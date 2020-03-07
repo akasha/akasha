@@ -1,0 +1,12 @@
+# DO NOT EDIT: File is auto-generated
+* -text
+*.java text
+*.md text
+*.rake text
+*.yml text
+.gitattributes text
+.gitignore text
+.ruby-version text
+Gemfile text
+LICENSE text
+buildfile text
