@@ -1,0 +1,14 @@
+# Lock down dist to ensure that builds run on a distribution that supports oraclejdk8
+dist: trusty
+jdk:
+  - oraclejdk8
+rvm:
+  - 2.3.1
+install:
+  - rvm install ruby-2.3.1
+  - rvm use 2.3.1
+  - gem install bundler
+  - bundle install
+script: buildr clean package
+git:
+  depth: 10
