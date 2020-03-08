@@ -23,7 +23,7 @@ final class AddCommand
                               "Skip running fetch command after registering WebIDL source." )
     };
   private boolean _noFetch;
-  private URI _sourceUrl;
+  private String _sourceUrl;
 
   AddCommand()
   {
@@ -52,7 +52,9 @@ final class AddCommand
         {
           try
           {
-            _sourceUrl = new URI( argument );
+            // Check format of URI by attempting to parse it
+            new URI( argument );
+            _sourceUrl = argument;
           }
           catch ( final URISyntaxException use )
           {
