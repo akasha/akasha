@@ -3,6 +3,7 @@
 /*.iws
 /Gemfile.lock
 /_buildr.rb
+/data
 /tmp
 /generated
 /reports
