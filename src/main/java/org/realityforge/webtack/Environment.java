@@ -16,6 +16,8 @@ final class Environment
   @Nonnull
   private final Logger _logger;
   @Nullable
+  private Path _configFile;
+  @Nullable
   private Command _command;
 
   Environment( @Nullable final Console console, @Nonnull final Path currentDirectory, @Nonnull final Logger logger )
@@ -46,6 +48,23 @@ final class Environment
   Logger logger()
   {
     return _logger;
+  }
+
+  boolean hasConfigFile()
+  {
+    return null != _configFile;
+  }
+
+  @Nonnull
+  Path getConfigFile()
+  {
+    assert null != _configFile;
+    return _configFile;
+  }
+
+  void setConfigFile( @Nullable final Path configFile )
+  {
+    _configFile = configFile;
   }
 
   boolean hasCommand()

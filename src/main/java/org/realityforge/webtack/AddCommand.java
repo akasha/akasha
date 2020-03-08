@@ -2,12 +2,16 @@ package org.realityforge.webtack;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.nio.file.Path;
 import java.util.List;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Nonnull;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
+import org.realityforge.webtack.config.RepositoryConfig;
+import org.realityforge.webtack.config.SourceConfig;
 
 final class AddCommand
   extends ConfigurableCommand
@@ -82,6 +86,40 @@ final class AddCommand
     {
       logger.log( Level.INFO, "Adding source: " + _sourceUrl );
     }
-    return ExitCodes.SUCCESS_EXIT_CODE;
+
+    final RepositoryConfig config = context.config();
+
+    if ( config.getSources().stream().anyMatch( s -> Objects.equals( _sourceUrl, s.getUrl() ) ) )
+    {
+      final String message =
+        "Error: Existing source exists with url " + _sourceUrl + " and can not add another source with the same url";
+      logger.log( Level.SEVERE, message );
+      return ExitCodes.ERROR_SOURCE_EXISTS;
+    }
+
+    final SourceConfig source = new SourceConfig();
+    source.setUrl( _sourceUrl );
+    config.getSources().add( source );
+    final Path configLocation = config.getConfigLocation();
+    try
+    {
+      RepositoryConfig.save( configLocation, config );
+    }
+    catch ( final Exception e )
+    {
+      final String message =
+        "Error: Failed to save config file " + configLocation + " after adding source " + _sourceUrl;
+      logger.log( Level.SEVERE, message );
+      return ExitCodes.ERROR_SAVING_CONFIG_CODE;
+    }
+    if ( !_noFetch )
+    {
+      //return new FetchCommand().run( context );
+      return ExitCodes.SUCCESS_EXIT_CODE;
+    }
+    else
+    {
+      return ExitCodes.SUCCESS_EXIT_CODE;
+    }
   }
 }

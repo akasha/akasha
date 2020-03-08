@@ -2,6 +2,7 @@ package org.realityforge.webtack;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.config.RepositoryConfig;
 
 final class CommandContextImpl
   implements Command.Context
@@ -19,5 +20,12 @@ final class CommandContextImpl
   public Environment environment()
   {
     return _environment;
+  }
+
+  @Nonnull
+  @Override
+  public RepositoryConfig config()
+  {
+    return Main.loadConfigFile( _environment );
   }
 }

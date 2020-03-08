@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.logging.Level;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.config.RepositoryConfig;
 
 abstract class Command
 {
@@ -11,6 +12,9 @@ abstract class Command
   {
     @Nonnull
     Environment environment();
+
+    @Nonnull
+    RepositoryConfig config();
   }
 
   @Nonnull
@@ -34,6 +38,11 @@ abstract class Command
   String getHelp()
   {
     return _help;
+  }
+
+  boolean requireConfigFile()
+  {
+    return true;
   }
 
   boolean processOptions( @Nonnull final Environment environment, @Nonnull final String... args )

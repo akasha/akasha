@@ -15,6 +15,7 @@ import org.realityforge.getopt4j.CLArgsParser;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.getopt4j.CLUtil;
+import org.realityforge.webtack.config.RepositoryConfig;
 
 /**
  * The entry point in which to run the tool.
@@ -105,6 +106,22 @@ public class Main
     {
       environment.logger().log( Level.WARNING, t.toString(), t );
       return ExitCodes.ERROR_EXIT_CODE;
+    }
+  }
+
+  @Nonnull
+  static RepositoryConfig loadConfigFile( @Nonnull final Environment environment )
+  {
+    final Path configFile = environment.getConfigFile();
+    try
+    {
+      return RepositoryConfig.load( configFile );
+    }
+    catch ( final Throwable t )
+    {
+      throw new TerminalStateException( "Error: Failed to load config file " + configFile,
+                                        t,
+                                        ExitCodes.ERROR_LOADING_CONFIG_CODE );
     }
   }
 
@@ -209,7 +226,37 @@ public class Main
       return false;
     }
     final String[] unParsedArgs = parser.getUnParsedArgs();
-    return unParsedArgs.length <= 0 || environment.getCommand().processOptions( environment, unParsedArgs );
+    if ( unParsedArgs.length > 0 )
+    {
+      if ( !environment.getCommand().processOptions( environment, unParsedArgs ) )
+      {
+        return false;
+      }
+    }
+
+    if ( environment.hasConfigFile() && environment.getCommand().requireConfigFile() )
+    {
+      if ( !environment.getConfigFile().toFile().exists() )
+      {
+        logger.log( Level.SEVERE,
+                    "Error: Specified config file does not exist. Specified value: " + environment.getConfigFile() );
+        return false;
+      }
+    }
+
+    if ( !environment.hasConfigFile() )
+    {
+      final Path configFile =
+        environment.currentDirectory().resolve( RepositoryConfig.FILENAME ).toAbsolutePath().normalize();
+      if ( environment.getCommand().requireConfigFile() && !configFile.toFile().exists() )
+      {
+        logger.log( Level.SEVERE,
+                    "Error: Default config file does not exist: " + RepositoryConfig.FILENAME );
+        return false;
+      }
+      environment.setConfigFile( configFile );
+    }
+    return true;
   }
 
   /**
