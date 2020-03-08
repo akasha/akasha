@@ -18,7 +18,10 @@ define 'webtack' do
   generate_config_resource(project)
 
   compile.with :javax_annotation,
-               :getopt4j
+               :getopt4j,
+               :jsonb_api,
+               :yasson,
+               :javax_json
 
   package(:jar)
   package(:sources)
