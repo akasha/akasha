@@ -94,7 +94,7 @@ final class AddCommand
       final String message =
         "Error: Existing source exists with url " + _sourceUrl + " and can not add another source with the same url";
       logger.log( Level.SEVERE, message );
-      return ExitCodes.ERROR_SOURCE_EXISTS;
+      return ExitCodes.ERROR_SOURCE_EXISTS_CODE;
     }
 
     final SourceConfig source = new SourceConfig();
