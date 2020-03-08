@@ -15,6 +15,8 @@ define 'webtack' do
   pom.add_github_project('realityforge/webtack')
   pom.add_developer('realityforge', 'Peter Donald')
 
+  generate_config_resource(project)
+
   compile.with :javax_annotation,
                :getopt4j
 
