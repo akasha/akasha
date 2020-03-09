@@ -44,7 +44,6 @@ final class AddCommand
   @Override
   boolean processArguments( @Nonnull final Environment environment, @Nonnull final List<CLOption> arguments )
   {
-    // Get a list of parsed options
     for ( final CLOption option : arguments )
     {
       if ( CLOption.TEXT_ARGUMENT == option.getId() )
