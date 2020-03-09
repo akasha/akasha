@@ -5,6 +5,7 @@ public class SourceConfig
   private String name;
   private String title;
   private String url;
+  private long lastModifiedTime;
 
   public String getName()
   {
@@ -34,5 +35,15 @@ public class SourceConfig
   public void setUrl( final String url )
   {
     this.url = url;
+  }
+
+  public long getLastModifiedTime()
+  {
+    return lastModifiedTime;
+  }
+
+  public void setLastModifiedTime( final long lastModifiedTime )
+  {
+    this.lastModifiedTime = lastModifiedTime;
   }
 }
