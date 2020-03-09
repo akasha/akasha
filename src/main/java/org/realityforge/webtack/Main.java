@@ -58,6 +58,7 @@ public class Main
     {
       {
         put( AddCommand.COMMAND, AddCommand::new );
+        put( FetchCommand.COMMAND, FetchCommand::new );
       }
     } );
 

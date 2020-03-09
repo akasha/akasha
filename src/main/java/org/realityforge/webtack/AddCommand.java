@@ -175,8 +175,7 @@ final class AddCommand
     }
     if ( !_noFetch )
     {
-      //return new FetchCommand().run( context );
-      return ExitCodes.SUCCESS_EXIT_CODE;
+      return new FetchCommand().run( context );
     }
     else
     {

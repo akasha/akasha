@@ -9,6 +9,9 @@ final class ExitCodes
   static final int ERROR_SAVING_CONFIG_CODE = 4;
   static final int ERROR_SOURCE_EXISTS_CODE = 5;
   static final int ERROR_BAD_SOURCE_NAME_DERIVED_CODE = 6;
+  static final int ERROR_SOURCE_DOES_NOT_EXIST_CODE = 7;
+  static final int ERROR_SOURCE_FETCH_FAILED_CODE = 8;
+  static final int ERROR_EXTRACT_IDL_FAILED_CODE = 9;
 
   private ExitCodes()
   {

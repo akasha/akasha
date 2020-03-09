@@ -34,6 +34,7 @@ public class RepositoryConfig
       final List<SourceConfig> sources = jsonb.fromJson( inputStream, new ArrayList<SourceConfig>()
       {
       }.getClass().getGenericSuperclass() );
+      //TODO: Verify every source has a name and url
       config.setSources( sources );
     }
     return config;
