@@ -56,6 +56,12 @@ final class Environment
   }
 
   @Nonnull
+  Path dataDirectory()
+  {
+    return currentDirectory().resolve( "idl" );
+  }
+
+  @Nonnull
   Path getConfigFile()
   {
     assert null != _configFile;
