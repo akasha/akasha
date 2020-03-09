@@ -154,7 +154,7 @@ final class AddCommand
     }
     if ( logger.isLoggable( Level.INFO ) )
     {
-      logger.log( Level.INFO, "Adding source named '" + _sourceName + "' with url " + _sourceUrl );
+      logger.log( Level.INFO, "Adding source named '" + name + "' with url " + _sourceUrl );
     }
 
     final SourceConfig source = new SourceConfig();
