@@ -70,6 +70,12 @@ public class RepositoryConfig
     return _sources;
   }
 
+  @Nullable
+  public SourceConfig findSourceByName( @Nonnull final String sourceName )
+  {
+    return getSources().stream().filter( s -> Objects.equals( s.getName(), sourceName ) ).findAny().orElse( null );
+  }
+
   private void setSources( @Nonnull final List<SourceConfig> sources )
   {
     _sources = Objects.requireNonNull( sources );
