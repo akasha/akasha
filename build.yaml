@@ -14,3 +14,5 @@ artifacts:
   jsonb_api: javax.json.bind:javax.json.bind-api:jar:1.0
   yasson: org.eclipse:yasson:jar:1.0
   javax_json: org.glassfish:javax.json:jar:1.1
+
+  jsoup: org.jsoup:jsoup:jar:1.13.1

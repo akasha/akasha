@@ -19,6 +19,7 @@ define 'webtack' do
 
   compile.with :javax_annotation,
                :getopt4j,
+               :jsoup,
                :jsonb_api,
                :yasson,
                :javax_json
