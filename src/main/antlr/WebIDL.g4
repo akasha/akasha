@@ -523,7 +523,7 @@ stringType
 ;
 
 promiseType
-  : 'promise' '<' returnType '>'
+  : 'Promise' '<' returnType '>'
 ;
 
 recordType
