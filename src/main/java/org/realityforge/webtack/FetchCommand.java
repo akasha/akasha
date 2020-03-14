@@ -51,6 +51,7 @@ final class FetchCommand
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
     };
+  @Nonnull
   private Set<String> _sourceNames = new LinkedHashSet<>();
 
   FetchCommand()
