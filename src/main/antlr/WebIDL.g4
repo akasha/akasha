@@ -5,6 +5,7 @@
 // - Renamed `enum` to `enumDefinition`
 // - Renamed `const` to `constMember`
 // - Renamed `null` to `nullModifier`
+// - Renamed `default` to `defaultAssignment`
 grammar WebIDL;
 
 INTEGER
@@ -304,7 +305,7 @@ argument
 ;
 
 argumentRest
-  : 'optional' typeWithExtendedAttributes argumentName default
+  : 'optional' typeWithExtendedAttributes argumentName defaultAssignment
   | type ellipsis argumentName
 ;
 
@@ -403,14 +404,14 @@ dictionaryMember
 
 dictionaryMemberRest
   : 'required' typeWithExtendedAttributes IDENTIFIER ';'
-  | type IDENTIFIER default
+  | type IDENTIFIER defaultAssignment
 ;
 
 partialDictionary
   : 'dictionary' IDENTIFIER '{' dictionaryMembers '}'
 ;
 
-default
+defaultAssignment
   : '=' defaultValue
   | /* empty */
 ;
