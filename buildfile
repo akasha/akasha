@@ -25,7 +25,7 @@ define 'webtack' do
                :javax_json,
                Buildr::Antlr4.runtime_dependencies
 
-  antlr_generated_dir = compile_antlr(_('src/main/antlr/WebIDL.g4'), :package => 'org.realityforge.webtack.webidl.parser')
+  antlr_generated_dir = compile_antlr(_('src/main/antlr/WebIDL_local.g4'), :package => 'org.realityforge.webtack.webidl.parser')
   compile.from antlr_generated_dir
 
   package(:jar)
