@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.logging.Logger;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.config.SourceConfig;
 
 final class Environment
 {
@@ -59,6 +60,12 @@ final class Environment
   Path dataDirectory()
   {
     return currentDirectory().resolve( "idl" );
+  }
+
+  @Nonnull
+  Path getPathForSource( @Nonnull final SourceConfig source )
+  {
+    return dataDirectory().resolve( source.getName() + ".webidl" );
   }
 
   @Nonnull

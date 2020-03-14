@@ -116,7 +116,7 @@ final class FetchCommand
         {
           logger.log( Level.INFO, "Fetching source named '" + sourceName + "' to " + file );
         }
-        final Path target = context.environment().dataDirectory().resolve( source.getName() + ".webidl" );
+        final Path target = context.environment().getPathForSource( source );
 
         if ( !Files.exists( target.getParent() ) )
         {
