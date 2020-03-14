@@ -94,7 +94,7 @@ interfaceOrMixin
 ;
 
 interfaceRest
-  : IDENTIFIER inheritance '{' interfaceMembers '}'
+  : IDENTIFIER inheritance '{' interfaceMembers '}' ';'
 ;
 
 partial
@@ -113,7 +113,7 @@ partialInterfaceOrPartialMixin
 ;
 
 partialInterfaceRest
-  : IDENTIFIER '{' partialInterfaceMembers '}'
+  : IDENTIFIER '{' partialInterfaceMembers '}' ';'
 ;
 
 interfaceMembers
@@ -150,7 +150,7 @@ inheritance
 ;
 
 mixinRest
-  : 'mixin' IDENTIFIER '{' mixinMembers '}'
+  : 'mixin' IDENTIFIER '{' mixinMembers '}' ';'
 ;
 
 mixinMembers
@@ -166,12 +166,12 @@ mixinMember
 ;
 
 includesStatement
-  : IDENTIFIER 'includes' IDENTIFIER
+  : IDENTIFIER 'includes' IDENTIFIER ';'
 ;
 
 callbackRestOrInterface
   : callbackRest
-  | 'interface' IDENTIFIER '{' callbackInterfaceMembers '}'
+  | 'interface' IDENTIFIER '{' callbackInterfaceMembers '}' ';'
 ;
 
 callbackInterfaceMembers
@@ -185,7 +185,7 @@ callbackInterfaceMember
 ;
 
 constMember
-  : 'const' constMemberType IDENTIFIER '=' constMemberValue
+  : 'const' constMemberType IDENTIFIER '=' constMemberValue ';'
 ;
 
 constMemberValue
@@ -227,7 +227,7 @@ readWriteAttribute
 ;
 
 attributeRest
-  : 'attribute' typeWithExtendedAttributes attributeName
+  : 'attribute' typeWithExtendedAttributes attributeName ';'
 ;
 
 attributeName
@@ -273,7 +273,7 @@ special
 ;
 
 operationRest
-  : optionalOperationName '(' argumentList ')'
+  : optionalOperationName '(' argumentList ')' ';'
 ;
 
 optionalOperationName
@@ -325,7 +325,7 @@ returnType
 ;
 
 constructor
-  : 'constructor' '(' argumentList ')'
+  : 'constructor' '(' argumentList ')' ';'
 ;
 
 stringifier
@@ -335,6 +335,7 @@ stringifier
 stringifierRest
   : readOnly attributeRest
   | regularOperation
+  | ';'
 ;
 
 staticMember
@@ -347,7 +348,7 @@ staticMemberRest
 ;
 
 iterable
-  : 'iterable' '<' typeWithExtendedAttributes optionalType '>'
+  : 'iterable' '<' typeWithExtendedAttributes optionalType '>' ';'
 ;
 
 optionalType
@@ -356,7 +357,7 @@ optionalType
 ;
 
 asyncIterable
-  : 'async' 'iterable' '<' typeWithExtendedAttributes ',' typeWithExtendedAttributes '>'
+  : 'async' 'iterable' '<' typeWithExtendedAttributes ',' typeWithExtendedAttributes '>' ';'
 ;
 
 readWriteMaplike
@@ -364,7 +365,7 @@ readWriteMaplike
 ;
 
 maplikeRest
-  : 'maplike' '<' typeWithExtendedAttributes ',' typeWithExtendedAttributes '>'
+  : 'maplike' '<' typeWithExtendedAttributes ',' typeWithExtendedAttributes '>' ';'
 ;
 
 readWriteSetlike
@@ -372,11 +373,11 @@ readWriteSetlike
 ;
 
 setlikeRest
-  : 'setlike' '<' typeWithExtendedAttributes '>'
+  : 'setlike' '<' typeWithExtendedAttributes '>' ';'
 ;
 
 namespace
-  : 'namespace' IDENTIFIER '{' namespaceMembers '}'
+  : 'namespace' IDENTIFIER '{' namespaceMembers '}' ';'
 ;
 
 namespaceMembers
@@ -390,7 +391,7 @@ namespaceMember
 ;
 
 dictionary
-  : 'dictionary' IDENTIFIER inheritance '{' dictionaryMembers '}'
+  : 'dictionary' IDENTIFIER inheritance '{' dictionaryMembers '}' ';'
 ;
 
 dictionaryMembers
@@ -404,11 +405,11 @@ dictionaryMember
 
 dictionaryMemberRest
   : 'required' typeWithExtendedAttributes IDENTIFIER ';'
-  | type IDENTIFIER defaultAssignment
+  | type IDENTIFIER defaultAssignment ';'
 ;
 
 partialDictionary
-  : 'dictionary' IDENTIFIER '{' dictionaryMembers '}'
+  : 'dictionary' IDENTIFIER '{' dictionaryMembers '}' ';'
 ;
 
 defaultAssignment
@@ -417,7 +418,7 @@ defaultAssignment
 ;
 
 enumDefinition
-  : 'enum' IDENTIFIER '{' enumValueList '}'
+  : 'enum' IDENTIFIER '{' enumValueList '}' ';'
 ;
 
 enumValueList
@@ -435,11 +436,11 @@ enumValueListString
 ;
 
 callbackRest
-  : IDENTIFIER '=' returnType '(' argumentList ')'
+  : IDENTIFIER '=' returnType '(' argumentList ')' ';'
 ;
 
 typedef
-  : 'typedef' typeWithExtendedAttributes IDENTIFIER
+  : 'typedef' typeWithExtendedAttributes IDENTIFIER ';'
 ;
 
 type
