@@ -658,3 +658,521 @@ extendedAttributeIdentList
 extendedAttributeNamedArgList
   : IDENTIFIER '=' IDENTIFIER '(' argumentList ')'
 ;
+
+/*
+
+The following is the grammar from the spec:
+
+Definitions ::
+    ExtendedAttributeList Definition Definitions
+    ε
+
+Definition ::
+    CallbackOrInterfaceOrMixin
+    Namespace
+    Partial
+    Dictionary
+    Enum
+    Typedef
+    IncludesStatement
+
+ArgumentNameKeyword ::
+    async
+    attribute
+    callback
+    const
+    constructor
+    deleter
+    dictionary
+    enum
+    getter
+    includes
+    inherit
+    interface
+    iterable
+    maplike
+    mixin
+    namespace
+    partial
+    readonly
+    required
+    setlike
+    setter
+    static
+    stringifier
+    typedef
+    unrestricted
+
+CallbackOrInterfaceOrMixin ::
+    callback CallbackRestOrInterface
+    interface InterfaceOrMixin
+
+InterfaceOrMixin ::
+    InterfaceRest
+    MixinRest
+
+InterfaceRest ::
+    identifier Inheritance { InterfaceMembers } ;
+
+Partial ::
+    partial PartialDefinition
+
+PartialDefinition ::
+    interface PartialInterfaceOrPartialMixin
+    PartialDictionary
+    Namespace
+
+PartialInterfaceOrPartialMixin ::
+    PartialInterfaceRest
+    MixinRest
+
+PartialInterfaceRest ::
+    identifier { PartialInterfaceMembers } ;
+
+InterfaceMembers ::
+    ExtendedAttributeList InterfaceMember InterfaceMembers
+    ε
+
+InterfaceMember ::
+    PartialInterfaceMember
+    Constructor
+
+PartialInterfaceMembers ::
+    ExtendedAttributeList PartialInterfaceMember PartialInterfaceMembers
+    ε
+
+PartialInterfaceMember ::
+    Const
+    Operation
+    Stringifier
+    StaticMember
+    Iterable
+    AsyncIterable
+    ReadOnlyMember
+    ReadWriteAttribute
+    ReadWriteMaplike
+    ReadWriteSetlike
+
+Inheritance ::
+    : identifier
+    ε
+
+MixinRest ::
+    mixin identifier { MixinMembers } ;
+
+MixinMembers ::
+    ExtendedAttributeList MixinMember MixinMembers
+    ε
+
+MixinMember ::
+    Const
+    RegularOperation
+    Stringifier
+    ReadOnly AttributeRest
+
+IncludesStatement ::
+    identifier includes identifier ;
+
+CallbackRestOrInterface ::
+    CallbackRest
+    interface identifier { CallbackInterfaceMembers } ;
+
+CallbackInterfaceMembers ::
+    ExtendedAttributeList CallbackInterfaceMember CallbackInterfaceMembers
+    ε
+
+CallbackInterfaceMember ::
+    Const
+    RegularOperation
+
+Const ::
+    const ConstType identifier = ConstValue ;
+
+ConstValue ::
+    BooleanLiteral
+    FloatLiteral
+    integer
+
+BooleanLiteral ::
+    true
+    false
+
+FloatLiteral ::
+    decimal
+    -Infinity
+    Infinity
+    NaN
+
+ConstType ::
+    PrimitiveType
+    identifier
+
+ReadOnlyMember ::
+    readonly ReadOnlyMemberRest
+
+ReadOnlyMemberRest ::
+    AttributeRest
+    MaplikeRest
+    SetlikeRest
+
+ReadWriteAttribute ::
+    inherit AttributeRest
+    AttributeRest
+
+AttributeRest ::
+    attribute TypeWithExtendedAttributes AttributeName ;
+
+AttributeName ::
+    AttributeNameKeyword
+    identifier
+
+AttributeNameKeyword ::
+    async
+    required
+
+ReadOnly ::
+    readonly
+    ε
+
+DefaultValue ::
+    ConstValue
+    string
+    [ ]
+    { }
+    null
+
+Operation ::
+    RegularOperation
+    SpecialOperation
+
+RegularOperation ::
+    ReturnType OperationRest
+
+SpecialOperation ::
+    Special RegularOperation
+
+Special ::
+    getter
+    setter
+    deleter
+
+OperationRest ::
+    OptionalOperationName ( ArgumentList ) ;
+
+OptionalOperationName ::
+    OperationName
+    ε
+
+OperationName ::
+    OperationNameKeyword
+    identifier
+
+OperationNameKeyword ::
+    includes
+
+ArgumentList ::
+    Argument Arguments
+    ε
+
+Arguments ::
+    , Argument Arguments
+    ε
+
+Argument ::
+    ExtendedAttributeList ArgumentRest
+
+ArgumentRest ::
+    optional TypeWithExtendedAttributes ArgumentName Default
+    Type Ellipsis ArgumentName
+
+ArgumentName ::
+    ArgumentNameKeyword
+    identifier
+
+Ellipsis ::
+    ...
+    ε
+
+ReturnType ::
+    Type
+    void
+
+Constructor ::
+    constructor ( ArgumentList ) ;
+
+Stringifier ::
+    stringifier StringifierRest
+
+StringifierRest ::
+    ReadOnly AttributeRest
+    RegularOperation
+    ;
+
+StaticMember ::
+    static StaticMemberRest
+
+StaticMemberRest ::
+    ReadOnly AttributeRest
+    RegularOperation
+
+Iterable ::
+    iterable < TypeWithExtendedAttributes OptionalType > ;
+
+OptionalType ::
+    , TypeWithExtendedAttributes
+    ε
+
+AsyncIterable ::
+    async iterable < TypeWithExtendedAttributes , TypeWithExtendedAttributes > ;
+
+ReadWriteMaplike ::
+    MaplikeRest
+
+MaplikeRest ::
+    maplike < TypeWithExtendedAttributes , TypeWithExtendedAttributes > ;
+
+ReadWriteSetlike ::
+    SetlikeRest
+
+SetlikeRest ::
+    setlike < TypeWithExtendedAttributes > ;
+
+Namespace ::
+    namespace identifier { NamespaceMembers } ;
+
+NamespaceMembers ::
+    ExtendedAttributeList NamespaceMember NamespaceMembers
+    ε
+
+NamespaceMember ::
+    RegularOperation
+    readonly AttributeRest
+
+Dictionary ::
+    dictionary identifier Inheritance { DictionaryMembers } ;
+
+DictionaryMembers ::
+    DictionaryMember DictionaryMembers
+    ε
+
+DictionaryMember ::
+    ExtendedAttributeList DictionaryMemberRest
+
+DictionaryMemberRest ::
+    required TypeWithExtendedAttributes identifier ;
+    Type identifier Default ;
+
+PartialDictionary ::
+    dictionary identifier { DictionaryMembers } ;
+
+Default ::
+    = DefaultValue
+    ε
+
+Enum ::
+    enum identifier { EnumValueList } ;
+
+EnumValueList ::
+    string EnumValueListComma
+
+EnumValueListComma ::
+    , EnumValueListString
+    ε
+
+EnumValueListString ::
+    string EnumValueListComma
+    ε
+
+CallbackRest ::
+    identifier = ReturnType ( ArgumentList ) ;
+
+Typedef ::
+    typedef TypeWithExtendedAttributes identifier ;
+
+Type ::
+    SingleType
+    UnionType Null
+
+TypeWithExtendedAttributes ::
+    ExtendedAttributeList Type
+
+SingleType ::
+    DistinguishableType
+    any
+    PromiseType
+
+UnionType ::
+    ( UnionMemberType or UnionMemberType UnionMemberTypes )
+
+UnionMemberType ::
+    ExtendedAttributeList DistinguishableType
+    UnionType Null
+
+UnionMemberTypes ::
+    or UnionMemberType UnionMemberTypes
+    ε
+
+DistinguishableType ::
+    PrimitiveType Null
+    StringType Null
+    identifier Null
+    sequence < TypeWithExtendedAttributes > Null
+    object Null
+    symbol Null
+    BufferRelatedType Null
+    FrozenArray < TypeWithExtendedAttributes > Null
+    RecordType Null
+
+PrimitiveType ::
+    UnsignedIntegerType
+    UnrestrictedFloatType
+    boolean
+    byte
+    octet
+
+UnrestrictedFloatType ::
+    unrestricted FloatType
+    FloatType
+
+FloatType ::
+    float
+    double
+
+UnsignedIntegerType ::
+    unsigned IntegerType
+    IntegerType
+
+IntegerType ::
+    short
+    long OptionalLong
+
+OptionalLong ::
+    long
+    ε
+
+StringType ::
+    ByteString
+    DOMString
+    USVString
+
+PromiseType ::
+    Promise < ReturnType >
+
+RecordType ::
+    record < StringType , TypeWithExtendedAttributes >
+
+Null ::
+    ?
+    ε
+
+BufferRelatedType ::
+    ArrayBuffer
+    DataView
+    Int8Array
+    Int16Array
+    Int32Array
+    Uint8Array
+    Uint16Array
+    Uint32Array
+    Uint8ClampedArray
+    Float32Array
+    Float64Array
+
+ExtendedAttributeList ::
+    [ ExtendedAttribute ExtendedAttributes ]
+    ε
+
+ExtendedAttributes ::
+    , ExtendedAttribute ExtendedAttributes
+    ε
+
+ExtendedAttribute ::
+    ( ExtendedAttributeInner ) ExtendedAttributeRest
+    [ ExtendedAttributeInner ] ExtendedAttributeRest
+    { ExtendedAttributeInner } ExtendedAttributeRest
+    Other ExtendedAttributeRest
+
+ExtendedAttributeRest ::
+    ExtendedAttribute
+    ε
+
+ExtendedAttributeInner ::
+    ( ExtendedAttributeInner ) ExtendedAttributeInner
+    [ ExtendedAttributeInner ] ExtendedAttributeInner
+    { ExtendedAttributeInner } ExtendedAttributeInner
+    OtherOrComma ExtendedAttributeInner
+    ε
+
+Other ::
+    integer
+    decimal
+    identifier
+    string
+    other
+    -
+    -Infinity
+    .
+    ...
+    :
+    ;
+    <
+    =
+    >
+    ?
+    ByteString
+    DOMString
+    FrozenArray
+    Infinity
+    NaN
+    Promise
+    USVString
+    any
+    boolean
+    byte
+    double
+    false
+    float
+    long
+    null
+    object
+    octet
+    or
+    optional
+    record
+    sequence
+    short
+    symbol
+    true
+    unsigned
+    void
+    ArgumentNameKeyword
+    BufferRelatedType
+
+OtherOrComma ::
+    Other
+    ,
+
+IdentifierList ::
+    identifier Identifiers
+
+Identifiers ::
+    , identifier Identifiers
+    ε
+
+ExtendedAttributeNoArgs ::
+    identifier
+
+ExtendedAttributeArgList ::
+    identifier ( ArgumentList )
+
+ExtendedAttributeIdent ::
+    identifier = identifier
+
+ExtendedAttributeIdentList ::
+    identifier = ( IdentifierList )
+
+ExtendedAttributeNamedArgList ::
+    identifier = identifier ( ArgumentList )
+
+
+*/
