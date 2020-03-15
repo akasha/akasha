@@ -106,7 +106,6 @@ final class FetchCommand
         {
           logger.log( Level.INFO, "Source named '" + sourceName + "' up to date, no need to fetch" );
         }
-        return ExitCodes.SUCCESS_EXIT_CODE;
       }
       else
       {
