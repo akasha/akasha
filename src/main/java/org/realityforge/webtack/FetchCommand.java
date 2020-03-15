@@ -50,11 +50,17 @@ final class FetchCommand
     "#permission-registry + pre.highlight";
   private static final int CONNECT_TIMEOUT = 15_000;
   private static final int READ_TIMEOUT = 10_000;
+  private static final int FORCE_OPT = 'f';
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
+      new CLOptionDescriptor( "force",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              FORCE_OPT,
+                              "Force the downloading of the source even if the last modified at time indicates it is up to date." )
     };
   @Nonnull
   private Set<String> _sourceNames = new LinkedHashSet<>();
+  private boolean _force;
 
   FetchCommand()
   {
@@ -66,8 +72,15 @@ final class FetchCommand
   {
     for ( final CLOption option : arguments )
     {
-      assert CLOption.TEXT_ARGUMENT == option.getId();
-      _sourceNames.add( option.getArgument() );
+      if ( FORCE_OPT == option.getId() )
+      {
+        _force = true;
+      }
+      else
+      {
+        assert CLOption.TEXT_ARGUMENT == option.getId();
+        _sourceNames.add( option.getArgument() );
+      }
     }
 
     return true;
@@ -225,7 +238,9 @@ final class FetchCommand
       connection.setConnectTimeout( CONNECT_TIMEOUT );
       connection.setReadTimeout( READ_TIMEOUT );
 
-      if ( 0 != lastModifiedAt && connection instanceof HttpURLConnection )
+      if ( !_force &&
+           0 != lastModifiedAt &&
+           ( "http".equals( sourceURL.getProtocol() ) || "https".equals( sourceURL.getProtocol() ) ) )
       {
         connection.setIfModifiedSince( lastModifiedAt );
         if ( HttpURLConnection.HTTP_NOT_MODIFIED == ( (HttpURLConnection) connection ).getResponseCode() )
