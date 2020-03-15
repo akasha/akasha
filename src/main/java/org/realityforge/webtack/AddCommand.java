@@ -180,7 +180,9 @@ final class AddCommand
     }
     if ( !_noFetch )
     {
-      return new FetchCommand().run( context );
+      final FetchCommand command = new FetchCommand();
+      command.processOptions( context.environment(), name );
+      return command.run( context );
     }
     else
     {
