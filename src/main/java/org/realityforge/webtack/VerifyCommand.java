@@ -12,10 +12,12 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.BailErrorStrategy;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.ConsoleErrorListener;
 import org.antlr.v4.runtime.LexerNoViableAltException;
+import org.antlr.v4.runtime.RecognitionException;
+import org.antlr.v4.runtime.Recognizer;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
@@ -97,22 +99,42 @@ final class VerifyCommand
         final CommonTokenStream tokens = new CommonTokenStream( lexer );
         final WebIDLParser parser = new WebIDLParser( tokens );
         parser.setBuildParseTree( true );
-        final ParseListener listener = new ParseListener();
-        parser.addParseListener( listener );
-        parser.setErrorHandler( new BailErrorStrategy() );
+        parser.addParseListener( new ParseListener() );
+        final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
+        parser.addErrorListener( errorListener );
 
         final WebIDLParser.WebIDLContext webIDLContext = parser.webIDL();
 
-        if ( logger.isLoggable( Level.INFO ) )
+        final int errorCount = errorListener.getErrorCount();
+        if ( 0 == errorCount )
         {
-          logger.log( Level.INFO, "Source named '" + sourceName + "' verified" );
+          if ( logger.isLoggable( Level.INFO ) )
+          {
+            logger.log( Level.INFO, "Source named '" + sourceName + "' verified" );
+          }
+        }
+        else
+        {
+          final String message =
+            "Error: Attempting to verify source named '" + sourceName + "' but there was " + errorCount +
+            " errors detected in the WebIDL";
+          logger.log( Level.SEVERE, message );
+          return ExitCodes.ERROR_IDL_NOT_VALID_CODE;
         }
       }
       catch ( final IOException ioe )
       {
         final String message =
           "Error: Attempting to verify source with the name '" + sourceName + "' but there was an error " +
-          "reading source. Error: " + ioe;
+          "reading WebIDL for source. Error: " + ioe;
+        logger.log( Level.SEVERE, message );
+        return ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE;
+      }
+      catch ( final Throwable t )
+      {
+        final String message =
+          "Error: Attempting to verify source with the name '" + sourceName + "' but there was an unexpected error " +
+          "verifying source. Error: " + t;
         logger.log( Level.SEVERE, message );
         return ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE;
       }
@@ -139,4 +161,26 @@ final class VerifyCommand
   {
   }
 
+  private static class CountingConsoleErrorListener
+    extends ConsoleErrorListener
+  {
+    private int _errorCount;
+
+    @Override
+    public void syntaxError( final Recognizer<?, ?> recognizer,
+                             final Object offendingSymbol,
+                             final int line,
+                             final int charPositionInLine,
+                             final String msg,
+                             final RecognitionException e )
+    {
+      super.syntaxError( recognizer, offendingSymbol, line, charPositionInLine, msg, e );
+      _errorCount++;
+    }
+
+    int getErrorCount()
+    {
+      return _errorCount;
+    }
+  }
 }
