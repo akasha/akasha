@@ -12,6 +12,7 @@ final class ExitCodes
   static final int ERROR_SOURCE_DOES_NOT_EXIST_CODE = 7;
   static final int ERROR_SOURCE_FETCH_FAILED_CODE = 8;
   static final int ERROR_EXTRACT_IDL_FAILED_CODE = 9;
+  static final int ERROR_SOURCE_NOT_FETCHED_CODE = 10;
 
   private ExitCodes()
   {
