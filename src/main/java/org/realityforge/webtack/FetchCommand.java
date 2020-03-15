@@ -52,16 +52,22 @@ final class FetchCommand
   private static final int CONNECT_TIMEOUT = 15_000;
   private static final int READ_TIMEOUT = 10_000;
   private static final int FORCE_OPT = 'f';
+  private static final int NO_VERIFY_OPT = 2;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
       new CLOptionDescriptor( "force",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               FORCE_OPT,
-                              "Force the downloading of the source even if the last modified at time indicates it is up to date." )
+                              "Force the downloading of the source even if the last modified at time indicates it is up to date." ),
+      new CLOptionDescriptor( "no-verify",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              NO_VERIFY_OPT,
+                              "Skip running verify command after fetching WebIDL source." )
     };
   @Nonnull
   private Set<String> _sourceNames = new LinkedHashSet<>();
   private boolean _force;
+  private boolean _noVerify;
 
   FetchCommand()
   {
@@ -77,6 +83,10 @@ final class FetchCommand
       if ( FORCE_OPT == optionId )
       {
         _force = true;
+      }
+      else if ( NO_VERIFY_OPT == optionId )
+      {
+        _noVerify = true;
       }
       else
       {
@@ -168,7 +178,16 @@ final class FetchCommand
         }
       }
     }
-    return ExitCodes.SUCCESS_EXIT_CODE;
+    if ( !_noVerify )
+    {
+      final VerifyCommand command = new VerifyCommand();
+      command.processOptions( context.environment(), sourceNames.toArray( new String[ 0 ] ) );
+      return command.run( context );
+    }
+    else
+    {
+      return ExitCodes.SUCCESS_EXIT_CODE;
+    }
   }
 
   private boolean extractWebIDL( @Nonnull final Logger logger,
