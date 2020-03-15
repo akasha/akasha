@@ -57,7 +57,7 @@ final class Environment
   }
 
   @Nonnull
-  Path dataDirectory()
+  Path webidlDirectory()
   {
     return currentDirectory().resolve( "idl" );
   }
@@ -65,7 +65,7 @@ final class Environment
   @Nonnull
   Path getPathForSource( @Nonnull final SourceConfig source )
   {
-    return dataDirectory().resolve( source.getName() + ".webidl" );
+    return webidlDirectory().resolve( source.getName() + ".webidl" );
   }
 
   @Nonnull
