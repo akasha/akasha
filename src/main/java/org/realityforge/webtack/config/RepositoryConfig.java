@@ -5,8 +5,10 @@ import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
@@ -48,7 +50,11 @@ public class RepositoryConfig
     Files.createDirectories( path.getParent() );
     try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
     {
-      jsonb.toJson( config.getSources(), outputStream );
+      jsonb.toJson( config.getSources()
+                      .stream()
+                      .sorted( Comparator.comparing( SourceConfig::getName ) )
+                      .collect( Collectors.toList() ),
+                    outputStream );
     }
   }
 
