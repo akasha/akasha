@@ -2,6 +2,8 @@ require 'buildr/git_auto_version'
 require 'buildr/gpg'
 require 'buildr/top_level_generate_dir'
 
+PACKAGED_DEPS=[:getopt4j, :jsoup, :jsonb_api, :yasson, :javax_json] + Buildr::Antlr4.runtime_dependencies
+
 desc 'webtack: Generate jsinterop types from WebIDL'
 define 'webtack' do
   project.group = 'org.realityforge.webtack'
@@ -18,17 +20,18 @@ define 'webtack' do
   generate_config_resource(project)
 
   compile.with :javax_annotation,
-               :getopt4j,
-               :jsoup,
-               :jsonb_api,
-               :yasson,
-               :javax_json,
-               Buildr::Antlr4.runtime_dependencies
+               PACKAGED_DEPS
 
   antlr_generated_dir = compile_antlr(_('src/main/antlr/WebIDL.g4'), :package => 'org.realityforge.webtack.webidl.parser')
   compile.from antlr_generated_dir
 
   package(:jar)
+  package(:jar, :classifier => 'all').tap do |jar|
+    jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
+    PACKAGED_DEPS.collect {|dep| Buildr.artifact(dep)}.each do |d|
+      jar.merge(d)
+    end
+  end
   package(:sources)
   package(:javadoc)
 
