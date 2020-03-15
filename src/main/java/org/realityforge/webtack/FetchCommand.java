@@ -26,6 +26,7 @@ import javax.annotation.Nullable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
@@ -234,21 +235,22 @@ final class FetchCommand
     try
     {
       final URL sourceURL = URI.create( url ).toURL();
-      final URLConnection connection = sourceURL.openConnection();
-      connection.setConnectTimeout( CONNECT_TIMEOUT );
-      connection.setReadTimeout( READ_TIMEOUT );
 
       if ( !_force &&
            0 != lastModifiedAt &&
            ( "http".equals( sourceURL.getProtocol() ) || "https".equals( sourceURL.getProtocol() ) ) )
       {
+        final HttpURLConnection connection = (HttpURLConnection) newUrlConnection( sourceURL );
         connection.setIfModifiedSince( lastModifiedAt );
-        if ( HttpURLConnection.HTTP_NOT_MODIFIED == ( (HttpURLConnection) connection ).getResponseCode() )
+        connection.setRequestMethod( "HEAD" );
+
+        if ( HttpURLConnection.HTTP_NOT_MODIFIED == connection.getResponseCode() )
         {
           return null;
         }
       }
 
+      final URLConnection connection = newUrlConnection( sourceURL );
       try ( final InputStream inputStream = new BufferedInputStream( connection.getInputStream() ) )
       {
         final long lastModified = connection.getLastModified();
@@ -271,5 +273,14 @@ final class FetchCommand
                                         ioe,
                                         ExitCodes.ERROR_SOURCE_FETCH_FAILED_CODE );
     }
+  }
+
+  private URLConnection newUrlConnection( final URL sourceURL )
+    throws IOException
+  {
+    final URLConnection connection = sourceURL.openConnection();
+    connection.setConnectTimeout( CONNECT_TIMEOUT );
+    connection.setReadTimeout( READ_TIMEOUT );
+    return connection;
   }
 }
