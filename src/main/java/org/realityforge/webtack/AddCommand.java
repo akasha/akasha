@@ -137,7 +137,13 @@ final class AddCommand
     {
       final String path = URI.create( _sourceUrl ).getPath();
       final String candidate =
-        path.replaceAll( "\\.html$", "" ).replaceAll( "/$", "" ).replaceAll( "^/TR/", "" ).replace( "/", "_" );
+        path
+          .replaceAll( "\\.html$", "" )
+          .replaceAll( "/$", "" )
+          .replaceAll( "^/TR/", "" )
+          .replaceAll( "^/", "" )
+          .replace( "/", "_" )
+          .replace( "-", "_" );
       if ( candidate.isEmpty() || !SourceVersion.isName( candidate ) )
       {
         final String message =
