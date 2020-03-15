@@ -146,7 +146,7 @@ final class AddCommand
         logger.log( Level.SEVERE, message );
         return ExitCodes.ERROR_BAD_SOURCE_NAME_DERIVED_CODE;
       }
-      name = candidate;
+      name = candidate.toLowerCase();
     }
     else
     {
