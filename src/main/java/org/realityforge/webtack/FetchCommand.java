@@ -13,6 +13,8 @@ import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.StandardOpenOption;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -168,7 +170,7 @@ final class FetchCommand
         {
           logger.log( Level.INFO, "Source named '" + sourceName + "' is already an IDL file. No processing required." );
         }
-        Files.copy( input, output );
+        Files.copy( input, output, StandardCopyOption.REPLACE_EXISTING );
       }
       else
       {
@@ -176,6 +178,8 @@ final class FetchCommand
         {
           logger.log( Level.INFO, "Source named '" + sourceName + "' needs to have IDL extracted." );
         }
+        // Cache a copy of downloaded html from which WebIDL was extracted
+        Files.copy( input, output.getParent().resolve( sourceName + ".html" ), StandardCopyOption.REPLACE_EXISTING );
 
         final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name(), url );
         final Elements elements = document.select( CSS_SELECTOR );
@@ -192,7 +196,7 @@ final class FetchCommand
                         ) )
           .map( Element::text )
           .collect( Collectors.joining( "\n\n" ) );
-        Files.write( output, idl.getBytes( StandardCharsets.UTF_8 ) );
+        Files.write( output, idl.getBytes( StandardCharsets.UTF_8 ), StandardOpenOption.CREATE );
       }
       if ( logger.isLoggable( Level.INFO ) )
       {
