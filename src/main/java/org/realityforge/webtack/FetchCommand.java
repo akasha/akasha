@@ -214,7 +214,7 @@ final class FetchCommand
                         ) )
           .map( Element::text )
           .collect( Collectors.joining( "\n\n" ) );
-        Files.write( output, idl.getBytes( StandardCharsets.UTF_8 ), StandardOpenOption.CREATE );
+        Files.write( output, idl.getBytes( StandardCharsets.UTF_8 ), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING );
       }
       if ( logger.isLoggable( Level.INFO ) )
       {
