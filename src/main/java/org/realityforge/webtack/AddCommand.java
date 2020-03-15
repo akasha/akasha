@@ -97,7 +97,6 @@ final class AddCommand
             "'. Source name expected to be a valid java variable.\n";
           environment.logger().log( Level.SEVERE, message );
           return false;
-
         }
       }
       else
