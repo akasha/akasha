@@ -73,13 +73,14 @@ final class FetchCommand
   {
     for ( final CLOption option : arguments )
     {
-      if ( FORCE_OPT == option.getId() )
+      final int optionId = option.getId();
+      if ( FORCE_OPT == optionId )
       {
         _force = true;
       }
       else
       {
-        assert CLOption.TEXT_ARGUMENT == option.getId();
+        assert CLOption.TEXT_ARGUMENT == optionId;
         _sourceNames.add( option.getArgument() );
       }
     }
