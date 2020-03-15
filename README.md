@@ -35,4 +35,3 @@ The project is licensed under [Apache License, Version 2.0](LICENSE).
 * This project took inspiration and some techniques from:
     * [TSJS-lib-generator](https://github.com/microsoft/TSJS-lib-generator): a WebIDL to Typescript types project.
     * [jsinterop-generator](https://github.com/google/jsinterop-generator): A closure externs to Java project.
-
