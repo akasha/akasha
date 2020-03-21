@@ -54,7 +54,6 @@ define 'webtack' do
                  project('webidl-model').compile.dependencies,
                  PACKAGED_DEPS
 
-
     package(:jar)
     package(:jar, :classifier => 'all').tap do |jar|
       jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
