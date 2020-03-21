@@ -39,12 +39,12 @@ public final class WebIDLParserTool
   private static class BailLexer
     extends WebIDLLexer
   {
-    public BailLexer( final CharStream input )
+    public BailLexer( @Nonnull final CharStream input )
     {
       super( input );
     }
 
-    public void recover( final LexerNoViableAltException e )
+    public void recover( @Nonnull final LexerNoViableAltException e )
     {
       throw new ParseCancellationException( e );
     }
