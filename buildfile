@@ -19,7 +19,7 @@ define 'webtack' do
   pom.add_github_project('realityforge/webtack')
   pom.add_developer('realityforge', 'Peter Donald')
 
-  define 'webidl' do
+  define 'webidl-parser' do
     compile.with :javax_annotation,
                  Buildr::Antlr4.runtime_dependencies
 
@@ -35,12 +35,23 @@ define 'webtack' do
     project.iml.main_generated_source_directories << antlr_generated_dir
   end
 
+  define 'webidl-model' do
+    compile.with project('webidl-parser').package(:jar),
+                 project('webidl-parser').compile.dependencies
+
+    package(:jar)
+    package(:sources)
+    package(:javadoc)
+
+    test.using :testng
+  end
+
   define 'cli' do
     generate_config_resource(project)
 
     compile.with :javax_annotation,
-                 project('webidl').package(:jar),
-                 project('webidl').compile.dependencies,
+                 project('webidl-model').package(:jar),
+                 project('webidl-model').compile.dependencies,
                  PACKAGED_DEPS
 
 
@@ -50,7 +61,8 @@ define 'webtack' do
       PACKAGED_DEPS.collect { |dep| Buildr.artifact(dep) }.each do |d|
         jar.merge(d)
       end
-      jar.merge(project('webidl').package(:jar))
+      jar.merge(project('webidl-parser').package(:jar))
+      jar.merge(project('webidl-model').package(:jar))
     end
     package(:sources)
     package(:javadoc)
@@ -64,4 +76,4 @@ define 'webtack' do
 end
 
 desc 'Generate source artifacts'
-task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webidl/generated/antlr/main/java"))])
+task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webidl-parser/generated/antlr/main/java"))])
