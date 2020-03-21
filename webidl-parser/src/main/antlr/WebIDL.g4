@@ -6,6 +6,10 @@
 // - Renamed `const` to `constMember` to avoid collision with the java keyword when generating java code.
 // - Renamed `null` to `nullModifier` to avoid collision with the java keyword when generating java code.
 // - Renamed `default` to `defaultAssignment` to avoid collision with the java keyword when generating java code.
+// - Redefined "extendedAttribute" as the small subset of extended attribute forms actually used by the specs that
+//   are defined by ExtendedAttributeNoArgs, ExtendedAttributeArgList, ExtendedAttributeIdent,
+//   ExtendedAttributeIdentList, ExtendedAttributeNamedArgList in the original spec. This change also meant that
+//   unused rules such as "other", "extendedAttributeRest", "extendedAttributeInner" and "otherOrComma" could be removed
 grammar WebIDL;
 
 INTEGER
@@ -561,74 +565,11 @@ extendedAttributes
 ;
 
 extendedAttribute
-  : '(' extendedAttributeInner ')' extendedAttributeRest
-  | '[' extendedAttributeInner ']' extendedAttributeRest
-  | '{' extendedAttributeInner '}' extendedAttributeRest
-  | other extendedAttributeRest
-;
-
-extendedAttributeRest
-  : extendedAttribute
-  | /* empty */
-;
-
-extendedAttributeInner
-  : '(' extendedAttributeInner ')' extendedAttributeInner
-  | '[' extendedAttributeInner ']' extendedAttributeInner
-  | '{' extendedAttributeInner '}' extendedAttributeInner
-  | otherOrComma extendedAttributeInner
-  | /* empty */
-;
-
-other
-  : INTEGER
-  | DECIMAL
-  | IDENTIFIER
-  | STRING
-  | OTHER
-  | '-'
-  | '-Infinity'
-  | '.'
-  | '...'
-  | ':'
-  | ';'
-  | '<'
-  | '='
-  | '>'
-  | '?'
-  | 'ByteString'
-  | 'DOMString'
-  | 'FrozenArray'
-  | 'Infinity'
-  | 'NaN'
-  | 'Promise'
-  | 'USVString'
-  | 'any'
-  | 'boolean'
-  | 'byte'
-  | 'double'
-  | 'false'
-  | 'float'
-  | 'long'
-  | 'null'
-  | 'object'
-  | 'octet'
-  | 'or'
-  | 'optional'
-  | 'record'
-  | 'sequence'
-  | 'short'
-  | 'symbol'
-  | 'true'
-  | 'unsigned'
-  | 'void'
-  | argumentNameKeyword
-  | bufferRelatedType
-;
-
-otherOrComma
-  : other
-  | ','
+  : extendedAttributeNoArgs
+  | extendedAttributeArgList
+  | extendedAttributeIdent
+  | extendedAttributeIdentList
+  | extendedAttributeNamedArgList
 ;
 
 identifierList
