@@ -23,7 +23,8 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
-import org.realityforge.webtack.webidl.parser.WebIDLBaseListener;
+import org.realityforge.webtack.model.ModelBuilderListener;
+import org.realityforge.webtack.model.ModelRepository;
 import org.realityforge.webtack.webidl.parser.WebIDLLexer;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
@@ -94,16 +95,23 @@ final class VerifyCommand
 
       try ( final FileReader reader = new FileReader( target.toFile() ) )
       {
+        final ModelRepository repository = new ModelRepository();
+
         final ANTLRInputStream input = new ANTLRInputStream( reader );
         final WebIDLLexer lexer = new BailLexer( input );
         final CommonTokenStream tokens = new CommonTokenStream( lexer );
         final WebIDLParser parser = new WebIDLParser( tokens );
         parser.setBuildParseTree( true );
-        parser.addParseListener( new ParseListener() );
+        parser.addParseListener( new ModelBuilderListener( repository ) );
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         parser.addErrorListener( errorListener );
 
-        final WebIDLParser.WebIDLContext webIDLContext = parser.webIDL();
+        parser.webIDL();
+
+        //for ( final InterfaceModel interfaceModel : repository.getInterfaces() )
+        //{
+        //  System.out.println( "Found interfaceModel " + interfaceModel.getName() );
+        //}
 
         final int errorCount = errorListener.getErrorCount();
         if ( 0 == errorCount )
@@ -154,11 +162,6 @@ final class VerifyCommand
     {
       throw new ParseCancellationException( e );
     }
-  }
-
-  private static class ParseListener
-    extends WebIDLBaseListener
-  {
   }
 
   private static class CountingConsoleErrorListener
