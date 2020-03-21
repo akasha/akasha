@@ -1174,6 +1174,4 @@ ExtendedAttributeIdentList ::
 
 ExtendedAttributeNamedArgList ::
     identifier = identifier ( ArgumentList )
-
-
 */
