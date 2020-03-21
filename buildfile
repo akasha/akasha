@@ -1,8 +1,10 @@
 require 'buildr/git_auto_version'
 require 'buildr/gpg'
+require 'buildr/single_intermediate_layout'
 require 'buildr/top_level_generate_dir'
+require 'buildr/jacoco'
 
-PACKAGED_DEPS=[:getopt4j, :jsoup, :jsonb_api, :yasson, :javax_json] + Buildr::Antlr4.runtime_dependencies
+PACKAGED_DEPS = [:getopt4j, :jsoup, :jsonb_api, :yasson, :javax_json] + Buildr::Antlr4.runtime_dependencies
 
 desc 'webtack: Generate jsinterop types from WebIDL'
 define 'webtack' do
@@ -17,31 +19,34 @@ define 'webtack' do
   pom.add_github_project('realityforge/webtack')
   pom.add_developer('realityforge', 'Peter Donald')
 
-  generate_config_resource(project)
+  define 'cli' do
+    generate_config_resource(project)
 
-  compile.with :javax_annotation,
-               PACKAGED_DEPS
+    compile.with :javax_annotation,
+                 PACKAGED_DEPS
 
-  antlr_generated_dir = compile_antlr(_('src/main/antlr/WebIDL.g4'), :package => 'org.realityforge.webtack.webidl.parser')
-  compile.from antlr_generated_dir
+    antlr_generated_dir = compile_antlr(_('src/main/antlr/WebIDL.g4'), :package => 'org.realityforge.webtack.webidl.parser')
+    compile.from antlr_generated_dir
 
-  package(:jar)
-  package(:jar, :classifier => 'all').tap do |jar|
-    jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
-    PACKAGED_DEPS.collect {|dep| Buildr.artifact(dep)}.each do |d|
-      jar.merge(d)
+    package(:jar)
+    package(:jar, :classifier => 'all').tap do |jar|
+      jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
+      PACKAGED_DEPS.collect { |dep| Buildr.artifact(dep) }.each do |d|
+        jar.merge(d)
+      end
     end
+    package(:sources)
+    package(:javadoc)
+
+    test.using :testng
+
+    project.iml.main_generated_source_directories << antlr_generated_dir
   end
-  package(:sources)
-  package(:javadoc)
 
-  test.using :testng
-
-  project.iml.main_generated_source_directories << antlr_generated_dir
   iml.excluded_directories << project._('tmp')
 
   ipr.add_component_from_artifact(:idea_codestyle)
 end
 
 desc 'Generate source artifacts'
-task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/generated/antlr/main/java"))])
+task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/cli/generated/antlr/main/java"))])
