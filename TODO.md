@@ -9,3 +9,11 @@ complete as there is too much un-said.
 * Add quiet mode to fetch so that only actions that require download print
 
 * Add quiet mode to verify so that only messages occur on failures
+
+* The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
+  so it should be possible with a little bit of heuristics to extract the documentation for different
+  members and definitions.
+
+  Spec Docs: https://heycam.github.io/webidl/
+
+* Earlier Attempt at modelling webidl in java: https://code.google.com/archive/p/webidl2ecore/source/default/source
