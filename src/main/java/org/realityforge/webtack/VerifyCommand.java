@@ -133,9 +133,9 @@ final class VerifyCommand
       catch ( final Throwable t )
       {
         final String message =
-          "Error: Attempting to verify source with the name '" + sourceName + "' but there was an unexpected error " +
-          "verifying source. Error: " + t;
-        logger.log( Level.SEVERE, message );
+          "Error: Attempting to verify source with the name '" + sourceName +
+          "' but there was an unexpected error verifying source. Error: " + t;
+        logger.log( Level.SEVERE, message, t );
         return ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE;
       }
     }
