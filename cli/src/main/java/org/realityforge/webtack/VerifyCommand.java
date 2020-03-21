@@ -11,21 +11,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
-import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.ConsoleErrorListener;
-import org.antlr.v4.runtime.LexerNoViableAltException;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
-import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
-import org.realityforge.webtack.model.ModelBuilderListener;
 import org.realityforge.webtack.model.ModelRepository;
-import org.realityforge.webtack.webidl.parser.WebIDLLexer;
+import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 final class VerifyCommand
@@ -97,12 +91,7 @@ final class VerifyCommand
       {
         final ModelRepository repository = new ModelRepository();
 
-        final ANTLRInputStream input = new ANTLRInputStream( reader );
-        final WebIDLLexer lexer = new BailLexer( input );
-        final CommonTokenStream tokens = new CommonTokenStream( lexer );
-        final WebIDLParser parser = new WebIDLParser( tokens );
-        parser.setBuildParseTree( true );
-        parser.addParseListener( new ModelBuilderListener( repository ) );
+        final WebIDLParser parser = WebIDLModelParser.createParser( reader, repository );
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         parser.addErrorListener( errorListener );
 
@@ -148,20 +137,6 @@ final class VerifyCommand
       }
     }
     return ExitCodes.SUCCESS_EXIT_CODE;
-  }
-
-  private static class BailLexer
-    extends WebIDLLexer
-  {
-    public BailLexer( final CharStream input )
-    {
-      super( input );
-    }
-
-    public void recover( final LexerNoViableAltException e )
-    {
-      throw new ParseCancellationException( e );
-    }
   }
 
   private static class CountingConsoleErrorListener
