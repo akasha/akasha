@@ -19,22 +19,14 @@ define 'webtack' do
   pom.add_github_project('realityforge/webtack')
   pom.add_developer('realityforge', 'Peter Donald')
 
-  define 'cli' do
-    generate_config_resource(project)
-
+  define 'webidl' do
     compile.with :javax_annotation,
-                 PACKAGED_DEPS
+                 Buildr::Antlr4.runtime_dependencies
 
     antlr_generated_dir = compile_antlr(_('src/main/antlr/WebIDL.g4'), :package => 'org.realityforge.webtack.webidl.parser')
     compile.from antlr_generated_dir
 
     package(:jar)
-    package(:jar, :classifier => 'all').tap do |jar|
-      jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
-      PACKAGED_DEPS.collect { |dep| Buildr.artifact(dep) }.each do |d|
-        jar.merge(d)
-      end
-    end
     package(:sources)
     package(:javadoc)
 
@@ -43,10 +35,33 @@ define 'webtack' do
     project.iml.main_generated_source_directories << antlr_generated_dir
   end
 
+  define 'cli' do
+    generate_config_resource(project)
+
+    compile.with :javax_annotation,
+                 project('webidl').package(:jar),
+                 project('webidl').compile.dependencies,
+                 PACKAGED_DEPS
+
+
+    package(:jar)
+    package(:jar, :classifier => 'all').tap do |jar|
+      jar.with :manifest => { 'Main-Class' => 'org.realityforge.webtack.Main' }
+      PACKAGED_DEPS.collect { |dep| Buildr.artifact(dep) }.each do |d|
+        jar.merge(d)
+      end
+      jar.merge(project('webidl').package(:jar))
+    end
+    package(:sources)
+    package(:javadoc)
+
+    test.using :testng
+  end
+
   iml.excluded_directories << project._('tmp')
 
   ipr.add_component_from_artifact(:idea_codestyle)
 end
 
 desc 'Generate source artifacts'
-task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/cli/generated/antlr/main/java"))])
+task('generate:all').enhance([file(File.expand_path("#{File.dirname(__FILE__)}/webidl/generated/antlr/main/java"))])
