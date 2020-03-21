@@ -28,8 +28,6 @@ public class ModelBuilderListener
     interfaceModel.setInherits( extractInherits( ctx ) );
   }
 
-
-
   @Nullable
   private String extractInherits( @Nonnull final WebIDLParser.InterfaceRestContext ctx )
   {
