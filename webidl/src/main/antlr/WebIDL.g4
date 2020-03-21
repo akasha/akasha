@@ -1,11 +1,11 @@
 // This grammar is based on grammar in Web IDL Editor’s Draft, 13 March 2020.
 
 // changes from the spec:
-// - Added `webIDL` wrapper type
-// - Renamed `enum` to `enumDefinition`
-// - Renamed `const` to `constMember`
-// - Renamed `null` to `nullModifier`
-// - Renamed `default` to `defaultAssignment`
+// - Added `webIDL` wrapper type to simplify parsing a single unit.
+// - Renamed `enum` to `enumDefinition` to avoid collision with the java keyword when generating java code.
+// - Renamed `const` to `constMember` to avoid collision with the java keyword when generating java code.
+// - Renamed `null` to `nullModifier` to avoid collision with the java keyword when generating java code.
+// - Renamed `default` to `defaultAssignment` to avoid collision with the java keyword when generating java code.
 grammar WebIDL;
 
 INTEGER
