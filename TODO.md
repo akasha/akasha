@@ -17,3 +17,5 @@ complete as there is too much un-said.
   Spec Docs: https://heycam.github.io/webidl/
 
 * Earlier Attempt at modelling webidl in java: https://code.google.com/archive/p/webidl2ecore/source/default/source
+
+* Split webidl into `webidl-parser` and `webidl-model` packages
