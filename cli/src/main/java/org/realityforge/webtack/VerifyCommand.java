@@ -91,7 +91,7 @@ final class VerifyCommand
       {
         final ModelRepository repository = new ModelRepository();
 
-        final WebIDLParser parser = WebIDLModelParser.createParser( reader, repository );
+        final WebIDLParser parser = WebIDLModelParser.createParser( reader );
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         parser.addErrorListener( errorListener );
 

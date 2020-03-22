@@ -13,7 +13,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static WebIDLParser createParser( @Nonnull final Reader reader, @Nonnull final ModelRepository repository )
+  public static WebIDLParser createParser( @Nonnull final Reader reader )
     throws IOException
   {
     final WebIDLParser parser = WebIDLParserTool.createParser( reader );
