@@ -1,6 +1,5 @@
 package org.realityforge.webtack.model;
 
-import java.io.StringReader;
 import java.util.Arrays;
 import java.util.List;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -30,8 +29,7 @@ public final class ExtendedAttributeTest
   public void NO_ARGS_parse()
     throws Exception
   {
-    final WebIDLParser parser =
-      WebIDLModelParser.createParser( new StringReader( "EnforceRange" ), new ModelRepository() );
+    final WebIDLParser parser = createParser( "EnforceRange" );
     final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "EnforceRange" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
@@ -55,8 +53,7 @@ public final class ExtendedAttributeTest
   public void IDENT_parse()
     throws Exception
   {
-    final WebIDLParser parser =
-      WebIDLModelParser.createParser( new StringReader( "LegacyNamespace=WebAssembly" ), new ModelRepository() );
+    final WebIDLParser parser = createParser( "LegacyNamespace=WebAssembly" );
     final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "LegacyNamespace" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
@@ -83,8 +80,7 @@ public final class ExtendedAttributeTest
   public void IDENT_LIST_parse()
     throws Exception
   {
-    final WebIDLParser parser =
-      WebIDLModelParser.createParser( new StringReader( "Exposed=(Window,Worker)" ), new ModelRepository() );
+    final WebIDLParser parser = createParser( "Exposed=(Window,Worker)" );
     final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "Exposed" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
@@ -96,8 +92,7 @@ public final class ExtendedAttributeTest
     throws Exception
   {
     final WebIDLParser parser =
-      WebIDLModelParser.createParser( new StringReader(
-        "[NoInterfaceObject, LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]" ), new ModelRepository() );
+      createParser( "[NoInterfaceObject, LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]" );
     final List<ExtendedAttribute> extendedAttributes = ExtendedAttribute.parse( parser.extendedAttributeList() );
     assertEquals( extendedAttributes.size(), 3 );
     {
