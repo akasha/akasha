@@ -31,7 +31,9 @@ public class PrimitiveTypeTest
   private void assertPrimitiveParse( @Nonnull final String idl, @Nonnull final PrimitiveType expected )
     throws IOException
   {
-    final WebIDLParser parser = createParser( idl );
+    // Explicitly supply a variable otherwise we get at EOF looking for
+    // optional "long" which generates a warning
+    final WebIDLParser parser = createParser( idl + " someVar" );
     final PrimitiveType actual = PrimitiveType.parse( parser.primitiveType() );
     assertEquals( actual, expected );
     assertEquals( actual.getName(), idl );
