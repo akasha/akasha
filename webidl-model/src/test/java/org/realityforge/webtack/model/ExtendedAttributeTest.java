@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
+import java.io.StringReader;
 import java.util.Arrays;
 import java.util.List;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -25,6 +27,17 @@ public final class ExtendedAttributeTest
   }
 
   @Test
+  public void NO_ARGS_parse()
+    throws Exception
+  {
+    final WebIDLParser parser =
+      WebIDLModelParser.createParser( new StringReader( "EnforceRange" ), new ModelRepository() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    assertEquals( extendedAttribute.getName(), "EnforceRange" );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
+  }
+
+  @Test
   public void IDENT()
   {
     final String name = randomString();
@@ -39,7 +52,20 @@ public final class ExtendedAttributeTest
   }
 
   @Test
+  public void IDENT_parse()
+    throws Exception
+  {
+    final WebIDLParser parser =
+      WebIDLModelParser.createParser( new StringReader( "LegacyNamespace=WebAssembly" ), new ModelRepository() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    assertEquals( extendedAttribute.getName(), "LegacyNamespace" );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
+    assertEquals( extendedAttribute.getIdent(), "WebAssembly" );
+  }
+
+  @Test
   public void IDENT_LIST()
+    throws Exception
   {
     final String name = randomString();
     final List<String> identList = Arrays.asList( randomString(), randomString() );
@@ -51,5 +77,17 @@ public final class ExtendedAttributeTest
     assertThrows( IllegalStateException.class,
                   "Invoked getIdent() on extended attribute named '" + name + "' but attribute is of kind IDENT_LIST",
                   extendedAttribute::getIdent );
+  }
+
+  @Test
+  public void IDENT_LIST_parse()
+    throws Exception
+  {
+    final WebIDLParser parser =
+      WebIDLModelParser.createParser( new StringReader( "Exposed=(Window,Worker)" ), new ModelRepository() );
+    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    assertEquals( extendedAttribute.getName(), "Exposed" );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
+    assertEquals( extendedAttribute.getIdentList(), Arrays.asList( "Window", "Worker" ) );
   }
 }

@@ -1,9 +1,13 @@
 package org.realityforge.webtack.model;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.antlr.v4.runtime.tree.TerminalNode;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 /**
  * @see <a href="https://heycam.github.io/webidl/#idl-extended-attributes">Extended Attributes Spec</a>
@@ -107,5 +111,49 @@ public final class ExtendedAttribute
     }
     assert null != _identList;
     return _identList;
+  }
+
+  @Nonnull
+  public static ExtendedAttribute parse( @Nonnull final WebIDLParser.ExtendedAttributeContext ctx )
+  {
+    final WebIDLParser.ExtendedAttributeNoArgsContext noArgsContext = ctx.extendedAttributeNoArgs();
+    if ( null != noArgsContext )
+    {
+      return ExtendedAttribute.createExtendedAttributeNoArgs( noArgsContext.IDENTIFIER().getText() );
+    }
+    final WebIDLParser.ExtendedAttributeIdentContext identContext = ctx.extendedAttributeIdent();
+    if ( null != identContext )
+    {
+      return ExtendedAttribute.createExtendedAttributeIdent( identContext.IDENTIFIER( 0 ).getText(),
+                                                             identContext.IDENTIFIER( 1 ).getText() );
+    }
+    final WebIDLParser.ExtendedAttributeIdentListContext identListContext = ctx.extendedAttributeIdentList();
+    if ( null != identListContext )
+    {
+      final List<String> identifiers = new ArrayList<>();
+      collectIdentifiers( identifiers, identListContext.identifierList() );
+      return ExtendedAttribute.createExtendedAttributeIdentList( identListContext.IDENTIFIER().getText(),
+                                                                 Collections.unmodifiableList( identifiers ) );
+    }
+    throw new IllegalModelException( "ExtendedAttribute does not yet model extendedAttributeArgList " +
+                                     "or extendedAttributeNamedArgList" );
+  }
+
+  private static void collectIdentifiers( @Nonnull final List<String> identifiers,
+                                          @Nonnull final WebIDLParser.IdentifierListContext identifierListContext )
+  {
+    identifiers.add( identifierListContext.IDENTIFIER().getText() );
+    collectIdentifiers( identifiers, identifierListContext.identifiers() );
+  }
+
+  private static void collectIdentifiers( @Nonnull final List<String> identifiers,
+                                          @Nonnull final WebIDLParser.IdentifiersContext identifiersContext )
+  {
+    final TerminalNode identifier = identifiersContext.IDENTIFIER();
+    if ( null != identifier )
+    {
+      identifiers.add( identifier.getText() );
+      collectIdentifiers( identifiers, identifiersContext.identifiers() );
+    }
   }
 }
