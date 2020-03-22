@@ -41,7 +41,7 @@ public final class InterfaceModel
   {
     if ( _inheritsSet )
     {
-      if ( Objects.equals( inherits, _inherits ) )
+      if ( !Objects.equals( inherits, _inherits ) )
       {
         throw new IllegalModelException( "Attempting to set inherits for interface named '" + _name + "' to '" +
                                          inherits + "' but it has already been set to '" + _inherits + "'" );
