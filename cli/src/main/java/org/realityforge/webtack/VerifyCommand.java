@@ -97,11 +97,6 @@ final class VerifyCommand
 
         parser.webIDL();
 
-        //for ( final InterfaceModel interfaceModel : repository.getInterfaces() )
-        //{
-        //  System.out.println( "Found interfaceModel " + interfaceModel.getName() );
-        //}
-
         final int errorCount = errorListener.getErrorCount();
         if ( 0 == errorCount )
         {

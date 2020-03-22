@@ -25,6 +25,7 @@ define 'webtack' do
 
     antlr_generated_dir =
       compile_antlr(_('src/main/antlr/WebIDL.g4'),
+                    :listener => false,
                     :package => 'org.realityforge.webtack.webidl.parser')
     compile.from antlr_generated_dir
 

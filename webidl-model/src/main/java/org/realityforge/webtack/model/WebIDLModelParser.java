@@ -18,7 +18,6 @@ public final class WebIDLModelParser
   {
     final WebIDLParser parser = WebIDLParserTool.createParser( reader );
     parser.setBuildParseTree( true );
-    parser.addParseListener( new ModelBuilderListener( repository ) );
     return parser;
   }
 }
