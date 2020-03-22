@@ -90,4 +90,32 @@ public final class ExtendedAttributeTest
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
     assertEquals( extendedAttribute.getIdentList(), Arrays.asList( "Window", "Worker" ) );
   }
+
+  @Test
+  public void parseExtendedAttributesList()
+    throws Exception
+  {
+    final WebIDLParser parser =
+      WebIDLModelParser.createParser( new StringReader(
+        "[NoInterfaceObject, LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]" ), new ModelRepository() );
+    final List<ExtendedAttribute> extendedAttributes = ExtendedAttribute.parse( parser.extendedAttributeList() );
+    assertEquals( extendedAttributes.size(), 3 );
+    {
+      final ExtendedAttribute extendedAttribute = extendedAttributes.get( 0 );
+      assertEquals( extendedAttribute.getName(), "NoInterfaceObject" );
+      assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
+    }
+    {
+      final ExtendedAttribute extendedAttribute = extendedAttributes.get( 1 );
+      assertEquals( extendedAttribute.getName(), "LegacyNamespace" );
+      assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
+      assertEquals( extendedAttribute.getIdent(), "WebAssembly" );
+    }
+    {
+      final ExtendedAttribute extendedAttribute = extendedAttributes.get( 2 );
+      assertEquals( extendedAttribute.getName(), "Exposed" );
+      assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
+      assertEquals( extendedAttribute.getIdentList(), Arrays.asList( "Window", "Worker", "Worklet" ) );
+    }
+  }
 }
