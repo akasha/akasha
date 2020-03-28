@@ -5,7 +5,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public final class StringType
-  extends Type
+  extends NullableType
 {
   @Nonnull
   public static final StringType BYTE_STRING = new StringType( "ByteString" );

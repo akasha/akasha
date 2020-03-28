@@ -5,7 +5,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public final class BufferRelatedType
-  extends Type
+  extends NullableType
 {
   @Nonnull
   public static final BufferRelatedType ARRAY_BUFFER = new BufferRelatedType( "ArrayBuffer" );

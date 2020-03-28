@@ -6,7 +6,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public final class PrimitiveType
-  extends Type
+  extends NullableType
 {
   @Nonnull
   public static final PrimitiveType BOOLEAN = new PrimitiveType( "boolean" );
