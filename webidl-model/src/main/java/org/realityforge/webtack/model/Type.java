@@ -6,16 +6,23 @@ import javax.annotation.Nonnull;
 public abstract class Type
 {
   @Nonnull
-  private final String _name;
+  private final String _typeName;
+  private final boolean _nullable;
 
-  protected Type( @Nonnull final String name )
+  protected Type( @Nonnull final String typeName, final boolean nullable )
   {
-    _name = Objects.requireNonNull( name );
+    _typeName = Objects.requireNonNull( typeName );
+    _nullable = nullable;
   }
 
   @Nonnull
-  public String getName()
+  public String getTypeName()
   {
-    return _name;
+    return _typeName;
+  }
+
+  public boolean isNullable()
+  {
+    return _nullable;
   }
 }
