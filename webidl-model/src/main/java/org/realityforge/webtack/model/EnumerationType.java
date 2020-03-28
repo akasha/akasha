@@ -5,8 +5,8 @@ import javax.annotation.Nonnull;
 public final class EnumerationType
   extends Type
 {
-  EnumerationType( @Nonnull final String enumerationName, final boolean nullable )
+  EnumerationType( @Nonnull final String enumerationName, final int flags )
   {
-    super( enumerationName, nullable );
+    super( enumerationName, Flags.ENUMERATION | flags );
   }
 }
