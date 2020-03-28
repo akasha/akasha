@@ -35,7 +35,7 @@ public class DistinguishableType
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx )
+  private static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx )
   {
     final WebIDLParser.TypeContext type = ctx.returnType().type();
     if ( null != type )
@@ -50,7 +50,7 @@ public class DistinguishableType
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.DistinguishableTypeContext ctx )
+  private static Type parse( @Nonnull final WebIDLParser.DistinguishableTypeContext ctx )
   {
     final boolean nullable = 1 == ctx.nullModifier().getChildCount();
 
@@ -94,7 +94,7 @@ public class DistinguishableType
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx, final boolean nullable )
+  private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx, final boolean nullable )
   {
 
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
@@ -147,7 +147,7 @@ public class DistinguishableType
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx, final boolean nullable )
+  private static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx, final boolean nullable )
   {
     final WebIDLParser.UnsignedIntegerTypeContext unsignedIntegerType = ctx.unsignedIntegerType();
     if ( null != unsignedIntegerType )
@@ -246,7 +246,7 @@ public class DistinguishableType
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx, final boolean nullable )
+  private static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx, final boolean nullable )
   {
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
