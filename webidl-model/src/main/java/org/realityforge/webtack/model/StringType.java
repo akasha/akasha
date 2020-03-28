@@ -17,7 +17,6 @@ public final class StringType
   @Nonnull
   public static StringType parse( @Nonnull final WebIDLParser.StringTypeContext ctx )
   {
-
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
     if ( BYTE_STRING.getName().equals( literalName ) )
