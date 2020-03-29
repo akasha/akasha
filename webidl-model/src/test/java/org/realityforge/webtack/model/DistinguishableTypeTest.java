@@ -80,6 +80,6 @@ public class DistinguishableTypeTest
   private Type parseType( @Nonnull final String webIDL )
     throws IOException
   {
-    return DistinguishableType.parse( createParser( webIDL ).singleType() );
+    return DistinguishableType.parse( createParser( webIDL ).type() );
   }
 }
