@@ -68,6 +68,8 @@ public class DistinguishableTypeTest
     assertType( ensureSequenceType( "sequence<long long>" ).getItemType(), Kind.LongLong, false );
     assertType( ensureSequenceType( "sequence<long long?>" ).getItemType(), Kind.LongLong, true );
     assertType( ensureSequenceType( "sequence<XRSessionMode>" ).getItemType(), Kind.Enumeration, false );
+
+    //TODO: Test all the types with extended attributes where possible
   }
 
   private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
