@@ -8,6 +8,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
+@SuppressWarnings( "DuplicatedCode" )
 public final class DistinguishableType
 {
   @Nonnull
