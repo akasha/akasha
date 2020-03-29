@@ -1,5 +1,8 @@
 package org.realityforge.webtack.model;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 import javax.annotation.Nonnull;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -7,6 +10,33 @@ import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public class DistinguishableType
 {
+  @Nonnull
+  private static final Map<String, Kind> STRING_KIND_MAP = Collections.unmodifiableMap( new HashMap<String, Kind>()
+  {
+    {
+      put( "DOMString", Kind.DOMString );
+      put( "ByteString", Kind.ByteString );
+      put( "USVString", Kind.USVString );
+    }
+  } );
+  @Nonnull
+  private static final Map<String, Kind> BUFFER_KIND_MAP = Collections.unmodifiableMap( new HashMap<String, Kind>()
+  {
+    {
+      put( "ArrayBuffer", Kind.ArrayBuffer );
+      put( "DataView", Kind.DataView );
+      put( "Int8Array", Kind.Int8Array );
+      put( "Int16Array", Kind.Int16Array );
+      put( "Int32Array", Kind.Int32Array );
+      put( "Uint8Array", Kind.Uint8Array );
+      put( "Uint16Array", Kind.Uint16Array );
+      put( "Uint32Array", Kind.Uint32Array );
+      put( "Uint8ClampedArray", Kind.Uint8ClampedArray );
+      put( "Float32Array", Kind.Float32Array );
+      put( "Float64Array", Kind.Float64Array );
+    }
+  } );
+
   @Nonnull
   public static Type parse( @Nonnull final WebIDLParser.TypeContext ctx )
   {
@@ -24,7 +54,7 @@ public class DistinguishableType
     else if ( ctx.getChild( 0 ) instanceof TerminalNode )
     {
       assert ctx.getChild( 0 ).getText().equals( "any" );
-      return Type.ANY;
+      return new Type( Kind.Any );
     }
     else
     {
@@ -38,36 +68,28 @@ public class DistinguishableType
   private static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx )
   {
     final WebIDLParser.TypeContext type = ctx.returnType().type();
-    if ( null != type )
-    {
-      final Type resolveType = parse( type );
-      return new PromiseType( "promise", resolveType );
-    }
-    else
-    {
-      return new PromiseType( "promise", null );
-    }
+    return new PromiseType( null != type ? parse( type ) : new Type( Kind.Void ) );
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.DistinguishableTypeContext ctx )
   {
-    final boolean nullable = 1 == ctx.nullModifier().getChildCount();
+    final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Type.Flags.NULLABLE : 0;
 
     final WebIDLParser.PrimitiveTypeContext primitiveTypeContext = ctx.primitiveType();
     if ( null != primitiveTypeContext )
     {
-      return parse( primitiveTypeContext, nullable );
+      return parse( primitiveTypeContext, additionalFlags );
     }
     final WebIDLParser.StringTypeContext stringTypeContext = ctx.stringType();
     if ( null != stringTypeContext )
     {
-      return parse( stringTypeContext, nullable );
+      return parse( stringTypeContext, additionalFlags );
     }
     final TerminalNode identifier = ctx.IDENTIFIER();
     if ( null != identifier )
     {
-      return new EnumerationType( identifier.getText(), nullable ? Type.Flags.NULLABLE : 0 );
+      return new EnumerationType( identifier.getText(), additionalFlags );
     }
     final ParseTree child1 = ctx.getChild( 0 );
     if ( child1 instanceof TerminalNode )
@@ -76,78 +98,36 @@ public class DistinguishableType
       //  | 'sequence' '<' typeWithExtendedAttributes '>' nullModifier
       if ( "object".equals( text ) )
       {
-        return nullable ? Type.NULLABLE_OBJECT : Type.OBJECT;
+        return new Type( Kind.Object, additionalFlags );
       }
       else if ( "symbol".equals( text ) )
       {
-        return nullable ? Type.NULLABLE_SYMBOL : Type.SYMBOL;
+        return new Type( Kind.Symbol, additionalFlags );
       }
       //  | 'FrozenArray' '<' typeWithExtendedAttributes '>' nullModifier
     }
     final WebIDLParser.BufferRelatedTypeContext bufferRelatedTypeContext = ctx.bufferRelatedType();
     if ( null != bufferRelatedTypeContext )
     {
-      return parse( bufferRelatedTypeContext, nullable );
+      return parse( bufferRelatedTypeContext, additionalFlags );
     }
     //  | recordType nullModifier
     throw new UnsupportedOperationException();
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx, final boolean nullable )
+  private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx, final int additionalFlags )
   {
-
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
-    if ( Type.ARRAY_BUFFER.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_ARRAY_BUFFER : Type.ARRAY_BUFFER;
-    }
-    else if ( Type.DATA_VIEW.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_DATA_VIEW : Type.DATA_VIEW;
-    }
-    else if ( Type.INT8_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_INT8_ARRAY : Type.INT8_ARRAY;
-    }
-    else if ( Type.INT16_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_INT16_ARRAY : Type.INT16_ARRAY;
-    }
-    else if ( Type.INT32_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_INT32_ARRAY : Type.INT32_ARRAY;
-    }
-    else if ( Type.UINT8_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_UINT8_ARRAY : Type.UINT8_ARRAY;
-    }
-    else if ( Type.UINT16_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_UINT16_ARRAY : Type.UINT16_ARRAY;
-    }
-    else if ( Type.UINT32_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_UINT32_ARRAY : Type.UINT32_ARRAY;
-    }
-    else if ( Type.UINT8_CLAMPED_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_UINT8_CLAMPED_ARRAY : Type.UINT8_CLAMPED_ARRAY;
-    }
-    else if ( Type.FLOAT32_ARRAY.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_FLOAT32_ARRAY : Type.FLOAT32_ARRAY;
-    }
-    else
-    {
-      assert Type.FLOAT64_ARRAY.getTypeName().equals( literalName );
-      return nullable ? Type.NULLABLE_FLOAT64_ARRAY : Type.FLOAT64_ARRAY;
-    }
+    assert null != literalName;
+    final Kind kind = BUFFER_KIND_MAP.get( literalName );
+    assert null != kind;
+    return new Type( kind, additionalFlags );
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx, final boolean nullable )
+  private static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx, final int additionalFlags )
   {
     final WebIDLParser.UnsignedIntegerTypeContext unsignedIntegerType = ctx.unsignedIntegerType();
     if ( null != unsignedIntegerType )
@@ -161,39 +141,18 @@ public class DistinguishableType
         final WebIDLParser.OptionalLongContext optionalLongContext = integerTypeContext.optionalLong();
         if ( 0 == optionalLongContext.getChildCount() )
         {
-          if ( unsigned )
-          {
-            return nullable ? Type.NULLABLE_UNSIGNED_LONG : Type.UNSIGNED_LONG;
-          }
-          else
-          {
-            return nullable ? Type.NULLABLE_LONG : Type.LONG;
-          }
+          return new Type( unsigned ? Kind.UnsignedLong : Kind.Long, additionalFlags );
         }
         else
         {
           assert optionalLongContext.getChild( 0 ).getText().equals( "long" );
-          if ( unsigned )
-          {
-            return nullable ? Type.NULLABLE_UNSIGNED_LONG_LONG : Type.UNSIGNED_LONG_LONG;
-          }
-          else
-          {
-            return nullable ? Type.NULLABLE_LONG_LONG : Type.LONG_LONG;
-          }
+          return new Type( unsigned ? Kind.UnsignedLongLong : Kind.LongLong, additionalFlags );
         }
       }
       else
       {
         assert integerTypeContext.getChild( 0 ).getText().equals( "short" );
-        if ( unsigned )
-        {
-          return nullable ? Type.NULLABLE_UNSIGNED_SHORT : Type.UNSIGNED_SHORT;
-        }
-        else
-        {
-          return nullable ? Type.NULLABLE_SHORT : Type.SHORT;
-        }
+        return new Type( unsigned ? Kind.UnsignedShort : Kind.Short, additionalFlags );
       }
     }
     final WebIDLParser.UnrestrictedFloatTypeContext unrestrictedFloatType = ctx.unrestrictedFloatType();
@@ -205,63 +164,40 @@ public class DistinguishableType
 
       if ( unrestrictedFloatType.floatType().getChild( 0 ).getText().equals( "float" ) )
       {
-        if ( unrestricted )
-        {
-          return nullable ? Type.NULLABLE_UNRESTRICTED_FLOAT : Type.UNRESTRICTED_FLOAT;
-        }
-        else
-        {
-          return nullable ? Type.NULLABLE_FLOAT : Type.FLOAT;
-        }
+        return new Type( unrestricted ? Kind.UnrestrictedFloat : Kind.Float, additionalFlags );
       }
       else
       {
         assert unrestrictedFloatType.floatType().getChild( 0 ).getText().equals( "double" );
-        if ( unrestricted )
-        {
-          return nullable ? Type.NULLABLE_UNRESTRICTED_DOUBLE : Type.UNRESTRICTED_DOUBLE;
-        }
-        else
-        {
-          return nullable ? Type.NULLABLE_DOUBLE : Type.DOUBLE;
-        }
+        return new Type( unrestricted ? Kind.UnrestrictedDouble : Kind.Double, additionalFlags );
       }
     }
 
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
-    if ( Type.BOOLEAN.getTypeName().equals( literalName ) )
+    if ( "boolean".equals( literalName ) )
     {
-      return nullable ? Type.NULLABLE_BOOLEAN : Type.BOOLEAN;
+      return new Type( Kind.Boolean, additionalFlags );
     }
-    else if ( Type.BYTE.getTypeName().equals( literalName ) )
+    else if ( "byte".equals( literalName ) )
     {
-      return nullable ? Type.NULLABLE_BYTE : Type.BYTE;
+      return new Type( Kind.Byte, additionalFlags );
     }
     else
     {
-      assert Type.OCTET.getTypeName().equals( literalName );
-      return nullable ? Type.NULLABLE_OCTET : Type.OCTET;
+      assert "octet".equals( literalName );
+      return new Type( Kind.Octet, additionalFlags );
     }
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx, final boolean nullable )
+  private static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx, final int additionalFlags )
   {
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
-    if ( Type.BYTE_STRING.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_BYTE_STRING : Type.BYTE_STRING;
-    }
-    else if ( Type.DOM_STRING.getTypeName().equals( literalName ) )
-    {
-      return nullable ? Type.NULLABLE_DOM_STRING : Type.DOM_STRING;
-    }
-    else
-    {
-      assert Type.USV_STRING.getTypeName().equals( literalName );
-      return nullable ? Type.NULLABLE_USV_STRING : Type.USV_STRING;
-    }
+    assert null != literalName;
+    final Kind kind = STRING_KIND_MAP.get( literalName );
+    assert null != kind;
+    return new Type( kind, additionalFlags );
   }
 }

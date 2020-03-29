@@ -9,7 +9,7 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-any">Any</a>
    */
-  Any,
+  Any( Flags.NULLABLE_DISALLOWED ),
   /**
    * The void type has a unique value.
    * It can only be used as the return type of an operation or the parameter of a promise type.
@@ -22,97 +22,97 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-boolean">Boolean</a>
    */
-  Boolean,
+  Boolean( Flags.PRIMITIVE ),
   /**
    * The byte type is a signed integer type that has values in the range [−128, 127].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-byte">Byte</a>
    */
-  Byte,
+  Byte( Flags.PRIMITIVE ),
   /**
    * The octet type is an unsigned integer type that has values in the range [0, 255].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-octet">Octet</a>
    */
-  Octet,
+  Octet( Flags.PRIMITIVE ),
   /**
    * The short type is a signed integer type that has values in the range [−32768, 32767].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-short">Short</a>
    */
-  Short,
+  Short( Flags.PRIMITIVE | Flags.INTEGER ),
   /**
    * The unsigned short type is an unsigned integer type that has values in the range [0, 65535].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unsigned-short">UnsignedShort</a>
    */
-  UnsignedShort,
+  UnsignedShort( Flags.PRIMITIVE | Flags.INTEGER ),
   /**
    * The long type is a signed integer type that has values in the range [−2147483648, 2147483647].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unsigned-long">Long</a>
    */
-  Long,
+  Long( Flags.PRIMITIVE | Flags.INTEGER ),
   /**
    * The unsigned long type is an unsigned integer type that has values in the range [0, 4294967295].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unsigned-long">UnsignedLong</a>
    */
-  UnsignedLong,
+  UnsignedLong( Flags.PRIMITIVE | Flags.INTEGER ),
   /**
    * The long long type is a signed integer type that has values in the range [−9223372036854775808, 9223372036854775807].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unsigned-long-long">LongLong</a>
    */
-  LongLong,
+  LongLong( Flags.PRIMITIVE | Flags.INTEGER ),
   /**
    * The unsigned long long type is an unsigned integer type that has values in the range [0, 18446744073709551615].
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unsigned-long-long">UnsignedLongLong</a>
    */
-  UnsignedLongLong,
+  UnsignedLongLong( Flags.PRIMITIVE | Flags.INTEGER ),
   /**
    * The float type is a floating point numeric type that corresponds to the set of finite single-precision 32 bit IEEE 754 floating point numbers. [IEEE-754]
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-float">Float</a>
    */
-  Float,
+  Float( Flags.PRIMITIVE | Flags.DECIMAL ),
   /**
    * The float type is a floating point numeric type that corresponds to the set of finite single-precision 32 bit IEEE 754 floating point numbers. [IEEE-754]
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unrestricted-float">UnrestrictedFloat</a>
    */
-  UnrestrictedFloat,
+  UnrestrictedFloat( Flags.PRIMITIVE | Flags.DECIMAL ),
   /**
    * The double type is a floating point numeric type that corresponds to the set of finite double-precision 64 bit IEEE 754 floating point numbers. [IEEE-754]
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-double">Double</a>
    */
-  Double,
+  Double( Flags.PRIMITIVE | Flags.DECIMAL ),
   /**
    * The unrestricted double type is a floating point numeric type that corresponds to the set of all possible double-precision 64 bit IEEE 754 floating point numbers, finite, non-finite, and special "not a number" values (NaNs). [IEEE-754]
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-unrestricted-double">UnrestrictedDouble</a>
    */
-  UnrestrictedDouble,
+  UnrestrictedDouble( Flags.PRIMITIVE | Flags.DECIMAL ),
   /**
    * The DOMString type corresponds to the set of all possible sequences of code units.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-DOMString">DOMString</a>
    */
-  DOMString( "String" ),
+  DOMString( "String", Flags.STRING ),
   /**
    * The ByteString type corresponds to the set of all possible sequences of bytes.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-ByteString">ByteString</a>
    */
-  ByteString,
+  ByteString( Flags.STRING ),
   /**
    * The USVString type corresponds to the set of all possible sequences of Unicode scalar values, which are all of the Unicode code points apart from the surrogate code points.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-USVString">USVString</a>
    */
-  USVString,
+  USVString( Flags.STRING ),
   /**
    * The object type corresponds to the set of all possible non-null object references.
    *
@@ -172,7 +172,7 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-promise">Promise types — Promise&lt;T&gt;</a>
    */
-  Promise( null ),
+  Promise( null, Flags.NULLABLE_DISALLOWED ),
   /**
    * A union type is a type whose set of values is the union of those in two or more other types.
    *
@@ -184,67 +184,67 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-ArrayBuffer">ArrayBuffer</a>
    */
-  ArrayBuffer,
+  ArrayBuffer( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that allows typed access to integers and floating point values stored at arbitrary offsets into the buffer.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-DataView">DataView</a>
    */
-  DataView,
+  DataView( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of two’s complement 8-bit signed integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Int8Array">Int8Array</a>
    */
-  Int8Array,
+  Int8Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of two’s complement 16-bit signed integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Int16Array">Int16Array</a>
    */
-  Int16Array,
+  Int16Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of two’s complement 32-bit signed integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Int32Array">Int32Array</a>
    */
-  Int32Array,
+  Int32Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of two’s complement 8-bit unsigned integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Uint8Array">Uint8Array</a>
    */
-  Uint8Array,
+  Uint8Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of two’s complement 16-bit unsigned integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Uint16Array">Uint16Array</a>
    */
-  Uint16Array,
+  Uint16Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of two’s complement 32-bit unsigned integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Uint32Array">Uint32Array</a>
    */
-  Uint32Array,
+  Uint32Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of unsigned 8 bit integers with clamped conversions.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Uint8ClampedArray">Uint8ClampedArray</a>
    */
-  Uint8ClampedArray,
+  Uint8ClampedArray( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of IEEE 754 32-bit floating point numbers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Float32Array">Float32Array</a>
    */
-  Float32Array,
+  Float32Array( Flags.BUFFER_RELATED ),
   /**
    * A view on to an ArrayBuffer that exposes it as an array of IEEE 754 64-bit floating point numbers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Float64Array">Float64Array</a>
    */
-  Float64Array,
+  Float64Array( Flags.BUFFER_RELATED ),
   /**
    * A frozen array type is a parameterized type whose values are references to objects that hold a fixed length array of unmodifiable values.
    *
@@ -253,14 +253,71 @@ public enum Kind
   FrozenArray( null );
   @Nullable
   private final String _typeName;
+  private final int _flags;
 
   Kind()
   {
+    this( 0 );
+  }
+
+  Kind( final int flags )
+  {
     _typeName = name();
+    _flags = flags;
   }
 
   Kind( @Nullable final String typeName )
   {
+    this( typeName, 0 );
+  }
+
+  Kind( @Nullable final String typeName, final int flags )
+  {
     _typeName = typeName;
+    _flags = flags;
+  }
+
+  public boolean isPrimitive()
+  {
+    return Flags.PRIMITIVE == ( Flags.PRIMITIVE & _flags );
+  }
+
+  public boolean isInteger()
+  {
+    return Flags.INTEGER == ( Flags.INTEGER & _flags );
+  }
+
+  public boolean isDecimal()
+  {
+    return Flags.DECIMAL == ( Flags.DECIMAL & _flags );
+  }
+
+  public boolean isString()
+  {
+    return Flags.STRING == ( Flags.STRING & _flags );
+  }
+
+  public boolean isBufferRelated()
+  {
+    return Flags.BUFFER_RELATED == ( Flags.BUFFER_RELATED & _flags );
+  }
+
+  public boolean isNullableAllowed()
+  {
+    return 0 == ( Flags.NULLABLE_DISALLOWED & _flags );
+  }
+
+  public static final class Flags
+  {
+    private Flags()
+    {
+    }
+
+    public static final int PRIMITIVE = 1 << 1;
+    public static final int INTEGER = 1 << 2;
+    public static final int DECIMAL = 1 << 3;
+    public static final int STRING = 1 << 4;
+    public static final int BUFFER_RELATED = 1 << 5;
+    public static final int NULLABLE_DISALLOWED = 1 << 6;
   }
 }

@@ -1,21 +1,21 @@
 package org.realityforge.webtack.model;
 
+import java.util.Objects;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public final class PromiseType
   extends Type
 {
-  @Nullable
+  @Nonnull
   private final Type _resolveType;
 
-  PromiseType( @Nonnull final String enumerationName, @Nullable final Type resolveType )
+  PromiseType( @Nonnull final Type resolveType )
   {
-    super( enumerationName, Flags.PROMISE );
-    _resolveType = resolveType;
+    super( Kind.Promise );
+    _resolveType = Objects.requireNonNull( resolveType );
   }
 
-  @Nullable
+  @Nonnull
   public Type getResolveType()
   {
     return _resolveType;
