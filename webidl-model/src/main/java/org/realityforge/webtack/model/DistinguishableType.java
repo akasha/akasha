@@ -40,11 +40,28 @@ public final class DistinguishableType
   @Nonnull
   public static Type parse( @Nonnull final WebIDLParser.TypeContext ctx )
   {
+    final WebIDLParser.SingleTypeContext singleTypeContext = ctx.singleType();
+    if ( null != singleTypeContext )
+    {
+      return parse( singleTypeContext );
+    }
+    else
+    {
+      final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Type.Flags.NULLABLE : 0;
+      final WebIDLParser.UnionTypeContext unionTypeContext = ctx.unionType();
+      assert null != unionTypeContext;
+      return parse( unionTypeContext, additionalFlags );
+    }
+  }
+
+  @Nonnull
+  private  static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx, final int additionalFlags )
+  {
     throw new UnsupportedOperationException();
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.SingleTypeContext ctx )
+  private static Type parse( @Nonnull final WebIDLParser.SingleTypeContext ctx )
   {
     final WebIDLParser.DistinguishableTypeContext distinguishableTypeContext = ctx.distinguishableType();
     if ( null != distinguishableTypeContext )
