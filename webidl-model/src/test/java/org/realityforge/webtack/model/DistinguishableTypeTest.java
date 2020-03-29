@@ -12,6 +12,7 @@ public class DistinguishableTypeTest
   public void parse()
     throws Exception
   {
+    // primitives
     assertParse( "boolean", Kind.Boolean, true );
     assertParse( "byte", Kind.Byte, true );
     assertParse( "octet", Kind.Octet, true );
@@ -26,6 +27,7 @@ public class DistinguishableTypeTest
     assertParse( "unsigned long", Kind.UnsignedLong, true );
     assertParse( "unsigned long long", Kind.UnsignedLongLong, true );
 
+    // buffer types
     assertParse( "ArrayBuffer", Kind.ArrayBuffer, true );
     assertParse( "DataView", Kind.DataView, true );
     assertParse( "Int8Array", Kind.Int8Array, true );
@@ -38,6 +40,7 @@ public class DistinguishableTypeTest
     assertParse( "Float32Array", Kind.Float32Array, true );
     assertParse( "Float64Array", Kind.Float64Array, true );
 
+    // strings
     assertParse( "DOMString", Kind.DOMString, true );
     assertParse( "ByteString", Kind.ByteString, true );
     assertParse( "USVString", Kind.USVString, true );
