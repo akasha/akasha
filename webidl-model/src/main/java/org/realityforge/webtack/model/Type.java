@@ -46,6 +46,7 @@ public class Type
     {
     }
 
+    // TODO: If there is only one flag we should just use a boolean
     public static final int NULLABLE = 1 << 5;
   }
 }
