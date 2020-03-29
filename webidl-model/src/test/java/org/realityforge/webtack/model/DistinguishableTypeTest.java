@@ -62,6 +62,12 @@ public class DistinguishableTypeTest
     assertEquals( ensureEnumerationType( "VisibilityState", false ).getEnumerationName(), "VisibilityState" );
     assertEquals( ensureEnumerationType( "XRSessionMode", false ).getEnumerationName(), "XRSessionMode" );
     assertEquals( ensureEnumerationType( "XRSessionInit?", true ).getEnumerationName(), "XRSessionInit" );
+
+    // sequences
+    assertType( ensureSequenceType( "sequence<short>" ).getItemType(), Kind.Short, false );
+    assertType( ensureSequenceType( "sequence<long long>" ).getItemType(), Kind.LongLong, false );
+    assertType( ensureSequenceType( "sequence<long long?>" ).getItemType(), Kind.LongLong, true );
+    assertType( ensureSequenceType( "sequence<XRSessionMode>" ).getItemType(), Kind.Enumeration, false );
   }
 
   private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
@@ -81,6 +87,15 @@ public class DistinguishableTypeTest
     final Type type = ensureType( idl, Kind.Promise, false );
     assertTrue( type instanceof PromiseType );
     return (PromiseType) type;
+  }
+
+  @Nonnull
+  private SequenceType ensureSequenceType( @Nonnull final String idl )
+    throws IOException
+  {
+    final Type type = ensureType( idl, Kind.Sequence, false );
+    assertTrue( type instanceof SequenceType );
+    return (SequenceType) type;
   }
 
   @Nonnull

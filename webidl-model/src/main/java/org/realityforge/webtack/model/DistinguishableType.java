@@ -132,7 +132,11 @@ public final class DistinguishableType
     if ( child1 instanceof TerminalNode )
     {
       final String text = child1.getText();
-      if ( "object".equals( text ) )
+      if ( "sequence".equals( text ) )
+      {
+        return new SequenceType( extendedAttributes, parse( ctx.typeWithExtendedAttributes() ), additionalFlags );
+      }
+      else if ( "object".equals( text ) )
       {
         return new Type( Kind.Object, extendedAttributes, additionalFlags );
       }
