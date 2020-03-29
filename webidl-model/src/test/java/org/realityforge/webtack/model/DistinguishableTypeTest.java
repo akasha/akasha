@@ -110,6 +110,7 @@ public class DistinguishableTypeTest
     assertEquals( type.isNullable(), isNullable );
   }
 
+  @Nonnull
   private Type parseType( @Nonnull final String webIDL )
     throws IOException
   {
