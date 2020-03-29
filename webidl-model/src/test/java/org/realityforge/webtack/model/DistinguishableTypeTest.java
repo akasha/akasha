@@ -50,21 +50,31 @@ public class DistinguishableTypeTest
     assertParse( "USVString", Kind.USVString, true );
   }
 
-  private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean nullable )
+  private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
     throws IOException
   {
+    // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
+    final String suffix = " someVar";
+    ensureType( idl + suffix, expected, false );
+    if ( supportsNullable )
     {
-      // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
-      final Type actual = parseType( idl + " someVar" );
-      assertEquals( actual.getKind(), expected );
-      assertFalse( actual.isNullable() );
+      ensureType( idl + "?" + suffix, expected, true );
     }
-    if ( nullable )
-    {
-      final Type actual = parseType( idl + "? someVar" );
-      assertEquals( actual.getKind(), expected );
-      assertTrue( actual.isNullable() );
-    }
+  }
+
+  @Nonnull
+  private Type ensureType( @Nonnull final String webIDL, @Nonnull final Kind kind, final boolean isNullable )
+    throws IOException
+  {
+    final Type actual = parseType( webIDL );
+    assertType( actual, kind, isNullable );
+    return actual;
+  }
+
+  private void assertType( @Nonnull final Type type, @Nonnull final Kind kind, final boolean isNullable )
+  {
+    assertEquals( type.getKind(), kind );
+    assertEquals( type.isNullable(), isNullable );
   }
 
   private Type parseType( @Nonnull final String webIDL )
