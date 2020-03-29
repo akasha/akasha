@@ -134,7 +134,7 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
-  public static ExtendedAttribute parse( @Nonnull final WebIDLParser.ExtendedAttributeContext ctx )
+  static ExtendedAttribute parse( @Nonnull final WebIDLParser.ExtendedAttributeContext ctx )
   {
     final WebIDLParser.ExtendedAttributeNoArgsContext noArgsContext = ctx.extendedAttributeNoArgs();
     if ( null != noArgsContext )
