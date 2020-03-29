@@ -68,12 +68,10 @@ public class DistinguishableTypeTest
   private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
     throws IOException
   {
-    // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
-    final String suffix = " someVar";
-    ensureType( idl + suffix, expected, false );
+    ensureType( idl, expected, false );
     if ( supportsNullable )
     {
-      ensureType( idl + "?" + suffix, expected, true );
+      ensureType( idl, expected, true );
     }
   }
 
@@ -99,7 +97,8 @@ public class DistinguishableTypeTest
   private Type ensureType( @Nonnull final String webIDL, @Nonnull final Kind kind, final boolean isNullable )
     throws IOException
   {
-    final Type actual = parseType( webIDL );
+    // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
+    final Type actual = parseType( webIDL + ( isNullable ? "? " : "" ) + " someVar" );
     assertType( actual, kind, isNullable );
     return actual;
   }
