@@ -19,6 +19,7 @@ public class Type
     _flags = flags;
     assert _kind.isNullableAllowed() || !isNullable();
     assert ( Kind.Sequence == _kind ) == ( this instanceof SequenceType );
+    assert ( Kind.FrozenArray == _kind ) == ( this instanceof FrozenArrayType );
     assert ( Kind.Enumeration == _kind ) == ( this instanceof EnumerationType );
     assert ( Kind.Promise == _kind ) == ( this instanceof PromiseType );
   }

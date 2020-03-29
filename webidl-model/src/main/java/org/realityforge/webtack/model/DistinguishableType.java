@@ -144,7 +144,11 @@ public final class DistinguishableType
       {
         return new Type( Kind.Symbol, extendedAttributes, additionalFlags );
       }
-      //  | 'FrozenArray' '<' typeWithExtendedAttributes '>' nullModifier
+      else
+      {
+        assert "FrozenArray".equals( text );
+        return new FrozenArrayType( extendedAttributes, parse( ctx.typeWithExtendedAttributes() ), additionalFlags );
+      }
     }
     final WebIDLParser.BufferRelatedTypeContext bufferRelatedTypeContext = ctx.bufferRelatedType();
     if ( null != bufferRelatedTypeContext )

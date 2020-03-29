@@ -64,10 +64,14 @@ public class DistinguishableTypeTest
     assertEquals( ensureEnumerationType( "XRSessionInit?", true ).getEnumerationName(), "XRSessionInit" );
 
     // sequences
-    assertType( ensureSequenceType( "sequence<short>" ).getItemType(), Kind.Short, false );
-    assertType( ensureSequenceType( "sequence<long long>" ).getItemType(), Kind.LongLong, false );
-    assertType( ensureSequenceType( "sequence<long long?>" ).getItemType(), Kind.LongLong, true );
-    assertType( ensureSequenceType( "sequence<XRSessionMode>" ).getItemType(), Kind.Enumeration, false );
+    assertType( ensureSequenceType( "sequence<short>", false ).getItemType(), Kind.Short, false );
+    assertType( ensureSequenceType( "sequence<long long>", false ).getItemType(), Kind.LongLong, false );
+    assertType( ensureSequenceType( "sequence<long long?>", false ).getItemType(), Kind.LongLong, true );
+    assertType( ensureSequenceType( "sequence<XRSessionMode>?", true ).getItemType(), Kind.Enumeration, false );
+
+    assertType( ensureFrozenArrayType( "FrozenArray<long>?", true ).getItemType(), Kind.Long, false );
+    assertType( ensureFrozenArrayType( "FrozenArray<long?>?", true ).getItemType(), Kind.Long, true );
+    assertType( ensureFrozenArrayType( "FrozenArray<Promise<DOMString>>", true ).getItemType(), Kind.Promise, false );
 
     //TODO: Test all the types with extended attributes where possible
   }
@@ -92,12 +96,21 @@ public class DistinguishableTypeTest
   }
 
   @Nonnull
-  private SequenceType ensureSequenceType( @Nonnull final String idl )
+  private SequenceType ensureSequenceType( @Nonnull final String idl, final boolean isNullable )
     throws IOException
   {
-    final Type type = ensureType( idl, Kind.Sequence, false );
+    final Type type = ensureType( idl, Kind.Sequence, isNullable );
     assertTrue( type instanceof SequenceType );
     return (SequenceType) type;
+  }
+
+  @Nonnull
+  private FrozenArrayType ensureFrozenArrayType( @Nonnull final String idl, final boolean isNullable )
+    throws IOException
+  {
+    final Type type = ensureType( idl, Kind.FrozenArray, isNullable );
+    assertTrue( type instanceof FrozenArrayType );
+    return (FrozenArrayType) type;
   }
 
   @Nonnull
