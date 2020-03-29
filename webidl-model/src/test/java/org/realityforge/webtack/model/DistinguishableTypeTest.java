@@ -48,6 +48,16 @@ public class DistinguishableTypeTest
     assertParse( "DOMString", Kind.DOMString, true );
     assertParse( "ByteString", Kind.ByteString, true );
     assertParse( "USVString", Kind.USVString, true );
+
+    // promises
+
+    assertType( ensurePromiseType( "Promise<void>" ).getResolveType(), Kind.Void, false );
+    assertType( ensurePromiseType( "Promise<short>" ).getResolveType(), Kind.Short, false );
+    assertType( ensurePromiseType( "Promise<short?>" ).getResolveType(), Kind.Short, true );
+    assertType( ensurePromiseType( "Promise<any>" ).getResolveType(), Kind.Any, false );
+    assertType( ensurePromiseType( "Promise<DOMString>" ).getResolveType(), Kind.DOMString, false );
+    assertType( ensurePromiseType( "Promise<VisibilityState>" ).getResolveType(), Kind.Enumeration, false );
+    assertType( ensurePromiseType( "Promise<XRSessionInit?>" ).getResolveType(), Kind.Enumeration, true );
   }
 
   private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
@@ -60,6 +70,15 @@ public class DistinguishableTypeTest
     {
       ensureType( idl + "?" + suffix, expected, true );
     }
+  }
+
+  @Nonnull
+  private PromiseType ensurePromiseType( @Nonnull final String idl )
+    throws IOException
+  {
+    final Type type = ensureType( idl, Kind.Promise, false );
+    assertTrue( type instanceof PromiseType );
+    return (PromiseType) type;
   }
 
   @Nonnull
