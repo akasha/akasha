@@ -12,6 +12,10 @@ public class DistinguishableTypeTest
   public void parse()
     throws Exception
   {
+    assertParse( "any", Kind.Any, false );
+    assertParse( "object", Kind.Object, true );
+    assertParse( "symbol", Kind.Symbol, true );
+
     // primitives
     assertParse( "boolean", Kind.Boolean, true );
     assertParse( "byte", Kind.Byte, true );
