@@ -73,6 +73,7 @@ public final class DistinguishableType
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx, final int additionalFlags )
   {
+    //TODO: Implement me!
     throw new UnsupportedOperationException();
   }
 
@@ -155,7 +156,7 @@ public final class DistinguishableType
     {
       return parse( bufferRelatedTypeContext, extendedAttributes, additionalFlags );
     }
-    //  | recordType nullModifier
+    //TODO:  | recordType nullModifier
     throw new UnsupportedOperationException();
   }
 
