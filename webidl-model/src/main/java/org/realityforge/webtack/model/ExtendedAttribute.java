@@ -116,7 +116,7 @@ public final class ExtendedAttribute
   @Nonnull
   public static List<ExtendedAttribute> parse( @Nonnull final WebIDLParser.ExtendedAttributeListContext ctx )
   {
-    final ArrayList<ExtendedAttribute> attributes = new ArrayList<>();
+    final List<ExtendedAttribute> attributes = new ArrayList<>();
     attributes.add( parse( ctx.extendedAttribute() ) );
     collectAttributes( attributes, ctx.extendedAttributes() );
     return attributes;
