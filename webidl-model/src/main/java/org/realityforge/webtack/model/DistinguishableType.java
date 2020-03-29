@@ -2,6 +2,7 @@ package org.realityforge.webtack.model;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.Nonnull;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -39,12 +40,26 @@ public final class DistinguishableType
   } );
 
   @Nonnull
+  public static Type parse( @Nonnull final WebIDLParser.TypeWithExtendedAttributesContext ctx )
+  {
+    final WebIDLParser.ExtendedAttributeListContext extendedAttributeListContext = ctx.extendedAttributeList();
+    return parse( ctx.type(), ExtendedAttribute.parse( extendedAttributeListContext ) );
+  }
+
+  @Nonnull
   public static Type parse( @Nonnull final WebIDLParser.TypeContext ctx )
+  {
+    return parse( ctx, Collections.emptyList() );
+  }
+
+  @Nonnull
+  private static Type parse( @Nonnull final WebIDLParser.TypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.SingleTypeContext singleTypeContext = ctx.singleType();
     if ( null != singleTypeContext )
     {
-      return parse( singleTypeContext );
+      return parse( singleTypeContext, extendedAttributes );
     }
     else
     {
@@ -56,96 +71,103 @@ public final class DistinguishableType
   }
 
   @Nonnull
-  private  static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx, final int additionalFlags )
+  private static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx, final int additionalFlags )
   {
     throw new UnsupportedOperationException();
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.SingleTypeContext ctx )
+  private static Type parse( @Nonnull final WebIDLParser.SingleTypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.DistinguishableTypeContext distinguishableTypeContext = ctx.distinguishableType();
     if ( null != distinguishableTypeContext )
     {
-      return parse( distinguishableTypeContext );
+      return parse( distinguishableTypeContext, extendedAttributes );
     }
     else if ( ctx.getChild( 0 ) instanceof TerminalNode )
     {
       assert ctx.getChild( 0 ).getText().equals( "any" );
-      return new Type( Kind.Any );
+      return new Type( Kind.Any, extendedAttributes, 0 );
     }
     else
     {
       final WebIDLParser.PromiseTypeContext promiseTypeContext = ctx.promiseType();
       assert null != promiseTypeContext;
-      return parse( promiseTypeContext );
+      return parse( promiseTypeContext, extendedAttributes );
     }
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx )
+  private static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.TypeContext type = ctx.returnType().type();
-    return new PromiseType( null != type ? parse( type ) : new Type( Kind.Void ) );
+    return new PromiseType( extendedAttributes,
+                            null != type ? parse( type ) : new Type( Kind.Void, Collections.emptyList(), 0 ) );
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.DistinguishableTypeContext ctx )
+  private static Type parse( @Nonnull final WebIDLParser.DistinguishableTypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Type.Flags.NULLABLE : 0;
 
     final WebIDLParser.PrimitiveTypeContext primitiveTypeContext = ctx.primitiveType();
     if ( null != primitiveTypeContext )
     {
-      return parse( primitiveTypeContext, additionalFlags );
+      return parse( primitiveTypeContext, extendedAttributes, additionalFlags );
     }
     final WebIDLParser.StringTypeContext stringTypeContext = ctx.stringType();
     if ( null != stringTypeContext )
     {
-      return parse( stringTypeContext, additionalFlags );
+      return parse( stringTypeContext, extendedAttributes, additionalFlags );
     }
     final TerminalNode identifier = ctx.IDENTIFIER();
     if ( null != identifier )
     {
-      return new EnumerationType( identifier.getText(), additionalFlags );
+      return new EnumerationType( identifier.getText(), extendedAttributes, additionalFlags );
     }
     final ParseTree child1 = ctx.getChild( 0 );
     if ( child1 instanceof TerminalNode )
     {
       final String text = child1.getText();
-      //  | 'sequence' '<' typeWithExtendedAttributes '>' nullModifier
       if ( "object".equals( text ) )
       {
-        return new Type( Kind.Object, additionalFlags );
+        return new Type( Kind.Object, extendedAttributes, additionalFlags );
       }
       else if ( "symbol".equals( text ) )
       {
-        return new Type( Kind.Symbol, additionalFlags );
+        return new Type( Kind.Symbol, extendedAttributes, additionalFlags );
       }
       //  | 'FrozenArray' '<' typeWithExtendedAttributes '>' nullModifier
     }
     final WebIDLParser.BufferRelatedTypeContext bufferRelatedTypeContext = ctx.bufferRelatedType();
     if ( null != bufferRelatedTypeContext )
     {
-      return parse( bufferRelatedTypeContext, additionalFlags );
+      return parse( bufferRelatedTypeContext, extendedAttributes, additionalFlags );
     }
     //  | recordType nullModifier
     throw new UnsupportedOperationException();
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx, final int additionalFlags )
+  private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                             final int additionalFlags )
   {
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
     assert null != literalName;
     final Kind kind = BUFFER_KIND_MAP.get( literalName );
     assert null != kind;
-    return new Type( kind, additionalFlags );
+    return new Type( kind, extendedAttributes, additionalFlags );
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx, final int additionalFlags )
+  private static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                             final int additionalFlags )
   {
     final WebIDLParser.UnsignedIntegerTypeContext unsignedIntegerType = ctx.unsignedIntegerType();
     if ( null != unsignedIntegerType )
@@ -159,18 +181,18 @@ public final class DistinguishableType
         final WebIDLParser.OptionalLongContext optionalLongContext = integerTypeContext.optionalLong();
         if ( 0 == optionalLongContext.getChildCount() )
         {
-          return new Type( unsigned ? Kind.UnsignedLong : Kind.Long, additionalFlags );
+          return new Type( unsigned ? Kind.UnsignedLong : Kind.Long, extendedAttributes, additionalFlags );
         }
         else
         {
           assert optionalLongContext.getChild( 0 ).getText().equals( "long" );
-          return new Type( unsigned ? Kind.UnsignedLongLong : Kind.LongLong, additionalFlags );
+          return new Type( unsigned ? Kind.UnsignedLongLong : Kind.LongLong, extendedAttributes, additionalFlags );
         }
       }
       else
       {
         assert integerTypeContext.getChild( 0 ).getText().equals( "short" );
-        return new Type( unsigned ? Kind.UnsignedShort : Kind.Short, additionalFlags );
+        return new Type( unsigned ? Kind.UnsignedShort : Kind.Short, extendedAttributes, additionalFlags );
       }
     }
     final WebIDLParser.UnrestrictedFloatTypeContext unrestrictedFloatType = ctx.unrestrictedFloatType();
@@ -182,12 +204,12 @@ public final class DistinguishableType
 
       if ( unrestrictedFloatType.floatType().getChild( 0 ).getText().equals( "float" ) )
       {
-        return new Type( unrestricted ? Kind.UnrestrictedFloat : Kind.Float, additionalFlags );
+        return new Type( unrestricted ? Kind.UnrestrictedFloat : Kind.Float, extendedAttributes, additionalFlags );
       }
       else
       {
         assert unrestrictedFloatType.floatType().getChild( 0 ).getText().equals( "double" );
-        return new Type( unrestricted ? Kind.UnrestrictedDouble : Kind.Double, additionalFlags );
+        return new Type( unrestricted ? Kind.UnrestrictedDouble : Kind.Double, extendedAttributes, additionalFlags );
       }
     }
 
@@ -195,27 +217,29 @@ public final class DistinguishableType
     final String literalName = child.getText();
     if ( "boolean".equals( literalName ) )
     {
-      return new Type( Kind.Boolean, additionalFlags );
+      return new Type( Kind.Boolean, extendedAttributes, additionalFlags );
     }
     else if ( "byte".equals( literalName ) )
     {
-      return new Type( Kind.Byte, additionalFlags );
+      return new Type( Kind.Byte, extendedAttributes, additionalFlags );
     }
     else
     {
       assert "octet".equals( literalName );
-      return new Type( Kind.Octet, additionalFlags );
+      return new Type( Kind.Octet, extendedAttributes, additionalFlags );
     }
   }
 
   @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx, final int additionalFlags )
+  private static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                             final int additionalFlags )
   {
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
     assert null != literalName;
     final Kind kind = STRING_KIND_MAP.get( literalName );
     assert null != kind;
-    return new Type( kind, additionalFlags );
+    return new Type( kind, extendedAttributes, additionalFlags );
   }
 }

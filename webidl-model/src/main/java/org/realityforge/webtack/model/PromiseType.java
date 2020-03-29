@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
@@ -9,9 +10,9 @@ public final class PromiseType
   @Nonnull
   private final Type _resolveType;
 
-  PromiseType( @Nonnull final Type resolveType )
+  PromiseType( @Nonnull final List<ExtendedAttribute> extendedAttributes, @Nonnull final Type resolveType )
   {
-    super( Kind.Promise );
+    super( Kind.Promise, extendedAttributes, 0 );
     _resolveType = Objects.requireNonNull( resolveType );
   }
 
