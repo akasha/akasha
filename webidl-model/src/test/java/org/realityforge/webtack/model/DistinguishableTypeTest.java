@@ -50,7 +50,6 @@ public class DistinguishableTypeTest
     assertParse( "USVString", Kind.USVString, true );
 
     // promises
-
     assertType( ensurePromiseType( "Promise<void>" ).getResolveType(), Kind.Void, false );
     assertType( ensurePromiseType( "Promise<short>" ).getResolveType(), Kind.Short, false );
     assertType( ensurePromiseType( "Promise<short?>" ).getResolveType(), Kind.Short, true );
