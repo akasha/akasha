@@ -119,7 +119,7 @@ public final class ExtendedAttribute
     final List<ExtendedAttribute> attributes = new ArrayList<>();
     attributes.add( parse( ctx.extendedAttribute() ) );
     collectAttributes( attributes, ctx.extendedAttributes() );
-    return attributes;
+    return Collections.unmodifiableList( attributes );
   }
 
   private static void collectAttributes( @Nonnull final List<ExtendedAttribute> attributes,
