@@ -58,6 +58,11 @@ public class DistinguishableTypeTest
     assertType( ensurePromiseType( "Promise<DOMString>" ).getResolveType(), Kind.DOMString, false );
     assertType( ensurePromiseType( "Promise<VisibilityState>" ).getResolveType(), Kind.Enumeration, false );
     assertType( ensurePromiseType( "Promise<XRSessionInit?>" ).getResolveType(), Kind.Enumeration, true );
+
+    // enumerations
+    assertEquals( ensureEnumerationType( "VisibilityState", false ).getEnumerationName(), "VisibilityState" );
+    assertEquals( ensureEnumerationType( "XRSessionMode", false ).getEnumerationName(), "XRSessionMode" );
+    assertEquals( ensureEnumerationType( "XRSessionInit?", true ).getEnumerationName(), "XRSessionInit" );
   }
 
   private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
@@ -79,6 +84,15 @@ public class DistinguishableTypeTest
     final Type type = ensureType( idl, Kind.Promise, false );
     assertTrue( type instanceof PromiseType );
     return (PromiseType) type;
+  }
+
+  @Nonnull
+  private EnumerationType ensureEnumerationType( @Nonnull final String idl, final boolean isNullable )
+    throws IOException
+  {
+    final Type type = ensureType( idl, Kind.Enumeration, isNullable );
+    assertTrue( type instanceof EnumerationType );
+    return (EnumerationType) type;
   }
 
   @Nonnull
