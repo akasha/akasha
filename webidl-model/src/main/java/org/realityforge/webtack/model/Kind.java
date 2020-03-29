@@ -16,7 +16,7 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-void">Void</a>
    */
-  Void,
+  Void( Flags.NULLABLE_DISALLOWED ),
   /**
    * The boolean type has two values: true and false.
    *
