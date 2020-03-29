@@ -5,7 +5,7 @@ import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class DistinguishableTypeTest
+public class TypeTest
   extends AbstractTest
 {
   @Test
@@ -142,6 +142,6 @@ public class DistinguishableTypeTest
   private Type parseType( @Nonnull final String webIDL )
     throws IOException
   {
-    return DistinguishableType.parse( createParser( webIDL ).type() );
+    return Type.parse( createParser( webIDL ).type() );
   }
 }
