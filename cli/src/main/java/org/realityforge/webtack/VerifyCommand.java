@@ -18,8 +18,9 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
-import org.realityforge.webtack.model.ModelRepository;
+import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.WebIDLModelParser;
+import org.realityforge.webtack.webidl.parser.WebIDLBaseListener;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 final class VerifyCommand
@@ -92,7 +93,31 @@ final class VerifyCommand
         final WebIDLParser parser = WebIDLModelParser.createParser( reader );
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         parser.addErrorListener( errorListener );
+        // TODO: Remove this next listener after we are finished with the model representation and
+        //  stop the listener being generated in the buildfile
+        parser.addParseListener( new WebIDLBaseListener()
+        {
+          @Override
+          public void exitType( final WebIDLParser.TypeContext ctx )
+          {
+            super.exitType( ctx );
+            Type.parse( ctx );
+          }
 
+          @Override
+          public void exitTypeWithExtendedAttributes( final WebIDLParser.TypeWithExtendedAttributesContext ctx )
+          {
+            super.exitTypeWithExtendedAttributes( ctx );
+            Type.parse( ctx );
+          }
+
+          @Override
+          public void exitReturnType( final WebIDLParser.ReturnTypeContext ctx )
+          {
+            super.exitReturnType( ctx );
+            Type.parse( ctx );
+          }
+        } );
         parser.webIDL();
 
         final int errorCount = errorListener.getErrorCount();

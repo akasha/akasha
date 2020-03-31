@@ -62,6 +62,12 @@ public class Type
     return Parser.parse( ctx );
   }
 
+  @Nonnull
+  public static Type parse( @Nonnull final WebIDLParser.ReturnTypeContext ctx )
+  {
+    return Parser.parse( ctx );
+  }
+
   public static final class Flags
   {
     private Flags()
