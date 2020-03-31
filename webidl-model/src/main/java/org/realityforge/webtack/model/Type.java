@@ -163,9 +163,14 @@ public class Type
     private static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx,
                                @Nonnull final List<ExtendedAttribute> extendedAttributes )
     {
-      final WebIDLParser.TypeContext type = ctx.returnType().type();
-      return new PromiseType( extendedAttributes,
-                              null != type ? parse( type ) : new Type( Kind.Void, Collections.emptyList(), 0 ) );
+      return new PromiseType( extendedAttributes, parse( ctx.returnType() ) );
+    }
+
+    @Nonnull
+    static Type parse( @Nonnull final WebIDLParser.ReturnTypeContext returnTypeContext )
+    {
+      final WebIDLParser.TypeContext type = returnTypeContext.type();
+      return null != type ? parse( type ) : new Type( Kind.Void, Collections.emptyList(), 0 );
     }
 
     @Nonnull
