@@ -69,6 +69,7 @@ public class TypeTest
     assertType( ensureSequenceType( "sequence<long long?>", false ).getItemType(), Kind.LongLong, true );
     assertType( ensureSequenceType( "sequence<XRSessionMode>?", true ).getItemType(), Kind.Enumeration, false );
 
+    // FrozenArrays
     assertType( ensureFrozenArrayType( "FrozenArray<long>?", true ).getItemType(), Kind.Long, false );
     assertType( ensureFrozenArrayType( "FrozenArray<long?>?", true ).getItemType(), Kind.Long, true );
     assertType( ensureFrozenArrayType( "FrozenArray<Promise<DOMString>>", true ).getItemType(), Kind.Promise, false );
