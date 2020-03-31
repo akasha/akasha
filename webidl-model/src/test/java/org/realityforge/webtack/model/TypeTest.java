@@ -83,7 +83,7 @@ public class TypeTest
     ensureType( idl, expected, false );
     if ( supportsNullable )
     {
-      ensureType( idl, expected, true );
+      ensureType( idl + "?", expected, true );
     }
   }
 
@@ -128,7 +128,7 @@ public class TypeTest
     throws IOException
   {
     // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
-    final Type actual = parseType( webIDL + ( isNullable ? "? " : "" ) + " someVar" );
+    final Type actual = parseType( webIDL + " someVar" );
     assertType( actual, kind, isNullable );
     return actual;
   }
