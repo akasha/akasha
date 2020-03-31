@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -79,7 +80,50 @@ public class TypeTest
     assertRecordType( "record<DOMString,sequence<short>>", false, Kind.DOMString, Kind.Sequence );
     assertRecordType( "record<USVString,Promise<void>>", false, Kind.USVString, Kind.Promise );
 
+    // unions
+    {
+      final UnionType unionType = ensureUnionType( "(long or long long or sequence<long>)", false );
+      final List<Type> memberTypes = unionType.getMemberTypes();
+      assertEquals( memberTypes.size(), 3 );
+      assertEquals( memberTypes.get( 0 ).getKind(), Kind.Long );
+      assertEquals( memberTypes.get( 1 ).getKind(), Kind.LongLong );
+      assertEquals( memberTypes.get( 2 ).getKind(), Kind.Sequence );
+    }
+
+    {
+      final UnionType unionType = ensureUnionType( "(long or (long long or sequence<long>))", false );
+      final List<Type> memberTypes = unionType.getMemberTypes();
+      assertEquals( memberTypes.size(), 2 );
+      assertEquals( memberTypes.get( 0 ).getKind(), Kind.Long );
+      assertEquals( memberTypes.get( 1 ).getKind(), Kind.Union );
+    }
+
+    {
+      final UnionType unionType = ensureUnionType( "(long? or XRSessionMode)", false );
+      final List<Type> memberTypes = unionType.getMemberTypes();
+      assertEquals( memberTypes.size(), 2 );
+      assertEquals( memberTypes.get( 0 ).getKind(), Kind.Long );
+      assertEquals( memberTypes.get( 1 ).getKind(), Kind.Enumeration );
+    }
+
+    {
+      final UnionType unionType = ensureUnionType( "(DOMString or XRSessionMode)?", true );
+      final List<Type> memberTypes = unionType.getMemberTypes();
+      assertEquals( memberTypes.size(), 2 );
+      assertEquals( memberTypes.get( 0 ).getKind(), Kind.DOMString );
+      assertEquals( memberTypes.get( 1 ).getKind(), Kind.Enumeration );
+    }
+
     //TODO: Test all the types with extended attributes where possible
+  }
+
+  @Nonnull
+  private UnionType ensureUnionType( @Nonnull final String idl, final boolean isNullable )
+    throws IOException
+  {
+    final Type type = ensureType( idl, Kind.Union, isNullable );
+    assertTrue( type instanceof UnionType );
+    return (UnionType) type;
   }
 
   private void assertRecordType( @Nonnull final String idl,

@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +30,7 @@ public class Type
     assert ( Kind.Enumeration == _kind ) == ( this instanceof EnumerationType );
     assert ( Kind.Promise == _kind ) == ( this instanceof PromiseType );
     assert ( Kind.Record == _kind ) == ( this instanceof RecordType );
+    assert ( Kind.Union == _kind ) == ( this instanceof UnionType );
   }
 
   @Nonnull
@@ -127,15 +129,44 @@ public class Type
         final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Flags.NULLABLE : 0;
         final WebIDLParser.UnionTypeContext unionTypeContext = ctx.unionType();
         assert null != unionTypeContext;
-        return parse( unionTypeContext, additionalFlags );
+        return parse( unionTypeContext, extendedAttributes, additionalFlags );
       }
     }
 
     @Nonnull
-    private static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx, final int additionalFlags )
+    private static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx,
+                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                               final int additionalFlags )
     {
-      //TODO: Implement me!
-      throw new UnsupportedOperationException();
+      final List<Type> memberTypes = new ArrayList<>();
+      collectUnionMemberType( ctx.unionMemberType( 0 ), memberTypes );
+      collectUnionMemberType( ctx.unionMemberType( 1 ), memberTypes );
+      WebIDLParser.UnionMemberTypesContext unionMemberTypesContext = ctx.unionMemberTypes();
+      while ( null != unionMemberTypesContext.unionMemberType() )
+      {
+        collectUnionMemberType( unionMemberTypesContext.unionMemberType(), memberTypes );
+        unionMemberTypesContext = unionMemberTypesContext.unionMemberTypes();
+      }
+      return new UnionType( extendedAttributes, additionalFlags, Collections.unmodifiableList( memberTypes ) );
+    }
+
+    private static void collectUnionMemberType( @Nonnull final WebIDLParser.UnionMemberTypeContext ctx,
+                                                @Nonnull final List<Type> memberTypes )
+    {
+      final WebIDLParser.ExtendedAttributeListContext extendedAttributeListContext = ctx.extendedAttributeList();
+      if ( null != extendedAttributeListContext )
+      {
+        final WebIDLParser.DistinguishableTypeContext distinguishableTypeContext = ctx.distinguishableType();
+        assert null != distinguishableTypeContext;
+        memberTypes.add( parse( distinguishableTypeContext, ExtendedAttribute.parse( extendedAttributeListContext ) ) );
+      }
+      else
+      {
+        final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Flags.NULLABLE : 0;
+        final WebIDLParser.UnionTypeContext unionTypeContext = ctx.unionType();
+        assert null != unionTypeContext;
+        memberTypes.add( parse( unionTypeContext, Collections.emptyList(), additionalFlags ) );
+      }
     }
 
     @Nonnull
