@@ -89,8 +89,6 @@ final class VerifyCommand
 
       try ( final FileReader reader = new FileReader( target.toFile() ) )
       {
-        final ModelRepository repository = new ModelRepository();
-
         final WebIDLParser parser = WebIDLModelParser.createParser( reader );
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         parser.addErrorListener( errorListener );
