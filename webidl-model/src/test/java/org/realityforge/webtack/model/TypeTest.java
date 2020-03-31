@@ -70,11 +70,20 @@ public class TypeTest
     assertType( ensureSequenceType( "sequence<XRSessionMode>?", true ).getItemType(), Kind.Enumeration, false );
 
     // FrozenArrays
-    assertType( ensureFrozenArrayType( "FrozenArray<long>?", true ).getItemType(), Kind.Long, false );
-    assertType( ensureFrozenArrayType( "FrozenArray<long?>?", true ).getItemType(), Kind.Long, true );
-    assertType( ensureFrozenArrayType( "FrozenArray<Promise<DOMString>>", true ).getItemType(), Kind.Promise, false );
+    assertFrozenArrayType( "FrozenArray<long>?", true, Kind.Long, false );
+    assertFrozenArrayType( "FrozenArray<long?>?", true, Kind.Long, true );
+    assertFrozenArrayType( "FrozenArray<Promise<DOMString>>", false, Kind.Promise, false );
 
     //TODO: Test all the types with extended attributes where possible
+  }
+
+  private void assertFrozenArrayType( @Nonnull final String idl,
+                                      final boolean isNullable,
+                                      @Nonnull final Kind itemKind,
+                                      final boolean isItemNullable )
+    throws IOException
+  {
+    assertType( ensureFrozenArrayType( idl, isNullable ).getItemType(), itemKind, isItemNullable );
   }
 
   private void assertParse( @Nonnull final String idl, @Nonnull final Kind expected, final boolean supportsNullable )
