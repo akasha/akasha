@@ -28,6 +28,7 @@ public class Type
     assert ( Kind.FrozenArray == _kind ) == ( this instanceof FrozenArrayType );
     assert ( Kind.Enumeration == _kind ) == ( this instanceof EnumerationType );
     assert ( Kind.Promise == _kind ) == ( this instanceof PromiseType );
+    assert ( Kind.Record == _kind ) == ( this instanceof RecordType );
   }
 
   @Nonnull
@@ -221,8 +222,19 @@ public class Type
       {
         return parse( bufferRelatedTypeContext, extendedAttributes, additionalFlags );
       }
-      //TODO:  | recordType nullModifier
-      throw new UnsupportedOperationException();
+      final WebIDLParser.RecordTypeContext recordTypeContext = ctx.recordType();
+      assert null != recordTypeContext;
+      return parse( recordTypeContext, extendedAttributes, additionalFlags );
+    }
+
+    @Nonnull
+    private static Type parse( @Nonnull final WebIDLParser.RecordTypeContext ctx,
+                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                               final int additionalFlags )
+    {
+      final Type keyType = parse( ctx.stringType(), Collections.emptyList(), 0 );
+      final Type valueType = parse( ctx.typeWithExtendedAttributes() );
+      return new RecordType( extendedAttributes, additionalFlags, keyType, valueType );
     }
 
     @Nonnull

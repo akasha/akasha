@@ -74,7 +74,23 @@ public class TypeTest
     assertFrozenArrayType( "FrozenArray<long?>?", true, Kind.Long, true );
     assertFrozenArrayType( "FrozenArray<Promise<DOMString>>", false, Kind.Promise, false );
 
+    // records
+    assertRecordType( "record<DOMString,long>?", true, Kind.DOMString, Kind.Long );
+    assertRecordType( "record<DOMString,sequence<short>>", false, Kind.DOMString, Kind.Sequence );
+    assertRecordType( "record<USVString,Promise<void>>", false, Kind.USVString, Kind.Promise );
+
     //TODO: Test all the types with extended attributes where possible
+  }
+
+  private void assertRecordType( @Nonnull final String idl,
+                                 final boolean isNullable,
+                                 @Nonnull final Kind keyKind,
+                                 @Nonnull final Kind valueKind )
+    throws IOException
+  {
+    final RecordType recordType = ensureRecordType( idl, isNullable );
+    assertType( recordType.getKeyType(), keyKind, false );
+    assertType( recordType.getValueType(), valueKind, false );
   }
 
   private void assertFrozenArrayType( @Nonnull final String idl,
@@ -130,6 +146,15 @@ public class TypeTest
     final Type type = ensureType( idl, Kind.Enumeration, isNullable );
     assertTrue( type instanceof EnumerationType );
     return (EnumerationType) type;
+  }
+
+  @Nonnull
+  private RecordType ensureRecordType( @Nonnull final String idl, final boolean isNullable )
+    throws IOException
+  {
+    final Type type = ensureType( idl, Kind.Record, isNullable );
+    assertTrue( type instanceof RecordType );
+    return (RecordType) type;
   }
 
   @Nonnull
