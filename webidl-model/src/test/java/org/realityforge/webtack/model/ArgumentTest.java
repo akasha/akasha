@@ -2,7 +2,6 @@ package org.realityforge.webtack.model;
 
 import java.io.IOException;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -50,16 +49,25 @@ public class ArgumentTest
   @Nonnull
   private Argument ensureArgument( @Nonnull final String webIDL,
                                    @Nonnull final String name,
-                                   @Nullable final Kind kind,
+                                   @Nonnull final Kind kind,
                                    final boolean optional,
                                    final boolean variadic )
     throws IOException
   {
     final Argument argument = Argument.parse( createParser( webIDL ).argument() );
+    assertArgument( argument, name, kind, optional, variadic );
+    return argument;
+  }
+
+  private void assertArgument( @Nonnull final Argument argument,
+                               @Nonnull final String name,
+                               @Nonnull final Kind kind,
+                               final boolean optional,
+                               final boolean variadic )
+  {
     assertEquals( argument.getName(), name );
     assertEquals( argument.getType().getKind(), kind );
     assertEquals( argument.isOptional(), optional );
     assertEquals( argument.isVariadic(), variadic );
-    return argument;
   }
 }
