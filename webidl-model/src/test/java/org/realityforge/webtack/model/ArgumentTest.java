@@ -60,18 +60,6 @@ public class ArgumentTest
     return argument;
   }
 
-  private void assertArgument( @Nonnull final Argument argument,
-                               @Nonnull final String name,
-                               @Nonnull final Kind kind,
-                               final boolean optional,
-                               final boolean variadic )
-  {
-    assertEquals( argument.getName(), name );
-    assertEquals( argument.getType().getKind(), kind );
-    assertEquals( argument.isOptional(), optional );
-    assertEquals( argument.isVariadic(), variadic );
-  }
-
   @Test
   public void parseList()
     throws IOException

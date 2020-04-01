@@ -11,6 +11,18 @@ import static org.testng.Assert.*;
 
 public abstract class AbstractTest
 {
+  protected final void assertArgument( @Nonnull final Argument argument,
+                                       @Nonnull final String name,
+                                       @Nonnull final Kind kind,
+                                       final boolean optional,
+                                       final boolean variadic )
+  {
+    assertEquals( argument.getName(), name );
+    assertEquals( argument.getType().getKind(), kind );
+    assertEquals( argument.isOptional(), optional );
+    assertEquals( argument.isVariadic(), variadic );
+  }
+
   @Nonnull
   protected final String randomString()
   {
