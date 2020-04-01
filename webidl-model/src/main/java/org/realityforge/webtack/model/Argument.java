@@ -1,5 +1,7 @@
 package org.realityforge.webtack.model;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -67,6 +69,28 @@ public final class Argument
   public List<ExtendedAttribute> getExtendedAttributes()
   {
     return _extendedAttributes;
+  }
+
+  @Nonnull
+  public static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx )
+  {
+    final WebIDLParser.ArgumentContext argumentContext = ctx.argument();
+    if ( null != argumentContext )
+    {
+      final List<Argument> arguments = new ArrayList<>();
+      arguments.add( parse( argumentContext ) );
+      WebIDLParser.ArgumentsContext argumentsContext = ctx.arguments();
+      while ( argumentsContext.getChildCount() > 0 )
+      {
+        arguments.add( parse( argumentsContext.argument() ) );
+        argumentsContext = argumentsContext.arguments();
+      }
+      return Collections.unmodifiableList( arguments );
+    }
+    else
+    {
+      return Collections.emptyList();
+    }
   }
 
   @Nonnull
