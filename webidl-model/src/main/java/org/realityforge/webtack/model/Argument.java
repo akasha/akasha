@@ -30,7 +30,7 @@ public final class Argument
                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     assert !optional || !variadic;
-    assert !optional || null == defaultValue;
+    assert optional || null == defaultValue;
     assert !optional || extendedAttributes.isEmpty();
     _name = Objects.requireNonNull( name );
     _type = Objects.requireNonNull( type );
