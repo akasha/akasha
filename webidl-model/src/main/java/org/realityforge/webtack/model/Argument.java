@@ -29,6 +29,9 @@ public final class Argument
                    @Nullable final DefaultValue defaultValue,
                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
+    assert !optional || !variadic;
+    assert !optional || null == defaultValue;
+    assert !optional || extendedAttributes.isEmpty();
     _name = Objects.requireNonNull( name );
     _type = Objects.requireNonNull( type );
     _optional = optional;
