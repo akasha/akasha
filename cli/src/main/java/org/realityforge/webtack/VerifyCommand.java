@@ -18,6 +18,7 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
+import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.EnumerationModel;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.WebIDLModelParser;
@@ -124,6 +125,13 @@ final class VerifyCommand
           {
             super.exitEnumDefinition( ctx );
             EnumerationModel.parse( ctx );
+          }
+
+          @Override
+          public void exitArgument( final WebIDLParser.ArgumentContext ctx )
+          {
+            super.exitArgument( ctx );
+            Argument.parse( ctx );
           }
         } );
         parser.webIDL();
