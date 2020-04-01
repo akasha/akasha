@@ -77,7 +77,7 @@ public class ArgumentTest
     throws IOException
   {
     {
-      final List<Argument> arguments = parseArgumentList( "long speed, long long accel, short friction?", 3 );
+      final List<Argument> arguments = parseArgumentList( "long speed, long long accel, optional short friction", 3 );
 
       assertArgument( arguments.get( 0 ), "speed", Kind.Long, false, false );
       assertArgument( arguments.get( 1 ), "accel", Kind.LongLong, false, false );
