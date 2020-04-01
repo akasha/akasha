@@ -62,7 +62,6 @@ public final class ExtendedAttributeTest
 
   @Test
   public void IDENT_LIST()
-    throws Exception
   {
     final String name = randomString();
     final List<String> identList = Arrays.asList( randomString(), randomString() );
