@@ -99,7 +99,8 @@ public class ArgumentTest
   private List<Argument> parseArgumentList( @Nonnull final String webIDL, final int expectedArgumentCount )
     throws IOException
   {
-    final List<Argument> arguments = Argument.parse( createParser( webIDL ).argumentList() );
+    // Add a trailing ")" so we do not get an EOF when we try to peek at the next token to see if it is a ","
+    final List<Argument> arguments = Argument.parse( createParser( webIDL + ")" ).argumentList() );
     assertEquals( arguments.size(), expectedArgumentCount );
     return arguments;
   }
