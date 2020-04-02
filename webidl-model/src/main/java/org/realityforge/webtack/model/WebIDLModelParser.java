@@ -61,6 +61,7 @@ public final class WebIDLModelParser
         callbackOrInterfaceOrMixinContext.callbackRestOrInterface();
       if ( null != callbackRestOrInterfaceContext )
       {
+        //TODO:
         throw new UnsupportedOperationException();
       }
       else
@@ -71,12 +72,14 @@ public final class WebIDLModelParser
         final WebIDLParser.InterfaceRestContext interfaceRestContext = interfaceOrMixinContext.interfaceRest();
         if ( null != interfaceRestContext )
         {
+          //TODO:
           throw new UnsupportedOperationException();
         }
         else
         {
           final WebIDLParser.MixinRestContext mixinRestContext = interfaceOrMixinContext.mixinRest();
           assert null != mixinRestContext;
+          //TODO:
           throw new UnsupportedOperationException();
         }
       }
