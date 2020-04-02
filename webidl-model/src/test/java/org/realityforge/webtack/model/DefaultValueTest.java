@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class DefaultValueTest
+public final class DefaultValueTest
   extends AbstractTest
 {
   @Test
