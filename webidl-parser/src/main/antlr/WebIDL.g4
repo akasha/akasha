@@ -36,10 +36,6 @@ COMMENT
 	: ('//'~[\n\r]*|'/*'(.|'\n')*?'*/')+ -> channel(HIDDEN)
 ; // Note: '/''/'~[\n\r]* instead of '/''/'.* (non-greedy because of wildcard).
 
-OTHER
-	: ~[\t\n\r 0-9A-Za-z]
-;
-
 webIDL
 	: definitions EOF
 ;
