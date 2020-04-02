@@ -58,7 +58,8 @@ public final class WebIDLModelParser
     final List<Definition> definitions = new ArrayList<>();
     while ( null != ( definitionContext = definitionsContext.definition() ) )
     {
-      definitions.add( parse( definitionContext ) );
+      final List<ExtendedAttribute> extendedAttributes = parse( definitionsContext.extendedAttributeList() );
+      definitions.add( parse( definitionContext, extendedAttributes ) );
       definitionsContext = definitionsContext.definitions();
     }
 
@@ -66,7 +67,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx )
+  public static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx,
+                                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.CallbackOrInterfaceOrMixinContext callbackOrInterfaceOrMixinContext =
       ctx.callbackOrInterfaceOrMixin();
@@ -145,7 +147,7 @@ public final class WebIDLModelParser
         partialDefinitionContext.partialDictionary();
       if ( null != partialDictionaryContext )
       {
-        return parse( partialDictionaryContext );
+        return parse( partialDictionaryContext, extendedAttributes );
       }
       else
       {
@@ -158,21 +160,21 @@ public final class WebIDLModelParser
     final WebIDLParser.DictionaryContext dictionaryContext = ctx.dictionary();
     if ( null != dictionaryContext )
     {
-      return parse( dictionaryContext );
+      return parse( dictionaryContext, extendedAttributes );
     }
     final WebIDLParser.EnumDefinitionContext enumDefinitionContext = ctx.enumDefinition();
     if ( null != enumDefinitionContext )
     {
-      return parse( enumDefinitionContext );
+      return parse( enumDefinitionContext, extendedAttributes );
     }
     final WebIDLParser.TypedefContext typedefContext = ctx.typedef();
     if ( null != typedefContext )
     {
-      return parse( typedefContext );
+      return parse( typedefContext, extendedAttributes );
     }
     final WebIDLParser.IncludesStatementContext includesStatementContext = ctx.includesStatement();
     assert null != includesStatementContext;
-    return parse( includesStatementContext );
+    return parse( includesStatementContext, extendedAttributes );
   }
 
   @Nonnull
@@ -308,10 +310,17 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static EnumerationDefinition parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx )
+  public static EnumerationDefinition parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx,
+                                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
-    final WebIDLParser.EnumValueListContext enumValueListContext = ctx.enumValueList();
+    final Set<String> values = parse( ctx.enumValueList() );
+    return new EnumerationDefinition( name, values, extendedAttributes );
+  }
+
+  @Nonnull
+  private static Set<String> parse( @Nonnull final WebIDLParser.EnumValueListContext enumValueListContext )
+  {
     final Set<String> values = new LinkedHashSet<>();
     values.add( extractString( enumValueListContext.STRING() ) );
 
@@ -330,7 +339,7 @@ public final class WebIDLModelParser
         null != enumValueListCommaContext ? enumValueListCommaContext.enumValueListString() : null;
     }
 
-    return new EnumerationDefinition( name, Collections.unmodifiableSet( values ) );
+    return Collections.unmodifiableSet( values );
   }
 
   @Nonnull
@@ -435,11 +444,12 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static TypedefDefinition parse( @Nonnull final WebIDLParser.TypedefContext ctx )
+  public static TypedefDefinition parse( @Nonnull final WebIDLParser.TypedefContext ctx,
+                                         @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final Type type = parse( ctx.typeWithExtendedAttributes() );
-    return new TypedefDefinition( name, type );
+    return new TypedefDefinition( name, type, extendedAttributes );
   }
 
   @Nonnull
@@ -701,28 +711,31 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static IncludesStatement parse( @Nonnull final WebIDLParser.IncludesStatementContext ctx )
+  public static IncludesStatement parse( @Nonnull final WebIDLParser.IncludesStatementContext ctx,
+                                         @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String interfaceName = ctx.IDENTIFIER( 0 ).getText();
     final String mixinName = ctx.IDENTIFIER( 1 ).getText();
-    return new IncludesStatement( interfaceName, mixinName );
+    return new IncludesStatement( interfaceName, mixinName, extendedAttributes );
   }
 
   @Nonnull
-  public static DictionaryDefinition parse( @Nonnull final WebIDLParser.DictionaryContext ctx )
+  public static DictionaryDefinition parse( @Nonnull final WebIDLParser.DictionaryContext ctx,
+                                            @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final String inherits = extractInherits( ctx.inheritance() );
     final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
-    return new DictionaryDefinition( name, inherits, members );
+    return new DictionaryDefinition( name, inherits, members, extendedAttributes );
   }
 
   @Nonnull
-  public static PartialDictionaryDefinition parse( @Nonnull final WebIDLParser.PartialDictionaryContext ctx )
+  public static PartialDictionaryDefinition parse( @Nonnull final WebIDLParser.PartialDictionaryContext ctx,
+                                                   @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
-    return new PartialDictionaryDefinition( name, members );
+    return new PartialDictionaryDefinition( name, members, extendedAttributes );
   }
 
   @Nonnull

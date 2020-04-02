@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
@@ -38,6 +39,6 @@ public final class PartialDictionaryDefinitionTest
   private PartialDictionaryDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).partialDictionary() );
+    return WebIDLModelParser.parse( createParser( webIDL ).partialDictionary(), Collections.emptyList() );
   }
 }

@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
@@ -11,8 +12,11 @@ public final class TypedefDefinition
   @Nonnull
   private final Type _type;
 
-  TypedefDefinition( @Nonnull final String name, @Nonnull final Type type )
+  TypedefDefinition( @Nonnull final String name,
+                     @Nonnull final Type type,
+                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
+    super( extendedAttributes );
     _name = Objects.requireNonNull( name );
     _type = Objects.requireNonNull( type );
   }

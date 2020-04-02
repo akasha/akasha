@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.util.Collections;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -33,6 +34,6 @@ public final class TypedefDefinitionTest
   private TypedefDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).typedef() );
+    return WebIDLModelParser.parse( createParser( webIDL ).typedef(), Collections.emptyList() );
   }
 }

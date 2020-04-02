@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
@@ -11,8 +12,11 @@ public final class IncludesStatement
   @Nonnull
   private final String _mixinName;
 
-  IncludesStatement( @Nonnull final String interfaceName, @Nonnull final String mixinName )
+  IncludesStatement( @Nonnull final String interfaceName,
+                     @Nonnull final String mixinName,
+                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
+    super( extendedAttributes );
     _interfaceName = Objects.requireNonNull( interfaceName );
     _mixinName = Objects.requireNonNull( mixinName );
   }

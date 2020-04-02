@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -121,7 +122,7 @@ final class VerifyCommand
           public void exitEnumDefinition( final WebIDLParser.EnumDefinitionContext ctx )
           {
             super.exitEnumDefinition( ctx );
-            WebIDLModelParser.parse( ctx );
+            WebIDLModelParser.parse( ctx, Collections.emptyList() );
           }
 
           @Override
@@ -135,21 +136,21 @@ final class VerifyCommand
           public void exitIncludesStatement( final WebIDLParser.IncludesStatementContext ctx )
           {
             super.exitIncludesStatement( ctx );
-            WebIDLModelParser.parse( ctx );
+            WebIDLModelParser.parse( ctx, Collections.emptyList() );
           }
 
           @Override
           public void exitDictionary( final WebIDLParser.DictionaryContext ctx )
           {
             super.exitDictionary( ctx );
-            WebIDLModelParser.parse( ctx );
+            WebIDLModelParser.parse( ctx, Collections.emptyList() );
           }
 
           @Override
           public void exitPartialDictionary( final WebIDLParser.PartialDictionaryContext ctx )
           {
             super.exitPartialDictionary( ctx );
-            WebIDLModelParser.parse( ctx );
+            WebIDLModelParser.parse( ctx, Collections.emptyList() );
           }
         } );
         parser.webIDL();

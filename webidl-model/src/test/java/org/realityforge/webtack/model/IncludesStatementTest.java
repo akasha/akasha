@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.util.Collections;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -21,7 +22,8 @@ public final class IncludesStatementTest
                                         @Nonnull final String mixinName )
     throws IOException
   {
-    final IncludesStatement includesStatement = WebIDLModelParser.parse( createParser( webIDL ).includesStatement() );
+    final IncludesStatement includesStatement =
+      WebIDLModelParser.parse( createParser( webIDL ).includesStatement(), Collections.emptyList() );
     assertEquals( includesStatement.getInterfaceName(), interfaceName );
     assertEquals( includesStatement.getMixinName(), mixinName );
   }
