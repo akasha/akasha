@@ -619,6 +619,32 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static DictionaryMember parse( @Nonnull final WebIDLParser.DictionaryMemberContext ctx )
+  {
+    final List<ExtendedAttribute> extendedAttributes = parse( ctx.extendedAttributeList() );
+    final WebIDLParser.DictionaryMemberRestContext restContext = ctx.dictionaryMemberRest();
+    final String name = restContext.IDENTIFIER().getText();
+    final WebIDLParser.TypeContext typeContext = restContext.type();
+    final Type type;
+    final boolean optional;
+    final DefaultValue defaultValue;
+    if ( null != typeContext )
+    {
+      type = parse( typeContext );
+      optional = true;
+      final WebIDLParser.DefaultValueContext defaultValueContext = restContext.defaultAssignment().defaultValue();
+      defaultValue = null != defaultValueContext ? parse( defaultValueContext ) : null;
+    }
+    else
+    {
+      type = parse( restContext.typeWithExtendedAttributes() );
+      optional = false;
+      defaultValue = null;
+    }
+    return new DictionaryMember( name, type, optional, defaultValue, extendedAttributes );
+  }
+
+  @Nonnull
   public static WebIDLParser createParser( @Nonnull final Reader reader )
     throws IOException
   {
