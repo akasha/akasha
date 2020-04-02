@@ -341,23 +341,15 @@ public final class WebIDLModelParser
   {
     final String name = ctx.IDENTIFIER().getText();
     final InterfaceModel interfaceModel = repository.findOrCreateInterfaceByName( name );
-    interfaceModel.setInherits( extractInherits( ctx ) );
+    interfaceModel.setInherits( extractInherits( ctx.inheritance() ) );
     return interfaceModel;
   }
 
   @Nullable
-  private static String extractInherits( @Nonnull final WebIDLParser.InterfaceRestContext ctx )
+  private static String extractInherits( @Nonnull final WebIDLParser.InheritanceContext inheritance )
   {
-    final WebIDLParser.InheritanceContext inheritance = ctx.inheritance();
-    if ( null != inheritance )
-    {
-      final TerminalNode identifier = inheritance.IDENTIFIER();
-      if ( null != identifier )
-      {
-        return identifier.getSymbol().getText();
-      }
-    }
-    return null;
+    final TerminalNode identifier = inheritance.IDENTIFIER();
+    return null != identifier ? identifier.getSymbol().getText() : null;
   }
 
   @Nonnull
