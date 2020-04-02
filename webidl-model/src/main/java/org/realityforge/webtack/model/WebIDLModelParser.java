@@ -157,8 +157,7 @@ public final class WebIDLModelParser
     }
     final WebIDLParser.IncludesStatementContext includesStatementContext = ctx.includesStatement();
     assert null != includesStatementContext;
-    //TODO:
-    throw new UnsupportedOperationException();
+    return parse( includesStatementContext );
   }
 
   @Nonnull
@@ -684,6 +683,14 @@ public final class WebIDLModelParser
     final Kind kind = STRING_KIND_MAP.get( literalName );
     assert null != kind;
     return new Type( kind, extendedAttributes, additionalFlags );
+  }
+
+  @Nonnull
+  public static IncludesStatement parse( @Nonnull final WebIDLParser.IncludesStatementContext ctx )
+  {
+    final String interfaceName = ctx.IDENTIFIER( 0 ).getText();
+    final String mixinName = ctx.IDENTIFIER( 1 ).getText();
+    return new IncludesStatement( interfaceName, mixinName );
   }
 
   @Nonnull
