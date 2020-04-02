@@ -61,8 +61,21 @@ public final class WebIDLModelParser
         callbackOrInterfaceOrMixinContext.callbackRestOrInterface();
       if ( null != callbackRestOrInterfaceContext )
       {
-        //TODO:
-        throw new UnsupportedOperationException();
+        final WebIDLParser.CallbackRestContext callbackRestContext = callbackRestOrInterfaceContext.callbackRest();
+        if( null != callbackRestContext )
+        {
+          //TODO:
+          throw new UnsupportedOperationException();
+        }
+        else
+        {
+          final String interfaceName = callbackRestOrInterfaceContext.IDENTIFIER().getText();
+          final WebIDLParser.CallbackInterfaceMembersContext callbackInterfaceMembersContext =
+            callbackRestOrInterfaceContext.callbackInterfaceMembers();
+          assert null != callbackInterfaceMembersContext;
+          //TODO:
+          throw new UnsupportedOperationException();
+        }
       }
       else
       {
