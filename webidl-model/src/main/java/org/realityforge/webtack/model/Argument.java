@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class Argument
+  extends Element
 {
   @Nonnull
   private final String _name;
@@ -15,8 +16,6 @@ public final class Argument
   private final boolean _variadic;
   @Nullable
   private final DefaultValue _defaultValue;
-  @Nonnull
-  private final List<ExtendedAttribute> _extendedAttributes;
 
   public Argument( @Nonnull final String name,
                    @Nonnull final Type type,
@@ -25,6 +24,7 @@ public final class Argument
                    @Nullable final DefaultValue defaultValue,
                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
+    super( extendedAttributes );
     assert !optional || !variadic;
     assert optional || null == defaultValue;
     assert !optional || extendedAttributes.isEmpty();
@@ -33,7 +33,6 @@ public final class Argument
     _optional = optional;
     _variadic = variadic;
     _defaultValue = defaultValue;
-    _extendedAttributes = Objects.requireNonNull( extendedAttributes );
   }
 
   @Nonnull
@@ -62,11 +61,5 @@ public final class Argument
   public DefaultValue getDefaultValue()
   {
     return _defaultValue;
-  }
-
-  @Nonnull
-  public List<ExtendedAttribute> getExtendedAttributes()
-  {
-    return _extendedAttributes;
   }
 }

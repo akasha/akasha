@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class DictionaryMember
+  extends Element
 {
   @Nonnull
   private final String _name;
@@ -14,8 +15,6 @@ public final class DictionaryMember
   private final boolean _optional;
   @Nullable
   private final DefaultValue _defaultValue;
-  @Nonnull
-  private final List<ExtendedAttribute> _extendedAttributes;
 
   DictionaryMember( @Nonnull final String name,
                     @Nonnull final Type type,
@@ -23,6 +22,7 @@ public final class DictionaryMember
                     @Nullable final DefaultValue defaultValue,
                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
+    super( extendedAttributes );
     assert optional || extendedAttributes.isEmpty();
     assert optional || null == defaultValue;
 
@@ -30,7 +30,6 @@ public final class DictionaryMember
     _type = Objects.requireNonNull( type );
     _optional = optional;
     _defaultValue = defaultValue;
-    _extendedAttributes = Objects.requireNonNull( extendedAttributes );
   }
 
   @Nonnull
@@ -54,11 +53,5 @@ public final class DictionaryMember
   public DefaultValue getDefaultValue()
   {
     return _defaultValue;
-  }
-
-  @Nonnull
-  public List<ExtendedAttribute> getExtendedAttributes()
-  {
-    return _extendedAttributes;
   }
 }
