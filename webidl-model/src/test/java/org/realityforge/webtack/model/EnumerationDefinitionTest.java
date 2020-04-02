@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class EnumerationModelTest
+public class EnumerationDefinitionTest
   extends AbstractTest
 {
   @Test
@@ -18,9 +18,9 @@ public class EnumerationModelTest
       "  \"inline\",\n" +
       "  \"immersive-vr\"\n" +
       "};";
-    final EnumerationModel enumerationModel = parse( webIDL );
-    assertEquals( enumerationModel.getName(), "XRSessionMode" );
-    final Set<String> values = enumerationModel.getValues();
+    final EnumerationDefinition enumerationDefinition = parse( webIDL );
+    assertEquals( enumerationDefinition.getName(), "XRSessionMode" );
+    final Set<String> values = enumerationDefinition.getValues();
     assertEquals( values.size(), 2 );
     assertTrue( values.contains( "inline" ) );
     assertTrue( values.contains( "immersive-vr" ) );
@@ -33,9 +33,9 @@ public class EnumerationModelTest
     throws IOException
   {
     final String webIDL = "enum PresentationStyle { \"unspecified\", \"inline\", \"attachment\", };";
-    final EnumerationModel enumerationModel = parse( webIDL );
-    assertEquals( enumerationModel.getName(), "PresentationStyle" );
-    final Set<String> values = enumerationModel.getValues();
+    final EnumerationDefinition enumerationDefinition = parse( webIDL );
+    assertEquals( enumerationDefinition.getName(), "PresentationStyle" );
+    final Set<String> values = enumerationDefinition.getValues();
     assertEquals( values.size(), 3 );
     assertTrue( values.contains( "unspecified" ) );
     assertTrue( values.contains( "inline" ) );
@@ -45,7 +45,7 @@ public class EnumerationModelTest
   }
 
   @Nonnull
-  private EnumerationModel parse( @Nonnull final String webIDL )
+  private EnumerationDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
     return WebIDLModelParser.parse( createParser( webIDL ).enumDefinition() );

@@ -226,7 +226,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static EnumerationModel parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx )
+  public static EnumerationDefinition parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx )
   {
     final String name = ctx.IDENTIFIER().getText();
     final WebIDLParser.EnumValueListContext enumValueListContext = ctx.enumValueList();
@@ -248,7 +248,7 @@ public final class WebIDLModelParser
         null != enumValueListCommaContext ? enumValueListCommaContext.enumValueListString() : null;
     }
 
-    return new EnumerationModel( name, Collections.unmodifiableSet( values ) );
+    return new EnumerationDefinition( name, Collections.unmodifiableSet( values ) );
   }
 
   @Nonnull
