@@ -619,6 +619,15 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  public static DictionaryDefinition parse( @Nonnull final WebIDLParser.DictionaryContext ctx )
+  {
+    final String name = ctx.IDENTIFIER().getText();
+    final String inherits = extractInherits( ctx.inheritance() );
+    final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
+    return new DictionaryDefinition( name, inherits, members );
+  }
+
+  @Nonnull
   static DictionaryMember parse( @Nonnull final WebIDLParser.DictionaryMemberContext ctx )
   {
     final List<ExtendedAttribute> extendedAttributes = parse( ctx.extendedAttributeList() );
