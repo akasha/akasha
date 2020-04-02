@@ -33,6 +33,6 @@ public class TypedefModelTest
   private TypedefModel parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return TypedefModel.parse( createParser( webIDL ).typedef() );
+    return WebIDLModelParser.parse( createParser( webIDL ).typedef() );
   }
 }

@@ -55,7 +55,7 @@ public final class ArgumentTest
                                    final boolean variadic )
     throws IOException
   {
-    final Argument argument = Argument.parse( createParser( webIDL ).argument() );
+    final Argument argument = WebIDLModelParser.parse( createParser( webIDL ).argument() );
     assertArgument( argument, name, kind, optional, variadic );
     return argument;
   }
@@ -73,7 +73,8 @@ public final class ArgumentTest
     }
 
     {
-      final List<Argument> arguments = parseArgumentList( "optional DOMPointInit position = {}, optional DOMPointInit orientation = {}", 2 );
+      final List<Argument> arguments =
+        parseArgumentList( "optional DOMPointInit position = {}, optional DOMPointInit orientation = {}", 2 );
 
       final Argument argument1 = arguments.get( 0 );
       assertArgument( argument1, "position", Kind.Enumeration, true, false );
@@ -88,7 +89,7 @@ public final class ArgumentTest
     throws IOException
   {
     // Add a trailing ")" so we do not get an EOF when we try to peek at the next token to see if it is a ","
-    final List<Argument> arguments = Argument.parse( createParser( webIDL + ")" ).argumentList() );
+    final List<Argument> arguments = WebIDLModelParser.parse( createParser( webIDL + ")" ).argumentList() );
     assertEquals( arguments.size(), expectedArgumentCount );
     return arguments;
   }

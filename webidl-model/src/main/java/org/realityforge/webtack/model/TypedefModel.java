@@ -2,7 +2,6 @@ package org.realityforge.webtack.model;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public final class TypedefModel
 {
@@ -27,13 +26,5 @@ public final class TypedefModel
   public Type getType()
   {
     return _type;
-  }
-
-  @Nonnull
-  public static TypedefModel parse( @Nonnull final WebIDLParser.TypedefContext ctx )
-  {
-    final String name = ctx.IDENTIFIER().getText();
-    final Type type = Type.parse( ctx.typeWithExtendedAttributes() );
-    return new TypedefModel( name, type );
   }
 }

@@ -37,7 +37,7 @@ public final class ExtendedAttributeTest
     throws Exception
   {
     final WebIDLParser parser = createParser( "EnforceRange" );
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "EnforceRange" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
   }
@@ -67,7 +67,7 @@ public final class ExtendedAttributeTest
     throws Exception
   {
     final WebIDLParser parser = createParser( "LegacyNamespace=WebAssembly" );
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "LegacyNamespace" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
     assertEquals( extendedAttribute.getIdent(), "WebAssembly" );
@@ -101,7 +101,7 @@ public final class ExtendedAttributeTest
     throws Exception
   {
     final WebIDLParser parser = createParser( "Exposed=(Window,Worker)" );
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "Exposed" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
     assertEquals( extendedAttribute.getIdentList(), Arrays.asList( "Window", "Worker" ) );
@@ -140,7 +140,7 @@ public final class ExtendedAttributeTest
   {
     final WebIDLParser parser =
       createParser( "CreatedBy(optional DOMPointInit position = {}, optional DOMPointInit orientation = {})" );
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getArgListName(), "CreatedBy" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.ARG_LIST );
 
@@ -187,7 +187,7 @@ public final class ExtendedAttributeTest
   {
     final WebIDLParser parser =
       createParser( "Creator=CreatedBy(optional DOMPointInit position = {}, optional DOMPointInit orientation = {})" );
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
     assertEquals( extendedAttribute.getName(), "Creator" );
     assertEquals( extendedAttribute.getArgListName(), "CreatedBy" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_ARG_LIST );
@@ -207,7 +207,7 @@ public final class ExtendedAttributeTest
   {
     final WebIDLParser parser =
       createParser( "[NoInterfaceObject, LegacyNamespace=WebAssembly, Exposed=(Window,Worker,Worklet)]" );
-    final List<ExtendedAttribute> extendedAttributes = ExtendedAttribute.parse( parser.extendedAttributeList() );
+    final List<ExtendedAttribute> extendedAttributes = WebIDLModelParser.parse( parser.extendedAttributeList() );
     assertEquals( extendedAttributes.size(), 3 );
     {
       final ExtendedAttribute extendedAttribute = extendedAttributes.get( 0 );

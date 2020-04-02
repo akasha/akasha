@@ -1,13 +1,9 @@
 package org.realityforge.webtack.model;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.antlr.v4.runtime.tree.TerminalNode;
-import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public final class Argument
 {
@@ -72,60 +68,5 @@ public final class Argument
   public List<ExtendedAttribute> getExtendedAttributes()
   {
     return _extendedAttributes;
-  }
-
-  @Nonnull
-  public static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx )
-  {
-    final WebIDLParser.ArgumentContext argumentContext = ctx.argument();
-    if ( null != argumentContext )
-    {
-      final List<Argument> arguments = new ArrayList<>();
-      arguments.add( parse( argumentContext ) );
-      WebIDLParser.ArgumentsContext argumentsContext = ctx.arguments();
-      while ( argumentsContext.getChildCount() > 0 )
-      {
-        arguments.add( parse( argumentsContext.argument() ) );
-        argumentsContext = argumentsContext.arguments();
-      }
-      return Collections.unmodifiableList( arguments );
-    }
-    else
-    {
-      return Collections.emptyList();
-    }
-  }
-
-  @Nonnull
-  public static Argument parse( @Nonnull final WebIDLParser.ArgumentContext ctx )
-  {
-    final List<ExtendedAttribute> extendedAttributes = ExtendedAttribute.parse( ctx.extendedAttributeList() );
-    final WebIDLParser.ArgumentRestContext argumentRestContext = ctx.argumentRest();
-    final WebIDLParser.ArgumentNameContext argumentNameContext = argumentRestContext.argumentName();
-    final TerminalNode identifier = argumentNameContext.IDENTIFIER();
-    final String name = null != identifier ? identifier.getText() : argumentNameContext.argumentNameKeyword().getText();
-    final WebIDLParser.TypeWithExtendedAttributesContext typeWithExtendedAttributesContext =
-      argumentRestContext.typeWithExtendedAttributes();
-    final Type type;
-    final boolean optional;
-    final boolean variadic;
-    final DefaultValue defaultValue;
-    if ( null != typeWithExtendedAttributesContext )
-    {
-      type = Type.parse( typeWithExtendedAttributesContext );
-      optional = true;
-      variadic = false;
-      final WebIDLParser.DefaultValueContext defaultValueContext =
-        argumentRestContext.defaultAssignment().defaultValue();
-      defaultValue = null != defaultValueContext ? DefaultValue.parse( defaultValueContext ) : null;
-    }
-    else
-    {
-      type = Type.parse( argumentRestContext.type() );
-      optional = false;
-      variadic = argumentRestContext.ellipsis().getChildCount() > 0;
-      defaultValue = null;
-    }
-    return new Argument( name, type, optional, variadic, defaultValue, extendedAttributes );
   }
 }

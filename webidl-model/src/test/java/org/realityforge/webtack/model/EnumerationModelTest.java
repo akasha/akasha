@@ -48,6 +48,6 @@ public class EnumerationModelTest
   private EnumerationModel parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return EnumerationModel.parse( createParser( webIDL ).enumDefinition() );
+    return WebIDLModelParser.parse( createParser( webIDL ).enumDefinition() );
   }
 }

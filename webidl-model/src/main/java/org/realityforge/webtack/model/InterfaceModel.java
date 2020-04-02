@@ -3,8 +3,6 @@ package org.realityforge.webtack.model;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.antlr.v4.runtime.tree.TerminalNode;
-import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 public final class InterfaceModel
 {
@@ -65,30 +63,5 @@ public final class InterfaceModel
                                        _name + "' before it has been set" );
     }
     return _inherits;
-  }
-
-  @Nonnull
-  public static InterfaceModel parse( @Nonnull final ModelRepository repository,
-                                      @Nonnull final WebIDLParser.InterfaceRestContext ctx )
-  {
-    final String name = ctx.IDENTIFIER().getText();
-    final InterfaceModel interfaceModel = repository.findOrCreateInterfaceByName( name );
-    interfaceModel.setInherits( extractInherits( ctx ) );
-    return interfaceModel;
-  }
-
-  @Nullable
-  private static String extractInherits( @Nonnull final WebIDLParser.InterfaceRestContext ctx )
-  {
-    final WebIDLParser.InheritanceContext inheritance = ctx.inheritance();
-    if ( null != inheritance )
-    {
-      final TerminalNode identifier = inheritance.IDENTIFIER();
-      if ( null != identifier )
-      {
-        return identifier.getSymbol().getText();
-      }
-    }
-    return null;
   }
 }

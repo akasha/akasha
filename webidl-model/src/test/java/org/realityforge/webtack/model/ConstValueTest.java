@@ -27,7 +27,7 @@ public class ConstValueTest
                                  @Nullable final String value )
     throws IOException
   {
-    final ConstValue constValue = ConstValue.parse( createParser( webIDL ).constMemberValue() );
+    final ConstValue constValue = WebIDLModelParser.parse( createParser( webIDL ).constMemberValue() );
     assertEquals( constValue.getKind(), kind );
     assertEquals( constValue.getValue(), value );
   }

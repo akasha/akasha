@@ -221,6 +221,6 @@ public class TypeTest
   private Type parseType( @Nonnull final String webIDL )
     throws IOException
   {
-    return Type.parse( createParser( webIDL ).type() );
+    return WebIDLModelParser.parse( createParser( webIDL ).type() );
   }
 }

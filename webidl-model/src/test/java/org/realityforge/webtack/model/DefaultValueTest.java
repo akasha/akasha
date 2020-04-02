@@ -32,7 +32,7 @@ public class DefaultValueTest
                                  @Nullable final String stringValue )
     throws IOException
   {
-    final DefaultValue defaultValue = DefaultValue.parse( createParser( webIDL ).defaultValue() );
+    final DefaultValue defaultValue = WebIDLModelParser.parse( createParser( webIDL ).defaultValue() );
     assertEquals( defaultValue.getKind(), kind );
     final ConstValue constValue = defaultValue.getConstValue();
     assertEquals( null != constValue, null != constValueType );

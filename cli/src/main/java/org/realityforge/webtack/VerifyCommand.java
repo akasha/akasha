@@ -18,9 +18,6 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
-import org.realityforge.webtack.model.Argument;
-import org.realityforge.webtack.model.EnumerationModel;
-import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.webidl.parser.WebIDLBaseListener;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -103,35 +100,35 @@ final class VerifyCommand
           public void exitType( final WebIDLParser.TypeContext ctx )
           {
             super.exitType( ctx );
-            Type.parse( ctx );
+            WebIDLModelParser.parse( ctx );
           }
 
           @Override
           public void exitTypeWithExtendedAttributes( final WebIDLParser.TypeWithExtendedAttributesContext ctx )
           {
             super.exitTypeWithExtendedAttributes( ctx );
-            Type.parse( ctx );
+            WebIDLModelParser.parse( ctx );
           }
 
           @Override
           public void exitReturnType( final WebIDLParser.ReturnTypeContext ctx )
           {
             super.exitReturnType( ctx );
-            Type.parse( ctx );
+            WebIDLModelParser.parse( ctx );
           }
 
           @Override
           public void exitEnumDefinition( final WebIDLParser.EnumDefinitionContext ctx )
           {
             super.exitEnumDefinition( ctx );
-            EnumerationModel.parse( ctx );
+            WebIDLModelParser.parse( ctx );
           }
 
           @Override
           public void exitArgument( final WebIDLParser.ArgumentContext ctx )
           {
             super.exitArgument( ctx );
-            Argument.parse( ctx );
+            WebIDLModelParser.parse( ctx );
           }
         } );
         parser.webIDL();
