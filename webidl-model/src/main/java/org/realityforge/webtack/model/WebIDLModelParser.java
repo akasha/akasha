@@ -93,8 +93,39 @@ public final class WebIDLModelParser
     final WebIDLParser.PartialContext partialContext = ctx.partial();
     if ( null != partialContext )
     {
-      //TODO:
-      throw new UnsupportedOperationException();
+      final WebIDLParser.PartialDefinitionContext partialDefinitionContext = partialContext.partialDefinition();
+      final WebIDLParser.PartialInterfaceOrPartialMixinContext partialInterfaceOrPartialMixinContext =
+        partialDefinitionContext.partialInterfaceOrPartialMixin();
+      if ( null != partialInterfaceOrPartialMixinContext )
+      {
+        final WebIDLParser.PartialInterfaceRestContext partialInterfaceRestContext =
+          partialInterfaceOrPartialMixinContext.partialInterfaceRest();
+        if ( null != partialInterfaceRestContext )
+        {
+          //TODO:
+          throw new UnsupportedOperationException();
+        }
+        else
+        {
+          final WebIDLParser.MixinRestContext mixinRestContext = partialInterfaceOrPartialMixinContext.mixinRest();
+          assert null != mixinRestContext;
+          //TODO:
+          throw new UnsupportedOperationException();
+        }
+      }
+      final WebIDLParser.PartialDictionaryContext partialDictionaryContext =
+        partialDefinitionContext.partialDictionary();
+      if ( null != partialDictionaryContext )
+      {
+        return parse( partialDictionaryContext );
+      }
+      else
+      {
+        final WebIDLParser.NamespaceContext partialNamespaceContext = partialDefinitionContext.namespace();
+        assert null != partialNamespaceContext;
+        //TODO:
+        throw new UnsupportedOperationException();
+      }
     }
     final WebIDLParser.DictionaryContext dictionaryContext = ctx.dictionary();
     if ( null != dictionaryContext )
