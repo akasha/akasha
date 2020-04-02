@@ -645,6 +645,20 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static List<DictionaryMember> parse( @Nonnull final WebIDLParser.DictionaryMembersContext ctx )
+  {
+    WebIDLParser.DictionaryMembersContext members = ctx;
+    WebIDLParser.DictionaryMemberContext memberContext;
+    final List<DictionaryMember> results = new ArrayList<>();
+    while ( null != ( memberContext = members.dictionaryMember() ) )
+    {
+      results.add( parse( memberContext ) );
+      members = members.dictionaryMembers();
+    }
+    return Collections.unmodifiableList( results );
+  }
+
+  @Nonnull
   public static WebIDLParser createParser( @Nonnull final Reader reader )
     throws IOException
   {

@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -33,6 +34,39 @@ public final class DictionaryMemberTest
     assertEquals( member.getType().getKind(), Kind.UnsignedShort );
     assertFalse( member.isOptional() );
     assertNull( member.getDefaultValue() );
+  }
+
+  @Test
+  public void parseList()
+    throws IOException
+  {
+    final String webIDL = "  USVString name;\n" +
+                          "  USVString iconURL;\n" +
+                          "  required USVString origin;\n" +
+                          "};\n";
+    final List<DictionaryMember> members = WebIDLModelParser.parse( createParser( webIDL ).dictionaryMembers() );
+    assertEquals( members.size(), 3 );
+    {
+      final DictionaryMember member = members.get( 0 );
+      assertEquals( member.getName(), "name" );
+      assertEquals( member.getType().getKind(), Kind.USVString );
+      assertTrue( member.isOptional() );
+      assertNull( member.getDefaultValue() );
+    }
+    {
+      final DictionaryMember member = members.get( 1 );
+      assertEquals( member.getName(), "iconURL" );
+      assertEquals( member.getType().getKind(), Kind.USVString );
+      assertTrue( member.isOptional() );
+      assertNull( member.getDefaultValue() );
+    }
+    {
+      final DictionaryMember member = members.get( 2 );
+      assertEquals( member.getName(), "origin" );
+      assertEquals( member.getType().getKind(), Kind.USVString );
+      assertFalse( member.isOptional() );
+      assertNull( member.getDefaultValue() );
+    }
   }
 
   @Nonnull
