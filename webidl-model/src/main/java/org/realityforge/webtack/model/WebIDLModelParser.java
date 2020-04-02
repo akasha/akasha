@@ -353,11 +353,11 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static TypedefModel parse( @Nonnull final WebIDLParser.TypedefContext ctx )
+  public static TypedefDefinition parse( @Nonnull final WebIDLParser.TypedefContext ctx )
   {
     final String name = ctx.IDENTIFIER().getText();
     final Type type = parse( ctx.typeWithExtendedAttributes() );
-    return new TypedefModel( name, type );
+    return new TypedefDefinition( name, type );
   }
 
   @Nonnull

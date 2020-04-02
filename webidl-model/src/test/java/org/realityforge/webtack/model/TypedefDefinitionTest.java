@@ -5,7 +5,7 @@ import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class TypedefModelTest
+public class TypedefDefinitionTest
   extends AbstractTest
 {
   @Test
@@ -24,13 +24,13 @@ public class TypedefModelTest
   private void assertTypedef( @Nonnull final String webIDL, @Nonnull final String name, @Nonnull final Kind kind )
     throws IOException
   {
-    final TypedefModel typedefModel = parse( webIDL );
+    final TypedefDefinition typedefModel = parse( webIDL );
     assertEquals( typedefModel.getName(), name );
     assertEquals( typedefModel.getType().getKind(), kind );
   }
 
   @Nonnull
-  private TypedefModel parse( @Nonnull final String webIDL )
+  private TypedefDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
     return WebIDLModelParser.parse( createParser( webIDL ).typedef() );

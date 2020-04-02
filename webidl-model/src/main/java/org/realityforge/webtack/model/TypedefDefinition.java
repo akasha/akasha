@@ -3,7 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
-public final class TypedefModel
+public final class TypedefDefinition
   extends Definition
 {
   @Nonnull
@@ -11,7 +11,7 @@ public final class TypedefModel
   @Nonnull
   private final Type _type;
 
-  TypedefModel( @Nonnull final String name, @Nonnull final Type type )
+  TypedefDefinition( @Nonnull final String name, @Nonnull final Type type )
   {
     _name = Objects.requireNonNull( name );
     _type = Objects.requireNonNull( type );
