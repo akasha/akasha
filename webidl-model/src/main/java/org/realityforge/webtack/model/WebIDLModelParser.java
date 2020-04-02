@@ -96,8 +96,7 @@ public final class WebIDLModelParser
     final WebIDLParser.DictionaryContext dictionaryContext = ctx.dictionary();
     if ( null != dictionaryContext )
     {
-      //TODO:
-      throw new UnsupportedOperationException();
+      return parse( dictionaryContext );
     }
     final WebIDLParser.EnumDefinitionContext enumDefinitionContext = ctx.enumDefinition();
     if ( null != enumDefinitionContext )
