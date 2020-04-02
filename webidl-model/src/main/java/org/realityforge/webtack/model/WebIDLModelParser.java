@@ -57,7 +57,29 @@ public final class WebIDLModelParser
       ctx.callbackOrInterfaceOrMixin();
     if ( null != callbackOrInterfaceOrMixinContext )
     {
-      throw new UnsupportedOperationException();
+      final WebIDLParser.CallbackRestOrInterfaceContext callbackRestOrInterfaceContext =
+        callbackOrInterfaceOrMixinContext.callbackRestOrInterface();
+      if ( null != callbackRestOrInterfaceContext )
+      {
+        throw new UnsupportedOperationException();
+      }
+      else
+      {
+        final WebIDLParser.InterfaceOrMixinContext interfaceOrMixinContext =
+          callbackOrInterfaceOrMixinContext.interfaceOrMixin();
+        assert null != interfaceOrMixinContext;
+        final WebIDLParser.InterfaceRestContext interfaceRestContext = interfaceOrMixinContext.interfaceRest();
+        if ( null != interfaceRestContext )
+        {
+          throw new UnsupportedOperationException();
+        }
+        else
+        {
+          final WebIDLParser.MixinRestContext mixinRestContext = interfaceOrMixinContext.mixinRest();
+          assert null != mixinRestContext;
+          throw new UnsupportedOperationException();
+        }
+      }
     }
     final WebIDLParser.NamespaceContext namespaceContext = ctx.namespace();
     if ( null != namespaceContext )
