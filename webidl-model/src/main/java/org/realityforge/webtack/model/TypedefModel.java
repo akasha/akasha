@@ -4,6 +4,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 
 public final class TypedefModel
+  extends Definition
 {
   @Nonnull
   private final String _name;

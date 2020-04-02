@@ -5,6 +5,7 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 
 public final class EnumerationModel
+  extends Definition
 {
   @Nonnull
   private final String _name;
