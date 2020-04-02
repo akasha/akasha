@@ -137,6 +137,13 @@ final class VerifyCommand
             super.exitDictionary( ctx );
             WebIDLModelParser.parse( ctx );
           }
+
+          @Override
+          public void exitPartialDictionary( final WebIDLParser.PartialDictionaryContext ctx )
+          {
+            super.exitPartialDictionary( ctx );
+            WebIDLModelParser.parse( ctx );
+          }
         } );
         parser.webIDL();
 

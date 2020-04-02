@@ -628,6 +628,14 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  public static PartialDictionaryDefinition parse( @Nonnull final WebIDLParser.PartialDictionaryContext ctx )
+  {
+    final String name = ctx.IDENTIFIER().getText();
+    final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
+    return new PartialDictionaryDefinition( name, members );
+  }
+
+  @Nonnull
   static DictionaryMember parse( @Nonnull final WebIDLParser.DictionaryMemberContext ctx )
   {
     final List<ExtendedAttribute> extendedAttributes = parse( ctx.extendedAttributeList() );
