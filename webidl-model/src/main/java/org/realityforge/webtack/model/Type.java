@@ -26,12 +26,12 @@ public class Type
   }
 
   @Nonnull
-  public Kind getKind()
+  public final Kind getKind()
   {
     return _kind;
   }
 
-  public boolean isNullable()
+  public final boolean isNullable()
   {
     return ( _flags & Flags.NULLABLE ) == Flags.NULLABLE;
   }

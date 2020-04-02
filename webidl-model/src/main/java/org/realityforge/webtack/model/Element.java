@@ -15,7 +15,7 @@ public abstract class Element
   }
 
   @Nonnull
-  public List<ExtendedAttribute> getExtendedAttributes()
+  public final List<ExtendedAttribute> getExtendedAttributes()
   {
     return _extendedAttributes;
   }
