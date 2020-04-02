@@ -51,6 +51,21 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  public static List<Definition> parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
+  {
+    WebIDLParser.DefinitionsContext definitionsContext = ctx.definitions();
+    WebIDLParser.DefinitionContext definitionContext;
+    final List<Definition> definitions = new ArrayList<>();
+    while ( null != ( definitionContext = definitionsContext.definition() ) )
+    {
+      definitions.add( parse( definitionContext ) );
+      definitionsContext = definitionsContext.definitions();
+    }
+
+    return Collections.unmodifiableList( definitions );
+  }
+
+  @Nonnull
   public static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx )
   {
     final WebIDLParser.CallbackOrInterfaceOrMixinContext callbackOrInterfaceOrMixinContext =
@@ -62,7 +77,7 @@ public final class WebIDLModelParser
       if ( null != callbackRestOrInterfaceContext )
       {
         final WebIDLParser.CallbackRestContext callbackRestContext = callbackRestOrInterfaceContext.callbackRest();
-        if( null != callbackRestContext )
+        if ( null != callbackRestContext )
         {
           //TODO:
           throw new UnsupportedOperationException();
