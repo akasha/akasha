@@ -51,6 +51,49 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  public static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx )
+  {
+    final WebIDLParser.CallbackOrInterfaceOrMixinContext callbackOrInterfaceOrMixinContext =
+      ctx.callbackOrInterfaceOrMixin();
+    if ( null != callbackOrInterfaceOrMixinContext )
+    {
+      throw new UnsupportedOperationException();
+    }
+    final WebIDLParser.NamespaceContext namespaceContext = ctx.namespace();
+    if ( null != namespaceContext )
+    {
+      //TODO:
+      throw new UnsupportedOperationException();
+    }
+    final WebIDLParser.PartialContext partialContext = ctx.partial();
+    if ( null != partialContext )
+    {
+      //TODO:
+      throw new UnsupportedOperationException();
+    }
+    final WebIDLParser.DictionaryContext dictionaryContext = ctx.dictionary();
+    if ( null != dictionaryContext )
+    {
+      //TODO:
+      throw new UnsupportedOperationException();
+    }
+    final WebIDLParser.EnumDefinitionContext enumDefinitionContext = ctx.enumDefinition();
+    if ( null != enumDefinitionContext )
+    {
+      return parse( enumDefinitionContext );
+    }
+    final WebIDLParser.TypedefContext typedefContext = ctx.typedef();
+    if ( null != typedefContext )
+    {
+      return parse( typedefContext );
+    }
+    final WebIDLParser.IncludesStatementContext includesStatementContext = ctx.includesStatement();
+    assert null != includesStatementContext;
+    //TODO:
+    throw new UnsupportedOperationException();
+  }
+
+  @Nonnull
   public static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx )
   {
     final WebIDLParser.ArgumentContext argumentContext = ctx.argument();
