@@ -12,12 +12,12 @@ public final class RecordType
   @Nonnull
   private final Type _valueType;
 
-  RecordType( @Nonnull final List<ExtendedAttribute> extendedAttributes,
-              final int flags,
-              @Nonnull final Type keyType,
-              @Nonnull final Type valueType )
+  RecordType( @Nonnull final Type keyType,
+              @Nonnull final Type valueType,
+              @Nonnull final List<ExtendedAttribute> extendedAttributes,
+              final boolean nullable )
   {
-    super( Kind.Record, extendedAttributes, flags );
+    super( Kind.Record, extendedAttributes, nullable );
     _keyType = Objects.requireNonNull( keyType );
     _valueType = Objects.requireNonNull( valueType );
     assert _keyType.getKind().isString();

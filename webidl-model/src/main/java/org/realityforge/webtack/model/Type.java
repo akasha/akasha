@@ -9,13 +9,13 @@ public class Type
 {
   @Nonnull
   private final Kind _kind;
-  private final int _flags;
+  private final boolean _nullable;
 
-  Type( @Nonnull final Kind kind, @Nonnull final List<ExtendedAttribute> extendedAttributes, final int flags )
+  Type( @Nonnull final Kind kind, @Nonnull final List<ExtendedAttribute> extendedAttributes, final boolean nullable )
   {
     super( extendedAttributes );
     _kind = Objects.requireNonNull( kind );
-    _flags = flags;
+    _nullable = nullable;
     assert _kind.isNullableAllowed() || !isNullable();
     assert ( Kind.Sequence == _kind ) == ( this instanceof SequenceType );
     assert ( Kind.FrozenArray == _kind ) == ( this instanceof FrozenArrayType );
@@ -33,16 +33,6 @@ public class Type
 
   public final boolean isNullable()
   {
-    return ( _flags & Flags.NULLABLE ) == Flags.NULLABLE;
-  }
-
-  public static final class Flags
-  {
-    private Flags()
-    {
-    }
-
-    // TODO: If there is only one flag we should just use a boolean
-    public static final int NULLABLE = 1 << 5;
+    return _nullable;
   }
 }

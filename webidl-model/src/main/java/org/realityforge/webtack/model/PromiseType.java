@@ -10,9 +10,9 @@ public final class PromiseType
   @Nonnull
   private final Type _resolveType;
 
-  PromiseType( @Nonnull final List<ExtendedAttribute> extendedAttributes, @Nonnull final Type resolveType )
+  PromiseType( @Nonnull final Type resolveType, @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
-    super( Kind.Promise, extendedAttributes, 0 );
+    super( Kind.Promise, extendedAttributes, false );
     _resolveType = Objects.requireNonNull( resolveType );
   }
 

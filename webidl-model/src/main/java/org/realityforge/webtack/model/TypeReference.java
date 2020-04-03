@@ -16,9 +16,9 @@ public final class TypeReference
 
   TypeReference( @Nonnull final String name,
                  @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                 final int flags )
+                 final boolean nullable )
   {
-    super( Kind.TypeReference, extendedAttributes, flags );
+    super( Kind.TypeReference, extendedAttributes, nullable );
     _name = Objects.requireNonNull( name );
   }
 

@@ -10,9 +10,11 @@ public final class SequenceType
   @Nonnull
   private final Type _itemType;
 
-  SequenceType( @Nonnull final List<ExtendedAttribute> extendedAttributes, @Nonnull final Type itemType, final int flags )
+  SequenceType( @Nonnull final Type itemType,
+                @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                final boolean nullable )
   {
-    super( Kind.Sequence, extendedAttributes, flags );
+    super( Kind.Sequence, extendedAttributes, nullable );
     _itemType = Objects.requireNonNull( itemType );
   }
 

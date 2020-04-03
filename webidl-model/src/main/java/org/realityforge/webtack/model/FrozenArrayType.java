@@ -10,9 +10,11 @@ public final class FrozenArrayType
   @Nonnull
   private final Type _itemType;
 
-  FrozenArrayType( @Nonnull final List<ExtendedAttribute> extendedAttributes, @Nonnull final Type itemType, final int flags )
+  FrozenArrayType( @Nonnull final Type itemType,
+                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                   final boolean nullable )
   {
-    super( Kind.FrozenArray, extendedAttributes, flags );
+    super( Kind.FrozenArray, extendedAttributes, nullable );
     _itemType = Objects.requireNonNull( itemType );
   }
 

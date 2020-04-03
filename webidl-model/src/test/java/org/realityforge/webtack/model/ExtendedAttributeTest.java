@@ -113,7 +113,7 @@ public final class ExtendedAttributeTest
     final String argListName = randomString();
     final List<Argument> argList =
       Collections.singletonList( new Argument( "foo",
-                                               new Type( Kind.Octet, Collections.emptyList(), 0 ),
+                                               new Type( Kind.Octet, Collections.emptyList(), false ),
                                                false,
                                                false,
                                                null,
@@ -160,7 +160,7 @@ public final class ExtendedAttributeTest
     final String argListName = randomString();
     final List<Argument> argList =
       Collections.singletonList( new Argument( "foo",
-                                               new Type( Kind.Octet, Collections.emptyList(), 0 ),
+                                               new Type( Kind.Octet, Collections.emptyList(), false ),
                                                false,
                                                false,
                                                null,

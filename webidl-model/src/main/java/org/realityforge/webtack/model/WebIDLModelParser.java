@@ -479,17 +479,17 @@ public final class WebIDLModelParser
     }
     else
     {
-      final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Type.Flags.NULLABLE : 0;
+      final boolean nullable = 1 == ctx.nullModifier().getChildCount();
       final WebIDLParser.UnionTypeContext unionTypeContext = ctx.unionType();
       assert null != unionTypeContext;
-      return parse( unionTypeContext, extendedAttributes, additionalFlags );
+      return parse( unionTypeContext, extendedAttributes, nullable );
     }
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.UnionTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                             final int additionalFlags )
+                             final boolean nullable )
   {
     final List<Type> memberTypes = new ArrayList<>();
     collectUnionMemberType( ctx.unionMemberType( 0 ), memberTypes );
@@ -500,7 +500,7 @@ public final class WebIDLModelParser
       collectUnionMemberType( unionMemberTypesContext.unionMemberType(), memberTypes );
       unionMemberTypesContext = unionMemberTypesContext.unionMemberTypes();
     }
-    return new UnionType( extendedAttributes, additionalFlags, Collections.unmodifiableList( memberTypes ) );
+    return new UnionType( Collections.unmodifiableList( memberTypes ), extendedAttributes, nullable );
   }
 
   private static void collectUnionMemberType( @Nonnull final WebIDLParser.UnionMemberTypeContext ctx,
@@ -515,10 +515,10 @@ public final class WebIDLModelParser
     }
     else
     {
-      final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Type.Flags.NULLABLE : 0;
+      final boolean nullable = 1 == ctx.nullModifier().getChildCount();
       final WebIDLParser.UnionTypeContext unionTypeContext = ctx.unionType();
       assert null != unionTypeContext;
-      memberTypes.add( parse( unionTypeContext, Collections.emptyList(), additionalFlags ) );
+      memberTypes.add( parse( unionTypeContext, Collections.emptyList(), nullable ) );
     }
   }
 
@@ -534,7 +534,7 @@ public final class WebIDLModelParser
     else if ( ctx.getChild( 0 ) instanceof TerminalNode )
     {
       assert ctx.getChild( 0 ).getText().equals( "any" );
-      return new Type( Kind.Any, extendedAttributes, 0 );
+      return new Type( Kind.Any, extendedAttributes, false );
     }
     else
     {
@@ -548,36 +548,36 @@ public final class WebIDLModelParser
   private static Type parse( @Nonnull final WebIDLParser.PromiseTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
-    return new PromiseType( extendedAttributes, parse( ctx.returnType() ) );
+    return new PromiseType( parse( ctx.returnType() ), extendedAttributes );
   }
 
   @Nonnull
   public static Type parse( @Nonnull final WebIDLParser.ReturnTypeContext returnTypeContext )
   {
     final WebIDLParser.TypeContext type = returnTypeContext.type();
-    return null != type ? parse( type ) : new Type( Kind.Void, Collections.emptyList(), 0 );
+    return null != type ? parse( type ) : new Type( Kind.Void, Collections.emptyList(), false );
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.DistinguishableTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
-    final int additionalFlags = 1 == ctx.nullModifier().getChildCount() ? Type.Flags.NULLABLE : 0;
+    final boolean nullable = 1 == ctx.nullModifier().getChildCount();
 
     final WebIDLParser.PrimitiveTypeContext primitiveTypeContext = ctx.primitiveType();
     if ( null != primitiveTypeContext )
     {
-      return parse( primitiveTypeContext, extendedAttributes, additionalFlags );
+      return parse( primitiveTypeContext, extendedAttributes, nullable );
     }
     final WebIDLParser.StringTypeContext stringTypeContext = ctx.stringType();
     if ( null != stringTypeContext )
     {
-      return parse( stringTypeContext, extendedAttributes, additionalFlags );
+      return parse( stringTypeContext, extendedAttributes, nullable );
     }
     final TerminalNode identifier = ctx.IDENTIFIER();
     if ( null != identifier )
     {
-      return new TypeReference( identifier.getText(), extendedAttributes, additionalFlags );
+      return new TypeReference( identifier.getText(), extendedAttributes, nullable );
     }
     final ParseTree child1 = ctx.getChild( 0 );
     if ( child1 instanceof TerminalNode )
@@ -585,59 +585,59 @@ public final class WebIDLModelParser
       final String text = child1.getText();
       if ( "sequence".equals( text ) )
       {
-        return new SequenceType( extendedAttributes, parse( ctx.typeWithExtendedAttributes() ), additionalFlags );
+        return new SequenceType( parse( ctx.typeWithExtendedAttributes() ), extendedAttributes, nullable );
       }
       else if ( "object".equals( text ) )
       {
-        return new Type( Kind.Object, extendedAttributes, additionalFlags );
+        return new Type( Kind.Object, extendedAttributes, nullable );
       }
       else if ( "symbol".equals( text ) )
       {
-        return new Type( Kind.Symbol, extendedAttributes, additionalFlags );
+        return new Type( Kind.Symbol, extendedAttributes, nullable );
       }
       else
       {
         assert "FrozenArray".equals( text );
-        return new FrozenArrayType( extendedAttributes, parse( ctx.typeWithExtendedAttributes() ), additionalFlags );
+        return new FrozenArrayType( parse( ctx.typeWithExtendedAttributes() ), extendedAttributes, nullable );
       }
     }
     final WebIDLParser.BufferRelatedTypeContext bufferRelatedTypeContext = ctx.bufferRelatedType();
     if ( null != bufferRelatedTypeContext )
     {
-      return parse( bufferRelatedTypeContext, extendedAttributes, additionalFlags );
+      return parse( bufferRelatedTypeContext, extendedAttributes, nullable );
     }
     final WebIDLParser.RecordTypeContext recordTypeContext = ctx.recordType();
     assert null != recordTypeContext;
-    return parse( recordTypeContext, extendedAttributes, additionalFlags );
+    return parse( recordTypeContext, extendedAttributes, nullable );
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.RecordTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                             final int additionalFlags )
+                             final boolean nullable )
   {
-    final Type keyType = parse( ctx.stringType(), Collections.emptyList(), 0 );
+    final Type keyType = parse( ctx.stringType(), Collections.emptyList(), false );
     final Type valueType = parse( ctx.typeWithExtendedAttributes() );
-    return new RecordType( extendedAttributes, additionalFlags, keyType, valueType );
+    return new RecordType( keyType, valueType, extendedAttributes, nullable );
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                             final int additionalFlags )
+                             final boolean nullable )
   {
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
     assert null != literalName;
     final Kind kind = BUFFER_KIND_MAP.get( literalName );
     assert null != kind;
-    return new Type( kind, extendedAttributes, additionalFlags );
+    return new Type( kind, extendedAttributes, nullable );
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.PrimitiveTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                             final int additionalFlags )
+                             final boolean nullable )
   {
     final WebIDLParser.UnsignedIntegerTypeContext unsignedIntegerType = ctx.unsignedIntegerType();
     if ( null != unsignedIntegerType )
@@ -651,18 +651,18 @@ public final class WebIDLModelParser
         final WebIDLParser.OptionalLongContext optionalLongContext = integerTypeContext.optionalLong();
         if ( 0 == optionalLongContext.getChildCount() )
         {
-          return new Type( unsigned ? Kind.UnsignedLong : Kind.Long, extendedAttributes, additionalFlags );
+          return new Type( unsigned ? Kind.UnsignedLong : Kind.Long, extendedAttributes, nullable );
         }
         else
         {
           assert optionalLongContext.getChild( 0 ).getText().equals( "long" );
-          return new Type( unsigned ? Kind.UnsignedLongLong : Kind.LongLong, extendedAttributes, additionalFlags );
+          return new Type( unsigned ? Kind.UnsignedLongLong : Kind.LongLong, extendedAttributes, nullable );
         }
       }
       else
       {
         assert integerTypeContext.getChild( 0 ).getText().equals( "short" );
-        return new Type( unsigned ? Kind.UnsignedShort : Kind.Short, extendedAttributes, additionalFlags );
+        return new Type( unsigned ? Kind.UnsignedShort : Kind.Short, extendedAttributes, nullable );
       }
     }
     final WebIDLParser.UnrestrictedFloatTypeContext unrestrictedFloatType = ctx.unrestrictedFloatType();
@@ -674,12 +674,12 @@ public final class WebIDLModelParser
 
       if ( unrestrictedFloatType.floatType().getChild( 0 ).getText().equals( "float" ) )
       {
-        return new Type( unrestricted ? Kind.UnrestrictedFloat : Kind.Float, extendedAttributes, additionalFlags );
+        return new Type( unrestricted ? Kind.UnrestrictedFloat : Kind.Float, extendedAttributes, nullable );
       }
       else
       {
         assert unrestrictedFloatType.floatType().getChild( 0 ).getText().equals( "double" );
-        return new Type( unrestricted ? Kind.UnrestrictedDouble : Kind.Double, extendedAttributes, additionalFlags );
+        return new Type( unrestricted ? Kind.UnrestrictedDouble : Kind.Double, extendedAttributes, nullable );
       }
     }
 
@@ -687,30 +687,30 @@ public final class WebIDLModelParser
     final String literalName = child.getText();
     if ( "boolean".equals( literalName ) )
     {
-      return new Type( Kind.Boolean, extendedAttributes, additionalFlags );
+      return new Type( Kind.Boolean, extendedAttributes, nullable );
     }
     else if ( "byte".equals( literalName ) )
     {
-      return new Type( Kind.Byte, extendedAttributes, additionalFlags );
+      return new Type( Kind.Byte, extendedAttributes, nullable );
     }
     else
     {
       assert "octet".equals( literalName );
-      return new Type( Kind.Octet, extendedAttributes, additionalFlags );
+      return new Type( Kind.Octet, extendedAttributes, nullable );
     }
   }
 
   @Nonnull
   private static Type parse( @Nonnull final WebIDLParser.StringTypeContext ctx,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                             final int additionalFlags )
+                             final boolean nullable )
   {
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
     assert null != literalName;
     final Kind kind = STRING_KIND_MAP.get( literalName );
     assert null != kind;
-    return new Type( kind, extendedAttributes, additionalFlags );
+    return new Type( kind, extendedAttributes, nullable );
   }
 
   @Nonnull
