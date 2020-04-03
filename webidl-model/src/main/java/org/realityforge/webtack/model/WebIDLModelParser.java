@@ -81,8 +81,11 @@ public final class WebIDLModelParser
         final WebIDLParser.CallbackRestContext callbackRestContext = callbackRestOrInterfaceContext.callbackRest();
         if ( null != callbackRestContext )
         {
-          //TODO:
-          throw new UnsupportedOperationException();
+          final String name = callbackRestContext.IDENTIFIER().getText();
+          final Type returnType = parse( callbackRestContext.returnType() );
+          final List<Argument> arguments = parse( callbackRestContext.argumentList() );
+
+          return new CallbackDefinition( name, returnType, arguments, extendedAttributes );
         }
         else
         {
