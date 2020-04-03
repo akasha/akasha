@@ -56,8 +56,8 @@ public final class TypeTest
     assertType( ensurePromiseType( "Promise<short?>" ).getResolveType(), Kind.Short, true );
     assertType( ensurePromiseType( "Promise<any>" ).getResolveType(), Kind.Any, false );
     assertType( ensurePromiseType( "Promise<DOMString>" ).getResolveType(), Kind.DOMString, false );
-    assertType( ensurePromiseType( "Promise<VisibilityState>" ).getResolveType(), Kind.Enumeration, false );
-    assertType( ensurePromiseType( "Promise<XRSessionInit?>" ).getResolveType(), Kind.Enumeration, true );
+    assertType( ensurePromiseType( "Promise<VisibilityState>" ).getResolveType(), Kind.TypeReference, false );
+    assertType( ensurePromiseType( "Promise<XRSessionInit?>" ).getResolveType(), Kind.TypeReference, true );
 
     // enumerations
     assertEquals( ensureEnumerationType( "VisibilityState", false ).getName(), "VisibilityState" );
@@ -68,7 +68,7 @@ public final class TypeTest
     assertType( ensureSequenceType( "sequence<short>", false ).getItemType(), Kind.Short, false );
     assertType( ensureSequenceType( "sequence<long long>", false ).getItemType(), Kind.LongLong, false );
     assertType( ensureSequenceType( "sequence<long long?>", false ).getItemType(), Kind.LongLong, true );
-    assertType( ensureSequenceType( "sequence<XRSessionMode>?", true ).getItemType(), Kind.Enumeration, false );
+    assertType( ensureSequenceType( "sequence<XRSessionMode>?", true ).getItemType(), Kind.TypeReference, false );
 
     // FrozenArrays
     assertFrozenArrayType( "FrozenArray<long>?", true, Kind.Long, false );
@@ -103,7 +103,7 @@ public final class TypeTest
       final List<Type> memberTypes = unionType.getMemberTypes();
       assertEquals( memberTypes.size(), 2 );
       assertEquals( memberTypes.get( 0 ).getKind(), Kind.Long );
-      assertEquals( memberTypes.get( 1 ).getKind(), Kind.Enumeration );
+      assertEquals( memberTypes.get( 1 ).getKind(), Kind.TypeReference );
     }
 
     {
@@ -111,7 +111,7 @@ public final class TypeTest
       final List<Type> memberTypes = unionType.getMemberTypes();
       assertEquals( memberTypes.size(), 2 );
       assertEquals( memberTypes.get( 0 ).getKind(), Kind.DOMString );
-      assertEquals( memberTypes.get( 1 ).getKind(), Kind.Enumeration );
+      assertEquals( memberTypes.get( 1 ).getKind(), Kind.TypeReference );
     }
 
     //TODO: Test all the types with extended attributes where possible
@@ -184,12 +184,12 @@ public final class TypeTest
   }
 
   @Nonnull
-  private EnumerationType ensureEnumerationType( @Nonnull final String idl, final boolean isNullable )
+  private TypeReference ensureEnumerationType( @Nonnull final String idl, final boolean isNullable )
     throws IOException
   {
-    final Type type = ensureType( idl, Kind.Enumeration, isNullable );
-    assertTrue( type instanceof EnumerationType );
-    return (EnumerationType) type;
+    final Type type = ensureType( idl, Kind.TypeReference, isNullable );
+    assertTrue( type instanceof TypeReference );
+    return (TypeReference) type;
   }
 
   @Nonnull

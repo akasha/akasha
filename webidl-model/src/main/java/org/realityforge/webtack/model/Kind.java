@@ -144,11 +144,12 @@ public enum Kind
    */
   Dictionary( null ),
   /**
-   * An identifier that identifies an enumeration is used to refer to a type whose values are the set of strings (sequences of code units, as with DOMString) that are the enumeration’s values.
+   * A reference to a type with specified name.
+   * The name may identify an interface, enumeration, callback function, callback interface or typedef.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-enumeration">Enumeration types</a>
    */
-  Enumeration( null ),
+  TypeReference( null ),
   /**
    * An identifier that identifies a callback function is used to refer to a type whose values are references to objects that are functions with the given signature.
    *

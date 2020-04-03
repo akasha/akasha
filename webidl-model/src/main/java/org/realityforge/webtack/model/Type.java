@@ -19,7 +19,7 @@ public class Type
     assert _kind.isNullableAllowed() || !isNullable();
     assert ( Kind.Sequence == _kind ) == ( this instanceof SequenceType );
     assert ( Kind.FrozenArray == _kind ) == ( this instanceof FrozenArrayType );
-    assert ( Kind.Enumeration == _kind ) == ( this instanceof EnumerationType );
+    assert ( Kind.TypeReference == _kind ) == ( this instanceof TypeReference );
     assert ( Kind.Promise == _kind ) == ( this instanceof PromiseType );
     assert ( Kind.Record == _kind ) == ( this instanceof RecordType );
     assert ( Kind.Union == _kind ) == ( this instanceof UnionType );

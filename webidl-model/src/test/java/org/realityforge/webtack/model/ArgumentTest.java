@@ -27,7 +27,7 @@ public final class ArgumentTest
 
     {
       final Argument argument =
-        ensureArgument( "optional XRRenderStateInit state = {}", "state", Kind.Enumeration, true, false );
+        ensureArgument( "optional XRRenderStateInit state = {}", "state", Kind.TypeReference, true, false );
       final DefaultValue defaultValue = argument.getDefaultValue();
       assertNotNull( defaultValue );
       assertEquals( defaultValue.getKind(), DefaultValue.Kind.EmptyDictionary );
@@ -77,10 +77,10 @@ public final class ArgumentTest
         parseArgumentList( "optional DOMPointInit position = {}, optional DOMPointInit orientation = {}", 2 );
 
       final Argument argument1 = arguments.get( 0 );
-      assertArgument( argument1, "position", Kind.Enumeration, true, false );
+      assertArgument( argument1, "position", Kind.TypeReference, true, false );
       assertNotNull( argument1.getDefaultValue() );
       assertEquals( argument1.getDefaultValue().getKind(), DefaultValue.Kind.EmptyDictionary );
-      assertArgument( arguments.get( 1 ), "orientation", Kind.Enumeration, true, false );
+      assertArgument( arguments.get( 1 ), "orientation", Kind.TypeReference, true, false );
     }
   }
 

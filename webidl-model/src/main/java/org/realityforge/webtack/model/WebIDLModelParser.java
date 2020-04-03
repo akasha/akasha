@@ -577,7 +577,7 @@ public final class WebIDLModelParser
     final TerminalNode identifier = ctx.IDENTIFIER();
     if ( null != identifier )
     {
-      return new EnumerationType( identifier.getText(), extendedAttributes, additionalFlags );
+      return new TypeReference( identifier.getText(), extendedAttributes, additionalFlags );
     }
     final ParseTree child1 = ctx.getChild( 0 );
     if ( child1 instanceof TerminalNode )

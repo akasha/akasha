@@ -147,10 +147,10 @@ public final class ExtendedAttributeTest
     final List<Argument> arguments = extendedAttribute.getArgList();
 
     final Argument argument1 = arguments.get( 0 );
-    assertArgument( argument1, "position", Kind.Enumeration, true, false );
+    assertArgument( argument1, "position", Kind.TypeReference, true, false );
     assertNotNull( argument1.getDefaultValue() );
     assertEquals( argument1.getDefaultValue().getKind(), DefaultValue.Kind.EmptyDictionary );
-    assertArgument( arguments.get( 1 ), "orientation", Kind.Enumeration, true, false );
+    assertArgument( arguments.get( 1 ), "orientation", Kind.TypeReference, true, false );
   }
 
   @Test
@@ -195,10 +195,10 @@ public final class ExtendedAttributeTest
     final List<Argument> arguments = extendedAttribute.getArgList();
 
     final Argument argument1 = arguments.get( 0 );
-    assertArgument( argument1, "position", Kind.Enumeration, true, false );
+    assertArgument( argument1, "position", Kind.TypeReference, true, false );
     assertNotNull( argument1.getDefaultValue() );
     assertEquals( argument1.getDefaultValue().getKind(), DefaultValue.Kind.EmptyDictionary );
-    assertArgument( arguments.get( 1 ), "orientation", Kind.Enumeration, true, false );
+    assertArgument( arguments.get( 1 ), "orientation", Kind.TypeReference, true, false );
   }
 
   @Test

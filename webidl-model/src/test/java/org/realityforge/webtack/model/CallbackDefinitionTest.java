@@ -24,8 +24,8 @@ public final class CallbackDefinitionTest
       final Argument argument1 = definition.getArguments().get( 0 );
       assertEquals( argument1.getName(), "position" );
       final Type argument1Type = argument1.getType();
-      assertEquals( argument1Type.getKind(), Kind.Enumeration );
-      assertEquals( ( (EnumerationType) argument1Type ).getName(), "Position" );
+      assertEquals( argument1Type.getKind(), Kind.TypeReference );
+      assertEquals( ( (TypeReference) argument1Type ).getName(), "Position" );
     }
 
     // Multiple args
@@ -39,8 +39,8 @@ public final class CallbackDefinitionTest
       final Argument argument1 = arguments.get( 0 );
       assertEquals( argument1.getName(), "time" );
       final Type argument1Type = argument1.getType();
-      assertEquals( argument1Type.getKind(), Kind.Enumeration );
-      assertEquals( ( (EnumerationType) argument1Type ).getName(), "DOMHighResTimeStamp" );
+      assertEquals( argument1Type.getKind(), Kind.TypeReference );
+      assertEquals( ( (TypeReference) argument1Type ).getName(), "DOMHighResTimeStamp" );
     }
 
     // zero args but has a return type
@@ -48,9 +48,9 @@ public final class CallbackDefinitionTest
       final CallbackDefinition definition =
         ensureCallbackDefinition( "callback ClipboardItemDelayedCallback = ClipboardItemData ();",
                                   "ClipboardItemDelayedCallback",
-                                  Kind.Enumeration,
+                                  Kind.TypeReference,
                                   0 );
-      assertEquals( ( (EnumerationType) definition.getReturnType() ).getName(), "ClipboardItemData" );
+      assertEquals( ( (TypeReference) definition.getReturnType() ).getName(), "ClipboardItemData" );
     }
   }
 
