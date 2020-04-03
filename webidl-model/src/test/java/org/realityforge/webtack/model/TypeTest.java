@@ -60,9 +60,9 @@ public final class TypeTest
     assertType( ensurePromiseType( "Promise<XRSessionInit?>" ).getResolveType(), Kind.Enumeration, true );
 
     // enumerations
-    assertEquals( ensureEnumerationType( "VisibilityState", false ).getEnumerationName(), "VisibilityState" );
-    assertEquals( ensureEnumerationType( "XRSessionMode", false ).getEnumerationName(), "XRSessionMode" );
-    assertEquals( ensureEnumerationType( "XRSessionInit?", true ).getEnumerationName(), "XRSessionInit" );
+    assertEquals( ensureEnumerationType( "VisibilityState", false ).getName(), "VisibilityState" );
+    assertEquals( ensureEnumerationType( "XRSessionMode", false ).getName(), "XRSessionMode" );
+    assertEquals( ensureEnumerationType( "XRSessionInit?", true ).getName(), "XRSessionInit" );
 
     // sequences
     assertType( ensureSequenceType( "sequence<short>", false ).getItemType(), Kind.Short, false );

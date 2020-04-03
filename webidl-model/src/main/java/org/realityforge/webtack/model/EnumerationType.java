@@ -8,19 +8,19 @@ public final class EnumerationType
   extends Type
 {
   @Nonnull
-  private final String _enumerationName;
+  private final String _name;
 
-  EnumerationType( @Nonnull final String enumerationName,
+  EnumerationType( @Nonnull final String name,
                    @Nonnull final List<ExtendedAttribute> extendedAttributes,
                    final int flags )
   {
     super( Kind.Enumeration, extendedAttributes, flags );
-    _enumerationName = Objects.requireNonNull( enumerationName );
+    _name = Objects.requireNonNull( name );
   }
 
   @Nonnull
-  public String getEnumerationName()
+  public String getName()
   {
-    return _enumerationName;
+    return _name;
   }
 }

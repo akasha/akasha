@@ -25,7 +25,7 @@ public final class CallbackDefinitionTest
       assertEquals( argument1.getName(), "position" );
       final Type argument1Type = argument1.getType();
       assertEquals( argument1Type.getKind(), Kind.Enumeration );
-      assertEquals( ( (EnumerationType) argument1Type ).getEnumerationName(), "Position" );
+      assertEquals( ( (EnumerationType) argument1Type ).getName(), "Position" );
     }
 
     // Multiple args
@@ -40,7 +40,7 @@ public final class CallbackDefinitionTest
       assertEquals( argument1.getName(), "time" );
       final Type argument1Type = argument1.getType();
       assertEquals( argument1Type.getKind(), Kind.Enumeration );
-      assertEquals( ( (EnumerationType) argument1Type ).getEnumerationName(), "DOMHighResTimeStamp" );
+      assertEquals( ( (EnumerationType) argument1Type ).getName(), "DOMHighResTimeStamp" );
     }
 
     // zero args but has a return type
@@ -50,7 +50,7 @@ public final class CallbackDefinitionTest
                                   "ClipboardItemDelayedCallback",
                                   Kind.Enumeration,
                                   0 );
-      assertEquals( ( (EnumerationType) definition.getReturnType() ).getEnumerationName(), "ClipboardItemData" );
+      assertEquals( ( (EnumerationType) definition.getReturnType() ).getName(), "ClipboardItemData" );
     }
   }
 
