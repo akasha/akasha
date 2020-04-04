@@ -15,6 +15,8 @@ public final class AttributeMemberTest
   {
     assertAttributeMember( "attribute short rambaldi", "rambaldi", Kind.Short );
     assertAttributeMember( "attribute DOMString name", "name", Kind.DOMString );
+    assertAttributeMember( "attribute boolean async", "async", Kind.Boolean );
+    assertAttributeMember( "attribute boolean required", "required", Kind.Boolean );
     assertAttributeMember( "GLenum bufferBits;", "bufferBits", Kind.TypeReference );
   }
 
