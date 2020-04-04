@@ -244,8 +244,22 @@ public final class WebIDLModelParser
     return text.substring( 1, text.length() - 1 );
   }
 
+
+  @Nonnull
+  static AttributeMember parse( @Nonnull final WebIDLParser.ReadWriteAttributeContext ctx,
+                                @Nonnull final Set<AttributeMember.Modifier> modifiers,
+                                @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    if( ctx.getChildCount() > 1 )
+    {
+      modifiers.add( AttributeMember.Modifier.INHERIT );
+    }
+    return parse( ctx.attributeRest(), modifiers, extendedAttributes );
+  }
+
   @Nonnull
   static AttributeMember parse( @Nonnull final WebIDLParser.AttributeRestContext ctx,
+                                @Nonnull final Set<AttributeMember.Modifier> modifiers,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.AttributeNameContext attributeNameContext = ctx.attributeName();
@@ -255,7 +269,7 @@ public final class WebIDLModelParser
                         attributeNameContext.IDENTIFIER().getText() :
                         attributeNameKeywordContext.getText();
     final Type type = parse( ctx.typeWithExtendedAttributes() );
-    return new AttributeMember( name, type, extendedAttributes );
+    return new AttributeMember( name, type, Collections.unmodifiableSet( modifiers ), extendedAttributes );
   }
 
   @Nonnull
