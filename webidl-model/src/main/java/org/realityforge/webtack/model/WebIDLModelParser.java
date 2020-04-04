@@ -245,6 +245,20 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static AttributeMember parse( @Nonnull final WebIDLParser.AttributeRestContext ctx,
+                                @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final WebIDLParser.AttributeNameContext attributeNameContext = ctx.attributeName();
+    final WebIDLParser.AttributeNameKeywordContext attributeNameKeywordContext =
+      attributeNameContext.attributeNameKeyword();
+    final String name = null == attributeNameKeywordContext ?
+                        attributeNameContext.IDENTIFIER().getText() :
+                        attributeNameKeywordContext.getText();
+    final Type type = parse( ctx.typeWithExtendedAttributes() );
+    return new AttributeMember( name, type, extendedAttributes );
+  }
+
+  @Nonnull
   static ConstMember parse( @Nonnull final WebIDLParser.ConstMemberContext ctx,
                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
