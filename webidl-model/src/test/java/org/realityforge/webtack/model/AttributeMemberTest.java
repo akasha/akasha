@@ -13,11 +13,11 @@ public final class AttributeMemberTest
   public void parse()
     throws Exception
   {
-    assertAttributeMember( "attribute short rambaldi", "rambaldi", Kind.Short );
-    assertAttributeMember( "attribute DOMString name", "name", Kind.DOMString );
-    assertAttributeMember( "attribute boolean async", "async", Kind.Boolean );
-    assertAttributeMember( "attribute boolean required", "required", Kind.Boolean );
-    assertAttributeMember( "GLenum bufferBits;", "bufferBits", Kind.TypeReference );
+    assertAttributeMember( "attribute short rambaldi;", "rambaldi", Kind.Short );
+    assertAttributeMember( "attribute DOMString name;", "name", Kind.DOMString );
+    assertAttributeMember( "attribute boolean async;", "async", Kind.Boolean );
+    assertAttributeMember( "attribute boolean required;", "required", Kind.Boolean );
+    assertAttributeMember( "attributeGLenum bufferBits;", "bufferBits", Kind.TypeReference );
   }
 
   private void assertAttributeMember( @Nonnull final String idl,
