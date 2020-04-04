@@ -4,9 +4,6 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
-/**
- * A member of an interface, a callback interface, interface mixins or namespaces.
- */
 public final class ConstMember
   extends Member
 {
