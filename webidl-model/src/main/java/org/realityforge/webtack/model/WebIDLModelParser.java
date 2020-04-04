@@ -245,6 +245,26 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static ConstMember parse( @Nonnull final WebIDLParser.ConstMemberContext ctx,
+                            @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final String name = ctx.IDENTIFIER().getText();
+    final WebIDLParser.ConstMemberTypeContext constMemberTypeContext = ctx.constMemberType();
+    final TerminalNode identifier = constMemberTypeContext.IDENTIFIER();
+    final Type type;
+    if ( null != identifier )
+    {
+      type = new TypeReference( identifier.getText(), Collections.emptyList(), false );
+    }
+    else
+    {
+      type = parse( constMemberTypeContext.primitiveType(), Collections.emptyList(), false );
+    }
+    final ConstValue value = parse( ctx.constMemberValue() );
+    return new ConstMember( name, type, value, extendedAttributes );
+  }
+
+  @Nonnull
   static ConstValue parse( @Nonnull final WebIDLParser.ConstMemberValueContext ctx )
   {
     final WebIDLParser.BooleanLiteralContext booleanLiteralContext = ctx.booleanLiteral();
