@@ -250,7 +250,7 @@ public final class WebIDLModelParser
                                 @Nonnull final Set<AttributeMember.Modifier> modifiers,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
-    if( ctx.getChildCount() > 1 )
+    if ( ctx.getChildCount() > 1 )
     {
       modifiers.add( AttributeMember.Modifier.INHERIT );
     }
