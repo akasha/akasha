@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public final class MapLikeAttributeMemberTest
+public final class MapLikeMemberTest
   extends AbstractTest
 {
   @Test
@@ -14,14 +14,14 @@ public final class MapLikeAttributeMemberTest
     throws IOException
   {
     {
-      final MapLikeAttributeMember mapLike = parse( "maplike<DOMString, object>;", true );
+      final MapLikeMember mapLike = parse( "maplike<DOMString, object>;", true );
       assertEquals( mapLike.getKeyType().getKind(), Kind.DOMString );
       assertEquals( mapLike.getValueType().getKind(), Kind.Object );
       assertTrue( mapLike.isReadOnly() );
     }
 
     {
-      final MapLikeAttributeMember mapLike = parse( "maplike<DOMString, AudioParam>;", false );
+      final MapLikeMember mapLike = parse( "maplike<DOMString, AudioParam>;", false );
       assertEquals( mapLike.getKeyType().getKind(), Kind.DOMString );
       assertEquals( mapLike.getValueType().getKind(), Kind.TypeReference );
       assertEquals( ( (TypeReference) mapLike.getValueType() ).getName(), "AudioParam" );
@@ -30,7 +30,7 @@ public final class MapLikeAttributeMemberTest
   }
 
   @Nonnull
-  private MapLikeAttributeMember parse( @Nonnull final String webIDL, final boolean readOnly )
+  private MapLikeMember parse( @Nonnull final String webIDL, final boolean readOnly )
     throws IOException
   {
     return WebIDLModelParser.parse( createParser( webIDL ).maplikeRest(), readOnly, Collections.emptyList() );

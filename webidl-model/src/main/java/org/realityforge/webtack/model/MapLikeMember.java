@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 
-public final class MapLikeAttributeMember
+public final class MapLikeMember
   extends Element
   implements Member
 {
@@ -14,10 +14,10 @@ public final class MapLikeAttributeMember
   private final Type _valueType;
   private final boolean _readOnly;
 
-  MapLikeAttributeMember( @Nonnull final Type keyType,
-                          @Nonnull final Type valueType,
-                          final boolean readOnly,
-                          @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  MapLikeMember( @Nonnull final Type keyType,
+                 @Nonnull final Type valueType,
+                 final boolean readOnly,
+                 @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     super( extendedAttributes );
     _keyType = Objects.requireNonNull( keyType );

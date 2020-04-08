@@ -273,13 +273,13 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static MapLikeAttributeMember parse( @Nonnull final WebIDLParser.MaplikeRestContext ctx,
-                                       final boolean readOnly,
-                                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static MapLikeMember parse( @Nonnull final WebIDLParser.MaplikeRestContext ctx,
+                              final boolean readOnly,
+                              @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final Type keyType = parse( ctx.typeWithExtendedAttributes( 0 ) );
     final Type valueType = parse( ctx.typeWithExtendedAttributes( 1 ) );
-    return new MapLikeAttributeMember( keyType, valueType, readOnly, extendedAttributes );
+    return new MapLikeMember( keyType, valueType, readOnly, extendedAttributes );
   }
 
   @Nonnull
@@ -292,12 +292,12 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static SetLikeAttributeMember parse( @Nonnull final WebIDLParser.SetlikeRestContext ctx,
-                                       final boolean readOnly,
-                                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static SetLikeMember parse( @Nonnull final WebIDLParser.SetlikeRestContext ctx,
+                              final boolean readOnly,
+                              @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final Type type = parse( ctx.typeWithExtendedAttributes() );
-    return new SetLikeAttributeMember( type, readOnly, extendedAttributes );
+    return new SetLikeMember( type, readOnly, extendedAttributes );
   }
 
   @Nonnull
