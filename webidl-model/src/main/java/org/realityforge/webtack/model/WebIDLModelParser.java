@@ -244,7 +244,6 @@ public final class WebIDLModelParser
     return text.substring( 1, text.length() - 1 );
   }
 
-
   @Nonnull
   static AttributeMember parse( @Nonnull final WebIDLParser.ReadWriteAttributeContext ctx,
                                 @Nonnull final Set<AttributeMember.Modifier> modifiers,
