@@ -246,6 +246,61 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  public static OperationMember parse( @Nonnull final WebIDLParser.OperationContext ctx,
+                                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final WebIDLParser.RegularOperationContext regularOperationContext = ctx.regularOperation();
+    if ( null != regularOperationContext )
+    {
+      return parse( regularOperationContext, OperationMember.Kind.OPERATOR, extendedAttributes );
+    }
+    else
+    {
+      final WebIDLParser.SpecialOperationContext specialOperationContext = ctx.specialOperation();
+      assert null != specialOperationContext;
+      return parse( specialOperationContext, extendedAttributes );
+    }
+  }
+
+  @Nonnull
+  private static OperationMember parse( @Nonnull final WebIDLParser.SpecialOperationContext ctx,
+                                        @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final OperationMember.Kind kind = OperationMember.Kind.valueOf( ctx.special().getText().toUpperCase() );
+    return parse( ctx.regularOperation(), kind, extendedAttributes );
+  }
+
+  @Nonnull
+  private static OperationMember parse( @Nonnull final WebIDLParser.RegularOperationContext ctx,
+                                        @Nonnull final OperationMember.Kind kind,
+                                        @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final Type returnType = parse( ctx.returnType() );
+    final WebIDLParser.OperationNameContext operationNameContext =
+      ctx.operationRest().optionalOperationName().operationName();
+    final String name;
+    if ( null != operationNameContext )
+    {
+      final WebIDLParser.OperationNameKeywordContext operationNameKeywordContext =
+        operationNameContext.operationNameKeyword();
+      if ( null != operationNameKeywordContext )
+      {
+        name = operationNameKeywordContext.getText();
+      }
+      else
+      {
+        name = operationNameContext.IDENTIFIER().getText();
+      }
+    }
+    else
+    {
+      name = null;
+    }
+    final List<Argument> arguments = parse( ctx.operationRest().argumentList() );
+    return new OperationMember( kind, name, arguments, returnType, extendedAttributes );
+  }
+
+  @Nonnull
   static AttributeMember parse( @Nonnull final WebIDLParser.ReadWriteAttributeContext ctx,
                                 @Nonnull final Set<AttributeMember.Modifier> modifiers,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes )
