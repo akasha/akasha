@@ -283,6 +283,17 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static IterableMember parse( @Nonnull final WebIDLParser.IterableContext ctx,
+                               @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final Type type1 = parse( ctx.typeWithExtendedAttributes() );
+    final WebIDLParser.TypeWithExtendedAttributesContext optional =
+      ctx.optionalType().typeWithExtendedAttributes();
+    final Type type2 = null == optional ? null : parse( optional );
+    return new IterableMember( null == type2 ? null : type1, null == type2 ? type1 : type2, extendedAttributes );
+  }
+
+  @Nonnull
   static AsyncIterableMember parse( @Nonnull final WebIDLParser.AsyncIterableContext ctx,
                                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
