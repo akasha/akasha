@@ -6,7 +6,8 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 
 public final class AttributeMember
-  extends Member
+  extends NamedElement
+  implements Member
 {
   @Nonnull
   private final Type _type;

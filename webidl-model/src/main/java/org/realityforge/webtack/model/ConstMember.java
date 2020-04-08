@@ -5,7 +5,8 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 
 public final class ConstMember
-  extends Member
+  extends NamedElement
+  implements Member
 {
   @Nonnull
   private final Type _type;
