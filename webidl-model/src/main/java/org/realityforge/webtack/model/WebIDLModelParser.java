@@ -121,7 +121,7 @@ public final class WebIDLModelParser
     final WebIDLParser.NamespaceContext namespaceContext = ctx.namespace();
     if ( null != namespaceContext )
     {
-      return parse( namespaceContext, extendedAttributes );
+      return parse( namespaceContext, false, extendedAttributes );
     }
     final WebIDLParser.PartialContext partialContext = ctx.partial();
     if ( null != partialContext )
@@ -156,8 +156,7 @@ public final class WebIDLModelParser
       {
         final WebIDLParser.NamespaceContext partialNamespaceContext = partialDefinitionContext.namespace();
         assert null != partialNamespaceContext;
-        //TODO:
-        throw new UnsupportedOperationException();
+        return parse( partialNamespaceContext, true, extendedAttributes );
       }
     }
     final WebIDLParser.DictionaryContext dictionaryContext = ctx.dictionary();
@@ -877,8 +876,9 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static NamespaceDefinition parse( @Nonnull final WebIDLParser.NamespaceContext ctx,
-                                           @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  public static Definition parse( @Nonnull final WebIDLParser.NamespaceContext ctx,
+                                  final boolean partial,
+                                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
 
@@ -904,10 +904,16 @@ public final class WebIDLModelParser
       }
       namespaceMembersContext = namespaceMembersContext.namespaceMembers();
     }
-    return new NamespaceDefinition( name,
-                                    Collections.unmodifiableList( operations ),
-                                    Collections.unmodifiableList( attributes ),
-                                    extendedAttributes );
+    return
+      partial ?
+      new PartialNamespaceDefinition( name,
+                                      Collections.unmodifiableList( operations ),
+                                      Collections.unmodifiableList( attributes ),
+                                      extendedAttributes ) :
+      new NamespaceDefinition( name,
+                               Collections.unmodifiableList( operations ),
+                               Collections.unmodifiableList( attributes ),
+                               extendedAttributes );
   }
 
   @Nonnull

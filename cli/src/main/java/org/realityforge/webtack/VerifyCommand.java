@@ -157,7 +157,7 @@ final class VerifyCommand
           public void exitNamespace( final WebIDLParser.NamespaceContext ctx )
           {
             super.exitNamespace( ctx );
-            WebIDLModelParser.parse( ctx, Collections.emptyList() );
+            WebIDLModelParser.parse( ctx, false, Collections.emptyList() );
           }
 
           @Override
