@@ -283,6 +283,15 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static AsyncIterableMember parse( @Nonnull final WebIDLParser.AsyncIterableContext ctx,
+                                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final Type keyType = parse( ctx.typeWithExtendedAttributes( 0 ) );
+    final Type valueType = parse( ctx.typeWithExtendedAttributes( 1 ) );
+    return new AsyncIterableMember( keyType, valueType, extendedAttributes );
+  }
+
+  @Nonnull
   static SetLikeAttributeMember parse( @Nonnull final WebIDLParser.SetlikeRestContext ctx,
                                        final boolean readOnly,
                                        @Nonnull final List<ExtendedAttribute> extendedAttributes )
