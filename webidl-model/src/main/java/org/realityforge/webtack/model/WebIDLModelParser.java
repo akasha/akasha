@@ -272,6 +272,16 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static MapLikeAttributeMember parse( @Nonnull final WebIDLParser.MaplikeRestContext ctx,
+                                       final boolean readOnly,
+                                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final Type keyType = parse( ctx.typeWithExtendedAttributes( 0 ) );
+    final Type valueType = parse( ctx.typeWithExtendedAttributes( 1 ) );
+    return new MapLikeAttributeMember( keyType, valueType, readOnly, extendedAttributes );
+  }
+
+  @Nonnull
   static ConstMember parse( @Nonnull final WebIDLParser.ConstMemberContext ctx,
                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
