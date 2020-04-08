@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 
 public final class MapLikeAttributeMember
   extends Element
+  implements Member
 {
   @Nonnull
   private final Type _keyType;

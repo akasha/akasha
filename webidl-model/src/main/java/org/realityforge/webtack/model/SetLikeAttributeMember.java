@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 
 public final class SetLikeAttributeMember
   extends Element
+  implements Member
 {
   @Nonnull
   private final Type _type;
