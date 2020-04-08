@@ -39,7 +39,6 @@ public final class AttributeMemberTest
     {
       assertTrue( member.getModifiers().contains( modifier ), "Expected modifier " + modifier );
     }
-    assertEquals( member.getModifiers().size(), modifiers.length );
   }
 
   @Nonnull
