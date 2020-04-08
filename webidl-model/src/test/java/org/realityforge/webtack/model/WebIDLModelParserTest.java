@@ -1,0 +1,54 @@
+package org.realityforge.webtack.model;
+
+import java.util.Collections;
+import org.testng.annotations.Test;
+import static org.testng.Assert.*;
+
+// This class contains tests for parse rules that do not line up one-to-one with a type
+public final class WebIDLModelParserTest
+  extends AbstractTest
+{
+  @Test
+  public void parse_readOnlyMember_attributeRest()
+    throws Exception
+  {
+    final Member member =
+      WebIDLModelParser.parse( createParser( "readonly attribute DOMString name;" ).readOnlyMember(),
+                               Collections.emptyList() );
+    assertTrue( member instanceof AttributeMember );
+    final AttributeMember value = (AttributeMember) member;
+    assertEquals( value.getName(), "name" );
+    assertEquals( value.getType().getKind(), Kind.DOMString );
+    assertEquals( value.getModifiers().size(), 1 );
+    assertTrue( value.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) );
+  }
+
+  @Test
+  public void parse_readOnlyMember_maplikeRest()
+    throws Exception
+  {
+    final Member member =
+      WebIDLModelParser.parse( createParser( "readonly maplike<DOMString, object>;" ).readOnlyMember(),
+                               Collections.emptyList() );
+    assertTrue( member instanceof MapLikeAttributeMember );
+
+    final MapLikeAttributeMember mapLike = (MapLikeAttributeMember) member;
+    assertEquals( mapLike.getKeyType().getKind(), Kind.DOMString );
+    assertEquals( mapLike.getValueType().getKind(), Kind.Object );
+    assertTrue( mapLike.isReadOnly() );
+  }
+
+  @Test
+  public void parse_readOnlyMember_setlikeRest()
+    throws Exception
+  {
+    final Member member =
+      WebIDLModelParser.parse( createParser( "readonly setlike<DOMString>;" ).readOnlyMember(),
+                               Collections.emptyList() );
+    assertTrue( member instanceof SetLikeAttributeMember );
+
+    final SetLikeAttributeMember setLike = (SetLikeAttributeMember) member;
+    assertEquals( setLike.getType().getKind(), Kind.DOMString );
+    assertTrue( setLike.isReadOnly() );
+  }
+}

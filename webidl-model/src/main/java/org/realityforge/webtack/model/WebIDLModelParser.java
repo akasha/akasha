@@ -5,6 +5,7 @@ import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -288,6 +289,28 @@ public final class WebIDLModelParser
   {
     final Type type = parse( ctx.typeWithExtendedAttributes() );
     return new SetLikeAttributeMember( type, readOnly, extendedAttributes );
+  }
+
+  @Nonnull
+  static Member parse( @Nonnull final WebIDLParser.ReadOnlyMemberContext ctx,
+                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final WebIDLParser.ReadOnlyMemberRestContext readOnlyMemberRestContext = ctx.readOnlyMemberRest();
+    final WebIDLParser.AttributeRestContext attributeRestContext = readOnlyMemberRestContext.attributeRest();
+    if ( null != attributeRestContext )
+    {
+      final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
+      modifiers.add( AttributeMember.Modifier.READ_ONLY );
+      return parse( attributeRestContext, modifiers, extendedAttributes );
+    }
+    final WebIDLParser.MaplikeRestContext maplikeRestContext = readOnlyMemberRestContext.maplikeRest();
+    if ( null != maplikeRestContext )
+    {
+      return parse( maplikeRestContext, true, extendedAttributes );
+    }
+    final WebIDLParser.SetlikeRestContext setlikeRestContext = readOnlyMemberRestContext.setlikeRest();
+    assert null != setlikeRestContext;
+    return parse( setlikeRestContext, true, extendedAttributes );
   }
 
   @Nonnull

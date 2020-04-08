@@ -38,6 +38,7 @@ public final class AttributeMember
 
   public enum Modifier
   {
+    READ_ONLY,
     INHERIT
   }
 }
