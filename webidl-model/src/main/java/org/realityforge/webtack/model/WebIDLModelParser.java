@@ -121,8 +121,7 @@ public final class WebIDLModelParser
     final WebIDLParser.NamespaceContext namespaceContext = ctx.namespace();
     if ( null != namespaceContext )
     {
-      //TODO:
-      throw new UnsupportedOperationException();
+      return parse( namespaceContext, extendedAttributes );
     }
     final WebIDLParser.PartialContext partialContext = ctx.partial();
     if ( null != partialContext )
@@ -875,6 +874,40 @@ public final class WebIDLModelParser
     final Kind kind = STRING_KIND_MAP.get( literalName );
     assert null != kind;
     return new Type( kind, extendedAttributes, nullable );
+  }
+
+  @Nonnull
+  public static NamespaceDefinition parse( @Nonnull final WebIDLParser.NamespaceContext ctx,
+                                           @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final String name = ctx.IDENTIFIER().getText();
+
+    final List<OperationMember> operations = new ArrayList<>();
+    final List<AttributeMember> attributes = new ArrayList<>();
+
+    WebIDLParser.NamespaceMembersContext namespaceMembersContext = ctx.namespaceMembers();
+    WebIDLParser.NamespaceMemberContext namespaceMemberContext;
+    while ( null != ( namespaceMemberContext = namespaceMembersContext.namespaceMember() ) )
+    {
+      final List<ExtendedAttribute> memberExtendedAttributes = parse( namespaceMembersContext.extendedAttributeList() );
+      final WebIDLParser.RegularOperationContext regularOperationContext = namespaceMemberContext.regularOperation();
+      if ( null != regularOperationContext )
+      {
+        operations.add( parse( regularOperationContext, OperationMember.Kind.OPERATOR, memberExtendedAttributes ) );
+      }
+      else
+      {
+        final WebIDLParser.AttributeRestContext attributeRestContext = namespaceMemberContext.attributeRest();
+        final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
+        modifiers.add( AttributeMember.Modifier.READ_ONLY );
+        attributes.add( parse( attributeRestContext, modifiers, memberExtendedAttributes ) );
+      }
+      namespaceMembersContext = namespaceMembersContext.namespaceMembers();
+    }
+    return new NamespaceDefinition( name,
+                                    Collections.unmodifiableList( operations ),
+                                    Collections.unmodifiableList( attributes ),
+                                    extendedAttributes );
   }
 
   @Nonnull

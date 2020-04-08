@@ -154,6 +154,13 @@ final class VerifyCommand
           }
 
           @Override
+          public void exitNamespace( final WebIDLParser.NamespaceContext ctx )
+          {
+            super.exitNamespace( ctx );
+            WebIDLModelParser.parse( ctx, Collections.emptyList() );
+          }
+
+          @Override
           public void exitPartialDictionary( final WebIDLParser.PartialDictionaryContext ctx )
           {
             super.exitPartialDictionary( ctx );
