@@ -282,6 +282,15 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static SetLikeAttributeMember parse( @Nonnull final WebIDLParser.SetlikeRestContext ctx,
+                                       final boolean readOnly,
+                                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final Type type = parse( ctx.typeWithExtendedAttributes() );
+    return new SetLikeAttributeMember( type, readOnly, extendedAttributes );
+  }
+
+  @Nonnull
   static ConstMember parse( @Nonnull final WebIDLParser.ConstMemberContext ctx,
                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
