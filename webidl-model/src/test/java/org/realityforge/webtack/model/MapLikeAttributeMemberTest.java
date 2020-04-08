@@ -24,6 +24,7 @@ public final class MapLikeAttributeMemberTest
       final MapLikeAttributeMember mapLike = parse( "maplike<DOMString, AudioParam>;", false );
       assertEquals( mapLike.getKeyType().getKind(), Kind.DOMString );
       assertEquals( mapLike.getValueType().getKind(), Kind.TypeReference );
+      assertEquals( ( (TypeReference) mapLike.getValueType() ).getName(), "AudioParam" );
       assertFalse( mapLike.isReadOnly() );
     }
   }
