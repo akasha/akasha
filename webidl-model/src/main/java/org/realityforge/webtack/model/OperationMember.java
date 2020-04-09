@@ -57,8 +57,7 @@ public final class OperationMember
 
   public enum Kind
   {
-    //TODO: Rename OPERATOR to REGULAR?
-    OPERATOR,
+    DEFAULT,
     STRINGIFIER,
     STATIC,
     CONSTRUCTOR,

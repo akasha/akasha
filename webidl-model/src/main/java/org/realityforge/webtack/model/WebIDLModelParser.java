@@ -201,7 +201,7 @@ public final class WebIDLModelParser
           callbackInterfaceMemberContext.regularOperation();
         assert null != regularOperationContext;
         final OperationMember candidate =
-          parse( regularOperationContext, OperationMember.Kind.OPERATOR, memberExtendedAttributes );
+          parse( regularOperationContext, OperationMember.Kind.DEFAULT, memberExtendedAttributes );
         if ( null != operation )
         {
           throw new IllegalModelException( "IDL attempted to define duplicate operation " +
@@ -300,7 +300,7 @@ public final class WebIDLModelParser
     final WebIDLParser.RegularOperationContext regularOperationContext = ctx.regularOperation();
     if ( null != regularOperationContext )
     {
-      return parse( regularOperationContext, OperationMember.Kind.OPERATOR, extendedAttributes );
+      return parse( regularOperationContext, OperationMember.Kind.DEFAULT, extendedAttributes );
     }
     else
     {
@@ -1013,7 +1013,7 @@ public final class WebIDLModelParser
       final WebIDLParser.RegularOperationContext regularOperationContext = namespaceMemberContext.regularOperation();
       if ( null != regularOperationContext )
       {
-        operations.add( parse( regularOperationContext, OperationMember.Kind.OPERATOR, memberExtendedAttributes ) );
+        operations.add( parse( regularOperationContext, OperationMember.Kind.DEFAULT, memberExtendedAttributes ) );
       }
       else
       {

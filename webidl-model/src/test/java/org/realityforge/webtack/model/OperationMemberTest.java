@@ -17,7 +17,7 @@ public final class OperationMemberTest
                                Collections.emptyList() );
     assertEquals( member.getName(), "isSessionSupported" );
     assertEquals( member.getReturnType().getKind(), Kind.Promise );
-    assertEquals( member.getKind(), OperationMember.Kind.OPERATOR );
+    assertEquals( member.getKind(), OperationMember.Kind.DEFAULT );
     assertEquals( ( (PromiseType) member.getReturnType() ).getResolveType().getKind(), Kind.Boolean );
     final List<Argument> arguments = member.getArguments();
     assertEquals( arguments.size(), 1 );
@@ -55,7 +55,7 @@ public final class OperationMemberTest
       WebIDLModelParser.parse( createParser( "boolean includes(any key);" ).operation(), Collections.emptyList() );
     assertEquals( member.getName(), "includes" );
     assertEquals( member.getReturnType().getKind(), Kind.Boolean );
-    assertEquals( member.getKind(), OperationMember.Kind.OPERATOR );
+    assertEquals( member.getKind(), OperationMember.Kind.DEFAULT );
     final List<Argument> arguments = member.getArguments();
     assertEquals( arguments.size(), 1 );
     final Argument argument1 = arguments.get( 0 );
