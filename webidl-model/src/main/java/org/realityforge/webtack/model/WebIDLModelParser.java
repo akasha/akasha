@@ -415,6 +415,30 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static Member parse( @Nonnull final WebIDLParser.StaticMemberContext ctx,
+                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final WebIDLParser.StaticMemberRestContext staticMemberRestContext = ctx.staticMemberRest();
+    final WebIDLParser.AttributeRestContext attributeRestContext = staticMemberRestContext.attributeRest();
+    if ( null != attributeRestContext )
+    {
+      final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
+      if ( staticMemberRestContext.readOnly().getChildCount() > 0 )
+      {
+        modifiers.add( AttributeMember.Modifier.READ_ONLY );
+      }
+      modifiers.add( AttributeMember.Modifier.STATIC );
+      return parse( attributeRestContext, modifiers, extendedAttributes );
+    }
+    else
+    {
+      final WebIDLParser.RegularOperationContext regularOperationContext = staticMemberRestContext.regularOperation();
+      assert null != regularOperationContext;
+      return parse( regularOperationContext, OperationMember.Kind.STATIC, extendedAttributes );
+    }
+  }
+
+  @Nonnull
   static Member parse( @Nonnull final WebIDLParser.ReadOnlyMemberContext ctx,
                        @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {

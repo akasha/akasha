@@ -62,4 +62,23 @@ public final class OperationMemberTest
     assertEquals( argument1.getName(), "key" );
     assertEquals( argument1.getType().getKind(), Kind.Any );
   }
+
+  @Test
+  public void parse_static()
+    throws Exception
+  {
+    final Member member =
+      WebIDLModelParser.parse( createParser( "static double getNativeFramebufferScaleFactor(XRSession session);" ).staticMember(),
+                               Collections.emptyList() );
+    assertTrue( member instanceof OperationMember );
+    final OperationMember operation = (OperationMember) member;
+    assertEquals( operation.getName(), "getNativeFramebufferScaleFactor" );
+    assertEquals( operation.getReturnType().getKind(), Kind.Double );
+    assertEquals( operation.getKind(), OperationMember.Kind.STATIC );
+    final List<Argument> arguments = operation.getArguments();
+    assertEquals( arguments.size(), 1 );
+    final Argument argument1 = arguments.get( 0 );
+    assertEquals( argument1.getName(), "session" );
+    assertEquals( argument1.getType().getKind(), Kind.TypeReference );
+  }
 }

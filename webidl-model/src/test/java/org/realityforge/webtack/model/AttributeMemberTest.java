@@ -25,6 +25,26 @@ public final class AttributeMemberTest
                              AttributeMember.Modifier.INHERIT );
   }
 
+  @Test
+  public void parseStaticAttributes()
+    throws Exception
+  {
+    assertStaticAttribute( "static readonly attribute NotificationPermission permission;",
+                           "permission",
+                           Kind.TypeReference,
+                           AttributeMember.Modifier.READ_ONLY,
+                           AttributeMember.Modifier.STATIC );
+    assertStaticAttribute( "static readonly attribute unsigned long maxActions;",
+                           "maxActions",
+                           Kind.UnsignedLong,
+                           AttributeMember.Modifier.READ_ONLY,
+                           AttributeMember.Modifier.STATIC );
+    assertStaticAttribute( "static attribute boolean active;",
+                           "active",
+                           Kind.Boolean,
+                           AttributeMember.Modifier.STATIC );
+  }
+
   private void assertInstanceAttribute( @Nonnull final String idl,
                                         @Nonnull final String name,
                                         @Nonnull final Kind kind,
@@ -36,6 +56,17 @@ public final class AttributeMemberTest
                                new HashSet<>(),
                                Collections.emptyList() );
     assertAttributeMember( member, name, kind, modifiers );
+  }
+
+  private void assertStaticAttribute( @Nonnull final String idl,
+                                      @Nonnull final String name,
+                                      @Nonnull final Kind kind,
+                                      @Nonnull final AttributeMember.Modifier... modifiers )
+    throws IOException
+  {
+    final Member member = WebIDLModelParser.parse( createParser( idl ).staticMember(), Collections.emptyList() );
+    assertTrue( member instanceof AttributeMember );
+    assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
   }
 
   private void assertAttributeMember( @Nonnull final AttributeMember member,
