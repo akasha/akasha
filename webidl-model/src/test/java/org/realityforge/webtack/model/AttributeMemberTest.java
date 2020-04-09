@@ -45,6 +45,21 @@ public final class AttributeMemberTest
                            AttributeMember.Modifier.STATIC );
   }
 
+  @Test
+  public void parseStringifierAttributes()
+    throws Exception
+  {
+    assertStringifierAttribute( "stringifier readonly attribute USVString href;",
+                                "href",
+                                Kind.USVString,
+                                AttributeMember.Modifier.READ_ONLY,
+                                AttributeMember.Modifier.STRINGIFIER );
+    assertStringifierAttribute( "stringifier attribute DOMString value;",
+                                "value",
+                                Kind.DOMString,
+                                AttributeMember.Modifier.STRINGIFIER );
+  }
+
   private void assertInstanceAttribute( @Nonnull final String idl,
                                         @Nonnull final String name,
                                         @Nonnull final Kind kind,
@@ -65,6 +80,17 @@ public final class AttributeMemberTest
     throws IOException
   {
     final Member member = WebIDLModelParser.parse( createParser( idl ).staticMember(), Collections.emptyList() );
+    assertTrue( member instanceof AttributeMember );
+    assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
+  }
+
+  private void assertStringifierAttribute( @Nonnull final String idl,
+                                           @Nonnull final String name,
+                                           @Nonnull final Kind kind,
+                                           @Nonnull final AttributeMember.Modifier... modifiers )
+    throws IOException
+  {
+    final Member member = WebIDLModelParser.parse( createParser( idl ).stringifier(), Collections.emptyList() );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
   }

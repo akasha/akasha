@@ -59,6 +59,7 @@ public final class OperationMember
   {
     //TODO: Rename OPERATOR to REGULAR?
     OPERATOR,
+    STRINGIFIER,
     STATIC,
     CONSTRUCTOR,
     GETTER,

@@ -81,4 +81,34 @@ public final class OperationMemberTest
     assertEquals( argument1.getName(), "session" );
     assertEquals( argument1.getType().getKind(), Kind.TypeReference );
   }
+
+  @Test
+  public void parse_stringifier()
+    throws Exception
+  {
+    final Member member =
+      WebIDLModelParser.parse( createParser( "stringifier DOMString ();" ).stringifier(),
+                               Collections.emptyList() );
+    assertTrue( member instanceof OperationMember );
+    final OperationMember operation = (OperationMember) member;
+    assertNull( operation.getName() );
+    assertEquals( operation.getReturnType().getKind(), Kind.DOMString );
+    assertEquals( operation.getKind(), OperationMember.Kind.STRINGIFIER );
+    assertEquals( operation.getArguments().size(), 0 );
+  }
+
+  @Test
+  public void parse_empty_stringifier()
+    throws Exception
+  {
+    final Member member =
+      WebIDLModelParser.parse( createParser( "stringifier;" ).stringifier(),
+                               Collections.emptyList() );
+    assertTrue( member instanceof OperationMember );
+    final OperationMember operation = (OperationMember) member;
+    assertNull( operation.getName() );
+    assertEquals( operation.getReturnType().getKind(), Kind.DOMString );
+    assertEquals( operation.getKind(), OperationMember.Kind.STRINGIFIER );
+    assertEquals( operation.getArguments().size(), 0 );
+  }
 }
