@@ -108,8 +108,7 @@ public final class WebIDLModelParser
         {
           final WebIDLParser.MixinRestContext mixinRestContext = interfaceOrMixinContext.mixinRest();
           assert null != mixinRestContext;
-          //TODO:
-          throw new UnsupportedOperationException();
+          return parse( mixinRestContext, false, extendedAttributes );
         }
       }
     }
@@ -137,8 +136,7 @@ public final class WebIDLModelParser
         {
           final WebIDLParser.MixinRestContext mixinRestContext = partialInterfaceOrPartialMixinContext.mixinRest();
           assert null != mixinRestContext;
-          //TODO:
-          throw new UnsupportedOperationException();
+          return parse( mixinRestContext, true, extendedAttributes );
         }
       }
       final WebIDLParser.PartialDictionaryContext partialDictionaryContext =
@@ -227,6 +225,76 @@ public final class WebIDLModelParser
                                             operation,
                                             Collections.unmodifiableList( constMembers ),
                                             extendedAttributes );
+  }
+
+  @Nonnull
+  private static Definition parse( @Nonnull final WebIDLParser.MixinRestContext ctx,
+                                   final boolean partial,
+                                   @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final List<ConstMember> constants = new ArrayList<>();
+    final List<AttributeMember> attributes = new ArrayList<>();
+    final List<OperationMember> operations = new ArrayList<>();
+
+    final String name = ctx.IDENTIFIER().getText();
+    WebIDLParser.MixinMembersContext mixinMembersContext = ctx.mixinMembers();
+    while ( mixinMembersContext.getChildCount() > 0 )
+    {
+      final List<ExtendedAttribute> memberExtendedAttributes = parse( mixinMembersContext.extendedAttributeList() );
+      final WebIDLParser.MixinMemberContext mixinMemberContext = mixinMembersContext.mixinMember();
+      final WebIDLParser.ConstMemberContext constMemberContext = mixinMemberContext.constMember();
+      if ( null != constMemberContext )
+      {
+        constants.add( parse( constMemberContext, memberExtendedAttributes ) );
+      }
+      else
+      {
+        final WebIDLParser.RegularOperationContext regularOperationContext = mixinMemberContext.regularOperation();
+        if ( null != regularOperationContext )
+        {
+          operations.add( parse( regularOperationContext, OperationMember.Kind.DEFAULT, memberExtendedAttributes ) );
+        }
+        else
+        {
+          final WebIDLParser.StringifierContext stringifier = mixinMemberContext.stringifier();
+          if ( null != stringifier )
+          {
+            final Member member = parse( stringifier, memberExtendedAttributes );
+            if ( member instanceof OperationMember )
+            {
+              operations.add( (OperationMember) member );
+            }
+            else
+            {
+              attributes.add( (AttributeMember) member );
+            }
+          }
+          else
+          {
+            final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
+            if ( mixinMemberContext.readOnly().getChildCount() > 0 )
+            {
+              modifiers.add( AttributeMember.Modifier.READ_ONLY );
+            }
+            attributes.add( parse( mixinMemberContext.attributeRest(), modifiers, memberExtendedAttributes ) );
+          }
+        }
+      }
+      mixinMembersContext = mixinMembersContext.mixinMembers();
+    }
+
+    return partial ?
+           new PartialMixinDefinition( name,
+                                       Collections.unmodifiableList( constants ),
+                                       Collections.unmodifiableList( attributes ),
+                                       Collections.unmodifiableList( operations ),
+                                       extendedAttributes ) :
+           new MixinDefinition( name,
+                                Collections.unmodifiableList( constants ),
+                                Collections.unmodifiableList( attributes ),
+                                Collections.unmodifiableList( operations ),
+                                extendedAttributes );
+
   }
 
   @Nonnull
