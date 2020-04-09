@@ -320,7 +320,5 @@ public enum Kind
     public static final int STRING = 1 << 4;
     public static final int BUFFER_RELATED = 1 << 5;
     public static final int NULLABLE_DISALLOWED = 1 << 6;
-
-    //TODO: Consider an EXTENDED_ATTRIBUTES_SUPPORTED flag
   }
 }
