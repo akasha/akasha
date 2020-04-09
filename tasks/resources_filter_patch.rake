@@ -2,7 +2,7 @@ class Buildr::Filter
   private
 
   def copy_map
-    # TODO: The following line was commented out so resource directories can be generated
+    # The following line was commented out so resource directories can be generated
     # sources.each { |source| raise "Source directory #{source} doesn't exist" unless File.exist?(source.to_s) }
     raise 'No target directory specified, where am I going to copy the files to?' if target.nil?
 
