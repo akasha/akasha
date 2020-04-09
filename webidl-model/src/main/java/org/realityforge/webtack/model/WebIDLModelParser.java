@@ -175,8 +175,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  private static Definition parseCallbackInterface( @Nonnull final WebIDLParser.CallbackRestOrInterfaceContext callbackRestOrInterfaceContext,
-                                                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  private static CallbackInterfaceDefinition parseCallbackInterface( @Nonnull final WebIDLParser.CallbackRestOrInterfaceContext callbackRestOrInterfaceContext,
+                                                                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     OperationMember operation = null;
     final List<ConstMember> constMembers = new ArrayList<>();
