@@ -90,12 +90,7 @@ public final class WebIDLModelParser
         }
         else
         {
-          final String interfaceName = callbackRestOrInterfaceContext.IDENTIFIER().getText();
-          final WebIDLParser.CallbackInterfaceMembersContext callbackInterfaceMembersContext =
-            callbackRestOrInterfaceContext.callbackInterfaceMembers();
-          assert null != callbackInterfaceMembersContext;
-          //TODO:
-          throw new UnsupportedOperationException();
+          return parseCallbackInterface( callbackRestOrInterfaceContext, extendedAttributes );
         }
       }
       else
@@ -177,6 +172,61 @@ public final class WebIDLModelParser
     final WebIDLParser.IncludesStatementContext includesStatementContext = ctx.includesStatement();
     assert null != includesStatementContext;
     return parse( includesStatementContext, extendedAttributes );
+  }
+
+  @Nonnull
+  private static Definition parseCallbackInterface( @Nonnull final WebIDLParser.CallbackRestOrInterfaceContext callbackRestOrInterfaceContext,
+                                                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    OperationMember operation = null;
+    final List<ConstMember> constMembers = new ArrayList<>();
+    final String name = callbackRestOrInterfaceContext.IDENTIFIER().getText();
+    WebIDLParser.CallbackInterfaceMembersContext callbackInterfaceMembersContext =
+      callbackRestOrInterfaceContext.callbackInterfaceMembers();
+    assert null != callbackInterfaceMembersContext;
+    while ( callbackInterfaceMembersContext.getChildCount() > 0 )
+    {
+      final List<ExtendedAttribute> memberExtendedAttributes =
+        parse( callbackInterfaceMembersContext.extendedAttributeList() );
+      final WebIDLParser.CallbackInterfaceMemberContext callbackInterfaceMemberContext =
+        callbackInterfaceMembersContext.callbackInterfaceMember();
+      final WebIDLParser.ConstMemberContext constMemberContext = callbackInterfaceMemberContext.constMember();
+      if ( null != constMemberContext )
+      {
+        constMembers.add( parse( constMemberContext, memberExtendedAttributes ) );
+      }
+      else
+      {
+        final WebIDLParser.RegularOperationContext regularOperationContext =
+          callbackInterfaceMemberContext.regularOperation();
+        assert null != regularOperationContext;
+        final OperationMember candidate =
+          parse( regularOperationContext, OperationMember.Kind.OPERATOR, memberExtendedAttributes );
+        if ( null != operation )
+        {
+          throw new IllegalModelException( "IDL attempted to define duplicate operation " +
+                                           "named '" + candidate.getName() + "' in callback interface named '" +
+                                           name + "' when an existing operation exists " +
+                                           "named '" + operation.getName() + "'" );
+        }
+        else
+        {
+          operation = candidate;
+        }
+      }
+
+      callbackInterfaceMembersContext = callbackInterfaceMembersContext.callbackInterfaceMembers();
+    }
+
+    if ( null == operation )
+    {
+      throw new IllegalModelException( "IDL attempted to define callback interface named '" +
+                                       name + "' without specifying an operation" );
+    }
+    return new CallbackInterfaceDefinition( name,
+                                            operation,
+                                            Collections.unmodifiableList( constMembers ),
+                                            extendedAttributes );
   }
 
   @Nonnull
