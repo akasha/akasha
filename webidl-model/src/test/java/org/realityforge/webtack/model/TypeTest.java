@@ -113,8 +113,6 @@ public final class TypeTest
       assertEquals( memberTypes.get( 0 ).getKind(), Kind.DOMString );
       assertEquals( memberTypes.get( 1 ).getKind(), Kind.TypeReference );
     }
-
-    //TODO: Test all the types with extended attributes where possible
   }
 
   @Nonnull
