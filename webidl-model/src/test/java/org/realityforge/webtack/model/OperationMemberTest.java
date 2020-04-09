@@ -111,4 +111,24 @@ public final class OperationMemberTest
     assertEquals( operation.getKind(), OperationMember.Kind.STRINGIFIER );
     assertEquals( operation.getArguments().size(), 0 );
   }
+
+  @Test
+  public void parse_constructor()
+    throws Exception
+  {
+    final OperationMember operation =
+      WebIDLModelParser.parse( createParser( "constructor(unsigned long sw, unsigned long sh);" ).constructor(),
+                               Collections.emptyList() );
+    assertNull( operation.getName() );
+    assertEquals( operation.getReturnType().getKind(), Kind.Void );
+    assertEquals( operation.getKind(), OperationMember.Kind.CONSTRUCTOR );
+    final List<Argument> arguments = operation.getArguments();
+    assertEquals( arguments.size(), 2 );
+    final Argument argument1 = arguments.get( 0 );
+    assertEquals( argument1.getName(), "sw" );
+    assertEquals( argument1.getType().getKind(), Kind.UnsignedLong );
+    final Argument argument2 = arguments.get( 1 );
+    assertEquals( argument2.getName(), "sh" );
+    assertEquals( argument2.getType().getKind(), Kind.UnsignedLong );
+  }
 }

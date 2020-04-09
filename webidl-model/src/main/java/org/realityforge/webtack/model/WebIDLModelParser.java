@@ -415,6 +415,18 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static OperationMember parse( @Nonnull final WebIDLParser.ConstructorContext ctx,
+                                @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final List<Argument> arguments = parse( ctx.argumentList() );
+    return new OperationMember( OperationMember.Kind.CONSTRUCTOR,
+                                null,
+                                arguments,
+                                new Type( Kind.Void, Collections.emptyList(), false ),
+                                extendedAttributes );
+  }
+
+  @Nonnull
   static Member parse( @Nonnull final WebIDLParser.StringifierContext ctx,
                        @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
