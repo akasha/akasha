@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,9 +18,8 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
+import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.WebIDLModelParser;
-import org.realityforge.webtack.webidl.parser.WebIDLBaseListener;
-import org.realityforge.webtack.webidl.parser.WebIDLParser;
 
 final class VerifyCommand
   extends ConfigurableCommand
@@ -90,84 +88,9 @@ final class VerifyCommand
 
       try ( final FileReader reader = new FileReader( target.toFile() ) )
       {
-        final WebIDLParser parser = WebIDLModelParser.createParser( reader );
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
-        parser.addErrorListener( errorListener );
-        // TODO: Remove this next listener after we are finished with the model representation and
-        //  stop the listener being generated in the buildfile
-        parser.addParseListener( new WebIDLBaseListener()
-        {
-          @Override
-          public void exitType( final WebIDLParser.TypeContext ctx )
-          {
-            super.exitType( ctx );
-            WebIDLModelParser.parse( ctx );
-          }
-
-          @Override
-          public void exitTypeWithExtendedAttributes( final WebIDLParser.TypeWithExtendedAttributesContext ctx )
-          {
-            super.exitTypeWithExtendedAttributes( ctx );
-            WebIDLModelParser.parse( ctx );
-          }
-
-          @Override
-          public void exitReturnType( final WebIDLParser.ReturnTypeContext ctx )
-          {
-            super.exitReturnType( ctx );
-            WebIDLModelParser.parse( ctx );
-          }
-
-          @Override
-          public void exitEnumDefinition( final WebIDLParser.EnumDefinitionContext ctx )
-          {
-            super.exitEnumDefinition( ctx );
-            WebIDLModelParser.parse( ctx, Collections.emptyList() );
-          }
-
-          @Override
-          public void exitArgument( final WebIDLParser.ArgumentContext ctx )
-          {
-            super.exitArgument( ctx );
-            WebIDLModelParser.parse( ctx );
-          }
-
-          @Override
-          public void exitIncludesStatement( final WebIDLParser.IncludesStatementContext ctx )
-          {
-            super.exitIncludesStatement( ctx );
-            WebIDLModelParser.parse( ctx, Collections.emptyList() );
-          }
-
-          @Override
-          public void exitDictionary( final WebIDLParser.DictionaryContext ctx )
-          {
-            super.exitDictionary( ctx );
-            WebIDLModelParser.parse( ctx, Collections.emptyList() );
-          }
-
-          @Override
-          public void exitOperation( final WebIDLParser.OperationContext ctx )
-          {
-            super.exitOperation( ctx );
-            WebIDLModelParser.parse( ctx, Collections.emptyList() );
-          }
-
-          @Override
-          public void exitNamespace( final WebIDLParser.NamespaceContext ctx )
-          {
-            super.exitNamespace( ctx );
-            WebIDLModelParser.parse( ctx, false, Collections.emptyList() );
-          }
-
-          @Override
-          public void exitPartialDictionary( final WebIDLParser.PartialDictionaryContext ctx )
-          {
-            super.exitPartialDictionary( ctx );
-            WebIDLModelParser.parse( ctx, Collections.emptyList() );
-          }
-        } );
-        parser.webIDL();
+        @SuppressWarnings( "unused" )
+        final List<Definition> definitions = WebIDLModelParser.parse( reader, errorListener );
 
         final int errorCount = errorListener.getErrorCount();
         if ( 0 == errorCount )

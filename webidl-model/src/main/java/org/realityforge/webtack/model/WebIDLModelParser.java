@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.antlr.v4.runtime.ANTLRErrorListener;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -52,9 +54,15 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static List<Definition> parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
+  private static List<Definition> parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
   {
-    WebIDLParser.DefinitionsContext definitionsContext = ctx.definitions();
+    return parse( ctx.definitions() );
+  }
+
+  @Nonnull
+  static List<Definition> parse( @Nonnull final WebIDLParser.DefinitionsContext ctx )
+  {
+    WebIDLParser.DefinitionsContext definitionsContext = ctx;
     WebIDLParser.DefinitionContext definitionContext;
     final List<Definition> definitions = new ArrayList<>();
     while ( null != ( definitionContext = definitionsContext.definition() ) )
@@ -68,8 +76,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx,
-                                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx,
+                           @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.CallbackOrInterfaceOrMixinContext callbackOrInterfaceOrMixinContext =
       ctx.callbackOrInterfaceOrMixin();
@@ -101,8 +109,7 @@ public final class WebIDLModelParser
         final WebIDLParser.InterfaceRestContext interfaceRestContext = interfaceOrMixinContext.interfaceRest();
         if ( null != interfaceRestContext )
         {
-          //TODO:
-          throw new UnsupportedOperationException();
+          return parse( interfaceRestContext, extendedAttributes );
         }
         else
         {
@@ -129,8 +136,7 @@ public final class WebIDLModelParser
           partialInterfaceOrPartialMixinContext.partialInterfaceRest();
         if ( null != partialInterfaceRestContext )
         {
-          //TODO:
-          throw new UnsupportedOperationException();
+          return parse( partialInterfaceRestContext, extendedAttributes );
         }
         else
         {
@@ -298,7 +304,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx )
+  static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx )
   {
     final WebIDLParser.ArgumentContext argumentContext = ctx.argument();
     if ( null != argumentContext )
@@ -320,7 +326,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static Argument parse( @Nonnull final WebIDLParser.ArgumentContext ctx )
+  static Argument parse( @Nonnull final WebIDLParser.ArgumentContext ctx )
   {
     final List<ExtendedAttribute> extendedAttributes = parse( ctx.extendedAttributeList() );
     final WebIDLParser.ArgumentRestContext argumentRestContext = ctx.argumentRest();
@@ -362,8 +368,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static OperationMember parse( @Nonnull final WebIDLParser.OperationContext ctx,
-                                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static OperationMember parse( @Nonnull final WebIDLParser.OperationContext ctx,
+                                @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final WebIDLParser.RegularOperationContext regularOperationContext = ctx.regularOperation();
     if ( null != regularOperationContext )
@@ -634,7 +640,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static DefaultValue parse( @Nonnull final WebIDLParser.DefaultValueContext ctx )
+  static DefaultValue parse( @Nonnull final WebIDLParser.DefaultValueContext ctx )
   {
     final WebIDLParser.ConstMemberValueContext constMemberValueContext = ctx.constMemberValue();
     if ( null != constMemberValueContext )
@@ -663,8 +669,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static EnumerationDefinition parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx,
-                                             @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static EnumerationDefinition parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx,
+                                      @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final Set<String> values = parse( ctx.enumValueList() );
@@ -696,7 +702,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static List<ExtendedAttribute> parse( @Nonnull final WebIDLParser.ExtendedAttributeListContext ctx )
+  static List<ExtendedAttribute> parse( @Nonnull final WebIDLParser.ExtendedAttributeListContext ctx )
   {
     final WebIDLParser.ExtendedAttributeContext extendedAttributeContext = ctx.extendedAttribute();
     if ( null == extendedAttributeContext )
@@ -780,13 +786,242 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static InterfaceModel parse( @Nonnull final ModelRepository repository,
-                                      @Nonnull final WebIDLParser.InterfaceRestContext ctx )
+  static InterfaceDefinition parse( @Nonnull final WebIDLParser.InterfaceRestContext ctx,
+                                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
-    final InterfaceModel interfaceModel = repository.findOrCreateInterfaceByName( name );
-    interfaceModel.setInherits( extractInherits( ctx.inheritance() ) );
-    return interfaceModel;
+
+    final ArrayList<ConstMember> constants = new ArrayList<>();
+    final ArrayList<AttributeMember> attributes = new ArrayList<>();
+    final ArrayList<OperationMember> operations = new ArrayList<>();
+    IterableMember iterable = null;
+    AsyncIterableMember asyncIterable = null;
+    MapLikeMember mapLike = null;
+    SetLikeMember setLike = null;
+
+    WebIDLParser.InterfaceMembersContext interfaceMembersContext = ctx.interfaceMembers();
+    while ( interfaceMembersContext.getChildCount() > 0 )
+    {
+      final List<ExtendedAttribute> memberExtendedAttributes = parse( interfaceMembersContext.extendedAttributeList() );
+
+      final WebIDLParser.InterfaceMemberContext interfaceMemberContext = interfaceMembersContext.interfaceMember();
+      final WebIDLParser.PartialInterfaceMemberContext partialInterfaceMemberContext =
+        interfaceMemberContext.partialInterfaceMember();
+      if ( null != partialInterfaceMemberContext )
+      {
+        final Member member = parse( partialInterfaceMemberContext, memberExtendedAttributes );
+        if ( member instanceof AttributeMember )
+        {
+          attributes.add( (AttributeMember) member );
+        }
+        else if ( member instanceof ConstMember )
+        {
+          constants.add( (ConstMember) member );
+        }
+        else if ( member instanceof OperationMember )
+        {
+          operations.add( (OperationMember) member );
+        }
+        else if ( member instanceof MapLikeMember )
+        {
+          if ( null != mapLike )
+          {
+            throw new IllegalModelException( "IDL attempted to define multiple mapLike members for " +
+                                             "interface named '" + name + "'" );
+          }
+          mapLike = (MapLikeMember) member;
+        }
+        else if ( member instanceof SetLikeMember )
+        {
+          if ( null != setLike )
+          {
+            throw new IllegalModelException( "IDL attempted to define multiple setLike members for " +
+                                             "interface named '" + name + "'" );
+          }
+          setLike = (SetLikeMember) member;
+        }
+        else if ( member instanceof IterableMember )
+        {
+          if ( null != iterable )
+          {
+            throw new IllegalModelException( "IDL attempted to define multiple iterable members for " +
+                                             "interface named '" + name + "'" );
+          }
+          iterable = (IterableMember) member;
+        }
+        else
+        {
+          assert member instanceof AsyncIterableMember;
+          if ( null != asyncIterable )
+          {
+            throw new IllegalModelException( "IDL attempted to define multiple async iterable members for " +
+                                             "interface named '" + name + "'" );
+          }
+          asyncIterable = (AsyncIterableMember) member;
+        }
+      }
+      else
+      {
+        final WebIDLParser.ConstructorContext constructorContext = interfaceMemberContext.constructor();
+        assert null != constructorContext;
+        operations.add( parse( constructorContext, memberExtendedAttributes ) );
+      }
+
+      interfaceMembersContext = interfaceMembersContext.interfaceMembers();
+    }
+
+    return new InterfaceDefinition( name,
+                                    extractInherits( ctx.inheritance() ),
+                                    Collections.unmodifiableList( constants ),
+                                    Collections.unmodifiableList( attributes ),
+                                    Collections.unmodifiableList( operations ),
+                                    iterable,
+                                    asyncIterable,
+                                    mapLike,
+                                    setLike,
+                                    extendedAttributes );
+  }
+
+  @Nonnull
+  static PartialInterfaceDefinition parse( @Nonnull final WebIDLParser.PartialInterfaceRestContext ctx,
+                                           @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final String name = ctx.IDENTIFIER().getText();
+
+    final ArrayList<ConstMember> constants = new ArrayList<>();
+    final ArrayList<AttributeMember> attributes = new ArrayList<>();
+    final ArrayList<OperationMember> operations = new ArrayList<>();
+    IterableMember iterable = null;
+    AsyncIterableMember asyncIterable = null;
+    MapLikeMember mapLike = null;
+    SetLikeMember setLike = null;
+
+    WebIDLParser.PartialInterfaceMembersContext partialInterfaceMembersContext = ctx.partialInterfaceMembers();
+    while ( partialInterfaceMembersContext.getChildCount() > 0 )
+    {
+      final List<ExtendedAttribute> memberExtendedAttributes =
+        parse( partialInterfaceMembersContext.extendedAttributeList() );
+
+      final WebIDLParser.PartialInterfaceMemberContext partialInterfaceMemberContext =
+        partialInterfaceMembersContext.partialInterfaceMember();
+      assert null != partialInterfaceMemberContext;
+      final Member member = parse( partialInterfaceMemberContext, memberExtendedAttributes );
+      if ( member instanceof AttributeMember )
+      {
+        attributes.add( (AttributeMember) member );
+      }
+      else if ( member instanceof ConstMember )
+      {
+        constants.add( (ConstMember) member );
+      }
+      else if ( member instanceof OperationMember )
+      {
+        operations.add( (OperationMember) member );
+      }
+      else if ( member instanceof MapLikeMember )
+      {
+        if ( null != mapLike )
+        {
+          throw new IllegalModelException( "IDL attempted to define multiple mapLike members for " +
+                                           "partial interface named '" + name + "'" );
+        }
+        mapLike = (MapLikeMember) member;
+      }
+      else if ( member instanceof SetLikeMember )
+      {
+        if ( null != setLike )
+        {
+          throw new IllegalModelException( "IDL attempted to define multiple setLike members for " +
+                                           "partial interface named '" + name + "'" );
+        }
+        setLike = (SetLikeMember) member;
+      }
+      else if ( member instanceof IterableMember )
+      {
+        if ( null != iterable )
+        {
+          throw new IllegalModelException( "IDL attempted to define multiple iterable members for " +
+                                           "partial interface named '" + name + "'" );
+        }
+        iterable = (IterableMember) member;
+      }
+      else
+      {
+        assert member instanceof AsyncIterableMember;
+        if ( null != asyncIterable )
+        {
+          throw new IllegalModelException( "IDL attempted to define multiple async iterable members for " +
+                                           "partial interface named '" + name + "'" );
+        }
+        asyncIterable = (AsyncIterableMember) member;
+      }
+
+      partialInterfaceMembersContext = partialInterfaceMembersContext.partialInterfaceMembers();
+    }
+
+    return new PartialInterfaceDefinition( name,
+                                           Collections.unmodifiableList( constants ),
+                                           Collections.unmodifiableList( attributes ),
+                                           Collections.unmodifiableList( operations ),
+                                           iterable,
+                                           asyncIterable,
+                                           mapLike,
+                                           setLike,
+                                           extendedAttributes );
+  }
+
+  @Nonnull
+  static Member parse( @Nonnull final WebIDLParser.PartialInterfaceMemberContext ctx,
+                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    final WebIDLParser.ConstMemberContext constMemberContext = ctx.constMember();
+    if ( null != constMemberContext )
+    {
+      return parse( constMemberContext, extendedAttributes );
+    }
+    final WebIDLParser.OperationContext operationContext = ctx.operation();
+    if ( null != operationContext )
+    {
+      return parse( operationContext, extendedAttributes );
+    }
+    final WebIDLParser.StringifierContext stringifierContext = ctx.stringifier();
+    if ( null != stringifierContext )
+    {
+      return parse( stringifierContext, extendedAttributes );
+    }
+    final WebIDLParser.StaticMemberContext staticMemberContext = ctx.staticMember();
+    if ( null != staticMemberContext )
+    {
+      return parse( staticMemberContext, extendedAttributes );
+    }
+    final WebIDLParser.IterableContext iterableContext = ctx.iterable();
+    if ( null != iterableContext )
+    {
+      return parse( iterableContext, extendedAttributes );
+    }
+    final WebIDLParser.AsyncIterableContext asyncIterableContext = ctx.asyncIterable();
+    if ( null != asyncIterableContext )
+    {
+      return parse( asyncIterableContext, extendedAttributes );
+    }
+    final WebIDLParser.ReadOnlyMemberContext readOnlyMemberContext = ctx.readOnlyMember();
+    if ( null != readOnlyMemberContext )
+    {
+      return parse( readOnlyMemberContext, extendedAttributes );
+    }
+    final WebIDLParser.ReadWriteAttributeContext readWriteAttributeContext = ctx.readWriteAttribute();
+    if ( null != readWriteAttributeContext )
+    {
+      return parse( readWriteAttributeContext, new HashSet<>(), extendedAttributes );
+    }
+    final WebIDLParser.ReadWriteMaplikeContext readWriteMaplikeContext = ctx.readWriteMaplike();
+    if ( null != readWriteMaplikeContext )
+    {
+      return parse( readWriteMaplikeContext.maplikeRest(), false, extendedAttributes );
+    }
+    final WebIDLParser.ReadWriteSetlikeContext readWriteSetlikeContext = ctx.readWriteSetlike();
+    assert null != readWriteSetlikeContext;
+    return parse( readWriteSetlikeContext.setlikeRest(), false, extendedAttributes );
   }
 
   @Nullable
@@ -797,8 +1032,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static TypedefDefinition parse( @Nonnull final WebIDLParser.TypedefContext ctx,
-                                         @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static TypedefDefinition parse( @Nonnull final WebIDLParser.TypedefContext ctx,
+                                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final Type type = parse( ctx.typeWithExtendedAttributes() );
@@ -806,14 +1041,14 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.TypeWithExtendedAttributesContext ctx )
+  static Type parse( @Nonnull final WebIDLParser.TypeWithExtendedAttributesContext ctx )
   {
     final WebIDLParser.ExtendedAttributeListContext extendedAttributeListContext = ctx.extendedAttributeList();
     return parse( ctx.type(), parse( extendedAttributeListContext ) );
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.TypeContext ctx )
+  static Type parse( @Nonnull final WebIDLParser.TypeContext ctx )
   {
     return parse( ctx, Collections.emptyList() );
   }
@@ -902,7 +1137,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static Type parse( @Nonnull final WebIDLParser.ReturnTypeContext returnTypeContext )
+  static Type parse( @Nonnull final WebIDLParser.ReturnTypeContext returnTypeContext )
   {
     final WebIDLParser.TypeContext type = returnTypeContext.type();
     return null != type ? parse( type ) : new Type( Kind.Void, Collections.emptyList(), false );
@@ -1064,9 +1299,9 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static Definition parse( @Nonnull final WebIDLParser.NamespaceContext ctx,
-                                  final boolean partial,
-                                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static Definition parse( @Nonnull final WebIDLParser.NamespaceContext ctx,
+                           final boolean partial,
+                           @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
 
@@ -1105,8 +1340,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static IncludesStatement parse( @Nonnull final WebIDLParser.IncludesStatementContext ctx,
-                                         @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static IncludesStatement parse( @Nonnull final WebIDLParser.IncludesStatementContext ctx,
+                                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String interfaceName = ctx.IDENTIFIER( 0 ).getText();
     final String mixinName = ctx.IDENTIFIER( 1 ).getText();
@@ -1114,8 +1349,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static DictionaryDefinition parse( @Nonnull final WebIDLParser.DictionaryContext ctx,
-                                            @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static DictionaryDefinition parse( @Nonnull final WebIDLParser.DictionaryContext ctx,
+                                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final String inherits = extractInherits( ctx.inheritance() );
@@ -1124,8 +1359,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static PartialDictionaryDefinition parse( @Nonnull final WebIDLParser.PartialDictionaryContext ctx,
-                                                   @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  static PartialDictionaryDefinition parse( @Nonnull final WebIDLParser.PartialDictionaryContext ctx,
+                                            @Nonnull final List<ExtendedAttribute> extendedAttributes )
   {
     final String name = ctx.IDENTIFIER().getText();
     final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
@@ -1173,11 +1408,21 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static WebIDLParser createParser( @Nonnull final Reader reader )
+  static WebIDLParser createParser( @Nonnull final Reader reader )
     throws IOException
   {
     final WebIDLParser parser = WebIDLParserTool.createParser( reader );
     parser.setBuildParseTree( true );
     return parser;
+  }
+
+  @Nonnull
+  public static List<Definition> parse( @Nonnull final FileReader reader,
+                                        @Nonnull final ANTLRErrorListener errorListener )
+    throws IOException
+  {
+    final WebIDLParser parser = createParser( reader );
+    parser.addErrorListener( errorListener );
+    return parse( parser.webIDL() );
   }
 }
