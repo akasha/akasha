@@ -15,3 +15,34 @@ complete as there is too much un-said.
   members and definitions.
 
   Spec Docs: https://heycam.github.io/webidl/
+
+* Add a top-level container for `WebIDL` perhaps named `WebIDLSchema` or similar that contains lists/maps of all
+  the definitions.
+
+* Add a `SourceLocation` entity that defines the file: line:character->line:character where element was defined.
+  Each element can potentially have a list of them as they may be sourced from multiple places. Make sure the
+  "file" field is the symbolic name associated with where idl sourced.
+
+* Add a process that merges multiple `WebIDLSchema` classes together.
+
+* Add a process that expands the partials into the actuals and creates a new `WebIDLSchema` with result.
+
+* Add a series of validators that verify characteristics of the schema before further processing. Errors or
+  warnings are likely the result of each validation process. Validations may include:
+  - if a partial exists then the actual should exist
+  - ensure that inherits exists for interfaces
+  - ensure all `TypeReference` types resolve to a valid type
+  etc.
+
+* Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
+  how this would look if we created a parallel model hierarchy and then generated source code based on this model.
+
+* Consider loading in the chrome `WebIDL` so that we could decorate the model with chrome specific extensions.
+  We could then make sure these extensions are clearly marked in the source code (i.e. generate to extern prefixed
+  with chrome etc or explicit annotations in java code)
+
+* Add a process where we could load customizations from json when processing the model so we can patch the schema
+  in specific ways.
+
+* Add passes where we modify the internal model (i.e. in java we could emit a `addOnFooListener(e -> {})` if there
+  is an event named `foo`)
