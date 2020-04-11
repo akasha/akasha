@@ -18,8 +18,8 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
-import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.WebIDLModelParser;
+import org.realityforge.webtack.model.WebIDLSchema;
 
 final class VerifyCommand
   extends ConfigurableCommand
@@ -90,7 +90,7 @@ final class VerifyCommand
       {
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         @SuppressWarnings( "unused" )
-        final List<Definition> definitions = WebIDLModelParser.parse( reader, errorListener );
+        final WebIDLSchema schema = WebIDLModelParser.parse( reader, errorListener );
 
         final int errorCount = errorListener.getErrorCount();
         if ( 0 == errorCount )

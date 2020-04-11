@@ -54,9 +54,101 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  private static List<Definition> parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
+  private static WebIDLSchema parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
   {
-    return parse( ctx.definitions() );
+    final List<Definition> definitions = parse( ctx.definitions() );
+
+    final Map<String, CallbackDefinition> callbacks = new HashMap<>();
+    final Map<String, CallbackInterfaceDefinition> callbackInterfaces = new HashMap<>();
+    final Map<String, DictionaryDefinition> dictionaries = new HashMap<>();
+    final Map<String, EnumerationDefinition> enumerations = new HashMap<>();
+    final Map<String, InterfaceDefinition> interfaces = new HashMap<>();
+    final Map<String, MixinDefinition> mixins = new HashMap<>();
+    final Map<String, IncludesStatement> includes = new HashMap<>();
+    final Map<String, NamespaceDefinition> namespaces = new HashMap<>();
+    final Map<String, List<PartialDictionaryDefinition>> partialDictionaries = new HashMap<>();
+    final Map<String, List<PartialInterfaceDefinition>> partialInterfaces = new HashMap<>();
+    final Map<String, List<PartialMixinDefinition>> partialMixins = new HashMap<>();
+    final Map<String, List<PartialNamespaceDefinition>> partialNamespaces = new HashMap<>();
+    final Map<String, TypedefDefinition> typedefs = new HashMap<>();
+
+    for ( final Definition definition : definitions )
+    {
+      if ( definition instanceof CallbackDefinition )
+      {
+        final CallbackDefinition value = (CallbackDefinition) definition;
+        addToCollection( "callbacks", callbacks, value.getName(), value );
+      }
+      else if ( definition instanceof CallbackInterfaceDefinition )
+      {
+        final CallbackInterfaceDefinition value = (CallbackInterfaceDefinition) definition;
+        addToCollection( "callback interfaces", callbackInterfaces, value.getName(), value );
+      }
+      else if ( definition instanceof DictionaryDefinition )
+      {
+        final DictionaryDefinition value = (DictionaryDefinition) definition;
+        addToCollection( "dictionaries", dictionaries, value.getName(), value );
+      }
+      else if ( definition instanceof EnumerationDefinition )
+      {
+        final EnumerationDefinition value = (EnumerationDefinition) definition;
+        addToCollection( "enumerations", enumerations, value.getName(), value );
+      }
+      else if ( definition instanceof InterfaceDefinition )
+      {
+        final InterfaceDefinition value = (InterfaceDefinition) definition;
+        addToCollection( "interfaces", interfaces, value.getName(), value );
+      }
+      else if ( definition instanceof MixinDefinition )
+      {
+        final MixinDefinition value = (MixinDefinition) definition;
+        addToCollection( "mixins", mixins, value.getName(), value );
+      }
+      else if ( definition instanceof IncludesStatement )
+      {
+        final IncludesStatement value = (IncludesStatement) definition;
+        addToCollection( "includes", includes, value.getInterfaceName() + "+" + value.getMixinName(), value );
+      }
+      else if ( definition instanceof NamespaceDefinition )
+      {
+        final NamespaceDefinition value = (NamespaceDefinition) definition;
+        addToCollection( "namespaces", namespaces, value.getName(), value );
+      }
+      else if ( definition instanceof TypedefDefinition )
+      {
+        final TypedefDefinition value = (TypedefDefinition) definition;
+        addToCollection( "typedefs", typedefs, value.getName(), value );
+      }
+    }
+
+    return new WebIDLSchema( callbacks,
+                             callbackInterfaces,
+                             dictionaries,
+                             enumerations,
+                             interfaces,
+                             mixins,
+                             includes,
+                             namespaces,
+                             partialDictionaries,
+                             partialInterfaces,
+                             partialMixins,
+                             partialNamespaces,
+                             typedefs );
+  }
+
+  private static <T extends Definition> void addToCollection( @Nonnull final String collectionName,
+                                                              @Nonnull final Map<String, T> collection,
+                                                              @Nonnull final String name,
+                                                              @Nonnull final T value )
+  {
+    if ( collection.containsKey( name ) )
+    {
+      throw new IllegalModelException( "Multiple " + collectionName + " defined with the name '" + name + "'" );
+    }
+    else
+    {
+      collection.put( name, value );
+    }
   }
 
   @Nonnull
@@ -1417,8 +1509,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  public static List<Definition> parse( @Nonnull final FileReader reader,
-                                        @Nonnull final ANTLRErrorListener errorListener )
+  public static WebIDLSchema parse( @Nonnull final FileReader reader,
+                                    @Nonnull final ANTLRErrorListener errorListener )
     throws IOException
   {
     final WebIDLParser parser = createParser( reader );
