@@ -33,7 +33,7 @@ public final class WebIDLParserToolTest
       "\n" +
       "  USVString toJSON();\n" +
       "};\n";
-    final WebIDLParser parser = WebIDLParserTool.createParser( new StringReader( webidl ) );
+    final WebIDLParser parser = WebIDLParserTool.createParser( "myschema", new StringReader( webidl ) );
     final WebIDLParser.WebIDLContext context = parser.webIDL();
     final WebIDLParser.DefinitionContext definition = context.definitions().definition();
     assertEquals( definition.callbackOrInterfaceOrMixin()

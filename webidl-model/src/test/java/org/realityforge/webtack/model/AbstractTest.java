@@ -40,6 +40,6 @@ public abstract class AbstractTest
   protected final WebIDLParser createParser( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.createParser( new StringReader( webIDL ) );
+    return WebIDLModelParser.createParser( "test", new StringReader( webIDL ) );
   }
 }

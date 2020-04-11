@@ -1,6 +1,5 @@
 package org.realityforge.webtack.model;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
@@ -1500,20 +1499,21 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static WebIDLParser createParser( @Nonnull final Reader reader )
+  static WebIDLParser createParser( @Nonnull final String name, @Nonnull final Reader reader )
     throws IOException
   {
-    final WebIDLParser parser = WebIDLParserTool.createParser( reader );
+    final WebIDLParser parser = WebIDLParserTool.createParser( name, reader );
     parser.setBuildParseTree( true );
     return parser;
   }
 
   @Nonnull
-  public static WebIDLSchema parse( @Nonnull final FileReader reader,
+  public static WebIDLSchema parse( @Nonnull final String name,
+                                    @Nonnull final Reader reader,
                                     @Nonnull final ANTLRErrorListener errorListener )
     throws IOException
   {
-    final WebIDLParser parser = createParser( reader );
+    final WebIDLParser parser = createParser( name, reader );
     parser.addErrorListener( errorListener );
     return parse( parser.webIDL() );
   }

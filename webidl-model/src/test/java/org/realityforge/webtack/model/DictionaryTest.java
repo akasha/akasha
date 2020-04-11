@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -69,6 +70,7 @@ public final class DictionaryTest
   private DictionaryDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).dictionary(), Collections.emptyList() );
+    final WebIDLParser.DictionaryContext dictionary = createParser( webIDL ).dictionary();
+    return WebIDLModelParser.parse( dictionary, Collections.emptyList() );
   }
 }
