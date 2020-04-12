@@ -3,6 +3,8 @@ package org.realityforge.webtack.model;
 import java.io.IOException;
 import java.util.Collections;
 import javax.annotation.Nonnull;
+import org.antlr.v4.runtime.ParserRuleContext;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -22,6 +24,7 @@ public final class AsyncIterableMemberTest
   private AsyncIterableMember parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).asyncIterable(), Collections.emptyList() );
+    final WebIDLParser.AsyncIterableContext ctx = createParser( webIDL ).asyncIterable();
+    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
   }
 }

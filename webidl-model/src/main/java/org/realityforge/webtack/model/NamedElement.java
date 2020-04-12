@@ -10,9 +10,11 @@ public abstract class NamedElement
   @Nonnull
   private final String _name;
 
-  protected NamedElement( @Nonnull final String name, @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  protected NamedElement( @Nonnull final String name,
+                          @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                          @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
   }
 

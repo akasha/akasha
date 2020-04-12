@@ -12,9 +12,10 @@ public final class SequenceType
 
   SequenceType( @Nonnull final Type itemType,
                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                final boolean nullable )
+                final boolean nullable,
+                @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( Kind.Sequence, extendedAttributes, nullable );
+    super( Kind.Sequence, extendedAttributes, nullable, sourceLocations );
     _itemType = Objects.requireNonNull( itemType );
   }
 

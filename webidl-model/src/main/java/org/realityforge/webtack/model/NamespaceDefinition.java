@@ -17,9 +17,10 @@ public final class NamespaceDefinition
   NamespaceDefinition( @Nonnull final String name,
                        @Nonnull final List<OperationMember> operations,
                        @Nonnull final List<AttributeMember> attributes,
-                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                       @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _operations = Objects.requireNonNull( operations );
     _attributes = Objects.requireNonNull( attributes );

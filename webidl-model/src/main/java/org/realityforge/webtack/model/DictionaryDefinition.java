@@ -18,9 +18,10 @@ public final class DictionaryDefinition
   DictionaryDefinition( @Nonnull final String name,
                         @Nullable final String inherits,
                         @Nonnull final List<DictionaryMember> members,
-                        @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                        @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _inherits = inherits;
     _members = Objects.requireNonNull( members );

@@ -11,9 +11,12 @@ public class Type
   private final Kind _kind;
   private final boolean _nullable;
 
-  Type( @Nonnull final Kind kind, @Nonnull final List<ExtendedAttribute> extendedAttributes, final boolean nullable )
+  Type( @Nonnull final Kind kind,
+        @Nonnull final List<ExtendedAttribute> extendedAttributes,
+        final boolean nullable,
+        @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _kind = Objects.requireNonNull( kind );
     _nullable = nullable;
     assert _kind.isNullableAllowed() || !isNullable();

@@ -14,9 +14,10 @@ public final class PartialDictionaryDefinition
 
   PartialDictionaryDefinition( @Nonnull final String name,
                                @Nonnull final List<DictionaryMember> members,
-                               @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                               @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _members = Objects.requireNonNull( members );
   }

@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -136,8 +137,8 @@ public final class PartialMixinDefinitionTest
                                                                final int operationCount )
     throws IOException
   {
-    final Definition definition =
-      WebIDLModelParser.parse( createParser( webIDL ).definition(), Collections.emptyList() );
+    final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
+    final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof PartialMixinDefinition );
     final PartialMixinDefinition mixin = (PartialMixinDefinition) definition;
     assertEquals( mixin.getName(), name );

@@ -70,7 +70,7 @@ public final class DictionaryTest
   private DictionaryDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
-    final WebIDLParser.DictionaryContext dictionary = createParser( webIDL ).dictionary();
-    return WebIDLModelParser.parse( dictionary, Collections.emptyList() );
+    final WebIDLParser.DictionaryContext ctx = createParser( webIDL ).dictionary();
+    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
   }
 }

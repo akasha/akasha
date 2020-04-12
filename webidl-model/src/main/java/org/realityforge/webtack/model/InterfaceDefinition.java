@@ -36,9 +36,10 @@ public final class InterfaceDefinition
                        @Nullable final AsyncIterableMember asyncIterable,
                        @Nullable final MapLikeMember mapLikeMember,
                        @Nullable final SetLikeMember setLikeMember,
-                       @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                       @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _inherits = inherits;
     _constants = Objects.requireNonNull( constants );

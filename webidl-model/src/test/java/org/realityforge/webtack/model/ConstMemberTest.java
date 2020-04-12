@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -41,6 +42,7 @@ public final class ConstMemberTest
   private ConstMember parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).constMember(), Collections.emptyList() );
+    final WebIDLParser.ConstMemberContext ctx = createParser( webIDL ).constMember();
+    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
   }
 }

@@ -5,6 +5,7 @@ import java.io.StringReader;
 import java.util.UUID;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
 import static org.testng.Assert.*;
@@ -41,5 +42,11 @@ public abstract class AbstractTest
     throws IOException
   {
     return WebIDLModelParser.createParser( "test", new StringReader( webIDL ) );
+  }
+
+  @Nonnull
+  protected final SourcePosition parseStartPosition( @Nonnull final ParserRuleContext ctx )
+  {
+    return WebIDLModelParser.parseSourcePosition( ctx.getStart() );
   }
 }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -86,8 +87,8 @@ public final class CallbackInterfaceDefinitionTest
                                                                final int constantCount )
     throws IOException
   {
-    final Definition definition =
-      WebIDLModelParser.parse( createParser( webIDL ).definition(), Collections.emptyList() );
+    final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
+    final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof CallbackInterfaceDefinition );
     final CallbackInterfaceDefinition callbackDefinition = (CallbackInterfaceDefinition) definition;
     assertEquals( callbackDefinition.getName(), name );

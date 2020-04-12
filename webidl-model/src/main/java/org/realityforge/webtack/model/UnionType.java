@@ -12,9 +12,10 @@ public final class UnionType
 
   UnionType( @Nonnull final List<Type> memberTypes,
              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-             final boolean nullable )
+             final boolean nullable,
+             @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( Kind.Union, extendedAttributes, nullable );
+    super( Kind.Union, extendedAttributes, nullable, sourceLocations );
     _memberTypes = Objects.requireNonNull( memberTypes );
   }
 

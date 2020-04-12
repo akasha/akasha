@@ -16,10 +16,6 @@ complete as there is too much un-said.
 
   Spec Docs: https://heycam.github.io/webidl/
 
-* Add a `SourceLocation` entity that defines the file: line:character->line:character where element was defined.
-  Each element can potentially have a list of them as they may be sourced from multiple places. Make sure the
-  "file" field is the symbolic name associated with where idl sourced.
-
 * Add a process that merges multiple `WebIDLSchema` classes together.
 
 * Add a process that expands the partials into the actuals and creates a new `WebIDLSchema` with result.

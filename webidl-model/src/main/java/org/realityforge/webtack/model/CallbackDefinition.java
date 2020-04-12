@@ -17,9 +17,10 @@ public final class CallbackDefinition
   CallbackDefinition( @Nonnull final String name,
                       @Nonnull final Type returnType,
                       @Nonnull final List<Argument> arguments,
-                      @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                      @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _returnType = Objects.requireNonNull( returnType );
     _arguments = Objects.requireNonNull( arguments );

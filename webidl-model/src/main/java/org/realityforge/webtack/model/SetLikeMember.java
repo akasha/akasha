@@ -14,9 +14,10 @@ public final class SetLikeMember
 
   SetLikeMember( @Nonnull final Type type,
                  final boolean readOnly,
-                 @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                 @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _type = Objects.requireNonNull( type );
     _readOnly = readOnly;
   }

@@ -2,6 +2,7 @@ package org.realityforge.webtack.model;
 
 import java.util.Collections;
 import java.util.List;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -12,9 +13,9 @@ public final class OperationMemberTest
   public void parse()
     throws Exception
   {
-    final OperationMember member =
-      WebIDLModelParser.parse( createParser( "Promise<boolean> isSessionSupported(XRSessionMode mode);" ).operation(),
-                               Collections.emptyList() );
+    final WebIDLParser.OperationContext ctx =
+      createParser( "Promise<boolean> isSessionSupported(XRSessionMode mode);" ).operation();
+    final OperationMember member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( member.getName(), "isSessionSupported" );
     assertEquals( member.getReturnType().getKind(), Kind.Promise );
     assertEquals( member.getKind(), OperationMember.Kind.DEFAULT );
@@ -32,9 +33,9 @@ public final class OperationMemberTest
   public void parse_getter()
     throws Exception
   {
-    final OperationMember member =
-      WebIDLModelParser.parse( createParser( "getter XRInputSource(unsigned long index);" ).operation(),
-                               Collections.emptyList() );
+    final WebIDLParser.OperationContext ctx =
+      createParser( "getter XRInputSource(unsigned long index);" ).operation();
+    final OperationMember member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertNull( member.getName() );
     assertEquals( member.getReturnType().getKind(), Kind.TypeReference );
     assertEquals( member.getKind(), OperationMember.Kind.GETTER );
@@ -51,8 +52,8 @@ public final class OperationMemberTest
   public void parse_specialName()
     throws Exception
   {
-    final OperationMember member =
-      WebIDLModelParser.parse( createParser( "boolean includes(any key);" ).operation(), Collections.emptyList() );
+    final WebIDLParser.OperationContext ctx = createParser( "boolean includes(any key);" ).operation();
+    final OperationMember member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( member.getName(), "includes" );
     assertEquals( member.getReturnType().getKind(), Kind.Boolean );
     assertEquals( member.getKind(), OperationMember.Kind.DEFAULT );
@@ -67,9 +68,9 @@ public final class OperationMemberTest
   public void parse_static()
     throws Exception
   {
-    final Member member =
-      WebIDLModelParser.parse( createParser( "static double getNativeFramebufferScaleFactor(XRSession session);" ).staticMember(),
-                               Collections.emptyList() );
+    final WebIDLParser.StaticMemberContext ctx =
+      createParser( "static double getNativeFramebufferScaleFactor(XRSession session);" ).staticMember();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof OperationMember );
     final OperationMember operation = (OperationMember) member;
     assertEquals( operation.getName(), "getNativeFramebufferScaleFactor" );
@@ -86,9 +87,8 @@ public final class OperationMemberTest
   public void parse_stringifier()
     throws Exception
   {
-    final Member member =
-      WebIDLModelParser.parse( createParser( "stringifier DOMString ();" ).stringifier(),
-                               Collections.emptyList() );
+    final WebIDLParser.StringifierContext ctx = createParser( "stringifier DOMString ();" ).stringifier();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof OperationMember );
     final OperationMember operation = (OperationMember) member;
     assertNull( operation.getName() );
@@ -101,9 +101,8 @@ public final class OperationMemberTest
   public void parse_empty_stringifier()
     throws Exception
   {
-    final Member member =
-      WebIDLModelParser.parse( createParser( "stringifier;" ).stringifier(),
-                               Collections.emptyList() );
+    final WebIDLParser.StringifierContext ctx = createParser( "stringifier;" ).stringifier();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof OperationMember );
     final OperationMember operation = (OperationMember) member;
     assertNull( operation.getName() );
@@ -116,9 +115,9 @@ public final class OperationMemberTest
   public void parse_constructor()
     throws Exception
   {
-    final OperationMember operation =
-      WebIDLModelParser.parse( createParser( "constructor(unsigned long sw, unsigned long sh);" ).constructor(),
-                               Collections.emptyList() );
+    final WebIDLParser.ConstructorContext ctx =
+      createParser( "constructor(unsigned long sw, unsigned long sh);" ).constructor();
+    final OperationMember operation = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertNull( operation.getName() );
     assertEquals( operation.getReturnType().getKind(), Kind.Void );
     assertEquals( operation.getKind(), OperationMember.Kind.CONSTRUCTOR );

@@ -14,7 +14,8 @@ public final class ExtendedAttributeTest
   public void NO_ARGS()
   {
     final String name = randomString();
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createExtendedAttributeNoArgs( name );
+    final ExtendedAttribute extendedAttribute =
+      ExtendedAttribute.createExtendedAttributeNoArgs( name, Collections.emptyList() );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
     assertThrows( IllegalStateException.class,
@@ -47,7 +48,8 @@ public final class ExtendedAttributeTest
   {
     final String name = randomString();
     final String ident = randomString();
-    final ExtendedAttribute extendedAttribute = ExtendedAttribute.createExtendedAttributeIdent( name, ident );
+    final ExtendedAttribute extendedAttribute =
+      ExtendedAttribute.createExtendedAttributeIdent( name, ident, Collections.emptyList() );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
     assertEquals( extendedAttribute.getIdent(), ident );
@@ -79,7 +81,7 @@ public final class ExtendedAttributeTest
     final String name = randomString();
     final List<String> identList = Arrays.asList( randomString(), randomString() );
     final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeIdentList( name, identList );
+      ExtendedAttribute.createExtendedAttributeIdentList( name, identList, Collections.emptyList() );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
     assertEquals( extendedAttribute.getIdentList(), identList );
@@ -113,13 +115,17 @@ public final class ExtendedAttributeTest
     final String argListName = randomString();
     final List<Argument> argList =
       Collections.singletonList( new Argument( "foo",
-                                               new Type( Kind.Octet, Collections.emptyList(), false ),
+                                               new Type( Kind.Octet,
+                                                         Collections.emptyList(),
+                                                         false,
+                                                         Collections.emptyList() ),
                                                false,
                                                false,
                                                null,
+                                               Collections.emptyList(),
                                                Collections.emptyList() ) );
     final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeArgList( argListName, argList );
+      ExtendedAttribute.createExtendedAttributeArgList( argListName, argList, Collections.emptyList() );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.ARG_LIST );
     assertEquals( extendedAttribute.getArgListName(), argListName );
     assertEquals( extendedAttribute.getArgList(), argList );
@@ -160,13 +166,17 @@ public final class ExtendedAttributeTest
     final String argListName = randomString();
     final List<Argument> argList =
       Collections.singletonList( new Argument( "foo",
-                                               new Type( Kind.Octet, Collections.emptyList(), false ),
+                                               new Type( Kind.Octet,
+                                                         Collections.emptyList(),
+                                                         false,
+                                                         Collections.emptyList() ),
                                                false,
                                                false,
                                                null,
+                                               Collections.emptyList(),
                                                Collections.emptyList() ) );
     final ExtendedAttribute extendedAttribute =
-      ExtendedAttribute.createExtendedAttributeNamedArgList( name, argListName, argList );
+      ExtendedAttribute.createExtendedAttributeNamedArgList( name, argListName, argList, Collections.emptyList() );
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_ARG_LIST );
     assertEquals( extendedAttribute.getArgListName(), argListName );

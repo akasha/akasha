@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.util.Collections;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -12,9 +13,9 @@ public final class WebIDLModelParserTest
   public void parse_readOnlyMember_attributeRest()
     throws Exception
   {
-    final Member member =
-      WebIDLModelParser.parse( createParser( "readonly attribute DOMString name;" ).readOnlyMember(),
-                               Collections.emptyList() );
+    final WebIDLParser.ReadOnlyMemberContext ctx =
+      createParser( "readonly attribute DOMString name;" ).readOnlyMember();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     final AttributeMember value = (AttributeMember) member;
     assertEquals( value.getName(), "name" );
@@ -27,9 +28,9 @@ public final class WebIDLModelParserTest
   public void parse_readOnlyMember_maplikeRest()
     throws Exception
   {
-    final Member member =
-      WebIDLModelParser.parse( createParser( "readonly maplike<DOMString, object>;" ).readOnlyMember(),
-                               Collections.emptyList() );
+    final WebIDLParser.ReadOnlyMemberContext ctx =
+      createParser( "readonly maplike<DOMString, object>;" ).readOnlyMember();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof MapLikeMember );
 
     final MapLikeMember mapLike = (MapLikeMember) member;
@@ -42,9 +43,9 @@ public final class WebIDLModelParserTest
   public void parse_readOnlyMember_setlikeRest()
     throws Exception
   {
-    final Member member =
-      WebIDLModelParser.parse( createParser( "readonly setlike<DOMString>;" ).readOnlyMember(),
-                               Collections.emptyList() );
+    final WebIDLParser.ReadOnlyMemberContext ctx =
+      createParser( "readonly setlike<DOMString>;" ).readOnlyMember();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof SetLikeMember );
 
     final SetLikeMember setLike = (SetLikeMember) member;

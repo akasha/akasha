@@ -17,9 +17,10 @@ public final class CallbackInterfaceDefinition
   public CallbackInterfaceDefinition( @Nonnull final String name,
                                       @Nonnull final OperationMember operation,
                                       @Nonnull final List<ConstMember> constants,
-                                      @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                                      @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _operation = Objects.requireNonNull( operation );
     _constants = Objects.requireNonNull( constants );

@@ -16,9 +16,10 @@ public final class IterableMember
 
   IterableMember( @Nullable final Type keyType,
                   @Nonnull final Type valueType,
-                  @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                  @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                  @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _keyType = keyType;
     _valueType = Objects.requireNonNull( valueType );
   }

@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.io.IOException;
 import java.util.Collections;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -31,6 +32,7 @@ public final class SetLikeMemberTest
   private SetLikeMember parse( @Nonnull final String webIDL, final boolean readOnly )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).setlikeRest(), readOnly, Collections.emptyList() );
+    final WebIDLParser.SetlikeRestContext ctx = createParser( webIDL ).setlikeRest();
+    return WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
   }
 }

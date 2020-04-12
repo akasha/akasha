@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
  * @see <a href="https://heycam.github.io/webidl/#idl-extended-attributes">Extended Attributes Spec</a>
  */
 public final class ExtendedAttribute
+  extends Node
 {
   public enum Kind
   {
@@ -37,63 +38,73 @@ public final class ExtendedAttribute
   private final List<Argument> _argList;
 
   @Nonnull
-  public static ExtendedAttribute createExtendedAttributeNoArgs( @Nonnull final String name )
+  public static ExtendedAttribute createExtendedAttributeNoArgs( @Nonnull final String name,
+                                                                 @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NO_ARGS,
                                   null,
                                   null,
                                   null,
-                                  null );
+                                  null,
+                                  sourceLocations );
   }
 
   @Nonnull
   public static ExtendedAttribute createExtendedAttributeIdent( @Nonnull final String name,
-                                                                @Nonnull final String ident )
+                                                                @Nonnull final String ident,
+                                                                @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.IDENT,
                                   Objects.requireNonNull( ident ),
                                   null,
                                   null,
-                                  null );
+                                  null,
+                                  sourceLocations );
   }
 
   @Nonnull
   public static ExtendedAttribute createExtendedAttributeIdentList( @Nonnull final String name,
-                                                                    @Nonnull final List<String> identList )
+                                                                    @Nonnull final List<String> identList,
+                                                                    @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.IDENT_LIST,
                                   null,
                                   Objects.requireNonNull( identList ),
                                   null,
-                                  null );
+                                  null,
+                                  sourceLocations );
   }
 
   @Nonnull
   public static ExtendedAttribute createExtendedAttributeNamedArgList( @Nonnull final String name,
                                                                        @Nonnull final String argListName,
-                                                                       @Nonnull final List<Argument> argList )
+                                                                       @Nonnull final List<Argument> argList,
+                                                                       @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NAMED_ARG_LIST,
                                   null,
                                   null,
                                   Objects.requireNonNull( argListName ),
-                                  Objects.requireNonNull( argList ) );
+                                  Objects.requireNonNull( argList ),
+                                  sourceLocations );
   }
 
   @Nonnull
   public static ExtendedAttribute createExtendedAttributeArgList( @Nonnull final String argListName,
-                                                                  @Nonnull final List<Argument> argList )
+                                                                  @Nonnull final List<Argument> argList,
+                                                                  @Nonnull final List<SourceInterval> sourceLocations )
   {
     return new ExtendedAttribute( null,
                                   Kind.ARG_LIST,
                                   null,
                                   null,
                                   Objects.requireNonNull( argListName ),
-                                  Objects.requireNonNull( argList ) );
+                                  Objects.requireNonNull( argList ),
+                                  sourceLocations );
   }
 
   private ExtendedAttribute( @Nullable final String name,
@@ -101,10 +112,12 @@ public final class ExtendedAttribute
                              @Nullable final String ident,
                              @Nullable final List<String> identList,
                              @Nullable final String argListName,
-                             @Nullable final List<Argument> argList )
+                             @Nullable final List<Argument> argList,
+                             @Nonnull final List<SourceInterval> sourceLocations )
   {
+    super( sourceLocations );
     _name = name;
-    _kind = kind;
+    _kind = Objects.requireNonNull( kind );
     _ident = ident;
     _identList = identList;
     _argListName = argListName;

@@ -6,8 +6,9 @@ import javax.annotation.Nonnull;
 public abstract class Definition
   extends Element
 {
-  Definition( @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  Definition( @Nonnull final List<ExtendedAttribute> extendedAttributes,
+              @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
   }
 }

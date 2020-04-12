@@ -17,9 +17,10 @@ public final class AttributeMember
   AttributeMember( @Nonnull final String name,
                    @Nonnull final Type type,
                    @Nonnull final Set<Modifier> modifiers,
-                   @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                   @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( name, extendedAttributes );
+    super( name, extendedAttributes, sourceLocations );
     _type = Objects.requireNonNull( type );
     _modifiers = Objects.requireNonNull( modifiers );
   }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -49,6 +50,7 @@ public final class EnumerationDefinitionTest
   private EnumerationDefinition parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).enumDefinition(), Collections.emptyList() );
+    final WebIDLParser.EnumDefinitionContext ctx = createParser( webIDL ).enumDefinition();
+    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
   }
 }

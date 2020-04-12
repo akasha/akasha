@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 
 public final class WebIDLSchema
+  extends Node
 {
   @Nonnull
   private final Map<String, CallbackDefinition> _callbacks;
@@ -48,8 +49,10 @@ public final class WebIDLSchema
                        @Nonnull final Map<String, List<PartialInterfaceDefinition>> partialInterfaces,
                        @Nonnull final Map<String, List<PartialMixinDefinition>> partialMixins,
                        @Nonnull final Map<String, List<PartialNamespaceDefinition>> partialNamespaces,
-                       @Nonnull final Map<String, TypedefDefinition> typedefs )
+                       @Nonnull final Map<String, TypedefDefinition> typedefs,
+                       @Nonnull final List<SourceInterval> sourceLocations )
   {
+    super( sourceLocations );
     _callbacks = Objects.requireNonNull( callbacks );
     _callbackInterfaces = Objects.requireNonNull( callbackInterfaces );
     _dictionaries = Objects.requireNonNull( dictionaries );

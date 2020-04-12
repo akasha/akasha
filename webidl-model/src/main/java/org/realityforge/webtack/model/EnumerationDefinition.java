@@ -15,9 +15,10 @@ public final class EnumerationDefinition
 
   EnumerationDefinition( @Nonnull final String name,
                          @Nonnull final Set<String> values,
-                         @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                         @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _values = Objects.requireNonNull( values );
   }

@@ -90,7 +90,7 @@ final class VerifyCommand
       {
         final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
         @SuppressWarnings( "unused" )
-        final WebIDLSchema schema = WebIDLModelParser.parse( reader, errorListener );
+        final WebIDLSchema schema = WebIDLModelParser.parse( sourceName, reader, errorListener );
 
         final int errorCount = errorListener.getErrorCount();
         if ( 0 == errorCount )

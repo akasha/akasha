@@ -20,9 +20,10 @@ public final class Argument
                    final boolean optional,
                    final boolean variadic,
                    @Nullable final DefaultValue defaultValue,
-                   @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                   @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( name, extendedAttributes );
+    super( name, extendedAttributes, sourceLocations );
     assert !optional || !variadic;
     assert optional || null == defaultValue;
     assert !optional || extendedAttributes.isEmpty();

@@ -14,9 +14,10 @@ public final class IncludesStatement
 
   IncludesStatement( @Nonnull final String interfaceName,
                      @Nonnull final String mixinName,
-                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                     @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes );
+    super( extendedAttributes, sourceLocations );
     _interfaceName = Objects.requireNonNull( interfaceName );
     _mixinName = Objects.requireNonNull( mixinName );
   }

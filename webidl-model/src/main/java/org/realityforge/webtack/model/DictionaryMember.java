@@ -18,9 +18,10 @@ public final class DictionaryMember
                     @Nonnull final Type type,
                     final boolean optional,
                     @Nullable final DefaultValue defaultValue,
-                    @Nonnull final List<ExtendedAttribute> extendedAttributes )
+                    @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                    @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( name, extendedAttributes );
+    super( name, extendedAttributes, sourceLocations );
     assert optional || extendedAttributes.isEmpty();
     assert optional || null == defaultValue;
     _type = Objects.requireNonNull( type );

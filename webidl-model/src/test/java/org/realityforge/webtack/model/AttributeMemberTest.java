@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.HashSet;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -66,10 +67,9 @@ public final class AttributeMemberTest
                                         @Nonnull final AttributeMember.Modifier... modifiers )
     throws IOException
   {
+    final WebIDLParser.ReadWriteAttributeContext ctx = createParser( idl ).readWriteAttribute();
     final AttributeMember member =
-      WebIDLModelParser.parse( createParser( idl ).readWriteAttribute(),
-                               new HashSet<>(),
-                               Collections.emptyList() );
+      WebIDLModelParser.parse( ctx, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx ) );
     assertAttributeMember( member, name, kind, modifiers );
   }
 
@@ -79,7 +79,8 @@ public final class AttributeMemberTest
                                       @Nonnull final AttributeMember.Modifier... modifiers )
     throws IOException
   {
-    final Member member = WebIDLModelParser.parse( createParser( idl ).staticMember(), Collections.emptyList() );
+    final WebIDLParser.StaticMemberContext ctx = createParser( idl ).staticMember();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
   }
@@ -90,7 +91,8 @@ public final class AttributeMemberTest
                                            @Nonnull final AttributeMember.Modifier... modifiers )
     throws IOException
   {
-    final Member member = WebIDLModelParser.parse( createParser( idl ).stringifier(), Collections.emptyList() );
+    final WebIDLParser.StringifierContext ctx = createParser( idl ).stringifier();
+    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
   }
