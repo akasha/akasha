@@ -30,7 +30,7 @@ final class VerifyCommand
     {
     };
   @Nonnull
-  private Set<String> _sourceNames = new LinkedHashSet<>();
+  private final Set<String> _sourceNames = new LinkedHashSet<>();
 
   VerifyCommand()
   {
