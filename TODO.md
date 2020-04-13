@@ -12,6 +12,8 @@ complete as there is too much un-said.
 
 * Rename the "verify" command to parse as it is really only verifying that a parse was successful.
 
+* Merge the "load" and "verify" commands common parts.
+
 * Add a "load" command that parses and loads the semantic model. This will ensure that the model 
   is semantically valid and usually involves loading multiple webidls to get a consistent view.
 
