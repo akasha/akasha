@@ -60,6 +60,7 @@ public class Main
         put( AddCommand.COMMAND, AddCommand::new );
         put( FetchCommand.COMMAND, FetchCommand::new );
         put( VerifyCommand.COMMAND, VerifyCommand::new );
+        put( LoadCommand.COMMAND, LoadCommand::new );
       }
     } );
 

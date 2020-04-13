@@ -14,9 +14,6 @@ complete as there is too much un-said.
 
 * Merge the "load" and "verify" commands common parts.
 
-* Add a "load" command that parses and loads the semantic model. This will ensure that the model 
-  is semantically valid and usually involves loading multiple webidls to get a consistent view.
-
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
   so it should be possible with a little bit of heuristics to extract the documentation for different
   members and definitions.
