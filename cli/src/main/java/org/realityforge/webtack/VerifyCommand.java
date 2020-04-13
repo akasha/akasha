@@ -34,7 +34,7 @@ final class VerifyCommand
 
   VerifyCommand()
   {
-    super( COMMAND, "Verify that the WebIDL source can be parsed", OPTIONS );
+    super( COMMAND, "Verify that the WebIDL source can be parsed and is syntactically valid", OPTIONS );
   }
 
   @Override
