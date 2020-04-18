@@ -46,9 +46,9 @@ public class RepositoryConfig
     throws Exception
   {
     final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
-    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
     Files.createDirectories( path.getParent() );
-    try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
+    try ( final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
+          final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
     {
       jsonb.toJson( config.getSources()
                       .stream()
