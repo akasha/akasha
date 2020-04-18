@@ -13,23 +13,23 @@ public final class DefaultValueTest
   public void parse()
     throws IOException
   {
-    assertConstValue( "[]", DefaultValue.Kind.EmptySequence, null, null );
-    assertConstValue( "{}", DefaultValue.Kind.EmptyDictionary, null, null );
-    assertConstValue( "null", DefaultValue.Kind.Null, null, null );
-    assertConstValue( "\"Zap\"", DefaultValue.Kind.String, null, "Zap" );
-    assertConstValue( "-Infinity", DefaultValue.Kind.Const, ConstValue.Kind.NegativeInfinity, null );
-    assertConstValue( "-Infinity", DefaultValue.Kind.Const, ConstValue.Kind.NegativeInfinity, null );
-    assertConstValue( "Infinity", DefaultValue.Kind.Const, ConstValue.Kind.PositiveInfinity, null );
-    assertConstValue( "true", DefaultValue.Kind.Const, ConstValue.Kind.True, null );
-    assertConstValue( "false", DefaultValue.Kind.Const, ConstValue.Kind.False, null );
-    assertConstValue( "23.45", DefaultValue.Kind.Const, ConstValue.Kind.Decimal, null );
-    assertConstValue( "23", DefaultValue.Kind.Const, ConstValue.Kind.Integer, null );
+    assertDefaultValue( "[]", DefaultValue.Kind.EmptySequence, null, null );
+    assertDefaultValue( "{}", DefaultValue.Kind.EmptyDictionary, null, null );
+    assertDefaultValue( "null", DefaultValue.Kind.Null, null, null );
+    assertDefaultValue( "\"Zap\"", DefaultValue.Kind.String, null, "Zap" );
+    assertDefaultValue( "-Infinity", DefaultValue.Kind.Const, ConstValue.Kind.NegativeInfinity, null );
+    assertDefaultValue( "-Infinity", DefaultValue.Kind.Const, ConstValue.Kind.NegativeInfinity, null );
+    assertDefaultValue( "Infinity", DefaultValue.Kind.Const, ConstValue.Kind.PositiveInfinity, null );
+    assertDefaultValue( "true", DefaultValue.Kind.Const, ConstValue.Kind.True, null );
+    assertDefaultValue( "false", DefaultValue.Kind.Const, ConstValue.Kind.False, null );
+    assertDefaultValue( "23.45", DefaultValue.Kind.Const, ConstValue.Kind.Decimal, null );
+    assertDefaultValue( "23", DefaultValue.Kind.Const, ConstValue.Kind.Integer, null );
   }
 
-  private void assertConstValue( @Nonnull final String webIDL,
-                                 @Nonnull final DefaultValue.Kind kind,
-                                 @Nullable final ConstValue.Kind constValueType,
-                                 @Nullable final String stringValue )
+  private void assertDefaultValue( @Nonnull final String webIDL,
+                                   @Nonnull final DefaultValue.Kind kind,
+                                   @Nullable final ConstValue.Kind constValueType,
+                                   @Nullable final String stringValue )
     throws IOException
   {
     final DefaultValue defaultValue = WebIDLModelParser.parse( createParser( webIDL ).defaultValue() );
