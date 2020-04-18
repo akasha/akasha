@@ -44,3 +44,5 @@ complete as there is too much un-said.
 
 * Add passes where we modify the internal model (i.e. in java we could emit a `addOnFooListener(e -> {})` if there
   is an event named `foo`)
+
+* Re-add idl source named `deviceorientation` at url `https://w3c.github.io/deviceorientation/`
