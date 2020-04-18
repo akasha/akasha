@@ -126,36 +126,12 @@ public enum Kind
    */
   Symbol,
   /**
-   * An identifier that identifies an interface is used to refer to a type that corresponds to the set of all possible non-null references to objects that implement that interface.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-interface">Interface types</a>
-   */
-  Interface( null ),
-  /**
-   * An identifier that identifies a callback interface is used to refer to a type that corresponds to the set of all possible non-null references to objects.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-callback-interface">Callback interface types</a>
-   */
-  CallbackInterface( null ),
-  /**
-   * An identifier that identifies a dictionary is used to refer to a type that corresponds to the set of all dictionaries that adhere to the dictionary definition.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-dictionary">Dictionary types</a>
-   */
-  Dictionary( null ),
-  /**
    * A reference to a type with specified name.
    * The name may identify an interface, enumeration, callback function, callback interface or typedef.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-enumeration">Enumeration types</a>
    */
   TypeReference( null ),
-  /**
-   * An identifier that identifies a callback function is used to refer to a type whose values are references to objects that are functions with the given signature.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-callback-function">Callback function types</a>
-   */
-  CallbackFunction( null ),
   /**
    * The sequence&lt;T&gt; type is a parameterized type whose values are (possibly zero-length) lists of values of type T.
    *
