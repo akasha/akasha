@@ -34,4 +34,10 @@ public final class SourcePosition
   {
     return _charPositionInLine;
   }
+
+  @Override
+  public String toString()
+  {
+    return getSourceName() + ":" + getLine() + ":" + getCharPositionInLine();
+  }
 }
