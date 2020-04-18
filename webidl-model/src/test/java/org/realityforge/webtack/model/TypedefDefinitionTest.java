@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
+import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
@@ -36,6 +38,22 @@ public final class TypedefDefinitionTest
     throws IOException
   {
     final WebIDLParser.TypedefContext ctx = createParser( webIDL ).typedef();
-    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final TypedefDefinition actual = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+
+    final StringWriter writer = new StringWriter();
+    actual.write( writer );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    final Definition definition = definitions.get( 0 );
+    assertTrue( definition instanceof TypedefDefinition );
+    final TypedefDefinition element = (TypedefDefinition) definition;
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }
