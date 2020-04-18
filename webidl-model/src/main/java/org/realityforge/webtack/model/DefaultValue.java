@@ -1,5 +1,7 @@
 package org.realityforge.webtack.model;
 
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -44,6 +46,65 @@ public final class DefaultValue
   public String getStringValue()
   {
     return _stringValue;
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() )
+    {
+      return false;
+    }
+    else
+    {
+      final DefaultValue that = (DefaultValue) o;
+      return _kind == that._kind &&
+             Objects.equals( _constValue, that._constValue ) &&
+             Objects.equals( _stringValue, that._stringValue );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( _kind, _constValue, _stringValue );
+  }
+
+  public boolean equiv( @Nonnull final DefaultValue other )
+  {
+    return equals( other );
+  }
+
+  public void write( @Nonnull final Writer writer )
+    throws IOException
+  {
+    switch ( _kind )
+    {
+      case Const:
+        assert null != _constValue;
+        _constValue.write( writer );
+        break;
+      case EmptyDictionary:
+        writer.write( "{}" );
+        break;
+      case EmptySequence:
+        writer.write( "[]" );
+        break;
+      case Null:
+        writer.write( "null" );
+        break;
+      default:
+        assert Kind.String == _kind;
+        assert null != _stringValue;
+        writer.write( '"' );
+        writer.write( _stringValue );
+        writer.write( '"' );
+        break;
+    }
   }
 
   public enum Kind

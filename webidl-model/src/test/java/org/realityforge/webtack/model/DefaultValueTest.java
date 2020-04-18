@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.testng.annotations.Test;
@@ -41,5 +42,15 @@ public final class DefaultValueTest
       assertEquals( constValue.getKind(), constValueType );
     }
     assertEquals( defaultValue.getStringValue(), stringValue );
+
+    final StringWriter writer = new StringWriter();
+    defaultValue.write( writer );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final DefaultValue element = WebIDLModelParser.parse( createParser( emittedIDL ).defaultValue() );
+    assertEquals( element, defaultValue );
+    assertEquals( element.hashCode(), defaultValue.hashCode() );
+    assertTrue( element.equiv( defaultValue ) );
+    assertNotSame( element, defaultValue );
   }
 }
