@@ -1,5 +1,7 @@
 package org.realityforge.webtack.model;
 
+import java.io.IOException;
+import java.io.Writer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -36,6 +38,62 @@ public final class ConstValue
   public String getValue()
   {
     return _value;
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( null == o || getClass() != o.getClass() )
+    {
+      return false;
+    }
+    else
+    {
+      final ConstValue that = (ConstValue) o;
+      return _kind == that._kind && Objects.equals( _value, that._value );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( _kind, _value );
+  }
+
+  public boolean equiv( @Nonnull final ConstValue other )
+  {
+    return equals( other );
+  }
+
+  public void write( @Nonnull final Writer writer )
+    throws IOException
+  {
+    switch ( getKind() )
+    {
+      case NaN:
+        writer.write( "NaN" );
+        break;
+      case PositiveInfinity:
+        writer.write( "Infinity" );
+        break;
+      case NegativeInfinity:
+        writer.write( "-Infinity" );
+        break;
+      case True:
+        writer.write( "true" );
+        break;
+      case False:
+        writer.write( "false" );
+        break;
+      default:
+        assert null != _value;
+        writer.write( _value );
+        break;
+    }
   }
 
   public enum Kind

@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.testng.annotations.Test;
@@ -30,5 +31,15 @@ public final class ConstValueTest
     final ConstValue constValue = WebIDLModelParser.parse( createParser( webIDL ).constMemberValue() );
     assertEquals( constValue.getKind(), kind );
     assertEquals( constValue.getValue(), value );
+
+    final StringWriter writer = new StringWriter();
+    constValue.write( writer );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final ConstValue element = WebIDLModelParser.parse( createParser( emittedIDL ).constMemberValue() );
+    assertEquals( element, constValue );
+    assertEquals( element.hashCode(), constValue.hashCode() );
+    assertTrue( element.equiv( constValue ) );
+    assertNotSame( element, constValue );
   }
 }
