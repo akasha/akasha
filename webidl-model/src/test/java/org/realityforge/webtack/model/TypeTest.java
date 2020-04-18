@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
@@ -204,8 +205,19 @@ public final class TypeTest
     throws IOException
   {
     // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
-    final Type actual = parseType( webIDL + " someVar" );
+    final Type actual = WebIDLModelParser.parse( createParser( webIDL + " someVar" ).type() );
     assertType( actual, kind, isNullable );
+
+    final StringWriter writer = new StringWriter();
+    actual.write( writer );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final Type element = WebIDLModelParser.parse( createParser( emittedIDL+ " someVar" ).type() );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
     return actual;
   }
 
@@ -213,12 +225,5 @@ public final class TypeTest
   {
     assertEquals( type.getKind(), kind );
     assertEquals( type.isNullable(), isNullable );
-  }
-
-  @Nonnull
-  private Type parseType( @Nonnull final String webIDL )
-    throws IOException
-  {
-    return WebIDLModelParser.parse( createParser( webIDL ).type() );
   }
 }
