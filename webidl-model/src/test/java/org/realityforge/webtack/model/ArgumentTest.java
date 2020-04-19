@@ -97,7 +97,7 @@ public final class ArgumentTest
     WebIDLWriter.writeArgumentList( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
-    final List<Argument> elements = WebIDLModelParser.parse( createParser( emittedIDL ).argumentList() );
+    final List<Argument> elements = WebIDLModelParser.parse( createParser( emittedIDL + ")" ).argumentList() );
     assertEquals( elements.size(), expectedArgumentCount );
     for ( int i = 0; i < expectedArgumentCount; i++ )
     {
