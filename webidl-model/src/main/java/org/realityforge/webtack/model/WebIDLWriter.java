@@ -15,7 +15,7 @@ public final class WebIDLWriter
                                        @Nonnull final CallbackDefinition callbackDefinition )
     throws IOException
   {
-    writeAttributesIfRequired( callbackDefinition.getExtendedAttributes(), writer, "\n" );
+    writeAttributesIfRequired( writer, callbackDefinition.getExtendedAttributes(), "\n" );
     writer.write( "callback " );
     writer.write( callbackDefinition.getName() );
     writer.write( " = " );
@@ -25,8 +25,8 @@ public final class WebIDLWriter
     writer.write( " );\n" );
   }
 
-  static void writeAttributesIfRequired( @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                                         @Nonnull final Writer writer,
+  static void writeAttributesIfRequired( @Nonnull final Writer writer,
+                                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                          @Nonnull final String separator )
     throws IOException
   {
@@ -58,7 +58,7 @@ public final class WebIDLWriter
   static void writeArgument( @Nonnull final Writer writer, @Nonnull final Argument argument )
     throws IOException
   {
-    writeAttributesIfRequired( argument.getExtendedAttributes(), writer, " " );
+    writeAttributesIfRequired( writer, argument.getExtendedAttributes(), " " );
     if ( argument.isOptional() )
     {
       writer.write( "optional " );
@@ -140,7 +140,7 @@ public final class WebIDLWriter
                                       @Nonnull final TypedefDefinition typedefDefinition )
     throws IOException
   {
-    writeAttributesIfRequired( typedefDefinition.getExtendedAttributes(), writer, "\n" );
+    writeAttributesIfRequired( writer, typedefDefinition.getExtendedAttributes(), "\n" );
     writer.write( "typedef " );
     writeType( writer, typedefDefinition.getType() );
     writer.write( ' ' );
@@ -151,7 +151,7 @@ public final class WebIDLWriter
   static void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
-    writeAttributesIfRequired( type.getExtendedAttributes(), writer, " " );
+    writeAttributesIfRequired( writer, type.getExtendedAttributes(), " " );
     switch ( type.getKind() )
     {
       case Any:
