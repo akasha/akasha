@@ -72,8 +72,4 @@ public abstract class Element
     }
   }
 
-  protected void write( @Nonnull final Writer writer )
-    throws IOException
-  {
-  }
 }
