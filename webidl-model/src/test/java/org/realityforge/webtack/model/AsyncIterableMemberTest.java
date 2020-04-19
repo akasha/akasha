@@ -3,7 +3,6 @@ package org.realityforge.webtack.model;
 import java.io.IOException;
 import java.util.Collections;
 import javax.annotation.Nonnull;
-import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
