@@ -23,4 +23,28 @@ public abstract class NamedElement
   {
     return _name;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final NamedElement that = (NamedElement) o;
+      return _name.equals( that._name );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _name );
+  }
 }
