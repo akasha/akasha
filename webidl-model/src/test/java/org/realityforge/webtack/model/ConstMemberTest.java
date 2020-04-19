@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -43,6 +44,20 @@ public final class ConstMemberTest
     throws IOException
   {
     final WebIDLParser.ConstMemberContext ctx = createParser( webIDL ).constMember();
-    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final ConstMember member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeConstMember( writer, member );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.ConstMemberContext ctx2 = createParser( emittedIDL ).constMember();
+    final ConstMember element =
+      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, member );
+    assertEquals( element.hashCode(), member.hashCode() );
+    assertTrue( element.equiv( member ) );
+    assertNotSame( element, member );
+
+    return member;
   }
 }

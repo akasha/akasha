@@ -180,6 +180,20 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeConstMember( @Nonnull final Writer writer, @Nonnull final ConstMember constMember )
+    throws IOException
+  {
+    writer.write( "  " );
+    writeAttributesIfRequired( writer, constMember.getExtendedAttributes(), " \n" );
+    writer.write( "const " );
+    writeType( writer, constMember.getType() );
+    writer.write( " " );
+    writer.write( constMember.getName() );
+    writer.write( " = " );
+    writeConstValue( writer, constMember.getValue() );
+    writer.write( ";\n" );
+  }
+
   static void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
     throws IOException
   {
