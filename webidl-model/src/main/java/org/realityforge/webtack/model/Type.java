@@ -197,11 +197,7 @@ public class Type
   public final void write( @Nonnull final Writer writer )
     throws IOException
   {
-    if ( !getExtendedAttributes().isEmpty() )
-    {
-      super.write( writer );
-      writer.write( ' ' );
-    }
+    WebIDLWriter.writeAttributesIfRequired( getExtendedAttributes(), writer, " " );
     switch ( _kind )
     {
       case Any:
