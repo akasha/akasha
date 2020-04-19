@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
@@ -43,5 +45,54 @@ public final class DictionaryDefinition
   public List<DictionaryMember> getMembers()
   {
     return _members;
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final DictionaryDefinition that = (DictionaryDefinition) o;
+      return _name.equals( that._name ) &&
+             Objects.equals( _inherits, that._inherits ) &&
+             _members.equals( that._members );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _name, _inherits, _members );
+  }
+
+  public boolean equiv( @Nonnull final DictionaryDefinition other )
+  {
+    if ( super.equiv( other ) &&
+         _name.equals( other._name ) &&
+         Objects.equals( _inherits, other._inherits ) &&
+         _members.size() == other._members.size() )
+    {
+      final Set<DictionaryMember> otherMembers = new HashSet<>( other._members );
+      for ( final DictionaryMember member : _members )
+      {
+        if ( !otherMembers.remove( member ) )
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 }

@@ -2,8 +2,10 @@ package org.realityforge.webtack.model;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 
 public final class WebIDLWriter
@@ -156,6 +158,29 @@ public final class WebIDLWriter
     writer.write( ' ' );
     writer.write( typedefDefinition.getName() );
     writer.write( ";\n" );
+  }
+
+  static void writeDictionaryDefinition( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
+    throws IOException
+  {
+    writer.write( "dictionary " );
+    writer.write( definition.getName() );
+    final String inherits = definition.getInherits();
+    if ( null != inherits )
+    {
+      writer.write( " : " );
+      writer.write( inherits );
+    }
+    writer.write( " {\n" );
+    final List<DictionaryMember> members = definition.getMembers()
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .collect( Collectors.toList() );
+    for ( final DictionaryMember member : members )
+    {
+      writeDictionaryMember( writer, member );
+    }
+    writer.write( "};\n" );
   }
 
   static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )

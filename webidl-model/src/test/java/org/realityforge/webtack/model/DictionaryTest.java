@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
@@ -71,6 +72,23 @@ public final class DictionaryTest
     throws IOException
   {
     final WebIDLParser.DictionaryContext ctx = createParser( webIDL ).dictionary();
-    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final DictionaryDefinition actual =
+      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeDictionaryDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    final Definition definition = definitions.get( 0 );
+    assertTrue( definition instanceof DictionaryDefinition );
+    final DictionaryDefinition element = (DictionaryDefinition) definition;
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }
