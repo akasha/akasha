@@ -192,7 +192,7 @@ public final class WebIDLWriter
         .toArray( String[]::new );
     for ( int i = 0; i < values.length; i++ )
     {
-      writer.write( "  " );
+      writeIndent( writer );
       writeString( writer, values[ i ] );
       if ( i + 1 != values.length )
       {
@@ -229,7 +229,7 @@ public final class WebIDLWriter
   static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )
     throws IOException
   {
-    writer.write( "  " );
+    writeIndent( writer );
 
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     if ( !member.isOptional() )
@@ -248,11 +248,17 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  private static void writeIndent( @Nonnull final Writer writer )
+    throws IOException
+  {
+    writer.write( "  " );
+  }
+
   static void writeAttributeMember( @Nonnull final Writer writer, @Nonnull final AttributeMember attribute )
     throws IOException
   {
     // Attributes are always nested in a container so add some leading space
-    writer.write( "  " );
+    writeIndent( writer );
 
     writeAttributesIfRequired( writer, attribute.getExtendedAttributes(), "\n  " );
     final Set<AttributeMember.Modifier> modifiers = attribute.getModifiers();
@@ -282,7 +288,7 @@ public final class WebIDLWriter
   static void writeConstMember( @Nonnull final Writer writer, @Nonnull final ConstMember constMember )
     throws IOException
   {
-    writer.write( "  " );
+    writeIndent( writer );
     writeAttributesIfRequired( writer, constMember.getExtendedAttributes(), " \n" );
     writer.write( "const " );
     writeType( writer, constMember.getType() );
@@ -296,7 +302,7 @@ public final class WebIDLWriter
   static void writeOperationMember( @Nonnull final Writer writer, @Nonnull final OperationMember operation )
     throws IOException
   {
-    writer.write( "  " );
+    writeIndent( writer );
     writeAttributesIfRequired( writer, operation.getExtendedAttributes(), " \n" );
     final OperationMember.Kind kind = operation.getKind();
     if ( OperationMember.Kind.STRINGIFIER == kind && null == operation.getName() )
