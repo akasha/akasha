@@ -756,11 +756,6 @@
         "url": "https://storage.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1586184630000,
-        "name": "whatwg_streams",
-        "url": "https://streams.spec.whatwg.org/"
-    },
-    {
         "lastModifiedTime": 1586183707000,
         "name": "whatwg_url",
         "url": "https://url.spec.whatwg.org/"
