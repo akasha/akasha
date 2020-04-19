@@ -1,7 +1,5 @@
 package org.realityforge.webtack.model;
 
-import java.io.IOException;
-import java.io.Writer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -67,33 +65,6 @@ public final class ConstValue
   public boolean equiv( @Nonnull final ConstValue other )
   {
     return equals( other );
-  }
-
-  public void write( @Nonnull final Writer writer )
-    throws IOException
-  {
-    switch ( getKind() )
-    {
-      case NaN:
-        writer.write( "NaN" );
-        break;
-      case PositiveInfinity:
-        writer.write( "Infinity" );
-        break;
-      case NegativeInfinity:
-        writer.write( "-Infinity" );
-        break;
-      case True:
-        writer.write( "true" );
-        break;
-      case False:
-        writer.write( "false" );
-        break;
-      default:
-        assert null != _value;
-        writer.write( _value );
-        break;
-    }
   }
 
   public enum Kind

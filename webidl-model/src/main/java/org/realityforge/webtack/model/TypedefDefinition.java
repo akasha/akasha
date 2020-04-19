@@ -1,7 +1,5 @@
 package org.realityforge.webtack.model;
 
-import java.io.IOException;
-import java.io.Writer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -63,16 +61,5 @@ public final class TypedefDefinition
   public boolean equiv( @Nonnull final TypedefDefinition other )
   {
     return equivAttributes( other ) && _name.equals( other._name ) && _type.equiv( other._type );
-  }
-
-  public void write( @Nonnull final Writer writer )
-    throws IOException
-  {
-    WebIDLWriter.writeAttributesIfRequired( getExtendedAttributes(), writer, "\n" );
-    writer.write( "typedef " );
-    _type.write( writer );
-    writer.write( ' ' );
-    writer.write( _name );
-    writer.write( ";\n" );
   }
 }

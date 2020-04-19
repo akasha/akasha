@@ -33,7 +33,7 @@ public final class ConstValueTest
     assertEquals( constValue.getValue(), value );
 
     final StringWriter writer = new StringWriter();
-    constValue.write( writer );
+    WebIDLWriter.writeConstValue( writer, constValue );
     writer.close();
     final String emittedIDL = writer.toString();
     final ConstValue element = WebIDLModelParser.parse( createParser( emittedIDL ).constMemberValue() );

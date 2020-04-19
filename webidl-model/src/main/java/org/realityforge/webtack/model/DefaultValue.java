@@ -1,7 +1,5 @@
 package org.realityforge.webtack.model;
 
-import java.io.IOException;
-import java.io.Writer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -77,34 +75,6 @@ public final class DefaultValue
   public boolean equiv( @Nonnull final DefaultValue other )
   {
     return equals( other );
-  }
-
-  public void write( @Nonnull final Writer writer )
-    throws IOException
-  {
-    switch ( _kind )
-    {
-      case Const:
-        assert null != _constValue;
-        _constValue.write( writer );
-        break;
-      case EmptyDictionary:
-        writer.write( "{}" );
-        break;
-      case EmptySequence:
-        writer.write( "[]" );
-        break;
-      case Null:
-        writer.write( "null" );
-        break;
-      default:
-        assert Kind.String == _kind;
-        assert null != _stringValue;
-        writer.write( '"' );
-        writer.write( _stringValue );
-        writer.write( '"' );
-        break;
-    }
   }
 
   public enum Kind

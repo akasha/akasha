@@ -41,7 +41,7 @@ public final class TypedefDefinitionTest
     final TypedefDefinition actual = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
 
     final StringWriter writer = new StringWriter();
-    actual.write( writer );
+    WebIDLWriter.writeTypedefDefinition( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
     final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );

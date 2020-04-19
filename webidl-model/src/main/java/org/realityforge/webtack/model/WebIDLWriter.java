@@ -19,7 +19,7 @@ public final class WebIDLWriter
     writer.write( "callback " );
     writer.write( callbackDefinition.getName() );
     writer.write( " = " );
-    callbackDefinition.getReturnType().write( writer );
+    writeType( writer, callbackDefinition.getReturnType() );
     writer.write( " ( " );
     writeArgumentList( writer, callbackDefinition.getArguments() );
     writer.write( " );\n" );
@@ -63,7 +63,7 @@ public final class WebIDLWriter
     {
       writer.write( "optional " );
     }
-    argument.getType().write( writer );
+    writeType( writer, argument.getType() );
     if ( argument.isVariadic() )
     {
       writer.write( "..." );
@@ -74,7 +74,243 @@ public final class WebIDLWriter
     if ( null != defaultValue )
     {
       writer.write( " = " );
-      defaultValue.write( writer );
+      writeDefaultValue( writer, defaultValue );
+    }
+  }
+
+  static void writeConstValue( @Nonnull final Writer writer, @Nonnull final ConstValue constValue )
+    throws IOException
+  {
+    switch ( constValue.getKind() )
+    {
+      case NaN:
+        writer.write( "NaN" );
+        break;
+      case PositiveInfinity:
+        writer.write( "Infinity" );
+        break;
+      case NegativeInfinity:
+        writer.write( "-Infinity" );
+        break;
+      case True:
+        writer.write( "true" );
+        break;
+      case False:
+        writer.write( "false" );
+        break;
+      default:
+        final String value = constValue.getValue();
+        assert null != value;
+        writer.write( value );
+        break;
+    }
+  }
+
+  static void writeDefaultValue( @Nonnull final Writer writer, @Nonnull final DefaultValue defaultValue )
+    throws IOException
+  {
+    switch ( defaultValue.getKind() )
+    {
+      case Const:
+        final ConstValue constValue = defaultValue.getConstValue();
+        assert null != constValue;
+        writeConstValue( writer, constValue );
+        break;
+      case EmptyDictionary:
+        writer.write( "{}" );
+        break;
+      case EmptySequence:
+        writer.write( "[]" );
+        break;
+      case Null:
+        writer.write( "null" );
+        break;
+      default:
+        assert DefaultValue.Kind.String == defaultValue.getKind();
+        final String stringValue = defaultValue.getStringValue();
+        assert null != stringValue;
+        writer.write( '"' );
+        writer.write( stringValue );
+        writer.write( '"' );
+        break;
+    }
+  }
+
+  static void writeTypedefDefinition( @Nonnull final Writer writer,
+                                      @Nonnull final TypedefDefinition typedefDefinition )
+    throws IOException
+  {
+    writeAttributesIfRequired( typedefDefinition.getExtendedAttributes(), writer, "\n" );
+    writer.write( "typedef " );
+    writeType( writer, typedefDefinition.getType() );
+    writer.write( ' ' );
+    writer.write( typedefDefinition.getName() );
+    writer.write( ";\n" );
+  }
+
+  static void writeType( @Nonnull final Writer writer, @Nonnull final Type type )
+    throws IOException
+  {
+    writeAttributesIfRequired( type.getExtendedAttributes(), writer, " " );
+    switch ( type.getKind() )
+    {
+      case Any:
+        writer.write( "any" );
+        break;
+      case Object:
+        writer.write( "object" );
+        break;
+      case Symbol:
+        writer.write( "symbol" );
+        break;
+      case Void:
+        writer.write( "void" );
+        break;
+      case Byte:
+        writer.write( "byte" );
+        break;
+      case Octet:
+        writer.write( "octet" );
+        break;
+      case Boolean:
+        writer.write( "boolean" );
+        break;
+      case ArrayBuffer:
+        writer.write( "ArrayBuffer" );
+        break;
+      case DataView:
+        writer.write( "DataView" );
+        break;
+      case Int8Array:
+        writer.write( "Int8Array" );
+        break;
+      case Int16Array:
+        writer.write( "Int16Array" );
+        break;
+      case Int32Array:
+        writer.write( "Int32Array" );
+        break;
+      case Uint8Array:
+        writer.write( "Uint8Array" );
+        break;
+      case Uint16Array:
+        writer.write( "Uint16Array" );
+        break;
+      case Uint32Array:
+        writer.write( "Uint32Array" );
+        break;
+      case Uint8ClampedArray:
+        writer.write( "Uint8ClampedArray" );
+        break;
+      case Float32Array:
+        writer.write( "Float32Array" );
+        break;
+      case Float64Array:
+        writer.write( "Float64Array" );
+        break;
+      case DOMString:
+        writer.write( "DOMString" );
+        break;
+      case ByteString:
+        writer.write( "ByteString" );
+        break;
+      case USVString:
+        writer.write( "USVString" );
+        break;
+      case Short:
+        writer.write( "short" );
+        break;
+      case Long:
+        writer.write( "long" );
+        break;
+      case LongLong:
+        writer.write( "long long" );
+        break;
+      case UnsignedShort:
+        writer.write( "unsigned short" );
+        break;
+      case UnsignedLong:
+        writer.write( "unsigned long" );
+        break;
+      case UnsignedLongLong:
+        writer.write( "unsigned long long" );
+        break;
+      case Float:
+        writer.write( "float" );
+        break;
+      case Double:
+        writer.write( "double" );
+        break;
+      case UnrestrictedFloat:
+        writer.write( "unrestricted float" );
+        break;
+      case UnrestrictedDouble:
+        writer.write( "unrestricted double" );
+        break;
+      case FrozenArray:
+      {
+        final FrozenArrayType self = (FrozenArrayType) type;
+        writer.write( "FrozenArray<" );
+        writeType( writer, self.getItemType() );
+        writer.write( ">" );
+        break;
+      }
+      case Sequence:
+      {
+        final SequenceType self = (SequenceType) type;
+        writer.write( "sequence<" );
+        writeType( writer, self.getItemType() );
+        writer.write( ">" );
+        break;
+      }
+      case Record:
+      {
+        final RecordType self = (RecordType) type;
+        writer.write( "record<" );
+        writeType( writer, self.getKeyType() );
+        writer.write( ", " );
+        writeType( writer, self.getValueType() );
+        writer.write( ">" );
+        break;
+      }
+      case TypeReference:
+      {
+        final TypeReference self = (TypeReference) type;
+        writer.write( self.getName() );
+        break;
+      }
+      case Promise:
+      {
+        final PromiseType self = (PromiseType) type;
+        writer.write( "Promise<" );
+        writeType( writer, self.getResolveType() );
+        writer.write( ">" );
+        break;
+      }
+      case Union:
+      {
+        final UnionType self = (UnionType) type;
+        writer.write( "( " );
+        boolean first = true;
+        for ( final Type memberType : self.getMemberTypes() )
+        {
+          if ( !first )
+          {
+            writer.write( " or " );
+          }
+          else
+          {
+            first = false;
+          }
+          writeType( writer, memberType );
+        }
+        writer.write( " )" );
+        break;
+      }
+    }
+    if ( type.isNullable() )
+    {
+      writer.write( '?' );
     }
   }
 }

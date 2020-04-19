@@ -44,7 +44,7 @@ public final class DefaultValueTest
     assertEquals( defaultValue.getStringValue(), stringValue );
 
     final StringWriter writer = new StringWriter();
-    defaultValue.write( writer );
+    WebIDLWriter.writeDefaultValue( writer, defaultValue );
     writer.close();
     final String emittedIDL = writer.toString();
     final DefaultValue element = WebIDLModelParser.parse( createParser( emittedIDL ).defaultValue() );

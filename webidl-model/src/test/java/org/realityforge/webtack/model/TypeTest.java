@@ -209,10 +209,10 @@ public final class TypeTest
     assertType( actual, kind, isNullable );
 
     final StringWriter writer = new StringWriter();
-    actual.write( writer );
+    WebIDLWriter.writeType( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
-    final Type element = WebIDLModelParser.parse( createParser( emittedIDL+ " someVar" ).type() );
+    final Type element = WebIDLModelParser.parse( createParser( emittedIDL + " someVar" ).type() );
     assertEquals( element, actual );
     assertEquals( element.hashCode(), actual.hashCode() );
     assertTrue( element.equiv( actual ) );
