@@ -14,6 +14,8 @@ complete as there is too much un-said.
 
 * Generate an error if the IDL extracted from web page is empty. Either the spec does not use WebIDL or we have incorrect matching rules.
 
+* The fetch action should fetch, parse and normalize the WebIDL and we should ditch the verify stage. 
+
 * Add boolean to source config to indicate whether it has been verified
 
 * Add quiet mode to fetch so that only actions that require download print
