@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
+import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
@@ -24,9 +26,23 @@ public final class IncludesStatementTest
     throws IOException
   {
     final WebIDLParser.IncludesStatementContext ctx = createParser( webIDL ).includesStatement();
-    final IncludesStatement includesStatement =
+    final IncludesStatement actual =
       WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
-    assertEquals( includesStatement.getInterfaceName(), interfaceName );
-    assertEquals( includesStatement.getMixinName(), mixinName );
+    assertEquals( actual.getInterfaceName(), interfaceName );
+    assertEquals( actual.getMixinName(), mixinName );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeIncludesStatement( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof IncludesStatement );
+    final IncludesStatement element = (IncludesStatement) definitions.get( 0 );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
   }
 }

@@ -166,6 +166,17 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeIncludesStatement( @Nonnull final Writer writer,
+                                      @Nonnull final IncludesStatement includesStatement )
+    throws IOException
+  {
+    writeAttributesIfRequired( writer, includesStatement.getExtendedAttributes(), "\n" );
+    writer.write( includesStatement.getInterfaceName() );
+    writer.write( " includes " );
+    writer.write( includesStatement.getMixinName() );
+    writer.write( ";\n" );
+  }
+
   static void writeEnumerationDefinition( @Nonnull final Writer writer,
                                           @Nonnull final EnumerationDefinition definition )
     throws IOException

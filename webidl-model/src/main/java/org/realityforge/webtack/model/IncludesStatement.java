@@ -33,4 +33,36 @@ public final class IncludesStatement
   {
     return _mixinName;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final IncludesStatement that = (IncludesStatement) o;
+      return _interfaceName.equals( that._interfaceName ) &&
+             _mixinName.equals( that._mixinName );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _interfaceName, _mixinName );
+  }
+
+  public boolean equiv( @Nonnull final IncludesStatement other )
+  {
+    return super.equiv( other ) &&
+           _interfaceName.equals( other._interfaceName ) &&
+           _mixinName.equals( other._mixinName );
+  }
 }
