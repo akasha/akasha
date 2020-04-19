@@ -20,6 +20,7 @@ public final class AsyncIterableMemberTest
     assertEquals( asyncIterableMember.getValueType().getKind(), Kind.Object );
   }
 
+  @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   private AsyncIterableMember parse( @Nonnull final String webIDL )
     throws IOException
