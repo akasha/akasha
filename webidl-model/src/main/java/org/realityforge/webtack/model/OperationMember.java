@@ -56,6 +56,42 @@ public final class OperationMember
     return _returnType;
   }
 
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final OperationMember that = (OperationMember) o;
+      return _kind == that._kind &&
+             Objects.equals( _name, that._name ) &&
+             _arguments.equals( that._arguments ) &&
+             _returnType.equals( that._returnType );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _kind, _name, _arguments, _returnType );
+  }
+
+  public boolean equiv( @Nonnull final OperationMember other )
+  {
+    return super.equiv( other ) &&
+           _kind == other._kind &&
+           Objects.equals( _name, other._name ) &&
+           Argument.argumentListEquiv( _arguments, other._arguments ) &&
+           _returnType.equiv( other._returnType );
+  }
+
   public enum Kind
   {
     DEFAULT,

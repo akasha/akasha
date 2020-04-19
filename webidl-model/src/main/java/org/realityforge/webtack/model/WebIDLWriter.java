@@ -21,9 +21,9 @@ public final class WebIDLWriter
     writer.write( callbackDefinition.getName() );
     writer.write( " = " );
     writeType( writer, callbackDefinition.getReturnType() );
-    writer.write( " ( " );
+    writer.write( " " );
     writeArgumentList( writer, callbackDefinition.getArguments() );
-    writer.write( " );\n" );
+    writer.write( ";\n" );
   }
 
   static void writeAttributesIfRequired( @Nonnull final Writer writer,
@@ -41,18 +41,27 @@ public final class WebIDLWriter
   static void writeArgumentList( @Nonnull final Writer writer, @Nonnull final List<Argument> arguments )
     throws IOException
   {
-    boolean first = true;
-    for ( final Argument argument : arguments )
+    if ( arguments.isEmpty() )
     {
-      if ( !first )
+      writer.write( "()" );
+    }
+    else
+    {
+      writer.write( "( " );
+      boolean first = true;
+      for ( final Argument argument : arguments )
       {
-        writer.write( ", " );
+        if ( !first )
+        {
+          writer.write( ", " );
+        }
+        else
+        {
+          first = false;
+        }
+        writeArgument( writer, argument );
       }
-      else
-      {
-        first = false;
-      }
-      writeArgument( writer, argument );
+      writer.write( " )" );
     }
   }
 
@@ -191,6 +200,54 @@ public final class WebIDLWriter
     writer.write( constMember.getName() );
     writer.write( " = " );
     writeConstValue( writer, constMember.getValue() );
+    writer.write( ";\n" );
+  }
+
+  static void writeOperationMember( @Nonnull final Writer writer, @Nonnull final OperationMember operation )
+    throws IOException
+  {
+    writer.write( "  " );
+    writeAttributesIfRequired( writer, operation.getExtendedAttributes(), " \n" );
+    final OperationMember.Kind kind = operation.getKind();
+    if ( OperationMember.Kind.STRINGIFIER == kind && null == operation.getName() )
+    {
+      writer.write( "stringifier" );
+    }
+    else
+    {
+      if ( OperationMember.Kind.STATIC == kind )
+      {
+        writer.write( "static " );
+      }
+      else if ( OperationMember.Kind.GETTER == kind )
+      {
+        writer.write( "getter " );
+      }
+      else if ( OperationMember.Kind.SETTER == kind )
+      {
+        writer.write( "setter " );
+      }
+      else if ( OperationMember.Kind.DELETER == kind )
+      {
+        writer.write( "deleter " );
+      }
+      else if ( OperationMember.Kind.STRINGIFIER == kind )
+      {
+        writer.write( "stringifier " );
+      }
+
+      if ( OperationMember.Kind.CONSTRUCTOR != kind )
+      {
+        writeType( writer, operation.getReturnType() );
+        writer.write( " " );
+      }
+      final String name = operation.getName();
+      if ( null != name )
+      {
+        writer.write( name );
+      }
+      writeArgumentList( writer, operation.getArguments() );
+    }
     writer.write( ";\n" );
   }
 
