@@ -34,4 +34,36 @@ public final class AsyncIterableMember
   {
     return _valueType;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final AsyncIterableMember that = (AsyncIterableMember) o;
+      return _keyType.equals( that._keyType ) &&
+             _valueType.equals( that._valueType );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _keyType, _valueType );
+  }
+
+  public boolean equiv( @Nonnull final AsyncIterableMember other )
+  {
+    return super.equiv( other ) &&
+           _keyType.equiv( other._keyType ) &&
+           _valueType.equiv( other._valueType );
+  }
 }

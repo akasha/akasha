@@ -248,6 +248,18 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeAsyncIterableMember( @Nonnull final Writer writer, @Nonnull final AsyncIterableMember member )
+    throws IOException
+  {
+    writeIndent( writer );
+    writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
+    writer.write( "async iterable<" );
+    writeType( writer, member.getKeyType() );
+    writer.write( ", " );
+    writeType( writer, member.getValueType() );
+    writer.write( ">;\n" );
+  }
+
   private static void writeIndent( @Nonnull final Writer writer )
     throws IOException
   {

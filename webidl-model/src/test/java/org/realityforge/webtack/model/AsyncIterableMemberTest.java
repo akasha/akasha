@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -25,6 +26,21 @@ public final class AsyncIterableMemberTest
     throws IOException
   {
     final WebIDLParser.AsyncIterableContext ctx = createParser( webIDL ).asyncIterable();
-    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final AsyncIterableMember actual =
+      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final StringWriter writer = new StringWriter();
+
+    WebIDLWriter.writeAsyncIterableMember( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.AsyncIterableContext ctx2 = createParser( emittedIDL ).asyncIterable();
+    final AsyncIterableMember element =
+      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }
