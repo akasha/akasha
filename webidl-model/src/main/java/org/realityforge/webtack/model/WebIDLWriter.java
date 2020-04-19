@@ -141,11 +141,17 @@ public final class WebIDLWriter
         assert DefaultValue.Kind.String == defaultValue.getKind();
         final String stringValue = defaultValue.getStringValue();
         assert null != stringValue;
-        writer.write( '"' );
-        writer.write( stringValue );
-        writer.write( '"' );
+        writeString( writer, stringValue );
         break;
     }
+  }
+
+  private static void writeString( @Nonnull final Writer writer, @Nonnull final String value )
+    throws IOException
+  {
+    writer.write( '"' );
+    writer.write( value );
+    writer.write( '"' );
   }
 
   static void writeTypedefDefinition( @Nonnull final Writer writer,
