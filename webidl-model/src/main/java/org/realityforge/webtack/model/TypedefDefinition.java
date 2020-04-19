@@ -68,6 +68,7 @@ public final class TypedefDefinition
   public void write( @Nonnull final Writer writer )
     throws IOException
   {
+    WebIDLWriter.writeAttributesIfRequired( getExtendedAttributes(), writer, "\n" );
     writer.write( "typedef " );
     _type.write( writer );
     writer.write( ' ' );
