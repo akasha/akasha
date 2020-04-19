@@ -43,4 +43,38 @@ public final class CallbackDefinition
   {
     return _arguments;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final CallbackDefinition that = (CallbackDefinition) o;
+      return _name.equals( that._name ) &&
+             _returnType.equals( that._returnType ) &&
+             _arguments.equals( that._arguments );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _name, _returnType, _arguments );
+  }
+
+  public boolean equiv( @Nonnull final CallbackDefinition other )
+  {
+    return equivAttributes( other ) &&
+           _name.equals( other._name ) &&
+           _returnType.equiv( other._returnType ) &&
+           Argument.argumentListEquiv( _arguments, other._arguments );
+  }
 }

@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
@@ -65,10 +66,24 @@ public final class CallbackDefinitionTest
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
     final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof CallbackDefinition );
-    final CallbackDefinition callbackDefinition = (CallbackDefinition) definition;
-    assertEquals( callbackDefinition.getName(), name );
-    assertEquals( callbackDefinition.getReturnType().getKind(), returnTypeKind );
-    assertEquals( callbackDefinition.getArguments().size(), argumentCount );
-    return callbackDefinition;
+    final CallbackDefinition actual = (CallbackDefinition) definition;
+    assertEquals( actual.getName(), name );
+    assertEquals( actual.getReturnType().getKind(), returnTypeKind );
+    assertEquals( actual.getArguments().size(), argumentCount );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeCallbackDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof CallbackDefinition );
+    final CallbackDefinition element = (CallbackDefinition) definitions.get( 0 );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

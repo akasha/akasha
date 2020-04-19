@@ -54,4 +54,60 @@ public final class Argument
   {
     return _defaultValue;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final Argument argument = (Argument) o;
+      return _optional == argument._optional &&
+             _variadic == argument._variadic &&
+             _type.equals( argument._type ) &&
+             Objects.equals( _defaultValue, argument._defaultValue );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _type, _optional, _variadic, _defaultValue );
+  }
+
+  public boolean equiv( @Nonnull final Argument other )
+  {
+    return equivAttributes( other ) &&
+           _optional == other._optional &&
+           _variadic == other._variadic &&
+           _type.equals( other._type ) &&
+           Objects.equals( _defaultValue, other._defaultValue );
+  }
+
+  static boolean argumentListEquiv( @Nonnull final List<Argument> arguments1, @Nonnull final List<Argument> arguments2 )
+  {
+    final int size = arguments1.size();
+    if ( arguments2.size() != size )
+    {
+      return false;
+    }
+    else
+    {
+      for ( int i = 0; i < size; i++ )
+      {
+        if ( !arguments1.get( i ).equiv( arguments2.get( i ) ) )
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
 }

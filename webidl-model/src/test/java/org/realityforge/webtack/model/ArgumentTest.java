@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
@@ -89,8 +90,25 @@ public final class ArgumentTest
     throws IOException
   {
     // Add a trailing ")" so we do not get an EOF when we try to peek at the next token to see if it is a ","
-    final List<Argument> arguments = WebIDLModelParser.parse( createParser( webIDL + ")" ).argumentList() );
-    assertEquals( arguments.size(), expectedArgumentCount );
-    return arguments;
+    final List<Argument> actual = WebIDLModelParser.parse( createParser( webIDL + ")" ).argumentList() );
+    assertEquals( actual.size(), expectedArgumentCount );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeArgumentList( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Argument> elements = WebIDLModelParser.parse( createParser( emittedIDL ).argumentList() );
+    assertEquals( elements.size(), expectedArgumentCount );
+    for ( int i = 0; i < expectedArgumentCount; i++ )
+    {
+      final Argument element = elements.get( i );
+      final Argument actualElement = actual.get( i );
+      assertEquals( element, actualElement );
+      assertEquals( element.hashCode(), actualElement.hashCode() );
+      assertTrue( element.equiv( actualElement ) );
+      assertNotSame( element, actualElement );
+    }
+
+    return actual;
   }
 }
