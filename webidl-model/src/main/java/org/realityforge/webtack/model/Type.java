@@ -194,8 +194,7 @@ public class Type
     }
   }
 
-  public final void write(
-    @Nonnull final Writer writer )
+  public final void write( @Nonnull final Writer writer )
     throws IOException
   {
     if ( !getExtendedAttributes().isEmpty() )
