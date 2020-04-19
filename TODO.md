@@ -12,6 +12,8 @@ complete as there is too much un-said.
 
 * Add lots of tests for `MergeTool` using fixture data to drive tests.
 
+* Generate an error if the IDL extracted from web page is empty. Either the spec does not use WebIDL or we have incorrect matching rules.
+
 * Add boolean to source config to indicate whether it has been verified
 
 * Add quiet mode to fetch so that only actions that require download print
