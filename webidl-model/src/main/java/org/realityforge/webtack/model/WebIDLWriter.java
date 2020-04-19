@@ -166,6 +166,32 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeEnumerationDefinition( @Nonnull final Writer writer,
+                                          @Nonnull final EnumerationDefinition definition )
+    throws IOException
+  {
+    writer.write( "enum " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    final String[] values =
+      definition
+        .getValues()
+        .stream()
+        .sorted()
+        .toArray( String[]::new );
+    for ( int i = 0; i < values.length; i++ )
+    {
+      writer.write( "  " );
+      writeString( writer, values[ i ] );
+      if ( i + 1 != values.length )
+      {
+        writer.write( "," );
+      }
+      writer.write( "\n" );
+    }
+    writer.write( "};\n" );
+  }
+
   static void writeDictionaryDefinition( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {

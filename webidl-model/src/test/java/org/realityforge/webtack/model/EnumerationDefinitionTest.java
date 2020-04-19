@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -51,6 +53,22 @@ public final class EnumerationDefinitionTest
     throws IOException
   {
     final WebIDLParser.EnumDefinitionContext ctx = createParser( webIDL ).enumDefinition();
-    return WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final EnumerationDefinition actual =
+      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeEnumerationDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof EnumerationDefinition );
+    final EnumerationDefinition element = (EnumerationDefinition) definitions.get( 0 );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }
