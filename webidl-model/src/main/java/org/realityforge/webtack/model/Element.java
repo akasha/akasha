@@ -1,7 +1,5 @@
 package org.realityforge.webtack.model;
 
-import java.io.IOException;
-import java.io.Writer;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -51,7 +49,8 @@ public abstract class Element
     return Objects.hash( _extendedAttributes );
   }
 
-  final boolean equivAttributes( @Nonnull final Element other )
+  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
+  boolean equiv( @Nonnull final Element other )
   {
     final List<ExtendedAttribute> otherAttributes = other.getExtendedAttributes();
     if ( otherAttributes.size() != _extendedAttributes.size() )

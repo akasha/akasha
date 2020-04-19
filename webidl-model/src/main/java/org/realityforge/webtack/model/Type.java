@@ -144,7 +144,7 @@ public class Type
 
   public final boolean equiv( @Nonnull final Type other )
   {
-    if ( !equivAttributes( other ) || _nullable != other._nullable || _kind != other._kind )
+    if ( !super.equiv( other ) || _nullable != other._nullable || _kind != other._kind )
     {
       return false;
     }

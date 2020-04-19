@@ -72,7 +72,7 @@ public final class CallbackDefinition
 
   public boolean equiv( @Nonnull final CallbackDefinition other )
   {
-    return equivAttributes( other ) &&
+    return super.equiv( other ) &&
            _name.equals( other._name ) &&
            _returnType.equiv( other._returnType ) &&
            Argument.argumentListEquiv( _arguments, other._arguments );

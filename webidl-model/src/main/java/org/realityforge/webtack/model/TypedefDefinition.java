@@ -60,6 +60,6 @@ public final class TypedefDefinition
 
   public boolean equiv( @Nonnull final TypedefDefinition other )
   {
-    return equivAttributes( other ) && _name.equals( other._name ) && _type.equiv( other._type );
+    return super.equiv( other ) && _name.equals( other._name ) && _type.equiv( other._type );
   }
 }

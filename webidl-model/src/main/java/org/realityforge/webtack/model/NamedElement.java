@@ -47,4 +47,9 @@ public abstract class NamedElement
   {
     return Objects.hash( super.hashCode(), _name );
   }
+
+  boolean equiv( @Nonnull final NamedElement other )
+  {
+    return _name.equals( other._name ) && super.equiv( other );
+  }
 }

@@ -84,7 +84,7 @@ public final class Argument
 
   public boolean equiv( @Nonnull final Argument other )
   {
-    return equivAttributes( other ) &&
+    return super.equiv( other ) &&
            _optional == other._optional &&
            _variadic == other._variadic &&
            _type.equals( other._type ) &&
