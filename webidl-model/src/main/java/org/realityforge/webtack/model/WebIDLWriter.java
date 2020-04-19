@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.List;
+import java.util.Set;
 import javax.annotation.Nonnull;
 
 public final class WebIDLWriter
@@ -145,6 +146,37 @@ public final class WebIDLWriter
     writeType( writer, typedefDefinition.getType() );
     writer.write( ' ' );
     writer.write( typedefDefinition.getName() );
+    writer.write( ";\n" );
+  }
+
+  static void writeAttributeMember( @Nonnull final Writer writer, @Nonnull final AttributeMember attribute )
+    throws IOException
+  {
+    // Attributes are always nested in a container so add some leading space
+    writer.write( "  " );
+
+    writeAttributesIfRequired( writer, attribute.getExtendedAttributes(), "\n  " );
+    final Set<AttributeMember.Modifier> modifiers = attribute.getModifiers();
+    if ( modifiers.contains( AttributeMember.Modifier.STATIC ) )
+    {
+      writer.write( "static " );
+    }
+    else if ( modifiers.contains( AttributeMember.Modifier.STRINGIFIER ) )
+    {
+      writer.write( "stringifier " );
+    }
+    if ( modifiers.contains( AttributeMember.Modifier.READ_ONLY ) )
+    {
+      writer.write( "readonly " );
+    }
+    if ( modifiers.contains( AttributeMember.Modifier.INHERIT ) )
+    {
+      writer.write( "inherit " );
+    }
+    writer.write( "attribute " );
+    writeType( writer, attribute.getType() );
+    writer.write( " " );
+    writer.write( attribute.getName() );
     writer.write( ";\n" );
   }
 

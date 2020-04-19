@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import java.util.HashSet;
 import javax.annotation.Nonnull;
@@ -71,6 +72,18 @@ public final class AttributeMemberTest
     final AttributeMember member =
       WebIDLModelParser.parse( ctx, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx ) );
     assertAttributeMember( member, name, kind, modifiers );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeAttributeMember( writer, member );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.ReadWriteAttributeContext ctx2 = createParser( emittedIDL ).readWriteAttribute();
+    final AttributeMember element =
+      WebIDLModelParser.parse( ctx2, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, member );
+    assertEquals( element.hashCode(), member.hashCode() );
+    assertTrue( element.equiv( member ) );
+    assertNotSame( element, member );
   }
 
   private void assertStaticAttribute( @Nonnull final String idl,
@@ -83,6 +96,18 @@ public final class AttributeMemberTest
     final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeAttributeMember( writer, (AttributeMember) member );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.StaticMemberContext ctx2 = createParser( emittedIDL ).staticMember();
+    final Member element =
+      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, member );
+    assertEquals( element.hashCode(), member.hashCode() );
+    assertTrue( ( (AttributeMember) element ).equiv( (AttributeMember) member ) );
+    assertNotSame( element, member );
   }
 
   private void assertStringifierAttribute( @Nonnull final String idl,
@@ -95,6 +120,18 @@ public final class AttributeMemberTest
     final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeAttributeMember( writer, (AttributeMember) member );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.StringifierContext ctx2 = createParser( emittedIDL ).stringifier();
+    final Member element =
+      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, member );
+    assertEquals( element.hashCode(), member.hashCode() );
+    assertTrue( ( (AttributeMember) element ).equiv( (AttributeMember) member ) );
+    assertNotSame( element, member );
   }
 
   private void assertAttributeMember( @Nonnull final AttributeMember member,

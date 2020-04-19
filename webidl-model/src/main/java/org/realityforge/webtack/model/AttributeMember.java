@@ -37,6 +37,38 @@ public final class AttributeMember
     return _modifiers;
   }
 
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final AttributeMember that = (AttributeMember) o;
+      return _type.equals( that._type ) &&
+             _modifiers.equals( that._modifiers );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _type, _modifiers );
+  }
+
+  public boolean equiv( @Nonnull final AttributeMember other )
+  {
+    return super.equiv( other ) &&
+           _modifiers.equals( other._modifiers ) &&
+           _type.equiv( other._type );
+  }
+
   public enum Modifier
   {
     READ_ONLY,
