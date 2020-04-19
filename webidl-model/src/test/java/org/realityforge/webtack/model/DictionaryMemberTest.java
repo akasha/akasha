@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
@@ -73,6 +74,18 @@ public final class DictionaryMemberTest
   private DictionaryMember parse( @Nonnull final String webIDL )
     throws IOException
   {
-    return WebIDLModelParser.parse( createParser( webIDL ).dictionaryMember() );
+    final DictionaryMember member = WebIDLModelParser.parse( createParser( webIDL ).dictionaryMember() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeDictionaryMember( writer, member );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final DictionaryMember element = WebIDLModelParser.parse( createParser( emittedIDL ).dictionaryMember() );
+    assertEquals( element, member );
+    assertEquals( element.hashCode(), member.hashCode() );
+    assertTrue( element.equiv( member ) );
+    assertNotSame( element, member );
+
+    return member;
   }
 }

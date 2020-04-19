@@ -158,6 +158,28 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )
+    throws IOException
+  {
+    writer.write( "  " );
+
+    writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
+    if ( !member.isOptional() )
+    {
+      writer.write( "required " );
+    }
+    writeType( writer, member.getType() );
+    writer.write( " " );
+    writer.write( member.getName() );
+    final DefaultValue defaultValue = member.getDefaultValue();
+    if ( null != defaultValue )
+    {
+      writer.write( " = " );
+      writeDefaultValue( writer, defaultValue );
+    }
+    writer.write( ";\n" );
+  }
+
   static void writeAttributeMember( @Nonnull final Writer writer, @Nonnull final AttributeMember attribute )
     throws IOException
   {
