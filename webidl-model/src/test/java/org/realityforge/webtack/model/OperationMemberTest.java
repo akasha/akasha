@@ -16,7 +16,8 @@ public final class OperationMemberTest
   {
     final WebIDLParser.OperationContext ctx =
       createParser( "Promise<boolean> isSessionSupported(XRSessionMode mode);" ).operation();
-    final OperationMember operation = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final OperationMember operation =
+      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( operation.getName(), "isSessionSupported" );
     assertEquals( operation.getReturnType().getKind(), Kind.Promise );
     assertEquals( operation.getKind(), OperationMember.Kind.DEFAULT );
