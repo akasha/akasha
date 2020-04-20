@@ -33,24 +33,27 @@ public final class DefaultValueTest
                                    @Nullable final String stringValue )
     throws IOException
   {
-    final DefaultValue defaultValue = WebIDLModelParser.parse( createParser( webIDL ).defaultValue() );
-    assertEquals( defaultValue.getKind(), kind );
-    final ConstValue constValue = defaultValue.getConstValue();
+    final DefaultValue actual = WebIDLModelParser.parse( createParser( webIDL ).defaultValue() );
+    assertEquals( actual.getKind(), kind );
+    final ConstValue constValue = actual.getConstValue();
     assertEquals( null != constValue, null != constValueType );
     if ( null != constValue )
     {
       assertEquals( constValue.getKind(), constValueType );
     }
-    assertEquals( defaultValue.getStringValue(), stringValue );
+    assertEquals( actual.getStringValue(), stringValue );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
-    WebIDLWriter.writeDefaultValue( writer, defaultValue );
+    WebIDLWriter.writeDefaultValue( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
     final DefaultValue element = WebIDLModelParser.parse( createParser( emittedIDL ).defaultValue() );
-    assertEquals( element, defaultValue );
-    assertEquals( element.hashCode(), defaultValue.hashCode() );
-    assertTrue( element.equiv( defaultValue ) );
-    assertNotSame( element, defaultValue );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
   }
 }

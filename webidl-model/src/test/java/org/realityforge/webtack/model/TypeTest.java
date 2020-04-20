@@ -207,14 +207,17 @@ public final class TypeTest
     // Explicitly supply a variable otherwise we get at EOF looking for optional "long" which generates a warning
     final Type actual = WebIDLModelParser.parse( createParser( webIDL + " someVar" ).type() );
     assertType( actual, kind, isNullable );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeType( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
     final Type element = WebIDLModelParser.parse( createParser( emittedIDL + " someVar" ).type() );
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

@@ -70,6 +70,8 @@ public final class CallbackDefinitionTest
     assertEquals( actual.getName(), name );
     assertEquals( actual.getReturnType().getKind(), returnTypeKind );
     assertEquals( actual.getArguments().size(), argumentCount );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeCallbackDefinition( writer, actual );
@@ -79,8 +81,9 @@ public final class CallbackDefinitionTest
     assertEquals( definitions.size(), 1 );
     assertTrue( definitions.get( 0 ) instanceof CallbackDefinition );
     final CallbackDefinition element = (CallbackDefinition) definitions.get( 0 );
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

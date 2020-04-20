@@ -30,6 +30,9 @@ public final class IncludesStatementTest
       WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( actual.getInterfaceName(), interfaceName );
     assertEquals( actual.getMixinName(), mixinName );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeIncludesStatement( writer, actual );
@@ -39,8 +42,9 @@ public final class IncludesStatementTest
     assertEquals( definitions.size(), 1 );
     assertTrue( definitions.get( 0 ) instanceof IncludesStatement );
     final IncludesStatement element = (IncludesStatement) definitions.get( 0 );
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

@@ -39,6 +39,8 @@ public final class TypedefDefinitionTest
   {
     final WebIDLParser.TypedefContext ctx = createParser( webIDL ).typedef();
     final TypedefDefinition actual = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeTypedefDefinition( writer, actual );
@@ -49,8 +51,9 @@ public final class TypedefDefinitionTest
     final Definition definition = definitions.get( 0 );
     assertTrue( definition instanceof TypedefDefinition );
     final TypedefDefinition element = (TypedefDefinition) definition;
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

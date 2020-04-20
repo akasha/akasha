@@ -55,6 +55,8 @@ public final class EnumerationDefinitionTest
     final WebIDLParser.EnumDefinitionContext ctx = createParser( webIDL ).enumDefinition();
     final EnumerationDefinition actual =
       WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeEnumerationDefinition( writer, actual );
@@ -64,8 +66,9 @@ public final class EnumerationDefinitionTest
     assertEquals( definitions.size(), 1 );
     assertTrue( definitions.get( 0 ) instanceof EnumerationDefinition );
     final EnumerationDefinition element = (EnumerationDefinition) definitions.get( 0 );
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

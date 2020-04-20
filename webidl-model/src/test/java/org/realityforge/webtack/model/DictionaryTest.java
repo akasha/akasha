@@ -74,6 +74,8 @@ public final class DictionaryTest
     final WebIDLParser.DictionaryContext ctx = createParser( webIDL ).dictionary();
     final DictionaryDefinition actual =
       WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeDictionaryDefinition( writer, actual );
@@ -84,8 +86,9 @@ public final class DictionaryTest
     final Definition definition = definitions.get( 0 );
     assertTrue( definition instanceof DictionaryDefinition );
     final DictionaryDefinition element = (DictionaryDefinition) definition;
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

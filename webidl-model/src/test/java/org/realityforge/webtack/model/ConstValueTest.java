@@ -28,18 +28,18 @@ public final class ConstValueTest
                                  @Nullable final String value )
     throws IOException
   {
-    final ConstValue constValue = WebIDLModelParser.parse( createParser( webIDL ).constMemberValue() );
-    assertEquals( constValue.getKind(), kind );
-    assertEquals( constValue.getValue(), value );
+    final ConstValue actual = WebIDLModelParser.parse( createParser( webIDL ).constMemberValue() );
+    assertEquals( actual.getKind(), kind );
+    assertEquals( actual.getValue(), value );
 
     final StringWriter writer = new StringWriter();
-    WebIDLWriter.writeConstValue( writer, constValue );
+    WebIDLWriter.writeConstValue( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
     final ConstValue element = WebIDLModelParser.parse( createParser( emittedIDL ).constMemberValue() );
-    assertEquals( element, constValue );
-    assertEquals( element.hashCode(), constValue.hashCode() );
-    assertTrue( element.equiv( constValue ) );
-    assertNotSame( element, constValue );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
   }
 }

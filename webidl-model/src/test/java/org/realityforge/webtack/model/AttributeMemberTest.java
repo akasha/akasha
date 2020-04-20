@@ -72,6 +72,8 @@ public final class AttributeMemberTest
     final AttributeMember member =
       WebIDLModelParser.parse( ctx, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx ) );
     assertAttributeMember( member, name, kind, modifiers );
+    assertEquals( member, member );
+    assertEquals( member.hashCode(), member.hashCode() );
 
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeAttributeMember( writer, member );
@@ -81,7 +83,8 @@ public final class AttributeMemberTest
     final AttributeMember element =
       WebIDLModelParser.parse( ctx2, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, member );
-    assertEquals( element.hashCode(), member.hashCode() );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( member ) );
     assertNotSame( element, member );
   }

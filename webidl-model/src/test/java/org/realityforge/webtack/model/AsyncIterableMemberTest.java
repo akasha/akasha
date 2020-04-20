@@ -28,16 +28,19 @@ public final class AsyncIterableMemberTest
     final WebIDLParser.AsyncIterableContext ctx = createParser( webIDL ).asyncIterable();
     final AsyncIterableMember actual =
       WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
-    final StringWriter writer = new StringWriter();
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
+    final StringWriter writer = new StringWriter();
     WebIDLWriter.writeAsyncIterableMember( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
     final WebIDLParser.AsyncIterableContext ctx2 = createParser( emittedIDL ).asyncIterable();
     final AsyncIterableMember element =
       WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
-    assertEquals( element, actual );
-    assertEquals( element.hashCode(), actual.hashCode() );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
     assertTrue( element.equiv( actual ) );
     assertNotSame( element, actual );
 

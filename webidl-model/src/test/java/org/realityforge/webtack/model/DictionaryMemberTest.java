@@ -74,18 +74,21 @@ public final class DictionaryMemberTest
   private DictionaryMember parse( @Nonnull final String webIDL )
     throws IOException
   {
-    final DictionaryMember member = WebIDLModelParser.parse( createParser( webIDL ).dictionaryMember() );
+    final DictionaryMember actual = WebIDLModelParser.parse( createParser( webIDL ).dictionaryMember() );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
 
     final StringWriter writer = new StringWriter();
-    WebIDLWriter.writeDictionaryMember( writer, member );
+    WebIDLWriter.writeDictionaryMember( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
     final DictionaryMember element = WebIDLModelParser.parse( createParser( emittedIDL ).dictionaryMember() );
-    assertEquals( element, member );
-    assertEquals( element.hashCode(), member.hashCode() );
-    assertTrue( element.equiv( member ) );
-    assertNotSame( element, member );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
 
-    return member;
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }
