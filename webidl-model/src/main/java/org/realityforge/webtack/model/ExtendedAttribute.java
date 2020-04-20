@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
@@ -168,6 +170,80 @@ public final class ExtendedAttribute
     verifyKind( "getArgList()", Kind.ARG_LIST, Kind.NAMED_ARG_LIST );
     assert null != _argList;
     return _argList;
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() )
+    {
+      return false;
+    }
+    else
+    {
+      final ExtendedAttribute that = (ExtendedAttribute) o;
+      return Objects.equals( _name, that._name ) &&
+             _kind == that._kind &&
+             Objects.equals( _ident, that._ident ) &&
+             Objects.equals( _identList, that._identList ) &&
+             Objects.equals( _argListName, that._argListName ) &&
+             Objects.equals( _argList, that._argList );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( _name, _kind, _ident, _identList, _argListName, _argList );
+  }
+
+  public boolean equiv( @Nonnull final ExtendedAttribute other )
+  {
+    if ( Objects.equals( _name, other._name ) &&
+         _kind == other._kind &&
+         Objects.equals( _ident, other._ident ) &&
+         (
+           ( null == _identList && null == other._identList ) ||
+           ( null != _identList && null != other._identList && _identList.size() == other._identList.size() )
+         ) &&
+         Objects.equals( _argListName, other._argListName ) &&
+         (
+           ( null == _argList && null == other._argList ) ||
+           ( null != _argList && null != other._argList && _argList.size() == other._argList.size() )
+         ) )
+    {
+      if ( null != _identList )
+      {
+        final Set<String> otherValues = new HashSet<>( other._identList );
+        for ( final String value : _identList )
+        {
+          if ( !otherValues.remove( value ) )
+          {
+            return false;
+          }
+        }
+      }
+      if ( null != _argList )
+      {
+        final Set<Argument> otherValues = new HashSet<>( other._argList );
+        for ( final Argument value : _argList )
+        {
+          if ( !otherValues.remove( value ) )
+          {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 
   private void verifyKind( @Nonnull final String methodName, @Nonnull final Kind... kinds )

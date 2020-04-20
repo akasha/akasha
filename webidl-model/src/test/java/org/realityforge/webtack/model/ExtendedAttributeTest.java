@@ -1,8 +1,11 @@
 package org.realityforge.webtack.model;
 
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -37,8 +40,7 @@ public final class ExtendedAttributeTest
   public void NO_ARGS_parse()
     throws Exception
   {
-    final WebIDLParser parser = createParser( "EnforceRange" );
-    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = parse( "EnforceRange" );
     assertEquals( extendedAttribute.getName(), "EnforceRange" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NO_ARGS );
   }
@@ -68,8 +70,7 @@ public final class ExtendedAttributeTest
   public void IDENT_parse()
     throws Exception
   {
-    final WebIDLParser parser = createParser( "LegacyNamespace=WebAssembly" );
-    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = parse( "LegacyNamespace=WebAssembly" );
     assertEquals( extendedAttribute.getName(), "LegacyNamespace" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
     assertEquals( extendedAttribute.getIdent(), "WebAssembly" );
@@ -102,8 +103,7 @@ public final class ExtendedAttributeTest
   public void IDENT_LIST_parse()
     throws Exception
   {
-    final WebIDLParser parser = createParser( "Exposed=(Window,Worker)" );
-    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute = parse( "Exposed=(Window,Worker)" );
     assertEquals( extendedAttribute.getName(), "Exposed" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
     assertEquals( extendedAttribute.getIdentList(), Arrays.asList( "Window", "Worker" ) );
@@ -144,9 +144,8 @@ public final class ExtendedAttributeTest
   public void ARG_LIST_parse()
     throws Exception
   {
-    final WebIDLParser parser =
-      createParser( "CreatedBy(optional DOMPointInit position = {}, optional DOMPointInit orientation = {})" );
-    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute =
+      parse( "CreatedBy(optional DOMPointInit position = {}, optional DOMPointInit orientation = {})" );
     assertEquals( extendedAttribute.getArgListName(), "CreatedBy" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.ARG_LIST );
 
@@ -195,9 +194,8 @@ public final class ExtendedAttributeTest
   public void NAMED_ARG_LIST_parse()
     throws Exception
   {
-    final WebIDLParser parser =
-      createParser( "Creator=CreatedBy(optional DOMPointInit position = {}, optional DOMPointInit orientation = {})" );
-    final ExtendedAttribute extendedAttribute = WebIDLModelParser.parse( parser.extendedAttribute() );
+    final ExtendedAttribute extendedAttribute =
+      parse( "Creator=CreatedBy(optional DOMPointInit position = {}, optional DOMPointInit orientation = {})" );
     assertEquals( extendedAttribute.getName(), "Creator" );
     assertEquals( extendedAttribute.getArgListName(), "CreatedBy" );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_ARG_LIST );
@@ -236,5 +234,29 @@ public final class ExtendedAttributeTest
       assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
       assertEquals( extendedAttribute.getIdentList(), Arrays.asList( "Window", "Worker", "Worklet" ) );
     }
+  }
+
+  @Nonnull
+  private ExtendedAttribute parse( @Nonnull final String webIDL )
+    throws IOException
+  {
+    final WebIDLParser parser = createParser( webIDL );
+    final ExtendedAttribute actual = WebIDLModelParser.parse( parser.extendedAttribute() );
+
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeExtendedAttribute( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final ExtendedAttribute element = WebIDLModelParser.parse( createParser( emittedIDL ).extendedAttribute() );
+    assertEquals( element, actual );
+    assertEquals( element.hashCode(), actual.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

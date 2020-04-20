@@ -35,8 +35,60 @@ public final class WebIDLWriter
   {
     if ( !extendedAttributes.isEmpty() )
     {
-      //TODO: emit Attributes
+      writer.write( "[" );
+      boolean first = true;
+      for ( final ExtendedAttribute extendedAttribute : extendedAttributes )
+      {
+        if ( first )
+        {
+          first = false;
+        }
+        else
+        {
+          writer.write( ", " );
+        }
+        writeExtendedAttribute( writer, extendedAttribute );
+      }
+      writer.write( "]" );
       writer.write( separator );
+    }
+  }
+
+  static void writeExtendedAttribute( @Nonnull final Writer writer,
+                                      @Nonnull final ExtendedAttribute extendedAttribute )
+    throws IOException
+  {
+    final ExtendedAttribute.Kind kind = extendedAttribute.getKind();
+    if ( ExtendedAttribute.Kind.NO_ARGS == kind )
+    {
+      writer.write( extendedAttribute.getName() );
+    }
+    else if ( ExtendedAttribute.Kind.ARG_LIST == kind )
+    {
+      writer.write( extendedAttribute.getArgListName() );
+      writeArgumentList( writer, extendedAttribute.getArgList() );
+    }
+    else if ( ExtendedAttribute.Kind.IDENT == kind )
+    {
+      writer.write( extendedAttribute.getName() );
+      writer.write( "=" );
+      writer.write( extendedAttribute.getIdent() );
+    }
+    else if ( ExtendedAttribute.Kind.IDENT_LIST == kind )
+    {
+      writer.write( extendedAttribute.getName() );
+      writer.write( "=(" );
+      final List<String> identList = extendedAttribute.getIdentList();
+      writer.write( String.join( ",", identList ) );
+      writer.write( ")" );
+    }
+    else
+    {
+      assert ExtendedAttribute.Kind.NAMED_ARG_LIST == kind;
+      writer.write( extendedAttribute.getName() );
+      writer.write( "=" );
+      writer.write( extendedAttribute.getArgListName() );
+      writeArgumentList( writer, extendedAttribute.getArgList() );
     }
   }
 
