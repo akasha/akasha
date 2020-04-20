@@ -94,12 +94,12 @@ public final class OperationMember
 
   public enum Kind
   {
-    DEFAULT,
-    STRINGIFIER,
     STATIC,
     CONSTRUCTOR,
+    DEFAULT,
     GETTER,
     SETTER,
-    DELETER
+    DELETER,
+    STRINGIFIER
   }
 }

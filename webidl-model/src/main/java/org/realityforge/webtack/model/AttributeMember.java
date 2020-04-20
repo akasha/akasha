@@ -69,11 +69,38 @@ public final class AttributeMember
            _type.equiv( other._type );
   }
 
+  public int orderId()
+  {
+    final boolean isStatic = getModifiers().contains( Modifier.STATIC );
+    final boolean isReadOnly = getModifiers().contains( Modifier.READ_ONLY );
+    if ( isStatic )
+    {
+      return isReadOnly ? 1 : 2;
+    }
+    else
+    {
+      final boolean isInherit = getModifiers().contains( Modifier.INHERIT );
+      if ( isInherit )
+      {
+        return isReadOnly ? 3 : 4;
+      }
+      final boolean isStringifier = getModifiers().contains( Modifier.STRINGIFIER );
+      if ( !isStringifier )
+      {
+        return isReadOnly ? 5 : 6;
+      }
+      else
+      {
+        return isReadOnly ? 7 : 8;
+      }
+    }
+  }
+
   public enum Modifier
   {
-    READ_ONLY,
-    STRINGIFIER,
     STATIC,
-    INHERIT
+    READ_ONLY,
+    INHERIT,
+    STRINGIFIER
   }
 }
