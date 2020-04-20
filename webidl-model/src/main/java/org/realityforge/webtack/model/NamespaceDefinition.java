@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 
 public final class NamespaceDefinition
@@ -42,5 +44,62 @@ public final class NamespaceDefinition
   public List<AttributeMember> getAttributes()
   {
     return _attributes;
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final NamespaceDefinition that = (NamespaceDefinition) o;
+      return _name.equals( that._name ) &&
+             _operations.equals( that._operations ) &&
+             _attributes.equals( that._attributes );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _name, _operations, _attributes );
+  }
+
+  public boolean equiv( @Nonnull final NamespaceDefinition other )
+  {
+    if ( super.equiv( other ) &&
+         _name.equals( other._name ) &&
+         _operations.size() == other._operations.size() &&
+         _attributes.size() == other._attributes.size() )
+    {
+      final Set<AttributeMember> otherAttributes = new HashSet<>( other._attributes );
+      for ( final AttributeMember member : _attributes )
+      {
+        if ( !otherAttributes.remove( member ) )
+        {
+          return false;
+        }
+      }
+      final Set<OperationMember> otherOperations = new HashSet<>( other._operations );
+      for ( final OperationMember member : _operations )
+      {
+        if ( !otherOperations.remove( member ) )
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 }

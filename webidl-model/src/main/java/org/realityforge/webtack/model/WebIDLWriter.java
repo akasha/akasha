@@ -278,6 +278,35 @@ public final class WebIDLWriter
     writer.write( "};\n" );
   }
 
+  static void writeNamespaceDefinition( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
+    throws IOException
+  {
+    writer.write( "namespace " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    final List<AttributeMember> attributes = definition.getAttributes()
+      .stream()
+      .sorted( Comparator
+                 .comparing( AttributeMember::orderId )
+                 .thenComparing( NamedElement::getName ) )
+      .collect( Collectors.toList() );
+    for ( final AttributeMember attribute : attributes )
+    {
+      writeAttributeMember( writer, attribute );
+    }
+    final List<OperationMember> operations = definition.getOperations()
+      .stream()
+      .sorted( Comparator
+                 .comparing( OperationMember::getKind )
+                 .thenComparing( Comparator.nullsLast( Comparator.comparing( OperationMember::getName ) ) ) )
+      .collect( Collectors.toList() );
+    for ( final OperationMember operation : operations )
+    {
+      writeOperationMember( writer, operation );
+    }
+    writer.write( "};\n" );
+  }
+
   static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )
     throws IOException
   {
