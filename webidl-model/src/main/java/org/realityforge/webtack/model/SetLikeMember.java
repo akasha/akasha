@@ -32,4 +32,36 @@ public final class SetLikeMember
   {
     return _readOnly;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final SetLikeMember that = (SetLikeMember) o;
+      return _readOnly == that._readOnly &&
+             _type.equals( that._type );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _type, _readOnly );
+  }
+
+  public boolean equiv( @Nonnull final SetLikeMember other )
+  {
+    return super.equiv( other ) &&
+           _readOnly == other._readOnly &&
+           _type.equiv( other._type );
+  }
 }

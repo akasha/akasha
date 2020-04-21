@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -33,6 +34,33 @@ public final class SetLikeMemberTest
     throws IOException
   {
     final WebIDLParser.SetlikeRestContext ctx = createParser( webIDL ).setlikeRest();
-    return WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
+    final SetLikeMember actual =
+      WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
+
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeSetLikeMember( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final SetLikeMember element;
+    if ( readOnly )
+    {
+      final WebIDLParser.ReadOnlyMemberContext ctx2 = createParser( emittedIDL ).readOnlyMember();
+      element = (SetLikeMember) WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    }
+    else
+    {
+      final WebIDLParser.SetlikeRestContext ctx2 = createParser( emittedIDL ).setlikeRest();
+      element = WebIDLModelParser.parse( ctx2, readOnly, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    }
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

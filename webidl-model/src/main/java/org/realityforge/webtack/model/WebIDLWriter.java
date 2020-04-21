@@ -334,7 +334,7 @@ public final class WebIDLWriter
   {
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
-    if( member.isReadOnly())
+    if ( member.isReadOnly() )
     {
       writer.write( "readonly " );
     }
@@ -342,6 +342,20 @@ public final class WebIDLWriter
     writeType( writer, member.getKeyType() );
     writer.write( ", " );
     writeType( writer, member.getValueType() );
+    writer.write( ">;\n" );
+  }
+
+  static void writeSetLikeMember( @Nonnull final Writer writer, @Nonnull final SetLikeMember member )
+    throws IOException
+  {
+    writeIndent( writer );
+    writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
+    if ( member.isReadOnly() )
+    {
+      writer.write( "readonly " );
+    }
+    writer.write( "setlike<" );
+    writeType( writer, member.getType() );
     writer.write( ">;\n" );
   }
 
