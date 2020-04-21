@@ -517,7 +517,7 @@ public final class WebIDLWriter
     throws IOException
   {
     writeIndent( writer );
-    writeAttributesIfRequired( writer, operation.getExtendedAttributes(), " \n" );
+    writeAttributesIfRequired( writer, operation.getExtendedAttributes(), "\n  " );
     final OperationMember.Kind kind = operation.getKind();
     if ( OperationMember.Kind.STRINGIFIER == kind && null == operation.getName() )
     {
