@@ -129,7 +129,7 @@ final class VerifyCommand
     return ExitCodes.SUCCESS_EXIT_CODE;
   }
 
-  private static class CountingConsoleErrorListener
+  private static final class CountingConsoleErrorListener
     extends ConsoleErrorListener
   {
     private int _errorCount;
