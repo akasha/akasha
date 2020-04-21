@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
@@ -140,11 +141,29 @@ public final class PartialMixinDefinitionTest
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
     final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof PartialMixinDefinition );
-    final PartialMixinDefinition mixin = (PartialMixinDefinition) definition;
-    assertEquals( mixin.getName(), name );
-    assertEquals( mixin.getConstants().size(), constantCount );
-    assertEquals( mixin.getAttributes().size(), attributeCount );
-    assertEquals( mixin.getOperations().size(), operationCount );
-    return mixin;
+    final PartialMixinDefinition actual = (PartialMixinDefinition) definition;
+    assertEquals( actual.getName(), name );
+    assertEquals( actual.getConstants().size(), constantCount );
+    assertEquals( actual.getAttributes().size(), attributeCount );
+    assertEquals( actual.getOperations().size(), operationCount );
+
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writePartialMixinDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof PartialMixinDefinition );
+    final PartialMixinDefinition element = (PartialMixinDefinition) definitions.get( 0 );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

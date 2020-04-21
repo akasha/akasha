@@ -308,6 +308,19 @@ public final class WebIDLWriter
     writer.write( "};\n" );
   }
 
+  static void writePartialMixinDefinition( @Nonnull final Writer writer,
+                                           @Nonnull final PartialMixinDefinition definition )
+    throws IOException
+  {
+    writer.write( "partial interface mixin " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    writeConstants( writer, definition.getConstants() );
+    writeAttributes( writer, definition.getAttributes() );
+    writeOperations( writer, definition.getOperations() );
+    writer.write( "};\n" );
+  }
+
   static void writeNamespaceDefinition( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
