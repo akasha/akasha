@@ -338,6 +338,40 @@ public final class WebIDLWriter
     writer.write( "};\n" );
   }
 
+  static void writePartialInterfaceDefinition( @Nonnull final Writer writer,
+                                               @Nonnull final PartialInterfaceDefinition definition )
+    throws IOException
+  {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
+    writer.write( "partial interface " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    writeConstants( writer, definition.getConstants() );
+    final MapLikeMember mapLikeMember = definition.getMapLikeMember();
+    if ( null != mapLikeMember )
+    {
+      writeMapLikeMember( writer, mapLikeMember );
+    }
+    final SetLikeMember setLikeMember = definition.getSetLikeMember();
+    if ( null != setLikeMember )
+    {
+      writeSetLikeMember( writer, setLikeMember );
+    }
+    final IterableMember iterableMember = definition.getIterable();
+    if ( null != iterableMember )
+    {
+      writeIterableMember( writer, iterableMember );
+    }
+    final AsyncIterableMember asyncIterableMember = definition.getAsyncIterable();
+    if ( null != asyncIterableMember )
+    {
+      writeAsyncIterableMember( writer, asyncIterableMember );
+    }
+    writeAttributes( writer, definition.getAttributes() );
+    writeOperations( writer, definition.getOperations() );
+    writer.write( "};\n" );
+  }
+
   static void writeMixinDefinition( @Nonnull final Writer writer, @Nonnull final MixinDefinition definition )
     throws IOException
   {
