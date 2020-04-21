@@ -296,13 +296,47 @@ public final class WebIDLWriter
     writer.write( "};\n" );
   }
 
+  static void writeMixinDefinition( @Nonnull final Writer writer, @Nonnull final MixinDefinition definition )
+    throws IOException
+  {
+    writer.write( "interface mixin " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    writeConstants( writer, definition.getConstants() );
+    writeAttributes( writer, definition.getAttributes() );
+    writeOperations( writer, definition.getOperations() );
+    writer.write( "};\n" );
+  }
+
   static void writeNamespaceDefinition( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
     writer.write( "namespace " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
-    final List<AttributeMember> attributes = definition.getAttributes()
+    final List<AttributeMember> attr = definition.getAttributes();
+    writeAttributes( writer, attr );
+    writeOperations( writer, definition.getOperations() );
+    writer.write( "};\n" );
+  }
+
+  private static void writeConstants( @Nonnull final Writer writer, @Nonnull final List<ConstMember> members )
+    throws IOException
+  {
+    final List<ConstMember> constants = members
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .collect( Collectors.toList() );
+    for ( final ConstMember constant : constants )
+    {
+      writeConstMember( writer, constant );
+    }
+  }
+
+  private static void writeAttributes( @Nonnull final Writer writer, @Nonnull final List<AttributeMember> members )
+    throws IOException
+  {
+    final List<AttributeMember> attributes = members
       .stream()
       .sorted( Comparator
                  .comparing( AttributeMember::orderId )
@@ -312,7 +346,12 @@ public final class WebIDLWriter
     {
       writeAttributeMember( writer, attribute );
     }
-    final List<OperationMember> operations = definition.getOperations()
+  }
+
+  private static void writeOperations( @Nonnull final Writer writer, final List<OperationMember> members )
+    throws IOException
+  {
+    final List<OperationMember> operations = members
       .stream()
       .sorted( Comparator
                  .comparing( OperationMember::getKind )
@@ -322,7 +361,6 @@ public final class WebIDLWriter
     {
       writeOperationMember( writer, operation );
     }
-    writer.write( "};\n" );
   }
 
   static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )
