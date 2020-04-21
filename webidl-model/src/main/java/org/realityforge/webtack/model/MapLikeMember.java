@@ -72,6 +72,7 @@ public final class MapLikeMember
   public boolean equiv( @Nonnull final MapLikeMember other )
   {
     return super.equiv( other ) &&
+           _readOnly == other._readOnly &&
            _keyType.equiv( other._keyType ) &&
            _valueType.equiv( other._valueType );
   }
