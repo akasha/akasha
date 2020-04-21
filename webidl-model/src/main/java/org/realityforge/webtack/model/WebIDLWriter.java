@@ -233,6 +233,7 @@ public final class WebIDLWriter
                                           @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "enum " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
@@ -258,6 +259,7 @@ public final class WebIDLWriter
   static void writeDictionaryDefinition( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "dictionary " );
     writer.write( definition.getName() );
     final String inherits = definition.getInherits();
@@ -282,6 +284,7 @@ public final class WebIDLWriter
                                                 @Nonnull final PartialDictionaryDefinition definition )
     throws IOException
   {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "dictionary " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
@@ -299,6 +302,7 @@ public final class WebIDLWriter
   static void writeMixinDefinition( @Nonnull final Writer writer, @Nonnull final MixinDefinition definition )
     throws IOException
   {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "interface mixin " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
@@ -312,6 +316,7 @@ public final class WebIDLWriter
                                            @Nonnull final PartialMixinDefinition definition )
     throws IOException
   {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "partial interface mixin " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
@@ -324,6 +329,7 @@ public final class WebIDLWriter
   static void writeNamespaceDefinition( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "namespace " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
