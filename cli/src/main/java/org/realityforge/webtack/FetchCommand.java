@@ -65,7 +65,7 @@ final class FetchCommand
                               "Skip running verify command after fetching WebIDL source." )
     };
   @Nonnull
-  private Set<String> _sourceNames = new LinkedHashSet<>();
+  private final Set<String> _sourceNames = new LinkedHashSet<>();
   private boolean _force;
   private boolean _noVerify;
 
