@@ -55,7 +55,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  private static WebIDLSchema parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
+  static WebIDLSchema parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
   {
     final List<Definition> definitions = parse( ctx.definitions() );
 

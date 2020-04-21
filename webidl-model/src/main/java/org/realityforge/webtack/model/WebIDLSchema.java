@@ -1,9 +1,11 @@
 package org.realityforge.webtack.model;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 
@@ -144,5 +146,194 @@ public final class WebIDLSchema
   public Collection<TypedefDefinition> getTypedefs()
   {
     return _typedefs.values();
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() )
+    {
+      return false;
+    }
+    else
+    {
+      final WebIDLSchema other = (WebIDLSchema) o;
+      return _callbacks.equals( other._callbacks ) &&
+             _callbackInterfaces.equals( other._callbackInterfaces ) &&
+             _dictionaries.equals( other._dictionaries ) &&
+             _enumerations.equals( other._enumerations ) &&
+             _interfaces.equals( other._interfaces ) &&
+             _mixins.equals( other._mixins ) &&
+             _includes.equals( other._includes ) &&
+             _namespaces.equals( other._namespaces ) &&
+             _partialDictionaries.equals( other._partialDictionaries ) &&
+             _partialInterfaces.equals( other._partialInterfaces ) &&
+             _partialMixins.equals( other._partialMixins ) &&
+             _partialNamespaces.equals( other._partialNamespaces ) &&
+             _typedefs.equals( other._typedefs );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( _callbacks,
+                         _callbackInterfaces,
+                         _dictionaries,
+                         _enumerations,
+                         _interfaces,
+                         _mixins,
+                         _includes,
+                         _namespaces,
+                         _partialDictionaries,
+                         _partialInterfaces,
+                         _partialMixins,
+                         _partialNamespaces,
+                         _typedefs );
+  }
+
+  public boolean equiv( @Nonnull final WebIDLSchema other )
+  {
+    if ( _callbacks.size() == other._callbacks.size() &&
+         _callbackInterfaces.size() == other._callbackInterfaces.size() &&
+         _dictionaries.size() == other._dictionaries.size() &&
+         _enumerations.size() == other._enumerations.size() &&
+         _interfaces.size() == other._interfaces.size() &&
+         _mixins.size() == other._mixins.size() &&
+         _includes.size() == other._includes.size() &&
+         _namespaces.size() == other._namespaces.size() &&
+         _partialDictionaries.size() == other._partialDictionaries.size() &&
+         _partialInterfaces.size() == other._partialInterfaces.size() &&
+         _partialMixins.size() == other._partialMixins.size() &&
+         _partialNamespaces.size() == other._partialNamespaces.size() &&
+         _typedefs.size() == other._typedefs.size()
+    )
+    {
+      final Set<CallbackDefinition> otherCallbacks = new HashSet<>( _callbacks.values() );
+      for ( final CallbackDefinition definition : _callbacks.values() )
+      {
+        if ( !otherCallbacks.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<CallbackInterfaceDefinition> otherCallbackInterfaces = new HashSet<>( _callbackInterfaces.values() );
+      for ( final CallbackInterfaceDefinition definition : _callbackInterfaces.values() )
+      {
+        if ( !otherCallbackInterfaces.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<DictionaryDefinition> otherDictionaries = new HashSet<>( _dictionaries.values() );
+      for ( final DictionaryDefinition definition : _dictionaries.values() )
+      {
+        if ( !otherDictionaries.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<EnumerationDefinition> otherEnumerations = new HashSet<>( _enumerations.values() );
+      for ( final EnumerationDefinition definition : _enumerations.values() )
+      {
+        if ( !otherEnumerations.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<InterfaceDefinition> otherInterfaces = new HashSet<>( _interfaces.values() );
+      for ( final InterfaceDefinition definition : _interfaces.values() )
+      {
+        if ( !otherInterfaces.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<MixinDefinition> otherMixins = new HashSet<>( _mixins.values() );
+      for ( final MixinDefinition definition : _mixins.values() )
+      {
+        if ( !otherMixins.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<IncludesStatement> otherIncludes = new HashSet<>( _includes.values() );
+      for ( final IncludesStatement definition : _includes.values() )
+      {
+        if ( !otherIncludes.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<NamespaceDefinition> otherNamespaces = new HashSet<>( _namespaces.values() );
+      for ( final NamespaceDefinition definition : _namespaces.values() )
+      {
+        if ( !otherNamespaces.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<TypedefDefinition> otherTypedefs = new HashSet<>( _typedefs.values() );
+      for ( final TypedefDefinition definition : _typedefs.values() )
+      {
+        if ( !otherTypedefs.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<PartialDictionaryDefinition> otherPartialDictionaries =
+        other._partialDictionaries.values().stream().flatMap( Collection::stream ).collect( Collectors.toSet() );
+      final List<PartialDictionaryDefinition> partialDictionaries =
+        _partialDictionaries.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
+      for ( final PartialDictionaryDefinition definition : partialDictionaries )
+      {
+        if ( !otherPartialDictionaries.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<PartialInterfaceDefinition> otherPartialInterfaces =
+        other._partialInterfaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toSet() );
+      final List<PartialInterfaceDefinition> partialInterfaces =
+        _partialInterfaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
+      for ( final PartialInterfaceDefinition definition : partialInterfaces )
+      {
+        if ( !otherPartialInterfaces.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<PartialMixinDefinition> otherPartialMixins =
+        other._partialMixins.values().stream().flatMap( Collection::stream ).collect( Collectors.toSet() );
+      final List<PartialMixinDefinition> partialMixins =
+        _partialMixins.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
+      for ( final PartialMixinDefinition definition : partialMixins )
+      {
+        if ( !otherPartialMixins.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      final Set<PartialNamespaceDefinition> otherPartialNamespaces =
+        other._partialNamespaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toSet() );
+      final List<PartialNamespaceDefinition> partialNamespaces =
+        _partialNamespaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
+      for ( final PartialNamespaceDefinition definition : partialNamespaces )
+      {
+        if ( !otherPartialNamespaces.remove( definition ) )
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 }

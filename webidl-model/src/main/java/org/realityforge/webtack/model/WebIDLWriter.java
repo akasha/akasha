@@ -14,6 +14,88 @@ public final class WebIDLWriter
   {
   }
 
+  static void writeSchema( @Nonnull final Writer writer, @Nonnull final WebIDLSchema schema )
+    throws IOException
+  {
+    int definitionCount = 0;
+    for ( final EnumerationDefinition definition : schema.getEnumerations() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeEnumerationDefinition( writer, definition );
+    }
+
+    for ( final TypedefDefinition definition : schema.getTypedefs() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeTypedefDefinition( writer, definition );
+    }
+
+    for ( final NamespaceDefinition definition : schema.getNamespaces() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeNamespaceDefinition( writer, definition );
+    }
+    for ( final PartialNamespaceDefinition definition : schema.getPartialNamespaces() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writePartialNamespaceDefinition( writer, definition );
+    }
+    for ( final CallbackDefinition definition : schema.getCallbacks() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeCallbackDefinition( writer, definition );
+    }
+    for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeCallbackInterfaceDefinition( writer, definition );
+    }
+    for ( final DictionaryDefinition definition : schema.getDictionaries() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeDictionaryDefinition( writer, definition );
+    }
+    for ( final PartialDictionaryDefinition definition : schema.getPartialDictionaries() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writePartialDictionaryDefinition( writer, definition );
+    }
+    for ( final MixinDefinition definition : schema.getMixins() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeMixinDefinition( writer, definition );
+    }
+    for ( final PartialMixinDefinition definition : schema.getPartialMixins() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writePartialMixinDefinition( writer, definition );
+    }
+    for ( final InterfaceDefinition definition : schema.getInterfaces() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeInterfaceDefinition( writer, definition );
+    }
+    for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writePartialInterfaceDefinition( writer, definition );
+    }
+    for ( final IncludesStatement definition : schema.getIncludes() )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeIncludesStatement( writer, definition );
+    }
+  }
+
+  private static void maybeNewLine( @Nonnull final Writer writer, final int definitionCount )
+    throws IOException
+  {
+    if ( 0 != definitionCount )
+    {
+      writer.append( "\n" );
+    }
+  }
+
   static void writeCallbackDefinition( @Nonnull final Writer writer,
                                        @Nonnull final CallbackDefinition callbackDefinition )
     throws IOException
