@@ -4,9 +4,7 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-* Add code to emit the IDL for each model element. The primary purpose is to make it easy to verify the shape
-  of WebIDL after processing has occurred and to use in the test infrastructure. We should also re-process the
-  idl that is downloaded and pass it through this as a form of poor-mans formatter.
+* Use fixture based tests when testing webIDL after processing has occurred.
 
 * Add lots of tests for `MergeTool` using fixture data to drive tests.
 
