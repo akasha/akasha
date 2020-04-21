@@ -550,11 +550,15 @@ public final class WebIDLWriter
       {
         writeType( writer, operation.getReturnType() );
         writer.write( " " );
+        final String name = operation.getName();
+        if ( null != name )
+        {
+          writer.write( name );
+        }
       }
-      final String name = operation.getName();
-      if ( null != name )
+      else
       {
-        writer.write( name );
+        writer.write( "constructor" );
       }
       writeArgumentList( writer, operation.getArguments() );
     }
