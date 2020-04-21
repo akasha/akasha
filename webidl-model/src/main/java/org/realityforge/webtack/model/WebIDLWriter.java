@@ -28,6 +28,19 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeCallbackInterfaceDefinition( @Nonnull final Writer writer,
+                                                @Nonnull final CallbackInterfaceDefinition definition )
+    throws IOException
+  {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
+    writer.write( "callback interface " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    writeConstants( writer, definition.getConstants() );
+    writeOperationMember( writer, definition.getOperation() );
+    writer.write( "};\n" );
+  }
+
   static void writeAttributesIfRequired( @Nonnull final Writer writer,
                                          @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                          @Nonnull final String separator )

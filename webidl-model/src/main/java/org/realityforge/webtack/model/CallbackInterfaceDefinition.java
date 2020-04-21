@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 
 public final class CallbackInterfaceDefinition
@@ -42,5 +44,54 @@ public final class CallbackInterfaceDefinition
   public List<ConstMember> getConstants()
   {
     return _constants;
+  }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final CallbackInterfaceDefinition other = (CallbackInterfaceDefinition) o;
+      return _name.equals( other._name ) &&
+             _operation.equals( other._operation ) &&
+             _constants.equals( other._constants );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _name, _operation, _constants );
+  }
+
+  public boolean equiv( @Nonnull final CallbackInterfaceDefinition other )
+  {
+    if ( super.equiv( other ) &&
+         _name.equals( other._name ) &&
+         _constants.size() == other._constants.size() &&
+         _operation.equiv( other._operation ) )
+    {
+      final Set<ConstMember> otherConstants = new HashSet<>( other._constants );
+      for ( final ConstMember member : _constants )
+      {
+        if ( !otherConstants.remove( member ) )
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+    else
+    {
+      return false;
+    }
   }
 }
