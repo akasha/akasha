@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -244,13 +245,31 @@ public final class InterfaceDefinitionTest
     final Definition definition =
       WebIDLModelParser.parse( createParser( webIDL ).definitions() ).get( 0 );
     assertTrue( definition instanceof InterfaceDefinition );
-    final InterfaceDefinition mixin = (InterfaceDefinition) definition;
-    assertEquals( mixin.getName(), name );
-    assertEquals( mixin.getInherits(), inherits );
-    assertEquals( mixin.getExtendedAttributes().size(), extendedAttributeCount );
-    assertEquals( mixin.getConstants().size(), constantCount );
-    assertEquals( mixin.getAttributes().size(), attributeCount );
-    assertEquals( mixin.getOperations().size(), operationCount );
-    return mixin;
+    final InterfaceDefinition actual = (InterfaceDefinition) definition;
+    assertEquals( actual.getName(), name );
+    assertEquals( actual.getInherits(), inherits );
+    assertEquals( actual.getExtendedAttributes().size(), extendedAttributeCount );
+    assertEquals( actual.getConstants().size(), constantCount );
+    assertEquals( actual.getAttributes().size(), attributeCount );
+    assertEquals( actual.getOperations().size(), operationCount );
+
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeInterfaceDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof InterfaceDefinition );
+    final InterfaceDefinition element = (InterfaceDefinition) definitions.get( 0 );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }
