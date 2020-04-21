@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.testng.annotations.Test;
@@ -41,6 +42,25 @@ public final class PartialDictionaryDefinitionTest
     final Definition definition =
       WebIDLModelParser.parse( createParser( webIDL ).definitions() ).get( 0 );
     assertTrue( definition instanceof PartialDictionaryDefinition );
-    return (PartialDictionaryDefinition) definition;
+    final PartialDictionaryDefinition actual = (PartialDictionaryDefinition) definition;
+
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writePartialDictionaryDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof DictionaryDefinition );
+    final DictionaryDefinition element = (DictionaryDefinition) definitions.get( 0 );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

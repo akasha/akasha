@@ -278,6 +278,24 @@ public final class WebIDLWriter
     writer.write( "};\n" );
   }
 
+  static void writePartialDictionaryDefinition( @Nonnull final Writer writer,
+                                                @Nonnull final PartialDictionaryDefinition definition )
+    throws IOException
+  {
+    writer.write( "dictionary " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    final List<DictionaryMember> members = definition.getMembers()
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .collect( Collectors.toList() );
+    for ( final DictionaryMember member : members )
+    {
+      writeDictionaryMember( writer, member );
+    }
+    writer.write( "};\n" );
+  }
+
   static void writeNamespaceDefinition( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
