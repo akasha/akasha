@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
@@ -96,10 +97,27 @@ public final class PartialNamespaceDefinitionTest
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
     final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof PartialNamespaceDefinition );
-    final PartialNamespaceDefinition namespace = (PartialNamespaceDefinition) definition;
-    assertEquals( namespace.getName(), name );
-    assertEquals( namespace.getOperations().size(), operationCount );
-    assertEquals( namespace.getAttributes().size(), attributeCount );
-    return namespace;
+    final PartialNamespaceDefinition actual = (PartialNamespaceDefinition) definition;
+    assertEquals( actual.getName(), name );
+    assertEquals( actual.getOperations().size(), operationCount );
+    assertEquals( actual.getAttributes().size(), attributeCount );
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writePartialNamespaceDefinition( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
+    assertEquals( definitions.size(), 1 );
+    assertTrue( definitions.get( 0 ) instanceof PartialNamespaceDefinition );
+    final PartialNamespaceDefinition element = (PartialNamespaceDefinition) definitions.get( 0 );
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

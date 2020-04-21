@@ -425,6 +425,20 @@ public final class WebIDLWriter
     writer.write( "};\n" );
   }
 
+  static void writePartialNamespaceDefinition( @Nonnull final Writer writer,
+                                               @Nonnull final PartialNamespaceDefinition definition )
+    throws IOException
+  {
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
+    writer.write( "partial namespace " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    final List<AttributeMember> attr = definition.getAttributes();
+    writeAttributes( writer, attr );
+    writeOperations( writer, definition.getOperations() );
+    writer.write( "};\n" );
+  }
+
   private static void writeConstants( @Nonnull final Writer writer, @Nonnull final List<ConstMember> members )
     throws IOException
   {
