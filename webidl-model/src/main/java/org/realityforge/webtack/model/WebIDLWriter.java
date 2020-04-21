@@ -329,6 +329,22 @@ public final class WebIDLWriter
     writer.write( ";\n" );
   }
 
+  static void writeMapLikeMember( @Nonnull final Writer writer, @Nonnull final MapLikeMember member )
+    throws IOException
+  {
+    writeIndent( writer );
+    writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
+    if( member.isReadOnly())
+    {
+      writer.write( "readonly " );
+    }
+    writer.write( "maplike<" );
+    writeType( writer, member.getKeyType() );
+    writer.write( ", " );
+    writeType( writer, member.getValueType() );
+    writer.write( ">;\n" );
+  }
+
   static void writeAsyncIterableMember( @Nonnull final Writer writer, @Nonnull final AsyncIterableMember member )
     throws IOException
   {

@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -35,6 +36,33 @@ public final class MapLikeMemberTest
     throws IOException
   {
     final WebIDLParser.MaplikeRestContext ctx = createParser( webIDL ).maplikeRest();
-    return WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
+    final MapLikeMember actual =
+      WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
+
+    assertEquals( actual, actual );
+    assertEquals( actual.hashCode(), actual.hashCode() );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeMapLikeMember( writer, actual );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final MapLikeMember element;
+    if ( readOnly )
+    {
+      final WebIDLParser.ReadOnlyMemberContext ctx2 = createParser( emittedIDL ).readOnlyMember();
+      element = (MapLikeMember) WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    }
+    else
+    {
+      final WebIDLParser.MaplikeRestContext ctx2 = createParser( emittedIDL ).maplikeRest();
+      element = WebIDLModelParser.parse( ctx2, readOnly, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    }
+    assertEquals( element, element );
+    assertEquals( element.hashCode(), element.hashCode() );
+
+    assertTrue( element.equiv( actual ) );
+    assertNotSame( element, actual );
+
+    return actual;
   }
 }

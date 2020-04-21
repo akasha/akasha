@@ -42,4 +42,37 @@ public final class MapLikeMember
   {
     return _readOnly;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final MapLikeMember that = (MapLikeMember) o;
+      return _readOnly == that._readOnly &&
+             _keyType.equals( that._keyType ) &&
+             _valueType.equals( that._valueType );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _keyType, _valueType, _readOnly );
+  }
+
+  public boolean equiv( @Nonnull final MapLikeMember other )
+  {
+    return super.equiv( other ) &&
+           _keyType.equiv( other._keyType ) &&
+           _valueType.equiv( other._valueType );
+  }
 }
