@@ -35,4 +35,39 @@ public final class IterableMember
   {
     return _valueType;
   }
+
+  @Override
+  public boolean equals( final Object o )
+  {
+    if ( this == o )
+    {
+      return true;
+    }
+    else if ( o == null || getClass() != o.getClass() || !super.equals( o ) )
+    {
+      return false;
+    }
+    else
+    {
+      final IterableMember that = (IterableMember) o;
+      return Objects.equals( _keyType, that._keyType ) &&
+             _valueType.equals( that._valueType );
+    }
+  }
+
+  @Override
+  public int hashCode()
+  {
+    return Objects.hash( super.hashCode(), _keyType, _valueType );
+  }
+
+  public boolean equiv( @Nonnull final IterableMember other )
+  {
+    return super.equiv( other ) &&
+           (
+             ( null == _keyType && null == other._keyType ) ||
+             ( null != _keyType && null != other._keyType && _keyType.equiv( other._keyType ) )
+           ) &&
+           _valueType.equiv( other._valueType );
+  }
 }

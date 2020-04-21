@@ -341,6 +341,22 @@ public final class WebIDLWriter
     writer.write( ">;\n" );
   }
 
+  static void writeIterableMember( @Nonnull final Writer writer, @Nonnull final IterableMember member )
+    throws IOException
+  {
+    writeIndent( writer );
+    writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
+    writer.write( "iterable<" );
+    final Type keyType = member.getKeyType();
+    if ( null != keyType )
+    {
+      writeType( writer, keyType );
+      writer.write( ", " );
+    }
+    writeType( writer, member.getValueType() );
+    writer.write( ">;\n" );
+  }
+
   private static void writeIndent( @Nonnull final Writer writer )
     throws IOException
   {
