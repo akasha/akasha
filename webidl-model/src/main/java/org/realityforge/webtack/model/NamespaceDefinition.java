@@ -59,10 +59,10 @@ public final class NamespaceDefinition
     }
     else
     {
-      final NamespaceDefinition that = (NamespaceDefinition) o;
-      return _name.equals( that._name ) &&
-             _operations.equals( that._operations ) &&
-             _attributes.equals( that._attributes );
+      final NamespaceDefinition other = (NamespaceDefinition) o;
+      return _name.equals( other._name ) &&
+             _operations.equals( other._operations ) &&
+             _attributes.equals( other._attributes );
     }
   }
 

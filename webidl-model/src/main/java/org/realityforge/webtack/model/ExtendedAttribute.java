@@ -16,7 +16,7 @@ public final class ExtendedAttribute
   public enum Kind
   {
     NO_ARGS,
-    // ARG_LIST has no specs that implement it
+    // ARG_LIST has no specs other implement it
     ARG_LIST,
     NAMED_ARG_LIST,
     IDENT,
@@ -185,13 +185,13 @@ public final class ExtendedAttribute
     }
     else
     {
-      final ExtendedAttribute that = (ExtendedAttribute) o;
-      return Objects.equals( _name, that._name ) &&
-             _kind == that._kind &&
-             Objects.equals( _ident, that._ident ) &&
-             Objects.equals( _identList, that._identList ) &&
-             Objects.equals( _argListName, that._argListName ) &&
-             Objects.equals( _argList, that._argList );
+      final ExtendedAttribute other = (ExtendedAttribute) o;
+      return Objects.equals( _name, other._name ) &&
+             _kind == other._kind &&
+             Objects.equals( _ident, other._ident ) &&
+             Objects.equals( _identList, other._identList ) &&
+             Objects.equals( _argListName, other._argListName ) &&
+             Objects.equals( _argList, other._argList );
     }
   }
 

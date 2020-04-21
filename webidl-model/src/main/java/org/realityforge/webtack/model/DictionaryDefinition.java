@@ -60,10 +60,10 @@ public final class DictionaryDefinition
     }
     else
     {
-      final DictionaryDefinition that = (DictionaryDefinition) o;
-      return _name.equals( that._name ) &&
-             Objects.equals( _inherits, that._inherits ) &&
-             _members.equals( that._members );
+      final DictionaryDefinition other = (DictionaryDefinition) o;
+      return _name.equals( other._name ) &&
+             Objects.equals( _inherits, other._inherits ) &&
+             _members.equals( other._members );
     }
   }
 

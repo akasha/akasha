@@ -51,8 +51,8 @@ public final class ConstValue
     }
     else
     {
-      final ConstValue that = (ConstValue) o;
-      return _kind == that._kind && Objects.equals( _value, that._value );
+      final ConstValue other = (ConstValue) o;
+      return _kind == other._kind && Objects.equals( _value, other._value );
     }
   }
 

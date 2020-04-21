@@ -59,10 +59,10 @@ public final class DefaultValue
     }
     else
     {
-      final DefaultValue that = (DefaultValue) o;
-      return _kind == that._kind &&
-             Objects.equals( _constValue, that._constValue ) &&
-             Objects.equals( _stringValue, that._stringValue );
+      final DefaultValue other = (DefaultValue) o;
+      return _kind == other._kind &&
+             Objects.equals( _constValue, other._constValue ) &&
+             Objects.equals( _stringValue, other._stringValue );
     }
   }
 

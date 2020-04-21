@@ -47,8 +47,8 @@ public final class TypedefDefinition
     }
     else
     {
-      final TypedefDefinition that = (TypedefDefinition) o;
-      return _name.equals( that._name ) && _type.equals( that._type );
+      final TypedefDefinition other = (TypedefDefinition) o;
+      return _name.equals( other._name ) && _type.equals( other._type );
     }
   }
 

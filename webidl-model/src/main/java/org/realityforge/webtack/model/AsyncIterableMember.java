@@ -48,9 +48,9 @@ public final class AsyncIterableMember
     }
     else
     {
-      final AsyncIterableMember that = (AsyncIterableMember) o;
-      return _keyType.equals( that._keyType ) &&
-             _valueType.equals( that._valueType );
+      final AsyncIterableMember other = (AsyncIterableMember) o;
+      return _keyType.equals( other._keyType ) &&
+             _valueType.equals( other._valueType );
     }
   }
 

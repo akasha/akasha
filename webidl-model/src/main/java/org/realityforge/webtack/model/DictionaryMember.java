@@ -59,10 +59,10 @@ public final class DictionaryMember
     }
     else
     {
-      final DictionaryMember that = (DictionaryMember) o;
-      return _optional == that._optional &&
-             _type.equals( that._type ) &&
-             Objects.equals( _defaultValue, that._defaultValue );
+      final DictionaryMember other = (DictionaryMember) o;
+      return _optional == other._optional &&
+             _type.equals( other._type ) &&
+             Objects.equals( _defaultValue, other._defaultValue );
     }
   }
 

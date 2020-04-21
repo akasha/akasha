@@ -49,9 +49,9 @@ public final class IterableMember
     }
     else
     {
-      final IterableMember that = (IterableMember) o;
-      return Objects.equals( _keyType, that._keyType ) &&
-             _valueType.equals( that._valueType );
+      final IterableMember other = (IterableMember) o;
+      return Objects.equals( _keyType, other._keyType ) &&
+             _valueType.equals( other._valueType );
     }
   }
 

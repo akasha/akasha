@@ -46,9 +46,9 @@ public final class SetLikeMember
     }
     else
     {
-      final SetLikeMember that = (SetLikeMember) o;
-      return _readOnly == that._readOnly &&
-             _type.equals( that._type );
+      final SetLikeMember other = (SetLikeMember) o;
+      return _readOnly == other._readOnly &&
+             _type.equals( other._type );
     }
   }
 

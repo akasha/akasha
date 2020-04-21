@@ -47,9 +47,9 @@ public final class IncludesStatement
     }
     else
     {
-      final IncludesStatement that = (IncludesStatement) o;
-      return _interfaceName.equals( that._interfaceName ) &&
-             _mixinName.equals( that._mixinName );
+      final IncludesStatement other = (IncludesStatement) o;
+      return _interfaceName.equals( other._interfaceName ) &&
+             _mixinName.equals( other._mixinName );
     }
   }
 

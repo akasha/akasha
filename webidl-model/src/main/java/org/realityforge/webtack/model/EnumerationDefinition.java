@@ -49,8 +49,8 @@ public final class EnumerationDefinition
     }
     else
     {
-      final EnumerationDefinition that = (EnumerationDefinition) o;
-      return _name.equals( that._name ) && _values.equals( that._values );
+      final EnumerationDefinition other = (EnumerationDefinition) o;
+      return _name.equals( other._name ) && _values.equals( other._values );
     }
   }
 

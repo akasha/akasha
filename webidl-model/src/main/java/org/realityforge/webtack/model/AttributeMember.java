@@ -50,9 +50,9 @@ public final class AttributeMember
     }
     else
     {
-      final AttributeMember that = (AttributeMember) o;
-      return _type.equals( that._type ) &&
-             _modifiers.equals( that._modifiers );
+      final AttributeMember other = (AttributeMember) o;
+      return _type.equals( other._type ) &&
+             _modifiers.equals( other._modifiers );
     }
   }
 

@@ -49,9 +49,9 @@ public final class PartialDictionaryDefinition
     }
     else
     {
-      final PartialDictionaryDefinition that = (PartialDictionaryDefinition) o;
-      return _name.equals( that._name ) &&
-             _members.equals( that._members );
+      final PartialDictionaryDefinition other = (PartialDictionaryDefinition) o;
+      return _name.equals( other._name ) &&
+             _members.equals( other._members );
     }
   }
 

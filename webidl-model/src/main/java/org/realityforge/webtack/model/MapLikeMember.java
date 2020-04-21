@@ -56,10 +56,10 @@ public final class MapLikeMember
     }
     else
     {
-      final MapLikeMember that = (MapLikeMember) o;
-      return _readOnly == that._readOnly &&
-             _keyType.equals( that._keyType ) &&
-             _valueType.equals( that._valueType );
+      final MapLikeMember other = (MapLikeMember) o;
+      return _readOnly == other._readOnly &&
+             _keyType.equals( other._keyType ) &&
+             _valueType.equals( other._valueType );
     }
   }
 

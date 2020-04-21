@@ -51,9 +51,9 @@ public final class ConstMember
     }
     else
     {
-      final ConstMember that = (ConstMember) o;
-      return _type.equals( that._type ) &&
-             _value.equals( that._value );
+      final ConstMember other = (ConstMember) o;
+      return _type.equals( other._type ) &&
+             _value.equals( other._value );
     }
   }
 

@@ -57,10 +57,10 @@ public final class CallbackDefinition
     }
     else
     {
-      final CallbackDefinition that = (CallbackDefinition) o;
-      return _name.equals( that._name ) &&
-             _returnType.equals( that._returnType ) &&
-             _arguments.equals( that._arguments );
+      final CallbackDefinition other = (CallbackDefinition) o;
+      return _name.equals( other._name ) &&
+             _returnType.equals( other._returnType ) &&
+             _arguments.equals( other._arguments );
     }
   }
 

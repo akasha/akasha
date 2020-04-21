@@ -69,11 +69,11 @@ public final class OperationMember
     }
     else
     {
-      final OperationMember that = (OperationMember) o;
-      return _kind == that._kind &&
-             Objects.equals( _name, that._name ) &&
-             _arguments.equals( that._arguments ) &&
-             _returnType.equals( that._returnType );
+      final OperationMember other = (OperationMember) o;
+      return _kind == other._kind &&
+             Objects.equals( _name, other._name ) &&
+             _arguments.equals( other._arguments ) &&
+             _returnType.equals( other._returnType );
     }
   }
 

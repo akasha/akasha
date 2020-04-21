@@ -37,8 +37,8 @@ public abstract class NamedElement
     }
     else
     {
-      final NamedElement that = (NamedElement) o;
-      return _name.equals( that._name );
+      final NamedElement other = (NamedElement) o;
+      return _name.equals( other._name );
     }
   }
 
