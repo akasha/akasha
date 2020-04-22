@@ -1,51 +1,7 @@
-[Exposed=(Window,Worker)]
-interface Notification : EventTarget {
-  constructor(DOMString title, optional NotificationOptions options = {});
-
-  static readonly attribute NotificationPermission permission;
-  [Exposed=Window] static Promise<NotificationPermission> requestPermission(optional NotificationPermissionCallback deprecatedCallback);
-
-  static readonly attribute unsigned long maxActions;
-
-  attribute EventHandler onclick;
-  attribute EventHandler onshow;
-  attribute EventHandler onerror;
-  attribute EventHandler onclose;
-
-  readonly attribute DOMString title;
-  readonly attribute NotificationDirection dir;
-  readonly attribute DOMString lang;
-  readonly attribute DOMString body;
-  readonly attribute DOMString tag;
-  readonly attribute USVString image;
-  readonly attribute USVString icon;
-  readonly attribute USVString badge;
-  [SameObject] readonly attribute FrozenArray<unsigned long> vibrate;
-  readonly attribute DOMTimeStamp timestamp;
-  readonly attribute boolean renotify;
-  readonly attribute boolean silent;
-  readonly attribute boolean requireInteraction;
-  [SameObject] readonly attribute any data;
-  [SameObject] readonly attribute FrozenArray<NotificationAction> actions;
-
-  void close();
-};
-
-dictionary NotificationOptions {
-  NotificationDirection dir = "auto";
-  DOMString lang = "";
-  DOMString body = "";
-  DOMString tag = "";
-  USVString image;
-  USVString icon;
-  USVString badge;
-  VibratePattern vibrate;
-  DOMTimeStamp timestamp;
-  boolean renotify = false;
-  boolean silent = false;
-  boolean requireInteraction = false;
-  any data = null;
-  sequence<NotificationAction> actions = [];
+enum NotificationDirection {
+  "auto",
+  "ltr",
+  "rtl"
 };
 
 enum NotificationPermission {
@@ -54,40 +10,82 @@ enum NotificationPermission {
   "granted"
 };
 
-enum NotificationDirection {
-  "auto",
-  "ltr",
-  "rtl"
+callback NotificationPermissionCallback = void ( NotificationPermission permission );
+
+dictionary NotificationOptions {
+  sequence<NotificationAction> actions = [];
+  USVString badge;
+  DOMString body = "";
+  any data = null;
+  NotificationDirection dir = "auto";
+  USVString icon;
+  USVString image;
+  DOMString lang = "";
+  boolean renotify = false;
+  boolean requireInteraction = false;
+  boolean silent = false;
+  DOMString tag = "";
+  DOMTimeStamp timestamp;
+  VibratePattern vibrate;
 };
 
 dictionary NotificationAction {
   required DOMString action;
-  required DOMString title;
   USVString icon;
+  required DOMString title;
 };
-
-callback NotificationPermissionCallback = void (NotificationPermission permission);
 
 dictionary GetNotificationOptions {
   DOMString tag = "";
 };
 
-partial interface ServiceWorkerRegistration {
-  Promise<void> showNotification(DOMString title, optional NotificationOptions options = {});
-  Promise<sequence<Notification>> getNotifications(optional GetNotificationOptions filter = {});
+dictionary NotificationEventInit : ExtendableEventInit {
+  DOMString action = "";
+  required Notification notification;
 };
 
 [Exposed=ServiceWorker]
 interface NotificationEvent : ExtendableEvent {
-  constructor(DOMString type, NotificationEventInit eventInitDict);
-
-  readonly attribute Notification notification;
   readonly attribute DOMString action;
+  readonly attribute Notification notification;
+  constructor( DOMString type, NotificationEventInit eventInitDict );
 };
 
-dictionary NotificationEventInit : ExtendableEventInit {
-  required Notification notification;
-  DOMString action = "";
+[Exposed=(Window,Worker)]
+interface Notification : EventTarget {
+  static readonly attribute unsigned long maxActions;
+  static readonly attribute NotificationPermission permission;
+  [SameObject]
+  readonly attribute FrozenArray<NotificationAction> actions;
+  readonly attribute USVString badge;
+  readonly attribute DOMString body;
+  [SameObject]
+  readonly attribute any data;
+  readonly attribute NotificationDirection dir;
+  readonly attribute USVString icon;
+  readonly attribute USVString image;
+  readonly attribute DOMString lang;
+  readonly attribute boolean renotify;
+  readonly attribute boolean requireInteraction;
+  readonly attribute boolean silent;
+  readonly attribute DOMString tag;
+  readonly attribute DOMTimeStamp timestamp;
+  readonly attribute DOMString title;
+  [SameObject]
+  readonly attribute FrozenArray<unsigned long> vibrate;
+  attribute EventHandler onclick;
+  attribute EventHandler onclose;
+  attribute EventHandler onerror;
+  attribute EventHandler onshow;
+  [Exposed=Window]
+  static Promise<NotificationPermission> requestPermission( optional NotificationPermissionCallback deprecatedCallback );
+  constructor( DOMString title, optional NotificationOptions options = {} );
+  void close();
+};
+
+partial interface ServiceWorkerRegistration {
+  Promise<sequence<Notification>> getNotifications( optional GetNotificationOptions filter = {} );
+  Promise<void> showNotification( DOMString title, optional NotificationOptions options = {} );
 };
 
 partial interface ServiceWorkerGlobalScope {

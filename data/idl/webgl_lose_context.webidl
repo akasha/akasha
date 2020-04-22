@@ -1,5 +1,5 @@
-[NoInterfaceObject]
+[LegacyNoInterfaceObject]
 interface WEBGL_lose_context {
-      void loseContext();
-      void restoreContext();
+  void loseContext();
+  void restoreContext();
 };

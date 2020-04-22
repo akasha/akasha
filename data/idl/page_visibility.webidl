@@ -1,9 +1,10 @@
 enum VisibilityState {
-        "hidden", "visible"
-      };
+  "hidden",
+  "visible"
+};
 
 partial interface Document {
-        readonly attribute boolean hidden;
-        readonly attribute VisibilityState visibilityState;
-        attribute EventHandler onvisibilitychange;
-      };
+  readonly attribute boolean hidden;
+  readonly attribute VisibilityState visibilityState;
+  attribute EventHandler onvisibilitychange;
+};

@@ -1,7 +1,5 @@
-interface mixin TextDecoderCommon {
-  readonly attribute DOMString encoding;
-  readonly attribute boolean fatal;
-  readonly attribute boolean ignoreBOM;
+dictionary TextDecodeOptions {
+  boolean stream = false;
 };
 
 dictionary TextDecoderOptions {
@@ -9,51 +7,58 @@ dictionary TextDecoderOptions {
   boolean ignoreBOM = false;
 };
 
-dictionary TextDecodeOptions {
-  boolean stream = false;
-};
-
-[Exposed=(Window,Worker)]
-interface TextDecoder {
-  constructor(optional DOMString label = "utf-8", optional TextDecoderOptions options = {});
-
-  USVString decode(optional [AllowShared] BufferSource input, optional TextDecodeOptions options = {});
-};
-TextDecoder includes TextDecoderCommon;
-
-interface mixin TextEncoderCommon {
-  readonly attribute DOMString encoding;
-};
-
 dictionary TextEncoderEncodeIntoResult {
   unsigned long long read;
   unsigned long long written;
 };
 
-[Exposed=(Window,Worker)]
-interface TextEncoder {
-  constructor();
-
-  [NewObject] Uint8Array encode(optional USVString input = "");
-  TextEncoderEncodeIntoResult encodeInto(USVString source, [AllowShared] Uint8Array destination);
+interface mixin TextEncoderCommon {
+  readonly attribute DOMString encoding;
 };
-TextEncoder includes TextEncoderCommon;
 
 interface mixin GenericTransformStream {
   readonly attribute ReadableStream readable;
   readonly attribute WritableStream writable;
 };
 
+interface mixin TextDecoderCommon {
+  readonly attribute DOMString encoding;
+  readonly attribute boolean fatal;
+  readonly attribute boolean ignoreBOM;
+};
+
+[Exposed=(Window,Worker)]
+interface TextEncoder {
+  constructor();
+  [NewObject]
+  Uint8Array encode( optional USVString input = "" );
+  TextEncoderEncodeIntoResult encodeInto( USVString source, [AllowShared] Uint8Array destination );
+};
+
 [Exposed=(Window,Worker)]
 interface TextDecoderStream {
-  constructor(optional DOMString label = "utf-8", optional TextDecoderOptions options = {});
+  constructor( optional DOMString label = "utf-8", optional TextDecoderOptions options = {} );
 };
-TextDecoderStream includes TextDecoderCommon;
-TextDecoderStream includes GenericTransformStream;
 
 [Exposed=(Window,Worker)]
 interface TextEncoderStream {
   constructor();
 };
-TextEncoderStream includes TextEncoderCommon;
+
+[Exposed=(Window,Worker)]
+interface TextDecoder {
+  constructor( optional DOMString label = "utf-8", optional TextDecoderOptions options = {} );
+  USVString decode( optional [AllowShared] BufferSource input, optional TextDecodeOptions options = {} );
+};
+
+TextDecoder includes TextDecoderCommon;
+
+TextEncoder includes TextEncoderCommon;
+
+TextDecoderStream includes GenericTransformStream;
+
+TextDecoderStream includes TextDecoderCommon;
+
 TextEncoderStream includes GenericTransformStream;
+
+TextEncoderStream includes TextEncoderCommon;

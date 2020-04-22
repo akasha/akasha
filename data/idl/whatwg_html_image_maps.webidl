@@ -1,23 +1,35 @@
 [Exposed=Window]
-interface HTMLMapElement : HTMLElement {
-  [HTMLConstructor] constructor();
-
-  [CEReactions] attribute DOMString name;
-  [SameObject] readonly attribute HTMLCollection areas;
+interface HTMLAreaElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList relList;
+  [CEReactions]
+  attribute DOMString alt;
+  [CEReactions]
+  attribute DOMString coords;
+  [CEReactions]
+  attribute DOMString download;
+  [CEReactions]
+  attribute USVString ping;
+  [CEReactions]
+  attribute DOMString referrerPolicy;
+  [CEReactions]
+  attribute DOMString rel;
+  [CEReactions]
+  attribute DOMString shape;
+  [CEReactions]
+  attribute DOMString target;
+  [HTMLConstructor]
+  constructor();
 };
 
 [Exposed=Window]
-interface HTMLAreaElement : HTMLElement {
-  [HTMLConstructor] constructor();
-
-  [CEReactions] attribute DOMString alt;
-  [CEReactions] attribute DOMString coords;
-  [CEReactions] attribute DOMString shape;
-  [CEReactions] attribute DOMString target;
-  [CEReactions] attribute DOMString download;
-  [CEReactions] attribute USVString ping;
-  [CEReactions] attribute DOMString rel;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
-  [CEReactions] attribute DOMString referrerPolicy;
+interface HTMLMapElement : HTMLElement {
+  [SameObject]
+  readonly attribute HTMLCollection areas;
+  [CEReactions]
+  attribute DOMString name;
+  [HTMLConstructor]
+  constructor();
 };
+
 HTMLAreaElement includes HTMLHyperlinkElementUtils;

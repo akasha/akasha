@@ -1,32 +1,46 @@
-enum ScrollRestoration { "auto", "manual" };
+enum ScrollRestoration {
+  "auto",
+  "manual"
+};
 
 [Exposed=Window]
 interface History {
   readonly attribute unsigned long length;
-  attribute ScrollRestoration scrollRestoration;
   readonly attribute any state;
-  void go(optional long delta = 0);
+  attribute ScrollRestoration scrollRestoration;
   void back();
   void forward();
-  void pushState(any data, DOMString title, optional USVString? url = null);
-  void replaceState(any data, DOMString title, optional USVString? url = null);
+  void go( optional long delta = 0 );
+  void pushState( any data, DOMString title, optional USVString? url = null );
+  void replaceState( any data, DOMString title, optional USVString? url = null );
 };
 
 [Exposed=Window]
-interface Location { // but see also additional creation steps and overridden internal methods
-  [Unforgeable] stringifier attribute USVString href;
-  [Unforgeable] readonly attribute USVString origin;
-  [Unforgeable] attribute USVString protocol;
-  [Unforgeable] attribute USVString host;
-  [Unforgeable] attribute USVString hostname;
-  [Unforgeable] attribute USVString port;
-  [Unforgeable] attribute USVString pathname;
-  [Unforgeable] attribute USVString search;
-  [Unforgeable] attribute USVString hash;
-
-  [Unforgeable] void assign(USVString url);
-  [Unforgeable] void replace(USVString url);
-  [Unforgeable] void reload();
-
-  [Unforgeable, SameObject] readonly attribute DOMStringList ancestorOrigins;
+interface Location {
+  [LegacyUnforgeable, SameObject]
+  readonly attribute DOMStringList ancestorOrigins;
+  [LegacyUnforgeable]
+  readonly attribute USVString origin;
+  [LegacyUnforgeable]
+  attribute USVString hash;
+  [LegacyUnforgeable]
+  attribute USVString host;
+  [LegacyUnforgeable]
+  attribute USVString hostname;
+  [LegacyUnforgeable]
+  attribute USVString pathname;
+  [LegacyUnforgeable]
+  attribute USVString port;
+  [LegacyUnforgeable]
+  attribute USVString protocol;
+  [LegacyUnforgeable]
+  attribute USVString search;
+  [LegacyUnforgeable]
+  stringifier attribute USVString href;
+  [LegacyUnforgeable]
+  void assign( USVString url );
+  [LegacyUnforgeable]
+  void reload();
+  [LegacyUnforgeable]
+  void replace( USVString url );
 };

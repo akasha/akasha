@@ -1,105 +1,103 @@
-dictionary WebAssemblyInstantiatedSource {
-    required Module module;
-    required Instance instance;
+enum ImportExportKind {
+  "function",
+  "global",
+  "memory",
+  "table"
+};
+
+enum TableKind {
+  "anyfunc"
+};
+
+enum ValueType {
+  "f32",
+  "f64",
+  "i32",
+  "i64"
 };
 
 [Exposed=(Window,Worker,Worklet)]
 namespace WebAssembly {
-    boolean validate(BufferSource bytes);
-    Promise<Module> compile(BufferSource bytes);
-
-    Promise<WebAssemblyInstantiatedSource> instantiate(
-        BufferSource bytes, optional object importObject);
-
-    Promise<Instance> instantiate(
-        Module moduleObject, optional object importObject);
-};
-
-enum ImportExportKind {
-  "function",
-  "table",
-  "memory",
-  "global"
-};
-
-dictionary ModuleExportDescriptor {
-  required USVString name;
-  required ImportExportKind kind;
-  // Note: Other fields such as signature may be added in the future.
+  Promise<Module> compile( BufferSource bytes );
+  Promise<WebAssemblyInstantiatedSource> instantiate( BufferSource bytes, optional object importObject );
+  Promise<Instance> instantiate( Module moduleObject, optional object importObject );
+  boolean validate( BufferSource bytes );
 };
 
 dictionary ModuleImportDescriptor {
+  required ImportExportKind kind;
   required USVString module;
   required USVString name;
+};
+
+dictionary ModuleExportDescriptor {
   required ImportExportKind kind;
+  required USVString name;
 };
 
-[LegacyNamespace=WebAssembly, Constructor(BufferSource bytes), Exposed=(Window,Worker,Worklet)]
-interface Module {
-  static sequence<ModuleExportDescriptor> exports(Module moduleObject);
-  static sequence<ModuleImportDescriptor> imports(Module moduleObject);
-  static sequence<ArrayBuffer> customSections(Module moduleObject, DOMString sectionName);
+dictionary GlobalDescriptor {
+  boolean mutable = false;
+  required ValueType value;
 };
 
-[LegacyNamespace=WebAssembly, Constructor(Module module, optional object importObject), Exposed=(Window,Worker,Worklet)]
-interface Instance {
-  readonly attribute object exports;
+dictionary WebAssemblyInstantiatedSource {
+  required Instance instance;
+  required Module module;
 };
 
 dictionary MemoryDescriptor {
   required [EnforceRange] unsigned long initial;
-  [EnforceRange] unsigned long maximum;
-};
-
-[LegacyNamespace=WebAssembly, Constructor(MemoryDescriptor descriptor), Exposed=(Window,Worker,Worklet)]
-interface Memory {
-  unsigned long grow([EnforceRange] unsigned long delta);
-  readonly attribute ArrayBuffer buffer;
-};
-
-enum TableKind {
-  "anyfunc",
-  // Note: More values may be added in future iterations,
-  // e.g., typed function references, typed GC references
+  [EnforceRange]
+  unsigned long maximum;
 };
 
 dictionary TableDescriptor {
   required TableKind element;
   required [EnforceRange] unsigned long initial;
-  [EnforceRange] unsigned long maximum;
+  [EnforceRange]
+  unsigned long maximum;
 };
 
-[LegacyNamespace=WebAssembly, Constructor(TableDescriptor descriptor), Exposed=(Window,Worker,Worklet)]
+[LegacyNamespace=WebAssembly]
+interface CompileError {
+};
+
+[LegacyNamespace=WebAssembly, Constructor( TableDescriptor descriptor ), Exposed=(Window,Worker,Worklet)]
 interface Table {
-  unsigned long grow([EnforceRange] unsigned long delta);
-  Function? get([EnforceRange] unsigned long index);
-  void set([EnforceRange] unsigned long index, Function? value);
   readonly attribute unsigned long length;
+  Function? get( [EnforceRange] unsigned long index );
+  unsigned long grow( [EnforceRange] unsigned long delta );
+  void set( [EnforceRange] unsigned long index, Function? value );
 };
 
-enum ValueType {
-  "i32",
-  "i64",
-  "f32",
-  "f64"
+[LegacyNamespace=WebAssembly, Constructor( Module module, optional object importObject ), Exposed=(Window,Worker,Worklet)]
+interface Instance {
+  readonly attribute object exports;
 };
 
-dictionary GlobalDescriptor {
-  required ValueType value;
-  boolean mutable = false;
+[LegacyNamespace=WebAssembly, Constructor( MemoryDescriptor descriptor ), Exposed=(Window,Worker,Worklet)]
+interface Memory {
+  readonly attribute ArrayBuffer buffer;
+  unsigned long grow( [EnforceRange] unsigned long delta );
 };
 
-[LegacyNamespace=WebAssembly, Constructor(GlobalDescriptor descriptor, optional any v), Exposed=(Window,Worker,Worklet)]
+[LegacyNamespace=WebAssembly]
+interface RuntimeError {
+};
+
+[LegacyNamespace=WebAssembly, Constructor( BufferSource bytes ), Exposed=(Window,Worker,Worklet)]
+interface Module {
+  static sequence<ArrayBuffer> customSections( Module moduleObject, DOMString sectionName );
+  static sequence<ModuleExportDescriptor> exports( Module moduleObject );
+  static sequence<ModuleImportDescriptor> imports( Module moduleObject );
+};
+
+[LegacyNamespace=WebAssembly]
+interface LinkError {
+};
+
+[LegacyNamespace=WebAssembly, Constructor( GlobalDescriptor descriptor, optional any v ), Exposed=(Window,Worker,Worklet)]
 interface Global {
-  any valueOf();
   attribute any value;
+  any valueOf();
 };
-
-[LegacyNamespace=WebAssembly]
-interface CompileError { };
-
-[LegacyNamespace=WebAssembly]
-interface LinkError { };
-
-[LegacyNamespace=WebAssembly]
-interface RuntimeError { };

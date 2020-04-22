@@ -1,30 +1,31 @@
-partial interface Screen {
-  [SameObject] readonly attribute ScreenOrientation orientation;
+enum OrientationLockType {
+  "any",
+  "landscape",
+  "landscape-primary",
+  "landscape-secondary",
+  "natural",
+  "portrait",
+  "portrait-primary",
+  "portrait-secondary"
+};
+
+enum OrientationType {
+  "landscape-primary",
+  "landscape-secondary",
+  "portrait-primary",
+  "portrait-secondary"
 };
 
 [Exposed=Window]
 interface ScreenOrientation : EventTarget {
-  Promise<void> lock(OrientationLockType orientation);
-  void unlock();
-  readonly attribute OrientationType type;
   readonly attribute unsigned short angle;
+  readonly attribute OrientationType type;
   attribute EventHandler onchange;
+  Promise<void> lock( OrientationLockType orientation );
+  void unlock();
 };
 
-enum OrientationLockType {
-  "any",
-  "natural",
-  "landscape",
-  "portrait",
-  "portrait-primary",
-  "portrait-secondary",
-  "landscape-primary",
-  "landscape-secondary"
-};
-
-enum OrientationType {
-  "portrait-primary",
-  "portrait-secondary",
-  "landscape-primary",
-  "landscape-secondary"
+partial interface Screen {
+  [SameObject]
+  readonly attribute ScreenOrientation orientation;
 };

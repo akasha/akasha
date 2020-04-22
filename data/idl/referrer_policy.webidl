@@ -2,10 +2,10 @@ enum ReferrerPolicy {
   "",
   "no-referrer",
   "no-referrer-when-downgrade",
-  "same-origin",
   "origin",
-  "strict-origin",
   "origin-when-cross-origin",
+  "same-origin",
+  "strict-origin",
   "strict-origin-when-cross-origin",
   "unsafe-url"
 };

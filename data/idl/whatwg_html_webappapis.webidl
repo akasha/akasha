@@ -1,46 +1,46 @@
-[Exposed=(Window,Worker)]
-interface ErrorEvent : Event {
-  constructor(DOMString type, optional ErrorEventInit eventInitDict = {});
+typedef ( DOMString or Function ) TimerHandler;
 
-  readonly attribute DOMString message;
-  readonly attribute USVString filename;
-  readonly attribute unsigned long lineno;
-  readonly attribute unsigned long colno;
-  readonly attribute any error;
-};
+typedef OnBeforeUnloadEventHandlerNonNull? OnBeforeUnloadEventHandler;
 
-dictionary ErrorEventInit : EventInit {
-  DOMString message = "";
-  USVString filename = "";
-  unsigned long lineno = 0;
-  unsigned long colno = 0;
-  any error = null;
-};
+typedef EventHandlerNonNull? EventHandler;
 
-[Exposed=(Window,Worker)]
-interface PromiseRejectionEvent : Event {
-  constructor(DOMString type, PromiseRejectionEventInit eventInitDict);
+typedef OnErrorEventHandlerNonNull? OnErrorEventHandler;
 
-  readonly attribute Promise<any> promise;
-  readonly attribute any reason;
-};
+[LegacyTreatNonObjectAsNull]
+callback OnErrorEventHandlerNonNull = any ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
+
+[LegacyTreatNonObjectAsNull]
+callback EventHandlerNonNull = any ( Event event );
+
+[LegacyTreatNonObjectAsNull]
+callback OnBeforeUnloadEventHandlerNonNull = DOMString? ( Event event );
 
 dictionary PromiseRejectionEventInit : EventInit {
   required Promise<any> promise;
   any reason;
 };
 
-[TreatNonObjectAsNull]
-callback EventHandlerNonNull = any (Event event);
-typedef EventHandlerNonNull? EventHandler;
+dictionary ErrorEventInit : EventInit {
+  unsigned long colno = 0;
+  any error = null;
+  USVString filename = "";
+  unsigned long lineno = 0;
+  DOMString message = "";
+};
 
-[TreatNonObjectAsNull]
-callback OnErrorEventHandlerNonNull = any ((Event or DOMString) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error);
-typedef OnErrorEventHandlerNonNull? OnErrorEventHandler;
-
-[TreatNonObjectAsNull]
-callback OnBeforeUnloadEventHandlerNonNull = DOMString? (Event event);
-typedef OnBeforeUnloadEventHandlerNonNull? OnBeforeUnloadEventHandler;
+interface mixin WindowOrWorkerGlobalScope {
+  [Replaceable]
+  readonly attribute USVString origin;
+  ByteString atob( DOMString data );
+  DOMString btoa( DOMString data );
+  void clearInterval( optional long handle = 0 );
+  void clearTimeout( optional long handle = 0 );
+  Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
+  Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
+  void queueMicrotask( VoidFunction callback );
+  long setInterval( TimerHandler handler, optional long timeout = 0, any... arguments );
+  long setTimeout( TimerHandler handler, optional long timeout = 0, any... arguments );
+};
 
 interface mixin GlobalEventHandlers {
   attribute EventHandler onabort;
@@ -79,8 +79,10 @@ interface mixin GlobalEventHandlers {
   attribute EventHandler onloadedmetadata;
   attribute EventHandler onloadstart;
   attribute EventHandler onmousedown;
-  [LenientThis] attribute EventHandler onmouseenter;
-  [LenientThis] attribute EventHandler onmouseleave;
+  [LegacyLenientThis]
+  attribute EventHandler onmouseenter;
+  [LegacyLenientThis]
+  attribute EventHandler onmouseleave;
   attribute EventHandler onmousemove;
   attribute EventHandler onmouseout;
   attribute EventHandler onmouseover;
@@ -112,6 +114,12 @@ interface mixin GlobalEventHandlers {
   attribute EventHandler onwheel;
 };
 
+interface mixin DocumentAndElementEventHandlers {
+  attribute EventHandler oncopy;
+  attribute EventHandler oncut;
+  attribute EventHandler onpaste;
+};
+
 interface mixin WindowEventHandlers {
   attribute EventHandler onafterprint;
   attribute EventHandler onbeforeprint;
@@ -131,33 +139,23 @@ interface mixin WindowEventHandlers {
   attribute EventHandler onunload;
 };
 
-interface mixin DocumentAndElementEventHandlers {
-  attribute EventHandler oncopy;
-  attribute EventHandler oncut;
-  attribute EventHandler onpaste;
+[Exposed=(Window,Worker)]
+interface ErrorEvent : Event {
+  readonly attribute unsigned long colno;
+  readonly attribute any error;
+  readonly attribute USVString filename;
+  readonly attribute unsigned long lineno;
+  readonly attribute DOMString message;
+  constructor( DOMString type, optional ErrorEventInit eventInitDict = {} );
 };
 
-typedef (DOMString or Function) TimerHandler;
-
-interface mixin WindowOrWorkerGlobalScope {
-  [Replaceable] readonly attribute USVString origin;
-
-  // base64 utility methods
-  DOMString btoa(DOMString data);
-  ByteString atob(DOMString data);
-
-  // timers
-  long setTimeout(TimerHandler handler, optional long timeout = 0, any... arguments);
-  void clearTimeout(optional long handle = 0);
-  long setInterval(TimerHandler handler, optional long timeout = 0, any... arguments);
-  void clearInterval(optional long handle = 0);
-
-  // microtask queuing
-  void queueMicrotask(VoidFunction callback);
-
-  // ImageBitmap
-  Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, optional ImageBitmapOptions options = {});
-  Promise<ImageBitmap> createImageBitmap(ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {});
+[Exposed=(Window,Worker)]
+interface PromiseRejectionEvent : Event {
+  readonly attribute Promise<any> promise;
+  readonly attribute any reason;
+  constructor( DOMString type, PromiseRejectionEventInit eventInitDict );
 };
-Window includes WindowOrWorkerGlobalScope;
+
 WorkerGlobalScope includes WindowOrWorkerGlobalScope;
+
+Window includes WindowOrWorkerGlobalScope;

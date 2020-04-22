@@ -1,5 +1,5 @@
-Navigator includes NavigatorAutomationInformation;
-
 interface mixin NavigatorAutomationInformation {
-    readonly attribute boolean webdriver;
+  readonly attribute boolean webdriver;
 };
+
+Navigator includes NavigatorAutomationInformation;

@@ -1,11 +1,47 @@
+enum PermissionState {
+  "denied",
+  "granted",
+  "prompt"
+};
+
+enum PermissionName {
+  "accelerometer",
+  "ambient-light-sensor",
+  "background-sync",
+  "bluetooth",
+  "camera",
+  "clipboard",
+  "device-info",
+  "geolocation",
+  "gyroscope",
+  "magnetometer",
+  "microphone",
+  "midi",
+  "notifications",
+  "persistent-storage",
+  "push",
+  "speaker"
+};
+
+dictionary DevicePermissionDescriptor : PermissionDescriptor {
+  DOMString deviceId;
+};
+
+dictionary PushPermissionDescriptor : PermissionDescriptor {
+  boolean userVisibleOnly = false;
+};
+
 dictionary PermissionDescriptor {
   required PermissionName name;
 };
 
-enum PermissionState {
-  "granted",
-  "denied",
-  "prompt",
+dictionary MidiPermissionDescriptor : PermissionDescriptor {
+  boolean sysex = false;
+};
+
+[Exposed=(Window,Worker)]
+interface Permissions {
+  Promise<PermissionStatus> query( object permissionDesc );
 };
 
 [Exposed=(Window,Worker)]
@@ -22,40 +58,4 @@ partial interface Navigator {
 [Exposed=(Worker)]
 partial interface WorkerNavigator {
   readonly attribute Permissions permissions;
-};
-
-[Exposed=(Window,Worker)]
-interface Permissions {
-  Promise<PermissionStatus> query(object permissionDesc);
-};
-
-enum PermissionName {
-  "geolocation",
-  "notifications",
-  "push",
-  "midi",
-  "camera",
-  "microphone",
-  "speaker",
-  "device-info",
-  "background-sync",
-  "bluetooth",
-  "persistent-storage",
-  "ambient-light-sensor",
-  "accelerometer",
-  "gyroscope",
-  "magnetometer",
-  "clipboard",
-};
-
-dictionary PushPermissionDescriptor : PermissionDescriptor {
-  boolean userVisibleOnly = false;
-};
-
-dictionary MidiPermissionDescriptor : PermissionDescriptor {
-  boolean sysex = false;
-};
-
-dictionary DevicePermissionDescriptor : PermissionDescriptor {
-  DOMString deviceId;
 };

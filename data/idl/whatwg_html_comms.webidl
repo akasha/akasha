@@ -1,22 +1,20 @@
-[Exposed=(Window,Worker,AudioWorklet)]
-interface MessageEvent : Event {
-  constructor(DOMString type, optional MessageEventInit eventInitDict = {});
-
-  readonly attribute any data;
-  readonly attribute USVString origin;
-  readonly attribute DOMString lastEventId;
-  readonly attribute MessageEventSource? source;
-  readonly attribute FrozenArray<MessagePort> ports;
-
-  void initMessageEvent(DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any data = null, optional USVString origin = "", optional DOMString lastEventId = "", optional MessageEventSource? source = null, optional sequence<MessagePort> ports = []);
-};
+typedef ( WindowProxy or MessagePort or ServiceWorker ) MessageEventSource;
 
 dictionary MessageEventInit : EventInit {
   any data = null;
-  USVString origin = "";
   DOMString lastEventId = "";
-  MessageEventSource? source = null;
+  USVString origin = "";
   sequence<MessagePort> ports = [];
+  MessageEventSource? source = null;
 };
 
-typedef (WindowProxy or MessagePort or ServiceWorker) MessageEventSource;
+[Exposed=(Window,Worker,AudioWorklet)]
+interface MessageEvent : Event {
+  readonly attribute any data;
+  readonly attribute DOMString lastEventId;
+  readonly attribute USVString origin;
+  readonly attribute FrozenArray<MessagePort> ports;
+  readonly attribute MessageEventSource? source;
+  constructor( DOMString type, optional MessageEventInit eventInitDict = {} );
+  void initMessageEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any data = null, optional USVString origin = "", optional DOMString lastEventId = "", optional MessageEventSource? source = null, optional sequence<MessagePort> ports = [] );
+};

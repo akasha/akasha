@@ -1,30 +1,30 @@
 enum FullscreenNavigationUI {
   "auto",
-  "show",
-  "hide"
+  "hide",
+  "show"
 };
 
 dictionary FullscreenOptions {
   FullscreenNavigationUI navigationUI = "auto";
 };
 
-partial interface Element {
-  Promise<void> requestFullscreen(optional FullscreenOptions options = {});
+partial interface mixin DocumentOrShadowRoot {
+  [LegacyLenientSetter]
+  readonly attribute Element? fullscreenElement;
+};
 
+partial interface Element {
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
+  Promise<void> requestFullscreen( optional FullscreenOptions options = {} );
 };
 
 partial interface Document {
-  [LenientSetter] readonly attribute boolean fullscreenEnabled;
-  [LenientSetter, Unscopable] readonly attribute boolean fullscreen; // historical
-
-  Promise<void> exitFullscreen();
-
+  [LegacyLenientSetter, Unscopable]
+  readonly attribute boolean fullscreen;
+  [LegacyLenientSetter]
+  readonly attribute boolean fullscreenEnabled;
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
-};
-
-partial interface mixin DocumentOrShadowRoot {
-  [LenientSetter] readonly attribute Element? fullscreenElement;
+  Promise<void> exitFullscreen();
 };

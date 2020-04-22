@@ -1,41 +1,53 @@
 [Exposed=Window]
-interface HTMLAnchorElement : HTMLElement {
-  [HTMLConstructor] constructor();
-
-  [CEReactions] attribute DOMString target;
-  [CEReactions] attribute DOMString download;
-  [CEReactions] attribute USVString ping;
-  [CEReactions] attribute DOMString rel;
-  [SameObject, PutForwards=value] readonly attribute DOMTokenList relList;
-  [CEReactions] attribute DOMString hreflang;
-  [CEReactions] attribute DOMString type;
-
-  [CEReactions] attribute DOMString text;
-
-  [CEReactions] attribute DOMString referrerPolicy;
-};
-HTMLAnchorElement includes HTMLHyperlinkElementUtils;
-
-[Exposed=Window]
 interface HTMLDataElement : HTMLElement {
-  [HTMLConstructor] constructor();
-
-  [CEReactions] attribute DOMString value;
-};
-
-[Exposed=Window]
-interface HTMLTimeElement : HTMLElement {
-  [HTMLConstructor] constructor();
-
-  [CEReactions] attribute DOMString dateTime;
+  [CEReactions]
+  attribute DOMString value;
+  [HTMLConstructor]
+  constructor();
 };
 
 [Exposed=Window]
 interface HTMLSpanElement : HTMLElement {
-  [HTMLConstructor] constructor();
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLAnchorElement : HTMLElement {
+  [SameObject, PutForwards=value]
+  readonly attribute DOMTokenList relList;
+  [CEReactions]
+  attribute DOMString download;
+  [CEReactions]
+  attribute DOMString hreflang;
+  [CEReactions]
+  attribute USVString ping;
+  [CEReactions]
+  attribute DOMString referrerPolicy;
+  [CEReactions]
+  attribute DOMString rel;
+  [CEReactions]
+  attribute DOMString target;
+  [CEReactions]
+  attribute DOMString text;
+  [CEReactions]
+  attribute DOMString type;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLTimeElement : HTMLElement {
+  [CEReactions]
+  attribute DOMString dateTime;
+  [HTMLConstructor]
+  constructor();
 };
 
 [Exposed=Window]
 interface HTMLBRElement : HTMLElement {
-  [HTMLConstructor] constructor();
+  [HTMLConstructor]
+  constructor();
 };
+
+HTMLAnchorElement includes HTMLHyperlinkElementUtils;

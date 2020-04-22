@@ -1,23 +1,18 @@
-[Exposed=(Window,Worker)]
-interface EventSource : EventTarget {
-  constructor(USVString url, optional EventSourceInit eventSourceInitDict = {});
-
-  readonly attribute USVString url;
-  readonly attribute boolean withCredentials;
-
-  // ready state
-  const unsigned short CONNECTING = 0;
-  const unsigned short OPEN = 1;
-  const unsigned short CLOSED = 2;
-  readonly attribute unsigned short readyState;
-
-  // networking
-  attribute EventHandler onopen;
-  attribute EventHandler onmessage;
-  attribute EventHandler onerror;
-  void close();
-};
-
 dictionary EventSourceInit {
   boolean withCredentials = false;
+};
+
+[Exposed=(Window,Worker)]
+interface EventSource : EventTarget {
+  const unsigned short CLOSED = 2;
+  const unsigned short CONNECTING = 0;
+  const unsigned short OPEN = 1;
+  readonly attribute unsigned short readyState;
+  readonly attribute USVString url;
+  readonly attribute boolean withCredentials;
+  attribute EventHandler onerror;
+  attribute EventHandler onmessage;
+  attribute EventHandler onopen;
+  constructor( USVString url, optional EventSourceInit eventSourceInitDict = {} );
+  void close();
 };

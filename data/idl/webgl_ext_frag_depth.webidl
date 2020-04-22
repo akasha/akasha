@@ -1,3 +1,3 @@
-[NoInterfaceObject]
-    interface EXT_frag_depth {
-    };
+[LegacyNoInterfaceObject]
+interface EXT_frag_depth {
+};

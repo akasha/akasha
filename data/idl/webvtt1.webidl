@@ -1,35 +1,64 @@
-enum AutoKeyword { "auto" };
-typedef (double or AutoKeyword) LineAndPositionSetting;
-enum DirectionSetting { "" /* horizontal */, "rl", "lr" };
-enum LineAlignSetting { "start", "center", "end" };
-enum PositionAlignSetting { "line-left", "center", "line-right", "auto" };
-enum AlignSetting { "start", "center", "end", "left", "right" };
-[Exposed=Window,
- Constructor(double startTime, double endTime, DOMString text)]
+enum ScrollSetting {
+  "",
+  "up"
+};
+
+enum PositionAlignSetting {
+  "auto",
+  "center",
+  "line-left",
+  "line-right"
+};
+
+enum DirectionSetting {
+  "",
+  "lr",
+  "rl"
+};
+
+enum AlignSetting {
+  "center",
+  "end",
+  "left",
+  "right",
+  "start"
+};
+
+enum LineAlignSetting {
+  "center",
+  "end",
+  "start"
+};
+
+enum AutoKeyword {
+  "auto"
+};
+
+typedef ( double or AutoKeyword ) LineAndPositionSetting;
+
+[Exposed=Window, Constructor]
+interface VTTRegion {
+  attribute DOMString id;
+  attribute unsigned long lines;
+  attribute double regionAnchorX;
+  attribute double regionAnchorY;
+  attribute ScrollSetting scroll;
+  attribute double viewportAnchorX;
+  attribute double viewportAnchorY;
+  attribute double width;
+};
+
+[Exposed=Window, Constructor( double startTime, double endTime, DOMString text )]
 interface VTTCue : TextTrackCue {
-  attribute VTTRegion? region;
-  attribute DirectionSetting vertical;
-  attribute boolean snapToLines;
+  attribute AlignSetting align;
   attribute LineAndPositionSetting line;
   attribute LineAlignSetting lineAlign;
   attribute LineAndPositionSetting position;
   attribute PositionAlignSetting positionAlign;
+  attribute VTTRegion? region;
   attribute double size;
-  attribute AlignSetting align;
+  attribute boolean snapToLines;
   attribute DOMString text;
+  attribute DirectionSetting vertical;
   DocumentFragment getCueAsHTML();
-};
-
-enum ScrollSetting { "" /* none */, "up" };
-[Exposed=Window,
- Constructor]
-interface VTTRegion {
-  attribute DOMString id;
-  attribute double width;
-  attribute unsigned long lines;
-  attribute double regionAnchorX;
-  attribute double regionAnchorY;
-  attribute double viewportAnchorX;
-  attribute double viewportAnchorY;
-  attribute ScrollSetting scroll;
 };

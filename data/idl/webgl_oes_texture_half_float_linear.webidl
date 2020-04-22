@@ -1,2 +1,3 @@
-[NoInterfaceObject]
-interface OES_texture_half_float_linear { };
+[LegacyNoInterfaceObject]
+interface OES_texture_half_float_linear {
+};

@@ -1,39 +1,42 @@
-partial interface Performance {
-        PerformanceEntryList getEntries ();
-        PerformanceEntryList getEntriesByType (DOMString type);
-        PerformanceEntryList getEntriesByName (DOMString name, optional DOMString type);
-      };
-      typedef sequence<PerformanceEntry> PerformanceEntryList;
+typedef sequence<PerformanceEntry> PerformanceEntryList;
 
-[Exposed=(Window,Worker)]
-      interface PerformanceEntry {
-        readonly    attribute DOMString           name;
-        readonly    attribute DOMString           entryType;
-        readonly    attribute DOMHighResTimeStamp startTime;
-        readonly    attribute DOMHighResTimeStamp duration;
-        [Default] object toJSON();
-      };
-
-callback PerformanceObserverCallback = void (PerformanceObserverEntryList entries,
-                                                   PerformanceObserver observer);
-      [Exposed=(Window,Worker)]
-      interface PerformanceObserver {
-        constructor(PerformanceObserverCallback callback);
-        void observe (optional PerformanceObserverInit options = {});
-        void disconnect ();
-        PerformanceEntryList takeRecords();
-        [SameObject] static readonly attribute FrozenArray<DOMString> supportedEntryTypes;
-      };
+callback PerformanceObserverCallback = void ( PerformanceObserverEntryList entries, PerformanceObserver observer );
 
 dictionary PerformanceObserverInit {
-            sequence<DOMString> entryTypes;
-            DOMString type;
-            boolean buffered;
-          };
+  boolean buffered;
+  sequence<DOMString> entryTypes;
+  DOMString type;
+};
 
 [Exposed=(Window,Worker)]
-          interface PerformanceObserverEntryList {
-            PerformanceEntryList getEntries();
-            PerformanceEntryList getEntriesByType (DOMString type);
-            PerformanceEntryList getEntriesByName (DOMString name, optional DOMString type);
-          };
+interface PerformanceEntry {
+  readonly attribute DOMHighResTimeStamp duration;
+  readonly attribute DOMString entryType;
+  readonly attribute DOMString name;
+  readonly attribute DOMHighResTimeStamp startTime;
+  [Default]
+  object toJSON();
+};
+
+[Exposed=(Window,Worker)]
+interface PerformanceObserver {
+  [SameObject]
+  static readonly attribute FrozenArray<DOMString> supportedEntryTypes;
+  constructor( PerformanceObserverCallback callback );
+  void disconnect();
+  void observe( optional PerformanceObserverInit options = {} );
+  PerformanceEntryList takeRecords();
+};
+
+[Exposed=(Window,Worker)]
+interface PerformanceObserverEntryList {
+  PerformanceEntryList getEntries();
+  PerformanceEntryList getEntriesByName( DOMString name, optional DOMString type );
+  PerformanceEntryList getEntriesByType( DOMString type );
+};
+
+partial interface Performance {
+  PerformanceEntryList getEntries();
+  PerformanceEntryList getEntriesByName( DOMString name, optional DOMString type );
+  PerformanceEntryList getEntriesByType( DOMString type );
+};

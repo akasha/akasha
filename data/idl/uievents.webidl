@@ -1,60 +1,23 @@
-[Constructor(DOMString type, optional UIEventInit eventInitDict), Exposed=Window]
-interface UIEvent : Event {
-  readonly attribute Window? view;
-  readonly attribute long detail;
+dictionary CompositionEventInit : UIEventInit {
+  DOMString data = "";
 };
 
-dictionary UIEventInit : EventInit {
-  Window? view = null;
-  long detail = 0;
-};
-
-[Constructor(DOMString type, optional FocusEventInit eventInitDict), Exposed=Window]
-interface FocusEvent : UIEvent {
-  readonly attribute EventTarget? relatedTarget;
+dictionary KeyboardEventInit : EventModifierInit {
+  DOMString code = "";
+  boolean isComposing = false;
+  DOMString key = "";
+  unsigned long location = 0;
+  boolean repeat = false;
 };
 
 dictionary FocusEventInit : UIEventInit {
   EventTarget? relatedTarget = null;
 };
 
-[Constructor(DOMString type, optional MouseEventInit eventInitDict), Exposed=Window]
-interface MouseEvent : UIEvent {
-  readonly attribute long screenX;
-  readonly attribute long screenY;
-  readonly attribute long clientX;
-  readonly attribute long clientY;
-
-  readonly attribute boolean ctrlKey;
-  readonly attribute boolean shiftKey;
-  readonly attribute boolean altKey;
-  readonly attribute boolean metaKey;
-
-  readonly attribute short button;
-  readonly attribute unsigned short buttons;
-
-  readonly attribute EventTarget? relatedTarget;
-
-  boolean getModifierState(DOMString keyArg);
-};
-
-dictionary MouseEventInit : EventModifierInit {
-  long screenX = 0;
-  long screenY = 0;
-  long clientX = 0;
-  long clientY = 0;
-
-  short button = 0;
-  unsigned short buttons = 0;
-  EventTarget? relatedTarget = null;
-};
-
 dictionary EventModifierInit : UIEventInit {
-  boolean ctrlKey = false;
-  boolean shiftKey = false;
   boolean altKey = false;
+  boolean ctrlKey = false;
   boolean metaKey = false;
-
   boolean modifierAltGraph = false;
   boolean modifierCapsLock = false;
   boolean modifierFn = false;
@@ -65,88 +28,110 @@ dictionary EventModifierInit : UIEventInit {
   boolean modifierSuper = false;
   boolean modifierSymbol = false;
   boolean modifierSymbolLock = false;
+  boolean shiftKey = false;
 };
 
-[Constructor(DOMString type, optional WheelEventInit eventInitDict), Exposed=Window]
-interface WheelEvent : MouseEvent {
-  // DeltaModeCode
-  const unsigned long DOM_DELTA_PIXEL = 0x00;
-  const unsigned long DOM_DELTA_LINE  = 0x01;
-  const unsigned long DOM_DELTA_PAGE  = 0x02;
-
-  readonly attribute double deltaX;
-  readonly attribute double deltaY;
-  readonly attribute double deltaZ;
-  readonly attribute unsigned long deltaMode;
+dictionary UIEventInit : EventInit {
+  long detail = 0;
+  Window? view = null;
 };
 
 dictionary WheelEventInit : MouseEventInit {
+  unsigned long deltaMode = 0;
   double deltaX = 0.0;
   double deltaY = 0.0;
   double deltaZ = 0.0;
-  unsigned long deltaMode = 0;
 };
 
-[Constructor(DOMString type, optional InputEventInit eventInitDict), Exposed=Window]
-interface InputEvent : UIEvent {
-  readonly attribute DOMString? data;
-  readonly attribute boolean isComposing;
-  readonly attribute DOMString inputType;
+dictionary MouseEventInit : EventModifierInit {
+  short button = 0;
+  unsigned short buttons = 0;
+  long clientX = 0;
+  long clientY = 0;
+  EventTarget? relatedTarget = null;
+  long screenX = 0;
+  long screenY = 0;
 };
 
 dictionary InputEventInit : UIEventInit {
   DOMString? data = "";
-  boolean isComposing = false;
   DOMString inputType = "";
-};
-
-[Constructor(DOMString type, optional KeyboardEventInit eventInitDict), Exposed=Window]
-interface KeyboardEvent : UIEvent {
-  // KeyLocationCode
-  const unsigned long DOM_KEY_LOCATION_STANDARD = 0x00;
-  const unsigned long DOM_KEY_LOCATION_LEFT = 0x01;
-  const unsigned long DOM_KEY_LOCATION_RIGHT = 0x02;
-  const unsigned long DOM_KEY_LOCATION_NUMPAD = 0x03;
-
-  readonly attribute DOMString key;
-  readonly attribute DOMString code;
-  readonly attribute unsigned long location;
-
-  readonly attribute boolean ctrlKey;
-  readonly attribute boolean shiftKey;
-  readonly attribute boolean altKey;
-  readonly attribute boolean metaKey;
-
-  readonly attribute boolean repeat;
-  readonly attribute boolean isComposing;
-
-  boolean getModifierState(DOMString keyArg);
-};
-
-dictionary KeyboardEventInit : EventModifierInit {
-  DOMString key = "";
-  DOMString code = "";
-  unsigned long location = 0;
-  boolean repeat = false;
   boolean isComposing = false;
 };
 
-[Constructor(DOMString type, optional CompositionEventInit eventInitDict), Exposed=Window]
+[Constructor( DOMString type, optional UIEventInit eventInitDict ), Exposed=Window]
+interface UIEvent : Event {
+  readonly attribute long detail;
+  readonly attribute Window? view;
+};
+
+[Constructor( DOMString type, optional WheelEventInit eventInitDict ), Exposed=Window]
+interface WheelEvent : MouseEvent {
+  const unsigned long DOM_DELTA_LINE = 0x01;
+  const unsigned long DOM_DELTA_PAGE = 0x02;
+  const unsigned long DOM_DELTA_PIXEL = 0x00;
+  readonly attribute unsigned long deltaMode;
+  readonly attribute double deltaX;
+  readonly attribute double deltaY;
+  readonly attribute double deltaZ;
+};
+
+[Constructor( DOMString type, optional MouseEventInit eventInitDict ), Exposed=Window]
+interface MouseEvent : UIEvent {
+  readonly attribute boolean altKey;
+  readonly attribute short button;
+  readonly attribute unsigned short buttons;
+  readonly attribute long clientX;
+  readonly attribute long clientY;
+  readonly attribute boolean ctrlKey;
+  readonly attribute boolean metaKey;
+  readonly attribute EventTarget? relatedTarget;
+  readonly attribute long screenX;
+  readonly attribute long screenY;
+  readonly attribute boolean shiftKey;
+  boolean getModifierState( DOMString keyArg );
+};
+
+[Constructor( DOMString type, optional KeyboardEventInit eventInitDict ), Exposed=Window]
+interface KeyboardEvent : UIEvent {
+  const unsigned long DOM_KEY_LOCATION_LEFT = 0x01;
+  const unsigned long DOM_KEY_LOCATION_NUMPAD = 0x03;
+  const unsigned long DOM_KEY_LOCATION_RIGHT = 0x02;
+  const unsigned long DOM_KEY_LOCATION_STANDARD = 0x00;
+  readonly attribute boolean altKey;
+  readonly attribute DOMString code;
+  readonly attribute boolean ctrlKey;
+  readonly attribute boolean isComposing;
+  readonly attribute DOMString key;
+  readonly attribute unsigned long location;
+  readonly attribute boolean metaKey;
+  readonly attribute boolean repeat;
+  readonly attribute boolean shiftKey;
+  boolean getModifierState( DOMString keyArg );
+};
+
+[Constructor( DOMString type, optional InputEventInit eventInitDict ), Exposed=Window]
+interface InputEvent : UIEvent {
+  readonly attribute DOMString? data;
+  readonly attribute DOMString inputType;
+  readonly attribute boolean isComposing;
+};
+
+[Constructor( DOMString type, optional FocusEventInit eventInitDict ), Exposed=Window]
+interface FocusEvent : UIEvent {
+  readonly attribute EventTarget? relatedTarget;
+};
+
+[Constructor( DOMString type, optional CompositionEventInit eventInitDict ), Exposed=Window]
 interface CompositionEvent : UIEvent {
   readonly attribute DOMString data;
 };
 
-dictionary CompositionEventInit : UIEventInit {
-  DOMString data = "";
-};
-
 partial interface UIEvent {
-  // The following support legacy user agents
   readonly attribute unsigned long which;
 };
 
 partial interface KeyboardEvent {
-  // The following support legacy user agents
   readonly attribute unsigned long charCode;
   readonly attribute unsigned long keyCode;
 };

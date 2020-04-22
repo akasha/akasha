@@ -1,2 +1,3 @@
-[NoInterfaceObject]
-interface OES_texture_float { };
+[LegacyNoInterfaceObject]
+interface OES_texture_float {
+};

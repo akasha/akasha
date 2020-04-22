@@ -1,30 +1,12 @@
 enum SelectionMode {
-  "select",
-  "start",
   "end",
-  "preserve" // default
+  "preserve",
+  "select",
+  "start"
 };
 
-[Exposed=Window]
-interface ValidityState {
-  readonly attribute boolean valueMissing;
-  readonly attribute boolean typeMismatch;
-  readonly attribute boolean patternMismatch;
-  readonly attribute boolean tooLong;
-  readonly attribute boolean tooShort;
-  readonly attribute boolean rangeUnderflow;
-  readonly attribute boolean rangeOverflow;
-  readonly attribute boolean stepMismatch;
-  readonly attribute boolean badInput;
-  readonly attribute boolean customError;
-  readonly attribute boolean valid;
-};
-
-[Exposed=Window]
-interface SubmitEvent : Event {
-  constructor(DOMString type, optional SubmitEventInit eventInitDict = {});
-
-  readonly attribute HTMLElement? submitter;
+dictionary FormDataEventInit : EventInit {
+  required FormData formData;
 };
 
 dictionary SubmitEventInit : EventInit {
@@ -32,12 +14,28 @@ dictionary SubmitEventInit : EventInit {
 };
 
 [Exposed=Window]
-interface FormDataEvent : Event {
-  constructor(DOMString type, FormDataEventInit eventInitDict);
-
-  readonly attribute FormData formData;
+interface ValidityState {
+  readonly attribute boolean badInput;
+  readonly attribute boolean customError;
+  readonly attribute boolean patternMismatch;
+  readonly attribute boolean rangeOverflow;
+  readonly attribute boolean rangeUnderflow;
+  readonly attribute boolean stepMismatch;
+  readonly attribute boolean tooLong;
+  readonly attribute boolean tooShort;
+  readonly attribute boolean typeMismatch;
+  readonly attribute boolean valid;
+  readonly attribute boolean valueMissing;
 };
 
-dictionary FormDataEventInit : EventInit {
-  required FormData formData;
+[Exposed=Window]
+interface SubmitEvent : Event {
+  readonly attribute HTMLElement? submitter;
+  constructor( DOMString type, optional SubmitEventInit eventInitDict = {} );
+};
+
+[Exposed=Window]
+interface FormDataEvent : Event {
+  readonly attribute FormData formData;
+  constructor( DOMString type, FormDataEventInit eventInitDict );
 };
