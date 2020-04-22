@@ -53,8 +53,8 @@ public final class PartialDictionaryDefinitionTest
     final String emittedIDL = writer.toString();
     final List<Definition> definitions = WebIDLModelParser.parse( createParser( emittedIDL ).definitions() );
     assertEquals( definitions.size(), 1 );
-    assertTrue( definitions.get( 0 ) instanceof DictionaryDefinition );
-    final DictionaryDefinition element = (DictionaryDefinition) definitions.get( 0 );
+    assertTrue( definitions.get( 0 ) instanceof PartialDictionaryDefinition );
+    final PartialDictionaryDefinition element = (PartialDictionaryDefinition) definitions.get( 0 );
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );
 

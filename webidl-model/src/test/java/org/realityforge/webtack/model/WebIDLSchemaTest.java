@@ -277,7 +277,7 @@ public final class WebIDLSchemaTest
     assertEquals( schema.getPartialNamespaces().size(), 0 );
     assertEquals( schema.getEnumerations().size(), 6 );
     assertEquals( schema.getDictionaries().size(), 7 );
-    assertEquals( schema.getPartialDictionaries().size(), 0 );
+    assertEquals( schema.getPartialDictionaries().size(), 1 );
     assertEquals( schema.getIncludes().size(), 0 );
     assertEquals( schema.getInterfaces().size(), 19 );
     assertEquals( schema.getPartialInterfaces().size(), 0 );

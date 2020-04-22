@@ -380,7 +380,7 @@ public final class WebIDLWriter
     throws IOException
   {
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
-    writer.write( "dictionary " );
+    writer.write( "partial dictionary " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
     final List<DictionaryMember> members = definition.getMembers()
