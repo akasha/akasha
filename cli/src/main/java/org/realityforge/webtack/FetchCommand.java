@@ -131,9 +131,9 @@ final class FetchCommand
       {
         final Path file = result.getPath();
         source.setLastModifiedTime( result.getLastModifiedTime() );
-        if ( logger.isLoggable( Level.INFO ) )
+        if ( logger.isLoggable( Level.FINE ) )
         {
-          logger.log( Level.INFO, "Fetched source named '" + sourceName + "' to " + file );
+          logger.log( Level.FINE, "Fetched source named '" + sourceName + "' to " + file );
         }
         final Path target = context.environment().getPathForSource( source );
 
