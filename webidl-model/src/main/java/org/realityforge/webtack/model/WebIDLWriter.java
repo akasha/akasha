@@ -559,7 +559,7 @@ public final class WebIDLWriter
                  .thenComparing( ( o1, o2 ) -> {
                    final String name1 = o1.getName();
                    final String name2 = o2.getName();
-                   return null == name1 ? 1 : null == name2 ? -1 : name1.compareTo( name2z );
+                   return null == name1 ? 1 : null == name2 ? -1 : name1.compareTo( name2 );
                  } )
       )
       .collect( Collectors.toList() );
