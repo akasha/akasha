@@ -213,9 +213,9 @@ final class FetchCommand
       }
       else
       {
-        if ( logger.isLoggable( Level.INFO ) )
+        if ( logger.isLoggable( Level.FINE ) )
         {
-          logger.log( Level.INFO, "Source named '" + sourceName + "' needs to have IDL extracted." );
+          logger.log( Level.FINE, "Source named '" + sourceName + "' needs to have IDL extracted." );
         }
         // Cache a copy of downloaded html from which WebIDL was extracted
         Files.copy( input, output.getParent().resolve( sourceName + ".html" ), StandardCopyOption.REPLACE_EXISTING );
