@@ -177,7 +177,7 @@ public final class InterfaceDefinition
       final Set<ConstMember> otherConstants = new HashSet<>( other._constants );
       for ( final ConstMember member : _constants )
       {
-        if ( !otherConstants.remove( member ) )
+        if ( !otherConstants.removeIf( member::equiv ) )
         {
           return false;
         }
@@ -185,7 +185,7 @@ public final class InterfaceDefinition
       final Set<AttributeMember> otherAttributes = new HashSet<>( other._attributes );
       for ( final AttributeMember member : _attributes )
       {
-        if ( !otherAttributes.remove( member ) )
+        if ( !otherAttributes.removeIf( member::equiv ) )
         {
           return false;
         }
@@ -193,7 +193,7 @@ public final class InterfaceDefinition
       final Set<OperationMember> otherOperations = new HashSet<>( other._operations );
       for ( final OperationMember member : _operations )
       {
-        if ( !otherOperations.remove( member ) )
+        if ( !otherOperations.removeIf( member::equiv ) )
         {
           return false;
         }

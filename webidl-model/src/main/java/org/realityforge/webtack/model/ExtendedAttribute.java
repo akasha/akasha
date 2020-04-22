@@ -229,10 +229,10 @@ public final class ExtendedAttribute
       }
       if ( null != _argList )
       {
-        final Set<Argument> otherValues = new HashSet<>( other._argList );
-        for ( final Argument value : _argList )
+        final Set<Argument> otherArguments = new HashSet<>( other._argList );
+        for ( final Argument argument : _argList )
         {
-          if ( !otherValues.remove( value ) )
+          if ( !otherArguments.removeIf( argument::equiv ) )
           {
             return false;
           }

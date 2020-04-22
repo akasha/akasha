@@ -82,7 +82,7 @@ public final class CallbackInterfaceDefinition
       final Set<ConstMember> otherConstants = new HashSet<>( other._constants );
       for ( final ConstMember member : _constants )
       {
-        if ( !otherConstants.remove( member ) )
+        if ( !otherConstants.removeIf( member::equiv ) )
         {
           return false;
         }

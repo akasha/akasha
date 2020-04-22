@@ -62,7 +62,7 @@ public abstract class Element
       final Set<ExtendedAttribute> otherAttr = new HashSet<>( otherAttributes );
       for ( final ExtendedAttribute extendedAttribute : _extendedAttributes )
       {
-        if ( !otherAttr.remove( extendedAttribute ) )
+        if ( !otherAttr.removeIf( extendedAttribute::equiv ) )
         {
           return false;
         }

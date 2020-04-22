@@ -70,7 +70,7 @@ public final class PartialDictionaryDefinition
       final Set<DictionaryMember> otherMembers = new HashSet<>( other._members );
       for ( final DictionaryMember member : _members )
       {
-        if ( !otherMembers.remove( member ) )
+        if ( !otherMembers.removeIf( member::equiv ) )
         {
           return false;
         }

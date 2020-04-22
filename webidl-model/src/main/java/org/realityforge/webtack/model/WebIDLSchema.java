@@ -216,7 +216,7 @@ public final class WebIDLSchema
       final Set<CallbackDefinition> otherCallbacks = new HashSet<>( _callbacks.values() );
       for ( final CallbackDefinition definition : _callbacks.values() )
       {
-        if ( !otherCallbacks.remove( definition ) )
+        if ( !otherCallbacks.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -224,7 +224,7 @@ public final class WebIDLSchema
       final Set<CallbackInterfaceDefinition> otherCallbackInterfaces = new HashSet<>( _callbackInterfaces.values() );
       for ( final CallbackInterfaceDefinition definition : _callbackInterfaces.values() )
       {
-        if ( !otherCallbackInterfaces.remove( definition ) )
+        if ( !otherCallbackInterfaces.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -232,7 +232,7 @@ public final class WebIDLSchema
       final Set<DictionaryDefinition> otherDictionaries = new HashSet<>( _dictionaries.values() );
       for ( final DictionaryDefinition definition : _dictionaries.values() )
       {
-        if ( !otherDictionaries.remove( definition ) )
+        if ( !otherDictionaries.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -240,7 +240,7 @@ public final class WebIDLSchema
       final Set<EnumerationDefinition> otherEnumerations = new HashSet<>( _enumerations.values() );
       for ( final EnumerationDefinition definition : _enumerations.values() )
       {
-        if ( !otherEnumerations.remove( definition ) )
+        if ( !otherEnumerations.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -248,7 +248,7 @@ public final class WebIDLSchema
       final Set<InterfaceDefinition> otherInterfaces = new HashSet<>( _interfaces.values() );
       for ( final InterfaceDefinition definition : _interfaces.values() )
       {
-        if ( !otherInterfaces.remove( definition ) )
+        if ( !otherInterfaces.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -256,7 +256,7 @@ public final class WebIDLSchema
       final Set<MixinDefinition> otherMixins = new HashSet<>( _mixins.values() );
       for ( final MixinDefinition definition : _mixins.values() )
       {
-        if ( !otherMixins.remove( definition ) )
+        if ( !otherMixins.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -264,7 +264,7 @@ public final class WebIDLSchema
       final Set<IncludesStatement> otherIncludes = new HashSet<>( _includes.values() );
       for ( final IncludesStatement definition : _includes.values() )
       {
-        if ( !otherIncludes.remove( definition ) )
+        if ( !otherIncludes.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -272,7 +272,7 @@ public final class WebIDLSchema
       final Set<NamespaceDefinition> otherNamespaces = new HashSet<>( _namespaces.values() );
       for ( final NamespaceDefinition definition : _namespaces.values() )
       {
-        if ( !otherNamespaces.remove( definition ) )
+        if ( !otherNamespaces.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -280,7 +280,7 @@ public final class WebIDLSchema
       final Set<TypedefDefinition> otherTypedefs = new HashSet<>( _typedefs.values() );
       for ( final TypedefDefinition definition : _typedefs.values() )
       {
-        if ( !otherTypedefs.remove( definition ) )
+        if ( !otherTypedefs.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -291,7 +291,7 @@ public final class WebIDLSchema
         _partialDictionaries.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
       for ( final PartialDictionaryDefinition definition : partialDictionaries )
       {
-        if ( !otherPartialDictionaries.remove( definition ) )
+        if ( !otherPartialDictionaries.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -302,7 +302,7 @@ public final class WebIDLSchema
         _partialInterfaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
       for ( final PartialInterfaceDefinition definition : partialInterfaces )
       {
-        if ( !otherPartialInterfaces.remove( definition ) )
+        if ( !otherPartialInterfaces.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -313,7 +313,7 @@ public final class WebIDLSchema
         _partialMixins.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
       for ( final PartialMixinDefinition definition : partialMixins )
       {
-        if ( !otherPartialMixins.remove( definition ) )
+        if ( !otherPartialMixins.removeIf( definition::equiv ) )
         {
           return false;
         }
@@ -324,7 +324,7 @@ public final class WebIDLSchema
         _partialNamespaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
       for ( final PartialNamespaceDefinition definition : partialNamespaces )
       {
-        if ( !otherPartialNamespaces.remove( definition ) )
+        if ( !otherPartialNamespaces.removeIf( definition::equiv ) )
         {
           return false;
         }
