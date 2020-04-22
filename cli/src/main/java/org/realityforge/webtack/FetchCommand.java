@@ -105,13 +105,7 @@ final class FetchCommand
 
     final RepositoryConfig config = context.config();
 
-    final Set<String> sourceNames = _sourceNames.isEmpty() ?
-                                    config.getSources()
-                                      .stream()
-                                      .map( SourceConfig::getName )
-                                      .collect( Collectors.toCollection( LinkedHashSet::new ) ) :
-                                    _sourceNames;
-    for ( final String sourceName : sourceNames )
+    for ( final String sourceName : getSourceNames( config ) )
     {
       if ( logger.isLoggable( Level.INFO ) )
       {
@@ -188,6 +182,17 @@ final class FetchCommand
     {
       return ExitCodes.SUCCESS_EXIT_CODE;
     }
+  }
+
+  @Nonnull
+  private Set<String> getSourceNames( final RepositoryConfig config )
+  {
+    return _sourceNames.isEmpty() ?
+           config.getSources()
+             .stream()
+             .map( SourceConfig::getName )
+             .collect( Collectors.toCollection( LinkedHashSet::new ) ) :
+           _sourceNames;
   }
 
   private boolean extractWebIDL( @Nonnull final Logger logger,
