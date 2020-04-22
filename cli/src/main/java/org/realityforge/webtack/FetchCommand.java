@@ -107,9 +107,9 @@ final class FetchCommand
 
     for ( final String sourceName : getSourceNames( config ) )
     {
-      if ( logger.isLoggable( Level.INFO ) )
+      if ( logger.isLoggable( Level.FINE ) )
       {
-        logger.log( Level.INFO, "Fetching source named '" + sourceName + "'" );
+        logger.log( Level.FINE, "Fetching source named '" + sourceName + "'" );
       }
       final SourceConfig source = config.findSourceByName( sourceName );
       if ( null == source )
