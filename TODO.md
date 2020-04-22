@@ -10,25 +10,13 @@ complete as there is too much un-said.
 
 * Generate an error if the IDL extracted from web page is empty. Either the spec does not use WebIDL or we have incorrect matching rules.
 
-* The fetch action should fetch, parse and normalize the WebIDL and we should ditch the verify stage. 
-
-* Add boolean to source config to indicate whether it has been verified
-
 * Add quiet mode to fetch so that only actions that require download print
-
-* Add quiet mode to verify so that only messages occur on failures
-
-* Rename the "verify" command to parse as it is really only verifying that a parse was successful.
-
-* Merge the "load" and "verify" commands common parts.
 
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
   so it should be possible with a little bit of heuristics to extract the documentation for different
   members and definitions.
 
   Spec Docs: https://heycam.github.io/webidl/
-
-* Add a process that merges multiple `WebIDLSchema` classes together.
 
 * Add a process that expands the partials into the actuals and creates a new `WebIDLSchema` with result.
 
