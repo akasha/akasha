@@ -116,8 +116,7 @@ final class FetchCommand
       {
         final String message =
           "Error: Attempting to fetch source with the name '" + sourceName + "' but no such source exists.";
-        logger.log( Level.SEVERE, message );
-        return ExitCodes.ERROR_SOURCE_DOES_NOT_EXIST_CODE;
+        throw new TerminalStateException( message, ExitCodes.ERROR_SOURCE_DOES_NOT_EXIST_CODE );
       }
       final String url = source.getUrl();
       final DownloadResult result = downloadURL( url, source.getLastModifiedTime() );
@@ -149,8 +148,7 @@ final class FetchCommand
             final String message =
               "Error: Failed to create directory to contain IDL for the source with the name '" +
               sourceName + "' due to " + ioe;
-            logger.log( Level.SEVERE, message );
-            return ExitCodes.ERROR_EXTRACT_IDL_FAILED_CODE;
+            throw new TerminalStateException( message, ExitCodes.ERROR_EXTRACT_IDL_FAILED_CODE );
           }
         }
 
@@ -167,8 +165,7 @@ final class FetchCommand
           final String message =
             "Error: Failed to update config file after fetching IDL for the source with the name '" +
             sourceName + "' due to " + e;
-          logger.log( Level.SEVERE, message );
-          return ExitCodes.ERROR_SAVING_CONFIG_CODE;
+          throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_CONFIG_CODE );
         }
       }
     }
