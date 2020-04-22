@@ -556,7 +556,12 @@ public final class WebIDLWriter
       .stream()
       .sorted( Comparator
                  .comparing( OperationMember::getKind )
-                 .thenComparing( Comparator.nullsLast( Comparator.comparing( OperationMember::getName ) ) ) )
+                 .thenComparing( ( o1, o2 ) -> {
+                   final String name1 = o1.getName();
+                   final String name2 = o2.getName();
+                   return null == name1 ? 1 : null == name2 ? -1 : name1.compareTo( name2z );
+                 } )
+      )
       .collect( Collectors.toList() );
     for ( final OperationMember operation : operations )
     {
