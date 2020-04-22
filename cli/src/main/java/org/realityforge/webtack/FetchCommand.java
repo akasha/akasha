@@ -3,6 +3,8 @@ package org.realityforge.webtack;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -32,6 +34,9 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
+import org.realityforge.webtack.model.WebIDLModelParser;
+import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.WebIDLWriter;
 
 final class FetchCommand
   extends ConfigurableCommand
@@ -152,10 +157,20 @@ final class FetchCommand
           }
         }
 
-        if ( !extractWebIDL( logger, sourceName, url, file, target ) )
+        final Path tmpTarget = target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp" );
+        try
         {
-          return ExitCodes.ERROR_EXTRACT_IDL_FAILED_CODE;
+          Files.deleteIfExists( target );
+          Files.deleteIfExists( tmpTarget );
         }
+        catch ( final IOException ioe )
+        {
+          final String message =
+            "Error: Failed to removed existing files for source named '" + sourceName + "' with the error: " + ioe;
+          throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_EXISTING_IDL_CODE );
+        }
+
+        extractWebIDL( logger, sourceName, url, file, tmpTarget );
         try
         {
           RepositoryConfig.save( config.getConfigLocation(), config );
@@ -167,18 +182,109 @@ final class FetchCommand
             sourceName + "' due to " + e;
           throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_CONFIG_CODE );
         }
+        if ( _noVerify )
+        {
+          try
+          {
+            Files.move( tmpTarget, target );
+          }
+          catch ( final IOException e )
+          {
+            final String message =
+              "Error: Failed to save IDL file for the source named '" + sourceName + "' due to " + e;
+            throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_IDL_CODE );
+
+          }
+        }
+        else
+        {
+          final WebIDLSchema schema;
+          try ( final FileReader reader = new FileReader( tmpTarget.toFile() ) )
+          {
+            final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener( tmpTarget.toString() );
+            schema = WebIDLModelParser.parse( tmpTarget.toString(), reader, errorListener );
+
+            final int errorCount = errorListener.getErrorCount();
+            if ( 0 == errorCount )
+            {
+              if ( logger.isLoggable( Level.FINE ) )
+              {
+                logger.log( Level.FINE, "Source named '" + sourceName + "' parsed without errors." );
+              }
+            }
+            else
+            {
+              final String message =
+                "Error: Attempting to parse source named '" + sourceName + "' but there was " + errorCount +
+                " errors detected in the WebIDL";
+              throw new TerminalStateException( message, ExitCodes.ERROR_IDL_NOT_VALID_CODE );
+            }
+          }
+          catch ( final IOException ioe )
+          {
+            final String message =
+              "Error: Attempting to parse source with the name '" + sourceName + "' but there was an error " +
+              "reading the WebIDL for source. Error: " + ioe;
+            throw new TerminalStateException( message, ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE );
+          }
+          catch ( final Throwable t )
+          {
+            final String message =
+              "Error: Attempting to parse source with the name '" + sourceName +
+              "' but there was an unexpected error verifying source. Error: " + t;
+            throw new TerminalStateException( message, ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE );
+          }
+
+          try ( final FileWriter writer = new FileWriter( target.toFile() ) )
+          {
+            WebIDLWriter.writeSchema( writer, schema );
+          }
+          catch ( final IOException ioe )
+          {
+            final String message =
+              "Error: Failed while writing source named '" + sourceName + "' with the error: " + ioe;
+            throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_IDL_CODE );
+          }
+          final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener( tmpTarget.toString() );
+          try ( final FileReader reader = new FileReader( target.toFile() ) )
+          {
+            final WebIDLSchema reloadedSchema =
+              WebIDLModelParser.parse( target.toString(), reader, errorListener );
+            if ( !reloadedSchema.equiv( schema ) )
+            {
+              final String message =
+                "Error: Normalized WebIDL for source named '" + sourceName + "' saved to " + target +
+                " is not equivalent to WebIDL extracted to " + tmpTarget;
+              throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_IDL_CODE );
+            }
+          }
+          catch ( final IOException ioe )
+          {
+            final String message =
+              "Error: Failed reloading schema for source named '" + sourceName + "' with the error: " + ioe;
+            throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_IDL_CODE );
+          }
+          try
+          {
+            Files.deleteIfExists( tmpTarget );
+          }
+          catch ( final IOException ioe )
+          {
+            final String message =
+              "Error: Failed to removed temporary IDL file for source named '" +
+              sourceName + "' with the error: " + ioe;
+            throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_EXISTING_IDL_CODE );
+          }
+          if ( logger.isLoggable( Level.INFO ) )
+          {
+            logger.log( Level.INFO, "Source named '" + sourceName + "' extracted from url " + url +
+                                    " exported WebIDL to file " + target );
+          }
+        }
       }
     }
-    if ( !_noVerify )
-    {
-      final VerifyCommand command = new VerifyCommand();
-      command.processOptions( context.environment(), sourceNames.toArray( new String[ 0 ] ) );
-      return command.run( context );
-    }
-    else
-    {
-      return ExitCodes.SUCCESS_EXIT_CODE;
-    }
+
+    return ExitCodes.SUCCESS_EXIT_CODE;
   }
 
   @Nonnull
@@ -192,11 +298,11 @@ final class FetchCommand
            _sourceNames;
   }
 
-  private boolean extractWebIDL( @Nonnull final Logger logger,
-                                 @Nonnull final String sourceName,
-                                 @Nonnull final String url,
-                                 @Nonnull final Path input,
-                                 @Nonnull final Path output )
+  private void extractWebIDL( @Nonnull final Logger logger,
+                              @Nonnull final String sourceName,
+                              @Nonnull final String url,
+                              @Nonnull final Path input,
+                              @Nonnull final Path output )
   {
     try
     {
@@ -245,8 +351,6 @@ final class FetchCommand
       {
         logger.log( Level.FINE, "Source named '" + sourceName + "' processed and WebIDL extracted to file " + output );
       }
-
-      return true;
     }
     catch ( final IOException ioe )
     {
