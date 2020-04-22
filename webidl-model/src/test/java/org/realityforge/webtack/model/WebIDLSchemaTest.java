@@ -280,9 +280,9 @@ public final class WebIDLSchemaTest
     assertEquals( schema.getPartialDictionaries().size(), 1 );
     assertEquals( schema.getIncludes().size(), 0 );
     assertEquals( schema.getInterfaces().size(), 19 );
-    assertEquals( schema.getPartialInterfaces().size(), 0 );
+    assertEquals( schema.getPartialInterfaces().size(), 1 );
     assertEquals( schema.getMixins().size(), 0 );
-    assertEquals( schema.getPartialMixins().size(), 0 );
+    assertEquals( schema.getPartialMixins().size(), 1 );
   }
 
   @SuppressWarnings( "SameParameterValue" )
