@@ -120,6 +120,26 @@ public final class WebIDLModelParser
         final TypedefDefinition value = (TypedefDefinition) definition;
         addToCollection( "typedefs", typedefs, value.getName(), value );
       }
+      else if ( definition instanceof PartialDictionaryDefinition )
+      {
+        final PartialDictionaryDefinition value = (PartialDictionaryDefinition) definition;
+        partialDictionaries.computeIfAbsent( value.getName(), n -> new ArrayList<>() ).add( value );
+      }
+      else if ( definition instanceof PartialInterfaceDefinition )
+      {
+        final PartialInterfaceDefinition value = (PartialInterfaceDefinition) definition;
+        partialInterfaces.computeIfAbsent( value.getName(), n -> new ArrayList<>() ).add( value );
+      }
+      else if ( definition instanceof PartialMixinDefinition )
+      {
+        final PartialMixinDefinition value = (PartialMixinDefinition) definition;
+        partialMixins.computeIfAbsent( value.getName(), n -> new ArrayList<>() ).add( value );
+      }
+      else if ( definition instanceof PartialNamespaceDefinition )
+      {
+        final PartialNamespaceDefinition value = (PartialNamespaceDefinition) definition;
+        partialNamespaces.computeIfAbsent( value.getName(), n -> new ArrayList<>() ).add( value );
+      }
     }
 
     return new WebIDLSchema( callbacks,
