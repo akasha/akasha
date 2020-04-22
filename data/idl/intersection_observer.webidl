@@ -1,40 +1,39 @@
-callback IntersectionObserverCallback = void (sequence<IntersectionObserverEntry> entries, IntersectionObserver observer);
+callback IntersectionObserverCallback = void ( sequence<IntersectionObserverEntry> entries, IntersectionObserver observer );
 
-[Constructor(IntersectionObserverCallback callback, optional IntersectionObserverInit options),
- Exposed=Window]
+dictionary IntersectionObserverInit {
+  Element? root = null;
+  DOMString rootMargin = "0px";
+  ( double or sequence<double> ) threshold = 0;
+};
+
+dictionary IntersectionObserverEntryInit {
+  required DOMRectInit boundingClientRect;
+  required double intersectionRatio;
+  required DOMRectInit intersectionRect;
+  required boolean isIntersecting;
+  required DOMRectInit? rootBounds;
+  required Element target;
+  required DOMHighResTimeStamp time;
+};
+
+[Constructor( IntersectionObserverCallback callback, optional IntersectionObserverInit options ), Exposed=Window]
 interface IntersectionObserver {
   readonly attribute Element? root;
   readonly attribute DOMString rootMargin;
   readonly attribute FrozenArray<double> thresholds;
-  void observe(Element target);
-  void unobserve(Element target);
   void disconnect();
+  void observe( Element target );
   sequence<IntersectionObserverEntry> takeRecords();
+  void unobserve( Element target );
 };
 
-[Constructor(IntersectionObserverEntryInit intersectionObserverEntryInit)]
+[Constructor( IntersectionObserverEntryInit intersectionObserverEntryInit )]
 interface IntersectionObserverEntry {
-  readonly attribute DOMHighResTimeStamp time;
-  readonly attribute DOMRectReadOnly? rootBounds;
   readonly attribute DOMRectReadOnly boundingClientRect;
+  readonly attribute double intersectionRatio;
   readonly attribute DOMRectReadOnly intersectionRect;
   readonly attribute boolean isIntersecting;
-  readonly attribute double intersectionRatio;
+  readonly attribute DOMRectReadOnly? rootBounds;
   readonly attribute Element target;
-};
-
-dictionary IntersectionObserverEntryInit {
-  required DOMHighResTimeStamp time;
-  required DOMRectInit? rootBounds;
-  required DOMRectInit boundingClientRect;
-  required DOMRectInit intersectionRect;
-  required boolean isIntersecting;
-  required double intersectionRatio;
-  required Element target;
-};
-
-dictionary IntersectionObserverInit {
-  Element?  root = null;
-  DOMString rootMargin = "0px";
-  (double or sequence<double>) threshold = 0;
+  readonly attribute DOMHighResTimeStamp time;
 };

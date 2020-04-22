@@ -1,3 +1,3 @@
 interface CSSFontFaceRule : CSSRule {
-    readonly attribute CSSStyleDeclaration style;
+  readonly attribute CSSStyleDeclaration style;
 };

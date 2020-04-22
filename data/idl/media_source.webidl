@@ -1,76 +1,76 @@
 enum ReadyState {
-    "closed",
-    "open",
-    "ended"
+  "closed",
+  "ended",
+  "open"
+};
+
+enum AppendMode {
+  "segments",
+  "sequence"
 };
 
 enum EndOfStreamError {
-    "network",
-    "decode"
+  "decode",
+  "network"
 };
 
 [Constructor]
 interface MediaSource : EventTarget {
-    readonly attribute SourceBufferList    sourceBuffers;
-    readonly attribute SourceBufferList    activeSourceBuffers;
-    readonly attribute ReadyState          readyState;
-             attribute unrestricted double duration;
-             attribute EventHandler        onsourceopen;
-             attribute EventHandler        onsourceended;
-             attribute EventHandler        onsourceclose;
-    SourceBuffer addSourceBuffer(DOMString type);
-    void         removeSourceBuffer(SourceBuffer sourceBuffer);
-    void         endOfStream(optional EndOfStreamError error);
-    void         setLiveSeekableRange(double start, double end);
-    void         clearLiveSeekableRange();
-    static boolean isTypeSupported(DOMString type);
-};
-
-enum AppendMode {
-    "segments",
-    "sequence"
-};
-
-interface SourceBuffer : EventTarget {
-             attribute AppendMode          mode;
-    readonly attribute boolean             updating;
-    readonly attribute TimeRanges          buffered;
-             attribute double              timestampOffset;
-    readonly attribute AudioTrackList      audioTracks;
-    readonly attribute VideoTrackList      videoTracks;
-    readonly attribute TextTrackList       textTracks;
-             attribute double              appendWindowStart;
-             attribute unrestricted double appendWindowEnd;
-             attribute EventHandler        onupdatestart;
-             attribute EventHandler        onupdate;
-             attribute EventHandler        onupdateend;
-             attribute EventHandler        onerror;
-             attribute EventHandler        onabort;
-    void appendBuffer(BufferSource data);
-    void abort();
-    void remove(double start, unrestricted double end);
+  readonly attribute SourceBufferList activeSourceBuffers;
+  readonly attribute ReadyState readyState;
+  readonly attribute SourceBufferList sourceBuffers;
+  attribute unrestricted double duration;
+  attribute EventHandler onsourceclose;
+  attribute EventHandler onsourceended;
+  attribute EventHandler onsourceopen;
+  static boolean isTypeSupported( DOMString type );
+  SourceBuffer addSourceBuffer( DOMString type );
+  void clearLiveSeekableRange();
+  void endOfStream( optional EndOfStreamError error );
+  void removeSourceBuffer( SourceBuffer sourceBuffer );
+  void setLiveSeekableRange( double start, double end );
 };
 
 interface SourceBufferList : EventTarget {
-    readonly attribute unsigned long length;
-             attribute EventHandler  onaddsourcebuffer;
-             attribute EventHandler  onremovesourcebuffer;
-    getter SourceBuffer (unsigned long index);
+  readonly attribute unsigned long length;
+  attribute EventHandler onaddsourcebuffer;
+  attribute EventHandler onremovesourcebuffer;
+  getter SourceBuffer ( unsigned long index );
+};
+
+interface SourceBuffer : EventTarget {
+  readonly attribute AudioTrackList audioTracks;
+  readonly attribute TimeRanges buffered;
+  readonly attribute TextTrackList textTracks;
+  readonly attribute boolean updating;
+  readonly attribute VideoTrackList videoTracks;
+  attribute unrestricted double appendWindowEnd;
+  attribute double appendWindowStart;
+  attribute AppendMode mode;
+  attribute EventHandler onabort;
+  attribute EventHandler onerror;
+  attribute EventHandler onupdate;
+  attribute EventHandler onupdateend;
+  attribute EventHandler onupdatestart;
+  attribute double timestampOffset;
+  void abort();
+  void appendBuffer( BufferSource data );
+  void remove( double start, unrestricted double end );
+};
+
+partial interface TextTrack {
+  readonly attribute SourceBuffer? sourceBuffer;
+};
+
+partial interface VideoTrack {
+  readonly attribute SourceBuffer? sourceBuffer;
+};
+
+partial interface AudioTrack {
+  readonly attribute SourceBuffer? sourceBuffer;
 };
 
 [Exposed=Window]
 partial interface URL {
-    static DOMString createObjectURL(MediaSource mediaSource);
-};
-
-partial interface AudioTrack {
-    readonly attribute SourceBuffer? sourceBuffer;
-};
-
-partial interface VideoTrack {
-    readonly attribute SourceBuffer? sourceBuffer;
-};
-
-partial interface TextTrack {
-    readonly attribute SourceBuffer? sourceBuffer;
+  static DOMString createObjectURL( MediaSource mediaSource );
 };

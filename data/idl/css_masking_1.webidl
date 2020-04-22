@@ -6,10 +6,10 @@ interface SVGClipPathElement : SVGElement {
 
 [Exposed=Window]
 interface SVGMaskElement : SVGElement {
-  readonly attribute SVGAnimatedEnumeration maskUnits;
+  readonly attribute SVGAnimatedLength height;
   readonly attribute SVGAnimatedEnumeration maskContentUnits;
+  readonly attribute SVGAnimatedEnumeration maskUnits;
+  readonly attribute SVGAnimatedLength width;
   readonly attribute SVGAnimatedLength x;
   readonly attribute SVGAnimatedLength y;
-  readonly attribute SVGAnimatedLength width;
-  readonly attribute SVGAnimatedLength height;
 };

@@ -1,26 +1,10 @@
-[Exposed=Window, SecureContext]
-interface Credential {
-  readonly attribute USVString id;
-  readonly attribute DOMString type;
+enum CredentialMediationRequirement {
+  "optional",
+  "required",
+  "silent"
 };
 
-[SecureContext]
-interface mixin CredentialUserData {
-  readonly attribute USVString name;
-  readonly attribute USVString iconURL;
-};
-
-partial interface Navigator {
-  [SecureContext, SameObject] readonly attribute CredentialsContainer credentials;
-};
-
-[Exposed=Window, SecureContext]
-interface CredentialsContainer {
-  Promise<Credential?> get(optional CredentialRequestOptions options);
-  Promise<Credential> store(Credential credential);
-  Promise<Credential?> create(optional CredentialCreationOptions options);
-  Promise<void> preventSilentAccess();
-};
+typedef ( PasswordCredentialData or HTMLFormElement ) PasswordCredentialInit;
 
 dictionary CredentialData {
   required USVString id;
@@ -31,68 +15,82 @@ dictionary CredentialRequestOptions {
   AbortSignal signal;
 };
 
-enum CredentialMediationRequirement {
-  "silent",
-  "optional",
-  "required"
+dictionary FederatedCredentialRequestOptions {
+  sequence<DOMString> protocols;
+  sequence<USVString> providers;
+};
+
+dictionary PasswordCredentialData : CredentialData {
+  USVString iconURL;
+  USVString name;
+  required USVString origin;
+  required USVString password;
+};
+
+dictionary FederatedCredentialInit : CredentialData {
+  USVString iconURL;
+  USVString name;
+  required USVString origin;
+  DOMString protocol;
+  required USVString provider;
 };
 
 dictionary CredentialCreationOptions {
   AbortSignal signal;
 };
 
-[Constructor(HTMLFormElement form),
- Constructor(PasswordCredentialData data),
- Exposed=Window,
- SecureContext]
-interface PasswordCredential : Credential {
-  readonly attribute USVString password;
-};
-PasswordCredential includes CredentialUserData;
-
 partial dictionary CredentialRequestOptions {
   boolean password = false;
-};
-
-dictionary PasswordCredentialData : CredentialData {
-  USVString name;
-  USVString iconURL;
-  required USVString origin;
-  required USVString password;
-};
-
-typedef (PasswordCredentialData or HTMLFormElement) PasswordCredentialInit;
-
-partial dictionary CredentialCreationOptions {
-  PasswordCredentialInit password;
-};
-
-[Constructor(FederatedCredentialInit data),
- Exposed=Window,
- SecureContext]
-interface FederatedCredential : Credential {
-  readonly attribute USVString provider;
-  readonly attribute DOMString? protocol;
-};
-FederatedCredential includes CredentialUserData;
-
-dictionary FederatedCredentialRequestOptions {
-  sequence<USVString> providers;
-  sequence<DOMString> protocols;
 };
 
 partial dictionary CredentialRequestOptions {
   FederatedCredentialRequestOptions federated;
 };
 
-dictionary FederatedCredentialInit : CredentialData {
-  USVString name;
-  USVString iconURL;
-  required USVString origin;
-  required USVString provider;
-  DOMString protocol;
+partial dictionary CredentialCreationOptions {
+  PasswordCredentialInit password;
 };
 
 partial dictionary CredentialCreationOptions {
   FederatedCredentialInit federated;
 };
+
+[SecureContext]
+interface mixin CredentialUserData {
+  readonly attribute USVString iconURL;
+  readonly attribute USVString name;
+};
+
+[Constructor( FederatedCredentialInit data ), Exposed=Window, SecureContext]
+interface FederatedCredential : Credential {
+  readonly attribute DOMString? protocol;
+  readonly attribute USVString provider;
+};
+
+[Exposed=Window, SecureContext]
+interface Credential {
+  readonly attribute USVString id;
+  readonly attribute DOMString type;
+};
+
+[Exposed=Window, SecureContext]
+interface CredentialsContainer {
+  Promise<Credential?> create( optional CredentialCreationOptions options );
+  Promise<Credential?> get( optional CredentialRequestOptions options );
+  Promise<void> preventSilentAccess();
+  Promise<Credential> store( Credential credential );
+};
+
+[Constructor( HTMLFormElement form ), Constructor( PasswordCredentialData data ), Exposed=Window, SecureContext]
+interface PasswordCredential : Credential {
+  readonly attribute USVString password;
+};
+
+partial interface Navigator {
+  [SecureContext, SameObject]
+  readonly attribute CredentialsContainer credentials;
+};
+
+PasswordCredential includes CredentialUserData;
+
+FederatedCredential includes CredentialUserData;

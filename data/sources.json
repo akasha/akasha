@@ -61,7 +61,7 @@
         "url": "https://www.w3.org/TR/CSS22/visuren.html"
     },
     {
-        "lastModifiedTime": 1544062473000,
+        "lastModifiedTime": 1587487558000,
         "name": "css_align_3",
         "url": "https://www.w3.org/TR/css-align-3/"
     },
@@ -76,7 +76,7 @@
         "url": "https://www.w3.org/TR/css-backgrounds-3/"
     },
     {
-        "lastModifiedTime": 1587180930000,
+        "lastModifiedTime": 1587513976000,
         "name": "css_backgrounds_4",
         "url": "https://drafts.csswg.org/css-backgrounds-4/"
     },
@@ -106,7 +106,7 @@
         "url": "https://www.w3.org/TR/css-grid-1/"
     },
     {
-        "lastModifiedTime": 1587181029000,
+        "lastModifiedTime": 1587514077000,
         "name": "css_images_3",
         "url": "https://drafts.csswg.org/css-images-3/"
     },
@@ -121,7 +121,7 @@
         "url": "https://www.w3.org/TR/css-logical-1/"
     },
     {
-        "lastModifiedTime": 1587180653000,
+        "lastModifiedTime": 1587512778000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
@@ -141,7 +141,7 @@
         "url": "https://www.w3.org/TR/css-ruby-1/"
     },
     {
-        "lastModifiedTime": 1587181090000,
+        "lastModifiedTime": 1587514138000,
         "name": "css_scroll_anchoring",
         "url": "https://drafts.csswg.org/css-scroll-anchoring/"
     },
@@ -161,7 +161,7 @@
         "url": "https://www.w3.org/TR/css-transforms-1/"
     },
     {
-        "lastModifiedTime": 1587181138000,
+        "lastModifiedTime": 1587514188000,
         "name": "css_transforms_2",
         "url": "https://drafts.csswg.org/css-transforms-2/"
     },
@@ -186,12 +186,12 @@
         "url": "https://www.w3.org/TR/css-writing-modes-3/"
     },
     {
-        "lastModifiedTime": 1587181188000,
+        "lastModifiedTime": 1587514238000,
         "name": "cssom_view",
         "url": "https://drafts.csswg.org/cssom-view/"
     },
     {
-        "lastModifiedTime": 1580945455000,
+        "lastModifiedTime": 1587410955000,
         "name": "dom_parsing",
         "url": "https://w3c.github.io/DOM-Parsing/"
     },

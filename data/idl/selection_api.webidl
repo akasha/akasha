@@ -1,3 +1,8 @@
+partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onselectionchange;
+  attribute EventHandler onselectstart;
+};
+
 [Exposed=Window]
 interface Selection {
   readonly attribute Node? anchorNode;
@@ -7,33 +12,28 @@ interface Selection {
   readonly attribute boolean isCollapsed;
   readonly attribute unsigned long rangeCount;
   readonly attribute DOMString type;
-  Range getRangeAt(unsigned long index);
-  void addRange(Range range);
-  void removeRange(Range range);
-  void removeAllRanges();
-  void empty();
-  void collapse(Node? node, optional unsigned long offset = 0);
-  void setPosition(Node? node, optional unsigned long offset = 0);
-  void collapseToStart();
+  void addRange( Range range );
+  void collapse( Node? node, optional unsigned long offset = 0 );
   void collapseToEnd();
-  void extend(Node node, optional unsigned long offset = 0);
-  void setBaseAndExtent(Node anchorNode, unsigned long anchorOffset, Node focusNode, unsigned long focusOffset);
-  void selectAllChildren(Node node);
+  void collapseToStart();
+  boolean containsNode( Node node, optional boolean allowPartialContainment = false );
   [CEReactions]
   void deleteFromDocument();
-  boolean containsNode(Node node, optional boolean allowPartialContainment = false);
-  stringifier DOMString ();
-};
-
-partial interface Document {
-  Selection? getSelection();
+  void empty();
+  void extend( Node node, optional unsigned long offset = 0 );
+  Range getRangeAt( unsigned long index );
+  void removeAllRanges();
+  void removeRange( Range range );
+  void selectAllChildren( Node node );
+  void setBaseAndExtent( Node anchorNode, unsigned long anchorOffset, Node focusNode, unsigned long focusOffset );
+  void setPosition( Node? node, optional unsigned long offset = 0 );
+  stringifier;
 };
 
 partial interface Window {
   Selection? getSelection();
 };
 
-partial interface mixin GlobalEventHandlers {
-  attribute EventHandler onselectstart;
-  attribute EventHandler onselectionchange;
+partial interface Document {
+  Selection? getSelection();
 };

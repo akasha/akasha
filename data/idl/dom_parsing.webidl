@@ -1,21 +1,26 @@
-[Exposed=Window]
-    interface XMLSerializer {
-      constructor();
-      DOMString serializeToString(Node root);
-    };
-
 interface mixin InnerHTML {
-      [CEReactions] attribute [TreatNullAs=EmptyString] DOMString innerHTML;
-    };
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString innerHTML;
+};
 
-    Element includes InnerHTML;
-    ShadowRoot includes InnerHTML;
+[Exposed=Window]
+interface XMLSerializer {
+  constructor();
+  DOMString serializeToString( Node root );
+};
 
 partial interface Element {
-      [CEReactions] attribute [TreatNullAs=EmptyString] DOMString outerHTML;
-      [CEReactions] void insertAdjacentHTML(DOMString position, DOMString text);
-    };
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString outerHTML;
+  [CEReactions]
+  void insertAdjacentHTML( DOMString position, DOMString text );
+};
 
 partial interface Range {
-      [CEReactions, NewObject] DocumentFragment createContextualFragment(DOMString fragment);
-    };
+  [CEReactions, NewObject]
+  DocumentFragment createContextualFragment( DOMString fragment );
+};
+
+ShadowRoot includes InnerHTML;
+
+Element includes InnerHTML;

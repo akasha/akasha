@@ -1,34 +1,33 @@
 enum GamepadHand {
-          "",  /* unknown, both hands, or not applicable */
-          "left",
-          "right"
-        };
-
-[Exposed=Window]
-        interface GamepadHapticActuator {
-          readonly attribute GamepadHapticActuatorType type;
-          Promise<boolean> pulse(double value, double duration);
-        };
+  "",
+  "left",
+  "right"
+};
 
 enum GamepadHapticActuatorType {
-          "vibration"
-        };
+  "vibration"
+};
 
 [Exposed=Window]
-        interface GamepadPose {
-          readonly attribute boolean hasOrientation;
-          readonly attribute boolean hasPosition;
+interface GamepadPose {
+  readonly attribute Float32Array? angularAcceleration;
+  readonly attribute Float32Array? angularVelocity;
+  readonly attribute boolean hasOrientation;
+  readonly attribute boolean hasPosition;
+  readonly attribute Float32Array? linearAcceleration;
+  readonly attribute Float32Array? linearVelocity;
+  readonly attribute Float32Array? orientation;
+  readonly attribute Float32Array? position;
+};
 
-          readonly attribute Float32Array? position;
-          readonly attribute Float32Array? linearVelocity;
-          readonly attribute Float32Array? linearAcceleration;
-          readonly attribute Float32Array? orientation;
-          readonly attribute Float32Array? angularVelocity;
-          readonly attribute Float32Array? angularAcceleration;
-        };
+[Exposed=Window]
+interface GamepadHapticActuator {
+  readonly attribute GamepadHapticActuatorType type;
+  Promise<boolean> pulse( double value, double duration );
+};
 
 partial interface Gamepad {
-          readonly attribute GamepadHand hand;
-          readonly attribute FrozenArray<GamepadHapticActuator> hapticActuators;
-          readonly attribute GamepadPose? pose;
-        };
+  readonly attribute GamepadHand hand;
+  readonly attribute FrozenArray<GamepadHapticActuator> hapticActuators;
+  readonly attribute GamepadPose? pose;
+};

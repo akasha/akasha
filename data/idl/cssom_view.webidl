@@ -1,126 +1,129 @@
-enum ScrollBehavior { "auto", "smooth" };
-
-dictionary ScrollOptions {
-    ScrollBehavior behavior = "auto";
+enum ScrollLogicalPosition {
+  "center",
+  "end",
+  "nearest",
+  "start"
 };
+
+enum ScrollBehavior {
+  "auto",
+  "smooth"
+};
+
 dictionary ScrollToOptions : ScrollOptions {
-    unrestricted double left;
-    unrestricted double top;
-};
-
-partial interface Window {
-    [NewObject] MediaQueryList matchMedia(CSSOMString query);
-    [SameObject, Replaceable] readonly attribute Screen screen;
-
-    // browsing context
-    void moveTo(long x, long y);
-    void moveBy(long x, long y);
-    void resizeTo(long width, long height);
-    void resizeBy(long x, long y);
-
-    // viewport
-    [Replaceable] readonly attribute long innerWidth;
-    [Replaceable] readonly attribute long innerHeight;
-
-    // viewport scrolling
-    [Replaceable] readonly attribute double scrollX;
-    [Replaceable] readonly attribute double pageXOffset;
-    [Replaceable] readonly attribute double scrollY;
-    [Replaceable] readonly attribute double pageYOffset;
-    void scroll(optional ScrollToOptions options = {});
-    void scroll(unrestricted double x, unrestricted double y);
-    void scrollTo(optional ScrollToOptions options = {});
-    void scrollTo(unrestricted double x, unrestricted double y);
-    void scrollBy(optional ScrollToOptions options = {});
-    void scrollBy(unrestricted double x, unrestricted double y);
-
-    // client
-    [Replaceable] readonly attribute long screenX;
-    [Replaceable] readonly attribute long screenLeft;
-    [Replaceable] readonly attribute long screenY;
-    [Replaceable] readonly attribute long screenTop;
-    [Replaceable] readonly attribute long outerWidth;
-    [Replaceable] readonly attribute long outerHeight;
-    [Replaceable] readonly attribute double devicePixelRatio;
-};
-
-[Exposed=Window]
-interface MediaQueryList : EventTarget {
-  readonly attribute CSSOMString media;
-  readonly attribute boolean matches;
-  void addListener(EventListener? callback);
-  void removeListener(EventListener? callback);
-           attribute EventHandler onchange;
-};
-
-[Exposed=Window]
-interface MediaQueryListEvent : Event {
-  constructor(CSSOMString type, optional MediaQueryListEventInit eventInitDict = {});
-  readonly attribute CSSOMString media;
-  readonly attribute boolean matches;
+  unrestricted double left;
+  unrestricted double top;
 };
 
 dictionary MediaQueryListEventInit : EventInit {
-  CSSOMString media = "";
   boolean matches = false;
+  CSSOMString media = "";
 };
 
-[Exposed=Window]
-interface Screen {
-  readonly attribute long availWidth;
-  readonly attribute long availHeight;
-  readonly attribute long width;
-  readonly attribute long height;
-  readonly attribute unsigned long colorDepth;
-  readonly attribute unsigned long pixelDepth;
+dictionary ScrollOptions {
+  ScrollBehavior behavior = "auto";
 };
 
-partial interface Document {
-  Element? elementFromPoint(double x, double y);
-  sequence<Element> elementsFromPoint(double x, double y);
-  CaretPosition? caretPositionFromPoint(double x, double y);
-  readonly attribute Element? scrollingElement;
-};
-
-[Exposed=Window]
-interface CaretPosition {
-  readonly attribute Node offsetNode;
-  readonly attribute unsigned long offset;
-  [NewObject] DOMRect? getClientRect();
-};
-
-enum ScrollLogicalPosition { "start", "center", "end", "nearest" };
 dictionary ScrollIntoViewOptions : ScrollOptions {
   ScrollLogicalPosition block = "start";
   ScrollLogicalPosition inline = "nearest";
 };
 
-partial interface Element {
-  DOMRectList getClientRects();
-  [NewObject] DOMRect getBoundingClientRect();
-  void scrollIntoView(optional (boolean or ScrollIntoViewOptions) arg = {});
-  void scroll(optional ScrollToOptions options = {});
-  void scroll(unrestricted double x, unrestricted double y);
-  void scrollTo(optional ScrollToOptions options = {});
-  void scrollTo(unrestricted double x, unrestricted double y);
-  void scrollBy(optional ScrollToOptions options = {});
-  void scrollBy(unrestricted double x, unrestricted double y);
-  attribute unrestricted double scrollTop;
-  attribute unrestricted double scrollLeft;
-  readonly attribute long scrollWidth;
-  readonly attribute long scrollHeight;
-  readonly attribute long clientTop;
-  readonly attribute long clientLeft;
-  readonly attribute long clientWidth;
-  readonly attribute long clientHeight;
+partial dictionary MouseEventInit {
+  double clientX = 0.0;
+  double clientY = 0.0;
+  double screenX = 0.0;
+  double screenY = 0.0;
 };
 
-partial interface HTMLElement {
-  readonly attribute Element? offsetParent;
-  readonly attribute long offsetTop;
-  readonly attribute long offsetLeft;
-  readonly attribute long offsetWidth;
-  readonly attribute long offsetHeight;
+[Exposed=Window]
+interface Screen {
+  readonly attribute long availHeight;
+  readonly attribute long availWidth;
+  readonly attribute unsigned long colorDepth;
+  readonly attribute long height;
+  readonly attribute unsigned long pixelDepth;
+  readonly attribute long width;
+};
+
+[Exposed=Window]
+interface CaretPosition {
+  readonly attribute unsigned long offset;
+  readonly attribute Node offsetNode;
+  [NewObject]
+  DOMRect? getClientRect();
+};
+
+[Exposed=Window]
+interface MediaQueryListEvent : Event {
+  readonly attribute boolean matches;
+  readonly attribute CSSOMString media;
+  constructor( CSSOMString type, optional MediaQueryListEventInit eventInitDict = {} );
+};
+
+[Exposed=Window]
+interface MediaQueryList : EventTarget {
+  readonly attribute boolean matches;
+  readonly attribute CSSOMString media;
+  attribute EventHandler onchange;
+  void addListener( EventListener? callback );
+  void removeListener( EventListener? callback );
+};
+
+partial interface Window {
+  [Replaceable]
+  readonly attribute double devicePixelRatio;
+  [Replaceable]
+  readonly attribute long innerHeight;
+  [Replaceable]
+  readonly attribute long innerWidth;
+  [Replaceable]
+  readonly attribute long outerHeight;
+  [Replaceable]
+  readonly attribute long outerWidth;
+  [Replaceable]
+  readonly attribute double pageXOffset;
+  [Replaceable]
+  readonly attribute double pageYOffset;
+  [SameObject, Replaceable]
+  readonly attribute Screen screen;
+  [Replaceable]
+  readonly attribute long screenLeft;
+  [Replaceable]
+  readonly attribute long screenTop;
+  [Replaceable]
+  readonly attribute long screenX;
+  [Replaceable]
+  readonly attribute long screenY;
+  [Replaceable]
+  readonly attribute double scrollX;
+  [Replaceable]
+  readonly attribute double scrollY;
+  [NewObject]
+  MediaQueryList matchMedia( CSSOMString query );
+  void moveBy( long x, long y );
+  void moveTo( long x, long y );
+  void resizeBy( long x, long y );
+  void resizeTo( long width, long height );
+  void scroll( optional ScrollToOptions options = {} );
+  void scroll( unrestricted double x, unrestricted double y );
+  void scrollBy( optional ScrollToOptions options = {} );
+  void scrollBy( unrestricted double x, unrestricted double y );
+  void scrollTo( optional ScrollToOptions options = {} );
+  void scrollTo( unrestricted double x, unrestricted double y );
+};
+
+partial interface MouseEvent {
+  readonly attribute double clientX;
+  readonly attribute double clientY;
+  readonly attribute double offsetX;
+  readonly attribute double offsetY;
+  readonly attribute double pageX;
+  readonly attribute double pageY;
+  readonly attribute double screenX;
+  readonly attribute double screenY;
+  readonly attribute double x;
+  readonly attribute double y;
 };
 
 partial interface HTMLImageElement {
@@ -128,27 +131,44 @@ partial interface HTMLImageElement {
   readonly attribute long y;
 };
 
-partial interface Range {
+partial interface HTMLElement {
+  readonly attribute long offsetHeight;
+  readonly attribute long offsetLeft;
+  readonly attribute Element? offsetParent;
+  readonly attribute long offsetTop;
+  readonly attribute long offsetWidth;
+};
+
+partial interface Element {
+  readonly attribute long clientHeight;
+  readonly attribute long clientLeft;
+  readonly attribute long clientTop;
+  readonly attribute long clientWidth;
+  readonly attribute long scrollHeight;
+  readonly attribute long scrollWidth;
+  attribute unrestricted double scrollLeft;
+  attribute unrestricted double scrollTop;
+  [NewObject]
+  DOMRect getBoundingClientRect();
   DOMRectList getClientRects();
-  [NewObject] DOMRect getBoundingClientRect();
+  void scroll( optional ScrollToOptions options = {} );
+  void scroll( unrestricted double x, unrestricted double y );
+  void scrollBy( optional ScrollToOptions options = {} );
+  void scrollBy( unrestricted double x, unrestricted double y );
+  void scrollIntoView( optional ( boolean or ScrollIntoViewOptions ) arg = {} );
+  void scrollTo( optional ScrollToOptions options = {} );
+  void scrollTo( unrestricted double x, unrestricted double y );
 };
 
-partial interface MouseEvent {
-  readonly attribute double screenX;
-  readonly attribute double screenY;
-  readonly attribute double pageX;
-  readonly attribute double pageY;
-  readonly attribute double clientX;
-  readonly attribute double clientY;
-  readonly attribute double x;
-  readonly attribute double y;
-  readonly attribute double offsetX;
-  readonly attribute double offsetY;
+partial interface Range {
+  [NewObject]
+  DOMRect getBoundingClientRect();
+  DOMRectList getClientRects();
 };
 
-partial dictionary MouseEventInit {
-  double screenX = 0.0;
-  double screenY = 0.0;
-  double clientX = 0.0;
-  double clientY = 0.0;
+partial interface Document {
+  readonly attribute Element? scrollingElement;
+  CaretPosition? caretPositionFromPoint( double x, double y );
+  Element? elementFromPoint( double x, double y );
+  sequence<Element> elementsFromPoint( double x, double y );
 };
