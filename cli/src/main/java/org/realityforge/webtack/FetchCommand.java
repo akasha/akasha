@@ -246,7 +246,7 @@ final class FetchCommand
       }
       if ( logger.isLoggable( Level.INFO ) )
       {
-        logger.log( Level.INFO, "Source named '" + sourceName + "' produced IDL file " + output );
+        logger.log( Level.INFO, "Source named '" + sourceName + "' processed and WebIDL extracted to file " + output );
       }
 
       return true;
