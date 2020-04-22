@@ -6,6 +6,8 @@ complete as there is too much un-said.
 
 * Use fixture based tests when testing webIDL after processing has occurred.
 
+* Remove local html once fetch is successful. Potentially add a CLI arg that will leave it rather than deleting.
+
 * Add lots of tests for `MergeTool` using fixture data to drive tests.
 
 * Generate an error if the IDL extracted from web page is empty. Either the spec does not use WebIDL or we have incorrect matching rules.
