@@ -14,7 +14,7 @@ public final class WebIDLWriter
   {
   }
 
-  static void writeSchema( @Nonnull final Writer writer, @Nonnull final WebIDLSchema schema )
+  public static void writeSchema( @Nonnull final Writer writer, @Nonnull final WebIDLSchema schema )
     throws IOException
   {
     int definitionCount = 0;
