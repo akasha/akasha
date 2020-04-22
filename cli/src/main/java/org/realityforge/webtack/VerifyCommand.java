@@ -11,9 +11,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
-import org.antlr.v4.runtime.ConsoleErrorListener;
-import org.antlr.v4.runtime.RecognitionException;
-import org.antlr.v4.runtime.Recognizer;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
@@ -88,7 +85,7 @@ final class VerifyCommand
 
       try ( final FileReader reader = new FileReader( target.toFile() ) )
       {
-        final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener();
+        final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener( target.toString() );
         @SuppressWarnings( "unused" )
         final WebIDLSchema schema = WebIDLModelParser.parse( sourceName, reader, errorListener );
 
@@ -127,28 +124,5 @@ final class VerifyCommand
       }
     }
     return ExitCodes.SUCCESS_EXIT_CODE;
-  }
-
-  private static final class CountingConsoleErrorListener
-    extends ConsoleErrorListener
-  {
-    private int _errorCount;
-
-    @Override
-    public void syntaxError( final Recognizer<?, ?> recognizer,
-                             final Object offendingSymbol,
-                             final int line,
-                             final int charPositionInLine,
-                             final String msg,
-                             final RecognitionException e )
-    {
-      super.syntaxError( recognizer, offendingSymbol, line, charPositionInLine, msg, e );
-      _errorCount++;
-    }
-
-    int getErrorCount()
-    {
-      return _errorCount;
-    }
   }
 }
