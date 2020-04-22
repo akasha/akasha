@@ -42,6 +42,9 @@ define 'webtack' do
     compile.with project('webidl-parser').package(:jar),
                  project('webidl-parser').compile.dependencies
 
+    test.using :testng
+    test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/fixtures') }
+
     package(:jar)
     package(:sources)
     package(:javadoc)
@@ -73,6 +76,12 @@ define 'webtack' do
   end
 
   iml.excluded_directories << project._('tmp')
+
+  ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webidl-model/src/test/resources')
+
+  ipr.add_testng_configuration('webidl-model',
+                               :module => 'webidl-model',
+                               :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.fixture_dir=src/test/fixtures')
 
   ipr.add_component_from_artifact(:idea_codestyle)
 end
