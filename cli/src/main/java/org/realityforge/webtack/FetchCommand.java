@@ -256,8 +256,7 @@ final class FetchCommand
       final String message =
         "Error: Failed to extract WebIDL from source named '" + sourceName + "' downloaded to file " +
         input + " due to " + ioe;
-      logger.log( Level.SEVERE, message );
-      return false;
+      throw new TerminalStateException( message, ExitCodes.ERROR_EXTRACT_IDL_FAILED_CODE );
     }
   }
 
