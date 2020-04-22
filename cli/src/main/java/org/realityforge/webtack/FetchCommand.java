@@ -241,9 +241,9 @@ final class FetchCommand
                      StandardOpenOption.CREATE,
                      StandardOpenOption.TRUNCATE_EXISTING );
       }
-      if ( logger.isLoggable( Level.INFO ) )
+      if ( logger.isLoggable( Level.FINE ) )
       {
-        logger.log( Level.INFO, "Source named '" + sourceName + "' processed and WebIDL extracted to file " + output );
+        logger.log( Level.FINE, "Source named '" + sourceName + "' processed and WebIDL extracted to file " + output );
       }
 
       return true;
