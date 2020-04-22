@@ -22,12 +22,6 @@ task "data:force_fetch" do
   end
 end
 
-task "data:verify" do
-  in_dir(WORKSPACE_DIR) do
-    run_webtack(%w(--verbose -d data verify))
-  end
-end
-
 task "data:load" do
   in_dir(WORKSPACE_DIR) do
     run_webtack(%w(--verbose -d data load))
