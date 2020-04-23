@@ -10,6 +10,10 @@ complete as there is too much un-said.
 
 * Add lots of tests for `MergeTool` using fixture data to drive tests.
 
+* Add blend operation that will attempt merge multiple schemas and if it finds matching declarations will perform blending. This is useful when pulling in gecko or chrome schemas and creating a combined schema.
+
+* Should blend of multiple Extended attribute `Ident` types produce an `IdentList` type or only for special well-known extended attributes ala `Exposed`? 
+
 * Generate an error if the IDL extracted from web page is empty. Either the spec does not use WebIDL or we have incorrect matching rules.
 
 * Add quiet mode to fetch so that only actions that require download print
