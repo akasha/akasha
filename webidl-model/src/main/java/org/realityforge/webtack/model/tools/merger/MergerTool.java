@@ -140,5 +140,4 @@ public final class MergerTool
       .map( l -> l.getStart().toString() )
       .collect( Collectors.joining( delimiter ) );
   }
-
 }
