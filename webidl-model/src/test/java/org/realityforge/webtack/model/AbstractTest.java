@@ -1,7 +1,11 @@
 package org.realityforge.webtack.model;
 
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.io.StringReader;
+import java.nio.file.Path;
 import java.util.UUID;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -48,5 +52,39 @@ public abstract class AbstractTest
   protected final SourcePosition parseStartPosition( @Nonnull final ParserRuleContext ctx )
   {
     return WebIDLModelParser.parseSourcePosition( ctx.getStart() );
+  }
+
+  @Nonnull
+  protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file, @Nonnull final String testDescription )
+  {
+    final String filename = file.toString();
+    try ( final Reader reader = new FileReader( file.toFile() ) )
+    {
+      return WebIDLModelParser.parse( filename, reader, new BailErrorListener( filename ) );
+    }
+    catch ( final IOException ioe )
+    {
+      throw new AssertionError( "Error reading file " + filename + " for " + testDescription );
+    }
+  }
+
+  @Nonnull
+  protected final Path getTestLocalFixtureDir()
+  {
+    return getBaseFixtureDir().resolve( getClass().getName().replaceAll( "\\.", File.separator ) );
+  }
+
+  protected final boolean writeOutputFixtures()
+  {
+    return "true".equals( System.getProperty( "webtack.output_fixture_data" ) );
+  }
+
+  @Nonnull
+  protected final Path getBaseFixtureDir()
+  {
+    final String key = "webtack.fixture_dir";
+    final String fixtureDir = System.getProperty( key );
+    assertNotNull( fixtureDir, "Expected System.getProperty( \"" + key + "\" ) to return fixture directory" );
+    return new File( fixtureDir ).toPath();
   }
 }
