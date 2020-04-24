@@ -6,6 +6,40 @@ interface mixin SVGAnimatedPoints {
 };
 
 [Exposed=Window]
+interface SVGCircleElement : SVGGeometryElement {
+  [SameObject]
+  readonly attribute SVGAnimatedLength cx;
+  [SameObject]
+  readonly attribute SVGAnimatedLength cy;
+  [SameObject]
+  readonly attribute SVGAnimatedLength r;
+};
+
+[Exposed=Window]
+interface SVGEllipseElement : SVGGeometryElement {
+  [SameObject]
+  readonly attribute SVGAnimatedLength cx;
+  [SameObject]
+  readonly attribute SVGAnimatedLength cy;
+  [SameObject]
+  readonly attribute SVGAnimatedLength rx;
+  [SameObject]
+  readonly attribute SVGAnimatedLength ry;
+};
+
+[Exposed=Window]
+interface SVGLineElement : SVGGeometryElement {
+  [SameObject]
+  readonly attribute SVGAnimatedLength x1;
+  [SameObject]
+  readonly attribute SVGAnimatedLength x2;
+  [SameObject]
+  readonly attribute SVGAnimatedLength y1;
+  [SameObject]
+  readonly attribute SVGAnimatedLength y2;
+};
+
+[Exposed=Window]
 interface SVGPointList {
   readonly attribute unsigned long length;
   readonly attribute unsigned long numberOfItems;
@@ -20,13 +54,11 @@ interface SVGPointList {
 };
 
 [Exposed=Window]
-interface SVGCircleElement : SVGGeometryElement {
-  [SameObject]
-  readonly attribute SVGAnimatedLength cx;
-  [SameObject]
-  readonly attribute SVGAnimatedLength cy;
-  [SameObject]
-  readonly attribute SVGAnimatedLength r;
+interface SVGPolygonElement : SVGGeometryElement {
+};
+
+[Exposed=Window]
+interface SVGPolylineElement : SVGGeometryElement {
 };
 
 [Exposed=Window]
@@ -45,38 +77,6 @@ interface SVGRectElement : SVGGeometryElement {
   readonly attribute SVGAnimatedLength y;
 };
 
-[Exposed=Window]
-interface SVGPolylineElement : SVGGeometryElement {
-};
-
-[Exposed=Window]
-interface SVGPolygonElement : SVGGeometryElement {
-};
-
-[Exposed=Window]
-interface SVGLineElement : SVGGeometryElement {
-  [SameObject]
-  readonly attribute SVGAnimatedLength x1;
-  [SameObject]
-  readonly attribute SVGAnimatedLength x2;
-  [SameObject]
-  readonly attribute SVGAnimatedLength y1;
-  [SameObject]
-  readonly attribute SVGAnimatedLength y2;
-};
-
-[Exposed=Window]
-interface SVGEllipseElement : SVGGeometryElement {
-  [SameObject]
-  readonly attribute SVGAnimatedLength cx;
-  [SameObject]
-  readonly attribute SVGAnimatedLength cy;
-  [SameObject]
-  readonly attribute SVGAnimatedLength rx;
-  [SameObject]
-  readonly attribute SVGAnimatedLength ry;
-};
+SVGPolygonElement includes SVGAnimatedPoints;
 
 SVGPolylineElement includes SVGAnimatedPoints;
-
-SVGPolygonElement includes SVGAnimatedPoints;

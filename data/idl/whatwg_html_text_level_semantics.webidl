@@ -1,18 +1,4 @@
 [Exposed=Window]
-interface HTMLDataElement : HTMLElement {
-  [CEReactions]
-  attribute DOMString value;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLSpanElement : HTMLElement {
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
 interface HTMLAnchorElement : HTMLElement {
   [SameObject, PutForwards=value]
   readonly attribute DOMTokenList relList;
@@ -37,15 +23,29 @@ interface HTMLAnchorElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLTimeElement : HTMLElement {
-  [CEReactions]
-  attribute DOMString dateTime;
+interface HTMLBRElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };
 
 [Exposed=Window]
-interface HTMLBRElement : HTMLElement {
+interface HTMLDataElement : HTMLElement {
+  [CEReactions]
+  attribute DOMString value;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLSpanElement : HTMLElement {
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLTimeElement : HTMLElement {
+  [CEReactions]
+  attribute DOMString dateTime;
   [HTMLConstructor]
   constructor();
 };

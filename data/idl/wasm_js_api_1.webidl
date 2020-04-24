@@ -24,10 +24,15 @@ namespace WebAssembly {
   boolean validate( BufferSource bytes );
 };
 
-dictionary ModuleImportDescriptor {
-  required ImportExportKind kind;
-  required USVString module;
-  required USVString name;
+dictionary GlobalDescriptor {
+  boolean mutable = false;
+  required ValueType value;
+};
+
+dictionary MemoryDescriptor {
+  required [EnforceRange] unsigned long initial;
+  [EnforceRange]
+  unsigned long maximum;
 };
 
 dictionary ModuleExportDescriptor {
@@ -35,20 +40,10 @@ dictionary ModuleExportDescriptor {
   required USVString name;
 };
 
-dictionary GlobalDescriptor {
-  boolean mutable = false;
-  required ValueType value;
-};
-
-dictionary WebAssemblyInstantiatedSource {
-  required Instance instance;
-  required Module module;
-};
-
-dictionary MemoryDescriptor {
-  required [EnforceRange] unsigned long initial;
-  [EnforceRange]
-  unsigned long maximum;
+dictionary ModuleImportDescriptor {
+  required ImportExportKind kind;
+  required USVString module;
+  required USVString name;
 };
 
 dictionary TableDescriptor {
@@ -58,16 +53,19 @@ dictionary TableDescriptor {
   unsigned long maximum;
 };
 
+dictionary WebAssemblyInstantiatedSource {
+  required Instance instance;
+  required Module module;
+};
+
 [LegacyNamespace=WebAssembly]
 interface CompileError {
 };
 
-[LegacyNamespace=WebAssembly, Constructor( TableDescriptor descriptor ), Exposed=(Window,Worker,Worklet)]
-interface Table {
-  readonly attribute unsigned long length;
-  Function? get( [EnforceRange] unsigned long index );
-  unsigned long grow( [EnforceRange] unsigned long delta );
-  void set( [EnforceRange] unsigned long index, Function? value );
+[LegacyNamespace=WebAssembly, Constructor( GlobalDescriptor descriptor, optional any v ), Exposed=(Window,Worker,Worklet)]
+interface Global {
+  attribute any value;
+  any valueOf();
 };
 
 [LegacyNamespace=WebAssembly, Constructor( Module module, optional object importObject ), Exposed=(Window,Worker,Worklet)]
@@ -75,14 +73,14 @@ interface Instance {
   readonly attribute object exports;
 };
 
+[LegacyNamespace=WebAssembly]
+interface LinkError {
+};
+
 [LegacyNamespace=WebAssembly, Constructor( MemoryDescriptor descriptor ), Exposed=(Window,Worker,Worklet)]
 interface Memory {
   readonly attribute ArrayBuffer buffer;
   unsigned long grow( [EnforceRange] unsigned long delta );
-};
-
-[LegacyNamespace=WebAssembly]
-interface RuntimeError {
 };
 
 [LegacyNamespace=WebAssembly, Constructor( BufferSource bytes ), Exposed=(Window,Worker,Worklet)]
@@ -93,11 +91,13 @@ interface Module {
 };
 
 [LegacyNamespace=WebAssembly]
-interface LinkError {
+interface RuntimeError {
 };
 
-[LegacyNamespace=WebAssembly, Constructor( GlobalDescriptor descriptor, optional any v ), Exposed=(Window,Worker,Worklet)]
-interface Global {
-  attribute any value;
-  any valueOf();
+[LegacyNamespace=WebAssembly, Constructor( TableDescriptor descriptor ), Exposed=(Window,Worker,Worklet)]
+interface Table {
+  readonly attribute unsigned long length;
+  Function? get( [EnforceRange] unsigned long index );
+  unsigned long grow( [EnforceRange] unsigned long delta );
+  void set( [EnforceRange] unsigned long index, Function? value );
 };

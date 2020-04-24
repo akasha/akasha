@@ -1,4 +1,12 @@
 [Exposed=Window]
+interface HTMLDetailsElement : HTMLElement {
+  [CEReactions]
+  attribute boolean open;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
 interface HTMLDialogElement : HTMLElement {
   [CEReactions]
   attribute boolean open;
@@ -11,12 +19,4 @@ interface HTMLDialogElement : HTMLElement {
   void show();
   [CEReactions]
   void showModal();
-};
-
-[Exposed=Window]
-interface HTMLDetailsElement : HTMLElement {
-  [CEReactions]
-  attribute boolean open;
-  [HTMLConstructor]
-  constructor();
 };

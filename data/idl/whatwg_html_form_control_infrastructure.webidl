@@ -14,6 +14,18 @@ dictionary SubmitEventInit : EventInit {
 };
 
 [Exposed=Window]
+interface FormDataEvent : Event {
+  readonly attribute FormData formData;
+  constructor( DOMString type, FormDataEventInit eventInitDict );
+};
+
+[Exposed=Window]
+interface SubmitEvent : Event {
+  readonly attribute HTMLElement? submitter;
+  constructor( DOMString type, optional SubmitEventInit eventInitDict = {} );
+};
+
+[Exposed=Window]
 interface ValidityState {
   readonly attribute boolean badInput;
   readonly attribute boolean customError;
@@ -26,16 +38,4 @@ interface ValidityState {
   readonly attribute boolean typeMismatch;
   readonly attribute boolean valid;
   readonly attribute boolean valueMissing;
-};
-
-[Exposed=Window]
-interface SubmitEvent : Event {
-  readonly attribute HTMLElement? submitter;
-  constructor( DOMString type, optional SubmitEventInit eventInitDict = {} );
-};
-
-[Exposed=Window]
-interface FormDataEvent : Event {
-  readonly attribute FormData formData;
-  constructor( DOMString type, FormDataEventInit eventInitDict );
 };

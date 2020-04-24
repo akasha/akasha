@@ -1,17 +1,27 @@
 [Exposed=Window]
-interface SVGRadialGradientElement : SVGGradientElement {
+interface SVGGradientElement : SVGElement {
+  const unsigned short SVG_SPREADMETHOD_PAD = 1;
+  const unsigned short SVG_SPREADMETHOD_REFLECT = 2;
+  const unsigned short SVG_SPREADMETHOD_REPEAT = 3;
+  const unsigned short SVG_SPREADMETHOD_UNKNOWN = 0;
   [SameObject]
-  readonly attribute SVGAnimatedLength cx;
+  readonly attribute SVGAnimatedTransformList gradientTransform;
   [SameObject]
-  readonly attribute SVGAnimatedLength cy;
+  readonly attribute SVGAnimatedEnumeration gradientUnits;
   [SameObject]
-  readonly attribute SVGAnimatedLength fr;
+  readonly attribute SVGAnimatedEnumeration spreadMethod;
+};
+
+[Exposed=Window]
+interface SVGLinearGradientElement : SVGGradientElement {
   [SameObject]
-  readonly attribute SVGAnimatedLength fx;
+  readonly attribute SVGAnimatedLength x1;
   [SameObject]
-  readonly attribute SVGAnimatedLength fy;
+  readonly attribute SVGAnimatedLength x2;
   [SameObject]
-  readonly attribute SVGAnimatedLength r;
+  readonly attribute SVGAnimatedLength y1;
+  [SameObject]
+  readonly attribute SVGAnimatedLength y2;
 };
 
 [Exposed=Window]
@@ -33,17 +43,19 @@ interface SVGPatternElement : SVGElement {
 };
 
 [Exposed=Window]
-interface SVGGradientElement : SVGElement {
-  const unsigned short SVG_SPREADMETHOD_PAD = 1;
-  const unsigned short SVG_SPREADMETHOD_REFLECT = 2;
-  const unsigned short SVG_SPREADMETHOD_REPEAT = 3;
-  const unsigned short SVG_SPREADMETHOD_UNKNOWN = 0;
+interface SVGRadialGradientElement : SVGGradientElement {
   [SameObject]
-  readonly attribute SVGAnimatedTransformList gradientTransform;
+  readonly attribute SVGAnimatedLength cx;
   [SameObject]
-  readonly attribute SVGAnimatedEnumeration gradientUnits;
+  readonly attribute SVGAnimatedLength cy;
   [SameObject]
-  readonly attribute SVGAnimatedEnumeration spreadMethod;
+  readonly attribute SVGAnimatedLength fr;
+  [SameObject]
+  readonly attribute SVGAnimatedLength fx;
+  [SameObject]
+  readonly attribute SVGAnimatedLength fy;
+  [SameObject]
+  readonly attribute SVGAnimatedLength r;
 };
 
 [Exposed=Window]
@@ -52,20 +64,8 @@ interface SVGStopElement : SVGElement {
   readonly attribute SVGAnimatedNumber offset;
 };
 
-[Exposed=Window]
-interface SVGLinearGradientElement : SVGGradientElement {
-  [SameObject]
-  readonly attribute SVGAnimatedLength x1;
-  [SameObject]
-  readonly attribute SVGAnimatedLength x2;
-  [SameObject]
-  readonly attribute SVGAnimatedLength y1;
-  [SameObject]
-  readonly attribute SVGAnimatedLength y2;
-};
+SVGGradientElement includes SVGURIReference;
 
 SVGPatternElement includes SVGFitToViewBox;
 
 SVGPatternElement includes SVGURIReference;
-
-SVGGradientElement includes SVGURIReference;

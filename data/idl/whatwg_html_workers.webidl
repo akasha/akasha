@@ -17,20 +17,6 @@ interface mixin NavigatorConcurrentHardware {
   readonly attribute unsigned long long hardwareConcurrency;
 };
 
-[Exposed=Worker]
-interface WorkerGlobalScope : EventTarget {
-  readonly attribute WorkerLocation location;
-  readonly attribute WorkerNavigator navigator;
-  readonly attribute WorkerGlobalScope self;
-  attribute OnErrorEventHandler onerror;
-  attribute EventHandler onlanguagechange;
-  attribute EventHandler onoffline;
-  attribute EventHandler ononline;
-  attribute EventHandler onrejectionhandled;
-  attribute EventHandler onunhandledrejection;
-  void importScripts( USVString... urls );
-};
-
 [Global=(Worker,DedicatedWorker), Exposed=DedicatedWorker]
 interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
   [Replaceable]
@@ -48,6 +34,14 @@ interface SharedWorker : EventTarget {
   constructor( USVString scriptURL, optional ( DOMString or WorkerOptions ) options = {} );
 };
 
+[Global=(Worker,SharedWorker), Exposed=SharedWorker]
+interface SharedWorkerGlobalScope : WorkerGlobalScope {
+  [Replaceable]
+  readonly attribute DOMString name;
+  attribute EventHandler onconnect;
+  void close();
+};
+
 [Exposed=(Window,Worker)]
 interface Worker : EventTarget {
   attribute EventHandler onmessage;
@@ -58,16 +52,18 @@ interface Worker : EventTarget {
   void terminate();
 };
 
-[Global=(Worker,SharedWorker), Exposed=SharedWorker]
-interface SharedWorkerGlobalScope : WorkerGlobalScope {
-  [Replaceable]
-  readonly attribute DOMString name;
-  attribute EventHandler onconnect;
-  void close();
-};
-
 [Exposed=Worker]
-interface WorkerNavigator {
+interface WorkerGlobalScope : EventTarget {
+  readonly attribute WorkerLocation location;
+  readonly attribute WorkerNavigator navigator;
+  readonly attribute WorkerGlobalScope self;
+  attribute OnErrorEventHandler onerror;
+  attribute EventHandler onlanguagechange;
+  attribute EventHandler onoffline;
+  attribute EventHandler ononline;
+  attribute EventHandler onrejectionhandled;
+  attribute EventHandler onunhandledrejection;
+  void importScripts( USVString... urls );
 };
 
 [Exposed=Worker]
@@ -83,14 +79,18 @@ interface WorkerLocation {
   stringifier readonly attribute USVString href;
 };
 
-Worker includes AbstractWorker;
+[Exposed=Worker]
+interface WorkerNavigator {
+};
 
 SharedWorker includes AbstractWorker;
 
-WorkerNavigator includes NavigatorID;
+Worker includes AbstractWorker;
 
 WorkerNavigator includes NavigatorConcurrentHardware;
 
-WorkerNavigator includes NavigatorOnLine;
+WorkerNavigator includes NavigatorID;
 
 WorkerNavigator includes NavigatorLanguage;
+
+WorkerNavigator includes NavigatorOnLine;

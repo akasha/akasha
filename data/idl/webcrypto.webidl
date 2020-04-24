@@ -1,3 +1,10 @@
+enum KeyFormat {
+  "jwk",
+  "pkcs8",
+  "raw",
+  "spki"
+};
+
 enum KeyType {
   "private",
   "public",
@@ -15,23 +22,16 @@ enum KeyUsage {
   "wrapKey"
 };
 
-enum KeyFormat {
-  "jwk",
-  "pkcs8",
-  "raw",
-  "spki"
-};
-
-typedef AlgorithmIdentifier HashAlgorithmIdentifier;
+typedef ( object or DOMString ) AlgorithmIdentifier;
 
 typedef Uint8Array BigInteger;
 
+typedef AlgorithmIdentifier HashAlgorithmIdentifier;
+
 typedef DOMString NamedCurve;
 
-typedef ( object or DOMString ) AlgorithmIdentifier;
-
-dictionary RsaHashedKeyAlgorithm : RsaKeyAlgorithm {
-  required KeyAlgorithm hash;
+dictionary AesCbcParams : Algorithm {
+  required BufferSource iv;
 };
 
 dictionary AesCtrParams : Algorithm {
@@ -39,18 +39,36 @@ dictionary AesCtrParams : Algorithm {
   required [EnforceRange] octet length;
 };
 
-dictionary RsaOaepParams : Algorithm {
-  BufferSource label;
+dictionary AesDerivedKeyParams : Algorithm {
+  required [EnforceRange] unsigned short length;
 };
 
-dictionary HkdfParams : Algorithm {
-  required HashAlgorithmIdentifier hash;
-  required BufferSource info;
-  required BufferSource salt;
+dictionary AesGcmParams : Algorithm {
+  BufferSource additionalData;
+  required BufferSource iv;
+  [EnforceRange]
+  octet tagLength;
 };
 
-dictionary RsaPssParams : Algorithm {
-  required [EnforceRange] unsigned long saltLength;
+dictionary AesKeyAlgorithm : KeyAlgorithm {
+  required unsigned short length;
+};
+
+dictionary AesKeyGenParams : Algorithm {
+  required [EnforceRange] unsigned short length;
+};
+
+dictionary Algorithm {
+  required DOMString name;
+};
+
+dictionary CryptoKeyPair {
+  CryptoKey privateKey;
+  CryptoKey publicKey;
+};
+
+dictionary EcKeyAlgorithm : KeyAlgorithm {
+  required NamedCurve namedCurve;
 };
 
 dictionary EcKeyGenParams : Algorithm {
@@ -61,19 +79,18 @@ dictionary EcKeyImportParams : Algorithm {
   required NamedCurve namedCurve;
 };
 
-dictionary HmacKeyGenParams : Algorithm {
+dictionary EcdhKeyDeriveParams : Algorithm {
+  required CryptoKey public;
+};
+
+dictionary EcdsaParams : Algorithm {
   required HashAlgorithmIdentifier hash;
-  [EnforceRange]
-  unsigned long length;
 };
 
-dictionary RsaKeyGenParams : Algorithm {
-  required [EnforceRange] unsigned long modulusLength;
-  required BigInteger publicExponent;
-};
-
-dictionary AesCbcParams : Algorithm {
-  required BufferSource iv;
+dictionary HkdfParams : Algorithm {
+  required HashAlgorithmIdentifier hash;
+  required BufferSource info;
+  required BufferSource salt;
 };
 
 dictionary HmacImportParams : Algorithm {
@@ -82,33 +99,15 @@ dictionary HmacImportParams : Algorithm {
   unsigned long length;
 };
 
-dictionary CryptoKeyPair {
-  CryptoKey privateKey;
-  CryptoKey publicKey;
+dictionary HmacKeyAlgorithm : KeyAlgorithm {
+  required KeyAlgorithm hash;
+  required unsigned long length;
 };
 
-dictionary RsaOtherPrimesInfo {
-  DOMString d;
-  DOMString r;
-  DOMString t;
-};
-
-dictionary EcdhKeyDeriveParams : Algorithm {
-  required CryptoKey public;
-};
-
-dictionary Pbkdf2Params : Algorithm {
+dictionary HmacKeyGenParams : Algorithm {
   required HashAlgorithmIdentifier hash;
-  required [EnforceRange] unsigned long iterations;
-  required BufferSource salt;
-};
-
-dictionary EcdsaParams : Algorithm {
-  required HashAlgorithmIdentifier hash;
-};
-
-dictionary RsaHashedImportParams : Algorithm {
-  required HashAlgorithmIdentifier hash;
+  [EnforceRange]
+  unsigned long length;
 };
 
 dictionary JsonWebKey {
@@ -132,49 +131,50 @@ dictionary JsonWebKey {
   DOMString y;
 };
 
-dictionary Algorithm {
+dictionary KeyAlgorithm {
   required DOMString name;
+};
+
+dictionary Pbkdf2Params : Algorithm {
+  required HashAlgorithmIdentifier hash;
+  required [EnforceRange] unsigned long iterations;
+  required BufferSource salt;
+};
+
+dictionary RsaHashedImportParams : Algorithm {
+  required HashAlgorithmIdentifier hash;
+};
+
+dictionary RsaHashedKeyAlgorithm : RsaKeyAlgorithm {
+  required KeyAlgorithm hash;
 };
 
 dictionary RsaHashedKeyGenParams : RsaKeyGenParams {
   required HashAlgorithmIdentifier hash;
 };
 
-dictionary AesKeyAlgorithm : KeyAlgorithm {
-  required unsigned short length;
-};
-
-dictionary KeyAlgorithm {
-  required DOMString name;
-};
-
-dictionary AesGcmParams : Algorithm {
-  BufferSource additionalData;
-  required BufferSource iv;
-  [EnforceRange]
-  octet tagLength;
-};
-
-dictionary HmacKeyAlgorithm : KeyAlgorithm {
-  required KeyAlgorithm hash;
-  required unsigned long length;
-};
-
-dictionary AesDerivedKeyParams : Algorithm {
-  required [EnforceRange] unsigned short length;
-};
-
-dictionary AesKeyGenParams : Algorithm {
-  required [EnforceRange] unsigned short length;
-};
-
-dictionary EcKeyAlgorithm : KeyAlgorithm {
-  required NamedCurve namedCurve;
-};
-
 dictionary RsaKeyAlgorithm : KeyAlgorithm {
   required unsigned long modulusLength;
   required BigInteger publicExponent;
+};
+
+dictionary RsaKeyGenParams : Algorithm {
+  required [EnforceRange] unsigned long modulusLength;
+  required BigInteger publicExponent;
+};
+
+dictionary RsaOaepParams : Algorithm {
+  BufferSource label;
+};
+
+dictionary RsaOtherPrimesInfo {
+  DOMString d;
+  DOMString r;
+  DOMString t;
+};
+
+dictionary RsaPssParams : Algorithm {
+  required [EnforceRange] unsigned long saltLength;
 };
 
 partial interface mixin WindowOrWorkerGlobalScope {

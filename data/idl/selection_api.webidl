@@ -30,10 +30,10 @@ interface Selection {
   stringifier;
 };
 
-partial interface Window {
+partial interface Document {
   Selection? getSelection();
 };
 
-partial interface Document {
+partial interface Window {
   Selection? getSelection();
 };

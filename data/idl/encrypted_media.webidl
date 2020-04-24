@@ -1,19 +1,13 @@
-enum MediaKeySessionType {
-  "persistent-license",
-  "temporary"
-};
-
-enum MediaKeysRequirement {
-  "not-allowed",
-  "optional",
-  "required"
-};
-
 enum MediaKeyMessageType {
   "individualization-request",
   "license-release",
   "license-renewal",
   "license-request"
+};
+
+enum MediaKeySessionType {
+  "persistent-license",
+  "temporary"
 };
 
 enum MediaKeyStatus {
@@ -26,6 +20,22 @@ enum MediaKeyStatus {
   "usable"
 };
 
+enum MediaKeysRequirement {
+  "not-allowed",
+  "optional",
+  "required"
+};
+
+dictionary MediaEncryptedEventInit : EventInit {
+  ArrayBuffer? initData = null;
+  DOMString initDataType = "";
+};
+
+dictionary MediaKeyMessageEventInit : EventInit {
+  required ArrayBuffer message;
+  required MediaKeyMessageType messageType;
+};
+
 dictionary MediaKeySystemConfiguration {
   sequence<MediaKeySystemMediaCapability> audioCapabilities = [];
   MediaKeysRequirement distinctiveIdentifier = "optional";
@@ -34,16 +44,6 @@ dictionary MediaKeySystemConfiguration {
   MediaKeysRequirement persistentState = "optional";
   sequence<DOMString> sessionTypes;
   sequence<MediaKeySystemMediaCapability> videoCapabilities = [];
-};
-
-dictionary MediaKeyMessageEventInit : EventInit {
-  required ArrayBuffer message;
-  required MediaKeyMessageType messageType;
-};
-
-dictionary MediaEncryptedEventInit : EventInit {
-  ArrayBuffer? initData = null;
-  DOMString initDataType = "";
 };
 
 dictionary MediaKeySystemMediaCapability {
@@ -55,6 +55,12 @@ dictionary MediaKeySystemMediaCapability {
 interface MediaEncryptedEvent : Event {
   readonly attribute ArrayBuffer? initData;
   readonly attribute DOMString initDataType;
+};
+
+[SecureContext, Constructor( DOMString type, MediaKeyMessageEventInit eventInitDict )]
+interface MediaKeyMessageEvent : Event {
+  readonly attribute ArrayBuffer message;
+  readonly attribute MediaKeyMessageType messageType;
 };
 
 [SecureContext]
@@ -73,6 +79,14 @@ interface MediaKeySession : EventTarget {
 };
 
 [SecureContext]
+interface MediaKeyStatusMap {
+  iterable<BufferSource, MediaKeyStatus>;
+  readonly attribute unsigned long size;
+  any get( BufferSource keyId );
+  boolean has( BufferSource keyId );
+};
+
+[SecureContext]
 interface MediaKeySystemAccess {
   readonly attribute DOMString keySystem;
   Promise<MediaKeys> createMediaKeys();
@@ -85,25 +99,6 @@ interface MediaKeys {
   Promise<boolean> setServerCertificate( BufferSource serverCertificate );
 };
 
-[SecureContext, Constructor( DOMString type, MediaKeyMessageEventInit eventInitDict )]
-interface MediaKeyMessageEvent : Event {
-  readonly attribute ArrayBuffer message;
-  readonly attribute MediaKeyMessageType messageType;
-};
-
-[SecureContext]
-interface MediaKeyStatusMap {
-  iterable<BufferSource, MediaKeyStatus>;
-  readonly attribute unsigned long size;
-  any get( BufferSource keyId );
-  boolean has( BufferSource keyId );
-};
-
-partial interface Navigator {
-  [SecureContext]
-  Promise<MediaKeySystemAccess> requestMediaKeySystemAccess( DOMString keySystem, sequence<MediaKeySystemConfiguration> supportedConfigurations );
-};
-
 partial interface HTMLMediaElement {
   [SecureContext]
   readonly attribute MediaKeys? mediaKeys;
@@ -111,4 +106,9 @@ partial interface HTMLMediaElement {
   attribute EventHandler onwaitingforkey;
   [SecureContext]
   Promise<void> setMediaKeys( MediaKeys? mediaKeys );
+};
+
+partial interface Navigator {
+  [SecureContext]
+  Promise<MediaKeySystemAccess> requestMediaKeySystemAccess( DOMString keySystem, sequence<MediaKeySystemConfiguration> supportedConfigurations );
 };

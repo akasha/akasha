@@ -12,6 +12,21 @@ enum NotificationPermission {
 
 callback NotificationPermissionCallback = void ( NotificationPermission permission );
 
+dictionary GetNotificationOptions {
+  DOMString tag = "";
+};
+
+dictionary NotificationAction {
+  required DOMString action;
+  USVString icon;
+  required DOMString title;
+};
+
+dictionary NotificationEventInit : ExtendableEventInit {
+  DOMString action = "";
+  required Notification notification;
+};
+
 dictionary NotificationOptions {
   sequence<NotificationAction> actions = [];
   USVString badge;
@@ -27,28 +42,6 @@ dictionary NotificationOptions {
   DOMString tag = "";
   DOMTimeStamp timestamp;
   VibratePattern vibrate;
-};
-
-dictionary NotificationAction {
-  required DOMString action;
-  USVString icon;
-  required DOMString title;
-};
-
-dictionary GetNotificationOptions {
-  DOMString tag = "";
-};
-
-dictionary NotificationEventInit : ExtendableEventInit {
-  DOMString action = "";
-  required Notification notification;
-};
-
-[Exposed=ServiceWorker]
-interface NotificationEvent : ExtendableEvent {
-  readonly attribute DOMString action;
-  readonly attribute Notification notification;
-  constructor( DOMString type, NotificationEventInit eventInitDict );
 };
 
 [Exposed=(Window,Worker)]
@@ -83,12 +76,19 @@ interface Notification : EventTarget {
   void close();
 };
 
-partial interface ServiceWorkerRegistration {
-  Promise<sequence<Notification>> getNotifications( optional GetNotificationOptions filter = {} );
-  Promise<void> showNotification( DOMString title, optional NotificationOptions options = {} );
+[Exposed=ServiceWorker]
+interface NotificationEvent : ExtendableEvent {
+  readonly attribute DOMString action;
+  readonly attribute Notification notification;
+  constructor( DOMString type, NotificationEventInit eventInitDict );
 };
 
 partial interface ServiceWorkerGlobalScope {
   attribute EventHandler onnotificationclick;
   attribute EventHandler onnotificationclose;
+};
+
+partial interface ServiceWorkerRegistration {
+  Promise<sequence<Notification>> getNotifications( optional GetNotificationOptions filter = {} );
+  Promise<void> showNotification( DOMString title, optional NotificationOptions options = {} );
 };

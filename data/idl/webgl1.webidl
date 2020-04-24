@@ -4,39 +4,39 @@ enum WebGLPowerPreference {
   "low-power"
 };
 
-typedef unsigned long GLenum;
+typedef ( [AllowShared] Float32Array or sequence<GLfloat> ) Float32List;
 
 typedef unsigned long GLbitfield;
 
-typedef ( ImageBitmap or ImageData or HTMLImageElement or HTMLCanvasElement or HTMLVideoElement or OffscreenCanvas ) TexImageSource;
-
-typedef long GLint;
-
-typedef short GLshort;
+typedef boolean GLboolean;
 
 typedef byte GLbyte;
 
-typedef boolean GLboolean;
-
 typedef unrestricted float GLclampf;
+
+typedef unsigned long GLenum;
 
 typedef unrestricted float GLfloat;
 
-typedef ( [AllowShared] Int32Array or sequence<GLint> ) Int32List;
+typedef long GLint;
+
+typedef long long GLintptr;
+
+typedef short GLshort;
+
+typedef long GLsizei;
+
+typedef long long GLsizeiptr;
 
 typedef octet GLubyte;
 
 typedef unsigned long GLuint;
 
-typedef long GLsizei;
-
 typedef unsigned short GLushort;
 
-typedef ( [AllowShared] Float32Array or sequence<GLfloat> ) Float32List;
+typedef ( [AllowShared] Int32Array or sequence<GLint> ) Int32List;
 
-typedef long long GLintptr;
-
-typedef long long GLsizeiptr;
+typedef ( ImageBitmap or ImageData or HTMLImageElement or HTMLCanvasElement or HTMLVideoElement or OffscreenCanvas ) TexImageSource;
 
 dictionary WebGLContextAttributes {
   boolean alpha = true;
@@ -515,37 +515,10 @@ interface mixin WebGLRenderingContextOverloads {
 };
 
 [Exposed=(Window,Worker)]
-interface WebGLTexture : WebGLObject {
-};
-
-[Exposed=(Window,Worker)]
-interface WebGLUniformLocation {
-};
-
-[Exposed=(Window,Worker)]
-interface WebGLShader : WebGLObject {
-};
-
-[Exposed=(Window,Worker)]
 interface WebGLActiveInfo {
   readonly attribute DOMString name;
   readonly attribute GLint size;
   readonly attribute GLenum type;
-};
-
-[Exposed=(Window,Worker)]
-interface WebGLProgram : WebGLObject {
-};
-
-[Exposed=(Window,Worker)]
-interface WebGLRenderingContext {
-};
-
-[Exposed=(Window,Worker)]
-interface WebGLShaderPrecisionFormat {
-  readonly attribute GLint precision;
-  readonly attribute GLint rangeMax;
-  readonly attribute GLint rangeMin;
 };
 
 [Exposed=(Window,Worker)]
@@ -558,10 +531,6 @@ interface WebGLContextEvent : Event {
 };
 
 [Exposed=(Window,Worker)]
-interface WebGLRenderbuffer : WebGLObject {
-};
-
-[Exposed=(Window,Worker)]
 interface WebGLFramebuffer : WebGLObject {
 };
 
@@ -569,6 +538,37 @@ interface WebGLFramebuffer : WebGLObject {
 interface WebGLObject {
 };
 
-WebGLRenderingContext includes WebGLRenderingContextOverloads;
+[Exposed=(Window,Worker)]
+interface WebGLProgram : WebGLObject {
+};
+
+[Exposed=(Window,Worker)]
+interface WebGLRenderbuffer : WebGLObject {
+};
+
+[Exposed=(Window,Worker)]
+interface WebGLRenderingContext {
+};
+
+[Exposed=(Window,Worker)]
+interface WebGLShader : WebGLObject {
+};
+
+[Exposed=(Window,Worker)]
+interface WebGLShaderPrecisionFormat {
+  readonly attribute GLint precision;
+  readonly attribute GLint rangeMax;
+  readonly attribute GLint rangeMin;
+};
+
+[Exposed=(Window,Worker)]
+interface WebGLTexture : WebGLObject {
+};
+
+[Exposed=(Window,Worker)]
+interface WebGLUniformLocation {
+};
 
 WebGLRenderingContext includes WebGLRenderingContextBase;
+
+WebGLRenderingContext includes WebGLRenderingContextOverloads;

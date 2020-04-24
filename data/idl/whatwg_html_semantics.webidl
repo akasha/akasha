@@ -1,4 +1,26 @@
 [Exposed=Window]
+interface HTMLBaseElement : HTMLElement {
+  [CEReactions]
+  attribute USVString href;
+  [CEReactions]
+  attribute DOMString target;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLHeadElement : HTMLElement {
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLHtmlElement : HTMLElement {
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
 interface HTMLLinkElement : HTMLElement {
   [SameObject, PutForwards=value]
   readonly attribute DOMTokenList relList;
@@ -31,14 +53,6 @@ interface HTMLLinkElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLStyleElement : HTMLElement {
-  [CEReactions]
-  attribute DOMString media;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
 interface HTMLMetaElement : HTMLElement {
   [CEReactions]
   attribute DOMString content;
@@ -51,23 +65,9 @@ interface HTMLMetaElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLHeadElement : HTMLElement {
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLBaseElement : HTMLElement {
+interface HTMLStyleElement : HTMLElement {
   [CEReactions]
-  attribute USVString href;
-  [CEReactions]
-  attribute DOMString target;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLHtmlElement : HTMLElement {
+  attribute DOMString media;
   [HTMLConstructor]
   constructor();
 };
@@ -80,6 +80,6 @@ interface HTMLTitleElement : HTMLElement {
   constructor();
 };
 
-HTMLStyleElement includes LinkStyle;
-
 HTMLLinkElement includes LinkStyle;
+
+HTMLStyleElement includes LinkStyle;

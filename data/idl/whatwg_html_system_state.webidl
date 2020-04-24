@@ -5,6 +5,10 @@ interface mixin NavigatorContentUtils {
   void unregisterProtocolHandler( DOMString scheme, USVString url );
 };
 
+interface mixin NavigatorCookies {
+  readonly attribute boolean cookieEnabled;
+};
+
 interface mixin NavigatorID {
   readonly attribute DOMString appCodeName;
   readonly attribute DOMString appName;
@@ -25,10 +29,6 @@ interface mixin NavigatorLanguage {
   readonly attribute FrozenArray<DOMString> languages;
 };
 
-interface mixin NavigatorCookies {
-  readonly attribute boolean cookieEnabled;
-};
-
 interface mixin NavigatorPlugins {
   [SameObject]
   readonly attribute MimeTypeArray mimeTypes;
@@ -44,6 +44,14 @@ partial interface mixin NavigatorID {
   boolean taintEnabled();
 };
 
+[Exposed=Window]
+interface MimeType {
+  readonly attribute DOMString description;
+  readonly attribute Plugin enabledPlugin;
+  readonly attribute DOMString suffixes;
+  readonly attribute DOMString type;
+};
+
 [Exposed=Window, LegacyUnenumerableNamedProperties]
 interface MimeTypeArray {
   readonly attribute unsigned long length;
@@ -56,22 +64,6 @@ interface Navigator {
 };
 
 [Exposed=Window, LegacyUnenumerableNamedProperties]
-interface PluginArray {
-  readonly attribute unsigned long length;
-  void refresh( optional boolean reload = false );
-  getter Plugin? item( unsigned long index );
-  getter Plugin? namedItem( DOMString name );
-};
-
-[Exposed=Window]
-interface MimeType {
-  readonly attribute DOMString description;
-  readonly attribute Plugin enabledPlugin;
-  readonly attribute DOMString suffixes;
-  readonly attribute DOMString type;
-};
-
-[Exposed=Window, LegacyUnenumerableNamedProperties]
 interface Plugin {
   readonly attribute DOMString description;
   readonly attribute DOMString filename;
@@ -81,16 +73,24 @@ interface Plugin {
   getter MimeType? namedItem( DOMString name );
 };
 
-Navigator includes NavigatorCookies;
-
-Navigator includes NavigatorOnLine;
-
-Navigator includes NavigatorID;
-
-Navigator includes NavigatorContentUtils;
+[Exposed=Window, LegacyUnenumerableNamedProperties]
+interface PluginArray {
+  readonly attribute unsigned long length;
+  void refresh( optional boolean reload = false );
+  getter Plugin? item( unsigned long index );
+  getter Plugin? namedItem( DOMString name );
+};
 
 Navigator includes NavigatorConcurrentHardware;
 
+Navigator includes NavigatorContentUtils;
+
+Navigator includes NavigatorCookies;
+
+Navigator includes NavigatorID;
+
 Navigator includes NavigatorLanguage;
+
+Navigator includes NavigatorOnLine;
 
 Navigator includes NavigatorPlugins;

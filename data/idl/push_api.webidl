@@ -1,15 +1,19 @@
+enum PushEncryptionKeyName {
+  "auth",
+  "p256dh"
+};
+
 enum PushPermissionState {
   "denied",
   "granted",
   "prompt"
 };
 
-enum PushEncryptionKeyName {
-  "auth",
-  "p256dh"
-};
-
 typedef ( BufferSource or USVString ) PushMessageDataInit;
+
+dictionary PushEventInit : ExtendableEventInit {
+  PushMessageDataInit data;
+};
 
 dictionary PushSubscriptionChangeEventInit : ExtendableEventInit {
   PushSubscription newSubscription = null;
@@ -22,13 +26,15 @@ dictionary PushSubscriptionJSON {
   record<DOMString, USVString> keys;
 };
 
-dictionary PushEventInit : ExtendableEventInit {
-  PushMessageDataInit data;
-};
-
 dictionary PushSubscriptionOptionsInit {
   ( BufferSource or DOMString )? applicationServerKey = null;
   boolean userVisibleOnly = false;
+};
+
+[Exposed=ServiceWorker, SecureContext]
+interface PushEvent : ExtendableEvent {
+  readonly attribute PushMessageData? data;
+  constructor( DOMString type, optional PushEventInit eventInitDict = {} );
 };
 
 [Exposed=(Window,Worker), SecureContext]
@@ -41,31 +47,11 @@ interface PushManager {
 };
 
 [Exposed=ServiceWorker, SecureContext]
-interface PushSubscriptionChangeEvent : ExtendableEvent {
-  readonly attribute PushSubscription? newSubscription;
-  readonly attribute PushSubscription? oldSubscription;
-  constructor( DOMString type, optional PushSubscriptionChangeEventInit eventInitDict = {} );
-};
-
-[Exposed=ServiceWorker, SecureContext]
-interface PushEvent : ExtendableEvent {
-  readonly attribute PushMessageData? data;
-  constructor( DOMString type, optional PushEventInit eventInitDict = {} );
-};
-
-[Exposed=ServiceWorker, SecureContext]
 interface PushMessageData {
   ArrayBuffer arrayBuffer();
   Blob blob();
   any json();
   USVString text();
-};
-
-[Exposed=(Window,Worker), SecureContext]
-interface PushSubscriptionOptions {
-  [SameObject]
-  readonly attribute ArrayBuffer? applicationServerKey;
-  readonly attribute boolean userVisibleOnly;
 };
 
 [Exposed=(Window,Worker), SecureContext]
@@ -79,13 +65,27 @@ interface PushSubscription {
   Promise<boolean> unsubscribe();
 };
 
-[SecureContext]
-partial interface ServiceWorkerRegistration {
-  readonly attribute PushManager pushManager;
+[Exposed=ServiceWorker, SecureContext]
+interface PushSubscriptionChangeEvent : ExtendableEvent {
+  readonly attribute PushSubscription? newSubscription;
+  readonly attribute PushSubscription? oldSubscription;
+  constructor( DOMString type, optional PushSubscriptionChangeEventInit eventInitDict = {} );
+};
+
+[Exposed=(Window,Worker), SecureContext]
+interface PushSubscriptionOptions {
+  [SameObject]
+  readonly attribute ArrayBuffer? applicationServerKey;
+  readonly attribute boolean userVisibleOnly;
 };
 
 [Exposed=ServiceWorker, SecureContext]
 partial interface ServiceWorkerGlobalScope {
   attribute EventHandler onpush;
   attribute EventHandler onpushsubscriptionchange;
+};
+
+[SecureContext]
+partial interface ServiceWorkerRegistration {
+  readonly attribute PushManager pushManager;
 };

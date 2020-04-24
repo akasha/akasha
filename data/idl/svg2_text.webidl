@@ -1,19 +1,5 @@
 [Exposed=Window]
-interface SVGTextPositioningElement : SVGTextContentElement {
-  [SameObject]
-  readonly attribute SVGAnimatedLengthList dx;
-  [SameObject]
-  readonly attribute SVGAnimatedLengthList dy;
-  [SameObject]
-  readonly attribute SVGAnimatedNumberList rotate;
-  [SameObject]
-  readonly attribute SVGAnimatedLengthList x;
-  [SameObject]
-  readonly attribute SVGAnimatedLengthList y;
-};
-
-[Exposed=Window]
-interface SVGTextElement : SVGTextPositioningElement {
+interface SVGTSpanElement : SVGTextPositioningElement {
 };
 
 [Exposed=Window]
@@ -37,6 +23,10 @@ interface SVGTextContentElement : SVGGraphicsElement {
 };
 
 [Exposed=Window]
+interface SVGTextElement : SVGTextPositioningElement {
+};
+
+[Exposed=Window]
 interface SVGTextPathElement : SVGTextContentElement {
   const unsigned short TEXTPATH_METHODTYPE_ALIGN = 1;
   const unsigned short TEXTPATH_METHODTYPE_STRETCH = 2;
@@ -53,7 +43,17 @@ interface SVGTextPathElement : SVGTextContentElement {
 };
 
 [Exposed=Window]
-interface SVGTSpanElement : SVGTextPositioningElement {
+interface SVGTextPositioningElement : SVGTextContentElement {
+  [SameObject]
+  readonly attribute SVGAnimatedLengthList dx;
+  [SameObject]
+  readonly attribute SVGAnimatedLengthList dy;
+  [SameObject]
+  readonly attribute SVGAnimatedNumberList rotate;
+  [SameObject]
+  readonly attribute SVGAnimatedLengthList x;
+  [SameObject]
+  readonly attribute SVGAnimatedLengthList y;
 };
 
 SVGTextPathElement includes SVGURIReference;

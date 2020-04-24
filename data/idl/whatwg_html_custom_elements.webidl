@@ -18,6 +18,16 @@ dictionary ValidityStateFlags {
 };
 
 [Exposed=Window]
+interface CustomElementRegistry {
+  [CEReactions]
+  void define( DOMString name, CustomElementConstructor constructor, optional ElementDefinitionOptions options = {} );
+  any get( DOMString name );
+  [CEReactions]
+  void upgrade( Node root );
+  Promise<void> whenDefined( DOMString name );
+};
+
+[Exposed=Window]
 interface ElementInternals {
   readonly attribute HTMLFormElement? form;
   readonly attribute NodeList labels;
@@ -28,14 +38,4 @@ interface ElementInternals {
   boolean reportValidity();
   void setFormValue( ( File or USVString or FormData )? value, optional ( File or USVString or FormData )? state );
   void setValidity( ValidityStateFlags flags, optional DOMString message, optional HTMLElement anchor );
-};
-
-[Exposed=Window]
-interface CustomElementRegistry {
-  [CEReactions]
-  void define( DOMString name, CustomElementConstructor constructor, optional ElementDefinitionOptions options = {} );
-  any get( DOMString name );
-  [CEReactions]
-  void upgrade( Node root );
-  Promise<void> whenDefined( DOMString name );
 };

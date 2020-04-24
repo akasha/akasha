@@ -18,69 +18,145 @@ public final class WebIDLWriter
     throws IOException
   {
     int definitionCount = 0;
-    for ( final EnumerationDefinition definition : schema.getEnumerations() )
+    final List<EnumerationDefinition> enumerations =
+      schema
+        .getEnumerations()
+        .stream()
+        .sorted( Comparator.comparing( EnumerationDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final EnumerationDefinition definition : enumerations )
     {
       maybeNewLine( writer, definitionCount++ );
       writeEnumerationDefinition( writer, definition );
     }
-
-    for ( final TypedefDefinition definition : schema.getTypedefs() )
+    final List<TypedefDefinition> typedefs =
+      schema
+        .getTypedefs()
+        .stream()
+        .sorted( Comparator.comparing( TypedefDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final TypedefDefinition definition : typedefs )
     {
       maybeNewLine( writer, definitionCount++ );
       writeTypedefDefinition( writer, definition );
     }
-
-    for ( final NamespaceDefinition definition : schema.getNamespaces() )
+    final List<NamespaceDefinition> namespaces =
+      schema
+        .getNamespaces()
+        .stream()
+        .sorted( Comparator.comparing( NamespaceDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final NamespaceDefinition definition : namespaces )
     {
       maybeNewLine( writer, definitionCount++ );
       writeNamespaceDefinition( writer, definition );
     }
-    for ( final PartialNamespaceDefinition definition : schema.getPartialNamespaces() )
+    final List<PartialNamespaceDefinition> partialNamespaces =
+      schema
+        .getPartialNamespaces()
+        .stream()
+        .sorted( Comparator.comparing( PartialNamespaceDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final PartialNamespaceDefinition definition : partialNamespaces )
     {
       maybeNewLine( writer, definitionCount++ );
       writePartialNamespaceDefinition( writer, definition );
     }
-    for ( final CallbackDefinition definition : schema.getCallbacks() )
+    final List<CallbackDefinition> callbacks =
+      schema
+        .getCallbacks()
+        .stream()
+        .sorted( Comparator.comparing( CallbackDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final CallbackDefinition definition : callbacks )
     {
       maybeNewLine( writer, definitionCount++ );
       writeCallbackDefinition( writer, definition );
     }
-    for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
+    final List<CallbackInterfaceDefinition> callbackInterfaces =
+      schema
+        .getCallbackInterfaces()
+        .stream()
+        .sorted( Comparator.comparing( CallbackInterfaceDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final CallbackInterfaceDefinition definition : callbackInterfaces )
     {
       maybeNewLine( writer, definitionCount++ );
       writeCallbackInterfaceDefinition( writer, definition );
     }
-    for ( final DictionaryDefinition definition : schema.getDictionaries() )
+    final List<DictionaryDefinition> dictionaries =
+      schema
+        .getDictionaries()
+        .stream()
+        .sorted( Comparator.comparing( DictionaryDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final DictionaryDefinition definition : dictionaries )
     {
       maybeNewLine( writer, definitionCount++ );
       writeDictionaryDefinition( writer, definition );
     }
-    for ( final PartialDictionaryDefinition definition : schema.getPartialDictionaries() )
+    final List<PartialDictionaryDefinition> partialDictionaries =
+      schema
+        .getPartialDictionaries()
+        .stream()
+        .sorted( Comparator.comparing( PartialDictionaryDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final PartialDictionaryDefinition definition : partialDictionaries )
     {
       maybeNewLine( writer, definitionCount++ );
       writePartialDictionaryDefinition( writer, definition );
     }
-    for ( final MixinDefinition definition : schema.getMixins() )
+    final List<MixinDefinition> mixins =
+      schema
+        .getMixins()
+        .stream()
+        .sorted( Comparator.comparing( MixinDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final MixinDefinition definition : mixins )
     {
       maybeNewLine( writer, definitionCount++ );
       writeMixinDefinition( writer, definition );
     }
-    for ( final PartialMixinDefinition definition : schema.getPartialMixins() )
+    final List<PartialMixinDefinition> partialMixins =
+      schema
+        .getPartialMixins()
+        .stream()
+        .sorted( Comparator.comparing( PartialMixinDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final PartialMixinDefinition definition : partialMixins )
     {
       maybeNewLine( writer, definitionCount++ );
       writePartialMixinDefinition( writer, definition );
     }
-    for ( final InterfaceDefinition definition : schema.getInterfaces() )
+    final List<InterfaceDefinition> interfaces =
+      schema
+        .getInterfaces()
+        .stream()
+        .sorted( Comparator.comparing( InterfaceDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final InterfaceDefinition definition : interfaces )
     {
       maybeNewLine( writer, definitionCount++ );
       writeInterfaceDefinition( writer, definition );
     }
-    for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
+    final List<PartialInterfaceDefinition> partialInterfaces =
+      schema
+        .getPartialInterfaces()
+        .stream()
+        .sorted( Comparator.comparing( PartialInterfaceDefinition::getName ) )
+        .collect( Collectors.toList() );
+    for ( final PartialInterfaceDefinition definition : partialInterfaces )
     {
       maybeNewLine( writer, definitionCount++ );
       writePartialInterfaceDefinition( writer, definition );
     }
-    for ( final IncludesStatement definition : schema.getIncludes() )
+    final List<IncludesStatement> includes =
+      schema
+        .getIncludes()
+        .stream()
+        .sorted( Comparator.comparing( s -> s.getInterfaceName() + "-" + s.getMixinName() ) )
+        .collect( Collectors.toList() );
+    for ( final IncludesStatement definition : includes )
     {
       maybeNewLine( writer, definitionCount++ );
       writeIncludesStatement( writer, definition );

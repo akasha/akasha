@@ -1,25 +1,24 @@
 [Exposed=Window]
-interface HTMLTableSectionElement : HTMLElement {
-  [SameObject]
-  readonly attribute HTMLCollection rows;
+interface HTMLTableCaptionElement : HTMLElement {
   [HTMLConstructor]
   constructor();
-  [CEReactions]
-  void deleteRow( long index );
-  HTMLTableRowElement insertRow( optional long index = -1 );
 };
 
 [Exposed=Window]
-interface HTMLTableRowElement : HTMLElement {
-  [SameObject]
-  readonly attribute HTMLCollection cells;
-  readonly attribute long rowIndex;
-  readonly attribute long sectionRowIndex;
+interface HTMLTableCellElement : HTMLElement {
+  readonly attribute long cellIndex;
+  [CEReactions]
+  attribute DOMString abbr;
+  [CEReactions]
+  attribute unsigned long colSpan;
+  [CEReactions]
+  attribute DOMString headers;
+  [CEReactions]
+  attribute unsigned long rowSpan;
+  [CEReactions]
+  attribute DOMString scope;
   [HTMLConstructor]
   constructor();
-  [CEReactions]
-  void deleteCell( long index );
-  HTMLTableCellElement insertCell( optional long index = -1 );
 };
 
 [Exposed=Window]
@@ -60,24 +59,25 @@ interface HTMLTableElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLTableCellElement : HTMLElement {
-  readonly attribute long cellIndex;
-  [CEReactions]
-  attribute DOMString abbr;
-  [CEReactions]
-  attribute unsigned long colSpan;
-  [CEReactions]
-  attribute DOMString headers;
-  [CEReactions]
-  attribute unsigned long rowSpan;
-  [CEReactions]
-  attribute DOMString scope;
+interface HTMLTableRowElement : HTMLElement {
+  [SameObject]
+  readonly attribute HTMLCollection cells;
+  readonly attribute long rowIndex;
+  readonly attribute long sectionRowIndex;
   [HTMLConstructor]
   constructor();
+  [CEReactions]
+  void deleteCell( long index );
+  HTMLTableCellElement insertCell( optional long index = -1 );
 };
 
 [Exposed=Window]
-interface HTMLTableCaptionElement : HTMLElement {
+interface HTMLTableSectionElement : HTMLElement {
+  [SameObject]
+  readonly attribute HTMLCollection rows;
   [HTMLConstructor]
   constructor();
+  [CEReactions]
+  void deleteRow( long index );
+  HTMLTableRowElement insertRow( optional long index = -1 );
 };

@@ -22,6 +22,15 @@ partial interface mixin DocumentOrShadowRoot {
   readonly attribute Element? activeElement;
 };
 
+[Exposed=Window, LegacyOverrideBuiltIns]
+interface DOMStringMap {
+  getter DOMString ( DOMString name );
+  [CEReactions]
+  setter void ( DOMString name, DOMString value );
+  [CEReactions]
+  deleter void ( DOMString name );
+};
+
 [Exposed=Window]
 interface HTMLElement : Element {
   readonly attribute DOMString accessKeyLabel;
@@ -49,15 +58,6 @@ interface HTMLElement : Element {
   constructor();
   ElementInternals attachInternals();
   void click();
-};
-
-[Exposed=Window, LegacyOverrideBuiltIns]
-interface DOMStringMap {
-  getter DOMString ( DOMString name );
-  [CEReactions]
-  setter void ( DOMString name, DOMString value );
-  [CEReactions]
-  deleter void ( DOMString name );
 };
 
 [Exposed=Window]
@@ -119,14 +119,14 @@ partial interface Document {
   getter object ( DOMString name );
 };
 
+Document includes DocumentAndElementEventHandlers;
+
 Document includes GlobalEventHandlers;
 
-HTMLElement includes GlobalEventHandlers;
-
-Document includes DocumentAndElementEventHandlers;
+HTMLElement includes DocumentAndElementEventHandlers;
 
 HTMLElement includes ElementContentEditable;
 
-HTMLElement includes DocumentAndElementEventHandlers;
+HTMLElement includes GlobalEventHandlers;
 
 HTMLElement includes HTMLOrSVGElement;

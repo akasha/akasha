@@ -8,13 +8,6 @@ dictionary GamepadEventInit : EventInit {
 };
 
 [Exposed=Window]
-interface GamepadEvent : Event {
-  [SameObject]
-  readonly attribute Gamepad gamepad;
-  constructor( DOMString type, GamepadEventInit eventInitDict );
-};
-
-[Exposed=Window]
 interface Gamepad {
   readonly attribute FrozenArray<double> axes;
   readonly attribute FrozenArray<GamepadButton> buttons;
@@ -30,6 +23,13 @@ interface GamepadButton {
   readonly attribute boolean pressed;
   readonly attribute boolean touched;
   readonly attribute double value;
+};
+
+[Exposed=Window]
+interface GamepadEvent : Event {
+  [SameObject]
+  readonly attribute Gamepad gamepad;
+  constructor( DOMString type, GamepadEventInit eventInitDict );
 };
 
 [Exposed=Window]

@@ -1,9 +1,3 @@
-enum PermissionState {
-  "denied",
-  "granted",
-  "prompt"
-};
-
 enum PermissionName {
   "accelerometer",
   "ambient-light-sensor",
@@ -23,31 +17,37 @@ enum PermissionName {
   "speaker"
 };
 
+enum PermissionState {
+  "denied",
+  "granted",
+  "prompt"
+};
+
 dictionary DevicePermissionDescriptor : PermissionDescriptor {
   DOMString deviceId;
-};
-
-dictionary PushPermissionDescriptor : PermissionDescriptor {
-  boolean userVisibleOnly = false;
-};
-
-dictionary PermissionDescriptor {
-  required PermissionName name;
 };
 
 dictionary MidiPermissionDescriptor : PermissionDescriptor {
   boolean sysex = false;
 };
 
-[Exposed=(Window,Worker)]
-interface Permissions {
-  Promise<PermissionStatus> query( object permissionDesc );
+dictionary PermissionDescriptor {
+  required PermissionName name;
+};
+
+dictionary PushPermissionDescriptor : PermissionDescriptor {
+  boolean userVisibleOnly = false;
 };
 
 [Exposed=(Window,Worker)]
 interface PermissionStatus : EventTarget {
   readonly attribute PermissionState state;
   attribute EventHandler onchange;
+};
+
+[Exposed=(Window,Worker)]
+interface Permissions {
+  Promise<PermissionStatus> query( object permissionDesc );
 };
 
 [Exposed=(Window)]

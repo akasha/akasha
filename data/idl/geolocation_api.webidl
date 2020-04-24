@@ -11,12 +11,14 @@ dictionary PositionOptions {
 };
 
 [NoInterfaceObject]
-interface PositionError {
-  const unsigned short PERMISSION_DENIED = 1;
-  const unsigned short POSITION_UNAVAILABLE = 2;
-  const unsigned short TIMEOUT = 3;
-  readonly attribute unsigned short code;
-  readonly attribute DOMString message;
+interface Coordinates {
+  readonly attribute double accuracy;
+  readonly attribute double? altitude;
+  readonly attribute double? altitudeAccuracy;
+  readonly attribute double? heading;
+  readonly attribute double latitude;
+  readonly attribute double longitude;
+  readonly attribute double? speed;
 };
 
 [NoInterfaceObject]
@@ -33,14 +35,12 @@ interface Position {
 };
 
 [NoInterfaceObject]
-interface Coordinates {
-  readonly attribute double accuracy;
-  readonly attribute double? altitude;
-  readonly attribute double? altitudeAccuracy;
-  readonly attribute double? heading;
-  readonly attribute double latitude;
-  readonly attribute double longitude;
-  readonly attribute double? speed;
+interface PositionError {
+  const unsigned short PERMISSION_DENIED = 1;
+  const unsigned short POSITION_UNAVAILABLE = 2;
+  const unsigned short TIMEOUT = 3;
+  readonly attribute unsigned short code;
+  readonly attribute DOMString message;
 };
 
 partial interface Navigator {

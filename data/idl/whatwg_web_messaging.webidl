@@ -2,6 +2,16 @@ dictionary PostMessageOptions {
   sequence<object> transfer = [];
 };
 
+[Exposed=(Window,Worker)]
+interface BroadcastChannel : EventTarget {
+  readonly attribute DOMString name;
+  attribute EventHandler onmessage;
+  attribute EventHandler onmessageerror;
+  constructor( DOMString name );
+  void close();
+  void postMessage( any message );
+};
+
 [Constructor, Exposed=(Window,Worker)]
 interface MessageChannel {
   readonly attribute MessagePort port1;
@@ -16,14 +26,4 @@ interface MessagePort : EventTarget {
   void postMessage( any message, sequence<object> transfer );
   void postMessage( any message, optional PostMessageOptions options = {} );
   void start();
-};
-
-[Exposed=(Window,Worker)]
-interface BroadcastChannel : EventTarget {
-  readonly attribute DOMString name;
-  attribute EventHandler onmessage;
-  attribute EventHandler onmessageerror;
-  constructor( DOMString name );
-  void close();
-  void postMessage( any message );
 };

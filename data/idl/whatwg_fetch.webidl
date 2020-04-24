@@ -1,10 +1,3 @@
-enum RequestMode {
-  "cors",
-  "navigate",
-  "no-cors",
-  "same-origin"
-};
-
 enum RequestCache {
   "default",
   "force-cache",
@@ -18,12 +11,6 @@ enum RequestCredentials {
   "include",
   "omit",
   "same-origin"
-};
-
-enum RequestRedirect {
-  "error",
-  "follow",
-  "manual"
 };
 
 enum RequestDestination {
@@ -47,6 +34,19 @@ enum RequestDestination {
   "xslt"
 };
 
+enum RequestMode {
+  "cors",
+  "navigate",
+  "no-cors",
+  "same-origin"
+};
+
+enum RequestRedirect {
+  "error",
+  "follow",
+  "manual"
+};
+
 enum ResponseType {
   "basic",
   "cors",
@@ -56,9 +56,9 @@ enum ResponseType {
   "opaqueredirect"
 };
 
-typedef ( sequence<sequence<ByteString>> or record<ByteString, ByteString> ) HeadersInit;
-
 typedef ( Blob or BufferSource or FormData or URLSearchParams or ReadableStream or USVString ) BodyInit;
+
+typedef ( sequence<sequence<ByteString>> or record<ByteString, ByteString> ) HeadersInit;
 
 typedef ( Request or USVString ) RequestInfo;
 
@@ -105,25 +105,6 @@ partial interface mixin WindowOrWorkerGlobalScope {
 };
 
 [Exposed=(Window,Worker)]
-interface Response {
-  [SameObject]
-  readonly attribute Headers headers;
-  readonly attribute boolean ok;
-  readonly attribute boolean redirected;
-  readonly attribute unsigned short status;
-  readonly attribute ByteString statusText;
-  readonly attribute ResponseType type;
-  readonly attribute USVString url;
-  [NewObject]
-  static Response error();
-  [NewObject]
-  static Response redirect( USVString url, optional unsigned short status = 302 );
-  constructor( optional BodyInit? body = null, optional ResponseInit init = {} );
-  [NewObject]
-  Response clone();
-};
-
-[Exposed=(Window,Worker)]
 interface Headers {
   iterable<ByteString, ByteString>;
   constructor( optional HeadersInit init );
@@ -157,6 +138,25 @@ interface Request {
   Request clone();
 };
 
-Response includes Body;
+[Exposed=(Window,Worker)]
+interface Response {
+  [SameObject]
+  readonly attribute Headers headers;
+  readonly attribute boolean ok;
+  readonly attribute boolean redirected;
+  readonly attribute unsigned short status;
+  readonly attribute ByteString statusText;
+  readonly attribute ResponseType type;
+  readonly attribute USVString url;
+  [NewObject]
+  static Response error();
+  [NewObject]
+  static Response redirect( USVString url, optional unsigned short status = 302 );
+  constructor( optional BodyInit? body = null, optional ResponseInit init = {} );
+  [NewObject]
+  Response clone();
+};
 
 Request includes Body;
+
+Response includes Body;

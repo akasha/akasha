@@ -4,24 +4,9 @@ enum AttestationConveyancePreference {
   "none"
 };
 
-enum UserVerificationRequirement {
-  "discouraged",
-  "preferred",
-  "required"
-};
-
 enum AuthenticatorAttachment {
   "cross-platform",
   "platform"
-};
-
-enum TokenBindingStatus {
-  "present",
-  "supported"
-};
-
-enum PublicKeyCredentialType {
-  "public-key"
 };
 
 enum AuthenticatorTransport {
@@ -31,19 +16,53 @@ enum AuthenticatorTransport {
   "usb"
 };
 
-typedef sequence<AAGUID> AuthenticatorSelectionList;
+enum PublicKeyCredentialType {
+  "public-key"
+};
 
-typedef sequence<unsigned long> UvmEntry;
+enum TokenBindingStatus {
+  "present",
+  "supported"
+};
 
-typedef long COSEAlgorithmIdentifier;
-
-typedef sequence<USVString> AuthenticationExtensionsSupported;
-
-typedef record<DOMString, DOMString> AuthenticationExtensionsAuthenticatorInputs;
+enum UserVerificationRequirement {
+  "discouraged",
+  "preferred",
+  "required"
+};
 
 typedef BufferSource AAGUID;
 
+typedef record<DOMString, DOMString> AuthenticationExtensionsAuthenticatorInputs;
+
+typedef sequence<USVString> AuthenticationExtensionsSupported;
+
+typedef sequence<AAGUID> AuthenticatorSelectionList;
+
+typedef long COSEAlgorithmIdentifier;
+
 typedef sequence<UvmEntry> UvmEntries;
+
+typedef sequence<unsigned long> UvmEntry;
+
+dictionary AuthenticationExtensionsClientInputs {
+};
+
+dictionary AuthenticationExtensionsClientOutputs {
+};
+
+dictionary AuthenticatorSelectionCriteria {
+  AuthenticatorAttachment authenticatorAttachment;
+  boolean requireResidentKey = false;
+  UserVerificationRequirement userVerification = "preferred";
+};
+
+dictionary CollectedClientData {
+  required DOMString challenge;
+  required DOMString origin;
+  TokenBinding tokenBinding;
+  required DOMString type;
+};
 
 dictionary PublicKeyCredentialCreationOptions {
   AttestationConveyancePreference attestation = "none";
@@ -57,18 +76,20 @@ dictionary PublicKeyCredentialCreationOptions {
   required PublicKeyCredentialUserEntity user;
 };
 
-dictionary TokenBinding {
-  DOMString id;
-  required TokenBindingStatus status;
-};
-
-dictionary PublicKeyCredentialRpEntity : PublicKeyCredentialEntity {
-  DOMString id;
-};
-
-dictionary PublicKeyCredentialUserEntity : PublicKeyCredentialEntity {
-  required DOMString displayName;
+dictionary PublicKeyCredentialDescriptor {
   required BufferSource id;
+  sequence<AuthenticatorTransport> transports;
+  required PublicKeyCredentialType type;
+};
+
+dictionary PublicKeyCredentialEntity {
+  USVString icon;
+  required DOMString name;
+};
+
+dictionary PublicKeyCredentialParameters {
+  required COSEAlgorithmIdentifier alg;
+  required PublicKeyCredentialType type;
 };
 
 dictionary PublicKeyCredentialRequestOptions {
@@ -80,44 +101,18 @@ dictionary PublicKeyCredentialRequestOptions {
   UserVerificationRequirement userVerification = "preferred";
 };
 
-dictionary PublicKeyCredentialDescriptor {
+dictionary PublicKeyCredentialRpEntity : PublicKeyCredentialEntity {
+  DOMString id;
+};
+
+dictionary PublicKeyCredentialUserEntity : PublicKeyCredentialEntity {
+  required DOMString displayName;
   required BufferSource id;
-  sequence<AuthenticatorTransport> transports;
-  required PublicKeyCredentialType type;
 };
 
-dictionary CollectedClientData {
-  required DOMString challenge;
-  required DOMString origin;
-  TokenBinding tokenBinding;
-  required DOMString type;
-};
-
-dictionary txAuthGenericArg {
-  required ArrayBuffer content;
-  required USVString contentType;
-};
-
-dictionary PublicKeyCredentialParameters {
-  required COSEAlgorithmIdentifier alg;
-  required PublicKeyCredentialType type;
-};
-
-dictionary PublicKeyCredentialEntity {
-  USVString icon;
-  required DOMString name;
-};
-
-dictionary AuthenticationExtensionsClientInputs {
-};
-
-dictionary AuthenticatorSelectionCriteria {
-  AuthenticatorAttachment authenticatorAttachment;
-  boolean requireResidentKey = false;
-  UserVerificationRequirement userVerification = "preferred";
-};
-
-dictionary AuthenticationExtensionsClientOutputs {
+dictionary TokenBinding {
+  DOMString id;
+  required TokenBindingStatus status;
 };
 
 dictionary authenticatorBiometricPerfBounds {
@@ -125,8 +120,9 @@ dictionary authenticatorBiometricPerfBounds {
   float FRR;
 };
 
-partial dictionary CredentialRequestOptions {
-  PublicKeyCredentialRequestOptions publicKey;
+dictionary txAuthGenericArg {
+  required ArrayBuffer content;
+  required USVString contentType;
 };
 
 partial dictionary AuthenticationExtensionsClientInputs {
@@ -197,6 +193,10 @@ partial dictionary CredentialCreationOptions {
   PublicKeyCredentialCreationOptions publicKey;
 };
 
+partial dictionary CredentialRequestOptions {
+  PublicKeyCredentialRequestOptions publicKey;
+};
+
 [SecureContext, Exposed=Window]
 interface AuthenticatorAssertionResponse : AuthenticatorResponse {
   [SameObject]
@@ -205,15 +205,6 @@ interface AuthenticatorAssertionResponse : AuthenticatorResponse {
   readonly attribute ArrayBuffer signature;
   [SameObject]
   readonly attribute ArrayBuffer? userHandle;
-};
-
-[SecureContext, Exposed=Window]
-interface PublicKeyCredential : Credential {
-  [SameObject]
-  readonly attribute ArrayBuffer rawId;
-  [SameObject]
-  readonly attribute AuthenticatorResponse response;
-  AuthenticationExtensionsClientOutputs getClientExtensionResults();
 };
 
 [SecureContext, Exposed=Window]
@@ -226,6 +217,15 @@ interface AuthenticatorAttestationResponse : AuthenticatorResponse {
 interface AuthenticatorResponse {
   [SameObject]
   readonly attribute ArrayBuffer clientDataJSON;
+};
+
+[SecureContext, Exposed=Window]
+interface PublicKeyCredential : Credential {
+  [SameObject]
+  readonly attribute ArrayBuffer rawId;
+  [SameObject]
+  readonly attribute AuthenticatorResponse response;
+  AuthenticationExtensionsClientOutputs getClientExtensionResults();
 };
 
 partial interface PublicKeyCredential {

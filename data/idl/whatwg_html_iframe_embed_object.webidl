@@ -1,39 +1,16 @@
 [Exposed=Window]
-interface HTMLParamElement : HTMLElement {
-  [CEReactions]
-  attribute DOMString name;
-  [CEReactions]
-  attribute DOMString value;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLObjectElement : HTMLElement {
-  readonly attribute Document? contentDocument;
-  readonly attribute WindowProxy? contentWindow;
-  readonly attribute HTMLFormElement? form;
-  readonly attribute DOMString validationMessage;
-  readonly attribute ValidityState validity;
-  readonly attribute boolean willValidate;
-  [CEReactions]
-  attribute USVString data;
+interface HTMLEmbedElement : HTMLElement {
   [CEReactions]
   attribute DOMString height;
   [CEReactions]
-  attribute DOMString name;
+  attribute USVString src;
   [CEReactions]
   attribute DOMString type;
-  [CEReactions]
-  attribute DOMString useMap;
   [CEReactions]
   attribute DOMString width;
   [HTMLConstructor]
   constructor();
-  boolean checkValidity();
   Document? getSVGDocument();
-  boolean reportValidity();
-  void setCustomValidity( DOMString error );
 };
 
 [Exposed=Window]
@@ -66,16 +43,39 @@ interface HTMLIFrameElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLEmbedElement : HTMLElement {
+interface HTMLObjectElement : HTMLElement {
+  readonly attribute Document? contentDocument;
+  readonly attribute WindowProxy? contentWindow;
+  readonly attribute HTMLFormElement? form;
+  readonly attribute DOMString validationMessage;
+  readonly attribute ValidityState validity;
+  readonly attribute boolean willValidate;
+  [CEReactions]
+  attribute USVString data;
   [CEReactions]
   attribute DOMString height;
   [CEReactions]
-  attribute USVString src;
+  attribute DOMString name;
   [CEReactions]
   attribute DOMString type;
+  [CEReactions]
+  attribute DOMString useMap;
   [CEReactions]
   attribute DOMString width;
   [HTMLConstructor]
   constructor();
+  boolean checkValidity();
   Document? getSVGDocument();
+  boolean reportValidity();
+  void setCustomValidity( DOMString error );
+};
+
+[Exposed=Window]
+interface HTMLParamElement : HTMLElement {
+  [CEReactions]
+  attribute DOMString name;
+  [CEReactions]
+  attribute DOMString value;
+  [HTMLConstructor]
+  constructor();
 };

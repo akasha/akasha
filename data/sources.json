@@ -76,12 +76,12 @@
         "url": "https://www.w3.org/TR/css-backgrounds-3/"
     },
     {
-        "lastModifiedTime": 1587513976000,
+        "lastModifiedTime": 1587683226000,
         "name": "css_backgrounds_4",
         "url": "https://drafts.csswg.org/css-backgrounds-4/"
     },
     {
-        "lastModifiedTime": 1543806909000,
+        "lastModifiedTime": 1543615853000,
         "name": "css_break_3",
         "url": "https://www.w3.org/TR/css-break-3/"
     },
@@ -106,7 +106,7 @@
         "url": "https://www.w3.org/TR/css-grid-1/"
     },
     {
-        "lastModifiedTime": 1587514077000,
+        "lastModifiedTime": 1587683347000,
         "name": "css_images_3",
         "url": "https://drafts.csswg.org/css-images-3/"
     },
@@ -121,7 +121,7 @@
         "url": "https://www.w3.org/TR/css-logical-1/"
     },
     {
-        "lastModifiedTime": 1587512778000,
+        "lastModifiedTime": 1587678672000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
@@ -141,7 +141,7 @@
         "url": "https://www.w3.org/TR/css-ruby-1/"
     },
     {
-        "lastModifiedTime": 1587514138000,
+        "lastModifiedTime": 1587683412000,
         "name": "css_scroll_anchoring",
         "url": "https://drafts.csswg.org/css-scroll-anchoring/"
     },
@@ -161,7 +161,7 @@
         "url": "https://www.w3.org/TR/css-transforms-1/"
     },
     {
-        "lastModifiedTime": 1587514188000,
+        "lastModifiedTime": 1587683461000,
         "name": "css_transforms_2",
         "url": "https://drafts.csswg.org/css-transforms-2/"
     },
@@ -186,7 +186,7 @@
         "url": "https://www.w3.org/TR/css-writing-modes-3/"
     },
     {
-        "lastModifiedTime": 1587514238000,
+        "lastModifiedTime": 1587683512000,
         "name": "cssom_view",
         "url": "https://drafts.csswg.org/cssom-view/"
     },
@@ -256,7 +256,7 @@
         "url": "https://www.w3.org/TR/media-source/"
     },
     {
-        "lastModifiedTime": 1587048627000,
+        "lastModifiedTime": 1587653869000,
         "name": "mediacapture_main",
         "url": "https://w3c.github.io/mediacapture-main/"
     },
@@ -536,7 +536,7 @@
         "url": "https://w3c.github.io/webrtc-identity/"
     },
     {
-        "lastModifiedTime": 1587414197000,
+        "lastModifiedTime": 1587651757000,
         "name": "webrtc_pc",
         "url": "https://w3c.github.io/webrtc-pc/"
     },
@@ -551,22 +551,22 @@
         "url": "https://www.w3.org/TR/webxr/"
     },
     {
-        "lastModifiedTime": 1586183415000,
+        "lastModifiedTime": 1587654270000,
         "name": "whatwg_compat",
         "url": "https://compat.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1587422244000,
+        "lastModifiedTime": 1587654270000,
         "name": "whatwg_dom",
         "url": "https://dom.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1586183603000,
+        "lastModifiedTime": 1587654191000,
         "name": "whatwg_encoding",
         "url": "https://encoding.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1586183626000,
+        "lastModifiedTime": 1587655332000,
         "name": "whatwg_fetch",
         "url": "https://fetch.spec.whatwg.org/"
     },
@@ -576,202 +576,202 @@
         "url": "https://fullscreen.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_browsing_the_web",
         "url": "https://html.spec.whatwg.org/multipage/browsing-the-web.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_canvas",
         "url": "https://html.spec.whatwg.org/multipage/canvas.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533082000,
         "name": "whatwg_html_common_dom_interfaces",
         "url": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_comms",
         "url": "https://html.spec.whatwg.org/multipage/comms.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_custom_elements",
         "url": "https://html.spec.whatwg.org/multipage/custom-elements.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_dnd",
         "url": "https://html.spec.whatwg.org/multipage/dnd.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533082000,
         "name": "whatwg_html_dom",
         "url": "https://html.spec.whatwg.org/multipage/dom.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_edits",
         "url": "https://html.spec.whatwg.org/multipage/edits.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_embedded_content",
         "url": "https://html.spec.whatwg.org/multipage/embedded-content.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_form_control_infrastructure",
         "url": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_form_elements",
         "url": "https://html.spec.whatwg.org/multipage/form-elements.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_forms",
         "url": "https://html.spec.whatwg.org/multipage/forms.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_grouping_content",
         "url": "https://html.spec.whatwg.org/multipage/grouping-content.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_history",
         "url": "https://html.spec.whatwg.org/multipage/history.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_iframe_embed_object",
         "url": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_image_maps",
         "url": "https://html.spec.whatwg.org/multipage/image-maps.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_imagebitmap_and_animations",
         "url": "https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_input",
         "url": "https://html.spec.whatwg.org/multipage/input.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_interaction",
         "url": "https://html.spec.whatwg.org/multipage/interaction.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_interactive_elements",
         "url": "https://html.spec.whatwg.org/multipage/interactive-elements.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_links",
         "url": "https://html.spec.whatwg.org/multipage/links.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533085000,
         "name": "whatwg_html_obsolete",
         "url": "https://html.spec.whatwg.org/multipage/obsolete.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_offline",
         "url": "https://html.spec.whatwg.org/multipage/offline.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_scripting",
         "url": "https://html.spec.whatwg.org/multipage/scripting.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_sections",
         "url": "https://html.spec.whatwg.org/multipage/sections.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_semantics",
         "url": "https://html.spec.whatwg.org/multipage/semantics.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_server_sent_events",
         "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_system_state",
         "url": "https://html.spec.whatwg.org/multipage/system-state.html"
     },
     {
-        "lastModifiedTime": 1587500186000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_tables",
         "url": "https://html.spec.whatwg.org/multipage/tables.html"
     },
     {
-        "lastModifiedTime": 1587500185000,
+        "lastModifiedTime": 1587533083000,
         "name": "whatwg_html_text_level_semantics",
         "url": "https://html.spec.whatwg.org/multipage/text-level-semantics.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_web_sockets",
         "url": "https://html.spec.whatwg.org/multipage/web-sockets.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_webappapis",
         "url": "https://html.spec.whatwg.org/multipage/webappapis.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_webstorage",
         "url": "https://html.spec.whatwg.org/multipage/webstorage.html"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_html_workers",
         "url": "https://html.spec.whatwg.org/multipage/workers.html"
     },
     {
-        "lastModifiedTime": 1586183665000,
+        "lastModifiedTime": 1587654016000,
         "name": "whatwg_notifications",
         "url": "https://notifications.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1587142362000,
+        "lastModifiedTime": 1587653987000,
         "name": "whatwg_storage",
         "url": "https://storage.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1586183707000,
+        "lastModifiedTime": 1587653809000,
         "name": "whatwg_url",
         "url": "https://url.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1587500187000,
+        "lastModifiedTime": 1587533084000,
         "name": "whatwg_web_messaging",
         "url": "https://html.spec.whatwg.org/multipage/web-messaging.html"
     },
     {
-        "lastModifiedTime": 1586183754000,
+        "lastModifiedTime": 1587653783000,
         "name": "whatwg_xhr",
         "url": "https://xhr.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1587512843000,
+        "lastModifiedTime": 1587678737000,
         "name": "worklets",
         "url": "https://drafts.css-houdini.org/worklets/"
     }

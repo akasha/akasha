@@ -1,13 +1,10 @@
-typedef ( DOMString or Function ) TimerHandler;
+typedef EventHandlerNonNull? EventHandler;
 
 typedef OnBeforeUnloadEventHandlerNonNull? OnBeforeUnloadEventHandler;
 
-typedef EventHandlerNonNull? EventHandler;
-
 typedef OnErrorEventHandlerNonNull? OnErrorEventHandler;
 
-[LegacyTreatNonObjectAsNull]
-callback OnErrorEventHandlerNonNull = any ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
+typedef ( DOMString or Function ) TimerHandler;
 
 [LegacyTreatNonObjectAsNull]
 callback EventHandlerNonNull = any ( Event event );
@@ -15,10 +12,8 @@ callback EventHandlerNonNull = any ( Event event );
 [LegacyTreatNonObjectAsNull]
 callback OnBeforeUnloadEventHandlerNonNull = DOMString? ( Event event );
 
-dictionary PromiseRejectionEventInit : EventInit {
-  required Promise<any> promise;
-  any reason;
-};
+[LegacyTreatNonObjectAsNull]
+callback OnErrorEventHandlerNonNull = any ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
 
 dictionary ErrorEventInit : EventInit {
   unsigned long colno = 0;
@@ -28,18 +23,15 @@ dictionary ErrorEventInit : EventInit {
   DOMString message = "";
 };
 
-interface mixin WindowOrWorkerGlobalScope {
-  [Replaceable]
-  readonly attribute USVString origin;
-  ByteString atob( DOMString data );
-  DOMString btoa( DOMString data );
-  void clearInterval( optional long handle = 0 );
-  void clearTimeout( optional long handle = 0 );
-  Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
-  Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
-  void queueMicrotask( VoidFunction callback );
-  long setInterval( TimerHandler handler, optional long timeout = 0, any... arguments );
-  long setTimeout( TimerHandler handler, optional long timeout = 0, any... arguments );
+dictionary PromiseRejectionEventInit : EventInit {
+  required Promise<any> promise;
+  any reason;
+};
+
+interface mixin DocumentAndElementEventHandlers {
+  attribute EventHandler oncopy;
+  attribute EventHandler oncut;
+  attribute EventHandler onpaste;
 };
 
 interface mixin GlobalEventHandlers {
@@ -114,12 +106,6 @@ interface mixin GlobalEventHandlers {
   attribute EventHandler onwheel;
 };
 
-interface mixin DocumentAndElementEventHandlers {
-  attribute EventHandler oncopy;
-  attribute EventHandler oncut;
-  attribute EventHandler onpaste;
-};
-
 interface mixin WindowEventHandlers {
   attribute EventHandler onafterprint;
   attribute EventHandler onbeforeprint;
@@ -139,6 +125,20 @@ interface mixin WindowEventHandlers {
   attribute EventHandler onunload;
 };
 
+interface mixin WindowOrWorkerGlobalScope {
+  [Replaceable]
+  readonly attribute USVString origin;
+  ByteString atob( DOMString data );
+  DOMString btoa( DOMString data );
+  void clearInterval( optional long handle = 0 );
+  void clearTimeout( optional long handle = 0 );
+  Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
+  Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
+  void queueMicrotask( VoidFunction callback );
+  long setInterval( TimerHandler handler, optional long timeout = 0, any... arguments );
+  long setTimeout( TimerHandler handler, optional long timeout = 0, any... arguments );
+};
+
 [Exposed=(Window,Worker)]
 interface ErrorEvent : Event {
   readonly attribute unsigned long colno;
@@ -156,6 +156,6 @@ interface PromiseRejectionEvent : Event {
   constructor( DOMString type, PromiseRejectionEventInit eventInitDict );
 };
 
-WorkerGlobalScope includes WindowOrWorkerGlobalScope;
-
 Window includes WindowOrWorkerGlobalScope;
+
+WorkerGlobalScope includes WindowOrWorkerGlobalScope;

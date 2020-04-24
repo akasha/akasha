@@ -30,18 +30,11 @@ interface FormData {
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]
-interface XMLHttpRequestEventTarget : EventTarget {
-  attribute EventHandler onabort;
-  attribute EventHandler onerror;
-  attribute EventHandler onload;
-  attribute EventHandler onloadend;
-  attribute EventHandler onloadstart;
-  attribute EventHandler onprogress;
-  attribute EventHandler ontimeout;
-};
-
-[Exposed=(Window,DedicatedWorker,SharedWorker)]
-interface XMLHttpRequestUpload : XMLHttpRequestEventTarget {
+interface ProgressEvent : Event {
+  readonly attribute boolean lengthComputable;
+  readonly attribute unsigned long long loaded;
+  readonly attribute unsigned long long total;
+  constructor( DOMString type, optional ProgressEventInit eventInitDict = {} );
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]
@@ -77,9 +70,16 @@ interface XMLHttpRequest : XMLHttpRequestEventTarget {
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]
-interface ProgressEvent : Event {
-  readonly attribute boolean lengthComputable;
-  readonly attribute unsigned long long loaded;
-  readonly attribute unsigned long long total;
-  constructor( DOMString type, optional ProgressEventInit eventInitDict = {} );
+interface XMLHttpRequestEventTarget : EventTarget {
+  attribute EventHandler onabort;
+  attribute EventHandler onerror;
+  attribute EventHandler onload;
+  attribute EventHandler onloadend;
+  attribute EventHandler onloadstart;
+  attribute EventHandler onprogress;
+  attribute EventHandler ontimeout;
+};
+
+[Exposed=(Window,DedicatedWorker,SharedWorker)]
+interface XMLHttpRequestUpload : XMLHttpRequestEventTarget {
 };

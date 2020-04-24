@@ -1,8 +1,21 @@
-enum PlaybackDirection {
-  "alternate",
-  "alternate-reverse",
-  "normal",
-  "reverse"
+enum AnimationPlayState {
+  "finished",
+  "idle",
+  "paused",
+  "running"
+};
+
+enum CompositeOperation {
+  "accumulate",
+  "add",
+  "replace"
+};
+
+enum CompositeOperationOrAuto {
+  "accumulate",
+  "add",
+  "auto",
+  "replace"
 };
 
 enum FillMode {
@@ -13,54 +26,21 @@ enum FillMode {
   "none"
 };
 
-enum CompositeOperationOrAuto {
-  "accumulate",
-  "add",
-  "auto",
-  "replace"
-};
-
-enum CompositeOperation {
-  "accumulate",
-  "add",
-  "replace"
-};
-
-enum AnimationPlayState {
-  "finished",
-  "idle",
-  "paused",
-  "running"
-};
-
 enum IterationCompositeOperation {
   "accumulate",
   "replace"
 };
 
+enum PlaybackDirection {
+  "alternate",
+  "alternate-reverse",
+  "normal",
+  "reverse"
+};
+
 dictionary AnimationPlaybackEventInit : EventInit {
   double? currentTime = null;
   double? timelineTime = null;
-};
-
-dictionary BasePropertyIndexedKeyframe {
-  ( CompositeOperationOrAuto or sequence<CompositeOperationOrAuto> ) composite = [];
-  ( DOMString or sequence<DOMString> ) easing = [];
-  ( double? or sequence<double?> ) offset = [];
-};
-
-dictionary BaseKeyframe {
-  CompositeOperationOrAuto composite = "auto";
-  DOMString easing = "linear";
-  double? offset = null;
-};
-
-dictionary ComputedEffectTiming : EffectTiming {
-  unrestricted double activeDuration;
-  unrestricted double? currentIteration;
-  unrestricted double endTime;
-  double? localTime;
-  double? progress;
 };
 
 dictionary BaseComputedKeyframe {
@@ -70,8 +50,24 @@ dictionary BaseComputedKeyframe {
   double? offset = null;
 };
 
-dictionary KeyframeAnimationOptions : KeyframeEffectOptions {
-  DOMString id = "";
+dictionary BaseKeyframe {
+  CompositeOperationOrAuto composite = "auto";
+  DOMString easing = "linear";
+  double? offset = null;
+};
+
+dictionary BasePropertyIndexedKeyframe {
+  ( CompositeOperationOrAuto or sequence<CompositeOperationOrAuto> ) composite = [];
+  ( DOMString or sequence<DOMString> ) easing = [];
+  ( double? or sequence<double?> ) offset = [];
+};
+
+dictionary ComputedEffectTiming : EffectTiming {
+  unrestricted double activeDuration;
+  unrestricted double? currentIteration;
+  unrestricted double endTime;
+  double? localTime;
+  double? progress;
 };
 
 dictionary DocumentTimelineOptions {
@@ -87,6 +83,10 @@ dictionary EffectTiming {
   FillMode fill = "auto";
   double iterationStart = 0.0;
   unrestricted double iterations = 1.0;
+};
+
+dictionary KeyframeAnimationOptions : KeyframeEffectOptions {
+  DOMString id = "";
 };
 
 dictionary KeyframeEffectOptions : EffectTiming {
@@ -108,15 +108,6 @@ dictionary OptionalEffectTiming {
 interface mixin Animatable {
   Animation animate( object? keyframes, optional ( unrestricted double or KeyframeAnimationOptions ) options );
   sequence<Animation> getAnimations();
-};
-
-[Exposed=Window]
-interface AnimationTimeline {
-  readonly attribute double? currentTime;
-};
-
-[Exposed=Window, Constructor( optional DocumentTimelineOptions options )]
-interface DocumentTimeline : AnimationTimeline {
 };
 
 [Exposed=Window, Constructor( optional AnimationEffect? effect = null, optional AnimationTimeline? timeline )]
@@ -148,6 +139,21 @@ interface AnimationEffect {
   void updateTiming( optional OptionalEffectTiming timing );
 };
 
+[Exposed=Window, Constructor( DOMString type, optional AnimationPlaybackEventInit eventInitDict )]
+interface AnimationPlaybackEvent : Event {
+  readonly attribute double? currentTime;
+  readonly attribute double? timelineTime;
+};
+
+[Exposed=Window]
+interface AnimationTimeline {
+  readonly attribute double? currentTime;
+};
+
+[Exposed=Window, Constructor( optional DocumentTimelineOptions options )]
+interface DocumentTimeline : AnimationTimeline {
+};
+
 [Exposed=Window, Constructor( ( Element or CSSPseudoElement )? target, object? keyframes, optional ( unrestricted double or KeyframeEffectOptions ) options ), Constructor( KeyframeEffect source )]
 interface KeyframeEffect : AnimationEffect {
   attribute CompositeOperation composite;
@@ -155,12 +161,6 @@ interface KeyframeEffect : AnimationEffect {
   attribute ( Element or CSSPseudoElement )? target;
   sequence<object> getKeyframes();
   void setKeyframes( object? keyframes );
-};
-
-[Exposed=Window, Constructor( DOMString type, optional AnimationPlaybackEventInit eventInitDict )]
-interface AnimationPlaybackEvent : Event {
-  readonly attribute double? currentTime;
-  readonly attribute double? timelineTime;
 };
 
 partial interface Document {

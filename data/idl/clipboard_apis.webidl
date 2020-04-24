@@ -4,11 +4,11 @@ enum PresentationStyle {
   "unspecified"
 };
 
-typedef sequence<ClipboardItem> ClipboardItems;
-
 typedef Promise<ClipboardItemDataType> ClipboardItemData;
 
 typedef ( DOMString or Blob ) ClipboardItemDataType;
+
+typedef sequence<ClipboardItem> ClipboardItems;
 
 callback ClipboardItemDelayedCallback = ClipboardItemData ();
 
@@ -24,6 +24,19 @@ dictionary ClipboardPermissionDescriptor : PermissionDescriptor {
   boolean allowWithoutGesture = false;
 };
 
+[SecureContext, Exposed=Window]
+interface Clipboard : EventTarget {
+  Promise<ClipboardItems> read();
+  Promise<DOMString> readText();
+  Promise<void> write( ClipboardItems data );
+  Promise<void> writeText( DOMString data );
+};
+
+[Constructor( DOMString type, optional ClipboardEventInit eventInitDict ), Exposed=Window]
+interface ClipboardEvent : Event {
+  readonly attribute DataTransfer? clipboardData;
+};
+
 [Constructor( record<DOMString, ClipboardItemData> items, optional ClipboardItemOptions options ), Exposed=Window]
 interface ClipboardItem {
   readonly attribute boolean delayed;
@@ -32,19 +45,6 @@ interface ClipboardItem {
   readonly attribute FrozenArray<DOMString> types;
   static ClipboardItem createDelayed( record<DOMString, ClipboardItemDelayedCallback> items, optional ClipboardItemOptions options );
   Promise<Blob> getType( DOMString type );
-};
-
-[Constructor( DOMString type, optional ClipboardEventInit eventInitDict ), Exposed=Window]
-interface ClipboardEvent : Event {
-  readonly attribute DataTransfer? clipboardData;
-};
-
-[SecureContext, Exposed=Window]
-interface Clipboard : EventTarget {
-  Promise<ClipboardItems> read();
-  Promise<DOMString> readText();
-  Promise<void> write( ClipboardItems data );
-  Promise<void> writeText( DOMString data );
 };
 
 partial interface Navigator {

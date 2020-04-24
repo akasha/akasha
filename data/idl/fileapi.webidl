@@ -29,18 +29,16 @@ interface Blob {
 };
 
 [Exposed=(Window,Worker), Serializable]
+interface File : Blob {
+  readonly attribute long long lastModified;
+  readonly attribute DOMString name;
+  constructor( sequence<BlobPart> fileBits, USVString fileName, optional FilePropertyBag options = {} );
+};
+
+[Exposed=(Window,Worker), Serializable]
 interface FileList {
   readonly attribute unsigned long length;
   getter File? item( unsigned long index );
-};
-
-[Exposed=(DedicatedWorker,SharedWorker)]
-interface FileReaderSync {
-  constructor();
-  ArrayBuffer readAsArrayBuffer( Blob blob );
-  DOMString readAsBinaryString( Blob blob );
-  DOMString readAsDataURL( Blob blob );
-  DOMString readAsText( Blob blob, optional DOMString encoding );
 };
 
 [Exposed=(Window,Worker)]
@@ -65,11 +63,13 @@ interface FileReader : EventTarget {
   void readAsText( Blob blob, optional DOMString encoding );
 };
 
-[Exposed=(Window,Worker), Serializable]
-interface File : Blob {
-  readonly attribute long long lastModified;
-  readonly attribute DOMString name;
-  constructor( sequence<BlobPart> fileBits, USVString fileName, optional FilePropertyBag options = {} );
+[Exposed=(DedicatedWorker,SharedWorker)]
+interface FileReaderSync {
+  constructor();
+  ArrayBuffer readAsArrayBuffer( Blob blob );
+  DOMString readAsBinaryString( Blob blob );
+  DOMString readAsDataURL( Blob blob );
+  DOMString readAsText( Blob blob, optional DOMString encoding );
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]

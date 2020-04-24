@@ -1,9 +1,9 @@
 [Exposed=(Window,Worker)]
-interface PerformanceMeasure : PerformanceEntry {
+interface PerformanceMark : PerformanceEntry {
 };
 
 [Exposed=(Window,Worker)]
-interface PerformanceMark : PerformanceEntry {
+interface PerformanceMeasure : PerformanceEntry {
 };
 
 partial interface Performance {

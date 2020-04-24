@@ -13,12 +13,6 @@ partial interface mixin DocumentOrShadowRoot {
   readonly attribute Element? fullscreenElement;
 };
 
-partial interface Element {
-  attribute EventHandler onfullscreenchange;
-  attribute EventHandler onfullscreenerror;
-  Promise<void> requestFullscreen( optional FullscreenOptions options = {} );
-};
-
 partial interface Document {
   [LegacyLenientSetter, Unscopable]
   readonly attribute boolean fullscreen;
@@ -27,4 +21,10 @@ partial interface Document {
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
   Promise<void> exitFullscreen();
+};
+
+partial interface Element {
+  attribute EventHandler onfullscreenchange;
+  attribute EventHandler onfullscreenerror;
+  Promise<void> requestFullscreen( optional FullscreenOptions options = {} );
 };

@@ -21,6 +21,6 @@ partial interface Range {
   DocumentFragment createContextualFragment( DOMString fragment );
 };
 
-ShadowRoot includes InnerHTML;
-
 Element includes InnerHTML;
+
+ShadowRoot includes InnerHTML;

@@ -6,6 +6,34 @@ enum NavigationType {
 };
 
 [Exposed=Window]
+interface PerformanceNavigation {
+  const unsigned short TYPE_BACK_FORWARD = 2;
+  const unsigned short TYPE_NAVIGATE = 0;
+  const unsigned short TYPE_RELOAD = 1;
+  const unsigned short TYPE_RESERVED = 255;
+  readonly attribute unsigned short redirectCount;
+  readonly attribute unsigned short type;
+  [Default]
+  object toJSON();
+};
+
+[Exposed=Window]
+interface PerformanceNavigationTiming : PerformanceResourceTiming {
+  readonly attribute DOMHighResTimeStamp domComplete;
+  readonly attribute DOMHighResTimeStamp domContentLoadedEventEnd;
+  readonly attribute DOMHighResTimeStamp domContentLoadedEventStart;
+  readonly attribute DOMHighResTimeStamp domInteractive;
+  readonly attribute DOMHighResTimeStamp loadEventEnd;
+  readonly attribute DOMHighResTimeStamp loadEventStart;
+  readonly attribute unsigned short redirectCount;
+  readonly attribute NavigationType type;
+  readonly attribute DOMHighResTimeStamp unloadEventEnd;
+  readonly attribute DOMHighResTimeStamp unloadEventStart;
+  [Default]
+  object toJSON();
+};
+
+[Exposed=Window]
 interface PerformanceTiming {
   readonly attribute unsigned long long connectEnd;
   readonly attribute unsigned long long connectStart;
@@ -28,34 +56,6 @@ interface PerformanceTiming {
   readonly attribute unsigned long long secureConnectionStart;
   readonly attribute unsigned long long unloadEventEnd;
   readonly attribute unsigned long long unloadEventStart;
-  [Default]
-  object toJSON();
-};
-
-[Exposed=Window]
-interface PerformanceNavigationTiming : PerformanceResourceTiming {
-  readonly attribute DOMHighResTimeStamp domComplete;
-  readonly attribute DOMHighResTimeStamp domContentLoadedEventEnd;
-  readonly attribute DOMHighResTimeStamp domContentLoadedEventStart;
-  readonly attribute DOMHighResTimeStamp domInteractive;
-  readonly attribute DOMHighResTimeStamp loadEventEnd;
-  readonly attribute DOMHighResTimeStamp loadEventStart;
-  readonly attribute unsigned short redirectCount;
-  readonly attribute NavigationType type;
-  readonly attribute DOMHighResTimeStamp unloadEventEnd;
-  readonly attribute DOMHighResTimeStamp unloadEventStart;
-  [Default]
-  object toJSON();
-};
-
-[Exposed=Window]
-interface PerformanceNavigation {
-  const unsigned short TYPE_BACK_FORWARD = 2;
-  const unsigned short TYPE_NAVIGATE = 0;
-  const unsigned short TYPE_RELOAD = 1;
-  const unsigned short TYPE_RESERVED = 255;
-  readonly attribute unsigned short redirectCount;
-  readonly attribute unsigned short type;
   [Default]
   object toJSON();
 };

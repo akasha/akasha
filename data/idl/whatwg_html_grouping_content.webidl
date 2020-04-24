@@ -1,11 +1,11 @@
 [Exposed=Window]
-interface HTMLMenuElement : HTMLElement {
+interface HTMLDListElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };
 
 [Exposed=Window]
-interface HTMLParagraphElement : HTMLElement {
+interface HTMLDivElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };
@@ -17,15 +17,15 @@ interface HTMLHRElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLDListElement : HTMLElement {
+interface HTMLLIElement : HTMLElement {
+  [CEReactions]
+  attribute long value;
   [HTMLConstructor]
   constructor();
 };
 
 [Exposed=Window]
-interface HTMLQuoteElement : HTMLElement {
-  [CEReactions]
-  attribute USVString cite;
+interface HTMLMenuElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };
@@ -43,27 +43,27 @@ interface HTMLOListElement : HTMLElement {
 };
 
 [Exposed=Window]
+interface HTMLParagraphElement : HTMLElement {
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
 interface HTMLPreElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };
 
 [Exposed=Window]
-interface HTMLUListElement : HTMLElement {
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLLIElement : HTMLElement {
+interface HTMLQuoteElement : HTMLElement {
   [CEReactions]
-  attribute long value;
+  attribute USVString cite;
   [HTMLConstructor]
   constructor();
 };
 
 [Exposed=Window]
-interface HTMLDivElement : HTMLElement {
+interface HTMLUListElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };

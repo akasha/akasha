@@ -6,12 +6,12 @@ dictionary StorageEventInit : EventInit {
   USVString url = "";
 };
 
-interface mixin WindowSessionStorage {
-  readonly attribute Storage sessionStorage;
-};
-
 interface mixin WindowLocalStorage {
   readonly attribute Storage localStorage;
+};
+
+interface mixin WindowSessionStorage {
+  readonly attribute Storage sessionStorage;
 };
 
 [Exposed=Window]

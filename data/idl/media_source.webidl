@@ -1,9 +1,3 @@
-enum ReadyState {
-  "closed",
-  "ended",
-  "open"
-};
-
 enum AppendMode {
   "segments",
   "sequence"
@@ -12,6 +6,12 @@ enum AppendMode {
 enum EndOfStreamError {
   "decode",
   "network"
+};
+
+enum ReadyState {
+  "closed",
+  "ended",
+  "open"
 };
 
 [Constructor]
@@ -29,13 +29,6 @@ interface MediaSource : EventTarget {
   void endOfStream( optional EndOfStreamError error );
   void removeSourceBuffer( SourceBuffer sourceBuffer );
   void setLiveSeekableRange( double start, double end );
-};
-
-interface SourceBufferList : EventTarget {
-  readonly attribute unsigned long length;
-  attribute EventHandler onaddsourcebuffer;
-  attribute EventHandler onremovesourcebuffer;
-  getter SourceBuffer ( unsigned long index );
 };
 
 interface SourceBuffer : EventTarget {
@@ -58,19 +51,26 @@ interface SourceBuffer : EventTarget {
   void remove( double start, unrestricted double end );
 };
 
-partial interface TextTrack {
-  readonly attribute SourceBuffer? sourceBuffer;
-};
-
-partial interface VideoTrack {
-  readonly attribute SourceBuffer? sourceBuffer;
+interface SourceBufferList : EventTarget {
+  readonly attribute unsigned long length;
+  attribute EventHandler onaddsourcebuffer;
+  attribute EventHandler onremovesourcebuffer;
+  getter SourceBuffer ( unsigned long index );
 };
 
 partial interface AudioTrack {
   readonly attribute SourceBuffer? sourceBuffer;
 };
 
+partial interface TextTrack {
+  readonly attribute SourceBuffer? sourceBuffer;
+};
+
 [Exposed=Window]
 partial interface URL {
   static DOMString createObjectURL( MediaSource mediaSource );
+};
+
+partial interface VideoTrack {
+  readonly attribute SourceBuffer? sourceBuffer;
 };

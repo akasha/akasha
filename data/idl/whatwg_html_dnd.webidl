@@ -4,19 +4,6 @@ dictionary DragEventInit : MouseEventInit {
   DataTransfer? dataTransfer = null;
 };
 
-[Exposed=Window, Constructor( DOMString type, optional DragEventInit eventInitDict = {} )]
-interface DragEvent : MouseEvent {
-  readonly attribute DataTransfer? dataTransfer;
-};
-
-[Exposed=Window]
-interface DataTransferItem {
-  readonly attribute DOMString kind;
-  readonly attribute DOMString type;
-  File? getAsFile();
-  void getAsString( FunctionStringCallback? _callback );
-};
-
 [Exposed=Window, Constructor]
 interface DataTransfer {
   [SameObject]
@@ -33,6 +20,14 @@ interface DataTransfer {
 };
 
 [Exposed=Window]
+interface DataTransferItem {
+  readonly attribute DOMString kind;
+  readonly attribute DOMString type;
+  File? getAsFile();
+  void getAsString( FunctionStringCallback? _callback );
+};
+
+[Exposed=Window]
 interface DataTransferItemList {
   readonly attribute unsigned long length;
   DataTransferItem? add( DOMString data, DOMString type );
@@ -40,4 +35,9 @@ interface DataTransferItemList {
   void clear();
   void remove( unsigned long index );
   getter DataTransferItem ( unsigned long index );
+};
+
+[Exposed=Window, Constructor( DOMString type, optional DragEventInit eventInitDict = {} )]
+interface DragEvent : MouseEvent {
+  readonly attribute DataTransfer? dataTransfer;
 };

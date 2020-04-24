@@ -15,10 +15,10 @@ interface SyncManager {
   Promise<void> register( DOMString tag );
 };
 
-partial interface ServiceWorkerRegistration {
-  readonly attribute SyncManager sync;
-};
-
 partial interface ServiceWorkerGlobalScope {
   attribute EventHandler onsync;
+};
+
+partial interface ServiceWorkerRegistration {
+  readonly attribute SyncManager sync;
 };

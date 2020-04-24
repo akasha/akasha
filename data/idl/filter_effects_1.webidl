@@ -6,47 +6,20 @@ interface mixin SVGFilterPrimitiveStandardAttributes {
   readonly attribute SVGAnimatedLength y;
 };
 
-interface SVGFEComponentTransferElement : SVGElement {
-  readonly attribute SVGAnimatedString in1;
-};
-
-interface SVGFEDisplacementMapElement : SVGElement {
-  const unsigned short SVG_CHANNEL_A = 4;
-  const unsigned short SVG_CHANNEL_B = 3;
-  const unsigned short SVG_CHANNEL_G = 2;
-  const unsigned short SVG_CHANNEL_R = 1;
-  const unsigned short SVG_CHANNEL_UNKNOWN = 0;
-  readonly attribute SVGAnimatedString in1;
-  readonly attribute SVGAnimatedString in2;
-  readonly attribute SVGAnimatedNumber scale;
-  readonly attribute SVGAnimatedEnumeration xChannelSelector;
-  readonly attribute SVGAnimatedEnumeration yChannelSelector;
-};
-
-interface SVGFEFloodElement : SVGElement {
-};
-
-interface SVGFESpecularLightingElement : SVGElement {
-  readonly attribute SVGAnimatedString in1;
-  readonly attribute SVGAnimatedNumber kernelUnitLengthX;
-  readonly attribute SVGAnimatedNumber kernelUnitLengthY;
-  readonly attribute SVGAnimatedNumber specularConstant;
-  readonly attribute SVGAnimatedNumber specularExponent;
-  readonly attribute SVGAnimatedNumber surfaceScale;
-};
-
-interface SVGFEFuncGElement : SVGComponentTransferFunctionElement {
-};
-
-interface SVGFEFuncRElement : SVGComponentTransferFunctionElement {
-};
-
-interface SVGFEDiffuseLightingElement : SVGElement {
-  readonly attribute SVGAnimatedNumber diffuseConstant;
-  readonly attribute SVGAnimatedString in1;
-  readonly attribute SVGAnimatedNumber kernelUnitLengthX;
-  readonly attribute SVGAnimatedNumber kernelUnitLengthY;
-  readonly attribute SVGAnimatedNumber surfaceScale;
+interface SVGComponentTransferFunctionElement : SVGElement {
+  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
+  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_GAMMA = 5;
+  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY = 1;
+  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_LINEAR = 4;
+  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_TABLE = 2;
+  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
+  readonly attribute SVGAnimatedNumber amplitude;
+  readonly attribute SVGAnimatedNumber exponent;
+  readonly attribute SVGAnimatedNumber intercept;
+  readonly attribute SVGAnimatedNumber offset;
+  readonly attribute SVGAnimatedNumber slope;
+  readonly attribute SVGAnimatedNumberList tableValues;
+  readonly attribute SVGAnimatedEnumeration type;
 };
 
 interface SVGFEBlendElement : SVGElement {
@@ -83,6 +56,10 @@ interface SVGFEColorMatrixElement : SVGElement {
   readonly attribute SVGAnimatedNumberList values;
 };
 
+interface SVGFEComponentTransferElement : SVGElement {
+  readonly attribute SVGAnimatedString in1;
+};
+
 interface SVGFECompositeElement : SVGElement {
   const unsigned short SVG_FECOMPOSITE_OPERATOR_ARITHMETIC = 6;
   const unsigned short SVG_FECOMPOSITE_OPERATOR_ATOP = 4;
@@ -98,47 +75,6 @@ interface SVGFECompositeElement : SVGElement {
   readonly attribute SVGAnimatedNumber k3;
   readonly attribute SVGAnimatedNumber k4;
   readonly attribute SVGAnimatedEnumeration operator;
-};
-
-interface SVGComponentTransferFunctionElement : SVGElement {
-  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_DISCRETE = 3;
-  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_GAMMA = 5;
-  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_IDENTITY = 1;
-  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_LINEAR = 4;
-  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_TABLE = 2;
-  const unsigned short SVG_FECOMPONENTTRANSFER_TYPE_UNKNOWN = 0;
-  readonly attribute SVGAnimatedNumber amplitude;
-  readonly attribute SVGAnimatedNumber exponent;
-  readonly attribute SVGAnimatedNumber intercept;
-  readonly attribute SVGAnimatedNumber offset;
-  readonly attribute SVGAnimatedNumber slope;
-  readonly attribute SVGAnimatedNumberList tableValues;
-  readonly attribute SVGAnimatedEnumeration type;
-};
-
-interface SVGFEGaussianBlurElement : SVGElement {
-  const unsigned short SVG_EDGEMODE_DUPLICATE = 1;
-  const unsigned short SVG_EDGEMODE_NONE = 3;
-  const unsigned short SVG_EDGEMODE_UNKNOWN = 0;
-  const unsigned short SVG_EDGEMODE_WRAP = 2;
-  readonly attribute SVGAnimatedEnumeration edgeMode;
-  readonly attribute SVGAnimatedString in1;
-  readonly attribute SVGAnimatedNumber stdDeviationX;
-  readonly attribute SVGAnimatedNumber stdDeviationY;
-  void setStdDeviation( float stdDeviationX, float stdDeviationY );
-};
-
-interface SVGFilterElement : SVGElement {
-  readonly attribute SVGAnimatedEnumeration filterUnits;
-  readonly attribute SVGAnimatedLength height;
-  readonly attribute SVGAnimatedEnumeration primitiveUnits;
-  readonly attribute SVGAnimatedLength width;
-  readonly attribute SVGAnimatedLength x;
-  readonly attribute SVGAnimatedLength y;
-};
-
-interface SVGFETileElement : SVGElement {
-  readonly attribute SVGAnimatedString in1;
 };
 
 interface SVGFEConvolveMatrixElement : SVGElement {
@@ -160,16 +96,25 @@ interface SVGFEConvolveMatrixElement : SVGElement {
   readonly attribute SVGAnimatedInteger targetY;
 };
 
-interface SVGFEFuncAElement : SVGComponentTransferFunctionElement {
-};
-
-interface SVGFEOffsetElement : SVGElement {
-  readonly attribute SVGAnimatedNumber dx;
-  readonly attribute SVGAnimatedNumber dy;
+interface SVGFEDiffuseLightingElement : SVGElement {
+  readonly attribute SVGAnimatedNumber diffuseConstant;
   readonly attribute SVGAnimatedString in1;
+  readonly attribute SVGAnimatedNumber kernelUnitLengthX;
+  readonly attribute SVGAnimatedNumber kernelUnitLengthY;
+  readonly attribute SVGAnimatedNumber surfaceScale;
 };
 
-interface SVGFEFuncBElement : SVGComponentTransferFunctionElement {
+interface SVGFEDisplacementMapElement : SVGElement {
+  const unsigned short SVG_CHANNEL_A = 4;
+  const unsigned short SVG_CHANNEL_B = 3;
+  const unsigned short SVG_CHANNEL_G = 2;
+  const unsigned short SVG_CHANNEL_R = 1;
+  const unsigned short SVG_CHANNEL_UNKNOWN = 0;
+  readonly attribute SVGAnimatedString in1;
+  readonly attribute SVGAnimatedString in2;
+  readonly attribute SVGAnimatedNumber scale;
+  readonly attribute SVGAnimatedEnumeration xChannelSelector;
+  readonly attribute SVGAnimatedEnumeration yChannelSelector;
 };
 
 interface SVGFEDistantLightElement : SVGElement {
@@ -186,6 +131,76 @@ interface SVGFEDropShadowElement : SVGElement {
   void setStdDeviation( float stdDeviationX, float stdDeviationY );
 };
 
+interface SVGFEFloodElement : SVGElement {
+};
+
+interface SVGFEFuncAElement : SVGComponentTransferFunctionElement {
+};
+
+interface SVGFEFuncBElement : SVGComponentTransferFunctionElement {
+};
+
+interface SVGFEFuncGElement : SVGComponentTransferFunctionElement {
+};
+
+interface SVGFEFuncRElement : SVGComponentTransferFunctionElement {
+};
+
+interface SVGFEGaussianBlurElement : SVGElement {
+  const unsigned short SVG_EDGEMODE_DUPLICATE = 1;
+  const unsigned short SVG_EDGEMODE_NONE = 3;
+  const unsigned short SVG_EDGEMODE_UNKNOWN = 0;
+  const unsigned short SVG_EDGEMODE_WRAP = 2;
+  readonly attribute SVGAnimatedEnumeration edgeMode;
+  readonly attribute SVGAnimatedString in1;
+  readonly attribute SVGAnimatedNumber stdDeviationX;
+  readonly attribute SVGAnimatedNumber stdDeviationY;
+  void setStdDeviation( float stdDeviationX, float stdDeviationY );
+};
+
+interface SVGFEImageElement : SVGElement {
+  readonly attribute SVGAnimatedString crossOrigin;
+  readonly attribute SVGAnimatedPreserveAspectRatio preserveAspectRatio;
+};
+
+interface SVGFEMergeElement : SVGElement {
+};
+
+interface SVGFEMergeNodeElement : SVGElement {
+  readonly attribute SVGAnimatedString in1;
+};
+
+interface SVGFEMorphologyElement : SVGElement {
+  const unsigned short SVG_MORPHOLOGY_OPERATOR_DILATE = 2;
+  const unsigned short SVG_MORPHOLOGY_OPERATOR_ERODE = 1;
+  const unsigned short SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
+  readonly attribute SVGAnimatedString in1;
+  readonly attribute SVGAnimatedEnumeration operator;
+  readonly attribute SVGAnimatedNumber radiusX;
+  readonly attribute SVGAnimatedNumber radiusY;
+};
+
+interface SVGFEOffsetElement : SVGElement {
+  readonly attribute SVGAnimatedNumber dx;
+  readonly attribute SVGAnimatedNumber dy;
+  readonly attribute SVGAnimatedString in1;
+};
+
+interface SVGFEPointLightElement : SVGElement {
+  readonly attribute SVGAnimatedNumber x;
+  readonly attribute SVGAnimatedNumber y;
+  readonly attribute SVGAnimatedNumber z;
+};
+
+interface SVGFESpecularLightingElement : SVGElement {
+  readonly attribute SVGAnimatedString in1;
+  readonly attribute SVGAnimatedNumber kernelUnitLengthX;
+  readonly attribute SVGAnimatedNumber kernelUnitLengthY;
+  readonly attribute SVGAnimatedNumber specularConstant;
+  readonly attribute SVGAnimatedNumber specularExponent;
+  readonly attribute SVGAnimatedNumber surfaceScale;
+};
+
 interface SVGFESpotLightElement : SVGElement {
   readonly attribute SVGAnimatedNumber limitingConeAngle;
   readonly attribute SVGAnimatedNumber pointsAtX;
@@ -195,6 +210,10 @@ interface SVGFESpotLightElement : SVGElement {
   readonly attribute SVGAnimatedNumber x;
   readonly attribute SVGAnimatedNumber y;
   readonly attribute SVGAnimatedNumber z;
+};
+
+interface SVGFETileElement : SVGElement {
+  readonly attribute SVGAnimatedString in1;
 };
 
 interface SVGFETurbulenceElement : SVGElement {
@@ -212,43 +231,24 @@ interface SVGFETurbulenceElement : SVGElement {
   readonly attribute SVGAnimatedEnumeration type;
 };
 
-interface SVGFEMorphologyElement : SVGElement {
-  const unsigned short SVG_MORPHOLOGY_OPERATOR_DILATE = 2;
-  const unsigned short SVG_MORPHOLOGY_OPERATOR_ERODE = 1;
-  const unsigned short SVG_MORPHOLOGY_OPERATOR_UNKNOWN = 0;
-  readonly attribute SVGAnimatedString in1;
-  readonly attribute SVGAnimatedEnumeration operator;
-  readonly attribute SVGAnimatedNumber radiusX;
-  readonly attribute SVGAnimatedNumber radiusY;
+interface SVGFilterElement : SVGElement {
+  readonly attribute SVGAnimatedEnumeration filterUnits;
+  readonly attribute SVGAnimatedLength height;
+  readonly attribute SVGAnimatedEnumeration primitiveUnits;
+  readonly attribute SVGAnimatedLength width;
+  readonly attribute SVGAnimatedLength x;
+  readonly attribute SVGAnimatedLength y;
 };
 
-interface SVGFEMergeElement : SVGElement {
-};
+SVGFEBlendElement includes SVGFilterPrimitiveStandardAttributes;
 
-interface SVGFEPointLightElement : SVGElement {
-  readonly attribute SVGAnimatedNumber x;
-  readonly attribute SVGAnimatedNumber y;
-  readonly attribute SVGAnimatedNumber z;
-};
+SVGFEColorMatrixElement includes SVGFilterPrimitiveStandardAttributes;
 
-interface SVGFEMergeNodeElement : SVGElement {
-  readonly attribute SVGAnimatedString in1;
-};
+SVGFEComponentTransferElement includes SVGFilterPrimitiveStandardAttributes;
 
-interface SVGFEImageElement : SVGElement {
-  readonly attribute SVGAnimatedString crossOrigin;
-  readonly attribute SVGAnimatedPreserveAspectRatio preserveAspectRatio;
-};
+SVGFECompositeElement includes SVGFilterPrimitiveStandardAttributes;
 
-SVGFESpecularLightingElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEImageElement includes SVGURIReference;
-
-SVGFEFloodElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEOffsetElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFilterElement includes SVGURIReference;
+SVGFEConvolveMatrixElement includes SVGFilterPrimitiveStandardAttributes;
 
 SVGFEDiffuseLightingElement includes SVGFilterPrimitiveStandardAttributes;
 
@@ -256,24 +256,24 @@ SVGFEDisplacementMapElement includes SVGFilterPrimitiveStandardAttributes;
 
 SVGFEDropShadowElement includes SVGFilterPrimitiveStandardAttributes;
 
+SVGFEFloodElement includes SVGFilterPrimitiveStandardAttributes;
+
+SVGFEGaussianBlurElement includes SVGFilterPrimitiveStandardAttributes;
+
 SVGFEImageElement includes SVGFilterPrimitiveStandardAttributes;
 
-SVGFEComponentTransferElement includes SVGFilterPrimitiveStandardAttributes;
+SVGFEImageElement includes SVGURIReference;
+
+SVGFEMergeElement includes SVGFilterPrimitiveStandardAttributes;
 
 SVGFEMorphologyElement includes SVGFilterPrimitiveStandardAttributes;
+
+SVGFEOffsetElement includes SVGFilterPrimitiveStandardAttributes;
+
+SVGFESpecularLightingElement includes SVGFilterPrimitiveStandardAttributes;
 
 SVGFETileElement includes SVGFilterPrimitiveStandardAttributes;
 
 SVGFETurbulenceElement includes SVGFilterPrimitiveStandardAttributes;
 
-SVGFECompositeElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEBlendElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEConvolveMatrixElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEGaussianBlurElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEMergeElement includes SVGFilterPrimitiveStandardAttributes;
-
-SVGFEColorMatrixElement includes SVGFilterPrimitiveStandardAttributes;
+SVGFilterElement includes SVGURIReference;

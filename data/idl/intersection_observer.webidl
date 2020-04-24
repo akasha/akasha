@@ -1,11 +1,5 @@
 callback IntersectionObserverCallback = void ( sequence<IntersectionObserverEntry> entries, IntersectionObserver observer );
 
-dictionary IntersectionObserverInit {
-  Element? root = null;
-  DOMString rootMargin = "0px";
-  ( double or sequence<double> ) threshold = 0;
-};
-
 dictionary IntersectionObserverEntryInit {
   required DOMRectInit boundingClientRect;
   required double intersectionRatio;
@@ -14,6 +8,12 @@ dictionary IntersectionObserverEntryInit {
   required DOMRectInit? rootBounds;
   required Element target;
   required DOMHighResTimeStamp time;
+};
+
+dictionary IntersectionObserverInit {
+  Element? root = null;
+  DOMString rootMargin = "0px";
+  ( double or sequence<double> ) threshold = 0;
 };
 
 [Constructor( IntersectionObserverCallback callback, optional IntersectionObserverInit options ), Exposed=Window]

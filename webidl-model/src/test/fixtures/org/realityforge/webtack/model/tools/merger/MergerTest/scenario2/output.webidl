@@ -1,8 +1,3 @@
-enum MyEnumC {
-  "r",
-  "s"
-};
-
 enum MyEnumA {
   "a",
   "b"
@@ -13,21 +8,16 @@ enum MyEnumB {
   "q"
 };
 
-typedef ( RenderingContextA or RenderingContextP ) RenderingContext;
+enum MyEnumC {
+  "r",
+  "s"
+};
 
-typedef short XRint16;
+typedef ( RenderingContextA or RenderingContextP ) RenderingContext;
 
 typedef long XRint;
 
-namespace NamespaceC {
-  void methodR( BufferSource? data );
-  void methodS( boolean flag );
-};
-
-namespace NamespaceB {
-  void methodP( BufferSource? data );
-  void methodQ( boolean flag );
-};
+typedef short XRint16;
 
 [Exposed=(Window,Worker,Worklet)]
 namespace NamespaceA {
@@ -35,16 +25,26 @@ namespace NamespaceA {
   boolean methodB( BufferSource bytes );
 };
 
-callback CallbackC = DOMString ();
+namespace NamespaceB {
+  void methodP( BufferSource? data );
+  void methodQ( boolean flag );
+};
+
+namespace NamespaceC {
+  void methodR( BufferSource? data );
+  void methodS( boolean flag );
+};
 
 callback CallbackA = HTMLElement ();
 
 callback CallbackB = DOMString ();
 
-callback interface MyEventListenerC {
-  const unsigned short MYCONST_R = 7;
-  const unsigned short MYCONST_S = 8;
-  void handleIt( Event event );
+callback CallbackC = DOMString ();
+
+callback interface MyEventListenerA {
+  const unsigned short MYCONST_A = 7;
+  const unsigned short MYCONST_B = 8;
+  void handleEvent( Event event );
 };
 
 callback interface MyEventListenerB {
@@ -53,10 +53,15 @@ callback interface MyEventListenerB {
   void doStuff( Event event );
 };
 
-callback interface MyEventListenerA {
-  const unsigned short MYCONST_A = 7;
-  const unsigned short MYCONST_B = 8;
-  void handleEvent( Event event );
+callback interface MyEventListenerC {
+  const unsigned short MYCONST_R = 7;
+  const unsigned short MYCONST_S = 8;
+  void handleIt( Event event );
+};
+
+dictionary MyDictionaryA : EventInit {
+  USVString a = "";
+  USVString b = "";
 };
 
 dictionary MyDictionaryB {
@@ -69,9 +74,16 @@ dictionary MyDictionaryC {
   USVString s = "";
 };
 
-dictionary MyDictionaryA : EventInit {
-  USVString a = "";
-  USVString b = "";
+interface mixin MyMixinA {
+  const unsigned short MYCONST_A = 7;
+  const unsigned short MYCONST_B = 8;
+  [SameObject, A, Input1]
+  readonly attribute SVGPointList a;
+  [SameObject]
+  readonly attribute SVGPointList b;
+  [CEReactions]
+  boolean myMethodA();
+  boolean myMethodB();
 };
 
 interface mixin MyMixinB {
@@ -81,18 +93,6 @@ interface mixin MyMixinB {
   readonly attribute SVGPointList a;
   [SameObject]
   readonly attribute SVGPointList c;
-  [CEReactions]
-  boolean myMethodA();
-  boolean myMethodB();
-};
-
-interface mixin MyMixinA {
-  const unsigned short MYCONST_A = 7;
-  const unsigned short MYCONST_B = 8;
-  [SameObject, A, Input1]
-  readonly attribute SVGPointList a;
-  [SameObject]
-  readonly attribute SVGPointList b;
   [CEReactions]
   boolean myMethodA();
   boolean myMethodB();
@@ -109,6 +109,15 @@ interface mixin MyMixinC {
   boolean myMethodS();
 };
 
+[Exposed=Window, Constructor( DOMString type, optional PopStateEventInit eventInitDict = {} )]
+interface MyInterfaceA : Event {
+  readonly attribute any a;
+  readonly attribute any b;
+  [CEReactions]
+  boolean myMethodA();
+  boolean myMethodB();
+};
+
 [Exposed=(Window,Worker)]
 interface MyInterfaceB : Event {
   const unsigned short MYCONST_A = 7;
@@ -118,15 +127,6 @@ interface MyInterfaceB : Event {
   [CEReactions]
   boolean myMethodP();
   boolean myMethodQ();
-};
-
-[Exposed=Window, Constructor( DOMString type, optional PopStateEventInit eventInitDict = {} )]
-interface MyInterfaceA : Event {
-  readonly attribute any a;
-  readonly attribute any b;
-  [CEReactions]
-  boolean myMethodA();
-  boolean myMethodB();
 };
 
 [Exposed=(Window,Worker)]

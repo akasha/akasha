@@ -1,4 +1,91 @@
 [Exposed=Window]
+interface HTMLButtonElement : HTMLElement {
+  readonly attribute HTMLFormElement? form;
+  readonly attribute NodeList labels;
+  readonly attribute DOMString validationMessage;
+  readonly attribute ValidityState validity;
+  readonly attribute boolean willValidate;
+  [CEReactions]
+  attribute boolean disabled;
+  [CEReactions]
+  attribute USVString formAction;
+  [CEReactions]
+  attribute DOMString formEnctype;
+  [CEReactions]
+  attribute DOMString formMethod;
+  [CEReactions]
+  attribute boolean formNoValidate;
+  [CEReactions]
+  attribute DOMString formTarget;
+  [CEReactions]
+  attribute DOMString name;
+  [CEReactions]
+  attribute DOMString type;
+  [CEReactions]
+  attribute DOMString value;
+  [HTMLConstructor]
+  constructor();
+  boolean checkValidity();
+  boolean reportValidity();
+  void setCustomValidity( DOMString error );
+};
+
+[Exposed=Window]
+interface HTMLDataListElement : HTMLElement {
+  [SameObject]
+  readonly attribute HTMLCollection options;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLFieldSetElement : HTMLElement {
+  [SameObject]
+  readonly attribute HTMLCollection elements;
+  readonly attribute HTMLFormElement? form;
+  readonly attribute DOMString type;
+  readonly attribute DOMString validationMessage;
+  [SameObject]
+  readonly attribute ValidityState validity;
+  readonly attribute boolean willValidate;
+  [CEReactions]
+  attribute boolean disabled;
+  [CEReactions]
+  attribute DOMString name;
+  [HTMLConstructor]
+  constructor();
+  boolean checkValidity();
+  boolean reportValidity();
+  void setCustomValidity( DOMString error );
+};
+
+[Exposed=Window]
+interface HTMLLegendElement : HTMLElement {
+  readonly attribute HTMLFormElement? form;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
+interface HTMLMeterElement : HTMLElement {
+  readonly attribute NodeList labels;
+  [CEReactions]
+  attribute double high;
+  [CEReactions]
+  attribute double low;
+  [CEReactions]
+  attribute double max;
+  [CEReactions]
+  attribute double min;
+  [CEReactions]
+  attribute double optimum;
+  [CEReactions]
+  attribute double value;
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
 interface HTMLOptGroupElement : HTMLElement {
   [CEReactions]
   attribute boolean disabled;
@@ -51,13 +138,6 @@ interface HTMLOutputElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLLegendElement : HTMLElement {
-  readonly attribute HTMLFormElement? form;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
 interface HTMLProgressElement : HTMLElement {
   readonly attribute NodeList labels;
   readonly attribute double position;
@@ -70,64 +150,48 @@ interface HTMLProgressElement : HTMLElement {
 };
 
 [Exposed=Window]
-interface HTMLFieldSetElement : HTMLElement {
-  [SameObject]
-  readonly attribute HTMLCollection elements;
-  readonly attribute HTMLFormElement? form;
-  readonly attribute DOMString type;
-  readonly attribute DOMString validationMessage;
-  [SameObject]
-  readonly attribute ValidityState validity;
-  readonly attribute boolean willValidate;
-  [CEReactions]
-  attribute boolean disabled;
-  [CEReactions]
-  attribute DOMString name;
-  [HTMLConstructor]
-  constructor();
-  boolean checkValidity();
-  boolean reportValidity();
-  void setCustomValidity( DOMString error );
-};
-
-[Exposed=Window]
-interface HTMLButtonElement : HTMLElement {
+interface HTMLSelectElement : HTMLElement {
   readonly attribute HTMLFormElement? form;
   readonly attribute NodeList labels;
+  [SameObject]
+  readonly attribute HTMLOptionsCollection options;
+  [SameObject]
+  readonly attribute HTMLCollection selectedOptions;
+  readonly attribute DOMString type;
   readonly attribute DOMString validationMessage;
   readonly attribute ValidityState validity;
   readonly attribute boolean willValidate;
   [CEReactions]
+  attribute DOMString autocomplete;
+  [CEReactions]
   attribute boolean disabled;
   [CEReactions]
-  attribute USVString formAction;
+  attribute unsigned long length;
   [CEReactions]
-  attribute DOMString formEnctype;
-  [CEReactions]
-  attribute DOMString formMethod;
-  [CEReactions]
-  attribute boolean formNoValidate;
-  [CEReactions]
-  attribute DOMString formTarget;
+  attribute boolean multiple;
   [CEReactions]
   attribute DOMString name;
   [CEReactions]
-  attribute DOMString type;
+  attribute boolean required;
+  attribute long selectedIndex;
   [CEReactions]
+  attribute unsigned long size;
   attribute DOMString value;
   [HTMLConstructor]
   constructor();
+  [CEReactions]
+  void add( ( HTMLOptionElement or HTMLOptGroupElement ) element, optional ( HTMLElement or long )? before = null );
   boolean checkValidity();
+  HTMLOptionElement? namedItem( DOMString name );
+  [CEReactions]
+  void remove();
+  [CEReactions]
+  void remove( long index );
   boolean reportValidity();
   void setCustomValidity( DOMString error );
-};
-
-[Exposed=Window]
-interface HTMLDataListElement : HTMLElement {
-  [SameObject]
-  readonly attribute HTMLCollection options;
-  [HTMLConstructor]
-  constructor();
+  getter Element? item( unsigned long index );
+  [CEReactions]
+  setter void ( unsigned long index, HTMLOptionElement? option );
 };
 
 [Exposed=Window]
@@ -178,68 +242,4 @@ interface HTMLTextAreaElement : HTMLElement {
   void setRangeText( DOMString replacement );
   void setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
   void setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
-};
-
-[Exposed=Window]
-interface HTMLMeterElement : HTMLElement {
-  readonly attribute NodeList labels;
-  [CEReactions]
-  attribute double high;
-  [CEReactions]
-  attribute double low;
-  [CEReactions]
-  attribute double max;
-  [CEReactions]
-  attribute double min;
-  [CEReactions]
-  attribute double optimum;
-  [CEReactions]
-  attribute double value;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLSelectElement : HTMLElement {
-  readonly attribute HTMLFormElement? form;
-  readonly attribute NodeList labels;
-  [SameObject]
-  readonly attribute HTMLOptionsCollection options;
-  [SameObject]
-  readonly attribute HTMLCollection selectedOptions;
-  readonly attribute DOMString type;
-  readonly attribute DOMString validationMessage;
-  readonly attribute ValidityState validity;
-  readonly attribute boolean willValidate;
-  [CEReactions]
-  attribute DOMString autocomplete;
-  [CEReactions]
-  attribute boolean disabled;
-  [CEReactions]
-  attribute unsigned long length;
-  [CEReactions]
-  attribute boolean multiple;
-  [CEReactions]
-  attribute DOMString name;
-  [CEReactions]
-  attribute boolean required;
-  attribute long selectedIndex;
-  [CEReactions]
-  attribute unsigned long size;
-  attribute DOMString value;
-  [HTMLConstructor]
-  constructor();
-  [CEReactions]
-  void add( ( HTMLOptionElement or HTMLOptGroupElement ) element, optional ( HTMLElement or long )? before = null );
-  boolean checkValidity();
-  HTMLOptionElement? namedItem( DOMString name );
-  [CEReactions]
-  void remove();
-  [CEReactions]
-  void remove( long index );
-  boolean reportValidity();
-  void setCustomValidity( DOMString error );
-  getter Element? item( unsigned long index );
-  [CEReactions]
-  setter void ( unsigned long index, HTMLOptionElement? option );
 };

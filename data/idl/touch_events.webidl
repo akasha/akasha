@@ -35,24 +35,6 @@ partial interface mixin GlobalEventHandlers {
 };
 
 [Exposed=Window]
-interface TouchList {
-  readonly attribute unsigned long length;
-  getter Touch? item( unsigned long index );
-};
-
-[Exposed=Window]
-interface TouchEvent : UIEvent {
-  readonly attribute boolean altKey;
-  readonly attribute TouchList changedTouches;
-  readonly attribute boolean ctrlKey;
-  readonly attribute boolean metaKey;
-  readonly attribute boolean shiftKey;
-  readonly attribute TouchList targetTouches;
-  readonly attribute TouchList touches;
-  constructor( DOMString type, optional TouchEventInit eventInitDict = {} );
-};
-
-[Exposed=Window]
 interface Touch {
   readonly attribute float altitudeAngle;
   readonly attribute float azimuthAngle;
@@ -70,4 +52,22 @@ interface Touch {
   readonly attribute EventTarget target;
   readonly attribute TouchType touchType;
   constructor( TouchInit touchInitDict );
+};
+
+[Exposed=Window]
+interface TouchEvent : UIEvent {
+  readonly attribute boolean altKey;
+  readonly attribute TouchList changedTouches;
+  readonly attribute boolean ctrlKey;
+  readonly attribute boolean metaKey;
+  readonly attribute boolean shiftKey;
+  readonly attribute TouchList targetTouches;
+  readonly attribute TouchList touches;
+  constructor( DOMString type, optional TouchEventInit eventInitDict = {} );
+};
+
+[Exposed=Window]
+interface TouchList {
+  readonly attribute unsigned long length;
+  getter Touch? item( unsigned long index );
 };

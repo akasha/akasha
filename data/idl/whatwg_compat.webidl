@@ -1,8 +1,8 @@
-partial interface Window {
-  readonly attribute short orientation;
+partial interface HTMLBodyElement {
   attribute EventHandler onorientationchange;
 };
 
-partial interface HTMLBodyElement {
+partial interface Window {
+  readonly attribute short orientation;
   attribute EventHandler onorientationchange;
 };

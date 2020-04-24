@@ -3,15 +3,15 @@ enum ColorSpaceConversion {
   "none"
 };
 
+enum ImageOrientation {
+  "flipY",
+  "none"
+};
+
 enum PremultiplyAlpha {
   "default",
   "none",
   "premultiply"
-};
-
-enum ImageOrientation {
-  "flipY",
-  "none"
 };
 
 enum ResizeQuality {

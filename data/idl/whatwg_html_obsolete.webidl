@@ -1,44 +1,7 @@
 [Exposed=Window]
-interface HTMLMarqueeElement : HTMLElement {
-  [CEReactions]
-  attribute DOMString behavior;
-  [CEReactions]
-  attribute DOMString bgColor;
-  [CEReactions]
-  attribute DOMString direction;
-  [CEReactions]
-  attribute DOMString height;
-  [CEReactions]
-  attribute unsigned long hspace;
-  [CEReactions]
-  attribute long loop;
-  attribute EventHandler onbounce;
-  attribute EventHandler onfinish;
-  attribute EventHandler onstart;
-  [CEReactions]
-  attribute unsigned long scrollAmount;
-  [CEReactions]
-  attribute unsigned long scrollDelay;
-  [CEReactions]
-  attribute boolean trueSpeed;
-  [CEReactions]
-  attribute unsigned long vspace;
-  [CEReactions]
-  attribute DOMString width;
-  [HTMLConstructor]
-  constructor();
-  void start();
-  void stop();
-};
-
-[Exposed=Window]
-interface HTMLFrameSetElement : HTMLElement {
-  [CEReactions]
-  attribute DOMString cols;
-  [CEReactions]
-  attribute DOMString rows;
-  [HTMLConstructor]
-  constructor();
+interface External {
+  void AddSearchProvider();
+  void IsSearchProviderInstalled();
 };
 
 [Exposed=Window]
@@ -47,12 +10,6 @@ interface HTMLDirectoryElement : HTMLElement {
   attribute boolean compact;
   [HTMLConstructor]
   constructor();
-};
-
-[Exposed=Window]
-interface External {
-  void AddSearchProvider();
-  void IsSearchProviderInstalled();
 };
 
 [Exposed=Window]
@@ -91,44 +48,47 @@ interface HTMLFrameElement : HTMLElement {
   constructor();
 };
 
-partial interface HTMLTableRowElement {
+[Exposed=Window]
+interface HTMLFrameSetElement : HTMLElement {
   [CEReactions]
-  attribute DOMString align;
+  attribute DOMString cols;
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString bgColor;
-  [CEReactions]
-  attribute DOMString ch;
-  [CEReactions]
-  attribute DOMString chOff;
-  [CEReactions]
-  attribute DOMString vAlign;
+  attribute DOMString rows;
+  [HTMLConstructor]
+  constructor();
 };
 
-partial interface HTMLOListElement {
+[Exposed=Window]
+interface HTMLMarqueeElement : HTMLElement {
   [CEReactions]
-  attribute boolean compact;
-};
-
-partial interface HTMLIFrameElement {
+  attribute DOMString behavior;
   [CEReactions]
-  attribute DOMString align;
+  attribute DOMString bgColor;
   [CEReactions]
-  attribute DOMString frameBorder;
+  attribute DOMString direction;
   [CEReactions]
-  attribute USVString longDesc;
+  attribute DOMString height;
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString marginHeight;
+  attribute unsigned long hspace;
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString marginWidth;
+  attribute long loop;
+  attribute EventHandler onbounce;
+  attribute EventHandler onfinish;
+  attribute EventHandler onstart;
   [CEReactions]
-  attribute DOMString scrolling;
-};
-
-partial interface HTMLInputElement {
+  attribute unsigned long scrollAmount;
   [CEReactions]
-  attribute DOMString align;
+  attribute unsigned long scrollDelay;
   [CEReactions]
-  attribute DOMString useMap;
+  attribute boolean trueSpeed;
+  [CEReactions]
+  attribute unsigned long vspace;
+  [CEReactions]
+  attribute DOMString width;
+  [HTMLConstructor]
+  constructor();
+  void start();
+  void stop();
 };
 
 partial interface Document {
@@ -153,11 +113,17 @@ partial interface Document {
   void releaseEvents();
 };
 
-partial interface HTMLParamElement {
+partial interface HTMLAnchorElement {
   [CEReactions]
-  attribute DOMString type;
+  attribute DOMString charset;
   [CEReactions]
-  attribute DOMString valueType;
+  attribute DOMString coords;
+  [CEReactions]
+  attribute DOMString name;
+  [CEReactions]
+  attribute DOMString rev;
+  [CEReactions]
+  attribute DOMString shape;
 };
 
 partial interface HTMLAreaElement {
@@ -165,15 +131,79 @@ partial interface HTMLAreaElement {
   attribute boolean noHref;
 };
 
-partial interface HTMLTableSectionElement {
+partial interface HTMLBRElement {
+  [CEReactions]
+  attribute DOMString clear;
+};
+
+partial interface HTMLBodyElement {
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString aLink;
+  [CEReactions]
+  attribute DOMString background;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString bgColor;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString link;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString text;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString vLink;
+};
+
+partial interface HTMLDListElement {
+  [CEReactions]
+  attribute boolean compact;
+};
+
+partial interface HTMLDivElement {
+  [CEReactions]
+  attribute DOMString align;
+};
+
+partial interface HTMLEmbedElement {
   [CEReactions]
   attribute DOMString align;
   [CEReactions]
-  attribute DOMString ch;
+  attribute DOMString name;
+};
+
+partial interface HTMLHRElement {
   [CEReactions]
-  attribute DOMString chOff;
+  attribute DOMString align;
   [CEReactions]
-  attribute DOMString vAlign;
+  attribute DOMString color;
+  [CEReactions]
+  attribute boolean noShade;
+  [CEReactions]
+  attribute DOMString size;
+  [CEReactions]
+  attribute DOMString width;
+};
+
+partial interface HTMLHeadingElement {
+  [CEReactions]
+  attribute DOMString align;
+};
+
+partial interface HTMLHtmlElement {
+  [CEReactions]
+  attribute DOMString version;
+};
+
+partial interface HTMLIFrameElement {
+  [CEReactions]
+  attribute DOMString align;
+  [CEReactions]
+  attribute DOMString frameBorder;
+  [CEReactions]
+  attribute USVString longDesc;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString marginHeight;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString marginWidth;
+  [CEReactions]
+  attribute DOMString scrolling;
 };
 
 partial interface HTMLImageElement {
@@ -193,45 +223,35 @@ partial interface HTMLImageElement {
   attribute unsigned long vspace;
 };
 
-partial interface HTMLTableColElement {
+partial interface HTMLInputElement {
   [CEReactions]
   attribute DOMString align;
   [CEReactions]
-  attribute DOMString ch;
-  [CEReactions]
-  attribute DOMString chOff;
-  [CEReactions]
-  attribute DOMString vAlign;
-  [CEReactions]
-  attribute DOMString width;
+  attribute DOMString useMap;
 };
 
-partial interface HTMLUListElement {
-  [CEReactions]
-  attribute boolean compact;
+partial interface HTMLLIElement {
   [CEReactions]
   attribute DOMString type;
 };
 
-partial interface HTMLTableElement {
+partial interface HTMLLegendElement {
   [CEReactions]
   attribute DOMString align;
+};
+
+partial interface HTMLLinkElement {
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString bgColor;
+  attribute DOMString charset;
   [CEReactions]
-  attribute DOMString border;
+  attribute DOMString rev;
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString cellPadding;
+  attribute DOMString target;
+};
+
+partial interface HTMLMenuElement {
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString cellSpacing;
-  [CEReactions]
-  attribute DOMString frame;
-  [CEReactions]
-  attribute DOMString rules;
-  [CEReactions]
-  attribute DOMString summary;
-  [CEReactions]
-  attribute DOMString width;
+  attribute boolean compact;
 };
 
 partial interface HTMLMetaElement {
@@ -239,60 +259,7 @@ partial interface HTMLMetaElement {
   attribute DOMString scheme;
 };
 
-partial interface HTMLTableCellElement {
-  [CEReactions]
-  attribute DOMString align;
-  [CEReactions]
-  attribute DOMString axis;
-  [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString bgColor;
-  [CEReactions]
-  attribute DOMString ch;
-  [CEReactions]
-  attribute DOMString chOff;
-  [CEReactions]
-  attribute DOMString height;
-  [CEReactions]
-  attribute boolean noWrap;
-  [CEReactions]
-  attribute DOMString vAlign;
-  [CEReactions]
-  attribute DOMString width;
-};
-
-partial interface HTMLDivElement {
-  [CEReactions]
-  attribute DOMString align;
-};
-
-partial interface HTMLTableCaptionElement {
-  [CEReactions]
-  attribute DOMString align;
-};
-
-partial interface HTMLBRElement {
-  [CEReactions]
-  attribute DOMString clear;
-};
-
-partial interface HTMLHeadingElement {
-  [CEReactions]
-  attribute DOMString align;
-};
-
-partial interface HTMLHtmlElement {
-  [CEReactions]
-  attribute DOMString version;
-};
-
-partial interface Window {
-  [Replaceable, SameObject]
-  readonly attribute External external;
-  void captureEvents();
-  void releaseEvents();
-};
-
-partial interface HTMLMenuElement {
+partial interface HTMLOListElement {
   [CEReactions]
   attribute boolean compact;
 };
@@ -320,64 +287,21 @@ partial interface HTMLObjectElement {
   attribute unsigned long vspace;
 };
 
-partial interface HTMLLegendElement {
-  [CEReactions]
-  attribute DOMString align;
-};
-
-partial interface HTMLLIElement {
-  [CEReactions]
-  attribute DOMString type;
-};
-
-partial interface HTMLLinkElement {
-  [CEReactions]
-  attribute DOMString charset;
-  [CEReactions]
-  attribute DOMString rev;
-  [CEReactions]
-  attribute DOMString target;
-};
-
 partial interface HTMLParagraphElement {
   [CEReactions]
   attribute DOMString align;
 };
 
-partial interface HTMLHRElement {
-  [CEReactions]
-  attribute DOMString align;
-  [CEReactions]
-  attribute DOMString color;
-  [CEReactions]
-  attribute boolean noShade;
-  [CEReactions]
-  attribute DOMString size;
-  [CEReactions]
-  attribute DOMString width;
-};
-
-partial interface HTMLDListElement {
-  [CEReactions]
-  attribute boolean compact;
-};
-
-partial interface HTMLStyleElement {
+partial interface HTMLParamElement {
   [CEReactions]
   attribute DOMString type;
+  [CEReactions]
+  attribute DOMString valueType;
 };
 
-partial interface HTMLAnchorElement {
+partial interface HTMLPreElement {
   [CEReactions]
-  attribute DOMString charset;
-  [CEReactions]
-  attribute DOMString coords;
-  [CEReactions]
-  attribute DOMString name;
-  [CEReactions]
-  attribute DOMString rev;
-  [CEReactions]
-  attribute DOMString shape;
+  attribute long width;
 };
 
 partial interface HTMLScriptElement {
@@ -389,31 +313,107 @@ partial interface HTMLScriptElement {
   attribute DOMString htmlFor;
 };
 
-partial interface HTMLPreElement {
+partial interface HTMLStyleElement {
   [CEReactions]
-  attribute long width;
+  attribute DOMString type;
 };
 
-partial interface HTMLBodyElement {
+partial interface HTMLTableCaptionElement {
   [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString aLink;
-  [CEReactions]
-  attribute DOMString background;
-  [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString bgColor;
-  [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString link;
-  [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString text;
-  [CEReactions]
-  attribute [LegacyNullToEmptyString] DOMString vLink;
+  attribute DOMString align;
 };
 
-partial interface HTMLEmbedElement {
+partial interface HTMLTableCellElement {
   [CEReactions]
   attribute DOMString align;
   [CEReactions]
-  attribute DOMString name;
+  attribute DOMString axis;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString bgColor;
+  [CEReactions]
+  attribute DOMString ch;
+  [CEReactions]
+  attribute DOMString chOff;
+  [CEReactions]
+  attribute DOMString height;
+  [CEReactions]
+  attribute boolean noWrap;
+  [CEReactions]
+  attribute DOMString vAlign;
+  [CEReactions]
+  attribute DOMString width;
+};
+
+partial interface HTMLTableColElement {
+  [CEReactions]
+  attribute DOMString align;
+  [CEReactions]
+  attribute DOMString ch;
+  [CEReactions]
+  attribute DOMString chOff;
+  [CEReactions]
+  attribute DOMString vAlign;
+  [CEReactions]
+  attribute DOMString width;
+};
+
+partial interface HTMLTableElement {
+  [CEReactions]
+  attribute DOMString align;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString bgColor;
+  [CEReactions]
+  attribute DOMString border;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString cellPadding;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString cellSpacing;
+  [CEReactions]
+  attribute DOMString frame;
+  [CEReactions]
+  attribute DOMString rules;
+  [CEReactions]
+  attribute DOMString summary;
+  [CEReactions]
+  attribute DOMString width;
+};
+
+partial interface HTMLTableRowElement {
+  [CEReactions]
+  attribute DOMString align;
+  [CEReactions]
+  attribute [LegacyNullToEmptyString] DOMString bgColor;
+  [CEReactions]
+  attribute DOMString ch;
+  [CEReactions]
+  attribute DOMString chOff;
+  [CEReactions]
+  attribute DOMString vAlign;
+};
+
+partial interface HTMLTableSectionElement {
+  [CEReactions]
+  attribute DOMString align;
+  [CEReactions]
+  attribute DOMString ch;
+  [CEReactions]
+  attribute DOMString chOff;
+  [CEReactions]
+  attribute DOMString vAlign;
+};
+
+partial interface HTMLUListElement {
+  [CEReactions]
+  attribute boolean compact;
+  [CEReactions]
+  attribute DOMString type;
+};
+
+partial interface Window {
+  [Replaceable, SameObject]
+  readonly attribute External external;
+  void captureEvents();
+  void releaseEvents();
 };
 
 HTMLFrameSetElement includes WindowEventHandlers;

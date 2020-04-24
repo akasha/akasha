@@ -34,6 +34,12 @@ interface HTMLImageElement : HTMLElement {
 };
 
 [Exposed=Window]
+interface HTMLPictureElement : HTMLElement {
+  [HTMLConstructor]
+  constructor();
+};
+
+[Exposed=Window]
 interface HTMLSourceElement : HTMLElement {
   [CEReactions]
   attribute DOMString media;
@@ -45,12 +51,6 @@ interface HTMLSourceElement : HTMLElement {
   attribute USVString srcset;
   [CEReactions]
   attribute DOMString type;
-  [HTMLConstructor]
-  constructor();
-};
-
-[Exposed=Window]
-interface HTMLPictureElement : HTMLElement {
   [HTMLConstructor]
   constructor();
 };

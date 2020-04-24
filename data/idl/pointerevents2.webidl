@@ -38,12 +38,12 @@ interface PointerEvent : MouseEvent {
   readonly attribute double width;
 };
 
-partial interface Navigator {
-  readonly attribute long maxTouchPoints;
-};
-
 partial interface Element {
   boolean hasPointerCapture( long pointerId );
   void releasePointerCapture( long pointerId );
   void setPointerCapture( long pointerId );
+};
+
+partial interface Navigator {
+  readonly attribute long maxTouchPoints;
 };

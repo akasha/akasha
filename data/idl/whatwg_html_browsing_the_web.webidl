@@ -11,9 +11,9 @@ dictionary PopStateEventInit : EventInit {
   any state = null;
 };
 
-[Exposed=Window, Constructor( DOMString type, optional PopStateEventInit eventInitDict = {} )]
-interface PopStateEvent : Event {
-  readonly attribute any state;
+[Exposed=Window]
+interface BeforeUnloadEvent : Event {
+  attribute DOMString returnValue;
 };
 
 [Exposed=Window, Constructor( DOMString type, optional HashChangeEventInit eventInitDict = {} )]
@@ -27,7 +27,7 @@ interface PageTransitionEvent : Event {
   readonly attribute boolean persisted;
 };
 
-[Exposed=Window]
-interface BeforeUnloadEvent : Event {
-  attribute DOMString returnValue;
+[Exposed=Window, Constructor( DOMString type, optional PopStateEventInit eventInitDict = {} )]
+interface PopStateEvent : Event {
+  readonly attribute any state;
 };

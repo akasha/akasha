@@ -5,18 +5,6 @@ dictionary SVGBoundingBoxOptions {
   boolean stroke = false;
 };
 
-interface mixin SVGURIReference {
-  [SameObject]
-  readonly attribute SVGAnimatedString href;
-};
-
-interface mixin SVGZoomAndPan {
-  const unsigned short SVG_ZOOMANDPAN_DISABLE = 1;
-  const unsigned short SVG_ZOOMANDPAN_MAGNIFY = 2;
-  const unsigned short SVG_ZOOMANDPAN_UNKNOWN = 0;
-  attribute unsigned short zoomAndPan;
-};
-
 interface mixin SVGFitToViewBox {
   [SameObject]
   readonly attribute SVGAnimatedPreserveAspectRatio preserveAspectRatio;
@@ -31,35 +19,16 @@ interface mixin SVGTests {
   readonly attribute SVGStringList systemLanguage;
 };
 
-[Exposed=Window]
-interface SVGNumber {
-  attribute float value;
+interface mixin SVGURIReference {
+  [SameObject]
+  readonly attribute SVGAnimatedString href;
 };
 
-interface SVGGraphicsElement : SVGElement {
-  [SameObject]
-  readonly attribute SVGAnimatedTransformList transform;
-  DOMRect getBBox( optional SVGBoundingBoxOptions options );
-  DOMMatrix? getCTM();
-  DOMMatrix? getScreenCTM();
-};
-
-[Exposed=Window]
-interface SVGGeometryElement : SVGGraphicsElement {
-  [SameObject]
-  readonly attribute SVGAnimatedNumber pathLength;
-  DOMPoint getPointAtLength( float distance );
-  float getTotalLength();
-  boolean isPointInFill( optional DOMPointInit point );
-  boolean isPointInStroke( optional DOMPointInit point );
-};
-
-[Exposed=Window]
-interface SVGElement : Element {
-  [SameObject]
-  readonly attribute SVGAnimatedString className;
-  readonly attribute SVGSVGElement? ownerSVGElement;
-  readonly attribute SVGElement? viewportElement;
+interface mixin SVGZoomAndPan {
+  const unsigned short SVG_ZOOMANDPAN_DISABLE = 1;
+  const unsigned short SVG_ZOOMANDPAN_MAGNIFY = 2;
+  const unsigned short SVG_ZOOMANDPAN_UNKNOWN = 0;
+  attribute unsigned short zoomAndPan;
 };
 
 [Exposed=Window]
@@ -78,9 +47,99 @@ interface SVGAngle {
 };
 
 [Exposed=Window]
+interface SVGAnimatedAngle {
+  [SameObject]
+  readonly attribute SVGAngle animVal;
+  [SameObject]
+  readonly attribute SVGAngle baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedBoolean {
+  readonly attribute boolean animVal;
+  attribute boolean baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedEnumeration {
+  readonly attribute unsigned short animVal;
+  attribute unsigned short baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedInteger {
+  readonly attribute long animVal;
+  attribute long baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedLength {
+  [SameObject]
+  readonly attribute SVGLength animVal;
+  [SameObject]
+  readonly attribute SVGLength baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedLengthList {
+  [SameObject]
+  readonly attribute SVGLengthList animVal;
+  [SameObject]
+  readonly attribute SVGLengthList baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedNumber {
+  readonly attribute float animVal;
+  attribute float baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedNumberList {
+  [SameObject]
+  readonly attribute SVGNumberList animVal;
+  [SameObject]
+  readonly attribute SVGNumberList baseVal;
+};
+
+[Exposed=Window]
+interface SVGAnimatedRect {
+  [SameObject]
+  readonly attribute DOMRectReadOnly animVal;
+  [SameObject]
+  readonly attribute DOMRect baseVal;
+};
+
+[Exposed=Window]
 interface SVGAnimatedString {
   readonly attribute DOMString animVal;
   attribute DOMString baseVal;
+};
+
+[Exposed=Window]
+interface SVGElement : Element {
+  [SameObject]
+  readonly attribute SVGAnimatedString className;
+  readonly attribute SVGSVGElement? ownerSVGElement;
+  readonly attribute SVGElement? viewportElement;
+};
+
+[Exposed=Window]
+interface SVGGeometryElement : SVGGraphicsElement {
+  [SameObject]
+  readonly attribute SVGAnimatedNumber pathLength;
+  DOMPoint getPointAtLength( float distance );
+  float getTotalLength();
+  boolean isPointInFill( optional DOMPointInit point );
+  boolean isPointInStroke( optional DOMPointInit point );
+};
+
+interface SVGGraphicsElement : SVGElement {
+  [SameObject]
+  readonly attribute SVGAnimatedTransformList transform;
+  DOMRect getBBox( optional SVGBoundingBoxOptions options );
+  DOMMatrix? getCTM();
+  DOMMatrix? getScreenCTM();
 };
 
 [Exposed=Window]
@@ -105,17 +164,22 @@ interface SVGLength {
 };
 
 [Exposed=Window]
-interface SVGAnimatedAngle {
-  [SameObject]
-  readonly attribute SVGAngle animVal;
-  [SameObject]
-  readonly attribute SVGAngle baseVal;
+interface SVGLengthList {
+  readonly attribute unsigned long length;
+  readonly attribute unsigned long numberOfItems;
+  SVGLength appendItem( SVGLength newItem );
+  void clear();
+  SVGLength initialize( SVGLength newItem );
+  SVGLength insertItemBefore( SVGLength newItem, unsigned long index );
+  SVGLength removeItem( unsigned long index );
+  SVGLength replaceItem( SVGLength newItem, unsigned long index );
+  getter SVGLength getItem( unsigned long index );
+  setter void ( unsigned long index, SVGLength newItem );
 };
 
 [Exposed=Window]
-interface SVGAnimatedBoolean {
-  readonly attribute boolean animVal;
-  attribute boolean baseVal;
+interface SVGNumber {
+  attribute float value;
 };
 
 [Exposed=Window]
@@ -133,41 +197,6 @@ interface SVGNumberList {
 };
 
 [Exposed=Window]
-interface SVGAnimatedRect {
-  [SameObject]
-  readonly attribute DOMRectReadOnly animVal;
-  [SameObject]
-  readonly attribute DOMRect baseVal;
-};
-
-[Exposed=Window]
-interface SVGAnimatedNumberList {
-  [SameObject]
-  readonly attribute SVGNumberList animVal;
-  [SameObject]
-  readonly attribute SVGNumberList baseVal;
-};
-
-[Exposed=Window]
-interface SVGUnitTypes {
-  const unsigned short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
-  const unsigned short SVG_UNIT_TYPE_UNKNOWN = 0;
-  const unsigned short SVG_UNIT_TYPE_USERSPACEONUSE = 1;
-};
-
-[Exposed=Window]
-interface SVGAnimatedInteger {
-  readonly attribute long animVal;
-  attribute long baseVal;
-};
-
-[Exposed=Window]
-interface SVGAnimatedNumber {
-  readonly attribute float animVal;
-  attribute float baseVal;
-};
-
-[Exposed=Window]
 interface SVGStringList {
   readonly attribute unsigned long length;
   readonly attribute unsigned long numberOfItems;
@@ -182,47 +211,18 @@ interface SVGStringList {
 };
 
 [Exposed=Window]
-interface SVGAnimatedEnumeration {
-  readonly attribute unsigned short animVal;
-  attribute unsigned short baseVal;
+interface SVGUnitTypes {
+  const unsigned short SVG_UNIT_TYPE_OBJECTBOUNDINGBOX = 2;
+  const unsigned short SVG_UNIT_TYPE_UNKNOWN = 0;
+  const unsigned short SVG_UNIT_TYPE_USERSPACEONUSE = 1;
 };
-
-[Exposed=Window]
-interface SVGAnimatedLengthList {
-  [SameObject]
-  readonly attribute SVGLengthList animVal;
-  [SameObject]
-  readonly attribute SVGLengthList baseVal;
-};
-
-[Exposed=Window]
-interface SVGAnimatedLength {
-  [SameObject]
-  readonly attribute SVGLength animVal;
-  [SameObject]
-  readonly attribute SVGLength baseVal;
-};
-
-[Exposed=Window]
-interface SVGLengthList {
-  readonly attribute unsigned long length;
-  readonly attribute unsigned long numberOfItems;
-  SVGLength appendItem( SVGLength newItem );
-  void clear();
-  SVGLength initialize( SVGLength newItem );
-  SVGLength insertItemBefore( SVGLength newItem, unsigned long index );
-  SVGLength removeItem( unsigned long index );
-  SVGLength replaceItem( SVGLength newItem, unsigned long index );
-  getter SVGLength getItem( unsigned long index );
-  setter void ( unsigned long index, SVGLength newItem );
-};
-
-SVGElement includes SVGElementInstance;
-
-SVGElement includes GlobalEventHandlers;
 
 SVGElement includes DocumentAndElementEventHandlers;
 
-SVGGraphicsElement includes SVGTests;
+SVGElement includes GlobalEventHandlers;
 
 SVGElement includes HTMLOrSVGElement;
+
+SVGElement includes SVGElementInstance;
+
+SVGGraphicsElement includes SVGTests;

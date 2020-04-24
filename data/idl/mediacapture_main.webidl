@@ -1,6 +1,12 @@
-enum VideoResizeModeEnum {
-  "crop-and-scale",
-  "none"
+enum MediaDeviceKind {
+  "audioinput",
+  "audiooutput",
+  "videoinput"
+};
+
+enum MediaStreamTrackState {
+  "ended",
+  "live"
 };
 
 enum VideoFacingModeEnum {
@@ -10,78 +16,41 @@ enum VideoFacingModeEnum {
   "user"
 };
 
-enum MediaStreamTrackState {
-  "ended",
-  "live"
+enum VideoResizeModeEnum {
+  "crop-and-scale",
+  "none"
 };
-
-enum MediaDeviceKind {
-  "audioinput",
-  "audiooutput",
-  "videoinput"
-};
-
-typedef ( double or ConstrainDoubleRange ) ConstrainDouble;
-
-typedef ( DOMString or sequence<DOMString> or ConstrainDOMStringParameters ) ConstrainDOMString;
-
-typedef object MediaStreamError;
 
 typedef ( boolean or ConstrainBooleanParameters ) ConstrainBoolean;
 
+typedef ( DOMString or sequence<DOMString> or ConstrainDOMStringParameters ) ConstrainDOMString;
+
+typedef ( double or ConstrainDoubleRange ) ConstrainDouble;
+
 typedef ( [Clamp] unsigned long or ConstrainULongRange ) ConstrainULong;
+
+typedef object MediaStreamError;
+
+callback NavigatorUserMediaErrorCallback = void ( MediaStreamError error );
 
 callback NavigatorUserMediaSuccessCallback = void ( MediaStream stream );
 
-callback NavigatorUserMediaErrorCallback = void ( MediaStreamError error );
+dictionary Capabilities {
+};
+
+dictionary ConstrainBooleanParameters {
+  boolean exact;
+  boolean ideal;
+};
 
 dictionary ConstrainDOMStringParameters {
   ( DOMString or sequence<DOMString> ) exact;
   ( DOMString or sequence<DOMString> ) ideal;
 };
 
-dictionary MediaTrackConstraintSet {
-  ConstrainDouble aspectRatio;
-  ConstrainBoolean autoGainControl;
-  ConstrainULong channelCount;
-  ConstrainDOMString deviceId;
-  ConstrainBoolean echoCancellation;
-  ConstrainDOMString facingMode;
-  ConstrainDouble frameRate;
-  ConstrainDOMString groupId;
-  ConstrainULong height;
-  ConstrainDouble latency;
-  ConstrainBoolean noiseSuppression;
-  ConstrainDOMString resizeMode;
-  ConstrainULong sampleRate;
-  ConstrainULong sampleSize;
-  ConstrainULong width;
-};
-
-dictionary MediaTrackSettings {
-  double aspectRatio;
-  boolean autoGainControl;
-  long channelCount;
-  DOMString deviceId;
-  boolean echoCancellation;
-  DOMString facingMode;
-  double frameRate;
-  DOMString groupId;
-  long height;
-  double latency;
-  boolean noiseSuppression;
-  DOMString resizeMode;
-  long sampleRate;
-  long sampleSize;
-  long width;
-};
-
-dictionary MediaTrackConstraints : MediaTrackConstraintSet {
-  sequence<MediaTrackConstraintSet> advanced;
-};
-
-dictionary MediaStreamTrackEventInit : EventInit {
-  required MediaStreamTrack track;
+dictionary ConstrainDoubleRange : DoubleRange {
+  double exact;
+  double ideal;
 };
 
 dictionary ConstrainULongRange : ULongRange {
@@ -92,6 +61,24 @@ dictionary ConstrainULongRange : ULongRange {
 };
 
 dictionary ConstraintSet {
+};
+
+dictionary Constraints : ConstraintSet {
+  sequence<ConstraintSet> advanced;
+};
+
+dictionary DoubleRange {
+  double max;
+  double min;
+};
+
+dictionary MediaStreamConstraints {
+  ( boolean or MediaTrackConstraints ) audio = false;
+  ( boolean or MediaTrackConstraints ) video = false;
+};
+
+dictionary MediaStreamTrackEventInit : EventInit {
+  required MediaStreamTrack track;
 };
 
 dictionary MediaTrackCapabilities {
@@ -112,18 +99,44 @@ dictionary MediaTrackCapabilities {
   ULongRange width;
 };
 
-dictionary MediaStreamConstraints {
-  ( boolean or MediaTrackConstraints ) audio = false;
-  ( boolean or MediaTrackConstraints ) video = false;
+dictionary MediaTrackConstraintSet {
+  ConstrainDouble aspectRatio;
+  ConstrainBoolean autoGainControl;
+  ConstrainULong channelCount;
+  ConstrainDOMString deviceId;
+  ConstrainBoolean echoCancellation;
+  ConstrainDOMString facingMode;
+  ConstrainDouble frameRate;
+  ConstrainDOMString groupId;
+  ConstrainULong height;
+  ConstrainDouble latency;
+  ConstrainBoolean noiseSuppression;
+  ConstrainDOMString resizeMode;
+  ConstrainULong sampleRate;
+  ConstrainULong sampleSize;
+  ConstrainULong width;
 };
 
-dictionary DoubleRange {
-  double max;
-  double min;
+dictionary MediaTrackConstraints : MediaTrackConstraintSet {
+  sequence<MediaTrackConstraintSet> advanced;
 };
 
-dictionary Constraints : ConstraintSet {
-  sequence<ConstraintSet> advanced;
+dictionary MediaTrackSettings {
+  double aspectRatio;
+  boolean autoGainControl;
+  long channelCount;
+  DOMString deviceId;
+  boolean echoCancellation;
+  DOMString facingMode;
+  double frameRate;
+  DOMString groupId;
+  long height;
+  double latency;
+  boolean noiseSuppression;
+  DOMString resizeMode;
+  long sampleRate;
+  long sampleSize;
+  long width;
 };
 
 dictionary MediaTrackSupportedConstraints {
@@ -144,17 +157,7 @@ dictionary MediaTrackSupportedConstraints {
   boolean width = true;
 };
 
-dictionary ConstrainDoubleRange : DoubleRange {
-  double exact;
-  double ideal;
-};
-
-dictionary Capabilities {
-};
-
-dictionary ConstrainBooleanParameters {
-  boolean exact;
-  boolean ideal;
+dictionary Settings {
 };
 
 dictionary ULongRange {
@@ -164,19 +167,25 @@ dictionary ULongRange {
   unsigned long min;
 };
 
-dictionary Settings {
-};
-
 [Exposed=Window]
 interface InputDeviceInfo : MediaDeviceInfo {
   MediaTrackCapabilities getCapabilities();
 };
 
-[Exposed=Window]
-interface MediaStreamTrackEvent : Event {
-  [SameObject]
-  readonly attribute MediaStreamTrack track;
-  constructor( DOMString type, MediaStreamTrackEventInit eventInitDict );
+[Exposed=Window, SecureContext]
+interface MediaDeviceInfo {
+  readonly attribute DOMString deviceId;
+  readonly attribute DOMString groupId;
+  readonly attribute MediaDeviceKind kind;
+  readonly attribute DOMString label;
+  [Default]
+  object toJSON();
+};
+
+[Exposed=Window, SecureContext]
+interface MediaDevices : EventTarget {
+  attribute EventHandler ondevicechange;
+  Promise<sequence<MediaDeviceInfo>> enumerateDevices();
 };
 
 [Exposed=Window]
@@ -195,22 +204,6 @@ interface MediaStream : EventTarget {
   sequence<MediaStreamTrack> getTracks();
   sequence<MediaStreamTrack> getVideoTracks();
   void removeTrack( MediaStreamTrack track );
-};
-
-[Exposed=Window, SecureContext]
-interface MediaDevices : EventTarget {
-  attribute EventHandler ondevicechange;
-  Promise<sequence<MediaDeviceInfo>> enumerateDevices();
-};
-
-[Exposed=Window, SecureContext]
-interface MediaDeviceInfo {
-  readonly attribute DOMString deviceId;
-  readonly attribute DOMString groupId;
-  readonly attribute MediaDeviceKind kind;
-  readonly attribute DOMString label;
-  [Default]
-  object toJSON();
 };
 
 [Exposed=Window]
@@ -232,6 +225,18 @@ interface MediaStreamTrack : EventTarget {
   void stop();
 };
 
+[Exposed=Window]
+interface MediaStreamTrackEvent : Event {
+  [SameObject]
+  readonly attribute MediaStreamTrack track;
+  constructor( DOMString type, MediaStreamTrackEventInit eventInitDict );
+};
+
+partial interface MediaDevices {
+  MediaTrackSupportedConstraints getSupportedConstraints();
+  Promise<MediaStream> getUserMedia( optional MediaStreamConstraints constraints = {} );
+};
+
 partial interface Navigator {
   [SameObject, SecureContext]
   readonly attribute MediaDevices mediaDevices;
@@ -240,9 +245,4 @@ partial interface Navigator {
 partial interface Navigator {
   [SecureContext]
   void getUserMedia( MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback );
-};
-
-partial interface MediaDevices {
-  MediaTrackSupportedConstraints getSupportedConstraints();
-  Promise<MediaStream> getUserMedia( optional MediaStreamConstraints constraints = {} );
 };
