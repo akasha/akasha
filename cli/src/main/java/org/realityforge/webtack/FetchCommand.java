@@ -58,6 +58,7 @@ final class FetchCommand
   private static final int READ_TIMEOUT = 10_000;
   private static final int FORCE_OPT = 'f';
   private static final int NO_VERIFY_OPT = 2;
+  private static final int NO_REMOVE_SOURCE_OPT = 3;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
       new CLOptionDescriptor( "force",
@@ -67,12 +68,17 @@ final class FetchCommand
       new CLOptionDescriptor( "no-verify",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_VERIFY_OPT,
-                              "Skip running verify command after fetching WebIDL source." )
+                              "Skip running verify command after fetching WebIDL source." ),
+      new CLOptionDescriptor( "no-remove-source",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              NO_REMOVE_SOURCE_OPT,
+                              "Do not remove source after fetching and sxtracting WebIDL." )
     };
   @Nonnull
   private final Set<String> _sourceNames = new LinkedHashSet<>();
   private boolean _force;
   private boolean _noVerify;
+  private boolean _noRemoveSource;
 
   FetchCommand()
   {
@@ -92,6 +98,10 @@ final class FetchCommand
       else if ( NO_VERIFY_OPT == optionId )
       {
         _noVerify = true;
+      }
+      else if ( NO_REMOVE_SOURCE_OPT == optionId )
+      {
+        _noRemoveSource = true;
       }
       else
       {
@@ -279,6 +289,20 @@ final class FetchCommand
           {
             logger.log( Level.INFO, "Source named '" + sourceName + "' extracted from url " + url +
                                     " exported WebIDL to file " + target );
+          }
+        }
+        if ( !_noRemoveSource )
+        {
+          try
+          {
+            Files.deleteIfExists( target.getParent().resolve( sourceName + ".html" ) );
+          }
+          catch ( final IOException ioe )
+          {
+            final String message =
+              "Error: Failed to remove source file that the IDL file was extracted from for source named '" +
+              sourceName + "' with the error: " + ioe;
+            throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_SOURCE_CODE );
           }
         }
       }

@@ -4,8 +4,6 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-* Remove local html once fetch is successful. Potentially add a CLI arg that will leave it rather than deleting.
-
 * Add blend operation that will attempt merge multiple schemas and if it finds matching declarations will perform blending. This is useful when pulling in gecko or chrome schemas and creating a combined schema.
 
 * Should blend of multiple Extended attribute `Ident` types produce an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
