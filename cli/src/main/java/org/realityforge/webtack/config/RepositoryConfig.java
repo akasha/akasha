@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -56,6 +57,8 @@ public class RepositoryConfig
                       .collect( Collectors.toList() ),
                     outputStream );
     }
+    // Add newline as json output omits trailing new line
+    Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
   }
 
   private void setConfigLocation( @Nonnull final Path configLocation )
