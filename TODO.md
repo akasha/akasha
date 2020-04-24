@@ -4,8 +4,6 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-* Use fixture based tests when testing webIDL after processing has occurred.
-
 * Remove local html once fetch is successful. Potentially add a CLI arg that will leave it rather than deleting.
 
 * Add lots of tests for `MergeTool` using fixture data to drive tests.
