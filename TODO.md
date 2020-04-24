@@ -8,8 +8,6 @@ complete as there is too much un-said.
 
 * Should blend of multiple Extended attribute `Ident` types produce an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
 
-* Add quiet mode to fetch so that only actions that require download print
-
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
   so it should be possible with a little bit of heuristics to extract the documentation for different
   members and definitions.
