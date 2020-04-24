@@ -15,7 +15,7 @@ final class ExitCodes
   static final int ERROR_SOURCE_NOT_FETCHED_CODE = 10;
   static final int ERROR_IDL_NOT_VALID_CODE = 11;
   static final int ERROR_SAVING_IDL_CODE = 12;
-  static final int ERROR_REMOVING_EXISTING_IDL_CODE = 12;
+  static final int ERROR_REMOVING_EXISTING_IDL_CODE = 13;
 
   private ExitCodes()
   {
