@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.merger;
+package org.realityforge.webtack.model;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -7,7 +7,7 @@ import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 import static org.testng.Assert.*;
 
-final class BailErrorListener
+public final class BailErrorListener
   extends BaseErrorListener
 {
   /**
@@ -16,7 +16,7 @@ final class BailErrorListener
   @Nonnull
   private final String _sourceName;
 
-  BailErrorListener( @Nonnull final String sourceName )
+  public BailErrorListener( @Nonnull final String sourceName )
   {
     _sourceName = Objects.requireNonNull( sourceName );
   }

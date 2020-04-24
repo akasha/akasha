@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
+import org.realityforge.webtack.model.BailErrorListener;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
