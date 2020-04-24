@@ -281,7 +281,7 @@ final class FetchCommand
           catch ( final IOException ioe )
           {
             final String message =
-              "Error: Failed to removed temporary IDL file for source named '" +
+              "Error: Failed to remove temporary IDL file for source named '" +
               sourceName + "' with the error: " + ioe;
             throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_EXISTING_IDL_CODE );
           }
