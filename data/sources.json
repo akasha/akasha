@@ -21,39 +21,9 @@
         "url": "https://www.w3.org/TR/credential-management-1/"
     },
     {
-        "lastModifiedTime": 1587487558000,
-        "name": "css_align_3",
-        "url": "https://www.w3.org/TR/css-align-3/"
-    },
-    {
         "lastModifiedTime": 1539221726000,
         "name": "css_animations_1",
         "url": "https://www.w3.org/TR/css-animations-1/"
-    },
-    {
-        "lastModifiedTime": 1508325226000,
-        "name": "css_backgrounds_3",
-        "url": "https://www.w3.org/TR/css-backgrounds-3/"
-    },
-    {
-        "lastModifiedTime": 1587710548000,
-        "name": "css_backgrounds_4",
-        "url": "https://drafts.csswg.org/css-backgrounds-4/"
-    },
-    {
-        "lastModifiedTime": 1543615853000,
-        "name": "css_break_3",
-        "url": "https://www.w3.org/TR/css-break-3/"
-    },
-    {
-        "lastModifiedTime": 1529868620000,
-        "name": "css_color_3",
-        "url": "https://www.w3.org/TR/css-color-3/"
-    },
-    {
-        "lastModifiedTime": 1542618390000,
-        "name": "css_flexbox_1",
-        "url": "https://www.w3.org/TR/css-flexbox-1/"
     },
     {
         "lastModifiedTime": 1550757539000,
@@ -61,89 +31,14 @@
         "url": "https://www.w3.org/TR/css-fonts-3/"
     },
     {
-        "lastModifiedTime": 1513112746000,
-        "name": "css_grid_1",
-        "url": "https://www.w3.org/TR/css-grid-1/"
-    },
-    {
-        "lastModifiedTime": 1587710656000,
-        "name": "css_images_3",
-        "url": "https://drafts.csswg.org/css-images-3/"
-    },
-    {
-        "lastModifiedTime": 1533771201000,
-        "name": "css_inline_3",
-        "url": "https://www.w3.org/TR/css-inline-3/"
-    },
-    {
-        "lastModifiedTime": 1535406767000,
-        "name": "css_logical_1",
-        "url": "https://www.w3.org/TR/css-logical-1/"
-    },
-    {
         "lastModifiedTime": 1587702002000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
     {
-        "lastModifiedTime": 1571151527000,
-        "name": "css_multicol_1",
-        "url": "https://www.w3.org/TR/css-multicol-1/"
-    },
-    {
-        "lastModifiedTime": 1533069706000,
-        "name": "css_overflow_3",
-        "url": "https://www.w3.org/TR/css-overflow-3/"
-    },
-    {
-        "lastModifiedTime": 1506943042000,
-        "name": "css_ruby_1",
-        "url": "https://www.w3.org/TR/css-ruby-1/"
-    },
-    {
-        "lastModifiedTime": 1587710726000,
-        "name": "css_scroll_anchoring",
-        "url": "https://drafts.csswg.org/css-scroll-anchoring/"
-    },
-    {
-        "lastModifiedTime": 1573608521000,
-        "name": "css_text_3",
-        "url": "https://www.w3.org/TR/css-text-3/"
-    },
-    {
-        "lastModifiedTime": 1564726478000,
-        "name": "css_text_decor_3",
-        "url": "https://www.w3.org/TR/css-text-decor-3/"
-    },
-    {
-        "lastModifiedTime": 1550143976000,
-        "name": "css_transforms_1",
-        "url": "https://www.w3.org/TR/css-transforms-1/"
-    },
-    {
-        "lastModifiedTime": 1587710776000,
-        "name": "css_transforms_2",
-        "url": "https://drafts.csswg.org/css-transforms-2/"
-    },
-    {
         "lastModifiedTime": 1539221854000,
         "name": "css_transitions_1",
         "url": "https://www.w3.org/TR/css-transitions-1/"
-    },
-    {
-        "lastModifiedTime": 1529598599000,
-        "name": "css_ui_3",
-        "url": "https://www.w3.org/TR/css-ui-3/"
-    },
-    {
-        "lastModifiedTime": 1506941675000,
-        "name": "css_will_change",
-        "url": "https://www.w3.org/TR/css-will-change/"
-    },
-    {
-        "lastModifiedTime": 1575610941000,
-        "name": "css_writing_modes_3",
-        "url": "https://www.w3.org/TR/css-writing-modes-3/"
     },
     {
         "lastModifiedTime": 1587710828000,
@@ -164,11 +59,6 @@
         "lastModifiedTime": 1586847645000,
         "name": "fileapi",
         "url": "https://w3c.github.io/FileAPI/"
-    },
-    {
-        "lastModifiedTime": 1491946065000,
-        "name": "fill_stroke_3",
-        "url": "https://www.w3.org/TR/fill-stroke-3/"
     },
     {
         "lastModifiedTime": 1544824620000,

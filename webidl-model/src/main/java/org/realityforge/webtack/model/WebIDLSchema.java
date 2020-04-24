@@ -70,6 +70,23 @@ public final class WebIDLSchema
     _typedefs = Objects.requireNonNull( typedefs );
   }
 
+  public boolean isEmpty()
+  {
+    return _callbacks.isEmpty() &&
+           _callbackInterfaces.isEmpty() &&
+           _dictionaries.isEmpty() &&
+           _enumerations.isEmpty() &&
+           _interfaces.isEmpty() &&
+           _mixins.isEmpty() &&
+           _includes.isEmpty() &&
+           _namespaces.isEmpty() &&
+           _partialDictionaries.isEmpty() &&
+           _partialInterfaces.isEmpty() &&
+           _partialMixins.isEmpty() &&
+           _partialNamespaces.isEmpty() &&
+           _typedefs.isEmpty();
+  }
+
   @Nonnull
   public Collection<CallbackDefinition> getCallbacks()
   {

@@ -244,6 +244,14 @@ final class FetchCommand
               "' but there was an unexpected error verifying source. Error: " + t;
             throw new TerminalStateException( message, ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE );
           }
+          if ( schema.isEmpty() )
+          {
+            final String message =
+              "Error: Schema from source named '" + sourceName + "' fetched from " + url +
+              " contains no elements. Either the URL contains no WebIDL or the matching rules failed to " +
+              "match WebIDL sections.";
+            throw new TerminalStateException( message, ExitCodes.ERROR_IDL_NOT_VALID_CODE );
+          }
 
           try ( final FileWriter writer = new FileWriter( target.toFile() ) )
           {

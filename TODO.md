@@ -8,8 +8,6 @@ complete as there is too much un-said.
 
 * Should blend of multiple Extended attribute `Ident` types produce an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
 
-* Generate an error if the IDL extracted from web page is empty. Either the spec does not use WebIDL or we have incorrect matching rules.
-
 * Add quiet mode to fetch so that only actions that require download print
 
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
