@@ -76,7 +76,7 @@
         "url": "https://www.w3.org/TR/css-backgrounds-3/"
     },
     {
-        "lastModifiedTime": 1587683226000,
+        "lastModifiedTime": 1587710548000,
         "name": "css_backgrounds_4",
         "url": "https://drafts.csswg.org/css-backgrounds-4/"
     },
@@ -106,7 +106,7 @@
         "url": "https://www.w3.org/TR/css-grid-1/"
     },
     {
-        "lastModifiedTime": 1587683347000,
+        "lastModifiedTime": 1587710656000,
         "name": "css_images_3",
         "url": "https://drafts.csswg.org/css-images-3/"
     },
@@ -121,7 +121,7 @@
         "url": "https://www.w3.org/TR/css-logical-1/"
     },
     {
-        "lastModifiedTime": 1587678672000,
+        "lastModifiedTime": 1587702002000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
@@ -141,7 +141,7 @@
         "url": "https://www.w3.org/TR/css-ruby-1/"
     },
     {
-        "lastModifiedTime": 1587683412000,
+        "lastModifiedTime": 1587710726000,
         "name": "css_scroll_anchoring",
         "url": "https://drafts.csswg.org/css-scroll-anchoring/"
     },
@@ -161,7 +161,7 @@
         "url": "https://www.w3.org/TR/css-transforms-1/"
     },
     {
-        "lastModifiedTime": 1587683461000,
+        "lastModifiedTime": 1587710776000,
         "name": "css_transforms_2",
         "url": "https://drafts.csswg.org/css-transforms-2/"
     },
@@ -186,7 +186,7 @@
         "url": "https://www.w3.org/TR/css-writing-modes-3/"
     },
     {
-        "lastModifiedTime": 1587683512000,
+        "lastModifiedTime": 1587710828000,
         "name": "cssom_view",
         "url": "https://drafts.csswg.org/cssom-view/"
     },
@@ -771,7 +771,7 @@
         "url": "https://xhr.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1587678737000,
+        "lastModifiedTime": 1587702065000,
         "name": "worklets",
         "url": "https://drafts.css-houdini.org/worklets/"
     }
