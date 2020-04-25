@@ -1,10 +1,13 @@
 package org.realityforge.webtack.config;
 
+import java.util.List;
+
 public class SourceConfig
 {
   private String name;
   private String url;
   private long lastModifiedTime;
+  private List<String> tags;
 
   public String getName()
   {
@@ -34,5 +37,15 @@ public class SourceConfig
   public void setLastModifiedTime( final long lastModifiedTime )
   {
     this.lastModifiedTime = lastModifiedTime;
+  }
+
+  public List<String> getTags()
+  {
+    return tags;
+  }
+
+  public void setTags( final List<String> tags )
+  {
+    this.tags = tags;
   }
 }

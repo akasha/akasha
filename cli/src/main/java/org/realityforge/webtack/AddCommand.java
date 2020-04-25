@@ -3,10 +3,13 @@ package org.realityforge.webtack;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.lang.model.SourceVersion;
 import org.realityforge.getopt4j.CLOption;
@@ -20,6 +23,7 @@ final class AddCommand
   @Nonnull
   static final String COMMAND = "add";
   private static final int NAME_OPT = 'n';
+  private static final int TAGS_OPT = 't';
   private static final int NO_FETCH_OPT = 2;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
@@ -27,6 +31,10 @@ final class AddCommand
                               CLOptionDescriptor.ARGUMENT_REQUIRED,
                               NAME_OPT,
                               "Explicitly specify the name of the source rather than trying to derive it." ),
+      new CLOptionDescriptor( "tags",
+                              CLOptionDescriptor.ARGUMENT_REQUIRED,
+                              TAGS_OPT,
+                              "Specify the tags associated with the source." ),
       new CLOptionDescriptor( "no-fetch",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_FETCH_OPT,
@@ -35,6 +43,7 @@ final class AddCommand
   private boolean _noFetch;
   private String _sourceName;
   private String _sourceUrl;
+  private Set<String> _tags;
 
   AddCommand()
   {
@@ -97,6 +106,22 @@ final class AddCommand
             "'. Source name expected to be a valid java variable.\n";
           environment.logger().log( Level.SEVERE, message );
           return false;
+        }
+      }
+      else if ( TAGS_OPT == option.getId() )
+      {
+        _tags = new HashSet<>();
+        final String[] tags = option.getArgument().split( "," );
+        for ( final String tag : tags )
+        {
+          if ( !SourceVersion.isName( tag ) || !_tags.add( tag ) )
+          {
+            final String message =
+              "Error: Invalid tag specified: '" + tag + "'. Tags are expected to be a " +
+              "unique set of valid java identifiers separated by the ',' character";
+            environment.logger().log( Level.SEVERE, message );
+            return false;
+          }
         }
       }
       else
@@ -165,6 +190,10 @@ final class AddCommand
     final SourceConfig source = new SourceConfig();
     source.setName( name );
     source.setUrl( _sourceUrl );
+    if( null != _tags )
+    {
+      source.setTags( _tags.stream().sorted().collect( Collectors.toList() ) );
+    }
     config.getSources().add( source );
     final Path configLocation = config.getConfigLocation();
     try
