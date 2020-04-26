@@ -17,6 +17,8 @@ complete as there is too much un-said.
   Spec Docs: https://heycam.github.io/webidl/
 
 * Add a process that expands the partials into the actuals and creates a new `WebIDLSchema` with result.
+  Includes should also be merged into the types so the final model just includes the resolved interfaces,
+  dictionaries etc. 
 
 * Add a series of validators that verify characteristics of the schema before further processing. Errors or
   warnings are likely the result of each validation process. Validations may include:
