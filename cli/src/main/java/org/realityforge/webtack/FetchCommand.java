@@ -180,7 +180,7 @@ final class FetchCommand
           throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_EXISTING_IDL_CODE );
         }
 
-        extractWebIDL( logger, sourceName, url, file, tmpTarget );
+        extractWebIDL( logger, source, file, tmpTarget );
         try
         {
           RepositoryConfig.save( config.getConfigLocation(), config );
@@ -331,11 +331,12 @@ final class FetchCommand
   }
 
   private void extractWebIDL( @Nonnull final Logger logger,
-                              @Nonnull final String sourceName,
-                              @Nonnull final String url,
+                              @Nonnull final SourceConfig source,
                               @Nonnull final Path input,
                               @Nonnull final Path output )
   {
+    final String sourceName = source.getName();
+    final String url = source.getUrl();
     try
     {
       if ( url.endsWith( ".idl" ) )
