@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,9 +17,13 @@ import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.config.RepositoryConfig;
 import org.realityforge.webtack.config.SourceConfig;
+import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.merger.MergerTool;
+import org.realityforge.webtack.model.tools.validator.ValidationError;
+import org.realityforge.webtack.model.tools.validator.Validator;
+import org.realityforge.webtack.model.tools.validator.ValidatorTool;
 
 final class LoadCommand
   extends ConfigurableCommand
@@ -128,6 +133,21 @@ final class LoadCommand
     }
     final MergerTool mergerTool = new MergerTool();
     final WebIDLSchema mergedSchema = mergerTool.merge( schemas.toArray( new WebIDLSchema[ 0 ] ) );
-    return ExitCodes.SUCCESS_EXIT_CODE;
+    final Validator validator = ValidatorTool.create();
+    final Collection<ValidationError> errors = validator.validate( mergedSchema );
+    if ( !errors.isEmpty() )
+    {
+      for ( final ValidationError error : errors )
+      {
+        final List<SourceInterval> sourceLocations = error.getNode().getSourceLocations();
+        final String prefix = sourceLocations.isEmpty() ? "" : sourceLocations.get( 0 ).getStart().toString() + " ";
+        logger.log( error.shouldHaltValidation() ? Level.SEVERE : Level.WARNING, prefix + error.getMessage() );
+      }
+      return ExitCodes.ERROR_SCHEMA_INVALID_CODE;
+    }
+    else
+    {
+      return ExitCodes.SUCCESS_EXIT_CODE;
+    }
   }
 }
