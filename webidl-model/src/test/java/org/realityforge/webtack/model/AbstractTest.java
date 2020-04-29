@@ -55,7 +55,13 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file, @Nonnull final String testDescription )
+  protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file )
+  {
+    return loadWebIDLSchema( file, null );
+  }
+
+  @Nonnull
+  protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file, @Nullable final String testDescription )
   {
     final String filename = file.toString();
     try ( final Reader reader = new FileReader( file.toFile() ) )
@@ -64,7 +70,8 @@ public abstract class AbstractTest
     }
     catch ( final IOException ioe )
     {
-      throw new AssertionError( "Error reading file " + filename + " for " + testDescription );
+      throw new AssertionError( "Error reading file " + filename +
+                                ( null == testDescription ? "" : " for " + testDescription ) );
     }
   }
 
