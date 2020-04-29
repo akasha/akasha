@@ -8,6 +8,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class WebIDLSchema
   extends Node
@@ -105,6 +106,12 @@ public final class WebIDLSchema
     return _dictionaries.values();
   }
 
+  @Nullable
+  public DictionaryDefinition findDictionaryByName( @Nonnull final String name )
+  {
+    return _dictionaries.get( name );
+  }
+
   @Nonnull
   public Collection<EnumerationDefinition> getEnumerations()
   {
@@ -115,6 +122,12 @@ public final class WebIDLSchema
   public Collection<InterfaceDefinition> getInterfaces()
   {
     return _interfaces.values();
+  }
+
+  @Nullable
+  public InterfaceDefinition findInterfaceByName( @Nonnull final String name )
+  {
+    return _interfaces.get( name );
   }
 
   @Nonnull
