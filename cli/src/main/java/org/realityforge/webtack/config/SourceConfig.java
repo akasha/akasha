@@ -6,6 +6,7 @@ public class SourceConfig
 {
   private String name;
   private String url;
+  private String selector;
   private long lastModifiedTime;
   private List<String> tags;
 
@@ -27,6 +28,16 @@ public class SourceConfig
   public void setUrl( final String url )
   {
     this.url = url;
+  }
+
+  public String getSelector()
+  {
+    return selector;
+  }
+
+  public void setSelector( final String selector )
+  {
+    this.selector = selector;
   }
 
   public long getLastModifiedTime()

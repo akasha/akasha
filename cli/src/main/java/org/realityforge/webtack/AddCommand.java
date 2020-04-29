@@ -24,6 +24,7 @@ final class AddCommand
   static final String COMMAND = "add";
   private static final int NAME_OPT = 'n';
   private static final int TAGS_OPT = 't';
+  private static final int SELECTOR_OPT = 's';
   private static final int NO_FETCH_OPT = 2;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
@@ -35,6 +36,10 @@ final class AddCommand
                               CLOptionDescriptor.ARGUMENT_REQUIRED,
                               TAGS_OPT,
                               "Specify the tags associated with the source." ),
+      new CLOptionDescriptor( "selector",
+                              CLOptionDescriptor.ARGUMENT_REQUIRED,
+                              SELECTOR_OPT,
+                              "Specify the css selector used to extract the WebIDL from the source URL." ),
       new CLOptionDescriptor( "no-fetch",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_FETCH_OPT,
@@ -43,6 +48,7 @@ final class AddCommand
   private boolean _noFetch;
   private String _sourceName;
   private String _sourceUrl;
+  private String _selector;
   private Set<String> _tags;
 
   AddCommand()
@@ -107,6 +113,10 @@ final class AddCommand
           environment.logger().log( Level.SEVERE, message );
           return false;
         }
+      }
+      else if ( SELECTOR_OPT == option.getId() )
+      {
+        _selector = option.getArgument();
       }
       else if ( TAGS_OPT == option.getId() )
       {
@@ -190,7 +200,8 @@ final class AddCommand
     final SourceConfig source = new SourceConfig();
     source.setName( name );
     source.setUrl( _sourceUrl );
-    if( null != _tags )
+    source.setSelector( _selector );
+    if ( null != _tags )
     {
       source.setTags( _tags.stream().sorted().collect( Collectors.toList() ) );
     }

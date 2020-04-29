@@ -357,7 +357,8 @@ final class FetchCommand
         Files.copy( input, output.getParent().resolve( sourceName + ".html" ), StandardCopyOption.REPLACE_EXISTING );
 
         final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name(), url );
-        final Elements elements = document.select( CSS_SELECTOR );
+        final String selector = source.getSelector();
+        final Elements elements = document.select( null == selector ? CSS_SELECTOR : selector );
 
         // Some spec docs (gamepad, push_api, screen_orientation, selection_api) include an anchor in block so strip it out
         elements.forEach( e -> e.getElementsByClass( "idlHeader" ).forEach( Node::remove ) );
