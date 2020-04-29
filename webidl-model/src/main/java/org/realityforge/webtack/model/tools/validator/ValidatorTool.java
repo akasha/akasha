@@ -14,6 +14,7 @@ public final class ValidatorTool
   public static Validator create()
   {
     final List<Validator> validators = new ArrayList<>();
+    validators.add( new InheritsValidator() );
     return new AggregateValidator( validators );
   }
 }
