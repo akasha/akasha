@@ -193,28 +193,8 @@
     },
     {
         "lastModifiedTime": 1538502648000,
-        "name": "svg2_painting",
-        "url": "https://www.w3.org/TR/SVG2/painting.html"
-    },
-    {
-        "lastModifiedTime": 1538502648000,
-        "name": "svg2_pservers",
-        "url": "https://www.w3.org/TR/SVG2/pservers.html"
-    },
-    {
-        "lastModifiedTime": 1538502648000,
-        "name": "svg2_shapes",
-        "url": "https://www.w3.org/TR/SVG2/shapes.html"
-    },
-    {
-        "lastModifiedTime": 1538526428000,
-        "name": "svg2_text",
-        "url": "https://www.w3.org/TR/SVG2/text.html"
-    },
-    {
-        "lastModifiedTime": 1538502648000,
-        "name": "svg2_types",
-        "url": "https://www.w3.org/TR/SVG2/types.html"
+        "name": "svg2",
+        "url": "https://www.w3.org/TR/SVG2/idl.html"
     },
     {
         "lastModifiedTime": 1569311451000,
