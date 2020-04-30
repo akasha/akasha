@@ -94,10 +94,22 @@ public final class WebIDLSchema
     return _callbacks.values();
   }
 
+  @Nullable
+  public CallbackDefinition findCallbackByName( @Nonnull final String name )
+  {
+    return _callbacks.get( name );
+  }
+
   @Nonnull
   public Collection<CallbackInterfaceDefinition> getCallbackInterfaces()
   {
     return _callbackInterfaces.values();
+  }
+
+  @Nullable
+  public CallbackInterfaceDefinition findCallbackInterfaceByName( @Nonnull final String name )
+  {
+    return _callbackInterfaces.get( name );
   }
 
   @Nonnull
@@ -116,6 +128,12 @@ public final class WebIDLSchema
   public Collection<EnumerationDefinition> getEnumerations()
   {
     return _enumerations.values();
+  }
+
+  @Nullable
+  public EnumerationDefinition findEnumerationByName( @Nonnull final String name )
+  {
+    return _enumerations.get( name );
   }
 
   @Nonnull
@@ -176,6 +194,12 @@ public final class WebIDLSchema
   public Collection<TypedefDefinition> getTypedefs()
   {
     return _typedefs.values();
+  }
+
+  @Nullable
+  public TypedefDefinition findTypedefByName( @Nonnull final String name )
+  {
+    return _typedefs.get( name );
   }
 
   @Override
