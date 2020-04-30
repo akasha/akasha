@@ -141,7 +141,7 @@ final class LoadCommand
       {
         final List<SourceInterval> sourceLocations = error.getNode().getSourceLocations();
         final String prefix = sourceLocations.isEmpty() ? "" : sourceLocations.get( 0 ).getStart().toString() + " ";
-        logger.log( error.shouldHaltValidation() ? Level.SEVERE : Level.WARNING, prefix + error.getMessage() );
+        logger.log( error.shouldHalt() ? Level.SEVERE : Level.WARNING, prefix + error.getMessage() );
       }
       return ExitCodes.ERROR_SCHEMA_INVALID_CODE;
     }

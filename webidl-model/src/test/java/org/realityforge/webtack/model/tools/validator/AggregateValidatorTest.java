@@ -34,7 +34,7 @@ public final class AggregateValidatorTest
                                           final boolean haltValidation )
   {
     assertTrue( errors.stream()
-                  .anyMatch( e -> e.getMessage().equals( message ) && e.shouldHaltValidation() == haltValidation ) );
+                  .anyMatch( e -> e.getMessage().equals( message ) && e.shouldHalt() == haltValidation ) );
   }
 
   private void assertErrorMessageNotPresent( @Nonnull final Collection<ValidationError> errors,

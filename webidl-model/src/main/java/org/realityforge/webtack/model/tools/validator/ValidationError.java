@@ -19,13 +19,13 @@ public final class ValidationError
    * Typically this set when there is significant structural problems with the schema so subsequent validation
    * errors will likely result from this unless it is fixed.
    */
-  private final boolean _haltValidation;
+  private final boolean _halt;
 
-  public ValidationError( @Nonnull final Node node, @Nonnull final String message, final boolean haltValidation )
+  public ValidationError( @Nonnull final Node node, @Nonnull final String message, final boolean halt )
   {
     _node = Objects.requireNonNull( node );
     _message = Objects.requireNonNull( message );
-    _haltValidation = haltValidation;
+    _halt = halt;
   }
 
   @Nonnull
@@ -40,8 +40,8 @@ public final class ValidationError
     return _message;
   }
 
-  public boolean shouldHaltValidation()
+  public boolean shouldHalt()
   {
-    return _haltValidation;
+    return _halt;
   }
 }

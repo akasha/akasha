@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model.tools.validator;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
@@ -22,9 +23,11 @@ public abstract class AbstractValidatorTest
 
   final void assertErrorPresent( @Nonnull final Collection<ValidationError> errors,
                                  @Nonnull final String message,
-                                 final boolean shouldHaltValidation )
+                                 final boolean halt )
   {
-    assertTrue( errors.stream().anyMatch( e -> e.getMessage().equals( message ) &&
-                                               e.shouldHaltValidation() == shouldHaltValidation ) );
+    assertTrue( errors.stream().anyMatch( e -> e.getMessage().equals( message ) && e.shouldHalt() == halt ),
+                "Failed to find error with message '" + message + "' and shouldHalt = " + halt +
+                " in errors:\n" +
+                errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) ) );
   }
 }

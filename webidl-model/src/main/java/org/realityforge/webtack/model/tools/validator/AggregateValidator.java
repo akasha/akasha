@@ -10,7 +10,7 @@ import org.realityforge.webtack.model.WebIDLSchema;
 
 /**
  * A validator that runs a chain of validator stages in succession.
- * If a stage returns a error that where {@link ValidationError#shouldHaltValidation()} returns {@code true}
+ * If a stage returns a error that where {@link ValidationError#shouldHalt()} returns {@code true}
  * then the subsequent stages are skipped.
  */
 final class AggregateValidator
@@ -33,7 +33,7 @@ final class AggregateValidator
     {
       final Collection<ValidationError> validationErrors = validator.validate( schema );
       errors.addAll( validationErrors );
-      if ( validationErrors.stream().anyMatch( ValidationError::shouldHaltValidation ) )
+      if ( validationErrors.stream().anyMatch( ValidationError::shouldHalt ) )
       {
         break;
       }
