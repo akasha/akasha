@@ -382,21 +382,6 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/"
     },
     {
-        "lastModifiedTime": 0,
-        "name": "webrtc",
-        "url": "https://www.w3.org/TR/webrtc/"
-    },
-    {
-        "lastModifiedTime": 1575647599000,
-        "name": "webrtc_identity",
-        "url": "https://w3c.github.io/webrtc-identity/"
-    },
-    {
-        "lastModifiedTime": 1578990563000,
-        "name": "webrtc_stats",
-        "url": "https://www.w3.org/TR/webrtc-stats/"
-    },
-    {
         "lastModifiedTime": 1570729391000,
         "name": "webxr",
         "url": "https://www.w3.org/TR/webxr/"
