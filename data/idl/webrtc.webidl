@@ -195,6 +195,7 @@ dictionary RTCErrorEventInit : EventInit {
 
 dictionary RTCErrorInit {
   required RTCErrorDetailType errorDetail;
+  long httpRequestStatusCode;
   unsigned long receivedAlert;
   long sctpCauseCode;
   long sdpLineNumber;
@@ -219,7 +220,6 @@ dictionary RTCIceParameters {
 };
 
 dictionary RTCIceServer {
-  DOMString credential;
   RTCIceCredentialType credentialType = "password";
   required ( DOMString or sequence<DOMString> ) urls;
   DOMString username;
@@ -233,9 +233,8 @@ dictionary RTCOfferOptions : RTCOfferAnswerOptions {
 };
 
 dictionary RTCPeerConnectionIceErrorEventInit : EventInit {
-  DOMString? address;
   required unsigned short errorCode;
-  unsigned short? port;
+  DOMString hostCandidate;
   USVString statusText;
   DOMString url;
 };
@@ -413,6 +412,7 @@ interface RTCDtlsTransport : EventTarget {
 [Exposed=Window]
 interface RTCError : DOMException {
   readonly attribute RTCErrorDetailType errorDetail;
+  readonly attribute long? httpRequestStatusCode;
   readonly attribute unsigned long? receivedAlert;
   readonly attribute long? sctpCauseCode;
   readonly attribute long? sdpLineNumber;

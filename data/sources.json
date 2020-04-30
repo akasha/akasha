@@ -117,6 +117,11 @@
         "url": "https://www.w3.org/TR/intersection-observer/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "local",
+        "url": "https://drafts.css-houdini.org/worklets/"
+    },
+    {
         "lastModifiedTime": 1479323342000,
         "name": "media_source",
         "url": "https://www.w3.org/TR/media-source/"
@@ -377,14 +382,19 @@
         "url": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "webrtc",
+        "url": "https://www.w3.org/TR/webrtc/"
+    },
+    {
         "lastModifiedTime": 1575647599000,
         "name": "webrtc_identity",
         "url": "https://w3c.github.io/webrtc-identity/"
     },
     {
-        "lastModifiedTime": 1587651757000,
-        "name": "webrtc_pc",
-        "url": "https://w3c.github.io/webrtc-pc/"
+        "lastModifiedTime": 1578990563000,
+        "name": "webrtc_stats",
+        "url": "https://www.w3.org/TR/webrtc-stats/"
     },
     {
         "lastModifiedTime": 1570729391000,
