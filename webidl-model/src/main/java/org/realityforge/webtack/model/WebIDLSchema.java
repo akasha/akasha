@@ -166,6 +166,12 @@ public final class WebIDLSchema
     return _namespaces.values();
   }
 
+  @Nullable
+  public NamespaceDefinition findNamespaceByName( @Nonnull final String name )
+  {
+    return _namespaces.get( name );
+  }
+
   @Nonnull
   public Collection<PartialDictionaryDefinition> getPartialDictionaries()
   {
