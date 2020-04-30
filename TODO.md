@@ -23,7 +23,6 @@ complete as there is too much un-said.
 * Add a series of validators that verify characteristics of the schema before further processing. Errors or
   warnings are likely the result of each validation process. Validations may include:
   - ensure all `TypeReference` types resolve to a valid type
-  - ensure all types part of includes are present
   etc.
 
 * Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
