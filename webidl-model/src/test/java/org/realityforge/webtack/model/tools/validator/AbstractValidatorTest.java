@@ -17,7 +17,7 @@ public abstract class AbstractValidatorTest
   final Collection<ValidationError> validate( @Nonnull final WebIDLSchema schema, final int errorCount )
   {
     final Collection<ValidationError> errors = createValidator().validate( schema );
-    assertEquals( errors.size(), errorCount );
+    assertEquals( errors.size(), errorCount, "Errors: " + asString( errors ) );
     return errors;
   }
 
@@ -33,8 +33,13 @@ public abstract class AbstractValidatorTest
                                  final boolean halt )
   {
     assertTrue( errors.stream().anyMatch( e -> e.getMessage().equals( message ) && e.shouldHalt() == halt ),
-                "Failed to find error with message '" + message + "' and shouldHalt = " + halt +
-                " in errors:\n" +
-                errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) ) );
+                "Failed to find error with message '" + message + "' and shouldHalt = " + halt + " in " +
+                asString( errors ) );
+  }
+
+  @Nonnull
+  private String asString( @Nonnull final Collection<ValidationError> errors )
+  {
+    return "Errors:\n" + errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) );
   }
 }
