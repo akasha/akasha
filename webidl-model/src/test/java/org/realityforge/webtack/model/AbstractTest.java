@@ -55,6 +55,12 @@ public abstract class AbstractTest
   }
 
   @Nonnull
+  protected final WebIDLSchema loadTestLocalSchema( @Nonnull final String filename )
+  {
+    return loadWebIDLSchema( getTestLocalFixtureDir().resolve( filename ) );
+  }
+
+  @Nonnull
   protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file )
   {
     return loadWebIDLSchema( file, null );
