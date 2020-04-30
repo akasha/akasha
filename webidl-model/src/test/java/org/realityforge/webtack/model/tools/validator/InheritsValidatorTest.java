@@ -31,8 +31,7 @@ public final class InheritsValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Dictionary named 'DanglingDictionary' inherits from dictionary named 'MissingDictionary' but no such dictionary exists",
-                        true );
+                        "Dictionary named 'DanglingDictionary' inherits from dictionary named 'MissingDictionary' but no such dictionary exists" );
   }
 
   @Test
@@ -45,8 +44,7 @@ public final class InheritsValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Interface named 'DanglingInterface' inherits from interface named 'MissingInterface' but no such interface exists",
-                        true );
+                        "Interface named 'DanglingInterface' inherits from interface named 'MissingInterface' but no such interface exists" );
   }
 
   @Nonnull
