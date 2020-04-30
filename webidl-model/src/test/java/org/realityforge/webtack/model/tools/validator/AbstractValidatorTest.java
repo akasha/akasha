@@ -22,6 +22,13 @@ public abstract class AbstractValidatorTest
   }
 
   final void assertErrorPresent( @Nonnull final Collection<ValidationError> errors,
+                                 @Nonnull final String message )
+  {
+    assertErrorPresent( errors, message, true );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  final void assertErrorPresent( @Nonnull final Collection<ValidationError> errors,
                                  @Nonnull final String message,
                                  final boolean halt )
   {

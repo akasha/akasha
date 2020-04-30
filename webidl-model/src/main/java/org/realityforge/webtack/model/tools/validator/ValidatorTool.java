@@ -15,6 +15,7 @@ public final class ValidatorTool
   {
     final List<Validator> validators = new ArrayList<>();
     validators.add( new InheritsValidator() );
+    validators.add( new UniqueNamesValidator() );
     return new AggregateValidator( validators );
   }
 }

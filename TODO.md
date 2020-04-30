@@ -24,7 +24,6 @@ complete as there is too much un-said.
   warnings are likely the result of each validation process. Validations may include:
   - if a partial exists then the actual should exist
   - ensure all `TypeReference` types resolve to a valid type
-  - ensure that names are unique across all the types
   etc.
 
 * Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
