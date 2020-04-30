@@ -154,6 +154,12 @@ public final class WebIDLSchema
     return _mixins.values();
   }
 
+  @Nullable
+  public MixinDefinition findMixinByName( @Nonnull final String name )
+  {
+    return _mixins.get( name );
+  }
+
   @Nonnull
   public Collection<IncludesStatement> getIncludes()
   {
