@@ -1,0 +1,3 @@
+namespace NamespaceUnderTest {
+  NoExist myOperation();
+};

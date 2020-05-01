@@ -1,0 +1,1 @@
+callback CallbackUnderTest = Promise<NoExist> ();

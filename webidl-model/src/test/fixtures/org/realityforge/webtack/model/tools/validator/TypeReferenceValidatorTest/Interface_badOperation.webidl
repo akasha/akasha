@@ -1,0 +1,3 @@
+interface InterfaceUnderTest {
+  NoExist myOperation();
+};

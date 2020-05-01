@@ -20,11 +20,6 @@ complete as there is too much un-said.
   Includes should also be merged into the types so the final model just includes the resolved interfaces,
   dictionaries etc.
 
-* Add a series of validators that verify characteristics of the schema before further processing. Errors or
-  warnings are likely the result of each validation process. Validations may include:
-  - ensure all `TypeReference` types resolve to a valid type
-  etc.
-
 * Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
   how this would look if we created a parallel model hierarchy and then generated source code based on this model.
 

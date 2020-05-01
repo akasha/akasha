@@ -18,6 +18,7 @@ public final class ValidatorTool
     validators.add( new IncludeValidator() );
     validators.add( new UniqueNamesValidator() );
     validators.add( new PartialValidator() );
+    validators.add( new TypeReferenceValidator() );
     return new AggregateValidator( validators );
   }
 }
