@@ -69,9 +69,9 @@ final class LoadCommand
                                     _sourceNames;
     for ( final String sourceName : sourceNames )
     {
-      if ( logger.isLoggable( Level.INFO ) )
+      if ( logger.isLoggable( Level.FINE ) )
       {
-        logger.log( Level.INFO, "Parsing source named '" + sourceName + "'" );
+        logger.log( Level.FINE, "Parsing source named '" + sourceName + "'" );
       }
       final SourceConfig source = config.findSourceByName( sourceName );
       if ( null == source )
@@ -100,9 +100,9 @@ final class LoadCommand
         final int errorCount = errorListener.getErrorCount();
         if ( 0 == errorCount )
         {
-          if ( logger.isLoggable( Level.INFO ) )
+          if ( logger.isLoggable( Level.FINE ) )
           {
-            logger.log( Level.INFO, "Source named '" + sourceName + "' parsed" );
+            logger.log( Level.FINE, "Source named '" + sourceName + "' parsed" );
           }
         }
         else
