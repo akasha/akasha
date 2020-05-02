@@ -119,7 +119,6 @@ public final class MergerTool
     final T existing = collection.get( name );
     if ( null != existing )
     {
-
       throw new IllegalModelException( "Multiple " + collectionName + " defined with the name '" + name + "'. " +
                                        "Existing defined in:\n" + describeLocations( existing, "\n" ) + "\n" +
                                        "Attempting to add element defined in:\n" + describeLocations( value, "\n" ) );
