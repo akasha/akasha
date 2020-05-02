@@ -17,11 +17,11 @@ public final class DictionaryDefinition
   @Nonnull
   private final List<DictionaryMember> _members;
 
-  DictionaryDefinition( @Nonnull final String name,
-                        @Nullable final String inherits,
-                        @Nonnull final List<DictionaryMember> members,
-                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                        @Nonnull final List<SourceInterval> sourceLocations )
+  public DictionaryDefinition( @Nonnull final String name,
+                               @Nullable final String inherits,
+                               @Nonnull final List<DictionaryMember> members,
+                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                               @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
