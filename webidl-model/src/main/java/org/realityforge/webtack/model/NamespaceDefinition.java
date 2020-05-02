@@ -16,11 +16,11 @@ public final class NamespaceDefinition
   @Nonnull
   private final List<AttributeMember> _attributes;
 
-  NamespaceDefinition( @Nonnull final String name,
-                       @Nonnull final List<OperationMember> operations,
-                       @Nonnull final List<AttributeMember> attributes,
-                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                       @Nonnull final List<SourceInterval> sourceLocations )
+  public NamespaceDefinition( @Nonnull final String name,
+                              @Nonnull final List<OperationMember> operations,
+                              @Nonnull final List<AttributeMember> attributes,
+                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                              @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
