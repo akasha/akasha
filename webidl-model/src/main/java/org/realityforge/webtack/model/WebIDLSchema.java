@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -185,9 +186,21 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public List<PartialDictionaryDefinition> findPartialDictionariesByName( @Nonnull final String name )
+  {
+    return _partialDictionaries.getOrDefault( name, Collections.emptyList() );
+  }
+
+  @Nonnull
   public Collection<PartialInterfaceDefinition> getPartialInterfaces()
   {
     return _partialInterfaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
+  }
+
+  @Nonnull
+  public List<PartialInterfaceDefinition> findPartialInterfacesByName( @Nonnull final String name )
+  {
+    return _partialInterfaces.getOrDefault( name, Collections.emptyList() );
   }
 
   @Nonnull
@@ -197,9 +210,21 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public List<PartialMixinDefinition> findPartialMixinsByName( @Nonnull final String name )
+  {
+    return _partialMixins.getOrDefault( name, Collections.emptyList() );
+  }
+
+  @Nonnull
   public Collection<PartialNamespaceDefinition> getPartialNamespaces()
   {
     return _partialNamespaces.values().stream().flatMap( Collection::stream ).collect( Collectors.toList() );
+  }
+
+  @Nonnull
+  public List<PartialNamespaceDefinition> findPartialNamespacesByName( @Nonnull final String name )
+  {
+    return _partialNamespaces.getOrDefault( name, Collections.emptyList() );
   }
 
   @Nonnull
