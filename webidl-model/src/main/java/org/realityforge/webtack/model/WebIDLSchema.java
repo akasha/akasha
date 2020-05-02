@@ -168,6 +168,15 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public List<IncludesStatement> findIncludesByInterfaceName( @Nonnull final String name )
+  {
+    return _includes.values()
+      .stream()
+      .filter( i -> i.getInterfaceName().equals( name ) )
+      .collect( Collectors.toList() );
+  }
+
+  @Nonnull
   public Collection<NamespaceDefinition> getNamespaces()
   {
     return _namespaces.values();
