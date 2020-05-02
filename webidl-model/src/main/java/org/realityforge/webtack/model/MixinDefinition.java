@@ -18,12 +18,12 @@ public final class MixinDefinition
   @Nonnull
   private final List<OperationMember> _operations;
 
-  MixinDefinition( @Nonnull final String name,
-                   @Nonnull final List<ConstMember> constants,
-                   @Nonnull final List<AttributeMember> attributes,
-                   @Nonnull final List<OperationMember> operations,
-                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                   @Nonnull final List<SourceInterval> sourceLocations )
+  public MixinDefinition( @Nonnull final String name,
+                          @Nonnull final List<ConstMember> constants,
+                          @Nonnull final List<AttributeMember> attributes,
+                          @Nonnull final List<OperationMember> operations,
+                          @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                          @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
