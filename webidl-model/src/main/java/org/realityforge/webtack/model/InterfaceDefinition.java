@@ -29,17 +29,17 @@ public final class InterfaceDefinition
   @Nullable
   private final SetLikeMember _setLikeMember;
 
-  InterfaceDefinition( @Nonnull final String name,
-                       @Nullable final String inherits,
-                       @Nonnull final List<ConstMember> constants,
-                       @Nonnull final List<AttributeMember> attributes,
-                       @Nonnull final List<OperationMember> operations,
-                       @Nullable final IterableMember iterable,
-                       @Nullable final AsyncIterableMember asyncIterable,
-                       @Nullable final MapLikeMember mapLikeMember,
-                       @Nullable final SetLikeMember setLikeMember,
-                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                       @Nonnull final List<SourceInterval> sourceLocations )
+  public InterfaceDefinition( @Nonnull final String name,
+                              @Nullable final String inherits,
+                              @Nonnull final List<ConstMember> constants,
+                              @Nonnull final List<AttributeMember> attributes,
+                              @Nonnull final List<OperationMember> operations,
+                              @Nullable final IterableMember iterable,
+                              @Nullable final AsyncIterableMember asyncIterable,
+                              @Nullable final MapLikeMember mapLikeMember,
+                              @Nullable final SetLikeMember setLikeMember,
+                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                              @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
