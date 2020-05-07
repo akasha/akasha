@@ -14,11 +14,11 @@ public final class CallbackDefinition
   @Nonnull
   private final List<Argument> _arguments;
 
-  CallbackDefinition( @Nonnull final String name,
-                      @Nonnull final Type returnType,
-                      @Nonnull final List<Argument> arguments,
-                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                      @Nonnull final List<SourceInterval> sourceLocations )
+  public CallbackDefinition( @Nonnull final String name,
+                             @Nonnull final Type returnType,
+                             @Nonnull final List<Argument> arguments,
+                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                             @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
