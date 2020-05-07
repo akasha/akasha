@@ -142,20 +142,20 @@ public final class WebIDLModelParser
       }
     }
 
-    return new WebIDLSchema( callbacks,
-                             callbackInterfaces,
-                             dictionaries,
-                             enumerations,
-                             interfaces,
-                             mixins,
+    return new WebIDLSchema( Collections.unmodifiableMap( callbacks ),
+                             Collections.unmodifiableMap( callbackInterfaces ),
+                             Collections.unmodifiableMap( dictionaries ),
+                             Collections.unmodifiableMap( enumerations ),
+                             Collections.unmodifiableMap( interfaces ),
+                             Collections.unmodifiableMap( mixins ),
                              Collections.unmodifiableList( new ArrayList<>( includes.values() ) ),
-                             namespaces,
-                             partialDictionaries,
-                             partialInterfaces,
-                             partialMixins,
-                             partialNamespaces,
-                             typedefs,
-                             Collections.singletonList( parseSourceInterval( ctx ) ) );
+                             Collections.unmodifiableMap( namespaces ),
+                             Collections.unmodifiableMap( partialDictionaries ),
+                             Collections.unmodifiableMap( partialInterfaces ),
+                             Collections.unmodifiableMap( partialMixins ),
+                             Collections.unmodifiableMap( partialNamespaces ),
+                             Collections.unmodifiableMap( typedefs ),
+                             Collections.unmodifiableList( Collections.singletonList( parseSourceInterval( ctx ) ) ) );
   }
 
   private static <T extends Definition> void addToCollection( @Nonnull final String collectionName,
