@@ -1,5 +1,6 @@
 package org.realityforge.webtack;
 
+import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.Path;
@@ -78,7 +79,8 @@ final class AddCommand
           try
           {
             // Check format of URI by attempting to parse it
-            new URI( argument );
+            //noinspection ResultOfMethodCallIgnored
+            new File( ".").toURI().resolve( argument );
             _sourceUrl = argument;
           }
           catch ( final URISyntaxException use )

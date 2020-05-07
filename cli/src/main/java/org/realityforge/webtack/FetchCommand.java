@@ -2,6 +2,7 @@ package org.realityforge.webtack;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -9,7 +10,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.URI;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
@@ -401,7 +401,7 @@ final class FetchCommand
   {
     try
     {
-      final URL sourceURL = URI.create( url ).toURL();
+      final URL sourceURL = new File( "." ).toURI().resolve( url ).toURL();
 
       if ( !_force &&
            0 != lastModifiedAt &&
