@@ -134,6 +134,14 @@ final class FetchCommand
         throw new TerminalStateException( message, ExitCodes.ERROR_SOURCE_DOES_NOT_EXIST_CODE );
       }
       final String url = source.getUrl();
+      if ( null == url )
+      {
+        if ( logger.isLoggable( Level.INFO ) )
+        {
+          logger.log( Level.INFO, "Source named '" + sourceName + "' has no url, no need to fetch" );
+        }
+        continue;
+      }
       final DownloadResult result = downloadURL( url, source.getLastModifiedTime() );
       if ( null == result )
       {

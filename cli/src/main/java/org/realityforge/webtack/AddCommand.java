@@ -2,7 +2,6 @@ package org.realityforge.webtack;
 
 import java.io.File;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.List;
@@ -27,6 +26,7 @@ final class AddCommand
   private static final int TAGS_OPT = 't';
   private static final int SELECTOR_OPT = 's';
   private static final int NO_FETCH_OPT = 2;
+  private static final int NO_URL_OPT = 3;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
       new CLOptionDescriptor( "name",
@@ -41,12 +41,17 @@ final class AddCommand
                               CLOptionDescriptor.ARGUMENT_REQUIRED,
                               SELECTOR_OPT,
                               "Specify the css selector used to extract the WebIDL from the source URL." ),
+      new CLOptionDescriptor( "no-url",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              NO_URL_OPT,
+                              "Fetch the WebIDL from the url but do not register the url with the WebIDL source." ),
       new CLOptionDescriptor( "no-fetch",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_FETCH_OPT,
                               "Skip running fetch command after registering WebIDL source." )
     };
   private boolean _noFetch;
+  private boolean _noUrl;
   private String _sourceName;
   private String _sourceUrl;
   private String _selector;
@@ -83,9 +88,9 @@ final class AddCommand
             new File( ".").toURI().resolve( argument );
             _sourceUrl = argument;
           }
-          catch ( final URISyntaxException use )
+          catch ( final IllegalArgumentException iae )
           {
-            final String message = "Error: Invalid url specified: " + argument + "  Error: " + use.getMessage();
+            final String message = "Error: Invalid url specified: " + argument + "  Error: " + iae.getMessage();
             environment.logger().log( Level.SEVERE, message );
             return false;
           }
@@ -135,6 +140,10 @@ final class AddCommand
             return false;
           }
         }
+      }
+      else if ( NO_URL_OPT == option.getId() )
+      {
+        _noUrl = true;
       }
       else
       {
@@ -201,7 +210,10 @@ final class AddCommand
 
     final SourceConfig source = new SourceConfig();
     source.setName( name );
-    source.setUrl( _sourceUrl );
+    if ( !( _noFetch && _noUrl ) )
+    {
+      source.setUrl( _sourceUrl );
+    }
     source.setSelector( _selector );
     if ( null != _tags )
     {
@@ -224,7 +236,24 @@ final class AddCommand
     {
       final FetchCommand command = new FetchCommand();
       command.processOptions( context.environment(), name );
-      return command.run( context );
+      final int exitCode = command.run( context );
+      if ( _noUrl )
+      {
+        source.setUrl( null );
+        try
+        {
+          RepositoryConfig.save( configLocation, config );
+        }
+        catch ( final Exception e )
+        {
+          final String message =
+            "Error: Failed to save config file " + configLocation + " after removing url for " +
+            "source named " + _sourceName;
+          logger.log( Level.SEVERE, message );
+          return ExitCodes.ERROR_SAVING_CONFIG_CODE;
+        }
+      }
+      return exitCode;
     }
     else
     {
