@@ -15,10 +15,10 @@ public final class DefaultValue
   @Nullable
   private final String _stringValue;
 
-  DefaultValue( @Nonnull final Kind kind,
-                @Nullable final ConstValue constValue,
-                @Nullable final String stringValue,
-                @Nonnull final List<SourceInterval> sourceLocations )
+  public DefaultValue( @Nonnull final Kind kind,
+                       @Nullable final ConstValue constValue,
+                       @Nullable final String stringValue,
+                       @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( sourceLocations );
     assert ( Kind.Const == kind ) == ( null != constValue );

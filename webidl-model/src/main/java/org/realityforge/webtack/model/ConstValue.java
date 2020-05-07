@@ -16,9 +16,9 @@ public final class ConstValue
   @Nullable
   private final String _value;
 
-  ConstValue( @Nonnull final Kind kind,
-              @Nullable final String value,
-              @Nonnull final List<SourceInterval> sourceLocations )
+  public ConstValue( @Nonnull final Kind kind,
+                     @Nullable final String value,
+                     @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( sourceLocations );
     assert ( Kind.Decimal == kind || Kind.Integer == kind ) == ( null != value );

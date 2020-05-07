@@ -12,10 +12,10 @@ public final class TypedefDefinition
   @Nonnull
   private final Type _type;
 
-  TypedefDefinition( @Nonnull final String name,
-                     @Nonnull final Type type,
-                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                     @Nonnull final List<SourceInterval> sourceLocations )
+  public TypedefDefinition( @Nonnull final String name,
+                            @Nonnull final Type type,
+                            @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                            @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
