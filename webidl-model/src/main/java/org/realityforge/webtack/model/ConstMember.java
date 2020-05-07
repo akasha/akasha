@@ -13,11 +13,11 @@ public final class ConstMember
   @Nonnull
   private final ConstValue _value;
 
-  ConstMember( @Nonnull final String name,
-               @Nonnull final Type type,
-               @Nonnull final ConstValue value,
-               @Nonnull final List<ExtendedAttribute> extendedAttributes,
-               @Nonnull final List<SourceInterval> sourceLocations )
+  public ConstMember( @Nonnull final String name,
+                      @Nonnull final Type type,
+                      @Nonnull final ConstValue value,
+                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                      @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( name, extendedAttributes, sourceLocations );
     // The type reference should be to a primitive type but this would need to be verified post resolution
