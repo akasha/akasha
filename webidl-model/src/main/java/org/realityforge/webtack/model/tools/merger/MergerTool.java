@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model.tools.merger;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -95,20 +96,21 @@ public final class MergerTool
       }
       sourceLocations.addAll( schema.getSourceLocations() );
     }
-    return new WebIDLSchema( callbacks,
-                             callbackInterfaces,
-                             dictionaries,
-                             enumerations,
-                             interfaces,
-                             mixins,
-                             new ArrayList<>( includes.values() ),
-                             namespaces,
-                             partialDictionaries,
-                             partialInterfaces,
-                             partialMixins,
-                             partialNamespaces,
-                             typedefs,
-                             sourceLocations );
+
+    return new WebIDLSchema( Collections.unmodifiableMap( callbacks ),
+                             Collections.unmodifiableMap( callbackInterfaces ),
+                             Collections.unmodifiableMap( dictionaries ),
+                             Collections.unmodifiableMap( enumerations ),
+                             Collections.unmodifiableMap( interfaces ),
+                             Collections.unmodifiableMap( mixins ),
+                             Collections.unmodifiableList( new ArrayList<>( includes.values() ) ),
+                             Collections.unmodifiableMap( namespaces ),
+                             Collections.unmodifiableMap( partialDictionaries ),
+                             Collections.unmodifiableMap( partialInterfaces ),
+                             Collections.unmodifiableMap( partialMixins ),
+                             Collections.unmodifiableMap( partialNamespaces ),
+                             Collections.unmodifiableMap( typedefs ),
+                             Collections.unmodifiableList( sourceLocations ) );
   }
 
   private static <T extends Definition> void addToCollection( @Nonnull final String collectionName,
