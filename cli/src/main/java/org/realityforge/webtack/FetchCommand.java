@@ -339,7 +339,8 @@ final class FetchCommand
     final String url = source.getUrl();
     try
     {
-      if ( url.endsWith( ".idl" ) )
+      final String lowerUrl = url.toLowerCase();
+      if ( lowerUrl.endsWith( ".idl" ) || lowerUrl.endsWith( ".webidl" ) )
       {
         if ( logger.isLoggable( Level.INFO ) )
         {
