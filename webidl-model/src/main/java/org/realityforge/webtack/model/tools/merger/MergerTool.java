@@ -101,7 +101,7 @@ public final class MergerTool
                              enumerations,
                              interfaces,
                              mixins,
-                             includes,
+                             new ArrayList<>( includes.values() ),
                              namespaces,
                              partialDictionaries,
                              partialInterfaces,
