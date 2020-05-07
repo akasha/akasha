@@ -1680,7 +1680,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-   static SourcePosition parseSourcePosition( @Nonnull final Token token )
+  static SourcePosition parseSourcePosition( @Nonnull final Token token )
   {
     return new SourcePosition( token.getTokenSource().getSourceName(), token.getLine(), token.getCharPositionInLine() );
   }
