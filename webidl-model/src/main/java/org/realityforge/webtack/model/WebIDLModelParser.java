@@ -148,7 +148,7 @@ public final class WebIDLModelParser
                              enumerations,
                              interfaces,
                              mixins,
-                             includes,
+                             Collections.unmodifiableList( new ArrayList<>( includes.values() ) ),
                              namespaces,
                              partialDictionaries,
                              partialInterfaces,

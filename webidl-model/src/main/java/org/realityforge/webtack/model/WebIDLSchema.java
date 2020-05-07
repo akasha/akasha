@@ -27,7 +27,7 @@ public final class WebIDLSchema
   @Nonnull
   private final Map<String, MixinDefinition> _mixins;
   @Nonnull
-  private final Map<String, IncludesStatement> _includes;
+  private final List<IncludesStatement> _includes;
   @Nonnull
   private final Map<String, NamespaceDefinition> _namespaces;
   @Nonnull
@@ -47,7 +47,7 @@ public final class WebIDLSchema
                        @Nonnull final Map<String, EnumerationDefinition> enumerations,
                        @Nonnull final Map<String, InterfaceDefinition> interfaces,
                        @Nonnull final Map<String, MixinDefinition> mixins,
-                       @Nonnull final Map<String, IncludesStatement> includes,
+                       @Nonnull final List<IncludesStatement> includes,
                        @Nonnull final Map<String, NamespaceDefinition> namespaces,
                        @Nonnull final Map<String, List<PartialDictionaryDefinition>> partialDictionaries,
                        @Nonnull final Map<String, List<PartialInterfaceDefinition>> partialInterfaces,
@@ -164,13 +164,13 @@ public final class WebIDLSchema
   @Nonnull
   public Collection<IncludesStatement> getIncludes()
   {
-    return _includes.values();
+    return _includes;
   }
 
   @Nonnull
   public List<IncludesStatement> findIncludesByInterfaceName( @Nonnull final String name )
   {
-    return _includes.values()
+    return _includes
       .stream()
       .filter( i -> i.getInterfaceName().equals( name ) )
       .collect( Collectors.toList() );
@@ -361,8 +361,8 @@ public final class WebIDLSchema
           return false;
         }
       }
-      final Set<IncludesStatement> otherIncludes = new HashSet<>( _includes.values() );
-      for ( final IncludesStatement definition : _includes.values() )
+      final Set<IncludesStatement> otherIncludes = new HashSet<>( _includes );
+      for ( final IncludesStatement definition : _includes )
       {
         if ( !otherIncludes.removeIf( definition::equiv ) )
         {
