@@ -4,7 +4,11 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Add `--no-url` argument to `add` command
+
 * Add query language that can be used to select sources based on tags or names so that we can filter load/merge/blend/generate operations
+
+* Define "pass" that transforms one schema into another schema.
 
 * Add blend operation that will attempt merge multiple schemas and if it finds matching declarations will perform blending. This is useful when pulling in gecko or chrome schemas and creating a combined schema.
 
