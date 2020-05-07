@@ -14,12 +14,12 @@ public final class DictionaryMember
   @Nullable
   private final DefaultValue _defaultValue;
 
-  DictionaryMember( @Nonnull final String name,
-                    @Nonnull final Type type,
-                    final boolean optional,
-                    @Nullable final DefaultValue defaultValue,
-                    @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                    @Nonnull final List<SourceInterval> sourceLocations )
+  public DictionaryMember( @Nonnull final String name,
+                           @Nonnull final Type type,
+                           final boolean optional,
+                           @Nullable final DefaultValue defaultValue,
+                           @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                           @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( name, extendedAttributes, sourceLocations );
     assert optional || extendedAttributes.isEmpty();
