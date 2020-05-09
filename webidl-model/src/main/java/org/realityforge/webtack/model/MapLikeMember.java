@@ -14,11 +14,11 @@ public final class MapLikeMember
   private final Type _valueType;
   private final boolean _readOnly;
 
-  MapLikeMember( @Nonnull final Type keyType,
-                 @Nonnull final Type valueType,
-                 final boolean readOnly,
-                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                 @Nonnull final List<SourceInterval> sourceLocations )
+  public MapLikeMember( @Nonnull final Type keyType,
+                        @Nonnull final Type valueType,
+                        final boolean readOnly,
+                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                        @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _keyType = Objects.requireNonNull( keyType );
