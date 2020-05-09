@@ -16,11 +16,11 @@ public final class PartialNamespaceDefinition
   @Nonnull
   private final List<AttributeMember> _attributes;
 
-  PartialNamespaceDefinition( @Nonnull final String name,
-                              @Nonnull final List<OperationMember> operations,
-                              @Nonnull final List<AttributeMember> attributes,
-                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                              @Nonnull final List<SourceInterval> sourceLocations )
+  public PartialNamespaceDefinition( @Nonnull final String name,
+                                     @Nonnull final List<OperationMember> operations,
+                                     @Nonnull final List<AttributeMember> attributes,
+                                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                                     @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
