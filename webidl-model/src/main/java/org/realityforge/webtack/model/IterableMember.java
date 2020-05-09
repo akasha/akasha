@@ -14,10 +14,10 @@ public final class IterableMember
   @Nonnull
   private final Type _valueType;
 
-  IterableMember( @Nullable final Type keyType,
-                  @Nonnull final Type valueType,
-                  @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                  @Nonnull final List<SourceInterval> sourceLocations )
+  public IterableMember( @Nullable final Type keyType,
+                         @Nonnull final Type valueType,
+                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                         @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _keyType = keyType;
