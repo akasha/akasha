@@ -13,10 +13,10 @@ public final class AsyncIterableMember
   @Nonnull
   private final Type _valueType;
 
-  AsyncIterableMember( @Nonnull final Type keyType,
-                       @Nonnull final Type valueType,
-                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                       @Nonnull final List<SourceInterval> sourceLocations )
+  public AsyncIterableMember( @Nonnull final Type keyType,
+                              @Nonnull final Type valueType,
+                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                              @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _keyType = Objects.requireNonNull( keyType );
