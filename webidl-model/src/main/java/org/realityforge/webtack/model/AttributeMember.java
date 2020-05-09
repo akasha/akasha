@@ -14,11 +14,11 @@ public final class AttributeMember
   @Nonnull
   private final Set<Modifier> _modifiers;
 
-  AttributeMember( @Nonnull final String name,
-                   @Nonnull final Type type,
-                   @Nonnull final Set<Modifier> modifiers,
-                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                   @Nonnull final List<SourceInterval> sourceLocations )
+  public AttributeMember( @Nonnull final String name,
+                          @Nonnull final Type type,
+                          @Nonnull final Set<Modifier> modifiers,
+                          @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                          @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( name, extendedAttributes, sourceLocations );
     _type = Objects.requireNonNull( type );
