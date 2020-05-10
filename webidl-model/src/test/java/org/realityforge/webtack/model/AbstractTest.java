@@ -2,14 +2,19 @@ package org.realityforge.webtack.model;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
+import java.io.Writer;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.UUID;
+import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
+import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
 import static org.testng.Assert.*;
@@ -85,6 +90,32 @@ public abstract class AbstractTest
   protected final Path getTestLocalFixtureDir()
   {
     return getBaseFixtureDir().resolve( getClass().getName().replaceAll( "\\.", File.separator ) );
+  }
+
+  protected final void performFixtureTest( @Nonnull final String label,
+                                           @Nonnull final Supplier<SchemaProcessor> supplier,
+                                           @Nonnull final Path dir,
+                                           @Nonnull final String inputFilename,
+                                           @Nonnull final String outputFilename )
+    throws Exception
+  {
+    final String testDescription = label + " fixture test. Input=" + inputFilename + " Output=" + outputFilename;
+
+    final WebIDLSchema input = loadWebIDLSchema( dir.resolve( inputFilename ), testDescription );
+    final WebIDLSchema output = supplier.get().transform( input );
+
+    final Path outputFile = dir.resolve( outputFilename );
+    if ( writeOutputFixtures() )
+    {
+      try ( final Writer writer = new FileWriter( outputFile.toFile() ) )
+      {
+        WebIDLWriter.writeSchema( writer, output );
+      }
+    }
+    assertTrue( Files.exists( outputFile ), "Expected output file missing for " + testDescription );
+    final WebIDLSchema expected = loadWebIDLSchema( outputFile, testDescription );
+    assertTrue( expected.equiv( output ),
+                "Expected output file for " + testDescription + " does not match value emitted by " + label );
   }
 
   protected final boolean writeOutputFixtures()
