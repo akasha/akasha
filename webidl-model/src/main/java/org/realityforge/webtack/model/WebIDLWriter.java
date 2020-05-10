@@ -766,7 +766,7 @@ public final class WebIDLWriter
     throws IOException
   {
     writeIndent( writer );
-    writeAttributesIfRequired( writer, constMember.getExtendedAttributes(), " \n" );
+    writeAttributesIfRequired( writer, constMember.getExtendedAttributes(), "\n  " );
     writer.write( "const " );
     writeType( writer, constMember.getType() );
     writer.write( " " );
