@@ -8,8 +8,6 @@ complete as there is too much un-said.
 
 * Test IncludeRemovalProcessor
 
-* Define "pass" that transforms one schema into another schema.
-
 * Add blend operation that will attempt merge multiple schemas and if it finds matching declarations will perform blending. This is useful when pulling in gecko or chrome schemas and creating a combined schema.
 
 * Should blend of multiple Extended attribute `Ident` types produce an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
