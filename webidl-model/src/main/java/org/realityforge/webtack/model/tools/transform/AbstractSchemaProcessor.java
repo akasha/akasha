@@ -38,6 +38,10 @@ import org.realityforge.webtack.model.WebIDLSchema;
 
 /**
  * Base class for applying a transformation to a schema.
+ *
+ * <p>It should be notes that this is extremely inefficient computationally and memory-wise. If this is
+ * ever a problem we can always allow subclasses to use a bitset to declare which child elements of the
+ * schema are processed. We would just reuse elements if we don't walk down a tree.</p>
  */
 @SuppressWarnings( "unused" )
 public abstract class AbstractSchemaProcessor
