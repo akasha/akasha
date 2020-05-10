@@ -6,6 +6,11 @@ complete as there is too much un-said.
 
 * Add query language that can be used to select sources based on tags or names so that we can filter load/merge/blend/generate operations
 
+* Add a workflow/pipeline json descriptor that describes how to combine and transform the input schemas. It is
+  likely that a selector/query would match the schemas to apply transforms in a particular order. Another step
+  in pipeline may be merging schemas. A pipeline would consist of transforms followed by merges, followed by
+  merges etc and would finally produce output artifacts such as schemas, closure annotated schemas, java code etc.
+
 * Test `IncludeRemovalProcessor` and `FlattenProcessor`
 
 * Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
