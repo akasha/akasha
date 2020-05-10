@@ -18,10 +18,6 @@ complete as there is too much un-said.
 
   Spec Docs: https://heycam.github.io/webidl/
 
-* Add a process that expands the partials into the actuals and creates a new `WebIDLSchema` with result.
-  Includes should also be merged into the types so the final model just includes the resolved interfaces,
-  dictionaries etc.
-
 * Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
   how this would look if we created a parallel model hierarchy and then generated source code based on this model.
 
