@@ -27,9 +27,6 @@ complete as there is too much un-said.
   We should also emit browser specific extension with clear markers in the source code (i.e. generate the externs
   prefixed with `chrome_` etc or add explicit annotations in java code).
 
-* Add a process where we could load customizations from json when processing the model so we can patch the schema
-  in specific ways.
-
 * Add passes where we modify the internal model (i.e. in java we could emit a `addOnFooListener(e -> {})` if there
   is an event named `foo`)
 
