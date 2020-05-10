@@ -8,9 +8,13 @@ complete as there is too much un-said.
 
 * Test `IncludeRemovalProcessor` and `FlattenProcessor`
 
-* Add blend operation that will attempt merge multiple schemas and if it finds matching declarations will perform blending. This is useful when pulling in gecko or chrome schemas and creating a combined schema.
-
-* Should blend of multiple Extended attribute `Ident` types produce an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
+* Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
+  have the same name and parameters then they should be collapsed into a single operation but with potentially
+  merged extended attributes. The intention is for this to be used to import gecko and/or chrome WebIDL and combine
+  it with the spec produced WebIDL so that we have a combined schema and can specifically identify which constructs
+  are browser specific. We may also combine multiple versions of schemas so we can see which versions of the browsers
+  added which features. Questions exist such as: Should blend of multiple Extended attribute `Ident` types produce
+  an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
 
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
   so it should be possible with a little bit of heuristics to extract the documentation for different
@@ -20,10 +24,8 @@ complete as there is too much un-said.
 
 * Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
   how this would look if we created a parallel model hierarchy and then generated source code based on this model.
-
-* Consider loading in the chrome `WebIDL` so that we could decorate the model with chrome specific extensions.
-  We could then make sure these extensions are clearly marked in the source code (i.e. generate to extern prefixed
-  with chrome etc or explicit annotations in java code)
+  We should also emit browser specific extension with clear markers in the source code (i.e. generate the externs
+  prefixed with `chrome_` etc or add explicit annotations in java code).
 
 * Add a process where we could load customizations from json when processing the model so we can patch the schema
   in specific ways.
