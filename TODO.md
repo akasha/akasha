@@ -6,6 +6,8 @@ complete as there is too much un-said.
 
 * Add query language that can be used to select sources based on tags or names so that we can filter load/merge/blend/generate operations
 
+* Test IncludeRemovalProcessor
+
 * Define "pass" that transforms one schema into another schema.
 
 * Add blend operation that will attempt merge multiple schemas and if it finds matching declarations will perform blending. This is useful when pulling in gecko or chrome schemas and creating a combined schema.
