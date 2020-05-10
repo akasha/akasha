@@ -10,6 +10,7 @@ complete as there is too much un-said.
   likely that a selector/query would match the schemas to apply transforms in a particular order. Another step
   in pipeline may be merging schemas. A pipeline would consist of transforms followed by merges, followed by
   merges etc and would finally produce output artifacts such as schemas, closure annotated schemas, java code etc.
+  These pipelines will probably replace the existing `Load` command.
 
 * Test `IncludeRemovalProcessor` and `FlattenProcessor`
 
