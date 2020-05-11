@@ -9,7 +9,7 @@ import org.realityforge.webtack.model.IncludesStatement;
 /**
  * Remove includes that match a pattern.
  */
-public final class IncludeRemovalProcessor
+public final class RemoveIncludesProcessor
   extends AbstractSchemaProcessor
 {
   @Nonnull
@@ -17,7 +17,7 @@ public final class IncludeRemovalProcessor
   @Nonnull
   private final Pattern _mixinPattern;
 
-  public IncludeRemovalProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
+  public RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
   {
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
@@ -46,7 +46,7 @@ public final class IncludeRemovalProcessor
     @Override
     public SchemaProcessor create()
     {
-      return new IncludeRemovalProcessor( extractPattern( "interfacePattern", interfacePattern ),
+      return new RemoveIncludesProcessor( extractPattern( "interfacePattern", interfacePattern ),
                                           extractPattern( "mixinPattern", mixinPattern ) );
     }
 

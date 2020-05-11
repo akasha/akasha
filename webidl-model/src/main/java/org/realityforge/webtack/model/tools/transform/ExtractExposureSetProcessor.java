@@ -17,7 +17,7 @@ import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
 
 /**
- * Specify what exposure set to retain.
+ * Transform schema extracting/retaining a particular exposure set.
  *
  * <p>The [Exposed] extended attribute may appear on an interface, partial interface,
  * interface mixin, partial interface mixin, callback interface, namespace, partial namespace,
@@ -25,13 +25,13 @@ import org.realityforge.webtack.model.PartialNamespaceDefinition;
  * extended attribute specifies that the construct is exposed on that particular set of global
  * interfaces. The extended attribute may either be an ident or identList form.</p>
  */
-public final class ExposureSetExtractorProcessor
+public final class ExtractExposureSetProcessor
   extends AbstractSchemaProcessor
 {
   @Nonnull
   private final String _globalInterface;
 
-  public ExposureSetExtractorProcessor( @Nonnull final String globalInterface )
+  public ExtractExposureSetProcessor( @Nonnull final String globalInterface )
   {
     _globalInterface = Objects.requireNonNull( globalInterface );
   }
@@ -145,7 +145,7 @@ public final class ExposureSetExtractorProcessor
         throw new IllegalArgumentException(
           "ExposureSetExtractorProcessor missing required globalInterface configuration value" );
       }
-      return new ExposureSetExtractorProcessor( globalInterface );
+      return new ExtractExposureSetProcessor( globalInterface );
     }
   }
 }
