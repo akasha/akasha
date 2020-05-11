@@ -35,4 +35,30 @@ public final class IncludeRemovalProcessor
     return _interfacePattern.matcher( input.getInterfaceName() ).matches() &&
            _mixinPattern.matcher( input.getMixinName() ).matches();
   }
+
+  public static final class Config
+    implements SchemaProcessorFactory
+  {
+    public String interfacePattern;
+    public String mixinPattern;
+
+    @Nonnull
+    @Override
+    public SchemaProcessor create()
+    {
+      return new IncludeRemovalProcessor( extractPattern( "interfacePattern", interfacePattern ),
+                                          extractPattern( "mixinPattern", mixinPattern ) );
+    }
+
+    @Nonnull
+    private Pattern extractPattern( @Nonnull final String configKey, @Nullable final String input )
+    {
+      if ( null == input )
+      {
+        throw new IllegalArgumentException( "IncludeRemovalProcessor missing required " +
+                                            configKey + " configuration value" );
+      }
+      return Pattern.compile( input );
+    }
+  }
 }

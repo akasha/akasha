@@ -130,4 +130,22 @@ public final class ExposureSetExtractorProcessor
 
     return true;
   }
+
+  public static final class Config
+    implements SchemaProcessorFactory
+  {
+    public String globalInterface;
+
+    @Nonnull
+    @Override
+    public SchemaProcessor create()
+    {
+      if ( null == globalInterface )
+      {
+        throw new IllegalArgumentException(
+          "ExposureSetExtractorProcessor missing required globalInterface configuration value" );
+      }
+      return new ExposureSetExtractorProcessor( globalInterface );
+    }
+  }
 }

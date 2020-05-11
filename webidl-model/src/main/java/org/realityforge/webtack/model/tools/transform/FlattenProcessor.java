@@ -371,4 +371,15 @@ public final class FlattenProcessor
       .map( l -> l.getStart().toString() )
       .collect( Collectors.joining( delimiter ) );
   }
+
+  public static final class Config
+    implements SchemaProcessorFactory
+  {
+    @Nonnull
+    @Override
+    public SchemaProcessor create()
+    {
+      return new FlattenProcessor();
+    }
+  }
 }

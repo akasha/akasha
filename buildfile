@@ -4,7 +4,8 @@ require 'buildr/single_intermediate_layout'
 require 'buildr/top_level_generate_dir'
 require 'buildr/jacoco'
 
-PACKAGED_DEPS = [:getopt4j, :jsoup, :jsonb_api, :yasson, :javax_json] + Buildr::Antlr4.runtime_dependencies
+JSONB_DEPS = [:jsonb_api, :yasson, :javax_json]
+PACKAGED_DEPS = [:getopt4j, :jsoup] + JSONB_DEPS + Buildr::Antlr4.runtime_dependencies
 
 desc 'webtack: Generate jsinterop types from WebIDL'
 define 'webtack' do
@@ -40,7 +41,8 @@ define 'webtack' do
 
   define 'webidl-model' do
     compile.with project('webidl-parser').package(:jar),
-                 project('webidl-parser').compile.dependencies
+                 project('webidl-parser').compile.dependencies,
+                 JSONB_DEPS
 
     test.using :testng
     test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/fixtures') }
