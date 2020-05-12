@@ -50,6 +50,7 @@ public final class FlattenProcessor
    * @param schema the schema to flatten.
    * @return the merged schema.
    */
+  @Override
   public WebIDLSchema transform( @Nonnull final WebIDLSchema schema )
   {
     final Map<String, DictionaryDefinition> dictionaries = new HashMap<>();
