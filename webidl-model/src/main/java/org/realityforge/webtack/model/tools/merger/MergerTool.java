@@ -27,6 +27,7 @@ import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 public final class MergerTool
+  implements SchemaJoiner
 {
   /**
    * Combine two or more schemas into a single schema.
@@ -34,6 +35,7 @@ public final class MergerTool
    * @param schemas the schemas to combine.
    * @return the merged schema.
    */
+  @Override
   public WebIDLSchema merge( @Nonnull final WebIDLSchema... schemas )
   {
     Objects.requireNonNull( schemas );
@@ -140,5 +142,16 @@ public final class MergerTool
       .stream()
       .map( l -> l.getStart().toString() )
       .collect( Collectors.joining( delimiter ) );
+  }
+
+  public static final class Config
+    implements SchemaJoinerFactory
+  {
+    @Nonnull
+    @Override
+    public SchemaJoiner create()
+    {
+      return new MergerTool();
+    }
   }
 }
