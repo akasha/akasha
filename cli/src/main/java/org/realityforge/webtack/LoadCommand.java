@@ -13,14 +13,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
+import javax.json.Json;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
-import org.realityforge.webtack.config.RepositoryConfig;
-import org.realityforge.webtack.config.SourceConfig;
 import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
-import org.realityforge.webtack.model.tools.merger.MergerTool;
+import org.realityforge.webtack.model.tools.merger.SchemaJoiner;
+import org.realityforge.webtack.model.tools.merger.SchemaJoinerRegistry;
+import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
+import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
+import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
+import org.realityforge.webtack.model.tools.transform.SchemaProcessorRegistry;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.model.tools.validator.Validator;
 import org.realityforge.webtack.model.tools.validator.ValidatorTool;
@@ -131,8 +135,9 @@ final class LoadCommand
         return ExitCodes.ERROR_SOURCE_NOT_FETCHED_CODE;
       }
     }
-    final MergerTool mergerTool = new MergerTool();
-    final WebIDLSchema mergedSchema = mergerTool.merge( schemas.toArray( new WebIDLSchema[ 0 ] ) );
+    final SchemaJoiner joiner =
+      SchemaJoinerRegistry.createSchemaProcessor( "Merge", Json.createObjectBuilder().build() );
+    final WebIDLSchema mergedSchema = joiner.merge( schemas.toArray( new WebIDLSchema[ 0 ] ) );
     final Validator validator = ValidatorTool.create();
     final Collection<ValidationError> errors = validator.validate( mergedSchema );
     if ( !errors.isEmpty() )
@@ -147,6 +152,22 @@ final class LoadCommand
     }
     else
     {
+      final SchemaProcessor p1 =
+        SchemaProcessorRegistry.createSchemaProcessor( "RemoveIncludes",
+                                                       Json.createObjectBuilder()
+                                                         .add( "interfacePattern", "^SVGAElement$" )
+                                                         .add( "mixinPattern", "^SVGURIReference$" )
+                                                         .build() );
+      final SchemaProcessor p2 =
+        SchemaProcessorRegistry.createSchemaProcessor( "ExtractExposureSet",
+                                                       Json.createObjectBuilder()
+                                                         .add( "globalInterface", "Window" )
+                                                         .build() );
+      final SchemaProcessor p3 =
+        SchemaProcessorRegistry.createSchemaProcessor( "Flatten",
+                                                       Json.createObjectBuilder().build() );
+
+      final WebIDLSchema flattenSchema = p3.transform( p2.transform( p1.transform( mergedSchema ) ) );
       return ExitCodes.SUCCESS_EXIT_CODE;
     }
   }

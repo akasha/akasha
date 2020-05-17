@@ -2,7 +2,7 @@ package org.realityforge.webtack;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.config.RepositoryConfig;
+import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 final class CommandContextImpl
   implements Command.Context

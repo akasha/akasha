@@ -14,8 +14,8 @@ import javax.annotation.Nonnull;
 import javax.lang.model.SourceVersion;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
-import org.realityforge.webtack.config.RepositoryConfig;
-import org.realityforge.webtack.config.SourceConfig;
+import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
+import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 
 final class AddCommand
   extends ConfigurableCommand

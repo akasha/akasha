@@ -32,11 +32,11 @@ import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
-import org.realityforge.webtack.config.RepositoryConfig;
-import org.realityforge.webtack.config.SourceConfig;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
+import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
+import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 
 final class FetchCommand
   extends ConfigurableCommand

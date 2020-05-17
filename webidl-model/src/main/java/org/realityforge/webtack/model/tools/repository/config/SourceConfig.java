@@ -1,13 +1,17 @@
-package org.realityforge.webtack.config;
+package org.realityforge.webtack.model.tools.repository.config;
 
 import java.util.List;
+import javax.annotation.Nullable;
 
-public class SourceConfig
+public final class SourceConfig
 {
   private String name;
+  @Nullable
   private String url;
+  @Nullable
   private String selector;
   private long lastModifiedTime;
+  @Nullable
   private List<String> tags;
 
   public String getName()
@@ -20,22 +24,24 @@ public class SourceConfig
     this.name = name;
   }
 
+  @Nullable
   public String getUrl()
   {
     return url;
   }
 
-  public void setUrl( final String url )
+  public void setUrl( @Nullable final String url )
   {
     this.url = url;
   }
 
+  @Nullable
   public String getSelector()
   {
     return selector;
   }
 
-  public void setSelector( final String selector )
+  public void setSelector( @Nullable final String selector )
   {
     this.selector = selector;
   }
@@ -50,12 +56,13 @@ public class SourceConfig
     this.lastModifiedTime = lastModifiedTime;
   }
 
+  @Nullable
   public List<String> getTags()
   {
     return tags;
   }
 
-  public void setTags( final List<String> tags )
+  public void setTags( @Nullable final List<String> tags )
   {
     this.tags = tags;
   }

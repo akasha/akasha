@@ -15,7 +15,7 @@ import org.realityforge.getopt4j.CLArgsParser;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.getopt4j.CLUtil;
-import org.realityforge.webtack.config.RepositoryConfig;
+import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 /**
  * The entry point in which to run the tool.

@@ -1,4 +1,4 @@
-package org.realityforge.webtack.config;
+package org.realityforge.webtack.model.tools.repository.config;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,31 +16,40 @@ import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 
-public class RepositoryConfig
+public final class RepositoryConfig
 {
   @Nonnull
   public static final String FILENAME = "sources.json";
-  @Nullable
-  private Path _configLocation;
-  @Nullable
-  private List<SourceConfig> _sources;
+  @Nonnull
+  private final Path _configLocation;
+  @Nonnull
+  private final List<SourceConfig> _sources;
+
+  RepositoryConfig( @Nonnull final Path configLocation, @Nonnull final List<SourceConfig> sources )
+  {
+    _configLocation = Objects.requireNonNull( configLocation );
+    _sources = Objects.requireNonNull( sources );
+  }
 
   @Nonnull
   public static RepositoryConfig load( @Nonnull final Path path )
     throws Exception
   {
-    final RepositoryConfig config = new RepositoryConfig();
-    config.setConfigLocation( path );
     final Jsonb jsonb = JsonbBuilder.create();
     try ( final FileInputStream inputStream = new FileInputStream( path.toFile() ) )
     {
       final List<SourceConfig> sources = jsonb.fromJson( inputStream, new ArrayList<SourceConfig>()
       {
       }.getClass().getGenericSuperclass() );
-      //TODO: Verify every source has a name
-      config.setSources( sources );
+      for ( final SourceConfig source : sources )
+      {
+        if ( null == source.getName() )
+        {
+          throw new IllegalConfigException( "Repository contains a source missing the name value" );
+        }
+      }
+      return new RepositoryConfig( path, sources );
     }
-    return config;
   }
 
   public static void save( @Nonnull final Path path, @Nonnull final RepositoryConfig config )
@@ -61,22 +70,15 @@ public class RepositoryConfig
     Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
   }
 
-  private void setConfigLocation( @Nonnull final Path configLocation )
-  {
-    _configLocation = Objects.requireNonNull( configLocation );
-  }
-
   @Nonnull
   public Path getConfigLocation()
   {
-    assert null != _configLocation;
     return _configLocation;
   }
 
   @Nonnull
   public List<SourceConfig> getSources()
   {
-    assert null != _sources;
     return _sources;
   }
 
@@ -84,10 +86,5 @@ public class RepositoryConfig
   public SourceConfig findSourceByName( @Nonnull final String sourceName )
   {
     return getSources().stream().filter( s -> Objects.equals( s.getName(), sourceName ) ).findAny().orElse( null );
-  }
-
-  private void setSources( @Nonnull final List<SourceConfig> sources )
-  {
-    _sources = Objects.requireNonNull( sources );
   }
 }

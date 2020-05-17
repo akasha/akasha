@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.logging.Level;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.config.RepositoryConfig;
+import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 abstract class Command
 {
