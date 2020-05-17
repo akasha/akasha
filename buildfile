@@ -51,8 +51,6 @@ define 'webtack' do
     package(:jar)
     package(:sources)
     package(:javadoc)
-
-    test.using :testng
   end
 
   define 'cli' do
