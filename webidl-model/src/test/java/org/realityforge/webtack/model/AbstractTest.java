@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import gir.io.FileUtil;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -17,10 +18,34 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import static org.testng.Assert.*;
 
 public abstract class AbstractTest
 {
+  @Nullable
+  private Path _workingDirectory;
+
+  @AfterTest
+  protected void afterTest()
+  {
+    if ( null != _workingDirectory )
+    {
+      FileUtil.deleteDirIfExists( _workingDirectory );
+    }
+  }
+
+  @Nonnull
+  protected final Path getWorkingDirectory()
+    throws Exception
+  {
+    if ( null == _workingDirectory )
+    {
+      _workingDirectory = FileUtil.createTempDir();
+    }
+    return _workingDirectory;
+  }
+
   protected final void assertArgument( @Nonnull final Argument argument,
                                        @Nonnull final String name,
                                        @Nonnull final Kind kind,
