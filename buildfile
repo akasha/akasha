@@ -46,6 +46,7 @@ define 'webtack' do
 
     test.using :testng
     test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/fixtures') }
+    test.compile.with :gir
 
     package(:jar)
     package(:sources)

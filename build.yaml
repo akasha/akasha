@@ -16,3 +16,5 @@ artifacts:
   javax_json: org.glassfish:javax.json:jar:1.1
 
   jsoup: org.jsoup:jsoup:jar:1.13.1
+
+  gir: org.realityforge.gir:gir-core:jar:0.11
