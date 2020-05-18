@@ -191,7 +191,7 @@ final class FetchCommand
         extractWebIDL( logger, source, file, tmpTarget );
         try
         {
-          RepositoryConfig.save( config.getConfigLocation(), config );
+          RepositoryConfig.save( config );
         }
         catch ( final Exception e )
         {

@@ -4,6 +4,7 @@ import gir.io.FileUtil;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
@@ -162,7 +163,7 @@ public final class RepositoryConfigTest
     Files.createDirectories( outputDir );
     final RepositoryConfig config = RepositoryConfig.load( file );
     final Path outputFile = outputDir.resolve( file.getName( file.getNameCount() - 1 ) );
-    RepositoryConfig.save( outputFile, config );
+    RepositoryConfig.save( new RepositoryConfig( outputFile, new ArrayList<>( config.getSources() ) ) );
     final String actualOutput = new String( Files.readAllBytes( outputFile ), StandardCharsets.UTF_8 );
     assertEquals( actualOutput, expectedOutput );
     return config;

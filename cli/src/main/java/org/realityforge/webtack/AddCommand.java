@@ -220,15 +220,14 @@ final class AddCommand
       source.setTags( _tags.stream().sorted().collect( Collectors.toList() ) );
     }
     config.getSources().add( source );
-    final Path configLocation = config.getConfigLocation();
     try
     {
-      RepositoryConfig.save( configLocation, config );
+      RepositoryConfig.save( config );
     }
     catch ( final Exception e )
     {
       final String message =
-        "Error: Failed to save config file " + configLocation + " after adding source " + _sourceUrl;
+        "Error: Failed to save config file " + config.getConfigLocation() + " after adding source " + _sourceUrl;
       logger.log( Level.SEVERE, message );
       return ExitCodes.ERROR_SAVING_CONFIG_CODE;
     }
@@ -242,12 +241,12 @@ final class AddCommand
         source.setUrl( null );
         try
         {
-          RepositoryConfig.save( configLocation, config );
+          RepositoryConfig.save( config );
         }
         catch ( final Exception e )
         {
           final String message =
-            "Error: Failed to save config file " + configLocation + " after removing url for " +
+            "Error: Failed to save config file " + config.getConfigLocation() + " after removing url for " +
             "source named " + _sourceName;
           logger.log( Level.SEVERE, message );
           return ExitCodes.ERROR_SAVING_CONFIG_CODE;

@@ -52,9 +52,10 @@ public final class RepositoryConfig
     }
   }
 
-  public static void save( @Nonnull final Path path, @Nonnull final RepositoryConfig config )
+  public static void save( @Nonnull final RepositoryConfig config )
     throws Exception
   {
+    final Path path = config.getConfigLocation();
     final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
     Files.createDirectories( path.getParent() );
     try ( final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
