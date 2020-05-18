@@ -192,7 +192,7 @@ final class AddCommand
       {
         final String message =
           "Error: Derived source name '" + candidate + "' from url " + _sourceUrl +
-          " is not valid Explicitly specify the name using the --name parameter";
+          " is not valid. Explicitly specify the name using the --name parameter";
         logger.log( Level.SEVERE, message );
         return ExitCodes.ERROR_BAD_SOURCE_NAME_DERIVED_CODE;
       }
