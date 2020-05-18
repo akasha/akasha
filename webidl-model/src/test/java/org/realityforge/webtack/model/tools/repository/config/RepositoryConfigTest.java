@@ -21,7 +21,7 @@ public final class RepositoryConfigTest
     final Path file = getWorkingDirectory().resolve( RepositoryConfig.FILENAME );
     FileUtil.write( file, "[]" );
 
-    final RepositoryConfig repository = load( file,"\n[\n]\n" );
+    final RepositoryConfig repository = load( file, "\n[\n]\n" );
 
     assertEquals( repository.getConfigLocation(), file );
     assertTrue( repository.getSources().isEmpty() );
