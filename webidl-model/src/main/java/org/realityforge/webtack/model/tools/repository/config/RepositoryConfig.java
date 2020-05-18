@@ -2,6 +2,7 @@ package org.realityforge.webtack.model.tools.repository.config;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -35,10 +36,9 @@ public final class RepositoryConfig
   public static RepositoryConfig load( @Nonnull final Path path )
     throws Exception
   {
-    final Jsonb jsonb = JsonbBuilder.create();
-    try ( final FileInputStream inputStream = new FileInputStream( path.toFile() ) )
+    try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
     {
-      final List<SourceConfig> sources = jsonb.fromJson( inputStream, new ArrayList<SourceConfig>()
+      final List<SourceConfig> sources = JsonbBuilder.create().fromJson( inputStream, new ArrayList<SourceConfig>()
       {
       }.getClass().getGenericSuperclass() );
       for ( final SourceConfig source : sources )
