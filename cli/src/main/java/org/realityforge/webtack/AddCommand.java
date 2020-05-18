@@ -2,7 +2,6 @@ package org.realityforge.webtack;
 
 import java.io.File;
 import java.net.URI;
-import java.nio.file.Path;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
