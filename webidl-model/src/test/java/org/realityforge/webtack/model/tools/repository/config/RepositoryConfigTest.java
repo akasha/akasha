@@ -35,10 +35,9 @@ public final class RepositoryConfigTest
     final Path file = getWorkingDirectory().resolve( RepositoryConfig.FILENAME );
     FileUtil.write( file, "[{}]" );
 
-    final IllegalConfigException exception =
-      expectThrows( IllegalConfigException.class, () -> RepositoryConfig.load( file ) );
-
-    assertEquals( exception.getMessage(), "Repository contains a source missing the name value" );
+    assertThrows( IllegalConfigException.class,
+                  "Repository contains a source missing the name value",
+                  () -> RepositoryConfig.load( file ) );
   }
 
   @Test
