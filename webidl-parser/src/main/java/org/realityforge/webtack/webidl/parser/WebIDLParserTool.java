@@ -34,9 +34,7 @@ public final class WebIDLParserTool
   {
     final ANTLRInputStream input = new ANTLRInputStream( reader );
     input.name = Objects.requireNonNull( name );
-    final WebIDLLexer lexer = new BailLexer( input );
-    final CommonTokenStream tokens = new CommonTokenStream( lexer );
-    return new WebIDLParser( tokens );
+    return new WebIDLParser( new CommonTokenStream( new BailLexer( input ) ) );
   }
 
   private static class BailLexer
