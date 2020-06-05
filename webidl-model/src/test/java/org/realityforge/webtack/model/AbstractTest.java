@@ -18,7 +18,7 @@ import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import static org.testng.Assert.*;
 
 public abstract class AbstractTest
@@ -26,8 +26,8 @@ public abstract class AbstractTest
   @Nullable
   private Path _workingDirectory;
 
-  @AfterTest
-  protected void afterTest()
+  @AfterMethod
+  protected void afterMethod()
   {
     if ( null != _workingDirectory )
     {
