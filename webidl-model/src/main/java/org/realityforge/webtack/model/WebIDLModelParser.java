@@ -1701,6 +1701,8 @@ public final class WebIDLModelParser
     throws IOException
   {
     final WebIDLParser parser = createParser( name, reader );
+    // Remove the default console listener and just use the supplied listener
+    parser.getErrorListeners().clear();
     parser.addErrorListener( errorListener );
     return parse( parser.webIDL() );
   }
