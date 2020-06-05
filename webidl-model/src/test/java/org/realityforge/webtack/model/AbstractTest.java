@@ -32,6 +32,7 @@ public abstract class AbstractTest
     if ( null != _workingDirectory )
     {
       FileUtil.deleteDirIfExists( _workingDirectory );
+      _workingDirectory = null;
     }
   }
 
