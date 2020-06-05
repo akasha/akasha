@@ -345,10 +345,11 @@ final class FetchCommand
   {
     final String sourceName = source.getName();
     final String url = source.getUrl();
+    assert null != url;
     try
     {
       final String lowerUrl = url.toLowerCase();
-      if ( lowerUrl.endsWith( ".idl" ) || lowerUrl.endsWith( ".webidl" ) )
+      if ( lowerUrl.endsWith( ".idl" ) || lowerUrl.endsWith( WebIDLSchema.EXTENSION ) )
       {
         if ( logger.isLoggable( Level.INFO ) )
         {

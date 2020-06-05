@@ -12,7 +12,7 @@ public final class IncludeValidatorTest
   @Test
   public void allElementsPresent()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "allElementsPresent.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "allElementsPresent" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getMixins().size(), 1 );
@@ -25,7 +25,7 @@ public final class IncludeValidatorTest
   @Test
   public void interfaceMissing()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "interfaceMissing.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "interfaceMissing" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getMixins().size(), 1 );
@@ -40,7 +40,7 @@ public final class IncludeValidatorTest
   @Test
   public void mixinMissing()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "mixinMissing.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "mixinMissing" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getMixins().size(), 0 );

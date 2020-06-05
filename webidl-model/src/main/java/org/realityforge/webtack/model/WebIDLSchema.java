@@ -15,6 +15,8 @@ public final class WebIDLSchema
   extends Node
 {
   @Nonnull
+  public static final String EXTENSION = ".webidl";
+  @Nonnull
   private final Map<String, CallbackDefinition> _callbacks;
   @Nonnull
   private final Map<String, CallbackInterfaceDefinition> _callbackInterfaces;

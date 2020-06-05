@@ -126,10 +126,11 @@ public abstract class AbstractTest
   {
     final String testDescription = label + " fixture test. Input=" + inputFilename + " Output=" + outputFilename;
 
-    final WebIDLSchema input = loadWebIDLSchema( dir.resolve( inputFilename ), testDescription );
+    final WebIDLSchema input =
+      loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
     final WebIDLSchema output = supplier.get().transform( input );
 
-    final Path outputFile = dir.resolve( outputFilename );
+    final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
     if ( writeOutputFixtures() )
     {
       try ( final Writer writer = new FileWriter( outputFile.toFile() ) )

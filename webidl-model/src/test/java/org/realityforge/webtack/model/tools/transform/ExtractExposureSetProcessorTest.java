@@ -14,18 +14,18 @@ public class ExtractExposureSetProcessorTest
     performFixtureTest( "ExposureSetExtractorProcessor - interface",
                         () -> new ExtractExposureSetProcessor( "other" ),
                         getTestLocalFixtureDir().resolve( "interface" ),
-                        "input.webidl",
-                        "output_other.webidl" );
+                        "input",
+                        "output_other" );
     performFixtureTest( "ExposureSetExtractorProcessor - interface",
                         () -> new ExtractExposureSetProcessor( "Window" ),
                         getTestLocalFixtureDir().resolve( "interface" ),
-                        "input.webidl",
-                        "output_window.webidl" );
+                        "input",
+                        "output_window" );
     performFixtureTest( "ExposureSetExtractorProcessor - interface",
                         () -> new ExtractExposureSetProcessor( "Worker" ),
                         getTestLocalFixtureDir().resolve( "interface" ),
-                        "input.webidl",
-                        "output_worker.webidl" );
+                        "input",
+                        "output_worker" );
   }
   @Test
   public void mixinTest()
@@ -34,18 +34,18 @@ public class ExtractExposureSetProcessorTest
     performFixtureTest( "ExposureSetExtractorProcessor - mixin",
                         () -> new ExtractExposureSetProcessor( "other" ),
                         getTestLocalFixtureDir().resolve( "mixin" ),
-                        "input.webidl",
-                        "output_other.webidl" );
+                        "input",
+                        "output_other" );
     performFixtureTest( "ExposureSetExtractorProcessor - mixin",
                         () -> new ExtractExposureSetProcessor( "Window" ),
                         getTestLocalFixtureDir().resolve( "mixin" ),
-                        "input.webidl",
-                        "output_window.webidl" );
+                        "input",
+                        "output_window" );
     performFixtureTest( "ExposureSetExtractorProcessor - mixin",
                         () -> new ExtractExposureSetProcessor( "Worker" ),
                         getTestLocalFixtureDir().resolve( "mixin" ),
-                        "input.webidl",
-                        "output_worker.webidl" );
+                        "input",
+                        "output_worker" );
   }
 
   @Test
@@ -55,18 +55,18 @@ public class ExtractExposureSetProcessorTest
     performFixtureTest( "ExposureSetExtractorProcessor - namespace",
                         () -> new ExtractExposureSetProcessor( "other" ),
                         getTestLocalFixtureDir().resolve( "namespace" ),
-                        "input.webidl",
-                        "output_other.webidl" );
+                        "input",
+                        "output_other" );
     performFixtureTest( "ExposureSetExtractorProcessor - namespace",
                         () -> new ExtractExposureSetProcessor( "Window" ),
                         getTestLocalFixtureDir().resolve( "namespace" ),
-                        "input.webidl",
-                        "output_window.webidl" );
+                        "input",
+                        "output_window" );
     performFixtureTest( "ExposureSetExtractorProcessor - namespace",
                         () -> new ExtractExposureSetProcessor( "Worker" ),
                         getTestLocalFixtureDir().resolve( "namespace" ),
-                        "input.webidl",
-                        "output_worker.webidl" );
+                        "input",
+                        "output_worker" );
   }
 
 
@@ -77,17 +77,17 @@ public class ExtractExposureSetProcessorTest
     performFixtureTest( "ExposureSetExtractorProcessor - callback_interface",
                         () -> new ExtractExposureSetProcessor( "other" ),
                         getTestLocalFixtureDir().resolve( "callback_interface" ),
-                        "input.webidl",
-                        "output_other.webidl" );
+                        "input",
+                        "output_other" );
     performFixtureTest( "ExposureSetExtractorProcessor - callback_interface",
                         () -> new ExtractExposureSetProcessor( "Window" ),
                         getTestLocalFixtureDir().resolve( "callback_interface" ),
-                        "input.webidl",
-                        "output_window.webidl" );
+                        "input",
+                        "output_window" );
     performFixtureTest( "ExposureSetExtractorProcessor - callback_interface",
                         () -> new ExtractExposureSetProcessor( "Worker" ),
                         getTestLocalFixtureDir().resolve( "callback_interface" ),
-                        "input.webidl",
-                        "output_worker.webidl" );
+                        "input",
+                        "output_worker" );
   }
 }

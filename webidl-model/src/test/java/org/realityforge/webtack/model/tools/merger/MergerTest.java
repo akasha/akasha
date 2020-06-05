@@ -38,7 +38,7 @@ public final class MergerTest
     for ( final Path file : Files.newDirectoryStream( dir ) )
     {
       final String localName = file.getName( file.getNameCount() - 1 ).toString();
-      if ( Files.isRegularFile( file ) && localName.startsWith( "input" ) && localName.endsWith( ".webidl" ) )
+      if ( Files.isRegularFile( file ) && localName.startsWith( "input" ) && localName.endsWith( WebIDLSchema.EXTENSION ) )
       {
         inputs.add( file );
       }
@@ -51,7 +51,7 @@ public final class MergerTest
 
     final WebIDLSchema output = new MergerTool().merge( schemas );
 
-    final Path outputFile = dir.resolve( "output.webidl" );
+    final Path outputFile = dir.resolve( "output" + WebIDLSchema.EXTENSION );
     if ( writeOutputFixtures() )
     {
       try ( final Writer writer = new FileWriter( outputFile.toFile() ) )

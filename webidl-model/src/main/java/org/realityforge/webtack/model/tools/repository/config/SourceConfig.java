@@ -1,14 +1,10 @@
 package org.realityforge.webtack.model.tools.repository.config;
 
 import java.util.List;
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class SourceConfig
 {
-  @Nonnull
-  public static final String IDL_SUFFIX = ".webidl";
-
   private String name;
   @Nullable
   private String url;

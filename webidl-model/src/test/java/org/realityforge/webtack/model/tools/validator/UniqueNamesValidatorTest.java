@@ -12,7 +12,7 @@ public final class UniqueNamesValidatorTest
   @Test
   public void allUnique()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "allUnique.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "allUnique" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getCallbacks().size(), 3 );
@@ -28,7 +28,7 @@ public final class UniqueNamesValidatorTest
   @Test
   public void typedefNonUnique()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "typedefNonUnique.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "typedefNonUnique" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getCallbacks().size(), 3 );
@@ -57,7 +57,7 @@ public final class UniqueNamesValidatorTest
   @Test
   public void interfaceNonUnique()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "interfaceNonUnique.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "interfaceNonUnique" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getCallbacks().size(), 3 );

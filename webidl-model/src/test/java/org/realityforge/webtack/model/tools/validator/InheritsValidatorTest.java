@@ -12,7 +12,7 @@ public final class InheritsValidatorTest
   @Test
   public void allInheritsPresent()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "allInheritsPresent.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "allInheritsPresent" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getDictionaries().size(), 3 );
@@ -24,7 +24,7 @@ public final class InheritsValidatorTest
   @Test
   public void missingDictionaryInherit()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "missingDictionaryInherit.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "missingDictionaryInherit" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getDictionaries().size(), 4 );
@@ -37,7 +37,7 @@ public final class InheritsValidatorTest
   @Test
   public void missingInterfaceInherit()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "missingInterfaceInherit.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "missingInterfaceInherit" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getInterfaces().size(), 4 );

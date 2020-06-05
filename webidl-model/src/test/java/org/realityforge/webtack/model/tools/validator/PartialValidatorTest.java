@@ -12,7 +12,7 @@ public final class PartialValidatorTest
   @Test
   public void allPartialsMatch()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "allPartialsMatch.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "allPartialsMatch" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getNamespaces().size(), 2 );
@@ -30,7 +30,7 @@ public final class PartialValidatorTest
   @Test
   public void dictionaryMissing()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "dictionaryMissing.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "dictionaryMissing" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getDictionaries().size(), 1 );
@@ -44,7 +44,7 @@ public final class PartialValidatorTest
   @Test
   public void interfaceMissing()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "interfaceMissing.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "interfaceMissing" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getInterfaces().size(), 1 );
@@ -58,7 +58,7 @@ public final class PartialValidatorTest
   @Test
   public void mixinMissing()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "mixinMissing.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "mixinMissing" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getMixins().size(), 1 );
@@ -72,7 +72,7 @@ public final class PartialValidatorTest
   @Test
   public void namespaceMissing()
   {
-    final WebIDLSchema schema = loadTestLocalSchema( "namespaceMissing.webidl" );
+    final WebIDLSchema schema = loadTestLocalSchema( "namespaceMissing" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
     assertEquals( schema.getNamespaces().size(), 1 );
