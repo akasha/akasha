@@ -15,7 +15,7 @@ public final class ValidationError
   @Nonnull
   private final String _message;
   /**
-   * Flag set to true if this error should stop latesr stages of validation from running.
+   * Flag set to true if this error should stop later stages of validation from running.
    * Typically this set when there is significant structural problems with the schema so subsequent validation
    * errors will likely result from this unless it is fixed.
    */
