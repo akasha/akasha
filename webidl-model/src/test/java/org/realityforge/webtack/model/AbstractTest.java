@@ -132,17 +132,23 @@ public abstract class AbstractTest
     final WebIDLSchema output = supplier.get().transform( input );
 
     final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
-    if ( writeOutputFixtures() )
-    {
-      try ( final Writer writer = new FileWriter( outputFile.toFile() ) )
-      {
-        WebIDLWriter.writeSchema( writer, output );
-      }
-    }
+    maybeWriteSchemaFixture( outputFile, output );
     assertTrue( Files.exists( outputFile ), "Expected output file missing for " + testDescription );
     final WebIDLSchema expected = loadWebIDLSchema( outputFile, testDescription );
     assertTrue( expected.equiv( output ),
                 "Expected output file for " + testDescription + " does not match value emitted by " + label );
+  }
+
+  protected final void maybeWriteSchemaFixture( @Nonnull final Path file, @Nonnull final WebIDLSchema schema )
+    throws IOException
+  {
+    if ( writeOutputFixtures() )
+    {
+      try ( final Writer writer = new FileWriter( file.toFile() ) )
+      {
+        WebIDLWriter.writeSchema( writer, schema );
+      }
+    }
   }
 
   protected final boolean writeOutputFixtures()
