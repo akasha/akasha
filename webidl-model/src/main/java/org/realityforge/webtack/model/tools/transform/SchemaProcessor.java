@@ -14,5 +14,6 @@ public interface SchemaProcessor
    * @param schema the input schema.
    * @return the output schema.
    */
-  WebIDLSchema transform( @Nonnull WebIDLSchema schema );
+  WebIDLSchema transform( @Nonnull WebIDLSchema schema )
+    throws Exception;
 }
