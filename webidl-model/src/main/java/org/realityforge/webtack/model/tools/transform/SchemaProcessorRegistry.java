@@ -16,6 +16,7 @@ public final class SchemaProcessorRegistry
         put( "ExtractExposureSet", ExtractExposureSetProcessor.Config.class );
         put( "RemoveIncludes", RemoveIncludesProcessor.Config.class );
         put( "Flatten", FlattenProcessor.Config.class );
+        put( "Validate", ValidatorProcessor.Config.class );
       }
     };
 
