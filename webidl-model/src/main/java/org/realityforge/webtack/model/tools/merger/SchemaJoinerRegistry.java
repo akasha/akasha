@@ -27,7 +27,7 @@ public final class SchemaJoinerRegistry
   }
 
   @Nonnull
-  public static SchemaJoiner createSchemaProcessor( @Nonnull final String name, @Nonnull final JsonObject config )
+  public static SchemaJoiner createSchemaJoiner( @Nonnull final String name, @Nonnull final JsonObject config )
   {
     final Class<? extends SchemaJoinerFactory> type = FACTORY_MAP.get( name );
     if ( null == type )
