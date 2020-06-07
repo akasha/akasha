@@ -10,12 +10,15 @@ import java.io.StringReader;
 import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Collection;
 import java.util.UUID;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
+import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -163,5 +166,32 @@ public abstract class AbstractTest
     final String fixtureDir = System.getProperty( key );
     assertNotNull( fixtureDir, "Expected System.getProperty( \"" + key + "\" ) to return fixture directory" );
     return new File( fixtureDir ).toPath();
+  }
+
+  protected final void assertErrorPresent( @Nonnull final Collection<ValidationError> errors,
+                                           @Nonnull final String message )
+  {
+    assertErrorPresent( errors, message, true );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  protected final void assertErrorPresent( @Nonnull final Collection<ValidationError> errors,
+                                           @Nonnull final String message,
+                                           final boolean halt )
+  {
+    assertTrue( errors.stream().anyMatch( e -> e.getMessage().equals( message ) && e.shouldHalt() == halt ),
+                "Failed to find error with message '" + message + "' and shouldHalt = " + halt + " in " +
+                asString( errors ) );
+  }
+
+  protected final void assertErrorCount( @Nonnull final Collection<ValidationError> errors, final int errorCount )
+  {
+    assertEquals( errors.size(), errorCount, "Errors: " + asString( errors ) );
+  }
+
+  @Nonnull
+  private String asString( @Nonnull final Collection<ValidationError> errors )
+  {
+    return "Errors:\n" + errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) );
   }
 }
