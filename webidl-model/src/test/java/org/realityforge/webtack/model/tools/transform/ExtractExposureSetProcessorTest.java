@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 public class ExtractExposureSetProcessorTest
   extends AbstractTest
 {
-
   @Test
   public void interfaceTest()
     throws Exception
@@ -27,6 +26,7 @@ public class ExtractExposureSetProcessorTest
                         "input",
                         "output_worker" );
   }
+
   @Test
   public void mixinTest()
     throws Exception
@@ -68,7 +68,6 @@ public class ExtractExposureSetProcessorTest
                         "input",
                         "output_worker" );
   }
-
 
   @Test
   public void callbackInterfaceTest()
