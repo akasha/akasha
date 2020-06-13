@@ -47,6 +47,7 @@ import org.realityforge.webtack.model.WebIDLSchema;
 public abstract class AbstractSchemaProcessor
   implements SchemaProcessor
 {
+  @Nullable
   @Override
   public WebIDLSchema transform( @Nonnull final WebIDLSchema schema )
   {

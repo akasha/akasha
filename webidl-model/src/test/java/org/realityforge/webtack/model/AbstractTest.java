@@ -133,6 +133,7 @@ public abstract class AbstractTest
     final WebIDLSchema input =
       loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
     final WebIDLSchema output = supplier.get().transform( input );
+    assertNotNull( output );
 
     final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
     maybeWriteSchemaFixture( outputFile, output );

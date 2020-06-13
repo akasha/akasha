@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model.tools.transform;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 /**
@@ -14,6 +15,7 @@ public interface SchemaProcessor
    * @param schema the input schema.
    * @return the output schema.
    */
+  @Nullable
   WebIDLSchema transform( @Nonnull WebIDLSchema schema )
     throws Exception;
 }
