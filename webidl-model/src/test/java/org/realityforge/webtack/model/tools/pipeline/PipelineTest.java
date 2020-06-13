@@ -22,19 +22,18 @@ public final class PipelineTest
   public void loadSchemas_sourceNotFetched()
     throws Exception
   {
-    final Path idlDirectory = getIdlDirectory();
     final TestProgressListener listener = new TestProgressListener();
 
     final String pipelineName = "main";
     final Pipeline pipeline =
-      buildPipeline( "[{\"name\": \"speech_api\"}]", pipelineName, "{\"stages\": []}", idlDirectory, listener );
+      buildPipeline( "[{\"name\": \"speech_api\"}]", pipelineName, "{\"stages\": []}", getIdlDirectory(), listener );
 
     final SourceNotFetchedException exception =
       expectThrows( SourceNotFetchedException.class, pipeline::loadSchemas );
 
     listener.assertContains( "onSourcesFiltered(main,[speech_api])" );
 
-    assertEquals( exception.getPipeline().getName(), pipelineName );
+    assertEquals( exception.getPipeline(), pipeline.getConfig() );
     assertEquals( exception.getSource().getName(), "speech_api" );
   }
 
@@ -42,22 +41,19 @@ public final class PipelineTest
   public void loadSchemas_badFormatSource()
     throws Exception
   {
-    final Path idlDirectory = getIdlDirectory();
     final TestProgressListener listener = new TestProgressListener();
 
-    final String pipelineName = "main";
     final Pipeline pipeline =
-      buildPipeline( "[{\"name\": \"speech_api\"}]", pipelineName, "{\"stages\": []}", idlDirectory, listener );
+      buildPipeline( "[{\"name\": \"speech_api\"}]", "main", "{\"stages\": []}", getIdlDirectory(), listener );
 
-    Files.write( idlDirectory.resolve( "speech_api" + WebIDLSchema.EXTENSION ),
-                 "interface BadData".getBytes( StandardCharsets.UTF_8 ) );
+    writeSchema( "speech_api", "interface BadData" );
 
     final InvalidFormatException exception =
       expectThrows( InvalidFormatException.class, pipeline::loadSchemas );
 
     listener.assertContains( "onSourcesFiltered(main,[speech_api])" );
 
-    assertEquals( exception.getPipeline().getName(), pipelineName );
+    assertEquals( exception.getPipeline(), pipeline.getConfig() );
     assertEquals( exception.getSource().getName(), "speech_api" );
     assertEquals( exception.getErrors().get( 0 ).getLine(), 1 );
     assertEquals( exception.getErrors().get( 0 ).getCharPositionInLine(), 17 );
@@ -68,15 +64,12 @@ public final class PipelineTest
   public void loadSchemas_IOErrorReadingSource()
     throws Exception
   {
-    final Path idlDirectory = getIdlDirectory();
     final TestProgressListener listener = new TestProgressListener();
 
-    final String pipelineName = "main";
     final Pipeline pipeline =
-      buildPipeline( "[{\"name\": \"speech_api\"}]", pipelineName, "{\"stages\": []}", idlDirectory, listener );
+      buildPipeline( "[{\"name\": \"speech_api\"}]", "main", "{\"stages\": []}", getIdlDirectory(), listener );
 
-    final Path sourceFile = idlDirectory.resolve( "speech_api" + WebIDLSchema.EXTENSION );
-    Files.write( sourceFile, "".getBytes( StandardCharsets.UTF_8 ) );
+    final Path sourceFile = writeSchema( "speech_api", "" );
 
     // Write only. Should result in error attempting to read
     Files.setPosixFilePermissions( sourceFile, Collections.singleton( PosixFilePermission.OWNER_WRITE ) );
@@ -85,7 +78,7 @@ public final class PipelineTest
 
     listener.assertContains( "onSourcesFiltered(main,[speech_api])" );
 
-    assertEquals( exception.getPipeline().getName(), pipelineName );
+    assertEquals( exception.getPipeline(), pipeline.getConfig() );
     assertEquals( exception.getSource().getName(), "speech_api" );
   }
 
@@ -93,14 +86,12 @@ public final class PipelineTest
   public void loadSchema_singleSchema()
     throws Exception
   {
-    final Path idlDirectory = getIdlDirectory();
     final TestProgressListener listener = new TestProgressListener();
 
-    final String pipelineName = "main";
     final Pipeline pipeline =
-      buildPipeline( "[{\"name\": \"speech_api\"}]", pipelineName, "{\"stages\": []}", idlDirectory, listener );
+      buildPipeline( "[{\"name\": \"speech_api\"}]", "main", "{\"stages\": []}", getIdlDirectory(), listener );
 
-    Files.write( idlDirectory.resolve( "speech_api" + WebIDLSchema.EXTENSION ), "".getBytes( StandardCharsets.UTF_8 ) );
+    writeSchema( "speech_api", "" );
 
     final List<WebIDLSchema> schemas = pipeline.loadSchemas();
 
@@ -114,19 +105,17 @@ public final class PipelineTest
   public void loadSchema_multipleSchema()
     throws Exception
   {
-    final Path idlDirectory = getIdlDirectory();
     final TestProgressListener listener = new TestProgressListener();
 
-    final String pipelineName = "main";
     final Pipeline pipeline =
       buildPipeline( "[{\"name\": \"speech_api\"},{\"name\": \"webxr\"}]",
-                     pipelineName,
+                     "main",
                      "{\"stages\": []}",
-                     idlDirectory,
+                     getIdlDirectory(),
                      listener );
 
-    Files.write( idlDirectory.resolve( "speech_api" + WebIDLSchema.EXTENSION ), "".getBytes( StandardCharsets.UTF_8 ) );
-    Files.write( idlDirectory.resolve( "webxr" + WebIDLSchema.EXTENSION ), "".getBytes( StandardCharsets.UTF_8 ) );
+    writeSchema( "speech_api", "" );
+    writeSchema( "webxr", "" );
 
     final List<WebIDLSchema> schemas = pipeline.loadSchemas();
 
@@ -158,6 +147,15 @@ public final class PipelineTest
                                   @Nonnull final TestProgressListener listener )
   {
     return new Pipeline( repository, config, new ExecutionContext( idlDirectory, listener ) );
+  }
+
+  @Nonnull
+  private Path writeSchema( @Nonnull final String name, @Nonnull final String content )
+    throws Exception
+  {
+    final Path file = getIdlDirectory().resolve( name + WebIDLSchema.EXTENSION );
+    Files.write( file, content.getBytes( StandardCharsets.UTF_8 ) );
+    return file;
   }
 
   @Nonnull
