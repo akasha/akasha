@@ -1,33 +1,34 @@
 package org.realityforge.webtack;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.json.Json;
+import javax.json.JsonObject;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.WebIDLSchema;
-import org.realityforge.webtack.model.tools.merger.SchemaJoiner;
-import org.realityforge.webtack.model.tools.merger.SchemaJoinerRegistry;
 import org.realityforge.webtack.model.tools.pipeline.ExecutionContext;
 import org.realityforge.webtack.model.tools.pipeline.InvalidFormatException;
 import org.realityforge.webtack.model.tools.pipeline.ParseError;
 import org.realityforge.webtack.model.tools.pipeline.Pipeline;
+import org.realityforge.webtack.model.tools.pipeline.PipelineException;
 import org.realityforge.webtack.model.tools.pipeline.SourceIOException;
 import org.realityforge.webtack.model.tools.pipeline.SourceNotFetchedException;
+import org.realityforge.webtack.model.tools.pipeline.StageProcessException;
 import org.realityforge.webtack.model.tools.pipeline.UnexpectedSourceException;
+import org.realityforge.webtack.model.tools.pipeline.UnknownStageConfigException;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
+import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
-import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
-import org.realityforge.webtack.model.tools.transform.SchemaProcessorRegistry;
+import org.realityforge.webtack.model.tools.transform.ValidationException;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
-import org.realityforge.webtack.model.tools.validator.Validator;
-import org.realityforge.webtack.model.tools.validator.ValidatorTool;
 
 final class LoadCommand
   extends ConfigurableCommand
@@ -62,10 +63,40 @@ final class LoadCommand
 
     final Pipeline pipeline = loadPipeline( context );
 
-    final List<WebIDLSchema> schemas;
     try
     {
-      schemas = pipeline.loadSchemas();
+      pipeline.process();
+      return ExitCodes.SUCCESS_EXIT_CODE;
+    }
+    catch ( final UnknownStageConfigException e )
+    {
+      final String message =
+        "Error: Pipeline configuration specified stage named '" + e.getStage().getName() +
+        "' but no such stage can be found.";
+      logger.log( Level.SEVERE, message );
+      return ExitCodes.ERROR_UNKNOWN_STAGE_CODE;
+    }
+    catch ( final StageProcessException e )
+    {
+      final Throwable cause = e.getCause();
+      if ( cause instanceof ValidationException )
+      {
+        for ( final ValidationError error : ( (ValidationException) cause ).getErrors() )
+        {
+          final List<SourceInterval> sourceLocations = error.getNode().getSourceLocations();
+          final String prefix = sourceLocations.isEmpty() ? "" : sourceLocations.get( 0 ).getStart().toString() + " ";
+          logger.log( error.shouldHalt() ? Level.SEVERE : Level.WARNING, prefix + error.getMessage() );
+        }
+        return ExitCodes.ERROR_SCHEMA_INVALID_CODE;
+      }
+      else
+      {
+        final String message =
+          "Error: Failed processing stage named '" + e.getStage().getName() +
+          "' with error: " + cause;
+        logger.log( Level.SEVERE, message, cause );
+        return ExitCodes.ERROR_FAILED_STAGE_PROCESS_CODE;
+      }
     }
     catch ( final SourceNotFetchedException e )
     {
@@ -108,41 +139,12 @@ final class LoadCommand
       logger.log( Level.SEVERE, message, e.getCause() );
       return ExitCodes.ERROR_EXIT_CODE;
     }
-
-    final SchemaJoiner joiner =
-      SchemaJoinerRegistry.createSchemaProcessor( "Merge", Json.createObjectBuilder().build() );
-    final WebIDLSchema mergedSchema = joiner.merge( schemas.toArray( new WebIDLSchema[ 0 ] ) );
-    final Validator validator = ValidatorTool.create();
-    final Collection<ValidationError> errors = validator.validate( mergedSchema );
-    if ( !errors.isEmpty() )
+    catch ( final PipelineException e )
     {
-      for ( final ValidationError error : errors )
-      {
-        final List<SourceInterval> sourceLocations = error.getNode().getSourceLocations();
-        final String prefix = sourceLocations.isEmpty() ? "" : sourceLocations.get( 0 ).getStart().toString() + " ";
-        logger.log( error.shouldHalt() ? Level.SEVERE : Level.WARNING, prefix + error.getMessage() );
-      }
-      return ExitCodes.ERROR_SCHEMA_INVALID_CODE;
-    }
-    else
-    {
-      final SchemaProcessor p1 =
-        SchemaProcessorRegistry.createSchemaProcessor( "RemoveIncludes",
-                                                       Json.createObjectBuilder()
-                                                         .add( "interfacePattern", "^SVGAElement$" )
-                                                         .add( "mixinPattern", "^SVGURIReference$" )
-                                                         .build() );
-      final SchemaProcessor p2 =
-        SchemaProcessorRegistry.createSchemaProcessor( "ExtractExposureSet",
-                                                       Json.createObjectBuilder()
-                                                         .add( "globalInterface", "Window" )
-                                                         .build() );
-      final SchemaProcessor p3 =
-        SchemaProcessorRegistry.createSchemaProcessor( "Flatten",
-                                                       Json.createObjectBuilder().build() );
-
-      final WebIDLSchema flattenSchema = p3.transform( p2.transform( p1.transform( mergedSchema ) ) );
-      return ExitCodes.SUCCESS_EXIT_CODE;
+      final String message =
+        "Error: Failed pipeline with the name '" + e.getPipeline().getName() + "' Error: " + e;
+      logger.log( Level.SEVERE, message, e );
+      return ExitCodes.ERROR_EXIT_CODE;
     }
   }
 
@@ -152,10 +154,50 @@ final class LoadCommand
     final RepositoryConfig config = context.config();
     final PipelineConfig pipeline = new PipelineConfig();
     pipeline.setName( "main" );
+    final List<StageConfig> stages = new ArrayList<>();
+    pipeline.setStages( stages );
+    stages.add( createStage( "Merge" ) );
+    stages.add( createStage( "Validate" ) );
+    stages.add( createStage( "RemoveIncludes",
+                             Json.createObjectBuilder()
+                               .add( "interfacePattern", "^SVGAElement$" )
+                               .add( "mixinPattern", "^SVGURIReference$" )
+                               .build() ) );
+    stages.add( createStage( "ExtractExposureSet",
+                             Json.createObjectBuilder()
+                               .add( "globalInterface", "Window" )
+                               .build() ) );
+    stages.add( createStage( "Flatten" ) );
+
     return new Pipeline( config,
                          pipeline,
                          new ExecutionContext( context.environment().webidlDirectory(),
                                                new ProgressListener( context.environment().logger() ) ) );
+  }
+
+  @Nonnull
+  private StageConfig createStage( @Nonnull final String name )
+  {
+    return createStage( name, Json.createObjectBuilder().build() );
+  }
+
+  @Nonnull
+  private StageConfig createStage( @Nonnull final String name, @Nonnull final JsonObject stageConfig )
+  {
+    return createStage( name, stageConfig, null );
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  @Nonnull
+  private StageConfig createStage( @Nonnull final String name,
+                                   @Nonnull final JsonObject stageConfig,
+                                   @Nullable final String sourceSelector )
+  {
+    final StageConfig stage = new StageConfig();
+    stage.setName( name );
+    stage.setConfig( stageConfig );
+    stage.setSourceSelector( sourceSelector );
+    return stage;
   }
 
   private static class ProgressListener

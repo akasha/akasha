@@ -18,6 +18,8 @@ final class ExitCodes
   static final int ERROR_REMOVING_EXISTING_IDL_CODE = 13;
   static final int ERROR_REMOVING_SOURCE_CODE = 14;
   static final int ERROR_SCHEMA_INVALID_CODE = 15;
+  static final int ERROR_UNKNOWN_STAGE_CODE = 16;
+  static final int ERROR_FAILED_STAGE_PROCESS_CODE = 17;
 
   private ExitCodes()
   {
