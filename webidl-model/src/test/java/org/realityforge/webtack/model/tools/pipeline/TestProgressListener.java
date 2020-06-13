@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
+import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import static org.testng.Assert.*;
 
@@ -29,6 +30,22 @@ final class TestProgressListener
                               @Nonnull final WebIDLSchema schema )
   {
     _trace.add( "onSourceParsed(" + pipeline.getName() + "," + source.getName() + ")" );
+  }
+
+  @Override
+  public void beforeStage( @Nonnull final PipelineConfig pipeline,
+                           @Nonnull final StageConfig stage,
+                           @Nonnull final List<WebIDLSchema> schemas )
+  {
+    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "), schemaCount=" + schemas.size() );
+  }
+
+  @Override
+  public void afterStage( @Nonnull final PipelineConfig pipeline,
+                          @Nonnull final StageConfig stage,
+                          @Nonnull final List<WebIDLSchema> schemas )
+  {
+    _trace.add( "afterStage(" + pipeline.getName() + "," + stage.getName() + "), schemaCount=" + schemas.size() );
   }
 
   @Nonnull

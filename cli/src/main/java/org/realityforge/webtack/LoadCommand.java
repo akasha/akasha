@@ -189,5 +189,33 @@ final class LoadCommand
                      "Pipeline named '" + pipeline.getName() + "' parsed source named '" + source.getName() + "'" );
       }
     }
+
+    @Override
+    public void beforeStage( @Nonnull final PipelineConfig pipeline,
+                             @Nonnull final StageConfig stage,
+                             @Nonnull final List<WebIDLSchema> schemas )
+    {
+      if ( _logger.isLoggable( Level.FINE ) )
+      {
+        _logger.log( Level.FINE,
+                     "Pipeline named '" + pipeline.getName() +
+                     "' is starting stage named '" + stage.getName() + "' with " +
+                     schemas.size() + " schemas as input." );
+      }
+    }
+
+    @Override
+    public void afterStage( @Nonnull final PipelineConfig pipeline,
+                            @Nonnull final StageConfig stage,
+                            @Nonnull final List<WebIDLSchema> schemas )
+    {
+      if ( _logger.isLoggable( Level.FINE ) )
+      {
+        _logger.log( Level.FINE,
+                     "Pipeline named '" + pipeline.getName() +
+                     "' completed stage named '" + stage.getName() + "' with " +
+                     schemas.size() + " schemas as output." );
+      }
+    }
   }
 }
