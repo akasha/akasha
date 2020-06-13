@@ -186,8 +186,7 @@ final class LoadCommand
       if ( _logger.isLoggable( Level.FINE ) )
       {
         _logger.log( Level.FINE,
-                     "Pipeline named '" + pipeline.getName() +
-                     "' parsed source named '" + source.getName() + "' sources to load'" );
+                     "Pipeline named '" + pipeline.getName() + "' parsed source named '" + source.getName() + "'" );
       }
     }
   }
