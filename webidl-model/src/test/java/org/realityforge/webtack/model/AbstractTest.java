@@ -8,9 +8,12 @@ import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Set;
 import java.util.UUID;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
@@ -153,6 +156,14 @@ public abstract class AbstractTest
         WebIDLWriter.writeSchema( writer, schema );
       }
     }
+  }
+
+  protected final void assertFileContents( @Nonnull final Path path, @Nonnull final String expected )
+    throws IOException
+  {
+    assertTrue( Files.exists( path ) );
+    assertEquals( new String( Files.readAllBytes( path ), StandardCharsets.UTF_8 ),
+                  expected );
   }
 
   protected final boolean writeOutputFixtures()
