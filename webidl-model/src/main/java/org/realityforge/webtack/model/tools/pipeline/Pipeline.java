@@ -5,17 +5,28 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.json.Json;
+import javax.json.JsonObject;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.merger.SchemaJoiner;
+import org.realityforge.webtack.model.tools.merger.SchemaJoinerRegistry;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
+import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
+import org.realityforge.webtack.model.tools.sink.SchemaAction;
+import org.realityforge.webtack.model.tools.sink.SchemaActionRegistry;
+import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
+import org.realityforge.webtack.model.tools.transform.SchemaProcessorRegistry;
 
 public final class Pipeline
 {
@@ -33,6 +44,134 @@ public final class Pipeline
     _repository = Objects.requireNonNull( repository );
     _pipeline = Objects.requireNonNull( pipeline );
     _context = Objects.requireNonNull( context );
+  }
+
+  @Nonnull
+  public RepositoryConfig getRepository()
+  {
+    return _repository;
+  }
+
+  @Nonnull
+  public PipelineConfig getConfig()
+  {
+    return _pipeline;
+  }
+
+  public void process()
+    throws PipelineException
+  {
+    processSchemas( loadSchemas() );
+  }
+
+  void processSchemas( @Nonnull final List<WebIDLSchema> initialSchemas )
+    throws PipelineException
+  {
+    final List<WebIDLSchema> current = new ArrayList<>( initialSchemas );
+
+    final List<StageConfig> stages = _pipeline.getStages();
+    for ( final StageConfig stage : stages )
+    {
+      final String name = stage.getName();
+      _context.getProgressListener().beforeStage( _pipeline, stage, current );
+
+      final String selector = stage.getSourceSelector();
+      final List<WebIDLSchema> resultSchema = new ArrayList<>();
+
+      if ( SchemaJoinerRegistry.isSchemaJoinerFactoryPresent( name ) )
+      {
+        final SchemaJoiner processor =
+          SchemaJoinerRegistry.createSchemaJoiner( name, getStageConfig( stage ) );
+        final List<WebIDLSchema> matchedSchema = new ArrayList<>();
+        final List<WebIDLSchema> unmatchedSchema = new ArrayList<>();
+        for ( final WebIDLSchema schema : current )
+        {
+          if ( isSchemaSelected( schema, selector ) )
+          {
+            matchedSchema.add( schema );
+          }
+          else
+          {
+            unmatchedSchema.add( schema );
+          }
+        }
+        try
+        {
+          resultSchema.add( processor.merge( matchedSchema.toArray( new WebIDLSchema[ 0 ] ) ) );
+        }
+        catch ( final Exception e )
+        {
+          throw new StageProcessException( _pipeline, stage, e );
+        }
+        resultSchema.addAll( unmatchedSchema );
+      }
+      else if ( SchemaProcessorRegistry.isSchemaProcessorFactoryPresent( name ) )
+      {
+        final SchemaProcessor processor =
+          SchemaProcessorRegistry.createSchemaProcessor( name, getStageConfig( stage ) );
+        for ( final WebIDLSchema schema : current )
+        {
+          if ( isSchemaSelected( schema, selector ) )
+          {
+            try
+            {
+              final WebIDLSchema output = processor.transform( schema );
+              if ( null != output )
+              {
+                resultSchema.add( output );
+              }
+            }
+            catch ( final Exception e )
+            {
+              throw new StageProcessException( _pipeline, stage, e );
+            }
+          }
+          else
+          {
+            resultSchema.add( schema );
+          }
+        }
+      }
+      else if ( SchemaActionRegistry.isSchemaActionFactoryPresent( name ) )
+      {
+        final SchemaAction action =
+          SchemaActionRegistry.createSchemaAction( name, getStageConfig( stage ) );
+        for ( final WebIDLSchema schema : current )
+        {
+          if ( isSchemaSelected( schema, selector ) )
+          {
+            try
+            {
+              action.process( schema );
+            }
+            catch ( final Exception e )
+            {
+              throw new StageProcessException( _pipeline, stage, e );
+            }
+          }
+          resultSchema.add( schema );
+        }
+      }
+      else
+      {
+        throw new UnknownStageConfigException( _pipeline, stage );
+      }
+      current.clear();
+      current.addAll( resultSchema );
+      _context.getProgressListener().afterStage( _pipeline, stage, current );
+    }
+  }
+
+  private boolean isSchemaSelected( @Nonnull final WebIDLSchema schema, @Nullable final String selector )
+  {
+    return selector == null;
+  }
+
+  @Nonnull
+  private JsonObject getStageConfig( @Nonnull final StageConfig stage )
+  {
+    final JsonObject config = stage.getConfig();
+    return null == config ? Json.createObjectBuilder().build() : config;
   }
 
   @Nonnull

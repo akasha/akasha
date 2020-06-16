@@ -19,6 +19,90 @@ public final class PipelineTest
   extends AbstractTest
 {
   @Test
+  public void processSchemas_singleSchemaProcessor()
+    throws Exception
+  {
+    final TestProgressListener listener = new TestProgressListener();
+
+    final Path output = getOutputFile( "%{name}" );
+    final Pipeline pipeline =
+      buildPipeline( "[{\"name\": \"speech_api\"},{\"name\": \"webxr\"}]",
+                     "main",
+                     "{\"stages\": [" +
+                     "    {\n" +
+                     "      \"name\": \"ExtractExposureSet\",\n" +
+                     "      \"config\": {\n" +
+                     "        \"globalInterface\": \"Window\"\n" +
+                     "      }\n" +
+                     "    },\n" +
+                     "    {\n" +
+                     "      \"name\": \"Emit\",\n" +
+                     "      \"config\": {\n" +
+                     "        \"filePattern\": \"" + output + "\"\n" +
+                     "      }\n" +
+                     "    }\n" +
+                     "]}",
+                     getIdlDirectory(),
+                     listener );
+
+    writeSchema( "speech_api",
+                 "[Exposed=(Window,Other)]\n" +
+                 "interface SpeechGrammar {\n" +
+                 "  attribute DOMString src;\n" +
+                 "  attribute float weight;\n" +
+                 "};\n" +
+                 "[Exposed=Worker]\n" +
+                 "interface SpeechGrammar2 {\n" +
+                 "  attribute DOMString src;\n" +
+                 "  attribute float weight;\n" +
+                 "};\n" );
+    writeSchema( "webxr",
+                 "[SecureContext, Exposed=Window]\n" +
+                 "interface XRFrame {\n" +
+                 "  [SameObject]\n" +
+                 "  readonly attribute XRSession session;\n" +
+                 "  XRPose? getPose( XRSpace space, XRSpace baseSpace );\n" +
+                 "  XRViewerPose? getViewerPose( XRReferenceSpace referenceSpace );\n" +
+                 "};\n" );
+
+    final List<WebIDLSchema> schemas = pipeline.loadSchemas();
+
+    assertEquals( listener.getTrace().size(), 3 );
+    listener.assertContains( "onSourcesFiltered(main,[speech_api, webxr])" );
+    listener.assertContains( "onSourceParsed(main,speech_api)" );
+    listener.assertContains( "onSourceParsed(main,webxr)" );
+
+    assertEquals( schemas.size(), 2 );
+
+    pipeline.processSchemas( schemas );
+
+    assertEquals( listener.getTrace().size(), 7 );
+    listener.assertContains( "beforeStage(main,ExtractExposureSet), schemaCount=2" );
+    listener.assertContains( "afterStage(main,ExtractExposureSet), schemaCount=2" );
+    listener.assertContains( "beforeStage(main,Emit), schemaCount=2" );
+    listener.assertContains( "afterStage(main,Emit), schemaCount=2" );
+
+    final Path output1 = getOutputDirectory().resolve( "speech_api.webidl" );
+    final Path output2 = getOutputDirectory().resolve( "webxr.webidl" );
+
+    assertFileContents( output1,
+                        "[Exposed=(Window,Other)]\n" +
+                        "interface SpeechGrammar {\n" +
+                        "  attribute DOMString src;\n" +
+                        "  attribute float weight;\n" +
+                        "};\n" );
+
+    assertFileContents( output2,
+                        "[SecureContext, Exposed=Window]\n" +
+                        "interface XRFrame {\n" +
+                        "  [SameObject]\n" +
+                        "  readonly attribute XRSession session;\n" +
+                        "  XRPose? getPose( XRSpace space, XRSpace baseSpace );\n" +
+                        "  XRViewerPose? getViewerPose( XRReferenceSpace referenceSpace );\n" +
+                        "};\n" );
+  }
+
+  @Test
   public void loadSchemas_sourceNotFetched()
     throws Exception
   {
