@@ -150,24 +150,6 @@ public final class PipelineTest
   }
 
   @Nonnull
-  private Path writeSchema( @Nonnull final String name, @Nonnull final String content )
-    throws Exception
-  {
-    final Path file = getIdlDirectory().resolve( name + WebIDLSchema.EXTENSION );
-    Files.write( file, content.getBytes( StandardCharsets.UTF_8 ) );
-    return file;
-  }
-
-  @Nonnull
-  private Path getIdlDirectory()
-    throws Exception
-  {
-    final Path idlDirectory = getWorkingDirectory().resolve( "idl" );
-    Files.createDirectories( idlDirectory );
-    return idlDirectory;
-  }
-
-  @Nonnull
   private PipelineConfig loadPipelineConfig( @Nonnull final String name, @Nonnull final String content )
     throws Exception
   {

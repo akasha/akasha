@@ -206,4 +206,38 @@ public abstract class AbstractTest
   {
     return "Errors:\n" + errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) );
   }
+
+  @Nonnull
+  protected final Path writeSchema( @Nonnull final String name, @Nonnull final String content )
+    throws Exception
+  {
+    final Path file = getIdlDirectory().resolve( name + WebIDLSchema.EXTENSION );
+    Files.write( file, content.getBytes( StandardCharsets.UTF_8 ) );
+    return file;
+  }
+
+  @Nonnull
+  protected final Path getOutputFile( @Nonnull final String filename )
+    throws Exception
+  {
+    return getOutputDirectory().resolve( filename + WebIDLSchema.EXTENSION );
+  }
+
+  @Nonnull
+  protected final Path getOutputDirectory()
+    throws Exception
+  {
+    final Path idlDirectory = getWorkingDirectory().resolve( "output" );
+    Files.createDirectories( idlDirectory );
+    return idlDirectory;
+  }
+
+  @Nonnull
+  protected final  Path getIdlDirectory()
+    throws Exception
+  {
+    final Path idlDirectory = getWorkingDirectory().resolve( "idl" );
+    Files.createDirectories( idlDirectory );
+    return idlDirectory;
+  }
 }
