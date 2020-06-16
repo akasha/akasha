@@ -44,6 +44,9 @@ import org.realityforge.webtack.model.WebIDLSchema;
 public final class FlattenProcessor
   implements SchemaProcessor
 {
+  @Nonnull
+  public static final String NAME = "Flatten";
+
   /**
    * Flatten two or more schemas into a single schema.
    *

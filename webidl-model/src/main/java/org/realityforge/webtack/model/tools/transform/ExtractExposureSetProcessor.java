@@ -29,9 +29,11 @@ public final class ExtractExposureSetProcessor
   extends AbstractSchemaProcessor
 {
   @Nonnull
+  public static final String NAME = "ExtractExposureSet";
+  @Nonnull
   private final String _globalInterface;
 
-  public ExtractExposureSetProcessor( @Nonnull final String globalInterface )
+  private ExtractExposureSetProcessor( @Nonnull final String globalInterface )
   {
     _globalInterface = Objects.requireNonNull( globalInterface );
   }

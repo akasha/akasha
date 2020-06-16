@@ -9,6 +9,13 @@ import org.realityforge.webtack.model.tools.validator.ValidatorTool;
 final class ValidatorProcessor
   implements SchemaProcessor
 {
+  @Nonnull
+  public static final String NAME = "Validate";
+
+  private ValidatorProcessor()
+  {
+  }
+
   @Override
   public WebIDLSchema transform( @Nonnull final WebIDLSchema schema )
     throws ValidationException

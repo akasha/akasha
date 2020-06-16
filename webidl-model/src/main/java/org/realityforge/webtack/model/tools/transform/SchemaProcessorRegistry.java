@@ -13,10 +13,10 @@ public final class SchemaProcessorRegistry
     new HashMap<String, Class<? extends SchemaProcessorFactory>>()
     {
       {
-        put( "ExtractExposureSet", ExtractExposureSetProcessor.Config.class );
-        put( "RemoveIncludes", RemoveIncludesProcessor.Config.class );
-        put( "Flatten", FlattenProcessor.Config.class );
-        put( "Validate", ValidatorProcessor.Config.class );
+        put( ExtractExposureSetProcessor.NAME, ExtractExposureSetProcessor.Config.class );
+        put( RemoveIncludesProcessor.NAME, RemoveIncludesProcessor.Config.class );
+        put( FlattenProcessor.NAME, FlattenProcessor.Config.class );
+        put( ValidatorProcessor.NAME, ValidatorProcessor.Config.class );
       }
     };
 

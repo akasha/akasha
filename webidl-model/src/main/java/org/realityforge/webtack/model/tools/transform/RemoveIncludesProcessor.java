@@ -13,11 +13,13 @@ public final class RemoveIncludesProcessor
   extends AbstractSchemaProcessor
 {
   @Nonnull
+  public static final String NAME = "RemoveIncludes";
+  @Nonnull
   private final Pattern _interfacePattern;
   @Nonnull
   private final Pattern _mixinPattern;
 
-  public RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
+  private RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
   {
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
