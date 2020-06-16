@@ -114,7 +114,8 @@ public final class FlattenProcessor
                              schema.getTypedefs()
                                .stream()
                                .collect( Collectors.toMap( TypedefDefinition::getName, Function.identity() ) ),
-                             schema.getSourceLocations() );
+                             schema.getSourceLocations(),
+                             schema.getTags() );
   }
 
   @Nonnull

@@ -36,7 +36,7 @@ public final class Pipeline
   }
 
   @Nonnull
-  public List<WebIDLSchema> loadSchemas()
+  List<WebIDLSchema> loadSchemas()
     throws SourceNotFetchedException, SourceIOException, UnexpectedSourceException, InvalidFormatException
   {
     final List<WebIDLSchema> schemas = new ArrayList<>();
@@ -83,9 +83,16 @@ public final class Pipeline
     {
       throw new SourceNotFetchedException( _pipeline, source );
     }
+    final Set<String> tags = new HashSet<>();
+    final List<String> sourceTags = source.getTags();
+    if ( null != sourceTags )
+    {
+      tags.addAll( sourceTags );
+    }
+    tags.add( "name=" + source.getName() );
     try ( final FileReader reader = new FileReader( sourcePath.toFile() ) )
     {
-      return WebIDLModelParser.parse( sourceName, reader, errorCollector );
+      return WebIDLModelParser.parse( sourceName, tags, reader, errorCollector );
     }
     catch ( final IOException ioe )
     {

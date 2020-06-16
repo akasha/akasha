@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.CallbackDefinition;
@@ -51,12 +53,14 @@ public final class MergerTool
     final Map<String, MixinDefinition> mixins = new HashMap<>();
     final Map<String, IncludesStatement> includes = new HashMap<>();
     final Map<String, NamespaceDefinition> namespaces = new HashMap<>();
+    //TODO: None of these partials are actually implemented in merging...
     final Map<String, List<PartialDictionaryDefinition>> partialDictionaries = new HashMap<>();
     final Map<String, List<PartialInterfaceDefinition>> partialInterfaces = new HashMap<>();
     final Map<String, List<PartialMixinDefinition>> partialMixins = new HashMap<>();
     final Map<String, List<PartialNamespaceDefinition>> partialNamespaces = new HashMap<>();
     final Map<String, TypedefDefinition> typedefs = new HashMap<>();
     final List<SourceInterval> sourceLocations = new ArrayList<>();
+    final Set<String> tags = new TreeSet<>();
 
     for ( final WebIDLSchema schema : schemas )
     {
@@ -97,6 +101,7 @@ public final class MergerTool
         addToCollection( "typedefs", typedefs, typedef.getName(), typedef );
       }
       sourceLocations.addAll( schema.getSourceLocations() );
+      tags.addAll( schema.getTags() );
     }
 
     return new WebIDLSchema( Collections.unmodifiableMap( callbacks ),
@@ -112,7 +117,8 @@ public final class MergerTool
                              Collections.unmodifiableMap( partialMixins ),
                              Collections.unmodifiableMap( partialNamespaces ),
                              Collections.unmodifiableMap( typedefs ),
-                             Collections.unmodifiableList( sourceLocations ) );
+                             Collections.unmodifiableList( sourceLocations ),
+                             tags );
   }
 
   private static <T extends Definition> void addToCollection( @Nonnull final String collectionName,

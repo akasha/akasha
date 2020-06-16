@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
@@ -82,7 +83,14 @@ public abstract class AbstractSchemaProcessor
                              partialMixins,
                              partialNamespaces,
                              typedefs,
-                             transformSourceLocations( schema.getSourceLocations() ) );
+                             transformSourceLocations( schema.getSourceLocations() ),
+                             transformTags( schema ) );
+  }
+
+  @Nonnull
+  protected Set<String> transformTags( @Nonnull final WebIDLSchema schema )
+  {
+    return schema.getTags();
   }
 
   @Nonnull

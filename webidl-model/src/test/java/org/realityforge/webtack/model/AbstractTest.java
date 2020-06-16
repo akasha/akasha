@@ -106,10 +106,18 @@ public abstract class AbstractTest
   @Nonnull
   protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file, @Nullable final String testDescription )
   {
+    return loadWebIDLSchema( file, Collections.emptySet(), testDescription );
+  }
+
+  @Nonnull
+  protected final WebIDLSchema loadWebIDLSchema( @Nonnull final Path file,
+                                                 @Nonnull final Set<String> tags,
+                                                 @Nullable final String testDescription )
+  {
     final String filename = file.toString();
     try ( final Reader reader = new FileReader( file.toFile() ) )
     {
-      return WebIDLModelParser.parse( filename, reader, new BailErrorListener( filename ) );
+      return WebIDLModelParser.parse( filename, tags, reader, new BailErrorListener( filename ) );
     }
     catch ( final IOException ioe )
     {

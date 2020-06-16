@@ -38,7 +38,9 @@ public final class MergerTest
     for ( final Path file : Files.newDirectoryStream( dir ) )
     {
       final String localName = file.getName( file.getNameCount() - 1 ).toString();
-      if ( Files.isRegularFile( file ) && localName.startsWith( "input" ) && localName.endsWith( WebIDLSchema.EXTENSION ) )
+      if ( Files.isRegularFile( file ) &&
+           localName.startsWith( "input" ) &&
+           localName.endsWith( WebIDLSchema.EXTENSION ) )
       {
         inputs.add( file );
       }
@@ -47,9 +49,22 @@ public final class MergerTest
     final String testDescription = "MergeTool fixture test. Inputs=" + inputs;
 
     final WebIDLSchema[] schemas =
-      inputs.stream().map( input -> loadWebIDLSchema( input, testDescription ) ).toArray( WebIDLSchema[]::new );
+      inputs.stream()
+        .map( input -> loadWebIDLSchema( input,
+                                         Collections.singleton( "name=" + input.getFileName().toString() ),
+                                         testDescription ) )
+        .toArray( WebIDLSchema[]::new );
 
     final WebIDLSchema output = new MergerTool().merge( schemas );
+
+    assertEquals( output.getTags().size(), inputs.size() );
+    for ( final Path input : inputs )
+    {
+      final String expected = "name=" + input.getFileName().toString();
+      assertTrue( output.getTags().contains( expected ),
+                  "Actual tags=" + output.getTags() + " " +
+                  "Desired tag=" + expected );
+    }
 
     final Path outputFile = dir.resolve( "output" + WebIDLSchema.EXTENSION );
     if ( writeOutputFixtures() )

@@ -2,6 +2,9 @@ package org.realityforge.webtack.model;
 
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.annotations.Test;
@@ -268,8 +271,10 @@ public final class WebIDLSchemaTest
              "dictionary XRReferenceSpaceEventInit : EventInit {\n" +
              "  required XRReferenceSpace referenceSpace;\n" +
              "  XRRigidTransform transform;\n" +
-             "};" );
+             "};",
+             new HashSet<>( Arrays.asList( "name=xr", "size=big" ) ) );
 
+    assertEquals( schema.getTags().size(), 2 );
     assertEquals( schema.getCallbacks().size(), 1 );
     assertEquals( schema.getCallbackInterfaces().size(), 0 );
     assertEquals( schema.getTypedefs().size(), 1 );
@@ -287,11 +292,12 @@ public final class WebIDLSchemaTest
 
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
-  private WebIDLSchema parse( @Nonnull final String webIDL )
+  private WebIDLSchema parse( @Nonnull final String webIDL,
+                              @Nonnull final Set<String> tags )
     throws IOException
   {
     final WebIDLParser.WebIDLContext ctx = createParser( webIDL ).webIDL();
-    final WebIDLSchema actual = WebIDLModelParser.parse( ctx );
+    final WebIDLSchema actual = WebIDLModelParser.parse( ctx, tags );
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 
@@ -299,7 +305,8 @@ public final class WebIDLSchemaTest
     WebIDLWriter.writeSchema( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
-    final WebIDLSchema element = WebIDLModelParser.parse( createParser( emittedIDL ).webIDL() );
+    final WebIDLSchema element =
+      WebIDLModelParser.parse( createParser( emittedIDL ).webIDL(), tags );
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );
 

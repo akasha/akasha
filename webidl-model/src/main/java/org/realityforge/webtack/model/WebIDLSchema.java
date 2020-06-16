@@ -17,6 +17,8 @@ public final class WebIDLSchema
   @Nonnull
   public static final String EXTENSION = ".webidl";
   @Nonnull
+  private final Set<String> _tags;
+  @Nonnull
   private final Map<String, CallbackDefinition> _callbacks;
   @Nonnull
   private final Map<String, CallbackInterfaceDefinition> _callbackInterfaces;
@@ -56,9 +58,11 @@ public final class WebIDLSchema
                        @Nonnull final Map<String, List<PartialMixinDefinition>> partialMixins,
                        @Nonnull final Map<String, List<PartialNamespaceDefinition>> partialNamespaces,
                        @Nonnull final Map<String, TypedefDefinition> typedefs,
-                       @Nonnull final List<SourceInterval> sourceLocations )
+                       @Nonnull final List<SourceInterval> sourceLocations,
+                       @Nonnull final Set<String> tags )
   {
     super( sourceLocations );
+    _tags = Objects.requireNonNull( tags );
     _callbacks = Objects.requireNonNull( callbacks );
     _callbackInterfaces = Objects.requireNonNull( callbackInterfaces );
     _dictionaries = Objects.requireNonNull( dictionaries );
@@ -72,6 +76,12 @@ public final class WebIDLSchema
     _partialMixins = Objects.requireNonNull( partialMixins );
     _partialNamespaces = Objects.requireNonNull( partialNamespaces );
     _typedefs = Objects.requireNonNull( typedefs );
+  }
+
+  @Nonnull
+  public Set<String> getTags()
+  {
+    return _tags;
   }
 
   public boolean isEmpty()
@@ -264,7 +274,8 @@ public final class WebIDLSchema
     else
     {
       final WebIDLSchema other = (WebIDLSchema) o;
-      return _callbacks.equals( other._callbacks ) &&
+      return _tags.equals( other._tags ) &&
+             _callbacks.equals( other._callbacks ) &&
              _callbackInterfaces.equals( other._callbackInterfaces ) &&
              _dictionaries.equals( other._dictionaries ) &&
              _enumerations.equals( other._enumerations ) &&
@@ -283,7 +294,8 @@ public final class WebIDLSchema
   @Override
   public int hashCode()
   {
-    return Objects.hash( _callbacks,
+    return Objects.hash( _tags,
+                         _callbacks,
                          _callbackInterfaces,
                          _dictionaries,
                          _enumerations,

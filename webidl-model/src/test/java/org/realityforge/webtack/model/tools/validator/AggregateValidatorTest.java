@@ -76,6 +76,7 @@ public final class AggregateValidatorTest
                              Collections.emptyMap(),
                              Collections.emptyMap(),
                              Collections.emptyMap(),
-                             Collections.emptyList() );
+                             Collections.emptyList(),
+                             Collections.emptySet() );
   }
 }

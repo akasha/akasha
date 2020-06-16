@@ -55,7 +55,8 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static WebIDLSchema parse( @Nonnull final WebIDLParser.WebIDLContext ctx )
+  static WebIDLSchema parse( @Nonnull final WebIDLParser.WebIDLContext ctx,
+                             @Nonnull final Set<String> tags )
   {
     final List<Definition> definitions = parse( ctx.definitions() );
 
@@ -155,7 +156,8 @@ public final class WebIDLModelParser
                              Collections.unmodifiableMap( partialMixins ),
                              Collections.unmodifiableMap( partialNamespaces ),
                              Collections.unmodifiableMap( typedefs ),
-                             Collections.unmodifiableList( Collections.singletonList( parseSourceInterval( ctx ) ) ) );
+                             Collections.unmodifiableList( Collections.singletonList( parseSourceInterval( ctx ) ) ),
+                             tags );
   }
 
   private static <T extends Definition> void addToCollection( @Nonnull final String collectionName,
@@ -1696,6 +1698,7 @@ public final class WebIDLModelParser
 
   @Nonnull
   public static WebIDLSchema parse( @Nonnull final String name,
+                                    @Nonnull final Set<String> tags,
                                     @Nonnull final Reader reader,
                                     @Nonnull final ANTLRErrorListener errorListener )
     throws IOException
@@ -1704,6 +1707,6 @@ public final class WebIDLModelParser
     // Remove the default console listener and just use the supplied listener
     parser.getErrorListeners().clear();
     parser.addErrorListener( errorListener );
-    return parse( parser.webIDL() );
+    return parse( parser.webIDL(), tags );
   }
 }

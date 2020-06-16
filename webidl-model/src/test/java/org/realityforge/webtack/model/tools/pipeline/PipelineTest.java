@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.attribute.PosixFilePermission;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
@@ -98,6 +99,37 @@ public final class PipelineTest
     listener.assertContains( "onSourceParsed(main,speech_api)" );
 
     assertEquals( schemas.size(), 1 );
+    final Set<String> tags = schemas.get( 0 ).getTags();
+    assertEquals( tags.size(), 1 );
+    assertTrue( tags.contains( "name=speech_api" ) );
+  }
+
+  @Test
+  public void loadSchema_mergedTags()
+    throws Exception
+  {
+    final TestProgressListener listener = new TestProgressListener();
+
+    final Pipeline pipeline =
+      buildPipeline( "[{\"name\": \"speech_api\", \"tags\":[\"z\", \"a\"]}]",
+                     "main",
+                     "{\"stages\": []}",
+                     getIdlDirectory(),
+                     listener );
+
+    writeSchema( "speech_api", "" );
+
+    final List<WebIDLSchema> schemas = pipeline.loadSchemas();
+
+    listener.assertContains( "onSourcesFiltered(main,[speech_api])" );
+    listener.assertContains( "onSourceParsed(main,speech_api)" );
+
+    assertEquals( schemas.size(), 1 );
+    final Set<String> tags = schemas.get( 0 ).getTags();
+    assertEquals( tags.size(), 3 );
+    assertTrue( tags.contains( "name=speech_api" ) );
+    assertTrue( tags.contains( "a" ) );
+    assertTrue( tags.contains( "z" ) );
   }
 
   @Test

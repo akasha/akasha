@@ -17,6 +17,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -188,6 +190,7 @@ final class FetchCommand
           throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_EXISTING_IDL_CODE );
         }
 
+        final List<String> sourceTags = source.getTags();
         extractWebIDL( logger, source, file, tmpTarget );
         try
         {
@@ -216,11 +219,14 @@ final class FetchCommand
         }
         else
         {
+          final Set<String> tags =
+            null == sourceTags ? Collections.emptySet() : Collections.unmodifiableSet( new HashSet<>( sourceTags ) );
+
           final WebIDLSchema schema;
           try ( final FileReader reader = new FileReader( tmpTarget.toFile() ) )
           {
             final CountingConsoleErrorListener errorListener = new CountingConsoleErrorListener( tmpTarget.toString() );
-            schema = WebIDLModelParser.parse( tmpTarget.toString(), reader, errorListener );
+            schema = WebIDLModelParser.parse( tmpTarget.toString(), tags, reader, errorListener );
 
             final int errorCount = errorListener.getErrorCount();
             if ( 0 == errorCount )
@@ -275,7 +281,7 @@ final class FetchCommand
           try ( final FileReader reader = new FileReader( target.toFile() ) )
           {
             final WebIDLSchema reloadedSchema =
-              WebIDLModelParser.parse( target.toString(), reader, errorListener );
+              WebIDLModelParser.parse( target.toString(), tags, reader, errorListener );
             if ( !reloadedSchema.equiv( schema ) )
             {
               final String message =
