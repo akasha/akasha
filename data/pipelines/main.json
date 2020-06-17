@@ -1,8 +1,13 @@
 {
   "stages": [
     {
+      "name": "Merge"
+    },
+    {
+      "name": "Validate"
+    },
+    {
       "name": "RemoveIncludes",
-      "sourceSelector": "name=svg2",
       "config": {
         "interfacePattern": "^SVGAElement$",
         "mixinPattern": "^SVGURIReference$"
@@ -13,9 +18,6 @@
       "config": {
         "globalInterface": "Window"
       }
-    },
-    {
-      "name": "Merge"
     },
     {
       "name": "Flatten"
