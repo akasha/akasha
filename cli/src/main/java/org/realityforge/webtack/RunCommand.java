@@ -28,20 +28,20 @@ import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.transform.ValidationException;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 
-final class LoadCommand
+final class RunCommand
   extends ConfigurableCommand
 {
   @Nonnull
-  static final String COMMAND = "load";
+  static final String COMMAND = "run";
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
     };
   @Nullable
   private String _pipelineName;
 
-  LoadCommand()
+  RunCommand()
   {
-    super( COMMAND, "Load that the WebIDL source and verify that it is semantically valid", OPTIONS );
+    super( COMMAND, "Run a pipeline task", OPTIONS );
   }
 
   @Override
