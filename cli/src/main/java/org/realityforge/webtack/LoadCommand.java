@@ -1,14 +1,13 @@
 package org.realityforge.webtack;
 
-import java.util.ArrayList;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.json.Json;
-import javax.json.JsonObject;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.model.SourceInterval;
@@ -25,7 +24,6 @@ import org.realityforge.webtack.model.tools.pipeline.UnexpectedSourceException;
 import org.realityforge.webtack.model.tools.pipeline.UnknownStageConfigException;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
-import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.transform.ValidationException;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
@@ -38,6 +36,8 @@ final class LoadCommand
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
     };
+  @Nullable
+  private String _pipelineName;
 
   LoadCommand()
   {
@@ -50,7 +50,26 @@ final class LoadCommand
     for ( final CLOption option : arguments )
     {
       assert CLOption.TEXT_ARGUMENT == option.getId();
-      //TODO: Get pipline name here
+      final String argument = option.getArgument();
+      if ( null == _pipelineName )
+      {
+        _pipelineName = argument;
+      }
+      else
+      {
+        final String message =
+          "Error: Attempted to specify multiple pipeline arguments.\n" +
+          "\tSpecified pipeline: " + _pipelineName + "\n" +
+          "\tUnexpected parameter: " + argument;
+        environment.logger().log( Level.SEVERE, message );
+        return false;
+      }
+    }
+
+    if ( null == _pipelineName )
+    {
+      environment.logger().log( Level.SEVERE, "Error: Failed to specify the pipeline to process" );
+      return false;
     }
 
     return true;
@@ -60,13 +79,18 @@ final class LoadCommand
   int run( @Nonnull final Context context )
   {
     final Logger logger = context.environment().logger();
-
-    final Pipeline pipeline = loadPipeline( context );
-
     try
     {
-      pipeline.process();
-      return ExitCodes.SUCCESS_EXIT_CODE;
+      final Pipeline pipeline = loadPipeline( context );
+      if ( null == pipeline )
+      {
+        return ExitCodes.ERROR_BAD_PIPELINE_CODE;
+      }
+      else
+      {
+        pipeline.process();
+        return ExitCodes.SUCCESS_EXIT_CODE;
+      }
     }
     catch ( final UnknownStageConfigException e )
     {
@@ -148,56 +172,38 @@ final class LoadCommand
     }
   }
 
-  @Nonnull
+  @Nullable
   private Pipeline loadPipeline( @Nonnull final Context context )
   {
-    final RepositoryConfig config = context.config();
-    final PipelineConfig pipeline = new PipelineConfig();
-    pipeline.setName( "main" );
-    final List<StageConfig> stages = new ArrayList<>();
-    pipeline.setStages( stages );
-    stages.add( createStage( "Merge" ) );
-    stages.add( createStage( "Validate" ) );
-    stages.add( createStage( "RemoveIncludes",
-                             Json.createObjectBuilder()
-                               .add( "interfacePattern", "^SVGAElement$" )
-                               .add( "mixinPattern", "^SVGURIReference$" )
-                               .build() ) );
-    stages.add( createStage( "ExtractExposureSet",
-                             Json.createObjectBuilder()
-                               .add( "globalInterface", "Window" )
-                               .build() ) );
-    stages.add( createStage( "Flatten" ) );
-
-    return new Pipeline( config,
-                         pipeline,
-                         new ExecutionContext( context.environment().webidlDirectory(),
-                                               new ProgressListener( context.environment().logger() ) ) );
-  }
-
-  @Nonnull
-  private StageConfig createStage( @Nonnull final String name )
-  {
-    return createStage( name, Json.createObjectBuilder().build() );
-  }
-
-  @Nonnull
-  private StageConfig createStage( @Nonnull final String name, @Nonnull final JsonObject stageConfig )
-  {
-    return createStage( name, stageConfig, null );
-  }
-
-  @SuppressWarnings( "SameParameterValue" )
-  @Nonnull
-  private StageConfig createStage( @Nonnull final String name,
-                                   @Nonnull final JsonObject stageConfig,
-                                   @Nullable final String sourceSelector )
-  {
-    final StageConfig stage = new StageConfig();
-    stage.setName( name );
-    stage.setConfig( stageConfig );
-    stage.setSourceSelector( sourceSelector );
-    return stage;
+    final Path pipelineFile =
+      context.environment().currentDirectory().resolve( "pipelines" ).resolve( _pipelineName + ".json" );
+    if ( !Files.exists( pipelineFile ) )
+    {
+      final String message =
+        "Error: Error attempting to load pipeline named '" + _pipelineName +
+        "' from " + pipelineFile + " but file does not exist";
+      context.environment().logger().log( Level.SEVERE, message );
+      return null;
+    }
+    else
+    {
+      try
+      {
+        final PipelineConfig pipeline = PipelineConfig.load( pipelineFile );
+        return new Pipeline( context.config(),
+                             pipeline,
+                             new ExecutionContext( context.environment().webidlDirectory(),
+                                                   new ProgressListener( context.environment().logger() ) ) );
+      }
+      catch ( final Exception e )
+      {
+        final String message =
+          "Error: Error attempting to load pipeline named '" + _pipelineName +
+          "' from " + pipelineFile + " Error: " + e;
+        context.environment().logger().log( Level.SEVERE, message, e );
+        return null;
+      }
+    }
   }
 
   private static class ProgressListener
