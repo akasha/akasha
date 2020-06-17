@@ -47,7 +47,7 @@ abstract class ConfigurableCommand
     }
     // Get a list of parsed options
     final List<CLOption> arguments = parser.getArguments();
-    final ArrayList<CLOption> argumentsToProcess = new ArrayList<>( arguments );
+    final List<CLOption> argumentsToProcess = new ArrayList<>( arguments );
     for ( final CLOption option : arguments )
     {
       if ( HELP_OPT == option.getId() )
