@@ -228,12 +228,9 @@ public class Main
       return false;
     }
     final String[] unParsedArgs = parser.getUnParsedArgs();
-    if ( unParsedArgs.length > 0 )
+    if ( !environment.getCommand().processOptions( environment, unParsedArgs ) )
     {
-      if ( !environment.getCommand().processOptions( environment, unParsedArgs ) )
-      {
-        return false;
-      }
+      return false;
     }
 
     if ( environment.hasConfigFile() && environment.getCommand().requireConfigFile() )
