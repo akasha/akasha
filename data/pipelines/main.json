@@ -21,6 +21,12 @@
     },
     {
       "name": "Flatten"
+    },
+    {
+      "name": "Emit",
+      "config": {
+        "filePattern": "data/output/complete.webidl"
+      }
     }
   ]
 }

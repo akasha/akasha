@@ -4,6 +4,7 @@
 /Gemfile.lock
 /_buildr.rb
 /data/idl/*.html
+/data/output
 /tmp
 /*/generated
 /reports
