@@ -1,6 +1,9 @@
 package org.realityforge.webtack.model.tools.sink;
 
 import java.io.FileWriter;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -14,7 +17,6 @@ public final class EmitAction
 {
   @Nonnull
   public static final String NAME = "Emit";
-
   @Nonnull
   private final String _filePattern;
 
@@ -27,7 +29,13 @@ public final class EmitAction
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    try ( final FileWriter writer = new FileWriter( getFilename( schema ) ) )
+    final Path path = Paths.get( getFilename( schema ) );
+    final Path dir = path.getParent();
+    if ( Files.notExists( dir ) )
+    {
+      Files.createDirectories( dir );
+    }
+    try ( final FileWriter writer = new FileWriter( path.toFile() ) )
     {
       WebIDLWriter.writeSchema( writer, schema );
     }
