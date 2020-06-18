@@ -22,8 +22,8 @@ task "data:force_fetch" do
   end
 end
 
-task "data:load" do
+task "data:run_simple_pipeline" do
   in_dir(WORKSPACE_DIR) do
-    run_webtack(%w(--verbose -d data load))
+    run_webtack(%w(--verbose -d data run main))
   end
 end
