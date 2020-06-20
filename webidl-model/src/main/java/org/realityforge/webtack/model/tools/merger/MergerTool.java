@@ -28,7 +28,7 @@ import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
-public final class MergerTool
+final class MergerTool
   implements SchemaJoiner
 {
   /**
@@ -148,16 +148,5 @@ public final class MergerTool
       .stream()
       .map( l -> l.getStart().toString() )
       .collect( Collectors.joining( delimiter ) );
-  }
-
-  public static final class Config
-    implements SchemaJoinerFactory
-  {
-    @Nonnull
-    @Override
-    public SchemaJoiner create()
-    {
-      return new MergerTool();
-    }
   }
 }
