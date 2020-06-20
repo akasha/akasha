@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.merger;
+package org.realityforge.webtack.model.tools.combiners.merge;
 
 import java.io.FileWriter;
 import java.io.Writer;
@@ -8,13 +8,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
+import javax.json.Json;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
+import org.realityforge.webtack.model.tools.spi.Combiner;
+import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public final class MergerTest
+public final class MergeTest
   extends AbstractTest
 {
   @Test
@@ -46,7 +49,7 @@ public final class MergerTest
       }
     }
     Collections.sort( inputs );
-    final String testDescription = "MergeTool fixture test. Inputs=" + inputs;
+    final String testDescription = "Merge fixture test. Inputs=" + inputs;
 
     final WebIDLSchema[] schemas =
       inputs.stream()
@@ -55,7 +58,7 @@ public final class MergerTest
                                          testDescription ) )
         .toArray( WebIDLSchema[]::new );
 
-    final WebIDLSchema output = new MergeCombiner().combine( schemas );
+    final WebIDLSchema output = createCombiner().combine( schemas );
 
     assertEquals( output.getTags().size(), inputs.size() );
     for ( final Path input : inputs )
@@ -78,5 +81,11 @@ public final class MergerTest
     final WebIDLSchema expected = loadWebIDLSchema( outputFile, testDescription );
     assertTrue( expected.equiv( output ),
                 "Expected output file for " + testDescription + " does not match value emitted by merge operation" );
+  }
+
+  @Nonnull
+  private Combiner createCombiner()
+  {
+    return Registry.createCombiner( "Merge", Json.createObjectBuilder().build() );
   }
 }

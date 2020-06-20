@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.merger;
+package org.realityforge.webtack.model.tools.combiners.merge;
 
 import java.util.ArrayList;
 import java.util.Collections;
