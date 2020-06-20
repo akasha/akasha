@@ -7,7 +7,7 @@ import javax.json.Json;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Action;
-import org.realityforge.webtack.model.tools.spi.ActionRegistry;
+import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -18,7 +18,7 @@ public final class EmitActionTest
   public void registry()
     throws Exception
   {
-    assertTrue( ActionRegistry.isActionPresent( "Emit" ) );
+    assertTrue( Registry.isActionPresent( "Emit" ) );
     final Path output = getOutputFile( "%{name}" );
     assertNotNull( createAction( output.toString() ) );
   }
@@ -66,8 +66,8 @@ public final class EmitActionTest
   @Nonnull
   private Action createAction( @Nonnull final String filePattern )
   {
-    return ActionRegistry.createAction( EmitAction.NAME,
-                                        Json.createObjectBuilder()
+    return Registry.createAction( EmitAction.NAME,
+                                  Json.createObjectBuilder()
                                                       .add( "filePattern", filePattern )
                                                       .build() );
   }

@@ -18,13 +18,12 @@ import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Combiner;
-import org.realityforge.webtack.model.tools.spi.CombinerRegistry;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.spi.Action;
-import org.realityforge.webtack.model.tools.spi.ActionRegistry;
+import org.realityforge.webtack.model.tools.spi.Registry;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessorRegistry;
 
@@ -78,10 +77,10 @@ public final class Pipeline
       final String selector = stage.getSourceSelector();
       final List<WebIDLSchema> resultSchema = new ArrayList<>();
 
-      if ( CombinerRegistry.isCombinerPresent( name ) )
+      if ( Registry.isCombinerPresent( name ) )
       {
         final Combiner processor =
-          CombinerRegistry.createCombiner( name, getStageConfig( stage ) );
+          Registry.createCombiner( name, getStageConfig( stage ) );
         final List<WebIDLSchema> matchedSchema = new ArrayList<>();
         final List<WebIDLSchema> unmatchedSchema = new ArrayList<>();
         for ( final WebIDLSchema schema : current )
@@ -132,10 +131,10 @@ public final class Pipeline
           }
         }
       }
-      else if ( ActionRegistry.isActionPresent( name ) )
+      else if ( Registry.isActionPresent( name ) )
       {
         final Action action =
-          ActionRegistry.createAction( name, getStageConfig( stage ) );
+          Registry.createAction( name, getStageConfig( stage ) );
         for ( final WebIDLSchema schema : current )
         {
           if ( isSchemaSelected( schema, selector ) )
