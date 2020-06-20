@@ -12,11 +12,11 @@ import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
 
-public final class EmitAction
+final class EmitAction
   implements SchemaAction
 {
   @Nonnull
-  public static final String NAME = "Emit";
+  static final String NAME = "Emit";
   @Nonnull
   private final String _filePattern;
 
@@ -69,22 +69,5 @@ public final class EmitAction
     matcher.appendTail( filename );
 
     return filename.toString();
-  }
-
-  public static final class Config
-    implements SchemaActionFactory
-  {
-    public String filePattern;
-
-    @Nonnull
-    @Override
-    public SchemaAction create()
-    {
-      if ( null == filePattern )
-      {
-        throw new IllegalArgumentException( "EmitAction missing required filePattern configuration value" );
-      }
-      return new EmitAction( filePattern );
-    }
   }
 }
