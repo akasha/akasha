@@ -17,8 +17,8 @@ import javax.json.JsonObject;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
-import org.realityforge.webtack.model.tools.merger.SchemaJoiner;
-import org.realityforge.webtack.model.tools.merger.SchemaJoinerRegistry;
+import org.realityforge.webtack.model.tools.spi.Combiner;
+import org.realityforge.webtack.model.tools.spi.CombinerRegistry;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
@@ -78,10 +78,10 @@ public final class Pipeline
       final String selector = stage.getSourceSelector();
       final List<WebIDLSchema> resultSchema = new ArrayList<>();
 
-      if ( SchemaJoinerRegistry.isSchemaJoinerFactoryPresent( name ) )
+      if ( CombinerRegistry.isCombinerPresent( name ) )
       {
-        final SchemaJoiner processor =
-          SchemaJoinerRegistry.createSchemaJoiner( name, getStageConfig( stage ) );
+        final Combiner processor =
+          CombinerRegistry.createCombiner( name, getStageConfig( stage ) );
         final List<WebIDLSchema> matchedSchema = new ArrayList<>();
         final List<WebIDLSchema> unmatchedSchema = new ArrayList<>();
         for ( final WebIDLSchema schema : current )
@@ -97,7 +97,7 @@ public final class Pipeline
         }
         try
         {
-          resultSchema.add( processor.merge( matchedSchema.toArray( new WebIDLSchema[ 0 ] ) ) );
+          resultSchema.add( processor.combine( matchedSchema.toArray( new WebIDLSchema[ 0 ] ) ) );
         }
         catch ( final Exception e )
         {

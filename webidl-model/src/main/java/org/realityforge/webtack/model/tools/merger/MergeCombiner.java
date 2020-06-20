@@ -27,9 +27,10 @@ import org.realityforge.webtack.model.PartialNamespaceDefinition;
 import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.Combiner;
 
-final class MergerTool
-  implements SchemaJoiner
+final class MergeCombiner
+  implements Combiner
 {
   /**
    * Combine two or more schemas into a single schema.
@@ -38,7 +39,7 @@ final class MergerTool
    * @return the merged schema.
    */
   @Override
-  public WebIDLSchema merge( @Nonnull final WebIDLSchema... schemas )
+  public WebIDLSchema combine( @Nonnull final WebIDLSchema... schemas )
   {
     Objects.requireNonNull( schemas );
     if ( schemas.length < 2 )

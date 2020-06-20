@@ -55,7 +55,7 @@ public final class MergerTest
                                          testDescription ) )
         .toArray( WebIDLSchema[]::new );
 
-    final WebIDLSchema output = new MergerTool().merge( schemas );
+    final WebIDLSchema output = new MergeCombiner().combine( schemas );
 
     assertEquals( output.getTags().size(), inputs.size() );
     for ( final Path input : inputs )
