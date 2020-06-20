@@ -23,8 +23,8 @@ import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
-import org.realityforge.webtack.model.tools.sink.SchemaAction;
-import org.realityforge.webtack.model.tools.sink.SchemaActionRegistry;
+import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.spi.ActionRegistry;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
 import org.realityforge.webtack.model.tools.transform.SchemaProcessorRegistry;
 
@@ -132,10 +132,10 @@ public final class Pipeline
           }
         }
       }
-      else if ( SchemaActionRegistry.isSchemaActionFactoryPresent( name ) )
+      else if ( ActionRegistry.isActionPresent( name ) )
       {
-        final SchemaAction action =
-          SchemaActionRegistry.createSchemaAction( name, getStageConfig( stage ) );
+        final Action action =
+          ActionRegistry.createAction( name, getStageConfig( stage ) );
         for ( final WebIDLSchema schema : current )
         {
           if ( isSchemaSelected( schema, selector ) )

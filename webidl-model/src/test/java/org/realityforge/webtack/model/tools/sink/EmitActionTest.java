@@ -6,6 +6,8 @@ import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.spi.ActionRegistry;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -16,7 +18,7 @@ public final class EmitActionTest
   public void registry()
     throws Exception
   {
-    assertTrue( SchemaActionRegistry.isSchemaActionFactoryPresent( "Emit" ) );
+    assertTrue( ActionRegistry.isActionPresent( "Emit" ) );
     final Path output = getOutputFile( "%{name}" );
     assertNotNull( createAction( output.toString() ) );
   }
@@ -26,7 +28,7 @@ public final class EmitActionTest
     throws Exception
   {
     final Path output = getOutputFile( "%{name}" );
-    final SchemaAction action = createAction( output.toString() );
+    final Action action = createAction( output.toString() );
 
     final Path schemaFile =
       writeSchema( "speech_api",
@@ -62,10 +64,10 @@ public final class EmitActionTest
   }
 
   @Nonnull
-  private SchemaAction createAction( @Nonnull final String filePattern )
+  private Action createAction( @Nonnull final String filePattern )
   {
-    return SchemaActionRegistry.createSchemaAction( EmitAction.NAME,
-                                                    Json.createObjectBuilder()
+    return ActionRegistry.createAction( EmitAction.NAME,
+                                        Json.createObjectBuilder()
                                                       .add( "filePattern", filePattern )
                                                       .build() );
   }

@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.sink;
+package org.realityforge.webtack.model.tools.spi;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,29 +8,29 @@ import javax.json.JsonObject;
 import javax.json.bind.JsonbBuilder;
 import org.realityforge.webtack.model.tools.Name;
 
-public final class SchemaActionRegistry
+public final class ActionRegistry
 {
   @Nonnull
-  private static final Map<String, Class<? extends SchemaActionFactory>> ACTIONS = new HashMap<>();
+  private static final Map<String, Class<? extends ActionFactory>> ACTIONS = new HashMap<>();
 
   static
   {
     loadTypes();
   }
 
-  private SchemaActionRegistry()
+  private ActionRegistry()
   {
   }
 
-  public static boolean isSchemaActionFactoryPresent( @Nonnull final String name )
+  public static boolean isActionPresent( @Nonnull final String name )
   {
     return ACTIONS.containsKey( name );
   }
 
   @Nonnull
-  public static SchemaAction createSchemaAction( @Nonnull final String name, @Nonnull final JsonObject config )
+  public static Action createAction( @Nonnull final String name, @Nonnull final JsonObject config )
   {
-    final Class<? extends SchemaActionFactory> type = ACTIONS.get( name );
+    final Class<? extends ActionFactory> type = ACTIONS.get( name );
     if ( null == type )
     {
       throw new IllegalArgumentException( "Unable to locate schema action factory with name '" + name + "'" );
@@ -40,9 +40,9 @@ public final class SchemaActionRegistry
 
   private static void loadTypes()
   {
-    for ( final SchemaActionFactory factory : ServiceLoader.load( SchemaActionFactory.class ) )
+    for ( final ActionFactory factory : ServiceLoader.load( ActionFactory.class ) )
     {
-      final Class<? extends SchemaActionFactory> type = factory.getClass();
+      final Class<? extends ActionFactory> type = factory.getClass();
       final Name annotation = type.getAnnotation( Name.class );
       final String name = null == annotation ? type.getSimpleName() : annotation.value();
       ACTIONS.put( name, type );

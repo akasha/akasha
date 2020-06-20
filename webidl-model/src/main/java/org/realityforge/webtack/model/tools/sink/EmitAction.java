@@ -11,9 +11,10 @@ import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
+import org.realityforge.webtack.model.tools.spi.Action;
 
 final class EmitAction
-  implements SchemaAction
+  implements Action
 {
   @Nonnull
   static final String NAME = "Emit";

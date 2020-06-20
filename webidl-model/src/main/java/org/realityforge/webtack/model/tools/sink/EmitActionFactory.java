@@ -2,16 +2,18 @@ package org.realityforge.webtack.model.tools.sink;
 
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.Name;
+import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.spi.ActionFactory;
 
 @Name( EmitAction.NAME )
-public final class EmitSchemaActionFactoryConfig
-  implements SchemaActionFactory
+public final class EmitActionFactory
+  implements ActionFactory
 {
   public String filePattern;
 
   @Nonnull
   @Override
-  public SchemaAction create()
+  public Action create()
   {
     if ( null == filePattern )
     {
