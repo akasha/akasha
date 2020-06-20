@@ -15,6 +15,7 @@ public interface Processor
    *
    * @param schema the input schema.
    * @return the output schema.
+   * @throws Exception if an error occurs when running processor.
    */
   @Nullable
   WebIDLSchema process( @Nonnull WebIDLSchema schema )
