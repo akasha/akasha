@@ -1,8 +1,10 @@
-package org.realityforge.webtack.model.tools.transform;
+package org.realityforge.webtack.model.tools.processors.extract_exposure_set;
 
 import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.AbstractTest;
+import org.realityforge.webtack.model.tools.spi.Processor;
+import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
@@ -12,7 +14,7 @@ public class ExtractExposureSetProcessorTest
   @Test
   public void registry()
   {
-    assertTrue( SchemaProcessorRegistry.isSchemaProcessorFactoryPresent( ExtractExposureSetProcessor.NAME ) );
+    assertTrue( Registry.isProcessorPresent( "ExtractExposureSet" ) );
     assertNotNull( createProcessor( "Window" ) );
   }
 
@@ -102,11 +104,11 @@ public class ExtractExposureSetProcessorTest
   }
 
   @Nonnull
-  private SchemaProcessor createProcessor( @Nonnull final String globalInterface )
+  private Processor createProcessor( @Nonnull final String globalInterface )
   {
-    return SchemaProcessorRegistry.createSchemaProcessor( ExtractExposureSetProcessor.NAME,
-                                                          Json.createObjectBuilder()
-                                                            .add( "globalInterface", globalInterface )
-                                                            .build() );
+    return Registry.createProcessor( "ExtractExposureSet",
+                                     Json.createObjectBuilder()
+                                       .add( "globalInterface", globalInterface )
+                                       .build() );
   }
 }

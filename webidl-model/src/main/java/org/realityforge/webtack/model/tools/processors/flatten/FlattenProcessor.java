@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.transform;
+package org.realityforge.webtack.model.tools.processors.flatten;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -35,6 +35,8 @@ import org.realityforge.webtack.model.SetLikeMember;
 import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.Processor;
+import org.realityforge.webtack.model.tools.spi.ProcessorFactory;
 
 /**
  * Flatten the types.
@@ -42,7 +44,7 @@ import org.realityforge.webtack.model.WebIDLSchema;
  * Then members in mixins are merged into interface types.
  */
 public final class FlattenProcessor
-  implements SchemaProcessor
+  implements Processor
 {
   @Nonnull
   public static final String NAME = "Flatten";
@@ -54,7 +56,7 @@ public final class FlattenProcessor
    * @return the merged schema.
    */
   @Override
-  public WebIDLSchema transform( @Nonnull final WebIDLSchema schema )
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
   {
     final Map<String, DictionaryDefinition> dictionaries = new HashMap<>();
     final Map<String, InterfaceDefinition> interfaces = new HashMap<>();
@@ -377,14 +379,4 @@ public final class FlattenProcessor
       .collect( Collectors.joining( delimiter ) );
   }
 
-  public static final class Config
-    implements SchemaProcessorFactory
-  {
-    @Nonnull
-    @Override
-    public SchemaProcessor create()
-    {
-      return new FlattenProcessor();
-    }
-  }
 }

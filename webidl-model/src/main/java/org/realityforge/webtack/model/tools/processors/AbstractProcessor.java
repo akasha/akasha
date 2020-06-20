@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.transform;
+package org.realityforge.webtack.model.tools.processors;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -36,6 +36,7 @@ import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.Processor;
 
 /**
  * Base class for applying a transformation to a schema.
@@ -45,12 +46,12 @@ import org.realityforge.webtack.model.WebIDLSchema;
  * schema are processed. We would just reuse elements if we don't walk down a tree.</p>
  */
 @SuppressWarnings( "unused" )
-public abstract class AbstractSchemaProcessor
-  implements SchemaProcessor
+public abstract class AbstractProcessor
+  implements Processor
 {
   @Nullable
   @Override
-  public WebIDLSchema transform( @Nonnull final WebIDLSchema schema )
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
   {
     final Map<String, CallbackDefinition> callbacks = transformCallbacks( schema.getCallbacks() );
     final Map<String, CallbackInterfaceDefinition> callbackInterfaces =

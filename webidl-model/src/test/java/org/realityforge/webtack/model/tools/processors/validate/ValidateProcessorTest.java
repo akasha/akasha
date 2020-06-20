@@ -1,19 +1,21 @@
-package org.realityforge.webtack.model.tools.transform;
+package org.realityforge.webtack.model.tools.processors.validate;
 
 import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.Processor;
+import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class ValidatorProcessorTest
+public class ValidateProcessorTest
   extends AbstractTest
 {
   @Test
   public void registry()
   {
-    assertTrue( SchemaProcessorRegistry.isSchemaProcessorFactoryPresent( ValidatorProcessor.NAME ) );
+    assertTrue( Registry.isProcessorPresent( "Validate" ) );
     assertNotNull( createProcessor() );
   }
 
@@ -21,21 +23,21 @@ public class ValidatorProcessorTest
   public void valid()
     throws Exception
   {
-    final SchemaProcessor processor = createProcessor();
+    final Processor processor = createProcessor();
     final WebIDLSchema input =
       loadWebIDLSchema( getTestLocalFixtureDir().resolve( "valid" + WebIDLSchema.EXTENSION ), "Valid schema" );
-    final WebIDLSchema output = processor.transform( input );
+    final WebIDLSchema output = processor.process( input );
     assertNotNull( output );
   }
 
   @Test
   public void invalid()
   {
-    final SchemaProcessor processor = createProcessor();
+    final Processor processor = createProcessor();
     final WebIDLSchema input =
       loadWebIDLSchema( getTestLocalFixtureDir().resolve( "invalid" + WebIDLSchema.EXTENSION ), "Invalid schema" );
     final ValidationException exception =
-      expectThrows( ValidationException.class, () -> processor.transform( input ) );
+      expectThrows( ValidationException.class, () -> processor.process( input ) );
 
     assertErrorCount( exception.getErrors(), 2 );
     assertErrorPresent( exception.getErrors(),
@@ -45,9 +47,8 @@ public class ValidatorProcessorTest
   }
 
   @Nonnull
-  private SchemaProcessor createProcessor()
+  private Processor createProcessor()
   {
-    return SchemaProcessorRegistry.createSchemaProcessor( ValidatorProcessor.NAME,
-                                                          Json.createObjectBuilder().build() );
+    return Registry.createProcessor( "Validate", Json.createObjectBuilder().build() );
   }
 }

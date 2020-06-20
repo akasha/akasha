@@ -25,7 +25,7 @@ import org.realityforge.webtack.model.tools.pipeline.UnknownStageConfigException
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
-import org.realityforge.webtack.model.tools.transform.ValidationException;
+import org.realityforge.webtack.model.tools.processors.validate.ValidationException;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 
 final class RunCommand

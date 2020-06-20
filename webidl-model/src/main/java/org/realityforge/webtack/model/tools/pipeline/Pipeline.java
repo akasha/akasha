@@ -24,8 +24,7 @@ import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.Registry;
-import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
-import org.realityforge.webtack.model.tools.transform.SchemaProcessorRegistry;
+import org.realityforge.webtack.model.tools.spi.Processor;
 
 public final class Pipeline
 {
@@ -104,17 +103,17 @@ public final class Pipeline
         }
         resultSchema.addAll( unmatchedSchema );
       }
-      else if ( SchemaProcessorRegistry.isSchemaProcessorFactoryPresent( name ) )
+      else if ( Registry.isProcessorPresent( name ) )
       {
-        final SchemaProcessor processor =
-          SchemaProcessorRegistry.createSchemaProcessor( name, getStageConfig( stage ) );
+        final Processor processor =
+          Registry.createProcessor( name, getStageConfig( stage ) );
         for ( final WebIDLSchema schema : current )
         {
           if ( isSchemaSelected( schema, selector ) )
           {
             try
             {
-              final WebIDLSchema output = processor.transform( schema );
+              final WebIDLSchema output = processor.process( schema );
               if ( null != output )
               {
                 resultSchema.add( output );

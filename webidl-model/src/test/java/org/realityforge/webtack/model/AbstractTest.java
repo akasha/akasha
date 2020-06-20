@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
-import org.realityforge.webtack.model.tools.transform.SchemaProcessor;
+import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
@@ -133,7 +133,7 @@ public abstract class AbstractTest
   }
 
   protected final void performFixtureTest( @Nonnull final String label,
-                                           @Nonnull final Supplier<SchemaProcessor> supplier,
+                                           @Nonnull final Supplier<Processor> supplier,
                                            @Nonnull final Path dir,
                                            @Nonnull final String inputFilename,
                                            @Nonnull final String outputFilename )
@@ -143,7 +143,7 @@ public abstract class AbstractTest
 
     final WebIDLSchema input =
       loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
-    final WebIDLSchema output = supplier.get().transform( input );
+    final WebIDLSchema output = supplier.get().process( input );
     assertNotNull( output );
 
     final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );

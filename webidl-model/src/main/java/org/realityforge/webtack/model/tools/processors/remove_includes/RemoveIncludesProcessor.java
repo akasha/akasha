@@ -1,16 +1,17 @@
-package org.realityforge.webtack.model.tools.transform;
+package org.realityforge.webtack.model.tools.processors.remove_includes;
 
 import java.util.Objects;
 import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.IncludesStatement;
+import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
 /**
  * Remove includes that match a pattern.
  */
 public final class RemoveIncludesProcessor
-  extends AbstractSchemaProcessor
+  extends AbstractProcessor
 {
   @Nonnull
   public static final String NAME = "RemoveIncludes";
@@ -19,7 +20,7 @@ public final class RemoveIncludesProcessor
   @Nonnull
   private final Pattern _mixinPattern;
 
-  private RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
+   RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
   {
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
@@ -36,31 +37,5 @@ public final class RemoveIncludesProcessor
   {
     return _interfacePattern.matcher( input.getInterfaceName() ).matches() &&
            _mixinPattern.matcher( input.getMixinName() ).matches();
-  }
-
-  public static final class Config
-    implements SchemaProcessorFactory
-  {
-    public String interfacePattern;
-    public String mixinPattern;
-
-    @Nonnull
-    @Override
-    public SchemaProcessor create()
-    {
-      return new RemoveIncludesProcessor( extractPattern( "interfacePattern", interfacePattern ),
-                                          extractPattern( "mixinPattern", mixinPattern ) );
-    }
-
-    @Nonnull
-    private Pattern extractPattern( @Nonnull final String configKey, @Nullable final String input )
-    {
-      if ( null == input )
-      {
-        throw new IllegalArgumentException( "IncludeRemovalProcessor missing required " +
-                                            configKey + " configuration value" );
-      }
-      return Pattern.compile( input );
-    }
   }
 }

@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.transform;
+package org.realityforge.webtack.model.tools.processors.extract_exposure_set;
 
 import java.util.List;
 import java.util.Objects;
@@ -15,6 +15,7 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
 /**
  * Transform schema extracting/retaining a particular exposure set.
@@ -26,14 +27,14 @@ import org.realityforge.webtack.model.PartialNamespaceDefinition;
  * interfaces. The extended attribute may either be an ident or identList form.</p>
  */
 public final class ExtractExposureSetProcessor
-  extends AbstractSchemaProcessor
+  extends AbstractProcessor
 {
   @Nonnull
   public static final String NAME = "ExtractExposureSet";
   @Nonnull
   private final String _globalInterface;
 
-  private ExtractExposureSetProcessor( @Nonnull final String globalInterface )
+  ExtractExposureSetProcessor( @Nonnull final String globalInterface )
   {
     _globalInterface = Objects.requireNonNull( globalInterface );
   }
@@ -131,23 +132,5 @@ public final class ExtractExposureSetProcessor
     }
 
     return true;
-  }
-
-  public static final class Config
-    implements SchemaProcessorFactory
-  {
-    public String globalInterface;
-
-    @Nonnull
-    @Override
-    public SchemaProcessor create()
-    {
-      if ( null == globalInterface )
-      {
-        throw new IllegalArgumentException(
-          "ExposureSetExtractorProcessor missing required globalInterface configuration value" );
-      }
-      return new ExtractExposureSetProcessor( globalInterface );
-    }
   }
 }
