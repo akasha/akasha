@@ -1,0 +1,26 @@
+{
+  "sourceSelector": "name=minimal_event or name=speech_api",
+  "stages": [
+    {
+      "name": "Merge"
+    },
+    {
+      "name": "Validate"
+    },
+    {
+      "name": "ExtractExposureSet",
+      "config": {
+        "globalInterface": "Window"
+      }
+    },
+    {
+      "name": "Flatten"
+    },
+    {
+      "name": "Emit",
+      "config": {
+        "filePattern": "data/output/complete.webidl"
+      }
+    }
+  ]
+}
