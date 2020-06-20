@@ -241,7 +241,7 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected final  Path getIdlDirectory()
+  protected final Path getIdlDirectory()
     throws Exception
   {
     final Path idlDirectory = getWorkingDirectory().resolve( "idl" );

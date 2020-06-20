@@ -1,7 +1,6 @@
 package org.realityforge.webtack.model.tools.spi;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 /**

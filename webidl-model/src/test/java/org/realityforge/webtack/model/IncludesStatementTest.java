@@ -33,7 +33,6 @@ public final class IncludesStatementTest
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 
-
     final StringWriter writer = new StringWriter();
     WebIDLWriter.writeIncludesStatement( writer, actual );
     writer.close();

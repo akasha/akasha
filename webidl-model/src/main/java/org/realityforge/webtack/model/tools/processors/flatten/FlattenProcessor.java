@@ -36,7 +36,6 @@ import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Processor;
-import org.realityforge.webtack.model.tools.spi.ProcessorFactory;
 
 /**
  * Flatten the types.

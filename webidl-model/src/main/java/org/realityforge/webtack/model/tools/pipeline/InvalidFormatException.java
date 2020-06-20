@@ -16,7 +16,7 @@ public final class InvalidFormatException
                                  @Nonnull final SourceConfig source,
                                  @Nonnull final List<ParseError> errors )
   {
-    super( pipeline,source );
+    super( pipeline, source );
     _errors = Objects.requireNonNull( errors );
   }
 

@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.IncludesStatement;
-import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 final class IncludeValidator

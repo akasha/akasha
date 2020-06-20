@@ -20,7 +20,7 @@ public final class RemoveIncludesProcessor
   @Nonnull
   private final Pattern _mixinPattern;
 
-   RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
+  RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
   {
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
