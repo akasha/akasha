@@ -66,7 +66,7 @@ public final class EmitActionTest
   @Nonnull
   private Action createAction( @Nonnull final String filePattern )
   {
-    return Registry.createAction( EmitAction.NAME,
+    return Registry.createAction( "Emit",
                                   Json.createObjectBuilder().add( "filePattern", filePattern ).build() );
   }
 }

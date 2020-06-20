@@ -17,8 +17,6 @@ final class EmitAction
   implements Action
 {
   @Nonnull
-  static final String NAME = "Emit";
-  @Nonnull
   private final String _filePattern;
 
   EmitAction( @Nonnull final String filePattern )

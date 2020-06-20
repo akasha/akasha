@@ -5,7 +5,7 @@ import org.realityforge.webtack.model.tools.Name;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
 
-@Name( EmitAction.NAME )
+@Name( "Emit" )
 public final class EmitActionFactory
   implements ActionFactory
 {
