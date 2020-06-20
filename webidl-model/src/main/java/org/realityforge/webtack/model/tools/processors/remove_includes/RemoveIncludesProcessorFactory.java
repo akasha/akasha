@@ -3,7 +3,7 @@ package org.realityforge.webtack.model.tools.processors.remove_includes;
 import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.tools.Name;
+import org.realityforge.webtack.model.tools.spi.Name;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.ProcessorFactory;
 

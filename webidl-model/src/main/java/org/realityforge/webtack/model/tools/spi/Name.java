@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools;
+package org.realityforge.webtack.model.tools.spi;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -1,7 +1,7 @@
 package org.realityforge.webtack.model.tools.actions.emit;
 
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.tools.Name;
+import org.realityforge.webtack.model.tools.spi.Name;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
 

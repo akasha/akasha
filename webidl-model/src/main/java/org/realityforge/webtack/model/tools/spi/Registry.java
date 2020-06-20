@@ -6,7 +6,6 @@ import java.util.ServiceLoader;
 import javax.annotation.Nonnull;
 import javax.json.JsonObject;
 import javax.json.bind.JsonbBuilder;
-import org.realityforge.webtack.model.tools.Name;
 
 public final class Registry
 {
