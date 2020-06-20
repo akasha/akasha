@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.sink;
+package org.realityforge.webtack.model.tools.actions.emit;
 
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.Name;

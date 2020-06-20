@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.sink;
+package org.realityforge.webtack.model.tools.actions.emit;
 
 import java.io.FileWriter;
 import java.nio.file.Files;

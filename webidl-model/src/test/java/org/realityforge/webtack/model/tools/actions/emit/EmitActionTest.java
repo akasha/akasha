@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.sink;
+package org.realityforge.webtack.model.tools.actions.emit;
 
 import java.nio.file.Path;
 import java.util.Collections;
@@ -67,8 +67,6 @@ public final class EmitActionTest
   private Action createAction( @Nonnull final String filePattern )
   {
     return Registry.createAction( EmitAction.NAME,
-                                  Json.createObjectBuilder()
-                                                      .add( "filePattern", filePattern )
-                                                      .build() );
+                                  Json.createObjectBuilder().add( "filePattern", filePattern ).build() );
   }
 }
