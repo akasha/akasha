@@ -134,9 +134,7 @@ public abstract class AbstractTest
   @Nonnull
   private Path javaMain( @Nonnull final Path directory, @Nonnull final String name )
   {
-    return directory.resolve( "com" )
-      .resolve( "example" )
-      .resolve( name + ".java" );
+    return directory.resolve( "com" ).resolve( "example" ).resolve( name + ".java" );
   }
 
   protected final void assertFileMatchesFixture( @Nonnull final Path file, @Nonnull final Path fixtureFile )
