@@ -58,8 +58,8 @@ public final class RepositoryConfig
     final Path path = config.getConfigLocation();
     final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
     Files.createDirectories( path.getParent() );
-    try ( final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
-          final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
+    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
+    try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
     {
       jsonb.toJson( config.getSources()
                       .stream()
@@ -67,6 +67,7 @@ public final class RepositoryConfig
                       .collect( Collectors.toList() ),
                     outputStream );
     }
+    jsonb.close();
     // Add newline as json output omits trailing new line
     Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
   }
