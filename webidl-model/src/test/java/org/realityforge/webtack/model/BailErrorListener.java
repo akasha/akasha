@@ -7,7 +7,7 @@ import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 import static org.testng.Assert.*;
 
-public final class BailErrorListener
+final class BailErrorListener
   extends BaseErrorListener
 {
   /**
@@ -16,7 +16,7 @@ public final class BailErrorListener
   @Nonnull
   private final String _sourceName;
 
-  public BailErrorListener( @Nonnull final String sourceName )
+  BailErrorListener( @Nonnull final String sourceName )
   {
     _sourceName = Objects.requireNonNull( sourceName );
   }
