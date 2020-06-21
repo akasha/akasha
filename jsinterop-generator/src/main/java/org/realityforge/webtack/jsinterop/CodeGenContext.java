@@ -63,7 +63,7 @@ final class CodeGenContext
   }
 
   @Nonnull
-  public ClassName getClassName( @Nonnull final String name )
+  private ClassName getClassName( @Nonnull final String name )
   {
     return ClassName.get( getPackageName(), name );
   }
