@@ -20,34 +20,34 @@ import static org.testng.Assert.*;
 public abstract class AbstractTest
 {
   @Nullable
-  private Path _workingDirectory;
+  private Path _workingDir;
 
   @AfterMethod
   protected void afterMethod()
   {
-    if ( null != _workingDirectory )
+    if ( null != _workingDir )
     {
-      FileUtil.deleteDirIfExists( _workingDirectory );
-      _workingDirectory = null;
+      FileUtil.deleteDirIfExists( _workingDir );
+      _workingDir = null;
     }
   }
 
   @Nonnull
-  protected final Path getWorkingDirectory()
+  protected final Path getWorkingDir()
     throws Exception
   {
-    if ( null == _workingDirectory )
+    if ( null == _workingDir )
     {
-      _workingDirectory = FileUtil.createTempDir();
+      _workingDir = FileUtil.createTempDir();
     }
-    return _workingDirectory;
+    return _workingDir;
   }
 
   @Nonnull
   protected final Path getJavaMainDirectory()
     throws Exception
   {
-    return getWorkingDirectory().resolve( "main" ).resolve( "java" );
+    return getWorkingDir().resolve( "main" ).resolve( "java" );
   }
 
   @Nonnull
@@ -68,7 +68,7 @@ public abstract class AbstractTest
   protected final WebIDLSchema loadSchema( @Nonnull final String content )
     throws Exception
   {
-    final Path directory = getWorkingDirectory();
+    final Path directory = getWorkingDir();
     final Path file = directory.resolve( "schema.webidl" );
     writeContent( file, content );
     return loadWebIDLSchema( file );
@@ -113,7 +113,7 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected final Path getJavaMainFixtureDirectory()
+  protected final Path getJavaFixtureDir()
   {
     return getTestLocalFixtureDir().resolve( "main" ).resolve( "java" );
   }
@@ -121,7 +121,7 @@ public abstract class AbstractTest
   @Nonnull
   protected final Path javaFixtureFile( @Nonnull final String name )
   {
-    return javaMain( getJavaMainFixtureDirectory(), name );
+    return javaMain( getJavaFixtureDir(), name );
   }
 
   @Nonnull
@@ -156,6 +156,6 @@ public abstract class AbstractTest
   protected final CodeGenContext newContext()
     throws Exception
   {
-    return new CodeGenContext( Collections.emptyMap(), getWorkingDirectory(), "com.example" );
+    return new CodeGenContext( Collections.emptyMap(), getWorkingDir(), "com.example" );
   }
 }
