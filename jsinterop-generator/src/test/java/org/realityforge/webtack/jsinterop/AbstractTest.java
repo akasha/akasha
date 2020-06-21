@@ -152,9 +152,9 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected final CodeGenContext newContext()
+  protected final CodeGenContext newContext( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    return new CodeGenContext( Collections.emptyMap(), getWorkingDir(), "com.example" );
+    return new CodeGenContext( schema, Collections.emptyMap(), getWorkingDir(), "com.example" );
   }
 }

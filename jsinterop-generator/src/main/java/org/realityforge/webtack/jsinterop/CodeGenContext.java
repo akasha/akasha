@@ -6,9 +6,12 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.model.WebIDLSchema;
 
 final class CodeGenContext
 {
+  @Nonnull
+  private final WebIDLSchema _schema;
   @Nonnull
   private final Map<String, String> _typeMapping;
   @Nonnull
@@ -16,13 +19,21 @@ final class CodeGenContext
   @Nonnull
   private final String _packageName;
 
-  CodeGenContext( @Nonnull final Map<String, String> typeMapping,
+  CodeGenContext( @Nonnull final WebIDLSchema schema,
+                  @Nonnull final Map<String, String> typeMapping,
                   @Nonnull final Path outputDirectory,
                   @Nonnull final String packageName )
   {
+    _schema = Objects.requireNonNull( schema );
     _typeMapping = Objects.requireNonNull( typeMapping );
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+  }
+
+  @Nonnull
+  WebIDLSchema getSchema()
+  {
+    return _schema;
   }
 
   @Nonnull
