@@ -102,6 +102,10 @@ define 'webtack' do
                                :module => 'webidl-model',
                                :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.fixture_dir=src/test/fixtures')
 
+  ipr.add_testng_configuration('jsinterop-generator',
+                               :module => 'jsinterop-generator',
+                               :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures')
+
   ipr.add_component_from_artifact(:idea_codestyle)
 end
 
