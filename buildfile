@@ -56,6 +56,21 @@ define 'webtack' do
     package(:javadoc)
   end
 
+  define 'jsinterop-generator' do
+    compile.with project('webidl-model').package(:jar),
+                 project('webidl-parser').compile.dependencies,
+                 :javapoet
+
+    test.using :testng
+    test.options[:properties] = { 'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures') }
+    test.options[:java_args] = ['-ea']
+    test.compile.with :gir
+
+    package(:jar)
+    package(:sources)
+    package(:javadoc)
+  end
+
   define 'cli' do
     generate_config_resource(project)
 
