@@ -159,15 +159,6 @@ public abstract class AbstractTest
   protected final CodeGenContext newContext()
     throws Exception
   {
-    return newContext( getJavaMainDirectory() );
-  }
-
-  @Nonnull
-  private CodeGenContext newContext( @Nonnull final Path outputDir )
-  {
-    return new CodeGenContext( Collections.emptyMap(),
-                               Collections.emptyMap(),
-                               outputDir,
-                               "com.example" );
+    return new CodeGenContext( Collections.emptyMap(), getWorkingDirectory(), "com.example" );
   }
 }
