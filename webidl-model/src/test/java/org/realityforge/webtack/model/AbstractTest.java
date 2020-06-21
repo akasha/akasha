@@ -170,9 +170,14 @@ public abstract class AbstractTest
     throws IOException
   {
     assertTrue( Files.exists( file ), " File " + file + " should exist" );
-    assertEquals( new String( Files.readAllBytes( file ), StandardCharsets.UTF_8 ),
-                  expected,
-                  " File " + file + " should match" );
+    assertEquals( getFileContentsAsString( file ), expected, " File " + file + " should match" );
+  }
+
+  @Nonnull
+  protected final String getFileContentsAsString( @Nonnull final Path file )
+    throws IOException
+  {
+    return new String( Files.readAllBytes( file ), StandardCharsets.UTF_8 );
   }
 
   protected final boolean writeOutputFixtures()
