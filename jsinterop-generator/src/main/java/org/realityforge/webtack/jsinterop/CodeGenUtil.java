@@ -61,8 +61,26 @@ final class CodeGenUtil
     }
   }
 
+
   @Nonnull
-  static TypeName toTypeName( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  static Type resolveTypeDefs( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  {
+    if ( Kind.TypeReference == type.getKind() )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      if ( null != typedef )
+      {
+        return resolveTypeDefs( context, typedef.getType() );
+      }
+    }
+    return type;
+  }
+
+  @Nonnull
+  static TypeName toTypeName( @Nonnull final CodeGenContext context,
+                              @Nonnull final Type type,
+                              @Nonnull final Type actualType )
   {
     final Kind kind = type.getKind();
 

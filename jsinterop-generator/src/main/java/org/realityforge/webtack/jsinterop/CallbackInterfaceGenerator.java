@@ -40,14 +40,16 @@ final class CallbackInterfaceGenerator
     final Type returnType = operation.getReturnType();
     if ( Kind.Void != returnType.getKind() )
     {
-      method.returns( CodeGenUtil.toTypeName( context, returnType ) );
+      final Type actualType = CodeGenUtil.resolveTypeDefs( context, returnType );
+      method.returns( CodeGenUtil.toTypeName( context, returnType, actualType ) );
     }
     final List<Argument> arguments = operation.getArguments();
     for ( final Argument argument : arguments )
     {
       final Type argumentType = argument.getType();
+      final Type actualType = CodeGenUtil.resolveTypeDefs( context, argumentType );
       final ParameterSpec.Builder parameter =
-        ParameterSpec.builder( CodeGenUtil.toTypeName( context, argumentType ), argument.getName() );
+        ParameterSpec.builder( CodeGenUtil.toTypeName( context, argumentType, actualType ), argument.getName() );
       if ( argumentType.isNullable() )
       {
         parameter.addAnnotation( Types.NULLABLE );
