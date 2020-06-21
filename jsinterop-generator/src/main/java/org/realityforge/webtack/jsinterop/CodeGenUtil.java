@@ -143,6 +143,12 @@ final class CodeGenUtil
     {
       return TypeName.INT;
     }
+    else if ( Kind.UnsignedLong == kind )
+    {
+      // UnsignedLong is not representable in a JVM but we may it using a signed integer when in jsinterop
+      // and just hope it produces the correct value.
+      return TypeName.INT;
+    }
     else if ( Kind.LongLong == kind )
     {
       // LongLong is actually the same size as a java long in the jre but the way that
