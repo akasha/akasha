@@ -31,6 +31,7 @@ public final class CallbackInterfaceGeneratorTest
   public void generate_callback_returnsValue()
     throws Exception
   {
+    // Example returns nullable value
     final String content =
       "callback interface XPathNSResolver {\n" +
       "  DOMString? lookupNamespaceURI( DOMString? prefix );\n" +
