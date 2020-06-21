@@ -120,7 +120,6 @@ public abstract class AbstractTest
 
   @Nonnull
   protected final Path javaFixtureFile( @Nonnull final String name )
-    throws Exception
   {
     return javaMain( getJavaMainFixtureDirectory(), name );
   }
