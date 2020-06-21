@@ -12,6 +12,7 @@ import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
+import org.realityforge.webtack.model.TypedefDefinition;
 
 final class CodeGenUtil
 {
@@ -61,6 +62,23 @@ final class CodeGenUtil
     }
   }
 
+  static boolean isNullable( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  {
+    if ( type.isNullable() )
+    {
+      return true;
+    }
+    else if ( Kind.TypeReference == type.getKind() )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      if ( null != typedef )
+      {
+        return isNullable( context, typedef.getType() );
+      }
+    }
+    return false;
+  }
 
   @Nonnull
   static Type resolveTypeDefs( @Nonnull final CodeGenContext context, @Nonnull final Type type )
