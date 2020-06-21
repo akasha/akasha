@@ -56,7 +56,7 @@ final class CallbackInterfaceGenerator
       {
         parameter.addAnnotation( Types.NONNULL );
       }
-
+      // TODO: Add jetbrains annotation for enumerations constants
       method.addParameter( parameter.build() );
     }
     type.addMethod( method.build() );
