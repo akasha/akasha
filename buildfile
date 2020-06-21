@@ -58,7 +58,7 @@ define 'webtack' do
 
   define 'jsinterop-generator' do
     compile.with project('webidl-model').package(:jar),
-                 project('webidl-parser').compile.dependencies,
+                 project('webidl-model').compile.dependencies,
                  :javapoet
 
     test.using :testng
