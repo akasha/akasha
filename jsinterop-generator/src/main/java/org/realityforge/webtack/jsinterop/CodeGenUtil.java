@@ -179,7 +179,16 @@ final class CodeGenUtil
     else if ( Kind.TypeReference == kind )
     {
       final TypeReference typeReference = (TypeReference) type;
-      return context.lookupTypeByName( typeReference.getName() );
+      final String name = typeReference.getName();
+      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      if ( null != typedef )
+      {
+        return toTypeName( context, actualType, actualType );
+      }
+      else
+      {
+        return context.lookupTypeByName( name );
+      }
     }
     else if ( Kind.Promise == kind )
     {
