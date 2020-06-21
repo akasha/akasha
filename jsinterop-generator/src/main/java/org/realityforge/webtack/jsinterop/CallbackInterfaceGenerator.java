@@ -50,7 +50,7 @@ final class CallbackInterfaceGenerator
       final Type actualType = CodeGenUtil.resolveTypeDefs( context, argumentType );
       final ParameterSpec.Builder parameter =
         ParameterSpec.builder( CodeGenUtil.toTypeName( context, argumentType, actualType ), argument.getName() );
-      if ( argumentType.isNullable() )
+      if ( CodeGenUtil.isNullable( context, argumentType ) )
       {
         parameter.addAnnotation( Types.NULLABLE );
       }
