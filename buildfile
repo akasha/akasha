@@ -68,7 +68,8 @@ define 'webtack' do
 
     package(:jar)
     package(:sources)
-    package(:javadoc)
+    # TODO: Uncomment this once we actually have some public classes in the module
+    # package(:javadoc)
   end
 
   define 'cli' do
