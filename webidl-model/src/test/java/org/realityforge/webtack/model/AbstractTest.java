@@ -166,11 +166,13 @@ public abstract class AbstractTest
     }
   }
 
-  protected final void assertFileContents( @Nonnull final Path path, @Nonnull final String expected )
+  protected final void assertFileContents( @Nonnull final Path file, @Nonnull final String expected )
     throws IOException
   {
-    assertTrue( Files.exists( path ) );
-    assertEquals( new String( Files.readAllBytes( path ), StandardCharsets.UTF_8 ), expected );
+    assertTrue( Files.exists( file ), " File " + file + " should exist" );
+    assertEquals( new String( Files.readAllBytes( file ), StandardCharsets.UTF_8 ),
+                  expected,
+                  " File " + file + " should match" );
   }
 
   protected final boolean writeOutputFixtures()
