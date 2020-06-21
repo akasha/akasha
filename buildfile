@@ -48,6 +48,7 @@ define 'webtack' do
 
     test.using :testng
     test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/fixtures') }
+    test.options[:java_args] = ['-ea']
     test.compile.with :gir
 
     package(:jar)
