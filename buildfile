@@ -12,7 +12,7 @@ define 'webtack' do
   project.group = 'org.realityforge.webtack'
   compile.options.source = '1.8'
   compile.options.target = '1.8'
-  compile.options.lint = 'all'
+  compile.options.lint = 'all,-serial'
   project.compile.options.warnings = true
   project.compile.options.other = %w(-Werror -Xmaxerrs 10000 -Xmaxwarns 10000)
 
