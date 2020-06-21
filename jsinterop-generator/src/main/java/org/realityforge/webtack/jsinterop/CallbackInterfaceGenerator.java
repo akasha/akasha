@@ -41,6 +41,14 @@ final class CallbackInterfaceGenerator
     if ( Kind.Void != returnType.getKind() )
     {
       final Type actualType = CodeGenUtil.resolveTypeDefs( context, returnType );
+      if ( CodeGenUtil.isNullable( context, returnType ) )
+      {
+        method.addAnnotation( Types.NULLABLE );
+      }
+      else if ( !actualType.getKind().isPrimitive() )
+      {
+        method.addAnnotation( Types.NONNULL );
+      }
       method.returns( CodeGenUtil.toTypeName( context, returnType, actualType ) );
     }
     final List<Argument> arguments = operation.getArguments();
