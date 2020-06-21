@@ -32,7 +32,17 @@ final class CallbackInterfaceGenerator
                           .build() )
       .addAnnotation( FunctionalInterface.class );
 
-    final OperationMember operation = definition.getOperation();
+    generateOperation( context, definition.getOperation(), type );
+
+    // TODO: Constants
+
+    CodeGenUtil.writeTopLevelType( context, type );
+  }
+
+  private void generateOperation( @Nonnull final CodeGenContext context,
+                                  @Nonnull final OperationMember operation,
+                                  @Nonnull final TypeSpec.Builder type )
+  {
     final String name = operation.getName();
     assert null != name;
     final MethodSpec.Builder method =
@@ -69,10 +79,7 @@ final class CallbackInterfaceGenerator
       // TODO: Add jetbrains annotation for enumerations constants
       method.addParameter( parameter.build() );
     }
-    type.addMethod( method.build() );
-
-    // TODO: Constants
-
-    CodeGenUtil.writeTopLevelType( context, type );
+    final MethodSpec build = method.build();
+    type.addMethod( build );
   }
 }
