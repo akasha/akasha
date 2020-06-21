@@ -11,7 +11,6 @@ import java.nio.file.Path;
 import java.util.Collections;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.BailErrorListener;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.annotations.AfterMethod;
