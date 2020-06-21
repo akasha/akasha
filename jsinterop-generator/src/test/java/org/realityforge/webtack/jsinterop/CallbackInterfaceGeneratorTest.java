@@ -39,7 +39,6 @@ public final class CallbackInterfaceGeneratorTest
     final CallbackInterfaceDefinition definition = schema.findCallbackInterfaceByName( "XPathNSResolver" );
     assert null != definition;
     generateCallbackCode( schema, definition );
-
   }
 
   private void generateCallbackCode( @Nonnull final WebIDLSchema schema,
