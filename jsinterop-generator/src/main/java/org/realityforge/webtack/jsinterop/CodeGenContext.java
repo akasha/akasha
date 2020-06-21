@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 final class CodeGenContext
@@ -65,6 +66,11 @@ final class CodeGenContext
   @Nonnull
   private ClassName getClassName( @Nonnull final String name )
   {
+    final EnumerationDefinition enumeration = getSchema().findEnumerationByName( name );
+    if( null != enumeration )
+    {
+      return Types.STRING;
+    }
     return ClassName.get( getPackageName(), name );
   }
 }
