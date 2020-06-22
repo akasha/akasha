@@ -21,12 +21,15 @@ final class EnumerationGenerator
 
     for ( final String value : definition.getValues() )
     {
-      final String name = toName( value );
-      type.addField( FieldSpec
-                       .builder( Types.STRING, name, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
-                       .addAnnotation( Types.NONNULL )
-                       .initializer( "$S", value )
-                       .build() );
+      if ( !value.isEmpty() )
+      {
+        final String name = toName( value );
+        type.addField( FieldSpec
+                         .builder( Types.STRING, name, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                         .addAnnotation( Types.NONNULL )
+                         .initializer( "$S", value )
+                         .build() );
+      }
     }
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
@@ -37,10 +40,6 @@ final class EnumerationGenerator
   @Nonnull
   private String toName( @Nonnull final String value )
   {
-    if ( value.isEmpty() )
-    {
-      return "empty";
-    }
     final StringBuilder sb = new StringBuilder();
     for ( int i = 0; i < value.length(); i++ )
     {

@@ -6,9 +6,6 @@ import javax.annotation.Nonnull;
 @Generated("org.realityforge.webtack")
 public final class XMLHttpRequestResponseType {
   @Nonnull
-  public static final String empty = "";
-
-  @Nonnull
   public static final String arraybuffer = "arraybuffer";
 
   @Nonnull
