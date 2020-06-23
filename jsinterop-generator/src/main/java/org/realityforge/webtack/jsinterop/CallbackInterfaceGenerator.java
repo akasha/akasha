@@ -6,6 +6,7 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -83,7 +84,7 @@ final class CallbackInterfaceGenerator
       }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
-        generateConstructorOperation( context, operation, type );
+        generateConstructorOperation( context, operation, null != inherits, type );
       }
     }
 
@@ -212,6 +213,7 @@ final class CallbackInterfaceGenerator
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
                                              @Nonnull final OperationMember operation,
+                                             final boolean invokeSuper,
                                              @Nonnull final TypeSpec.Builder type )
   {
     final List<Argument> arguments = operation.getArguments();
@@ -219,19 +221,30 @@ final class CallbackInterfaceGenerator
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
     for ( int i = 0; i <= optionalCount; i++ )
     {
-      generateConstructorOperation( context, operation, argCount - i, type );
+      generateConstructorOperation( context, operation, invokeSuper, argCount - i, type );
     }
   }
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
                                              @Nonnull final OperationMember operation,
+                                             final boolean invokeSuper,
                                              final long maxArgumentCount,
                                              @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PUBLIC );
+    final List<String> superArgs = invokeSuper ? new ArrayList<>() : null;
     for ( int i = 0; i < maxArgumentCount; i++ )
     {
-      generateOperationArgument( context, operation.getArguments().get( i ), true, method );
+      final Argument argument = operation.getArguments().get( i );
+      generateOperationArgument( context, argument, true, method );
+      if ( invokeSuper )
+      {
+        superArgs.add( argument.getName() );
+      }
+    }
+    if ( invokeSuper )
+    {
+      method.addStatement( "super( " + String.join( ", ", superArgs ) + " )" );
     }
     type.addMethod( method.build() );
   }

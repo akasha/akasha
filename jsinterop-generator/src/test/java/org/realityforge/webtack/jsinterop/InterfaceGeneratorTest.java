@@ -1,7 +1,6 @@
 package org.realityforge.webtack.jsinterop;
 
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.annotations.Test;
@@ -40,15 +39,19 @@ public final class InterfaceGeneratorTest
       "  void preventDefault();\n" +
       "  void stopImmediatePropagation();\n" +
       "  void stopPropagation();\n" +
+      "};\n" +
+      "[Exposed=Window]\n" +
+      "interface SpeechRecognitionErrorEvent : Event {\n" +
+      "  readonly attribute SpeechRecognitionErrorCode error;\n" +
+      "  readonly attribute DOMString message;\n" +
+      "  constructor( DOMString type, SpeechRecognitionErrorEventInit eventInitDict );\n" +
       "};\n";
     final WebIDLSchema schema = loadSchema( content );
-    final InterfaceDefinition definition = schema.findInterfaceByName( "Event" );
-    assert null != definition;
-
-    generateCallbackCode( schema, definition );
+    generateCode( schema, schema.getInterfaceByName( "Event" ) );
+    generateCode( schema, schema.getInterfaceByName( "SpeechRecognitionErrorEvent" ) );
   }
 
-  private void generateCallbackCode( @Nonnull final WebIDLSchema schema, @Nonnull final InterfaceDefinition definition )
+  private void generateCode( @Nonnull final WebIDLSchema schema, @Nonnull final InterfaceDefinition definition )
     throws Exception
   {
     //TODO: We should generate the java code for above and compile java code to ensure it is valid
