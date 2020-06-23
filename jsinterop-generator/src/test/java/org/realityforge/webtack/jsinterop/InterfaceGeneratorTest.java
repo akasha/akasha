@@ -1,0 +1,59 @@
+package org.realityforge.webtack.jsinterop;
+
+import javax.annotation.Nonnull;
+import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.InterfaceDefinition;
+import org.realityforge.webtack.model.WebIDLSchema;
+import org.testng.annotations.Test;
+
+public final class InterfaceGeneratorTest
+  extends AbstractTest
+{
+  @Test
+  public void generate()
+    throws Exception
+  {
+    final String content =
+      "[Exposed=(Window,Worker,AudioWorklet)]\n" +
+      "interface Event {\n" +
+      "  const unsigned short AT_TARGET = 2;\n" +
+      "  const unsigned short BUBBLING_PHASE = 3;\n" +
+      "  const unsigned short CAPTURING_PHASE = 1;\n" +
+      "  const unsigned short NONE = 0;\n" +
+      "  readonly attribute boolean bubbles;\n" +
+      "  readonly attribute boolean cancelable;\n" +
+      "  readonly attribute boolean composed;\n" +
+      "  readonly attribute EventTarget? currentTarget;\n" +
+      "  readonly attribute boolean defaultPrevented;\n" +
+      "  readonly attribute unsigned short eventPhase;\n" +
+      "  [LegacyUnforgeable]\n" +
+      "  readonly attribute boolean isTrusted;\n" +
+      "  readonly attribute EventTarget? srcElement;\n" +
+      "  readonly attribute EventTarget? target;\n" +
+      "  readonly attribute DOMHighResTimeStamp timeStamp;\n" +
+      "  readonly attribute DOMString type;\n" +
+      "  attribute boolean cancelBubble;\n" +
+      "  attribute boolean returnValue;\n" +
+      "  constructor( DOMString type, optional EventInit eventInitDict = {} );\n" +
+      "  sequence<EventTarget> composedPath();\n" +
+      "  void initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );\n" +
+      "  void preventDefault();\n" +
+      "  void stopImmediatePropagation();\n" +
+      "  void stopPropagation();\n" +
+      "};\n";
+    final WebIDLSchema schema = loadSchema( content );
+    final InterfaceDefinition definition = schema.findInterfaceByName( "Event" );
+    assert null != definition;
+
+    generateCallbackCode( schema, definition );
+  }
+
+  private void generateCallbackCode( @Nonnull final WebIDLSchema schema, @Nonnull final InterfaceDefinition definition )
+    throws Exception
+  {
+    //TODO: We should generate the java code for above and compile java code to ensure it is valid
+    final CallbackInterfaceGenerator generator = new CallbackInterfaceGenerator();
+    generator.generate( newContext( schema ), definition );
+    assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
+  }
+}
