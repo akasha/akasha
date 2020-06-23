@@ -20,11 +20,7 @@ public final class CallbackInterfaceGeneratorTest
       "callback interface EventListener {\n" +
       "  void handleEvent( Event event );\n" +
       "};\n";
-    final WebIDLSchema schema = loadSchema( content );
-    final CallbackInterfaceDefinition definition = schema.findCallbackInterfaceByName( "EventListener" );
-    assert null != definition;
-
-    generateCallbackCode( schema, definition );
+    assertCallbackInterfaceGenerated( content, "EventListener" );
   }
 
   @Test
@@ -36,10 +32,7 @@ public final class CallbackInterfaceGeneratorTest
       "callback interface XPathNSResolver {\n" +
       "  DOMString? lookupNamespaceURI( DOMString? prefix );\n" +
       "};\n";
-    final WebIDLSchema schema = loadSchema( content );
-    final CallbackInterfaceDefinition definition = schema.findCallbackInterfaceByName( "XPathNSResolver" );
-    assert null != definition;
-    generateCallbackCode( schema, definition );
+    assertCallbackInterfaceGenerated( content, "XPathNSResolver" );
   }
 
   @Test
@@ -71,14 +64,18 @@ public final class CallbackInterfaceGeneratorTest
       "  const unsigned long SHOW_TEXT = 0x4;\n" +
       "  unsigned short acceptNode( Node node );\n" +
       "};\n";
-    final WebIDLSchema schema = loadSchema( content );
-    final CallbackInterfaceDefinition definition = schema.findCallbackInterfaceByName( "NodeFilter" );
-    assert null != definition;
-    generateCallbackCode( schema, definition );
+    assertCallbackInterfaceGenerated( content, "NodeFilter" );
   }
 
-  private void generateCallbackCode( @Nonnull final WebIDLSchema schema,
-                                     @Nonnull final CallbackInterfaceDefinition definition )
+  private void assertCallbackInterfaceGenerated( @Nonnull final String content, @Nonnull final String name )
+    throws Exception
+  {
+    final WebIDLSchema schema = loadSchema( content );
+    generateCode( schema, schema.getCallbackInterfaceByName( name ) );
+  }
+
+  private void generateCode( @Nonnull final WebIDLSchema schema,
+                             @Nonnull final CallbackInterfaceDefinition definition )
     throws Exception
   {
     //TODO: We should generate the java code for above and compile java code to ensure it is valid
