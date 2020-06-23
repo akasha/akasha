@@ -3,6 +3,7 @@ package org.realityforge.webtack.jsinterop;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
+import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.nio.file.Path;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
@@ -202,7 +204,9 @@ final class CodeGenUtil
     }
     else if ( Kind.Sequence == kind )
     {
-      throw new UnsupportedOperationException( "Sequence not currently supported by generator" );
+      final Type itemType = ( (SequenceType) type ).getItemType();
+      return ParameterizedTypeName.get( Types.JS_ARRAY,
+                                        toTypeName( context, itemType, resolveTypeDefs( context, itemType ) ) );
     }
     else if ( Kind.Record == kind )
     {
