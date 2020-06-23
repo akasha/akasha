@@ -38,14 +38,21 @@ final class CallbackInterfaceGenerator
                           .build() )
       .addAnnotation( FunctionalInterface.class );
 
-    for ( final ConstMember constant : definition.getConstants() )
-    {
-      generateConstant( context, constant, type );
-    }
+    generateConstants( context, definition.getConstants(), type );
 
     generateOperation( context, definition.getOperation(), type );
 
     CodeGenUtil.writeTopLevelType( context, type );
+  }
+
+  private void generateConstants( @Nonnull final CodeGenContext context,
+                                  @Nonnull final Iterable<ConstMember> constants,
+                                  @Nonnull final TypeSpec.Builder type )
+  {
+    for ( final ConstMember constant : constants )
+    {
+      generateConstant( context, constant, type );
+    }
   }
 
   private void generateConstant( @Nonnull final CodeGenContext context,
