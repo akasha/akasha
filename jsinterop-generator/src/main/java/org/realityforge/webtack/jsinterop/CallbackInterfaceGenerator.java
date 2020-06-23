@@ -14,9 +14,11 @@ import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
+import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.Type;
+import org.realityforge.webtack.model.TypeReference;
 
 final class CallbackInterfaceGenerator
 {
@@ -139,6 +141,22 @@ final class CallbackInterfaceGenerator
       final Type actualType = CodeGenUtil.resolveTypeDefs( context, argumentType );
       final ParameterSpec.Builder parameter =
         ParameterSpec.builder( CodeGenUtil.toTypeName( context, argumentType, actualType ), argument.getName() );
+
+      if ( addMagicConstantsAnnotation() && Kind.TypeReference == actualType.getKind() )
+      {
+        final EnumerationDefinition enumeration =
+          context.getSchema().findEnumerationByName( ( (TypeReference) actualType ).getName() );
+        if ( null != enumeration )
+        {
+          final AnnotationSpec.Builder annotation = AnnotationSpec.builder( Types.MAGIC_CONSTANT );
+          for ( final String value : enumeration.getValues() )
+          {
+            annotation.addMember( "stringValues", "$S", value );
+          }
+          parameter.addAnnotation( annotation.build() );
+
+        }
+      }
       if ( CodeGenUtil.isNullable( context, argumentType ) )
       {
         parameter.addAnnotation( Types.NULLABLE );
@@ -147,10 +165,14 @@ final class CallbackInterfaceGenerator
       {
         parameter.addAnnotation( Types.NONNULL );
       }
-      // TODO: Add jetbrains annotation for enumerations constants
       method.addParameter( parameter.build() );
     }
     final MethodSpec build = method.build();
     type.addMethod( build );
+  }
+
+  boolean addMagicConstantsAnnotation()
+  {
+    return true;
   }
 }
