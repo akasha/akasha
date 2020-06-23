@@ -114,6 +114,12 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public CallbackDefinition getCallbackByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findCallbackByName( name ), "Missing expected callback with name " + name );
+  }
+
+  @Nonnull
   public Collection<CallbackInterfaceDefinition> getCallbackInterfaces()
   {
     return _callbackInterfaces.values();
@@ -123,6 +129,13 @@ public final class WebIDLSchema
   public CallbackInterfaceDefinition findCallbackInterfaceByName( @Nonnull final String name )
   {
     return _callbackInterfaces.get( name );
+  }
+
+  @Nonnull
+  public CallbackInterfaceDefinition getCallbackInterfaceByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findCallbackInterfaceByName( name ),
+                                   "Missing expected callback interface with name " + name );
   }
 
   @Nonnull
@@ -138,6 +151,12 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public DictionaryDefinition getDictionaryByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findDictionaryByName( name ), "Missing expected dictionary with name " + name );
+  }
+
+  @Nonnull
   public Collection<EnumerationDefinition> getEnumerations()
   {
     return _enumerations.values();
@@ -147,6 +166,12 @@ public final class WebIDLSchema
   public EnumerationDefinition findEnumerationByName( @Nonnull final String name )
   {
     return _enumerations.get( name );
+  }
+
+  @Nonnull
+  public EnumerationDefinition getEnumerationByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findEnumerationByName( name ), "Missing expected enumeration with name " + name );
   }
 
   @Nonnull
@@ -162,6 +187,12 @@ public final class WebIDLSchema
   }
 
   @Nonnull
+  public InterfaceDefinition getInterfaceByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findInterfaceByName( name ), "Missing expected interface with name " + name );
+  }
+
+  @Nonnull
   public Collection<MixinDefinition> getMixins()
   {
     return _mixins.values();
@@ -171,6 +202,12 @@ public final class WebIDLSchema
   public MixinDefinition findMixinByName( @Nonnull final String name )
   {
     return _mixins.get( name );
+  }
+
+  @Nonnull
+  public MixinDefinition getMixinByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findMixinByName( name ), "Missing expected mixin with name " + name );
   }
 
   @Nonnull
@@ -198,6 +235,12 @@ public final class WebIDLSchema
   public NamespaceDefinition findNamespaceByName( @Nonnull final String name )
   {
     return _namespaces.get( name );
+  }
+
+  @Nonnull
+  public NamespaceDefinition getNamespaceByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findNamespaceByName( name ), "Missing expected namespace with name " + name );
   }
 
   @Nonnull
@@ -258,6 +301,12 @@ public final class WebIDLSchema
   public TypedefDefinition findTypedefByName( @Nonnull final String name )
   {
     return _typedefs.get( name );
+  }
+
+  @Nonnull
+  public TypedefDefinition getTypedefByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findTypedefByName( name ), "Missing expected typedef with name " + name );
   }
 
   @Override
