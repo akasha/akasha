@@ -1,8 +1,5 @@
 package org.realityforge.webtack.jsinterop;
 
-import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.CallbackInterfaceDefinition;
-import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.annotations.Test;
 
 public final class CallbackInterfaceGeneratorTest
@@ -21,7 +18,9 @@ public final class CallbackInterfaceGeneratorTest
       "callback interface EventListener {\n" +
       "  void handleEvent( Event event );\n" +
       "};\n";
-    assertCallbackInterfaceGenerated( content, "EventListener" );
+    generateCode( content );
+    assertJavaFilePresent( "Event" );
+    assertJavaFilePresent( "EventListener" );
   }
 
   @Test
@@ -33,7 +32,8 @@ public final class CallbackInterfaceGeneratorTest
       "callback interface XPathNSResolver {\n" +
       "  DOMString? lookupNamespaceURI( DOMString? prefix );\n" +
       "};\n";
-    assertCallbackInterfaceGenerated( content, "XPathNSResolver" );
+    generateCode( content );
+    assertJavaFilePresent( "XPathNSResolver" );
   }
 
   @Test
@@ -66,21 +66,7 @@ public final class CallbackInterfaceGeneratorTest
       "  const unsigned long SHOW_TEXT = 0x4;\n" +
       "  unsigned short acceptNode( Node node );\n" +
       "};\n";
-    assertCallbackInterfaceGenerated( content, "NodeFilter" );
-  }
-
-  private void assertCallbackInterfaceGenerated( @Nonnull final String content, @Nonnull final String name )
-    throws Exception
-  {
-    final WebIDLSchema schema = loadSchema( content );
-    generateCode( schema, schema.getCallbackInterfaceByName( name ) );
-  }
-
-  private void generateCode( @Nonnull final WebIDLSchema schema,
-                             @Nonnull final CallbackInterfaceDefinition definition )
-    throws Exception
-  {
-    generateCode( schema );
-    assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
+    generateCode( content );
+    assertJavaFilePresent( "NodeFilter" );
   }
 }

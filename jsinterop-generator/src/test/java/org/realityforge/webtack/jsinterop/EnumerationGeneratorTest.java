@@ -1,7 +1,5 @@
 package org.realityforge.webtack.jsinterop;
 
-import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.annotations.Test;
 
@@ -23,11 +21,8 @@ public final class EnumerationGeneratorTest
       "  \"not-allowed\",\n" +
       "  \"service-not-allowed\"\n" +
       "};\n";
-    final WebIDLSchema schema = loadSchema( content );
-    final EnumerationDefinition definition = schema.findEnumerationByName( "SpeechRecognitionErrorCode" );
-    assert null != definition;
-
-    generateCode( schema, definition );
+    generateCode( content );
+    assertJavaFilePresent( "SpeechRecognitionErrorCode" );
   }
 
   @Test
@@ -43,17 +38,7 @@ public final class EnumerationGeneratorTest
       "  \"json\",\n" +
       "  \"text\"\n" +
       "};\n";
-    final WebIDLSchema schema = loadSchema( content );
-    final EnumerationDefinition definition = schema.findEnumerationByName( "XMLHttpRequestResponseType" );
-    assert null != definition;
-
-    generateCode( schema, definition );
-  }
-
-  private void generateCode( @Nonnull final WebIDLSchema schema, @Nonnull final EnumerationDefinition definition )
-    throws Exception
-  {
-    generateCode( schema );
-    assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
+    generateCode( content );
+    assertJavaFilePresent( "XMLHttpRequestResponseType" );
   }
 }

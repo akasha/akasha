@@ -1,8 +1,5 @@
 package org.realityforge.webtack.jsinterop;
 
-import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.InterfaceDefinition;
-import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.annotations.Test;
 
 public final class InterfaceGeneratorTest
@@ -46,15 +43,8 @@ public final class InterfaceGeneratorTest
       "  readonly attribute DOMString message;\n" +
       "  constructor( DOMString type, SpeechRecognitionErrorEventInit eventInitDict );\n" +
       "};\n";
-    final WebIDLSchema schema = loadSchema( content );
-    generateCode( schema, schema.getInterfaceByName( "Event" ) );
-    generateCode( schema, schema.getInterfaceByName( "SpeechRecognitionErrorEvent" ) );
-  }
-
-  private void generateCode( @Nonnull final WebIDLSchema schema, @Nonnull final InterfaceDefinition definition )
-    throws Exception
-  {
-    generateCode( schema );
-    assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
+    generateCode( content );
+    assertJavaFilePresent( "Event" );
+    assertJavaFilePresent( "SpeechRecognitionErrorEvent" );
   }
 }
