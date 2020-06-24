@@ -1,7 +1,10 @@
 package org.realityforge.webtack.jsinterop;
 
 import com.squareup.javapoet.ClassName;
+import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeName;
+import com.squareup.javapoet.TypeSpec;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Map;
 import java.util.Objects;
@@ -61,6 +64,19 @@ final class CodeGenContext
     final String typeMapping = _typeMapping.get( name );
     // TODO: Cache ClassName in context?
     return null != typeMapping ? ClassName.bestGuess( typeMapping ) : getClassName( name );
+  }
+
+  public void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
+    throws IOException
+  {
+    final Path outputDirectory = getMainJavaDirectory();
+    final TypeSpec typeSpec = type.build();
+    final String packageName = getPackageName();
+    JavaFile
+      .builder( packageName, typeSpec )
+      .skipJavaLangImports( true )
+      .build()
+      .writeTo( outputDirectory );
   }
 
   @Nonnull
