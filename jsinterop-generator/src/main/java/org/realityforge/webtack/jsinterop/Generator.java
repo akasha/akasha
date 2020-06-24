@@ -51,7 +51,7 @@ final class Generator
     }
   }
 
-  void generate( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )
+  private void generate( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
@@ -74,7 +74,7 @@ final class Generator
     context.writeTopLevelType( type );
   }
 
-  void generate( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
+  private void generate( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
@@ -330,7 +330,7 @@ final class Generator
     }
   }
 
-  void generate( @Nonnull final CodeGenContext context, @Nonnull final EnumerationDefinition definition )
+  private void generate( @Nonnull final CodeGenContext context, @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
