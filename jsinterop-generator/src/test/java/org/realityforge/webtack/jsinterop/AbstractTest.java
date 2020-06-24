@@ -136,6 +136,12 @@ public abstract class AbstractTest
     return directory.resolve( "com" ).resolve( "example" ).resolve( name + ".java" );
   }
 
+  protected final void assertJavaFilePresent( @Nonnull final String name )
+    throws Exception
+  {
+    assertFileExists( javaFile( name ) );
+  }
+
   protected final void assertFileMatchesFixture( @Nonnull final Path file, @Nonnull final Path fixtureFile )
     throws IOException
   {
