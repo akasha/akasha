@@ -158,6 +158,12 @@ public abstract class AbstractTest
     assertEquals( actualContents, expectedContents, "File " + file + " should match fixture file " + fixtureFile );
   }
 
+  protected final void generateCode( @Nonnull final String content )
+    throws Exception
+  {
+    generateCode( loadSchema( content ) );
+  }
+
   protected final void generateCode( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
