@@ -21,10 +21,10 @@ public class Event {
 
   public static final int NONE = 0;
 
-  public Event(@Nonnull String type, @Nonnull EventInit eventInitDict) {
+  public Event(@Nonnull final String type, @Nonnull final EventInit eventInitDict) {
   }
 
-  public Event(@Nonnull String type) {
+  public Event(@Nonnull final String type) {
   }
 
   @Nonnull

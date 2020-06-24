@@ -259,7 +259,10 @@ final class CallbackInterfaceGenerator
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( CodeGenUtil.toTypeName( context, argumentType, actualType ), argument.getName() );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
-
+    if ( isFinal )
+    {
+      parameter.addModifiers( Modifier.FINAL );
+    }
     if ( CodeGenUtil.isNullable( context, argumentType ) )
     {
       parameter.addAnnotation( Types.NULLABLE );
