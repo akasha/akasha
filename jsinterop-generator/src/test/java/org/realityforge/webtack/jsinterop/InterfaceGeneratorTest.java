@@ -54,9 +54,7 @@ public final class InterfaceGeneratorTest
   private void generateCode( @Nonnull final WebIDLSchema schema, @Nonnull final InterfaceDefinition definition )
     throws Exception
   {
-    //TODO: We should generate the java code for above and compile java code to ensure it is valid
-    final CallbackInterfaceGenerator generator = new CallbackInterfaceGenerator();
-    generator.generate( newContext( schema ), definition );
+    generateCode( schema );
     assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
   }
 }

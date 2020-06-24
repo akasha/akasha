@@ -80,9 +80,7 @@ public final class CallbackInterfaceGeneratorTest
                              @Nonnull final CallbackInterfaceDefinition definition )
     throws Exception
   {
-    //TODO: We should generate the java code for above and compile java code to ensure it is valid
-    final CallbackInterfaceGenerator generator = new CallbackInterfaceGenerator();
-    generator.generate( newContext( schema ) );
+    generateCode( schema );
     assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
   }
 }

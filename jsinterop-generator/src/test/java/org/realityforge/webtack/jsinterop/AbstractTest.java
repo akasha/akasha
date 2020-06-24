@@ -151,6 +151,13 @@ public abstract class AbstractTest
     assertEquals( actualContents, expectedContents, "File " + file + " should match fixture file " + fixtureFile );
   }
 
+  protected final void generateCode( @Nonnull final WebIDLSchema schema )
+    throws Exception
+  {
+    //TODO: We should generate the java code for above and compile java code to ensure it is valid
+    new Generator().generate( newContext( schema ) );
+  }
+
   @Nonnull
   protected final CodeGenContext newContext( @Nonnull final WebIDLSchema schema )
     throws Exception

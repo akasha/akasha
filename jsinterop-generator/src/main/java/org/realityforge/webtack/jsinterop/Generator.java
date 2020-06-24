@@ -31,7 +31,7 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
-final class CallbackInterfaceGenerator
+final class Generator
 {
   void generate( @Nonnull final CodeGenContext context )
     throws IOException

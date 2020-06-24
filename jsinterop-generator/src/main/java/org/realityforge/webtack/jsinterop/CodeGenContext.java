@@ -72,6 +72,7 @@ final class CodeGenContext
     final Path outputDirectory = getMainJavaDirectory();
     final TypeSpec typeSpec = type.build();
     final String packageName = getPackageName();
+    final String name = typeSpec.name;
     JavaFile
       .builder( packageName, typeSpec )
       .skipJavaLangImports( true )
