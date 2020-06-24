@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "SpeechRecognitionErrorEvent"
 )
-public class SpeechRecognitionErrorEvent extends Event {
+public final class SpeechRecognitionErrorEvent extends Event {
   public SpeechRecognitionErrorEvent(@Nonnull final String type,
       @Nonnull final SpeechRecognitionErrorEventInit eventInitDict) {
     super( type, eventInitDict );

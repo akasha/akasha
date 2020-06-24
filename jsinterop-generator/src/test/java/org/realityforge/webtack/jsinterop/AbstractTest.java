@@ -155,6 +155,7 @@ public abstract class AbstractTest
   protected final CodeGenContext newContext( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
+    schema.link();
     return new CodeGenContext( schema, Collections.emptyMap(), getWorkingDir(), "com.example" );
   }
 }
