@@ -140,7 +140,7 @@ final class Generator
     final Type constantType = constant.getType();
     final Type actualType = resolveTypeDefs( context, constantType );
     final FieldSpec.Builder field =
-      FieldSpec.builder( toTypeName( context, constantType, actualType ),
+      FieldSpec.builder( toTypeName( context, actualType ),
                          constant.getName(),
                          Modifier.PUBLIC,
                          Modifier.STATIC,
@@ -234,7 +234,7 @@ final class Generator
       {
         method.addAnnotation( Types.NONNULL );
       }
-      method.returns( toTypeName( context, returnType, actualType ) );
+      method.returns( toTypeName( context, actualType ) );
     }
     for ( int i = 0; i < maxArgumentCount; i++ )
     {
@@ -289,7 +289,7 @@ final class Generator
     final Type argumentType = argument.getType();
     final Type actualType = resolveTypeDefs( context, argumentType );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( toTypeName( context, argumentType, actualType ), argument.getName() );
+      ParameterSpec.builder( toTypeName( context, actualType ), argument.getName() );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
     if ( isFinal )
     {
@@ -448,9 +448,7 @@ final class Generator
   }
 
   @Nonnull
-  private TypeName toTypeName( @Nonnull final CodeGenContext context,
-                               @Nonnull final Type type,
-                               @Nonnull final Type actualType )
+  private TypeName toTypeName( @Nonnull final CodeGenContext context, @Nonnull final Type type )
   {
     final Kind kind = type.getKind();
 
@@ -538,14 +536,21 @@ final class Generator
     {
       final TypeReference typeReference = (TypeReference) type;
       final String name = typeReference.getName();
-      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
-      if ( null != typedef )
+      final WebIDLSchema schema = context.getSchema();
+      if ( null != schema.findInterfaceByName( name ) ||
+           null != schema.findDictionaryByName( name ) ||
+           null != schema.findCallbackInterfaceByName( name ) ||
+           null != schema.findCallbackByName( name ) )
       {
-        return toTypeName( context, actualType, actualType );
+        return context.lookupTypeByName( name );
+      }
+      else if ( null != schema.findEnumerationByName( name ) )
+      {
+        return Types.STRING;
       }
       else
       {
-        return context.lookupTypeByName( name );
+        return toTypeName( context, schema.getTypedefByName( name ).getType() );
       }
     }
     else if ( Kind.Promise == kind )
@@ -556,7 +561,7 @@ final class Generator
     {
       final Type itemType = ( (SequenceType) type ).getItemType();
       return ParameterizedTypeName.get( Types.JS_ARRAY,
-                                        toTypeName( context, itemType, resolveTypeDefs( context, itemType ) ) );
+                                        toTypeName( context, resolveTypeDefs( context, itemType ) ) );
     }
     else if ( Kind.Record == kind )
     {
