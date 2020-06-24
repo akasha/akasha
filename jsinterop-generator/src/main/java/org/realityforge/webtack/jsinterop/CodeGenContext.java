@@ -67,7 +67,7 @@ final class CodeGenContext
   private ClassName getClassName( @Nonnull final String name )
   {
     final EnumerationDefinition enumeration = getSchema().findEnumerationByName( name );
-    if( null != enumeration )
+    if ( null != enumeration )
     {
       return Types.STRING;
     }
