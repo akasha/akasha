@@ -13,6 +13,7 @@ public final class CallbackInterfaceGeneratorTest
     throws Exception
   {
     final String content =
+      "[Exposed=(Window,Worker,AudioWorklet)]\n" +
       "interface Event {\n" +
       "  constructor();\n" +
       "};\n" +
@@ -41,6 +42,7 @@ public final class CallbackInterfaceGeneratorTest
   {
     // Example returns nullable value
     final String content =
+      "[Exposed=Window]\n" +
       "interface Node {\n" +
       "  constructor();\n" +
       "};\n" +
