@@ -10,6 +10,11 @@ public final class InterfaceGeneratorTest
     throws Exception
   {
     final String content =
+      "dictionary EventInit {\n" +
+      "  boolean bubbles = false;\n" +
+      "  boolean cancelable = false;\n" +
+      "  boolean composed = false;\n" +
+      "};\n" +
       "[Exposed=(Window,Worker,AudioWorklet)]\n" +
       "interface Event {\n" +
       "  const unsigned short AT_TARGET = 2;\n" +
@@ -26,7 +31,6 @@ public final class InterfaceGeneratorTest
       "  readonly attribute boolean isTrusted;\n" +
       "  readonly attribute EventTarget? srcElement;\n" +
       "  readonly attribute EventTarget? target;\n" +
-      "  readonly attribute DOMHighResTimeStamp timeStamp;\n" +
       "  readonly attribute DOMString type;\n" +
       "  attribute boolean cancelBubble;\n" +
       "  attribute boolean returnValue;\n" +
@@ -39,9 +43,13 @@ public final class InterfaceGeneratorTest
       "};\n" +
       "[Exposed=Window]\n" +
       "interface SpeechRecognitionErrorEvent : Event {\n" +
-      "  readonly attribute SpeechRecognitionErrorCode error;\n" +
       "  readonly attribute DOMString message;\n" +
-      "  constructor( DOMString type, SpeechRecognitionErrorEventInit eventInitDict );\n" +
+      "  constructor( DOMString type );\n" +
+      "};\n" +
+      "[Exposed=(Window,Worker,AudioWorklet)]\n" +
+      "interface EventTarget {\n" +
+      "  constructor();\n" +
+      "  boolean dispatchEvent( Event event );\n" +
       "};\n";
     generateCode( content );
     assertJavaFilePresent( "Event" );

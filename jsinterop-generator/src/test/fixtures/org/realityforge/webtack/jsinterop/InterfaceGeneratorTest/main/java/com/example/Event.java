@@ -3,6 +3,7 @@ package com.example;
 import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -21,10 +22,60 @@ public class Event {
 
   public static final int NONE = 0;
 
+  public final boolean bubbles;
+
+  public final boolean cancelable;
+
+  public final boolean composed;
+
+  @Nullable
+  public final EventTarget currentTarget;
+
+  public final boolean defaultPrevented;
+
+  public final int eventPhase;
+
+  public final boolean isTrusted;
+
+  @Nullable
+  public final EventTarget srcElement;
+
+  @Nullable
+  public final EventTarget target;
+
+  @Nonnull
+  public final String type;
+
+  public boolean cancelBubble;
+
+  public boolean returnValue;
+
   public Event(@Nonnull final String type, @Nonnull final EventInit eventInitDict) {
+    // Initialize read-only attributes. This is done to satisfy the JVM and will be ignored when transpiled to javascript.
+    this.bubbles = false;
+    this.cancelable = false;
+    this.composed = false;
+    this.currentTarget = null;
+    this.defaultPrevented = false;
+    this.eventPhase = 0;
+    this.isTrusted = false;
+    this.srcElement = null;
+    this.target = null;
+    this.type = null;
   }
 
   public Event(@Nonnull final String type) {
+    // Initialize read-only attributes. This is done to satisfy the JVM and will be ignored when transpiled to javascript.
+    this.bubbles = false;
+    this.cancelable = false;
+    this.composed = false;
+    this.currentTarget = null;
+    this.defaultPrevented = false;
+    this.eventPhase = 0;
+    this.isTrusted = false;
+    this.srcElement = null;
+    this.target = null;
+    this.type = null;
   }
 
   @Nonnull

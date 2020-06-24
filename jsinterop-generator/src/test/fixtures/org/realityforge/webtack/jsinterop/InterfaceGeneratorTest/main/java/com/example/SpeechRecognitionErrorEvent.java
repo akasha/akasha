@@ -12,8 +12,12 @@ import jsinterop.annotations.JsType;
     name = "SpeechRecognitionErrorEvent"
 )
 public final class SpeechRecognitionErrorEvent extends Event {
-  public SpeechRecognitionErrorEvent(@Nonnull final String type,
-      @Nonnull final SpeechRecognitionErrorEventInit eventInitDict) {
-    super( type, eventInitDict );
+  @Nonnull
+  public final String message;
+
+  public SpeechRecognitionErrorEvent(@Nonnull final String type) {
+    super( type );
+    // Initialize read-only attributes. This is done to satisfy the JVM and will be ignored when transpiled to javascript.
+    this.message = null;
   }
 }
