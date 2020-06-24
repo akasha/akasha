@@ -4,8 +4,11 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -22,6 +25,9 @@ final class CodeGenContext
   private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
+  // Maps Classname -> Path of source file
+  @Nonnull
+  private final Map<String, Path> _generatedSourceFiles = new HashMap<>();
 
   CodeGenContext( @Nonnull final WebIDLSchema schema,
                   @Nonnull final Map<String, String> typeMapping,
@@ -73,11 +79,26 @@ final class CodeGenContext
     final TypeSpec typeSpec = type.build();
     final String packageName = getPackageName();
     final String name = typeSpec.name;
+    Path path = outputDirectory;
+    if ( !packageName.isEmpty() )
+    {
+      path = outputDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
+    }
+    path = path.resolve( name + ".java" );
+    final String qualifiedName = packageName + "." + name;
+    assert !_generatedSourceFiles.containsKey( qualifiedName );
+    _generatedSourceFiles.put( qualifiedName, path );
     JavaFile
       .builder( packageName, typeSpec )
       .skipJavaLangImports( true )
       .build()
       .writeTo( outputDirectory );
+  }
+
+  @Nonnull
+  Map<String, Path> getGeneratedSourceFiles()
+  {
+    return Collections.unmodifiableMap( _generatedSourceFiles );
   }
 
   @Nonnull
