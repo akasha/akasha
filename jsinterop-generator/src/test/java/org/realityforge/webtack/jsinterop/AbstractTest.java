@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Collections;
+import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.WebIDLModelParser;
@@ -161,7 +162,15 @@ public abstract class AbstractTest
     throws Exception
   {
     //TODO: We should generate the java code for above and compile java code to ensure it is valid
-    new Generator().generate( newContext( schema ) );
+    final CodeGenContext context = newContext( schema );
+    new Generator().generate( context );
+    final Map<String, Path> generatedSourceFiles = context.getGeneratedSourceFiles();
+    for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
+    {
+      final Path file = e.getValue();
+      final Path relativePath = context.getOutputDirectory().relativize( file );
+      assertFileMatchesFixture( file, getTestLocalFixtureDir().resolve( relativePath ) );
+    }
   }
 
   @Nonnull
