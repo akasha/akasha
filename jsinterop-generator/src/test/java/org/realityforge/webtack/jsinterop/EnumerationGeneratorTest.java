@@ -54,7 +54,7 @@ public final class EnumerationGeneratorTest
     throws Exception
   {
     //TODO: We should generate the java code for above and compile java code to ensure it is valid
-    final EnumerationGenerator generator = new EnumerationGenerator();
+    final CallbackInterfaceGenerator generator = new CallbackInterfaceGenerator();
     generator.generate( newContext( schema ), definition );
     assertFileMatchesFixture( javaFile( definition.getName() ), javaFixtureFile( definition.getName() ) );
   }
