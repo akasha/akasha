@@ -499,4 +499,9 @@ public final class WebIDLSchema
       return false;
     }
   }
+
+  public void link()
+  {
+    getInterfaces().forEach( e -> e.link( this ) );
+  }
 }

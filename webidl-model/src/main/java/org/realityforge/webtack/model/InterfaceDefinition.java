@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -28,6 +29,11 @@ public final class InterfaceDefinition
   private final MapLikeMember _mapLikeMember;
   @Nullable
   private final SetLikeMember _setLikeMember;
+  private boolean _linked;
+  @Nullable
+  private InterfaceDefinition _superInterface;
+  @Nonnull
+  private final List<InterfaceDefinition> _directSubInterfaces = new ArrayList<>();
 
   public InterfaceDefinition( @Nonnull final String name,
                               @Nullable final String inherits,
@@ -63,6 +69,21 @@ public final class InterfaceDefinition
   public String getInherits()
   {
     return _inherits;
+  }
+
+  @Nullable
+  public InterfaceDefinition getSuperInterface()
+  {
+    assert _linked;
+    assert null == _inherits || null != _superInterface;
+    return _superInterface;
+  }
+
+  @Nonnull
+  public List<InterfaceDefinition> getDirectSubInterfaces()
+  {
+    assert _linked;
+    return _directSubInterfaces;
   }
 
   @Nonnull
@@ -204,5 +225,15 @@ public final class InterfaceDefinition
     {
       return false;
     }
+  }
+
+  void link( @Nonnull final WebIDLSchema schema )
+  {
+    if ( null != _inherits )
+    {
+      _superInterface = schema.getInterfaceByName( _inherits );
+      _superInterface._directSubInterfaces.add( this );
+    }
+    _linked = true;
   }
 }
