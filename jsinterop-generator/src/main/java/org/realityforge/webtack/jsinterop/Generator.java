@@ -21,6 +21,8 @@ import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
+import org.realityforge.webtack.model.DictionaryDefinition;
+import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.ExtendedAttribute;
@@ -43,6 +45,10 @@ final class Generator
     {
       generate( context, definition );
     }
+    for ( final DictionaryDefinition definition : schema.getDictionaries() )
+    {
+      generate( context, definition );
+    }
     for ( final EnumerationDefinition definition : schema.getEnumerations() )
     {
       generate( context, definition );
@@ -51,6 +57,38 @@ final class Generator
     {
       generate( context, definition );
     }
+  }
+
+  private void generate( @Nonnull final CodeGenContext context, @Nonnull final DictionaryDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .classBuilder( definition.getName() )
+        .addModifiers( Modifier.PUBLIC );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "name", "$S", "?" )
+                          .build() );
+
+    final String inherits = definition.getInherits();
+    if ( null != inherits )
+    {
+      type.superclass( context.lookupTypeByName( inherits ) );
+    }
+
+    for ( final DictionaryMember member : definition.getMembers() )
+    {
+      final Type attributeType = member.getType();
+      final Type actualType = resolveTypeDefs( context, attributeType );
+      final FieldSpec.Builder field =
+        FieldSpec.builder( toTypeName( context, actualType ), member.getName(), Modifier.PUBLIC );
+      type.addField( field.build() );
+    }
+
+    context.writeTopLevelType( type );
   }
 
   private void generate( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )
