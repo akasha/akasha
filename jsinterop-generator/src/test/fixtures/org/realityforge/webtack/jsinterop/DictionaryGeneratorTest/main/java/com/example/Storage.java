@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "Storage"
 )
 public class Storage {
-  public final int length;
+  public native int length();
 
   public native void clear();
 

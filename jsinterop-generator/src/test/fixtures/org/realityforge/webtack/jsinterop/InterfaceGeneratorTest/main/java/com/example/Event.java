@@ -27,61 +27,39 @@ public class Event {
   @JsOverlay
   public static final int NONE = 0;
 
-  public final boolean bubbles;
-
-  public final boolean cancelable;
-
-  public final boolean composed;
-
-  @Nullable
-  public final EventTarget currentTarget;
-
-  public final boolean defaultPrevented;
-
-  public final int eventPhase;
-
-  public final boolean isTrusted;
-
-  @Nullable
-  public final EventTarget srcElement;
-
-  @Nullable
-  public final EventTarget target;
-
-  @Nonnull
-  public final String type;
-
   public boolean cancelBubble;
 
   public boolean returnValue;
 
   public Event(@Nonnull final String type, @Nonnull final EventInit eventInitDict) {
-    // Initialize read-only attributes. This is done to satisfy the JVM and will be ignored when transpiled to javascript.
-    this.bubbles = false;
-    this.cancelable = false;
-    this.composed = false;
-    this.currentTarget = null;
-    this.defaultPrevented = false;
-    this.eventPhase = 0;
-    this.isTrusted = false;
-    this.srcElement = null;
-    this.target = null;
-    this.type = null;
   }
 
   public Event(@Nonnull final String type) {
-    // Initialize read-only attributes. This is done to satisfy the JVM and will be ignored when transpiled to javascript.
-    this.bubbles = false;
-    this.cancelable = false;
-    this.composed = false;
-    this.currentTarget = null;
-    this.defaultPrevented = false;
-    this.eventPhase = 0;
-    this.isTrusted = false;
-    this.srcElement = null;
-    this.target = null;
-    this.type = null;
   }
+
+  public native boolean bubbles();
+
+  public native boolean cancelable();
+
+  public native boolean composed();
+
+  @Nullable
+  public native EventTarget currentTarget();
+
+  public native boolean defaultPrevented();
+
+  public native int eventPhase();
+
+  public native boolean isTrusted();
+
+  @Nullable
+  public native EventTarget srcElement();
+
+  @Nullable
+  public native EventTarget target();
+
+  @Nonnull
+  public native String type();
 
   @Nonnull
   public native JsArray<EventTarget> composedPath();

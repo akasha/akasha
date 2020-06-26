@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.element.Modifier;
@@ -144,23 +143,14 @@ final class Generator
 
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
-      final Type attributeType = attribute.getType();
-      final Type actualType = resolveTypeDefs( context, attributeType );
-      final FieldSpec.Builder field =
-        FieldSpec.builder( toTypeName( context, actualType ), attribute.getName(), Modifier.PUBLIC );
       if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
       {
-        field.addModifiers( Modifier.FINAL );
+        generateReadOnlyAttribute( context, attribute, type );
       }
-      if ( isNullable( context, attributeType ) )
+      else
       {
-        field.addAnnotation( Types.NULLABLE );
+        generateAttribute( context, attribute, type );
       }
-      else if ( !actualType.getKind().isPrimitive() )
-      {
-        field.addAnnotation( Types.NONNULL );
-      }
-      type.addField( field.build() );
     }
 
     for ( final OperationMember operation : definition.getOperations() )
@@ -172,15 +162,54 @@ final class Generator
       }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
-        final List<AttributeMember> readOnlyAttributes = definition.getAttributes()
-          .stream()
-          .filter( a -> a.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
-          .collect( Collectors.toList() );
-        generateConstructorOperation( context, operation, readOnlyAttributes, null != inherits, type );
+        generateConstructorOperation( context, operation, null != inherits, type );
       }
     }
 
     context.writeTopLevelType( type );
+  }
+
+  private void generateReadOnlyAttribute( @Nonnull final CodeGenContext context,
+                                          @Nonnull final AttributeMember attribute,
+                                          @Nonnull final TypeSpec.Builder type )
+  {
+    assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    final Type attributeType = attribute.getType();
+    final Type actualType = resolveTypeDefs( context, attributeType );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( attribute.getName() )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .returns( toTypeName( context, actualType ) );
+    if ( isNullable( context, attributeType ) )
+    {
+      method.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      method.addAnnotation( Types.NONNULL );
+    }
+    type.addMethod( method.build() );
+  }
+
+  private void generateAttribute( @Nonnull final CodeGenContext context,
+                                  @Nonnull final AttributeMember attribute,
+                                  @Nonnull final TypeSpec.Builder type )
+  {
+    assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    final Type attributeType = attribute.getType();
+    final Type actualType = resolveTypeDefs( context, attributeType );
+    final FieldSpec.Builder field =
+      FieldSpec.builder( toTypeName( context, actualType ), attribute.getName(), Modifier.PUBLIC );
+    if ( isNullable( context, attributeType ) )
+    {
+      field.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      field.addAnnotation( Types.NONNULL );
+    }
+    type.addField( field.build() );
   }
 
   private void generateConstants( @Nonnull final CodeGenContext context,
@@ -307,7 +336,6 @@ final class Generator
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
                                              @Nonnull final OperationMember operation,
-                                             @Nonnull final List<AttributeMember> readOnlyAttributes,
                                              final boolean invokeSuper,
                                              @Nonnull final TypeSpec.Builder type )
   {
@@ -316,13 +344,12 @@ final class Generator
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
     for ( int i = 0; i <= optionalCount; i++ )
     {
-      generateConstructorOperation( context, operation, readOnlyAttributes, invokeSuper, argCount - i, type );
+      generateConstructorOperation( context, operation, invokeSuper, argCount - i, type );
     }
   }
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
                                              @Nonnull final OperationMember operation,
-                                             @Nonnull final List<AttributeMember> readOnlyAttributes,
                                              final boolean invokeSuper,
                                              final long maxArgumentCount,
                                              @Nonnull final TypeSpec.Builder type )
@@ -341,36 +368,6 @@ final class Generator
     if ( invokeSuper )
     {
       method.addStatement( "super( " + String.join( ", ", superArgs ) + " )" );
-    }
-    if ( !readOnlyAttributes.isEmpty() )
-    {
-      method.addComment( "Initialize read-only attributes. This is done to satisfy the JVM and will " +
-                         "be ignored when transpiled to javascript." );
-      for ( final AttributeMember attribute : readOnlyAttributes )
-      {
-        final boolean nullable = isNullable( context, attribute.getType() );
-        final Type actualType = resolveTypeDefs( context, attribute.getType() );
-        final Kind kind = actualType.getKind();
-        if ( kind.isPrimitive() )
-        {
-          if ( kind.isDecimal() )
-          {
-            method.addStatement( "this.$N = 0.0F", attribute.getName() );
-          }
-          else if ( kind.isInteger() || Kind.Octet == kind || Kind.Byte == kind )
-          {
-            method.addStatement( "this.$N = 0", attribute.getName() );
-          }
-          else if ( Kind.Boolean == kind )
-          {
-            method.addStatement( "this.$N = false", attribute.getName() );
-          }
-        }
-        else
-        {
-          method.addStatement( "this.$N = null", attribute.getName() );
-        }
-      }
     }
 
     type.addMethod( method.build() );
