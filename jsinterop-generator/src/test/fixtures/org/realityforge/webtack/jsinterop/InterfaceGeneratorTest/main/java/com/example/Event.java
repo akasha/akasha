@@ -4,6 +4,7 @@ import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -14,12 +15,16 @@ import jsinterop.annotations.JsType;
     name = "Event"
 )
 public class Event {
+  @JsOverlay
   public static final int AT_TARGET = 2;
 
+  @JsOverlay
   public static final int BUBBLING_PHASE = 3;
 
+  @JsOverlay
   public static final int CAPTURING_PHASE = 1;
 
+  @JsOverlay
   public static final int NONE = 0;
 
   public final boolean bubbles;

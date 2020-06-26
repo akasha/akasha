@@ -8,6 +8,8 @@ final class Types
   @Nonnull
   static final ClassName JS_TYPE = ClassName.get( "jsinterop.annotations", "JsType" );
   @Nonnull
+  static final ClassName JS_OVERLAY = ClassName.get( "jsinterop.annotations", "JsOverlay" );
+  @Nonnull
   static final ClassName JS_PACKAGE = ClassName.get( "jsinterop.annotations", "JsPackage" );
   @Nonnull
   static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );

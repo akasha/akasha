@@ -205,11 +205,13 @@ final class Generator
     final Type constantType = constant.getType();
     final Type actualType = resolveTypeDefs( context, constantType );
     final FieldSpec.Builder field =
-      FieldSpec.builder( toTypeName( context, actualType ),
-                         constant.getName(),
-                         Modifier.PUBLIC,
-                         Modifier.STATIC,
-                         Modifier.FINAL );
+      FieldSpec
+        .builder( toTypeName( context, actualType ),
+                  constant.getName(),
+                  Modifier.PUBLIC,
+                  Modifier.STATIC,
+                  Modifier.FINAL )
+        .addAnnotation( Types.JS_OVERLAY );
     final ConstValue value = constant.getValue();
     final ConstValue.Kind kind = value.getKind();
     if ( ConstValue.Kind.True == kind )
