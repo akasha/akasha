@@ -53,6 +53,8 @@ public final class InterfaceGeneratorTest
       "};\n";
     generateCode( content );
     assertJavaFilePresent( "Event" );
+    assertJavaFilePresent( "EventTarget" );
+    assertJavaFilePresent( "EventInit" );
     assertJavaFilePresent( "SpeechRecognitionErrorEvent" );
   }
 }
