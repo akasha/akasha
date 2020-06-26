@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Storage"
 )
-public final class Storage {
+public class Storage {
   public final int length;
 
   public native void clear();

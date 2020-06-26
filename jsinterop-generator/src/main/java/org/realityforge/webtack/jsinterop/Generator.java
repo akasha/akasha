@@ -134,11 +134,6 @@ final class Generator
                           .addMember( "name", "$S", exposedOnGlobal ? definition.getName() : "?" )
                           .build() );
 
-    if ( definition.getDirectSubInterfaces().isEmpty() )
-    {
-      type.addModifiers( Modifier.FINAL );
-    }
-
     final String inherits = definition.getInherits();
     if ( null != inherits )
     {

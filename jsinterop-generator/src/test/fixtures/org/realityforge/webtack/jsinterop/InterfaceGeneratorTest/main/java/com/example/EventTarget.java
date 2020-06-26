@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "EventTarget"
 )
-public final class EventTarget {
+public class EventTarget {
   public EventTarget() {
   }
 

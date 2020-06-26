@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Event"
 )
-public final class Event {
+public class Event {
   public Event() {
   }
 }

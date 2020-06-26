@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "Node"
 )
-public final class Node {
+public class Node {
   public Node() {
   }
 }
