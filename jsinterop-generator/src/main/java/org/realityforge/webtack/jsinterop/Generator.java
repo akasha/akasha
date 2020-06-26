@@ -113,9 +113,8 @@ final class Generator
     {
       final Type attributeType = attribute.getType();
       final Type actualType = resolveTypeDefs( context, attributeType );
-      final TypeName tt = toTypeName( context, actualType );
       final FieldSpec.Builder field =
-        FieldSpec.builder( tt, attribute.getName(), Modifier.PUBLIC );
+        FieldSpec.builder( toTypeName( context, actualType ), attribute.getName(), Modifier.PUBLIC );
       if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
       {
         field.addModifiers( Modifier.FINAL );
