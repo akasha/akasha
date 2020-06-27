@@ -8,10 +8,20 @@ import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.tools.DiagnosticCollector;
+import javax.tools.JavaCompiler;
+import javax.tools.JavaFileObject;
+import javax.tools.StandardJavaFileManager;
+import javax.tools.ToolProvider;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.IHookCallBack;
@@ -179,9 +189,21 @@ public abstract class AbstractTest
   protected final void generateCode( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    //TODO: We should generate the java code for above and compile java code to ensure it is valid
     final CodeGenContext context = newContext( schema );
+
+    if ( writeOutputFixtures() )
+    {
+      // Delete local fixtures if we plan to regenerate them to ensure that no
+      // stray source files are left in fixtures directory
+      FileUtil.deleteDirIfExists( getTestLocalFixtureDir() );
+    }
+
     new Generator().generate( context );
+    final List<Path> javaFiles = collectJavaFiles( context.getMainJavaDirectory() );
+    final List<Path> classpathEntries = collectLibs();
+
+    ensureGeneratedCodeCompiles( javaFiles, classpathEntries );
+
     final Map<String, Path> generatedSourceFiles = context.getGeneratedSourceFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
@@ -197,5 +219,78 @@ public abstract class AbstractTest
   {
     schema.link();
     return new CodeGenContext( schema, Collections.emptyMap(), getWorkingDir(), "com.example" );
+  }
+
+  /**
+   * Compile the supplied java files and make sure that they compile together.
+   *
+   * @param javaFiles the java files.
+   * @throws Exception if there is an error
+   */
+  private void ensureGeneratedCodeCompiles( @Nonnull final List<Path> javaFiles,
+                                            @Nonnull final List<Path> classpathEntries )
+    throws Exception
+  {
+    if ( !javaFiles.isEmpty() )
+    {
+      final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+      final StandardJavaFileManager fileManager = compiler.getStandardFileManager( null, null, null );
+      final Path output = getWorkingDir().resolve( "target" ).resolve( "classes" );
+      Files.createDirectories( output );
+      final Iterable<? extends JavaFileObject> compilationUnits =
+        fileManager.getJavaFileObjectsFromFiles( javaFiles
+                                                   .stream()
+                                                   .map( Path::toFile )
+                                                   .collect( Collectors.toList() ) );
+      final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
+      final String classpath =
+        classpathEntries
+          .stream()
+          .map( Path::toAbsolutePath )
+          .map( Path::toString )
+          .collect( Collectors.joining( File.pathSeparator ) );
+      final JavaCompiler.CompilationTask compilationTask =
+        compiler.getTask( null,
+                          fileManager,
+                          listener,
+                          Arrays.asList( "-d", output.toString(), "-cp", classpath, "-Xlint:all,-processing,-serial" ),
+                          null,
+                          compilationUnits );
+      if ( !compilationTask.call() )
+      {
+        fail( "Failed to compile files:\n" +
+              listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
+      }
+    }
+  }
+
+  @Nonnull
+  private List<Path> collectJavaFiles( @Nonnull final Path... dirs )
+    throws IOException
+  {
+    final List<Path> javaFiles = new ArrayList<>();
+    for ( final Path dir : dirs )
+    {
+      if ( dir.toFile().exists() )
+      {
+        Files
+          .walk( dir )
+          .filter( p -> p.toString().endsWith( ".java" ) )
+          .forEach( javaFiles::add );
+      }
+    }
+    return javaFiles;
+  }
+
+  @Nonnull
+  private List<Path> collectLibs()
+  {
+    final String libraries = System.getProperty( "webtack.jsinterop-generator.fixture.libs" );
+    return null == libraries ?
+           new ArrayList<>() :
+           Arrays
+             .stream( libraries.split( File.pathSeparator ) )
+             .map( Paths::get )
+             .collect( Collectors.toList() );
   }
 }

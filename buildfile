@@ -62,7 +62,10 @@ define 'webtack' do
                  :javapoet
 
     test.using :testng
-    test.options[:properties] = { 'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures') }
+    test.options[:properties] = {
+      'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
+      'webtack.jsinterop-generator.fixture.libs' => "#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s}"
+    }
     test.options[:java_args] = ['-ea']
     test.compile.with :gir
 
@@ -105,7 +108,7 @@ define 'webtack' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures')
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.fixture.libs=#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s}")
 
   ipr.add_component_from_artifact(:idea_codestyle)
 end
