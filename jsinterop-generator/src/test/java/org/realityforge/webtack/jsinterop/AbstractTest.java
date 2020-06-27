@@ -11,6 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,8 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.validator.ValidationError;
+import org.realityforge.webtack.model.tools.validator.ValidatorTool;
 import org.testng.IHookCallBack;
 import org.testng.IHookable;
 import org.testng.ITestResult;
@@ -189,6 +192,8 @@ public abstract class AbstractTest
   protected final void generateCode( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
+    final Collection<ValidationError> validate = ValidatorTool.create().validate( schema );
+    assertTrue( validate.isEmpty() );
     final CodeGenContext context = newContext( schema );
 
     if ( writeOutputFixtures() )
