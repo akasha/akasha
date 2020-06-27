@@ -1,6 +1,6 @@
 package com.example;
 
-import elemental2.core.Promise;
+import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

@@ -24,7 +24,7 @@ final class Types
   @Nonnull
   static final ClassName SYMBOL = ClassName.get( "elemental2.core", "Symbol" );
   @Nonnull
-  static final ClassName PROMISE = ClassName.get( "elemental2.core", "Promise" );
+  static final ClassName PROMISE = ClassName.get( "elemental2.promise", "Promise" );
   @Nonnull
   static final ClassName ARRAY_BUFFER = ClassName.get( "elemental2.core", "ArrayBuffer" );
   @Nonnull
