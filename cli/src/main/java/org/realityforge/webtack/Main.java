@@ -20,7 +20,7 @@ import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 /**
  * The entry point in which to run the tool.
  */
-public class Main
+public final class Main
 {
   private static final int VERSION_OPT = 2;
   private static final int HELP_OPT = 'h';
