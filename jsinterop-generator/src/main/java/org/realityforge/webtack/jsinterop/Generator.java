@@ -31,7 +31,6 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
-import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 final class Generator
@@ -78,6 +77,22 @@ final class Generator
       type.addSuperinterface( context.lookupTypeByName( inherits ) );
     }
 
+    generateDictionaryCreateMethod( context, definition, type );
+
+    for ( final DictionaryMember member : definition.getMembers() )
+    {
+      final Type actualType = context.getSchema().resolveType( member.getType() );
+      generateDictionaryMemberGetter( context, member, actualType, type );
+      generateDictionaryMemberSetter( context, member, actualType, type );
+    }
+
+    context.writeTopLevelType( type );
+  }
+
+  private void generateDictionaryCreateMethod( @Nonnull final CodeGenContext context,
+                                               @Nonnull final DictionaryDefinition definition,
+                                               @Nonnull final TypeSpec.Builder type )
+  {
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
 
     final ClassName self = ClassName.bestGuess( definition.getName() );
@@ -98,10 +113,10 @@ final class Generator
       for ( final DictionaryMember member : requiredMembers )
       {
         final Type memberType = member.getType();
-        final Type actualType = resolveTypeDefs( context, memberType );
+        final Type actualType = context.getSchema().resolveType( memberType );
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( toTypeName( context, actualType ), member.getName(), Modifier.FINAL );
-        if ( isNullable( context, memberType ) )
+        if ( context.getSchema().isNullable( memberType ) )
         {
           parameter.addAnnotation( Types.NULLABLE );
         }
@@ -115,15 +130,6 @@ final class Generator
       method.addStatement( "return $N", name );
     }
     type.addMethod( method.build() );
-
-    for ( final DictionaryMember member : definition.getMembers() )
-    {
-      final Type actualType = resolveTypeDefs( context, member.getType() );
-      generateDictionaryMemberGetter( context, member, actualType, type );
-      generateDictionaryMemberSetter( context, member, actualType, type );
-    }
-
-    context.writeTopLevelType( type );
   }
 
   @Nonnull
@@ -159,7 +165,7 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .returns( toTypeName( context, actualType ) )
         .addAnnotation( Types.JS_PROPERTY );
-    if ( isNullable( context, member.getType() ) )
+    if ( context.getSchema().isNullable( member.getType() ) )
     {
       method.addAnnotation( Types.NULLABLE );
     }
@@ -194,7 +200,7 @@ final class Generator
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( toTypeName( context, actualType ), member.getName() );
 
-    if ( isNullable( context, member.getType() ) )
+    if ( context.getSchema().isNullable( member.getType() ) )
     {
       parameter.addAnnotation( Types.NULLABLE );
     }
@@ -297,13 +303,13 @@ final class Generator
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
-    final Type actualType = resolveTypeDefs( context, attributeType );
+    final Type actualType = context.getSchema().resolveType( attributeType );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( attribute.getName() )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( toTypeName( context, actualType ) );
-    if ( isNullable( context, attributeType ) )
+    if ( context.getSchema().isNullable( attributeType ) )
     {
       method.addAnnotation( Types.NULLABLE );
     }
@@ -320,10 +326,10 @@ final class Generator
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
-    final Type actualType = resolveTypeDefs( context, attributeType );
+    final Type actualType = context.getSchema().resolveType( attributeType );
     final FieldSpec.Builder field =
       FieldSpec.builder( toTypeName( context, actualType ), attribute.getName(), Modifier.PUBLIC );
-    if ( isNullable( context, attributeType ) )
+    if ( context.getSchema().isNullable( attributeType ) )
     {
       field.addAnnotation( Types.NULLABLE );
     }
@@ -349,7 +355,7 @@ final class Generator
                                  @Nonnull final TypeSpec.Builder type )
   {
     final Type constantType = constant.getType();
-    final Type actualType = resolveTypeDefs( context, constantType );
+    final Type actualType = context.getSchema().resolveType( constantType );
     final FieldSpec.Builder field =
       FieldSpec
         .builder( toTypeName( context, actualType ),
@@ -438,8 +444,8 @@ final class Generator
     final Type returnType = operation.getReturnType();
     if ( Kind.Void != returnType.getKind() )
     {
-      final Type actualType = resolveTypeDefs( context, returnType );
-      if ( isNullable( context, returnType ) )
+      final Type actualType = context.getSchema().resolveType( returnType );
+      if ( context.getSchema().isNullable( returnType ) )
       {
         method.addAnnotation( Types.NULLABLE );
       }
@@ -501,7 +507,7 @@ final class Generator
                                           @Nonnull final MethodSpec.Builder method )
   {
     final Type argumentType = argument.getType();
-    final Type actualType = resolveTypeDefs( context, argumentType );
+    final Type actualType = context.getSchema().resolveType( argumentType );
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( toTypeName( context, actualType ), argument.getName() );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
@@ -509,7 +515,7 @@ final class Generator
     {
       parameter.addModifiers( Modifier.FINAL );
     }
-    if ( isNullable( context, argumentType ) )
+    if ( context.getSchema().isNullable( argumentType ) )
     {
       parameter.addAnnotation( Types.NULLABLE );
     }
@@ -628,39 +634,6 @@ final class Generator
     }
   }
 
-  private boolean isNullable( @Nonnull final CodeGenContext context, @Nonnull final Type type )
-  {
-    if ( type.isNullable() )
-    {
-      return true;
-    }
-    else if ( Kind.TypeReference == type.getKind() )
-    {
-      final String name = ( (TypeReference) type ).getName();
-      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
-      if ( null != typedef )
-      {
-        return isNullable( context, typedef.getType() );
-      }
-    }
-    return false;
-  }
-
-  @Nonnull
-  private Type resolveTypeDefs( @Nonnull final CodeGenContext context, @Nonnull final Type type )
-  {
-    if ( Kind.TypeReference == type.getKind() )
-    {
-      final String name = ( (TypeReference) type ).getName();
-      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
-      if ( null != typedef )
-      {
-        return resolveTypeDefs( context, typedef.getType() );
-      }
-    }
-    return type;
-  }
-
   @Nonnull
   private TypeName toTypeName( @Nonnull final CodeGenContext context, @Nonnull final Type type )
   {
@@ -775,7 +748,7 @@ final class Generator
     {
       final Type itemType = ( (SequenceType) type ).getItemType();
       return ParameterizedTypeName.get( Types.JS_ARRAY,
-                                        toTypeName( context, resolveTypeDefs( context, itemType ) ) );
+                                        toTypeName( context, context.getSchema().resolveType( itemType ) ) );
     }
     else if ( Kind.Record == kind )
     {

@@ -500,6 +500,59 @@ public final class WebIDLSchema
     }
   }
 
+  /**
+   * Resolve the specified type.
+   * This means that if the type is a type reference to a type def then the typedef is resolved
+   * and the underlying type is returned.
+   *
+   * @param type the input type.
+   * @return the resolved type.
+   */
+  @Nonnull
+  public Type resolveType( @Nonnull final Type type )
+  {
+    if ( Kind.TypeReference == type.getKind() )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final TypedefDefinition typedef = findTypedefByName( name );
+      if ( null != typedef )
+      {
+        return resolveType( typedef.getType() );
+      }
+    }
+    return type;
+  }
+
+  /**
+   * Return true if the specified type is nullable.
+   * This will resolve typedef references and unions and return true if any element is nullable.
+   *
+   * @param type the type.
+   * @return true if the type is nullable
+   */
+  public boolean isNullable( @Nonnull final Type type )
+  {
+    if ( type.isNullable() )
+    {
+      return true;
+    }
+    else if ( Kind.TypeReference == type.getKind() )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final TypedefDefinition typedef = findTypedefByName( name );
+      if ( null != typedef )
+      {
+        return isNullable( typedef.getType() );
+      }
+    }
+    else if ( Kind.Union == type.getKind() )
+    {
+      final UnionType unionType = (UnionType) type;
+      return unionType.getMemberTypes().stream().anyMatch( this::isNullable );
+    }
+    return false;
+  }
+
   public void link()
   {
     getInterfaces().forEach( e -> e.link( this ) );
