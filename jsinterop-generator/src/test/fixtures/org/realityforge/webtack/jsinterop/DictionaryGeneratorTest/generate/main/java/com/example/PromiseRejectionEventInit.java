@@ -34,7 +34,6 @@ public interface PromiseRejectionEventInit extends EventInit {
   void setPromise(@Nonnull Promise promise);
 
   @JsProperty
-  @Nonnull
   Any getReason();
 
   @JsProperty

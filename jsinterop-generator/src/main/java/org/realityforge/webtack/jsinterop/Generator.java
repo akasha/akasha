@@ -163,9 +163,12 @@ final class Generator
     {
       method.addAnnotation( Types.NULLABLE );
     }
-    else if ( !actualType.getKind().isPrimitive() )
+    else
     {
-      method.addAnnotation( Types.NONNULL );
+      if ( !actualType.getKind().isPrimitive() && !member.isOptional() )
+      {
+        method.addAnnotation( Types.NONNULL );
+      }
     }
     type.addMethod( method.build() );
   }

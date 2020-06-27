@@ -52,7 +52,6 @@ public interface StorageEventInit extends EventInit {
   void setStorageArea(@Nullable Storage storageArea);
 
   @JsProperty
-  @Nonnull
   String getUrl();
 
   @JsProperty

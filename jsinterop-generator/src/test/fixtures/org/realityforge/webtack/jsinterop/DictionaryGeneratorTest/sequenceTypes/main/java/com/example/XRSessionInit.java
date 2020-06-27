@@ -25,14 +25,12 @@ public interface XRSessionInit {
   }
 
   @JsProperty
-  @Nonnull
   JsArray<Any> getOptionalFeatures();
 
   @JsProperty
   void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
 
   @JsProperty
-  @Nonnull
   JsArray<Any> getRequiredFeatures();
 
   @JsProperty
