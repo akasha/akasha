@@ -6,6 +6,9 @@ complete as there is too much un-said.
 
 * Add query language that can be used to select sources based on tags or names so that we can filter load/merge/blend/generate operations
 
+* Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
+  would use raw inspection of objects to see if they line up with what is in WebIDL
+
 * Add a workflow/pipeline json descriptor that describes how to combine and transform the input schemas. It is
   likely that a selector/query would match the schemas to apply transforms in a particular order. Another step
   in pipeline may be merging schemas. A pipeline would consist of transforms followed by merges, followed by
