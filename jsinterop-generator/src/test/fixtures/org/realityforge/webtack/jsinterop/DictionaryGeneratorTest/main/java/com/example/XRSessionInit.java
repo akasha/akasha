@@ -3,10 +3,13 @@ package com.example;
 import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
+import jsinterop.base.Js;
+import jsinterop.base.JsPropertyMap;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,6 +18,12 @@ import jsinterop.base.Any;
     name = "?"
 )
 public interface XRSessionInit {
+  @JsOverlay
+  @Nonnull
+  static XRSessionInit create() {
+    return Js.uncheckedCast( JsPropertyMap.of() );
+  }
+
   @JsProperty
   @Nonnull
   JsArray<Any> getOptionalFeatures();

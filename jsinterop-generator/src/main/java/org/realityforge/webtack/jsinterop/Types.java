@@ -16,6 +16,10 @@ final class Types
   @Nonnull
   static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );
   @Nonnull
+  static final ClassName JS = ClassName.get( "jsinterop.base", "Js" );
+  @Nonnull
+  static final ClassName JS_PROPERTY_MAP = ClassName.get( "jsinterop.base", "JsPropertyMap" );
+  @Nonnull
   static final ClassName JS_ARRAY = ClassName.get( "elemental2.core", "JsArray" );
   @Nonnull
   static final ClassName SYMBOL = ClassName.get( "elemental2.core", "Symbol" );

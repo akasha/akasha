@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.element.Modifier;
@@ -77,6 +78,45 @@ final class Generator
     {
       type.addSuperinterface( context.lookupTypeByName( inherits ) );
     }
+
+    final List<DictionaryMember> requiredMembers =
+      definition.getMembers().stream().filter( m -> !m.isOptional() ).collect( Collectors.toList() );
+
+    final ClassName self = ClassName.bestGuess( definition.getName() );
+    final MethodSpec.Builder method = MethodSpec
+      .methodBuilder( "create" )
+      .addAnnotation( Types.JS_OVERLAY )
+      .addAnnotation( Types.NONNULL )
+      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+      .returns( self );
+    if ( requiredMembers.isEmpty() )
+    {
+      method.addStatement( "return $T.uncheckedCast( $T.of() )", Types.JS, Types.JS_PROPERTY_MAP );
+    }
+    else
+    {
+      final String name = "$instance$";
+      method.addStatement( "final $T $N = $T.uncheckedCast( $T.of() )", self, name, Types.JS, Types.JS_PROPERTY_MAP );
+      for ( final DictionaryMember member : requiredMembers )
+      {
+        final Type memberType = member.getType();
+        final Type actualType = resolveTypeDefs( context, memberType );
+        final ParameterSpec.Builder parameter =
+          ParameterSpec.builder( toTypeName( context, actualType ), member.getName(), Modifier.FINAL );
+        if ( isNullable( context, memberType ) )
+        {
+          parameter.addAnnotation( Types.NULLABLE );
+        }
+        else if ( !actualType.getKind().isPrimitive() )
+        {
+          parameter.addAnnotation( Types.NONNULL );
+        }
+        method.addParameter( parameter.build() );
+        method.addStatement( "$N.$N( $N )", name, getMutatorName( member ), member.getName() );
+      }
+      method.addStatement( "return $N", name );
+    }
+    type.addMethod( method.build() );
 
     for ( final DictionaryMember member : definition.getMembers() )
     {
