@@ -12,6 +12,8 @@ final class Types
   @Nonnull
   static final ClassName JS_PACKAGE = ClassName.get( "jsinterop.annotations", "JsPackage" );
   @Nonnull
+  static final ClassName JS_PROPERTY = ClassName.get( "jsinterop.annotations", "JsProperty" );
+  @Nonnull
   static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );
   @Nonnull
   static final ClassName JS_ARRAY = ClassName.get( "elemental2.core", "JsArray" );

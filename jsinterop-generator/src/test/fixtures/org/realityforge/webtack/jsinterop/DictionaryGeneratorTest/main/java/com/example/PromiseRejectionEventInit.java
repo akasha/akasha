@@ -2,7 +2,9 @@ package com.example;
 
 import elemental2.core.Promise;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
 
@@ -12,8 +14,18 @@ import jsinterop.base.Any;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public class PromiseRejectionEventInit extends EventInit {
-  public Promise promise;
+public interface PromiseRejectionEventInit extends EventInit {
+  @JsProperty
+  @Nonnull
+  Promise getPromise();
 
-  public Any reason;
+  @JsProperty
+  void setPromise(@Nonnull Promise promise);
+
+  @JsProperty
+  @Nonnull
+  Any getReason();
+
+  @JsProperty
+  void setReason(@Nonnull Any reason);
 }

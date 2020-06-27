@@ -63,7 +63,7 @@ final class Generator
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( definition.getName() )
+        .interfaceBuilder( definition.getName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
@@ -75,19 +75,78 @@ final class Generator
     final String inherits = definition.getInherits();
     if ( null != inherits )
     {
-      type.superclass( context.lookupTypeByName( inherits ) );
+      type.addSuperinterface( context.lookupTypeByName( inherits ) );
     }
 
     for ( final DictionaryMember member : definition.getMembers() )
     {
-      final Type attributeType = member.getType();
-      final Type actualType = resolveTypeDefs( context, attributeType );
-      final FieldSpec.Builder field =
-        FieldSpec.builder( toTypeName( context, actualType ), member.getName(), Modifier.PUBLIC );
-      type.addField( field.build() );
+      final Type actualType = resolveTypeDefs( context, member.getType() );
+      generateDictionaryMemberGetter( context, member, actualType, type );
+      generateDictionaryMemberSetter( context, member, actualType, type );
     }
 
     context.writeTopLevelType( type );
+  }
+
+  private void generateDictionaryMemberGetter( @Nonnull final CodeGenContext context,
+                                               @Nonnull final DictionaryMember member,
+                                               @Nonnull final Type actualType,
+                                               @Nonnull final TypeSpec.Builder type )
+  {
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( getAccessorName( member ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+        .returns( toTypeName( context, actualType ) )
+        .addAnnotation( Types.JS_PROPERTY );
+    if ( isNullable( context, member.getType() ) )
+    {
+      method.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      method.addAnnotation( Types.NONNULL );
+    }
+    type.addMethod( method.build() );
+  }
+
+  @Nonnull
+  private String getAccessorName( @Nonnull final DictionaryMember member )
+  {
+    final Type type = member.getType();
+    final String prefix = !type.isNullable() && type.getKind() == Kind.Boolean ? "is" : "get";
+    return prefix + NamingUtil.uppercaseFirstCharacter( member.getName() );
+  }
+
+  private void generateDictionaryMemberSetter( @Nonnull final CodeGenContext context,
+                                               @Nonnull final DictionaryMember member,
+                                               @Nonnull final Type actualType,
+                                               @Nonnull final TypeSpec.Builder type )
+  {
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( getMutatorName( member ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+        .addAnnotation( Types.JS_PROPERTY );
+    final ParameterSpec.Builder parameter =
+      ParameterSpec.builder( toTypeName( context, actualType ), member.getName() );
+
+    if ( isNullable( context, member.getType() ) )
+    {
+      parameter.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      parameter.addAnnotation( Types.NONNULL );
+    }
+    method.addParameter( parameter.build() );
+    type.addMethod( method.build() );
+  }
+
+  @Nonnull
+  private String getMutatorName( @Nonnull final DictionaryMember member )
+  {
+    return "set" + NamingUtil.uppercaseFirstCharacter( member.getName() );
   }
 
   private void generate( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )

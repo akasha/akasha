@@ -1,7 +1,10 @@
 package com.example;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
@@ -10,14 +13,39 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public class StorageEventInit extends EventInit {
-  public String key;
+public interface StorageEventInit extends EventInit {
+  @JsProperty
+  @Nullable
+  String getKey();
 
-  public String newValue;
+  @JsProperty
+  void setKey(@Nullable String key);
 
-  public String oldValue;
+  @JsProperty
+  @Nullable
+  String getNewValue();
 
-  public Storage storageArea;
+  @JsProperty
+  void setNewValue(@Nullable String newValue);
 
-  public String url;
+  @JsProperty
+  @Nullable
+  String getOldValue();
+
+  @JsProperty
+  void setOldValue(@Nullable String oldValue);
+
+  @JsProperty
+  @Nullable
+  Storage getStorageArea();
+
+  @JsProperty
+  void setStorageArea(@Nullable Storage storageArea);
+
+  @JsProperty
+  @Nonnull
+  String getUrl();
+
+  @JsProperty
+  void setUrl(@Nonnull String url);
 }

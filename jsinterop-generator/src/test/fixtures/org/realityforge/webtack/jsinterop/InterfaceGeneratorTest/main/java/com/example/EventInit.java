@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
@@ -10,10 +11,22 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public class EventInit {
-  public boolean bubbles;
+public interface EventInit {
+  @JsProperty
+  boolean isBubbles();
 
-  public boolean cancelable;
+  @JsProperty
+  void setBubbles(boolean bubbles);
 
-  public boolean composed;
+  @JsProperty
+  boolean isCancelable();
+
+  @JsProperty
+  void setCancelable(boolean cancelable);
+
+  @JsProperty
+  boolean isComposed();
+
+  @JsProperty
+  void setComposed(boolean composed);
 }
