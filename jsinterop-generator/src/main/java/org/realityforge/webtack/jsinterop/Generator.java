@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.element.Modifier;
@@ -79,8 +78,7 @@ final class Generator
       type.addSuperinterface( context.lookupTypeByName( inherits ) );
     }
 
-    final List<DictionaryMember> requiredMembers =
-      definition.getMembers().stream().filter( m -> !m.isOptional() ).collect( Collectors.toList() );
+    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
 
     final ClassName self = ClassName.bestGuess( definition.getName() );
     final MethodSpec.Builder method = MethodSpec
@@ -126,6 +124,28 @@ final class Generator
     }
 
     context.writeTopLevelType( type );
+  }
+
+  @Nonnull
+  private List<DictionaryMember> getRequiredDictionaryMembers( @Nonnull final CodeGenContext context,
+                                                               @Nonnull final DictionaryDefinition definition )
+  {
+    final List<DictionaryMember> requiredMembers = new ArrayList<>();
+    collectRequiredDictionaryMembers( context, definition, requiredMembers );
+    return requiredMembers;
+  }
+
+  private void collectRequiredDictionaryMembers( @Nonnull final CodeGenContext context,
+                                                 @Nonnull final DictionaryDefinition definition,
+                                                 @Nonnull final List<DictionaryMember> members )
+  {
+    final String inherits = definition.getInherits();
+    if ( null != inherits )
+    {
+      collectRequiredDictionaryMembers( context, context.getSchema().getDictionaryByName( inherits ), members );
+    }
+
+    definition.getMembers().stream().filter( m -> !m.isOptional() ).forEach( members::add );
   }
 
   private void generateDictionaryMemberGetter( @Nonnull final CodeGenContext context,

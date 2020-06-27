@@ -61,4 +61,26 @@ public final class DictionaryGeneratorTest
     generateCode( content );
     assertJavaFilePresent( "XRSessionInit" );
   }
+
+  @Test
+  public void requiredInParentDictionaryAddedToCreateMethods()
+    throws Exception
+  {
+    final String content =
+      "dictionary PermissionDescriptor {\n" +
+      "  required DOMString name;\n" +
+      "};\n" +
+      "\n" +
+      "dictionary PushPermissionDescriptor : PermissionDescriptor {\n" +
+      "  boolean userVisibleOnly = false;\n" +
+      "};\n" +
+      "\n" +
+      "dictionary OtherPushPermissionDescriptor : PushPermissionDescriptor {\n" +
+      "  required boolean safe;\n" +
+      "};\n";
+    generateCode( content );
+    assertJavaFilePresent( "PermissionDescriptor" );
+    assertJavaFilePresent( "PushPermissionDescriptor" );
+    assertJavaFilePresent( "OtherPushPermissionDescriptor" );
+  }
 }
