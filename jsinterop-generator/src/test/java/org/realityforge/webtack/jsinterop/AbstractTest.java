@@ -14,13 +14,25 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.testng.IHookCallBack;
+import org.testng.IHookable;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import static org.testng.Assert.*;
 
 public abstract class AbstractTest
+  implements IHookable
 {
   @Nullable
   private Path _workingDir;
+  private String _testName;
+
+  @Override
+  public void run( final IHookCallBack callBack, final ITestResult testResult )
+  {
+    _testName = testResult.getName();
+    callBack.runTestMethod( testResult );
+  }
 
   @AfterMethod
   protected void afterMethod()
@@ -109,7 +121,7 @@ public abstract class AbstractTest
   @Nonnull
   protected final Path getTestLocalFixtureDir()
   {
-    return getBaseFixtureDir().resolve( getClass().getName().replaceAll( "\\.", File.separator ) );
+    return getBaseFixtureDir().resolve( getClass().getName().replaceAll( "\\.", File.separator ) ).resolve( _testName );
   }
 
   @Nonnull
