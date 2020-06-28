@@ -30,8 +30,6 @@ public final class ExtractExposureSetProcessor
   extends AbstractProcessor
 {
   @Nonnull
-  public static final String NAME = "ExtractExposureSet";
-  @Nonnull
   private final String _globalInterface;
 
   ExtractExposureSetProcessor( @Nonnull final String globalInterface )
