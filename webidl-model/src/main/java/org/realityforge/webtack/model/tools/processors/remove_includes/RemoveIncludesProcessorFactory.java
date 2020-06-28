@@ -27,7 +27,7 @@ public final class RemoveIncludesProcessorFactory
   {
     if ( null == input )
     {
-      throw new IllegalArgumentException( "RemovalIncludesProcessor missing required " +
+      throw new IllegalArgumentException( "RemoveIncludesProcessor missing required " +
                                           configKey + " configuration value" );
     }
     return Pattern.compile( input );

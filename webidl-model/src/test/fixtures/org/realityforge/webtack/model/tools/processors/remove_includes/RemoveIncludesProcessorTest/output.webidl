@@ -1,0 +1,5 @@
+SVGAElement includes HTMLHyperlinkElementUtils;
+
+SVGElement includes DocumentAndElementEventHandlers;
+
+SVGElement includes GlobalEventHandlers;

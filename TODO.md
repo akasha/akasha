@@ -15,7 +15,7 @@ complete as there is too much un-said.
   merges etc and would finally produce output artifacts such as schemas, closure annotated schemas, java code etc.
   These pipelines will probably replace the existing `Load` command.
 
-* Test `IncludeRemovalProcessor` and `FlattenProcessor`
+* Test `FlattenProcessor`
 
 * Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
   have the same name and parameters then they should be collapsed into a single operation but with potentially
