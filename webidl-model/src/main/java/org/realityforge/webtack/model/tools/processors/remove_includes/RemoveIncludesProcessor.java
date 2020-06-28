@@ -14,8 +14,6 @@ public final class RemoveIncludesProcessor
   extends AbstractProcessor
 {
   @Nonnull
-  public static final String NAME = "RemoveIncludes";
-  @Nonnull
   private final Pattern _interfacePattern;
   @Nonnull
   private final Pattern _mixinPattern;
