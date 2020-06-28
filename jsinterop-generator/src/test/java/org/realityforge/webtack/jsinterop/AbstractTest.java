@@ -138,18 +138,6 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected final Path getJavaFixtureDir()
-  {
-    return getTestLocalFixtureDir().resolve( "main" ).resolve( "java" );
-  }
-
-  @Nonnull
-  protected final Path javaFixtureFile( @Nonnull final String name )
-  {
-    return javaMain( getJavaFixtureDir(), name );
-  }
-
-  @Nonnull
   protected final Path javaFile( @Nonnull final String name )
     throws Exception
   {
