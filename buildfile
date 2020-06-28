@@ -71,6 +71,9 @@ define 'webtack' do
     }
     test.options[:java_args] = ['-ea']
     test.compile.with :gir
+    test.compile.enhance do |d|
+      Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
+    end
 
     package(:jar)
     package(:sources)
