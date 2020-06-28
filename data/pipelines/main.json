@@ -14,6 +14,9 @@
       }
     },
     {
+      "name": "Validate"
+    },
+    {
       "name": "ExtractExposureSet",
       "config": {
         "globalInterface": "Window"
