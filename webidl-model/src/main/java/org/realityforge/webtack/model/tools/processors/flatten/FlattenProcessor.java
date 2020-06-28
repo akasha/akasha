@@ -45,9 +45,6 @@ import org.realityforge.webtack.model.tools.spi.Processor;
 public final class FlattenProcessor
   implements Processor
 {
-  @Nonnull
-  public static final String NAME = "Flatten";
-
   /**
    * Flatten two or more schemas into a single schema.
    *
