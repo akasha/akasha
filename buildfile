@@ -1,5 +1,6 @@
 require 'buildr/git_auto_version'
 require 'buildr/gpg'
+require 'buildr/gwt'
 require 'buildr/single_intermediate_layout'
 require 'buildr/top_level_generate_dir'
 require 'buildr/jacoco'
@@ -63,8 +64,10 @@ define 'webtack' do
 
     test.using :testng
     test.options[:properties] = {
+      'webtack.jsinterop-generator.gwtc' => 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s}"
+      'webtack.jsinterop-generator.fixture.libs' => "#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s}",
+      'webtack.jsinterop-generator.gwt_dev.libs' => Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')
     }
     test.options[:java_args] = ['-ea']
     test.compile.with :gir
@@ -108,7 +111,7 @@ define 'webtack' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.fixture.libs=#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}")
 
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - main', :dir => 'file://$PROJECT_DIR$', :args => '-d data run main')
 

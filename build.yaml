@@ -27,3 +27,4 @@ artifacts:
   elemental2_promise: org.realityforge.com.google.elemental2:elemental2-promise:jar:2.27
 
   gwt_user: com.google.gwt:gwt-user:jar:2.9.0
+  gwt_dev: com.google.gwt:gwt-dev:jar:2.9.0

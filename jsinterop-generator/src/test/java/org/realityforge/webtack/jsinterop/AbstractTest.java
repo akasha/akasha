@@ -1,6 +1,7 @@
 package org.realityforge.webtack.jsinterop;
 
 import gir.io.FileUtil;
+import gir.sys.SystemProperty;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -254,6 +255,34 @@ public abstract class AbstractTest
         fail( "Failed to compile files:\n" +
               listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
       }
+      if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
+      {
+        FileUtil.write( output.resolve( "com" ).resolve( "example" ).resolve( "MyModule.gwt.xml" ),
+                        "<module>\n" +
+                        "  <inherits name=\"com.google.gwt.user.User\"/>\n" +
+                        "  <source path=''/>\n" +
+                        "  <collapse-all-properties/>\n" +
+                        "</module>\n" );
+        classpathEntries.add( output );
+        classpathEntries.addAll( gwtDevLibs() );
+        final List<String> gwtClasspath =
+          classpathEntries
+            .stream()
+            .map( Path::toAbsolutePath )
+            .map( Path::toString )
+            .collect( Collectors.toList() );
+        final int exitCode =
+          JavaProcess.exec( "com.google.gwt.dev.Compiler",
+                            Collections.singletonList( "-Dgwt.persistentunitcache=false" ),
+                            Arrays.asList( "-strict",
+                                           "-war",
+                                           getWorkingDir().resolve( "war" ).toAbsolutePath().toString(),
+                                           "-draftCompile",
+                                           "-noincremental",
+                                           "com.example.MyModule" ),
+                            gwtClasspath );
+        assertEquals( exitCode, 0 );
+      }
     }
   }
 
@@ -279,6 +308,18 @@ public abstract class AbstractTest
   private List<Path> collectLibs()
   {
     final String libraries = System.getProperty( "webtack.jsinterop-generator.fixture.libs" );
+    return null == libraries ?
+           new ArrayList<>() :
+           Arrays
+             .stream( libraries.split( File.pathSeparator ) )
+             .map( Paths::get )
+             .collect( Collectors.toList() );
+  }
+
+  @Nonnull
+  private List<Path> gwtDevLibs()
+  {
+    final String libraries = System.getProperty( "webtack.jsinterop-generator.gwt_dev.libs" );
     return null == libraries ?
            new ArrayList<>() :
            Arrays
