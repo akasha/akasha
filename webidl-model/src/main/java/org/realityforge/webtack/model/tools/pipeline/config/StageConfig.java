@@ -7,6 +7,8 @@ public final class StageConfig
 {
   private String name;
   @Nullable
+  private String description;
+  @Nullable
   private String sourceSelector;
   @Nullable
   private JsonObject config;
@@ -19,6 +21,17 @@ public final class StageConfig
   public void setName( final String name )
   {
     this.name = name;
+  }
+
+  @Nullable
+  public String getDescription()
+  {
+    return description;
+  }
+
+  public void setDescription( @Nullable final String description )
+  {
+    this.description = description;
   }
 
   @Nullable

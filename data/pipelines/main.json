@@ -8,6 +8,7 @@
     },
     {
       "name": "RemoveIncludes",
+      "description": "Both SVGURIReference and HTMLHyperlinkElementUtils mixin define the href attribute and they are defined as different types. USVString in HTMLHyperlinkElementUtils and SVGAnimatedString in SVGURIReference. This stage effectively selects the HTMLHyperlinkElementUtils variant which seems more authoritative",
       "config": {
         "interfacePattern": "^SVGAElement$",
         "mixinPattern": "^SVGURIReference$"
