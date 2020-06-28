@@ -42,7 +42,7 @@ import org.realityforge.webtack.model.tools.spi.Processor;
  * First the members in "PartialX" types are merged into "X" types.
  * Then members in mixins are merged into interface types.
  */
-public final class FlattenProcessor
+final class FlattenProcessor
   implements Processor
 {
   /**

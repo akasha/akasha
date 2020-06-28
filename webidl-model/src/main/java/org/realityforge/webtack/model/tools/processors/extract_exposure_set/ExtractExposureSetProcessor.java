@@ -26,7 +26,7 @@ import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
  * extended attribute specifies that the construct is exposed on that particular set of global
  * interfaces. The extended attribute may either be an ident or identList form.</p>
  */
-public final class ExtractExposureSetProcessor
+final class ExtractExposureSetProcessor
   extends AbstractProcessor
 {
   @Nonnull

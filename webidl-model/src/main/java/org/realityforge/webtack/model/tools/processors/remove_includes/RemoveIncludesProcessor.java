@@ -10,7 +10,7 @@ import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 /**
  * Remove includes that match a pattern.
  */
-public final class RemoveIncludesProcessor
+final class RemoveIncludesProcessor
   extends AbstractProcessor
 {
   @Nonnull
