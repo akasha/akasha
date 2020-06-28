@@ -1,4 +1,5 @@
 org.realityforge.webtack.model.tools.processors.extract_exposure_set.ExtractExposureSetProcessorFactory
 org.realityforge.webtack.model.tools.processors.flatten.FlattenProcessorFactory
+org.realityforge.webtack.model.tools.processors.remove_dictionary.RemoveDictionaryProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_includes.RemoveIncludesProcessorFactory
 org.realityforge.webtack.model.tools.processors.validate.ValidateProcessorFactory

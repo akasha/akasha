@@ -27,6 +27,16 @@
       "name": "Flatten"
     },
     {
+      "name": "RemoveDictionary",
+      "description": "The ExtendableMessageEventInit is only used by elements exposed in the ServiceWorker exposure and references interfaces not available in Window exposure",
+      "config": {
+        "namePattern": "^ExtendableMessageEventInit$"
+      }
+    },
+    {
+      "name": "Validate"
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/complete.webidl"
