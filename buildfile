@@ -7,6 +7,15 @@ require 'buildr/jacoco'
 
 JSONB_DEPS = [:jsonb_api, :yasson, :javax_json]
 PACKAGED_DEPS = [:getopt4j, :jsoup] + JSONB_DEPS + Buildr::Antlr4.runtime_dependencies
+# GWT dependencies required for compiling generated code
+GWT_DEPS = [
+  :javax_annotation,
+  :jsinterop_annotations,
+  :jsinterop_base,
+  :elemental2_core,
+  :elemental2_promise,
+  :gwt_user
+]
 
 desc 'webtack: Generate jsinterop types from WebIDL'
 define 'webtack' do
@@ -62,16 +71,18 @@ define 'webtack' do
                  project('webidl-model').compile.dependencies,
                  :javapoet
 
+
     test.using :testng
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s}",
-      'webtack.jsinterop-generator.gwt_dev.libs' => Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')
+      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}",
+      'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}"
     }
     test.options[:java_args] = ['-ea']
     test.compile.with :gir
     test.compile.enhance do |d|
+      GWT_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
     end
 
