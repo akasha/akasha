@@ -7,12 +7,6 @@ complete as there is too much un-said.
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
 
-* Add a workflow/pipeline json descriptor that describes how to combine and transform the input schemas. It is
-  likely that a selector/query would match the schemas to apply transforms in a particular order. Another step
-  in pipeline may be merging schemas. A pipeline would consist of transforms followed by merges, followed by
-  merges etc and would finally produce output artifacts such as schemas, closure annotated schemas, java code etc.
-  These pipelines will probably replace the existing `Load` command.
-
 * Test `FlattenProcessor`
 
 * Export `jsinterop-generator` module as a pipeline action.
