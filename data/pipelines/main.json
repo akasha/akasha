@@ -2,6 +2,15 @@
   "sourceSelector": "!name=minimal_event",
   "stages": [
     {
+      "name": "RenameEnumeration",
+      "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
+      "sourceSelector": "name=deviceorientation",
+      "config": {
+        "namePattern": "^PermissionState$",
+        "replacement": "DevicePermissionState"
+      }
+    },
+    {
       "name": "Merge"
     },
     {
