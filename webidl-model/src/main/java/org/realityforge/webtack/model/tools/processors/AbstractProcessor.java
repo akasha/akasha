@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
@@ -20,9 +21,11 @@ import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.ExtendedAttribute;
+import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.IncludesStatement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.IterableMember;
+import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
@@ -31,10 +34,14 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.PromiseType;
+import org.realityforge.webtack.model.RecordType;
+import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.SetLikeMember;
 import org.realityforge.webtack.model.SourceInterval;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypedefDefinition;
+import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Processor;
 
@@ -630,7 +637,55 @@ public abstract class AbstractProcessor
   @Nonnull
   protected Type transformType( @Nonnull final Type type )
   {
-    return type;
+    final Kind kind = type.getKind();
+    if ( Kind.Union == kind )
+    {
+      final UnionType unionType = (UnionType) type;
+      return new UnionType( unionType
+                              .getMemberTypes()
+                              .stream()
+                              .map( this::transformType )
+                              .collect( Collectors.toList() ),
+                            unionType.getExtendedAttributes(),
+                            unionType.isNullable(),
+                            unionType.getSourceLocations() );
+    }
+    else if ( Kind.Promise == kind )
+    {
+      final PromiseType promiseType = (PromiseType) type;
+      return new PromiseType( transformType( promiseType.getResolveType() ),
+                              promiseType.getExtendedAttributes(),
+                              promiseType.getSourceLocations() );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      final SequenceType sequenceType = (SequenceType) type;
+      return new SequenceType( transformType( sequenceType.getItemType() ),
+                               sequenceType.getExtendedAttributes(),
+                               sequenceType.isNullable(),
+                               sequenceType.getSourceLocations() );
+    }
+    else if ( Kind.FrozenArray == kind )
+    {
+      final FrozenArrayType frozenArrayType = (FrozenArrayType) type;
+      return new FrozenArrayType( transformType( frozenArrayType.getItemType() ),
+                                  frozenArrayType.getExtendedAttributes(),
+                                  frozenArrayType.isNullable(),
+                                  frozenArrayType.getSourceLocations() );
+    }
+    else if ( Kind.Record == kind )
+    {
+      final RecordType recordType = (RecordType) type;
+      return new RecordType( transformType( recordType.getKeyType() ),
+                             transformType( recordType.getValueType() ),
+                             recordType.getExtendedAttributes(),
+                             recordType.isNullable(),
+                             recordType.getSourceLocations() );
+    }
+    else
+    {
+      return type;
+    }
   }
 
   @Nonnull
