@@ -14,10 +14,10 @@ public final class TypeReference
   @Nonnull
   private final String _name;
 
-  TypeReference( @Nonnull final String name,
-                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                 final boolean nullable,
-                 @Nonnull final List<SourceInterval> sourceLocations )
+  public TypeReference( @Nonnull final String name,
+                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                        final boolean nullable,
+                        @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( Kind.TypeReference, extendedAttributes, nullable, sourceLocations );
     _name = Objects.requireNonNull( name );
