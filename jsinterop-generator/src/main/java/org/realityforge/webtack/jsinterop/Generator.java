@@ -807,7 +807,7 @@ final class Generator
     }
     else
     {
-      throw new UnsupportedOperationException( kind + " type not currently supported by generator" );
+      throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
     }
   }
 
