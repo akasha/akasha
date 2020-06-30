@@ -6,6 +6,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
@@ -37,27 +38,57 @@ public class Event {
   public Event(@Nonnull final String type) {
   }
 
+  @JsProperty(
+      name = "bubbles"
+  )
   public native boolean bubbles();
 
+  @JsProperty(
+      name = "cancelable"
+  )
   public native boolean cancelable();
 
+  @JsProperty(
+      name = "composed"
+  )
   public native boolean composed();
 
+  @JsProperty(
+      name = "currentTarget"
+  )
   @Nullable
   public native EventTarget currentTarget();
 
+  @JsProperty(
+      name = "defaultPrevented"
+  )
   public native boolean defaultPrevented();
 
+  @JsProperty(
+      name = "eventPhase"
+  )
   public native int eventPhase();
 
+  @JsProperty(
+      name = "isTrusted"
+  )
   public native boolean isTrusted();
 
+  @JsProperty(
+      name = "srcElement"
+  )
   @Nullable
   public native EventTarget srcElement();
 
+  @JsProperty(
+      name = "target"
+  )
   @Nullable
   public native EventTarget target();
 
+  @JsProperty(
+      name = "type"
+  )
   @Nonnull
   public native String type();
 

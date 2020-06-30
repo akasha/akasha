@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
@@ -12,6 +13,9 @@ import jsinterop.annotations.JsType;
     name = "Storage"
 )
 public class Storage {
+  @JsProperty(
+      name = "length"
+  )
   public native int length();
 
   public native void clear();

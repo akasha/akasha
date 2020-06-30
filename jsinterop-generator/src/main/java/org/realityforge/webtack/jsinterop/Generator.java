@@ -306,11 +306,13 @@ final class Generator
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
     final Type actualType = context.getSchema().resolveType( attributeType );
+    final String name = attribute.getName();
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( attribute.getName() )
+        .methodBuilder( name )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( toTypeName( context, actualType ) );
+        .returns( toTypeName( context, actualType ) )
+        .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     if ( context.getSchema().isNullable( attributeType ) )
     {
       method.addAnnotation( Types.NULLABLE );

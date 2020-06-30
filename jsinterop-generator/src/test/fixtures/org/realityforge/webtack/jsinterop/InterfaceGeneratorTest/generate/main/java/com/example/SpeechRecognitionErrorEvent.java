@@ -3,6 +3,7 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
@@ -16,6 +17,9 @@ public class SpeechRecognitionErrorEvent extends Event {
     super( type );
   }
 
+  @JsProperty(
+      name = "message"
+  )
   @Nonnull
   public native String message();
 }
