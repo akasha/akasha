@@ -1,4 +1,5 @@
 {
+  "sourceSelector": "!name=minimal_event",
   "stages": [
     {
       "name": "Merge"

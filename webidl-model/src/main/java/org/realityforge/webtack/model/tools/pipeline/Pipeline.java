@@ -162,7 +162,7 @@ public final class Pipeline
 
   private boolean isSchemaSelected( @Nonnull final WebIDLSchema schema, @Nullable final String selector )
   {
-    return selector == null;
+    return null == selector || matchSelector( selector, schema.getTags() );
   }
 
   @Nonnull
@@ -248,16 +248,48 @@ public final class Pipeline
   private boolean includeSource( @Nonnull final SourceConfig source )
   {
     final String selector = _pipeline.getSourceSelector();
-    // TODO: Remove me! Some ugly hackery matching our test scenarios
-    if ( null == selector && source.getName().equals( "minimal_event" ) )
-    {
-      return false;
-    }
-    else if ( null != selector &&
-              ( source.getName().equals( "minimal_event" ) || source.getName().equals( "speech_api" ) ) )
+    if ( null == selector )
     {
       return true;
     }
-    return null == selector;
+    else
+    {
+      final List<String> declaredTags = source.getTags();
+      final Set<String> tags = new HashSet<>();
+      if ( null != declaredTags )
+      {
+        tags.addAll( declaredTags );
+      }
+      tags.add( "name=" + source.getName() );
+      return matchSelector( selector, tags );
+    }
+  }
+
+  private boolean matchSelector( @Nonnull final String selector, @Nonnull final Set<String> tags )
+  {
+    boolean defaultMatch = true;
+    for ( final String tag : selector.split( " +" ) )
+    {
+      if ( tag.startsWith( "!" ) )
+      {
+        if ( tags.contains( tag.substring( 1 ) ) )
+        {
+          return false;
+        }
+      }
+    }
+
+    for ( final String tag : selector.split( " +" ) )
+    {
+      if ( !tag.startsWith( "!" ) )
+      {
+        defaultMatch = false;
+        if ( tags.contains( tag ) )
+        {
+          return true;
+        }
+      }
+    }
+    return defaultMatch;
   }
 }

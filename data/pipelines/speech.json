@@ -1,5 +1,5 @@
 {
-  "sourceSelector": "name=minimal_event or name=speech_api",
+  "sourceSelector": "name=minimal_event name=speech_api",
   "stages": [
     {
       "name": "Merge"
