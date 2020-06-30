@@ -84,7 +84,7 @@ final class AddCommand
           {
             // Check format of URI by attempting to parse it
             //noinspection ResultOfMethodCallIgnored
-            new File( ".").toURI().resolve( argument );
+            new File( "." ).toURI().resolve( argument );
             _sourceUrl = argument;
           }
           catch ( final IllegalArgumentException iae )
