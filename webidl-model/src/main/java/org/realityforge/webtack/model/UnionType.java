@@ -10,10 +10,10 @@ public final class UnionType
   @Nonnull
   private final List<Type> _memberTypes;
 
-  UnionType( @Nonnull final List<Type> memberTypes,
-             @Nonnull final List<ExtendedAttribute> extendedAttributes,
-             final boolean nullable,
-             @Nonnull final List<SourceInterval> sourceLocations )
+  public UnionType( @Nonnull final List<Type> memberTypes,
+                    @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                    final boolean nullable,
+                    @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( Kind.Union, extendedAttributes, nullable, sourceLocations );
     _memberTypes = Objects.requireNonNull( memberTypes );
