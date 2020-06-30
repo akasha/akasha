@@ -32,7 +32,7 @@ public class RemoveDictionaryProcessorTest
   public void basicOperationTest()
     throws Exception
   {
-    performFixtureTest( "RemoveDictionaryProcessor - interface",
+    performFixtureTest( "RemoveDictionaryProcessor",
                         () -> createProcessor( "^ExtendableMessageEventInit$" ),
                         getTestLocalFixtureDir(),
                         "input",

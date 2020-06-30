@@ -32,7 +32,7 @@ public class RemoveCallbackProcessorTest
   public void basicOperationTest()
     throws Exception
   {
-    performFixtureTest( "RemoveCallbackProcessor - interface",
+    performFixtureTest( "RemoveCallbackProcessor",
                         () -> createProcessor( "^AudioWorkletProcessorConstructor$" ),
                         getTestLocalFixtureDir(),
                         "input",
