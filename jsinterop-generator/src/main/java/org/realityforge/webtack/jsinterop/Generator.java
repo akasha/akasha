@@ -57,7 +57,8 @@ final class Generator
     }
   }
 
-  private void generateDictionary( @Nonnull final CodeGenContext context, @Nonnull final DictionaryDefinition definition )
+  private void generateDictionary( @Nonnull final CodeGenContext context,
+                                   @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -218,7 +219,8 @@ final class Generator
     return "set" + NamingUtil.uppercaseFirstCharacter( member.getName() );
   }
 
-  private void generateCallbackInterface( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )
+  private void generateCallbackInterface( @Nonnull final CodeGenContext context,
+                                          @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
@@ -550,7 +552,8 @@ final class Generator
     }
   }
 
-  private void generateEnumeration( @Nonnull final CodeGenContext context, @Nonnull final EnumerationDefinition definition )
+  private void generateEnumeration( @Nonnull final CodeGenContext context,
+                                    @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
