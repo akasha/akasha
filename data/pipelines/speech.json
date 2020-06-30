@@ -21,6 +21,13 @@
       "config": {
         "filePattern": "data/output/complete.webidl"
       }
+    },
+    {
+      "name": "Jsinterop",
+      "config": {
+        "outputDirectory": "data/output/main/java",
+        "packageName": "elemental3"
+      }
     }
   ]
 }
