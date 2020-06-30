@@ -41,23 +41,23 @@ final class Generator
     final WebIDLSchema schema = context.getSchema();
     for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
     {
-      generate( context, definition );
+      generateCallbackInterface( context, definition );
     }
     for ( final DictionaryDefinition definition : schema.getDictionaries() )
     {
-      generate( context, definition );
+      generateDictionary( context, definition );
     }
     for ( final EnumerationDefinition definition : schema.getEnumerations() )
     {
-      generate( context, definition );
+      generateEnumeration( context, definition );
     }
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
-      generate( context, definition );
+      generateInterface( context, definition );
     }
   }
 
-  private void generate( @Nonnull final CodeGenContext context, @Nonnull final DictionaryDefinition definition )
+  private void generateDictionary( @Nonnull final CodeGenContext context, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -218,7 +218,7 @@ final class Generator
     return "set" + NamingUtil.uppercaseFirstCharacter( member.getName() );
   }
 
-  private void generate( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )
+  private void generateCallbackInterface( @Nonnull final CodeGenContext context, @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
@@ -241,7 +241,7 @@ final class Generator
     context.writeTopLevelType( type );
   }
 
-  private void generate( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
+  private void generateInterface( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
@@ -550,7 +550,7 @@ final class Generator
     }
   }
 
-  private void generate( @Nonnull final CodeGenContext context, @Nonnull final EnumerationDefinition definition )
+  private void generateEnumeration( @Nonnull final CodeGenContext context, @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
