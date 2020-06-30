@@ -57,4 +57,21 @@ public final class InterfaceGeneratorTest
     assertJavaFilePresent( "EventInit" );
     assertJavaFilePresent( "SpeechRecognitionErrorEvent" );
   }
+
+  @Test
+  public void propertyNameIsJavaKeyword()
+    throws Exception
+  {
+    final String content =
+      "[Exposed=Window]\n" +
+      "interface SpeechSynthesisVoice {\n" +
+      "  readonly attribute boolean default;\n" +
+      "  readonly attribute DOMString lang;\n" +
+      "  readonly attribute boolean localService;\n" +
+      "  readonly attribute DOMString name;\n" +
+      "  readonly attribute DOMString voiceURI;\n" +
+      "};\n";
+    generateCode( content );
+    assertJavaFilePresent( "SpeechSynthesisVoice" );
+  }
 }

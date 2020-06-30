@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Modifier;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
@@ -307,9 +308,10 @@ final class Generator
     final Type attributeType = attribute.getType();
     final Type actualType = context.getSchema().resolveType( attributeType );
     final String name = attribute.getName();
+    final String prefix = SourceVersion.isName( name ) ? "" : "_";
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( name )
+        .methodBuilder( prefix + name )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( toTypeName( context, actualType ) )
         .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
