@@ -119,6 +119,8 @@ define 'webtack' do
 
   ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webidl-model/src/test/resources')
 
+  ipr.add_testng_configuration('webidl-parser', :module => 'webidl-parser', :jvm_args => '-ea')
+
   ipr.add_testng_configuration('webidl-model',
                                :module => 'webidl-model',
                                :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.fixture_dir=src/test/fixtures')
