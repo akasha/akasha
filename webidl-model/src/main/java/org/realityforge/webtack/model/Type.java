@@ -1,5 +1,7 @@
 package org.realityforge.webtack.model;
 
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -189,6 +191,21 @@ public class Type
         default:
           return true;
       }
+    }
+  }
+
+  @Override
+  public String toString()
+  {
+    try
+    {
+      final StringWriter sw = new StringWriter();
+      WebIDLWriter.writeType( sw, this );
+      return sw.toString();
+    }
+    catch ( final IOException e )
+    {
+      throw new IllegalStateException( "Error generating toString for type of kind " + _kind );
     }
   }
 }
