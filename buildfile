@@ -98,6 +98,8 @@ define 'webtack' do
     compile.with :javax_annotation,
                  project('webidl-model').package(:jar),
                  project('webidl-model').compile.dependencies,
+                 project('jsinterop-generator').package(:jar),
+                 project('jsinterop-generator').compile.dependencies,
                  PACKAGED_DEPS
 
     package(:jar)
