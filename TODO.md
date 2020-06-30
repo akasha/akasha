@@ -15,6 +15,8 @@ complete as there is too much un-said.
 
 * Test `FlattenProcessor`
 
+* Export `jsinterop-generator` module as a pipeline action.
+
 * Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
   have the same name and parameters then they should be collapsed into a single operation but with potentially
   merged extended attributes. The intention is for this to be used to import gecko and/or chrome WebIDL and combine
