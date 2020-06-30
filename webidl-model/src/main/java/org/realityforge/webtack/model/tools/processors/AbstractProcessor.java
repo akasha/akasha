@@ -590,7 +590,7 @@ public abstract class AbstractProcessor
   @Nonnull
   protected List<Argument> transformArguments( @Nonnull final List<Argument> arguments )
   {
-    final ArrayList<Argument> outputs = new ArrayList<>();
+    final List<Argument> outputs = new ArrayList<>();
     for ( final Argument input : arguments )
     {
       outputs.add( transformArgument( input ) );
