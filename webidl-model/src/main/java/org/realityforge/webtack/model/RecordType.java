@@ -12,11 +12,11 @@ public final class RecordType
   @Nonnull
   private final Type _valueType;
 
-  RecordType( @Nonnull final Type keyType,
-              @Nonnull final Type valueType,
-              @Nonnull final List<ExtendedAttribute> extendedAttributes,
-              final boolean nullable,
-              @Nonnull final List<SourceInterval> sourceLocations )
+  public RecordType( @Nonnull final Type keyType,
+                     @Nonnull final Type valueType,
+                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                     final boolean nullable,
+                     @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( Kind.Record, extendedAttributes, nullable, sourceLocations );
     _keyType = Objects.requireNonNull( keyType );
