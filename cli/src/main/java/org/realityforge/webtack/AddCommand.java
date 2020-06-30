@@ -151,6 +151,12 @@ final class AddCommand
       }
     }
 
+    if ( !_noUrl && null == _sourceUrl )
+    {
+      environment.logger().log( Level.SEVERE, "Error: No url specified" );
+      return false;
+    }
+
     return true;
   }
 
