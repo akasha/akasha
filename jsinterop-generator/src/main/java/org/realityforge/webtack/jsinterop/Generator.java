@@ -432,14 +432,15 @@ final class Generator
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
     for ( int i = 0; i <= optionalCount; i++ )
     {
-      generateDefaultOperation( context, operation, javaInterface, argCount - i, type );
+      final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
+      generateDefaultOperation( context, operation, javaInterface, argumentList, type );
     }
   }
 
   private void generateDefaultOperation( @Nonnull final CodeGenContext context,
                                          @Nonnull final OperationMember operation,
                                          final boolean javaInterface,
-                                         final long maxArgumentCount,
+                                         @Nonnull final List<Argument> arguments,
                                          @Nonnull final TypeSpec.Builder type )
   {
     assert OperationMember.Kind.DEFAULT == operation.getKind();
@@ -461,9 +462,9 @@ final class Generator
       }
       method.returns( toTypeName( context, actualType ) );
     }
-    for ( int i = 0; i < maxArgumentCount; i++ )
+    for ( final Argument argument : arguments )
     {
-      generateOperationArgument( context, operation.getArguments().get( i ), false, method );
+      generateOperationArgument( context, argument, false, method );
     }
     type.addMethod( method.build() );
   }
