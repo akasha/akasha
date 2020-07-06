@@ -1,7 +1,6 @@
 package org.realityforge.webtack.jsinterop;
 
 import java.nio.file.Paths;
-import java.util.Collections;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.WebIDLSchema;
@@ -26,7 +25,7 @@ final class JsinteropAction
     throws Exception
   {
     final CodeGenContext context =
-      new CodeGenContext( schema, Collections.emptyMap(), Paths.get( _outputDirectory ), _packageName );
+      new CodeGenContext( schema, Paths.get( _outputDirectory ), _packageName );
     new Generator().generate( context );
   }
 }

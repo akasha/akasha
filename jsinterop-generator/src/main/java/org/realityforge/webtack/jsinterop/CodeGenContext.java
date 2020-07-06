@@ -20,7 +20,7 @@ final class CodeGenContext
   @Nonnull
   private final WebIDLSchema _schema;
   @Nonnull
-  private final Map<String, String> _typeMapping;
+  private final Map<String, ClassName> _typeMapping = new HashMap<>();
   @Nonnull
   private final Path _outputDirectory;
   @Nonnull
@@ -30,12 +30,10 @@ final class CodeGenContext
   private final Map<String, Path> _generatedSourceFiles = new HashMap<>();
 
   CodeGenContext( @Nonnull final WebIDLSchema schema,
-                  @Nonnull final Map<String, String> typeMapping,
                   @Nonnull final Path outputDirectory,
                   @Nonnull final String packageName )
   {
     _schema = Objects.requireNonNull( schema );
-    _typeMapping = Objects.requireNonNull( typeMapping );
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
   }
@@ -67,9 +65,17 @@ final class CodeGenContext
   @Nonnull
   public TypeName lookupTypeByName( @Nonnull final String name )
   {
-    final String typeMapping = _typeMapping.get( name );
-    // TODO: Cache ClassName in context?
-    return null != typeMapping ? ClassName.bestGuess( typeMapping ) : getClassName( name );
+    final ClassName existing = _typeMapping.get( name );
+    if ( null != existing )
+    {
+      return existing;
+    }
+    else
+    {
+      final ClassName className = getClassName( name );
+      _typeMapping.put( name, className );
+      return className;
+    }
   }
 
   public void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
