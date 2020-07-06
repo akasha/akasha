@@ -32,3 +32,7 @@ complete as there is too much un-said.
 
 * Add passes where we modify the internal model (i.e. in java we could emit a `addOnFooListener(e -> {})` if there
   is an event named `foo`)
+
+* Should union types as method parameters just result in multiple overloaded methods in java-land?
+
+* Only keep union type materialization for properties and/or return types from operations?
