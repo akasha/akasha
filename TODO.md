@@ -36,3 +36,11 @@ complete as there is too much un-said.
 * Should union types as method parameters just result in multiple overloaded methods in java-land?
 
 * Only keep union type materialization for properties and/or return types from operations?
+
+### Validations
+
+This section lists some validations that should be implemented to at least confirm some of our assumptions:
+
+* Exploded union type lists should not contains:
+  * multiple values represented by javascript numbers (otherwise how to determine which variant is intended)
+  * multiple dictionary values (otherwise would need to inspect data to switch between them?)
