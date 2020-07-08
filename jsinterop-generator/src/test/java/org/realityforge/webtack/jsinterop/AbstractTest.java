@@ -30,25 +30,13 @@ import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.model.tools.validator.ValidatorTool;
-import org.testng.IHookCallBack;
-import org.testng.IHookable;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import static org.testng.Assert.*;
 
 public abstract class AbstractTest
-  implements IHookable
 {
   @Nullable
   private Path _workingDir;
-  private String _testName;
-
-  @Override
-  public void run( final IHookCallBack callBack, final ITestResult testResult )
-  {
-    _testName = testResult.getName();
-    callBack.runTestMethod( testResult );
-  }
 
   @AfterMethod
   protected void afterMethod()
@@ -69,13 +57,6 @@ public abstract class AbstractTest
       _workingDir = FileUtil.createTempDir();
     }
     return _workingDir;
-  }
-
-  @Nonnull
-  protected final Path getJavaMainDirectory()
-    throws Exception
-  {
-    return getWorkingDir().resolve( "main" ).resolve( "java" );
   }
 
   @Nonnull
@@ -134,31 +115,6 @@ public abstract class AbstractTest
     return new File( fixtureDir ).toPath();
   }
 
-  @Nonnull
-  protected final Path getTestLocalFixtureDir()
-  {
-    return getBaseFixtureDir().resolve( getClass().getName().replaceAll( "\\.", File.separator ) ).resolve( _testName );
-  }
-
-  @Nonnull
-  protected final Path javaFile( @Nonnull final String name )
-    throws Exception
-  {
-    return javaMain( getJavaMainDirectory(), name );
-  }
-
-  @Nonnull
-  private Path javaMain( @Nonnull final Path directory, @Nonnull final String name )
-  {
-    return directory.resolve( "com" ).resolve( "example" ).resolve( name + ".java" );
-  }
-
-  protected final void assertJavaFilePresent( @Nonnull final String name )
-    throws Exception
-  {
-    assertFileExists( javaFile( name ) );
-  }
-
   protected final void assertFileMatchesFixture( @Nonnull final Path file, @Nonnull final Path fixtureFile )
     throws IOException
   {
@@ -174,13 +130,20 @@ public abstract class AbstractTest
     assertEquals( actualContents, expectedContents, "File " + file + " should match fixture file " + fixtureFile );
   }
 
-  protected final void generateCode( @Nonnull final String content )
+  protected final void generateCode( @Nonnull final Path directory )
     throws Exception
   {
-    generateCode( loadSchema( content ) );
+    generateCode( directory,
+                  new String( Files.readAllBytes( directory.resolve( "schema.webidl" ) ), StandardCharsets.UTF_8 ) );
   }
 
-  protected final void generateCode( @Nonnull final WebIDLSchema schema )
+  protected final void generateCode( @Nonnull final Path directory, @Nonnull final String content )
+    throws Exception
+  {
+    generateCode( directory, loadSchema( content ) );
+  }
+
+  protected final void generateCode( @Nonnull final Path directory, @Nonnull final WebIDLSchema schema )
     throws Exception
   {
     final Collection<ValidationError> validate = ValidatorTool.create().validate( schema );
@@ -191,11 +154,11 @@ public abstract class AbstractTest
     {
       // Delete local fixtures if we plan to regenerate them to ensure that no
       // stray source files are left in fixtures directory
-      FileUtil.deleteDirIfExists( getTestLocalFixtureDir() );
+      FileUtil.deleteDirIfExists( directory );
 
       // write out schema to ensure it is normalized
-      Files.createDirectories( getTestLocalFixtureDir() );
-      final Path schemaPath = getTestLocalFixtureDir().resolve( "schema.webidl" );
+      Files.createDirectories( directory );
+      final Path schemaPath = directory.resolve( "schema.webidl" );
       try ( final FileWriter writer = new FileWriter( schemaPath.toFile() ) )
       {
         WebIDLWriter.writeSchema( writer, schema );
@@ -213,7 +176,7 @@ public abstract class AbstractTest
     {
       final Path file = e.getValue();
       final Path relativePath = context.getOutputDirectory().relativize( file );
-      assertFileMatchesFixture( file, getTestLocalFixtureDir().resolve( relativePath ) );
+      assertFileMatchesFixture( file, directory.resolve( relativePath ) );
     }
   }
 
