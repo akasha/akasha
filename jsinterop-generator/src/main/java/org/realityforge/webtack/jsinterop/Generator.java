@@ -9,6 +9,7 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -430,9 +431,25 @@ final class Generator
                           .build() );
 
     final String inherits = definition.getInherits();
+    final OperationMember parentConstructor;
     if ( null != inherits )
     {
+      parentConstructor = context
+        .getSchema()
+        .getInterfaceByName( inherits )
+        .getOperations()
+        .stream()
+        .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
+        .min( Comparator.comparingLong( o -> o.getArguments()
+          .stream()
+          .filter( a -> !a.isOptional() && !a.isVariadic() )
+          .count() ) )
+        .orElse( null );
       type.superclass( context.lookupTypeByName( inherits ) );
+    }
+    else
+    {
+      parentConstructor = null;
     }
 
     generateConstants( context, definition.getConstants(), type );
@@ -458,7 +475,7 @@ final class Generator
       }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
-        generateConstructorOperation( context, operation, null != inherits, type );
+        generateConstructorOperation( context, operation, parentConstructor, type );
       }
     }
 
@@ -662,7 +679,7 @@ final class Generator
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
                                              @Nonnull final OperationMember operation,
-                                             final boolean invokeSuper,
+                                             @Nullable final OperationMember parentConstructor,
                                              @Nonnull final TypeSpec.Builder type )
   {
     final List<Argument> arguments = operation.getArguments();
@@ -670,33 +687,58 @@ final class Generator
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
     for ( int i = 0; i <= optionalCount; i++ )
     {
-      generateConstructorOperation( context, operation, invokeSuper, argCount - i, type );
+      generateConstructorOperation( context, operation, parentConstructor, argCount - i, type );
     }
   }
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
                                              @Nonnull final OperationMember operation,
-                                             final boolean invokeSuper,
+                                             @Nullable final OperationMember parentConstructor,
                                              final long maxArgumentCount,
                                              @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PUBLIC );
-    final List<String> superArgs = invokeSuper ? new ArrayList<>() : null;
     for ( int i = 0; i < maxArgumentCount; i++ )
     {
-      final Argument argument = operation.getArguments().get( i );
-      generateArgument( context, argument, true, method );
-      if ( invokeSuper )
-      {
-        superArgs.add( argument.getName() );
-      }
+      generateArgument( context, operation.getArguments().get( i ), true, method );
     }
-    if ( invokeSuper )
+    if ( null != parentConstructor )
     {
-      method.addStatement( "super( " + String.join( ", ", superArgs ) + " )" );
+      method.addStatement( "super( " +
+                           parentConstructor
+                             .getArguments()
+                             .stream()
+                             .filter( a -> !a.isOptional() && !a.isVariadic() )
+                             .map( a -> defaultValue( context, a ) )
+                             .collect( Collectors.joining( ", " ) ) +
+                           " )" );
     }
 
     type.addMethod( method.build() );
+  }
+
+  @Nonnull
+  private String defaultValue( @Nonnull final CodeGenContext context,
+                               @Nonnull final Argument argument )
+  {
+    final Type type = context.getSchema().resolveType( argument.getType() );
+    final Kind kind = type.getKind();
+    if ( kind.isInteger() )
+    {
+      return "0";
+    }
+    else if ( kind.isDecimal() )
+    {
+      return "0F";
+    }
+    else if ( Kind.Boolean == kind )
+    {
+      return "false";
+    }
+    else
+    {
+      return "null";
+    }
   }
 
   private void generateArgument( @Nonnull final CodeGenContext context,

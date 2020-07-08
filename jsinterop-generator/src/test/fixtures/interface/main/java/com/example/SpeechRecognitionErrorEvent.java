@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
 )
 public class SpeechRecognitionErrorEvent extends Event {
   public SpeechRecognitionErrorEvent(@Nonnull final String type) {
-    super( type );
+    super( null );
   }
 
   @JsProperty(
