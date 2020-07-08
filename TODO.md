@@ -4,6 +4,10 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Add `RenameTypeReference` processor so can rename `EventHandler` to `NullableEventHandler`
+
+* Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
+
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
 
