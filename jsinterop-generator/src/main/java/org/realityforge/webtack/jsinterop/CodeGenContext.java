@@ -15,6 +15,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
