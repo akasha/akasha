@@ -515,7 +515,7 @@ public final class WebIDLSchema
     {
       final String name = ( (TypeReference) type ).getName();
       final TypedefDefinition typedef = findTypedefByName( name );
-      if ( null != typedef )
+      if ( null != typedef && Kind.Union != typedef.getType().getKind() )
       {
         return resolveType( typedef.getType() );
       }
