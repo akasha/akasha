@@ -63,7 +63,7 @@ final class CodeGenContext
   }
 
   @Nonnull
-  public TypeName lookupTypeByName( @Nonnull final String name )
+  TypeName lookupTypeByName( @Nonnull final String name )
   {
     final ClassName existing = _typeMapping.get( name );
     if ( null != existing )
@@ -78,7 +78,7 @@ final class CodeGenContext
     }
   }
 
-  public void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
+  void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
     final Path outputDirectory = getMainJavaDirectory();
