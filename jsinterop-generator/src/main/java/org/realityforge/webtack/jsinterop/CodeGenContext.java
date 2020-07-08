@@ -240,7 +240,16 @@ final class CodeGenContext
       }
       else
       {
-        return toTypeName( schema.getTypedefByName( name ).getType() );
+        final TypedefDefinition typedef = schema.getTypedefByName( name );
+        //TODO: Figure out some sensible mechanism for this logic rather than duplicating the logic all over the place
+        if ( Kind.Union == typedef.getType().getKind() )
+        {
+          return lookupTypeByName( name );
+        }
+        else
+        {
+          return toTypeName( typedef.getType() );
+        }
       }
     }
     else if ( Kind.Promise == kind )
