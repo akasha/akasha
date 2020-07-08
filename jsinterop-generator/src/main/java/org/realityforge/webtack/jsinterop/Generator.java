@@ -513,6 +513,7 @@ final class Generator
     for ( int i = 0; i <= optionalCount; i++ )
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
+      //TODO: We need to generate a separate method for each possible union specialized operation
       generateDefaultOperation( context, operation, javaInterface, argumentList, type );
     }
   }
