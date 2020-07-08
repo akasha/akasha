@@ -5,8 +5,6 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
-import com.squareup.javapoet.ParameterizedTypeName;
-import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +27,6 @@ import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.OperationMember;
-import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
@@ -109,7 +106,7 @@ final class Generator
     for ( final Type memberType : memberTypes )
     {
       final ParameterSpec.Builder parameter =
-        ParameterSpec.builder( toTypeName( context, memberType ), "value", Modifier.FINAL );
+        ParameterSpec.builder( context.toTypeName( memberType ), "value", Modifier.FINAL );
 
       final ClassName methodNullability;
       if ( context.getSchema().isNullable( memberType ) )
@@ -197,7 +194,7 @@ final class Generator
         final Type memberType = member.getType();
         final Type actualType = context.getSchema().resolveType( memberType );
         final ParameterSpec.Builder parameter =
-          ParameterSpec.builder( toTypeName( context, actualType ), member.getName(), Modifier.FINAL );
+          ParameterSpec.builder( context.toTypeName( actualType ), member.getName(), Modifier.FINAL );
         if ( context.getSchema().isNullable( memberType ) )
         {
           parameter.addAnnotation( Types.NULLABLE );
@@ -245,7 +242,7 @@ final class Generator
       MethodSpec
         .methodBuilder( getAccessorName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
-        .returns( toTypeName( context, actualType ) )
+        .returns( context.toTypeName( actualType ) )
         .addAnnotation( Types.JS_PROPERTY );
     if ( context.getSchema().isNullable( member.getType() ) )
     {
@@ -280,7 +277,7 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .addAnnotation( Types.JS_PROPERTY );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( toTypeName( context, actualType ), member.getName() );
+      ParameterSpec.builder( context.toTypeName( actualType ), member.getName() );
 
     if ( context.getSchema().isNullable( member.getType() ) )
     {
@@ -393,7 +390,7 @@ final class Generator
       MethodSpec
         .methodBuilder( prefix + name )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( toTypeName( context, actualType ) )
+        .returns( context.toTypeName( actualType ) )
         .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     if ( context.getSchema().isNullable( attributeType ) )
     {
@@ -414,7 +411,7 @@ final class Generator
     final Type attributeType = attribute.getType();
     final Type actualType = context.getSchema().resolveType( attributeType );
     final FieldSpec.Builder field =
-      FieldSpec.builder( toTypeName( context, actualType ), attribute.getName(), Modifier.PUBLIC );
+      FieldSpec.builder( context.toTypeName( actualType ), attribute.getName(), Modifier.PUBLIC );
     if ( context.getSchema().isNullable( attributeType ) )
     {
       field.addAnnotation( Types.NULLABLE );
@@ -444,7 +441,7 @@ final class Generator
     final Type actualType = context.getSchema().resolveType( constantType );
     final FieldSpec.Builder field =
       FieldSpec
-        .builder( toTypeName( context, actualType ),
+        .builder( context.toTypeName( actualType ),
                   constant.getName(),
                   Modifier.PUBLIC,
                   Modifier.STATIC,
@@ -541,7 +538,7 @@ final class Generator
       {
         method.addAnnotation( Types.NONNULL );
       }
-      method.returns( toTypeName( context, actualType ) );
+      method.returns( context.toTypeName( actualType ) );
     }
     for ( final Argument argument : arguments )
     {
@@ -597,7 +594,7 @@ final class Generator
     final Type argumentType = argument.getType();
     final Type actualType = context.getSchema().resolveType( argumentType );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( toTypeName( context, actualType ), argument.getName() );
+      ParameterSpec.builder( context.toTypeName( actualType ), argument.getName() );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
     if ( isFinal )
     {
@@ -720,176 +717,6 @@ final class Generator
         //Generate no annotation
         return null;
       }
-    }
-  }
-
-  @Nonnull
-  private TypeName toTypeName( @Nonnull final CodeGenContext context, @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-
-    final boolean nullable = type.isNullable();
-    if ( nullable &&
-         ( Kind.Byte == kind ||
-           Kind.Octet == kind ||
-           Kind.Short == kind ||
-           Kind.UnsignedShort == kind ||
-           Kind.Long == kind ||
-           Kind.LongLong == kind ||
-           Kind.UnsignedLongLong == kind ) )
-    {
-      throw new UnsupportedOperationException( "Nullable " + kind + " not supported" );
-    }
-
-    if ( Kind.Any == kind )
-    {
-      return Types.ANY;
-    }
-    else if ( Kind.Void == kind )
-    {
-      return TypeName.VOID;
-    }
-    else if ( Kind.Boolean == kind )
-    {
-      return nullable ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
-    }
-    else if ( Kind.Byte == kind )
-    {
-      return TypeName.BYTE;
-    }
-    else if ( Kind.Octet == kind )
-    {
-      return TypeName.SHORT;
-    }
-    else if ( Kind.UnsignedShort == kind )
-    {
-      return TypeName.INT;
-    }
-    else if ( Kind.Long == kind )
-    {
-      return TypeName.INT;
-    }
-    else if ( Kind.UnsignedLong == kind )
-    {
-      // UnsignedLong is not representable in a JVM but we may it using a signed integer when in jsinterop
-      // and just hope it produces the correct value.
-      return TypeName.INT;
-    }
-    else if ( Kind.LongLong == kind )
-    {
-      // LongLong is actually the same size as a java long in the jre but the way that
-      // it is transpiled by GWT/J2CL means we need to represent it as an integer but
-      // acknowledge that at runtime the value can exceed what the java type represents
-      return TypeName.INT;
-    }
-    else if ( Kind.UnsignedLongLong == kind )
-    {
-      // Not representable natively in java but in jsinterop it is best represented as an integer
-      // See comment on LongLong type
-      return TypeName.INT;
-    }
-    else if ( Kind.Float == kind || Kind.UnrestrictedFloat == kind )
-    {
-      return nullable ? TypeName.DOUBLE.box() : TypeName.FLOAT;
-    }
-    else if ( Kind.Double == kind || Kind.UnrestrictedDouble == kind )
-    {
-      return nullable ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
-    }
-    else if ( Kind.DOMString == kind || Kind.ByteString == kind || Kind.USVString == kind )
-    {
-      return Types.STRING;
-    }
-    else if ( Kind.Object == kind )
-    {
-      return TypeName.OBJECT;
-    }
-    else if ( Kind.Symbol == kind )
-    {
-      return Types.SYMBOL;
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      final TypeReference typeReference = (TypeReference) type;
-      final String name = typeReference.getName();
-      final WebIDLSchema schema = context.getSchema();
-      if ( null != schema.findInterfaceByName( name ) ||
-           null != schema.findDictionaryByName( name ) ||
-           null != schema.findCallbackInterfaceByName( name ) ||
-           null != schema.findCallbackByName( name ) )
-      {
-        return context.lookupTypeByName( name );
-      }
-      else if ( null != schema.findEnumerationByName( name ) )
-      {
-        return Types.STRING;
-      }
-      else
-      {
-        return toTypeName( context, schema.getTypedefByName( name ).getType() );
-      }
-    }
-    else if ( Kind.Promise == kind )
-    {
-      return Types.PROMISE;
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      final Type itemType = ( (SequenceType) type ).getItemType();
-      return ParameterizedTypeName.get( Types.JS_ARRAY,
-                                        toTypeName( context, context.getSchema().resolveType( itemType ) ) );
-    }
-    else if ( Kind.Record == kind )
-    {
-      throw new UnsupportedOperationException( "Record not currently supported by generator" );
-    }
-    else if ( Kind.ArrayBuffer == kind )
-    {
-      return Types.ARRAY_BUFFER;
-    }
-    else if ( Kind.DataView == kind )
-    {
-      return Types.DATA_VIEW;
-    }
-    else if ( Kind.Int8Array == kind )
-    {
-      return Types.INT8_ARRAY;
-    }
-    else if ( Kind.Int16Array == kind )
-    {
-      return Types.INT16_ARRAY;
-    }
-    else if ( Kind.Int32Array == kind )
-    {
-      return Types.INT32_ARRAY;
-    }
-    else if ( Kind.Uint8Array == kind )
-    {
-      return Types.UINT8_ARRAY;
-    }
-    else if ( Kind.Uint16Array == kind )
-    {
-      return Types.UINT16_ARRAY;
-    }
-    else if ( Kind.Uint32Array == kind )
-    {
-      return Types.UINT32_ARRAY;
-    }
-    else if ( Kind.Uint8ClampedArray == kind )
-    {
-      return Types.UINT8_CLAMPED_ARRAY;
-    }
-    else if ( Kind.Float32Array == kind )
-    {
-      return Types.FLOAT32_ARRAY;
-    }
-    else if ( Kind.Float64Array == kind )
-    {
-      return Types.FLOAT64_ARRAY;
-    }
-    else
-    {
-      throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
     }
   }
 
