@@ -310,7 +310,7 @@ final class Generator
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
-                          .addMember( "name", exposedOnGlobal ? "\"" + definition.getName() + "\"" : "\"?\"" )
+                          .addMember( "name", "$S", exposedOnGlobal ? definition.getName() : "?" )
                           .build() )
       .addAnnotation( FunctionalInterface.class );
 
