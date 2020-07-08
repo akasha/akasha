@@ -21,4 +21,21 @@ public final class TypedefUnionGeneratorTest
     assertJavaFilePresent( "Blob" );
     assertJavaFilePresent( "ClipboardItemDataType" );
   }
+
+  @Test
+  public void generateUsedType()
+    throws Exception
+  {
+    final String content =
+      "[Exposed=(Window,Worker), Serializable] interface Blob { readonly attribute DOMString type; };\n" +
+      "typedef ( DOMString or Blob ) ClipboardItemDataType;\n" +
+      "\n" +
+      "typedef Promise<ClipboardItemDataType> ClipboardItemData;\n" +
+      "\n" +
+      "callback ClipboardItemDelayedCallback = ClipboardItemData ();\n";
+    generateCode( content );
+    assertJavaFilePresent( "Blob" );
+    assertJavaFilePresent( "ClipboardItemDataType" );
+    assertJavaFilePresent( "ClipboardItemDelayedCallback" );
+  }
 }
