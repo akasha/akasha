@@ -247,7 +247,7 @@ public abstract class AbstractTest
         compiler.getTask( null,
                           fileManager,
                           listener,
-                          Arrays.asList( "-d", output.toString(), "-cp", classpath, "-Xlint:all,-processing,-serial", "-Werror", "-Xlint:all,-processing,-serial" ),
+                          Arrays.asList( "-d", output.toString(), "-cp", classpath, "-Xlint:all,-processing,-serial", "-Werror" ),
                           null,
                           compilationUnits );
       if ( !compilationTask.call() || !listener.getDiagnostics().isEmpty() )
