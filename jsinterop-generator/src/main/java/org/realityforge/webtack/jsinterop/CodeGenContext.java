@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 final class CodeGenContext
@@ -114,6 +116,18 @@ final class CodeGenContext
     if ( null != enumeration )
     {
       return Types.STRING;
+    }
+    final TypedefDefinition typedef = getSchema().findTypedefByName( name );
+    if ( null != typedef )
+    {
+      if ( Kind.Union == typedef.getType().getKind() )
+      {
+        return ClassName.get( getPackageName(), name );
+      }
+      else
+      {
+        //TODO: resolve typedef
+      }
     }
     return ClassName.get( getPackageName(), name );
   }
