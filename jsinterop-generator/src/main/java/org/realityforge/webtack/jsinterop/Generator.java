@@ -46,6 +46,10 @@ final class Generator
     {
       generateTypedef( context, definition );
     }
+    for ( final CallbackDefinition definition : schema.getCallbacks() )
+    {
+      generateCallback( context, definition );
+    }
     for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
     {
       generateCallbackInterface( context, definition );
@@ -298,6 +302,31 @@ final class Generator
   private String getMutatorName( @Nonnull final DictionaryMember member )
   {
     return "set" + NamingUtil.uppercaseFirstCharacter( member.getName() );
+  }
+
+  private void generateCallback( @Nonnull final CodeGenContext context, @Nonnull final CallbackDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( definition.getName() )
+        .addModifiers( Modifier.PUBLIC );
+    writeGeneratedAnnotation( type );
+    type
+      .addAnnotation( Types.JS_FUNCTION )
+      .addAnnotation( FunctionalInterface.class );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( "onInvoke" )
+        .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT );
+    emitReturnType( context, definition.getReturnType(), method );
+    for ( final Argument argument : definition.getArguments() )
+    {
+      generateArgument( context, argument, false, method );
+    }
+    type.addMethod( method.build() );
+
+    context.writeTopLevelType( type );
   }
 
   private void generateCallbackInterface( @Nonnull final CodeGenContext context,
