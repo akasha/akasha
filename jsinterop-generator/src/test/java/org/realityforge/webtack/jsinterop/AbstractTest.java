@@ -4,6 +4,7 @@ import gir.io.FileUtil;
 import gir.sys.SystemProperty;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.charset.StandardCharsets;
@@ -26,6 +27,7 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.WebIDLWriter;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.model.tools.validator.ValidatorTool;
 import org.testng.IHookCallBack;
@@ -190,6 +192,14 @@ public abstract class AbstractTest
       // Delete local fixtures if we plan to regenerate them to ensure that no
       // stray source files are left in fixtures directory
       FileUtil.deleteDirIfExists( getTestLocalFixtureDir() );
+
+      // write out schema to ensure it is normalized
+      Files.createDirectories( getTestLocalFixtureDir() );
+      final Path schemaPath = getTestLocalFixtureDir().resolve( "schema.webidl" );
+      try ( final FileWriter writer = new FileWriter( schemaPath.toFile() ) )
+      {
+        WebIDLWriter.writeSchema( writer, schema );
+      }
     }
 
     new Generator().generate( context );
