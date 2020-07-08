@@ -8,14 +8,17 @@ import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Modifier;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
+import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
@@ -527,6 +530,18 @@ final class Generator
     final MethodSpec.Builder method = MethodSpec.methodBuilder( name ).addModifiers( Modifier.PUBLIC );
     method.addModifiers( javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
     final Type returnType = operation.getReturnType();
+    emitReturnType( context, returnType, method );
+    for ( final Argument argument : arguments )
+    {
+      generateArgument( context, argument, false, method );
+    }
+    type.addMethod( method.build() );
+  }
+
+  private void emitReturnType( @Nonnull final CodeGenContext context,
+                               @Nonnull final Type returnType,
+                               @Nonnull final MethodSpec.Builder method )
+  {
     if ( Kind.Void != returnType.getKind() )
     {
       final Type actualType = context.getSchema().resolveType( returnType );
@@ -538,13 +553,8 @@ final class Generator
       {
         method.addAnnotation( Types.NONNULL );
       }
-      method.returns( context.toTypeName( actualType ) );
+      method.returns( context.toTypeName( returnType ) );
     }
-    for ( final Argument argument : arguments )
-    {
-      generateOperationArgument( context, argument, false, method );
-    }
-    type.addMethod( method.build() );
   }
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
