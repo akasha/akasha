@@ -572,7 +572,7 @@ final class Generator
     for ( int i = 0; i < maxArgumentCount; i++ )
     {
       final Argument argument = operation.getArguments().get( i );
-      generateOperationArgument( context, argument, true, method );
+      generateArgument( context, argument, true, method );
       if ( invokeSuper )
       {
         superArgs.add( argument.getName() );
@@ -586,10 +586,10 @@ final class Generator
     type.addMethod( method.build() );
   }
 
-  private void generateOperationArgument( @Nonnull final CodeGenContext context,
-                                          @Nonnull final Argument argument,
-                                          final boolean isFinal,
-                                          @Nonnull final MethodSpec.Builder method )
+  private void generateArgument( @Nonnull final CodeGenContext context,
+                                 @Nonnull final Argument argument,
+                                 final boolean isFinal,
+                                 @Nonnull final MethodSpec.Builder method )
   {
     final Type argumentType = argument.getType();
     final Type actualType = context.getSchema().resolveType( argumentType );
