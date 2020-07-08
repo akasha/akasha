@@ -20,7 +20,7 @@ import jsinterop.base.JsPropertyMap;
 public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
-  static PromiseRejectionEventInit create(@Nonnull final Promise promise) {
+  static PromiseRejectionEventInit create(@Nonnull final Promise<Any> promise) {
     final PromiseRejectionEventInit $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
     $instance$.setPromise( promise );
     return $instance$;
@@ -28,10 +28,10 @@ public interface PromiseRejectionEventInit extends EventInit {
 
   @JsProperty
   @Nonnull
-  Promise getPromise();
+  Promise<Any> getPromise();
 
   @JsProperty
-  void setPromise(@Nonnull Promise promise);
+  void setPromise(@Nonnull Promise<Any> promise);
 
   @JsProperty
   Any getReason();

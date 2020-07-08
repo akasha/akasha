@@ -244,7 +244,9 @@ final class CodeGenContext
     }
     else if ( Kind.Promise == kind )
     {
-      return Types.PROMISE;
+      final PromiseType promiseType = (PromiseType) type;
+      return ParameterizedTypeName.get( Types.PROMISE,
+                                        toTypeName( _schema.resolveType( promiseType.getResolveType() ) ) );
     }
     else if ( Kind.Sequence == kind )
     {
