@@ -30,6 +30,7 @@ import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.OperationMember;
+import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
@@ -100,6 +101,61 @@ final class Generator
     generateUnionOfMethod( context, name, unionType, type );
 
     context.writeTopLevelType( type );
+  }
+
+  @Nonnull
+  private List<List<Type>> explodeTypeList( @Nonnull final List<Type> types )
+  {
+    final List<List<Type>> results = new ArrayList<>();
+    results.add( new ArrayList<>() );
+    for ( final Type type : types )
+    {
+      final List<Type> itemTypes = explodeType( type );
+      if ( 1 == itemTypes.size() )
+      {
+        final Type itemType = itemTypes.get( 0 );
+        results.forEach( result -> result.add( itemType ) );
+      }
+      else
+      {
+        final List<List<Type>> dupList = new ArrayList<>( results );
+        results.clear();
+        for ( final Type itemType : itemTypes )
+        {
+          for ( final List<Type> result : dupList )
+          {
+            final List<Type> newList = new ArrayList<>( result );
+            newList.add( itemType );
+            results.add( newList );
+          }
+        }
+      }
+    }
+    return results;
+  }
+
+  @Nonnull
+  private List<Type> explodeType( @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( Kind.Union == kind )
+    {
+      final UnionType unionType = (UnionType) type;
+      return unionType.getMemberTypes()
+        .stream()
+        .flatMap( t -> explodeType( t ).stream() )
+        .collect( Collectors.toList() );
+    }
+    else if ( Kind.Promise == kind )
+    {
+      final PromiseType promiseType = (PromiseType) type;
+      final List<Type> resolveTypes = explodeType( promiseType.getResolveType() );
+      return resolveTypes
+        .stream()
+        .map( t -> new PromiseType( t, promiseType.getExtendedAttributes(), promiseType.getSourceLocations() ) )
+        .collect( Collectors.toList() );
+    }
+    return Collections.singletonList( type );
   }
 
   private void generateUnionOfMethod( @Nonnull final CodeGenContext context,
@@ -542,8 +598,26 @@ final class Generator
     for ( int i = 0; i <= optionalCount; i++ )
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
-      //TODO: We need to generate a separate method for each possible union specialized operation
-      generateDefaultOperation( context, operation, javaInterface, argumentList, type );
+      final List<List<Type>> explodedTypeList =
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<Type> typeList : explodedTypeList )
+      {
+        final List<Argument> args = new ArrayList<>();
+        final int variantArgCount = typeList.size();
+        for ( int j = 0; j < variantArgCount; j++ )
+        {
+          final Type argType = typeList.get( j );
+          final Argument argument = argumentList.get( j );
+          args.add( new Argument( argument.getName(),
+                                  argType,
+                                  argument.isOptional(),
+                                  argument.isVariadic(),
+                                  argument.getDefaultValue(),
+                                  argument.getExtendedAttributes(),
+                                  argument.getSourceLocations() ) );
+        }
+        generateDefaultOperation( context, operation, javaInterface, args, type );
+      }
     }
   }
 
