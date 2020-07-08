@@ -247,10 +247,10 @@ public abstract class AbstractTest
         compiler.getTask( null,
                           fileManager,
                           listener,
-                          Arrays.asList( "-d", output.toString(), "-cp", classpath, "-Xlint:all,-processing,-serial" ),
+                          Arrays.asList( "-d", output.toString(), "-cp", classpath, "-Xlint:all,-processing,-serial", "-Werror", "-Xlint:all,-processing,-serial" ),
                           null,
                           compilationUnits );
-      if ( !compilationTask.call() )
+      if ( !compilationTask.call() || !listener.getDiagnostics().isEmpty() )
       {
         fail( "Failed to compile files:\n" +
               listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
