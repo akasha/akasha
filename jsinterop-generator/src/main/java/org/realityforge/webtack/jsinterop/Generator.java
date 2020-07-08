@@ -32,6 +32,8 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
+import org.realityforge.webtack.model.TypedefDefinition;
+import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 final class Generator
@@ -40,6 +42,10 @@ final class Generator
     throws IOException
   {
     final WebIDLSchema schema = context.getSchema();
+    for ( final TypedefDefinition definition : schema.getTypedefs() )
+    {
+      generateTypedef( context, definition );
+    }
     for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
     {
       generateCallbackInterface( context, definition );
@@ -55,6 +61,80 @@ final class Generator
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
       generateInterface( context, definition );
+    }
+  }
+
+  private void generateTypedef( @Nonnull final CodeGenContext context, @Nonnull final TypedefDefinition definition )
+    throws IOException
+  {
+    final Type type = definition.getType();
+    final Kind kind = type.getKind();
+    if ( Kind.Union == kind )
+    {
+      final String name = definition.getName();
+      final UnionType unionType = (UnionType) type;
+      generateUnion( context, name, unionType );
+    }
+  }
+
+  private void generateUnion( @Nonnull final CodeGenContext context,
+                              @Nonnull final String name,
+                              @Nonnull final UnionType unionType )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( name )
+        .addModifiers( Modifier.PUBLIC );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "name", "$S", "?" )
+                          .build() );
+
+    generateUnionOfMethod( context, name, unionType, type );
+
+    context.writeTopLevelType( type );
+  }
+
+  private void generateUnionOfMethod( @Nonnull final CodeGenContext context,
+                                      @Nonnull final String name,
+                                      @Nonnull final UnionType unionType,
+                                      @Nonnull final TypeSpec.Builder type )
+  {
+    final ClassName self = ClassName.bestGuess( name );
+    final List<Type> memberTypes = unionType.getMemberTypes();
+    //TODO: We need to generate a separate "of" method for each possible union specialized operation
+    for ( final Type memberType : memberTypes )
+    {
+      final ParameterSpec.Builder parameter =
+        ParameterSpec.builder( toTypeName( context, memberType ), "value", Modifier.FINAL );
+
+      final ClassName methodNullability;
+      if ( context.getSchema().isNullable( memberType ) )
+      {
+        parameter.addAnnotation( Types.NULLABLE );
+        methodNullability = Types.NULLABLE;
+      }
+      else if ( !memberType.getKind().isPrimitive() )
+      {
+        parameter.addAnnotation( Types.NONNULL );
+        methodNullability = Types.NONNULL;
+      }
+      else
+      {
+        methodNullability = Types.NONNULL;
+      }
+
+      type.addMethod( MethodSpec
+                        .methodBuilder( "of" )
+                        .addAnnotation( Types.JS_OVERLAY )
+                        .addAnnotation( methodNullability )
+                        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                        .addParameter( parameter.build() )
+                        .addStatement( "return $T.cast( value )", Types.JS )
+                        .returns( self ).build() );
     }
   }
 
