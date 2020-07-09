@@ -4,6 +4,9 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
+  code a whole lot nicer. We could do this after we have emitted closure externs.
+
 * Add code that "specializes" event handlers in some way. So we can make an event handler for a
   particular `onmyevent` attribute take an event of type `MyEvent`. We could also add overlap
   methods on the interfaces that wrapped and generated methods like:
@@ -32,6 +35,52 @@ complete as there is too much un-said.
 * Add `RenameTypeReference` processor so can rename `EventHandler` to `NullableEventHandler`
 
 * Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
+
+* Inject casts before super parameters to avoid collisions when ctors in parent classes duplicates.
+
+* Generate code for `partial interface Window {}` when exposed includes `Window` in speech pipeline.
+  Does this require a parameter passed into pipeline that can be accessed multiple places like env
+  var? We may need to pass in `globalObject="Window"` to code generator stage. We should probably
+  merge all partials and expose a type such as:
+
+```java
+@JsType( isNative = true, name = "Window", namespace = JsPackage.GLOBAL )
+public final class WebSpeechWindow
+{
+  @JsOverlay
+  @Nonnull
+  public static WebSpeechWindow of( @Nonnull final Object o )
+  {
+    return Js.cast( o );
+  }
+
+  // Constructor is only present to support the java compiler
+  private WebSpeechWindow()
+  {
+  }
+
+  @JsProperty( name = "speechSynthesis" )
+  @Nonnull
+  public native SpeechSynthesis speechSynthesis();
+}
+
+```
+* It is also unclear why an error was no generated when unmatched partial present in speech pipeline
+
+* Interfaces without constructors are not published on global types. How do we define them in jsinterop?
+  We could publish them in the same way we do structural types `@JsType(isNative=true,namespace=JsPackage.GLOBAL,name="?")` but that does not "feel" correct. Actually the only answer that seems reasonable is making them
+  extend `Object` which is a lie but ... one that may work
+
+```webidl
+[Exposed=Window]
+interface SpeechSynthesisVoice {
+  readonly attribute boolean default;
+  readonly attribute DOMString lang;
+  readonly attribute boolean localService;
+  readonly attribute DOMString name;
+  readonly attribute DOMString voiceURI;
+};
+```
 
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
