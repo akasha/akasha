@@ -36,8 +36,6 @@ complete as there is too much un-said.
 
 * Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
 
-* Inject casts before super parameters to avoid collisions when ctors in parent classes duplicates.
-
 * Generate code for `partial interface Window {}` when exposed includes `Window` in speech pipeline.
   Does this require a parameter passed into pipeline that can be accessed multiple places like env
   var? We may need to pass in `globalObject="Window"` to code generator stage. We should probably
