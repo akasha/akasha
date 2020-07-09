@@ -4,6 +4,31 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Add code that "specializes" event handlers in some way. So we can make an event handler for a
+  particular `onmyevent` attribute take an event of type `MyEvent`. We could also add overlap
+  methods on the interfaces that wrapped and generated methods like:
+
+```java
+  @JsOverlay
+  public void addProgressListener(@Nonnull final ProgressEventListener callback, @Nonnull AddEventListenerOptions options)
+  {
+    addEventListener( "progress", callback, options );
+  }
+
+  @JsOverlay
+  public void addProgressListener(@Nonnull final ProgressEventListener callback, boolean options)
+  {
+    addEventListener( "progress", callback, options );
+  }
+
+  @JsOverlay
+  public void addProgressListener(@Nonnull final ProgressEventListener callback)
+  {
+    addEventListener( "progress", callback );
+  }
+
+```
+
 * Add `RenameTypeReference` processor so can rename `EventHandler` to `NullableEventHandler`
 
 * Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
