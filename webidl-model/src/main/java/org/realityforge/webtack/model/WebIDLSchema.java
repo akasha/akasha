@@ -532,11 +532,12 @@ public final class WebIDLSchema
    */
   public boolean isNullable( @Nonnull final Type type )
   {
-    if ( type.isNullable() )
+    final Kind kind = type.getKind();
+    if ( type.isNullable() || Kind.Any == kind )
     {
       return true;
     }
-    else if ( Kind.TypeReference == type.getKind() )
+    else if ( Kind.TypeReference == kind )
     {
       final String name = ( (TypeReference) type ).getName();
       final TypedefDefinition typedef = findTypedefByName( name );
@@ -545,7 +546,7 @@ public final class WebIDLSchema
         return isNullable( typedef.getType() );
       }
     }
-    else if ( Kind.Union == type.getKind() )
+    else if ( Kind.Union == kind )
     {
       final UnionType unionType = (UnionType) type;
       return unionType.getMemberTypes().stream().anyMatch( this::isNullable );

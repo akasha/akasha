@@ -3,6 +3,7 @@ package com.example;
 import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -34,8 +35,9 @@ public interface PromiseRejectionEventInit extends EventInit {
   void setPromise(@Nonnull Promise<Any> promise);
 
   @JsProperty
+  @Nullable
   Any getReason();
 
   @JsProperty
-  void setReason(@Nonnull Any reason);
+  void setReason(@Nullable Any reason);
 }
