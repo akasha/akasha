@@ -413,22 +413,11 @@ final class Generator
   private void generateInterface( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
-    final boolean exposedOnGlobal = isExposedOnGlobal( definition );
-    if ( !exposedOnGlobal )
-    {
-      throw new UnsupportedOperationException( "Unexpected scenario with interface named '" + definition.getName() +
-                                               "' not exposed on global." );
-    }
     final TypeSpec.Builder type =
       TypeSpec
         .classBuilder( definition.getName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
-                          .addMember( "name", "$S", exposedOnGlobal ? definition.getName() : "?" )
-                          .build() );
 
     final String inherits = definition.getInherits();
     final OperationMember parentConstructor;
@@ -466,6 +455,7 @@ final class Generator
       }
     }
 
+    boolean constructorPresent = false;
     for ( final OperationMember operation : definition.getOperations() )
     {
       final OperationMember.Kind operationKind = operation.getKind();
@@ -476,7 +466,30 @@ final class Generator
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
         generateConstructorOperation( context, operation, parentConstructor, type );
+        constructorPresent = true;
       }
+    }
+
+    // As the constructor type is not directly accessible from the runtime environment when there is no constructor
+    // we force the name to "Object" so that we do not get cast errors everywhere. It does mean that some of the
+    // type logic will be wrong (i.e. instanceof will not work) but there does not seem to be a better way.
+    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "name", "$S", constructorPresent ? definition.getName() : "Object" )
+                          .build() );
+
+    if ( !constructorPresent )
+    {
+      final MethodSpec.Builder method = MethodSpec.constructorBuilder().addAnnotation( Deprecated.class );
+      method.addJavadoc( "Type is instantiated by the runtime no attempt should be made to " +
+                         "instantiate type by application code." );
+
+      if ( null != parentConstructor )
+      {
+        generateSuperCall( context, parentConstructor, method );
+      }
+      type.addMethod( method.build() );
     }
 
     context.writeTopLevelType( type );
@@ -704,22 +717,37 @@ final class Generator
     }
     if ( null != parentConstructor )
     {
-      method.addStatement( "super( " +
-                           parentConstructor
-                             .getArguments()
-                             .stream()
-                             .filter( a -> !a.isOptional() && !a.isVariadic() )
-                             .map( a -> defaultValue( context, a ) )
-                             .collect( Collectors.joining( ", " ) ) +
-                           " )" );
+      generateSuperCall( context, parentConstructor, method );
     }
 
     type.addMethod( method.build() );
   }
 
+  private void generateSuperCall( @Nonnull final CodeGenContext context,
+                                  @Nonnull final OperationMember parentConstructor,
+                                  @Nonnull final MethodSpec.Builder method )
+  {
+    final List<Argument> arguments = parentConstructor
+      .getArguments()
+      .stream()
+      .filter( a -> !a.isOptional() && !a.isVariadic() )
+      .collect( Collectors.toList() );
+
+    if ( !arguments.isEmpty() )
+    {
+      final List<Object> params = new ArrayList<>();
+      final String statement =
+        "super( " +
+        arguments.stream().map( a -> defaultValue( context, a, params ) ).collect( Collectors.joining( ", " ) ) +
+        " )";
+      method.addStatement( statement, params.toArray() );
+    }
+  }
+
   @Nonnull
   private String defaultValue( @Nonnull final CodeGenContext context,
-                               @Nonnull final Argument argument )
+                               @Nonnull final Argument argument,
+                               @Nonnull final List<Object> params )
   {
     final Type type = context.getSchema().resolveType( argument.getType() );
     final Kind kind = type.getKind();
@@ -737,6 +765,7 @@ final class Generator
     }
     else
     {
+      params.add( context.toTypeName( type ) );
       return "null";
     }
   }
