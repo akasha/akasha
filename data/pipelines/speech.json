@@ -5,7 +5,12 @@
       "name": "Merge"
     },
     {
-      "name": "Validate"
+      "name": "Validate",
+      "config": {
+        "ruleConfig": {
+          "allowDanglingInterfacePartials": true
+        }
+      }
     },
     {
       "name": "ExtractExposureSet",
