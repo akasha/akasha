@@ -32,6 +32,8 @@ complete as there is too much un-said.
 
 ```
 
+* Remove all the `onsomeevent` properties from interfaces once there is jsoverlay event handler like the above in place.
+
 * Add `RenameTypeReference` processor so can rename `EventHandler` to `NullableEventHandler`
 
 * Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
