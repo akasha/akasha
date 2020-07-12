@@ -57,7 +57,7 @@ define 'webtack' do
                  JSONB_DEPS
 
     test.using :testng
-    test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/fixtures') }
+    test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/java') }
     test.options[:java_args] = ['-ea']
     test.compile.with :gir
 
@@ -124,7 +124,7 @@ define 'webtack' do
 
   ipr.add_testng_configuration('webidl-model',
                                :module => 'webidl-model',
-                               :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.fixture_dir=src/test/fixtures')
+                               :jvm_args => '-ea -Dwebtack.output_fixture_data=true -Dwebtack.fixture_dir=src/test/java')
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
