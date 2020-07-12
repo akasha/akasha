@@ -35,6 +35,22 @@ namespace NamespaceC {
   void methodS( boolean flag );
 };
 
+[Exposed=(Window,Worker,Worklet)]
+partial namespace PartialNamespaceA {
+  Promise<Module> methodA( BufferSource bytes );
+  boolean methodB( BufferSource bytes );
+};
+
+partial namespace PartialNamespaceB {
+  void methodP( BufferSource? data );
+  void methodQ( boolean flag );
+};
+
+partial namespace PartialNamespaceC {
+  void methodR( BufferSource? data );
+  void methodS( boolean flag );
+};
+
 callback CallbackA = HTMLElement ();
 
 callback CallbackB = DOMString ();
@@ -74,6 +90,21 @@ dictionary MyDictionaryC {
   USVString s = "";
 };
 
+partial dictionary MyPartialDictionaryA {
+  USVString a = "";
+  USVString b = "";
+};
+
+partial dictionary MyPartialDictionaryB {
+  USVString p = "";
+  USVString q = "";
+};
+
+partial dictionary MyPartialDictionaryC {
+  USVString r = "";
+  USVString s = "";
+};
+
 interface mixin MyMixinA {
   const unsigned short MYCONST_A = 7;
   const unsigned short MYCONST_B = 8;
@@ -109,6 +140,42 @@ interface mixin MyMixinC {
   boolean myMethodS();
 };
 
+partial interface mixin MyPartialMixinA {
+  const unsigned short MYCONST_A = 7;
+  const unsigned short MYCONST_B = 8;
+  [SameObject, A, Input1]
+  readonly attribute SVGPointList a;
+  [SameObject]
+  readonly attribute SVGPointList b;
+  [CEReactions]
+  boolean myMethodA();
+  boolean myMethodB();
+};
+
+partial interface mixin MyPartialMixinB {
+  const unsigned short MYCONST_P = 7;
+  const unsigned short MYCONST_Q = 8;
+  [SameObject, B]
+  readonly attribute SVGPointList a;
+  [SameObject]
+  readonly attribute SVGPointList c;
+  [CEReactions]
+  boolean myMethodA();
+  boolean myMethodB();
+};
+
+partial interface mixin MyPartialMixinC {
+  const unsigned short MYCONST_R = 7;
+  const unsigned short MYCONST_S = 8;
+  [SameObject]
+  readonly attribute SVGPointList r;
+  [SameObject]
+  readonly attribute SVGPointList s;
+  [CEReactions]
+  boolean myMethodR();
+  boolean myMethodS();
+};
+
 [Exposed=Window, Constructor( DOMString type, optional PopStateEventInit eventInitDict = {} )]
 interface MyInterfaceA : Event {
   readonly attribute any a;
@@ -131,6 +198,34 @@ interface MyInterfaceB : Event {
 
 [Exposed=(Window,Worker)]
 interface MyInterfaceC : Event {
+  const unsigned short MYCONST_R = 7;
+  const unsigned short MYCONST_S = 8;
+  readonly attribute any r;
+  readonly attribute any s;
+  [CEReactions]
+  boolean myMethodR();
+  boolean myMethodS();
+};
+
+partial interface MyPartialInterfaceA {
+  readonly attribute any a;
+  readonly attribute any b;
+  [CEReactions]
+  boolean myMethodA();
+  boolean myMethodB();
+};
+
+partial interface MyPartialInterfaceB {
+  const unsigned short MYCONST_A = 7;
+  const unsigned short MYCONST_B = 8;
+  readonly attribute any a;
+  readonly attribute any b;
+  [CEReactions]
+  boolean myMethodP();
+  boolean myMethodQ();
+};
+
+partial interface MyPartialInterfaceC {
   const unsigned short MYCONST_R = 7;
   const unsigned short MYCONST_S = 8;
   readonly attribute any r;

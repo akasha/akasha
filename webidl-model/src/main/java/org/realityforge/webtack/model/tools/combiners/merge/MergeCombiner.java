@@ -54,7 +54,6 @@ final class MergeCombiner
     final Map<String, MixinDefinition> mixins = new HashMap<>();
     final Map<String, IncludesStatement> includes = new HashMap<>();
     final Map<String, NamespaceDefinition> namespaces = new HashMap<>();
-    //TODO: None of these partials are actually implemented in merging...
     final Map<String, List<PartialDictionaryDefinition>> partialDictionaries = new HashMap<>();
     final Map<String, List<PartialInterfaceDefinition>> partialInterfaces = new HashMap<>();
     final Map<String, List<PartialMixinDefinition>> partialMixins = new HashMap<>();
@@ -101,6 +100,24 @@ final class MergeCombiner
       {
         addToCollection( "typedefs", typedefs, typedef.getName(), typedef );
       }
+
+      for ( final PartialDictionaryDefinition definition : schema.getPartialDictionaries() )
+      {
+        partialDictionaries.computeIfAbsent( definition.getName(), n -> new ArrayList<>() ).add( definition );
+      }
+      for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
+      {
+        partialInterfaces.computeIfAbsent( definition.getName(), n -> new ArrayList<>() ).add( definition );
+      }
+      for ( final PartialMixinDefinition definition : schema.getPartialMixins() )
+      {
+        partialMixins.computeIfAbsent( definition.getName(), n -> new ArrayList<>() ).add( definition );
+      }
+      for ( final PartialNamespaceDefinition definition : schema.getPartialNamespaces() )
+      {
+        partialNamespaces.computeIfAbsent( definition.getName(), n -> new ArrayList<>() ).add( definition );
+      }
+
       sourceLocations.addAll( schema.getSourceLocations() );
       tags.addAll( schema.getTags() );
     }
