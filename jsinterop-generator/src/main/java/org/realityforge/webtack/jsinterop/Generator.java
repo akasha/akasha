@@ -470,6 +470,9 @@ final class Generator
       }
     }
 
+    //TODO: Actually rather than driving use of `Object` from constructorPresent, instead should look
+    // for extended property "[LegacyNoInterfaceObject]", "[NoInterfaceObject]" or "[LegacyNamespace]"
+
     // As the constructor type is not directly accessible from the runtime environment when there is no constructor
     // we force the name to "Object" so that we do not get cast errors everywhere. It does mean that some of the
     // type logic will be wrong (i.e. instanceof will not work) but there does not seem to be a better way.
