@@ -13,11 +13,32 @@ public final class ValidatorTool
   @Nonnull
   public static Validator create()
   {
+    return create( new ValidatorRuleConfig() );
+  }
+
+  @Nonnull
+  public static Validator create( @Nonnull final ValidatorRuleConfig config )
+  {
     final List<Validator> validators = new ArrayList<>();
     validators.add( new InheritsValidator() );
     validators.add( new IncludeValidator() );
     validators.add( new UniqueNamesValidator() );
-    validators.add( new PartialValidator() );
+    if ( !config.allowDanglingDictionaryPartials )
+    {
+      validators.add( new PartialDictionaryValidator() );
+    }
+    if ( !config.allowDanglingInterfacePartials )
+    {
+      validators.add( new PartialInterfaceValidator() );
+    }
+    if ( !config.allowDanglingMixinPartials )
+    {
+      validators.add( new PartialMixinValidator() );
+    }
+    if ( !config.allowDanglingNamespacePartials )
+    {
+      validators.add( new PartialNamespaceValidator() );
+    }
     validators.add( new TypeReferenceValidator() );
     return new AggregateValidator( validators );
   }
