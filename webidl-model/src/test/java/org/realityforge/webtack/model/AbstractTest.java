@@ -154,6 +154,26 @@ public abstract class AbstractTest
                 "Expected output file for " + testDescription + " does not match value emitted by " + label );
   }
 
+  protected final void processorGeneratesError( @Nonnull final String label,
+                                                @Nonnull final Supplier<Processor> supplier,
+                                                @Nonnull final Path dir,
+                                                @Nonnull final String inputFilename,
+                                                @Nonnull final String errorMessage )
+  {
+    final String testDescription = label + " fixture test. Input=" + inputFilename;
+
+    final WebIDLSchema input =
+      loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
+    try
+    {
+      supplier.get().process( input );
+    }
+    catch ( final Exception e )
+    {
+      assertEquals( e.getMessage(), errorMessage );
+    }
+  }
+
   protected final void maybeWriteSchemaFixture( @Nonnull final Path file, @Nonnull final WebIDLSchema schema )
     throws IOException
   {
