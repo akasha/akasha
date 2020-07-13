@@ -56,6 +56,7 @@ final class FlattenProcessor
   {
     final Map<String, DictionaryDefinition> dictionaries = new HashMap<>();
     final Map<String, InterfaceDefinition> interfaces = new HashMap<>();
+    final Map<String, List<PartialInterfaceDefinition>> partialInterfaces = new HashMap<>();
     final Map<String, MixinDefinition> mixins = new HashMap<>();
     final Map<String, NamespaceDefinition> namespaces = new HashMap<>();
 
@@ -93,6 +94,15 @@ final class FlattenProcessor
                       merge( definition, partials, includedMixins ) );
     }
 
+    for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
+    {
+      final String name = definition.getName();
+      if ( !interfaces.containsKey( name ) && !partialInterfaces.containsKey( name ) )
+      {
+        partialInterfaces.put( name, Collections.singletonList( merge( schema.findPartialInterfacesByName( name ) ) ) );
+      }
+    }
+
     return new WebIDLSchema( schema.getCallbacks()
                                .stream()
                                .collect( Collectors.toMap( CallbackDefinition::getName, Function.identity() ) ),
@@ -109,7 +119,7 @@ final class FlattenProcessor
                              Collections.emptyList(),
                              namespaces,
                              Collections.emptyMap(),
-                             Collections.emptyMap(),
+                             partialInterfaces,
                              Collections.emptyMap(),
                              Collections.emptyMap(),
                              schema.getTypedefs()
@@ -363,6 +373,70 @@ final class FlattenProcessor
                                     setLikeMember,
                                     definition.getExtendedAttributes(),
                                     Collections.unmodifiableList( sourceLocations ) );
+  }
+
+  @Nonnull
+  private PartialInterfaceDefinition merge( @Nonnull final List<PartialInterfaceDefinition> partials )
+  {
+    IterableMember iterable = null;
+    AsyncIterableMember asyncIterable = null;
+    MapLikeMember mapLikeMember = null;
+    SetLikeMember setLikeMember = null;
+
+    final Map<String, ConstMember> constants = new LinkedHashMap<>();
+    final Map<String, AttributeMember> attributes = new LinkedHashMap<>();
+    final Set<OperationMember> operations = new LinkedHashSet<>();
+    final List<SourceInterval> sourceLocations = new ArrayList<>();
+    for ( final PartialInterfaceDefinition partial : partials )
+    {
+      sourceLocations.addAll( partial.getSourceLocations() );
+      iterable = null == partial.getIterable() ? iterable : partial.getIterable();
+      asyncIterable = null == partial.getAsyncIterable() ? asyncIterable : partial.getAsyncIterable();
+      mapLikeMember = null == partial.getMapLikeMember() ? mapLikeMember : partial.getMapLikeMember();
+      setLikeMember = null == partial.getSetLikeMember() ? setLikeMember : partial.getSetLikeMember();
+
+      for ( final ConstMember constant : partial.getConstants() )
+      {
+        final String name = constant.getName();
+        final ConstMember existing = constants.get( name );
+        if ( null != existing )
+        {
+          throw new IllegalModelException( "Failed to merge constant named '" + name + "' into partial interface " +
+                                           "named '" + partial.getName() + "' as the partial interface already " +
+                                           "contains a constant with the same name. Existing defined in:\n" +
+                                           describeLocations( existing, "\n" ) + "\n" +
+                                           "Attempting to add member defined in:\n" +
+                                           describeLocations( constant, "\n" ) );
+        }
+        constants.put( name, constant );
+      }
+      for ( final AttributeMember attribute : partial.getAttributes() )
+      {
+        final String name = attribute.getName();
+        final AttributeMember existing = attributes.get( name );
+        if ( null != existing )
+        {
+          throw new IllegalModelException( "Failed to merge attribute named '" + name + "' into partial interface " +
+                                           "named '" + partial.getName() + "' as the partial interface already " +
+                                           "contains an attribute with the same name. Existing defined in:\n" +
+                                           describeLocations( existing, "\n" ) + "\n" +
+                                           "Attempting to add member defined in:\n" +
+                                           describeLocations( attribute, "\n" ) );
+        }
+        attributes.put( name, attribute );
+      }
+      operations.addAll( partial.getOperations() );
+    }
+    return new PartialInterfaceDefinition( partials.get( 0 ).getName(),
+                                           Collections.unmodifiableList( new ArrayList<>( constants.values() ) ),
+                                           Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
+                                           Collections.unmodifiableList( new ArrayList<>( operations ) ),
+                                           iterable,
+                                           asyncIterable,
+                                           mapLikeMember,
+                                           setLikeMember,
+                                           Collections.emptyList(),
+                                           Collections.unmodifiableList( sourceLocations ) );
   }
 
   @SuppressWarnings( "SameParameterValue" )
