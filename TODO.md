@@ -98,8 +98,6 @@ interface SpeechSynthesisVoice {
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
 
-* Test `FlattenProcessor`
-
 * Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
   have the same name and parameters then they should be collapsed into a single operation but with potentially
   merged extended attributes. The intention is for this to be used to import gecko and/or chrome WebIDL and combine
