@@ -374,5 +374,4 @@ final class FlattenProcessor
       .map( l -> l.getStart().toString() )
       .collect( Collectors.joining( delimiter ) );
   }
-
 }
