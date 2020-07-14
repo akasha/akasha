@@ -1,3 +1,3 @@
-partial interface WindowOrWorkerGlobalScope {
+partial interface mixin WindowOrWorkerGlobalScope {
   readonly attribute boolean isSecureContext;
 };

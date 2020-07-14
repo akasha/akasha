@@ -190,9 +190,9 @@
         "url": "https://www.w3.org/TR/screen-orientation/"
     },
     {
-        "lastModifiedTime": 1473887635000,
+        "lastModifiedTime": 1585575277000,
         "name": "secure_contexts",
-        "url": "https://www.w3.org/TR/secure-contexts/"
+        "url": "https://w3c.github.io/webappsec-secure-contexts/"
     },
     {
         "lastModifiedTime": 1582692365000,
