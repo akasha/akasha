@@ -23,7 +23,7 @@
     },
     {
       "name": "RemoveElement",
-      "description": "Remove the SpeechRecognition elements as we currently don't use them in the downstream library",
+      "description": "Remove the SpeechRecognition elements as we currently don't use them in the downstream applications",
       "config": {
         "namePattern": "^SpeechRecognition.*$"
       }
