@@ -11,7 +11,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-// TODO: Test every error scenario as well
 public final class FlattenProcessorTest
   extends AbstractTest
 {
