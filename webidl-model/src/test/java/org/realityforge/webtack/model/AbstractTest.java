@@ -250,6 +250,7 @@ public abstract class AbstractTest
     return file;
   }
 
+  @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   protected final Path getOutputFile( @Nonnull final String filename )
     throws Exception
