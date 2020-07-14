@@ -69,7 +69,6 @@ public final class WebSpeechWindow
 }
 
 ```
-* It is also unclear why an error was no generated when unmatched partial present in speech pipeline
 
 * Interfaces without constructors are not published on global types. How do we define them in jsinterop?
   We could publish them in the same way we do structural types `@JsType(isNative=true,namespace=JsPackage.GLOBAL,name="?")` but that does not "feel" correct. Actually the only answer that seems reasonable is making them
