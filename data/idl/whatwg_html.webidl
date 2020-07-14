@@ -629,6 +629,8 @@ interface mixin WindowLocalStorage {
 };
 
 interface mixin WindowOrWorkerGlobalScope {
+  readonly attribute boolean crossOriginIsolated;
+  readonly attribute boolean isSecureContext;
   [Replaceable]
   readonly attribute USVString origin;
   ByteString atob( DOMString data );
@@ -775,7 +777,7 @@ interface DOMStringMap {
   deleter void ( DOMString name );
 };
 
-[Exposed=Window, Constructor]
+[Exposed=Window]
 interface DataTransfer {
   [SameObject]
   readonly attribute FileList files;
@@ -784,6 +786,7 @@ interface DataTransfer {
   readonly attribute FrozenArray<DOMString> types;
   attribute DOMString dropEffect;
   attribute DOMString effectAllowed;
+  constructor();
   void clearData( optional DOMString format );
   DOMString getData( DOMString format );
   void setData( DOMString format, DOMString data );
@@ -819,9 +822,10 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
   void postMessage( any message, optional PostMessageOptions options = {} );
 };
 
-[Exposed=Window, Constructor( DOMString type, optional DragEventInit eventInitDict = {} )]
+[Exposed=Window]
 interface DragEvent : MouseEvent {
   readonly attribute DataTransfer? dataTransfer;
+  constructor( DOMString type, optional DragEventInit eventInitDict = {} );
 };
 
 [Exposed=Window]
@@ -834,7 +838,7 @@ interface ElementInternals {
   boolean checkValidity();
   boolean reportValidity();
   void setFormValue( ( File or USVString or FormData )? value, optional ( File or USVString or FormData )? state );
-  void setValidity( ValidityStateFlags flags, optional DOMString message, optional HTMLElement anchor );
+  void setValidity( optional ValidityStateFlags flags = {}, optional DOMString message, optional HTMLElement anchor );
 };
 
 [Exposed=(Window,Worker)]
@@ -1257,6 +1261,8 @@ interface HTMLIFrameElement : HTMLElement {
   [CEReactions]
   attribute DOMString height;
   [CEReactions]
+  attribute DOMString loading;
+  [CEReactions]
   attribute DOMString name;
   [CEReactions]
   attribute DOMString referrerPolicy;
@@ -1428,6 +1434,8 @@ interface HTMLLinkElement : HTMLElement {
   attribute DOMString as;
   [CEReactions]
   attribute DOMString? crossOrigin;
+  [CEReactions]
+  attribute boolean disabled;
   [CEReactions]
   attribute USVString href;
   [CEReactions]
@@ -2064,10 +2072,11 @@ interface HTMLVideoElement : HTMLMediaElement {
   constructor();
 };
 
-[Exposed=Window, Constructor( DOMString type, optional HashChangeEventInit eventInitDict = {} )]
+[Exposed=Window]
 interface HashChangeEvent : Event {
   readonly attribute USVString newURL;
   readonly attribute USVString oldURL;
+  constructor( DOMString type, optional HashChangeEventInit eventInitDict = {} );
 };
 
 [Exposed=Window]
@@ -2144,10 +2153,11 @@ interface MediaError {
   readonly attribute DOMString message;
 };
 
-[Constructor, Exposed=(Window,Worker)]
+[Exposed=(Window,Worker)]
 interface MessageChannel {
   readonly attribute MessagePort port1;
   readonly attribute MessagePort port2;
+  constructor();
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]
@@ -2206,9 +2216,10 @@ interface OffscreenCanvasRenderingContext2D {
   void commit();
 };
 
-[Exposed=Window, Constructor( DOMString type, optional PageTransitionEventInit eventInitDict = {} )]
+[Exposed=Window]
 interface PageTransitionEvent : Event {
   readonly attribute boolean persisted;
+  constructor( DOMString type, optional PageTransitionEventInit eventInitDict = {} );
 };
 
 [Exposed=(Window,Worker)]
@@ -2235,9 +2246,10 @@ interface PluginArray {
   getter Plugin? namedItem( DOMString name );
 };
 
-[Exposed=Window, Constructor( DOMString type, optional PopStateEventInit eventInitDict = {} )]
+[Exposed=Window]
 interface PopStateEvent : Event {
   readonly attribute any state;
+  constructor( DOMString type, optional PopStateEventInit eventInitDict = {} );
 };
 
 [Exposed=(Window,Worker)]
@@ -2252,7 +2264,7 @@ interface RadioNodeList : NodeList {
   attribute DOMString value;
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=Window]
 interface SharedWorker : EventTarget {
   readonly attribute MessagePort port;
   constructor( USVString scriptURL, optional ( DOMString or WorkerOptions ) options = {} );
@@ -2276,13 +2288,14 @@ interface Storage {
   deleter void removeItem( DOMString key );
 };
 
-[Exposed=Window, Constructor( DOMString type, optional StorageEventInit eventInitDict = {} )]
+[Exposed=Window]
 interface StorageEvent : Event {
   readonly attribute DOMString? key;
   readonly attribute DOMString? newValue;
   readonly attribute DOMString? oldValue;
   readonly attribute Storage? storageArea;
   readonly attribute USVString url;
+  constructor( DOMString type, optional StorageEventInit eventInitDict = {} );
   void initStorageEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional DOMString? key = null, optional DOMString? oldValue = null, optional DOMString? newValue = null, optional USVString url = "", optional Storage? storageArea = null );
 };
 
@@ -2358,9 +2371,10 @@ interface TimeRanges {
   double start( unsigned long index );
 };
 
-[Exposed=Window, Constructor( DOMString type, optional TrackEventInit eventInitDict = {} )]
+[Exposed=Window]
 interface TrackEvent : Event {
   readonly attribute ( VideoTrack or AudioTrack or TextTrack )? track;
+  constructor( DOMString type, optional TrackEventInit eventInitDict = {} );
 };
 
 [Exposed=Window]
@@ -2477,7 +2491,7 @@ interface Window : EventTarget {
   getter object ( DOMString name );
 };
 
-[Exposed=(Window,Worker)]
+[Exposed=(Window,DedicatedWorker,SharedWorker)]
 interface Worker : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;

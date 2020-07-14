@@ -20,6 +20,8 @@ enum RequestDestination {
   "document",
   "embed",
   "font",
+  "frame",
+  "iframe",
   "image",
   "manifest",
   "object",
@@ -56,11 +58,13 @@ enum ResponseType {
   "opaqueredirect"
 };
 
-typedef ( Blob or BufferSource or FormData or URLSearchParams or ReadableStream or USVString ) BodyInit;
+typedef ( ReadableStream or XMLHttpRequestBodyInit ) BodyInit;
 
 typedef ( sequence<sequence<ByteString>> or record<ByteString, ByteString> ) HeadersInit;
 
 typedef ( Request or USVString ) RequestInfo;
+
+typedef ( Blob or BufferSource or FormData or URLSearchParams or USVString ) XMLHttpRequestBodyInit;
 
 dictionary RequestInit {
   BodyInit? body;

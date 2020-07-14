@@ -32,18 +32,20 @@ interface Clipboard : EventTarget {
   Promise<void> writeText( DOMString data );
 };
 
-[Constructor( DOMString type, optional ClipboardEventInit eventInitDict ), Exposed=Window]
+[Exposed=Window]
 interface ClipboardEvent : Event {
   readonly attribute DataTransfer? clipboardData;
+  constructor( DOMString type, optional ClipboardEventInit eventInitDict = {} );
 };
 
-[Constructor( record<DOMString, ClipboardItemData> items, optional ClipboardItemOptions options ), Exposed=Window]
+[Exposed=Window]
 interface ClipboardItem {
   readonly attribute boolean delayed;
   readonly attribute long long lastModified;
   readonly attribute PresentationStyle presentationStyle;
   readonly attribute FrozenArray<DOMString> types;
-  static ClipboardItem createDelayed( record<DOMString, ClipboardItemDelayedCallback> items, optional ClipboardItemOptions options );
+  static ClipboardItem createDelayed( record<DOMString, ClipboardItemDelayedCallback> items, optional ClipboardItemOptions options = {} );
+  constructor( record<DOMString, ClipboardItemData> items, optional ClipboardItemOptions options = {} );
   Promise<Blob> getType( DOMString type );
 };
 

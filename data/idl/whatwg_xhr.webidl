@@ -65,7 +65,7 @@ interface XMLHttpRequest : XMLHttpRequestEventTarget {
   void open( ByteString method, USVString url );
   void open( ByteString method, USVString url, boolean async, optional USVString? username = null, optional USVString? password = null );
   void overrideMimeType( DOMString mime );
-  void send( optional ( Document or BodyInit )? body = null );
+  void send( optional ( Document or XMLHttpRequestBodyInit )? body = null );
   void setRequestHeader( ByteString name, ByteString value );
 };
 
