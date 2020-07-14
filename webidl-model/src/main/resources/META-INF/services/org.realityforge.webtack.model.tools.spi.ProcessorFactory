@@ -1,7 +1,6 @@
 org.realityforge.webtack.model.tools.processors.extract_exposure_set.ExtractExposureSetProcessorFactory
 org.realityforge.webtack.model.tools.processors.flatten.FlattenProcessorFactory
-org.realityforge.webtack.model.tools.processors.remove_callback.RemoveCallbackProcessorFactory
-org.realityforge.webtack.model.tools.processors.remove_dictionary.RemoveDictionaryProcessorFactory
+org.realityforge.webtack.model.tools.processors.remove_element.RemoveElementProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_includes.RemoveIncludesProcessorFactory
 org.realityforge.webtack.model.tools.processors.rename_enumeration.RenameEnumerationProcessorFactory
 org.realityforge.webtack.model.tools.processors.validate.ValidateProcessorFactory
