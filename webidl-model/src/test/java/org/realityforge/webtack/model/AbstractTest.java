@@ -15,12 +15,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
 import java.util.UUID;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
-import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
@@ -130,48 +128,6 @@ public abstract class AbstractTest
   protected final Path getTestLocalFixtureDir()
   {
     return getBaseFixtureDir().resolve( getClass().getName().replaceAll( "\\.", File.separator ) );
-  }
-
-  protected final void performFixtureTest( @Nonnull final String label,
-                                           @Nonnull final Supplier<Processor> supplier,
-                                           @Nonnull final Path dir,
-                                           @Nonnull final String inputFilename,
-                                           @Nonnull final String outputFilename )
-    throws Exception
-  {
-    final String testDescription = label + " fixture test. Input=" + inputFilename + " Output=" + outputFilename;
-
-    final WebIDLSchema input =
-      loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
-    final WebIDLSchema output = supplier.get().process( input );
-    assertNotNull( output );
-
-    final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
-    maybeWriteSchemaFixture( outputFile, output );
-    assertTrue( Files.exists( outputFile ), "Expected output file missing for " + testDescription );
-    final WebIDLSchema expected = loadWebIDLSchema( outputFile, testDescription );
-    assertTrue( expected.equiv( output ),
-                "Expected output file for " + testDescription + " does not match value emitted by " + label );
-  }
-
-  protected final void processorGeneratesError( @Nonnull final String label,
-                                                @Nonnull final Supplier<Processor> supplier,
-                                                @Nonnull final Path dir,
-                                                @Nonnull final String inputFilename,
-                                                @Nonnull final String errorMessage )
-  {
-    final String testDescription = label + " fixture test. Input=" + inputFilename;
-
-    final WebIDLSchema input =
-      loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
-    try
-    {
-      supplier.get().process( input );
-    }
-    catch ( final Exception e )
-    {
-      assertEquals( e.getMessage(), errorMessage );
-    }
   }
 
   protected final void maybeWriteSchemaFixture( @Nonnull final Path file, @Nonnull final WebIDLSchema schema )
