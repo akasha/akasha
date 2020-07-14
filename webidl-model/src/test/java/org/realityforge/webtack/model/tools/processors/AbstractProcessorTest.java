@@ -14,9 +14,6 @@ public abstract class AbstractProcessorTest
   extends AbstractTest
 {
   @Nonnull
-  protected abstract Processor createProcessor();
-
-  @Nonnull
   protected final Object[][] scanForStandardFixturesTestInput()
     throws IOException
   {
@@ -27,11 +24,12 @@ public abstract class AbstractProcessorTest
       .toArray( Object[][]::new );
   }
 
-  protected final void performStandardFixtureTest( @Nonnull final String subDirectory )
+  protected final void performStandardFixtureTest( @Nonnull final String subDirectory,
+                                                   @Nonnull final Supplier<Processor> processorSupplier )
     throws Exception
   {
     performFixtureTest( getClass().getSimpleName() + " " + subDirectory,
-                        this::createProcessor,
+                        processorSupplier,
                         getTestLocalFixtureDir().resolve( subDirectory ),
                         "input",
                         "output" );
@@ -59,10 +57,12 @@ public abstract class AbstractProcessorTest
                 "Expected output file for " + testDescription + " does not match value emitted by " + label );
   }
 
-  protected final void processFailedTest( @Nonnull final String subDirectory, @Nonnull final String errorMessage )
+  protected final void processFailedTest( @Nonnull final String subDirectory,
+                                          @Nonnull final String errorMessage,
+                                          @Nonnull final Supplier<Processor> processorSupplier )
   {
     processorGeneratesError( getClass().getSimpleName() + " " + subDirectory,
-                             this::createProcessor,
+                             processorSupplier,
                              getTestLocalFixtureDir().resolve( subDirectory ),
                              "input",
                              errorMessage );

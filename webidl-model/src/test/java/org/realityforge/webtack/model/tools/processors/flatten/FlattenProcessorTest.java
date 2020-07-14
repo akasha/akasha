@@ -31,7 +31,7 @@ public final class FlattenProcessorTest
   public void fixtureTest( @Nonnull final String subDirectory )
     throws Exception
   {
-    performStandardFixtureTest( subDirectory );
+    performStandardFixtureTest( subDirectory, this::createProcessor );
   }
 
   @DataProvider( name = "failedFixtures" )
@@ -89,12 +89,11 @@ public final class FlattenProcessorTest
   @Test( dataProvider = "failedFixtures" )
   public void failedFixtureTest( @Nonnull final String subDirectory, @Nonnull final String errorMessage )
   {
-    processFailedTest( subDirectory, errorMessage );
+    processFailedTest( subDirectory, errorMessage, this::createProcessor );
   }
 
   @Nonnull
-  @Override
-  protected Processor createProcessor()
+  private Processor createProcessor()
   {
     return Registry.createProcessor( "Flatten", Json.createObjectBuilder().build() );
   }
