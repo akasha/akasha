@@ -28,13 +28,13 @@
       "name": "Validate"
     },
     {
+      "name": "Flatten"
+    },
+    {
       "name": "ExtractExposureSet",
       "config": {
         "globalInterface": "Window"
       }
-    },
-    {
-      "name": "Flatten"
     },
     {
       "name": "RemoveCallback",
