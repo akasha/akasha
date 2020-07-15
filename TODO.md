@@ -87,9 +87,6 @@ interface SpeechSynthesisVoice {
   We should also emit browser specific extension with clear markers in the source code (i.e. generate the externs
   prefixed with `chrome_` etc or add explicit annotations in java code).
 
-* Add passes where we modify the internal model (i.e. in java we could emit a `addOnFooListener(e -> {})` if there
-  is an event named `foo`)
-
 * Should union types as method parameters just result in multiple overloaded methods in java-land?
 
 * Only keep union type materialization for properties and/or return types from operations?
