@@ -11,12 +11,6 @@ public final class ValidatorTool
   }
 
   @Nonnull
-  public static Validator create()
-  {
-    return create( new ValidatorRuleConfig() );
-  }
-
-  @Nonnull
   public static Validator create( @Nonnull final ValidatorRuleConfig config )
   {
     final List<Validator> validators = new ArrayList<>();

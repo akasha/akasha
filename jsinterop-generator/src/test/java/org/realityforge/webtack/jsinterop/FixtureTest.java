@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.model.tools.validator.ValidatorRuleConfig;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -25,6 +26,7 @@ public final class FixtureTest
   public void fixtureTest( @Nonnull final Path directory )
     throws Exception
   {
-    generateCode( directory );
+    final ValidatorRuleConfig validatorRuleConfig = new ValidatorRuleConfig();
+    generateCode( directory, validatorRuleConfig );
   }
 }
