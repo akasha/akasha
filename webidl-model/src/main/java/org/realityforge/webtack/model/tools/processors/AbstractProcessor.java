@@ -301,7 +301,7 @@ public abstract class AbstractProcessor
   }
 
   @Nullable
-  private SetLikeMember transformSetLikeMember( @Nullable final SetLikeMember input )
+  protected SetLikeMember transformSetLikeMember( @Nullable final SetLikeMember input )
   {
     return null == input ?
            null :
@@ -312,7 +312,7 @@ public abstract class AbstractProcessor
   }
 
   @Nullable
-  private MapLikeMember transformMapLikeMember( @Nullable final MapLikeMember input )
+  protected MapLikeMember transformMapLikeMember( @Nullable final MapLikeMember input )
   {
     return null == input ?
            null :
@@ -324,7 +324,7 @@ public abstract class AbstractProcessor
   }
 
   @Nullable
-  private AsyncIterableMember transformAsyncIterableMember( @Nullable final AsyncIterableMember input )
+  protected AsyncIterableMember transformAsyncIterableMember( @Nullable final AsyncIterableMember input )
   {
     return null == input ?
            null :
@@ -335,7 +335,7 @@ public abstract class AbstractProcessor
   }
 
   @Nullable
-  private IterableMember transformIterableMember( @Nullable final IterableMember input )
+  protected IterableMember transformIterableMember( @Nullable final IterableMember input )
   {
     return null == input ?
            null :
@@ -346,7 +346,7 @@ public abstract class AbstractProcessor
   }
 
   @Nullable
-  private Type transformOptionalType( @Nullable final Type type )
+  protected Type transformOptionalType( @Nullable final Type type )
   {
     return null == type ? null : transformType( type );
   }
