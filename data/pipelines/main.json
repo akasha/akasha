@@ -11,6 +11,16 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "the cssom spec 'overrides' the definitions to be of type double",
+      "sourceSelector": "name=uievents",
+      "config": {
+        "elementNamePattern": "^(MouseEvent|MouseEventInit)$",
+        "memberNamePattern": "^(clientX|clientY|screenX|screenY)$",
+        "types": ["interface_type", "dictionary"]
+      }
+    },
+    {
       "name": "Merge"
     },
     {
