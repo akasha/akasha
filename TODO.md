@@ -42,10 +42,13 @@ complete as there is too much un-said.
 
 * Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
 
+* Support defining and using variables in pipeline json. It probably means string values can be
+  interpolated like `"someProp"="${globalObject}"` and we would define the configuration `globalObject="Window"`
+  earlier in the pipeline (and effectively reuse it in extract exposure set, global object generator and
+  a few other places).
+
 * Generate code for `partial interface Window {}` when exposed includes `Window` in speech pipeline.
-  Does this require a parameter passed into pipeline that can be accessed multiple places like env
-  var? We may need to pass in `globalObject="Window"` to code generator stage. We should probably
-  merge all partials and expose a type such as:
+  We should probably merge all partials and expose a type such as:
 
 ```java
 @JsType( isNative = true, name = "Window", namespace = JsPackage.GLOBAL )
