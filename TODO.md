@@ -6,6 +6,8 @@ complete as there is too much un-said.
 
 * Add pipeline stage that upgrades old extended properties to new ones (i.e. X to LegacyX in many cases)
 
+* Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
+
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
   code a whole lot nicer. We could do this after we have emitted closure externs.
 
