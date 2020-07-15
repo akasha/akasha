@@ -234,6 +234,7 @@ final class Generator
       final Type actualType = context.getSchema().resolveType( member.getType() );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
+      generateDictionaryMemberSetterReturningThis( context, definition, member, actualType, type );
     }
 
     context.writeTopLevelType( type );
@@ -359,6 +360,36 @@ final class Generator
       parameter.addAnnotation( Types.NONNULL );
     }
     method.addParameter( parameter.build() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateDictionaryMemberSetterReturningThis( @Nonnull final CodeGenContext context,
+                                                            @Nonnull final DictionaryDefinition dictionary,
+                                                            @Nonnull final DictionaryMember member,
+                                                            @Nonnull final Type actualType,
+                                                            @Nonnull final TypeSpec.Builder type )
+  {
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( member.getName() )
+        .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+        .addAnnotation( Types.JS_OVERLAY )
+        .addAnnotation( Types.NONNULL )
+        .returns( context.lookupTypeByName( dictionary.getName() ) );
+    final ParameterSpec.Builder parameter =
+      ParameterSpec.builder( context.toTypeName( actualType ), member.getName() );
+
+    if ( context.getSchema().isNullable( member.getType() ) )
+    {
+      parameter.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !actualType.getKind().isPrimitive() )
+    {
+      parameter.addAnnotation( Types.NONNULL );
+    }
+    method.addParameter( parameter.build() );
+    method.addStatement( "$N( $N )", getMutatorName( member ), member.getName() );
+    method.addStatement( "return this" );
     type.addMethod( method.build() );
   }
 

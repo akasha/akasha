@@ -30,12 +30,26 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setKey(@Nullable String key);
 
+  @JsOverlay
+  @Nonnull
+  default StorageEventInit key(@Nullable String key) {
+    setKey( key );
+    return this;
+  }
+
   @JsProperty
   @Nullable
   String getNewValue();
 
   @JsProperty
   void setNewValue(@Nullable String newValue);
+
+  @JsOverlay
+  @Nonnull
+  default StorageEventInit newValue(@Nullable String newValue) {
+    setNewValue( newValue );
+    return this;
+  }
 
   @JsProperty
   @Nullable
@@ -44,6 +58,13 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setOldValue(@Nullable String oldValue);
 
+  @JsOverlay
+  @Nonnull
+  default StorageEventInit oldValue(@Nullable String oldValue) {
+    setOldValue( oldValue );
+    return this;
+  }
+
   @JsProperty
   @Nullable
   Storage getStorageArea();
@@ -51,9 +72,23 @@ public interface StorageEventInit extends EventInit {
   @JsProperty
   void setStorageArea(@Nullable Storage storageArea);
 
+  @JsOverlay
+  @Nonnull
+  default StorageEventInit storageArea(@Nullable Storage storageArea) {
+    setStorageArea( storageArea );
+    return this;
+  }
+
   @JsProperty
   String getUrl();
 
   @JsProperty
   void setUrl(@Nonnull String url);
+
+  @JsOverlay
+  @Nonnull
+  default StorageEventInit url(@Nonnull String url) {
+    setUrl( url );
+    return this;
+  }
 }

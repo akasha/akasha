@@ -29,4 +29,11 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
 
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);
+
+  @JsOverlay
+  @Nonnull
+  default PushPermissionDescriptor userVisibleOnly(boolean userVisibleOnly) {
+    setUserVisibleOnly( userVisibleOnly );
+    return this;
+  }
 }

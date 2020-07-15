@@ -34,10 +34,24 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsProperty
   void setPromise(@Nonnull Promise<Any> promise);
 
+  @JsOverlay
+  @Nonnull
+  default PromiseRejectionEventInit promise(@Nonnull Promise<Any> promise) {
+    setPromise( promise );
+    return this;
+  }
+
   @JsProperty
   @Nullable
   Any getReason();
 
   @JsProperty
   void setReason(@Nullable Any reason);
+
+  @JsOverlay
+  @Nonnull
+  default PromiseRejectionEventInit reason(@Nullable Any reason) {
+    setReason( reason );
+    return this;
+  }
 }

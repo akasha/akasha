@@ -28,15 +28,36 @@ public interface EventInit {
   @JsProperty
   void setBubbles(boolean bubbles);
 
+  @JsOverlay
+  @Nonnull
+  default EventInit bubbles(boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
   @JsProperty
   boolean isCancelable();
 
   @JsProperty
   void setCancelable(boolean cancelable);
 
+  @JsOverlay
+  @Nonnull
+  default EventInit cancelable(boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
   @JsProperty
   boolean isComposed();
 
   @JsProperty
   void setComposed(boolean composed);
+
+  @JsOverlay
+  @Nonnull
+  default EventInit composed(boolean composed) {
+    setComposed( composed );
+    return this;
+  }
 }

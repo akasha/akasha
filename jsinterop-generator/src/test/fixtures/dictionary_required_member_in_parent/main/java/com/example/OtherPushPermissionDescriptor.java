@@ -30,4 +30,11 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
 
   @JsProperty
   void setSafe(boolean safe);
+
+  @JsOverlay
+  @Nonnull
+  default OtherPushPermissionDescriptor safe(boolean safe) {
+    setSafe( safe );
+    return this;
+  }
 }
