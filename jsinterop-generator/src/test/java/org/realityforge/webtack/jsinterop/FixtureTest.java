@@ -27,6 +27,10 @@ public final class FixtureTest
     throws Exception
   {
     final ValidatorRuleConfig validatorRuleConfig = new ValidatorRuleConfig();
+    if ( directory.getFileName().toString().equals( "partial_interface" ) )
+    {
+      validatorRuleConfig.allowDanglingInterfacePartials = true;
+    }
     generateCode( directory, validatorRuleConfig );
   }
 }

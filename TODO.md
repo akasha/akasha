@@ -4,8 +4,6 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-* Generate `WebSpeechWindow` from webspeechdemo as a partial
-
 * Add pipeline stage that upgrades old extended properties to new ones (i.e. X to LegacyX in many cases)
 
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
@@ -46,32 +44,6 @@ complete as there is too much un-said.
   interpolated like `"someProp"="${globalObject}"` and we would define the configuration `globalObject="Window"`
   earlier in the pipeline (and effectively reuse it in extract exposure set, global object generator and
   a few other places).
-
-* Generate code for `partial interface Window {}` when exposed includes `Window` in speech pipeline.
-  We should probably merge all partials and expose a type such as:
-
-```java
-@JsType( isNative = true, name = "Window", namespace = JsPackage.GLOBAL )
-public final class WebSpeechWindow
-{
-  @JsOverlay
-  @Nonnull
-  public static WebSpeechWindow of( @Nonnull final Object o )
-  {
-    return Js.cast( o );
-  }
-
-  // Constructor is only present to support the java compiler
-  private WebSpeechWindow()
-  {
-  }
-
-  @JsProperty( name = "speechSynthesis" )
-  @Nonnull
-  public native SpeechSynthesis speechSynthesis();
-}
-
-```
 
 * Interfaces without constructors are not published on global types. How do we define them in jsinterop?
   We could publish them in the same way we do structural types `@JsType(isNative=true,namespace=JsPackage.GLOBAL,name="?")` but that does not "feel" correct. Actually the only answer that seems reasonable is making them

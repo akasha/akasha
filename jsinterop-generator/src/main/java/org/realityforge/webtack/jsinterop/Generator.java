@@ -5,6 +5,7 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
+import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
+import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.Element;
@@ -31,6 +33,7 @@ import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.OperationMember;
+import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -67,6 +70,10 @@ final class Generator
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
       generateInterface( context, definition );
+    }
+    for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
+    {
+      generatePartialInterface( context, definition );
     }
   }
 
@@ -408,6 +415,77 @@ final class Generator
     generateDefaultOperation( context, definition.getOperation(), true, type );
 
     context.writeTopLevelType( type );
+  }
+
+  private void generatePartialInterface( @Nonnull final CodeGenContext context,
+                                         @Nonnull final PartialInterfaceDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .classBuilder( definition.getName() )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( type );
+
+    generateConstants( context, definition.getConstants(), type );
+
+    type.addMethod( MethodSpec
+                      .methodBuilder( "of" )
+                      .addAnnotation( Types.JS_OVERLAY )
+                      .addAnnotation( Types.NONNULL )
+                      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                      .returns( context.lookupTypeByName( definition.getName() ) )
+                      .addParameter( ParameterSpec
+                                       .builder( TypeName.OBJECT, "object", Modifier.FINAL )
+                                       .addAnnotation( Types.NONNULL )
+                                       .build() )
+                      .addStatement( "return $T.cast( object )", Types.JS )
+                      .build() );
+
+    type.addMethod( MethodSpec
+                      .constructorBuilder()
+                      .addAnnotation( Deprecated.class )
+                      .addModifiers( Modifier.PRIVATE )
+                      .addJavadoc( "Use the static of method to cast an existing object to this type." ).build() );
+
+    for ( final AttributeMember attribute : definition.getAttributes() )
+    {
+      if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
+      {
+        generateReadOnlyAttribute( context, attribute, type );
+      }
+      else
+      {
+        generateAttribute( context, attribute, type );
+      }
+    }
+
+    for ( final OperationMember operation : definition.getOperations() )
+    {
+      final OperationMember.Kind operationKind = operation.getKind();
+      if ( OperationMember.Kind.DEFAULT == operationKind )
+      {
+        generateDefaultOperation( context, operation, false, type );
+      }
+    }
+
+    final boolean noPublicSymbol = shouldExpectNoGlobalSymbol( definition );
+
+    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "name", "$S", noPublicSymbol ? "Object" : definition.getName() )
+                          .build() );
+
+    context.writeTopLevelType( type );
+  }
+
+  private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
+  {
+    return definition.getExtendedAttributes()
+      .stream()
+      .anyMatch( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
+                      "LegacyNoInterfaceObject".equals( a.getName() ) );
   }
 
   private void generateInterface( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
