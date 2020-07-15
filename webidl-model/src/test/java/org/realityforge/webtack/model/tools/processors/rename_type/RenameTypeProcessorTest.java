@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.processors.rename_enumeration;
+package org.realityforge.webtack.model.tools.processors.rename_type;
 
 import javax.annotation.Nonnull;
 import javax.json.Json;
@@ -8,13 +8,13 @@ import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
-public class RenameEnumerationProcessorTest
+public class RenameTypeProcessorTest
   extends AbstractProcessorTest
 {
   @Test
   public void registry()
   {
-    assertTrue( Registry.isProcessorPresent( "RenameEnumeration" ) );
+    assertTrue( Registry.isProcessorPresent( "RenameType" ) );
     assertNotNull( createProcessor( "^PermissionState$", "DevicePermissionState" ) );
   }
 
@@ -23,12 +23,12 @@ public class RenameEnumerationProcessorTest
   {
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
-                    () -> Registry.createProcessor( "RenameEnumeration",
+                    () -> Registry.createProcessor( "RenameType",
                                                     Json.createObjectBuilder()
                                                       .add( "namePattern", "^PermissionState$" )
                                                       .build() ) );
     assertEquals( exception.getMessage(),
-                  "RenameEnumerationProcessor missing required replacement configuration value" );
+                  "RenameTypeProcessor missing required replacement configuration value" );
   }
 
   @Test
@@ -36,30 +36,35 @@ public class RenameEnumerationProcessorTest
   {
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
-                    () -> Registry.createProcessor( "RenameEnumeration",
+                    () -> Registry.createProcessor( "RenameType",
                                                     Json.createObjectBuilder()
                                                       .add( "replacement", "DevicePermissionState" )
                                                       .build() ) );
     assertEquals( exception.getMessage(),
-                  "RenameEnumerationProcessor missing required namePattern configuration value" );
+                  "RenameTypeProcessor missing required namePattern configuration value" );
   }
 
   @Test
-  public void basicOperationTest()
+  public void rename_callback()
     throws Exception
   {
-    performFixtureTest( "RenameEnumeration",
-                        () -> createProcessor( "^PermissionState$", "DevicePermissionState" ),
-                        getTestLocalFixtureDir(),
-                        "input",
-                        "output" );
+    performStandardFixtureTest( "rename_callback",
+                                () -> createProcessor( "^EventHandler$", "NullableEventHandler" ) );
+  }
+
+  @Test
+  public void rename_enumeration()
+    throws Exception
+  {
+    performStandardFixtureTest( "rename_enumeration",
+                                () -> createProcessor( "^PermissionState$", "DevicePermissionState" ) );
   }
 
   @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   private Processor createProcessor( @Nonnull final String namePattern, @Nonnull final String replacement )
   {
-    return Registry.createProcessor( "RenameEnumeration",
+    return Registry.createProcessor( "RenameType",
                                      Json.createObjectBuilder()
                                        .add( "namePattern", namePattern )
                                        .add( "replacement", replacement )

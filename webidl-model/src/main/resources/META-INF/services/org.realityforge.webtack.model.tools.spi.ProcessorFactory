@@ -3,5 +3,5 @@ org.realityforge.webtack.model.tools.processors.flatten.FlattenProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_element.RemoveElementProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_includes.RemoveIncludesProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_member.RemoveMemberProcessorFactory
-org.realityforge.webtack.model.tools.processors.rename_enumeration.RenameEnumerationProcessorFactory
+org.realityforge.webtack.model.tools.processors.rename_type.RenameTypeProcessorFactory
 org.realityforge.webtack.model.tools.processors.validate.ValidateProcessorFactory

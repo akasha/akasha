@@ -38,10 +38,6 @@ complete as there is too much un-said.
 
 * Remove all the `onsomeevent` properties from interfaces once there is jsoverlay event handler like the above in place.
 
-* Add `RenameTypeReference` processor so can rename `EventHandler` to `NullableEventHandler`
-
-* Add `RenameTypeDef` processor so can rename `EventHandlerNonNull` to `EventHandler`
-
 * Support defining and using variables in pipeline json. It probably means string values can be
   interpolated like `"someProp"="${globalObject}"` and we would define the configuration `globalObject="Window"`
   earlier in the pipeline (and effectively reuse it in extract exposure set, global object generator and
