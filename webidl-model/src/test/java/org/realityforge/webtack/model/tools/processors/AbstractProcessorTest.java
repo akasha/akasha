@@ -61,30 +61,19 @@ public abstract class AbstractProcessorTest
                                           @Nonnull final String errorMessage,
                                           @Nonnull final Supplier<Processor> processorSupplier )
   {
-    processorGeneratesError( getClass().getSimpleName() + " " + subDirectory,
-                             processorSupplier,
-                             getTestLocalFixtureDir().resolve( subDirectory ),
-                             "input",
-                             errorMessage );
-  }
+    final String testDescription = ( getClass().getSimpleName() + " " + subDirectory ) + " fixture test. Input=" +
+                                   "input";
 
-  private void processorGeneratesError( @Nonnull final String label,
-                                        @Nonnull final Supplier<Processor> supplier,
-                                        @Nonnull final Path dir,
-                                        @Nonnull final String inputFilename,
-                                        @Nonnull final String errorMessage )
-  {
-    final String testDescription = label + " fixture test. Input=" + inputFilename;
-
-    final WebIDLSchema input =
-      loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
+    final Path path = getTestLocalFixtureDir().resolve( subDirectory );
+    final WebIDLSchema input = loadWebIDLSchema( path.resolve( "input" + WebIDLSchema.EXTENSION ), testDescription );
     try
     {
-      supplier.get().process( input );
+      processorSupplier.get().process( input );
     }
     catch ( final Exception e )
     {
-      assertEquals( e.getMessage(), errorMessage );
+      final String message = e.getMessage();
+      assertEquals( message.replace( path.toString() + "/", "" ), errorMessage );
     }
   }
 }
