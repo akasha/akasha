@@ -61,6 +61,22 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Add LegacyNoInterfaceObject as chrome is non-compliant wrt this. See https://bugs.chromium.org/p/chromium/issues/detail?id=674507",
+      "config": {
+        "namePattern": "^(SpeechSynthesis|SpeechSynthesisVoice)$",
+        "extendedAttribute": "LegacyNoInterfaceObject"
+      }
+    },
+    {
+      "name": "Validate",
+      "config": {
+        "ruleConfig": {
+          "allowDanglingInterfacePartials": true
+        }
+      }
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/complete.webidl"

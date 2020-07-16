@@ -1,3 +1,4 @@
+org.realityforge.webtack.model.tools.processors.add_extended_attribute.AddExtendedAttributeProcessorFactory
 org.realityforge.webtack.model.tools.processors.extract_exposure_set.ExtractExposureSetProcessorFactory
 org.realityforge.webtack.model.tools.processors.flatten.FlattenProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_element.RemoveElementProcessorFactory
