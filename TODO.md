@@ -4,8 +4,6 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-* Patch some types with `LegacyNoInterfaceObject` for these known differences https://bugs.chromium.org/p/chromium/issues/detail?id=674507
-
 * Add pipeline stage that upgrades old extended properties to new ones (i.e. X to LegacyX in many cases)
 
 * Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
