@@ -10,7 +10,7 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "Object"
+    name = "SpeechSynthesisVoice"
 )
 public class SpeechSynthesisVoice {
   /**

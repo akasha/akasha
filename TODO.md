@@ -43,21 +43,6 @@ complete as there is too much un-said.
   earlier in the pipeline (and effectively reuse it in extract exposure set, global object generator and
   a few other places).
 
-* Interfaces without constructors are not published on global types. How do we define them in jsinterop?
-  We could publish them in the same way we do structural types `@JsType(isNative=true,namespace=JsPackage.GLOBAL,name="?")` but that does not "feel" correct. Actually the only answer that seems reasonable is making them
-  extend `Object` which is a lie but ... one that may work
-
-```webidl
-[Exposed=Window]
-interface SpeechSynthesisVoice {
-  readonly attribute boolean default;
-  readonly attribute DOMString lang;
-  readonly attribute boolean localService;
-  readonly attribute DOMString name;
-  readonly attribute DOMString voiceURI;
-};
-```
-
 * Start to download chrome webidl as they do not seem to align with specs exactly and thus generate some issues.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F

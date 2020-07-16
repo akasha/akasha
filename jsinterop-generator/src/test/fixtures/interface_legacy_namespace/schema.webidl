@@ -1,0 +1,3 @@
+[LegacyNamespace=WebAssembly]
+interface CompileError {
+};

@@ -578,17 +578,37 @@ final class Generator
         constructorPresent = true;
       }
     }
+    final AnnotationSpec.Builder jsTypeAnnotation =
+      AnnotationSpec
+        .builder( Types.JS_TYPE )
+        .addMember( "isNative", "true" );
 
-    //TODO: Actually rather than driving use of `Object` from constructorPresent, instead should look
-    // for extended property "[LegacyNoInterfaceObject]", "[NoInterfaceObject]" or "[LegacyNamespace]"
+    final String namespace =
+      definition
+        .getExtendedAttributes()
+        .stream()
+        .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
+        .map( ExtendedAttribute::getIdent )
+        .findAny()
+        .orElse( null );
+    if ( null == namespace )
+    {
+      jsTypeAnnotation.addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
+    }
+    else
+    {
+      jsTypeAnnotation.addMember( "namespace", "$S", namespace );
+    }
 
-    // As the constructor type is not directly accessible from the runtime environment when there is no constructor
-    // we force the name to "Object" so that we do not get cast errors everywhere. It does mean that some of the
-    // type logic will be wrong (i.e. instanceof will not work) but there does not seem to be a better way.
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
-                          .addMember( "name", "$S", constructorPresent ? definition.getName() : "Object" )
+    final boolean noInterfaceObject =
+      definition
+        .getExtendedAttributes()
+        .stream()
+        .anyMatch( a -> ExtendedAttribute.Kind.NO_ARGS == a.getKind() &&
+                        "LegacyNoInterfaceObject".equals( a.getName() ) );
+
+    type.addAnnotation( jsTypeAnnotation
+                          .addMember( "name", "$S", noInterfaceObject ? "Object" : definition.getName() )
                           .build() );
 
     if ( !constructorPresent )

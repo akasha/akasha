@@ -1,6 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
@@ -9,28 +10,41 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "SpeechSynthesis"
+    name = "Object"
 )
-public class SpeechSynthesis {
+public class SpeechSynthesisVoice {
   /**
    * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
    */
   @Deprecated
-  SpeechSynthesis() {
+  SpeechSynthesisVoice() {
   }
 
   @JsProperty(
-      name = "paused"
+      name = "default"
   )
-  public native boolean paused();
+  public native boolean _default();
 
   @JsProperty(
-      name = "pending"
+      name = "lang"
   )
-  public native boolean pending();
+  @Nonnull
+  public native String lang();
 
   @JsProperty(
-      name = "speaking"
+      name = "localService"
   )
-  public native boolean speaking();
+  public native boolean localService();
+
+  @JsProperty(
+      name = "name"
+  )
+  @Nonnull
+  public native String name();
+
+  @JsProperty(
+      name = "voiceURI"
+  )
+  @Nonnull
+  public native String voiceURI();
 }
