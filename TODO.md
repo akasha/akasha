@@ -4,8 +4,6 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
-* Add pipeline stage that upgrades old extended properties to new ones (i.e. X to LegacyX in many cases)
-
 * Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
 
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
