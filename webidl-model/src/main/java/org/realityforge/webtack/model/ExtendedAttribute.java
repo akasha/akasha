@@ -1,11 +1,15 @@
 package org.realityforge.webtack.model;
 
+import java.io.IOException;
+import java.io.StringReader;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.webidl.parser.WebIDLParser;
+import org.realityforge.webtack.webidl.parser.WebIDLParserTool;
 
 /**
  * @see <a href="https://heycam.github.io/webidl/#idl-extended-attributes">Extended Attributes Spec</a>
@@ -38,6 +42,15 @@ public final class ExtendedAttribute
   private final String _argListName;
   @Nullable
   private final List<Argument> _argList;
+
+  @Nonnull
+  public static ExtendedAttribute parse( @Nonnull final String extendedAttribute )
+    throws IOException
+  {
+    final WebIDLParser parser = WebIDLParserTool.createParser( "", new StringReader( extendedAttribute ) );
+    parser.setBuildParseTree( true );
+    return WebIDLModelParser.parse( parser.extendedAttribute() );
+  }
 
   @Nonnull
   public static ExtendedAttribute createExtendedAttributeNoArgs( @Nonnull final String name,

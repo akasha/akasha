@@ -240,8 +240,7 @@ public final class ExtendedAttributeTest
   private ExtendedAttribute parse( @Nonnull final String webIDL )
     throws IOException
   {
-    final WebIDLParser parser = createParser( webIDL );
-    final ExtendedAttribute actual = WebIDLModelParser.parse( parser.extendedAttribute() );
+    final ExtendedAttribute actual = ExtendedAttribute.parse( webIDL );
 
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
@@ -250,7 +249,7 @@ public final class ExtendedAttributeTest
     WebIDLWriter.writeExtendedAttribute( writer, actual );
     writer.close();
     final String emittedIDL = writer.toString();
-    final ExtendedAttribute element = WebIDLModelParser.parse( createParser( emittedIDL ).extendedAttribute() );
+    final ExtendedAttribute element = ExtendedAttribute.parse( emittedIDL );
     assertEquals( element, actual );
     assertEquals( element.hashCode(), actual.hashCode() );
 
