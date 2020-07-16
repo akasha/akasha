@@ -4,6 +4,9 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
+  which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
+
 * Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
 
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
