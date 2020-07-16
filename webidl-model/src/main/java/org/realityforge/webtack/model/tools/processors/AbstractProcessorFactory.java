@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.tools.spi.ProcessorFactory;
 
 public abstract class AbstractProcessorFactory
@@ -18,6 +19,20 @@ public abstract class AbstractProcessorFactory
     else
     {
       return value;
+    }
+  }
+
+  @Nonnull
+  protected final ExtendedAttribute requireExtendedAttribute( @Nonnull final String key, @Nonnull final String value )
+  {
+    try
+    {
+      return ExtendedAttribute.parse( requireNonNull( key, value ) );
+    }
+    catch ( final Exception e )
+    {
+      throw new IllegalArgumentException( getProcessorName() + " failed to parse the " + key + " configuration value",
+                                          e );
     }
   }
 
