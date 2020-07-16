@@ -38,7 +38,7 @@
     },
     {
       "name": "RenameType",
-      "description": "Reworked naming convention of typedef so that the underlying type can be renamed to EventHandler. This makes the java code much easier to grok",
+      "description": "Rename EventHandler so the java code generated is nicer",
       "config": {
         "namePattern": "^EventHandlerNonNull$",
         "replacement": "EventHandler"
