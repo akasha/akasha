@@ -102,6 +102,11 @@
         "url": "https://www.w3.org/TR/geolocation-API/"
     },
     {
+        "lastModifiedTime": 1590509649000,
+        "name": "geolocation_sensor",
+        "url": "https://w3c.github.io/geolocation-sensor"
+    },
+    {
         "lastModifiedTime": 1543613965000,
         "name": "geometry_1",
         "url": "https://www.w3.org/TR/geometry-1/"
