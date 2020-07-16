@@ -10,10 +10,21 @@ enum IDBRequestReadyState {
   "pending"
 };
 
+enum IDBTransactionDurability {
+  "default",
+  "relaxed",
+  "strict"
+};
+
 enum IDBTransactionMode {
   "readonly",
   "readwrite",
   "versionchange"
+};
+
+dictionary IDBDatabaseInfo {
+  DOMString name;
+  unsigned long long version;
 };
 
 dictionary IDBIndexParameters {
@@ -26,9 +37,18 @@ dictionary IDBObjectStoreParameters {
   ( DOMString or sequence<DOMString> )? keyPath = null;
 };
 
+dictionary IDBTransactionOptions {
+  IDBTransactionDurability durability = "default";
+};
+
 dictionary IDBVersionChangeEventInit : EventInit {
   unsigned long long? newVersion = null;
   unsigned long long oldVersion = 0;
+};
+
+partial interface mixin WindowOrWorkerGlobalScope {
+  [SameObject]
+  readonly attribute IDBFactory indexedDB;
 };
 
 [Exposed=(Window,Worker)]
@@ -36,6 +56,8 @@ interface IDBCursor {
   readonly attribute IDBCursorDirection direction;
   readonly attribute any key;
   readonly attribute any primaryKey;
+  [SameObject]
+  readonly attribute IDBRequest request;
   readonly attribute ( IDBObjectStore or IDBIndex ) source;
   void advance( [EnforceRange] unsigned long count );
   void continue( optional any key );
@@ -62,15 +84,16 @@ interface IDBDatabase : EventTarget {
   attribute EventHandler onversionchange;
   void close();
   [NewObject]
-  IDBObjectStore createObjectStore( DOMString name, optional IDBObjectStoreParameters options );
+  IDBObjectStore createObjectStore( DOMString name, optional IDBObjectStoreParameters options = {} );
   void deleteObjectStore( DOMString name );
   [NewObject]
-  IDBTransaction transaction( ( DOMString or sequence<DOMString> ) storeNames, optional IDBTransactionMode mode = "readonly" );
+  IDBTransaction transaction( ( DOMString or sequence<DOMString> ) storeNames, optional IDBTransactionMode mode = "readonly", optional IDBTransactionOptions options = {} );
 };
 
 [Exposed=(Window,Worker)]
 interface IDBFactory {
   short cmp( any first, any second );
+  Promise<sequence<IDBDatabaseInfo>> databases();
   [NewObject]
   IDBOpenDBRequest deleteDatabase( DOMString name );
   [NewObject]
@@ -115,7 +138,7 @@ interface IDBKeyRange {
   static IDBKeyRange only( any value );
   [NewObject]
   static IDBKeyRange upperBound( any upper, optional boolean open = false );
-  boolean _includes( any key );
+  boolean includes( any key );
 };
 
 [Exposed=(Window,Worker)]
@@ -133,7 +156,7 @@ interface IDBObjectStore {
   [NewObject]
   IDBRequest count( optional any query );
   [NewObject]
-  IDBIndex createIndex( DOMString name, ( DOMString or sequence<DOMString> ) keyPath, optional IDBIndexParameters options );
+  IDBIndex createIndex( DOMString name, ( DOMString or sequence<DOMString> ) keyPath, optional IDBIndexParameters options = {} );
   [NewObject]
   IDBRequest delete( any query );
   void deleteIndex( DOMString name );
@@ -175,23 +198,21 @@ interface IDBRequest : EventTarget {
 interface IDBTransaction : EventTarget {
   [SameObject]
   readonly attribute IDBDatabase db;
-  readonly attribute DOMException error;
+  readonly attribute IDBTransactionDurability durability;
+  readonly attribute DOMException? error;
   readonly attribute IDBTransactionMode mode;
   readonly attribute DOMStringList objectStoreNames;
   attribute EventHandler onabort;
   attribute EventHandler oncomplete;
   attribute EventHandler onerror;
   void abort();
+  void commit();
   IDBObjectStore objectStore( DOMString name );
 };
 
-[Exposed=(Window,Worker), Constructor( DOMString type, optional IDBVersionChangeEventInit eventInitDict )]
+[Exposed=(Window,Worker)]
 interface IDBVersionChangeEvent : Event {
   readonly attribute unsigned long long? newVersion;
   readonly attribute unsigned long long oldVersion;
-};
-
-partial interface WindowOrWorkerGlobalScope {
-  [SameObject]
-  readonly attribute IDBFactory indexedDB;
+  constructor( DOMString type, optional IDBVersionChangeEventInit eventInitDict = {} );
 };

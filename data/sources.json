@@ -112,9 +112,9 @@
         "url": "https://www.w3.org/TR/hr-time-2/"
     },
     {
-        "lastModifiedTime": 1516593274000,
-        "name": "indexeddb_2",
-        "url": "https://www.w3.org/TR/IndexedDB-2/"
+        "lastModifiedTime": 1593548858000,
+        "name": "indexeddb",
+        "url": "https://w3c.github.io/IndexedDB/"
     },
     {
         "lastModifiedTime": 1559285042000,
