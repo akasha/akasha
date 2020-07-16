@@ -17,11 +17,11 @@ typedef DOMString CSSOMString;
 // See https://github.com/heycam/webidl/issues/445
 // See https://streams.spec.whatwg.org/#rs-class-definition
 
-[NoInterfaceObject, Exposed=(Window,Worker)]
+[LegacyNoInterfaceObject, Exposed=(Window,Worker)]
 interface ReadableStream {};
 
-[NoInterfaceObject, Exposed=(Window,Worker)]
+[LegacyNoInterfaceObject, Exposed=(Window,Worker)]
 interface WritableStream {};
 
-[NoInterfaceObject, Exposed=(Window,Worker)]
+[LegacyNoInterfaceObject, Exposed=(Window,Worker)]
 interface TransformStream {};
