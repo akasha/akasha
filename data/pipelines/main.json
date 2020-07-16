@@ -113,7 +113,7 @@
     {
       "name": "Emit",
       "config": {
-        "filePattern": "data/output/complete.webidl"
+        "filePattern": "data/output/main/complete.webidl"
       }
     }
   ]
