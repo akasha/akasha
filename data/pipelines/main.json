@@ -47,6 +47,15 @@
       }
     },
     {
+      "name": "RemoveExtendedAttribute",
+      "description": "Remove NoInterfaceObject as spec still uses the historic 'NoInterfaceObject' extended attribute",
+      "sourceSelector": "name=geolocation_api",
+      "config": {
+        "namePattern": "^(Coordinates|Geolocation|Position|PositionError)$",
+        "extendedAttribute": "NoInterfaceObject"
+      }
+    },
+    {
       "name": "RemoveMember",
       "description": "the cssom spec 'overrides' the definitions to be of type double",
       "sourceSelector": "name=uievents",
