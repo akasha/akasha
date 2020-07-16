@@ -4,6 +4,8 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Patch some types with `LegacyNoInterfaceObject` for these known differences https://bugs.chromium.org/p/chromium/issues/detail?id=674507
+
 * Add pipeline stage that upgrades old extended properties to new ones (i.e. X to LegacyX in many cases)
 
 * Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
@@ -46,7 +48,6 @@ complete as there is too much un-said.
 * Start to download chrome webidl as they do not seem to align with specs exactly and thus generate some issues.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
-  - Some known differences: https://bugs.chromium.org/p/chromium/issues/detail?id=674507
 
 * Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
 
