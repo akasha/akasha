@@ -63,6 +63,8 @@ interface SpeechSynthesisVoice {
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
   - Some known differences: https://bugs.chromium.org/p/chromium/issues/detail?id=674507
 
+* Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
+
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
 
