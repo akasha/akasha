@@ -152,8 +152,8 @@ public abstract class AbstractTest
                              @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
-    final Collection<ValidationError> validate = ValidatorTool.create( validator ).validate( schema );
-    assertTrue( validate.isEmpty() );
+    final Collection<ValidationError> errors = ValidatorTool.create( validator ).validate( schema );
+    assertTrue( errors.isEmpty(), "Unexpected Errors: " + asString( errors ) );
     final CodeGenContext context = newContext( schema );
 
     if ( writeOutputFixtures() )
@@ -310,5 +310,11 @@ public abstract class AbstractTest
              .stream( libraries.split( File.pathSeparator ) )
              .map( Paths::get )
              .collect( Collectors.toList() );
+  }
+
+  @Nonnull
+  private String asString( @Nonnull final Collection<ValidationError> errors )
+  {
+    return "Errors:\n" + errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) );
   }
 }
