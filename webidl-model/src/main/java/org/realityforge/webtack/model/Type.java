@@ -13,10 +13,10 @@ public class Type
   private final Kind _kind;
   private final boolean _nullable;
 
-  Type( @Nonnull final Kind kind,
-        @Nonnull final List<ExtendedAttribute> extendedAttributes,
-        final boolean nullable,
-        @Nonnull final List<SourceInterval> sourceLocations )
+  public Type( @Nonnull final Kind kind,
+               @Nonnull final List<ExtendedAttribute> extendedAttributes,
+               final boolean nullable,
+               @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
     _kind = Objects.requireNonNull( kind );
