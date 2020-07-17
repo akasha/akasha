@@ -16,6 +16,7 @@ import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.PromiseType;
+import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -265,7 +266,8 @@ final class CodeGenContext
     }
     else if ( Kind.Record == kind )
     {
-      throw new UnsupportedOperationException( "Record not currently supported by generator" );
+      final Type valueType = ( (RecordType) type ).getValueType();
+      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP, toTypeName( _schema.resolveType( valueType ) ).box() );
     }
     else if ( Kind.ArrayBuffer == kind )
     {
