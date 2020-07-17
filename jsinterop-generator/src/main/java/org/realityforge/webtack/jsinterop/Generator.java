@@ -582,34 +582,11 @@ final class Generator
     final AnnotationSpec.Builder jsTypeAnnotation =
       AnnotationSpec
         .builder( Types.JS_TYPE )
-        .addMember( "isNative", "true" );
-
-    final String namespace =
-      definition
-        .getExtendedAttributes()
-        .stream()
-        .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
-        .map( ExtendedAttribute::getIdent )
-        .findAny()
-        .orElse( null );
-    if ( null == namespace )
-    {
-      jsTypeAnnotation.addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
-    }
-    else
-    {
-      jsTypeAnnotation.addMember( "namespace", "$S", namespace );
-    }
-
-    final boolean noInterfaceObject =
-      definition
-        .getExtendedAttributes()
-        .stream()
-        .anyMatch( a -> ExtendedAttribute.Kind.NO_ARGS == a.getKind() &&
-                        "LegacyNoInterfaceObject".equals( a.getName() ) );
+        .addMember( "isNative", "true" )
+        .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
 
     type.addAnnotation( jsTypeAnnotation
-                          .addMember( "name", "$S", noInterfaceObject ? "Object" : definition.getName() )
+                          .addMember( "name", "$S", deriveJavascriptName( definition ) )
                           .build() );
 
     if ( !constructorPresent )
@@ -626,6 +603,34 @@ final class Generator
     }
 
     context.writeTopLevelType( type );
+  }
+
+  @Nonnull
+  private String deriveJavascriptName( @Nonnull final InterfaceDefinition definition )
+  {
+    final boolean noInterfaceObject =
+      definition
+        .getExtendedAttributes()
+        .stream()
+        .anyMatch( a -> ExtendedAttribute.Kind.NO_ARGS == a.getKind() &&
+                        "LegacyNoInterfaceObject".equals( a.getName() ) );
+    if ( noInterfaceObject )
+    {
+      return "Object";
+    }
+    else
+    {
+      final String namespace =
+        definition
+          .getExtendedAttributes()
+          .stream()
+          .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
+          .map( ExtendedAttribute::getIdent )
+          .map( n -> n + "." )
+          .findAny()
+          .orElse( "" );
+      return namespace + definition.getName();
+    }
   }
 
   private void generateReadOnlyAttribute( @Nonnull final CodeGenContext context,
