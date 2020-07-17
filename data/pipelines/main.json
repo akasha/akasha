@@ -111,6 +111,54 @@
       "name": "Validate"
     },
     {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^EventHandler$",
+        "replacement": "NullableEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^EventHandlerNonNull$",
+        "replacement": "EventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnBeforeUnloadEventHandler$",
+        "replacement": "NullableOnBeforeUnloadEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnBeforeUnloadEventHandlerNonNull$",
+        "replacement": "OnBeforeUnloadEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnErrorEventHandler$",
+        "replacement": "NullableOnErrorEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnErrorEventHandlerNonNull$",
+        "replacement": "OnErrorEventHandler"
+      }
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/main/complete.webidl"
