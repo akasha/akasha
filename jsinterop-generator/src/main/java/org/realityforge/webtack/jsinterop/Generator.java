@@ -1,6 +1,7 @@
 package org.realityforge.webtack.jsinterop;
 
 import com.squareup.javapoet.AnnotationSpec;
+import com.squareup.javapoet.ArrayTypeName;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
@@ -909,8 +910,9 @@ final class Generator
   {
     final Type argumentType = argument.getType();
     final Type actualType = context.getSchema().resolveType( argumentType );
+    final TypeName type = context.toTypeName( actualType );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( context.toTypeName( actualType ), argument.getName() );
+      ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, argument.getName() );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
     if ( isFinal )
     {
