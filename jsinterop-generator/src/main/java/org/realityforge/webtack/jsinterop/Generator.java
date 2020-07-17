@@ -246,7 +246,7 @@ final class Generator
   {
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
 
-    final ClassName self = ClassName.bestGuess( definition.getName() );
+    final TypeName self = context.lookupTypeByName( definition.getName() );
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
       .addAnnotation( Types.JS_OVERLAY )
