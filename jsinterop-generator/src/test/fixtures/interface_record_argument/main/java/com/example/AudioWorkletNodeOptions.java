@@ -23,19 +23,6 @@ public interface AudioWorkletNodeOptions {
   }
 
   @JsProperty
-  JsPropertyMap<Double> getParameterData();
-
-  @JsProperty
-  void setParameterData(@Nonnull JsPropertyMap<Double> parameterData);
-
-  @JsOverlay
-  @Nonnull
-  default AudioWorkletNodeOptions parameterData(@Nonnull JsPropertyMap<Double> parameterData) {
-    setParameterData( parameterData );
-    return this;
-  }
-
-  @JsProperty
   JsPropertyMap<Boolean> getOtherData1();
 
   @JsProperty
@@ -45,6 +32,32 @@ public interface AudioWorkletNodeOptions {
   @Nonnull
   default AudioWorkletNodeOptions otherData1(@Nonnull JsPropertyMap<Boolean> otherData1) {
     setOtherData1( otherData1 );
+    return this;
+  }
+
+  @JsProperty
+  JsPropertyMap<Double> getOtherData10();
+
+  @JsProperty
+  void setOtherData10(@Nonnull JsPropertyMap<Double> otherData10);
+
+  @JsOverlay
+  @Nonnull
+  default AudioWorkletNodeOptions otherData10(@Nonnull JsPropertyMap<Double> otherData10) {
+    setOtherData10( otherData10 );
+    return this;
+  }
+
+  @JsProperty
+  JsPropertyMap<Double> getOtherData11();
+
+  @JsProperty
+  void setOtherData11(@Nonnull JsPropertyMap<Double> otherData11);
+
+  @JsOverlay
+  @Nonnull
+  default AudioWorkletNodeOptions otherData11(@Nonnull JsPropertyMap<Double> otherData11) {
+    setOtherData11( otherData11 );
     return this;
   }
 
@@ -153,28 +166,15 @@ public interface AudioWorkletNodeOptions {
   }
 
   @JsProperty
-  JsPropertyMap<Double> getOtherData10();
+  JsPropertyMap<Double> getParameterData();
 
   @JsProperty
-  void setOtherData10(@Nonnull JsPropertyMap<Double> otherData10);
+  void setParameterData(@Nonnull JsPropertyMap<Double> parameterData);
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData10(@Nonnull JsPropertyMap<Double> otherData10) {
-    setOtherData10( otherData10 );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<Double> getOtherData11();
-
-  @JsProperty
-  void setOtherData11(@Nonnull JsPropertyMap<Double> otherData11);
-
-  @JsOverlay
-  @Nonnull
-  default AudioWorkletNodeOptions otherData11(@Nonnull JsPropertyMap<Double> otherData11) {
-    setOtherData11( otherData11 );
+  default AudioWorkletNodeOptions parameterData(@Nonnull JsPropertyMap<Double> parameterData) {
+    setParameterData( parameterData );
     return this;
   }
 }
