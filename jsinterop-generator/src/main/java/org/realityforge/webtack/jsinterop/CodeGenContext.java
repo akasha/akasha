@@ -267,7 +267,7 @@ final class CodeGenContext
     else if ( Kind.Record == kind )
     {
       final Type valueType = ( (RecordType) type ).getValueType();
-      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP, toTypeName( _schema.resolveType( valueType ) ).box() );
+      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP, toTypeName( _schema.resolveType( toJsinteropCompatibleType( valueType ) ) ).box() );
     }
     else if ( Kind.ArrayBuffer == kind )
     {
@@ -316,6 +316,26 @@ final class CodeGenContext
     else
     {
       throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
+    }
+  }
+
+  @Nonnull
+  private Type toJsinteropCompatibleType( @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isPrimitive() &&
+         Kind.Boolean != kind &&
+         Kind.Double != kind &&
+         Kind.UnrestrictedDouble != kind )
+    {
+      return new Type( Kind.Double,
+                       type.getExtendedAttributes(),
+                       type.isNullable(),
+                       type.getSourceLocations() );
+    }
+    else
+    {
+      return type;
     }
   }
 }
