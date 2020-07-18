@@ -267,7 +267,8 @@ final class CodeGenContext
     else if ( Kind.Record == kind )
     {
       final Type valueType = ( (RecordType) type ).getValueType();
-      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP, toTypeName( _schema.resolveType( toJsinteropCompatibleType( valueType ) ) ).box() );
+      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
+                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( valueType ) ) ).box() );
     }
     else if ( Kind.ArrayBuffer == kind )
     {
