@@ -266,8 +266,9 @@ final class Generator
       {
         final Type memberType = member.getType();
         final Type actualType = context.getSchema().resolveType( memberType );
+        final String paramName = safeName( member.getName() );
         final ParameterSpec.Builder parameter =
-          ParameterSpec.builder( context.toTypeName( actualType ), member.getName(), Modifier.FINAL );
+          ParameterSpec.builder( context.toTypeName( actualType ), paramName, Modifier.FINAL );
         if ( context.getSchema().isNullable( memberType ) )
         {
           parameter.addAnnotation( Types.NULLABLE );
@@ -277,11 +278,17 @@ final class Generator
           parameter.addAnnotation( Types.NONNULL );
         }
         method.addParameter( parameter.build() );
-        method.addStatement( "$N.$N( $N )", name, getMutatorName( member ), member.getName() );
+        method.addStatement( "$N.$N( $N )", name, getMutatorName( member ), paramName );
       }
       method.addStatement( "return $N", name );
     }
     type.addMethod( method.build() );
+  }
+
+  @Nonnull
+  private String safeName( @Nonnull final String name )
+  {
+    return SourceVersion.isName( name ) ? name : "_" + name;
   }
 
   @Nonnull
@@ -349,8 +356,9 @@ final class Generator
         .methodBuilder( getMutatorName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .addAnnotation( Types.JS_PROPERTY );
+    final String paramName = safeName( member.getName() );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( context.toTypeName( actualType ), member.getName() );
+      ParameterSpec.builder( context.toTypeName( actualType ), paramName );
 
     if ( context.getSchema().isNullable( member.getType() ) )
     {
@@ -370,15 +378,16 @@ final class Generator
                                                             @Nonnull final Type actualType,
                                                             @Nonnull final TypeSpec.Builder type )
   {
+    final String paramName = safeName( member.getName() );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( member.getName() )
+        .methodBuilder( paramName )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( Types.JS_OVERLAY )
         .addAnnotation( Types.NONNULL )
         .returns( context.lookupTypeByName( dictionary.getName() ) );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( context.toTypeName( actualType ), member.getName() );
+      ParameterSpec.builder( context.toTypeName( actualType ), paramName );
 
     if ( context.getSchema().isNullable( member.getType() ) )
     {
@@ -389,7 +398,7 @@ final class Generator
       parameter.addAnnotation( Types.NONNULL );
     }
     method.addParameter( parameter.build() );
-    method.addStatement( "$N( $N )", getMutatorName( member ), member.getName() );
+    method.addStatement( "$N( $N )", getMutatorName( member ), paramName );
     method.addStatement( "return this" );
     type.addMethod( method.build() );
   }
@@ -641,10 +650,9 @@ final class Generator
     final Type attributeType = attribute.getType();
     final Type actualType = context.getSchema().resolveType( attributeType );
     final String name = attribute.getName();
-    final String prefix = SourceVersion.isName( name ) ? "" : "_";
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( prefix + name )
+        .methodBuilder( safeName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( context.toTypeName( actualType ) )
         .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
@@ -666,8 +674,14 @@ final class Generator
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
     final Type actualType = context.getSchema().resolveType( attributeType );
+    final String name = attribute.getName();
+    final String safeName = safeName( name );
     final FieldSpec.Builder field =
-      FieldSpec.builder( context.toTypeName( actualType ), attribute.getName(), Modifier.PUBLIC );
+      FieldSpec.builder( context.toTypeName( actualType ), safeName, Modifier.PUBLIC );
+    if ( !safeName.equals( name ) )
+    {
+      field.addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
+    }
     if ( context.getSchema().isNullable( attributeType ) )
     {
       field.addAnnotation( Types.NULLABLE );
@@ -974,7 +988,7 @@ final class Generator
       {
         final String name = toName( value );
         type.addField( FieldSpec
-                         .builder( Types.STRING, name, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                         .builder( Types.STRING, safeName( name ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                          .addAnnotation( Types.NONNULL )
                          .initializer( "$S", value )
                          .build() );
