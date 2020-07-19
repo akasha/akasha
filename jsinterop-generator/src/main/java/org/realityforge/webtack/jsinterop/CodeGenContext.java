@@ -155,8 +155,7 @@ final class CodeGenContext
     {
       throw new UnsupportedOperationException( "Nullable " + kind + " not supported" );
     }
-
-    if ( Kind.Any == kind )
+    else if ( Kind.Any == kind )
     {
       return Types.ANY;
     }
