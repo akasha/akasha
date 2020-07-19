@@ -255,6 +255,11 @@
         "url": "https://webaudio.github.io/web-audio-api/"
     },
     {
+        "lastModifiedTime": 1593645127000,
+        "name": "web_bluetooth",
+        "url": "https://webbluetoothcg.github.io/web-bluetooth/"
+    },
+    {
         "lastModifiedTime": 1551474872000,
         "name": "webauthn",
         "url": "https://www.w3.org/TR/2019/REC-webauthn-1-20190304/"
