@@ -257,6 +257,19 @@ public interface MyDictionary {
   }
 
   @JsProperty
+  JsPropertyMap<String> getByteStringRecord();
+
+  @JsProperty
+  void setByteStringRecord(@Nonnull JsPropertyMap<String> byteStringRecord);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary byteStringRecord(@Nonnull JsPropertyMap<String> byteStringRecord) {
+    setByteStringRecord( byteStringRecord );
+    return this;
+  }
+
+  @JsProperty
   String getByteStringValue();
 
   @JsProperty
@@ -296,6 +309,19 @@ public interface MyDictionary {
   }
 
   @JsProperty
+  JsPropertyMap<String> getDomStringRecord();
+
+  @JsProperty
+  void setDomStringRecord(@Nonnull JsPropertyMap<String> domStringRecord);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary domStringRecord(@Nonnull JsPropertyMap<String> domStringRecord) {
+    setDomStringRecord( domStringRecord );
+    return this;
+  }
+
+  @JsProperty
   String getDomStringValue();
 
   @JsProperty
@@ -318,6 +344,19 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary doubleFrozenArrayValue(@Nonnull JsArray<Double> doubleFrozenArrayValue) {
     setDoubleFrozenArrayValue( doubleFrozenArrayValue );
+    return this;
+  }
+
+  @JsProperty
+  JsPropertyMap<Double> getDoubleRecord();
+
+  @JsProperty
+  void setDoubleRecord(@Nonnull JsPropertyMap<Double> doubleRecord);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary doubleRecord(@Nonnull JsPropertyMap<Double> doubleRecord) {
+    setDoubleRecord( doubleRecord );
     return this;
   }
 
@@ -474,6 +513,19 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary longValue(int longValue) {
     setLongValue( longValue );
+    return this;
+  }
+
+  @JsProperty
+  JsPropertyMap<String> getMixedStringRecord();
+
+  @JsProperty
+  void setMixedStringRecord(@Nonnull JsPropertyMap<String> mixedStringRecord);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary mixedStringRecord(@Nonnull JsPropertyMap<String> mixedStringRecord) {
+    setMixedStringRecord( mixedStringRecord );
     return this;
   }
 
@@ -2426,6 +2478,19 @@ public interface MyDictionary {
   }
 
   @JsProperty
+  JsPropertyMap<SomeType> getTypeReferenceRecord();
+
+  @JsProperty
+  void setTypeReferenceRecord(@Nonnull JsPropertyMap<SomeType> typeReferenceRecord);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary typeReferenceRecord(@Nonnull JsPropertyMap<SomeType> typeReferenceRecord) {
+    setTypeReferenceRecord( typeReferenceRecord );
+    return this;
+  }
+
+  @JsProperty
   Uint16Array getUint16ArrayValue();
 
   @JsProperty
@@ -2543,6 +2608,19 @@ public interface MyDictionary {
   }
 
   @JsProperty
+  JsPropertyMap<String> getUsvStringRecord();
+
+  @JsProperty
+  void setUsvStringRecord(@Nonnull JsPropertyMap<String> usvStringRecord);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary usvStringRecord(@Nonnull JsPropertyMap<String> usvStringRecord) {
+    setUsvStringRecord( usvStringRecord );
+    return this;
+  }
+
+  @JsProperty
   String getUsvStringValue();
 
   @JsProperty
@@ -2565,84 +2643,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary voidPromiseValue(@Nonnull Promise<Void> voidPromiseValue) {
     setVoidPromiseValue( voidPromiseValue );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<String> getUsvStringRecord();
-
-  @JsProperty
-  void setUsvStringRecord(@Nonnull JsPropertyMap<String> usvStringRecord);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary usvStringRecord(@Nonnull JsPropertyMap<String> usvStringRecord) {
-    setUsvStringRecord( usvStringRecord );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<String> getDomStringRecord();
-
-  @JsProperty
-  void setDomStringRecord(@Nonnull JsPropertyMap<String> domStringRecord);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary domStringRecord(@Nonnull JsPropertyMap<String> domStringRecord) {
-    setDomStringRecord( domStringRecord );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<String> getByteStringRecord();
-
-  @JsProperty
-  void setByteStringRecord(@Nonnull JsPropertyMap<String> byteStringRecord);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary byteStringRecord(@Nonnull JsPropertyMap<String> byteStringRecord) {
-    setByteStringRecord( byteStringRecord );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<Double> getDoubleRecord();
-
-  @JsProperty
-  void setDoubleRecord(@Nonnull JsPropertyMap<Double> doubleRecord);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary doubleRecord(@Nonnull JsPropertyMap<Double> doubleRecord) {
-    setDoubleRecord( doubleRecord );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<String> getMixedStringRecord();
-
-  @JsProperty
-  void setMixedStringRecord(@Nonnull JsPropertyMap<String> mixedStringRecord);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary mixedStringRecord(@Nonnull JsPropertyMap<String> mixedStringRecord) {
-    setMixedStringRecord( mixedStringRecord );
-    return this;
-  }
-
-  @JsProperty
-  JsPropertyMap<SomeType> getTypeReferenceRecord();
-
-  @JsProperty
-  void setTypeReferenceRecord(@Nonnull JsPropertyMap<SomeType> typeReferenceRecord);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary typeReferenceRecord(@Nonnull JsPropertyMap<SomeType> typeReferenceRecord) {
-    setTypeReferenceRecord( typeReferenceRecord );
     return this;
   }
 }

@@ -45,6 +45,9 @@ public class MyInterface {
   public boolean booleanValue;
 
   @Nonnull
+  public JsPropertyMap<String> byteStringRecord;
+
+  @Nonnull
   public String byteStringValue;
 
   public byte byteValue;
@@ -53,10 +56,16 @@ public class MyInterface {
   public DataView dataViewValueValue;
 
   @Nonnull
+  public JsPropertyMap<String> domStringRecord;
+
+  @Nonnull
   public String domStringValue;
 
   @Nonnull
   public JsArray<Double> doubleFrozenArrayValue;
+
+  @Nonnull
+  public JsPropertyMap<Double> doubleRecord;
 
   @Nonnull
   public JsArray<Double> doubleSequenceValue;
@@ -92,6 +101,9 @@ public class MyInterface {
   public int longLongValue;
 
   public int longValue;
+
+  @Nonnull
+  public JsPropertyMap<String> mixedStringRecord;
 
   @Nullable
   public ArrayBuffer nullableArrayBufferValueValue;
@@ -251,6 +263,9 @@ public class MyInterface {
   public Symbol symbolValue;
 
   @Nonnull
+  public JsPropertyMap<SomeType> typeReferenceRecord;
+
+  @Nonnull
   public Uint16Array uint16ArrayValue;
 
   @Nonnull
@@ -273,28 +288,13 @@ public class MyInterface {
   public int unsignedShortValue;
 
   @Nonnull
+  public JsPropertyMap<String> usvStringRecord;
+
+  @Nonnull
   public String usvStringValue;
 
   @Nonnull
   public Promise<Void> voidPromiseValue;
-
-  @Nonnull
-  public JsPropertyMap<String> usvStringRecord;
-
-  @Nonnull
-  public JsPropertyMap<String> domStringRecord;
-
-  @Nonnull
-  public JsPropertyMap<String> byteStringRecord;
-
-  @Nonnull
-  public JsPropertyMap<Double> doubleRecord;
-
-  @Nonnull
-  public JsPropertyMap<String> mixedStringRecord;
-
-  @Nonnull
-  public JsPropertyMap<SomeType> typeReferenceRecord;
 
   /**
    * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
