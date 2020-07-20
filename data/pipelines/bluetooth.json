@@ -30,6 +30,13 @@
       }
     },
     {
+      "name": "RemoveElement",
+      "description": "Remove elements not used in downstream products",
+      "config": {
+        "namePattern": "^(VoidFunction|Function|DOMException).*$"
+      }
+    },
+    {
       "name": "RenameType",
       "description": "Reworked naming convention of typedef so that the underlying type can be renamed to EventHandler. This makes the java code much easier to grok",
       "config": {
