@@ -1,5 +1,5 @@
 {
-  "sourceSelector": "!name=minimal_event !name=secure_contexts",
+  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common",
   "stages": [
     {
       "name": "RenameType",
@@ -162,6 +162,13 @@
       "name": "Emit",
       "config": {
         "filePattern": "data/output/main/complete.webidl"
+      }
+    },
+    {
+      "name": "Jsinterop",
+      "config": {
+        "outputDirectory": "data/output/main/main/java",
+        "packageName": "elemental3"
       }
     }
   ]
