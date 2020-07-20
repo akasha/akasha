@@ -8,6 +8,8 @@ complete as there is too much un-said.
 
 * use webrtc video chat ala ZipCall.io as another example
 
+* Update `java_keyword_names` test to test operators that have names that collide or operators that have arguments that collide.
+
 * Change code to use the term  "literal" when generating the chaining methods  https://en.wikipedia.org/wiki/Fluent_interface
 
 * change chainable setters on dictionaries and make sure sub-classes override parent classes so correct this is returned.
