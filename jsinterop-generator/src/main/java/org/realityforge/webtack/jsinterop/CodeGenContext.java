@@ -262,12 +262,13 @@ final class CodeGenContext
     {
       final PromiseType promiseType = (PromiseType) type;
       return ParameterizedTypeName.get( Types.PROMISE,
-                                        toTypeName( _schema.resolveType( promiseType.getResolveType() ) ) );
+                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( promiseType.getResolveType() ) ) ).box() );
     }
     else if ( Kind.Sequence == kind )
     {
       final Type itemType = ( (SequenceType) type ).getItemType();
-      return ParameterizedTypeName.get( Types.JS_ARRAY, toTypeName( _schema.resolveType( itemType ) ) );
+      return ParameterizedTypeName.get( Types.JS_ARRAY,
+                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( itemType ) ) ).box() );
     }
     else if ( Kind.Record == kind )
     {
