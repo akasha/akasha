@@ -10,6 +10,7 @@ import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -44,6 +45,10 @@ import org.realityforge.webtack.model.WebIDLSchema;
 
 final class Generator
 {
+  @Nonnull
+  private static final List<String> OBJECT_METHODS =
+    Arrays.asList( "hashCode", "equals", "clone", "toString", "finalize", "getClass", "wait", "notifyAll", "notify" );
+
   void generate( @Nonnull final CodeGenContext context )
     throws IOException
   {
@@ -288,7 +293,7 @@ final class Generator
   @Nonnull
   private String safeName( @Nonnull final String name )
   {
-    return SourceVersion.isName( name ) ? name : "_" + name;
+    return SourceVersion.isName( name ) && !OBJECT_METHODS.contains( name ) ? name : "_" + name;
   }
 
   @Nonnull
