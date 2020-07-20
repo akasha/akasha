@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.RecordType;
