@@ -273,6 +273,12 @@ final class CodeGenContext
       return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
                                         toTypeName( toJsinteropCompatibleType( _schema.resolveType( valueType ) ) ).box() );
     }
+    else if ( Kind.FrozenArray == kind )
+    {
+      final Type itemType = ( (FrozenArrayType) type ).getItemType();
+      return ParameterizedTypeName.get( Types.JS_ARRAY,
+                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( itemType ) ) ).box() );
+    }
     else if ( Kind.ArrayBuffer == kind )
     {
       return Types.ARRAY_BUFFER;
