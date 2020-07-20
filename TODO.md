@@ -4,6 +4,10 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Use bluetooth/heart rate monitor as example app to test mapping
+
+* use webrtc video chat ala ZipCall.io as another example
+
 * Change code to use the term  "literal" when generating the chaining methods  https://en.wikipedia.org/wiki/Fluent_interface
 
 * change chainable setters on dictionaries and make sure sub-classes override parent classes so correct this is returned.
