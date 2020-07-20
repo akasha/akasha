@@ -4,6 +4,10 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+* Change code to use the term  "literal" when generating the chaining methods  https://en.wikipedia.org/wiki/Fluent_interface
+
+* change chainable setters on dictionaries and make sure sub-classes override parent classes so correct this is returned.
+
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
