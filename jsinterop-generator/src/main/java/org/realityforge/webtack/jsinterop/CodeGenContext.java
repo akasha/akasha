@@ -153,7 +153,9 @@ final class CodeGenContext
            Kind.LongLong == kind ||
            Kind.UnsignedLongLong == kind ) )
     {
-      throw new UnsupportedOperationException( "Nullable " + kind + " not supported" );
+      // TODO: This is uncomfortable mapping. Not sure what the solutions is...
+      //  We should emit a warning a deal with it later
+      return TypeName.DOUBLE.box();
     }
     else if ( Kind.Any == kind )
     {
