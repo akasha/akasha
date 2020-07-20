@@ -33,7 +33,7 @@
       "name": "RemoveElement",
       "description": "Remove elements not used in downstream products",
       "config": {
-        "namePattern": "^(VoidFunction|Function|DOMException).*$"
+        "namePattern": "^(VoidFunction|Function|DOMException|PushPermissionDescriptor|MidiPermissionDescriptor|DevicePermissionDescriptor).*$"
       }
     },
     {
