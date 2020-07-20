@@ -175,6 +175,10 @@ final class CodeGenContext
     {
       return TypeName.SHORT;
     }
+    else if ( Kind.Short == kind )
+    {
+      return TypeName.SHORT;
+    }
     else if ( Kind.UnsignedShort == kind )
     {
       return TypeName.INT;
