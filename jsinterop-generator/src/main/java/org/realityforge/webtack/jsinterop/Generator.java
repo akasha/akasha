@@ -291,6 +291,8 @@ final class Generator
       params.add( self );
       params.add( Types.JS_PROPERTY_MAP );
 
+      // TODO: Generate multiple creates for every expanded type
+
       for ( final DictionaryMember member : requiredMembers )
       {
         final String paramName = safeName( member.getName() );
