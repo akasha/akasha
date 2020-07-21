@@ -19,10 +19,10 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
   @JsOverlay
   @Nonnull
   static OtherPushPermissionDescriptor create(@Nonnull final String name, final boolean safe) {
-    final OtherPushPermissionDescriptor $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setName( name );
-    $instance$.setSafe( safe );
-    return $instance$;
+    final OtherPushPermissionDescriptor value = Js.uncheckedCast( JsPropertyMap.of() );
+    value.setName( name );
+    value.setSafe( safe );
+    return value;
   }
 
   @JsProperty

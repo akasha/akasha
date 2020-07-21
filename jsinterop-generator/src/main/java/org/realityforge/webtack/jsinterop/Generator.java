@@ -273,7 +273,8 @@ final class Generator
     }
     else
     {
-      final String name = "$instance$";
+      final String name =
+        ( requiredMembers.stream().anyMatch( m -> m.getName().equals( "value" ) ) ? "_" : "" ) + "value";
       method.addStatement( "final $T $N = $T.uncheckedCast( $T.of() )", self, name, Types.JS, Types.JS_PROPERTY_MAP );
       for ( final DictionaryMember member : requiredMembers )
       {

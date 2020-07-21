@@ -19,9 +19,9 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static PushPermissionDescriptor create(@Nonnull final String name) {
-    final PushPermissionDescriptor $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setName( name );
-    return $instance$;
+    final PushPermissionDescriptor value = Js.uncheckedCast( JsPropertyMap.of() );
+    value.setName( name );
+    return value;
   }
 
   @JsProperty

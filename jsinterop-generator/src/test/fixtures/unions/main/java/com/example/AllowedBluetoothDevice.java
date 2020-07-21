@@ -21,10 +21,10 @@ public interface AllowedBluetoothDevice {
   @Nonnull
   static AllowedBluetoothDevice create(@Nonnull final StringOrStringArrayUnion allowedServices,
       @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
-    final AllowedBluetoothDevice $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setAllowedServices( allowedServices );
-    $instance$.setRequiredUuids( requiredUuids );
-    return $instance$;
+    final AllowedBluetoothDevice value = Js.uncheckedCast( JsPropertyMap.of() );
+    value.setAllowedServices( allowedServices );
+    value.setRequiredUuids( requiredUuids );
+    return value;
   }
 
   @JsProperty

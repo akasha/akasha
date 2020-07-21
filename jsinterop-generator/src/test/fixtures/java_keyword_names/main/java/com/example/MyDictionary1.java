@@ -24,21 +24,21 @@ public interface MyDictionary1 {
       @Nonnull final Object _notify, @Nonnull final Object _notifyAll,
       @Nonnull final Object _private, @Nonnull final Object _protected,
       @Nonnull final Object _public, @Nonnull final Object _toString, @Nonnull final Object _wait) {
-    final MyDictionary1 $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setClone( _clone );
-    $instance$.setDefault( _default );
-    $instance$.setEquals( _equals );
-    $instance$.setFinalize( _finalize );
-    $instance$.setGetClass( _getClass );
-    $instance$.setHashCode( _hashCode );
-    $instance$.setNotify( _notify );
-    $instance$.setNotifyAll( _notifyAll );
-    $instance$.setPrivate( _private );
-    $instance$.setProtected( _protected );
-    $instance$.setPublic( _public );
-    $instance$.setToString( _toString );
-    $instance$.setWait( _wait );
-    return $instance$;
+    final MyDictionary1 value = Js.uncheckedCast( JsPropertyMap.of() );
+    value.setClone( _clone );
+    value.setDefault( _default );
+    value.setEquals( _equals );
+    value.setFinalize( _finalize );
+    value.setGetClass( _getClass );
+    value.setHashCode( _hashCode );
+    value.setNotify( _notify );
+    value.setNotifyAll( _notifyAll );
+    value.setPrivate( _private );
+    value.setProtected( _protected );
+    value.setPublic( _public );
+    value.setToString( _toString );
+    value.setWait( _wait );
+    return value;
   }
 
   @JsProperty
