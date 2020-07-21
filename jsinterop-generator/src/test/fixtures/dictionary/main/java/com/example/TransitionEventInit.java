@@ -60,4 +60,28 @@ public interface TransitionEventInit extends EventInit {
     setPseudoElement( pseudoElement );
     return this;
   }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default TransitionEventInit bubbles(boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default TransitionEventInit cancelable(boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default TransitionEventInit composed(boolean composed) {
+    setComposed( composed );
+    return this;
+  }
 }

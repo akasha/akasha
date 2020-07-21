@@ -248,7 +248,18 @@ final class Generator
       final Type actualType = context.getSchema().resolveType( member.getType() );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
-      generateDictionaryMemberSetterReturningThis( context, definition, member, actualType, type );
+      generateDictionaryMemberSetterReturningThis( context, definition, member, actualType, false, type );
+    }
+    String superName = definition.getInherits();
+    while ( null != superName )
+    {
+      final DictionaryDefinition parent = context.getSchema().getDictionaryByName( superName );
+      for ( final DictionaryMember member : parent.getMembers() )
+      {
+        final Type actualType = context.getSchema().resolveType( member.getType() );
+        generateDictionaryMemberSetterReturningThis( context, definition, member, actualType, true, type );
+      }
+      superName = parent.getInherits();
     }
 
     context.writeTopLevelType( type );
@@ -390,6 +401,7 @@ final class Generator
                                                             @Nonnull final DictionaryDefinition dictionary,
                                                             @Nonnull final DictionaryMember member,
                                                             @Nonnull final Type actualType,
+                                                            final boolean addOverride,
                                                             @Nonnull final TypeSpec.Builder type )
   {
     final String paramName = safeName( member.getName() );
@@ -400,6 +412,10 @@ final class Generator
         .addAnnotation( Types.JS_OVERLAY )
         .addAnnotation( Types.NONNULL )
         .returns( context.lookupTypeByName( dictionary.getName() ) );
+    if ( addOverride )
+    {
+      method.addAnnotation( Override.class );
+    }
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( context.toTypeName( actualType ), paramName );
 

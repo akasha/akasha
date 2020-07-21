@@ -37,4 +37,20 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
     setSafe( safe );
     return this;
   }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default OtherPushPermissionDescriptor userVisibleOnly(boolean userVisibleOnly) {
+    setUserVisibleOnly( userVisibleOnly );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default OtherPushPermissionDescriptor name(@Nonnull String name) {
+    setName( name );
+    return this;
+  }
 }

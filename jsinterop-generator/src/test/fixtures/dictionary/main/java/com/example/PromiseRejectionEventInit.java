@@ -54,4 +54,28 @@ public interface PromiseRejectionEventInit extends EventInit {
     setReason( reason );
     return this;
   }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default PromiseRejectionEventInit bubbles(boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default PromiseRejectionEventInit cancelable(boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default PromiseRejectionEventInit composed(boolean composed) {
+    setComposed( composed );
+    return this;
+  }
 }

@@ -91,4 +91,28 @@ public interface StorageEventInit extends EventInit {
     setUrl( url );
     return this;
   }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default StorageEventInit bubbles(boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default StorageEventInit cancelable(boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default StorageEventInit composed(boolean composed) {
+    setComposed( composed );
+    return this;
+  }
 }
