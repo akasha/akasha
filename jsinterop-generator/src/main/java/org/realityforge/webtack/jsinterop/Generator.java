@@ -429,11 +429,6 @@ final class Generator
                                                       @Nonnull final Type explodedType,
                                                       @Nonnull final TypeSpec.Builder type )
   {
-    final Kind kind = actualType.getKind();
-    if( Kind.Union != kind )
-    {
-      System.out.println( "Generator.generateDictionaryMemberOverlaySetter" );
-    }
     final String mutatorName = getMutatorName( member );
     final MethodSpec.Builder method =
       MethodSpec
