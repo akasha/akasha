@@ -175,8 +175,6 @@ public abstract class AbstractTest
     final List<Path> javaFiles = collectJavaFiles( context.getMainJavaDirectory() );
     final List<Path> classpathEntries = collectLibs();
 
-    ensureGeneratedCodeCompiles( javaFiles, classpathEntries );
-
     final Map<String, Path> generatedSourceFiles = context.getGeneratedSourceFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
@@ -184,6 +182,8 @@ public abstract class AbstractTest
       final Path relativePath = context.getOutputDirectory().relativize( file );
       assertFileMatchesFixture( file, directory.resolve( relativePath ) );
     }
+
+    ensureGeneratedCodeCompiles( javaFiles, classpathEntries );
   }
 
   @Nonnull
