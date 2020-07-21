@@ -264,27 +264,20 @@ final class CodeGenContext
     }
     else if ( Kind.Promise == kind )
     {
-      final PromiseType promiseType = (PromiseType) type;
-      return ParameterizedTypeName.get( Types.PROMISE,
-                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( promiseType.getResolveType() ) ) ).box() );
+      return ParameterizedTypeName.get( Types.PROMISE, getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
     }
     else if ( Kind.Sequence == kind )
     {
-      final Type itemType = ( (SequenceType) type ).getItemType();
-      return ParameterizedTypeName.get( Types.JS_ARRAY,
-                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( itemType ) ) ).box() );
+      return ParameterizedTypeName.get( Types.JS_ARRAY, getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
     }
     else if ( Kind.Record == kind )
     {
-      final Type valueType = ( (RecordType) type ).getValueType();
       return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
-                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( valueType ) ) ).box() );
+                                        getUnexpandedType( ( (RecordType) type ).getValueType() ) );
     }
     else if ( Kind.FrozenArray == kind )
     {
-      final Type itemType = ( (FrozenArrayType) type ).getItemType();
-      return ParameterizedTypeName.get( Types.JS_ARRAY,
-                                        toTypeName( toJsinteropCompatibleType( _schema.resolveType( itemType ) ) ).box() );
+      return ParameterizedTypeName.get( Types.JS_ARRAY, getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
     }
     else if ( Kind.ArrayBuffer == kind )
     {
@@ -338,6 +331,12 @@ final class CodeGenContext
     {
       throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
     }
+  }
+
+  @Nonnull
+  private TypeName getUnexpandedType( @Nonnull final Type type )
+  {
+    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
   }
 
   @Nonnull
