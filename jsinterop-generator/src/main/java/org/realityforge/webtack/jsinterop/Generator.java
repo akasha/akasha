@@ -448,10 +448,19 @@ final class Generator
       parameter.addAnnotation( Types.NONNULL );
     }
     method.addParameter( parameter.build() );
-    method.addStatement( "$N( $T.of( $N ) )",
-                         mutatorName,
-                         context.toTypeName( context.getSchema().resolveType( actualType ) ),
-                         paramName );
+    final Kind kind = actualType.getKind();
+    if ( Kind.Union == kind )
+    {
+      method.addStatement( "$N( $T.of( $N ) )",
+                           mutatorName,
+                           context.toTypeName( context.getSchema().resolveType( actualType ) ),
+                           paramName );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( "Create method for dictionary does not yet support exploding " +
+                                               explodedType + " from " + actualType );
+    }
     type.addMethod( method.build() );
   }
 
