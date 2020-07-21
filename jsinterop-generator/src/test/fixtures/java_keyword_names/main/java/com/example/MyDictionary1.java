@@ -24,21 +24,7 @@ public interface MyDictionary1 {
       @Nonnull final Object _notify, @Nonnull final Object _notifyAll,
       @Nonnull final Object _private, @Nonnull final Object _protected,
       @Nonnull final Object _public, @Nonnull final Object _toString, @Nonnull final Object _wait) {
-    final MyDictionary1 value = Js.uncheckedCast( JsPropertyMap.of() );
-    value.setClone( _clone );
-    value.setDefault( _default );
-    value.setEquals( _equals );
-    value.setFinalize( _finalize );
-    value.setGetClass( _getClass );
-    value.setHashCode( _hashCode );
-    value.setNotify( _notify );
-    value.setNotifyAll( _notifyAll );
-    value.setPrivate( _private );
-    value.setProtected( _protected );
-    value.setPublic( _public );
-    value.setToString( _toString );
-    value.setWait( _wait );
-    return value;
+    return Js.<MyDictionary1>uncheckedCast( JsPropertyMap.of() )._clone( _clone )._default( _default )._equals( _equals )._finalize( _finalize )._getClass( _getClass )._hashCode( _hashCode )._notify( _notify )._notifyAll( _notifyAll )._private( _private )._protected( _protected )._public( _public )._toString( _toString )._wait( _wait );
   }
 
   @JsProperty

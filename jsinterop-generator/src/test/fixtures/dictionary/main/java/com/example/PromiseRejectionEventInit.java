@@ -22,9 +22,7 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static PromiseRejectionEventInit create(@Nonnull final Promise<Any> promise) {
-    final PromiseRejectionEventInit value = Js.uncheckedCast( JsPropertyMap.of() );
-    value.setPromise( promise );
-    return value;
+    return Js.<PromiseRejectionEventInit>uncheckedCast( JsPropertyMap.of() ).promise( promise );
   }
 
   @JsProperty

@@ -284,14 +284,22 @@ final class Generator
     }
     else
     {
-      final String name =
-        ( requiredMembers.stream().anyMatch( m -> m.getName().equals( "value" ) ) ? "_" : "" ) + "value";
-      method.addStatement( "final $T $N = $T.uncheckedCast( $T.of() )", self, name, Types.JS, Types.JS_PROPERTY_MAP );
+      final List<Object> params = new ArrayList<>();
+      final StringBuilder sb = new StringBuilder();
+      sb.append( "return $T.<$T>uncheckedCast( $T.of() )" );
+      params.add( Types.JS );
+      params.add( self );
+      params.add( Types.JS_PROPERTY_MAP );
+
       for ( final DictionaryMember member : requiredMembers )
       {
+        final String paramName = safeName( member.getName() );
+        sb.append( ".$N( $N )" );
+        params.add( paramName );
+        params.add( paramName );
+
         final Type memberType = member.getType();
         final Type actualType = context.getSchema().resolveType( memberType );
-        final String paramName = safeName( member.getName() );
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( context.toTypeName( actualType ), paramName, Modifier.FINAL );
         if ( context.getSchema().isNullable( memberType ) )
@@ -303,9 +311,8 @@ final class Generator
           parameter.addAnnotation( Types.NONNULL );
         }
         method.addParameter( parameter.build() );
-        method.addStatement( "$N.$N( $N )", name, getMutatorName( member ), paramName );
       }
-      method.addStatement( "return $N", name );
+      method.addStatement( sb.toString(), params.toArray() );
     }
     type.addMethod( method.build() );
   }
