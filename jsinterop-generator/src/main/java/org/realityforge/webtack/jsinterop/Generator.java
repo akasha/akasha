@@ -259,7 +259,7 @@ final class Generator
       generateDictionaryMemberSetter( context, member, actualType, type );
       for ( final Type memberType : explodeType( actualType ) )
       {
-        if ( !actualType.equiv( memberType )  )
+        if ( !actualType.equiv( memberType ) )
         {
           generateDictionaryMemberOverlaySetter( context, member, actualType, memberType, type );
         }
