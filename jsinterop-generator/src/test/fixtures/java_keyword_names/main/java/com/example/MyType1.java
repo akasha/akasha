@@ -21,28 +21,22 @@ public class MyType1 {
   }
 
   @JsProperty(
-      name = "hashCode"
-  )
-  @Nonnull
-  public native Object _hashCode();
-
-  @JsProperty(
-      name = "equals"
-  )
-  @Nonnull
-  public native Object _equals();
-
-  @JsProperty(
       name = "clone"
   )
   @Nonnull
   public native Object _clone();
 
   @JsProperty(
-      name = "toString"
+      name = "default"
   )
   @Nonnull
-  public native Object _toString();
+  public native Object _default();
+
+  @JsProperty(
+      name = "equals"
+  )
+  @Nonnull
+  public native Object _equals();
 
   @JsProperty(
       name = "finalize"
@@ -57,16 +51,10 @@ public class MyType1 {
   public native Object _getClass();
 
   @JsProperty(
-      name = "wait"
+      name = "hashCode"
   )
   @Nonnull
-  public native Object _wait();
-
-  @JsProperty(
-      name = "notifyAll"
-  )
-  @Nonnull
-  public native Object _notifyAll();
+  public native Object _hashCode();
 
   @JsProperty(
       name = "notify"
@@ -75,10 +63,22 @@ public class MyType1 {
   public native Object _notify();
 
   @JsProperty(
+      name = "notifyAll"
+  )
+  @Nonnull
+  public native Object _notifyAll();
+
+  @JsProperty(
       name = "private"
   )
   @Nonnull
   public native Object _private();
+
+  @JsProperty(
+      name = "protected"
+  )
+  @Nonnull
+  public native Object _protected();
 
   @JsProperty(
       name = "public"
@@ -87,14 +87,14 @@ public class MyType1 {
   public native Object _public();
 
   @JsProperty(
-      name = "default"
+      name = "toString"
   )
   @Nonnull
-  public native Object _default();
+  public native Object _toString();
 
   @JsProperty(
-      name = "protected"
+      name = "wait"
   )
   @Nonnull
-  public native Object _protected();
+  public native Object _wait();
 }

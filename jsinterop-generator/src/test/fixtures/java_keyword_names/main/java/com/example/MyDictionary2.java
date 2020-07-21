@@ -23,32 +23,6 @@ public interface MyDictionary2 {
   }
 
   @JsProperty
-  Object getHashCode();
-
-  @JsProperty
-  void setHashCode(@Nonnull Object _hashCode);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 _hashCode(@Nonnull Object _hashCode) {
-    setHashCode( _hashCode );
-    return this;
-  }
-
-  @JsProperty
-  Object getEquals();
-
-  @JsProperty
-  void setEquals(@Nonnull Object _equals);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 _equals(@Nonnull Object _equals) {
-    setEquals( _equals );
-    return this;
-  }
-
-  @JsProperty
   Object getClone();
 
   @JsProperty
@@ -62,15 +36,28 @@ public interface MyDictionary2 {
   }
 
   @JsProperty
-  Object getToString();
+  Object getDefault();
 
   @JsProperty
-  void setToString(@Nonnull Object _toString);
+  void setDefault(@Nonnull Object _default);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _toString(@Nonnull Object _toString) {
-    setToString( _toString );
+  default MyDictionary2 _default(@Nonnull Object _default) {
+    setDefault( _default );
+    return this;
+  }
+
+  @JsProperty
+  Object getEquals();
+
+  @JsProperty
+  void setEquals(@Nonnull Object _equals);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary2 _equals(@Nonnull Object _equals) {
+    setEquals( _equals );
     return this;
   }
 
@@ -101,28 +88,15 @@ public interface MyDictionary2 {
   }
 
   @JsProperty
-  Object getWait();
+  Object getHashCode();
 
   @JsProperty
-  void setWait(@Nonnull Object _wait);
+  void setHashCode(@Nonnull Object _hashCode);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _wait(@Nonnull Object _wait) {
-    setWait( _wait );
-    return this;
-  }
-
-  @JsProperty
-  Object getNotifyAll();
-
-  @JsProperty
-  void setNotifyAll(@Nonnull Object _notifyAll);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary2 _notifyAll(@Nonnull Object _notifyAll) {
-    setNotifyAll( _notifyAll );
+  default MyDictionary2 _hashCode(@Nonnull Object _hashCode) {
+    setHashCode( _hashCode );
     return this;
   }
 
@@ -140,6 +114,19 @@ public interface MyDictionary2 {
   }
 
   @JsProperty
+  Object getNotifyAll();
+
+  @JsProperty
+  void setNotifyAll(@Nonnull Object _notifyAll);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary2 _notifyAll(@Nonnull Object _notifyAll) {
+    setNotifyAll( _notifyAll );
+    return this;
+  }
+
+  @JsProperty
   Object getPrivate();
 
   @JsProperty
@@ -149,6 +136,19 @@ public interface MyDictionary2 {
   @Nonnull
   default MyDictionary2 _private(@Nonnull Object _private) {
     setPrivate( _private );
+    return this;
+  }
+
+  @JsProperty
+  Object getProtected();
+
+  @JsProperty
+  void setProtected(@Nonnull Object _protected);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary2 _protected(@Nonnull Object _protected) {
+    setProtected( _protected );
     return this;
   }
 
@@ -166,28 +166,28 @@ public interface MyDictionary2 {
   }
 
   @JsProperty
-  Object getDefault();
+  Object getToString();
 
   @JsProperty
-  void setDefault(@Nonnull Object _default);
+  void setToString(@Nonnull Object _toString);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _default(@Nonnull Object _default) {
-    setDefault( _default );
+  default MyDictionary2 _toString(@Nonnull Object _toString) {
+    setToString( _toString );
     return this;
   }
 
   @JsProperty
-  Object getProtected();
+  Object getWait();
 
   @JsProperty
-  void setProtected(@Nonnull Object _protected);
+  void setWait(@Nonnull Object _wait);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _protected(@Nonnull Object _protected) {
-    setProtected( _protected );
+  default MyDictionary2 _wait(@Nonnull Object _wait) {
+    setWait( _wait );
     return this;
   }
 }

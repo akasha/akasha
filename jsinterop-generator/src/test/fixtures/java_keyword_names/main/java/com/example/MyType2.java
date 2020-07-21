@@ -14,28 +14,22 @@ import jsinterop.annotations.JsType;
 )
 public class MyType2 {
   @JsProperty(
-      name = "hashCode"
-  )
-  @Nonnull
-  public Object _hashCode;
-
-  @JsProperty(
-      name = "equals"
-  )
-  @Nonnull
-  public Object _equals;
-
-  @JsProperty(
       name = "clone"
   )
   @Nonnull
   public Object _clone;
 
   @JsProperty(
-      name = "toString"
+      name = "default"
   )
   @Nonnull
-  public Object _toString;
+  public Object _default;
+
+  @JsProperty(
+      name = "equals"
+  )
+  @Nonnull
+  public Object _equals;
 
   @JsProperty(
       name = "finalize"
@@ -50,16 +44,10 @@ public class MyType2 {
   public Object _getClass;
 
   @JsProperty(
-      name = "wait"
+      name = "hashCode"
   )
   @Nonnull
-  public Object _wait;
-
-  @JsProperty(
-      name = "notifyAll"
-  )
-  @Nonnull
-  public Object _notifyAll;
+  public Object _hashCode;
 
   @JsProperty(
       name = "notify"
@@ -68,10 +56,22 @@ public class MyType2 {
   public Object _notify;
 
   @JsProperty(
+      name = "notifyAll"
+  )
+  @Nonnull
+  public Object _notifyAll;
+
+  @JsProperty(
       name = "private"
   )
   @Nonnull
   public Object _private;
+
+  @JsProperty(
+      name = "protected"
+  )
+  @Nonnull
+  public Object _protected;
 
   @JsProperty(
       name = "public"
@@ -80,16 +80,16 @@ public class MyType2 {
   public Object _public;
 
   @JsProperty(
-      name = "default"
+      name = "toString"
   )
   @Nonnull
-  public Object _default;
+  public Object _toString;
 
   @JsProperty(
-      name = "protected"
+      name = "wait"
   )
   @Nonnull
-  public Object _protected;
+  public Object _wait;
 
   /**
    * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
