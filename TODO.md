@@ -10,8 +10,6 @@ complete as there is too much un-said.
 
 * Update `java_keyword_names` test to test operators that have names that collide or operators that have arguments that collide.
 
-* Change code to use the term  "literal" when generating the chaining methods  https://en.wikipedia.org/wiki/Fluent_interface
-
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
