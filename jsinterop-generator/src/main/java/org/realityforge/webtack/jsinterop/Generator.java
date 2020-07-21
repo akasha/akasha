@@ -177,7 +177,10 @@ final class Generator
         .map( t -> new PromiseType( t, promiseType.getExtendedAttributes(), promiseType.getSourceLocations() ) )
         .collect( Collectors.toList() );
     }
-    return Collections.singletonList( type );
+    else
+    {
+      return Collections.singletonList( type );
+    }
   }
 
   private void generateUnionOfMethods( @Nonnull final CodeGenContext context,
