@@ -244,14 +244,27 @@ final class Generator
       type.addSuperinterface( context.lookupTypeByName( inherits ) );
     }
 
-    generateDictionaryCreateMethod( context, definition, type );
+    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
+    final List<List<Type>> explodedTypeList =
+      explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
+    for ( final List<Type> argTypes : explodedTypeList )
+    {
+      generateDictionaryCreateMethod( context, definition, requiredMembers, argTypes, type );
+    }
 
     for ( final DictionaryMember member : definition.getMembers() )
     {
       final Type actualType = context.getSchema().resolveType( member.getType() );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
-      generateDictionaryMemberSetterReturningThis( context, definition, member, actualType, false, type );
+      for ( final Type memberType : explodeType( actualType ) )
+      {
+        if ( !actualType.equiv( memberType )  )
+        {
+          generateDictionaryMemberOverlaySetter( context, member, actualType, memberType, type );
+        }
+        generateDictionaryMemberSetterReturningThis( context, definition, member, memberType, false, type );
+      }
     }
     String superName = definition.getInherits();
     while ( null != superName )
@@ -259,8 +272,10 @@ final class Generator
       final DictionaryDefinition parent = context.getSchema().getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
-        final Type actualType = context.getSchema().resolveType( member.getType() );
-        generateDictionaryMemberSetterReturningThis( context, definition, member, actualType, true, type );
+        for ( final Type memberType : explodeType( context.getSchema().resolveType( member.getType() ) ) )
+        {
+          generateDictionaryMemberSetterReturningThis( context, definition, member, memberType, true, type );
+        }
       }
       superName = parent.getInherits();
     }
@@ -270,10 +285,10 @@ final class Generator
 
   private void generateDictionaryCreateMethod( @Nonnull final CodeGenContext context,
                                                @Nonnull final DictionaryDefinition definition,
+                                               @Nonnull final List<DictionaryMember> requiredMembers,
+                                               @Nonnull final List<Type> types,
                                                @Nonnull final TypeSpec.Builder type )
   {
-    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
-
     final TypeName self = context.lookupTypeByName( definition.getName() );
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
@@ -294,8 +309,7 @@ final class Generator
       params.add( self );
       params.add( Types.JS_PROPERTY_MAP );
 
-      // TODO: Generate multiple creates for every expanded type
-
+      int index = 0;
       for ( final DictionaryMember member : requiredMembers )
       {
         final String paramName = safeName( member.getName() );
@@ -303,7 +317,7 @@ final class Generator
         params.add( paramName );
         params.add( paramName );
 
-        final Type memberType = member.getType();
+        final Type memberType = types.get( index++ );
         final Type actualType = context.getSchema().resolveType( memberType );
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( context.toTypeName( actualType ), paramName, Modifier.FINAL );
@@ -406,6 +420,43 @@ final class Generator
       parameter.addAnnotation( Types.NONNULL );
     }
     method.addParameter( parameter.build() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateDictionaryMemberOverlaySetter( @Nonnull final CodeGenContext context,
+                                                      @Nonnull final DictionaryMember member,
+                                                      @Nonnull final Type actualType,
+                                                      @Nonnull final Type explodedType,
+                                                      @Nonnull final TypeSpec.Builder type )
+  {
+    final Kind kind = actualType.getKind();
+    if( Kind.Union != kind )
+    {
+      System.out.println( "Generator.generateDictionaryMemberOverlaySetter" );
+    }
+    final String mutatorName = getMutatorName( member );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( mutatorName )
+        .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+        .addAnnotation( Types.JS_OVERLAY );
+    final String paramName = safeName( member.getName() );
+    final ParameterSpec.Builder parameter =
+      ParameterSpec.builder( context.toTypeName( explodedType ), paramName, Modifier.FINAL );
+
+    if ( context.getSchema().isNullable( member.getType() ) )
+    {
+      parameter.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !explodedType.getKind().isPrimitive() )
+    {
+      parameter.addAnnotation( Types.NONNULL );
+    }
+    method.addParameter( parameter.build() );
+    method.addStatement( "$N( $T.of( $N ) )",
+                         mutatorName,
+                         context.toTypeName( context.getSchema().resolveType( actualType ) ),
+                         paramName );
     type.addMethod( method.build() );
   }
 

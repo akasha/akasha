@@ -19,7 +19,14 @@ import jsinterop.base.JsPropertyMap;
 public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
-  static AllowedBluetoothDevice create(@Nonnull final StringOrStringArrayUnion allowedServices,
+  static AllowedBluetoothDevice create(@Nonnull final String allowedServices,
+      @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final JsArray<String> allowedServices,
       @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
     return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
   }
@@ -32,9 +39,25 @@ public interface AllowedBluetoothDevice {
   void setAllowedServices(@Nonnull StringOrStringArrayUnion allowedServices);
 
   @JsOverlay
+  default void setAllowedServices(@Nonnull final String allowedServices) {
+    setAllowedServices( StringOrStringArrayUnion.of( allowedServices ) );
+  }
+
+  @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(
-      @Nonnull StringOrStringArrayUnion allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull String allowedServices) {
+    setAllowedServices( allowedServices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setAllowedServices(@Nonnull final JsArray<String> allowedServices) {
+    setAllowedServices( StringOrStringArrayUnion.of( allowedServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice allowedServices(@Nonnull JsArray<String> allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -46,8 +69,25 @@ public interface AllowedBluetoothDevice {
   void setOtherServices(@Nonnull StringOrStringArrayUnion otherServices);
 
   @JsOverlay
+  default void setOtherServices(@Nonnull final String otherServices) {
+    setOtherServices( StringOrStringArrayUnion.of( otherServices ) );
+  }
+
+  @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice otherServices(@Nonnull StringOrStringArrayUnion otherServices) {
+  default AllowedBluetoothDevice otherServices(@Nonnull String otherServices) {
+    setOtherServices( otherServices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setOtherServices(@Nonnull final JsArray<String> otherServices) {
+    setOtherServices( StringOrStringArrayUnion.of( otherServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice otherServices(@Nonnull JsArray<String> otherServices) {
     setOtherServices( otherServices );
     return this;
   }
