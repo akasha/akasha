@@ -22,6 +22,7 @@ import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
+import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 
 final class CodeGenContext
@@ -30,6 +31,8 @@ final class CodeGenContext
   private final WebIDLSchema _schema;
   @Nonnull
   private final Map<String, ClassName> _typeMapping = new HashMap<>();
+  @Nonnull
+  private final Map<String, UnionType> _unions = new HashMap<>();
   @Nonnull
   private final Path _outputDirectory;
   @Nonnull
@@ -327,6 +330,10 @@ final class CodeGenContext
     {
       return Types.FLOAT64_ARRAY;
     }
+    else if ( Kind.Union == kind )
+    {
+      return lookupTypeByName( generateUnionType( (UnionType) type ) );
+    }
     else
     {
       throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
@@ -350,6 +357,63 @@ final class CodeGenContext
     else
     {
       return type;
+    }
+  }
+
+  @Nonnull
+  Map<String, UnionType> getUnions()
+  {
+    return _unions;
+  }
+
+  @Nonnull
+  private String generateUnionType( @Nonnull final UnionType type )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( final Type memberType : type.getMemberTypes() )
+    {
+      if ( 0 != sb.length() )
+      {
+        sb.append( "Or" );
+      }
+      appendTypeToUnionName( sb, memberType );
+    }
+    sb.append( "Union" );
+    final String name = sb.toString();
+    if ( !_unions.containsKey( name ) )
+    {
+      _unions.put( name, type );
+    }
+    return name;
+  }
+
+  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isString() )
+    {
+      sb.append( "String" );
+    }
+    else if ( kind.isPrimitive() ||
+              kind.isBufferRelated() ||
+              Kind.FrozenArray == kind ||
+              Kind.Object == kind ||
+              Kind.Symbol == kind )
+    {
+      sb.append( kind.name() );
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      sb.append( ( (TypeReference) type ).getName() );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
+      sb.append( "Array" );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
     }
   }
 }

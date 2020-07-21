@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -80,6 +81,13 @@ final class Generator
     for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
     {
       generatePartialInterface( context, definition );
+    }
+
+    for ( final Map.Entry<String, UnionType> entry : context.getUnions().entrySet() )
+    {
+      final String name = entry.getKey();
+      final UnionType unionType = entry.getValue();
+      generateUnion( context, name, unionType );
     }
   }
 
