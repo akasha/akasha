@@ -112,7 +112,7 @@ final class Generator
                           .addMember( "name", "$S", "?" )
                           .build() );
 
-    generateUnionOfMethod( context, name, unionType, type );
+    generateUnionOfMethods( context, name, unionType, type );
 
     context.writeTopLevelType( type );
   }
@@ -172,10 +172,10 @@ final class Generator
     return Collections.singletonList( type );
   }
 
-  private void generateUnionOfMethod( @Nonnull final CodeGenContext context,
-                                      @Nonnull final String name,
-                                      @Nonnull final UnionType unionType,
-                                      @Nonnull final TypeSpec.Builder type )
+  private void generateUnionOfMethods( @Nonnull final CodeGenContext context,
+                                       @Nonnull final String name,
+                                       @Nonnull final UnionType unionType,
+                                       @Nonnull final TypeSpec.Builder type )
   {
     final ClassName self = ClassName.bestGuess( name );
     final List<Type> memberTypes = unionType.getMemberTypes();
