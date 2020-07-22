@@ -30,7 +30,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _clone(@Nonnull Object _clone) {
+  default MyDictionary2 _clone(@Nonnull final Object _clone) {
     setClone( _clone );
     return this;
   }
@@ -43,7 +43,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _default(@Nonnull Object _default) {
+  default MyDictionary2 _default(@Nonnull final Object _default) {
     setDefault( _default );
     return this;
   }
@@ -56,7 +56,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _equals(@Nonnull Object _equals) {
+  default MyDictionary2 _equals(@Nonnull final Object _equals) {
     setEquals( _equals );
     return this;
   }
@@ -69,7 +69,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _finalize(@Nonnull Object _finalize) {
+  default MyDictionary2 _finalize(@Nonnull final Object _finalize) {
     setFinalize( _finalize );
     return this;
   }
@@ -82,7 +82,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _getClass(@Nonnull Object _getClass) {
+  default MyDictionary2 _getClass(@Nonnull final Object _getClass) {
     setGetClass( _getClass );
     return this;
   }
@@ -95,7 +95,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _hashCode(@Nonnull Object _hashCode) {
+  default MyDictionary2 _hashCode(@Nonnull final Object _hashCode) {
     setHashCode( _hashCode );
     return this;
   }
@@ -108,7 +108,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _notify(@Nonnull Object _notify) {
+  default MyDictionary2 _notify(@Nonnull final Object _notify) {
     setNotify( _notify );
     return this;
   }
@@ -121,7 +121,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _notifyAll(@Nonnull Object _notifyAll) {
+  default MyDictionary2 _notifyAll(@Nonnull final Object _notifyAll) {
     setNotifyAll( _notifyAll );
     return this;
   }
@@ -134,7 +134,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _private(@Nonnull Object _private) {
+  default MyDictionary2 _private(@Nonnull final Object _private) {
     setPrivate( _private );
     return this;
   }
@@ -147,7 +147,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _protected(@Nonnull Object _protected) {
+  default MyDictionary2 _protected(@Nonnull final Object _protected) {
     setProtected( _protected );
     return this;
   }
@@ -160,7 +160,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _public(@Nonnull Object _public) {
+  default MyDictionary2 _public(@Nonnull final Object _public) {
     setPublic( _public );
     return this;
   }
@@ -173,7 +173,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _toString(@Nonnull Object _toString) {
+  default MyDictionary2 _toString(@Nonnull final Object _toString) {
     setToString( _toString );
     return this;
   }
@@ -186,7 +186,7 @@ public interface MyDictionary2 {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _wait(@Nonnull Object _wait) {
+  default MyDictionary2 _wait(@Nonnull final Object _wait) {
     setWait( _wait );
     return this;
   }

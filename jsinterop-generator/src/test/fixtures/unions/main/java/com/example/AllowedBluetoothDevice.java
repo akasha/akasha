@@ -45,7 +45,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull String allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull final String allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -57,7 +57,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull JsArray<String> allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull final JsArray<String> allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -75,7 +75,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice otherServices(@Nonnull String otherServices) {
+  default AllowedBluetoothDevice otherServices(@Nonnull final String otherServices) {
     setOtherServices( otherServices );
     return this;
   }
@@ -87,7 +87,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice otherServices(@Nonnull JsArray<String> otherServices) {
+  default AllowedBluetoothDevice otherServices(@Nonnull final JsArray<String> otherServices) {
     setOtherServices( otherServices );
     return this;
   }
@@ -102,7 +102,7 @@ public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
   default AllowedBluetoothDevice requiredUuids(
-      @Nonnull JsArray<StringOrLongLongUnion> requiredUuids) {
+      @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
     setRequiredUuids( requiredUuids );
     return this;
   }
@@ -115,7 +115,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice uuids(@Nonnull JsArray<StringOrOctetUnion> uuids) {
+  default AllowedBluetoothDevice uuids(@Nonnull final JsArray<StringOrOctetUnion> uuids) {
     setUuids( uuids );
     return this;
   }

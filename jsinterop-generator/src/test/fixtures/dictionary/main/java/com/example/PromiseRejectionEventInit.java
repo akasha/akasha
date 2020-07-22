@@ -34,7 +34,7 @@ public interface PromiseRejectionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default PromiseRejectionEventInit promise(@Nonnull Promise<Any> promise) {
+  default PromiseRejectionEventInit promise(@Nonnull final Promise<Any> promise) {
     setPromise( promise );
     return this;
   }
@@ -48,7 +48,7 @@ public interface PromiseRejectionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default PromiseRejectionEventInit reason(@Nullable Any reason) {
+  default PromiseRejectionEventInit reason(@Nullable final Any reason) {
     setReason( reason );
     return this;
   }
@@ -56,7 +56,7 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default PromiseRejectionEventInit bubbles(boolean bubbles) {
+  default PromiseRejectionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
   }
@@ -64,7 +64,7 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default PromiseRejectionEventInit cancelable(boolean cancelable) {
+  default PromiseRejectionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
   }
@@ -72,7 +72,7 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default PromiseRejectionEventInit composed(boolean composed) {
+  default PromiseRejectionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;
   }

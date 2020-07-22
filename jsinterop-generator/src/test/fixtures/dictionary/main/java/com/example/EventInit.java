@@ -30,7 +30,7 @@ public interface EventInit {
 
   @JsOverlay
   @Nonnull
-  default EventInit bubbles(boolean bubbles) {
+  default EventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
   }
@@ -43,7 +43,7 @@ public interface EventInit {
 
   @JsOverlay
   @Nonnull
-  default EventInit cancelable(boolean cancelable) {
+  default EventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
   }
@@ -56,7 +56,7 @@ public interface EventInit {
 
   @JsOverlay
   @Nonnull
-  default EventInit composed(boolean composed) {
+  default EventInit composed(final boolean composed) {
     setComposed( composed );
     return this;
   }

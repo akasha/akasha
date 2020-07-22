@@ -30,7 +30,7 @@ public interface ClipboardItemOptions {
 
   @JsOverlay
   @Nonnull
-  default ClipboardItemOptions presentationStyle(@Nonnull String presentationStyle) {
+  default ClipboardItemOptions presentationStyle(@Nonnull final String presentationStyle) {
     setPresentationStyle( presentationStyle );
     return this;
   }

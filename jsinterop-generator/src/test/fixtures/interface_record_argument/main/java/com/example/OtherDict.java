@@ -30,7 +30,7 @@ public interface OtherDict {
 
   @JsOverlay
   @Nonnull
-  default OtherDict value(@Nonnull JsPropertyMap<String> value) {
+  default OtherDict value(@Nonnull final JsPropertyMap<String> value) {
     setValue( value );
     return this;
   }

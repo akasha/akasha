@@ -30,7 +30,7 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
 
   @JsOverlay
   @Nonnull
-  default OtherPushPermissionDescriptor safe(boolean safe) {
+  default OtherPushPermissionDescriptor safe(final boolean safe) {
     setSafe( safe );
     return this;
   }
@@ -38,7 +38,7 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
   @JsOverlay
   @Nonnull
   @Override
-  default OtherPushPermissionDescriptor userVisibleOnly(boolean userVisibleOnly) {
+  default OtherPushPermissionDescriptor userVisibleOnly(final boolean userVisibleOnly) {
     setUserVisibleOnly( userVisibleOnly );
     return this;
   }
@@ -46,7 +46,7 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
   @JsOverlay
   @Nonnull
   @Override
-  default OtherPushPermissionDescriptor name(@Nonnull String name) {
+  default OtherPushPermissionDescriptor name(@Nonnull final String name) {
     setName( name );
     return this;
   }

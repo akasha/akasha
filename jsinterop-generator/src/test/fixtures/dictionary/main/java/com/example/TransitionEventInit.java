@@ -30,7 +30,7 @@ public interface TransitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default TransitionEventInit elapsedTime(double elapsedTime) {
+  default TransitionEventInit elapsedTime(final double elapsedTime) {
     setElapsedTime( elapsedTime );
     return this;
   }
@@ -43,7 +43,7 @@ public interface TransitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default TransitionEventInit propertyName(@Nonnull String propertyName) {
+  default TransitionEventInit propertyName(@Nonnull final String propertyName) {
     setPropertyName( propertyName );
     return this;
   }
@@ -56,7 +56,7 @@ public interface TransitionEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default TransitionEventInit pseudoElement(@Nonnull String pseudoElement) {
+  default TransitionEventInit pseudoElement(@Nonnull final String pseudoElement) {
     setPseudoElement( pseudoElement );
     return this;
   }
@@ -64,7 +64,7 @@ public interface TransitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default TransitionEventInit bubbles(boolean bubbles) {
+  default TransitionEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
   }
@@ -72,7 +72,7 @@ public interface TransitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default TransitionEventInit cancelable(boolean cancelable) {
+  default TransitionEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
   }
@@ -80,7 +80,7 @@ public interface TransitionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default TransitionEventInit composed(boolean composed) {
+  default TransitionEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;
   }

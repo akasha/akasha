@@ -32,7 +32,7 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default StorageEventInit key(@Nullable String key) {
+  default StorageEventInit key(@Nullable final String key) {
     setKey( key );
     return this;
   }
@@ -46,7 +46,7 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default StorageEventInit newValue(@Nullable String newValue) {
+  default StorageEventInit newValue(@Nullable final String newValue) {
     setNewValue( newValue );
     return this;
   }
@@ -60,7 +60,7 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default StorageEventInit oldValue(@Nullable String oldValue) {
+  default StorageEventInit oldValue(@Nullable final String oldValue) {
     setOldValue( oldValue );
     return this;
   }
@@ -74,7 +74,7 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default StorageEventInit storageArea(@Nullable Storage storageArea) {
+  default StorageEventInit storageArea(@Nullable final Storage storageArea) {
     setStorageArea( storageArea );
     return this;
   }
@@ -87,7 +87,7 @@ public interface StorageEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default StorageEventInit url(@Nonnull String url) {
+  default StorageEventInit url(@Nonnull final String url) {
     setUrl( url );
     return this;
   }
@@ -95,7 +95,7 @@ public interface StorageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default StorageEventInit bubbles(boolean bubbles) {
+  default StorageEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
   }
@@ -103,7 +103,7 @@ public interface StorageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default StorageEventInit cancelable(boolean cancelable) {
+  default StorageEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
   }
@@ -111,7 +111,7 @@ public interface StorageEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default StorageEventInit composed(boolean composed) {
+  default StorageEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;
   }

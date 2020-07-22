@@ -31,7 +31,7 @@ public interface PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default PermissionDescriptor name(@Nonnull String name) {
+  default PermissionDescriptor name(@Nonnull final String name) {
     setName( name );
     return this;
   }

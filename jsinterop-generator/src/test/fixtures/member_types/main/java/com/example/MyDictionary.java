@@ -117,7 +117,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary anyValue(@Nullable Any anyValue) {
+  default MyDictionary anyValue(@Nullable final Any anyValue) {
     setAnyValue( anyValue );
     return this;
   }
@@ -130,7 +130,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary arrayBufferValueValue(@Nonnull ArrayBuffer arrayBufferValueValue) {
+  default MyDictionary arrayBufferValueValue(@Nonnull final ArrayBuffer arrayBufferValueValue) {
     setArrayBufferValueValue( arrayBufferValueValue );
     return this;
   }
@@ -143,7 +143,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary booleanFrozenArrayValue(@Nonnull JsArray<Boolean> booleanFrozenArrayValue) {
+  default MyDictionary booleanFrozenArrayValue(
+      @Nonnull final JsArray<Boolean> booleanFrozenArrayValue) {
     setBooleanFrozenArrayValue( booleanFrozenArrayValue );
     return this;
   }
@@ -156,7 +157,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary booleanSequenceValue(@Nonnull JsArray<Boolean> booleanSequenceValue) {
+  default MyDictionary booleanSequenceValue(@Nonnull final JsArray<Boolean> booleanSequenceValue) {
     setBooleanSequenceValue( booleanSequenceValue );
     return this;
   }
@@ -169,7 +170,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary booleanValue(boolean booleanValue) {
+  default MyDictionary booleanValue(final boolean booleanValue) {
     setBooleanValue( booleanValue );
     return this;
   }
@@ -182,7 +183,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary byteStringRecord(@Nonnull JsPropertyMap<String> byteStringRecord) {
+  default MyDictionary byteStringRecord(@Nonnull final JsPropertyMap<String> byteStringRecord) {
     setByteStringRecord( byteStringRecord );
     return this;
   }
@@ -195,7 +196,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary byteStringValue(@Nonnull String byteStringValue) {
+  default MyDictionary byteStringValue(@Nonnull final String byteStringValue) {
     setByteStringValue( byteStringValue );
     return this;
   }
@@ -208,7 +209,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary byteValue(byte byteValue) {
+  default MyDictionary byteValue(final byte byteValue) {
     setByteValue( byteValue );
     return this;
   }
@@ -221,7 +222,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary dataViewValueValue(@Nonnull DataView dataViewValueValue) {
+  default MyDictionary dataViewValueValue(@Nonnull final DataView dataViewValueValue) {
     setDataViewValueValue( dataViewValueValue );
     return this;
   }
@@ -234,7 +235,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary domStringRecord(@Nonnull JsPropertyMap<String> domStringRecord) {
+  default MyDictionary domStringRecord(@Nonnull final JsPropertyMap<String> domStringRecord) {
     setDomStringRecord( domStringRecord );
     return this;
   }
@@ -247,7 +248,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary domStringValue(@Nonnull String domStringValue) {
+  default MyDictionary domStringValue(@Nonnull final String domStringValue) {
     setDomStringValue( domStringValue );
     return this;
   }
@@ -260,7 +261,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleFrozenArrayValue(@Nonnull JsArray<Double> doubleFrozenArrayValue) {
+  default MyDictionary doubleFrozenArrayValue(
+      @Nonnull final JsArray<Double> doubleFrozenArrayValue) {
     setDoubleFrozenArrayValue( doubleFrozenArrayValue );
     return this;
   }
@@ -273,7 +275,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleRecord(@Nonnull JsPropertyMap<Double> doubleRecord) {
+  default MyDictionary doubleRecord(@Nonnull final JsPropertyMap<Double> doubleRecord) {
     setDoubleRecord( doubleRecord );
     return this;
   }
@@ -286,7 +288,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleSequenceValue(@Nonnull JsArray<Double> doubleSequenceValue) {
+  default MyDictionary doubleSequenceValue(@Nonnull final JsArray<Double> doubleSequenceValue) {
     setDoubleSequenceValue( doubleSequenceValue );
     return this;
   }
@@ -299,7 +301,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleValue(double doubleValue) {
+  default MyDictionary doubleValue(final double doubleValue) {
     setDoubleValue( doubleValue );
     return this;
   }
@@ -312,7 +314,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary float32ArrayValue(@Nonnull Float32Array float32ArrayValue) {
+  default MyDictionary float32ArrayValue(@Nonnull final Float32Array float32ArrayValue) {
     setFloat32ArrayValue( float32ArrayValue );
     return this;
   }
@@ -325,7 +327,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary float64ArrayValue(@Nonnull Float64Array float64ArrayValue) {
+  default MyDictionary float64ArrayValue(@Nonnull final Float64Array float64ArrayValue) {
     setFloat64ArrayValue( float64ArrayValue );
     return this;
   }
@@ -338,7 +340,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary floatFrozenArrayValue(@Nonnull JsArray<Double> floatFrozenArrayValue) {
+  default MyDictionary floatFrozenArrayValue(@Nonnull final JsArray<Double> floatFrozenArrayValue) {
     setFloatFrozenArrayValue( floatFrozenArrayValue );
     return this;
   }
@@ -351,7 +353,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary floatSequenceValue(@Nonnull JsArray<Double> floatSequenceValue) {
+  default MyDictionary floatSequenceValue(@Nonnull final JsArray<Double> floatSequenceValue) {
     setFloatSequenceValue( floatSequenceValue );
     return this;
   }
@@ -364,7 +366,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary floatValue(float floatValue) {
+  default MyDictionary floatValue(final float floatValue) {
     setFloatValue( floatValue );
     return this;
   }
@@ -377,7 +379,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary int16ArrayValue(@Nonnull Int16Array int16ArrayValue) {
+  default MyDictionary int16ArrayValue(@Nonnull final Int16Array int16ArrayValue) {
     setInt16ArrayValue( int16ArrayValue );
     return this;
   }
@@ -390,7 +392,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary int32ArrayValue(@Nonnull Int32Array int32ArrayValue) {
+  default MyDictionary int32ArrayValue(@Nonnull final Int32Array int32ArrayValue) {
     setInt32ArrayValue( int32ArrayValue );
     return this;
   }
@@ -403,7 +405,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary int8ArrayValue(@Nonnull Int8Array int8ArrayValue) {
+  default MyDictionary int8ArrayValue(@Nonnull final Int8Array int8ArrayValue) {
     setInt8ArrayValue( int8ArrayValue );
     return this;
   }
@@ -416,7 +418,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary longLongValue(int longLongValue) {
+  default MyDictionary longLongValue(final int longLongValue) {
     setLongLongValue( longLongValue );
     return this;
   }
@@ -429,7 +431,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary longValue(int longValue) {
+  default MyDictionary longValue(final int longValue) {
     setLongValue( longValue );
     return this;
   }
@@ -442,7 +444,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary mixedStringRecord(@Nonnull JsPropertyMap<String> mixedStringRecord) {
+  default MyDictionary mixedStringRecord(@Nonnull final JsPropertyMap<String> mixedStringRecord) {
     setMixedStringRecord( mixedStringRecord );
     return this;
   }
@@ -457,7 +459,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableArrayBufferValueValue(
-      @Nullable ArrayBuffer nullableArrayBufferValueValue) {
+      @Nullable final ArrayBuffer nullableArrayBufferValueValue) {
     setNullableArrayBufferValueValue( nullableArrayBufferValueValue );
     return this;
   }
@@ -473,7 +475,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableBooleanFrozenArrayValue(
-      @Nullable JsArray<Boolean> nullableBooleanFrozenArrayValue) {
+      @Nullable final JsArray<Boolean> nullableBooleanFrozenArrayValue) {
     setNullableBooleanFrozenArrayValue( nullableBooleanFrozenArrayValue );
     return this;
   }
@@ -488,7 +490,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableBooleanSequenceValue(
-      @Nullable JsArray<Boolean> nullableBooleanSequenceValue) {
+      @Nullable final JsArray<Boolean> nullableBooleanSequenceValue) {
     setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
     return this;
   }
@@ -502,7 +504,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableBooleanValue(@Nullable Boolean nullableBooleanValue) {
+  default MyDictionary nullableBooleanValue(@Nullable final Boolean nullableBooleanValue) {
     setNullableBooleanValue( nullableBooleanValue );
     return this;
   }
@@ -516,7 +518,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableByteStringValue(@Nullable String nullableByteStringValue) {
+  default MyDictionary nullableByteStringValue(@Nullable final String nullableByteStringValue) {
     setNullableByteStringValue( nullableByteStringValue );
     return this;
   }
@@ -530,7 +532,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableByteValue(@Nullable Double nullableByteValue) {
+  default MyDictionary nullableByteValue(@Nullable final Double nullableByteValue) {
     setNullableByteValue( nullableByteValue );
     return this;
   }
@@ -544,7 +546,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableDOMStringValue(@Nullable String nullableDOMStringValue) {
+  default MyDictionary nullableDOMStringValue(@Nullable final String nullableDOMStringValue) {
     setNullableDOMStringValue( nullableDOMStringValue );
     return this;
   }
@@ -558,7 +560,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableDataViewValueValue(@Nullable DataView nullableDataViewValueValue) {
+  default MyDictionary nullableDataViewValueValue(
+      @Nullable final DataView nullableDataViewValueValue) {
     setNullableDataViewValueValue( nullableDataViewValueValue );
     return this;
   }
@@ -573,7 +576,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableDoubleFrozenArrayValue(
-      @Nullable JsArray<Double> nullableDoubleFrozenArrayValue) {
+      @Nullable final JsArray<Double> nullableDoubleFrozenArrayValue) {
     setNullableDoubleFrozenArrayValue( nullableDoubleFrozenArrayValue );
     return this;
   }
@@ -588,7 +591,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableDoubleSequenceValue(
-      @Nullable JsArray<Double> nullableDoubleSequenceValue) {
+      @Nullable final JsArray<Double> nullableDoubleSequenceValue) {
     setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
     return this;
   }
@@ -602,7 +605,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableDoubleValue(@Nullable Double nullableDoubleValue) {
+  default MyDictionary nullableDoubleValue(@Nullable final Double nullableDoubleValue) {
     setNullableDoubleValue( nullableDoubleValue );
     return this;
   }
@@ -616,7 +619,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableFloat32ArrayValue(@Nullable Float32Array nullableFloat32ArrayValue) {
+  default MyDictionary nullableFloat32ArrayValue(
+      @Nullable final Float32Array nullableFloat32ArrayValue) {
     setNullableFloat32ArrayValue( nullableFloat32ArrayValue );
     return this;
   }
@@ -630,7 +634,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableFloat64ArrayValue(@Nullable Float64Array nullableFloat64ArrayValue) {
+  default MyDictionary nullableFloat64ArrayValue(
+      @Nullable final Float64Array nullableFloat64ArrayValue) {
     setNullableFloat64ArrayValue( nullableFloat64ArrayValue );
     return this;
   }
@@ -645,7 +650,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableFloatFrozenArrayValue(
-      @Nullable JsArray<Double> nullableFloatFrozenArrayValue) {
+      @Nullable final JsArray<Double> nullableFloatFrozenArrayValue) {
     setNullableFloatFrozenArrayValue( nullableFloatFrozenArrayValue );
     return this;
   }
@@ -660,7 +665,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableFloatSequenceValue(
-      @Nullable JsArray<Double> nullableFloatSequenceValue) {
+      @Nullable final JsArray<Double> nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( nullableFloatSequenceValue );
     return this;
   }
@@ -674,7 +679,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableFloatValue(@Nullable Double nullableFloatValue) {
+  default MyDictionary nullableFloatValue(@Nullable final Double nullableFloatValue) {
     setNullableFloatValue( nullableFloatValue );
     return this;
   }
@@ -688,7 +693,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableInt16ArrayValue(@Nullable Int16Array nullableInt16ArrayValue) {
+  default MyDictionary nullableInt16ArrayValue(@Nullable final Int16Array nullableInt16ArrayValue) {
     setNullableInt16ArrayValue( nullableInt16ArrayValue );
     return this;
   }
@@ -702,7 +707,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableInt32ArrayValue(@Nullable Int32Array nullableInt32ArrayValue) {
+  default MyDictionary nullableInt32ArrayValue(@Nullable final Int32Array nullableInt32ArrayValue) {
     setNullableInt32ArrayValue( nullableInt32ArrayValue );
     return this;
   }
@@ -716,7 +721,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableInt8ArrayValue(@Nullable Int8Array nullableInt8ArrayValue) {
+  default MyDictionary nullableInt8ArrayValue(@Nullable final Int8Array nullableInt8ArrayValue) {
     setNullableInt8ArrayValue( nullableInt8ArrayValue );
     return this;
   }
@@ -730,7 +735,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableLongLongValue(@Nullable Double nullableLongLongValue) {
+  default MyDictionary nullableLongLongValue(@Nullable final Double nullableLongLongValue) {
     setNullableLongLongValue( nullableLongLongValue );
     return this;
   }
@@ -744,7 +749,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableLongValue(@Nullable Double nullableLongValue) {
+  default MyDictionary nullableLongValue(@Nullable final Double nullableLongValue) {
     setNullableLongValue( nullableLongValue );
     return this;
   }
@@ -758,7 +763,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableObjectValue(@Nullable Object nullableObjectValue) {
+  default MyDictionary nullableObjectValue(@Nullable final Object nullableObjectValue) {
     setNullableObjectValue( nullableObjectValue );
     return this;
   }
@@ -772,7 +777,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableOctetValue(@Nullable Double nullableOctetValue) {
+  default MyDictionary nullableOctetValue(@Nullable final Double nullableOctetValue) {
     setNullableOctetValue( nullableOctetValue );
     return this;
   }
@@ -787,7 +792,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableShortFrozenArrayValue(
-      @Nullable JsArray<Double> nullableShortFrozenArrayValue) {
+      @Nullable final JsArray<Double> nullableShortFrozenArrayValue) {
     setNullableShortFrozenArrayValue( nullableShortFrozenArrayValue );
     return this;
   }
@@ -801,7 +806,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableShortPromiseValue(
-      @Nonnull Promise<Double> nullableShortPromiseValue) {
+      @Nonnull final Promise<Double> nullableShortPromiseValue) {
     setNullableShortPromiseValue( nullableShortPromiseValue );
     return this;
   }
@@ -816,7 +821,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableShortSequenceValue(
-      @Nullable JsArray<Double> nullableShortSequenceValue) {
+      @Nullable final JsArray<Double> nullableShortSequenceValue) {
     setNullableShortSequenceValue( nullableShortSequenceValue );
     return this;
   }
@@ -830,7 +835,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableShortValue(@Nullable Double nullableShortValue) {
+  default MyDictionary nullableShortValue(@Nullable final Double nullableShortValue) {
     setNullableShortValue( nullableShortValue );
     return this;
   }
@@ -846,7 +851,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableSomeTypeFrozenArrayValue(
-      @Nullable JsArray<SomeType> nullableSomeTypeFrozenArrayValue) {
+      @Nullable final JsArray<SomeType> nullableSomeTypeFrozenArrayValue) {
     setNullableSomeTypeFrozenArrayValue( nullableSomeTypeFrozenArrayValue );
     return this;
   }
@@ -860,7 +865,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableSomeTypePromiseValue(
-      @Nonnull Promise<SomeType> nullableSomeTypePromiseValue) {
+      @Nonnull final Promise<SomeType> nullableSomeTypePromiseValue) {
     setNullableSomeTypePromiseValue( nullableSomeTypePromiseValue );
     return this;
   }
@@ -875,7 +880,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableSomeTypeSequenceValue(
-      @Nullable JsArray<SomeType> nullableSomeTypeSequenceValue) {
+      @Nullable final JsArray<SomeType> nullableSomeTypeSequenceValue) {
     setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
     return this;
   }
@@ -889,7 +894,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableSomeTypeValue(@Nullable SomeType nullableSomeTypeValue) {
+  default MyDictionary nullableSomeTypeValue(@Nullable final SomeType nullableSomeTypeValue) {
     setNullableSomeTypeValue( nullableSomeTypeValue );
     return this;
   }
@@ -903,7 +908,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableSymbolValue(@Nullable Symbol nullableSymbolValue) {
+  default MyDictionary nullableSymbolValue(@Nullable final Symbol nullableSymbolValue) {
     setNullableSymbolValue( nullableSymbolValue );
     return this;
   }
@@ -917,7 +922,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUSVStringValue(@Nullable String nullableUSVStringValue) {
+  default MyDictionary nullableUSVStringValue(@Nullable final String nullableUSVStringValue) {
     setNullableUSVStringValue( nullableUSVStringValue );
     return this;
   }
@@ -931,7 +936,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUint16ArrayValue(@Nullable Uint16Array nullableUint16ArrayValue) {
+  default MyDictionary nullableUint16ArrayValue(
+      @Nullable final Uint16Array nullableUint16ArrayValue) {
     setNullableUint16ArrayValue( nullableUint16ArrayValue );
     return this;
   }
@@ -945,7 +951,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUint32ArrayValue(@Nullable Uint32Array nullableUint32ArrayValue) {
+  default MyDictionary nullableUint32ArrayValue(
+      @Nullable final Uint32Array nullableUint32ArrayValue) {
     setNullableUint32ArrayValue( nullableUint32ArrayValue );
     return this;
   }
@@ -959,7 +966,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUint8ArrayValue(@Nullable Uint8Array nullableUint8ArrayValue) {
+  default MyDictionary nullableUint8ArrayValue(@Nullable final Uint8Array nullableUint8ArrayValue) {
     setNullableUint8ArrayValue( nullableUint8ArrayValue );
     return this;
   }
@@ -975,7 +982,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableUint8ClampedArrayValue(
-      @Nullable Uint8ClampedArray nullableUint8ClampedArrayValue) {
+      @Nullable final Uint8ClampedArray nullableUint8ClampedArrayValue) {
     setNullableUint8ClampedArrayValue( nullableUint8ClampedArrayValue );
     return this;
   }
@@ -990,7 +997,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableUnrestrictedDoubleValue(
-      @Nullable Double nullableUnrestrictedDoubleValue) {
+      @Nullable final Double nullableUnrestrictedDoubleValue) {
     setNullableUnrestrictedDoubleValue( nullableUnrestrictedDoubleValue );
     return this;
   }
@@ -1005,7 +1012,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableUnrestrictedFloatValue(
-      @Nullable Double nullableUnrestrictedFloatValue) {
+      @Nullable final Double nullableUnrestrictedFloatValue) {
     setNullableUnrestrictedFloatValue( nullableUnrestrictedFloatValue );
     return this;
   }
@@ -1020,7 +1027,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary nullableUnsignedLongLongValue(
-      @Nullable Double nullableUnsignedLongLongValue) {
+      @Nullable final Double nullableUnsignedLongLongValue) {
     setNullableUnsignedLongLongValue( nullableUnsignedLongLongValue );
     return this;
   }
@@ -1034,7 +1041,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUnsignedLongValue(@Nullable int nullableUnsignedLongValue) {
+  default MyDictionary nullableUnsignedLongValue(
+      @Nullable final Integer nullableUnsignedLongValue) {
     setNullableUnsignedLongValue( nullableUnsignedLongValue );
     return this;
   }
@@ -1048,7 +1056,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUnsignedShortValue(@Nullable Double nullableUnsignedShortValue) {
+  default MyDictionary nullableUnsignedShortValue(
+      @Nullable final Double nullableUnsignedShortValue) {
     setNullableUnsignedShortValue( nullableUnsignedShortValue );
     return this;
   }
@@ -1061,7 +1070,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary objectValue(@Nonnull Object objectValue) {
+  default MyDictionary objectValue(@Nonnull final Object objectValue) {
     setObjectValue( objectValue );
     return this;
   }
@@ -1074,7 +1083,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary octetValue(short octetValue) {
+  default MyDictionary octetValue(final short octetValue) {
     setOctetValue( octetValue );
     return this;
   }
@@ -1088,7 +1097,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredAnyValue(@Nullable Any requiredAnyValue) {
+  default MyDictionary requiredAnyValue(@Nullable final Any requiredAnyValue) {
     setRequiredAnyValue( requiredAnyValue );
     return this;
   }
@@ -1103,7 +1112,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredArrayBufferValueValue(
-      @Nonnull ArrayBuffer requiredArrayBufferValueValue) {
+      @Nonnull final ArrayBuffer requiredArrayBufferValueValue) {
     setRequiredArrayBufferValueValue( requiredArrayBufferValueValue );
     return this;
   }
@@ -1119,7 +1128,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredBooleanFrozenArrayValue(
-      @Nonnull JsArray<Boolean> requiredBooleanFrozenArrayValue) {
+      @Nonnull final JsArray<Boolean> requiredBooleanFrozenArrayValue) {
     setRequiredBooleanFrozenArrayValue( requiredBooleanFrozenArrayValue );
     return this;
   }
@@ -1134,7 +1143,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredBooleanSequenceValue(
-      @Nonnull JsArray<Boolean> requiredBooleanSequenceValue) {
+      @Nonnull final JsArray<Boolean> requiredBooleanSequenceValue) {
     setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
     return this;
   }
@@ -1147,7 +1156,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredBooleanValue(boolean requiredBooleanValue) {
+  default MyDictionary requiredBooleanValue(final boolean requiredBooleanValue) {
     setRequiredBooleanValue( requiredBooleanValue );
     return this;
   }
@@ -1161,7 +1170,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredByteStringValue(@Nonnull String requiredByteStringValue) {
+  default MyDictionary requiredByteStringValue(@Nonnull final String requiredByteStringValue) {
     setRequiredByteStringValue( requiredByteStringValue );
     return this;
   }
@@ -1174,7 +1183,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredByteValue(byte requiredByteValue) {
+  default MyDictionary requiredByteValue(final byte requiredByteValue) {
     setRequiredByteValue( requiredByteValue );
     return this;
   }
@@ -1188,7 +1197,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredDOMStringValue(@Nonnull String requiredDOMStringValue) {
+  default MyDictionary requiredDOMStringValue(@Nonnull final String requiredDOMStringValue) {
     setRequiredDOMStringValue( requiredDOMStringValue );
     return this;
   }
@@ -1202,7 +1211,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredDataViewValueValue(@Nonnull DataView requiredDataViewValueValue) {
+  default MyDictionary requiredDataViewValueValue(
+      @Nonnull final DataView requiredDataViewValueValue) {
     setRequiredDataViewValueValue( requiredDataViewValueValue );
     return this;
   }
@@ -1217,7 +1227,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredDoubleFrozenArrayValue(
-      @Nonnull JsArray<Double> requiredDoubleFrozenArrayValue) {
+      @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
     setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
     return this;
   }
@@ -1232,7 +1242,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredDoubleSequenceValue(
-      @Nonnull JsArray<Double> requiredDoubleSequenceValue) {
+      @Nonnull final JsArray<Double> requiredDoubleSequenceValue) {
     setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
     return this;
   }
@@ -1245,7 +1255,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredDoubleValue(double requiredDoubleValue) {
+  default MyDictionary requiredDoubleValue(final double requiredDoubleValue) {
     setRequiredDoubleValue( requiredDoubleValue );
     return this;
   }
@@ -1259,7 +1269,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredFloat32ArrayValue(@Nonnull Float32Array requiredFloat32ArrayValue) {
+  default MyDictionary requiredFloat32ArrayValue(
+      @Nonnull final Float32Array requiredFloat32ArrayValue) {
     setRequiredFloat32ArrayValue( requiredFloat32ArrayValue );
     return this;
   }
@@ -1273,7 +1284,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredFloat64ArrayValue(@Nonnull Float64Array requiredFloat64ArrayValue) {
+  default MyDictionary requiredFloat64ArrayValue(
+      @Nonnull final Float64Array requiredFloat64ArrayValue) {
     setRequiredFloat64ArrayValue( requiredFloat64ArrayValue );
     return this;
   }
@@ -1288,7 +1300,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredFloatFrozenArrayValue(
-      @Nonnull JsArray<Double> requiredFloatFrozenArrayValue) {
+      @Nonnull final JsArray<Double> requiredFloatFrozenArrayValue) {
     setRequiredFloatFrozenArrayValue( requiredFloatFrozenArrayValue );
     return this;
   }
@@ -1303,7 +1315,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredFloatSequenceValue(
-      @Nonnull JsArray<Double> requiredFloatSequenceValue) {
+      @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( requiredFloatSequenceValue );
     return this;
   }
@@ -1316,7 +1328,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredFloatValue(float requiredFloatValue) {
+  default MyDictionary requiredFloatValue(final float requiredFloatValue) {
     setRequiredFloatValue( requiredFloatValue );
     return this;
   }
@@ -1330,7 +1342,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredInt16ArrayValue(@Nonnull Int16Array requiredInt16ArrayValue) {
+  default MyDictionary requiredInt16ArrayValue(@Nonnull final Int16Array requiredInt16ArrayValue) {
     setRequiredInt16ArrayValue( requiredInt16ArrayValue );
     return this;
   }
@@ -1344,7 +1356,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredInt32ArrayValue(@Nonnull Int32Array requiredInt32ArrayValue) {
+  default MyDictionary requiredInt32ArrayValue(@Nonnull final Int32Array requiredInt32ArrayValue) {
     setRequiredInt32ArrayValue( requiredInt32ArrayValue );
     return this;
   }
@@ -1358,7 +1370,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredInt8ArrayValue(@Nonnull Int8Array requiredInt8ArrayValue) {
+  default MyDictionary requiredInt8ArrayValue(@Nonnull final Int8Array requiredInt8ArrayValue) {
     setRequiredInt8ArrayValue( requiredInt8ArrayValue );
     return this;
   }
@@ -1371,7 +1383,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredLongLongValue(int requiredLongLongValue) {
+  default MyDictionary requiredLongLongValue(final int requiredLongLongValue) {
     setRequiredLongLongValue( requiredLongLongValue );
     return this;
   }
@@ -1384,7 +1396,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredLongValue(int requiredLongValue) {
+  default MyDictionary requiredLongValue(final int requiredLongValue) {
     setRequiredLongValue( requiredLongValue );
     return this;
   }
@@ -1400,7 +1412,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableArrayBufferValueValue(
-      @Nullable ArrayBuffer requiredNullableArrayBufferValueValue) {
+      @Nullable final ArrayBuffer requiredNullableArrayBufferValueValue) {
     setRequiredNullableArrayBufferValueValue( requiredNullableArrayBufferValueValue );
     return this;
   }
@@ -1416,7 +1428,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableBooleanFrozenArrayValue(
-      @Nullable JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
+      @Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
     setRequiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
     return this;
   }
@@ -1432,7 +1444,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableBooleanSequenceValue(
-      @Nullable JsArray<Boolean> requiredNullableBooleanSequenceValue) {
+      @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
     setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
     return this;
   }
@@ -1447,7 +1459,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableBooleanValue(
-      @Nullable Boolean requiredNullableBooleanValue) {
+      @Nullable final Boolean requiredNullableBooleanValue) {
     setRequiredNullableBooleanValue( requiredNullableBooleanValue );
     return this;
   }
@@ -1462,7 +1474,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableByteStringValue(
-      @Nullable String requiredNullableByteStringValue) {
+      @Nullable final String requiredNullableByteStringValue) {
     setRequiredNullableByteStringValue( requiredNullableByteStringValue );
     return this;
   }
@@ -1476,7 +1488,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableByteValue(@Nullable Double requiredNullableByteValue) {
+  default MyDictionary requiredNullableByteValue(@Nullable final Double requiredNullableByteValue) {
     setRequiredNullableByteValue( requiredNullableByteValue );
     return this;
   }
@@ -1491,7 +1503,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableDOMStringValue(
-      @Nullable String requiredNullableDOMStringValue) {
+      @Nullable final String requiredNullableDOMStringValue) {
     setRequiredNullableDOMStringValue( requiredNullableDOMStringValue );
     return this;
   }
@@ -1506,7 +1518,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableDataViewValueValue(
-      @Nullable DataView requiredNullableDataViewValueValue) {
+      @Nullable final DataView requiredNullableDataViewValueValue) {
     setRequiredNullableDataViewValueValue( requiredNullableDataViewValueValue );
     return this;
   }
@@ -1522,7 +1534,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableDoubleFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableDoubleFrozenArrayValue) {
+      @Nullable final JsArray<Double> requiredNullableDoubleFrozenArrayValue) {
     setRequiredNullableDoubleFrozenArrayValue( requiredNullableDoubleFrozenArrayValue );
     return this;
   }
@@ -1538,7 +1550,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableDoubleSequenceValue(
-      @Nullable JsArray<Double> requiredNullableDoubleSequenceValue) {
+      @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
     setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
     return this;
   }
@@ -1552,7 +1564,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableDoubleValue(@Nullable Double requiredNullableDoubleValue) {
+  default MyDictionary requiredNullableDoubleValue(
+      @Nullable final Double requiredNullableDoubleValue) {
     setRequiredNullableDoubleValue( requiredNullableDoubleValue );
     return this;
   }
@@ -1568,7 +1581,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableFloat32ArrayValue(
-      @Nullable Float32Array requiredNullableFloat32ArrayValue) {
+      @Nullable final Float32Array requiredNullableFloat32ArrayValue) {
     setRequiredNullableFloat32ArrayValue( requiredNullableFloat32ArrayValue );
     return this;
   }
@@ -1584,7 +1597,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableFloat64ArrayValue(
-      @Nullable Float64Array requiredNullableFloat64ArrayValue) {
+      @Nullable final Float64Array requiredNullableFloat64ArrayValue) {
     setRequiredNullableFloat64ArrayValue( requiredNullableFloat64ArrayValue );
     return this;
   }
@@ -1600,7 +1613,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableFloatFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableFloatFrozenArrayValue) {
+      @Nullable final JsArray<Double> requiredNullableFloatFrozenArrayValue) {
     setRequiredNullableFloatFrozenArrayValue( requiredNullableFloatFrozenArrayValue );
     return this;
   }
@@ -1616,7 +1629,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableFloatSequenceValue(
-      @Nullable JsArray<Double> requiredNullableFloatSequenceValue) {
+      @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
     setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
     return this;
   }
@@ -1630,7 +1643,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableFloatValue(@Nullable Double requiredNullableFloatValue) {
+  default MyDictionary requiredNullableFloatValue(
+      @Nullable final Double requiredNullableFloatValue) {
     setRequiredNullableFloatValue( requiredNullableFloatValue );
     return this;
   }
@@ -1645,7 +1659,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableInt16ArrayValue(
-      @Nullable Int16Array requiredNullableInt16ArrayValue) {
+      @Nullable final Int16Array requiredNullableInt16ArrayValue) {
     setRequiredNullableInt16ArrayValue( requiredNullableInt16ArrayValue );
     return this;
   }
@@ -1660,7 +1674,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableInt32ArrayValue(
-      @Nullable Int32Array requiredNullableInt32ArrayValue) {
+      @Nullable final Int32Array requiredNullableInt32ArrayValue) {
     setRequiredNullableInt32ArrayValue( requiredNullableInt32ArrayValue );
     return this;
   }
@@ -1675,7 +1689,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableInt8ArrayValue(
-      @Nullable Int8Array requiredNullableInt8ArrayValue) {
+      @Nullable final Int8Array requiredNullableInt8ArrayValue) {
     setRequiredNullableInt8ArrayValue( requiredNullableInt8ArrayValue );
     return this;
   }
@@ -1690,7 +1704,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableLongLongValue(
-      @Nullable Double requiredNullableLongLongValue) {
+      @Nullable final Double requiredNullableLongLongValue) {
     setRequiredNullableLongLongValue( requiredNullableLongLongValue );
     return this;
   }
@@ -1704,7 +1718,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableLongValue(@Nullable Double requiredNullableLongValue) {
+  default MyDictionary requiredNullableLongValue(@Nullable final Double requiredNullableLongValue) {
     setRequiredNullableLongValue( requiredNullableLongValue );
     return this;
   }
@@ -1718,7 +1732,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableObjectValue(@Nullable Object requiredNullableObjectValue) {
+  default MyDictionary requiredNullableObjectValue(
+      @Nullable final Object requiredNullableObjectValue) {
     setRequiredNullableObjectValue( requiredNullableObjectValue );
     return this;
   }
@@ -1732,7 +1747,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableOctetValue(@Nullable Double requiredNullableOctetValue) {
+  default MyDictionary requiredNullableOctetValue(
+      @Nullable final Double requiredNullableOctetValue) {
     setRequiredNullableOctetValue( requiredNullableOctetValue );
     return this;
   }
@@ -1748,7 +1764,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableShortFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableShortFrozenArrayValue) {
+      @Nullable final JsArray<Double> requiredNullableShortFrozenArrayValue) {
     setRequiredNullableShortFrozenArrayValue( requiredNullableShortFrozenArrayValue );
     return this;
   }
@@ -1764,7 +1780,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableShortSequenceValue(
-      @Nullable JsArray<Double> requiredNullableShortSequenceValue) {
+      @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
     setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
     return this;
   }
@@ -1778,7 +1794,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableShortValue(@Nullable Double requiredNullableShortValue) {
+  default MyDictionary requiredNullableShortValue(
+      @Nullable final Double requiredNullableShortValue) {
     setRequiredNullableShortValue( requiredNullableShortValue );
     return this;
   }
@@ -1794,7 +1811,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableSomeTypeFrozenArrayValue(
-      @Nullable JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
+      @Nullable final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
     setRequiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
     return this;
   }
@@ -1810,7 +1827,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableSomeTypeSequenceValue(
-      @Nullable JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
+      @Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
     setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
     return this;
   }
@@ -1825,7 +1842,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableSomeTypeValue(
-      @Nullable SomeType requiredNullableSomeTypeValue) {
+      @Nullable final SomeType requiredNullableSomeTypeValue) {
     setRequiredNullableSomeTypeValue( requiredNullableSomeTypeValue );
     return this;
   }
@@ -1839,7 +1856,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredNullableSymbolValue(@Nullable Symbol requiredNullableSymbolValue) {
+  default MyDictionary requiredNullableSymbolValue(
+      @Nullable final Symbol requiredNullableSymbolValue) {
     setRequiredNullableSymbolValue( requiredNullableSymbolValue );
     return this;
   }
@@ -1854,7 +1872,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUSVStringValue(
-      @Nullable String requiredNullableUSVStringValue) {
+      @Nullable final String requiredNullableUSVStringValue) {
     setRequiredNullableUSVStringValue( requiredNullableUSVStringValue );
     return this;
   }
@@ -1869,7 +1887,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUint16ArrayValue(
-      @Nullable Uint16Array requiredNullableUint16ArrayValue) {
+      @Nullable final Uint16Array requiredNullableUint16ArrayValue) {
     setRequiredNullableUint16ArrayValue( requiredNullableUint16ArrayValue );
     return this;
   }
@@ -1884,7 +1902,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUint32ArrayValue(
-      @Nullable Uint32Array requiredNullableUint32ArrayValue) {
+      @Nullable final Uint32Array requiredNullableUint32ArrayValue) {
     setRequiredNullableUint32ArrayValue( requiredNullableUint32ArrayValue );
     return this;
   }
@@ -1899,7 +1917,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUint8ArrayValue(
-      @Nullable Uint8Array requiredNullableUint8ArrayValue) {
+      @Nullable final Uint8Array requiredNullableUint8ArrayValue) {
     setRequiredNullableUint8ArrayValue( requiredNullableUint8ArrayValue );
     return this;
   }
@@ -1915,7 +1933,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUint8ClampedArrayValue(
-      @Nullable Uint8ClampedArray requiredNullableUint8ClampedArrayValue) {
+      @Nullable final Uint8ClampedArray requiredNullableUint8ClampedArrayValue) {
     setRequiredNullableUint8ClampedArrayValue( requiredNullableUint8ClampedArrayValue );
     return this;
   }
@@ -1931,7 +1949,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUnrestrictedDoubleValue(
-      @Nullable Double requiredNullableUnrestrictedDoubleValue) {
+      @Nullable final Double requiredNullableUnrestrictedDoubleValue) {
     setRequiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
     return this;
   }
@@ -1947,7 +1965,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUnrestrictedFloatValue(
-      @Nullable Double requiredNullableUnrestrictedFloatValue) {
+      @Nullable final Double requiredNullableUnrestrictedFloatValue) {
     setRequiredNullableUnrestrictedFloatValue( requiredNullableUnrestrictedFloatValue );
     return this;
   }
@@ -1963,7 +1981,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUnsignedLongLongValue(
-      @Nullable Double requiredNullableUnsignedLongLongValue) {
+      @Nullable final Double requiredNullableUnsignedLongLongValue) {
     setRequiredNullableUnsignedLongLongValue( requiredNullableUnsignedLongLongValue );
     return this;
   }
@@ -1978,7 +1996,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUnsignedLongValue(
-      @Nullable int requiredNullableUnsignedLongValue) {
+      @Nullable final Integer requiredNullableUnsignedLongValue) {
     setRequiredNullableUnsignedLongValue( requiredNullableUnsignedLongValue );
     return this;
   }
@@ -1993,7 +2011,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUnsignedShortValue(
-      @Nullable Double requiredNullableUnsignedShortValue) {
+      @Nullable final Double requiredNullableUnsignedShortValue) {
     setRequiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
     return this;
   }
@@ -2007,7 +2025,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredObjectValue(@Nonnull Object requiredObjectValue) {
+  default MyDictionary requiredObjectValue(@Nonnull final Object requiredObjectValue) {
     setRequiredObjectValue( requiredObjectValue );
     return this;
   }
@@ -2020,7 +2038,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredOctetValue(short requiredOctetValue) {
+  default MyDictionary requiredOctetValue(final short requiredOctetValue) {
     setRequiredOctetValue( requiredOctetValue );
     return this;
   }
@@ -2035,7 +2053,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredShortFrozenArrayValue(
-      @Nonnull JsArray<Double> requiredShortFrozenArrayValue) {
+      @Nonnull final JsArray<Double> requiredShortFrozenArrayValue) {
     setRequiredShortFrozenArrayValue( requiredShortFrozenArrayValue );
     return this;
   }
@@ -2050,7 +2068,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredShortSequenceValue(
-      @Nonnull JsArray<Double> requiredShortSequenceValue) {
+      @Nonnull final JsArray<Double> requiredShortSequenceValue) {
     setRequiredShortSequenceValue( requiredShortSequenceValue );
     return this;
   }
@@ -2063,7 +2081,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredShortValue(short requiredShortValue) {
+  default MyDictionary requiredShortValue(final short requiredShortValue) {
     setRequiredShortValue( requiredShortValue );
     return this;
   }
@@ -2079,7 +2097,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredSomeTypeFrozenArrayValue(
-      @Nonnull JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
+      @Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
     setRequiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
     return this;
   }
@@ -2094,7 +2112,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredSomeTypeSequenceValue(
-      @Nonnull JsArray<SomeType> requiredSomeTypeSequenceValue) {
+      @Nonnull final JsArray<SomeType> requiredSomeTypeSequenceValue) {
     setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
     return this;
   }
@@ -2108,7 +2126,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredSomeTypeValue(@Nonnull SomeType requiredSomeTypeValue) {
+  default MyDictionary requiredSomeTypeValue(@Nonnull final SomeType requiredSomeTypeValue) {
     setRequiredSomeTypeValue( requiredSomeTypeValue );
     return this;
   }
@@ -2122,7 +2140,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredSymbolValue(@Nonnull Symbol requiredSymbolValue) {
+  default MyDictionary requiredSymbolValue(@Nonnull final Symbol requiredSymbolValue) {
     setRequiredSymbolValue( requiredSymbolValue );
     return this;
   }
@@ -2136,7 +2154,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUSVStringValue(@Nonnull String requiredUSVStringValue) {
+  default MyDictionary requiredUSVStringValue(@Nonnull final String requiredUSVStringValue) {
     setRequiredUSVStringValue( requiredUSVStringValue );
     return this;
   }
@@ -2150,7 +2168,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUint16ArrayValue(@Nonnull Uint16Array requiredUint16ArrayValue) {
+  default MyDictionary requiredUint16ArrayValue(
+      @Nonnull final Uint16Array requiredUint16ArrayValue) {
     setRequiredUint16ArrayValue( requiredUint16ArrayValue );
     return this;
   }
@@ -2164,7 +2183,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUint32ArrayValue(@Nonnull Uint32Array requiredUint32ArrayValue) {
+  default MyDictionary requiredUint32ArrayValue(
+      @Nonnull final Uint32Array requiredUint32ArrayValue) {
     setRequiredUint32ArrayValue( requiredUint32ArrayValue );
     return this;
   }
@@ -2178,7 +2198,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUint8ArrayValue(@Nonnull Uint8Array requiredUint8ArrayValue) {
+  default MyDictionary requiredUint8ArrayValue(@Nonnull final Uint8Array requiredUint8ArrayValue) {
     setRequiredUint8ArrayValue( requiredUint8ArrayValue );
     return this;
   }
@@ -2193,7 +2213,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary requiredUint8ClampedArrayValue(
-      @Nonnull Uint8ClampedArray requiredUint8ClampedArrayValue) {
+      @Nonnull final Uint8ClampedArray requiredUint8ClampedArrayValue) {
     setRequiredUint8ClampedArrayValue( requiredUint8ClampedArrayValue );
     return this;
   }
@@ -2206,7 +2226,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUnrestrictedDoubleValue(double requiredUnrestrictedDoubleValue) {
+  default MyDictionary requiredUnrestrictedDoubleValue(
+      final double requiredUnrestrictedDoubleValue) {
     setRequiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
     return this;
   }
@@ -2219,7 +2240,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUnrestrictedFloatValue(float requiredUnrestrictedFloatValue) {
+  default MyDictionary requiredUnrestrictedFloatValue(final float requiredUnrestrictedFloatValue) {
     setRequiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
     return this;
   }
@@ -2232,7 +2253,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUnsignedLongLongValue(int requiredUnsignedLongLongValue) {
+  default MyDictionary requiredUnsignedLongLongValue(final int requiredUnsignedLongLongValue) {
     setRequiredUnsignedLongLongValue( requiredUnsignedLongLongValue );
     return this;
   }
@@ -2245,7 +2266,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUnsignedLongValue(int requiredUnsignedLongValue) {
+  default MyDictionary requiredUnsignedLongValue(final int requiredUnsignedLongValue) {
     setRequiredUnsignedLongValue( requiredUnsignedLongValue );
     return this;
   }
@@ -2258,7 +2279,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary requiredUnsignedShortValue(int requiredUnsignedShortValue) {
+  default MyDictionary requiredUnsignedShortValue(final int requiredUnsignedShortValue) {
     setRequiredUnsignedShortValue( requiredUnsignedShortValue );
     return this;
   }
@@ -2272,7 +2293,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary sequencePromiseValue(
-      @Nonnull Promise<JsArray<Double>> sequencePromiseValue) {
+      @Nonnull final Promise<JsArray<Double>> sequencePromiseValue) {
     setSequencePromiseValue( sequencePromiseValue );
     return this;
   }
@@ -2285,7 +2306,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortFrozenArrayValue(@Nonnull JsArray<Double> shortFrozenArrayValue) {
+  default MyDictionary shortFrozenArrayValue(@Nonnull final JsArray<Double> shortFrozenArrayValue) {
     setShortFrozenArrayValue( shortFrozenArrayValue );
     return this;
   }
@@ -2298,7 +2319,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortPromiseValue(@Nonnull Promise<Double> shortPromiseValue) {
+  default MyDictionary shortPromiseValue(@Nonnull final Promise<Double> shortPromiseValue) {
     setShortPromiseValue( shortPromiseValue );
     return this;
   }
@@ -2311,7 +2332,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortSequenceValue(@Nonnull JsArray<Double> shortSequenceValue) {
+  default MyDictionary shortSequenceValue(@Nonnull final JsArray<Double> shortSequenceValue) {
     setShortSequenceValue( shortSequenceValue );
     return this;
   }
@@ -2324,7 +2345,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortValue(short shortValue) {
+  default MyDictionary shortValue(final short shortValue) {
     setShortValue( shortValue );
     return this;
   }
@@ -2338,7 +2359,7 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary someTypeFrozenArrayValue(
-      @Nonnull JsArray<SomeType> someTypeFrozenArrayValue) {
+      @Nonnull final JsArray<SomeType> someTypeFrozenArrayValue) {
     setSomeTypeFrozenArrayValue( someTypeFrozenArrayValue );
     return this;
   }
@@ -2351,7 +2372,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary someTypePromiseValue(@Nonnull Promise<SomeType> someTypePromiseValue) {
+  default MyDictionary someTypePromiseValue(@Nonnull final Promise<SomeType> someTypePromiseValue) {
     setSomeTypePromiseValue( someTypePromiseValue );
     return this;
   }
@@ -2364,7 +2385,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary someTypeSequenceValue(@Nonnull JsArray<SomeType> someTypeSequenceValue) {
+  default MyDictionary someTypeSequenceValue(
+      @Nonnull final JsArray<SomeType> someTypeSequenceValue) {
     setSomeTypeSequenceValue( someTypeSequenceValue );
     return this;
   }
@@ -2377,7 +2399,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary someTypeValue(@Nonnull SomeType someTypeValue) {
+  default MyDictionary someTypeValue(@Nonnull final SomeType someTypeValue) {
     setSomeTypeValue( someTypeValue );
     return this;
   }
@@ -2390,7 +2412,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary symbolValue(@Nonnull Symbol symbolValue) {
+  default MyDictionary symbolValue(@Nonnull final Symbol symbolValue) {
     setSymbolValue( symbolValue );
     return this;
   }
@@ -2403,7 +2425,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary typeReferenceRecord(@Nonnull JsPropertyMap<SomeType> typeReferenceRecord) {
+  default MyDictionary typeReferenceRecord(
+      @Nonnull final JsPropertyMap<SomeType> typeReferenceRecord) {
     setTypeReferenceRecord( typeReferenceRecord );
     return this;
   }
@@ -2416,7 +2439,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary uint16ArrayValue(@Nonnull Uint16Array uint16ArrayValue) {
+  default MyDictionary uint16ArrayValue(@Nonnull final Uint16Array uint16ArrayValue) {
     setUint16ArrayValue( uint16ArrayValue );
     return this;
   }
@@ -2429,7 +2452,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary uint32ArrayValue(@Nonnull Uint32Array uint32ArrayValue) {
+  default MyDictionary uint32ArrayValue(@Nonnull final Uint32Array uint32ArrayValue) {
     setUint32ArrayValue( uint32ArrayValue );
     return this;
   }
@@ -2442,7 +2465,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary uint8ArrayValue(@Nonnull Uint8Array uint8ArrayValue) {
+  default MyDictionary uint8ArrayValue(@Nonnull final Uint8Array uint8ArrayValue) {
     setUint8ArrayValue( uint8ArrayValue );
     return this;
   }
@@ -2455,7 +2478,8 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary uint8ClampedArrayValue(@Nonnull Uint8ClampedArray uint8ClampedArrayValue) {
+  default MyDictionary uint8ClampedArrayValue(
+      @Nonnull final Uint8ClampedArray uint8ClampedArrayValue) {
     setUint8ClampedArrayValue( uint8ClampedArrayValue );
     return this;
   }
@@ -2468,7 +2492,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary unrestrictedDoubleValue(double unrestrictedDoubleValue) {
+  default MyDictionary unrestrictedDoubleValue(final double unrestrictedDoubleValue) {
     setUnrestrictedDoubleValue( unrestrictedDoubleValue );
     return this;
   }
@@ -2481,7 +2505,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary unrestrictedFloatValue(float unrestrictedFloatValue) {
+  default MyDictionary unrestrictedFloatValue(final float unrestrictedFloatValue) {
     setUnrestrictedFloatValue( unrestrictedFloatValue );
     return this;
   }
@@ -2494,7 +2518,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary unsignedLongLongValue(int unsignedLongLongValue) {
+  default MyDictionary unsignedLongLongValue(final int unsignedLongLongValue) {
     setUnsignedLongLongValue( unsignedLongLongValue );
     return this;
   }
@@ -2507,7 +2531,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary unsignedLongValue(int unsignedLongValue) {
+  default MyDictionary unsignedLongValue(final int unsignedLongValue) {
     setUnsignedLongValue( unsignedLongValue );
     return this;
   }
@@ -2520,7 +2544,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary unsignedShortValue(int unsignedShortValue) {
+  default MyDictionary unsignedShortValue(final int unsignedShortValue) {
     setUnsignedShortValue( unsignedShortValue );
     return this;
   }
@@ -2533,7 +2557,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary usvStringRecord(@Nonnull JsPropertyMap<String> usvStringRecord) {
+  default MyDictionary usvStringRecord(@Nonnull final JsPropertyMap<String> usvStringRecord) {
     setUsvStringRecord( usvStringRecord );
     return this;
   }
@@ -2546,7 +2570,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary usvStringValue(@Nonnull String usvStringValue) {
+  default MyDictionary usvStringValue(@Nonnull final String usvStringValue) {
     setUsvStringValue( usvStringValue );
     return this;
   }
@@ -2559,7 +2583,7 @@ public interface MyDictionary {
 
   @JsOverlay
   @Nonnull
-  default MyDictionary voidPromiseValue(@Nonnull Promise<Void> voidPromiseValue) {
+  default MyDictionary voidPromiseValue(@Nonnull final Promise<Void> voidPromiseValue) {
     setVoidPromiseValue( voidPromiseValue );
     return this;
   }

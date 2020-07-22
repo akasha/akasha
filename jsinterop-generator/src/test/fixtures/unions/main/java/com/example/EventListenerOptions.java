@@ -30,7 +30,7 @@ public interface EventListenerOptions {
 
   @JsOverlay
   @Nonnull
-  default EventListenerOptions capture(boolean capture) {
+  default EventListenerOptions capture(final boolean capture) {
     setCapture( capture );
     return this;
   }

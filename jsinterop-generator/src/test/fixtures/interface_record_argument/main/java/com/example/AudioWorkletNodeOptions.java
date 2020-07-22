@@ -30,7 +30,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData1(@Nonnull JsPropertyMap<Boolean> otherData1) {
+  default AudioWorkletNodeOptions otherData1(@Nonnull final JsPropertyMap<Boolean> otherData1) {
     setOtherData1( otherData1 );
     return this;
   }
@@ -43,7 +43,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData10(@Nonnull JsPropertyMap<Double> otherData10) {
+  default AudioWorkletNodeOptions otherData10(@Nonnull final JsPropertyMap<Double> otherData10) {
     setOtherData10( otherData10 );
     return this;
   }
@@ -56,7 +56,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData11(@Nonnull JsPropertyMap<Double> otherData11) {
+  default AudioWorkletNodeOptions otherData11(@Nonnull final JsPropertyMap<Double> otherData11) {
     setOtherData11( otherData11 );
     return this;
   }
@@ -69,7 +69,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData2(@Nonnull JsPropertyMap<Double> otherData2) {
+  default AudioWorkletNodeOptions otherData2(@Nonnull final JsPropertyMap<Double> otherData2) {
     setOtherData2( otherData2 );
     return this;
   }
@@ -82,7 +82,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData3(@Nonnull JsPropertyMap<Double> otherData3) {
+  default AudioWorkletNodeOptions otherData3(@Nonnull final JsPropertyMap<Double> otherData3) {
     setOtherData3( otherData3 );
     return this;
   }
@@ -95,7 +95,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData4(@Nonnull JsPropertyMap<Double> otherData4) {
+  default AudioWorkletNodeOptions otherData4(@Nonnull final JsPropertyMap<Double> otherData4) {
     setOtherData4( otherData4 );
     return this;
   }
@@ -108,7 +108,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData5(@Nonnull JsPropertyMap<Double> otherData5) {
+  default AudioWorkletNodeOptions otherData5(@Nonnull final JsPropertyMap<Double> otherData5) {
     setOtherData5( otherData5 );
     return this;
   }
@@ -121,7 +121,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData6(@Nonnull JsPropertyMap<Double> otherData6) {
+  default AudioWorkletNodeOptions otherData6(@Nonnull final JsPropertyMap<Double> otherData6) {
     setOtherData6( otherData6 );
     return this;
   }
@@ -134,7 +134,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData7(@Nonnull JsPropertyMap<Double> otherData7) {
+  default AudioWorkletNodeOptions otherData7(@Nonnull final JsPropertyMap<Double> otherData7) {
     setOtherData7( otherData7 );
     return this;
   }
@@ -147,7 +147,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData8(@Nonnull JsPropertyMap<Double> otherData8) {
+  default AudioWorkletNodeOptions otherData8(@Nonnull final JsPropertyMap<Double> otherData8) {
     setOtherData8( otherData8 );
     return this;
   }
@@ -160,7 +160,7 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions otherData9(@Nonnull JsPropertyMap<Double> otherData9) {
+  default AudioWorkletNodeOptions otherData9(@Nonnull final JsPropertyMap<Double> otherData9) {
     setOtherData9( otherData9 );
     return this;
   }
@@ -173,7 +173,8 @@ public interface AudioWorkletNodeOptions {
 
   @JsOverlay
   @Nonnull
-  default AudioWorkletNodeOptions parameterData(@Nonnull JsPropertyMap<Double> parameterData) {
+  default AudioWorkletNodeOptions parameterData(
+      @Nonnull final JsPropertyMap<Double> parameterData) {
     setParameterData( parameterData );
     return this;
   }

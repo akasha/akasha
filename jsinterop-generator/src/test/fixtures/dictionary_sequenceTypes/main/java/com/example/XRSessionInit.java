@@ -32,7 +32,7 @@ public interface XRSessionInit {
 
   @JsOverlay
   @Nonnull
-  default XRSessionInit optionalFeatures(@Nonnull JsArray<Any> optionalFeatures) {
+  default XRSessionInit optionalFeatures(@Nonnull final JsArray<Any> optionalFeatures) {
     setOptionalFeatures( optionalFeatures );
     return this;
   }
@@ -45,7 +45,7 @@ public interface XRSessionInit {
 
   @JsOverlay
   @Nonnull
-  default XRSessionInit requiredFeatures(@Nonnull JsArray<Any> requiredFeatures) {
+  default XRSessionInit requiredFeatures(@Nonnull final JsArray<Any> requiredFeatures) {
     setRequiredFeatures( requiredFeatures );
     return this;
   }

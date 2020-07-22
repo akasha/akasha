@@ -30,7 +30,7 @@ public interface IDBIndexParameters {
 
   @JsOverlay
   @Nonnull
-  default IDBIndexParameters multiEntry(boolean multiEntry) {
+  default IDBIndexParameters multiEntry(final boolean multiEntry) {
     setMultiEntry( multiEntry );
     return this;
   }
@@ -43,7 +43,7 @@ public interface IDBIndexParameters {
 
   @JsOverlay
   @Nonnull
-  default IDBIndexParameters unique(boolean unique) {
+  default IDBIndexParameters unique(final boolean unique) {
     setUnique( unique );
     return this;
   }
