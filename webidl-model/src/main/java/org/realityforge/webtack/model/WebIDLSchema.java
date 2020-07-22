@@ -541,17 +541,17 @@ public final class WebIDLSchema
     {
       final String name = ( (TypeReference) type ).getName();
       final TypedefDefinition typedef = findTypedefByName( name );
-      if ( null != typedef )
-      {
-        return isNullable( typedef.getType() );
-      }
+      return null != typedef && isNullable( typedef.getType() );
     }
     else if ( Kind.Union == kind )
     {
       final UnionType unionType = (UnionType) type;
       return unionType.getMemberTypes().stream().anyMatch( this::isNullable );
     }
-    return false;
+    else
+    {
+      return false;
+    }
   }
 
   public void link()
