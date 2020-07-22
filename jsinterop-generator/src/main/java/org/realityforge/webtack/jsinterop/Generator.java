@@ -1005,20 +1005,27 @@ final class Generator
     final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
     for ( int i = 0; i <= optionalCount; i++ )
     {
-      generateConstructorOperation( context, operation, parentConstructor, argCount - i, type );
+      final List<Argument> argumentList = arguments.subList( 0, argCount - i );
+      final List<List<TypedValue>> explodedTypeList =
+        explodeTypeList2( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<TypedValue> typeList : explodedTypeList )
+      {
+        generateConstructorOperation( context, parentConstructor, argumentList, typeList, type );
+      }
     }
   }
 
   private void generateConstructorOperation( @Nonnull final CodeGenContext context,
-                                             @Nonnull final OperationMember operation,
                                              @Nullable final OperationMember parentConstructor,
-                                             final long maxArgumentCount,
+                                             @Nonnull final List<Argument> argumentList,
+                                             @Nonnull final List<TypedValue> typeList,
                                              @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PUBLIC );
-    for ( int i = 0; i < maxArgumentCount; i++ )
+    int index = 0;
+    for ( final Argument argument : argumentList )
     {
-      generateArgument( context, operation.getArguments().get( i ), true, method );
+      generateArgument( context, argument, typeList.get( index++ ), true, method );
     }
     if ( null != parentConstructor )
     {

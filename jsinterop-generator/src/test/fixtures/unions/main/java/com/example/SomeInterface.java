@@ -12,11 +12,10 @@ import jsinterop.annotations.JsType;
     name = "SomeInterface"
 )
 public class SomeInterface {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
-  SomeInterface() {
+  public SomeInterface(@Nonnull final String serviceUuid) {
+  }
+
+  public SomeInterface(final int serviceUuid) {
   }
 
   @Nonnull

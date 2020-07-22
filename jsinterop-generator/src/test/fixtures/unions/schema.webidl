@@ -63,6 +63,15 @@ interface EventTarget {
   void removeEventListener( DOMString type, optional ( EventListenerOptions or boolean ) options = {} );
 };
 
+interface SomeDataContainer {
+  constructor( BufferSource data );
+};
+
 interface SomeInterface {
+  constructor( ( DOMString or unsigned long ) serviceUuid );
   ( DOMString or unsigned long ) getUuid();
+};
+
+interface SomeServiceContainer {
+  constructor( optional BluetoothServiceUUID service );
 };
