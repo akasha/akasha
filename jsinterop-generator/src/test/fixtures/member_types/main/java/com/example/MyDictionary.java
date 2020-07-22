@@ -89,7 +89,7 @@ public interface MyDictionary {
       @Nullable final Double requiredNullableUnrestrictedDoubleValue,
       @Nullable final Double requiredNullableUnrestrictedFloatValue,
       @Nullable final Double requiredNullableUnsignedLongLongValue,
-      @Nullable final int requiredNullableUnsignedLongValue,
+      @Nullable final Double requiredNullableUnsignedLongValue,
       @Nullable final Double requiredNullableUnsignedShortValue,
       @Nonnull final Object requiredObjectValue, final short requiredOctetValue,
       @Nonnull final JsArray<Double> requiredShortFrozenArrayValue,
@@ -1034,15 +1034,14 @@ public interface MyDictionary {
 
   @JsProperty
   @Nullable
-  int getNullableUnsignedLongValue();
+  Double getNullableUnsignedLongValue();
 
   @JsProperty
-  void setNullableUnsignedLongValue(@Nullable int nullableUnsignedLongValue);
+  void setNullableUnsignedLongValue(@Nullable Double nullableUnsignedLongValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary nullableUnsignedLongValue(
-      @Nullable final Integer nullableUnsignedLongValue) {
+  default MyDictionary nullableUnsignedLongValue(@Nullable final Double nullableUnsignedLongValue) {
     setNullableUnsignedLongValue( nullableUnsignedLongValue );
     return this;
   }
@@ -1988,15 +1987,15 @@ public interface MyDictionary {
 
   @JsProperty
   @Nullable
-  int getRequiredNullableUnsignedLongValue();
+  Double getRequiredNullableUnsignedLongValue();
 
   @JsProperty
-  void setRequiredNullableUnsignedLongValue(@Nullable int requiredNullableUnsignedLongValue);
+  void setRequiredNullableUnsignedLongValue(@Nullable Double requiredNullableUnsignedLongValue);
 
   @JsOverlay
   @Nonnull
   default MyDictionary requiredNullableUnsignedLongValue(
-      @Nullable final Integer requiredNullableUnsignedLongValue) {
+      @Nullable final Double requiredNullableUnsignedLongValue) {
     setRequiredNullableUnsignedLongValue( requiredNullableUnsignedLongValue );
     return this;
   }

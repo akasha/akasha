@@ -226,7 +226,7 @@ public class MyInterface {
   public Double nullableUnsignedLongLongValue;
 
   @Nullable
-  public int nullableUnsignedLongValue;
+  public Double nullableUnsignedLongValue;
 
   @Nullable
   public Double nullableUnsignedShortValue;
@@ -673,7 +673,7 @@ public class MyInterface {
       name = "readonlyNullableUnsignedLongValue"
   )
   @Nullable
-  public native int readonlyNullableUnsignedLongValue();
+  public native Double readonlyNullableUnsignedLongValue();
 
   @JsProperty(
       name = "readonlyNullableUnsignedShortValue"

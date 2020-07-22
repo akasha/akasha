@@ -153,6 +153,7 @@ final class CodeGenContext
            Kind.Octet == kind ||
            Kind.Short == kind ||
            Kind.UnsignedShort == kind ||
+           Kind.UnsignedLong == kind ||
            Kind.Long == kind ||
            Kind.LongLong == kind ||
            Kind.UnsignedLongLong == kind ) )
