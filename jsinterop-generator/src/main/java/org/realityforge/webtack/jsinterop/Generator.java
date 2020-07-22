@@ -635,6 +635,18 @@ final class Generator
     context.writeTopLevelType( type );
   }
 
+  @Nonnull
+  private TypedValue asTypedValue( @Nonnull final CodeGenContext context, final Type type )
+  {
+    final Type resolveType = context.getSchema().resolveType( type );
+    final TypeName javaType = context.toTypeName( resolveType );
+    final TypedValue.Nullability nullability =
+      javaType.isPrimitive() ? TypedValue.Nullability.NA :
+      context.getSchema().isNullable( type ) ? TypedValue.Nullability.NULLABLE :
+      TypedValue.Nullability.NONNULL;
+    return new TypedValue( type, resolveType, javaType, nullability );
+  }
+
   private void generateCallbackInterface( @Nonnull final CodeGenContext context,
                                           @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
@@ -654,9 +666,19 @@ final class Generator
 
     generateConstants( context, definition.getConstants(), type );
 
-    generateDefaultOperation( context, definition.getOperation(), true, type );
+    final OperationMember operation = definition.getOperation();
+    final List<Argument> arguments = operation.getArguments();
+    final List<TypedValue> typedValues = asTypedValuesList( context, arguments );
+    generateDefaultOperation( context, operation, true, arguments, typedValues, type );
 
     context.writeTopLevelType( type );
+  }
+
+  @Nonnull
+  private List<TypedValue> asTypedValuesList( @Nonnull final CodeGenContext context,
+                                              @Nonnull final List<Argument> arguments )
+  {
+    return arguments.stream().map( a -> asTypedValue( context, a.getType() ) ).collect( Collectors.toList() );
   }
 
   private void generatePartialInterface( @Nonnull final CodeGenContext context,
