@@ -13,6 +13,11 @@ dictionary AllowedBluetoothDevice {
   sequence<( DOMString or octet )> uuids;
 };
 
+dictionary BluetoothDataFilterInit {
+  required BufferSource dataPrefix;
+  BufferSource mask;
+};
+
 dictionary EventListenerOptions {
   boolean capture = false;
 };
