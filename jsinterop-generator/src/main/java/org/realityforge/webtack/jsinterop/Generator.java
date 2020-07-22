@@ -11,7 +11,6 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -123,64 +122,6 @@ final class Generator
     generateUnionOfMethods( context, name, unionType, type );
 
     context.writeTopLevelType( type );
-  }
-
-  @Nonnull
-  private List<List<Type>> explodeTypeList( @Nonnull final List<Type> types )
-  {
-    final List<List<Type>> results = new ArrayList<>();
-    results.add( new ArrayList<>() );
-    for ( final Type type : types )
-    {
-      final List<Type> itemTypes = explodeType( type );
-      if ( 1 == itemTypes.size() )
-      {
-        final Type itemType = itemTypes.get( 0 );
-        results.forEach( result -> result.add( itemType ) );
-      }
-      else
-      {
-        final List<List<Type>> dupList = new ArrayList<>( results );
-        results.clear();
-        for ( final Type itemType : itemTypes )
-        {
-          for ( final List<Type> result : dupList )
-          {
-            final List<Type> newList = new ArrayList<>( result );
-            newList.add( itemType );
-            results.add( newList );
-          }
-        }
-      }
-    }
-    return results;
-  }
-
-  @Nonnull
-  private List<Type> explodeType( @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( Kind.Union == kind )
-    {
-      final UnionType unionType = (UnionType) type;
-      return unionType.getMemberTypes()
-        .stream()
-        .flatMap( t -> explodeType( t ).stream() )
-        .collect( Collectors.toList() );
-    }
-    else if ( Kind.Promise == kind )
-    {
-      final PromiseType promiseType = (PromiseType) type;
-      final List<Type> resolveTypes = explodeType( promiseType.getResolveType() );
-      return resolveTypes
-        .stream()
-        .map( t -> new PromiseType( t, promiseType.getExtendedAttributes(), promiseType.getSourceLocations() ) )
-        .collect( Collectors.toList() );
-    }
-    else
-    {
-      return Collections.singletonList( type );
-    }
   }
 
   @Nonnull
@@ -1003,25 +944,11 @@ final class Generator
     for ( int i = 0; i <= optionalCount; i++ )
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
-      final List<List<Type>> explodedTypeList =
-        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
-      for ( final List<Type> typeList : explodedTypeList )
+      final List<List<TypedValue>> explodedTypeList =
+        explodeTypeList2( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        final List<Argument> args = new ArrayList<>();
-        final int variantArgCount = typeList.size();
-        for ( int j = 0; j < variantArgCount; j++ )
-        {
-          final Type argType = typeList.get( j );
-          final Argument argument = argumentList.get( j );
-          args.add( new Argument( argument.getName(),
-                                  argType,
-                                  argument.isOptional(),
-                                  argument.isVariadic(),
-                                  argument.getDefaultValue(),
-                                  argument.getExtendedAttributes(),
-                                  argument.getSourceLocations() ) );
-        }
-        generateDefaultOperation( context, operation, javaInterface, args, type );
+        generateDefaultOperation( context, operation, javaInterface, argumentList, typeList, type );
       }
     }
   }
@@ -1030,6 +957,7 @@ final class Generator
                                          @Nonnull final OperationMember operation,
                                          final boolean javaInterface,
                                          @Nonnull final List<Argument> arguments,
+                                         @Nonnull final List<TypedValue> typeList,
                                          @Nonnull final TypeSpec.Builder type )
   {
     assert OperationMember.Kind.DEFAULT == operation.getKind();
@@ -1039,9 +967,11 @@ final class Generator
     method.addModifiers( javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
     final Type returnType = operation.getReturnType();
     emitReturnType( context, returnType, method );
+    int index = 0;
     for ( final Argument argument : arguments )
     {
-      generateArgument( context, argument, false, method );
+      final TypedValue typedValue = typeList.get( index++ );
+      generateArgument( context, argument, typedValue, false, method );
     }
     type.addMethod( method.build() );
   }
@@ -1147,12 +1077,12 @@ final class Generator
 
   private void generateArgument( @Nonnull final CodeGenContext context,
                                  @Nonnull final Argument argument,
+                                 @Nonnull final TypedValue typedValue,
                                  final boolean isFinal,
                                  @Nonnull final MethodSpec.Builder method )
   {
-    final Type argumentType = argument.getType();
-    final Type actualType = context.getSchema().resolveType( argumentType );
-    final TypeName type = context.toTypeName( actualType );
+    final Type actualType = context.getSchema().resolveType( argument.getType() );
+    final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, argument.getName() );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
@@ -1160,14 +1090,7 @@ final class Generator
     {
       parameter.addModifiers( Modifier.FINAL );
     }
-    if ( context.getSchema().isNullable( argumentType ) )
-    {
-      parameter.addAnnotation( Types.NULLABLE );
-    }
-    else if ( !actualType.getKind().isPrimitive() )
-    {
-      parameter.addAnnotation( Types.NONNULL );
-    }
+    addNullabilityAnnotation( typedValue, parameter );
     // Only the last argument can be variadic
     if ( argument.isVariadic() )
     {
