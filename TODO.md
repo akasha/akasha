@@ -10,7 +10,7 @@ complete as there is too much un-said.
 
 * Add support for static operators
 
-* Update `java_keyword_names` test to test operators that have names that collide or operators that have arguments that collide.
+* Update `java_keyword_names` test to test operators that have names that collide or operators that have arguments that collide. Also add tests that verify operators (`static`, `default` or any named operator) should also work when the name collides with java-isms.
 
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
