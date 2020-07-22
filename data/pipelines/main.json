@@ -167,7 +167,7 @@
     {
       "name": "Jsinterop",
       "config": {
-        "outputDirectory": "data/output/main/main/java",
+        "outputDirectory": "data/output/main",
         "packageName": "elemental3"
       }
     }

@@ -85,7 +85,7 @@
     {
       "name": "Jsinterop",
       "config": {
-        "outputDirectory": "data/output/speech/main/java",
+        "outputDirectory": "data/output/speech",
         "packageName": "elemental3"
       }
     }

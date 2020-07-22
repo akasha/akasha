@@ -69,7 +69,7 @@
     {
       "name": "Jsinterop",
       "config": {
-        "outputDirectory": "data/output/bluetooth/main/java",
+        "outputDirectory": "data/output/bluetooth",
         "packageName": "elemental3"
       }
     }
