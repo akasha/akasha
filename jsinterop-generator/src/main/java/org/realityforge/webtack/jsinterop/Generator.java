@@ -1155,12 +1155,13 @@ final class Generator
   }
 
   private void addMagicConstantAnnotationIfNeeded( @Nonnull final CodeGenContext context,
-                                                   final Type actualType, final ParameterSpec.Builder parameter )
+                                                   @Nonnull final Type type,
+                                                   @Nonnull final ParameterSpec.Builder parameter )
   {
-    if ( addMagicConstantsAnnotation() && Kind.TypeReference == actualType.getKind() )
+    if ( addMagicConstantsAnnotation() && Kind.TypeReference == type.getKind() )
     {
       final EnumerationDefinition enumeration =
-        context.getSchema().findEnumerationByName( ( (TypeReference) actualType ).getName() );
+        context.getSchema().findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
         final AnnotationSpec.Builder annotation = AnnotationSpec.builder( Types.MAGIC_CONSTANT );
