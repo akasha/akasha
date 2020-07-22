@@ -184,6 +184,38 @@ final class Generator
   }
 
   @Nonnull
+  private List<List<TypedValue>> explodeTypeList2( @Nonnull final CodeGenContext context,
+                                                   @Nonnull final List<Type> types )
+  {
+    final List<List<TypedValue>> results = new ArrayList<>();
+    results.add( new ArrayList<>() );
+    for ( final Type type : types )
+    {
+      final List<TypedValue> itemTypes = explodeType2( context, type );
+      if ( 1 == itemTypes.size() )
+      {
+        final TypedValue itemType = itemTypes.get( 0 );
+        results.forEach( result -> result.add( itemType ) );
+      }
+      else
+      {
+        final List<List<TypedValue>> dupList = new ArrayList<>( results );
+        results.clear();
+        for ( final TypedValue itemType : itemTypes )
+        {
+          for ( final List<TypedValue> result : dupList )
+          {
+            final List<TypedValue> newList = new ArrayList<>( result );
+            newList.add( itemType );
+            results.add( newList );
+          }
+        }
+      }
+    }
+    return results;
+  }
+
+  @Nonnull
   private List<TypedValue> explodeType2( @Nonnull final CodeGenContext context, @Nonnull final Type type )
   {
     final List<TypedValue> values = new ArrayList<>();
@@ -326,9 +358,10 @@ final class Generator
     }
 
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
-    final List<List<Type>> explodedTypeList =
-      explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
-    for ( final List<Type> argTypes : explodedTypeList )
+    final List<List<TypedValue>> explodedTypeList =
+      explodeTypeList2( context,
+                        requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
+    for ( final List<TypedValue> argTypes : explodedTypeList )
     {
       generateDictionaryCreateMethod( context, definition, requiredMembers, argTypes, type );
     }
@@ -367,7 +400,7 @@ final class Generator
   private void generateDictionaryCreateMethod( @Nonnull final CodeGenContext context,
                                                @Nonnull final DictionaryDefinition definition,
                                                @Nonnull final List<DictionaryMember> requiredMembers,
-                                               @Nonnull final List<Type> types,
+                                               @Nonnull final List<TypedValue> types,
                                                @Nonnull final TypeSpec.Builder type )
   {
     final TypeName self = context.lookupTypeByName( definition.getName() );
@@ -398,18 +431,10 @@ final class Generator
         params.add( paramName );
         params.add( paramName );
 
-        final Type memberType = types.get( index++ );
-        final Type actualType = context.getSchema().resolveType( memberType );
+        final TypedValue memberType = types.get( index++ );
         final ParameterSpec.Builder parameter =
-          ParameterSpec.builder( context.toTypeName( actualType ), paramName, Modifier.FINAL );
-        if ( context.getSchema().isNullable( memberType ) )
-        {
-          parameter.addAnnotation( Types.NULLABLE );
-        }
-        else if ( !actualType.getKind().isPrimitive() )
-        {
-          parameter.addAnnotation( Types.NONNULL );
-        }
+          ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
+        addNullabilityAnnotation( memberType, parameter );
         method.addParameter( parameter.build() );
       }
       method.addStatement( sb.toString(), params.toArray() );

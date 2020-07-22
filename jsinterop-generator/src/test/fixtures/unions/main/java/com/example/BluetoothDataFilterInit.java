@@ -33,6 +33,78 @@ public interface BluetoothDataFilterInit {
     return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final ArrayBufferView dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Int8Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Int16Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Int32Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Uint8Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Uint16Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Uint32Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Uint8ClampedArray dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Float32Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final Float64Array dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final DataView dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static BluetoothDataFilterInit create(@Nonnull final ArrayBuffer dataPrefix) {
+    return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
+  }
+
   @JsProperty
   @Nonnull
   BufferSource getDataPrefix();
