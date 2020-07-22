@@ -628,7 +628,7 @@ final class Generator
     emitReturnType( context, definition.getReturnType(), method );
     for ( final Argument argument : definition.getArguments() )
     {
-      generateArgument( context, argument, false, method );
+      generateArgument( context, argument, asTypedValue( context, argument.getType() ), false, method );
     }
     type.addMethod( method.build() );
 

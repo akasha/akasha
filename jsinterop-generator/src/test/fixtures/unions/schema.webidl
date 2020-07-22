@@ -8,6 +8,11 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 
 typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
+callback OnBufferSourceHandler = void ( optional BufferSource buffer );
+
+[LegacyTreatNonObjectAsNull]
+callback OnErrorEventHandler = any ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
+
 callback interface EventListener2 {
   void handleUuid( ( DOMString or unsigned long ) event );
 };
@@ -49,6 +54,9 @@ interface BluetoothRemoteGATTServer {
 interface BluetoothRemoteGATTService : EventTarget {
   Promise<BluetoothRemoteGATTService> getIncludedService( BluetoothServiceUUID service );
   Promise<sequence<BluetoothRemoteGATTService>> getIncludedServices( optional BluetoothServiceUUID service );
+};
+
+interface Event {
 };
 
 interface EventTarget {
