@@ -183,6 +183,84 @@ final class Generator
     }
   }
 
+  @Nonnull
+  private List<TypedValue> explodeType2( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  {
+    final List<TypedValue> values = new ArrayList<>();
+    explodeType2( context, type, type, values );
+    return values;
+  }
+
+  private void explodeType2( @Nonnull final CodeGenContext context,
+                             @Nonnull final Type declaredType,
+                             @Nonnull final Type type,
+                             @Nonnull final List<TypedValue> values )
+  {
+    final Kind kind = type.getKind();
+    if ( Kind.TypeReference == type.getKind() )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      if ( null != typedef )
+      {
+        final Type resolvedType = typedef.getType();
+        if ( Kind.Union == resolvedType.getKind() )
+        {
+          final boolean nullable = context.getSchema().isNullable( resolvedType );
+          values.add( new TypedValue( declaredType,
+                                      type,
+                                      context.lookupTypeByName( name ),
+                                      nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL ) );
+        }
+        explodeType2( context, declaredType, resolvedType, values );
+      }
+      else
+      {
+        final boolean nullable = context.getSchema().isNullable( type );
+        values.add( new TypedValue( declaredType,
+                                    type,
+                                    context.toTypeName( type ),
+                                    nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL ) );
+      }
+    }
+    else if ( Kind.Union == kind )
+    {
+      final UnionType unionType = (UnionType) type;
+      for ( final Type memberType : unionType.getMemberTypes() )
+      {
+        explodeType2( context, declaredType, memberType, values );
+      }
+    }
+    else if ( Kind.Promise == kind )
+    {
+      final PromiseType promiseType = (PromiseType) type;
+      final List<TypedValue> resolveTypes = explodeType2( context, promiseType.getResolveType() );
+      for ( final TypedValue t : resolveTypes )
+      {
+        final PromiseType p =
+          new PromiseType( t.getType(), promiseType.getExtendedAttributes(), promiseType.getSourceLocations() );
+        values.add( new TypedValue( declaredType,
+                                    p,
+                                    context.toTypeName( p ),
+                                    TypedValue.Nullability.NONNULL ) );
+      }
+    }
+    else
+    {
+      final boolean nullable = context.getSchema().isNullable( type );
+      TypeName javaType = context.toTypeName( type );
+      if ( nullable )
+      {
+        javaType = javaType.box();
+      }
+      final TypedValue.Nullability nullability =
+        javaType.isPrimitive() ? TypedValue.Nullability.NA :
+        nullable ? TypedValue.Nullability.NULLABLE :
+        TypedValue.Nullability.NONNULL;
+      values.add( new TypedValue( declaredType, type, javaType, nullability ) );
+    }
+  }
+
   private void generateUnionOfMethods( @Nonnull final CodeGenContext context,
                                        @Nonnull final String name,
                                        @Nonnull final UnionType unionType,
@@ -190,36 +268,39 @@ final class Generator
   {
     final ClassName self = ClassName.bestGuess( name );
     final List<Type> memberTypes = unionType.getMemberTypes();
-    //TODO: We need to generate a separate "of" method for each possible union specialized operation
     for ( final Type memberType : memberTypes )
     {
-      final ParameterSpec.Builder parameter =
-        ParameterSpec.builder( context.toTypeName( memberType ), "value", Modifier.FINAL );
+      for ( final TypedValue typedValue : explodeType2( context, memberType ) )
+      {
+        final ParameterSpec.Builder parameter =
+          ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
 
-      final ClassName methodNullability;
-      if ( context.getSchema().isNullable( memberType ) )
-      {
-        parameter.addAnnotation( Types.NULLABLE );
-        methodNullability = Types.NULLABLE;
-      }
-      else if ( !memberType.getKind().isPrimitive() )
-      {
-        parameter.addAnnotation( Types.NONNULL );
-        methodNullability = Types.NONNULL;
-      }
-      else
-      {
-        methodNullability = Types.NONNULL;
-      }
+        final ClassName methodNullability;
+        final TypedValue.Nullability nullability = typedValue.getNullability();
+        if ( TypedValue.Nullability.NULLABLE == nullability )
+        {
+          parameter.addAnnotation( Types.NULLABLE );
+          methodNullability = Types.NULLABLE;
+        }
+        else if ( TypedValue.Nullability.NONNULL == nullability )
+        {
+          parameter.addAnnotation( Types.NONNULL );
+          methodNullability = Types.NONNULL;
+        }
+        else
+        {
+          methodNullability = Types.NONNULL;
+        }
 
-      type.addMethod( MethodSpec
-                        .methodBuilder( "of" )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( methodNullability )
-                        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                        .addParameter( parameter.build() )
-                        .addStatement( "return $T.cast( value )", Types.JS )
-                        .returns( self ).build() );
+        type.addMethod( MethodSpec
+                          .methodBuilder( "of" )
+                          .addAnnotation( Types.JS_OVERLAY )
+                          .addAnnotation( methodNullability )
+                          .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                          .addParameter( parameter.build() )
+                          .addStatement( "return $T.cast( value )", Types.JS )
+                          .returns( self ).build() );
+      }
     }
   }
 
@@ -257,13 +338,13 @@ final class Generator
       final Type actualType = context.getSchema().resolveType( member.getType() );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
-      for ( final Type memberType : explodeType( actualType ) )
+      for ( final TypedValue typedValue : explodeType2( context, member.getType() ) )
       {
-        if ( !actualType.equiv( memberType ) )
+        if ( !actualType.equiv( typedValue.getType() ) )
         {
-          generateDictionaryMemberOverlaySetter( context, member, actualType, memberType, type );
+          generateDictionaryMemberOverlaySetter( context, member, typedValue, type );
         }
-        generateDictionaryMemberSetterReturningThis( context, definition, member, memberType, false, type );
+        generateDictionaryMemberSetterReturningThis( context, definition, member, typedValue, false, type );
       }
     }
     String superName = definition.getInherits();
@@ -272,7 +353,7 @@ final class Generator
       final DictionaryDefinition parent = context.getSchema().getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
-        for ( final Type memberType : explodeType( context.getSchema().resolveType( member.getType() ) ) )
+        for ( final TypedValue memberType : explodeType2( context, member.getType() ) )
         {
           generateDictionaryMemberSetterReturningThis( context, definition, member, memberType, true, type );
         }
@@ -425,8 +506,7 @@ final class Generator
 
   private void generateDictionaryMemberOverlaySetter( @Nonnull final CodeGenContext context,
                                                       @Nonnull final DictionaryMember member,
-                                                      @Nonnull final Type actualType,
-                                                      @Nonnull final Type explodedType,
+                                                      @Nonnull final TypedValue typedValue,
                                                       @Nonnull final TypeSpec.Builder type )
   {
     final String mutatorName = getMutatorName( member );
@@ -437,29 +517,20 @@ final class Generator
         .addAnnotation( Types.JS_OVERLAY );
     final String paramName = safeName( member.getName() );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( context.toTypeName( explodedType ), paramName, Modifier.FINAL );
+      ParameterSpec.builder( typedValue.getJavaType(), paramName, Modifier.FINAL );
 
-    if ( context.getSchema().isNullable( member.getType() ) )
-    {
-      parameter.addAnnotation( Types.NULLABLE );
-    }
-    else if ( !explodedType.getKind().isPrimitive() )
-    {
-      parameter.addAnnotation( Types.NONNULL );
-    }
+    addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
-    final Kind kind = actualType.getKind();
-    if ( Kind.Union == kind )
+    final Type declaredType = context.getSchema().resolveType( typedValue.getDeclaredType() );
+    final Type resolvedType = context.getSchema().resolveType( typedValue.getDeclaredType(), true );
+    if ( Kind.Union == declaredType.getKind() || Kind.Union == resolvedType.getKind() )
     {
-      method.addStatement( "$N( $T.of( $N ) )",
-                           mutatorName,
-                           context.toTypeName( context.getSchema().resolveType( actualType ) ),
-                           paramName );
+      method.addStatement( "$N( $T.of( $N ) )", mutatorName, context.toTypeName( declaredType ), paramName );
     }
     else
     {
       throw new UnsupportedOperationException( "Create method for dictionary does not yet support exploding " +
-                                               explodedType + " from " + actualType );
+                                               typedValue.getType() + " from " + declaredType );
     }
     type.addMethod( method.build() );
   }
@@ -467,7 +538,7 @@ final class Generator
   private void generateDictionaryMemberSetterReturningThis( @Nonnull final CodeGenContext context,
                                                             @Nonnull final DictionaryDefinition dictionary,
                                                             @Nonnull final DictionaryMember member,
-                                                            @Nonnull final Type actualType,
+                                                            @Nonnull final TypedValue typedValue,
                                                             final boolean addOverride,
                                                             @Nonnull final TypeSpec.Builder type )
   {
@@ -484,20 +555,28 @@ final class Generator
       method.addAnnotation( Override.class );
     }
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( context.toTypeName( actualType ), paramName );
+      ParameterSpec.builder( typedValue.getJavaType(), paramName, Modifier.FINAL );
 
-    if ( context.getSchema().isNullable( member.getType() ) )
-    {
-      parameter.addAnnotation( Types.NULLABLE );
-    }
-    else if ( !actualType.getKind().isPrimitive() )
-    {
-      parameter.addAnnotation( Types.NONNULL );
-    }
+    addNullabilityAnnotation( typedValue, parameter );
+
     method.addParameter( parameter.build() );
     method.addStatement( "$N( $N )", getMutatorName( member ), paramName );
     method.addStatement( "return this" );
     type.addMethod( method.build() );
+  }
+
+  private void addNullabilityAnnotation( @Nonnull final TypedValue typedValue,
+                                         @Nonnull final ParameterSpec.Builder parameter )
+  {
+    final TypedValue.Nullability nullability = typedValue.getNullability();
+    if ( TypedValue.Nullability.NULLABLE == nullability )
+    {
+      parameter.addAnnotation( Types.NULLABLE );
+    }
+    else if ( TypedValue.Nullability.NONNULL == nullability )
+    {
+      parameter.addAnnotation( Types.NONNULL );
+    }
   }
 
   @Nonnull

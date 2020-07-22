@@ -511,13 +511,23 @@ public final class WebIDLSchema
   @Nonnull
   public Type resolveType( @Nonnull final Type type )
   {
+    return resolveType( type, false );
+  }
+
+  @Nonnull
+  public Type resolveType( @Nonnull final Type type, final boolean resolveNamedUnion )
+  {
     if ( Kind.TypeReference == type.getKind() )
     {
       final String name = ( (TypeReference) type ).getName();
       final TypedefDefinition typedef = findTypedefByName( name );
-      if ( null != typedef && Kind.Union != typedef.getType().getKind() )
+      if ( null != typedef )
       {
-        return resolveType( typedef.getType() );
+        final Type otherType = typedef.getType();
+        if ( resolveNamedUnion || Kind.Union != otherType.getKind() )
+        {
+          return resolveType( otherType );
+        }
       }
     }
     return type;
