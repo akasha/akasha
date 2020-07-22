@@ -8,6 +8,14 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 
 typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
+callback interface EventListener2 {
+  void handleUuid( ( DOMString or unsigned long ) event );
+};
+
+callback interface EventListener3 {
+  void handleServiceUuid( BluetoothServiceUUID event );
+};
+
 dictionary AllowedBluetoothDevice {
   required ( DOMString or sequence<DOMString> ) allowedServices;
   ( DOMString or sequence<DOMString> ) otherServices;
