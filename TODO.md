@@ -8,6 +8,8 @@ complete as there is too much un-said.
 
 * use webrtc video chat ala ZipCall.io as another example
 
+* Add support for static operators
+
 * Update `java_keyword_names` test to test operators that have names that collide or operators that have arguments that collide.
 
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
