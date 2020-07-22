@@ -4,6 +4,8 @@ typedef ( DOMString or unsigned long ) BluetoothCharacteristicUUID;
 
 typedef ( DOMString or unsigned long ) BluetoothDescriptorUUID;
 
+typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
+
 typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
 dictionary AllowedBluetoothDevice {
@@ -20,6 +22,25 @@ dictionary BluetoothDataFilterInit {
 
 dictionary EventListenerOptions {
   boolean capture = false;
+};
+
+[Exposed=Window, SecureContext]
+interface BluetoothRemoteGATTCharacteristic : EventTarget {
+  Promise<void> writeValue( BufferSource value );
+  Promise<void> writeValueWithResponse( BufferSource value );
+  Promise<void> writeValueWithoutResponse( BufferSource value );
+};
+
+[Exposed=Window, SecureContext]
+interface BluetoothRemoteGATTServer {
+  Promise<BluetoothRemoteGATTService> getPrimaryService( BluetoothServiceUUID service );
+  Promise<sequence<BluetoothRemoteGATTService>> getPrimaryServices( optional BluetoothServiceUUID service );
+};
+
+[Exposed=Window, SecureContext]
+interface BluetoothRemoteGATTService : EventTarget {
+  Promise<BluetoothRemoteGATTService> getIncludedService( BluetoothServiceUUID service );
+  Promise<sequence<BluetoothRemoteGATTService>> getIncludedServices( optional BluetoothServiceUUID service );
 };
 
 interface EventTarget {
