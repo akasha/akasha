@@ -967,8 +967,15 @@ final class Generator
     assert OperationMember.Kind.DEFAULT == operation.getKind();
     final String name = operation.getName();
     assert null != name;
-    final MethodSpec.Builder method = MethodSpec.methodBuilder( name ).addModifiers( Modifier.PUBLIC );
-    method.addModifiers( javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
+    final String safeName = safeName( name );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( safeName )
+        .addModifiers( Modifier.PUBLIC, javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
+    if ( !safeName.equals( name ) )
+    {
+      method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
+    }
     final Type returnType = operation.getReturnType();
     emitReturnType( context, returnType, method );
     int index = 0;
@@ -1008,10 +1015,15 @@ final class Generator
     assert OperationMember.Kind.STATIC == operation.getKind();
     final String name = operation.getName();
     assert null != name;
+    final String safeName = safeName( name );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( name )
+        .methodBuilder( safeName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
+    if ( !safeName.equals( name ) )
+    {
+      method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
+    }
     final Type returnType = operation.getReturnType();
     emitReturnType( context, returnType, method );
     int index = 0;
@@ -1137,7 +1149,7 @@ final class Generator
     final Type actualType = context.getSchema().resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, argument.getName() );
+      ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, safeName( argument.getName() ) );
     addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
     if ( isFinal )
     {

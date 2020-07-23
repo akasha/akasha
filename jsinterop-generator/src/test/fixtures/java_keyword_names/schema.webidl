@@ -67,3 +67,35 @@ interface MyType2 {
   attribute object toString;
   attribute object wait;
 };
+
+interface MyType3 {
+  static void clone( object clone );
+  static void default( object default );
+  static void equals( object equals );
+  static void finalize( object finalize );
+  static void getClass( object getClass );
+  static void hashCode( object hashCode );
+  static void notify( object notify );
+  static void notifyAll( object notifyAll );
+  static void private( object private );
+  static void protected( object protected );
+  static void public( object public );
+  static void toString( object toString );
+  static void wait( object wait );
+};
+
+interface MyType4 {
+  void clone( object clone );
+  void default( object default );
+  void equals( object equals );
+  void finalize( object finalize );
+  void getClass( object getClass );
+  void hashCode( object hashCode );
+  void notify( object notify );
+  void notifyAll( object notifyAll );
+  void private( object private );
+  void protected( object protected );
+  void public( object public );
+  void toString( object toString );
+  void wait( object wait );
+};

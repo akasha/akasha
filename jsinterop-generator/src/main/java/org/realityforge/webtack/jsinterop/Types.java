@@ -14,6 +14,8 @@ final class Types
   @Nonnull
   static final ClassName JS_PROPERTY = ClassName.get( "jsinterop.annotations", "JsProperty" );
   @Nonnull
+  static final ClassName JS_METHOD = ClassName.get( "jsinterop.annotations", "JsMethod" );
+  @Nonnull
   static final ClassName JS_FUNCTION = ClassName.get( "jsinterop.annotations", "JsFunction" );
   @Nonnull
   static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );
