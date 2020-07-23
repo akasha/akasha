@@ -125,14 +125,14 @@ final class Generator
   }
 
   @Nonnull
-  private List<List<TypedValue>> explodeTypeList2( @Nonnull final CodeGenContext context,
-                                                   @Nonnull final List<Type> types )
+  private List<List<TypedValue>> explodeTypeList( @Nonnull final CodeGenContext context,
+                                                  @Nonnull final List<Type> types )
   {
     final List<List<TypedValue>> results = new ArrayList<>();
     results.add( new ArrayList<>() );
     for ( final Type type : types )
     {
-      final List<TypedValue> itemTypes = explodeType2( context, type );
+      final List<TypedValue> itemTypes = explodeType( context, type );
       if ( 1 == itemTypes.size() )
       {
         final TypedValue itemType = itemTypes.get( 0 );
@@ -157,17 +157,17 @@ final class Generator
   }
 
   @Nonnull
-  private List<TypedValue> explodeType2( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  private List<TypedValue> explodeType( @Nonnull final CodeGenContext context, @Nonnull final Type type )
   {
     final List<TypedValue> values = new ArrayList<>();
-    explodeType2( context, type, type, values );
+    explodeType( context, type, type, values );
     return values;
   }
 
-  private void explodeType2( @Nonnull final CodeGenContext context,
-                             @Nonnull final Type declaredType,
-                             @Nonnull final Type type,
-                             @Nonnull final List<TypedValue> values )
+  private void explodeType( @Nonnull final CodeGenContext context,
+                            @Nonnull final Type declaredType,
+                            @Nonnull final Type type,
+                            @Nonnull final List<TypedValue> values )
   {
     final Kind kind = type.getKind();
     if ( Kind.TypeReference == type.getKind() )
@@ -185,7 +185,7 @@ final class Generator
                                       context.lookupTypeByName( name ),
                                       nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL ) );
         }
-        explodeType2( context, declaredType, resolvedType, values );
+        explodeType( context, declaredType, resolvedType, values );
       }
       else
       {
@@ -201,13 +201,13 @@ final class Generator
       final UnionType unionType = (UnionType) type;
       for ( final Type memberType : unionType.getMemberTypes() )
       {
-        explodeType2( context, declaredType, memberType, values );
+        explodeType( context, declaredType, memberType, values );
       }
     }
     else if ( Kind.Promise == kind )
     {
       final PromiseType promiseType = (PromiseType) type;
-      final List<TypedValue> resolveTypes = explodeType2( context, promiseType.getResolveType() );
+      final List<TypedValue> resolveTypes = explodeType( context, promiseType.getResolveType() );
       for ( final TypedValue t : resolveTypes )
       {
         final PromiseType p =
@@ -243,7 +243,7 @@ final class Generator
     final List<Type> memberTypes = unionType.getMemberTypes();
     for ( final Type memberType : memberTypes )
     {
-      for ( final TypedValue typedValue : explodeType2( context, memberType ) )
+      for ( final TypedValue typedValue : explodeType( context, memberType ) )
       {
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
@@ -300,8 +300,8 @@ final class Generator
 
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
     final List<List<TypedValue>> explodedTypeList =
-      explodeTypeList2( context,
-                        requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
+      explodeTypeList( context,
+                       requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
     for ( final List<TypedValue> argTypes : explodedTypeList )
     {
       generateDictionaryCreateMethod( context, definition, requiredMembers, argTypes, type );
@@ -312,7 +312,7 @@ final class Generator
       final Type actualType = context.getSchema().resolveType( member.getType() );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
-      for ( final TypedValue typedValue : explodeType2( context, member.getType() ) )
+      for ( final TypedValue typedValue : explodeType( context, member.getType() ) )
       {
         if ( !actualType.equiv( typedValue.getType() ) )
         {
@@ -327,7 +327,7 @@ final class Generator
       final DictionaryDefinition parent = context.getSchema().getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
-        for ( final TypedValue memberType : explodeType2( context, member.getType() ) )
+        for ( final TypedValue memberType : explodeType( context, member.getType() ) )
         {
           generateDictionaryMemberSetterReturningThis( context, definition, member, memberType, true, type );
         }
@@ -949,7 +949,7 @@ final class Generator
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList2( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateDefaultOperation( context, operation, javaInterface, argumentList, typeList, type );
@@ -998,7 +998,7 @@ final class Generator
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList2( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateStaticOperation( context, operation, argumentList, typeList, type );
@@ -1065,7 +1065,7 @@ final class Generator
     {
       final List<Argument> argumentList = arguments.subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList2( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateConstructorOperation( context, parentConstructor, argumentList, typeList, type );
