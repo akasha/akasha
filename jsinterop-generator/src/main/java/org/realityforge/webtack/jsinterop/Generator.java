@@ -751,6 +751,10 @@ final class Generator
         generateConstructorOperation( context, operation, parentConstructor, type );
         constructorPresent = true;
       }
+      else if ( OperationMember.Kind.STATIC == operationKind )
+      {
+        generateStaticOperation( context, operation, type );
+      }
     }
     final AnnotationSpec.Builder jsTypeAnnotation =
       AnnotationSpec
@@ -972,6 +976,48 @@ final class Generator
     {
       final TypedValue typedValue = typeList.get( index++ );
       generateArgument( context, argument, typedValue, false, method );
+    }
+    type.addMethod( method.build() );
+  }
+
+  private void generateStaticOperation( @Nonnull final CodeGenContext context,
+                                        @Nonnull final OperationMember operation,
+                                        @Nonnull final TypeSpec.Builder type )
+  {
+    final List<Argument> arguments = operation.getArguments();
+    final int argCount = arguments.size();
+    final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
+    for ( int i = 0; i <= optionalCount; i++ )
+    {
+      final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
+      final List<List<TypedValue>> explodedTypeList =
+        explodeTypeList2( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<TypedValue> typeList : explodedTypeList )
+      {
+        generateStaticOperation( context, operation, argumentList, typeList, type );
+      }
+    }
+  }
+
+  private void generateStaticOperation( @Nonnull final CodeGenContext context,
+                                        @Nonnull final OperationMember operation,
+                                        @Nonnull final List<Argument> arguments,
+                                        @Nonnull final List<TypedValue> typeList,
+                                        @Nonnull final TypeSpec.Builder type )
+  {
+    assert OperationMember.Kind.STATIC == operation.getKind();
+    final String name = operation.getName();
+    assert null != name;
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( name )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
+    final Type returnType = operation.getReturnType();
+    emitReturnType( context, returnType, method );
+    int index = 0;
+    for ( final Argument argument : arguments )
+    {
+      generateArgument( context, argument, typeList.get( index++ ), false, method );
     }
     type.addMethod( method.build() );
   }

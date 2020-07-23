@@ -18,6 +18,13 @@ public class SomeInterface {
   public SomeInterface(final int serviceUuid) {
   }
 
+  public static native void myStaticMethodWithUnionArg(@Nonnull String serviceUuid);
+
+  public static native void myStaticMethodWithUnionArg(int serviceUuid);
+
+  @Nonnull
+  public static native StringOrUnsignedLongUnion myStaticMethodWithUnionReturn();
+
   @Nonnull
   public native StringOrUnsignedLongUnion getUuid();
 }

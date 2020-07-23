@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -23,4 +24,15 @@ public class SomeServiceContainer {
 
   public SomeServiceContainer() {
   }
+
+  public static native void myStaticMethodWithUnionArg(@Nonnull BluetoothDescriptorUUID name);
+
+  public static native void myStaticMethodWithUnionArg(@Nonnull String name);
+
+  public static native void myStaticMethodWithUnionArg(int name);
+
+  public static native void myStaticMethodWithUnionArg();
+
+  @Nullable
+  public static native BluetoothDescriptorUUID myStaticMethodWithUnionReturn();
 }

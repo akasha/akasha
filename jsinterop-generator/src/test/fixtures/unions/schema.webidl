@@ -64,14 +64,20 @@ interface EventTarget {
 };
 
 interface SomeDataContainer {
+  static void myStaticMethodWithUnionArg( BluetoothDescriptorUUID name );
+  static BluetoothDescriptorUUID myStaticMethodWithUnionReturn();
   constructor( BufferSource data );
 };
 
 interface SomeInterface {
+  static void myStaticMethodWithUnionArg( ( DOMString or unsigned long ) serviceUuid );
+  static ( DOMString or unsigned long ) myStaticMethodWithUnionReturn();
   constructor( ( DOMString or unsigned long ) serviceUuid );
   ( DOMString or unsigned long ) getUuid();
 };
 
 interface SomeServiceContainer {
+  static void myStaticMethodWithUnionArg( optional BluetoothDescriptorUUID name );
+  static BluetoothDescriptorUUID? myStaticMethodWithUnionReturn();
   constructor( optional BluetoothServiceUUID service );
 };

@@ -61,4 +61,13 @@ public class SomeDataContainer {
 
   public SomeDataContainer(@Nonnull final ArrayBuffer data) {
   }
+
+  public static native void myStaticMethodWithUnionArg(@Nonnull BluetoothDescriptorUUID name);
+
+  public static native void myStaticMethodWithUnionArg(@Nonnull String name);
+
+  public static native void myStaticMethodWithUnionArg(int name);
+
+  @Nonnull
+  public static native BluetoothDescriptorUUID myStaticMethodWithUnionReturn();
 }
