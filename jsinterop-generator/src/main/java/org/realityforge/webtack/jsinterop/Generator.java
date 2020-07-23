@@ -309,7 +309,6 @@ final class Generator
     for ( final DictionaryMember member : definition.getMembers() )
     {
       final Type actualType = context.getSchema().resolveType( member.getType() );
-      //final TypeName javaType = context.toTypeName( actualType );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
       for ( final TypedValue typedValue : explodeType( context, member.getType() ) )
