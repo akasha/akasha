@@ -8,6 +8,8 @@ complete as there is too much un-said.
 
 * use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system
 
+* Generate a global object ala `DomGlobal` based on a specific interface name.
+
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
