@@ -314,8 +314,7 @@ final class Generator
       generateDictionaryMemberSetter( context, member, actualType, javaType, type );
       for ( final TypedValue typedValue : explodeType( context, member.getType() ) )
       {
-        if ( !actualType.equiv( typedValue.getType() ) ||
-             typedValue.getJavaType() instanceof ArrayTypeName )
+        if ( !javaType.equals( typedValue.getJavaType() ) )
         {
           generateDictionaryMemberOverlaySetter( context, member, typedValue, type );
         }
