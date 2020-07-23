@@ -8,6 +8,8 @@ complete as there is too much un-said.
 
 * use webrtc video chat ala ZipCall.io as another example
 
+* use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system
+
 * Add support for static operators
 
 * Update `java_keyword_names` test to test operators that have names that collide or operators that have arguments that collide. Also add tests that verify operators (`static`, `default` or any named operator) should also work when the name collides with java-isms.
