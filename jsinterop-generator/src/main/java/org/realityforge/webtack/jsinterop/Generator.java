@@ -309,8 +309,9 @@ final class Generator
     for ( final DictionaryMember member : definition.getMembers() )
     {
       final Type actualType = context.getSchema().resolveType( member.getType() );
-      generateDictionaryMemberGetter( context, member, actualType, type );
-      generateDictionaryMemberSetter( context, member, actualType, type );
+      final TypeName javaType = context.toTypeName( actualType );
+      generateDictionaryMemberGetter( context, member, actualType, javaType, type );
+      generateDictionaryMemberSetter( context, member, actualType, javaType, type );
       for ( final TypedValue typedValue : explodeType( context, member.getType() ) )
       {
         if ( !actualType.equiv( typedValue.getType() ) ||
@@ -414,13 +415,14 @@ final class Generator
   private void generateDictionaryMemberGetter( @Nonnull final CodeGenContext context,
                                                @Nonnull final DictionaryMember member,
                                                @Nonnull final Type actualType,
+                                               @Nonnull final TypeName javaType,
                                                @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( getAccessorName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
-        .returns( context.toTypeName( actualType ) )
+        .returns( javaType )
         .addAnnotation( Types.JS_PROPERTY );
     if ( context.getSchema().isNullable( member.getType() ) )
     {
@@ -447,6 +449,7 @@ final class Generator
   private void generateDictionaryMemberSetter( @Nonnull final CodeGenContext context,
                                                @Nonnull final DictionaryMember member,
                                                @Nonnull final Type actualType,
+                                               @Nonnull final TypeName javaType,
                                                @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method =
@@ -456,7 +459,7 @@ final class Generator
         .addAnnotation( Types.JS_PROPERTY );
     final String paramName = safeName( member.getName() );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( context.toTypeName( actualType ), paramName );
+      ParameterSpec.builder( javaType, paramName );
 
     if ( context.getSchema().isNullable( member.getType() ) )
     {
