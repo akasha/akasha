@@ -1,3 +1,327 @@
+dictionary Dictionary_requiredAnyValue {
+  required any requiredAnyValue;
+};
+
+dictionary Dictionary_requiredArrayBufferValueValue {
+  required ArrayBuffer requiredArrayBufferValueValue;
+};
+
+dictionary Dictionary_requiredBooleanFrozenArrayValue {
+  required FrozenArray<boolean> requiredBooleanFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredBooleanSequenceValue {
+  required sequence<boolean> requiredBooleanSequenceValue;
+};
+
+dictionary Dictionary_requiredBooleanValue {
+  required boolean requiredBooleanValue;
+};
+
+dictionary Dictionary_requiredByteStringValue {
+  required ByteString requiredByteStringValue;
+};
+
+dictionary Dictionary_requiredByteValue {
+  required byte requiredByteValue;
+};
+
+dictionary Dictionary_requiredDOMStringValue {
+  required DOMString requiredDOMStringValue;
+};
+
+dictionary Dictionary_requiredDataViewValueValue {
+  required DataView requiredDataViewValueValue;
+};
+
+dictionary Dictionary_requiredDoubleFrozenArrayValue {
+  required FrozenArray<double> requiredDoubleFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredDoubleSequenceValue {
+  required sequence<double> requiredDoubleSequenceValue;
+};
+
+dictionary Dictionary_requiredDoubleValue {
+  required double requiredDoubleValue;
+};
+
+dictionary Dictionary_requiredFloat32ArrayValue {
+  required Float32Array requiredFloat32ArrayValue;
+};
+
+dictionary Dictionary_requiredFloat64ArrayValue {
+  required Float64Array requiredFloat64ArrayValue;
+};
+
+dictionary Dictionary_requiredFloatFrozenArrayValue {
+  required FrozenArray<float> requiredFloatFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredFloatSequenceValue {
+  required sequence<float> requiredFloatSequenceValue;
+};
+
+dictionary Dictionary_requiredFloatValue {
+  required float requiredFloatValue;
+};
+
+dictionary Dictionary_requiredInt16ArrayValue {
+  required Int16Array requiredInt16ArrayValue;
+};
+
+dictionary Dictionary_requiredInt32ArrayValue {
+  required Int32Array requiredInt32ArrayValue;
+};
+
+dictionary Dictionary_requiredInt8ArrayValue {
+  required Int8Array requiredInt8ArrayValue;
+};
+
+dictionary Dictionary_requiredLongLongValue {
+  required long long requiredLongLongValue;
+};
+
+dictionary Dictionary_requiredLongValue {
+  required long requiredLongValue;
+};
+
+dictionary Dictionary_requiredNullableArrayBufferValueValue {
+  required ArrayBuffer? requiredNullableArrayBufferValueValue;
+};
+
+dictionary Dictionary_requiredNullableBooleanFrozenArrayValue {
+  required FrozenArray<boolean>? requiredNullableBooleanFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredNullableBooleanSequenceValue {
+  required sequence<boolean>? requiredNullableBooleanSequenceValue;
+};
+
+dictionary Dictionary_requiredNullableBooleanValue {
+  required boolean? requiredNullableBooleanValue;
+};
+
+dictionary Dictionary_requiredNullableByteStringValue {
+  required ByteString? requiredNullableByteStringValue;
+};
+
+dictionary Dictionary_requiredNullableByteValue {
+  required byte? requiredNullableByteValue;
+};
+
+dictionary Dictionary_requiredNullableDOMStringValue {
+  required DOMString? requiredNullableDOMStringValue;
+};
+
+dictionary Dictionary_requiredNullableDataViewValueValue {
+  required DataView? requiredNullableDataViewValueValue;
+};
+
+dictionary Dictionary_requiredNullableDoubleFrozenArrayValue {
+  required FrozenArray<double>? requiredNullableDoubleFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredNullableDoubleSequenceValue {
+  required sequence<double>? requiredNullableDoubleSequenceValue;
+};
+
+dictionary Dictionary_requiredNullableDoubleValue {
+  required double? requiredNullableDoubleValue;
+};
+
+dictionary Dictionary_requiredNullableFloat32ArrayValue {
+  required Float32Array? requiredNullableFloat32ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableFloat64ArrayValue {
+  required Float64Array? requiredNullableFloat64ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableFloatFrozenArrayValue {
+  required FrozenArray<float>? requiredNullableFloatFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredNullableFloatSequenceValue {
+  required sequence<float>? requiredNullableFloatSequenceValue;
+};
+
+dictionary Dictionary_requiredNullableFloatValue {
+  required float? requiredNullableFloatValue;
+};
+
+dictionary Dictionary_requiredNullableInt16ArrayValue {
+  required Int16Array? requiredNullableInt16ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableInt32ArrayValue {
+  required Int32Array? requiredNullableInt32ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableInt8ArrayValue {
+  required Int8Array? requiredNullableInt8ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableLongLongValue {
+  required long long? requiredNullableLongLongValue;
+};
+
+dictionary Dictionary_requiredNullableLongValue {
+  required long? requiredNullableLongValue;
+};
+
+dictionary Dictionary_requiredNullableObjectValue {
+  required object? requiredNullableObjectValue;
+};
+
+dictionary Dictionary_requiredNullableOctetValue {
+  required octet? requiredNullableOctetValue;
+};
+
+dictionary Dictionary_requiredNullableShortFrozenArrayValue {
+  required FrozenArray<short>? requiredNullableShortFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredNullableShortSequenceValue {
+  required sequence<short>? requiredNullableShortSequenceValue;
+};
+
+dictionary Dictionary_requiredNullableShortValue {
+  required short? requiredNullableShortValue;
+};
+
+dictionary Dictionary_requiredNullableSomeTypeFrozenArrayValue {
+  required FrozenArray<SomeType>? requiredNullableSomeTypeFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredNullableSomeTypeSequenceValue {
+  required sequence<SomeType>? requiredNullableSomeTypeSequenceValue;
+};
+
+dictionary Dictionary_requiredNullableSomeTypeValue {
+  required SomeType? requiredNullableSomeTypeValue;
+};
+
+dictionary Dictionary_requiredNullableSymbolValue {
+  required symbol? requiredNullableSymbolValue;
+};
+
+dictionary Dictionary_requiredNullableUSVStringValue {
+  required USVString? requiredNullableUSVStringValue;
+};
+
+dictionary Dictionary_requiredNullableUint16ArrayValue {
+  required Uint16Array? requiredNullableUint16ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableUint32ArrayValue {
+  required Uint32Array? requiredNullableUint32ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableUint8ArrayValue {
+  required Uint8Array? requiredNullableUint8ArrayValue;
+};
+
+dictionary Dictionary_requiredNullableUint8ClampedArrayValue {
+  required Uint8ClampedArray? requiredNullableUint8ClampedArrayValue;
+};
+
+dictionary Dictionary_requiredNullableUnrestrictedDoubleValue {
+  required unrestricted double? requiredNullableUnrestrictedDoubleValue;
+};
+
+dictionary Dictionary_requiredNullableUnrestrictedFloatValue {
+  required unrestricted float? requiredNullableUnrestrictedFloatValue;
+};
+
+dictionary Dictionary_requiredNullableUnsignedLongLongValue {
+  required unsigned long long? requiredNullableUnsignedLongLongValue;
+};
+
+dictionary Dictionary_requiredNullableUnsignedLongValue {
+  required unsigned long? requiredNullableUnsignedLongValue;
+};
+
+dictionary Dictionary_requiredNullableUnsignedShortValue {
+  required unsigned short? requiredNullableUnsignedShortValue;
+};
+
+dictionary Dictionary_requiredObjectValue {
+  required object requiredObjectValue;
+};
+
+dictionary Dictionary_requiredOctetValue {
+  required octet requiredOctetValue;
+};
+
+dictionary Dictionary_requiredShortFrozenArrayValue {
+  required FrozenArray<short> requiredShortFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredShortSequenceValue {
+  required sequence<short> requiredShortSequenceValue;
+};
+
+dictionary Dictionary_requiredShortValue {
+  required short requiredShortValue;
+};
+
+dictionary Dictionary_requiredSomeTypeFrozenArrayValue {
+  required FrozenArray<SomeType> requiredSomeTypeFrozenArrayValue;
+};
+
+dictionary Dictionary_requiredSomeTypeSequenceValue {
+  required sequence<SomeType> requiredSomeTypeSequenceValue;
+};
+
+dictionary Dictionary_requiredSomeTypeValue {
+  required SomeType requiredSomeTypeValue;
+};
+
+dictionary Dictionary_requiredSymbolValue {
+  required symbol requiredSymbolValue;
+};
+
+dictionary Dictionary_requiredUSVStringValue {
+  required USVString requiredUSVStringValue;
+};
+
+dictionary Dictionary_requiredUint16ArrayValue {
+  required Uint16Array requiredUint16ArrayValue;
+};
+
+dictionary Dictionary_requiredUint32ArrayValue {
+  required Uint32Array requiredUint32ArrayValue;
+};
+
+dictionary Dictionary_requiredUint8ArrayValue {
+  required Uint8Array requiredUint8ArrayValue;
+};
+
+dictionary Dictionary_requiredUint8ClampedArrayValue {
+  required Uint8ClampedArray requiredUint8ClampedArrayValue;
+};
+
+dictionary Dictionary_requiredUnrestrictedDoubleValue {
+  required unrestricted double requiredUnrestrictedDoubleValue;
+};
+
+dictionary Dictionary_requiredUnrestrictedFloatValue {
+  required unrestricted float requiredUnrestrictedFloatValue;
+};
+
+dictionary Dictionary_requiredUnsignedLongLongValue {
+  required unsigned long long requiredUnsignedLongLongValue;
+};
+
+dictionary Dictionary_requiredUnsignedLongValue {
+  required unsigned long requiredUnsignedLongValue;
+};
+
+dictionary Dictionary_requiredUnsignedShortValue {
+  required unsigned short requiredUnsignedShortValue;
+};
+
 dictionary MyDictionary {
   any anyValue;
   ArrayBuffer arrayBufferValueValue;
@@ -69,87 +393,6 @@ dictionary MyDictionary {
   unsigned short? nullableUnsignedShortValue;
   object objectValue;
   octet octetValue;
-  required any requiredAnyValue;
-  required ArrayBuffer requiredArrayBufferValueValue;
-  required FrozenArray<boolean> requiredBooleanFrozenArrayValue;
-  required sequence<boolean> requiredBooleanSequenceValue;
-  required boolean requiredBooleanValue;
-  required ByteString requiredByteStringValue;
-  required byte requiredByteValue;
-  required DOMString requiredDOMStringValue;
-  required DataView requiredDataViewValueValue;
-  required FrozenArray<double> requiredDoubleFrozenArrayValue;
-  required sequence<double> requiredDoubleSequenceValue;
-  required double requiredDoubleValue;
-  required Float32Array requiredFloat32ArrayValue;
-  required Float64Array requiredFloat64ArrayValue;
-  required FrozenArray<float> requiredFloatFrozenArrayValue;
-  required sequence<float> requiredFloatSequenceValue;
-  required float requiredFloatValue;
-  required Int16Array requiredInt16ArrayValue;
-  required Int32Array requiredInt32ArrayValue;
-  required Int8Array requiredInt8ArrayValue;
-  required long long requiredLongLongValue;
-  required long requiredLongValue;
-  required ArrayBuffer? requiredNullableArrayBufferValueValue;
-  required FrozenArray<boolean>? requiredNullableBooleanFrozenArrayValue;
-  required sequence<boolean>? requiredNullableBooleanSequenceValue;
-  required boolean? requiredNullableBooleanValue;
-  required ByteString? requiredNullableByteStringValue;
-  required byte? requiredNullableByteValue;
-  required DOMString? requiredNullableDOMStringValue;
-  required DataView? requiredNullableDataViewValueValue;
-  required FrozenArray<double>? requiredNullableDoubleFrozenArrayValue;
-  required sequence<double>? requiredNullableDoubleSequenceValue;
-  required double? requiredNullableDoubleValue;
-  required Float32Array? requiredNullableFloat32ArrayValue;
-  required Float64Array? requiredNullableFloat64ArrayValue;
-  required FrozenArray<float>? requiredNullableFloatFrozenArrayValue;
-  required sequence<float>? requiredNullableFloatSequenceValue;
-  required float? requiredNullableFloatValue;
-  required Int16Array? requiredNullableInt16ArrayValue;
-  required Int32Array? requiredNullableInt32ArrayValue;
-  required Int8Array? requiredNullableInt8ArrayValue;
-  required long long? requiredNullableLongLongValue;
-  required long? requiredNullableLongValue;
-  required object? requiredNullableObjectValue;
-  required octet? requiredNullableOctetValue;
-  required FrozenArray<short>? requiredNullableShortFrozenArrayValue;
-  required sequence<short>? requiredNullableShortSequenceValue;
-  required short? requiredNullableShortValue;
-  required FrozenArray<SomeType>? requiredNullableSomeTypeFrozenArrayValue;
-  required sequence<SomeType>? requiredNullableSomeTypeSequenceValue;
-  required SomeType? requiredNullableSomeTypeValue;
-  required symbol? requiredNullableSymbolValue;
-  required USVString? requiredNullableUSVStringValue;
-  required Uint16Array? requiredNullableUint16ArrayValue;
-  required Uint32Array? requiredNullableUint32ArrayValue;
-  required Uint8Array? requiredNullableUint8ArrayValue;
-  required Uint8ClampedArray? requiredNullableUint8ClampedArrayValue;
-  required unrestricted double? requiredNullableUnrestrictedDoubleValue;
-  required unrestricted float? requiredNullableUnrestrictedFloatValue;
-  required unsigned long long? requiredNullableUnsignedLongLongValue;
-  required unsigned long? requiredNullableUnsignedLongValue;
-  required unsigned short? requiredNullableUnsignedShortValue;
-  required object requiredObjectValue;
-  required octet requiredOctetValue;
-  required FrozenArray<short> requiredShortFrozenArrayValue;
-  required sequence<short> requiredShortSequenceValue;
-  required short requiredShortValue;
-  required FrozenArray<SomeType> requiredSomeTypeFrozenArrayValue;
-  required sequence<SomeType> requiredSomeTypeSequenceValue;
-  required SomeType requiredSomeTypeValue;
-  required symbol requiredSymbolValue;
-  required USVString requiredUSVStringValue;
-  required Uint16Array requiredUint16ArrayValue;
-  required Uint32Array requiredUint32ArrayValue;
-  required Uint8Array requiredUint8ArrayValue;
-  required Uint8ClampedArray requiredUint8ClampedArrayValue;
-  required unrestricted double requiredUnrestrictedDoubleValue;
-  required unrestricted float requiredUnrestrictedFloatValue;
-  required unsigned long long requiredUnsignedLongLongValue;
-  required unsigned long requiredUnsignedLongValue;
-  required unsigned short requiredUnsignedShortValue;
   Promise<sequence<long long>> sequencePromiseValue;
   FrozenArray<short> shortFrozenArrayValue;
   Promise<short> shortPromiseValue;

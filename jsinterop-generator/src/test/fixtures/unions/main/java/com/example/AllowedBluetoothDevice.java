@@ -31,6 +31,34 @@ public interface AllowedBluetoothDevice {
     return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
   }
 
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final String[] allowedServices,
+      @Nonnull final JsArray<StringOrLongLongUnion> requiredUuids) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final String allowedServices,
+      @Nonnull final StringOrLongLongUnion[] requiredUuids) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final JsArray<String> allowedServices,
+      @Nonnull final StringOrLongLongUnion[] requiredUuids) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final String[] allowedServices,
+      @Nonnull final StringOrLongLongUnion[] requiredUuids) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
+  }
+
   @JsProperty
   @Nonnull
   StringOrStringArrayUnion getAllowedServices();
@@ -58,6 +86,18 @@ public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
   default AllowedBluetoothDevice allowedServices(@Nonnull final JsArray<String> allowedServices) {
+    setAllowedServices( allowedServices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setAllowedServices(@Nonnull final String[] allowedServices) {
+    setAllowedServices( StringOrStringArrayUnion.of( allowedServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice allowedServices(@Nonnull final String[] allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -92,6 +132,18 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
+  @JsOverlay
+  default void setOtherServices(@Nonnull final String[] otherServices) {
+    setOtherServices( StringOrStringArrayUnion.of( otherServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice otherServices(@Nonnull final String[] otherServices) {
+    setOtherServices( otherServices );
+    return this;
+  }
+
   @JsProperty
   @Nonnull
   JsArray<StringOrLongLongUnion> getRequiredUuids();
@@ -107,6 +159,19 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
+  @JsOverlay
+  default void setRequiredUuids(@Nonnull final StringOrLongLongUnion[] requiredUuids) {
+    setRequiredUuids( JsArray.asJsArray( requiredUuids ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice requiredUuids(
+      @Nonnull final StringOrLongLongUnion[] requiredUuids) {
+    setRequiredUuids( requiredUuids );
+    return this;
+  }
+
   @JsProperty
   JsArray<StringOrOctetUnion> getUuids();
 
@@ -116,6 +181,18 @@ public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
   default AllowedBluetoothDevice uuids(@Nonnull final JsArray<StringOrOctetUnion> uuids) {
+    setUuids( uuids );
+    return this;
+  }
+
+  @JsOverlay
+  default void setUuids(@Nonnull final StringOrOctetUnion[] uuids) {
+    setUuids( JsArray.asJsArray( uuids ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice uuids(@Nonnull final StringOrOctetUnion[] uuids) {
     setUuids( uuids );
     return this;
   }

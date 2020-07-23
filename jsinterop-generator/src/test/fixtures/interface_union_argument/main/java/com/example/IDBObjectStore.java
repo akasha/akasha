@@ -35,8 +35,15 @@ public class IDBObjectStore {
       @Nonnull IDBIndexParameters options);
 
   @Nonnull
+  public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath,
+      @Nonnull IDBIndexParameters options);
+
+  @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull String keyPath);
 
   @Nonnull
   public native IDBIndex createIndex(@Nonnull String name, @Nonnull JsArray<String> keyPath);
+
+  @Nonnull
+  public native IDBIndex createIndex(@Nonnull String name, @Nonnull String[] keyPath);
 }

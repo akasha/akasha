@@ -335,7 +335,7 @@ final class CodeGenContext
   }
 
   @Nonnull
-  private TypeName getUnexpandedType( @Nonnull final Type type )
+  TypeName getUnexpandedType( @Nonnull final Type type )
   {
     return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
   }

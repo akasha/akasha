@@ -34,78 +34,8 @@ import jsinterop.base.JsPropertyMap;
 public interface MyDictionary {
   @JsOverlay
   @Nonnull
-  static MyDictionary create(@Nullable final Any requiredAnyValue,
-      @Nonnull final ArrayBuffer requiredArrayBufferValueValue,
-      @Nonnull final JsArray<Boolean> requiredBooleanFrozenArrayValue,
-      @Nonnull final JsArray<Boolean> requiredBooleanSequenceValue,
-      final boolean requiredBooleanValue, @Nonnull final String requiredByteStringValue,
-      final byte requiredByteValue, @Nonnull final String requiredDOMStringValue,
-      @Nonnull final DataView requiredDataViewValueValue,
-      @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue,
-      @Nonnull final JsArray<Double> requiredDoubleSequenceValue, final double requiredDoubleValue,
-      @Nonnull final Float32Array requiredFloat32ArrayValue,
-      @Nonnull final Float64Array requiredFloat64ArrayValue,
-      @Nonnull final JsArray<Double> requiredFloatFrozenArrayValue,
-      @Nonnull final JsArray<Double> requiredFloatSequenceValue, final float requiredFloatValue,
-      @Nonnull final Int16Array requiredInt16ArrayValue,
-      @Nonnull final Int32Array requiredInt32ArrayValue,
-      @Nonnull final Int8Array requiredInt8ArrayValue, final int requiredLongLongValue,
-      final int requiredLongValue,
-      @Nullable final ArrayBuffer requiredNullableArrayBufferValueValue,
-      @Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue,
-      @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue,
-      @Nullable final Boolean requiredNullableBooleanValue,
-      @Nullable final String requiredNullableByteStringValue,
-      @Nullable final Double requiredNullableByteValue,
-      @Nullable final String requiredNullableDOMStringValue,
-      @Nullable final DataView requiredNullableDataViewValueValue,
-      @Nullable final JsArray<Double> requiredNullableDoubleFrozenArrayValue,
-      @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue,
-      @Nullable final Double requiredNullableDoubleValue,
-      @Nullable final Float32Array requiredNullableFloat32ArrayValue,
-      @Nullable final Float64Array requiredNullableFloat64ArrayValue,
-      @Nullable final JsArray<Double> requiredNullableFloatFrozenArrayValue,
-      @Nullable final JsArray<Double> requiredNullableFloatSequenceValue,
-      @Nullable final Double requiredNullableFloatValue,
-      @Nullable final Int16Array requiredNullableInt16ArrayValue,
-      @Nullable final Int32Array requiredNullableInt32ArrayValue,
-      @Nullable final Int8Array requiredNullableInt8ArrayValue,
-      @Nullable final Double requiredNullableLongLongValue,
-      @Nullable final Double requiredNullableLongValue,
-      @Nullable final Object requiredNullableObjectValue,
-      @Nullable final Double requiredNullableOctetValue,
-      @Nullable final JsArray<Double> requiredNullableShortFrozenArrayValue,
-      @Nullable final JsArray<Double> requiredNullableShortSequenceValue,
-      @Nullable final Double requiredNullableShortValue,
-      @Nullable final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue,
-      @Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue,
-      @Nullable final SomeType requiredNullableSomeTypeValue,
-      @Nullable final Symbol requiredNullableSymbolValue,
-      @Nullable final String requiredNullableUSVStringValue,
-      @Nullable final Uint16Array requiredNullableUint16ArrayValue,
-      @Nullable final Uint32Array requiredNullableUint32ArrayValue,
-      @Nullable final Uint8Array requiredNullableUint8ArrayValue,
-      @Nullable final Uint8ClampedArray requiredNullableUint8ClampedArrayValue,
-      @Nullable final Double requiredNullableUnrestrictedDoubleValue,
-      @Nullable final Double requiredNullableUnrestrictedFloatValue,
-      @Nullable final Double requiredNullableUnsignedLongLongValue,
-      @Nullable final Double requiredNullableUnsignedLongValue,
-      @Nullable final Double requiredNullableUnsignedShortValue,
-      @Nonnull final Object requiredObjectValue, final short requiredOctetValue,
-      @Nonnull final JsArray<Double> requiredShortFrozenArrayValue,
-      @Nonnull final JsArray<Double> requiredShortSequenceValue, final short requiredShortValue,
-      @Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue,
-      @Nonnull final JsArray<SomeType> requiredSomeTypeSequenceValue,
-      @Nonnull final SomeType requiredSomeTypeValue, @Nonnull final Symbol requiredSymbolValue,
-      @Nonnull final String requiredUSVStringValue,
-      @Nonnull final Uint16Array requiredUint16ArrayValue,
-      @Nonnull final Uint32Array requiredUint32ArrayValue,
-      @Nonnull final Uint8Array requiredUint8ArrayValue,
-      @Nonnull final Uint8ClampedArray requiredUint8ClampedArrayValue,
-      final double requiredUnrestrictedDoubleValue, final float requiredUnrestrictedFloatValue,
-      final int requiredUnsignedLongLongValue, final int requiredUnsignedLongValue,
-      final int requiredUnsignedShortValue) {
-    return Js.<MyDictionary>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue ).requiredArrayBufferValueValue( requiredArrayBufferValueValue ).requiredBooleanFrozenArrayValue( requiredBooleanFrozenArrayValue ).requiredBooleanSequenceValue( requiredBooleanSequenceValue ).requiredBooleanValue( requiredBooleanValue ).requiredByteStringValue( requiredByteStringValue ).requiredByteValue( requiredByteValue ).requiredDOMStringValue( requiredDOMStringValue ).requiredDataViewValueValue( requiredDataViewValueValue ).requiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue ).requiredDoubleSequenceValue( requiredDoubleSequenceValue ).requiredDoubleValue( requiredDoubleValue ).requiredFloat32ArrayValue( requiredFloat32ArrayValue ).requiredFloat64ArrayValue( requiredFloat64ArrayValue ).requiredFloatFrozenArrayValue( requiredFloatFrozenArrayValue ).requiredFloatSequenceValue( requiredFloatSequenceValue ).requiredFloatValue( requiredFloatValue ).requiredInt16ArrayValue( requiredInt16ArrayValue ).requiredInt32ArrayValue( requiredInt32ArrayValue ).requiredInt8ArrayValue( requiredInt8ArrayValue ).requiredLongLongValue( requiredLongLongValue ).requiredLongValue( requiredLongValue ).requiredNullableArrayBufferValueValue( requiredNullableArrayBufferValueValue ).requiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue ).requiredNullableBooleanValue( requiredNullableBooleanValue ).requiredNullableByteStringValue( requiredNullableByteStringValue ).requiredNullableByteValue( requiredNullableByteValue ).requiredNullableDOMStringValue( requiredNullableDOMStringValue ).requiredNullableDataViewValueValue( requiredNullableDataViewValueValue ).requiredNullableDoubleFrozenArrayValue( requiredNullableDoubleFrozenArrayValue ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue ).requiredNullableDoubleValue( requiredNullableDoubleValue ).requiredNullableFloat32ArrayValue( requiredNullableFloat32ArrayValue ).requiredNullableFloat64ArrayValue( requiredNullableFloat64ArrayValue ).requiredNullableFloatFrozenArrayValue( requiredNullableFloatFrozenArrayValue ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue ).requiredNullableFloatValue( requiredNullableFloatValue ).requiredNullableInt16ArrayValue( requiredNullableInt16ArrayValue ).requiredNullableInt32ArrayValue( requiredNullableInt32ArrayValue ).requiredNullableInt8ArrayValue( requiredNullableInt8ArrayValue ).requiredNullableLongLongValue( requiredNullableLongLongValue ).requiredNullableLongValue( requiredNullableLongValue ).requiredNullableObjectValue( requiredNullableObjectValue ).requiredNullableOctetValue( requiredNullableOctetValue ).requiredNullableShortFrozenArrayValue( requiredNullableShortFrozenArrayValue ).requiredNullableShortSequenceValue( requiredNullableShortSequenceValue ).requiredNullableShortValue( requiredNullableShortValue ).requiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue ).requiredNullableSomeTypeValue( requiredNullableSomeTypeValue ).requiredNullableSymbolValue( requiredNullableSymbolValue ).requiredNullableUSVStringValue( requiredNullableUSVStringValue ).requiredNullableUint16ArrayValue( requiredNullableUint16ArrayValue ).requiredNullableUint32ArrayValue( requiredNullableUint32ArrayValue ).requiredNullableUint8ArrayValue( requiredNullableUint8ArrayValue ).requiredNullableUint8ClampedArrayValue( requiredNullableUint8ClampedArrayValue ).requiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue ).requiredNullableUnrestrictedFloatValue( requiredNullableUnrestrictedFloatValue ).requiredNullableUnsignedLongLongValue( requiredNullableUnsignedLongLongValue ).requiredNullableUnsignedLongValue( requiredNullableUnsignedLongValue ).requiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue ).requiredObjectValue( requiredObjectValue ).requiredOctetValue( requiredOctetValue ).requiredShortFrozenArrayValue( requiredShortFrozenArrayValue ).requiredShortSequenceValue( requiredShortSequenceValue ).requiredShortValue( requiredShortValue ).requiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue ).requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue ).requiredSomeTypeValue( requiredSomeTypeValue ).requiredSymbolValue( requiredSymbolValue ).requiredUSVStringValue( requiredUSVStringValue ).requiredUint16ArrayValue( requiredUint16ArrayValue ).requiredUint32ArrayValue( requiredUint32ArrayValue ).requiredUint8ArrayValue( requiredUint8ArrayValue ).requiredUint8ClampedArrayValue( requiredUint8ClampedArrayValue ).requiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue ).requiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue ).requiredUnsignedLongLongValue( requiredUnsignedLongLongValue ).requiredUnsignedLongValue( requiredUnsignedLongValue ).requiredUnsignedShortValue( requiredUnsignedShortValue );
+  static MyDictionary create() {
+    return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
   @JsProperty
@@ -158,6 +88,18 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary booleanSequenceValue(@Nonnull final JsArray<Boolean> booleanSequenceValue) {
+    setBooleanSequenceValue( booleanSequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setBooleanSequenceValue(@Nonnull final Boolean[] booleanSequenceValue) {
+    setBooleanSequenceValue( JsArray.asJsArray( booleanSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary booleanSequenceValue(@Nonnull final Boolean[] booleanSequenceValue) {
     setBooleanSequenceValue( booleanSequenceValue );
     return this;
   }
@@ -295,6 +237,18 @@ public interface MyDictionary {
     return this;
   }
 
+  @JsOverlay
+  default void setDoubleSequenceValue(@Nonnull final Double[] doubleSequenceValue) {
+    setDoubleSequenceValue( JsArray.asJsArray( doubleSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary doubleSequenceValue(@Nonnull final Double[] doubleSequenceValue) {
+    setDoubleSequenceValue( doubleSequenceValue );
+    return this;
+  }
+
   @JsProperty
   double getDoubleValue();
 
@@ -356,6 +310,18 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary floatSequenceValue(@Nonnull final JsArray<Double> floatSequenceValue) {
+    setFloatSequenceValue( floatSequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setFloatSequenceValue(@Nonnull final Double[] floatSequenceValue) {
+    setFloatSequenceValue( JsArray.asJsArray( floatSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary floatSequenceValue(@Nonnull final Double[] floatSequenceValue) {
     setFloatSequenceValue( floatSequenceValue );
     return this;
   }
@@ -498,6 +464,20 @@ public interface MyDictionary {
     return this;
   }
 
+  @JsOverlay
+  default void setNullableBooleanSequenceValue(
+      @Nullable final Boolean[] nullableBooleanSequenceValue) {
+    setNullableBooleanSequenceValue( JsArray.asJsArray( nullableBooleanSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary nullableBooleanSequenceValue(
+      @Nullable final Boolean[] nullableBooleanSequenceValue) {
+    setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
+    return this;
+  }
+
   @JsProperty
   @Nullable
   Boolean getNullableBooleanValue();
@@ -599,6 +579,20 @@ public interface MyDictionary {
     return this;
   }
 
+  @JsOverlay
+  default void setNullableDoubleSequenceValue(
+      @Nullable final Double[] nullableDoubleSequenceValue) {
+    setNullableDoubleSequenceValue( JsArray.asJsArray( nullableDoubleSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary nullableDoubleSequenceValue(
+      @Nullable final Double[] nullableDoubleSequenceValue) {
+    setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
+    return this;
+  }
+
   @JsProperty
   @Nullable
   Double getNullableDoubleValue();
@@ -669,6 +663,19 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary nullableFloatSequenceValue(
       @Nullable final JsArray<Double> nullableFloatSequenceValue) {
+    setNullableFloatSequenceValue( nullableFloatSequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setNullableFloatSequenceValue(@Nullable final Double[] nullableFloatSequenceValue) {
+    setNullableFloatSequenceValue( JsArray.asJsArray( nullableFloatSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary nullableFloatSequenceValue(
+      @Nullable final Double[] nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( nullableFloatSequenceValue );
     return this;
   }
@@ -829,6 +836,19 @@ public interface MyDictionary {
     return this;
   }
 
+  @JsOverlay
+  default void setNullableShortSequenceValue(@Nullable final Double[] nullableShortSequenceValue) {
+    setNullableShortSequenceValue( JsArray.asJsArray( nullableShortSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary nullableShortSequenceValue(
+      @Nullable final Double[] nullableShortSequenceValue) {
+    setNullableShortSequenceValue( nullableShortSequenceValue );
+    return this;
+  }
+
   @JsProperty
   @Nullable
   Double getNullableShortValue();
@@ -884,6 +904,20 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary nullableSomeTypeSequenceValue(
       @Nullable final JsArray<SomeType> nullableSomeTypeSequenceValue) {
+    setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setNullableSomeTypeSequenceValue(
+      @Nullable final SomeType[] nullableSomeTypeSequenceValue) {
+    setNullableSomeTypeSequenceValue( JsArray.asJsArray( nullableSomeTypeSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary nullableSomeTypeSequenceValue(
+      @Nullable final SomeType[] nullableSomeTypeSequenceValue) {
     setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
     return this;
   }
@@ -1091,1202 +1125,6 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  @Nullable
-  Any getRequiredAnyValue();
-
-  @JsProperty
-  void setRequiredAnyValue(@Nullable Any requiredAnyValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredAnyValue(@Nullable final Any requiredAnyValue) {
-    setRequiredAnyValue( requiredAnyValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  ArrayBuffer getRequiredArrayBufferValueValue();
-
-  @JsProperty
-  void setRequiredArrayBufferValueValue(@Nonnull ArrayBuffer requiredArrayBufferValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredArrayBufferValueValue(
-      @Nonnull final ArrayBuffer requiredArrayBufferValueValue) {
-    setRequiredArrayBufferValueValue( requiredArrayBufferValueValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Boolean> getRequiredBooleanFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredBooleanFrozenArrayValue(
-      @Nonnull JsArray<Boolean> requiredBooleanFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredBooleanFrozenArrayValue(
-      @Nonnull final JsArray<Boolean> requiredBooleanFrozenArrayValue) {
-    setRequiredBooleanFrozenArrayValue( requiredBooleanFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Boolean> getRequiredBooleanSequenceValue();
-
-  @JsProperty
-  void setRequiredBooleanSequenceValue(@Nonnull JsArray<Boolean> requiredBooleanSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredBooleanSequenceValue(
-      @Nonnull final JsArray<Boolean> requiredBooleanSequenceValue) {
-    setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  boolean isRequiredBooleanValue();
-
-  @JsProperty
-  void setRequiredBooleanValue(boolean requiredBooleanValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredBooleanValue(final boolean requiredBooleanValue) {
-    setRequiredBooleanValue( requiredBooleanValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  String getRequiredByteStringValue();
-
-  @JsProperty
-  void setRequiredByteStringValue(@Nonnull String requiredByteStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredByteStringValue(@Nonnull final String requiredByteStringValue) {
-    setRequiredByteStringValue( requiredByteStringValue );
-    return this;
-  }
-
-  @JsProperty
-  byte getRequiredByteValue();
-
-  @JsProperty
-  void setRequiredByteValue(byte requiredByteValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredByteValue(final byte requiredByteValue) {
-    setRequiredByteValue( requiredByteValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  String getRequiredDOMStringValue();
-
-  @JsProperty
-  void setRequiredDOMStringValue(@Nonnull String requiredDOMStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredDOMStringValue(@Nonnull final String requiredDOMStringValue) {
-    setRequiredDOMStringValue( requiredDOMStringValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  DataView getRequiredDataViewValueValue();
-
-  @JsProperty
-  void setRequiredDataViewValueValue(@Nonnull DataView requiredDataViewValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredDataViewValueValue(
-      @Nonnull final DataView requiredDataViewValueValue) {
-    setRequiredDataViewValueValue( requiredDataViewValueValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Double> getRequiredDoubleFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredDoubleFrozenArrayValue(@Nonnull JsArray<Double> requiredDoubleFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredDoubleFrozenArrayValue(
-      @Nonnull final JsArray<Double> requiredDoubleFrozenArrayValue) {
-    setRequiredDoubleFrozenArrayValue( requiredDoubleFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Double> getRequiredDoubleSequenceValue();
-
-  @JsProperty
-  void setRequiredDoubleSequenceValue(@Nonnull JsArray<Double> requiredDoubleSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredDoubleSequenceValue(
-      @Nonnull final JsArray<Double> requiredDoubleSequenceValue) {
-    setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  double getRequiredDoubleValue();
-
-  @JsProperty
-  void setRequiredDoubleValue(double requiredDoubleValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredDoubleValue(final double requiredDoubleValue) {
-    setRequiredDoubleValue( requiredDoubleValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Float32Array getRequiredFloat32ArrayValue();
-
-  @JsProperty
-  void setRequiredFloat32ArrayValue(@Nonnull Float32Array requiredFloat32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredFloat32ArrayValue(
-      @Nonnull final Float32Array requiredFloat32ArrayValue) {
-    setRequiredFloat32ArrayValue( requiredFloat32ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Float64Array getRequiredFloat64ArrayValue();
-
-  @JsProperty
-  void setRequiredFloat64ArrayValue(@Nonnull Float64Array requiredFloat64ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredFloat64ArrayValue(
-      @Nonnull final Float64Array requiredFloat64ArrayValue) {
-    setRequiredFloat64ArrayValue( requiredFloat64ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Double> getRequiredFloatFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredFloatFrozenArrayValue(@Nonnull JsArray<Double> requiredFloatFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredFloatFrozenArrayValue(
-      @Nonnull final JsArray<Double> requiredFloatFrozenArrayValue) {
-    setRequiredFloatFrozenArrayValue( requiredFloatFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Double> getRequiredFloatSequenceValue();
-
-  @JsProperty
-  void setRequiredFloatSequenceValue(@Nonnull JsArray<Double> requiredFloatSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredFloatSequenceValue(
-      @Nonnull final JsArray<Double> requiredFloatSequenceValue) {
-    setRequiredFloatSequenceValue( requiredFloatSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  float getRequiredFloatValue();
-
-  @JsProperty
-  void setRequiredFloatValue(float requiredFloatValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredFloatValue(final float requiredFloatValue) {
-    setRequiredFloatValue( requiredFloatValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Int16Array getRequiredInt16ArrayValue();
-
-  @JsProperty
-  void setRequiredInt16ArrayValue(@Nonnull Int16Array requiredInt16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredInt16ArrayValue(@Nonnull final Int16Array requiredInt16ArrayValue) {
-    setRequiredInt16ArrayValue( requiredInt16ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Int32Array getRequiredInt32ArrayValue();
-
-  @JsProperty
-  void setRequiredInt32ArrayValue(@Nonnull Int32Array requiredInt32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredInt32ArrayValue(@Nonnull final Int32Array requiredInt32ArrayValue) {
-    setRequiredInt32ArrayValue( requiredInt32ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Int8Array getRequiredInt8ArrayValue();
-
-  @JsProperty
-  void setRequiredInt8ArrayValue(@Nonnull Int8Array requiredInt8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredInt8ArrayValue(@Nonnull final Int8Array requiredInt8ArrayValue) {
-    setRequiredInt8ArrayValue( requiredInt8ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  int getRequiredLongLongValue();
-
-  @JsProperty
-  void setRequiredLongLongValue(int requiredLongLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredLongLongValue(final int requiredLongLongValue) {
-    setRequiredLongLongValue( requiredLongLongValue );
-    return this;
-  }
-
-  @JsProperty
-  int getRequiredLongValue();
-
-  @JsProperty
-  void setRequiredLongValue(int requiredLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredLongValue(final int requiredLongValue) {
-    setRequiredLongValue( requiredLongValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  ArrayBuffer getRequiredNullableArrayBufferValueValue();
-
-  @JsProperty
-  void setRequiredNullableArrayBufferValueValue(
-      @Nullable ArrayBuffer requiredNullableArrayBufferValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableArrayBufferValueValue(
-      @Nullable final ArrayBuffer requiredNullableArrayBufferValueValue) {
-    setRequiredNullableArrayBufferValueValue( requiredNullableArrayBufferValueValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Boolean> getRequiredNullableBooleanFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredNullableBooleanFrozenArrayValue(
-      @Nullable JsArray<Boolean> requiredNullableBooleanFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableBooleanFrozenArrayValue(
-      @Nullable final JsArray<Boolean> requiredNullableBooleanFrozenArrayValue) {
-    setRequiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Boolean> getRequiredNullableBooleanSequenceValue();
-
-  @JsProperty
-  void setRequiredNullableBooleanSequenceValue(
-      @Nullable JsArray<Boolean> requiredNullableBooleanSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableBooleanSequenceValue(
-      @Nullable final JsArray<Boolean> requiredNullableBooleanSequenceValue) {
-    setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Boolean getRequiredNullableBooleanValue();
-
-  @JsProperty
-  void setRequiredNullableBooleanValue(@Nullable Boolean requiredNullableBooleanValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableBooleanValue(
-      @Nullable final Boolean requiredNullableBooleanValue) {
-    setRequiredNullableBooleanValue( requiredNullableBooleanValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  String getRequiredNullableByteStringValue();
-
-  @JsProperty
-  void setRequiredNullableByteStringValue(@Nullable String requiredNullableByteStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableByteStringValue(
-      @Nullable final String requiredNullableByteStringValue) {
-    setRequiredNullableByteStringValue( requiredNullableByteStringValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableByteValue();
-
-  @JsProperty
-  void setRequiredNullableByteValue(@Nullable Double requiredNullableByteValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableByteValue(@Nullable final Double requiredNullableByteValue) {
-    setRequiredNullableByteValue( requiredNullableByteValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  String getRequiredNullableDOMStringValue();
-
-  @JsProperty
-  void setRequiredNullableDOMStringValue(@Nullable String requiredNullableDOMStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableDOMStringValue(
-      @Nullable final String requiredNullableDOMStringValue) {
-    setRequiredNullableDOMStringValue( requiredNullableDOMStringValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  DataView getRequiredNullableDataViewValueValue();
-
-  @JsProperty
-  void setRequiredNullableDataViewValueValue(@Nullable DataView requiredNullableDataViewValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableDataViewValueValue(
-      @Nullable final DataView requiredNullableDataViewValueValue) {
-    setRequiredNullableDataViewValueValue( requiredNullableDataViewValueValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Double> getRequiredNullableDoubleFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredNullableDoubleFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableDoubleFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableDoubleFrozenArrayValue(
-      @Nullable final JsArray<Double> requiredNullableDoubleFrozenArrayValue) {
-    setRequiredNullableDoubleFrozenArrayValue( requiredNullableDoubleFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Double> getRequiredNullableDoubleSequenceValue();
-
-  @JsProperty
-  void setRequiredNullableDoubleSequenceValue(
-      @Nullable JsArray<Double> requiredNullableDoubleSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableDoubleSequenceValue(
-      @Nullable final JsArray<Double> requiredNullableDoubleSequenceValue) {
-    setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableDoubleValue();
-
-  @JsProperty
-  void setRequiredNullableDoubleValue(@Nullable Double requiredNullableDoubleValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableDoubleValue(
-      @Nullable final Double requiredNullableDoubleValue) {
-    setRequiredNullableDoubleValue( requiredNullableDoubleValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Float32Array getRequiredNullableFloat32ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableFloat32ArrayValue(
-      @Nullable Float32Array requiredNullableFloat32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableFloat32ArrayValue(
-      @Nullable final Float32Array requiredNullableFloat32ArrayValue) {
-    setRequiredNullableFloat32ArrayValue( requiredNullableFloat32ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Float64Array getRequiredNullableFloat64ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableFloat64ArrayValue(
-      @Nullable Float64Array requiredNullableFloat64ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableFloat64ArrayValue(
-      @Nullable final Float64Array requiredNullableFloat64ArrayValue) {
-    setRequiredNullableFloat64ArrayValue( requiredNullableFloat64ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Double> getRequiredNullableFloatFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredNullableFloatFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableFloatFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableFloatFrozenArrayValue(
-      @Nullable final JsArray<Double> requiredNullableFloatFrozenArrayValue) {
-    setRequiredNullableFloatFrozenArrayValue( requiredNullableFloatFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Double> getRequiredNullableFloatSequenceValue();
-
-  @JsProperty
-  void setRequiredNullableFloatSequenceValue(
-      @Nullable JsArray<Double> requiredNullableFloatSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableFloatSequenceValue(
-      @Nullable final JsArray<Double> requiredNullableFloatSequenceValue) {
-    setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableFloatValue();
-
-  @JsProperty
-  void setRequiredNullableFloatValue(@Nullable Double requiredNullableFloatValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableFloatValue(
-      @Nullable final Double requiredNullableFloatValue) {
-    setRequiredNullableFloatValue( requiredNullableFloatValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Int16Array getRequiredNullableInt16ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableInt16ArrayValue(@Nullable Int16Array requiredNullableInt16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableInt16ArrayValue(
-      @Nullable final Int16Array requiredNullableInt16ArrayValue) {
-    setRequiredNullableInt16ArrayValue( requiredNullableInt16ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Int32Array getRequiredNullableInt32ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableInt32ArrayValue(@Nullable Int32Array requiredNullableInt32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableInt32ArrayValue(
-      @Nullable final Int32Array requiredNullableInt32ArrayValue) {
-    setRequiredNullableInt32ArrayValue( requiredNullableInt32ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Int8Array getRequiredNullableInt8ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableInt8ArrayValue(@Nullable Int8Array requiredNullableInt8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableInt8ArrayValue(
-      @Nullable final Int8Array requiredNullableInt8ArrayValue) {
-    setRequiredNullableInt8ArrayValue( requiredNullableInt8ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableLongLongValue();
-
-  @JsProperty
-  void setRequiredNullableLongLongValue(@Nullable Double requiredNullableLongLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableLongLongValue(
-      @Nullable final Double requiredNullableLongLongValue) {
-    setRequiredNullableLongLongValue( requiredNullableLongLongValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableLongValue();
-
-  @JsProperty
-  void setRequiredNullableLongValue(@Nullable Double requiredNullableLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableLongValue(@Nullable final Double requiredNullableLongValue) {
-    setRequiredNullableLongValue( requiredNullableLongValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Object getRequiredNullableObjectValue();
-
-  @JsProperty
-  void setRequiredNullableObjectValue(@Nullable Object requiredNullableObjectValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableObjectValue(
-      @Nullable final Object requiredNullableObjectValue) {
-    setRequiredNullableObjectValue( requiredNullableObjectValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableOctetValue();
-
-  @JsProperty
-  void setRequiredNullableOctetValue(@Nullable Double requiredNullableOctetValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableOctetValue(
-      @Nullable final Double requiredNullableOctetValue) {
-    setRequiredNullableOctetValue( requiredNullableOctetValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Double> getRequiredNullableShortFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredNullableShortFrozenArrayValue(
-      @Nullable JsArray<Double> requiredNullableShortFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableShortFrozenArrayValue(
-      @Nullable final JsArray<Double> requiredNullableShortFrozenArrayValue) {
-    setRequiredNullableShortFrozenArrayValue( requiredNullableShortFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<Double> getRequiredNullableShortSequenceValue();
-
-  @JsProperty
-  void setRequiredNullableShortSequenceValue(
-      @Nullable JsArray<Double> requiredNullableShortSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableShortSequenceValue(
-      @Nullable final JsArray<Double> requiredNullableShortSequenceValue) {
-    setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableShortValue();
-
-  @JsProperty
-  void setRequiredNullableShortValue(@Nullable Double requiredNullableShortValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableShortValue(
-      @Nullable final Double requiredNullableShortValue) {
-    setRequiredNullableShortValue( requiredNullableShortValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<SomeType> getRequiredNullableSomeTypeFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredNullableSomeTypeFrozenArrayValue(
-      @Nullable JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableSomeTypeFrozenArrayValue(
-      @Nullable final JsArray<SomeType> requiredNullableSomeTypeFrozenArrayValue) {
-    setRequiredNullableSomeTypeFrozenArrayValue( requiredNullableSomeTypeFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  JsArray<SomeType> getRequiredNullableSomeTypeSequenceValue();
-
-  @JsProperty
-  void setRequiredNullableSomeTypeSequenceValue(
-      @Nullable JsArray<SomeType> requiredNullableSomeTypeSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableSomeTypeSequenceValue(
-      @Nullable final JsArray<SomeType> requiredNullableSomeTypeSequenceValue) {
-    setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  SomeType getRequiredNullableSomeTypeValue();
-
-  @JsProperty
-  void setRequiredNullableSomeTypeValue(@Nullable SomeType requiredNullableSomeTypeValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableSomeTypeValue(
-      @Nullable final SomeType requiredNullableSomeTypeValue) {
-    setRequiredNullableSomeTypeValue( requiredNullableSomeTypeValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Symbol getRequiredNullableSymbolValue();
-
-  @JsProperty
-  void setRequiredNullableSymbolValue(@Nullable Symbol requiredNullableSymbolValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableSymbolValue(
-      @Nullable final Symbol requiredNullableSymbolValue) {
-    setRequiredNullableSymbolValue( requiredNullableSymbolValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  String getRequiredNullableUSVStringValue();
-
-  @JsProperty
-  void setRequiredNullableUSVStringValue(@Nullable String requiredNullableUSVStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUSVStringValue(
-      @Nullable final String requiredNullableUSVStringValue) {
-    setRequiredNullableUSVStringValue( requiredNullableUSVStringValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Uint16Array getRequiredNullableUint16ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableUint16ArrayValue(@Nullable Uint16Array requiredNullableUint16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUint16ArrayValue(
-      @Nullable final Uint16Array requiredNullableUint16ArrayValue) {
-    setRequiredNullableUint16ArrayValue( requiredNullableUint16ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Uint32Array getRequiredNullableUint32ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableUint32ArrayValue(@Nullable Uint32Array requiredNullableUint32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUint32ArrayValue(
-      @Nullable final Uint32Array requiredNullableUint32ArrayValue) {
-    setRequiredNullableUint32ArrayValue( requiredNullableUint32ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Uint8Array getRequiredNullableUint8ArrayValue();
-
-  @JsProperty
-  void setRequiredNullableUint8ArrayValue(@Nullable Uint8Array requiredNullableUint8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUint8ArrayValue(
-      @Nullable final Uint8Array requiredNullableUint8ArrayValue) {
-    setRequiredNullableUint8ArrayValue( requiredNullableUint8ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Uint8ClampedArray getRequiredNullableUint8ClampedArrayValue();
-
-  @JsProperty
-  void setRequiredNullableUint8ClampedArrayValue(
-      @Nullable Uint8ClampedArray requiredNullableUint8ClampedArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUint8ClampedArrayValue(
-      @Nullable final Uint8ClampedArray requiredNullableUint8ClampedArrayValue) {
-    setRequiredNullableUint8ClampedArrayValue( requiredNullableUint8ClampedArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableUnrestrictedDoubleValue();
-
-  @JsProperty
-  void setRequiredNullableUnrestrictedDoubleValue(
-      @Nullable Double requiredNullableUnrestrictedDoubleValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUnrestrictedDoubleValue(
-      @Nullable final Double requiredNullableUnrestrictedDoubleValue) {
-    setRequiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableUnrestrictedFloatValue();
-
-  @JsProperty
-  void setRequiredNullableUnrestrictedFloatValue(
-      @Nullable Double requiredNullableUnrestrictedFloatValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUnrestrictedFloatValue(
-      @Nullable final Double requiredNullableUnrestrictedFloatValue) {
-    setRequiredNullableUnrestrictedFloatValue( requiredNullableUnrestrictedFloatValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableUnsignedLongLongValue();
-
-  @JsProperty
-  void setRequiredNullableUnsignedLongLongValue(
-      @Nullable Double requiredNullableUnsignedLongLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUnsignedLongLongValue(
-      @Nullable final Double requiredNullableUnsignedLongLongValue) {
-    setRequiredNullableUnsignedLongLongValue( requiredNullableUnsignedLongLongValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableUnsignedLongValue();
-
-  @JsProperty
-  void setRequiredNullableUnsignedLongValue(@Nullable Double requiredNullableUnsignedLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUnsignedLongValue(
-      @Nullable final Double requiredNullableUnsignedLongValue) {
-    setRequiredNullableUnsignedLongValue( requiredNullableUnsignedLongValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nullable
-  Double getRequiredNullableUnsignedShortValue();
-
-  @JsProperty
-  void setRequiredNullableUnsignedShortValue(@Nullable Double requiredNullableUnsignedShortValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredNullableUnsignedShortValue(
-      @Nullable final Double requiredNullableUnsignedShortValue) {
-    setRequiredNullableUnsignedShortValue( requiredNullableUnsignedShortValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Object getRequiredObjectValue();
-
-  @JsProperty
-  void setRequiredObjectValue(@Nonnull Object requiredObjectValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredObjectValue(@Nonnull final Object requiredObjectValue) {
-    setRequiredObjectValue( requiredObjectValue );
-    return this;
-  }
-
-  @JsProperty
-  short getRequiredOctetValue();
-
-  @JsProperty
-  void setRequiredOctetValue(short requiredOctetValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredOctetValue(final short requiredOctetValue) {
-    setRequiredOctetValue( requiredOctetValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Double> getRequiredShortFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredShortFrozenArrayValue(@Nonnull JsArray<Double> requiredShortFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredShortFrozenArrayValue(
-      @Nonnull final JsArray<Double> requiredShortFrozenArrayValue) {
-    setRequiredShortFrozenArrayValue( requiredShortFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<Double> getRequiredShortSequenceValue();
-
-  @JsProperty
-  void setRequiredShortSequenceValue(@Nonnull JsArray<Double> requiredShortSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredShortSequenceValue(
-      @Nonnull final JsArray<Double> requiredShortSequenceValue) {
-    setRequiredShortSequenceValue( requiredShortSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  short getRequiredShortValue();
-
-  @JsProperty
-  void setRequiredShortValue(short requiredShortValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredShortValue(final short requiredShortValue) {
-    setRequiredShortValue( requiredShortValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<SomeType> getRequiredSomeTypeFrozenArrayValue();
-
-  @JsProperty
-  void setRequiredSomeTypeFrozenArrayValue(
-      @Nonnull JsArray<SomeType> requiredSomeTypeFrozenArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredSomeTypeFrozenArrayValue(
-      @Nonnull final JsArray<SomeType> requiredSomeTypeFrozenArrayValue) {
-    setRequiredSomeTypeFrozenArrayValue( requiredSomeTypeFrozenArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  JsArray<SomeType> getRequiredSomeTypeSequenceValue();
-
-  @JsProperty
-  void setRequiredSomeTypeSequenceValue(@Nonnull JsArray<SomeType> requiredSomeTypeSequenceValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredSomeTypeSequenceValue(
-      @Nonnull final JsArray<SomeType> requiredSomeTypeSequenceValue) {
-    setRequiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  SomeType getRequiredSomeTypeValue();
-
-  @JsProperty
-  void setRequiredSomeTypeValue(@Nonnull SomeType requiredSomeTypeValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredSomeTypeValue(@Nonnull final SomeType requiredSomeTypeValue) {
-    setRequiredSomeTypeValue( requiredSomeTypeValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Symbol getRequiredSymbolValue();
-
-  @JsProperty
-  void setRequiredSymbolValue(@Nonnull Symbol requiredSymbolValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredSymbolValue(@Nonnull final Symbol requiredSymbolValue) {
-    setRequiredSymbolValue( requiredSymbolValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  String getRequiredUSVStringValue();
-
-  @JsProperty
-  void setRequiredUSVStringValue(@Nonnull String requiredUSVStringValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUSVStringValue(@Nonnull final String requiredUSVStringValue) {
-    setRequiredUSVStringValue( requiredUSVStringValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Uint16Array getRequiredUint16ArrayValue();
-
-  @JsProperty
-  void setRequiredUint16ArrayValue(@Nonnull Uint16Array requiredUint16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUint16ArrayValue(
-      @Nonnull final Uint16Array requiredUint16ArrayValue) {
-    setRequiredUint16ArrayValue( requiredUint16ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Uint32Array getRequiredUint32ArrayValue();
-
-  @JsProperty
-  void setRequiredUint32ArrayValue(@Nonnull Uint32Array requiredUint32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUint32ArrayValue(
-      @Nonnull final Uint32Array requiredUint32ArrayValue) {
-    setRequiredUint32ArrayValue( requiredUint32ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Uint8Array getRequiredUint8ArrayValue();
-
-  @JsProperty
-  void setRequiredUint8ArrayValue(@Nonnull Uint8Array requiredUint8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUint8ArrayValue(@Nonnull final Uint8Array requiredUint8ArrayValue) {
-    setRequiredUint8ArrayValue( requiredUint8ArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  @Nonnull
-  Uint8ClampedArray getRequiredUint8ClampedArrayValue();
-
-  @JsProperty
-  void setRequiredUint8ClampedArrayValue(@Nonnull Uint8ClampedArray requiredUint8ClampedArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUint8ClampedArrayValue(
-      @Nonnull final Uint8ClampedArray requiredUint8ClampedArrayValue) {
-    setRequiredUint8ClampedArrayValue( requiredUint8ClampedArrayValue );
-    return this;
-  }
-
-  @JsProperty
-  double getRequiredUnrestrictedDoubleValue();
-
-  @JsProperty
-  void setRequiredUnrestrictedDoubleValue(double requiredUnrestrictedDoubleValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUnrestrictedDoubleValue(
-      final double requiredUnrestrictedDoubleValue) {
-    setRequiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
-    return this;
-  }
-
-  @JsProperty
-  float getRequiredUnrestrictedFloatValue();
-
-  @JsProperty
-  void setRequiredUnrestrictedFloatValue(float requiredUnrestrictedFloatValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUnrestrictedFloatValue(final float requiredUnrestrictedFloatValue) {
-    setRequiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
-    return this;
-  }
-
-  @JsProperty
-  int getRequiredUnsignedLongLongValue();
-
-  @JsProperty
-  void setRequiredUnsignedLongLongValue(int requiredUnsignedLongLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUnsignedLongLongValue(final int requiredUnsignedLongLongValue) {
-    setRequiredUnsignedLongLongValue( requiredUnsignedLongLongValue );
-    return this;
-  }
-
-  @JsProperty
-  int getRequiredUnsignedLongValue();
-
-  @JsProperty
-  void setRequiredUnsignedLongValue(int requiredUnsignedLongValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUnsignedLongValue(final int requiredUnsignedLongValue) {
-    setRequiredUnsignedLongValue( requiredUnsignedLongValue );
-    return this;
-  }
-
-  @JsProperty
-  int getRequiredUnsignedShortValue();
-
-  @JsProperty
-  void setRequiredUnsignedShortValue(int requiredUnsignedShortValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary requiredUnsignedShortValue(final int requiredUnsignedShortValue) {
-    setRequiredUnsignedShortValue( requiredUnsignedShortValue );
-    return this;
-  }
-
-  @JsProperty
   Promise<JsArray<Double>> getSequencePromiseValue();
 
   @JsProperty
@@ -2335,6 +1173,18 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary shortSequenceValue(@Nonnull final JsArray<Double> shortSequenceValue) {
+    setShortSequenceValue( shortSequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setShortSequenceValue(@Nonnull final Double[] shortSequenceValue) {
+    setShortSequenceValue( JsArray.asJsArray( shortSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary shortSequenceValue(@Nonnull final Double[] shortSequenceValue) {
     setShortSequenceValue( shortSequenceValue );
     return this;
   }
@@ -2389,6 +1239,18 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary someTypeSequenceValue(
       @Nonnull final JsArray<SomeType> someTypeSequenceValue) {
+    setSomeTypeSequenceValue( someTypeSequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setSomeTypeSequenceValue(@Nonnull final SomeType[] someTypeSequenceValue) {
+    setSomeTypeSequenceValue( JsArray.asJsArray( someTypeSequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary someTypeSequenceValue(@Nonnull final SomeType[] someTypeSequenceValue) {
     setSomeTypeSequenceValue( someTypeSequenceValue );
     return this;
   }

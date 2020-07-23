@@ -36,7 +36,7 @@ import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
-import org.realityforge.webtack.model.PromiseType;
+import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
@@ -204,19 +204,18 @@ final class Generator
         explodeType( context, declaredType, memberType, values );
       }
     }
-    else if ( Kind.Promise == kind )
+    else if ( Kind.Sequence == kind )
     {
-      final PromiseType promiseType = (PromiseType) type;
-      final List<TypedValue> resolveTypes = explodeType( context, promiseType.getResolveType() );
-      for ( final TypedValue t : resolveTypes )
-      {
-        final PromiseType p =
-          new PromiseType( t.getType(), promiseType.getExtendedAttributes(), promiseType.getSourceLocations() );
-        values.add( new TypedValue( declaredType,
-                                    p,
-                                    context.toTypeName( p ),
-                                    TypedValue.Nullability.NONNULL ) );
-      }
+      final SequenceType sequenceType = (SequenceType) type;
+      final Type itemType = sequenceType.getItemType();
+      final boolean nullable = context.getSchema().isNullable( type );
+      final TypeName javaType = context.toTypeName( type );
+
+      final TypeName arrayJavaType = ArrayTypeName.of( context.getUnexpandedType( itemType ) );
+      final TypedValue.Nullability nullability =
+        nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
+      values.add( new TypedValue( declaredType, type, javaType, nullability ) );
+      values.add( new TypedValue( declaredType, type, arrayJavaType, nullability ) );
     }
     else
     {
@@ -310,11 +309,13 @@ final class Generator
     for ( final DictionaryMember member : definition.getMembers() )
     {
       final Type actualType = context.getSchema().resolveType( member.getType() );
+      //final TypeName javaType = context.toTypeName( actualType );
       generateDictionaryMemberGetter( context, member, actualType, type );
       generateDictionaryMemberSetter( context, member, actualType, type );
       for ( final TypedValue typedValue : explodeType( context, member.getType() ) )
       {
-        if ( !actualType.equiv( typedValue.getType() ) )
+        if ( !actualType.equiv( typedValue.getType() ) ||
+             typedValue.getJavaType() instanceof ArrayTypeName )
         {
           generateDictionaryMemberOverlaySetter( context, member, typedValue, type );
         }
@@ -493,6 +494,10 @@ final class Generator
     {
       method.addStatement( "$N( $T.of( $N ) )", mutatorName, context.toTypeName( declaredType ), paramName );
     }
+    else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
+    {
+      method.addStatement( "$N( $T.asJsArray( $N ) )", mutatorName, Types.JS_ARRAY, paramName );
+    }
     else
     {
       throw new UnsupportedOperationException( "Create method for dictionary does not yet support exploding " +
@@ -670,7 +675,7 @@ final class Generator
       final OperationMember.Kind operationKind = operation.getKind();
       if ( OperationMember.Kind.DEFAULT == operationKind )
       {
-        generateDefaultOperation( context, operation, false, type );
+        generateDefaultOperation( context, operation, type );
       }
     }
 
@@ -744,7 +749,7 @@ final class Generator
       final OperationMember.Kind operationKind = operation.getKind();
       if ( OperationMember.Kind.DEFAULT == operationKind )
       {
-        generateDefaultOperation( context, operation, false, type );
+        generateDefaultOperation( context, operation, type );
       }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
@@ -939,7 +944,6 @@ final class Generator
 
   private void generateDefaultOperation( @Nonnull final CodeGenContext context,
                                          @Nonnull final OperationMember operation,
-                                         final boolean javaInterface,
                                          @Nonnull final TypeSpec.Builder type )
   {
     final List<Argument> arguments = operation.getArguments();
@@ -952,7 +956,7 @@ final class Generator
         explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation( context, operation, javaInterface, argumentList, typeList, type );
+        generateDefaultOperation( context, operation, false, argumentList, typeList, type );
       }
     }
   }

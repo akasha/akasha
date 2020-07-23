@@ -37,6 +37,18 @@ public interface XRSessionInit {
     return this;
   }
 
+  @JsOverlay
+  default void setOptionalFeatures(@Nonnull final Any[] optionalFeatures) {
+    setOptionalFeatures( JsArray.asJsArray( optionalFeatures ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default XRSessionInit optionalFeatures(@Nonnull final Any[] optionalFeatures) {
+    setOptionalFeatures( optionalFeatures );
+    return this;
+  }
+
   @JsProperty
   JsArray<Any> getRequiredFeatures();
 
@@ -46,6 +58,18 @@ public interface XRSessionInit {
   @JsOverlay
   @Nonnull
   default XRSessionInit requiredFeatures(@Nonnull final JsArray<Any> requiredFeatures) {
+    setRequiredFeatures( requiredFeatures );
+    return this;
+  }
+
+  @JsOverlay
+  default void setRequiredFeatures(@Nonnull final Any[] requiredFeatures) {
+    setRequiredFeatures( JsArray.asJsArray( requiredFeatures ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default XRSessionInit requiredFeatures(@Nonnull final Any[] requiredFeatures) {
     setRequiredFeatures( requiredFeatures );
     return this;
   }

@@ -65,7 +65,22 @@ public class MyType4 {
       @Nonnull JsArray<Boolean> v2);
 
   @Nonnull
+  public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull Boolean[] v1,
+      @Nonnull JsArray<Boolean> v2);
+
+  @Nonnull
+  public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull JsArray<Boolean> v1,
+      @Nonnull Boolean[] v2);
+
+  @Nonnull
+  public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull Boolean[] v1,
+      @Nonnull Boolean[] v2);
+
+  @Nonnull
   public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull JsArray<Boolean> v1);
+
+  @Nonnull
+  public static native JsArray<Boolean> booleanSequenceMethod(@Nonnull Boolean[] v1);
 
   public static native byte byteMethod(byte v1, byte v2);
 
@@ -128,7 +143,22 @@ public class MyType4 {
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull Double[] v1,
+      @Nonnull JsArray<Double> v2);
+
+  @Nonnull
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull JsArray<Double> v1,
+      @Nonnull Double[] v2);
+
+  @Nonnull
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull Double[] v1,
+      @Nonnull Double[] v2);
+
+  @Nonnull
   public static native JsArray<Double> doubleSequenceMethod(@Nonnull JsArray<Double> v1);
+
+  @Nonnull
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull Double[] v1);
 
   @Nonnull
   public static native Float32Array float32ArrayMethod(@Nonnull Float32Array v1,
@@ -160,7 +190,22 @@ public class MyType4 {
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull Double[] v1,
+      @Nonnull JsArray<Double> v2);
+
+  @Nonnull
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull JsArray<Double> v1,
+      @Nonnull Double[] v2);
+
+  @Nonnull
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull Double[] v1,
+      @Nonnull Double[] v2);
+
+  @Nonnull
   public static native JsArray<Double> floatSequenceMethod(@Nonnull JsArray<Double> v1);
+
+  @Nonnull
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull Double[] v1);
 
   @Nonnull
   public static native Int16Array int16ArrayMethod(@Nonnull Int16Array v1, @Nonnull Int16Array v2);
@@ -230,8 +275,23 @@ public class MyType4 {
       @Nullable JsArray<Boolean> v2);
 
   @Nullable
+  public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable Boolean[] v1,
+      @Nullable JsArray<Boolean> v2);
+
+  @Nullable
+  public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable JsArray<Boolean> v1,
+      @Nullable Boolean[] v2);
+
+  @Nullable
+  public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable Boolean[] v1,
+      @Nullable Boolean[] v2);
+
+  @Nullable
   public static native JsArray<Boolean> nullableBooleanSequenceMethod(
       @Nullable JsArray<Boolean> v1);
+
+  @Nullable
+  public static native JsArray<Boolean> nullableBooleanSequenceMethod(@Nullable Boolean[] v1);
 
   @Nullable
   public static native Double nullableByteMethod(@Nullable Double v1, @Nullable Double v2);
@@ -277,7 +337,22 @@ public class MyType4 {
       @Nullable JsArray<Double> v2);
 
   @Nullable
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable Double[] v1,
+      @Nullable JsArray<Double> v2);
+
+  @Nullable
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable JsArray<Double> v1,
+      @Nullable Double[] v2);
+
+  @Nullable
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable Double[] v1,
+      @Nullable Double[] v2);
+
+  @Nullable
   public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable JsArray<Double> v1);
+
+  @Nullable
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable Double[] v1);
 
   @Nullable
   public static native Float32Array nullableFloat32ArrayMethod(@Nullable Float32Array v1,
@@ -311,7 +386,22 @@ public class MyType4 {
       @Nullable JsArray<Double> v2);
 
   @Nullable
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable Double[] v1,
+      @Nullable JsArray<Double> v2);
+
+  @Nullable
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable JsArray<Double> v1,
+      @Nullable Double[] v2);
+
+  @Nullable
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable Double[] v1,
+      @Nullable Double[] v2);
+
+  @Nullable
   public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable JsArray<Double> v1);
+
+  @Nullable
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable Double[] v1);
 
   @Nullable
   public static native Int16Array nullableInt16ArrayMethod(@Nullable Int16Array v1,
@@ -383,7 +473,22 @@ public class MyType4 {
       @Nullable JsArray<Double> v2);
 
   @Nullable
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable Double[] v1,
+      @Nullable JsArray<Double> v2);
+
+  @Nullable
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable JsArray<Double> v1,
+      @Nullable Double[] v2);
+
+  @Nullable
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable Double[] v1,
+      @Nullable Double[] v2);
+
+  @Nullable
   public static native JsArray<Double> nullableShortSequenceMethod(@Nullable JsArray<Double> v1);
+
+  @Nullable
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable Double[] v1);
 
   @Nullable
   public static native JsArray<SomeType> nullableSomeTypeFrozenArrayMethod(
@@ -413,8 +518,23 @@ public class MyType4 {
       @Nullable JsArray<SomeType> v1, @Nullable JsArray<SomeType> v2);
 
   @Nullable
+  public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(@Nullable SomeType[] v1,
+      @Nullable JsArray<SomeType> v2);
+
+  @Nullable
+  public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(
+      @Nullable JsArray<SomeType> v1, @Nullable SomeType[] v2);
+
+  @Nullable
+  public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(@Nullable SomeType[] v1,
+      @Nullable SomeType[] v2);
+
+  @Nullable
   public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(
       @Nullable JsArray<SomeType> v1);
+
+  @Nullable
+  public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(@Nullable SomeType[] v1);
 
   @Nullable
   public static native Symbol nullableSymbolMethod(@Nullable Symbol v1, @Nullable Symbol v2);
@@ -523,7 +643,22 @@ public class MyType4 {
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull Double[] v1,
+      @Nonnull JsArray<Double> v2);
+
+  @Nonnull
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull JsArray<Double> v1,
+      @Nonnull Double[] v2);
+
+  @Nonnull
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull Double[] v1,
+      @Nonnull Double[] v2);
+
+  @Nonnull
   public static native JsArray<Double> shortSequenceMethod(@Nonnull JsArray<Double> v1);
+
+  @Nonnull
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull Double[] v1);
 
   @Nonnull
   public static native JsArray<SomeType> someTypeFrozenArrayMethod(@Nonnull JsArray<SomeType> v1,
@@ -550,7 +685,22 @@ public class MyType4 {
       @Nonnull JsArray<SomeType> v2);
 
   @Nonnull
+  public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull SomeType[] v1,
+      @Nonnull JsArray<SomeType> v2);
+
+  @Nonnull
+  public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull JsArray<SomeType> v1,
+      @Nonnull SomeType[] v2);
+
+  @Nonnull
+  public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull SomeType[] v1,
+      @Nonnull SomeType[] v2);
+
+  @Nonnull
   public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull JsArray<SomeType> v1);
+
+  @Nonnull
+  public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull SomeType[] v1);
 
   @Nonnull
   public static native Symbol symbolMethod(@Nonnull Symbol v1, @Nonnull Symbol v2);
