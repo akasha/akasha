@@ -50,14 +50,14 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
 
   @JsOverlay
   default void setRequiredNullableBooleanSequenceValue(
-      @Nullable final Boolean[] requiredNullableBooleanSequenceValue) {
+      @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
     setRequiredNullableBooleanSequenceValue( JsArray.asJsArray( requiredNullableBooleanSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredNullableBooleanSequenceValue requiredNullableBooleanSequenceValue(
-      @Nullable final Boolean[] requiredNullableBooleanSequenceValue) {
+      @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
     setRequiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
     return this;
   }

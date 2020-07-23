@@ -50,14 +50,14 @@ public interface Dictionary_requiredNullableSomeTypeSequenceValue {
 
   @JsOverlay
   default void setRequiredNullableSomeTypeSequenceValue(
-      @Nullable final SomeType[] requiredNullableSomeTypeSequenceValue) {
+      @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
     setRequiredNullableSomeTypeSequenceValue( JsArray.asJsArray( requiredNullableSomeTypeSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredNullableSomeTypeSequenceValue requiredNullableSomeTypeSequenceValue(
-      @Nullable final SomeType[] requiredNullableSomeTypeSequenceValue) {
+      @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
     setRequiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
     return this;
   }

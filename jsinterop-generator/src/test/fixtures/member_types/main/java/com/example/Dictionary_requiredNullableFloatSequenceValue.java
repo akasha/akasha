@@ -50,14 +50,14 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
 
   @JsOverlay
   default void setRequiredNullableFloatSequenceValue(
-      @Nullable final Double[] requiredNullableFloatSequenceValue) {
+      @Nullable final Double... requiredNullableFloatSequenceValue) {
     setRequiredNullableFloatSequenceValue( JsArray.asJsArray( requiredNullableFloatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredNullableFloatSequenceValue requiredNullableFloatSequenceValue(
-      @Nullable final Double[] requiredNullableFloatSequenceValue) {
+      @Nullable final Double... requiredNullableFloatSequenceValue) {
     setRequiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
     return this;
   }

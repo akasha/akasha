@@ -482,8 +482,14 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( Types.JS_OVERLAY );
     final String paramName = safeName( member.getName() );
+    final TypeName javaType = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( typedValue.getJavaType(), paramName, Modifier.FINAL );
+      ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
+
+    if ( javaType instanceof ArrayTypeName )
+    {
+      method.varargs();
+    }
 
     addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
@@ -524,10 +530,16 @@ final class Generator
     {
       method.addAnnotation( Override.class );
     }
+    final TypeName javaType = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( typedValue.getJavaType(), paramName, Modifier.FINAL );
+      ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
     addNullabilityAnnotation( typedValue, parameter );
+
+    if ( javaType instanceof ArrayTypeName )
+    {
+      method.varargs();
+    }
 
     method.addParameter( parameter.build() );
     method.addStatement( "$N( $N )", getMutatorName( member ), paramName );

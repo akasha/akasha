@@ -91,13 +91,13 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsOverlay
-  default void setAllowedServices(@Nonnull final String[] allowedServices) {
+  default void setAllowedServices(@Nonnull final String... allowedServices) {
     setAllowedServices( StringOrStringArrayUnion.of( allowedServices ) );
   }
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull final String[] allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull final String... allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -133,13 +133,13 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsOverlay
-  default void setOtherServices(@Nonnull final String[] otherServices) {
+  default void setOtherServices(@Nonnull final String... otherServices) {
     setOtherServices( StringOrStringArrayUnion.of( otherServices ) );
   }
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice otherServices(@Nonnull final String[] otherServices) {
+  default AllowedBluetoothDevice otherServices(@Nonnull final String... otherServices) {
     setOtherServices( otherServices );
     return this;
   }
@@ -160,14 +160,14 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsOverlay
-  default void setRequiredUuids(@Nonnull final StringOrLongLongUnion[] requiredUuids) {
+  default void setRequiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
     setRequiredUuids( JsArray.asJsArray( requiredUuids ) );
   }
 
   @JsOverlay
   @Nonnull
   default AllowedBluetoothDevice requiredUuids(
-      @Nonnull final StringOrLongLongUnion[] requiredUuids) {
+      @Nonnull final StringOrLongLongUnion... requiredUuids) {
     setRequiredUuids( requiredUuids );
     return this;
   }
@@ -186,13 +186,13 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsOverlay
-  default void setUuids(@Nonnull final StringOrOctetUnion[] uuids) {
+  default void setUuids(@Nonnull final StringOrOctetUnion... uuids) {
     setUuids( JsArray.asJsArray( uuids ) );
   }
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice uuids(@Nonnull final StringOrOctetUnion[] uuids) {
+  default AllowedBluetoothDevice uuids(@Nonnull final StringOrOctetUnion... uuids) {
     setUuids( uuids );
     return this;
   }

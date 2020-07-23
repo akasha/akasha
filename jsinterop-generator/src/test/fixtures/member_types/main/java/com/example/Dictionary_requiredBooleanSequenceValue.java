@@ -48,14 +48,14 @@ public interface Dictionary_requiredBooleanSequenceValue {
 
   @JsOverlay
   default void setRequiredBooleanSequenceValue(
-      @Nonnull final Boolean[] requiredBooleanSequenceValue) {
+      @Nonnull final Boolean... requiredBooleanSequenceValue) {
     setRequiredBooleanSequenceValue( JsArray.asJsArray( requiredBooleanSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredBooleanSequenceValue requiredBooleanSequenceValue(
-      @Nonnull final Boolean[] requiredBooleanSequenceValue) {
+      @Nonnull final Boolean... requiredBooleanSequenceValue) {
     setRequiredBooleanSequenceValue( requiredBooleanSequenceValue );
     return this;
   }

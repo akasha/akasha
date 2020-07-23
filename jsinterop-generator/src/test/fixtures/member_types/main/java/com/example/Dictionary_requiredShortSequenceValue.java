@@ -47,14 +47,14 @@ public interface Dictionary_requiredShortSequenceValue {
   }
 
   @JsOverlay
-  default void setRequiredShortSequenceValue(@Nonnull final Double[] requiredShortSequenceValue) {
+  default void setRequiredShortSequenceValue(@Nonnull final Double... requiredShortSequenceValue) {
     setRequiredShortSequenceValue( JsArray.asJsArray( requiredShortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
-      @Nonnull final Double[] requiredShortSequenceValue) {
+      @Nonnull final Double... requiredShortSequenceValue) {
     setRequiredShortSequenceValue( requiredShortSequenceValue );
     return this;
   }

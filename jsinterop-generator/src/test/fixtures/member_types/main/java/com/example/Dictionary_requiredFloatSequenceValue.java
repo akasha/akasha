@@ -47,14 +47,14 @@ public interface Dictionary_requiredFloatSequenceValue {
   }
 
   @JsOverlay
-  default void setRequiredFloatSequenceValue(@Nonnull final Double[] requiredFloatSequenceValue) {
+  default void setRequiredFloatSequenceValue(@Nonnull final Double... requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( JsArray.asJsArray( requiredFloatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
-      @Nonnull final Double[] requiredFloatSequenceValue) {
+      @Nonnull final Double... requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( requiredFloatSequenceValue );
     return this;
   }

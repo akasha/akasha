@@ -50,14 +50,14 @@ public interface Dictionary_requiredNullableShortSequenceValue {
 
   @JsOverlay
   default void setRequiredNullableShortSequenceValue(
-      @Nullable final Double[] requiredNullableShortSequenceValue) {
+      @Nullable final Double... requiredNullableShortSequenceValue) {
     setRequiredNullableShortSequenceValue( JsArray.asJsArray( requiredNullableShortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredNullableShortSequenceValue requiredNullableShortSequenceValue(
-      @Nullable final Double[] requiredNullableShortSequenceValue) {
+      @Nullable final Double... requiredNullableShortSequenceValue) {
     setRequiredNullableShortSequenceValue( requiredNullableShortSequenceValue );
     return this;
   }

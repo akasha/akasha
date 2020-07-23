@@ -93,13 +93,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setBooleanSequenceValue(@Nonnull final Boolean[] booleanSequenceValue) {
+  default void setBooleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
     setBooleanSequenceValue( JsArray.asJsArray( booleanSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary booleanSequenceValue(@Nonnull final Boolean[] booleanSequenceValue) {
+  default MyDictionary booleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
     setBooleanSequenceValue( booleanSequenceValue );
     return this;
   }
@@ -238,13 +238,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setDoubleSequenceValue(@Nonnull final Double[] doubleSequenceValue) {
+  default void setDoubleSequenceValue(@Nonnull final Double... doubleSequenceValue) {
     setDoubleSequenceValue( JsArray.asJsArray( doubleSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleSequenceValue(@Nonnull final Double[] doubleSequenceValue) {
+  default MyDictionary doubleSequenceValue(@Nonnull final Double... doubleSequenceValue) {
     setDoubleSequenceValue( doubleSequenceValue );
     return this;
   }
@@ -315,13 +315,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setFloatSequenceValue(@Nonnull final Double[] floatSequenceValue) {
+  default void setFloatSequenceValue(@Nonnull final Double... floatSequenceValue) {
     setFloatSequenceValue( JsArray.asJsArray( floatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary floatSequenceValue(@Nonnull final Double[] floatSequenceValue) {
+  default MyDictionary floatSequenceValue(@Nonnull final Double... floatSequenceValue) {
     setFloatSequenceValue( floatSequenceValue );
     return this;
   }
@@ -466,14 +466,14 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setNullableBooleanSequenceValue(
-      @Nullable final Boolean[] nullableBooleanSequenceValue) {
+      @Nullable final Boolean... nullableBooleanSequenceValue) {
     setNullableBooleanSequenceValue( JsArray.asJsArray( nullableBooleanSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableBooleanSequenceValue(
-      @Nullable final Boolean[] nullableBooleanSequenceValue) {
+      @Nullable final Boolean... nullableBooleanSequenceValue) {
     setNullableBooleanSequenceValue( nullableBooleanSequenceValue );
     return this;
   }
@@ -581,14 +581,14 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setNullableDoubleSequenceValue(
-      @Nullable final Double[] nullableDoubleSequenceValue) {
+      @Nullable final Double... nullableDoubleSequenceValue) {
     setNullableDoubleSequenceValue( JsArray.asJsArray( nullableDoubleSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableDoubleSequenceValue(
-      @Nullable final Double[] nullableDoubleSequenceValue) {
+      @Nullable final Double... nullableDoubleSequenceValue) {
     setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
     return this;
   }
@@ -668,14 +668,14 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setNullableFloatSequenceValue(@Nullable final Double[] nullableFloatSequenceValue) {
+  default void setNullableFloatSequenceValue(@Nullable final Double... nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( JsArray.asJsArray( nullableFloatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableFloatSequenceValue(
-      @Nullable final Double[] nullableFloatSequenceValue) {
+      @Nullable final Double... nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( nullableFloatSequenceValue );
     return this;
   }
@@ -837,14 +837,14 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setNullableShortSequenceValue(@Nullable final Double[] nullableShortSequenceValue) {
+  default void setNullableShortSequenceValue(@Nullable final Double... nullableShortSequenceValue) {
     setNullableShortSequenceValue( JsArray.asJsArray( nullableShortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableShortSequenceValue(
-      @Nullable final Double[] nullableShortSequenceValue) {
+      @Nullable final Double... nullableShortSequenceValue) {
     setNullableShortSequenceValue( nullableShortSequenceValue );
     return this;
   }
@@ -910,14 +910,14 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setNullableSomeTypeSequenceValue(
-      @Nullable final SomeType[] nullableSomeTypeSequenceValue) {
+      @Nullable final SomeType... nullableSomeTypeSequenceValue) {
     setNullableSomeTypeSequenceValue( JsArray.asJsArray( nullableSomeTypeSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableSomeTypeSequenceValue(
-      @Nullable final SomeType[] nullableSomeTypeSequenceValue) {
+      @Nullable final SomeType... nullableSomeTypeSequenceValue) {
     setNullableSomeTypeSequenceValue( nullableSomeTypeSequenceValue );
     return this;
   }
@@ -1178,13 +1178,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setShortSequenceValue(@Nonnull final Double[] shortSequenceValue) {
+  default void setShortSequenceValue(@Nonnull final Double... shortSequenceValue) {
     setShortSequenceValue( JsArray.asJsArray( shortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortSequenceValue(@Nonnull final Double[] shortSequenceValue) {
+  default MyDictionary shortSequenceValue(@Nonnull final Double... shortSequenceValue) {
     setShortSequenceValue( shortSequenceValue );
     return this;
   }
@@ -1244,13 +1244,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setSomeTypeSequenceValue(@Nonnull final SomeType[] someTypeSequenceValue) {
+  default void setSomeTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
     setSomeTypeSequenceValue( JsArray.asJsArray( someTypeSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary someTypeSequenceValue(@Nonnull final SomeType[] someTypeSequenceValue) {
+  default MyDictionary someTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
     setSomeTypeSequenceValue( someTypeSequenceValue );
     return this;
   }

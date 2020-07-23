@@ -47,14 +47,15 @@ public interface Dictionary_requiredDoubleSequenceValue {
   }
 
   @JsOverlay
-  default void setRequiredDoubleSequenceValue(@Nonnull final Double[] requiredDoubleSequenceValue) {
+  default void setRequiredDoubleSequenceValue(
+      @Nonnull final Double... requiredDoubleSequenceValue) {
     setRequiredDoubleSequenceValue( JsArray.asJsArray( requiredDoubleSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredDoubleSequenceValue requiredDoubleSequenceValue(
-      @Nonnull final Double[] requiredDoubleSequenceValue) {
+      @Nonnull final Double... requiredDoubleSequenceValue) {
     setRequiredDoubleSequenceValue( requiredDoubleSequenceValue );
     return this;
   }
