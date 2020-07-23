@@ -783,10 +783,7 @@ final class Generator
 
     if ( !constructorPresent )
     {
-      final MethodSpec.Builder method = MethodSpec.constructorBuilder().addAnnotation( Deprecated.class );
-      method.addJavadoc( "Type is instantiated by the runtime no attempt should be made to " +
-                         "instantiate type by application code." );
-
+      final MethodSpec.Builder method = MethodSpec.constructorBuilder();
       if ( null != parentConstructor )
       {
         generateSuperCall( context, parentConstructor, method );
