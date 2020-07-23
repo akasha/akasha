@@ -176,15 +176,16 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  JsPropertyMap<String> getByteStringRecord();
+  JsPropertyMap<String> getByteStringRecordValue();
 
   @JsProperty
-  void setByteStringRecord(@Nonnull JsPropertyMap<String> byteStringRecord);
+  void setByteStringRecordValue(@Nonnull JsPropertyMap<String> byteStringRecordValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary byteStringRecord(@Nonnull final JsPropertyMap<String> byteStringRecord) {
-    setByteStringRecord( byteStringRecord );
+  default MyDictionary byteStringRecordValue(
+      @Nonnull final JsPropertyMap<String> byteStringRecordValue) {
+    setByteStringRecordValue( byteStringRecordValue );
     return this;
   }
 
@@ -228,15 +229,16 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  JsPropertyMap<String> getDomStringRecord();
+  JsPropertyMap<String> getDomStringRecordValue();
 
   @JsProperty
-  void setDomStringRecord(@Nonnull JsPropertyMap<String> domStringRecord);
+  void setDomStringRecordValue(@Nonnull JsPropertyMap<String> domStringRecordValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary domStringRecord(@Nonnull final JsPropertyMap<String> domStringRecord) {
-    setDomStringRecord( domStringRecord );
+  default MyDictionary domStringRecordValue(
+      @Nonnull final JsPropertyMap<String> domStringRecordValue) {
+    setDomStringRecordValue( domStringRecordValue );
     return this;
   }
 
@@ -268,15 +270,15 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  JsPropertyMap<Double> getDoubleRecord();
+  JsPropertyMap<Double> getDoubleRecordValue();
 
   @JsProperty
-  void setDoubleRecord(@Nonnull JsPropertyMap<Double> doubleRecord);
+  void setDoubleRecordValue(@Nonnull JsPropertyMap<Double> doubleRecordValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleRecord(@Nonnull final JsPropertyMap<Double> doubleRecord) {
-    setDoubleRecord( doubleRecord );
+  default MyDictionary doubleRecordValue(@Nonnull final JsPropertyMap<Double> doubleRecordValue) {
+    setDoubleRecordValue( doubleRecordValue );
     return this;
   }
 
@@ -437,15 +439,16 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  JsPropertyMap<String> getMixedStringRecord();
+  JsPropertyMap<String> getMixedStringRecordValue();
 
   @JsProperty
-  void setMixedStringRecord(@Nonnull JsPropertyMap<String> mixedStringRecord);
+  void setMixedStringRecordValue(@Nonnull JsPropertyMap<String> mixedStringRecordValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary mixedStringRecord(@Nonnull final JsPropertyMap<String> mixedStringRecord) {
-    setMixedStringRecord( mixedStringRecord );
+  default MyDictionary mixedStringRecordValue(
+      @Nonnull final JsPropertyMap<String> mixedStringRecordValue) {
+    setMixedStringRecordValue( mixedStringRecordValue );
     return this;
   }
 
@@ -2417,16 +2420,16 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  JsPropertyMap<SomeType> getTypeReferenceRecord();
+  JsPropertyMap<SomeType> getTypeReferenceRecordValue();
 
   @JsProperty
-  void setTypeReferenceRecord(@Nonnull JsPropertyMap<SomeType> typeReferenceRecord);
+  void setTypeReferenceRecordValue(@Nonnull JsPropertyMap<SomeType> typeReferenceRecordValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary typeReferenceRecord(
-      @Nonnull final JsPropertyMap<SomeType> typeReferenceRecord) {
-    setTypeReferenceRecord( typeReferenceRecord );
+  default MyDictionary typeReferenceRecordValue(
+      @Nonnull final JsPropertyMap<SomeType> typeReferenceRecordValue) {
+    setTypeReferenceRecordValue( typeReferenceRecordValue );
     return this;
   }
 
@@ -2549,15 +2552,16 @@ public interface MyDictionary {
   }
 
   @JsProperty
-  JsPropertyMap<String> getUsvStringRecord();
+  JsPropertyMap<String> getUsvStringRecordValue();
 
   @JsProperty
-  void setUsvStringRecord(@Nonnull JsPropertyMap<String> usvStringRecord);
+  void setUsvStringRecordValue(@Nonnull JsPropertyMap<String> usvStringRecordValue);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary usvStringRecord(@Nonnull final JsPropertyMap<String> usvStringRecord) {
-    setUsvStringRecord( usvStringRecord );
+  default MyDictionary usvStringRecordValue(
+      @Nonnull final JsPropertyMap<String> usvStringRecordValue) {
+    setUsvStringRecordValue( usvStringRecordValue );
     return this;
   }
 

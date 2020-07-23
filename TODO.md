@@ -17,8 +17,6 @@ complete as there is too much un-said.
 
 * Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
 
-* Add operators with arguments maytching all types in `member_types` test scenario in `jsinterop-generator`
-
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
   code a whole lot nicer. We could do this after we have emitted closure externs.
 
