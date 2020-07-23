@@ -54,9 +54,6 @@ complete as there is too much un-said.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
 
-* Wherever we see an operation argument of type `JsArray<X>` we should also generate an operation with a `X[]`
-  variant.
-
 * Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
 
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
