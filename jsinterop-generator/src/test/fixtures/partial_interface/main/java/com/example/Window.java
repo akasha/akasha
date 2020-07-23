@@ -15,9 +15,6 @@ import jsinterop.base.Js;
     name = "Window"
 )
 public final class Window {
-  /**
-   * Use the static of method to cast an existing object to this type.
-   */
   @Deprecated
   private Window() {
   }

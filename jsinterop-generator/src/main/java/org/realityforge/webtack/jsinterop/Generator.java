@@ -667,7 +667,7 @@ final class Generator
                       .constructorBuilder()
                       .addAnnotation( Deprecated.class )
                       .addModifiers( Modifier.PRIVATE )
-                      .addJavadoc( "Use the static of method to cast an existing object to this type." ).build() );
+                      .build() );
 
     for ( final AttributeMember attribute : definition.getAttributes() )
     {

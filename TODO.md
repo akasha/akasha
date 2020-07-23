@@ -8,8 +8,6 @@ complete as there is too much un-said.
 
 * use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system
 
-* Remove `Type is instantiated by the runtime no attempt should be made to instantiate type by application code.`
-
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
