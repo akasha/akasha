@@ -45,6 +45,8 @@ complete as there is too much un-said.
 
 * Type the `on[someevent]` properties on interfaces using the typed interface as specified above.
 
+* Add a `complete` method on `Action`, `Combiner` and `Processor` interfaces that will be invoked once the code will no longer have any schemas passed in. This allows the processor to perform cleanup and/or check that it is still needed. i.e. if a `RenameX` processor does not perform any renames we could alert in the complete to indicate that no match occurred. We could also add statistics (i.e. renamed 2 elements).
+
 * Support defining and using variables in pipeline json. It probably means string values can be
   interpolated like `"someProp"="${globalObject}"` and we would define the configuration `globalObject="Window"`
   earlier in the pipeline (and effectively reuse it in extract exposure set, global object generator and
