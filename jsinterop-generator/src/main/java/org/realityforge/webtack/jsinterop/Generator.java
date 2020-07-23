@@ -665,7 +665,6 @@ final class Generator
 
     type.addMethod( MethodSpec
                       .constructorBuilder()
-                      .addAnnotation( Deprecated.class )
                       .addModifiers( Modifier.PRIVATE )
                       .build() );
 

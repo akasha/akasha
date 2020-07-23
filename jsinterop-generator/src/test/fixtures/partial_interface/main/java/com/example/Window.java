@@ -15,7 +15,6 @@ import jsinterop.base.Js;
     name = "Window"
 )
 public final class Window {
-  @Deprecated
   private Window() {
   }
 
