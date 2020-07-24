@@ -1208,7 +1208,7 @@ final class Generator
     // Only the last argument can be variadic
     if ( argument.isVariadic() )
     {
-      method.varargs( true );
+      method.varargs();
     }
     method.addParameter( parameter.build() );
   }
