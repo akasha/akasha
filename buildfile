@@ -86,7 +86,11 @@ define 'webtack' do
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
     end
 
-    package(:jar)
+    package(:jar, :classifier => 'all').tap do |jar|
+      [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+        jar.merge(d)
+      end
+    end
     package(:sources)
     package(:javadoc)
   end
