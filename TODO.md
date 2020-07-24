@@ -6,7 +6,7 @@ complete as there is too much un-said.
 
 * use webrtc video chat ala ZipCall.io as another example
 
-* use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system
+* use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system. Possibly even add video layers via https://github.com/immersive-web/layers for desktop users?
 
 * Generate a global object ala `DomGlobal` based on a specific interface name.
 
