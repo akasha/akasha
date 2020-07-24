@@ -6,6 +6,7 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
+import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
@@ -491,6 +492,15 @@ final class Generator
     if ( javaType instanceof ArrayTypeName )
     {
       method.varargs();
+      final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+      if ( javaArrayType.componentType instanceof ArrayTypeName ||
+           javaArrayType.componentType instanceof ParameterizedTypeName )
+      {
+        method.addAnnotation( AnnotationSpec
+                                .builder( SuppressWarnings.class )
+                                .addMember( "value", "$S", "unchecked" )
+                                .build() );
+      }
     }
 
     addNullabilityAnnotation( typedValue, parameter );
@@ -558,6 +568,15 @@ final class Generator
     if ( javaType instanceof ArrayTypeName )
     {
       method.varargs();
+      final ArrayTypeName javaArrayType = (ArrayTypeName) javaType;
+      if ( javaArrayType.componentType instanceof ArrayTypeName ||
+           javaArrayType.componentType instanceof ParameterizedTypeName )
+      {
+        method.addAnnotation( AnnotationSpec
+                                .builder( SuppressWarnings.class )
+                                .addMember( "value", "$S", "unchecked" )
+                                .build() );
+      }
     }
 
     method.addParameter( parameter.build() );

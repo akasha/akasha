@@ -38,6 +38,10 @@ dictionary Dictionary_requiredDoubleFrozenArrayValue {
   required FrozenArray<double> requiredDoubleFrozenArrayValue;
 };
 
+dictionary Dictionary_requiredDoubleSequenceSequenceValue {
+  required sequence<sequence<double>> requiredDoubleSequenceSequenceValue;
+};
+
 dictionary Dictionary_requiredDoubleSequenceValue {
   required sequence<double> requiredDoubleSequenceValue;
 };
