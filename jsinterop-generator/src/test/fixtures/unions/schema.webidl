@@ -8,6 +8,8 @@ typedef ( DOMString or unsigned long ) BluetoothServiceUUID;
 
 typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
+typedef BufferSource MyNamedBufferSource;
+
 callback OnBufferSourceHandler = void ( optional BufferSource buffer );
 
 [LegacyTreatNonObjectAsNull]
@@ -31,6 +33,11 @@ dictionary AllowedBluetoothDevice {
 dictionary BluetoothDataFilterInit {
   required BufferSource dataPrefix;
   BufferSource mask;
+};
+
+dictionary BluetoothDataFilterInit2 {
+  required MyNamedBufferSource dataPrefix;
+  MyNamedBufferSource mask;
 };
 
 dictionary EventListenerOptions {

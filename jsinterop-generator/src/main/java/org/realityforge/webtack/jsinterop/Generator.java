@@ -495,9 +495,10 @@ final class Generator
 
     addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
-    final Type declaredType = context.getSchema().resolveType( typedValue.getDeclaredType() );
-    final Type resolvedType = context.getSchema().resolveType( typedValue.getDeclaredType(), true );
-    if ( Kind.Union == declaredType.getKind() || Kind.Union == resolvedType.getKind() )
+    final WebIDLSchema schema = context.getSchema();
+    final Type declaredType = schema.resolveType( typedValue.getDeclaredType() );
+    final Type resolvedType = schema.resolveType( typedValue.getType(), true );
+    if ( Kind.Union == declaredType.getKind() || unwrapsToUnion( context, declaredType ) )
     {
       method.addStatement( "$N( $T.of( $N ) )", mutatorName, context.toTypeName( declaredType ), paramName );
     }
@@ -511,6 +512,22 @@ final class Generator
                                                typedValue.getType() + " from " + declaredType );
     }
     type.addMethod( method.build() );
+  }
+
+  private boolean unwrapsToUnion( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( Kind.TypeReference == kind )
+    {
+      final String name = ( (TypeReference) type ).getName();
+      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      if ( null != typedef )
+      {
+        final Type otherType = typedef.getType();
+        return Kind.Union == otherType.getKind() || unwrapsToUnion( context, otherType );
+      }
+    }
+    return false;
   }
 
   private void generateDictionaryMemberSetterReturningThis( @Nonnull final CodeGenContext context,
