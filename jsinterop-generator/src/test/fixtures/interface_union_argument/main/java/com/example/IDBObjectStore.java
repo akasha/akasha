@@ -14,10 +14,6 @@ import jsinterop.annotations.JsType;
     name = "IDBObjectStore"
 )
 public class IDBObjectStore {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   IDBObjectStore() {
   }
 

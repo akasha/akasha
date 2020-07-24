@@ -12,10 +12,6 @@ import jsinterop.annotations.JsType;
     name = "EventTarget"
 )
 public class EventTarget {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   EventTarget() {
   }
 

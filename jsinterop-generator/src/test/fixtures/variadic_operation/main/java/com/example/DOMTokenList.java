@@ -12,10 +12,6 @@ import jsinterop.annotations.JsType;
     name = "DOMTokenList"
 )
 public class DOMTokenList {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   DOMTokenList() {
   }
 

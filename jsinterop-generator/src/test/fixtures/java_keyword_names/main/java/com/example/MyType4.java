@@ -13,10 +13,6 @@ import jsinterop.annotations.JsType;
     name = "MyType4"
 )
 public class MyType4 {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   MyType4() {
   }
 

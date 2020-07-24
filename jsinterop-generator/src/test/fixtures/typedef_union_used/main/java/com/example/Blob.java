@@ -13,10 +13,6 @@ import jsinterop.annotations.JsType;
     name = "Blob"
 )
 public class Blob {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   Blob() {
   }
 

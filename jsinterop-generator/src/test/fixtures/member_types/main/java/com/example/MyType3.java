@@ -29,10 +29,6 @@ import jsinterop.base.JsPropertyMap;
     name = "MyType3"
 )
 public class MyType3 {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   MyType3() {
   }
 

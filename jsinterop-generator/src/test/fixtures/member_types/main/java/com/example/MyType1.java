@@ -29,10 +29,6 @@ import jsinterop.base.Any;
     name = "MyType1"
 )
 public class MyType1 {
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   MyType1() {
   }
 

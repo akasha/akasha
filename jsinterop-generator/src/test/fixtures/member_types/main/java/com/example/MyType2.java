@@ -295,10 +295,6 @@ public class MyType2 {
   @Nonnull
   public Promise<Void> voidPromiseValue;
 
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   MyType2() {
   }
 }

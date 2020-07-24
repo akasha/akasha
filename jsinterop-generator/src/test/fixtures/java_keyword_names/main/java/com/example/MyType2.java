@@ -91,10 +91,6 @@ public class MyType2 {
   @Nonnull
   public Object _wait;
 
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   MyType2() {
   }
 }
