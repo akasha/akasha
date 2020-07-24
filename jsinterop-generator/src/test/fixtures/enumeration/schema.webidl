@@ -1,3 +1,9 @@
+enum OverSampleType {
+  "2x",
+  "4x",
+  "none"
+};
+
 enum SpeechRecognitionErrorCode {
   "aborted",
   "audio-capture",

@@ -1247,7 +1247,7 @@ final class Generator
     {
       if ( !value.isEmpty() )
       {
-        final String name = toName( value );
+        final String name = safeName( toName( value ) );
         type.addField( FieldSpec
                          .builder( Types.STRING, safeName( name ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                          .addAnnotation( Types.NONNULL )
@@ -1268,15 +1268,7 @@ final class Generator
     for ( int i = 0; i < value.length(); i++ )
     {
       final char ch = value.charAt( i );
-      if ( ( i == 0 && Character.isUnicodeIdentifierStart( ch ) ) ||
-           ( i != 0 && Character.isUnicodeIdentifierPart( ch ) ) )
-      {
-        sb.append( ch );
-      }
-      else
-      {
-        sb.append( "_" );
-      }
+      sb.append( Character.isUnicodeIdentifierPart( ch ) ? ch : "_" );
     }
     return sb.toString();
   }
