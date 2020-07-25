@@ -82,6 +82,10 @@
         "url": "https://w3c.github.io/FileAPI/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "fileapi_patch"
+    },
+    {
         "lastModifiedTime": 1544824620000,
         "name": "filter_effects_1",
         "url": "https://www.w3.org/TR/filter-effects-1/"
