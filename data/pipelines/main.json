@@ -67,6 +67,25 @@
     },
     {
       "name": "RemoveMember",
+      "description": "this is a legacy API that was left for backwards compatibility but causes issues in GWT because the objects returned used prototypes from the top level page rather than the containing iframe",
+      "sourceSelector": "name=mediacapture_main",
+      "config": {
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^getUserMedia$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "These are no longer needed once Navigator.getUserMedia is removed",
+      "sourceSelector": "name=mediacapture_main",
+      "config": {
+        "namePattern": "^(NavigatorUserMediaSuccessCallback|NavigatorUserMediaErrorCallback)$",
+        "type": ["callback"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "the fileapi spec 'overrides' a operation on URL with a union of blob and the type defined in the mediasource spec",
       "sourceSelector": "name=fileapi",
       "config": {
