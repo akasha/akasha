@@ -10,6 +10,8 @@ complete as there is too much un-said.
 
 * Generate a global object ala `DomGlobal` based on a specific interface name.
 
+* Generate `GETTER`, `SETTER`, `DELETER` and `STRINGIFIER` operations
+
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
