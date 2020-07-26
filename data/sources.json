@@ -11,6 +11,10 @@
         "url": "https://www.w3.org/TR/beacon/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "bluetooth_common"
+    },
+    {
         "lastModifiedTime": 1591193826000,
         "name": "clipboard_apis",
         "url": "https://www.w3.org/TR/clipboard-apis/"
@@ -128,10 +132,6 @@
     {
         "lastModifiedTime": 0,
         "name": "local"
-    },
-    {
-        "lastModifiedTime": 0,
-        "name": "bluetooth_common"
     },
     {
         "lastModifiedTime": 1479323342000,
