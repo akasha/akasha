@@ -16,6 +16,8 @@ complete as there is too much un-said.
 
 * Generate `GETTER`, `SETTER`, `DELETER` and `STRINGIFIER` operations
 
+* Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
+
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
