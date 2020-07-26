@@ -193,6 +193,11 @@
         "url": "https://w3c.github.io/resource-timing/"
     },
     {
+        "lastModifiedTime": 1573740227000,
+        "name": "screen_capture",
+        "url": "https://www.w3.org/TR/screen-capture/"
+    },
+    {
         "lastModifiedTime": 1587127250000,
         "name": "screen_orientation",
         "url": "https://www.w3.org/TR/screen-orientation/"
