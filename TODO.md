@@ -7,6 +7,7 @@ complete as there is too much un-said.
 * use webrtc video chat ala ZipCall.io as another example
 
 * webgl renderer of some kind.
+ - a good one is https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/blob/master/script.js
 
 * Maybe mesh+shaders sample app?
 
