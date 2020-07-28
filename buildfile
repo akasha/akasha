@@ -42,6 +42,12 @@ define 'webtack' do
                     :package => 'org.realityforge.webtack.webidl.parser')
     compile.from antlr_generated_dir
 
+    antlr_javadoc_generated_dir =
+      compile_antlr(_('src/main/antlr/Javadoc.g4'),
+                    :listener => false,
+                    :package => 'org.realityforge.webtack.webidl.javadoc')
+    compile.from antlr_javadoc_generated_dir
+
     package(:jar)
     package(:sources)
     package(:javadoc)
