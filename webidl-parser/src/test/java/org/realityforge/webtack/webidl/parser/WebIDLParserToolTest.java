@@ -16,6 +16,13 @@ public final class WebIDLParserToolTest
       "[Exposed=(Window,Worker),\n" +
       " LegacyWindowAlias=webkitURL]\n" +
       "interface URL {\n" +
+      "  /**\n" +
+      "   * This is a multiline description for the\n" +
+      "   * constructor\n" +
+      "   *\n" +
+      "   * @param base the base parameter. It is also\n" +
+      "   *             over multiple lines\n" +
+      "   */" +
       "  constructor(USVString url, optional USVString base);\n" +
       "\n" +
       "  stringifier attribute USVString href;\n" +

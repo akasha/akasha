@@ -10,6 +10,8 @@
 //   are defined by ExtendedAttributeNoArgs, ExtendedAttributeArgList, ExtendedAttributeIdent,
 //   ExtendedAttributeIdentList, ExtendedAttributeNamedArgList in the original spec. This change also meant that
 //   unused rules such as "other", "extendedAttributeRest", "extendedAttributeInner" and "otherOrComma" could be removed
+// - We have also added a JAVADOC comment sent to a specific channel that contains documentation for the webidl
+//   element in a javadoc-esque format. It is parsed by the Javadoc.g4 grammar
 grammar WebIDL;
 
 INTEGER
@@ -30,6 +32,10 @@ STRING
 
 WHITESPACE
 	: [\t\n\r ]+ -> channel(HIDDEN)
+;
+
+JAVADOC_COMMENT
+	: '/**'(.|'\n')*?'*/' -> channel(42)
 ;
 
 COMMENT
