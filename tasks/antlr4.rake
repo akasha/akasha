@@ -51,7 +51,7 @@ module Buildr
 
       project.iml.main_source_directories << target_dir if project.iml?
 
-      file(target_dir => input_file) do |task|
+      t = file(target_dir => input_file) do |task|
         package_dir = "#{target_dir}/#{options[:package].gsub('.','/')}"
         mkdir_p package_dir
         args << "-o" << package_dir
@@ -72,6 +72,9 @@ module Buildr
         end
         touch target_dir
       end
+
+      desc "Antlr tasks"
+      project.task("antlr" => [t])
 
       target_dir
     end
