@@ -40,7 +40,7 @@ public final class WebIDLParserTool
   private static class BailLexer
     extends WebIDLLexer
   {
-    public BailLexer( @Nonnull final CharStream input )
+    BailLexer( @Nonnull final CharStream input )
     {
       super( input );
     }
