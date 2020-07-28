@@ -36,8 +36,14 @@ define 'webtack' do
     compile.with :javax_annotation,
                  Buildr::Antlr4.runtime_dependencies
 
+    antlr_lexer_generated_dir =
+      compile_antlr(_('src/main/antlr/WebIDLLexer.g4'),
+                    :listener => false,
+                    :package => 'org.realityforge.webtack.webidl.parser')
+    compile.from antlr_lexer_generated_dir
+
     antlr_generated_dir =
-      compile_antlr(_('src/main/antlr/WebIDL.g4'),
+      compile_antlr(_('src/main/antlr/WebIDLParser.g4'),
                     :listener => false,
                     :package => 'org.realityforge.webtack.webidl.parser')
     compile.from antlr_generated_dir
@@ -54,6 +60,7 @@ define 'webtack' do
 
     test.using :testng
 
+    project.iml.main_generated_source_directories << antlr_lexer_generated_dir
     project.iml.main_generated_source_directories << antlr_generated_dir
   end
 

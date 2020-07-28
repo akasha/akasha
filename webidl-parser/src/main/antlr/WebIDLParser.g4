@@ -10,44 +10,19 @@
 //   are defined by ExtendedAttributeNoArgs, ExtendedAttributeArgList, ExtendedAttributeIdent,
 //   ExtendedAttributeIdentList, ExtendedAttributeNamedArgList in the original spec. This change also meant that
 //   unused rules such as "other", "extendedAttributeRest", "extendedAttributeInner" and "otherOrComma" could be removed
-// - We have also added a JAVADOC comment sent to a specific channel that contains documentation for the webidl
-//   element in a javadoc-esque format. It is parsed by the Javadoc.g4 grammar
-grammar WebIDL;
+// - We have also added a JAVADOC comment parsing in a separate lexer island that contains documentation for the webidl
+//   element in a javadoc-esque format. This is only allowed in specific places in the grammar which is NOT spec compliant
+//   but as we are not using this as a general parser, this should not be an issue.
+parser grammar WebIDLParser;
 
-INTEGER
-	: '-'?([1-9][0-9]*|'0'([Xx][0-9A-Fa-f]+|[0-7]*))
-;
-
-DECIMAL
-	: '-'?(([0-9]+'.'[0-9]*|[0-9]*'.'[0-9]+)([Ee][+\-]?[0-9]+)?|[0-9]+[Ee][+\-]?[0-9]+)
-;
-
-IDENTIFIER
-	: [_-]?[A-Za-z][0-9A-Z_a-z\-]*
-;
-
-STRING
-	: '"' ~["]* '"'
-;
-
-WHITESPACE
-	: [\t\n\r ]+ -> channel(HIDDEN)
-;
-
-JAVADOC_COMMENT
-	: '/**'(.|'\n')*?'*/' -> channel(42)
-;
-
-COMMENT
-	: ('//'~[\n\r]*|'/*'(.|'\n')*?'*/')+ -> channel(HIDDEN)
-; // Note: '/''/'~[\n\r]* instead of '/''/'.* (non-greedy because of wildcard).
+options { tokenVocab=WebIDLLexer; }
 
 webIDL
 	: definitions EOF
 ;
 
 definitions
-	: extendedAttributeList definition definitions
+	: documentation extendedAttributeList definition definitions
 	| /* empty */
 ;
 
@@ -62,36 +37,36 @@ definition
 ;
 
 argumentNameKeyword
-	: 'async'
-	| 'attribute'
-	| 'callback'
-	| 'const'
-	| 'constructor'
-	| 'deleter'
-	| 'dictionary'
-	| 'enum'
-	| 'getter'
-	| 'includes'
-	| 'inherit'
-	| 'interface'
-	| 'iterable'
-	| 'maplike'
-	| 'mixin'
-	| 'namespace'
-	| 'partial'
-	| 'readonly'
-	| 'required'
-	| 'setlike'
-	| 'setter'
-	| 'static'
-	| 'stringifier'
-	| 'typedef'
-	| 'unrestricted'
+	: ASYNC
+	| ATTRIBUTE
+	| CALLBACK
+	| CONST
+	| CONSTRUCTOR
+	| DELETER
+	| DICTIONARY
+	| ENUM
+	| GETTER
+	| INCLUDES
+	| INHERIT
+	| INTERFACE
+	| ITERABLE
+	| MAPLIKE
+	| MIXIN
+	| NAMESPACE
+	| PARTIAL
+	| READONLY
+	| REQUIRED
+	| SETLIKE
+	| SETTER
+	| STATIC
+	| STRINGIFIER
+	| TYPEDEF
+	| UNRESTRICTED
 ;
 
 callbackOrInterfaceOrMixin
-	: 'callback' callbackRestOrInterface
-	| 'interface' interfaceOrMixin
+	: CALLBACK callbackRestOrInterface
+	| INTERFACE interfaceOrMixin
 ;
 
 interfaceOrMixin
@@ -100,15 +75,15 @@ interfaceOrMixin
 ;
 
 interfaceRest
-  : IDENTIFIER inheritance '{' interfaceMembers '}' ';'
+  : IDENTIFIER inheritance OPEN_BRACE interfaceMembers CLOSE_BRACE SEMI_COLON
 ;
 
 partial
-  : 'partial' partialDefinition
+  : PARTIAL partialDefinition
 ;
 
 partialDefinition
-  : 'interface' partialInterfaceOrPartialMixin
+  : INTERFACE partialInterfaceOrPartialMixin
   | partialDictionary
   | namespace
 ;
@@ -119,11 +94,11 @@ partialInterfaceOrPartialMixin
 ;
 
 partialInterfaceRest
-  : IDENTIFIER '{' partialInterfaceMembers '}' ';'
+  : IDENTIFIER OPEN_BRACE partialInterfaceMembers CLOSE_BRACE SEMI_COLON
 ;
 
 interfaceMembers
-  : extendedAttributeList interfaceMember interfaceMembers
+  : documentation extendedAttributeList interfaceMember interfaceMembers
   | /* empty */
 ;
 
@@ -133,7 +108,7 @@ interfaceMember
 ;
 
 partialInterfaceMembers
-  : extendedAttributeList partialInterfaceMember partialInterfaceMembers
+  : documentation extendedAttributeList partialInterfaceMember partialInterfaceMembers
   | /* empty */
 ;
 
@@ -151,16 +126,16 @@ partialInterfaceMember
 ;
 
 inheritance
-  : ':' IDENTIFIER
+  : COLON IDENTIFIER
   | /* empty */
 ;
 
 mixinRest
-  : 'mixin' IDENTIFIER '{' mixinMembers '}' ';'
+  : MIXIN IDENTIFIER OPEN_BRACE mixinMembers CLOSE_BRACE SEMI_COLON
 ;
 
 mixinMembers
-  : extendedAttributeList mixinMember mixinMembers
+  : documentation extendedAttributeList mixinMember mixinMembers
   | /* empty */
 ;
 
@@ -172,16 +147,16 @@ mixinMember
 ;
 
 includesStatement
-  : IDENTIFIER 'includes' IDENTIFIER ';'
+  : IDENTIFIER INCLUDES IDENTIFIER SEMI_COLON
 ;
 
 callbackRestOrInterface
   : callbackRest
-  | 'interface' IDENTIFIER '{' callbackInterfaceMembers '}' ';'
+  | INTERFACE IDENTIFIER OPEN_BRACE callbackInterfaceMembers CLOSE_BRACE SEMI_COLON
 ;
 
 callbackInterfaceMembers
-  : extendedAttributeList callbackInterfaceMember callbackInterfaceMembers
+  : documentation extendedAttributeList callbackInterfaceMember callbackInterfaceMembers
   | /* empty */
 ;
 
@@ -191,7 +166,7 @@ callbackInterfaceMember
 ;
 
 constMember
-  : 'const' constMemberType IDENTIFIER '=' constMemberValue ';'
+  : CONST constMemberType IDENTIFIER EQUALS constMemberValue SEMI_COLON
 ;
 
 constMemberValue
@@ -201,15 +176,15 @@ constMemberValue
 ;
 
 booleanLiteral
-  : 'true'
-  | 'false'
+  : TRUE
+  | FALSE
 ;
 
 floatLiteral
   : DECIMAL
-  | '-Infinity'
-  | 'Infinity'
-  | 'NaN'
+  | NEGATIVE_INFINITY
+  | POSITIVE_INFINITY
+  | NAN
 ;
 
 constMemberType
@@ -218,7 +193,7 @@ constMemberType
 ;
 
 readOnlyMember
-  : 'readonly' readOnlyMemberRest
+  : READONLY readOnlyMemberRest
 ;
 
 readOnlyMemberRest
@@ -228,12 +203,12 @@ readOnlyMemberRest
 ;
 
 readWriteAttribute
-  : 'inherit' attributeRest
+  : INHERIT attributeRest
   | attributeRest
 ;
 
 attributeRest
-  : 'attribute' typeWithExtendedAttributes attributeName ';'
+  : ATTRIBUTE typeWithExtendedAttributes attributeName SEMI_COLON
 ;
 
 attributeName
@@ -242,21 +217,21 @@ attributeName
 ;
 
 attributeNameKeyword
-  : 'async'
-  | 'required'
+  : ASYNC
+  | REQUIRED
 ;
 
 readOnly
-  : 'readonly'
+  : READONLY
   | /* empty */
 ;
 
 defaultValue
   : constMemberValue
   | STRING
-  | '[' ']'
-  | '{' '}'
-  | 'null'
+  | OPEN_SQUARE_BRACKET CLOSE_SQUARE_BRACKET
+  | OPEN_BRACE CLOSE_BRACE
+  | NULL
 ;
 
 operation
@@ -273,13 +248,13 @@ specialOperation
 ;
 
 special
-  : 'getter'
-  | 'setter'
-  | 'deleter'
+  : GETTER
+  | SETTER
+  | DELETER
 ;
 
 operationRest
-  : optionalOperationName '(' argumentList ')' ';'
+  : optionalOperationName OPEN_BRACKET argumentList CLOSE_BRACKET SEMI_COLON
 ;
 
 optionalOperationName
@@ -293,7 +268,7 @@ operationName
 ;
 
 operationNameKeyword
-  : 'includes'
+  : INCLUDES
 ;
 
 argumentList
@@ -302,7 +277,7 @@ argumentList
 ;
 
 arguments
-  : ',' argument arguments
+  : COMMA argument arguments
   | /* empty */
 ;
 
@@ -311,7 +286,7 @@ argument
 ;
 
 argumentRest
-  : 'optional' typeWithExtendedAttributes argumentName defaultAssignment
+  : OPTIONAL typeWithExtendedAttributes argumentName defaultAssignment
   | type ellipsis argumentName
 ;
 
@@ -321,31 +296,31 @@ argumentName
 ;
 
 ellipsis
-  : '...'
+  : ELLIPSIS
   | /* empty */
 ;
 
 returnType
   : type
-  | 'void'
+  | VOID
 ;
 
 constructor
-  : 'constructor' '(' argumentList ')' ';'
+  : CONSTRUCTOR OPEN_BRACKET argumentList CLOSE_BRACKET SEMI_COLON
 ;
 
 stringifier
-  : 'stringifier' stringifierRest
+  : STRINGIFIER stringifierRest
 ;
 
 stringifierRest
   : readOnly attributeRest
   | regularOperation
-  | ';'
+  | SEMI_COLON
 ;
 
 staticMember
-  : 'static' staticMemberRest
+  : STATIC staticMemberRest
 ;
 
 staticMemberRest
@@ -354,16 +329,16 @@ staticMemberRest
 ;
 
 iterable
-  : 'iterable' '<' typeWithExtendedAttributes optionalType '>' ';'
+  : ITERABLE OPEN_ANGLE_BRACKET typeWithExtendedAttributes optionalType CLOSE_ANGLE_BRACKET SEMI_COLON
 ;
 
 optionalType
-  : ',' typeWithExtendedAttributes
+  : COMMA typeWithExtendedAttributes
   | /* empty */
 ;
 
 asyncIterable
-  : 'async' 'iterable' '<' typeWithExtendedAttributes ',' typeWithExtendedAttributes '>' ';'
+  : ASYNC ITERABLE OPEN_ANGLE_BRACKET typeWithExtendedAttributes COMMA typeWithExtendedAttributes CLOSE_ANGLE_BRACKET SEMI_COLON
 ;
 
 readWriteMaplike
@@ -371,7 +346,7 @@ readWriteMaplike
 ;
 
 maplikeRest
-  : 'maplike' '<' typeWithExtendedAttributes ',' typeWithExtendedAttributes '>' ';'
+  : MAPLIKE OPEN_ANGLE_BRACKET typeWithExtendedAttributes COMMA typeWithExtendedAttributes CLOSE_ANGLE_BRACKET SEMI_COLON
 ;
 
 readWriteSetlike
@@ -379,11 +354,11 @@ readWriteSetlike
 ;
 
 setlikeRest
-  : 'setlike' '<' typeWithExtendedAttributes '>' ';'
+  : SETLIKE OPEN_ANGLE_BRACKET typeWithExtendedAttributes CLOSE_ANGLE_BRACKET SEMI_COLON
 ;
 
 namespace
-  : 'namespace' IDENTIFIER '{' namespaceMembers '}' ';'
+  : NAMESPACE IDENTIFIER OPEN_BRACE namespaceMembers CLOSE_BRACE SEMI_COLON
 ;
 
 namespaceMembers
@@ -393,15 +368,15 @@ namespaceMembers
 
 namespaceMember
   : regularOperation
-  | 'readonly' attributeRest
+  | READONLY attributeRest
 ;
 
 dictionary
-  : 'dictionary' IDENTIFIER inheritance '{' dictionaryMembers '}' ';'
+  : DICTIONARY IDENTIFIER inheritance OPEN_BRACE dictionaryMembers CLOSE_BRACE SEMI_COLON
 ;
 
 dictionaryMembers
-  : dictionaryMember dictionaryMembers
+  : documentation dictionaryMember dictionaryMembers
   | /* empty */
 ;
 
@@ -410,21 +385,21 @@ dictionaryMember
 ;
 
 dictionaryMemberRest
-  : 'required' typeWithExtendedAttributes IDENTIFIER ';'
-  | type IDENTIFIER defaultAssignment ';'
+  : REQUIRED typeWithExtendedAttributes IDENTIFIER SEMI_COLON
+  | type IDENTIFIER defaultAssignment SEMI_COLON
 ;
 
 partialDictionary
-  : 'dictionary' IDENTIFIER '{' dictionaryMembers '}' ';'
+  : DICTIONARY IDENTIFIER OPEN_BRACE dictionaryMembers CLOSE_BRACE SEMI_COLON
 ;
 
 defaultAssignment
-  : '=' defaultValue
+  : EQUALS defaultValue
   | /* empty */
 ;
 
 enumDefinition
-  : 'enum' IDENTIFIER '{' enumValueList '}' ';'
+  : ENUM IDENTIFIER OPEN_BRACE enumValueList CLOSE_BRACE SEMI_COLON
 ;
 
 enumValueList
@@ -432,7 +407,7 @@ enumValueList
 ;
 
 enumValueListComma
-  : ',' enumValueListString
+  : COMMA enumValueListString
   | /* empty */
 ;
 
@@ -442,11 +417,11 @@ enumValueListString
 ;
 
 callbackRest
-  : IDENTIFIER '=' returnType '(' argumentList ')' ';'
+  : IDENTIFIER EQUALS returnType OPEN_BRACKET argumentList CLOSE_BRACKET SEMI_COLON
 ;
 
 typedef
-  : 'typedef' typeWithExtendedAttributes IDENTIFIER ';'
+  : TYPEDEF typeWithExtendedAttributes IDENTIFIER SEMI_COLON
 ;
 
 type
@@ -460,12 +435,12 @@ typeWithExtendedAttributes
 
 singleType
   : distinguishableType
-  | 'any'
+  | ANY
   | promiseType
 ;
 
 unionType
-  : '(' unionMemberType 'or' unionMemberType unionMemberTypes ')'
+  : OPEN_BRACKET unionMemberType OR unionMemberType unionMemberTypes CLOSE_BRACKET
 ;
 
 unionMemberType
@@ -474,7 +449,7 @@ unionMemberType
 ;
 
 unionMemberTypes
-  : 'or' unionMemberType unionMemberTypes
+  : OR unionMemberType unionMemberTypes
   | /* empty */
 ;
 
@@ -482,87 +457,87 @@ distinguishableType
   : primitiveType nullModifier
   | stringType nullModifier
   | IDENTIFIER nullModifier
-  | 'sequence' '<' typeWithExtendedAttributes '>' nullModifier
-  | 'object' nullModifier
-  | 'symbol' nullModifier
+  | SEQUENCE OPEN_ANGLE_BRACKET typeWithExtendedAttributes CLOSE_ANGLE_BRACKET nullModifier
+  | OBJECT nullModifier
+  | SYMBOL nullModifier
   | bufferRelatedType nullModifier
-  | 'FrozenArray' '<' typeWithExtendedAttributes '>' nullModifier
+  | FROZEN_ARRAY OPEN_ANGLE_BRACKET typeWithExtendedAttributes CLOSE_ANGLE_BRACKET nullModifier
   | recordType nullModifier
 ;
 
 primitiveType
   : unsignedIntegerType
   | unrestrictedFloatType
-  | 'boolean'
-  | 'byte'
-  | 'octet'
+  | BOOLEAN
+  | BYTE
+  | OCTET
 ;
 
 unrestrictedFloatType
-  : 'unrestricted' floatType
+  : UNRESTRICTED floatType
   | floatType
 ;
 
 floatType
-  : 'float'
-  | 'double'
+  : FLOAT
+  | DOUBLE
 ;
 
 unsignedIntegerType
-  : 'unsigned' integerType
+  : UNSIGNED integerType
   | integerType
 ;
 
 integerType
-  : 'short'
-  | 'long' optionalLong
+  : SHORT
+  | LONG optionalLong
 ;
 
 optionalLong
-  : 'long'
+  : LONG
   | /* empty */
 ;
 
 stringType
-  : 'ByteString'
-  | 'DOMString'
-  | 'USVString'
+  : BYTE_STRING
+  | DOM_STRING
+  | USV_STRING
 ;
 
 promiseType
-  : 'Promise' '<' returnType '>'
+  : PROMISE OPEN_ANGLE_BRACKET returnType CLOSE_ANGLE_BRACKET
 ;
 
 recordType
-  : 'record' '<' stringType ',' typeWithExtendedAttributes '>'
+  : RECORD OPEN_ANGLE_BRACKET stringType COMMA typeWithExtendedAttributes CLOSE_ANGLE_BRACKET
 ;
 
 nullModifier
-  : '?'
+  : QUESTION_MARK
   | /* empty */
 ;
 
 bufferRelatedType
-  : 'ArrayBuffer'
-  | 'DataView'
-  | 'Int8Array'
-  | 'Int16Array'
-  | 'Int32Array'
-  | 'Uint8Array'
-  | 'Uint16Array'
-  | 'Uint32Array'
-  | 'Uint8ClampedArray'
-  | 'Float32Array'
-  | 'Float64Array'
+  : ARRAY_BUFFER
+  | DATA_VIEW
+  | INT8_ARRAY
+  | INT16_ARRAY
+  | INT32_ARRAY
+  | UINT8_ARRAY
+  | UINT16_ARRAY
+  | UINT32_ARRAY
+  | UINT8_CLAMPED_ARRAY
+  | FLOAT32_ARRAY
+  | FLOAT64_ARRAY
 ;
 
 extendedAttributeList
-  : '[' extendedAttribute extendedAttributes ']'
+  : OPEN_SQUARE_BRACKET extendedAttribute extendedAttributes CLOSE_SQUARE_BRACKET
   | /* empty */
 ;
 
 extendedAttributes
-  : ',' extendedAttribute extendedAttributes
+  : COMMA extendedAttribute extendedAttributes
   | /* empty */
 ;
 
@@ -579,7 +554,7 @@ identifierList
 ;
 
 identifiers
-  : ',' IDENTIFIER identifiers
+  : COMMA IDENTIFIER identifiers
   | /* empty */
 ;
 
@@ -588,19 +563,19 @@ extendedAttributeNoArgs
 ;
 
 extendedAttributeArgList
-  : IDENTIFIER '(' argumentList ')'
+  : IDENTIFIER OPEN_BRACKET argumentList CLOSE_BRACKET
 ;
 
 extendedAttributeIdent
-  : IDENTIFIER '=' IDENTIFIER
+  : IDENTIFIER EQUALS IDENTIFIER
 ;
 
 extendedAttributeIdentList
-  : IDENTIFIER '=' '(' identifierList ')'
+  : IDENTIFIER EQUALS OPEN_BRACKET identifierList CLOSE_BRACKET
 ;
 
 extendedAttributeNamedArgList
-  : IDENTIFIER '=' IDENTIFIER '(' argumentList ')'
+  : IDENTIFIER EQUALS IDENTIFIER OPEN_BRACKET argumentList CLOSE_BRACKET
 ;
 
 /*
@@ -1118,3 +1093,112 @@ ExtendedAttributeIdentList ::
 ExtendedAttributeNamedArgList ::
     identifier = identifier ( ArgumentList )
 */
+
+documentation
+	: JAVADOC_START skipWhitespace* documentationContent JAVADOC_END
+	| /* empty */
+	;
+
+documentationContent
+	: description skipWhitespace*
+	| skipWhitespace* tagSection
+	| description NEWLINE+ skipWhitespace* tagSection
+	;
+
+skipWhitespace
+	: SPACE
+	| NEWLINE
+	;
+
+description
+	: descriptionLine (descriptionNewline+ descriptionLine)*
+	;
+
+descriptionLine
+	: descriptionLineStart descriptionLineElement*
+	| inlineTag descriptionLineElement*
+	;
+
+descriptionLineStart
+	: SPACE? descriptionLineNoSpaceNoAt+ (descriptionLineNoSpaceNoAt | SPACE | AT)*
+	;
+
+descriptionLineNoSpaceNoAt
+	: TEXT_CONTENT
+	| NAME
+	| STAR
+	| SLASH
+	| BRACE_OPEN
+	| BRACE_CLOSE
+	;
+
+descriptionLineElement
+	: inlineTag
+	| descriptionLineText
+	;
+
+descriptionLineText
+	: (descriptionLineNoSpaceNoAt | SPACE | AT)+
+	;
+
+descriptionNewline
+	: NEWLINE
+	;
+
+tagSection
+	: blockTag+
+;
+
+blockTag
+	: SPACE? AT NAME SPACE? blockTagContent*
+;
+
+blockTagContent
+	: blockTagText
+	| inlineTag
+	| NEWLINE
+;
+
+blockTagText
+	: blockTagTextElement+
+;
+
+blockTagTextElement
+	: TEXT_CONTENT
+	| NAME
+	| SPACE
+	| STAR
+	| SLASH
+	| BRACE_OPEN
+	| BRACE_CLOSE
+;
+
+inlineTag
+	: INLINE_TAG_START inlineTagName SPACE* inlineTagContent? BRACE_CLOSE
+;
+
+inlineTagName
+	: NAME
+;
+
+inlineTagContent
+	: braceContent+
+;
+
+braceExpression
+	: BRACE_OPEN braceContent* BRACE_CLOSE
+;
+
+braceContent
+	: braceExpression
+	| braceText (NEWLINE* braceText)*
+;
+
+braceText
+	: TEXT_CONTENT
+	| NAME
+	| SPACE
+	| STAR
+	| SLASH
+	| NEWLINE
+;
