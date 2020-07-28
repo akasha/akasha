@@ -8,6 +8,7 @@ import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.LexerNoViableAltException;
+import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 
 /**
@@ -43,6 +44,12 @@ public final class WebIDLParserTool
     BailLexer( @Nonnull final CharStream input )
     {
       super( input );
+    }
+
+    @Override
+    public void recover( @Nonnull final RecognitionException re )
+    {
+      throw new ParseCancellationException( re );
     }
 
     @Override
