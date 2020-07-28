@@ -45,6 +45,7 @@ public final class WebIDLParserTool
       super( input );
     }
 
+    @Override
     public void recover( @Nonnull final LexerNoViableAltException e )
     {
       throw new ParseCancellationException( e );
