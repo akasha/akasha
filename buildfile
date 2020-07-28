@@ -62,6 +62,7 @@ define 'webtack' do
 
     project.iml.main_generated_source_directories << antlr_lexer_generated_dir
     project.iml.main_generated_source_directories << antlr_generated_dir
+    project.iml.main_generated_source_directories << antlr_javadoc_generated_dir
   end
 
   define 'webidl-model' do
