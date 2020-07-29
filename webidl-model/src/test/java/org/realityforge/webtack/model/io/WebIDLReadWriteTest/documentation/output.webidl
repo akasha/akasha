@@ -44,6 +44,25 @@ partial namespace WebAssembly {
 };
 
 /**
+ * Documentation for FullscreenNavigationUI.
+ *
+ * @version 23
+ * @see http://example.com/#FullscreenOptions
+ */
+dictionary FullscreenOptions {
+};
+
+/**
+ * Documentation for WebGLContextAttributes.
+ *
+ * @version 42
+ * @see http://example.com/#WebGLContextAttributes
+ */
+partial dictionary WebGLContextAttributes {
+  boolean xrCompatible = null;
+};
+
+/**
  * This is some basic documentation for DocumentOrShadowRoot
  * element.
  *
