@@ -7,7 +7,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 
 public class Type
-  extends Element
+  extends AttributedNode
 {
   @Nonnull
   private final Kind _kind;
