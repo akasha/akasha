@@ -745,6 +745,7 @@ public final class WebIDLWriter
   static void writeMapLikeMember( @Nonnull final Writer writer, @Nonnull final MapLikeMember member )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, member.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     if ( member.isReadOnly() )

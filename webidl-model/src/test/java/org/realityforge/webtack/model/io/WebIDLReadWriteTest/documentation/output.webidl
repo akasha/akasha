@@ -111,6 +111,17 @@ partial interface mixin DocumentOrShadowRoot {
 };
 
 /**
+ * Documentation for AudioParamMap.
+ */
+[Exposed=Window]
+interface AudioParamMap {
+  /**
+   * Documentation for maplike.
+   */
+  readonly maplike<DOMString, AudioParam>;
+};
+
+/**
  * The Document interface.
  *
  * @version 23
