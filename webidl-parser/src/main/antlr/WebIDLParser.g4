@@ -362,7 +362,7 @@ namespace
 ;
 
 namespaceMembers
-  : extendedAttributeList namespaceMember namespaceMembers
+  : documentation extendedAttributeList namespaceMember namespaceMembers
   | /* empty */
 ;
 
