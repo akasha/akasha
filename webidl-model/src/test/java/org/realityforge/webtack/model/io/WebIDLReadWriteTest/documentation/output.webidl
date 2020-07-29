@@ -122,6 +122,31 @@ interface AudioParamMap {
 };
 
 /**
+ * Documentation for CommPanel.
+ */
+interface CommPanel {
+  /**
+   * Documentation for async iterable.
+   *
+   * @see http://example.com/#CommPanel.details
+   */
+  async iterable<USVString, ArrayBuffer>;
+};
+
+/**
+ * Documentation for Config.
+ */
+[Exposed=(Window,Worker)]
+interface Config {
+  /**
+   * Documentation for setlike.
+   *
+   * @see http://example.com/#config
+   */
+  setlike<USVString>;
+};
+
+/**
  * The Document interface.
  *
  * @version 23
@@ -173,6 +198,19 @@ interface Document {
    */
   [CEReactions, NewObject]
   Node importNode( Node node, optional boolean deep = false );
+};
+
+/**
+ * Documentation for FormData.
+ */
+[Exposed=(Window,Worker)]
+interface FormData {
+  /**
+   * Documentation for iterable.
+   *
+   * @see http://example.com/#iterable
+   */
+  iterable<USVString, FormDataEntryValue>;
 };
 
 /**

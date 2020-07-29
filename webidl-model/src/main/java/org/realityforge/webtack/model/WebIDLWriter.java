@@ -762,6 +762,7 @@ public final class WebIDLWriter
   static void writeSetLikeMember( @Nonnull final Writer writer, @Nonnull final SetLikeMember member )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, member.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     if ( member.isReadOnly() )
@@ -776,6 +777,7 @@ public final class WebIDLWriter
   static void writeAsyncIterableMember( @Nonnull final Writer writer, @Nonnull final AsyncIterableMember member )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, member.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     writer.write( "async iterable<" );
@@ -788,6 +790,7 @@ public final class WebIDLWriter
   static void writeIterableMember( @Nonnull final Writer writer, @Nonnull final IterableMember member )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, member.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     writer.write( "iterable<" );
