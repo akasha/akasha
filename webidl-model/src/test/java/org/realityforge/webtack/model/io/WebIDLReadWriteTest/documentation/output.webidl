@@ -174,6 +174,10 @@ interface Document {
    */
   attribute DOMString characterSet;
   /**
+   * The href attribute is documented.
+   */
+  stringifier attribute USVString href;
+  /**
    * This constructor is documented.
    *
    * @param callback the callback.
