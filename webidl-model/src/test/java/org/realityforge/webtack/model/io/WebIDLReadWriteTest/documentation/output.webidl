@@ -50,6 +50,13 @@ partial namespace WebAssembly {
  * @see http://example.com/#FullscreenOptions
  */
 dictionary FullscreenOptions {
+  /**
+   * Documentation for navigationUI.
+   *
+   * @version 23
+   * @see http://example.com/#FullscreenOptions.navigationUI
+   */
+  FullscreenNavigationUI navigationUI = "auto";
 };
 
 /**
@@ -59,6 +66,12 @@ dictionary FullscreenOptions {
  * @see http://example.com/#WebGLContextAttributes
  */
 partial dictionary WebGLContextAttributes {
+  /**
+   * Documentation for xrCompatible.
+   *
+   * @version 23
+   * @see http://example.com/#WebGLContextAttributes.xrCompatible
+   */
   boolean xrCompatible = null;
 };
 

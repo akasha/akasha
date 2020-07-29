@@ -723,6 +723,7 @@ public final class WebIDLWriter
   static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, member.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     if ( !member.isOptional() )
