@@ -724,7 +724,6 @@ public final class WebIDLWriter
     throws IOException
   {
     writeIndent( writer );
-
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     if ( !member.isOptional() )
     {
