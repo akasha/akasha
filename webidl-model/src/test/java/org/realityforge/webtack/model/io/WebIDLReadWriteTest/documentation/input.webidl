@@ -1,4 +1,16 @@
 /**
+ * Documentation for FullscreenNavigationUI.
+ *
+ * @version 23
+ * @see http://example.com/#FullscreenNavigationUI
+ */
+enum FullscreenNavigationUI {
+  "auto",
+  "hide",
+  "show"
+};
+
+/**
  * The glorious WebAssembly namespace.
  *
  * @data 2019
