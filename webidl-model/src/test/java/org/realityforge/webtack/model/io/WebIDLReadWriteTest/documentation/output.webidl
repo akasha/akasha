@@ -1,4 +1,37 @@
 /**
+ * The glorious WebAssembly namespace.
+ *
+ * @data 2019
+ */
+[Exposed=(Window,Worker,Worklet)]
+namespace WebAssembly {
+  /**
+   * Compile the buffer.
+   *
+   * @param bytes the bytes to compile
+   * @return the promise for the compiled module
+   * @see http://example.com
+   */
+  Promise<Module> compile( BufferSource bytes );
+};
+
+/**
+ * The stream WebAssembly extensions.
+ *
+ * @data 2020
+ */
+partial namespace WebAssembly {
+  /**
+   * Compile the data as it streams in.
+   *
+   * @param source the source to compile
+   * @return the promise for the compiled module
+   * @see http://example.com
+   */
+  Promise<Module> compileStreaming( Promise<Response> source );
+};
+
+/**
  * This is some basic documentation for DocumentOrShadowRoot
  * element.
  *
@@ -41,12 +74,33 @@ partial interface mixin DocumentOrShadowRoot {
 [Exposed=Window]
 interface Document {
   /**
-   * This attribute is documented.
+   * This constant is documented and has an {@link #URL inline tag}.
+   *
+   * @see http://example.com/#NAMESPACE_RULE
+   */
+  const unsigned short NAMESPACE_RULE = 10;
+  /**
+   * The static supportedEntryTypes attribute is documented.
+   */
+  static readonly attribute FrozenArray<DOMString> supportedEntryTypes;
+  /**
+   * The readonly URL attribute is documented.
    *
    * @version 23
    */
   readonly attribute USVString URL;
-  readonly attribute DOMString characterSet;
+  /**
+   * The characterSet attribute is documented.
+   */
+  attribute DOMString characterSet;
+  /**
+   * This constructor is documented.
+   *
+   * @param callback the callback.
+   * @return the new instance.
+   * @version 23
+   */
+  constructor( PerformanceObserverCallback callback );
   /**
    * This operation is documented.
    *
@@ -64,6 +118,16 @@ interface Document {
    */
   [CEReactions, NewObject]
   Node importNode( Node node, optional boolean deep = false );
+};
+
+/**
+ * Geolocation extensions for navigator.
+ */
+partial interface Navigator {
+  /**
+   * Commented attribute in partial interface.
+   */
+  readonly attribute Geolocation geolocation;
 };
 
 /**
