@@ -95,6 +95,6 @@ complete as there is too much un-said.
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
 
-* Exploded union type lists should not contains:
+* Exploded union type lists should not contain:
   * multiple values represented by javascript numbers (otherwise how to determine which variant is intended)
   * multiple dictionary values (otherwise would need to inspect data to switch between them?)
