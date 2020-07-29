@@ -91,10 +91,6 @@ complete as there is too much un-said.
   We should also emit browser specific extension with clear markers in the source code (i.e. generate the externs
   prefixed with `chrome_` etc or add explicit annotations in java code).
 
-* Should union types as method parameters just result in multiple overloaded methods in java-land?
-
-* Only keep union type materialization for properties and/or return types from operations?
-
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
