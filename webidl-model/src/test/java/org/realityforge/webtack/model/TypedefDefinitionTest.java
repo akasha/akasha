@@ -38,7 +38,8 @@ public final class TypedefDefinitionTest
     throws IOException
   {
     final WebIDLParser.TypedefContext ctx = createParser( webIDL ).typedef();
-    final TypedefDefinition actual = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final TypedefDefinition actual =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 

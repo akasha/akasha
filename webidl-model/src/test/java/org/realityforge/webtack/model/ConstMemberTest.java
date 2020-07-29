@@ -44,7 +44,7 @@ public final class ConstMemberTest
     throws IOException
   {
     final WebIDLParser.ConstMemberContext ctx = createParser( webIDL ).constMember();
-    final ConstMember actual = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final ConstMember actual = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 
@@ -54,7 +54,7 @@ public final class ConstMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.ConstMemberContext ctx2 = createParser( emittedIDL ).constMember();
     final ConstMember element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );
 

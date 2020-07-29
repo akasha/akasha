@@ -35,7 +35,8 @@ public final class IterableMemberTest
     throws IOException
   {
     final WebIDLParser.IterableContext ctx = createParser( webIDL ).iterable();
-    final IterableMember actual = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final IterableMember actual =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
 
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
@@ -46,7 +47,7 @@ public final class IterableMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.IterableContext ctx2 = createParser( emittedIDL ).iterable();
     final IterableMember element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );
 

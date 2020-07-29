@@ -46,6 +46,7 @@ final class AddExtendedAttributeProcessor
     return new CallbackDefinition( input.getName(),
                                    transformType( input.getReturnType() ),
                                    transformArguments( input.getArguments() ),
+                                   transformDocumentation( input.getDocumentation() ),
                                    matches( input ) ?
                                    expandExtendedAttributes( input.getExtendedAttributes() ) :
                                    transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -59,6 +60,7 @@ final class AddExtendedAttributeProcessor
     return new CallbackInterfaceDefinition( input.getName(),
                                             transformOperationMember( input.getOperation() ),
                                             transformConstants( input.getConstants() ),
+                                            transformDocumentation( input.getDocumentation() ),
                                             matches( input ) ?
                                             expandExtendedAttributes( input.getExtendedAttributes() ) :
                                             transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -71,6 +73,7 @@ final class AddExtendedAttributeProcessor
   {
     return new EnumerationDefinition( input.getName(),
                                       input.getValues(),
+                                      transformDocumentation( input.getDocumentation() ),
                                       matches( input ) ?
                                       expandExtendedAttributes( input.getExtendedAttributes() ) :
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -85,6 +88,7 @@ final class AddExtendedAttributeProcessor
                                 transformConstants( input.getConstants() ),
                                 transformAttributeMembers( input.getAttributes() ),
                                 transformOperationMembers( input.getOperations() ),
+                                transformDocumentation( input.getDocumentation() ),
                                 matches( input ) ?
                                 expandExtendedAttributes( input.getExtendedAttributes() ) :
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -99,6 +103,7 @@ final class AddExtendedAttributeProcessor
                                        transformConstants( input.getConstants() ),
                                        transformAttributeMembers( input.getAttributes() ),
                                        transformOperationMembers( input.getOperations() ),
+                                       transformDocumentation( input.getDocumentation() ),
                                        matches( input ) ?
                                        expandExtendedAttributes( input.getExtendedAttributes() ) :
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -118,6 +123,7 @@ final class AddExtendedAttributeProcessor
                                     transformAsyncIterableMember( input.getAsyncIterable() ),
                                     transformMapLikeMember( input.getMapLikeMember() ),
                                     transformSetLikeMember( input.getSetLikeMember() ),
+                                    transformDocumentation( input.getDocumentation() ),
                                     matches( input ) ?
                                     expandExtendedAttributes( input.getExtendedAttributes() ) :
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -136,6 +142,7 @@ final class AddExtendedAttributeProcessor
                                            transformAsyncIterableMember( input.getAsyncIterable() ),
                                            transformMapLikeMember( input.getMapLikeMember() ),
                                            transformSetLikeMember( input.getSetLikeMember() ),
+                                           transformDocumentation( input.getDocumentation() ),
                                            matches( input ) ?
                                            expandExtendedAttributes( input.getExtendedAttributes() ) :
                                            transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -149,6 +156,7 @@ final class AddExtendedAttributeProcessor
     return new NamespaceDefinition( input.getName(),
                                     transformOperationMembers( input.getOperations() ),
                                     transformAttributeMembers( input.getAttributes() ),
+                                    transformDocumentation( input.getDocumentation() ),
                                     matches( input ) ?
                                     expandExtendedAttributes( input.getExtendedAttributes() ) :
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -162,6 +170,7 @@ final class AddExtendedAttributeProcessor
     return new PartialNamespaceDefinition( input.getName(),
                                            transformOperationMembers( input.getOperations() ),
                                            transformAttributeMembers( input.getAttributes() ),
+                                           transformDocumentation( input.getDocumentation() ),
                                            matches( input ) ?
                                            expandExtendedAttributes( input.getExtendedAttributes() ) :
                                            transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -175,6 +184,7 @@ final class AddExtendedAttributeProcessor
     return new DictionaryDefinition( input.getName(),
                                      input.getInherits(),
                                      transformDictionaryMembers( input.getMembers() ),
+                                     transformDocumentation( input.getDocumentation() ),
                                      matches( input ) ?
                                      expandExtendedAttributes( input.getExtendedAttributes() ) :
                                      transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -187,6 +197,7 @@ final class AddExtendedAttributeProcessor
   {
     return new PartialDictionaryDefinition( input.getName(),
                                             transformDictionaryMembers( input.getMembers() ),
+                                            transformDocumentation( input.getDocumentation() ),
                                             matches( input ) ?
                                             expandExtendedAttributes( input.getExtendedAttributes() ) :
                                             transformExtendedAttributes( input.getExtendedAttributes() ),

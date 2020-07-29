@@ -73,7 +73,7 @@ public final class DictionaryTest
   {
     final WebIDLParser.DictionaryContext ctx = createParser( webIDL ).dictionary();
     final DictionaryDefinition actual =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 

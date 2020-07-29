@@ -19,6 +19,7 @@ import org.realityforge.webtack.model.ConstValue;
 import org.realityforge.webtack.model.DefaultValue;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
+import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
@@ -122,6 +123,7 @@ public abstract class AbstractProcessor
     return new CallbackDefinition( input.getName(),
                                    transformType( input.getReturnType() ),
                                    transformArguments( input.getArguments() ),
+                                   transformDocumentation( input.getDocumentation() ),
                                    transformExtendedAttributes( input.getExtendedAttributes() ),
                                    transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -147,6 +149,7 @@ public abstract class AbstractProcessor
     return new CallbackInterfaceDefinition( input.getName(),
                                             transformOperationMember( input.getOperation() ),
                                             transformConstants( input.getConstants() ),
+                                            transformDocumentation( input.getDocumentation() ),
                                             transformExtendedAttributes( input.getExtendedAttributes() ),
                                             transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -158,6 +161,7 @@ public abstract class AbstractProcessor
                                 input.getName(),
                                 transformArguments( input.getArguments() ),
                                 transformType( input.getReturnType() ),
+                                transformDocumentation( input.getDocumentation() ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -189,6 +193,7 @@ public abstract class AbstractProcessor
     return new ConstMember( input.getName(),
                             transformType( input.getType() ),
                             transformConstValue( input.getValue() ),
+                            transformDocumentation( input.getDocumentation() ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
                             transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -213,6 +218,7 @@ public abstract class AbstractProcessor
   {
     return new EnumerationDefinition( input.getName(),
                                       input.getValues(),
+                                      transformDocumentation( input.getDocumentation() ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -239,6 +245,7 @@ public abstract class AbstractProcessor
                                 transformConstants( input.getConstants() ),
                                 transformAttributeMembers( input.getAttributes() ),
                                 transformOperationMembers( input.getOperations() ),
+                                transformDocumentation( input.getDocumentation() ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -265,6 +272,7 @@ public abstract class AbstractProcessor
                                        transformConstants( input.getConstants() ),
                                        transformAttributeMembers( input.getAttributes() ),
                                        transformOperationMembers( input.getOperations() ),
+                                       transformDocumentation( input.getDocumentation() ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
                                        transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -296,6 +304,7 @@ public abstract class AbstractProcessor
                                     transformAsyncIterableMember( input.getAsyncIterable() ),
                                     transformMapLikeMember( input.getMapLikeMember() ),
                                     transformSetLikeMember( input.getSetLikeMember() ),
+                                    transformDocumentation( input.getDocumentation() ),
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
                                     transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -307,6 +316,7 @@ public abstract class AbstractProcessor
            null :
            new SetLikeMember( transformType( input.getType() ),
                               input.isReadOnly(),
+                              transformDocumentation( input.getDocumentation() ),
                               transformExtendedAttributes( input.getExtendedAttributes() ),
                               transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -319,6 +329,7 @@ public abstract class AbstractProcessor
            new MapLikeMember( transformType( input.getKeyType() ),
                               transformType( input.getValueType() ),
                               input.isReadOnly(),
+                              transformDocumentation( input.getDocumentation() ),
                               transformExtendedAttributes( input.getExtendedAttributes() ),
                               transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -330,6 +341,7 @@ public abstract class AbstractProcessor
            null :
            new AsyncIterableMember( transformType( input.getKeyType() ),
                                     transformType( input.getValueType() ),
+                                    transformDocumentation( input.getDocumentation() ),
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
                                     transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -341,6 +353,7 @@ public abstract class AbstractProcessor
            null :
            new IterableMember( transformOptionalType( input.getKeyType() ),
                                transformType( input.getValueType() ),
+                               transformDocumentation( input.getDocumentation() ),
                                transformExtendedAttributes( input.getExtendedAttributes() ),
                                transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -377,6 +390,7 @@ public abstract class AbstractProcessor
                                            transformAsyncIterableMember( input.getAsyncIterable() ),
                                            transformMapLikeMember( input.getMapLikeMember() ),
                                            transformSetLikeMember( input.getSetLikeMember() ),
+                                           transformDocumentation( input.getDocumentation() ),
                                            transformExtendedAttributes( input.getExtendedAttributes() ),
                                            transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -402,6 +416,7 @@ public abstract class AbstractProcessor
     return new NamespaceDefinition( input.getName(),
                                     transformOperationMembers( input.getOperations() ),
                                     transformAttributeMembers( input.getAttributes() ),
+                                    transformDocumentation( input.getDocumentation() ),
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
                                     transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -427,6 +442,7 @@ public abstract class AbstractProcessor
     return new PartialNamespaceDefinition( input.getName(),
                                            transformOperationMembers( input.getOperations() ),
                                            transformAttributeMembers( input.getAttributes() ),
+                                           transformDocumentation( input.getDocumentation() ),
                                            transformExtendedAttributes( input.getExtendedAttributes() ),
                                            transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -467,6 +483,7 @@ public abstract class AbstractProcessor
     return new AttributeMember( input.getName(),
                                 transformType( input.getType() ),
                                 input.getModifiers(),
+                                transformDocumentation( input.getDocumentation() ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -492,6 +509,7 @@ public abstract class AbstractProcessor
     return new DictionaryDefinition( input.getName(),
                                      input.getInherits(),
                                      transformDictionaryMembers( input.getMembers() ),
+                                     transformDocumentation( input.getDocumentation() ),
                                      transformExtendedAttributes( input.getExtendedAttributes() ),
                                      transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -518,6 +536,7 @@ public abstract class AbstractProcessor
                                  transformType( input.getType() ),
                                  input.isOptional(),
                                  input.getDefaultValue(),
+                                 transformDocumentation( input.getDocumentation() ),
                                  transformExtendedAttributes( input.getExtendedAttributes() ),
                                  transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -542,6 +561,7 @@ public abstract class AbstractProcessor
   {
     return new PartialDictionaryDefinition( input.getName(),
                                             transformDictionaryMembers( input.getMembers() ),
+                                            transformDocumentation( input.getDocumentation() ),
                                             transformExtendedAttributes( input.getExtendedAttributes() ),
                                             transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -566,6 +586,7 @@ public abstract class AbstractProcessor
   {
     return new IncludesStatement( input.getInterfaceName(),
                                   input.getMixinName(),
+                                  transformDocumentation( input.getDocumentation() ),
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
                                   transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -590,6 +611,7 @@ public abstract class AbstractProcessor
   {
     return new TypedefDefinition( input.getName(),
                                   transformType( input.getType() ),
+                                  transformDocumentation( input.getDocumentation() ),
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
                                   transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -613,6 +635,7 @@ public abstract class AbstractProcessor
                          input.isOptional(),
                          input.isVariadic(),
                          transformDefaultValue( input.getDefaultValue() ),
+                         transformDocumentation( input.getDocumentation() ),
                          transformExtendedAttributes( input.getExtendedAttributes() ),
                          input.getSourceLocations() );
   }
@@ -686,6 +709,12 @@ public abstract class AbstractProcessor
     {
       return type;
     }
+  }
+
+  @Nullable
+  protected DocumentationElement transformDocumentation( @Nullable final DocumentationElement documentation )
+  {
+    return documentation;
   }
 
   @Nonnull

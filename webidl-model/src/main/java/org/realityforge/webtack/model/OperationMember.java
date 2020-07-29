@@ -22,10 +22,11 @@ public final class OperationMember
                           @Nullable final String name,
                           @Nonnull final List<Argument> arguments,
                           @Nonnull final Type returnType,
+                          @Nullable final DocumentationElement documentation,
                           @Nonnull final List<ExtendedAttribute> extendedAttributes,
                           @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _kind = Objects.requireNonNull( kind );
     _name = name;
     _arguments = Objects.requireNonNull( arguments );

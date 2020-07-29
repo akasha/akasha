@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class PartialNamespaceDefinition
   extends Definition
@@ -19,10 +20,11 @@ public final class PartialNamespaceDefinition
   public PartialNamespaceDefinition( @Nonnull final String name,
                                      @Nonnull final List<OperationMember> operations,
                                      @Nonnull final List<AttributeMember> attributes,
+                                     @Nullable final DocumentationElement documentation,
                                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                      @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _operations = Objects.requireNonNull( operations );
     _attributes = Objects.requireNonNull( attributes );

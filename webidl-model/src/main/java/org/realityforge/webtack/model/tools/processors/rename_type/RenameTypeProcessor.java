@@ -65,6 +65,7 @@ final class RenameTypeProcessor
     {
       return new EnumerationDefinition( matcher.replaceAll( _replacement ),
                                         input.getValues(),
+                                        transformDocumentation( input.getDocumentation() ),
                                         transformExtendedAttributes( input.getExtendedAttributes() ),
                                         transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -84,6 +85,7 @@ final class RenameTypeProcessor
       return new CallbackDefinition( matcher.replaceAll( _replacement ),
                                      transformType( input.getReturnType() ),
                                      transformArguments( input.getArguments() ),
+                                     transformDocumentation( input.getDocumentation() ),
                                      transformExtendedAttributes( input.getExtendedAttributes() ),
                                      transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -103,6 +105,7 @@ final class RenameTypeProcessor
       return new CallbackInterfaceDefinition( matcher.replaceAll( _replacement ),
                                               transformOperationMember( input.getOperation() ),
                                               transformConstants( input.getConstants() ),
+                                              transformDocumentation( input.getDocumentation() ),
                                               transformExtendedAttributes( input.getExtendedAttributes() ),
                                               transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -123,6 +126,7 @@ final class RenameTypeProcessor
                                   transformConstants( input.getConstants() ),
                                   transformAttributeMembers( input.getAttributes() ),
                                   transformOperationMembers( input.getOperations() ),
+                                  transformDocumentation( input.getDocumentation() ),
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
                                   transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -143,6 +147,7 @@ final class RenameTypeProcessor
                                          transformConstants( input.getConstants() ),
                                          transformAttributeMembers( input.getAttributes() ),
                                          transformOperationMembers( input.getOperations() ),
+                                         transformDocumentation( input.getDocumentation() ),
                                          transformExtendedAttributes( input.getExtendedAttributes() ),
                                          transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -172,6 +177,7 @@ final class RenameTypeProcessor
                                       transformAsyncIterableMember( input.getAsyncIterable() ),
                                       transformMapLikeMember( input.getMapLikeMember() ),
                                       transformSetLikeMember( input.getSetLikeMember() ),
+                                      transformDocumentation( input.getDocumentation() ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -196,6 +202,7 @@ final class RenameTypeProcessor
                                              transformAsyncIterableMember( input.getAsyncIterable() ),
                                              transformMapLikeMember( input.getMapLikeMember() ),
                                              transformSetLikeMember( input.getSetLikeMember() ),
+                                             transformDocumentation( input.getDocumentation() ),
                                              transformExtendedAttributes( input.getExtendedAttributes() ),
                                              transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -215,6 +222,7 @@ final class RenameTypeProcessor
       return new NamespaceDefinition( matcher.replaceAll( _replacement ),
                                       transformOperationMembers( input.getOperations() ),
                                       transformAttributeMembers( input.getAttributes() ),
+                                      transformDocumentation( input.getDocumentation() ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -234,6 +242,7 @@ final class RenameTypeProcessor
       return new PartialNamespaceDefinition( matcher.replaceAll( _replacement ),
                                              transformOperationMembers( input.getOperations() ),
                                              transformAttributeMembers( input.getAttributes() ),
+                                             transformDocumentation( input.getDocumentation() ),
                                              transformExtendedAttributes( input.getExtendedAttributes() ),
                                              transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -257,6 +266,7 @@ final class RenameTypeProcessor
                                        matcher2.replaceAll( _replacement ) :
                                        input.getInherits(),
                                        transformDictionaryMembers( input.getMembers() ),
+                                       transformDocumentation( input.getDocumentation() ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
                                        transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -275,6 +285,7 @@ final class RenameTypeProcessor
     {
       return new PartialDictionaryDefinition( matcher.replaceAll( _replacement ),
                                               transformDictionaryMembers( input.getMembers() ),
+                                              transformDocumentation( input.getDocumentation() ),
                                               transformExtendedAttributes( input.getExtendedAttributes() ),
                                               transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -293,6 +304,7 @@ final class RenameTypeProcessor
     {
       return new IncludesStatement( matcher1.replaceAll( _replacement ),
                                     input.getMixinName(),
+                                    transformDocumentation( input.getDocumentation() ),
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
                                     transformSourceLocations( input.getSourceLocations() ) );
     }
@@ -303,6 +315,7 @@ final class RenameTypeProcessor
       {
         return new IncludesStatement( input.getInterfaceName(),
                                       matcher2.replaceAll( _replacement ),
+                                      transformDocumentation( input.getDocumentation() ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
       }
@@ -322,6 +335,7 @@ final class RenameTypeProcessor
     {
       return new TypedefDefinition( matcher.replaceAll( _replacement ),
                                     transformType( input.getType() ),
+                                    transformDocumentation( input.getDocumentation() ),
                                     transformExtendedAttributes( input.getExtendedAttributes() ),
                                     transformSourceLocations( input.getSourceLocations() ) );
     }

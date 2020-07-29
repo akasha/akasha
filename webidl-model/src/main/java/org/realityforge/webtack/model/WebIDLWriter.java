@@ -2,11 +2,14 @@ package org.realityforge.webtack.model;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class WebIDLWriter
 {
@@ -172,17 +175,17 @@ public final class WebIDLWriter
     }
   }
 
-  static void writeCallbackDefinition( @Nonnull final Writer writer,
-                                       @Nonnull final CallbackDefinition callbackDefinition )
+  static void writeCallbackDefinition( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
     throws IOException
   {
-    writeAttributesIfRequired( writer, callbackDefinition.getExtendedAttributes(), "\n" );
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "callback " );
-    writer.write( callbackDefinition.getName() );
+    writer.write( definition.getName() );
     writer.write( " = " );
-    writeType( writer, callbackDefinition.getReturnType() );
+    writeType( writer, definition.getReturnType() );
     writer.write( " " );
-    writeArgumentList( writer, callbackDefinition.getArguments() );
+    writeArgumentList( writer, definition.getArguments() );
     writer.write( ";\n" );
   }
 
@@ -190,6 +193,7 @@ public final class WebIDLWriter
                                                 @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "callback interface " );
     writer.write( definition.getName() );
@@ -197,6 +201,68 @@ public final class WebIDLWriter
     writeConstants( writer, definition.getConstants() );
     writeOperationMember( writer, definition.getOperation() );
     writer.write( "};\n" );
+  }
+
+  static void writeDocumentationIfRequired( @Nonnull final Writer writer,
+                                            @Nullable final DocumentationElement documentation,
+                                            @Nonnull final String prefix )
+    throws IOException
+  {
+    if ( null != documentation )
+    {
+      writer.write( prefix + "/**\n" );
+      final String description = documentation.getDocumentation();
+      if ( null != description )
+      {
+        for ( final String line : description.split( "\n" ) )
+        {
+          if ( line.isEmpty() )
+          {
+            writer.write( prefix + " *\n" );
+          }
+          else
+          {
+            writer.write( prefix + " * " + line + "\n" );
+          }
+        }
+      }
+
+      final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();
+      if ( !blockTags.isEmpty() && null != description )
+      {
+        writer.write( prefix + " *\n" );
+      }
+
+      for ( final DocumentationBlockTag tag : blockTags )
+      {
+        final String name = tag.getName();
+        final String tagDescription = tag.getDocumentation();
+        boolean firstLine = true;
+        for ( final String descLine : tagDescription.split( "\n" ) )
+        {
+          final String line = descLine.trim();
+          if ( firstLine )
+          {
+            firstLine = false;
+            writer.write( prefix + " * @" + name + ( line.isEmpty() ? "" : " " + line ) + "\n" );
+          }
+          else if ( line.isEmpty() )
+          {
+            writer.write( prefix + " *\n" );
+          }
+          else
+          {
+            writer.write( prefix +
+                          " *   " +
+                          name.chars().mapToObj( v -> " " ).collect( Collectors.joining() ) +
+                          line +
+                          "\n" );
+          }
+        }
+      }
+
+      writer.write( prefix + " */\n" );
+    }
   }
 
   static void writeAttributesIfRequired( @Nonnull final Writer writer,
@@ -378,25 +444,26 @@ public final class WebIDLWriter
   }
 
   static void writeTypedefDefinition( @Nonnull final Writer writer,
-                                      @Nonnull final TypedefDefinition typedefDefinition )
+                                      @Nonnull final TypedefDefinition definition )
     throws IOException
   {
-    writeAttributesIfRequired( writer, typedefDefinition.getExtendedAttributes(), "\n" );
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "typedef " );
-    writeType( writer, typedefDefinition.getType() );
+    writeType( writer, definition.getType() );
     writer.write( ' ' );
-    writer.write( typedefDefinition.getName() );
+    writer.write( definition.getName() );
     writer.write( ";\n" );
   }
 
-  static void writeIncludesStatement( @Nonnull final Writer writer,
-                                      @Nonnull final IncludesStatement includesStatement )
+  static void writeIncludesStatement( @Nonnull final Writer writer, @Nonnull final IncludesStatement definition )
     throws IOException
   {
-    writeAttributesIfRequired( writer, includesStatement.getExtendedAttributes(), "\n" );
-    writer.write( includesStatement.getInterfaceName() );
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
+    writer.write( definition.getInterfaceName() );
     writer.write( " includes " );
-    writer.write( includesStatement.getMixinName() );
+    writer.write( definition.getMixinName() );
     writer.write( ";\n" );
   }
 
@@ -404,6 +471,7 @@ public final class WebIDLWriter
                                           @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "enum " );
     writer.write( definition.getName() );
@@ -430,6 +498,7 @@ public final class WebIDLWriter
   static void writeDictionaryDefinition( @Nonnull final Writer writer, @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "dictionary " );
     writer.write( definition.getName() );
@@ -455,6 +524,7 @@ public final class WebIDLWriter
                                                 @Nonnull final PartialDictionaryDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "partial dictionary " );
     writer.write( definition.getName() );
@@ -473,6 +543,7 @@ public final class WebIDLWriter
   static void writeInterfaceDefinition( @Nonnull final Writer writer, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "interface " );
     writer.write( definition.getName() );
@@ -513,6 +584,7 @@ public final class WebIDLWriter
                                                @Nonnull final PartialInterfaceDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "partial interface " );
     writer.write( definition.getName() );
@@ -546,6 +618,7 @@ public final class WebIDLWriter
   static void writeMixinDefinition( @Nonnull final Writer writer, @Nonnull final MixinDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "interface mixin " );
     writer.write( definition.getName() );
@@ -560,6 +633,7 @@ public final class WebIDLWriter
                                            @Nonnull final PartialMixinDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "partial interface mixin " );
     writer.write( definition.getName() );
@@ -573,12 +647,12 @@ public final class WebIDLWriter
   static void writeNamespaceDefinition( @Nonnull final Writer writer, @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "namespace " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
-    final List<AttributeMember> attr = definition.getAttributes();
-    writeAttributes( writer, attr );
+    writeAttributes( writer, definition.getAttributes() );
     writeOperations( writer, definition.getOperations() );
     writer.write( "};\n" );
   }
@@ -587,6 +661,7 @@ public final class WebIDLWriter
                                                @Nonnull final PartialNamespaceDefinition definition )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "partial namespace " );
     writer.write( definition.getName() );
@@ -734,9 +809,9 @@ public final class WebIDLWriter
   static void writeAttributeMember( @Nonnull final Writer writer, @Nonnull final AttributeMember attribute )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, attribute.getDocumentation(), "  " );
     // Attributes are always nested in a container so add some leading space
     writeIndent( writer );
-
     writeAttributesIfRequired( writer, attribute.getExtendedAttributes(), "\n  " );
     final Set<AttributeMember.Modifier> modifiers = attribute.getModifiers();
     if ( modifiers.contains( AttributeMember.Modifier.STATIC ) )
@@ -765,6 +840,7 @@ public final class WebIDLWriter
   static void writeConstMember( @Nonnull final Writer writer, @Nonnull final ConstMember constMember )
     throws IOException
   {
+    writeDocumentationIfRequired( writer, constMember.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, constMember.getExtendedAttributes(), "\n  " );
     writer.write( "const " );
@@ -779,6 +855,31 @@ public final class WebIDLWriter
   static void writeOperationMember( @Nonnull final Writer writer, @Nonnull final OperationMember operation )
     throws IOException
   {
+    final DocumentationElement documentation = operation.getDocumentation();
+    final List<Argument> documentedArguments =
+      operation.getArguments().stream().filter( a -> null != a.getDocumentation() ).collect( Collectors.toList() );
+    if ( null != documentation || !documentedArguments.isEmpty() )
+    {
+      final List<DocumentationBlockTag> blockTags = new ArrayList<>();
+      for ( final Argument documentedArgument : documentedArguments )
+      {
+        final DocumentationElement argumentDocumentation = documentedArgument.getDocumentation();
+        assert null != argumentDocumentation;
+        blockTags.add( new DocumentationBlockTag( "param",
+                                                  documentedArgument.getName() +
+                                                  " " +
+                                                  argumentDocumentation.getDocumentation() ) );
+      }
+      if ( null != documentation )
+      {
+        blockTags.addAll( documentation.getBlockTags() );
+      }
+      final DocumentationElement operationDocumentation =
+        new DocumentationElement( null == documentation ? null : documentation.getDocumentation(),
+                                  blockTags,
+                                  Collections.emptyList() );
+      writeDocumentationIfRequired( writer, operationDocumentation, "  " );
+    }
     writeIndent( writer );
     writeAttributesIfRequired( writer, operation.getExtendedAttributes(), "\n  " );
     final OperationMember.Kind kind = operation.getKind();

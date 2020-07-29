@@ -17,7 +17,7 @@ public final class OperationMemberTest
     final WebIDLParser.OperationContext ctx =
       createParser( "Promise<boolean> isSessionSupported(XRSessionMode mode);" ).operation();
     final OperationMember operation =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( operation.getName(), "isSessionSupported" );
     assertEquals( operation.getReturnType().getKind(), Kind.Promise );
     assertEquals( operation.getKind(), OperationMember.Kind.DEFAULT );
@@ -36,7 +36,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.OperationContext ctx2 = createParser( emittedIDL ).operation();
     final OperationMember element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( element.equiv( operation ) );
@@ -50,7 +50,7 @@ public final class OperationMemberTest
     final WebIDLParser.OperationContext ctx =
       createParser( "getter XRInputSource(unsigned long index);" ).operation();
     final OperationMember operation =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertNull( operation.getName() );
     assertEquals( operation.getReturnType().getKind(), Kind.TypeReference );
     assertEquals( operation.getKind(), OperationMember.Kind.GETTER );
@@ -67,7 +67,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.OperationContext ctx2 = createParser( emittedIDL ).operation();
     final OperationMember element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( element.equiv( operation ) );
@@ -80,7 +80,7 @@ public final class OperationMemberTest
   {
     final WebIDLParser.OperationContext ctx = createParser( "boolean includes(any key);" ).operation();
     final OperationMember operation =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( operation.getName(), "includes" );
     assertEquals( operation.getReturnType().getKind(), Kind.Boolean );
     assertEquals( operation.getKind(), OperationMember.Kind.DEFAULT );
@@ -96,7 +96,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.OperationContext ctx2 = createParser( emittedIDL ).operation();
     final OperationMember element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( element.equiv( operation ) );
@@ -109,7 +109,7 @@ public final class OperationMemberTest
   {
     final WebIDLParser.StaticMemberContext ctx =
       createParser( "static double getNativeFramebufferScaleFactor(XRSession session);" ).staticMember();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof OperationMember );
     final OperationMember operation = (OperationMember) member;
     assertEquals( operation.getName(), "getNativeFramebufferScaleFactor" );
@@ -127,7 +127,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.StaticMemberContext ctx2 = createParser( emittedIDL ).staticMember();
     final Member element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( ( (OperationMember) element ).equiv( operation ) );
@@ -139,7 +139,7 @@ public final class OperationMemberTest
     throws Exception
   {
     final WebIDLParser.StringifierContext ctx = createParser( "stringifier DOMString ();" ).stringifier();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof OperationMember );
     final OperationMember operation = (OperationMember) member;
     assertNull( operation.getName() );
@@ -153,7 +153,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.StringifierContext ctx2 = createParser( emittedIDL ).stringifier();
     final Member element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( ( (OperationMember) element ).equiv( operation ) );
@@ -165,7 +165,7 @@ public final class OperationMemberTest
     throws Exception
   {
     final WebIDLParser.StringifierContext ctx = createParser( "stringifier;" ).stringifier();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof OperationMember );
     final OperationMember operation = (OperationMember) member;
     assertNull( operation.getName() );
@@ -179,7 +179,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.StringifierContext ctx2 = createParser( emittedIDL ).stringifier();
     final Member element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( ( (OperationMember) element ).equiv( operation ) );
@@ -193,7 +193,7 @@ public final class OperationMemberTest
     final WebIDLParser.ConstructorContext ctx =
       createParser( "constructor(unsigned long sw, unsigned long sh);" ).constructor();
     final OperationMember operation =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertNull( operation.getName() );
     assertEquals( operation.getReturnType().getKind(), Kind.Void );
     assertEquals( operation.getKind(), OperationMember.Kind.CONSTRUCTOR );
@@ -212,7 +212,7 @@ public final class OperationMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.ConstructorContext ctx2 = createParser( emittedIDL ).constructor();
     final OperationMember element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, operation );
     assertEquals( element.hashCode(), operation.hashCode() );
     assertTrue( element.equiv( operation ) );

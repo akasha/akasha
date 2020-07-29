@@ -1,6 +1,5 @@
 package org.realityforge.webtack.model.tools.processors;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.function.Supplier;
@@ -13,17 +12,6 @@ import static org.testng.Assert.*;
 public abstract class AbstractProcessorTest
   extends AbstractTest
 {
-  @Nonnull
-  protected final Object[][] scanForStandardFixturesTestInput()
-    throws IOException
-  {
-    return Files.list( getTestLocalFixtureDir() )
-      .filter( Files::isDirectory )
-      .filter( d -> Files.exists( d.resolve( "input.webidl" ) ) && Files.exists( d.resolve( "output.webidl" ) ) )
-      .map( d -> new Object[]{ d.getFileName().toString() } )
-      .toArray( Object[][]::new );
-  }
-
   protected final void performStandardFixtureTest( @Nonnull final String subDirectory,
                                                    @Nonnull final Supplier<Processor> processorSupplier )
     throws Exception

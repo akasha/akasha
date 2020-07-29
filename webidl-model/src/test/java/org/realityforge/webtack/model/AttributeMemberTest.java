@@ -70,7 +70,7 @@ public final class AttributeMemberTest
   {
     final WebIDLParser.ReadWriteAttributeContext ctx = createParser( idl ).readWriteAttribute();
     final AttributeMember member =
-      WebIDLModelParser.parse( ctx, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, new HashSet<>(), null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertAttributeMember( member, name, kind, modifiers );
     assertEquals( member, member );
     assertEquals( member.hashCode(), member.hashCode() );
@@ -81,7 +81,7 @@ public final class AttributeMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.ReadWriteAttributeContext ctx2 = createParser( emittedIDL ).readWriteAttribute();
     final AttributeMember element =
-      WebIDLModelParser.parse( ctx2, new HashSet<>(), Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, new HashSet<>(), null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, member );
     assertEquals( element.hashCode(), element.hashCode() );
 
@@ -96,7 +96,7 @@ public final class AttributeMemberTest
     throws IOException
   {
     final WebIDLParser.StaticMemberContext ctx = createParser( idl ).staticMember();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
 
@@ -106,7 +106,7 @@ public final class AttributeMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.StaticMemberContext ctx2 = createParser( emittedIDL ).staticMember();
     final Member element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, member );
     assertEquals( element.hashCode(), member.hashCode() );
     assertTrue( ( (AttributeMember) element ).equiv( (AttributeMember) member ) );
@@ -120,7 +120,7 @@ public final class AttributeMemberTest
     throws IOException
   {
     final WebIDLParser.StringifierContext ctx = createParser( idl ).stringifier();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     assertAttributeMember( (AttributeMember) member, name, kind, modifiers );
 
@@ -130,7 +130,7 @@ public final class AttributeMemberTest
     final String emittedIDL = writer.toString();
     final WebIDLParser.StringifierContext ctx2 = createParser( emittedIDL ).stringifier();
     final Member element =
-      WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     assertEquals( element, member );
     assertEquals( element.hashCode(), member.hashCode() );
     assertTrue( ( (AttributeMember) element ).equiv( (AttributeMember) member ) );

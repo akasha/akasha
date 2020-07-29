@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class SetLikeMember
   extends Element
@@ -14,10 +15,11 @@ public final class SetLikeMember
 
   public SetLikeMember( @Nonnull final Type type,
                         final boolean readOnly,
+                        @Nullable final DocumentationElement documentation,
                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                         @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _type = Objects.requireNonNull( type );
     _readOnly = readOnly;
   }

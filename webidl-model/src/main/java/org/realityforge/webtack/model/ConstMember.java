@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class ConstMember
   extends NamedElement
@@ -16,10 +17,11 @@ public final class ConstMember
   public ConstMember( @Nonnull final String name,
                       @Nonnull final Type type,
                       @Nonnull final ConstValue value,
+                      @Nullable final DocumentationElement documentation,
                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
                       @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( name, extendedAttributes, sourceLocations );
+    super( name, documentation, extendedAttributes, sourceLocations );
     // The type reference should be to a primitive type but this would need to be verified post resolution
     assert type.getKind().isPrimitive() || Kind.TypeReference == type.getKind();
     _type = Objects.requireNonNull( type );

@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class EnumerationDefinition
   extends Definition
@@ -16,10 +17,11 @@ public final class EnumerationDefinition
 
   public EnumerationDefinition( @Nonnull final String name,
                                 @Nonnull final Set<String> values,
+                                @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _values = Objects.requireNonNull( values );
   }

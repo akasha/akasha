@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class CallbackDefinition
   extends Definition
@@ -17,10 +18,11 @@ public final class CallbackDefinition
   public CallbackDefinition( @Nonnull final String name,
                              @Nonnull final Type returnType,
                              @Nonnull final List<Argument> arguments,
+                             @Nullable final DocumentationElement documentation,
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
                              @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _returnType = Objects.requireNonNull( returnType );
     _arguments = Objects.requireNonNull( arguments );

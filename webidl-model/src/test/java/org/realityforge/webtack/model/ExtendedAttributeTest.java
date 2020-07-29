@@ -122,6 +122,7 @@ public final class ExtendedAttributeTest
                                                false,
                                                false,
                                                null,
+                                               null,
                                                Collections.emptyList(),
                                                Collections.emptyList() ) );
     final ExtendedAttribute extendedAttribute =
@@ -171,6 +172,7 @@ public final class ExtendedAttributeTest
                                                          Collections.emptyList() ),
                                                false,
                                                false,
+                                               null,
                                                null,
                                                Collections.emptyList(),
                                                Collections.emptyList() ) );

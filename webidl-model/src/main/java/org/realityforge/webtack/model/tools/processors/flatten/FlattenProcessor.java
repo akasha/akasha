@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -18,6 +19,7 @@ import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
+import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.IllegalModelException;
 import org.realityforge.webtack.model.InterfaceDefinition;
@@ -161,6 +163,7 @@ final class FlattenProcessor
     return new DictionaryDefinition( definition.getName(),
                                      definition.getInherits(),
                                      Collections.unmodifiableList( new ArrayList<>( members.values() ) ),
+                                     definition.getDocumentation(),
                                      definition.getExtendedAttributes(),
                                      Collections.unmodifiableList( sourceLocations ) );
   }
@@ -199,6 +202,7 @@ final class FlattenProcessor
     return new NamespaceDefinition( definition.getName(),
                                     Collections.unmodifiableList( new ArrayList<>( operations ) ),
                                     Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
+                                    definition.getDocumentation(),
                                     definition.getExtendedAttributes(),
                                     Collections.unmodifiableList( sourceLocations ) );
   }
@@ -258,6 +262,7 @@ final class FlattenProcessor
                                 Collections.unmodifiableList( new ArrayList<>( constants.values() ) ),
                                 Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
                                 Collections.unmodifiableList( new ArrayList<>( operations ) ),
+                                definition.getDocumentation(),
                                 definition.getExtendedAttributes(),
                                 Collections.unmodifiableList( sourceLocations ) );
   }
@@ -371,6 +376,7 @@ final class FlattenProcessor
                                     asyncIterable,
                                     mapLikeMember,
                                     setLikeMember,
+                                    definition.getDocumentation(),
                                     definition.getExtendedAttributes(),
                                     Collections.unmodifiableList( sourceLocations ) );
   }
@@ -435,6 +441,11 @@ final class FlattenProcessor
                                            asyncIterable,
                                            mapLikeMember,
                                            setLikeMember,
+                                           partials.stream()
+                                             .map( Element::getDocumentation )
+                                             .filter( Objects::nonNull )
+                                             .findFirst()
+                                             .orElse( null ),
                                            Collections.emptyList(),
                                            Collections.unmodifiableList( sourceLocations ) );
   }

@@ -95,7 +95,8 @@ public final class NamespaceDefinitionTest
     throws IOException
   {
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
-    final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Definition definition =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof NamespaceDefinition );
     final NamespaceDefinition actual = (NamespaceDefinition) definition;
     assertEquals( actual.getName(), name );

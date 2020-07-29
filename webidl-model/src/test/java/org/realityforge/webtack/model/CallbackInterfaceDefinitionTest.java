@@ -89,7 +89,8 @@ public final class CallbackInterfaceDefinitionTest
     throws IOException
   {
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
-    final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Definition definition =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof CallbackInterfaceDefinition );
     final CallbackInterfaceDefinition actual = (CallbackInterfaceDefinition) definition;
     assertEquals( actual.getName(), name );

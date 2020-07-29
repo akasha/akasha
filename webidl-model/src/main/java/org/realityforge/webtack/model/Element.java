@@ -2,13 +2,37 @@ package org.realityforge.webtack.model;
 
 import java.util.List;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public abstract class Element
   extends AttributedNode
 {
-  Element( @Nonnull final List<ExtendedAttribute> extendedAttributes,
+  /**
+   * Documentation attached to the definition if any.
+   */
+  @Nullable
+  private final DocumentationElement _documentation;
+
+  Element( @Nullable final DocumentationElement documentation,
+           @Nonnull final List<ExtendedAttribute> extendedAttributes,
            @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( extendedAttributes, sourceLocations );
+    _documentation = documentation;
+  }
+
+  @Nullable
+  public DocumentationElement getDocumentation()
+  {
+    return _documentation;
+  }
+
+  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
+  boolean equiv( @Nonnull final Element other )
+  {
+    final DocumentationElement documentation = other.getDocumentation();
+    return super.equiv( other ) &&
+           ( null == _documentation ) == ( null == documentation ) &&
+           ( null == _documentation || _documentation.equiv( documentation ) );
   }
 }

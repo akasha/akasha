@@ -139,7 +139,8 @@ public final class MixinDefinitionTest
     throws IOException
   {
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
-    final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Definition definition =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof MixinDefinition );
     final MixinDefinition actual = (MixinDefinition) definition;
     assertEquals( actual.getName(), name );

@@ -35,7 +35,7 @@ public final class SetLikeMemberTest
   {
     final WebIDLParser.SetlikeRestContext ctx = createParser( webIDL ).setlikeRest();
     final SetLikeMember actual =
-      WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, readOnly, null, Collections.emptyList(), parseStartPosition( ctx ) );
 
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
@@ -48,12 +48,13 @@ public final class SetLikeMemberTest
     if ( readOnly )
     {
       final WebIDLParser.ReadOnlyMemberContext ctx2 = createParser( emittedIDL ).readOnlyMember();
-      element = (SetLikeMember) WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      element =
+        (SetLikeMember) WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     }
     else
     {
       final WebIDLParser.SetlikeRestContext ctx2 = createParser( emittedIDL ).setlikeRest();
-      element = WebIDLModelParser.parse( ctx2, readOnly, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      element = WebIDLModelParser.parse( ctx2, readOnly, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     }
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );

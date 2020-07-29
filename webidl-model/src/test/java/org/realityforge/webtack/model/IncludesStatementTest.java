@@ -27,7 +27,7 @@ public final class IncludesStatementTest
   {
     final WebIDLParser.IncludesStatementContext ctx = createParser( webIDL ).includesStatement();
     final IncludesStatement actual =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( actual.getInterfaceName(), interfaceName );
     assertEquals( actual.getMixinName(), mixinName );
     assertEquals( actual, actual );

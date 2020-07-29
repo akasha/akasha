@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class AttributeMember
   extends NamedElement
@@ -17,10 +18,11 @@ public final class AttributeMember
   public AttributeMember( @Nonnull final String name,
                           @Nonnull final Type type,
                           @Nonnull final Set<Modifier> modifiers,
+                          @Nullable final DocumentationElement documentation,
                           @Nonnull final List<ExtendedAttribute> extendedAttributes,
                           @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( name, extendedAttributes, sourceLocations );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _type = Objects.requireNonNull( type );
     _modifiers = Objects.requireNonNull( modifiers );
   }

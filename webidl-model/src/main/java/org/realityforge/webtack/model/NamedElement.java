@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public abstract class NamedElement
   extends Element
@@ -11,10 +12,11 @@ public abstract class NamedElement
   private final String _name;
 
   protected NamedElement( @Nonnull final String name,
+                          @Nullable final DocumentationElement documentation,
                           @Nonnull final List<ExtendedAttribute> extendedAttributes,
                           @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
   }
 

@@ -15,7 +15,7 @@ public final class WebIDLModelParserTest
   {
     final WebIDLParser.ReadOnlyMemberContext ctx =
       createParser( "readonly attribute DOMString name;" ).readOnlyMember();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof AttributeMember );
     final AttributeMember value = (AttributeMember) member;
     assertEquals( value.getName(), "name" );
@@ -30,7 +30,7 @@ public final class WebIDLModelParserTest
   {
     final WebIDLParser.ReadOnlyMemberContext ctx =
       createParser( "readonly maplike<DOMString, object>;" ).readOnlyMember();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof MapLikeMember );
 
     final MapLikeMember mapLike = (MapLikeMember) member;
@@ -45,7 +45,7 @@ public final class WebIDLModelParserTest
   {
     final WebIDLParser.ReadOnlyMemberContext ctx =
       createParser( "readonly setlike<DOMString>;" ).readOnlyMember();
-    final Member member = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Member member = WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( member instanceof SetLikeMember );
 
     final SetLikeMember setLike = (SetLikeMember) member;

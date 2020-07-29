@@ -95,7 +95,8 @@ public final class PartialNamespaceDefinitionTest
     throws IOException
   {
     final WebIDLParser.DefinitionContext ctx = createParser( webIDL ).definition();
-    final Definition definition = WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+    final Definition definition =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertTrue( definition instanceof PartialNamespaceDefinition );
     final PartialNamespaceDefinition actual = (PartialNamespaceDefinition) definition;
     assertEquals( actual.getName(), name );

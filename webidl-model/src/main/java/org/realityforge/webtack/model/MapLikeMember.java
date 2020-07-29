@@ -3,6 +3,7 @@ package org.realityforge.webtack.model;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class MapLikeMember
   extends Element
@@ -17,10 +18,11 @@ public final class MapLikeMember
   public MapLikeMember( @Nonnull final Type keyType,
                         @Nonnull final Type valueType,
                         final boolean readOnly,
+                        @Nullable final DocumentationElement documentation,
                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                         @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _keyType = Objects.requireNonNull( keyType );
     _valueType = Objects.requireNonNull( valueType );
     _readOnly = readOnly;

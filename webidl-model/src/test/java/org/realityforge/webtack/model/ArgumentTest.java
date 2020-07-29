@@ -56,7 +56,7 @@ public final class ArgumentTest
                                    final boolean variadic )
     throws IOException
   {
-    final Argument argument = WebIDLModelParser.parse( createParser( webIDL ).argument() );
+    final Argument argument = WebIDLModelParser.parse( createParser( webIDL ).argument(), null );
     assertArgument( argument, name, kind, optional, variadic );
     return argument;
   }
@@ -90,7 +90,7 @@ public final class ArgumentTest
     throws IOException
   {
     // Add a trailing ")" so we do not get an EOF when we try to peek at the next token to see if it is a ","
-    final List<Argument> actual = WebIDLModelParser.parse( createParser( webIDL + ")" ).argumentList() );
+    final List<Argument> actual = WebIDLModelParser.parse( createParser( webIDL + ")" ).argumentList(), null );
     assertEquals( actual.size(), expectedArgumentCount );
 
     final StringWriter writer = new StringWriter();
@@ -98,7 +98,7 @@ public final class ArgumentTest
     writer.close();
     // substring consumes the '(' opening for argList
     final String emittedIDL = writer.toString().substring( 1 );
-    final List<Argument> elements = WebIDLModelParser.parse( createParser( emittedIDL + ")" ).argumentList() );
+    final List<Argument> elements = WebIDLModelParser.parse( createParser( emittedIDL + ")" ).argumentList(), null );
     assertEquals( elements.size(), expectedArgumentCount );
     for ( int i = 0; i < expectedArgumentCount; i++ )
     {

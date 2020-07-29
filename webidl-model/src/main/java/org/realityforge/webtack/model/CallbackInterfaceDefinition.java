@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public final class CallbackInterfaceDefinition
   extends Definition
@@ -19,10 +20,11 @@ public final class CallbackInterfaceDefinition
   public CallbackInterfaceDefinition( @Nonnull final String name,
                                       @Nonnull final OperationMember operation,
                                       @Nonnull final List<ConstMember> constants,
+                                      @Nullable final DocumentationElement documentation,
                                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                       @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( extendedAttributes, sourceLocations );
+    super( documentation, extendedAttributes, sourceLocations );
     _name = Objects.requireNonNull( name );
     _operation = Objects.requireNonNull( operation );
     _constants = Objects.requireNonNull( constants );

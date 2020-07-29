@@ -54,7 +54,7 @@ public final class EnumerationDefinitionTest
   {
     final WebIDLParser.EnumDefinitionContext ctx = createParser( webIDL ).enumDefinition();
     final EnumerationDefinition actual =
-      WebIDLModelParser.parse( ctx, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
 

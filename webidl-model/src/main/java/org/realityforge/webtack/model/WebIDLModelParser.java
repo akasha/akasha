@@ -10,6 +10,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ANTLRErrorListener;
@@ -183,8 +184,10 @@ public final class WebIDLModelParser
     final List<Definition> definitions = new ArrayList<>();
     while ( null != ( definitionContext = definitionsContext.definition() ) )
     {
+      final DocumentationElement documentation = parseDocumentation( definitionsContext.documentation() );
       final List<ExtendedAttribute> extendedAttributes = parse( definitionsContext.extendedAttributeList() );
       definitions.add( parse( definitionContext,
+                              documentation,
                               extendedAttributes,
                               parseSourcePosition( definitionContext.getStart() ) ) );
       definitionsContext = definitionsContext.definitions();
@@ -195,6 +198,7 @@ public final class WebIDLModelParser
 
   @Nonnull
   static Definition parse( @Nonnull final WebIDLParser.DefinitionContext ctx,
+                           @Nullable final DocumentationElement documentation,
                            @Nonnull final List<ExtendedAttribute> extendedAttributes,
                            @Nonnull final SourcePosition startPosition )
   {
@@ -211,17 +215,21 @@ public final class WebIDLModelParser
         {
           final String name = callbackRestContext.IDENTIFIER().getText();
           final Type returnType = parse( callbackRestContext.returnType() );
-          final List<Argument> arguments = parse( callbackRestContext.argumentList() );
+          final List<Argument> arguments = parse( callbackRestContext.argumentList(), documentation );
 
           return new CallbackDefinition( name,
                                          returnType,
                                          arguments,
+                                         documentation,
                                          extendedAttributes,
                                          parseSourceIntervals( startPosition, callbackRestContext ) );
         }
         else
         {
-          return parseCallbackInterface( callbackRestOrInterfaceContext, extendedAttributes, startPosition );
+          return parseCallbackInterface( callbackRestOrInterfaceContext,
+                                         documentation,
+                                         extendedAttributes,
+                                         startPosition );
         }
       }
       else
@@ -232,20 +240,20 @@ public final class WebIDLModelParser
         final WebIDLParser.InterfaceRestContext interfaceRestContext = interfaceOrMixinContext.interfaceRest();
         if ( null != interfaceRestContext )
         {
-          return parse( interfaceRestContext, extendedAttributes, startPosition );
+          return parse( interfaceRestContext, documentation, extendedAttributes, startPosition );
         }
         else
         {
           final WebIDLParser.MixinRestContext mixinRestContext = interfaceOrMixinContext.mixinRest();
           assert null != mixinRestContext;
-          return parse( mixinRestContext, false, extendedAttributes, startPosition );
+          return parse( mixinRestContext, false, documentation, extendedAttributes, startPosition );
         }
       }
     }
     final WebIDLParser.NamespaceContext namespaceContext = ctx.namespace();
     if ( null != namespaceContext )
     {
-      return parse( namespaceContext, false, extendedAttributes, startPosition );
+      return parse( namespaceContext, false, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.PartialContext partialContext = ctx.partial();
     if ( null != partialContext )
@@ -259,50 +267,51 @@ public final class WebIDLModelParser
           partialInterfaceOrPartialMixinContext.partialInterfaceRest();
         if ( null != partialInterfaceRestContext )
         {
-          return parse( partialInterfaceRestContext, extendedAttributes, startPosition );
+          return parse( partialInterfaceRestContext, documentation, extendedAttributes, startPosition );
         }
         else
         {
           final WebIDLParser.MixinRestContext mixinRestContext = partialInterfaceOrPartialMixinContext.mixinRest();
           assert null != mixinRestContext;
-          return parse( mixinRestContext, true, extendedAttributes, startPosition );
+          return parse( mixinRestContext, true, documentation, extendedAttributes, startPosition );
         }
       }
       final WebIDLParser.PartialDictionaryContext partialDictionaryContext =
         partialDefinitionContext.partialDictionary();
       if ( null != partialDictionaryContext )
       {
-        return parse( partialDictionaryContext, extendedAttributes, startPosition );
+        return parse( partialDictionaryContext, documentation, extendedAttributes, startPosition );
       }
       else
       {
         final WebIDLParser.NamespaceContext partialNamespaceContext = partialDefinitionContext.namespace();
         assert null != partialNamespaceContext;
-        return parse( partialNamespaceContext, true, extendedAttributes, startPosition );
+        return parse( partialNamespaceContext, true, documentation, extendedAttributes, startPosition );
       }
     }
     final WebIDLParser.DictionaryContext dictionaryContext = ctx.dictionary();
     if ( null != dictionaryContext )
     {
-      return parse( dictionaryContext, extendedAttributes, startPosition );
+      return parse( dictionaryContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.EnumDefinitionContext enumDefinitionContext = ctx.enumDefinition();
     if ( null != enumDefinitionContext )
     {
-      return parse( enumDefinitionContext, extendedAttributes, startPosition );
+      return parse( enumDefinitionContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.TypedefContext typedefContext = ctx.typedef();
     if ( null != typedefContext )
     {
-      return parse( typedefContext, extendedAttributes, startPosition );
+      return parse( typedefContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.IncludesStatementContext includesStatementContext = ctx.includesStatement();
     assert null != includesStatementContext;
-    return parse( includesStatementContext, extendedAttributes, startPosition );
+    return parse( includesStatementContext, documentation, extendedAttributes, startPosition );
   }
 
   @Nonnull
   private static CallbackInterfaceDefinition parseCallbackInterface( @Nonnull final WebIDLParser.CallbackRestOrInterfaceContext callbackRestOrInterfaceContext,
+                                                                     @Nullable final DocumentationElement documentation,
                                                                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                                                      @Nonnull final SourcePosition startPosition )
   {
@@ -314,6 +323,8 @@ public final class WebIDLModelParser
     assert null != callbackInterfaceMembersContext;
     while ( callbackInterfaceMembersContext.getChildCount() > 0 )
     {
+      final DocumentationElement memberDocumentation =
+        parseDocumentation( callbackInterfaceMembersContext.documentation() );
       final List<ExtendedAttribute> memberExtendedAttributes =
         parse( callbackInterfaceMembersContext.extendedAttributeList() );
       final WebIDLParser.CallbackInterfaceMemberContext callbackInterfaceMemberContext =
@@ -321,7 +332,7 @@ public final class WebIDLModelParser
       final WebIDLParser.ConstMemberContext constMemberContext = callbackInterfaceMemberContext.constMember();
       if ( null != constMemberContext )
       {
-        constMembers.add( parse( constMemberContext, memberExtendedAttributes, startPosition ) );
+        constMembers.add( parse( constMemberContext, memberDocumentation, memberExtendedAttributes, startPosition ) );
       }
       else
       {
@@ -329,7 +340,11 @@ public final class WebIDLModelParser
           callbackInterfaceMemberContext.regularOperation();
         assert null != regularOperationContext;
         final OperationMember candidate =
-          parse( regularOperationContext, OperationMember.Kind.DEFAULT, memberExtendedAttributes, startPosition );
+          parse( regularOperationContext,
+                 OperationMember.Kind.DEFAULT,
+                 memberDocumentation,
+                 memberExtendedAttributes,
+                 startPosition );
         if ( null != operation )
         {
           throw new IllegalModelException( "IDL attempted to define duplicate operation " +
@@ -354,6 +369,7 @@ public final class WebIDLModelParser
     return new CallbackInterfaceDefinition( name,
                                             operation,
                                             Collections.unmodifiableList( constMembers ),
+                                            documentation,
                                             extendedAttributes,
                                             parseSourceIntervals( startPosition, callbackRestOrInterfaceContext ) );
   }
@@ -361,6 +377,7 @@ public final class WebIDLModelParser
   @Nonnull
   private static Definition parse( @Nonnull final WebIDLParser.MixinRestContext ctx,
                                    final boolean partial,
+                                   @Nullable final DocumentationElement documentation,
                                    @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                    @Nonnull final SourcePosition startPosition )
   {
@@ -372,12 +389,13 @@ public final class WebIDLModelParser
     WebIDLParser.MixinMembersContext mixinMembersContext = ctx.mixinMembers();
     while ( mixinMembersContext.getChildCount() > 0 )
     {
+      final DocumentationElement memberDocumentation = parseDocumentation( mixinMembersContext.documentation() );
       final List<ExtendedAttribute> memberExtendedAttributes = parse( mixinMembersContext.extendedAttributeList() );
       final WebIDLParser.MixinMemberContext mixinMemberContext = mixinMembersContext.mixinMember();
       final WebIDLParser.ConstMemberContext constMemberContext = mixinMemberContext.constMember();
       if ( null != constMemberContext )
       {
-        constants.add( parse( constMemberContext, memberExtendedAttributes, startPosition ) );
+        constants.add( parse( constMemberContext, memberDocumentation, memberExtendedAttributes, startPosition ) );
       }
       else
       {
@@ -386,6 +404,7 @@ public final class WebIDLModelParser
         {
           operations.add( parse( regularOperationContext,
                                  OperationMember.Kind.DEFAULT,
+                                 memberDocumentation,
                                  memberExtendedAttributes,
                                  startPosition ) );
         }
@@ -394,7 +413,7 @@ public final class WebIDLModelParser
           final WebIDLParser.StringifierContext stringifier = mixinMemberContext.stringifier();
           if ( null != stringifier )
           {
-            final Member member = parse( stringifier, memberExtendedAttributes, startPosition );
+            final Member member = parse( stringifier, memberDocumentation, memberExtendedAttributes, startPosition );
             if ( member instanceof OperationMember )
             {
               operations.add( (OperationMember) member );
@@ -413,6 +432,7 @@ public final class WebIDLModelParser
             }
             attributes.add( parse( mixinMemberContext.attributeRest(),
                                    modifiers,
+                                   memberDocumentation,
                                    memberExtendedAttributes,
                                    startPosition ) );
           }
@@ -426,29 +446,32 @@ public final class WebIDLModelParser
                                        Collections.unmodifiableList( constants ),
                                        Collections.unmodifiableList( attributes ),
                                        Collections.unmodifiableList( operations ),
+                                       documentation,
                                        extendedAttributes,
                                        parseSourceIntervals( startPosition, ctx ) ) :
            new MixinDefinition( name,
                                 Collections.unmodifiableList( constants ),
                                 Collections.unmodifiableList( attributes ),
                                 Collections.unmodifiableList( operations ),
+                                documentation,
                                 extendedAttributes,
                                 parseSourceIntervals( startPosition, ctx ) );
 
   }
 
   @Nonnull
-  static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx )
+  static List<Argument> parse( @Nonnull final WebIDLParser.ArgumentListContext ctx,
+                               @Nullable final DocumentationElement documentation )
   {
     final WebIDLParser.ArgumentContext argumentContext = ctx.argument();
     if ( null != argumentContext )
     {
       final List<Argument> arguments = new ArrayList<>();
-      arguments.add( parse( argumentContext ) );
+      arguments.add( parse( argumentContext, documentation ) );
       WebIDLParser.ArgumentsContext argumentsContext = ctx.arguments();
       while ( argumentsContext.getChildCount() > 0 )
       {
-        arguments.add( parse( argumentsContext.argument() ) );
+        arguments.add( parse( argumentsContext.argument(), documentation ) );
         argumentsContext = argumentsContext.arguments();
       }
       return Collections.unmodifiableList( arguments );
@@ -460,13 +483,30 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static Argument parse( @Nonnull final WebIDLParser.ArgumentContext ctx )
+  static Argument parse( @Nonnull final WebIDLParser.ArgumentContext ctx,
+                         @Nullable final DocumentationElement documentation )
   {
     final List<ExtendedAttribute> extendedAttributes = parse( ctx.extendedAttributeList() );
     final WebIDLParser.ArgumentRestContext argumentRestContext = ctx.argumentRest();
     final WebIDLParser.ArgumentNameContext argumentNameContext = argumentRestContext.argumentName();
     final TerminalNode identifier = argumentNameContext.IDENTIFIER();
     final String name = null != identifier ? identifier.getText() : argumentNameContext.argumentNameKeyword().getText();
+
+    DocumentationElement argumentDocumentation = null;
+    if ( null != documentation )
+    {
+      for ( final DocumentationBlockTag tag : documentation.getBlockTags() )
+      {
+        if ( tag.isParamTag( name ) )
+        {
+          argumentDocumentation =
+            new DocumentationElement( tag.getDocumentation().substring( name.length() + 1 ).trim(),
+                                      Collections.emptyList(),
+                                      documentation.getSourceLocations() );
+        }
+      }
+    }
+
     final WebIDLParser.TypeWithExtendedAttributesContext typeWithExtendedAttributesContext =
       argumentRestContext.typeWithExtendedAttributes();
     final Type type;
@@ -494,6 +534,7 @@ public final class WebIDLModelParser
                          optional,
                          variadic,
                          defaultValue,
+                         argumentDocumentation,
                          extendedAttributes,
                          parseSourceIntervals( parseSourcePosition( ctx.getStart() ), ctx ) );
   }
@@ -509,34 +550,41 @@ public final class WebIDLModelParser
 
   @Nonnull
   static OperationMember parse( @Nonnull final WebIDLParser.OperationContext ctx,
+                                @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final SourcePosition startPosition )
   {
     final WebIDLParser.RegularOperationContext regularOperationContext = ctx.regularOperation();
     if ( null != regularOperationContext )
     {
-      return parse( regularOperationContext, OperationMember.Kind.DEFAULT, extendedAttributes, startPosition );
+      return parse( regularOperationContext,
+                    OperationMember.Kind.DEFAULT,
+                    documentation,
+                    extendedAttributes,
+                    startPosition );
     }
     else
     {
       final WebIDLParser.SpecialOperationContext specialOperationContext = ctx.specialOperation();
       assert null != specialOperationContext;
-      return parse( specialOperationContext, extendedAttributes, startPosition );
+      return parse( specialOperationContext, documentation, extendedAttributes, startPosition );
     }
   }
 
   @Nonnull
   private static OperationMember parse( @Nonnull final WebIDLParser.SpecialOperationContext ctx,
+                                        @Nullable final DocumentationElement documentation,
                                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                         @Nonnull final SourcePosition startPosition )
   {
     final OperationMember.Kind kind = OperationMember.Kind.valueOf( ctx.special().getText().toUpperCase() );
-    return parse( ctx.regularOperation(), kind, extendedAttributes, startPosition );
+    return parse( ctx.regularOperation(), kind, documentation, extendedAttributes, startPosition );
   }
 
   @Nonnull
   private static OperationMember parse( @Nonnull final WebIDLParser.RegularOperationContext ctx,
                                         @Nonnull final OperationMember.Kind kind,
+                                        @Nullable final DocumentationElement documentation,
                                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                         @Nonnull final SourcePosition startPosition )
   {
@@ -561,11 +609,23 @@ public final class WebIDLModelParser
     {
       name = null;
     }
-    final List<Argument> arguments = parse( ctx.operationRest().argumentList() );
+    final List<Argument> arguments = parse( ctx.operationRest().argumentList(), documentation );
+    DocumentationElement operationDocumentation = null;
+    if ( null != documentation )
+    {
+      operationDocumentation = new DocumentationElement( documentation.getDocumentation(),
+                                                         documentation
+                                                           .getBlockTags()
+                                                           .stream()
+                                                           .filter( t -> !"param".equals( t.getName() ) )
+                                                           .collect( Collectors.toList() ),
+                                                         documentation.getSourceLocations() );
+    }
     return new OperationMember( kind,
                                 name,
                                 arguments,
                                 returnType,
+                                operationDocumentation,
                                 extendedAttributes,
                                 parseSourceIntervals( startPosition, ctx ) );
   }
@@ -573,6 +633,7 @@ public final class WebIDLModelParser
   @Nonnull
   static AttributeMember parse( @Nonnull final WebIDLParser.ReadWriteAttributeContext ctx,
                                 @Nonnull final Set<AttributeMember.Modifier> modifiers,
+                                @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final SourcePosition startPosition )
   {
@@ -580,12 +641,13 @@ public final class WebIDLModelParser
     {
       modifiers.add( AttributeMember.Modifier.INHERIT );
     }
-    return parse( ctx.attributeRest(), modifiers, extendedAttributes, startPosition );
+    return parse( ctx.attributeRest(), modifiers, documentation, extendedAttributes, startPosition );
   }
 
   @Nonnull
   static AttributeMember parse( @Nonnull final WebIDLParser.AttributeRestContext ctx,
                                 @Nonnull final Set<AttributeMember.Modifier> modifiers,
+                                @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final SourcePosition startPosition )
   {
@@ -599,6 +661,7 @@ public final class WebIDLModelParser
     return new AttributeMember( name,
                                 type,
                                 Collections.unmodifiableSet( modifiers ),
+                                documentation,
                                 extendedAttributes,
                                 parseSourceIntervals( startPosition, ctx ) );
   }
@@ -606,6 +669,7 @@ public final class WebIDLModelParser
   @Nonnull
   static MapLikeMember parse( @Nonnull final WebIDLParser.MaplikeRestContext ctx,
                               final boolean readOnly,
+                              @Nullable final DocumentationElement documentation,
                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
                               @Nonnull final SourcePosition startPosition )
   {
@@ -614,12 +678,14 @@ public final class WebIDLModelParser
     return new MapLikeMember( keyType,
                               valueType,
                               readOnly,
+                              documentation,
                               extendedAttributes,
                               parseSourceIntervals( startPosition, ctx ) );
   }
 
   @Nonnull
   static IterableMember parse( @Nonnull final WebIDLParser.IterableContext ctx,
+                               @Nullable final DocumentationElement documentation,
                                @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                @Nonnull final SourcePosition startPosition )
   {
@@ -629,12 +695,14 @@ public final class WebIDLModelParser
     final Type type2 = null == optional ? null : parse( optional );
     return new IterableMember( null == type2 ? null : type1,
                                null == type2 ? type1 : type2,
+                               documentation,
                                extendedAttributes,
                                parseSourceIntervals( startPosition, ctx ) );
   }
 
   @Nonnull
   static AsyncIterableMember parse( @Nonnull final WebIDLParser.AsyncIterableContext ctx,
+                                    @Nullable final DocumentationElement documentation,
                                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                     @Nonnull final SourcePosition startPosition )
   {
@@ -642,6 +710,7 @@ public final class WebIDLModelParser
     final Type valueType = parse( ctx.typeWithExtendedAttributes( 1 ) );
     return new AsyncIterableMember( keyType,
                                     valueType,
+                                    documentation,
                                     extendedAttributes,
                                     parseSourceIntervals( startPosition, ctx ) );
   }
@@ -649,20 +718,40 @@ public final class WebIDLModelParser
   @Nonnull
   static SetLikeMember parse( @Nonnull final WebIDLParser.SetlikeRestContext ctx,
                               final boolean readOnly,
+                              @Nullable final DocumentationElement documentation,
                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
                               @Nonnull final SourcePosition startPosition )
   {
     final Type type = parse( ctx.typeWithExtendedAttributes() );
-    return new SetLikeMember( type, readOnly, extendedAttributes, parseSourceIntervals( startPosition, ctx ) );
+    return new SetLikeMember( type,
+                              readOnly,
+                              documentation,
+                              extendedAttributes,
+                              parseSourceIntervals( startPosition, ctx ) );
   }
 
   @Nonnull
   static OperationMember parse( @Nonnull final WebIDLParser.ConstructorContext ctx,
+                                @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final SourcePosition startPosition )
   {
-    final List<Argument> arguments = parse( ctx.argumentList() );
+    final List<Argument> arguments = parse( ctx.argumentList(), documentation );
     final List<SourceInterval> sourceLocations = parseSourceIntervals( startPosition, ctx );
+    DocumentationElement operationDocumentation = null;
+    if ( null != documentation )
+    {
+      final List<DocumentationBlockTag> blockTags =
+        documentation.getBlockTags()
+          .stream()
+          .filter( t -> !"param".equals( t.getName() ) )
+          .collect( Collectors.toList() );
+      if ( !blockTags.isEmpty() )
+      {
+        operationDocumentation =
+          new DocumentationElement( documentation.getDocumentation(), blockTags, documentation.getSourceLocations() );
+      }
+    }
     return new OperationMember( OperationMember.Kind.CONSTRUCTOR,
                                 null,
                                 arguments,
@@ -670,12 +759,14 @@ public final class WebIDLModelParser
                                           Collections.emptyList(),
                                           false,
                                           sourceLocations ),
+                                operationDocumentation,
                                 extendedAttributes,
                                 sourceLocations );
   }
 
   @Nonnull
   static Member parse( @Nonnull final WebIDLParser.StringifierContext ctx,
+                       @Nullable final DocumentationElement documentation,
                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
                        @Nonnull final SourcePosition startPosition )
   {
@@ -689,14 +780,18 @@ public final class WebIDLModelParser
         modifiers.add( AttributeMember.Modifier.READ_ONLY );
       }
       modifiers.add( AttributeMember.Modifier.STRINGIFIER );
-      return parse( attributeRestContext, modifiers, extendedAttributes, startPosition );
+      return parse( attributeRestContext, modifiers, documentation, extendedAttributes, startPosition );
     }
     else
     {
       final WebIDLParser.RegularOperationContext regularOperationContext = stringifierRestContext.regularOperation();
       if ( null != regularOperationContext )
       {
-        return parse( regularOperationContext, OperationMember.Kind.STRINGIFIER, extendedAttributes, startPosition );
+        return parse( regularOperationContext,
+                      OperationMember.Kind.STRINGIFIER,
+                      documentation,
+                      extendedAttributes,
+                      startPosition );
       }
       else
       {
@@ -705,6 +800,7 @@ public final class WebIDLModelParser
                                     null,
                                     Collections.emptyList(),
                                     new Type( Kind.DOMString, Collections.emptyList(), false, sourceLocations ),
+                                    documentation,
                                     extendedAttributes,
                                     sourceLocations );
       }
@@ -713,6 +809,7 @@ public final class WebIDLModelParser
 
   @Nonnull
   static Member parse( @Nonnull final WebIDLParser.StaticMemberContext ctx,
+                       @Nullable final DocumentationElement documentation,
                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
                        @Nonnull final SourcePosition startPosition )
   {
@@ -726,18 +823,23 @@ public final class WebIDLModelParser
         modifiers.add( AttributeMember.Modifier.READ_ONLY );
       }
       modifiers.add( AttributeMember.Modifier.STATIC );
-      return parse( attributeRestContext, modifiers, extendedAttributes, startPosition );
+      return parse( attributeRestContext, modifiers, documentation, extendedAttributes, startPosition );
     }
     else
     {
       final WebIDLParser.RegularOperationContext regularOperationContext = staticMemberRestContext.regularOperation();
       assert null != regularOperationContext;
-      return parse( regularOperationContext, OperationMember.Kind.STATIC, extendedAttributes, startPosition );
+      return parse( regularOperationContext,
+                    OperationMember.Kind.STATIC,
+                    documentation,
+                    extendedAttributes,
+                    startPosition );
     }
   }
 
   @Nonnull
   static Member parse( @Nonnull final WebIDLParser.ReadOnlyMemberContext ctx,
+                       @Nullable final DocumentationElement documentation,
                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
                        @Nonnull final SourcePosition startPosition )
   {
@@ -747,20 +849,21 @@ public final class WebIDLModelParser
     {
       final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
       modifiers.add( AttributeMember.Modifier.READ_ONLY );
-      return parse( attributeRestContext, modifiers, extendedAttributes, startPosition );
+      return parse( attributeRestContext, modifiers, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.MaplikeRestContext maplikeRestContext = readOnlyMemberRestContext.maplikeRest();
     if ( null != maplikeRestContext )
     {
-      return parse( maplikeRestContext, true, extendedAttributes, startPosition );
+      return parse( maplikeRestContext, true, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.SetlikeRestContext setlikeRestContext = readOnlyMemberRestContext.setlikeRest();
     assert null != setlikeRestContext;
-    return parse( setlikeRestContext, true, extendedAttributes, startPosition );
+    return parse( setlikeRestContext, true, documentation, extendedAttributes, startPosition );
   }
 
   @Nonnull
   static ConstMember parse( @Nonnull final WebIDLParser.ConstMemberContext ctx,
+                            @Nullable final DocumentationElement documentation,
                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
                             @Nonnull final SourcePosition startPosition )
   {
@@ -781,7 +884,7 @@ public final class WebIDLModelParser
                     parseSourceIntervals( startPosition, ctx ) );
     }
     final ConstValue value = parse( ctx.constMemberValue() );
-    return new ConstMember( name, type, value, extendedAttributes, sourceIntervals );
+    return new ConstMember( name, type, value, documentation, extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
@@ -858,13 +961,14 @@ public final class WebIDLModelParser
 
   @Nonnull
   static EnumerationDefinition parse( @Nonnull final WebIDLParser.EnumDefinitionContext ctx,
+                                      @Nullable final DocumentationElement documentation,
                                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                       @Nonnull final SourcePosition startPosition )
   {
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
     final String name = ctx.IDENTIFIER().getText();
     final Set<String> values = parse( ctx.enumValueList() );
-    return new EnumerationDefinition( name, values, extendedAttributes, sourceIntervals );
+    return new EnumerationDefinition( name, values, documentation, extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
@@ -948,7 +1052,7 @@ public final class WebIDLModelParser
     if ( null != argListContext )
     {
       final String argName = argListContext.IDENTIFIER().getText();
-      final List<Argument> arguments = parse( argListContext.argumentList() );
+      final List<Argument> arguments = parse( argListContext.argumentList(), null );
       return ExtendedAttribute.createExtendedAttributeArgList( argName, arguments, sourceIntervals );
     }
     final WebIDLParser.ExtendedAttributeNamedArgListContext namedArgListContext = ctx.extendedAttributeNamedArgList();
@@ -956,7 +1060,7 @@ public final class WebIDLModelParser
 
     final String name = namedArgListContext.IDENTIFIER( 0 ).getText();
     final String argName = namedArgListContext.IDENTIFIER( 1 ).getText();
-    final List<Argument> arguments = parse( namedArgListContext.argumentList() );
+    final List<Argument> arguments = parse( namedArgListContext.argumentList(), null );
     return ExtendedAttribute.createExtendedAttributeNamedArgList( name, argName, arguments, sourceIntervals );
   }
 
@@ -980,6 +1084,7 @@ public final class WebIDLModelParser
 
   @Nonnull
   static InterfaceDefinition parse( @Nonnull final WebIDLParser.InterfaceRestContext ctx,
+                                    @Nullable final DocumentationElement documentation,
                                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                     @Nonnull final SourcePosition startPosition )
   {
@@ -996,6 +1101,7 @@ public final class WebIDLModelParser
     WebIDLParser.InterfaceMembersContext interfaceMembersContext = ctx.interfaceMembers();
     while ( interfaceMembersContext.getChildCount() > 0 )
     {
+      final DocumentationElement memberDocumentation = parseDocumentation( interfaceMembersContext.documentation() );
       final List<ExtendedAttribute> memberExtendedAttributes = parse( interfaceMembersContext.extendedAttributeList() );
 
       final WebIDLParser.InterfaceMemberContext interfaceMemberContext = interfaceMembersContext.interfaceMember();
@@ -1005,7 +1111,8 @@ public final class WebIDLModelParser
         interfaceMemberContext.partialInterfaceMember();
       if ( null != partialInterfaceMemberContext )
       {
-        final Member member = parse( partialInterfaceMemberContext, memberExtendedAttributes, memberStartPosition );
+        final Member member =
+          parse( partialInterfaceMemberContext, memberDocumentation, memberExtendedAttributes, memberStartPosition );
         if ( member instanceof AttributeMember )
         {
           attributes.add( (AttributeMember) member );
@@ -1060,7 +1167,10 @@ public final class WebIDLModelParser
       {
         final WebIDLParser.ConstructorContext constructorContext = interfaceMemberContext.constructor();
         assert null != constructorContext;
-        operations.add( parse( constructorContext, memberExtendedAttributes, memberStartPosition ) );
+        operations.add( parse( constructorContext,
+                               memberDocumentation,
+                               memberExtendedAttributes,
+                               memberStartPosition ) );
       }
 
       interfaceMembersContext = interfaceMembersContext.interfaceMembers();
@@ -1075,12 +1185,14 @@ public final class WebIDLModelParser
                                     asyncIterable,
                                     mapLike,
                                     setLike,
+                                    documentation,
                                     extendedAttributes,
                                     parseSourceIntervals( startPosition, ctx ) );
   }
 
   @Nonnull
   static PartialInterfaceDefinition parse( @Nonnull final WebIDLParser.PartialInterfaceRestContext ctx,
+                                           @Nullable final DocumentationElement documentation,
                                            @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                            @Nonnull final SourcePosition startPosition )
   {
@@ -1097,13 +1209,16 @@ public final class WebIDLModelParser
     WebIDLParser.PartialInterfaceMembersContext partialInterfaceMembersContext = ctx.partialInterfaceMembers();
     while ( partialInterfaceMembersContext.getChildCount() > 0 )
     {
+      final DocumentationElement memberDocumentation =
+        parseDocumentation( partialInterfaceMembersContext.documentation() );
       final List<ExtendedAttribute> memberExtendedAttributes =
         parse( partialInterfaceMembersContext.extendedAttributeList() );
       final SourcePosition memberStartPosition = parseSourcePosition( partialInterfaceMembersContext.getStart() );
       final WebIDLParser.PartialInterfaceMemberContext partialInterfaceMemberContext =
         partialInterfaceMembersContext.partialInterfaceMember();
       assert null != partialInterfaceMemberContext;
-      final Member member = parse( partialInterfaceMemberContext, memberExtendedAttributes, memberStartPosition );
+      final Member member =
+        parse( partialInterfaceMemberContext, memberDocumentation, memberExtendedAttributes, memberStartPosition );
       if ( member instanceof AttributeMember )
       {
         attributes.add( (AttributeMember) member );
@@ -1165,63 +1280,65 @@ public final class WebIDLModelParser
                                            asyncIterable,
                                            mapLike,
                                            setLike,
+                                           documentation,
                                            extendedAttributes,
                                            parseSourceIntervals( startPosition, ctx ) );
   }
 
   @Nonnull
   static Member parse( @Nonnull final WebIDLParser.PartialInterfaceMemberContext ctx,
+                       @Nullable final DocumentationElement documentation,
                        @Nonnull final List<ExtendedAttribute> extendedAttributes,
                        @Nonnull final SourcePosition startPosition )
   {
     final WebIDLParser.ConstMemberContext constMemberContext = ctx.constMember();
     if ( null != constMemberContext )
     {
-      return parse( constMemberContext, extendedAttributes, startPosition );
+      return parse( constMemberContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.OperationContext operationContext = ctx.operation();
     if ( null != operationContext )
     {
-      return parse( operationContext, extendedAttributes, startPosition );
+      return parse( operationContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.StringifierContext stringifierContext = ctx.stringifier();
     if ( null != stringifierContext )
     {
-      return parse( stringifierContext, extendedAttributes, startPosition );
+      return parse( stringifierContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.StaticMemberContext staticMemberContext = ctx.staticMember();
     if ( null != staticMemberContext )
     {
-      return parse( staticMemberContext, extendedAttributes, startPosition );
+      return parse( staticMemberContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.IterableContext iterableContext = ctx.iterable();
     if ( null != iterableContext )
     {
-      return parse( iterableContext, extendedAttributes, startPosition );
+      return parse( iterableContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.AsyncIterableContext asyncIterableContext = ctx.asyncIterable();
     if ( null != asyncIterableContext )
     {
-      return parse( asyncIterableContext, extendedAttributes, startPosition );
+      return parse( asyncIterableContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.ReadOnlyMemberContext readOnlyMemberContext = ctx.readOnlyMember();
     if ( null != readOnlyMemberContext )
     {
-      return parse( readOnlyMemberContext, extendedAttributes, startPosition );
+      return parse( readOnlyMemberContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.ReadWriteAttributeContext readWriteAttributeContext = ctx.readWriteAttribute();
     if ( null != readWriteAttributeContext )
     {
-      return parse( readWriteAttributeContext, new HashSet<>(), extendedAttributes, startPosition );
+      return parse( readWriteAttributeContext, new HashSet<>(), documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.ReadWriteMaplikeContext readWriteMaplikeContext = ctx.readWriteMaplike();
     if ( null != readWriteMaplikeContext )
     {
-      return parse( readWriteMaplikeContext.maplikeRest(), false, extendedAttributes, startPosition );
+      return parse( readWriteMaplikeContext.maplikeRest(), false, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.ReadWriteSetlikeContext readWriteSetlikeContext = ctx.readWriteSetlike();
     assert null != readWriteSetlikeContext;
-    return parse( readWriteSetlikeContext.setlikeRest(), false, extendedAttributes, startPosition );
+    return parse( readWriteSetlikeContext.setlikeRest(), false, documentation, extendedAttributes, startPosition );
   }
 
   @Nullable
@@ -1233,12 +1350,17 @@ public final class WebIDLModelParser
 
   @Nonnull
   static TypedefDefinition parse( @Nonnull final WebIDLParser.TypedefContext ctx,
+                                  @Nullable final DocumentationElement documentation,
                                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                   @Nonnull final SourcePosition startPosition )
   {
     final String name = ctx.IDENTIFIER().getText();
     final Type type = parse( ctx.typeWithExtendedAttributes() );
-    return new TypedefDefinition( name, type, extendedAttributes, parseSourceIntervals( startPosition, ctx ) );
+    return new TypedefDefinition( name,
+                                  type,
+                                  documentation,
+                                  extendedAttributes,
+                                  parseSourceIntervals( startPosition, ctx ) );
   }
 
   @Nonnull
@@ -1539,6 +1661,7 @@ public final class WebIDLModelParser
   @Nonnull
   static Definition parse( @Nonnull final WebIDLParser.NamespaceContext ctx,
                            final boolean partial,
+                           @Nullable final DocumentationElement documentation,
                            @Nonnull final List<ExtendedAttribute> extendedAttributes,
                            @Nonnull final SourcePosition startPosition )
   {
@@ -1553,12 +1676,14 @@ public final class WebIDLModelParser
     while ( null != ( namespaceMemberContext = namespaceMembersContext.namespaceMember() ) )
     {
       final SourcePosition memberStart = parseSourcePosition( namespaceMemberContext.getStart() );
+      final DocumentationElement memberDocumentation = parseDocumentation( namespaceMembersContext.documentation() );
       final List<ExtendedAttribute> memberExtendedAttributes = parse( namespaceMembersContext.extendedAttributeList() );
       final WebIDLParser.RegularOperationContext regularOperationContext = namespaceMemberContext.regularOperation();
       if ( null != regularOperationContext )
       {
         operations.add( parse( regularOperationContext,
                                OperationMember.Kind.DEFAULT,
+                               memberDocumentation,
                                memberExtendedAttributes,
                                memberStart ) );
       }
@@ -1567,7 +1692,11 @@ public final class WebIDLModelParser
         final WebIDLParser.AttributeRestContext attributeRestContext = namespaceMemberContext.attributeRest();
         final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
         modifiers.add( AttributeMember.Modifier.READ_ONLY );
-        attributes.add( parse( attributeRestContext, modifiers, memberExtendedAttributes, memberStart ) );
+        attributes.add( parse( attributeRestContext,
+                               modifiers,
+                               memberDocumentation,
+                               memberExtendedAttributes,
+                               memberStart ) );
       }
       namespaceMembersContext = namespaceMembersContext.namespaceMembers();
     }
@@ -1576,28 +1705,32 @@ public final class WebIDLModelParser
       new PartialNamespaceDefinition( name,
                                       Collections.unmodifiableList( operations ),
                                       Collections.unmodifiableList( attributes ),
+                                      documentation,
                                       extendedAttributes,
                                       sourceIntervals ) :
       new NamespaceDefinition( name,
                                Collections.unmodifiableList( operations ),
                                Collections.unmodifiableList( attributes ),
+                               documentation,
                                extendedAttributes,
                                sourceIntervals );
   }
 
   @Nonnull
   static IncludesStatement parse( @Nonnull final WebIDLParser.IncludesStatementContext ctx,
+                                  @Nullable final DocumentationElement documentation,
                                   @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                   @Nonnull final SourcePosition startPosition )
   {
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
     final String interfaceName = ctx.IDENTIFIER( 0 ).getText();
     final String mixinName = ctx.IDENTIFIER( 1 ).getText();
-    return new IncludesStatement( interfaceName, mixinName, extendedAttributes, sourceIntervals );
+    return new IncludesStatement( interfaceName, mixinName, documentation, extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
   static DictionaryDefinition parse( @Nonnull final WebIDLParser.DictionaryContext ctx,
+                                     @Nullable final DocumentationElement documentation,
                                      @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                      @Nonnull final SourcePosition startPosition )
   {
@@ -1605,22 +1738,24 @@ public final class WebIDLModelParser
     final String name = ctx.IDENTIFIER().getText();
     final String inherits = extractInherits( ctx.inheritance() );
     final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
-    return new DictionaryDefinition( name, inherits, members, extendedAttributes, sourceIntervals );
+    return new DictionaryDefinition( name, inherits, members, documentation, extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
   static PartialDictionaryDefinition parse( @Nonnull final WebIDLParser.PartialDictionaryContext ctx,
+                                            @Nullable final DocumentationElement documentation,
                                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                             @Nonnull final SourcePosition startPosition )
   {
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
     final String name = ctx.IDENTIFIER().getText();
     final List<DictionaryMember> members = parse( ctx.dictionaryMembers() );
-    return new PartialDictionaryDefinition( name, members, extendedAttributes, sourceIntervals );
+    return new PartialDictionaryDefinition( name, members, documentation, extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
-  static DictionaryMember parse( @Nonnull final WebIDLParser.DictionaryMemberContext ctx )
+  static DictionaryMember parse( @Nonnull final WebIDLParser.DictionaryMemberContext ctx,
+                                 @Nullable final DocumentationElement documentation )
   {
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( parseSourcePosition( ctx.getStart() ), ctx );
     final List<ExtendedAttribute> extendedAttributes = parse( ctx.extendedAttributeList() );
@@ -1643,7 +1778,13 @@ public final class WebIDLModelParser
       optional = false;
       defaultValue = null;
     }
-    return new DictionaryMember( name, type, optional, defaultValue, extendedAttributes, sourceIntervals );
+    return new DictionaryMember( name,
+                                 type,
+                                 optional,
+                                 defaultValue,
+                                 documentation,
+                                 extendedAttributes,
+                                 sourceIntervals );
   }
 
   @Nonnull
@@ -1654,10 +1795,64 @@ public final class WebIDLModelParser
     final List<DictionaryMember> results = new ArrayList<>();
     while ( null != ( memberContext = members.dictionaryMember() ) )
     {
-      results.add( parse( memberContext ) );
+      final DocumentationElement documentation = parseDocumentation( members.documentation() );
+      results.add( parse( memberContext, documentation ) );
       members = members.dictionaryMembers();
     }
     return Collections.unmodifiableList( results );
+  }
+
+  @Nullable
+  private static DocumentationElement parseDocumentation( @Nonnull final WebIDLParser.DocumentationContext ctx )
+  {
+    final WebIDLParser.DocumentationContentContext documentationContentContext = ctx.documentationContent();
+    if ( null == documentationContentContext )
+    {
+      return null;
+    }
+    final WebIDLParser.DescriptionContext descriptionContext = documentationContentContext.description();
+    final String description;
+    if ( null != descriptionContext )
+    {
+      final List<WebIDLParser.DescriptionLineContext> descriptionLineContexts = descriptionContext.descriptionLine();
+      final StringBuilder sb = new StringBuilder();
+      for ( final WebIDLParser.DescriptionLineContext descriptionLineContext : descriptionLineContexts )
+      {
+        sb.append( descriptionLineContext.getText().trim() );
+        sb.append( "\n" );
+      }
+      description = sb.toString().trim();
+    }
+    else
+    {
+      description = null;
+    }
+    final List<DocumentationBlockTag> blockTags = new ArrayList<>();
+    final WebIDLParser.TagSectionContext tagSectionContext = documentationContentContext.tagSection();
+    if ( null != tagSectionContext )
+    {
+      final List<WebIDLParser.BlockTagContext> tags = tagSectionContext.blockTag();
+      for ( final WebIDLParser.BlockTagContext tag : tags )
+      {
+        final String tagName = tag.NAME().getText();
+        final StringBuilder sb = new StringBuilder();
+        for ( final WebIDLParser.BlockTagContentContext blockTagContentContext : tag.blockTagContent() )
+        {
+          if ( null == blockTagContentContext.NEWLINE() )
+          {
+            sb.append( blockTagContentContext.getText().trim() );
+          }
+          else
+          {
+            sb.append( "\n" );
+          }
+        }
+        blockTags.add( new DocumentationBlockTag( tagName, sb.toString().trim() ) );
+      }
+    }
+
+    final List<SourceInterval> sourceLocations = parseSourceIntervals( parseSourcePosition( ctx.getStart() ), ctx );
+    return new DocumentationElement( description, blockTags, sourceLocations );
   }
 
   @Nonnull
@@ -1671,8 +1866,7 @@ public final class WebIDLModelParser
   private static SourceInterval parseSourceInterval( @Nonnull final SourcePosition start,
                                                      @Nonnull final ParserRuleContext token )
   {
-    final SourcePosition end = parseSourcePosition( token.getStop() );
-    return new SourceInterval( start, end );
+    return new SourceInterval( start, parseSourcePosition( token.getStop() ) );
   }
 
   @Nonnull

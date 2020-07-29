@@ -231,4 +231,15 @@ public abstract class AbstractTest
     Files.createDirectories( idlDirectory );
     return idlDirectory;
   }
+
+  @Nonnull
+  protected final Object[][] scanForStandardFixturesTestInput()
+    throws IOException
+  {
+    return Files.list( getTestLocalFixtureDir() )
+      .filter( Files::isDirectory )
+      .filter( d -> Files.exists( d.resolve( "input.webidl" ) ) && Files.exists( d.resolve( "output.webidl" ) ) )
+      .map( d -> new Object[]{ d.getFileName().toString() } )
+      .toArray( Object[][]::new );
+  }
 }

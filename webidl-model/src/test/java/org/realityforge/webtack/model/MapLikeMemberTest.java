@@ -37,7 +37,7 @@ public final class MapLikeMemberTest
   {
     final WebIDLParser.MaplikeRestContext ctx = createParser( webIDL ).maplikeRest();
     final MapLikeMember actual =
-      WebIDLModelParser.parse( ctx, readOnly, Collections.emptyList(), parseStartPosition( ctx ) );
+      WebIDLModelParser.parse( ctx, readOnly, null, Collections.emptyList(), parseStartPosition( ctx ) );
 
     assertEquals( actual, actual );
     assertEquals( actual.hashCode(), actual.hashCode() );
@@ -50,12 +50,13 @@ public final class MapLikeMemberTest
     if ( readOnly )
     {
       final WebIDLParser.ReadOnlyMemberContext ctx2 = createParser( emittedIDL ).readOnlyMember();
-      element = (MapLikeMember) WebIDLModelParser.parse( ctx2, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      element =
+        (MapLikeMember) WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     }
     else
     {
       final WebIDLParser.MaplikeRestContext ctx2 = createParser( emittedIDL ).maplikeRest();
-      element = WebIDLModelParser.parse( ctx2, readOnly, Collections.emptyList(), parseStartPosition( ctx2 ) );
+      element = WebIDLModelParser.parse( ctx2, readOnly, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
     }
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );
