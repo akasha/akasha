@@ -8,7 +8,7 @@ public abstract class Element
   extends AttributedNode
 {
   /**
-   * Documentation attached to the definition if any.
+   * Documentation attached to the element if any.
    */
   @Nullable
   private final DocumentationElement _documentation;
