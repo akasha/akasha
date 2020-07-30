@@ -403,7 +403,7 @@ enumDefinition
 ;
 
 enumValueList
-  : STRING enumValueListComma
+  : documentation STRING enumValueListComma
 ;
 
 enumValueListComma
@@ -412,7 +412,7 @@ enumValueListComma
 ;
 
 enumValueListString
-  : STRING enumValueListComma
+  : documentation STRING enumValueListComma
   | /* empty */
 ;
 

@@ -72,7 +72,7 @@ final class RemoveExtendedAttributeProcessor
   protected EnumerationDefinition transformEnumeration( @Nonnull final EnumerationDefinition input )
   {
     return new EnumerationDefinition( input.getName(),
-                                      input.getValues(),
+                                      transformEnumerationValues( input.getValues() ),
                                       transformDocumentation( input.getDocumentation() ),
                                       matches( input ) ?
                                       shrinkExtendedAttributes( input.getExtendedAttributes() ) :

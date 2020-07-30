@@ -1,9 +1,7 @@
 package org.realityforge.webtack.model;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
@@ -13,10 +11,10 @@ public final class EnumerationDefinition
   @Nonnull
   private final String _name;
   @Nonnull
-  private final Set<String> _values;
+  private final List<EnumerationValue> _values;
 
   public EnumerationDefinition( @Nonnull final String name,
-                                @Nonnull final Set<String> values,
+                                @Nonnull final List<EnumerationValue> values,
                                 @Nullable final DocumentationElement documentation,
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final List<SourceInterval> sourceLocations )
@@ -33,7 +31,7 @@ public final class EnumerationDefinition
   }
 
   @Nonnull
-  public Set<String> getValues()
+  public List<EnumerationValue> getValues()
   {
     return _values;
   }
@@ -68,10 +66,10 @@ public final class EnumerationDefinition
          _name.equals( other._name ) &&
          _values.size() == other._values.size() )
     {
-      final Set<String> otherValues = new HashSet<>( other._values );
-      for ( final String value : _values )
+      int index = 0;
+      for ( final EnumerationValue value : _values )
       {
-        if ( !otherValues.remove( value ) )
+        if( !value.equiv( other.getValues().get( index++ ) ))
         {
           return false;
         }

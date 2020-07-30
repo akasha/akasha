@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -967,15 +966,16 @@ public final class WebIDLModelParser
   {
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
     final String name = ctx.IDENTIFIER().getText();
-    final Set<String> values = parse( ctx.enumValueList() );
+    final List<EnumerationValue> values = parse( ctx.enumValueList() );
     return new EnumerationDefinition( name, values, documentation, extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
-  private static Set<String> parse( @Nonnull final WebIDLParser.EnumValueListContext enumValueListContext )
+  private static List<EnumerationValue> parse( @Nonnull final WebIDLParser.EnumValueListContext enumValueListContext )
   {
-    final Set<String> values = new LinkedHashSet<>();
-    values.add( extractString( enumValueListContext.STRING() ) );
+    final List<EnumerationValue> values = new ArrayList<>();
+    final String value = extractString( enumValueListContext.STRING() );
+    values.add( new EnumerationValue( value, parseDocumentation( enumValueListContext.documentation() ) ) );
 
     WebIDLParser.EnumValueListStringContext enumValueListStringContext =
       enumValueListContext.enumValueListComma().enumValueListString();
@@ -984,7 +984,8 @@ public final class WebIDLModelParser
       final TerminalNode string = enumValueListStringContext.STRING();
       if ( null != string )
       {
-        values.add( extractString( string ) );
+        values.add( new EnumerationValue( extractString( string ),
+                                          parseDocumentation( enumValueListStringContext.documentation() ) ) );
       }
       final WebIDLParser.EnumValueListCommaContext enumValueListCommaContext =
         enumValueListStringContext.enumValueListComma();
@@ -992,7 +993,7 @@ public final class WebIDLModelParser
         null != enumValueListCommaContext ? enumValueListCommaContext.enumValueListString() : null;
     }
 
-    return Collections.unmodifiableSet( values );
+    return Collections.unmodifiableList( values );
   }
 
   @Nonnull

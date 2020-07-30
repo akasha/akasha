@@ -476,17 +476,14 @@ public final class WebIDLWriter
     writer.write( "enum " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
-    final String[] values =
-      definition
-        .getValues()
-        .stream()
-        .sorted()
-        .toArray( String[]::new );
-    for ( int i = 0; i < values.length; i++ )
+    final int size = definition.getValues().size();
+    int index = 1;
+    for ( final EnumerationValue value : definition.getValues() )
     {
+      writeDocumentationIfRequired( writer, value.getDocumentation(), "  " );
       writeIndent( writer );
-      writeString( writer, values[ i ] );
-      if ( i + 1 != values.length )
+      writeString( writer, value.getValue() );
+      if ( size != index++ )
       {
         writer.write( "," );
       }

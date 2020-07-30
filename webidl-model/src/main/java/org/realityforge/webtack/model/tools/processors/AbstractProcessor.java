@@ -21,6 +21,7 @@ import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.IncludesStatement;
@@ -217,10 +218,31 @@ public abstract class AbstractProcessor
   protected EnumerationDefinition transformEnumeration( @Nonnull final EnumerationDefinition input )
   {
     return new EnumerationDefinition( input.getName(),
-                                      input.getValues(),
+                                      transformEnumerationValues( input.getValues() ),
                                       transformDocumentation( input.getDocumentation() ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  protected List<EnumerationValue> transformEnumerationValues( @Nonnull final List<EnumerationValue> inputs )
+  {
+    final List<EnumerationValue> outputs = new ArrayList<>();
+    for ( final EnumerationValue input : inputs )
+    {
+      final EnumerationValue value = transformEnumerationValue( input );
+      if ( null != value )
+      {
+        outputs.add( value );
+      }
+    }
+    return outputs;
+  }
+
+  @Nullable
+  protected EnumerationValue transformEnumerationValue( @Nullable final EnumerationValue input )
+  {
+    return input;
   }
 
   @Nonnull

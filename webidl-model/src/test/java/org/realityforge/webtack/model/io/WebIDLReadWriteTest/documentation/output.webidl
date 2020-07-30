@@ -5,8 +5,26 @@
  * @see http://example.com/#FullscreenNavigationUI
  */
 enum FullscreenNavigationUI {
+  /**
+   * Documentation for "auto" value.
+   *
+   * @version 23
+   * @see http://example.com/#FullscreenNavigationUI.auto
+   */
   "auto",
+  /**
+   * Documentation for "hide" value.
+   *
+   * @version 23
+   * @see http://example.com/#FullscreenNavigationUI.hide
+   */
   "hide",
+  /**
+   * Documentation for "show" value.
+   *
+   * @version 23
+   * @see http://example.com/#FullscreenNavigationUI.show
+   */
   "show"
 };
 

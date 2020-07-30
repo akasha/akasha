@@ -64,7 +64,7 @@ final class RenameTypeProcessor
     if ( matcher.matches() )
     {
       return new EnumerationDefinition( matcher.replaceAll( _replacement ),
-                                        input.getValues(),
+                                        transformEnumerationValues( input.getValues() ),
                                         transformDocumentation( input.getDocumentation() ),
                                         transformExtendedAttributes( input.getExtendedAttributes() ),
                                         transformSourceLocations( input.getSourceLocations() ) );

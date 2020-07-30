@@ -32,6 +32,7 @@ import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
@@ -1224,9 +1225,9 @@ final class Generator
       if ( null != enumeration )
       {
         final AnnotationSpec.Builder annotation = AnnotationSpec.builder( Types.MAGIC_CONSTANT );
-        for ( final String value : enumeration.getValues() )
+        for ( final EnumerationValue value : enumeration.getValues() )
         {
-          annotation.addMember( "stringValues", "$S", value );
+          annotation.addMember( "stringValues", "$S", value.getValue() );
         }
         parameter.addAnnotation( annotation.build() );
       }
@@ -1243,8 +1244,9 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
 
-    for ( final String value : definition.getValues() )
+    for ( final EnumerationValue enumerationValue : definition.getValues() )
     {
+      final String value = enumerationValue.getValue();
       if ( !value.isEmpty() )
       {
         final String name = safeName( toName( value ) );
