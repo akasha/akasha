@@ -85,6 +85,15 @@
       }
     },
     {
+      "name": "RemoveElement",
+      "description": "This defined in both webrtc_stats and webrtc so lets remove one",
+      "sourceSelector": "name=webrtc_stats",
+      "config": {
+        "namePattern": "^RTCStats$",
+        "type": ["dictionary"]
+      }
+    },
+    {
       "name": "RemoveMember",
       "description": "the fileapi spec 'overrides' a operation on URL with a union of blob and the type defined in the mediasource spec. We re-add the blob variant in the fileapi_patch variant",
       "sourceSelector": "name=fileapi",
