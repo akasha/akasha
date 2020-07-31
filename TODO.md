@@ -102,6 +102,8 @@ complete as there is too much un-said.
   and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
   browsers to support
 
+* Consider adding a non-standard "event" member to interfaces to webidl language to represent events.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
