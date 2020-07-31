@@ -74,7 +74,7 @@ final class FetchCommand
       new CLOptionDescriptor( "no-remove-source",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_REMOVE_SOURCE_OPT,
-                              "Do not remove source after fetching and sxtracting WebIDL." )
+                              "Do not remove source after fetching and extracting WebIDL." )
     };
   @Nonnull
   private final Set<String> _sourceNames = new LinkedHashSet<>();
