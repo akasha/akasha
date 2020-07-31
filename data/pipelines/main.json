@@ -95,6 +95,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "the spec defines these members in RTCAudioHandlerStats which is the parent dictionary of RTCAudioReceiverStats",
+      "sourceSelector": "name=webrtc_stats",
+      "config": {
+        "elementNamePattern": "^RTCAudioReceiverStats$",
+        "memberNamePattern": "^(audioLevel|totalAudioEnergy|totalSamplesDuration)$",
+        "types": ["dictionary"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "the fileapi spec 'overrides' a operation on URL with a union of blob and the type defined in the mediasource spec. We re-add the blob variant in the fileapi_patch variant",
       "sourceSelector": "name=fileapi",
       "config": {
