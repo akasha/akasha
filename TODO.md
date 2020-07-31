@@ -86,10 +86,21 @@ complete as there is too much un-said.
 
   Spec Docs: https://heycam.github.io/webidl/
 
+* Maybe always try to link to MDN documentation via url like https://developer.mozilla.org/en-US/docs/Web/API/{Element}(/{Member})? such as  https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent - Of course we would need to do a http get to verify that the element is documented and it is only available for some element types (interfaces?). We could also scrape the events on interfaces and link to them via
+  - https://developer.mozilla.org/en-US/docs/Web/API/XRSession/squeezestart_event
+
 * Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
   how this would look if we created a parallel model hierarchy and then generated source code based on this model.
   We should also emit browser specific extension with clear markers in the source code (i.e. generate the externs
   prefixed with `chrome_` etc or add explicit annotations in java code).
+
+* How do we force `XRInputSourcesChangeEvent.XRInputSourcesChangeEvent.type` to a constant value? The spec that
+  there is only one valid value but idl does not have a way of specifying that. If we knew that we could force
+  the java code to have a constructor that specified value for you
+
+* Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
+  and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
+  browsers to support
 
 ### Validations
 
