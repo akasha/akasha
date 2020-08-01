@@ -61,7 +61,8 @@ define 'webtack' do
   define 'webidl-model' do
     compile.with project('webidl-parser').package(:jar),
                  project('webidl-parser').compile.dependencies,
-                 JSONB_DEPS
+                 JSONB_DEPS,
+                 :jsoup
 
     test.using :testng
     test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/java') }
