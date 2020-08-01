@@ -1,17 +1,8 @@
 package org.realityforge.webtack;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -26,7 +17,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -37,6 +27,9 @@ import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
+import org.realityforge.webtack.model.tools.fetch.FetchException;
+import org.realityforge.webtack.model.tools.fetch.FetchResult;
+import org.realityforge.webtack.model.tools.fetch.FetchUtil;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 
@@ -56,8 +49,6 @@ final class FetchCommand
     "pre:not(.extract) code.idl," +
     // Permissions
     "#permission-registry + pre.highlight";
-  private static final int CONNECT_TIMEOUT = 15_000;
-  private static final int READ_TIMEOUT = 10_000;
   private static final int FORCE_OPT = 'f';
   private static final int NO_VERIFY_OPT = 2;
   private static final int NO_REMOVE_SOURCE_OPT = 3;
@@ -144,7 +135,17 @@ final class FetchCommand
         }
         continue;
       }
-      final DownloadResult result = downloadURL( url, source.getLastModifiedTime() );
+      final FetchResult result;
+      try
+      {
+        result = FetchUtil.downloadURL( url, _force ? 0 : source.getLastModifiedTime() );
+      }
+      catch ( final FetchException e )
+      {
+        throw new TerminalStateException( "Failed during fetch of source at " + e.getUrl(),
+                                          e.getCause(),
+                                          ExitCodes.ERROR_SOURCE_FETCH_FAILED_CODE );
+      }
       if ( null == result )
       {
         if ( logger.isLoggable( Level.INFO ) )
@@ -409,60 +410,5 @@ final class FetchCommand
         input + " due to " + ioe;
       throw new TerminalStateException( message, ExitCodes.ERROR_EXTRACT_IDL_FAILED_CODE );
     }
-  }
-
-  @Nullable
-  private DownloadResult downloadURL( @Nonnull final String url, final long lastModifiedAt )
-  {
-    try
-    {
-      final URL sourceURL = new File( "." ).toURI().resolve( url ).toURL();
-
-      if ( !_force &&
-           0 != lastModifiedAt &&
-           ( "http".equals( sourceURL.getProtocol() ) || "https".equals( sourceURL.getProtocol() ) ) )
-      {
-        final HttpURLConnection connection = (HttpURLConnection) newUrlConnection( sourceURL );
-        connection.setIfModifiedSince( lastModifiedAt );
-        connection.setRequestMethod( "HEAD" );
-
-        if ( HttpURLConnection.HTTP_NOT_MODIFIED == connection.getResponseCode() )
-        {
-          return null;
-        }
-      }
-
-      final URLConnection connection = newUrlConnection( sourceURL );
-      try ( final InputStream inputStream = new BufferedInputStream( connection.getInputStream() ) )
-      {
-        final long lastModified = connection.getLastModified();
-        final Path file = Files.createTempFile( "webtack", ".html" );
-        try ( final OutputStream outputStream = new BufferedOutputStream( new FileOutputStream( file.toFile() ) ) )
-        {
-          final byte[] buffer = new byte[ 1024 * 4 ];
-          int count;
-          while ( -1 != ( count = inputStream.read( buffer ) ) )
-          {
-            outputStream.write( buffer, 0, count );
-          }
-        }
-        return new DownloadResult( file, lastModified );
-      }
-    }
-    catch ( final IOException ioe )
-    {
-      throw new TerminalStateException( "Failed during fetch of source at " + url,
-                                        ioe,
-                                        ExitCodes.ERROR_SOURCE_FETCH_FAILED_CODE );
-    }
-  }
-
-  private URLConnection newUrlConnection( final URL sourceURL )
-    throws IOException
-  {
-    final URLConnection connection = sourceURL.openConnection();
-    connection.setConnectTimeout( CONNECT_TIMEOUT );
-    connection.setReadTimeout( READ_TIMEOUT );
-    return connection;
   }
 }
