@@ -131,7 +131,6 @@ final class FetchDocsCommand
           throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE );
         }
       }
-
     }
 
     return ExitCodes.SUCCESS_EXIT_CODE;
