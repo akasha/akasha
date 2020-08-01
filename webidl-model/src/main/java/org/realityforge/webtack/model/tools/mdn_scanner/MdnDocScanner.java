@@ -320,7 +320,7 @@ public final class MdnDocScanner
   @Nonnull
   private Path asTmpTarget( @Nonnull final Path target )
   {
-    return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp.html" );
+    return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp" );
   }
 
   private void createParentDirectoryIfRequired( @Nonnull final DocSourceConfig source, @Nonnull final Path path )
