@@ -8,12 +8,12 @@ public final class FetchResult
 {
   @Nonnull
   private final Path _path;
-  private final long _lastModifiedTime;
+  private final long _lastModifiedAt;
 
-  FetchResult( @Nonnull final Path path, final long lastModifiedTime )
+  FetchResult( @Nonnull final Path path, final long lastModifiedAt )
   {
     _path = Objects.requireNonNull( path );
-    _lastModifiedTime = lastModifiedTime;
+    _lastModifiedAt = lastModifiedAt;
   }
 
   @Nonnull
@@ -22,8 +22,8 @@ public final class FetchResult
     return _path;
   }
 
-  public long getLastModifiedTime()
+  public long getLastModifiedAt()
   {
-    return _lastModifiedTime;
+    return _lastModifiedAt;
   }
 }

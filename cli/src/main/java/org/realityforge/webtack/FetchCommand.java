@@ -156,7 +156,7 @@ final class FetchCommand
       else
       {
         final Path file = result.getPath();
-        source.setLastModifiedTime( result.getLastModifiedTime() );
+        source.setLastModifiedTime( result.getLastModifiedAt() );
         if ( logger.isLoggable( Level.FINE ) )
         {
           logger.log( Level.FINE, "Fetched source named '" + sourceName + "' to " + file );
