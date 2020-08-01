@@ -228,6 +228,8 @@ public final class MdnDocScanner
           .select( "#Methods + p + dl dt a code, #Methods + dl dt a code" )
           .stream()
           .map( Element::text )
+          // Strip the brackets at end of methods
+          .map( text -> text.replaceAll( "\\(.*", "" ) )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
           .collect( Collectors.toList() );
