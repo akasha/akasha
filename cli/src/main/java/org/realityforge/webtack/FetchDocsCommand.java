@@ -101,11 +101,11 @@ final class FetchDocsCommand
         logger.log( Level.FINE, "Fetched documentation for source named '" + sourceName + "'" );
       }
       final WebIDLSchema schema = loadSchema( context, source );
+      final MdnDocScanner scanner =
+        new MdnDocScanner( context.docRepository(), context.environment().docDirectory() );
 
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
-        final MdnDocScanner scanner =
-          new MdnDocScanner( context.docRepository(), context.environment().docDirectory() );
         try
         {
           scanner.fetchDocumentation( DocKind.Type, definition.getName(), null, _force, !_noRemoveSource );
