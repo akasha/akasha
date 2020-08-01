@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.ontrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack",
+    "description": "<p> The function receives as input the event object, of type <code>RTCTrackEvent</code>; this event is sent when a new incoming <code>MediaStreamTrack</code> has been created and associated with an <code>RTCRtpReceiver</code> object which has been added to the set of receivers on connection.</p>"
+}

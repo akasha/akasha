@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.onbufferedamountlow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onbufferedamountlow",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>RTCDataChannel.onbufferedamountlow</code></strong> property is an <code>EventHandler</code> which specifies a function the browser calls when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/bufferedamountlow\" title=\"/en-US/docs/Web/Events/bufferedamountlow\">bufferedamountlow</a></code> event is sent to the <code>RTCDataChannel</code>. This event, which is represented by a simple <code>Event</code> object, is sent when the amount of data buffered to be sent falls to or below the threshold specified by the channel's <code>bufferedAmountLowThreshold</code>.</p>\n<p>See in to learn more about how to work with the data channel buffer.</p>"
+}

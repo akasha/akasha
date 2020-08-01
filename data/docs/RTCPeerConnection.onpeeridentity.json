@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.onpeeridentity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onpeeridentity",
+    "description": "<p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n<p>The <code><strong>RTCPeerConnection.onpeeridentity</strong></code> event handler is a property containing the code to execute whent the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/peeridentity\" title=\"/en-US/docs/Web/Events/peeridentity\">peeridentity</a></code> event, of type <code>Event</code>, is received by this <code>RTCPeerConnection</code>. Such an event is sent when an identity assertion, received from a peer, has been successfully validated.</p>\n<p><em>This event handler is obsolete</em>. To detect successful validation of the identity, wait for the promise returned by <code>peerIdentity</code> to resolve successfully with the peer's identity.</p>"
+}

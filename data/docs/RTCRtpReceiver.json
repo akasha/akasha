@@ -2,5 +2,17 @@
 {
     "name": "RTCRtpReceiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver",
-    "description": "<p></p>"
+    "description": "<p>The <strong><code>RTCRtpReceiver</code></strong> interface of the WebRTC APImanages the reception and decoding of data for a<code>MediaStreamTrack</code> on an<code>RTCPeerConnection</code>.</p>",
+    "properties": [
+        "track",
+        "rtcpTransport",
+        "transport"
+    ],
+    "methods": [
+        "getContributingSources",
+        "getParameters",
+        "getStats",
+        "getSynchronizationSources",
+        "getCapabilities"
+    ]
 }

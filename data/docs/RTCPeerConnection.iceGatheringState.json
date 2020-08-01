@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.iceGatheringState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The read-only property <code><strong>RTCPeerConnection.iceGatheringState</strong></code> returns an enum of type <code>RTCIceGatheringState</code> that describes connection's ICE gathering state. This lets you detect, for example, when collection of ICE candidates has finished.</p>\n<p>You can detect when the value of this property changes by watching for an event of type <code>icegatheringstatechange</code>.</p>"
+}

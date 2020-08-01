@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpReceiver.getSynchronizationSources",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources",
+    "description": "<p>The <strong><code>getSynchronizationSources()</code></strong> method of the <code>RTCRtpReceiver</code> interface returns an array of <code>RTCRtpContributingSource</code> instances, each corresponding to one SSRC (synchronization source) identifier received by the current <code>RTCRtpReceiver</code> in the last ten seconds.</p>"
+}

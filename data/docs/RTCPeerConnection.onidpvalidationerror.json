@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.onidpvalidationerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onidpvalidationerror",
+    "description": "<p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n<p>The <code><strong>RTCPeerConnection.onidpvalidationerror</strong></code> event handler is a property containing the code to execute whent the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/idpvalidationerror\" title=\"/en-US/docs/Web/Events/idpvalidationerror\">idpvalidationerror</a></code> event, of type <code>RTCIdentityErrorEvent</code>, is received by this <code>RTCPeerConnection</code>. Such an event is sent when the associated identity provider (IdP) encounters an error while validating an identity assertion.</p>\n<p><em>This event handler is obsolete</em>. You should instead detect IdP validation errors by watching for the <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise\"><code>promise</code></a> returned by <code>RTCPeerConnection.peerIdentity</code> to be rejected.</p>"
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.reliable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/reliable",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<div class=\"blockIndicator obsolete obsoleteHeader\">\n <p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n</div>\n<p>The read-only <code>RTCDataChannel</code> property <code><strong>reliable</strong></code> indicates whether or not the data channel is reliable.</p>\n<div class=\"warning\"> \n <p>This property is obsolete. Use <code>RTCDataChannel.ordered</code> instead in any new code, and update existing code as soon as possible.</p> \n</div>"
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceTransport.gatheringState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringState",
+    "description": "<p>The read-only <strong><code>RTCIceTransport</code></strong> property <strong><code>gatheringState</code></strong> returns a <code>DOMString</code> from the enumerated type <code>RTCIceGathererState</code> that indicates what gathering state the ICE agent is currently in: <code>\"new\"</code>, <code>\"gathering\"</code>, or <code>\"complete\"</code>.</p>"
+}

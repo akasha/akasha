@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.onopen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCDataChannel.onopen</strong></code> property is an <code>EventHandler</code> which specifies a function to be called when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/open\" title=\"/en-US/docs/Web/Events/open\">open</a></code> event is fired; this is a simple <code>Event</code> which is sent when the data channel's underlying data transport—the link over which the <code>RTCDataChannel</code>'s messages flow—is established or re-established.</p>"
+}

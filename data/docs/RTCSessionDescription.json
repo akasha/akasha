@@ -2,5 +2,14 @@
 {
     "name": "RTCSessionDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>RTCSessionDescription</code></strong> interface describes one end of a connection—or potential connection—and how it's configured. Each <code>RTCSessionDescription</code> consists of a description indicating which part of the offer/answer negotiation process it describes and of the <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/SDP\">SDP</a> descriptor of the session.</p>\n<p>The process of negotiating a connection between two peers involves exchanging <code>RTCSessionDescription</code> objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.</p>"
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>RTCSessionDescription</code></strong> interface describes one end of a connection—or potential connection—and how it's configured. Each <code>RTCSessionDescription</code> consists of a description <code>type</code> indicating which part of the offer/answer negotiation process it describes and of the <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/SDP\">SDP</a> descriptor of the session.</p>\n<p>The process of negotiating a connection between two peers involves exchanging <code>RTCSessionDescription</code> objects back and forth, with each description suggesting one combination of connection configuration options that the sender of the description supports. Once the two peers agree upon a configuration for the connection, negotiation is complete.</p>",
+    "constructors": [
+        "RTCSessionDescription"
+    ],
+    "properties": [
+        "type"
+    ],
+    "methods": [
+        "toJSON"
+    ]
 }

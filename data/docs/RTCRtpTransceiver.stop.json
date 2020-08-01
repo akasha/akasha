@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpTransceiver.stop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stop",
+    "description": "<p>The <strong><code>stop()</code></strong> method in the <code>RTCRtpTransceiver</code> interface permanently stops the transceiver by stopping both the associated <code>RTCRtpSender</code> and <code>RTCRtpReceiver</code>.</p>\n<div class=\"blockIndicator note\"> \n <p><strong>Note:</strong> Until recently, the <code>stopped</code> property was provided to return <code>true</code> if the connection is stopped. That property has been deprecated and will be removed at some point. Instead, check the value of <code>currentDirection</code>. If it's <code>stopped</code>, the transceiver has been stopped.</p> \n</div>\n<p>This method does nothing if the transceiver is already stopped.</p>"
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/id",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The read-only <code>RTCDataChannel</code> property <code><strong>id</strong></code> returns an ID number (between 0 and 65,534) which uniquely identifies the <code>RTCDataChannel</code>. This ID is set at the time the data channel is created, either by the user agent (if <code>RTCDataChannel.negotiated</code> is <code>false</code>) or by the site or app script (if <code>negotiated</code> is <code>true</code>).</p>\n<p>Each <code>RTCPeerConnection</code> can therefore have up to a theoretical maximum of 65,534 data channels on it, although the actual maximum may vary from browser to browser.</p>\n<div class=\"note\"> \n <p>In early versions of the WebRTC specification, this property's name was <code>stream</code>. Code that uses that property needs to be updated.</p> \n</div>"
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.negotiated",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/negotiated",
+    "description": "The read-only <code>RTCDataChannel</code> property <code><strong>negotiated</strong></code> indicates whether the <code>RTCDataChannel</code>'s connection was negotiated by the Web app (<code>true</code>) or by the WebRTC layer (<code>false</code>). <strong>The default is <code>false</code>.</strong>\n<p>See Creating a data channel in Using WebRTC data channels for further information about this property.</p>"
+}

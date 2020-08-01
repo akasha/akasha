@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpTransceiver.mid",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/mid",
+    "description": "<p>The read-only <code>RTCRtpTransceiver</code> interface's <code><strong>mid</strong></code> property specifies the negotiated media ID (<code>mid</code>) which the local and remote peers have agreed upon to uniquely identify the stream's pairing of sender and receiver.</p>"
+}

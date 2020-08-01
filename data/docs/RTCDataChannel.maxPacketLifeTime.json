@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.maxPacketLifeTime",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxPacketLifeTime",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The read-only <code>RTCDataChannel</code> property <code><strong>maxPacketLifeTime</strong></code> returns the amount of time, in milliseconds, the browser is allowed to take to attempt to transmit a message, as set when the data channel was created, or <code>null</code>. This limits how long the browser can continue to attempt to transmit and retransmit the message before giving up.</p>"
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnectionIceEvent.candidate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate",
+    "description": "The read-only <strong><code>candidate</code></strong> property of the <code>RTCPeerConnectionIceEvent</code> interface returns the <code>RTCIceCandidate</code> associated with the event."
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDTMFSender.toneBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer",
+    "description": "<p>The <code>RTCDTMFSender</code> interface's toneBuffer property returns a string containing a list of the <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/DTMF\">DTMF</a> tones currently queued for sending to the remote peer over the <code>RTCPeerConnection</code>. To place tones into the buffer, call <code>insertDTMF()</code>.</p>\n<p>Tones are removed from the string as they're played, so only upcoming tones are listed.</p>"
+}

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceCandidate.sdpMLineIndex",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex",
+    "description": "<p>The read-only <code><strong>sdpMLineIndex</strong></code> property on the <code>RTCIceCandidate</code> interface is a zero-based index of the m-line describing the media associated with the candidate.</p>\n<p>This value is specified when creating the <code>RTCIceCandidate</code> by setting the corresponding <code>sdpMLineIndex</code> value in the <code>RTCIceCandidateInit</code> object when creating a new candidate with <code>new RTCIceCandidate()</code>.</p>\n<p>If you instead call <code>RTCIceCandidate()</code> with a string parameter containing the <code>candidate</code> m-line text, the value of <code>sdpMLineIndex</code> is extracted from the m-line.</p>"
+}

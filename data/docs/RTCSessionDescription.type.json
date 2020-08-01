@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCSessionDescription.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The property <strong><code>RTCSessionDescription.type</code></strong> is a read-only value of type <code>RTCSdpType</code> which describes the description's type.</p>"
+}

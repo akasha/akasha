@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceTransport.getLocalCandidates",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates",
+    "description": "<p>The <strong><code>RTCIceTransport</code></strong> method <code><strong>getLocalCandidates()</strong></code> returns an array of <code>RTCIceCandidate</code> objects, one for each of the candidates that have been gathered by the local device during the current <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> agent session.</p>\n<p>The local candidates are placed in this list by the ICE agent prior to being delivered to the local client's code in an <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/icecandidate\" title=\"/en-US/docs/Web/Events/icecandidate\">icecandidate</a></code> event so that the client can forward the candidates to the remote peer.</p>"
+}

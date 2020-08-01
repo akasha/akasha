@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.onmessage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onmessage",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCDataChannel.onmessage</strong></code> property stores an <code>EventHandler</code> which specifies a function to be called when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/message\" title=\"/en-US/docs/Web/Events/message\">message</a></code> event is fired on the channel. This event is represented by the <code>MessageEvent</code> interface. This event is sent to the channel when a message is received from the other peer.</p>"
+}

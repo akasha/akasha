@@ -2,5 +2,11 @@
 {
     "name": "RTCPeerConnectionIceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent",
-    "description": "Only one event is of this type: <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/icecandidate\" title=\"/en-US/docs/Web/Events/icecandidate\">icecandidate</a></code>."
+    "description": "The <strong><code>RTCPeerConnectionIceEvent</code></strong> interface represents events that occurs in relation to <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> candidates with the target, usually an <code>RTCPeerConnection</code>. Only one event is of this type: <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/icecandidate\" title=\"/en-US/docs/Web/Events/icecandidate\">icecandidate</a></code>.",
+    "constructors": [
+        "RTCPeerConnectionIceEvent()"
+    ],
+    "properties": [
+        "candidate"
+    ]
 }

@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.getTransceivers",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers",
+    "description": "The <code>RTCPeerConnection</code> interface's <code><strong>getTransceivers()</strong></code> method returns a list of the <code>RTCRtpTransceiver</code> objects being used to send and receive data on the connection."
+}

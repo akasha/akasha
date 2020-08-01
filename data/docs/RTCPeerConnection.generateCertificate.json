@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.generateCertificate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate",
+    "description": "The <strong><code>generateCertificate()</code></strong> method of the <code>RTCPeerConnection</code> interface creates and stores an X.509 certificate and corresponding private key then returns an <code>RTCCertificate</code>, providing access to it."
+}

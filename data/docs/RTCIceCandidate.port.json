@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceCandidate.port",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/port",
+    "description": "<p>The <strong><code>RTCIceCandidate</code></strong> interface's read-only <strong><code>port</code></strong> property contains the port number on the device at the address given by <code>ip</code> at which the candidate's peer can be reached.</p>\n<p>As is the case with most of <code>RTCIceCandidate</code>'s properties, the value of <code>port</code> is extracted from the <code>candidate</code> a-line string specified when creating the <code>RTCIceCandidate</code>. The a-line string is obtained either from the <code>RTCIceCandidateInit</code> property <code>candidate</code> or from a-line string passed into the constructor upon using <code>new RTCIceCandidate()</code>.</p>"
+}

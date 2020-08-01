@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.addTrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTrack",
+    "description": "<p>The <code>RTCPeerConnection</code> method <strong><code>addTrack()</code></strong> adds a new media track to the set of tracks which will be transmitted to the other peer.</p>\n<div class=\"note\"> \n <p><strong>Note:</strong> Adding a track to a connection triggers renegotiation by firing a <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/negotiationneeded\" title=\"/en-US/docs/Web/Events/negotiationneeded\">negotiationneeded</a></code> event. See Starting negotiation in Signaling and video calling for details.</p> \n</div>"
+}

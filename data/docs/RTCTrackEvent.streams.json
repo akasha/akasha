@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCTrackEvent.streams",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/streams",
+    "description": "<p>The WebRTC API interface <code>RTCTrackEvent</code>'s read-only <strong><code>streams</code></strong> property specifies an array of <code>MediaStream</code> objects, one for each of the streams that comprise the track being added to the <code>RTCPeerConnection</code>.</p>"
+}

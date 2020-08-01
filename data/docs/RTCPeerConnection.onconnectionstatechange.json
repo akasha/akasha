@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.onconnectionstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onconnectionstatechange",
+    "description": "The aggregate state is a combination of the states of all of the individual network transports being used by the connection."
+}

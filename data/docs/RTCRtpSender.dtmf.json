@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpSender.dtmf",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/dtmf",
+    "description": "<p>The read-only <strong><code>dtmf</code></strong> property on the <strong><code>RTCRtpSender</code></strong> interface returns a <code>RTCDTMFSender</code> object which can be used to send <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/DTMF\">DTMF</a> tones over the <code>RTCPeerConnection</code> . See Using DTMF for details on how to make use of th<code>e</code> returned <code>RTCDTMFSender</code> object.</p>"
+}

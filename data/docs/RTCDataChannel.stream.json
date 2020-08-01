@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.stream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/stream",
+    "description": "<p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<p><code>RTCDataChannel</code><code><strong>stream</strong></code><code>RTCDataChannel</code> This ID is set at the time the data channel is created, either by the user agent (if <code>RTCDataChannel.negotiated</code> is <code>false</code>) or by the site or app script (if <code>negotiated</code> is <code>true</code>).</p>\n<div class=\"warning\"> \n <p>This property has been replaced with the <code>RTCDataChannel.id</code> property. If you have code that uses <code>stream</code>, you will need to update, since browsers have begun to remove support for <code>stream</code>.</p> \n</div>"
+}

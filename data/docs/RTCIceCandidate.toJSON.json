@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceCandidate.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/toJSON",
+    "description": "<p>The <code>RTCIceCandidate</code> method <code><strong>toJSON()</strong></code> converts the <code>RTCIceCandidate</code> on which it's called into JSON in the form of an <code>RTCIceCandidateInit</code> object.</p>"
+}

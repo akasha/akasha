@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDataChannel.label",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/label",
+    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The read-only <code>RTCDataChannel</code> property <code><strong>label</strong></code> returns a <code>DOMString</code> containing a name describing the data channel. These labels are not required to be unique.</p>\n<p>You may use the label as you wish; you could use it to identify all the channels that are being used for the same purpose, by giving them all the same name. Or you could give each channel a unique label for tracking purposes. It's entirely up to the design decisions made when building your site or app.</p>\n<p>A unique ID can be found in the <code>id</code> property.</p>\n<div class=\"note\"> \n <p>A data channel's label is set when the channel is created by calling <code>RTCPeerConnection.createDataChannel()</code>. It cannot be changed after that.</p> \n</div>"
+}

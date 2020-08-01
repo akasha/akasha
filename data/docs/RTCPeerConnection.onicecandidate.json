@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.onicecandidate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate",
+    "description": "This lets the ICE agent perform negotiation with the remote peer without the browser itself needing to know any specifics about the technology being used for signaling; simply implement this method to use whatever messaging technology you choose to send the ICE candidate to the remote peer."
+}

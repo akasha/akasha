@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpTransceiver.sender",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender",
+    "description": "<div></div>\n<p>The read-only <strong><code>sender</code></strong> property of WebRTC's <code>RTCRtpTransceiver</code> interface indicates the <code>RTCRtpSender</code> responsible for encoding and sending outgoing media data for the transceiver's stream.</p>"
+}

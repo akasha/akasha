@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpTransceiver.receiver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/receiver",
+    "description": "<p>The read-only <code><strong>receiver</strong></code> property of WebRTC's <code>RTCRtpTransceiver</code> interface indicates the <code>RTCRtpReceiver</code> responsible for receiving and decoding incoming media data for the transceiver's stream.</p>"
+}

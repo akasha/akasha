@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceCandidate.usernameFragment",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/usernameFragment",
+    "description": "<p>The read-only <strong><code>usernameFragment</code></strong> property on the <code>RTCIceCandidate</code> interface is a string indicating the username fragment (\"ufrag\") that uniquely identifies a single ICE interaction session.</p>\n<p>This value is specified when creating the <code>RTCIceCandidate</code> by setting the corresponding <code>usernameFragment</code> value in the <code>RTCIceCandidateInit</code> object when creating a new candidate with <code>new RTCIceCandidate()</code>. Note that 24 bits of the username fragment are required to be randomized by the browser. See <a href=\"#Randomization\">Randomization</a> below for details.</p>\n<p>If you instead call <code>RTCIceCandidate()</code> with a string parameter containing the <code>candidate</code> m-line text, the value of <code>usernameFragment</code> is extracted from the m-line.</p>"
+}

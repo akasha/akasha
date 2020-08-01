@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnection.pendingLocalDescription",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingLocalDescription",
+    "description": "The read-only property <code><strong>RTCPeerConnection.pendingLocalDescription</strong></code> returns an <code>RTCSessionDescription</code> object describing a pending configuration change for the local end of the connection. This does not describe the connection as it currently stands, but as it may exist in the near future. Use <code>RTCPeerConnection.currentLocalDescription</code> or <code>RTCPeerConnection.localDescription</code> to get the current state of the endpoint. For details on the difference, see Pending and current descriptions in WebRTC connectivity."
+}
