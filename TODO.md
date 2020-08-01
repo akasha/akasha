@@ -104,6 +104,12 @@ complete as there is too much un-said.
 
 * Consider adding a non-standard "event" member to interfaces to webidl language to represent events.
 
+* Change doc scanner to only change lastUpdated if the content changes.
+
+* Change doc scanner to normalize descriptions.
+
+* Change doc scanner to jsonb to emit description.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
