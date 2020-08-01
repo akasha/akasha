@@ -33,6 +33,12 @@ public final class DocRepositoryConfig
   }
 
   @Nonnull
+  public static DocRepositoryConfig create( @Nonnull final Path path )
+  {
+    return new DocRepositoryConfig( path, new ArrayList<>() );
+  }
+
+  @Nonnull
   public static DocRepositoryConfig load( @Nonnull final Path path )
     throws Exception
   {
