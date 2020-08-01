@@ -201,7 +201,7 @@ public final class MdnDocScanner
 
       final List<String> constructors =
         document
-          .select( "#Constructors + p + dl dt a code, #Constructors + dl dt a code" )
+          .select( "#Constructors + p + dl > dt > code, #Constructors + dl > dt > code" )
           .stream()
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
@@ -213,7 +213,7 @@ public final class MdnDocScanner
       }
       final List<String> properties =
         document
-          .select( "#Properties + p + dl dt a code, #Properties + dl dt a code" )
+          .select( "#Properties + p + dl > dt > code, #Properties + dl > dt > code" )
           .stream()
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
