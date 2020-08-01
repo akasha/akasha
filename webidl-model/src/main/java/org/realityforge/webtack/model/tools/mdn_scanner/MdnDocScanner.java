@@ -204,6 +204,8 @@ public final class MdnDocScanner
           .select( "#Constructors + p + dl dt a code, #Constructors + dl dt a code" )
           .stream()
           .map( Element::text )
+          // Strip out the type name that sometimes appears in the documentation
+          .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
           .collect( Collectors.toList() );
       if ( !constructors.isEmpty() )
       {
@@ -214,6 +216,8 @@ public final class MdnDocScanner
           .select( "#Properties + p + dl dt a code, #Properties + dl dt a code" )
           .stream()
           .map( Element::text )
+          // Strip out the type name that sometimes appears in the documentation
+          .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
           .collect( Collectors.toList() );
       if ( !properties.isEmpty() )
       {
@@ -224,6 +228,8 @@ public final class MdnDocScanner
           .select( "#Methods + p + dl dt a code, #Methods + dl dt a code" )
           .stream()
           .map( Element::text )
+          // Strip out the type name that sometimes appears in the documentation
+          .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
           .collect( Collectors.toList() );
       if ( !methods.isEmpty() )
       {
