@@ -2,5 +2,6 @@
 {
     "name": "RTCTrackEvent.track",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/track",
-    "description": "<p>The WebRTC API interface <code>RTCTrackEvent</code>'s read-only <strong><code>track</code></strong> property specifies the <code>MediaStreamTrack</code> that has been added to the <code>RTCPeerConnection</code>.</p>"
+    "description": "The WebRTC API interface RTCTrackEvent's read-only track property specifies the MediaStreamTrack that has been added to the RTCPeerConnection.",
+    "content": "<p>The WebRTC API interface <code>RTCTrackEvent</code>'s read-only <strong><code>track</code></strong> property specifies the <code>MediaStreamTrack</code> that has been added to the <code>RTCPeerConnection</code>.</p>"
 }

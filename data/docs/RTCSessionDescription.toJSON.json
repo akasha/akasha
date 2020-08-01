@@ -2,5 +2,6 @@
 {
     "name": "RTCSessionDescription.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/toJSON",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCSessionDescription.toJSON()</strong></code> method generates a <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/JSON\">JSON</a> description of the object. Both properties, <code>type</code> and <code>sdp</code>, are contained in the generated JSON.</p>"
+    "description": "The RTCSessionDescription.toJSON() method generates a JSON description of the object. Both properties, type and sdp, are contained in the generated JSON.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCSessionDescription.toJSON()</strong></code> method generates a <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/JSON\">JSON</a> description of the object. Both properties, <code>type</code> and <code>sdp</code>, are contained in the generated JSON.</p>"
 }

@@ -2,5 +2,6 @@
 {
     "name": "RTCIceCandidate.component",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/component",
-    "description": "<p>The read-only <strong><code>component</code></strong> property on the <code>RTCIceCandidate</code> interface is a string which indicates whether the candidate is an RTP or an RTCP candidate.</p>\n<p>If a candidate represents both RTP and RTCP multiplexed together, it is reported as an RTP candidate.</p>"
+    "description": "The read-only component property on the RTCIceCandidate interface is a string which indicates whether the candidate is an RTP or an RTCP candidate.",
+    "content": "<p>The read-only <strong><code>component</code></strong> property on the <code>RTCIceCandidate</code> interface is a string which indicates whether the candidate is an RTP or an RTCP candidate.</p>\n<p>If a candidate represents both RTP and RTCP multiplexed together, it is reported as an RTP candidate.</p>"
 }

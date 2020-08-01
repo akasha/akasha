@@ -2,7 +2,8 @@
 {
     "name": "RTCIceCandidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate",
-    "description": "<p>The <strong><code>RTCIceCandidate</code></strong> interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a>) configuration which may be used to establish an <code>RTCPeerConnection</code>.</p>\n<p>An ICE candidate describes the protocols and routing needed for WebRTC to be able to communicate with a remote device. When starting a WebRTC peer connection, typically a number of candidates are proposed by each end of the connection, until they mutually agree upon one which describes the connection they decide will be best. WebRTC then uses that candidate's details to initiate the connection.</p>\n<p>For details on how the ICE process works, see Lifetime of a WebRTC session. The article WebRTC connectivity provides additional useful details.</p>",
+    "description": "The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection.",
+    "content": "<p>The <strong><code>RTCIceCandidate</code></strong> interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (<a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a>) configuration which may be used to establish an <code>RTCPeerConnection</code>.</p>\n<p>An ICE candidate describes the protocols and routing needed for WebRTC to be able to communicate with a remote device. When starting a WebRTC peer connection, typically a number of candidates are proposed by each end of the connection, until they mutually agree upon one which describes the connection they decide will be best. WebRTC then uses that candidate's details to initiate the connection.</p>\n<p>For details on how the ICE process works, see Lifetime of a WebRTC session. The article WebRTC connectivity provides additional useful details.</p>",
     "properties": [
         "candidate",
         "component",
@@ -13,8 +14,8 @@
         "protocol",
         "relatedAddress",
         "relatedPort",
-        "sdpMid",
         "sdpMLineIndex",
+        "sdpMid",
         "tcpType",
         "type",
         "usernameFragment"

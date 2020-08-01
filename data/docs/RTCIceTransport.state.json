@@ -2,5 +2,6 @@
 {
     "name": "RTCIceTransport.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/state",
-    "description": "<p>The read-only <strong><code>RTCIceTransport</code></strong> property <strong><code>state</code></strong> returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.</p>\n<p>This differs from the <code>gatheringState</code>, which only indicates whether or not ICE gathering is currently underway.</p>"
+    "description": "The read-only RTCIceTransport property state returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.",
+    "content": "<p>The read-only <strong><code>RTCIceTransport</code></strong> property <strong><code>state</code></strong> returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.</p>\n<p>This differs from the <code>gatheringState</code>, which only indicates whether or not ICE gathering is currently underway.</p>"
 }

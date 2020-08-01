@@ -2,5 +2,6 @@
 {
     "name": "RTCDTMFToneChangeEvent.tone",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/tone",
-    "description": "<p>The read-only property <strong><code>RTCDTMFToneChangeEvent.tone</code></strong> returns the DTMF character which has just begun to play, or an empty string (<code>\"\"</code>). if all queued tones have finished playing (that is, <code>RTCDTMFSender.toneBuffer</code> is empty).</p>"
+    "description": "The read-only property RTCDTMFToneChangeEvent.tone returns the DTMF character which has just begun to play, or an empty string (\"\"). if all queued tones have finished playing (that is, RTCDTMFSender.toneBuffer is empty).",
+    "content": "<p>The read-only property <strong><code>RTCDTMFToneChangeEvent.tone</code></strong> returns the DTMF character which has just begun to play, or an empty string (<code>\"\"</code>). if all queued tones have finished playing (that is, <code>RTCDTMFSender.toneBuffer</code> is empty).</p>"
 }

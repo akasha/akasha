@@ -2,5 +2,6 @@
 {
     "name": "RTCIceCandidate.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/type",
-    "description": "<p>The <strong><code>RTCIceCandidate</code></strong> interface's read-only <strong><code>type</code></strong> specifies the type of candidate the object represents.</p>\n<p>The <code>type</code> field's value is set when the <code>RTCIceCandidate()</code> constructor is used. You can't specify the value of <code>type</code> in the options object, but the address is automatically extracted from the <code>candidate</code> a-line, if it's formatted properly, being taken from its <code>cand-type</code> field.</p>"
+    "description": "The RTCIceCandidate interface's read-only type specifies the type of candidate the object represents.",
+    "content": "<p>The <strong><code>RTCIceCandidate</code></strong> interface's read-only <strong><code>type</code></strong> specifies the type of candidate the object represents.</p>\n<p>The <code>type</code> field's value is set when the <code>RTCIceCandidate()</code> constructor is used. You can't specify the value of <code>type</code> in the options object, but the address is automatically extracted from the <code>candidate</code> a-line, if it's formatted properly, being taken from its <code>cand-type</code> field.</p>"
 }

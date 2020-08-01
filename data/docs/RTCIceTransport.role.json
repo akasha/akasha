@@ -2,5 +2,6 @@
 {
     "name": "RTCIceTransport.role",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/role",
-    "description": "<p>The read-only <strong><code>RTCIceTransport</code></strong> property <code><strong>role</strong></code> indicates which <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.</p>\n<p>You can learn more about ICE roles in Choosing a candidate pair in WebRTC connectivity.</p>"
+    "description": "The read-only RTCIceTransport property role indicates which ICE role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.",
+    "content": "<p>The read-only <strong><code>RTCIceTransport</code></strong> property <code><strong>role</strong></code> indicates which <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.</p>\n<p>You can learn more about ICE roles in Choosing a candidate pair in WebRTC connectivity.</p>"
 }

@@ -2,7 +2,8 @@
 {
     "name": "RTCIceTransport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport",
-    "description": "<p>The <code><strong>RTCIceTransport</strong></code> interface provides access to information about the <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> transport layer over which the data is being sent and received. This is particularly useful if you need to access state information about the connection.</p>",
+    "description": "The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.",
+    "content": "<p>The <code><strong>RTCIceTransport</strong></code> interface provides access to information about the <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> transport layer over which the data is being sent and received. This is particularly useful if you need to access state information about the connection.</p>",
     "properties": [
         "component",
         "gatheringState",

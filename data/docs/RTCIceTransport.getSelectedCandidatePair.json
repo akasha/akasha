@@ -2,5 +2,6 @@
 {
     "name": "RTCIceTransport.getSelectedCandidatePair",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair",
-    "description": "<p>The <code>RTCIceTransport</code> method <code><strong>getSelectedCandidatePair()</strong></code> returns an <code>RTCIceCandidatePair</code> object containing the current best-choice pair of <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> candidates describing the configuration of the endpoints of the transport.</p>"
+    "description": "The RTCIceTransport method getSelectedCandidatePair() returns an RTCIceCandidatePair object containing the current best-choice pair of ICE candidates describing the configuration of the endpoints of the transport.",
+    "content": "<p>The <code>RTCIceTransport</code> method <code><strong>getSelectedCandidatePair()</strong></code> returns an <code>RTCIceCandidatePair</code> object containing the current best-choice pair of <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/ICE\">ICE</a> candidates describing the configuration of the endpoints of the transport.</p>"
 }

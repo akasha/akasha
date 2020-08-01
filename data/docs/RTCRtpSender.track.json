@@ -2,5 +2,6 @@
 {
     "name": "RTCRtpSender.track",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/track",
-    "description": "The <strong><code>track</code></strong> read-only property of the <code>RTCRtpSender</code> interface returns the <code>MediaStreamTrack</code> which is being handled by the <code>RTCRtpSender</code>."
+    "description": "The track read-only property of the RTCRtpSender interface returns the MediaStreamTrack which is being handled by the RTCRtpSender.",
+    "content": "The <strong><code>track</code></strong> read-only property of the <code>RTCRtpSender</code> interface returns the <code>MediaStreamTrack</code> which is being handled by the <code>RTCRtpSender</code>."
 }

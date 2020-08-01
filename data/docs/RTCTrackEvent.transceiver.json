@@ -2,5 +2,6 @@
 {
     "name": "RTCTrackEvent.transceiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver",
-    "description": "<p>The WebRTC API interface <code>RTCTrackEvent</code>'s read-only <code><strong>transceiver</strong></code> property indicates the <code>RTCRtpTransceiver</code> affiliated with the event's <code>track</code>. The transceiver pairs the track's <code>receiver</code> with an <code>RTCRtpSender</code>.</p>"
+    "description": "The WebRTC API interface RTCTrackEvent's read-only transceiver property indicates the RTCRtpTransceiver affiliated with the event's track.",
+    "content": "<p>The WebRTC API interface <code>RTCTrackEvent</code>'s read-only <code><strong>transceiver</strong></code> property indicates the <code>RTCRtpTransceiver</code> affiliated with the event's <code>track</code>. The transceiver pairs the track's <code>receiver</code> with an <code>RTCRtpSender</code>.</p>"
 }

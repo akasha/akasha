@@ -2,5 +2,6 @@
 {
     "name": "RTCIceCandidate.foundation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/foundation",
-    "description": "<p>The <strong><code>RTCIceCandidate</code></strong> interface's read-only <strong><code>foundation</code></strong> property is a string which uniquely identifies the candidate across multiple transports. As such, the <code>foundation</code> can be used to correlate candidates that are present on multiple <code>RTCIceTransport</code> objects</p>"
+    "description": "The RTCIceCandidate interface's read-only foundation property is a string which uniquely identifies the candidate across multiple transports.",
+    "content": "<p>The <strong><code>RTCIceCandidate</code></strong> interface's read-only <strong><code>foundation</code></strong> property is a string which uniquely identifies the candidate across multiple transports. As such, the <code>foundation</code> can be used to correlate candidates that are present on multiple <code>RTCIceTransport</code> objects</p>"
 }

@@ -2,5 +2,6 @@
 {
     "name": "RTCIceCandidate.candidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/candidate",
-    "description": "<p>The read-only property <code><strong>candidate</strong></code> on the <code>RTCIceCandidate</code> interface returns a <code>DOMString</code> describing the candidate in detail. Most of the other properties of <code>RTCIceCandidate</code> are actually extracted from this string.</p>\n<p>This property can be configured by specifying the value of the <code>candidate</code> property when constructing the new candidate object using <code>RTCIceCandidate()</code>.</p>"
+    "description": "The read-only property candidate on the RTCIceCandidate interface returns a DOMString describing the candidate in detail.",
+    "content": "<p>The read-only property <code><strong>candidate</strong></code> on the <code>RTCIceCandidate</code> interface returns a <code>DOMString</code> describing the candidate in detail. Most of the other properties of <code>RTCIceCandidate</code> are actually extracted from this string.</p>\n<p>This property can be configured by specifying the value of the <code>candidate</code> property when constructing the new candidate object using <code>RTCIceCandidate()</code>.</p>"
 }

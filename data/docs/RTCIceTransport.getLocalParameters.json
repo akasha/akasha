@@ -2,5 +2,6 @@
 {
     "name": "RTCIceTransport.getLocalParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters",
-    "description": "<p>The <strong><code>RTCIceTransport</code></strong> method <code><strong>getLocalParameters()</strong></code> returns an <code>RTCIceParameters</code> object which provides information uniquely identifying the local peer for the duration of the ICE session.</p>\n<p>The local peer's parameters are obtained during ICE signaling and delivered to the transport when the client calls <code>RTCPeerConnection.setLocalDescription()</code>.</p>"
+    "description": "The RTCIceTransport method getLocalParameters() returns an RTCIceParameters object which provides information uniquely identifying the local peer for the duration of the ICE session.",
+    "content": "<p>The <strong><code>RTCIceTransport</code></strong> method <code><strong>getLocalParameters()</strong></code> returns an <code>RTCIceParameters</code> object which provides information uniquely identifying the local peer for the duration of the ICE session.</p>\n<p>The local peer's parameters are obtained during ICE signaling and delivered to the transport when the client calls <code>RTCPeerConnection.setLocalDescription()</code>.</p>"
 }

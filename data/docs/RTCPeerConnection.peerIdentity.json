@@ -2,5 +2,6 @@
 {
     "name": "RTCPeerConnection.peerIdentity",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity",
-    "description": "The read-only <code>RTCPeerConnection</code> property <code><strong>peerIdentity</strong></code> returns a JavaScript <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> that resolves to an <code>RTCIdentityAssertion</code> which contains a <code>DOMString</code> identifying the remote peer. Once this promise resolves successfully, the resulting identity is the <strong>target peer identity</strong> and cannot change for the duration of the connection."
+    "description": "The read-only RTCPeerConnection property peerIdentity returns a JavaScript Promise that resolves to an RTCIdentityAssertion which contains a DOMString identifying the remote peer.",
+    "content": "The read-only <code>RTCPeerConnection</code> property <code><strong>peerIdentity</strong></code> returns a JavaScript <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> that resolves to an <code>RTCIdentityAssertion</code> which contains a <code>DOMString</code> identifying the remote peer. Once this promise resolves successfully, the resulting identity is the <strong>target peer identity</strong> and cannot change for the duration of the connection."
 }

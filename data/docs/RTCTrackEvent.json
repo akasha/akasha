@@ -2,7 +2,8 @@
 {
     "name": "RTCTrackEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent",
-    "description": "<p>The WebRTC API interface <code><strong>RTCTrackEvent</strong></code> represents the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/track\" title=\"/en-US/docs/Web/Events/track\">track</a></code> event, which is sent when a new <code>MediaStreamTrack</code> is added to an <code>RTCRtpReceiver</code> which is part of the <code>RTCPeerConnection</code>. The target is the <code>RTCPeerConnection</code> object to which the track is being added.</p>\n<p>This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an <code>RTCTrackEvent</code> yourself.</p>",
+    "description": "The WebRTC API interface RTCTrackEvent represents the track event, which is sent when a new MediaStreamTrack is added to an RTCRtpReceiver which is part of the RTCPeerConnection.",
+    "content": "<p>The WebRTC API interface <code><strong>RTCTrackEvent</strong></code> represents the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/track\" title=\"/en-US/docs/Web/Events/track\">track</a></code> event, which is sent when a new <code>MediaStreamTrack</code> is added to an <code>RTCRtpReceiver</code> which is part of the <code>RTCPeerConnection</code>. The target is the <code>RTCPeerConnection</code> object to which the track is being added.</p>\n<p>This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an <code>RTCTrackEvent</code> yourself.</p>",
     "properties": [
         "receiver",
         "streams",
