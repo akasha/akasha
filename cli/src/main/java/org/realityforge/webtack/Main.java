@@ -113,7 +113,7 @@ public final class Main
   @Nonnull
   static RepositoryConfig loadConfigFile( @Nonnull final Environment environment )
   {
-    final Path configFile = environment.getConfigFile();
+    final Path configFile = environment.getRepositoryConfigFile();
     try
     {
       return RepositoryConfig.load( configFile );
@@ -232,17 +232,18 @@ public final class Main
       return false;
     }
 
-    if ( environment.hasConfigFile() && environment.getCommand().requireConfigFile() )
+    if ( environment.hasRepositoryConfigFile() && environment.getCommand().requireConfigFile() )
     {
-      if ( !environment.getConfigFile().toFile().exists() )
+      if ( !environment.getRepositoryConfigFile().toFile().exists() )
       {
         logger.log( Level.SEVERE,
-                    "Error: Specified config file does not exist. Specified value: " + environment.getConfigFile() );
+                    "Error: Specified config file does not exist. Specified value: " +
+                    environment.getRepositoryConfigFile() );
         return false;
       }
     }
 
-    if ( !environment.hasConfigFile() )
+    if ( !environment.hasRepositoryConfigFile() )
     {
       final Path configFile =
         environment.currentDirectory().resolve( RepositoryConfig.FILENAME ).toAbsolutePath().normalize();
@@ -252,7 +253,7 @@ public final class Main
                     "Error: Default config file does not exist: " + RepositoryConfig.FILENAME );
         return false;
       }
-      environment.setConfigFile( configFile );
+      environment.setRepositoryConfigFile( configFile );
     }
     return true;
   }

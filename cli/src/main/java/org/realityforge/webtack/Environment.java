@@ -16,7 +16,7 @@ final class Environment
   @Nonnull
   private final Logger _logger;
   @Nullable
-  private Path _configFile;
+  private Path _repositoryConfigFile;
   @Nullable
   private Command _command;
 
@@ -43,9 +43,9 @@ final class Environment
     return _logger;
   }
 
-  boolean hasConfigFile()
+  boolean hasRepositoryConfigFile()
   {
-    return null != _configFile;
+    return null != _repositoryConfigFile;
   }
 
   @Nonnull
@@ -61,15 +61,15 @@ final class Environment
   }
 
   @Nonnull
-  Path getConfigFile()
+  Path getRepositoryConfigFile()
   {
-    assert null != _configFile;
-    return _configFile;
+    assert null != _repositoryConfigFile;
+    return _repositoryConfigFile;
   }
 
-  void setConfigFile( @Nullable final Path configFile )
+  void setRepositoryConfigFile( @Nullable final Path repositoryConfigFile )
   {
-    _configFile = configFile;
+    _repositoryConfigFile = repositoryConfigFile;
   }
 
   boolean hasCommand()
