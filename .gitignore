@@ -1,6 +1,7 @@
 *.iml
 /*.ipr
 /*.iws
+/*.sh
 /Gemfile.lock
 /_buildr.rb
 /data/idl/*.html
