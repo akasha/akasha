@@ -238,8 +238,8 @@ public final class MdnDocScanner
           .select( "#Constructors + p + dl > dt > code, #Constructors + dl > dt > code" )
           .stream()
           .map( Element::text )
-          // Strip out the type name that sometimes appears in the documentation
-          .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+          // Strip the brackets at end of constructors
+          .map( text -> text.replaceAll( "\\(.*", "" ) )
           .sorted()
           .collect( Collectors.toList() );
       if ( !constructors.isEmpty() )
@@ -275,7 +275,10 @@ public final class MdnDocScanner
       {
         // Sometimes constructors are documented as methods so instead register them as constructors
         final List<String> newConstructors =
-          methods.stream().filter( m -> m.equals( source.getName() ) ).collect( Collectors.toList() );
+          methods.stream()
+            .filter( m -> m.equals( source.getName() ) )
+            .map( m -> m + "." + m )
+            .collect( Collectors.toList() );
         if ( !newConstructors.isEmpty() )
         {
           newConstructors.addAll( constructors );

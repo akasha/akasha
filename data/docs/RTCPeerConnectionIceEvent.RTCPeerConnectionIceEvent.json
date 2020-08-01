@@ -1,0 +1,7 @@
+
+{
+    "name": "RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent",
+    "description": "The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCPeerConnectionIceEvent()</strong></code> constructor creates a new <code>RTCPeerConnectionIceEvent</code>.</p>"
+}
