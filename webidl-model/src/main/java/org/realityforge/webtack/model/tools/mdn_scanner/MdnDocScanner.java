@@ -148,14 +148,12 @@ public final class MdnDocScanner
       {
         // TODO: In the future we can try to process href and add local {@link } in.
         //  For now we are just replacing the link with text.
-        anchor.prependText( anchor.text() );
-        anchor.remove();
+        replaceElementWithChildren( anchor );
       }
       // Remove span element and just nest content.
       for ( final Element span : document.select( "span[class=\"seoSummary\"]" ) )
       {
-        span.prependText( span.html() );
-        span.remove();
+        replaceElementWithChildren( span );
       }
       // Make all anchors absolute so anything we include will correctly crosslink
       for ( final Element anchor : document.select( "a[href^=\"/\"]" ) )
@@ -238,6 +236,15 @@ public final class MdnDocScanner
     {
       throw new SourceIOException( source, "Failed to read local file for source", ioe );
     }
+  }
+
+  private void replaceElementWithChildren( final Element span )
+  {
+    for ( final Node child : new ArrayList<>( span.childNodes() ) )
+    {
+      span.before( child );
+    }
+    span.remove();
   }
 
   @Nonnull
