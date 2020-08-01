@@ -63,8 +63,8 @@ public final class DocRepositoryConfig
     throws Exception
   {
     final Path path = config.getConfigLocation();
-    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
     Files.createDirectories( path.getParent() );
+    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
     final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
     try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
     {
