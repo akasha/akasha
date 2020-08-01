@@ -294,7 +294,7 @@ public final class MdnDocScanner
       }
 
       final Path tmpOutput = asTmpTarget( output, "" );
-      writeJson( tmpOutput, entry );
+      DocEntry.save( entry, tmpOutput );
       if ( Files.exists( output ) && doFileContentsMatch( output, tmpOutput ) )
       {
         Files.delete( tmpOutput );
@@ -347,20 +347,6 @@ public final class MdnDocScanner
   private String cleanDescription( @Nonnull final String text )
   {
     return text.replaceAll( " +", " " ).replace( "&nbsp;", "" ).trim();
-  }
-
-  private void writeJson( @Nonnull final Path output, @Nonnull final DocEntry docEntry )
-    throws Exception
-  {
-    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
-    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
-    try ( final FileOutputStream outputStream = new FileOutputStream( output.toFile() ) )
-    {
-      jsonb.toJson( docEntry, outputStream );
-    }
-    jsonb.close();
-    // Add newline as json output omits trailing new line
-    Files.write( output, new byte[]{ '\n' }, StandardOpenOption.APPEND );
   }
 
   @Nonnull
