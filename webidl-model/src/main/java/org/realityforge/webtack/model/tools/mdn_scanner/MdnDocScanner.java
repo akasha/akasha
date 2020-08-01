@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
@@ -45,14 +46,16 @@ public final class MdnDocScanner
     _dataDirectory = Objects.requireNonNull( dataDirectory );
   }
 
-  public void fetchDocumentation( @Nonnull final DocKind kind,
-                                  @Nonnull final String type,
-                                  @Nullable final String member,
-                                  final boolean force,
-                                  final boolean removeSource )
+  @Nonnull
+  public DocFetchResult fetchDocumentation( @Nonnull final DocKind kind,
+                                            @Nonnull final String type,
+                                            @Nullable final String member,
+                                            final boolean force,
+                                            final boolean removeSource )
     throws DocException
   {
     final DocSourceConfig source = findOrCreateDocSourceConfig( kind, type, member );
+    final boolean isNew = 0 == source.getLastModifiedAt();
     final Path target = _dataDirectory.resolve( source.getName() + ".json" );
     final FetchResult result;
     try
@@ -67,9 +70,9 @@ public final class MdnDocScanner
         source.setLastModifiedAt( 0 );
         saveRepository();
         // Documentation has been removed so remove our local caches
-        removeExistingSourceFiles( source, target );
+        removeExistingTmpFiles( source, target );
         // TODO: If kind == Type then delete all dependent
-        return;
+        return new DocFetchResult( source, null, !isNew );
       }
       else
       {
@@ -78,12 +81,10 @@ public final class MdnDocScanner
     }
     if ( null != result )
     {
-      source.setLastModifiedAt( result.getLastModifiedAt() );
-
       createParentDirectoryIfRequired( source, target );
-      removeExistingSourceFiles( source, target );
+      removeExistingTmpFiles( source, target );
 
-      final Path tmpTarget = asTmpTarget( target );
+      final Path tmpTarget = asTmpTarget( target, ".html" );
 
       // just copy to tmp file for now
       try
@@ -95,9 +96,14 @@ public final class MdnDocScanner
         throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
       }
 
-      final DocEntry entry = extractDocs( source, tmpTarget, target );
+      final ExtractResult extractResult = extractDocs( source, tmpTarget, target );
 
-      saveRepository();
+      if ( extractResult.isChanged() )
+      {
+        source.setLastModifiedAt( result.getLastModifiedAt() );
+        saveRepository();
+      }
+
       if ( removeSource )
       {
         try
@@ -110,6 +116,7 @@ public final class MdnDocScanner
         }
       }
 
+      final DocEntry entry = extractResult.getEntry();
       final List<String> constructors = entry.getConstructors();
       if ( null != constructors )
       {
@@ -134,16 +141,22 @@ public final class MdnDocScanner
           fetchDocumentation( DocKind.Method, type, method, force, removeSource );
         }
       }
+      //TODO: Remove any sources for type if they are not present above
+      return new DocFetchResult( source, entry, extractResult.isChanged() );
+    }
+    else
+    {
+      return new DocFetchResult( source, null, !isNew );
     }
   }
 
-  private void removeExistingSourceFiles( @Nonnull final DocSourceConfig source, @Nonnull final Path target )
+  private void removeExistingTmpFiles( @Nonnull final DocSourceConfig source, @Nonnull final Path target )
     throws SourceIOException
   {
     try
     {
-      Files.deleteIfExists( target );
-      Files.deleteIfExists( asTmpTarget( target ) );
+      Files.deleteIfExists( asTmpTarget( target, ".html" ) );
+      Files.deleteIfExists( asTmpTarget( target, "" ) );
     }
     catch ( final IOException ioe )
     {
@@ -152,9 +165,9 @@ public final class MdnDocScanner
   }
 
   @Nonnull
-  private DocEntry extractDocs( @Nonnull final DocSourceConfig source,
-                                @Nonnull final Path input,
-                                @Nonnull final Path output )
+  private ExtractResult extractDocs( @Nonnull final DocSourceConfig source,
+                                     @Nonnull final Path input,
+                                     @Nonnull final Path output )
     throws SourceIOException
   {
     try
@@ -276,15 +289,45 @@ public final class MdnDocScanner
           entry.setMethods( actualMethods );
         }
       }
-      //TODO: Remove any sources for type if they are not present above
 
-      writeJson( output, entry );
-
-      return entry;
+      final Path tmpOutput = asTmpTarget( output, "" );
+      writeJson( tmpOutput, entry );
+      if ( Files.exists( output ) && doFileContentsMatch( output, tmpOutput ) )
+      {
+        Files.delete( tmpOutput );
+        return new ExtractResult( entry, false );
+      }
+      else
+      {
+        Files.move( tmpOutput, output, StandardCopyOption.REPLACE_EXISTING );
+        return new ExtractResult( entry, true );
+      }
     }
     catch ( final Exception e )
     {
       throw new SourceIOException( source, "Failed to read local file for source", e );
+    }
+  }
+
+  private boolean doFileContentsMatch( @Nonnull final Path path1, @Nonnull final Path path2 )
+    throws IOException
+  {
+    final byte[] path1Bytes = Files.readAllBytes( path1 );
+    final byte[] path2Bytes = Files.readAllBytes( path2 );
+    if ( path1Bytes.length == path2Bytes.length )
+    {
+      for ( int i = 0; i < path1Bytes.length; i++ )
+      {
+        if ( path1Bytes[ i ] != path2Bytes[ i ] )
+        {
+          return false;
+        }
+      }
+      return true;
+    }
+    else
+    {
+      return false;
     }
   }
 
@@ -318,9 +361,9 @@ public final class MdnDocScanner
   }
 
   @Nonnull
-  private Path asTmpTarget( @Nonnull final Path target )
+  private Path asTmpTarget( @Nonnull final Path target, @Nonnull final String suffix )
   {
-    return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp" );
+    return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp" + suffix );
   }
 
   private void createParentDirectoryIfRequired( @Nonnull final DocSourceConfig source, @Nonnull final Path path )

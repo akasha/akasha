@@ -10,6 +10,7 @@ import javax.annotation.Nonnull;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocException;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocFetchResult;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
 import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceFetchException;
@@ -84,7 +85,16 @@ final class FetchDocsCommand
 
       try
       {
-        scanner.fetchDocumentation( DocKind.Type, typeName, null, _force, !_noRemoveSource );
+        final DocFetchResult result =
+          scanner.fetchDocumentation( DocKind.Type, typeName, null, _force, !_noRemoveSource );
+        if ( logger.isLoggable( Level.FINE ) && !result.isChanged() )
+        {
+          logger.log( Level.FINE, "Documentation for element named '" + typeName + "' is unchanged." );
+        }
+        else if ( logger.isLoggable( Level.FINE ) && result.isChanged() )
+        {
+          logger.log( Level.FINE, "Documentation for element named '" + typeName + "' created or updated." );
+        }
       }
       catch ( final SourceFetchException sfe )
       {
