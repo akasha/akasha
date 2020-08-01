@@ -2,12 +2,12 @@ package org.realityforge.webtack;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.antlr.v4.runtime.ConsoleErrorListener;
+import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
 
 final class CountingConsoleErrorListener
-  extends ConsoleErrorListener
+  extends BaseErrorListener
 {
   /**
    * The name of the source file used when reporting errors.
