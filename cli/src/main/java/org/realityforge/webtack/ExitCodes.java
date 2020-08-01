@@ -21,6 +21,10 @@ final class ExitCodes
   static final int ERROR_UNKNOWN_STAGE_CODE = 16;
   static final int ERROR_FAILED_STAGE_PROCESS_CODE = 17;
   static final int ERROR_BAD_PIPELINE_CODE = 18;
+  static final int ERROR_LOADING_DOC_CONFIG_CODE = 19;
+  static final int ERROR_DOC_SOURCE_FETCH_FAILED_CODE = 20;
+  static final int ERROR_DOC_SOURCE_IO_ERROR_CODE = 21;
+  static final int ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE = 22;
 
   private ExitCodes()
   {

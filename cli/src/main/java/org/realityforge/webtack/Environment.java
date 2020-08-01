@@ -18,6 +18,8 @@ final class Environment
   @Nullable
   private Path _repositoryConfigFile;
   @Nullable
+  private Path _docRepositoryConfigFile;
+  @Nullable
   private Command _command;
 
   Environment( @Nonnull final Path currentDirectory, @Nonnull final Logger logger )
@@ -48,10 +50,21 @@ final class Environment
     return null != _repositoryConfigFile;
   }
 
+  boolean hasDocRepositoryConfigFile()
+  {
+    return null != _docRepositoryConfigFile;
+  }
+
   @Nonnull
   Path webidlDirectory()
   {
     return currentDirectory().resolve( "idl" );
+  }
+
+  @Nonnull
+  Path docDirectory()
+  {
+    return currentDirectory().resolve( "docs" );
   }
 
   @Nonnull
@@ -70,6 +83,18 @@ final class Environment
   void setRepositoryConfigFile( @Nullable final Path repositoryConfigFile )
   {
     _repositoryConfigFile = repositoryConfigFile;
+  }
+
+  @Nonnull
+  Path getDocRepositoryConfigFile()
+  {
+    assert null != _docRepositoryConfigFile;
+    return _docRepositoryConfigFile;
+  }
+
+  void setDocRepositoryConfigFile( @Nullable final Path docRepositoryConfigFile )
+  {
+    _docRepositoryConfigFile = docRepositoryConfigFile;
   }
 
   boolean hasCommand()

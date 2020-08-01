@@ -24,12 +24,18 @@ import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
+import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
 import org.realityforge.webtack.model.tools.fetch.FetchException;
 import org.realityforge.webtack.model.tools.fetch.FetchResult;
 import org.realityforge.webtack.model.tools.fetch.FetchUtil;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocException;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
+import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
+import org.realityforge.webtack.model.tools.mdn_scanner.SourceFetchException;
+import org.realityforge.webtack.model.tools.mdn_scanner.SourceIOException;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 
@@ -52,6 +58,7 @@ final class FetchCommand
   private static final int FORCE_OPT = 'f';
   private static final int NO_VERIFY_OPT = 2;
   private static final int NO_REMOVE_SOURCE_OPT = 3;
+  private static final int FETCH_DOCS_OPT = 4;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
       new CLOptionDescriptor( "force",
@@ -65,13 +72,18 @@ final class FetchCommand
       new CLOptionDescriptor( "no-remove-source",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_REMOVE_SOURCE_OPT,
-                              "Do not remove source after fetching and extracting WebIDL." )
+                              "Do not remove source after fetching and extracting WebIDL." ),
+      new CLOptionDescriptor( "fetch-documentation",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              FETCH_DOCS_OPT,
+                              "Fetch documentation from MDN." )
     };
   @Nonnull
   private final Set<String> _sourceNames = new LinkedHashSet<>();
   private boolean _force;
   private boolean _noVerify;
   private boolean _noRemoveSource;
+  private boolean _fetchDocumentation;
 
   FetchCommand()
   {
@@ -95,6 +107,10 @@ final class FetchCommand
       else if ( NO_REMOVE_SOURCE_OPT == optionId )
       {
         _noRemoveSource = true;
+      }
+      else if ( FETCH_DOCS_OPT == optionId )
+      {
+        _fetchDocumentation = true;
       }
       else
       {
@@ -311,6 +327,38 @@ final class FetchCommand
           {
             logger.log( Level.INFO, "Source named '" + sourceName + "' extracted from url " + url +
                                     " exported WebIDL to file " + target );
+          }
+          if ( _fetchDocumentation )
+          {
+            for ( final InterfaceDefinition definition : schema.getInterfaces() )
+            {
+              final MdnDocScanner scanner =
+                new MdnDocScanner( context.docRepository(), context.environment().docDirectory() );
+              try
+              {
+                scanner.fetchDocumentation( DocKind.Type, definition.getName(), null, _force );
+              }
+              catch ( final SourceFetchException sfe )
+              {
+                final String message =
+                  "Error: Failed to fetch documentation for element named '" + sfe.getSource().getName() +
+                  "' with the error: " + sfe.getCause();
+                throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_FETCH_FAILED_CODE );
+              }
+              catch ( final SourceIOException sioe )
+              {
+                final String message =
+                  "Error: " + sioe.getMessage() + ". Element: " + sioe.getSource().getName() +
+                  " Error: " + sioe.getCause();
+                throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_IO_ERROR_CODE );
+              }
+              catch ( final DocException sioe )
+              {
+                final String message =
+                  "Error: Unexpected error fetching documentation. Error: " + sioe.getCause();
+                throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE );
+              }
+            }
           }
         }
         if ( !_noRemoveSource )

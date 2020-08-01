@@ -2,6 +2,7 @@ package org.realityforge.webtack;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import org.realityforge.webtack.model.tools.repository.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 final class CommandContextImpl
@@ -27,5 +28,12 @@ final class CommandContextImpl
   public RepositoryConfig config()
   {
     return Main.loadConfigFile( _environment );
+  }
+
+  @Nonnull
+  @Override
+  public DocRepositoryConfig docRepository()
+  {
+    return Main.loadDocRepositoryConfig( _environment );
   }
 }
