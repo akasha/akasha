@@ -10,7 +10,7 @@ public final class DocSourceConfig
   private String name;
   @Nullable
   private String url;
-  private long lastModifiedTime;
+  private long lastModifiedAt;
 
   public String getName()
   {
@@ -33,13 +33,13 @@ public final class DocSourceConfig
     this.url = url;
   }
 
-  public long getLastModifiedTime()
+  public long getLastModifiedAt()
   {
-    return lastModifiedTime;
+    return lastModifiedAt;
   }
 
-  public void setLastModifiedTime( final long lastModifiedTime )
+  public void setLastModifiedAt( final long lastModifiedAt )
   {
-    this.lastModifiedTime = lastModifiedTime;
+    this.lastModifiedAt = lastModifiedAt;
   }
 }

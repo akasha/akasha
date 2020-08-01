@@ -63,7 +63,7 @@ public final class DocRepositoryConfigTest
     final DocSourceConfig source = sources.get( 0 );
     assertEquals( source.getName(), "XRInputSourcesChangeEvent" );
     assertEquals( source.getUrl(), "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent" );
-    assertEquals( source.getLastModifiedTime(), 1579594580000L );
+    assertEquals( source.getLastModifiedAt(), 1579594580000L );
 
     assertNull( repository.findSourceByName( "notFound" ) );
     assertEquals( repository.findSourceByName( source.getName() ), source );
