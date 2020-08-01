@@ -192,6 +192,8 @@ final class FetchCommand
         }
 
         final List<String> sourceTags = source.getTags();
+        final Set<String> tags =
+          null == sourceTags ? Collections.emptySet() : Collections.unmodifiableSet( new HashSet<>( sourceTags ) );
         extractWebIDL( logger, source, file, tmpTarget );
         try
         {
@@ -220,9 +222,6 @@ final class FetchCommand
         }
         else
         {
-          final Set<String> tags =
-            null == sourceTags ? Collections.emptySet() : Collections.unmodifiableSet( new HashSet<>( sourceTags ) );
-
           final WebIDLSchema schema;
           try ( final FileReader reader = new FileReader( tmpTarget.toFile() ) )
           {
