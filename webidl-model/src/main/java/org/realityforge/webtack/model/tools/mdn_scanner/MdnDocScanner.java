@@ -180,7 +180,7 @@ public final class MdnDocScanner
 
       final DocEntry entry = new DocEntry();
       final Element article = document.selectFirst( "#wikiArticle" );
-      final StringBuilder description = new StringBuilder();
+      final StringBuilder content = new StringBuilder();
       boolean firstNode = true;
       for ( final Node node : article.childNodes() )
       {
@@ -199,23 +199,26 @@ public final class MdnDocScanner
           }
           else
           {
-            if ( 0 == description.length() )
+            if ( 0 == content.length() )
             {
-              description.append( child.html() );
-              description.append( "\n" );
+              content.append( child.html() );
+              content.append( "\n" );
             }
             else
             {
-              description.append( child.outerHtml() );
-              description.append( "\n" );
+              content.append( child.outerHtml() );
+              content.append( "\n" );
             }
           }
         }
       }
 
+      final Element element = document.selectFirst( "meta[name=\"description\"]" );
+      final String description = null != element ? element.attr( "content" ) : "";
       entry.setName( source.getName() );
       entry.setHref( source.getUrl() );
-      entry.setDescription( cleanDescription( description.toString() ) );
+      entry.setDescription( description );
+      entry.setContent( cleanDescription( content.toString() ) );
 
       final List<String> constructors =
         document

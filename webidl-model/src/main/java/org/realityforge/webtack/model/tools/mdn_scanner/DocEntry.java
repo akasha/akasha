@@ -4,12 +4,13 @@ import java.util.List;
 import javax.annotation.Nullable;
 import javax.json.bind.annotation.JsonbPropertyOrder;
 
-@JsonbPropertyOrder( { "name", "href", "description", "constructors", "properties", "methods" } )
+@JsonbPropertyOrder( { "name", "href", "description", "content", "constructors", "properties", "methods" } )
 public class DocEntry
 {
   private String name;
   private String href;
   private String description;
+  private String content;
   @Nullable
   private List<String> constructors;
   @Nullable
@@ -45,6 +46,16 @@ public class DocEntry
   public void setDescription( final String description )
   {
     this.description = description;
+  }
+
+  public String getContent()
+  {
+    return content;
+  }
+
+  public void setContent( final String content )
+  {
+    this.content = content;
   }
 
   @Nullable
