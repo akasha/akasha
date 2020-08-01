@@ -101,6 +101,16 @@ public class DocEntry
     this.methods = methods;
   }
 
+  @Nonnull
+  public static DocEntry load( @Nonnull final Path path )
+    throws Exception
+  {
+    try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
+    {
+      return JsonbBuilder.create().fromJson( inputStream, DocEntry.class );
+    }
+  }
+
   public static void save( @Nonnull final DocEntry entry, @Nonnull final Path path )
     throws Exception
   {
