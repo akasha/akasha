@@ -65,8 +65,7 @@ public final class Main
 
   public static void main( @Nonnull final String[] args )
   {
-    final Environment environment =
-      new Environment( System.console(), Paths.get( "" ).toAbsolutePath(), Logger.getGlobal() );
+    final Environment environment = new Environment( Paths.get( "" ).toAbsolutePath(), Logger.getGlobal() );
     setupLogger( environment );
     System.exit( run( environment, args ) );
   }
