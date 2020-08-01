@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model.tools.mdn_scanner;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
@@ -12,17 +13,17 @@ public abstract class DocException
   {
   }
 
-  public DocException( @Nullable final String message )
+  public DocException( @Nonnull final String message )
   {
     super( message );
   }
 
-  public DocException( @Nullable final String message, @Nullable final Throwable cause )
+  public DocException( @Nonnull final String message, @Nonnull final Throwable cause )
   {
     super( message, cause );
   }
 
-  public DocException( @Nullable final Throwable cause )
+  public DocException( @Nonnull final Throwable cause )
   {
     super( cause );
   }
