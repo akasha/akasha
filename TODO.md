@@ -110,6 +110,8 @@ complete as there is too much un-said.
 
 * Some doc entries include documentation for constants .. scan for that?.
 
+* Put all docs for a type in a directory and delete the entire directory when type is deleted.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
