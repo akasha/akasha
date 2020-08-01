@@ -108,8 +108,6 @@ complete as there is too much un-said.
 
 * Change doc scanner to normalize descriptions.
 
-* Change doc scanner to jsonb to emit description.
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 ### Validations

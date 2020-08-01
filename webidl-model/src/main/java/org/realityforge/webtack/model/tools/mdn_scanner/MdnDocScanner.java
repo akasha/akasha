@@ -7,18 +7,15 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonWriter;
-import javax.json.stream.JsonGenerator;
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
+import javax.json.bind.JsonbConfig;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -98,7 +95,7 @@ public final class MdnDocScanner
         throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
       }
 
-      extractDocs( source, tmpTarget, target );
+      final DocEntry entry = extractDocs( source, tmpTarget, target );
 
       saveRepository();
       if ( removeSource )
@@ -113,9 +110,29 @@ public final class MdnDocScanner
         }
       }
 
-      if( DocKind.Type == kind )
+      final List<String> constructors = entry.getConstructors();
+      if ( null != constructors )
       {
-        // TODO: If kind == Type then delete all dependent that are not part of doc and trigger fetch for all others
+        for ( final String constructor : constructors )
+        {
+          fetchDocumentation( DocKind.Constructor, type, constructor, force, removeSource );
+        }
+      }
+      final List<String> properties = entry.getProperties();
+      if ( null != properties )
+      {
+        for ( final String property : properties )
+        {
+          fetchDocumentation( DocKind.Property, type, property, force, removeSource );
+        }
+      }
+      final List<String> methods = entry.getMethods();
+      if ( null != methods )
+      {
+        for ( final String method : methods )
+        {
+          fetchDocumentation( DocKind.Method, type, method, force, removeSource );
+        }
       }
     }
   }
@@ -134,14 +151,14 @@ public final class MdnDocScanner
     }
   }
 
-  private void extractDocs( @Nonnull final DocSourceConfig source,
-                            @Nonnull final Path input,
-                            @Nonnull final Path output )
+  @Nonnull
+  private DocEntry extractDocs( @Nonnull final DocSourceConfig source,
+                                @Nonnull final Path input,
+                                @Nonnull final Path output )
     throws SourceIOException
   {
     try
     {
-      final JsonObjectBuilder json = Json.createObjectBuilder();
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
 
       for ( final Element anchor : document.select( "a[href^=\"/en-US/docs/Web/API/\"]" ) )
@@ -161,6 +178,7 @@ public final class MdnDocScanner
         anchor.attr( "href", HOST_URL + anchor.attr( "href" ) );
       }
 
+      final DocEntry entry = new DocEntry();
       final Element article = document.selectFirst( "#wikiArticle" );
       final StringBuilder description = new StringBuilder();
       boolean firstNode = true;
@@ -195,9 +213,9 @@ public final class MdnDocScanner
         }
       }
 
-      json.add( "name", source.getName() );
-      json.add( "href", source.getUrl() );
-      json.add( "description", cleanDescription( description.toString() ) );
+      entry.setName( source.getName() );
+      entry.setHref( source.getUrl() );
+      entry.setDescription( cleanDescription( description.toString() ) );
 
       final List<String> constructors =
         document
@@ -209,7 +227,7 @@ public final class MdnDocScanner
           .collect( Collectors.toList() );
       if ( !constructors.isEmpty() )
       {
-        json.add( "constructors", Json.createArrayBuilder( constructors ) );
+        entry.setConstructors( constructors );
       }
       final List<String> properties =
         document
@@ -221,7 +239,7 @@ public final class MdnDocScanner
           .collect( Collectors.toList() );
       if ( !properties.isEmpty() )
       {
-        json.add( "properties", Json.createArrayBuilder( properties ) );
+        entry.setProperties( properties );
       }
       final List<String> methods =
         document
@@ -236,14 +254,30 @@ public final class MdnDocScanner
           .collect( Collectors.toList() );
       if ( !methods.isEmpty() )
       {
-        json.add( "methods", Json.createArrayBuilder( methods ) );
+        // Sometimes constructors are documented as methods so instead register them as constructors
+        final List<String> newConstructors =
+          methods.stream().filter( m -> m.equals( source.getName() ) ).collect( Collectors.toList() );
+        if ( !newConstructors.isEmpty() )
+        {
+          newConstructors.addAll( constructors );
+          entry.setConstructors( newConstructors );
+        }
+
+        final List<String> actualMethods =
+          methods.stream().filter( m -> !m.equals( source.getName() ) ).collect( Collectors.toList() );
+        if ( !actualMethods.isEmpty() )
+        {
+          entry.setMethods( actualMethods );
+        }
       }
 
-      writeJson( output, json.build() );
+      writeJson( output, entry );
+
+      return entry;
     }
-    catch ( final IOException ioe )
+    catch ( final Exception e )
     {
-      throw new SourceIOException( source, "Failed to read local file for source", ioe );
+      throw new SourceIOException( source, "Failed to read local file for source", e );
     }
   }
 
@@ -262,18 +296,16 @@ public final class MdnDocScanner
     return text.replaceAll( " +", " " ).replace( "&nbsp;", "" ).trim();
   }
 
-  private void writeJson( @Nonnull final Path output, @Nonnull final JsonObject jsonObject )
-    throws IOException
+  private void writeJson( @Nonnull final Path output, @Nonnull final DocEntry docEntry )
+    throws Exception
   {
+    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
+    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
     try ( final FileOutputStream outputStream = new FileOutputStream( output.toFile() ) )
     {
-      final Map<String, Object> config = new HashMap<>();
-      config.put( JsonGenerator.PRETTY_PRINTING, true );
-      try ( JsonWriter writer = Json.createWriterFactory( config ).createWriter( outputStream ) )
-      {
-        writer.write( jsonObject );
-      }
+      jsonb.toJson( docEntry, outputStream );
     }
+    jsonb.close();
     // Add newline as json output omits trailing new line
     Files.write( output, new byte[]{ '\n' }, StandardOpenOption.APPEND );
   }
