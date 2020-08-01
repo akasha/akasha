@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCDTMFToneChangeEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent",
+    "description": "<p>The <strong><code>RTCDTMFToneChangeEvent</code></strong> interface represents events sent to indicate that <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/DTMF\">DTMF</a> tones have started or finished playing. This interface is used by the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/tonechange\" title=\"/en-US/docs/Web/Events/tonechange\">tonechange</a></code> event.</p>"
+}

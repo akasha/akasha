@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCPeerConnectionIceEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent",
+    "description": "Only one event is of this type: <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/icecandidate\" title=\"/en-US/docs/Web/Events/icecandidate\">icecandidate</a></code>."
+}

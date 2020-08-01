@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCIceTransport",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport",
+    "description": "<p> This is particularly useful if you need to access state information about the connection.</p>"
+}

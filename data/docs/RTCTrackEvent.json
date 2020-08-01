@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCTrackEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent",
+    "description": "<p> The target is the <code>RTCPeerConnection</code> object to which the track is being added.</p>\n<p>This event is sent by the WebRTC layer to the web site or application, so you will not typically need to instantiate an <code>RTCTrackEvent</code> yourself.</p>"
+}

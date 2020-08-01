@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCRtpSender",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender",
+    "description": "<div id=\"interface_description\"> \n <p> With it, you can configure the encoding used for the corresponding track, get information about the device's media capabilities, and so forth. You can also obtain access to an which can be used to send <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/DTMF\">DTMF</a> codes (to simulate the user pressing buttons on a telephone's dial pad)to the remote peer.</p> \n</div>"
+}

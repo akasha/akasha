@@ -1,0 +1,6 @@
+
+{
+    "name": "RTCCertificate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate",
+    "description": "The interface of the the provides an object represents a certificate that an uses to authenticate."
+}
