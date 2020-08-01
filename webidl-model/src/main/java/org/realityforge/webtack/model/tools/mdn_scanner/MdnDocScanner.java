@@ -225,7 +225,8 @@ public final class MdnDocScanner
       }
       final List<String> methods =
         document
-          .select( "#Methods + p + dl dt a code, #Methods + dl dt a code" )
+          .select(
+            "#Methods + p + dl > dt > code, #Methods + dl > dt > code, #Static_methods + p + dl > dt > code, #Static_methods + dl > dt > code" )
           .stream()
           .map( Element::text )
           // Strip the brackets at end of methods
