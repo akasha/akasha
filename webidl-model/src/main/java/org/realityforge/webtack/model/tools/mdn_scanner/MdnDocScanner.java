@@ -224,6 +224,7 @@ public final class MdnDocScanner
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+          .sorted()
           .collect( Collectors.toList() );
       if ( !constructors.isEmpty() )
       {
@@ -236,6 +237,7 @@ public final class MdnDocScanner
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+          .sorted()
           .collect( Collectors.toList() );
       if ( !properties.isEmpty() )
       {
@@ -251,6 +253,7 @@ public final class MdnDocScanner
           .map( text -> text.replaceAll( "\\(.*", "" ) )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+          .sorted()
           .collect( Collectors.toList() );
       if ( !methods.isEmpty() )
       {
@@ -260,7 +263,7 @@ public final class MdnDocScanner
         if ( !newConstructors.isEmpty() )
         {
           newConstructors.addAll( constructors );
-          entry.setConstructors( newConstructors );
+          entry.setConstructors( newConstructors.stream().sorted().collect( Collectors.toList() ) );
         }
 
         final List<String> actualMethods =
