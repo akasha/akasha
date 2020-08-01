@@ -270,6 +270,7 @@ public final class MdnDocScanner
           entry.setMethods( actualMethods );
         }
       }
+      //TODO: Remove any sources for type if they are not present above
 
       writeJson( output, entry );
 
