@@ -110,6 +110,8 @@ complete as there is too much un-said.
 
 * Change doc scanner to jsonb to emit description.
 
+* Some doc entries include documentation for constants .. scan for that?.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
