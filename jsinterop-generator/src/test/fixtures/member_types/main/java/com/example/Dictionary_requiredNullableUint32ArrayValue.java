@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableUint32ArrayValue {
     return Js.<Dictionary_requiredNullableUint32ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableUint32ArrayValue( requiredNullableUint32ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableUint32ArrayValue"
+  )
   @Nullable
-  Uint32Array getRequiredNullableUint32ArrayValue();
+  Uint32Array requiredNullableUint32ArrayValue();
 
   @JsProperty
   void setRequiredNullableUint32ArrayValue(@Nullable Uint32Array requiredNullableUint32ArrayValue);

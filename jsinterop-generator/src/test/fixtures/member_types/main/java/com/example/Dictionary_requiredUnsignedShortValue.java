@@ -22,8 +22,10 @@ public interface Dictionary_requiredUnsignedShortValue {
     return Js.<Dictionary_requiredUnsignedShortValue>uncheckedCast( JsPropertyMap.of() ).requiredUnsignedShortValue( requiredUnsignedShortValue );
   }
 
-  @JsProperty
-  int getRequiredUnsignedShortValue();
+  @JsProperty(
+      name = "requiredUnsignedShortValue"
+  )
+  int requiredUnsignedShortValue();
 
   @JsProperty
   void setRequiredUnsignedShortValue(int requiredUnsignedShortValue);

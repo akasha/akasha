@@ -22,8 +22,10 @@ public interface Dictionary_requiredOctetValue {
     return Js.<Dictionary_requiredOctetValue>uncheckedCast( JsPropertyMap.of() ).requiredOctetValue( requiredOctetValue );
   }
 
-  @JsProperty
-  short getRequiredOctetValue();
+  @JsProperty(
+      name = "requiredOctetValue"
+  )
+  short requiredOctetValue();
 
   @JsProperty
   void setRequiredOctetValue(short requiredOctetValue);

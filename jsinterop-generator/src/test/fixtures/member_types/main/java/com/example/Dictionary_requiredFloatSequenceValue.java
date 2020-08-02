@@ -31,9 +31,11 @@ public interface Dictionary_requiredFloatSequenceValue {
     return Js.<Dictionary_requiredFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredFloatSequenceValue"
+  )
   @Nonnull
-  JsArray<Double> getRequiredFloatSequenceValue();
+  JsArray<Double> requiredFloatSequenceValue();
 
   @JsProperty
   void setRequiredFloatSequenceValue(@Nonnull JsArray<Double> requiredFloatSequenceValue);

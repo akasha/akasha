@@ -22,9 +22,11 @@ public interface Dictionary_requiredUSVStringValue {
     return Js.<Dictionary_requiredUSVStringValue>uncheckedCast( JsPropertyMap.of() ).requiredUSVStringValue( requiredUSVStringValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredUSVStringValue"
+  )
   @Nonnull
-  String getRequiredUSVStringValue();
+  String requiredUSVStringValue();
 
   @JsProperty
   void setRequiredUSVStringValue(@Nonnull String requiredUSVStringValue);

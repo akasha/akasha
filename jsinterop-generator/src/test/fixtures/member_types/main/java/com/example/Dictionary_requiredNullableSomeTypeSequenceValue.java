@@ -32,9 +32,11 @@ public interface Dictionary_requiredNullableSomeTypeSequenceValue {
     return Js.<Dictionary_requiredNullableSomeTypeSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableSomeTypeSequenceValue( requiredNullableSomeTypeSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableSomeTypeSequenceValue"
+  )
   @Nullable
-  JsArray<SomeType> getRequiredNullableSomeTypeSequenceValue();
+  JsArray<SomeType> requiredNullableSomeTypeSequenceValue();
 
   @JsProperty
   void setRequiredNullableSomeTypeSequenceValue(

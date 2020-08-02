@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableFloatValue {
     return Js.<Dictionary_requiredNullableFloatValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatValue( requiredNullableFloatValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableFloatValue"
+  )
   @Nullable
-  Double getRequiredNullableFloatValue();
+  Double requiredNullableFloatValue();
 
   @JsProperty
   void setRequiredNullableFloatValue(@Nullable Double requiredNullableFloatValue);

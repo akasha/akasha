@@ -22,8 +22,10 @@ public interface PushPermissionDescriptor extends PermissionDescriptor {
     return Js.<PushPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  boolean isUserVisibleOnly();
+  @JsProperty(
+      name = "userVisibleOnly"
+  )
+  boolean userVisibleOnly();
 
   @JsProperty
   void setUserVisibleOnly(boolean userVisibleOnly);

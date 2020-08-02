@@ -22,8 +22,10 @@ public interface MyDictionary2 {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  Object getClone();
+  @JsProperty(
+      name = "clone"
+  )
+  Object _clone();
 
   @JsProperty
   void setClone(@Nonnull Object _clone);
@@ -35,8 +37,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getDefault();
+  @JsProperty(
+      name = "default"
+  )
+  Object _default();
 
   @JsProperty
   void setDefault(@Nonnull Object _default);
@@ -48,8 +52,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getEquals();
+  @JsProperty(
+      name = "equals"
+  )
+  Object _equals();
 
   @JsProperty
   void setEquals(@Nonnull Object _equals);
@@ -61,8 +67,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getFinalize();
+  @JsProperty(
+      name = "finalize"
+  )
+  Object _finalize();
 
   @JsProperty
   void setFinalize(@Nonnull Object _finalize);
@@ -74,8 +82,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getGetClass();
+  @JsProperty(
+      name = "getClass"
+  )
+  Object _getClass();
 
   @JsProperty
   void setGetClass(@Nonnull Object _getClass);
@@ -87,8 +97,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getHashCode();
+  @JsProperty(
+      name = "hashCode"
+  )
+  Object _hashCode();
 
   @JsProperty
   void setHashCode(@Nonnull Object _hashCode);
@@ -100,8 +112,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getNotify();
+  @JsProperty(
+      name = "notify"
+  )
+  Object _notify();
 
   @JsProperty
   void setNotify(@Nonnull Object _notify);
@@ -113,8 +127,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getNotifyAll();
+  @JsProperty(
+      name = "notifyAll"
+  )
+  Object _notifyAll();
 
   @JsProperty
   void setNotifyAll(@Nonnull Object _notifyAll);
@@ -126,8 +142,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getPrivate();
+  @JsProperty(
+      name = "private"
+  )
+  Object _private();
 
   @JsProperty
   void setPrivate(@Nonnull Object _private);
@@ -139,8 +157,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getProtected();
+  @JsProperty(
+      name = "protected"
+  )
+  Object _protected();
 
   @JsProperty
   void setProtected(@Nonnull Object _protected);
@@ -152,8 +172,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getPublic();
+  @JsProperty(
+      name = "public"
+  )
+  Object _public();
 
   @JsProperty
   void setPublic(@Nonnull Object _public);
@@ -165,8 +187,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getToString();
+  @JsProperty(
+      name = "toString"
+  )
+  Object _toString();
 
   @JsProperty
   void setToString(@Nonnull Object _toString);
@@ -178,8 +202,10 @@ public interface MyDictionary2 {
     return this;
   }
 
-  @JsProperty
-  Object getWait();
+  @JsProperty(
+      name = "wait"
+  )
+  Object _wait();
 
   @JsProperty
   void setWait(@Nonnull Object _wait);

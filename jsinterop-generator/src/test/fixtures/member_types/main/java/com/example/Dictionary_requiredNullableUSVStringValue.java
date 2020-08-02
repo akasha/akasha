@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableUSVStringValue {
     return Js.<Dictionary_requiredNullableUSVStringValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableUSVStringValue( requiredNullableUSVStringValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableUSVStringValue"
+  )
   @Nullable
-  String getRequiredNullableUSVStringValue();
+  String requiredNullableUSVStringValue();
 
   @JsProperty
   void setRequiredNullableUSVStringValue(@Nullable String requiredNullableUSVStringValue);

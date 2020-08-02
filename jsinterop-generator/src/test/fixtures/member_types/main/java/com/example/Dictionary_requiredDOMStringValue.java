@@ -22,9 +22,11 @@ public interface Dictionary_requiredDOMStringValue {
     return Js.<Dictionary_requiredDOMStringValue>uncheckedCast( JsPropertyMap.of() ).requiredDOMStringValue( requiredDOMStringValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredDOMStringValue"
+  )
   @Nonnull
-  String getRequiredDOMStringValue();
+  String requiredDOMStringValue();
 
   @JsProperty
   void setRequiredDOMStringValue(@Nonnull String requiredDOMStringValue);

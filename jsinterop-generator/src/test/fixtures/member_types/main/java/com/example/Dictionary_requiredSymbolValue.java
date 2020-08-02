@@ -23,9 +23,11 @@ public interface Dictionary_requiredSymbolValue {
     return Js.<Dictionary_requiredSymbolValue>uncheckedCast( JsPropertyMap.of() ).requiredSymbolValue( requiredSymbolValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredSymbolValue"
+  )
   @Nonnull
-  Symbol getRequiredSymbolValue();
+  Symbol requiredSymbolValue();
 
   @JsProperty
   void setRequiredSymbolValue(@Nonnull Symbol requiredSymbolValue);

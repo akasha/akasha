@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableFloat64ArrayValue {
     return Js.<Dictionary_requiredNullableFloat64ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloat64ArrayValue( requiredNullableFloat64ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableFloat64ArrayValue"
+  )
   @Nullable
-  Float64Array getRequiredNullableFloat64ArrayValue();
+  Float64Array requiredNullableFloat64ArrayValue();
 
   @JsProperty
   void setRequiredNullableFloat64ArrayValue(

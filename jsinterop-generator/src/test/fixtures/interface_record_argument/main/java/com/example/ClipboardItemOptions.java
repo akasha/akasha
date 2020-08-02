@@ -22,8 +22,10 @@ public interface ClipboardItemOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  String getPresentationStyle();
+  @JsProperty(
+      name = "presentationStyle"
+  )
+  String presentationStyle();
 
   @JsProperty
   void setPresentationStyle(@Nonnull String presentationStyle);

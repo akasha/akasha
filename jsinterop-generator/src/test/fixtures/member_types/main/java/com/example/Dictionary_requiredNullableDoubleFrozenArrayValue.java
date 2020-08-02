@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableDoubleFrozenArrayValue {
     return Js.<Dictionary_requiredNullableDoubleFrozenArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleFrozenArrayValue( requiredNullableDoubleFrozenArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableDoubleFrozenArrayValue"
+  )
   @Nullable
-  JsArray<Double> getRequiredNullableDoubleFrozenArrayValue();
+  JsArray<Double> requiredNullableDoubleFrozenArrayValue();
 
   @JsProperty
   void setRequiredNullableDoubleFrozenArrayValue(

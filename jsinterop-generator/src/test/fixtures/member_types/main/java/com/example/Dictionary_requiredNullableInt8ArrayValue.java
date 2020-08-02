@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableInt8ArrayValue {
     return Js.<Dictionary_requiredNullableInt8ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableInt8ArrayValue( requiredNullableInt8ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableInt8ArrayValue"
+  )
   @Nullable
-  Int8Array getRequiredNullableInt8ArrayValue();
+  Int8Array requiredNullableInt8ArrayValue();
 
   @JsProperty
   void setRequiredNullableInt8ArrayValue(@Nullable Int8Array requiredNullableInt8ArrayValue);

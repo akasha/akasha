@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableOctetValue {
     return Js.<Dictionary_requiredNullableOctetValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableOctetValue( requiredNullableOctetValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableOctetValue"
+  )
   @Nullable
-  Double getRequiredNullableOctetValue();
+  Double requiredNullableOctetValue();
 
   @JsProperty
   void setRequiredNullableOctetValue(@Nullable Double requiredNullableOctetValue);

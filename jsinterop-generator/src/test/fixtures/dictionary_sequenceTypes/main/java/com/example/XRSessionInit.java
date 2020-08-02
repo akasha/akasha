@@ -24,8 +24,10 @@ public interface XRSessionInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsArray<Any> getOptionalFeatures();
+  @JsProperty(
+      name = "optionalFeatures"
+  )
+  JsArray<Any> optionalFeatures();
 
   @JsProperty
   void setOptionalFeatures(@Nonnull JsArray<Any> optionalFeatures);
@@ -49,8 +51,10 @@ public interface XRSessionInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<Any> getRequiredFeatures();
+  @JsProperty(
+      name = "requiredFeatures"
+  )
+  JsArray<Any> requiredFeatures();
 
   @JsProperty
   void setRequiredFeatures(@Nonnull JsArray<Any> requiredFeatures);

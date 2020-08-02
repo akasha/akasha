@@ -31,9 +31,11 @@ public interface Dictionary_requiredSomeTypeSequenceValue {
     return Js.<Dictionary_requiredSomeTypeSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredSomeTypeSequenceValue( requiredSomeTypeSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredSomeTypeSequenceValue"
+  )
   @Nonnull
-  JsArray<SomeType> getRequiredSomeTypeSequenceValue();
+  JsArray<SomeType> requiredSomeTypeSequenceValue();
 
   @JsProperty
   void setRequiredSomeTypeSequenceValue(@Nonnull JsArray<SomeType> requiredSomeTypeSequenceValue);

@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableLongLongValue {
     return Js.<Dictionary_requiredNullableLongLongValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableLongLongValue( requiredNullableLongLongValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableLongLongValue"
+  )
   @Nullable
-  Double getRequiredNullableLongLongValue();
+  Double requiredNullableLongLongValue();
 
   @JsProperty
   void setRequiredNullableLongLongValue(@Nullable Double requiredNullableLongLongValue);

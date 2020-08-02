@@ -31,9 +31,11 @@ public interface Dictionary_requiredDoubleSequenceValue {
     return Js.<Dictionary_requiredDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredDoubleSequenceValue( requiredDoubleSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredDoubleSequenceValue"
+  )
   @Nonnull
-  JsArray<Double> getRequiredDoubleSequenceValue();
+  JsArray<Double> requiredDoubleSequenceValue();
 
   @JsProperty
   void setRequiredDoubleSequenceValue(@Nonnull JsArray<Double> requiredDoubleSequenceValue);

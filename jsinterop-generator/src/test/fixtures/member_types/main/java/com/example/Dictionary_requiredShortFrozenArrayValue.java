@@ -24,9 +24,11 @@ public interface Dictionary_requiredShortFrozenArrayValue {
     return Js.<Dictionary_requiredShortFrozenArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredShortFrozenArrayValue( requiredShortFrozenArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredShortFrozenArrayValue"
+  )
   @Nonnull
-  JsArray<Double> getRequiredShortFrozenArrayValue();
+  JsArray<Double> requiredShortFrozenArrayValue();
 
   @JsProperty
   void setRequiredShortFrozenArrayValue(@Nonnull JsArray<Double> requiredShortFrozenArrayValue);

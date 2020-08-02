@@ -31,9 +31,11 @@ public interface Dictionary_requiredBooleanSequenceValue {
     return Js.<Dictionary_requiredBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredBooleanSequenceValue( requiredBooleanSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredBooleanSequenceValue"
+  )
   @Nonnull
-  JsArray<Boolean> getRequiredBooleanSequenceValue();
+  JsArray<Boolean> requiredBooleanSequenceValue();
 
   @JsProperty
   void setRequiredBooleanSequenceValue(@Nonnull JsArray<Boolean> requiredBooleanSequenceValue);

@@ -22,9 +22,11 @@ public interface Dictionary_requiredObjectValue {
     return Js.<Dictionary_requiredObjectValue>uncheckedCast( JsPropertyMap.of() ).requiredObjectValue( requiredObjectValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredObjectValue"
+  )
   @Nonnull
-  Object getRequiredObjectValue();
+  Object requiredObjectValue();
 
   @JsProperty
   void setRequiredObjectValue(@Nonnull Object requiredObjectValue);

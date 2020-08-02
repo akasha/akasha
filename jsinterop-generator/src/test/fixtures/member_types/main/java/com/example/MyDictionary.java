@@ -38,9 +38,11 @@ public interface MyDictionary {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "anyValue"
+  )
   @Nullable
-  Any getAnyValue();
+  Any anyValue();
 
   @JsProperty
   void setAnyValue(@Nullable Any anyValue);
@@ -52,8 +54,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  ArrayBuffer getArrayBufferValueValue();
+  @JsProperty(
+      name = "arrayBufferValueValue"
+  )
+  ArrayBuffer arrayBufferValueValue();
 
   @JsProperty
   void setArrayBufferValueValue(@Nonnull ArrayBuffer arrayBufferValueValue);
@@ -65,8 +69,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Boolean> getBooleanFrozenArrayValue();
+  @JsProperty(
+      name = "booleanFrozenArrayValue"
+  )
+  JsArray<Boolean> booleanFrozenArrayValue();
 
   @JsProperty
   void setBooleanFrozenArrayValue(@Nonnull JsArray<Boolean> booleanFrozenArrayValue);
@@ -79,8 +85,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Boolean> getBooleanSequenceValue();
+  @JsProperty(
+      name = "booleanSequenceValue"
+  )
+  JsArray<Boolean> booleanSequenceValue();
 
   @JsProperty
   void setBooleanSequenceValue(@Nonnull JsArray<Boolean> booleanSequenceValue);
@@ -104,8 +112,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  boolean isBooleanValue();
+  @JsProperty(
+      name = "booleanValue"
+  )
+  boolean booleanValue();
 
   @JsProperty
   void setBooleanValue(boolean booleanValue);
@@ -117,8 +127,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<String> getByteStringRecordValue();
+  @JsProperty(
+      name = "byteStringRecordValue"
+  )
+  JsPropertyMap<String> byteStringRecordValue();
 
   @JsProperty
   void setByteStringRecordValue(@Nonnull JsPropertyMap<String> byteStringRecordValue);
@@ -131,8 +143,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  String getByteStringValue();
+  @JsProperty(
+      name = "byteStringValue"
+  )
+  String byteStringValue();
 
   @JsProperty
   void setByteStringValue(@Nonnull String byteStringValue);
@@ -144,8 +158,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  byte getByteValue();
+  @JsProperty(
+      name = "byteValue"
+  )
+  byte byteValue();
 
   @JsProperty
   void setByteValue(byte byteValue);
@@ -157,8 +173,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  DataView getDataViewValueValue();
+  @JsProperty(
+      name = "dataViewValueValue"
+  )
+  DataView dataViewValueValue();
 
   @JsProperty
   void setDataViewValueValue(@Nonnull DataView dataViewValueValue);
@@ -170,8 +188,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<String> getDomStringRecordValue();
+  @JsProperty(
+      name = "domStringRecordValue"
+  )
+  JsPropertyMap<String> domStringRecordValue();
 
   @JsProperty
   void setDomStringRecordValue(@Nonnull JsPropertyMap<String> domStringRecordValue);
@@ -184,8 +204,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  String getDomStringValue();
+  @JsProperty(
+      name = "domStringValue"
+  )
+  String domStringValue();
 
   @JsProperty
   void setDomStringValue(@Nonnull String domStringValue);
@@ -197,8 +219,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getDoubleFrozenArrayValue();
+  @JsProperty(
+      name = "doubleFrozenArrayValue"
+  )
+  JsArray<Double> doubleFrozenArrayValue();
 
   @JsProperty
   void setDoubleFrozenArrayValue(@Nonnull JsArray<Double> doubleFrozenArrayValue);
@@ -211,8 +235,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getDoubleRecordValue();
+  @JsProperty(
+      name = "doubleRecordValue"
+  )
+  JsPropertyMap<Double> doubleRecordValue();
 
   @JsProperty
   void setDoubleRecordValue(@Nonnull JsPropertyMap<Double> doubleRecordValue);
@@ -224,8 +250,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getDoubleSequenceValue();
+  @JsProperty(
+      name = "doubleSequenceValue"
+  )
+  JsArray<Double> doubleSequenceValue();
 
   @JsProperty
   void setDoubleSequenceValue(@Nonnull JsArray<Double> doubleSequenceValue);
@@ -249,8 +277,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  double getDoubleValue();
+  @JsProperty(
+      name = "doubleValue"
+  )
+  double doubleValue();
 
   @JsProperty
   void setDoubleValue(double doubleValue);
@@ -262,8 +292,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Float32Array getFloat32ArrayValue();
+  @JsProperty(
+      name = "float32ArrayValue"
+  )
+  Float32Array float32ArrayValue();
 
   @JsProperty
   void setFloat32ArrayValue(@Nonnull Float32Array float32ArrayValue);
@@ -275,8 +307,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Float64Array getFloat64ArrayValue();
+  @JsProperty(
+      name = "float64ArrayValue"
+  )
+  Float64Array float64ArrayValue();
 
   @JsProperty
   void setFloat64ArrayValue(@Nonnull Float64Array float64ArrayValue);
@@ -288,8 +322,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getFloatFrozenArrayValue();
+  @JsProperty(
+      name = "floatFrozenArrayValue"
+  )
+  JsArray<Double> floatFrozenArrayValue();
 
   @JsProperty
   void setFloatFrozenArrayValue(@Nonnull JsArray<Double> floatFrozenArrayValue);
@@ -301,8 +337,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getFloatSequenceValue();
+  @JsProperty(
+      name = "floatSequenceValue"
+  )
+  JsArray<Double> floatSequenceValue();
 
   @JsProperty
   void setFloatSequenceValue(@Nonnull JsArray<Double> floatSequenceValue);
@@ -326,8 +364,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  float getFloatValue();
+  @JsProperty(
+      name = "floatValue"
+  )
+  float floatValue();
 
   @JsProperty
   void setFloatValue(float floatValue);
@@ -339,8 +379,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Int16Array getInt16ArrayValue();
+  @JsProperty(
+      name = "int16ArrayValue"
+  )
+  Int16Array int16ArrayValue();
 
   @JsProperty
   void setInt16ArrayValue(@Nonnull Int16Array int16ArrayValue);
@@ -352,8 +394,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Int32Array getInt32ArrayValue();
+  @JsProperty(
+      name = "int32ArrayValue"
+  )
+  Int32Array int32ArrayValue();
 
   @JsProperty
   void setInt32ArrayValue(@Nonnull Int32Array int32ArrayValue);
@@ -365,8 +409,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Int8Array getInt8ArrayValue();
+  @JsProperty(
+      name = "int8ArrayValue"
+  )
+  Int8Array int8ArrayValue();
 
   @JsProperty
   void setInt8ArrayValue(@Nonnull Int8Array int8ArrayValue);
@@ -378,8 +424,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  int getLongLongValue();
+  @JsProperty(
+      name = "longLongValue"
+  )
+  int longLongValue();
 
   @JsProperty
   void setLongLongValue(int longLongValue);
@@ -391,8 +439,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  int getLongValue();
+  @JsProperty(
+      name = "longValue"
+  )
+  int longValue();
 
   @JsProperty
   void setLongValue(int longValue);
@@ -404,8 +454,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<String> getMixedStringRecordValue();
+  @JsProperty(
+      name = "mixedStringRecordValue"
+  )
+  JsPropertyMap<String> mixedStringRecordValue();
 
   @JsProperty
   void setMixedStringRecordValue(@Nonnull JsPropertyMap<String> mixedStringRecordValue);
@@ -418,9 +470,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableArrayBufferValueValue"
+  )
   @Nullable
-  ArrayBuffer getNullableArrayBufferValueValue();
+  ArrayBuffer nullableArrayBufferValueValue();
 
   @JsProperty
   void setNullableArrayBufferValueValue(@Nullable ArrayBuffer nullableArrayBufferValueValue);
@@ -433,9 +487,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableBooleanFrozenArrayValue"
+  )
   @Nullable
-  JsArray<Boolean> getNullableBooleanFrozenArrayValue();
+  JsArray<Boolean> nullableBooleanFrozenArrayValue();
 
   @JsProperty
   void setNullableBooleanFrozenArrayValue(
@@ -449,9 +505,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableBooleanSequenceValue"
+  )
   @Nullable
-  JsArray<Boolean> getNullableBooleanSequenceValue();
+  JsArray<Boolean> nullableBooleanSequenceValue();
 
   @JsProperty
   void setNullableBooleanSequenceValue(@Nullable JsArray<Boolean> nullableBooleanSequenceValue);
@@ -478,9 +536,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableBooleanValue"
+  )
   @Nullable
-  Boolean getNullableBooleanValue();
+  Boolean nullableBooleanValue();
 
   @JsProperty
   void setNullableBooleanValue(@Nullable Boolean nullableBooleanValue);
@@ -492,9 +552,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableByteStringValue"
+  )
   @Nullable
-  String getNullableByteStringValue();
+  String nullableByteStringValue();
 
   @JsProperty
   void setNullableByteStringValue(@Nullable String nullableByteStringValue);
@@ -506,9 +568,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableByteValue"
+  )
   @Nullable
-  Double getNullableByteValue();
+  Double nullableByteValue();
 
   @JsProperty
   void setNullableByteValue(@Nullable Double nullableByteValue);
@@ -520,9 +584,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableDOMStringValue"
+  )
   @Nullable
-  String getNullableDOMStringValue();
+  String nullableDOMStringValue();
 
   @JsProperty
   void setNullableDOMStringValue(@Nullable String nullableDOMStringValue);
@@ -534,9 +600,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableDataViewValueValue"
+  )
   @Nullable
-  DataView getNullableDataViewValueValue();
+  DataView nullableDataViewValueValue();
 
   @JsProperty
   void setNullableDataViewValueValue(@Nullable DataView nullableDataViewValueValue);
@@ -549,9 +617,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableDoubleFrozenArrayValue"
+  )
   @Nullable
-  JsArray<Double> getNullableDoubleFrozenArrayValue();
+  JsArray<Double> nullableDoubleFrozenArrayValue();
 
   @JsProperty
   void setNullableDoubleFrozenArrayValue(@Nullable JsArray<Double> nullableDoubleFrozenArrayValue);
@@ -564,9 +634,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableDoubleSequenceValue"
+  )
   @Nullable
-  JsArray<Double> getNullableDoubleSequenceValue();
+  JsArray<Double> nullableDoubleSequenceValue();
 
   @JsProperty
   void setNullableDoubleSequenceValue(@Nullable JsArray<Double> nullableDoubleSequenceValue);
@@ -593,9 +665,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableDoubleValue"
+  )
   @Nullable
-  Double getNullableDoubleValue();
+  Double nullableDoubleValue();
 
   @JsProperty
   void setNullableDoubleValue(@Nullable Double nullableDoubleValue);
@@ -607,9 +681,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableFloat32ArrayValue"
+  )
   @Nullable
-  Float32Array getNullableFloat32ArrayValue();
+  Float32Array nullableFloat32ArrayValue();
 
   @JsProperty
   void setNullableFloat32ArrayValue(@Nullable Float32Array nullableFloat32ArrayValue);
@@ -622,9 +698,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableFloat64ArrayValue"
+  )
   @Nullable
-  Float64Array getNullableFloat64ArrayValue();
+  Float64Array nullableFloat64ArrayValue();
 
   @JsProperty
   void setNullableFloat64ArrayValue(@Nullable Float64Array nullableFloat64ArrayValue);
@@ -637,9 +715,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableFloatFrozenArrayValue"
+  )
   @Nullable
-  JsArray<Double> getNullableFloatFrozenArrayValue();
+  JsArray<Double> nullableFloatFrozenArrayValue();
 
   @JsProperty
   void setNullableFloatFrozenArrayValue(@Nullable JsArray<Double> nullableFloatFrozenArrayValue);
@@ -652,9 +732,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableFloatSequenceValue"
+  )
   @Nullable
-  JsArray<Double> getNullableFloatSequenceValue();
+  JsArray<Double> nullableFloatSequenceValue();
 
   @JsProperty
   void setNullableFloatSequenceValue(@Nullable JsArray<Double> nullableFloatSequenceValue);
@@ -680,9 +762,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableFloatValue"
+  )
   @Nullable
-  Double getNullableFloatValue();
+  Double nullableFloatValue();
 
   @JsProperty
   void setNullableFloatValue(@Nullable Double nullableFloatValue);
@@ -694,9 +778,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableInt16ArrayValue"
+  )
   @Nullable
-  Int16Array getNullableInt16ArrayValue();
+  Int16Array nullableInt16ArrayValue();
 
   @JsProperty
   void setNullableInt16ArrayValue(@Nullable Int16Array nullableInt16ArrayValue);
@@ -708,9 +794,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableInt32ArrayValue"
+  )
   @Nullable
-  Int32Array getNullableInt32ArrayValue();
+  Int32Array nullableInt32ArrayValue();
 
   @JsProperty
   void setNullableInt32ArrayValue(@Nullable Int32Array nullableInt32ArrayValue);
@@ -722,9 +810,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableInt8ArrayValue"
+  )
   @Nullable
-  Int8Array getNullableInt8ArrayValue();
+  Int8Array nullableInt8ArrayValue();
 
   @JsProperty
   void setNullableInt8ArrayValue(@Nullable Int8Array nullableInt8ArrayValue);
@@ -736,9 +826,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableLongLongValue"
+  )
   @Nullable
-  Double getNullableLongLongValue();
+  Double nullableLongLongValue();
 
   @JsProperty
   void setNullableLongLongValue(@Nullable Double nullableLongLongValue);
@@ -750,9 +842,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableLongValue"
+  )
   @Nullable
-  Double getNullableLongValue();
+  Double nullableLongValue();
 
   @JsProperty
   void setNullableLongValue(@Nullable Double nullableLongValue);
@@ -764,9 +858,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableObjectValue"
+  )
   @Nullable
-  Object getNullableObjectValue();
+  Object nullableObjectValue();
 
   @JsProperty
   void setNullableObjectValue(@Nullable Object nullableObjectValue);
@@ -778,9 +874,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableOctetValue"
+  )
   @Nullable
-  Double getNullableOctetValue();
+  Double nullableOctetValue();
 
   @JsProperty
   void setNullableOctetValue(@Nullable Double nullableOctetValue);
@@ -792,9 +890,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableShortFrozenArrayValue"
+  )
   @Nullable
-  JsArray<Double> getNullableShortFrozenArrayValue();
+  JsArray<Double> nullableShortFrozenArrayValue();
 
   @JsProperty
   void setNullableShortFrozenArrayValue(@Nullable JsArray<Double> nullableShortFrozenArrayValue);
@@ -807,8 +907,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Promise<Double> getNullableShortPromiseValue();
+  @JsProperty(
+      name = "nullableShortPromiseValue"
+  )
+  Promise<Double> nullableShortPromiseValue();
 
   @JsProperty
   void setNullableShortPromiseValue(@Nonnull Promise<Double> nullableShortPromiseValue);
@@ -821,9 +923,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableShortSequenceValue"
+  )
   @Nullable
-  JsArray<Double> getNullableShortSequenceValue();
+  JsArray<Double> nullableShortSequenceValue();
 
   @JsProperty
   void setNullableShortSequenceValue(@Nullable JsArray<Double> nullableShortSequenceValue);
@@ -849,9 +953,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableShortValue"
+  )
   @Nullable
-  Double getNullableShortValue();
+  Double nullableShortValue();
 
   @JsProperty
   void setNullableShortValue(@Nullable Double nullableShortValue);
@@ -863,9 +969,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableSomeTypeFrozenArrayValue"
+  )
   @Nullable
-  JsArray<SomeType> getNullableSomeTypeFrozenArrayValue();
+  JsArray<SomeType> nullableSomeTypeFrozenArrayValue();
 
   @JsProperty
   void setNullableSomeTypeFrozenArrayValue(
@@ -879,8 +987,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Promise<SomeType> getNullableSomeTypePromiseValue();
+  @JsProperty(
+      name = "nullableSomeTypePromiseValue"
+  )
+  Promise<SomeType> nullableSomeTypePromiseValue();
 
   @JsProperty
   void setNullableSomeTypePromiseValue(@Nonnull Promise<SomeType> nullableSomeTypePromiseValue);
@@ -893,9 +1003,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableSomeTypeSequenceValue"
+  )
   @Nullable
-  JsArray<SomeType> getNullableSomeTypeSequenceValue();
+  JsArray<SomeType> nullableSomeTypeSequenceValue();
 
   @JsProperty
   void setNullableSomeTypeSequenceValue(@Nullable JsArray<SomeType> nullableSomeTypeSequenceValue);
@@ -922,9 +1034,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableSomeTypeValue"
+  )
   @Nullable
-  SomeType getNullableSomeTypeValue();
+  SomeType nullableSomeTypeValue();
 
   @JsProperty
   void setNullableSomeTypeValue(@Nullable SomeType nullableSomeTypeValue);
@@ -936,9 +1050,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableSymbolValue"
+  )
   @Nullable
-  Symbol getNullableSymbolValue();
+  Symbol nullableSymbolValue();
 
   @JsProperty
   void setNullableSymbolValue(@Nullable Symbol nullableSymbolValue);
@@ -950,9 +1066,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUSVStringValue"
+  )
   @Nullable
-  String getNullableUSVStringValue();
+  String nullableUSVStringValue();
 
   @JsProperty
   void setNullableUSVStringValue(@Nullable String nullableUSVStringValue);
@@ -964,9 +1082,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUint16ArrayValue"
+  )
   @Nullable
-  Uint16Array getNullableUint16ArrayValue();
+  Uint16Array nullableUint16ArrayValue();
 
   @JsProperty
   void setNullableUint16ArrayValue(@Nullable Uint16Array nullableUint16ArrayValue);
@@ -979,9 +1099,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUint32ArrayValue"
+  )
   @Nullable
-  Uint32Array getNullableUint32ArrayValue();
+  Uint32Array nullableUint32ArrayValue();
 
   @JsProperty
   void setNullableUint32ArrayValue(@Nullable Uint32Array nullableUint32ArrayValue);
@@ -994,9 +1116,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUint8ArrayValue"
+  )
   @Nullable
-  Uint8Array getNullableUint8ArrayValue();
+  Uint8Array nullableUint8ArrayValue();
 
   @JsProperty
   void setNullableUint8ArrayValue(@Nullable Uint8Array nullableUint8ArrayValue);
@@ -1008,9 +1132,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUint8ClampedArrayValue"
+  )
   @Nullable
-  Uint8ClampedArray getNullableUint8ClampedArrayValue();
+  Uint8ClampedArray nullableUint8ClampedArrayValue();
 
   @JsProperty
   void setNullableUint8ClampedArrayValue(
@@ -1024,9 +1150,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUnrestrictedDoubleValue"
+  )
   @Nullable
-  Double getNullableUnrestrictedDoubleValue();
+  Double nullableUnrestrictedDoubleValue();
 
   @JsProperty
   void setNullableUnrestrictedDoubleValue(@Nullable Double nullableUnrestrictedDoubleValue);
@@ -1039,9 +1167,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUnrestrictedFloatValue"
+  )
   @Nullable
-  Double getNullableUnrestrictedFloatValue();
+  Double nullableUnrestrictedFloatValue();
 
   @JsProperty
   void setNullableUnrestrictedFloatValue(@Nullable Double nullableUnrestrictedFloatValue);
@@ -1054,9 +1184,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUnsignedLongLongValue"
+  )
   @Nullable
-  Double getNullableUnsignedLongLongValue();
+  Double nullableUnsignedLongLongValue();
 
   @JsProperty
   void setNullableUnsignedLongLongValue(@Nullable Double nullableUnsignedLongLongValue);
@@ -1069,9 +1201,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUnsignedLongValue"
+  )
   @Nullable
-  Double getNullableUnsignedLongValue();
+  Double nullableUnsignedLongValue();
 
   @JsProperty
   void setNullableUnsignedLongValue(@Nullable Double nullableUnsignedLongValue);
@@ -1083,9 +1217,11 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "nullableUnsignedShortValue"
+  )
   @Nullable
-  Double getNullableUnsignedShortValue();
+  Double nullableUnsignedShortValue();
 
   @JsProperty
   void setNullableUnsignedShortValue(@Nullable Double nullableUnsignedShortValue);
@@ -1098,8 +1234,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Object getObjectValue();
+  @JsProperty(
+      name = "objectValue"
+  )
+  Object objectValue();
 
   @JsProperty
   void setObjectValue(@Nonnull Object objectValue);
@@ -1111,8 +1249,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  short getOctetValue();
+  @JsProperty(
+      name = "octetValue"
+  )
+  short octetValue();
 
   @JsProperty
   void setOctetValue(short octetValue);
@@ -1124,8 +1264,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Promise<JsArray<Double>> getSequencePromiseValue();
+  @JsProperty(
+      name = "sequencePromiseValue"
+  )
+  Promise<JsArray<Double>> sequencePromiseValue();
 
   @JsProperty
   void setSequencePromiseValue(@Nonnull Promise<JsArray<Double>> sequencePromiseValue);
@@ -1138,8 +1280,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getShortFrozenArrayValue();
+  @JsProperty(
+      name = "shortFrozenArrayValue"
+  )
+  JsArray<Double> shortFrozenArrayValue();
 
   @JsProperty
   void setShortFrozenArrayValue(@Nonnull JsArray<Double> shortFrozenArrayValue);
@@ -1151,8 +1295,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Promise<Double> getShortPromiseValue();
+  @JsProperty(
+      name = "shortPromiseValue"
+  )
+  Promise<Double> shortPromiseValue();
 
   @JsProperty
   void setShortPromiseValue(@Nonnull Promise<Double> shortPromiseValue);
@@ -1164,8 +1310,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<Double> getShortSequenceValue();
+  @JsProperty(
+      name = "shortSequenceValue"
+  )
+  JsArray<Double> shortSequenceValue();
 
   @JsProperty
   void setShortSequenceValue(@Nonnull JsArray<Double> shortSequenceValue);
@@ -1189,8 +1337,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  short getShortValue();
+  @JsProperty(
+      name = "shortValue"
+  )
+  short shortValue();
 
   @JsProperty
   void setShortValue(short shortValue);
@@ -1202,8 +1352,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<SomeType> getSomeTypeFrozenArrayValue();
+  @JsProperty(
+      name = "someTypeFrozenArrayValue"
+  )
+  JsArray<SomeType> someTypeFrozenArrayValue();
 
   @JsProperty
   void setSomeTypeFrozenArrayValue(@Nonnull JsArray<SomeType> someTypeFrozenArrayValue);
@@ -1216,8 +1368,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Promise<SomeType> getSomeTypePromiseValue();
+  @JsProperty(
+      name = "someTypePromiseValue"
+  )
+  Promise<SomeType> someTypePromiseValue();
 
   @JsProperty
   void setSomeTypePromiseValue(@Nonnull Promise<SomeType> someTypePromiseValue);
@@ -1229,8 +1383,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsArray<SomeType> getSomeTypeSequenceValue();
+  @JsProperty(
+      name = "someTypeSequenceValue"
+  )
+  JsArray<SomeType> someTypeSequenceValue();
 
   @JsProperty
   void setSomeTypeSequenceValue(@Nonnull JsArray<SomeType> someTypeSequenceValue);
@@ -1255,8 +1411,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  SomeType getSomeTypeValue();
+  @JsProperty(
+      name = "someTypeValue"
+  )
+  SomeType someTypeValue();
 
   @JsProperty
   void setSomeTypeValue(@Nonnull SomeType someTypeValue);
@@ -1268,8 +1426,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Symbol getSymbolValue();
+  @JsProperty(
+      name = "symbolValue"
+  )
+  Symbol symbolValue();
 
   @JsProperty
   void setSymbolValue(@Nonnull Symbol symbolValue);
@@ -1281,8 +1441,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<SomeType> getTypeReferenceRecordValue();
+  @JsProperty(
+      name = "typeReferenceRecordValue"
+  )
+  JsPropertyMap<SomeType> typeReferenceRecordValue();
 
   @JsProperty
   void setTypeReferenceRecordValue(@Nonnull JsPropertyMap<SomeType> typeReferenceRecordValue);
@@ -1295,8 +1457,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Uint16Array getUint16ArrayValue();
+  @JsProperty(
+      name = "uint16ArrayValue"
+  )
+  Uint16Array uint16ArrayValue();
 
   @JsProperty
   void setUint16ArrayValue(@Nonnull Uint16Array uint16ArrayValue);
@@ -1308,8 +1472,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Uint32Array getUint32ArrayValue();
+  @JsProperty(
+      name = "uint32ArrayValue"
+  )
+  Uint32Array uint32ArrayValue();
 
   @JsProperty
   void setUint32ArrayValue(@Nonnull Uint32Array uint32ArrayValue);
@@ -1321,8 +1487,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Uint8Array getUint8ArrayValue();
+  @JsProperty(
+      name = "uint8ArrayValue"
+  )
+  Uint8Array uint8ArrayValue();
 
   @JsProperty
   void setUint8ArrayValue(@Nonnull Uint8Array uint8ArrayValue);
@@ -1334,8 +1502,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Uint8ClampedArray getUint8ClampedArrayValue();
+  @JsProperty(
+      name = "uint8ClampedArrayValue"
+  )
+  Uint8ClampedArray uint8ClampedArrayValue();
 
   @JsProperty
   void setUint8ClampedArrayValue(@Nonnull Uint8ClampedArray uint8ClampedArrayValue);
@@ -1348,8 +1518,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  double getUnrestrictedDoubleValue();
+  @JsProperty(
+      name = "unrestrictedDoubleValue"
+  )
+  double unrestrictedDoubleValue();
 
   @JsProperty
   void setUnrestrictedDoubleValue(double unrestrictedDoubleValue);
@@ -1361,8 +1533,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  float getUnrestrictedFloatValue();
+  @JsProperty(
+      name = "unrestrictedFloatValue"
+  )
+  float unrestrictedFloatValue();
 
   @JsProperty
   void setUnrestrictedFloatValue(float unrestrictedFloatValue);
@@ -1374,8 +1548,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  int getUnsignedLongLongValue();
+  @JsProperty(
+      name = "unsignedLongLongValue"
+  )
+  int unsignedLongLongValue();
 
   @JsProperty
   void setUnsignedLongLongValue(int unsignedLongLongValue);
@@ -1387,8 +1563,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  int getUnsignedLongValue();
+  @JsProperty(
+      name = "unsignedLongValue"
+  )
+  int unsignedLongValue();
 
   @JsProperty
   void setUnsignedLongValue(int unsignedLongValue);
@@ -1400,8 +1578,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  int getUnsignedShortValue();
+  @JsProperty(
+      name = "unsignedShortValue"
+  )
+  int unsignedShortValue();
 
   @JsProperty
   void setUnsignedShortValue(int unsignedShortValue);
@@ -1413,8 +1593,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<String> getUsvStringRecordValue();
+  @JsProperty(
+      name = "usvStringRecordValue"
+  )
+  JsPropertyMap<String> usvStringRecordValue();
 
   @JsProperty
   void setUsvStringRecordValue(@Nonnull JsPropertyMap<String> usvStringRecordValue);
@@ -1427,8 +1609,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  String getUsvStringValue();
+  @JsProperty(
+      name = "usvStringValue"
+  )
+  String usvStringValue();
 
   @JsProperty
   void setUsvStringValue(@Nonnull String usvStringValue);
@@ -1440,8 +1624,10 @@ public interface MyDictionary {
     return this;
   }
 
-  @JsProperty
-  Promise<Void> getVoidPromiseValue();
+  @JsProperty(
+      name = "voidPromiseValue"
+  )
+  Promise<Void> voidPromiseValue();
 
   @JsProperty
   void setVoidPromiseValue(@Nonnull Promise<Void> voidPromiseValue);

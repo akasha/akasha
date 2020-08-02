@@ -22,8 +22,10 @@ public interface OtherPushPermissionDescriptor extends PushPermissionDescriptor 
     return Js.<OtherPushPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name ).safe( safe );
   }
 
-  @JsProperty
-  boolean isSafe();
+  @JsProperty(
+      name = "safe"
+  )
+  boolean safe();
 
   @JsProperty
   void setSafe(boolean safe);

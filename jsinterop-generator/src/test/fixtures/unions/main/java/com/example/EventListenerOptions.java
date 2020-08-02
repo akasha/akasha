@@ -22,8 +22,10 @@ public interface EventListenerOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isCapture();
+  @JsProperty(
+      name = "capture"
+  )
+  boolean capture();
 
   @JsProperty
   void setCapture(boolean capture);

@@ -32,9 +32,11 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
     return Js.<Dictionary_requiredNullableFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableFloatSequenceValue( requiredNullableFloatSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableFloatSequenceValue"
+  )
   @Nullable
-  JsArray<Double> getRequiredNullableFloatSequenceValue();
+  JsArray<Double> requiredNullableFloatSequenceValue();
 
   @JsProperty
   void setRequiredNullableFloatSequenceValue(

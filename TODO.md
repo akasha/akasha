@@ -101,8 +101,6 @@ complete as there is too much un-said.
 
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
 
-* Change getter in dictionary to remove prefix. 
-
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:

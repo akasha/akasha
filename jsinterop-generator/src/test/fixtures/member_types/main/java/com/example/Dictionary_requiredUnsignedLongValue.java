@@ -22,8 +22,10 @@ public interface Dictionary_requiredUnsignedLongValue {
     return Js.<Dictionary_requiredUnsignedLongValue>uncheckedCast( JsPropertyMap.of() ).requiredUnsignedLongValue( requiredUnsignedLongValue );
   }
 
-  @JsProperty
-  int getRequiredUnsignedLongValue();
+  @JsProperty(
+      name = "requiredUnsignedLongValue"
+  )
+  int requiredUnsignedLongValue();
 
   @JsProperty
   void setRequiredUnsignedLongValue(int requiredUnsignedLongValue);

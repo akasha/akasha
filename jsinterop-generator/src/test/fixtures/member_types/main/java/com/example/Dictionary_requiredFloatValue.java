@@ -22,8 +22,10 @@ public interface Dictionary_requiredFloatValue {
     return Js.<Dictionary_requiredFloatValue>uncheckedCast( JsPropertyMap.of() ).requiredFloatValue( requiredFloatValue );
   }
 
-  @JsProperty
-  float getRequiredFloatValue();
+  @JsProperty(
+      name = "requiredFloatValue"
+  )
+  float requiredFloatValue();
 
   @JsProperty
   void setRequiredFloatValue(float requiredFloatValue);

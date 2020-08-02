@@ -28,8 +28,10 @@ public interface EventInit {
   /**
    * Documentation for member EventInit.bubbles.
    */
-  @JsProperty
-  boolean isBubbles();
+  @JsProperty(
+      name = "bubbles"
+  )
+  boolean bubbles();
 
   /**
    * Documentation for member EventInit.bubbles.
@@ -50,8 +52,10 @@ public interface EventInit {
   /**
    * Documentation for required member EventInit.cancelable.
    */
-  @JsProperty
-  boolean isCancelable();
+  @JsProperty(
+      name = "cancelable"
+  )
+  boolean cancelable();
 
   /**
    * Documentation for required member EventInit.cancelable.

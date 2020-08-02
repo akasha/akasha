@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableBooleanFrozenArrayValue {
     return Js.<Dictionary_requiredNullableBooleanFrozenArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanFrozenArrayValue( requiredNullableBooleanFrozenArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableBooleanFrozenArrayValue"
+  )
   @Nullable
-  JsArray<Boolean> getRequiredNullableBooleanFrozenArrayValue();
+  JsArray<Boolean> requiredNullableBooleanFrozenArrayValue();
 
   @JsProperty
   void setRequiredNullableBooleanFrozenArrayValue(

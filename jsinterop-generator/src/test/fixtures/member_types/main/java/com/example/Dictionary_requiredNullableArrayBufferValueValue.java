@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableArrayBufferValueValue {
     return Js.<Dictionary_requiredNullableArrayBufferValueValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableArrayBufferValueValue( requiredNullableArrayBufferValueValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableArrayBufferValueValue"
+  )
   @Nullable
-  ArrayBuffer getRequiredNullableArrayBufferValueValue();
+  ArrayBuffer requiredNullableArrayBufferValueValue();
 
   @JsProperty
   void setRequiredNullableArrayBufferValueValue(

@@ -59,9 +59,11 @@ public interface AllowedBluetoothDevice {
     return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).requiredUuids( requiredUuids );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "allowedServices"
+  )
   @Nonnull
-  StringOrStringArrayUnion getAllowedServices();
+  StringOrStringArrayUnion allowedServices();
 
   @JsProperty
   void setAllowedServices(@Nonnull StringOrStringArrayUnion allowedServices);
@@ -102,8 +104,10 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
-  @JsProperty
-  StringOrStringArrayUnion getOtherServices();
+  @JsProperty(
+      name = "otherServices"
+  )
+  StringOrStringArrayUnion otherServices();
 
   @JsProperty
   void setOtherServices(@Nonnull StringOrStringArrayUnion otherServices);
@@ -144,9 +148,11 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredUuids"
+  )
   @Nonnull
-  JsArray<StringOrLongLongUnion> getRequiredUuids();
+  JsArray<StringOrLongLongUnion> requiredUuids();
 
   @JsProperty
   void setRequiredUuids(@Nonnull JsArray<StringOrLongLongUnion> requiredUuids);
@@ -172,8 +178,10 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
-  @JsProperty
-  JsArray<StringOrOctetUnion> getUuids();
+  @JsProperty(
+      name = "uuids"
+  )
+  JsArray<StringOrOctetUnion> uuids();
 
   @JsProperty
   void setUuids(@Nonnull JsArray<StringOrOctetUnion> uuids);

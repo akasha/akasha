@@ -23,8 +23,10 @@ public interface Dictionary_requiredUnrestrictedDoubleValue {
     return Js.<Dictionary_requiredUnrestrictedDoubleValue>uncheckedCast( JsPropertyMap.of() ).requiredUnrestrictedDoubleValue( requiredUnrestrictedDoubleValue );
   }
 
-  @JsProperty
-  double getRequiredUnrestrictedDoubleValue();
+  @JsProperty(
+      name = "requiredUnrestrictedDoubleValue"
+  )
+  double requiredUnrestrictedDoubleValue();
 
   @JsProperty
   void setRequiredUnrestrictedDoubleValue(double requiredUnrestrictedDoubleValue);

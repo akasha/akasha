@@ -24,9 +24,11 @@ public interface Dictionary_requiredDataViewValueValue {
     return Js.<Dictionary_requiredDataViewValueValue>uncheckedCast( JsPropertyMap.of() ).requiredDataViewValueValue( requiredDataViewValueValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredDataViewValueValue"
+  )
   @Nonnull
-  DataView getRequiredDataViewValueValue();
+  DataView requiredDataViewValueValue();
 
   @JsProperty
   void setRequiredDataViewValueValue(@Nonnull DataView requiredDataViewValueValue);

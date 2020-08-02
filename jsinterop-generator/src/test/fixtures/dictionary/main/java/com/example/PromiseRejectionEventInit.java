@@ -25,9 +25,11 @@ public interface PromiseRejectionEventInit extends EventInit {
     return Js.<PromiseRejectionEventInit>uncheckedCast( JsPropertyMap.of() ).promise( promise );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "promise"
+  )
   @Nonnull
-  Promise<Any> getPromise();
+  Promise<Any> promise();
 
   @JsProperty
   void setPromise(@Nonnull Promise<Any> promise);
@@ -39,9 +41,11 @@ public interface PromiseRejectionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "reason"
+  )
   @Nullable
-  Any getReason();
+  Any reason();
 
   @JsProperty
   void setReason(@Nullable Any reason);

@@ -22,8 +22,10 @@ public interface Dictionary_requiredBooleanValue {
     return Js.<Dictionary_requiredBooleanValue>uncheckedCast( JsPropertyMap.of() ).requiredBooleanValue( requiredBooleanValue );
   }
 
-  @JsProperty
-  boolean isRequiredBooleanValue();
+  @JsProperty(
+      name = "requiredBooleanValue"
+  )
+  boolean requiredBooleanValue();
 
   @JsProperty
   void setRequiredBooleanValue(boolean requiredBooleanValue);

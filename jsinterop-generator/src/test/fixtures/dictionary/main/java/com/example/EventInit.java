@@ -22,8 +22,10 @@ public interface EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isBubbles();
+  @JsProperty(
+      name = "bubbles"
+  )
+  boolean bubbles();
 
   @JsProperty
   void setBubbles(boolean bubbles);
@@ -35,8 +37,10 @@ public interface EventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isCancelable();
+  @JsProperty(
+      name = "cancelable"
+  )
+  boolean cancelable();
 
   @JsProperty
   void setCancelable(boolean cancelable);
@@ -48,8 +52,10 @@ public interface EventInit {
     return this;
   }
 
-  @JsProperty
-  boolean isComposed();
+  @JsProperty(
+      name = "composed"
+  )
+  boolean composed();
 
   @JsProperty
   void setComposed(boolean composed);

@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableByteStringValue {
     return Js.<Dictionary_requiredNullableByteStringValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableByteStringValue( requiredNullableByteStringValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableByteStringValue"
+  )
   @Nullable
-  String getRequiredNullableByteStringValue();
+  String requiredNullableByteStringValue();
 
   @JsProperty
   void setRequiredNullableByteStringValue(@Nullable String requiredNullableByteStringValue);

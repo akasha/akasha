@@ -32,9 +32,11 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
     return Js.<Dictionary_requiredNullableBooleanSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableBooleanSequenceValue( requiredNullableBooleanSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableBooleanSequenceValue"
+  )
   @Nullable
-  JsArray<Boolean> getRequiredNullableBooleanSequenceValue();
+  JsArray<Boolean> requiredNullableBooleanSequenceValue();
 
   @JsProperty
   void setRequiredNullableBooleanSequenceValue(

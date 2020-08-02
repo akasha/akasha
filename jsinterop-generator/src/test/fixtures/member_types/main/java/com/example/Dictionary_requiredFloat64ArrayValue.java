@@ -24,9 +24,11 @@ public interface Dictionary_requiredFloat64ArrayValue {
     return Js.<Dictionary_requiredFloat64ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredFloat64ArrayValue( requiredFloat64ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredFloat64ArrayValue"
+  )
   @Nonnull
-  Float64Array getRequiredFloat64ArrayValue();
+  Float64Array requiredFloat64ArrayValue();
 
   @JsProperty
   void setRequiredFloat64ArrayValue(@Nonnull Float64Array requiredFloat64ArrayValue);

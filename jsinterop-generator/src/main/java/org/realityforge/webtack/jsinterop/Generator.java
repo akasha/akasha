@@ -428,10 +428,13 @@ final class Generator
   {
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( getAccessorName( member ) )
+        .methodBuilder( safeName( member.getName() ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
-        .returns( javaType )
-        .addAnnotation( Types.JS_PROPERTY );
+        .returns( javaType );
+    method.addAnnotation( AnnotationSpec
+                            .builder( Types.JS_PROPERTY )
+                            .addMember( "name", "$S", member.getName() )
+                            .build() );
     final DocumentationElement documentation = member.getDocumentation();
     if ( null != documentation )
     {
@@ -449,14 +452,6 @@ final class Generator
       }
     }
     type.addMethod( method.build() );
-  }
-
-  @Nonnull
-  private String getAccessorName( @Nonnull final DictionaryMember member )
-  {
-    final Type type = member.getType();
-    final String prefix = !type.isNullable() && type.getKind() == Kind.Boolean ? "is" : "get";
-    return prefix + NamingUtil.uppercaseFirstCharacter( member.getName() );
   }
 
   private void generateDictionaryMemberSetter( @Nonnull final CodeGenContext context,

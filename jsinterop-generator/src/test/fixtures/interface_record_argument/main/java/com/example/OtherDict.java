@@ -22,8 +22,10 @@ public interface OtherDict {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsPropertyMap<String> getValue();
+  @JsProperty(
+      name = "value"
+  )
+  JsPropertyMap<String> value();
 
   @JsProperty
   void setValue(@Nonnull JsPropertyMap<String> value);

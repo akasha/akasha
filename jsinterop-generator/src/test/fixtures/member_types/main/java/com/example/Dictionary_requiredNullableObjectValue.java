@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableObjectValue {
     return Js.<Dictionary_requiredNullableObjectValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableObjectValue( requiredNullableObjectValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableObjectValue"
+  )
   @Nullable
-  Object getRequiredNullableObjectValue();
+  Object requiredNullableObjectValue();
 
   @JsProperty
   void setRequiredNullableObjectValue(@Nullable Object requiredNullableObjectValue);

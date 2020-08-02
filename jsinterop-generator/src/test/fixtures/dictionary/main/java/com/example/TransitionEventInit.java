@@ -22,8 +22,10 @@ public interface TransitionEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  double getElapsedTime();
+  @JsProperty(
+      name = "elapsedTime"
+  )
+  double elapsedTime();
 
   @JsProperty
   void setElapsedTime(double elapsedTime);
@@ -35,8 +37,10 @@ public interface TransitionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getPropertyName();
+  @JsProperty(
+      name = "propertyName"
+  )
+  String propertyName();
 
   @JsProperty
   void setPropertyName(@Nonnull String propertyName);
@@ -48,8 +52,10 @@ public interface TransitionEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getPseudoElement();
+  @JsProperty(
+      name = "pseudoElement"
+  )
+  String pseudoElement();
 
   @JsProperty
   void setPseudoElement(@Nonnull String pseudoElement);

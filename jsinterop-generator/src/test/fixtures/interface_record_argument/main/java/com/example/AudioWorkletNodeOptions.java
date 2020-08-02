@@ -22,8 +22,10 @@ public interface AudioWorkletNodeOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  JsPropertyMap<Boolean> getOtherData1();
+  @JsProperty(
+      name = "otherData1"
+  )
+  JsPropertyMap<Boolean> otherData1();
 
   @JsProperty
   void setOtherData1(@Nonnull JsPropertyMap<Boolean> otherData1);
@@ -35,8 +37,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData10();
+  @JsProperty(
+      name = "otherData10"
+  )
+  JsPropertyMap<Double> otherData10();
 
   @JsProperty
   void setOtherData10(@Nonnull JsPropertyMap<Double> otherData10);
@@ -48,8 +52,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData11();
+  @JsProperty(
+      name = "otherData11"
+  )
+  JsPropertyMap<Double> otherData11();
 
   @JsProperty
   void setOtherData11(@Nonnull JsPropertyMap<Double> otherData11);
@@ -61,8 +67,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData2();
+  @JsProperty(
+      name = "otherData2"
+  )
+  JsPropertyMap<Double> otherData2();
 
   @JsProperty
   void setOtherData2(@Nonnull JsPropertyMap<Double> otherData2);
@@ -74,8 +82,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData3();
+  @JsProperty(
+      name = "otherData3"
+  )
+  JsPropertyMap<Double> otherData3();
 
   @JsProperty
   void setOtherData3(@Nonnull JsPropertyMap<Double> otherData3);
@@ -87,8 +97,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData4();
+  @JsProperty(
+      name = "otherData4"
+  )
+  JsPropertyMap<Double> otherData4();
 
   @JsProperty
   void setOtherData4(@Nonnull JsPropertyMap<Double> otherData4);
@@ -100,8 +112,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData5();
+  @JsProperty(
+      name = "otherData5"
+  )
+  JsPropertyMap<Double> otherData5();
 
   @JsProperty
   void setOtherData5(@Nonnull JsPropertyMap<Double> otherData5);
@@ -113,8 +127,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData6();
+  @JsProperty(
+      name = "otherData6"
+  )
+  JsPropertyMap<Double> otherData6();
 
   @JsProperty
   void setOtherData6(@Nonnull JsPropertyMap<Double> otherData6);
@@ -126,8 +142,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData7();
+  @JsProperty(
+      name = "otherData7"
+  )
+  JsPropertyMap<Double> otherData7();
 
   @JsProperty
   void setOtherData7(@Nonnull JsPropertyMap<Double> otherData7);
@@ -139,8 +157,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData8();
+  @JsProperty(
+      name = "otherData8"
+  )
+  JsPropertyMap<Double> otherData8();
 
   @JsProperty
   void setOtherData8(@Nonnull JsPropertyMap<Double> otherData8);
@@ -152,8 +172,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getOtherData9();
+  @JsProperty(
+      name = "otherData9"
+  )
+  JsPropertyMap<Double> otherData9();
 
   @JsProperty
   void setOtherData9(@Nonnull JsPropertyMap<Double> otherData9);
@@ -165,8 +187,10 @@ public interface AudioWorkletNodeOptions {
     return this;
   }
 
-  @JsProperty
-  JsPropertyMap<Double> getParameterData();
+  @JsProperty(
+      name = "parameterData"
+  )
+  JsPropertyMap<Double> parameterData();
 
   @JsProperty
   void setParameterData(@Nonnull JsPropertyMap<Double> parameterData);

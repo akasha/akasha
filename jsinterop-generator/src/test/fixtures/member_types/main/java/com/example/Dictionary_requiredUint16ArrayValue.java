@@ -24,9 +24,11 @@ public interface Dictionary_requiredUint16ArrayValue {
     return Js.<Dictionary_requiredUint16ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredUint16ArrayValue( requiredUint16ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredUint16ArrayValue"
+  )
   @Nonnull
-  Uint16Array getRequiredUint16ArrayValue();
+  Uint16Array requiredUint16ArrayValue();
 
   @JsProperty
   void setRequiredUint16ArrayValue(@Nonnull Uint16Array requiredUint16ArrayValue);

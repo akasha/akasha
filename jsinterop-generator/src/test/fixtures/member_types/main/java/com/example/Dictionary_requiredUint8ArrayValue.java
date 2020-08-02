@@ -24,9 +24,11 @@ public interface Dictionary_requiredUint8ArrayValue {
     return Js.<Dictionary_requiredUint8ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredUint8ArrayValue( requiredUint8ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredUint8ArrayValue"
+  )
   @Nonnull
-  Uint8Array getRequiredUint8ArrayValue();
+  Uint8Array requiredUint8ArrayValue();
 
   @JsProperty
   void setRequiredUint8ArrayValue(@Nonnull Uint8Array requiredUint8ArrayValue);

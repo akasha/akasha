@@ -22,8 +22,10 @@ public interface Dictionary_requiredDoubleValue {
     return Js.<Dictionary_requiredDoubleValue>uncheckedCast( JsPropertyMap.of() ).requiredDoubleValue( requiredDoubleValue );
   }
 
-  @JsProperty
-  double getRequiredDoubleValue();
+  @JsProperty(
+      name = "requiredDoubleValue"
+  )
+  double requiredDoubleValue();
 
   @JsProperty
   void setRequiredDoubleValue(double requiredDoubleValue);

@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableUnrestrictedDoubleValue {
     return Js.<Dictionary_requiredNullableUnrestrictedDoubleValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableUnrestrictedDoubleValue( requiredNullableUnrestrictedDoubleValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableUnrestrictedDoubleValue"
+  )
   @Nullable
-  Double getRequiredNullableUnrestrictedDoubleValue();
+  Double requiredNullableUnrestrictedDoubleValue();
 
   @JsProperty
   void setRequiredNullableUnrestrictedDoubleValue(

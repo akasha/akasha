@@ -105,9 +105,11 @@ public interface BluetoothDataFilterInit {
     return Js.<BluetoothDataFilterInit>uncheckedCast( JsPropertyMap.of() ).dataPrefix( dataPrefix );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "dataPrefix"
+  )
   @Nonnull
-  BufferSource getDataPrefix();
+  BufferSource dataPrefix();
 
   @JsProperty
   void setDataPrefix(@Nonnull BufferSource dataPrefix);
@@ -263,8 +265,10 @@ public interface BluetoothDataFilterInit {
     return this;
   }
 
-  @JsProperty
-  BufferSource getMask();
+  @JsProperty(
+      name = "mask"
+  )
+  BufferSource mask();
 
   @JsProperty
   void setMask(@Nonnull BufferSource mask);

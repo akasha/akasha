@@ -22,9 +22,11 @@ public interface Dictionary_requiredByteStringValue {
     return Js.<Dictionary_requiredByteStringValue>uncheckedCast( JsPropertyMap.of() ).requiredByteStringValue( requiredByteStringValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredByteStringValue"
+  )
   @Nonnull
-  String getRequiredByteStringValue();
+  String requiredByteStringValue();
 
   @JsProperty
   void setRequiredByteStringValue(@Nonnull String requiredByteStringValue);

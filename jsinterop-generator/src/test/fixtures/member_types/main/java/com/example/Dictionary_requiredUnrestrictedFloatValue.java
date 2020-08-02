@@ -23,8 +23,10 @@ public interface Dictionary_requiredUnrestrictedFloatValue {
     return Js.<Dictionary_requiredUnrestrictedFloatValue>uncheckedCast( JsPropertyMap.of() ).requiredUnrestrictedFloatValue( requiredUnrestrictedFloatValue );
   }
 
-  @JsProperty
-  float getRequiredUnrestrictedFloatValue();
+  @JsProperty(
+      name = "requiredUnrestrictedFloatValue"
+  )
+  float requiredUnrestrictedFloatValue();
 
   @JsProperty
   void setRequiredUnrestrictedFloatValue(float requiredUnrestrictedFloatValue);

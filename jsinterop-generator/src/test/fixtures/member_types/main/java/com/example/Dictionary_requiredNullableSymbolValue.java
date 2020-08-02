@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableSymbolValue {
     return Js.<Dictionary_requiredNullableSymbolValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableSymbolValue( requiredNullableSymbolValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableSymbolValue"
+  )
   @Nullable
-  Symbol getRequiredNullableSymbolValue();
+  Symbol requiredNullableSymbolValue();
 
   @JsProperty
   void setRequiredNullableSymbolValue(@Nullable Symbol requiredNullableSymbolValue);

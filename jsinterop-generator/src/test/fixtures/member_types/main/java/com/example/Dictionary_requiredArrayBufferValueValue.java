@@ -24,9 +24,11 @@ public interface Dictionary_requiredArrayBufferValueValue {
     return Js.<Dictionary_requiredArrayBufferValueValue>uncheckedCast( JsPropertyMap.of() ).requiredArrayBufferValueValue( requiredArrayBufferValueValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredArrayBufferValueValue"
+  )
   @Nonnull
-  ArrayBuffer getRequiredArrayBufferValueValue();
+  ArrayBuffer requiredArrayBufferValueValue();
 
   @JsProperty
   void setRequiredArrayBufferValueValue(@Nonnull ArrayBuffer requiredArrayBufferValueValue);

@@ -24,9 +24,11 @@ public interface Dictionary_requiredAnyValue {
     return Js.<Dictionary_requiredAnyValue>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredAnyValue"
+  )
   @Nullable
-  Any getRequiredAnyValue();
+  Any requiredAnyValue();
 
   @JsProperty
   void setRequiredAnyValue(@Nullable Any requiredAnyValue);

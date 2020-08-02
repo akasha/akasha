@@ -31,9 +31,11 @@ public interface Dictionary_requiredShortSequenceValue {
     return Js.<Dictionary_requiredShortSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredShortSequenceValue"
+  )
   @Nonnull
-  JsArray<Double> getRequiredShortSequenceValue();
+  JsArray<Double> requiredShortSequenceValue();
 
   @JsProperty
   void setRequiredShortSequenceValue(@Nonnull JsArray<Double> requiredShortSequenceValue);

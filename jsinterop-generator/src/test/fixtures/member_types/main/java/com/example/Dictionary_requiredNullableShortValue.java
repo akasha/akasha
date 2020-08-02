@@ -24,9 +24,11 @@ public interface Dictionary_requiredNullableShortValue {
     return Js.<Dictionary_requiredNullableShortValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableShortValue( requiredNullableShortValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableShortValue"
+  )
   @Nullable
-  Double getRequiredNullableShortValue();
+  Double requiredNullableShortValue();
 
   @JsProperty
   void setRequiredNullableShortValue(@Nullable Double requiredNullableShortValue);

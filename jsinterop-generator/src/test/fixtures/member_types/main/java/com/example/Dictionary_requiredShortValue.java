@@ -22,8 +22,10 @@ public interface Dictionary_requiredShortValue {
     return Js.<Dictionary_requiredShortValue>uncheckedCast( JsPropertyMap.of() ).requiredShortValue( requiredShortValue );
   }
 
-  @JsProperty
-  short getRequiredShortValue();
+  @JsProperty(
+      name = "requiredShortValue"
+  )
+  short requiredShortValue();
 
   @JsProperty
   void setRequiredShortValue(short requiredShortValue);

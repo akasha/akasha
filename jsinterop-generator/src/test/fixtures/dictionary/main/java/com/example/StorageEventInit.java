@@ -23,9 +23,11 @@ public interface StorageEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "key"
+  )
   @Nullable
-  String getKey();
+  String key();
 
   @JsProperty
   void setKey(@Nullable String key);
@@ -37,9 +39,11 @@ public interface StorageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "newValue"
+  )
   @Nullable
-  String getNewValue();
+  String newValue();
 
   @JsProperty
   void setNewValue(@Nullable String newValue);
@@ -51,9 +55,11 @@ public interface StorageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "oldValue"
+  )
   @Nullable
-  String getOldValue();
+  String oldValue();
 
   @JsProperty
   void setOldValue(@Nullable String oldValue);
@@ -65,9 +71,11 @@ public interface StorageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "storageArea"
+  )
   @Nullable
-  Storage getStorageArea();
+  Storage storageArea();
 
   @JsProperty
   void setStorageArea(@Nullable Storage storageArea);
@@ -79,8 +87,10 @@ public interface StorageEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getUrl();
+  @JsProperty(
+      name = "url"
+  )
+  String url();
 
   @JsProperty
   void setUrl(@Nonnull String url);

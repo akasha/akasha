@@ -22,8 +22,10 @@ public interface IDBIndexParameters {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isMultiEntry();
+  @JsProperty(
+      name = "multiEntry"
+  )
+  boolean multiEntry();
 
   @JsProperty
   void setMultiEntry(boolean multiEntry);
@@ -35,8 +37,10 @@ public interface IDBIndexParameters {
     return this;
   }
 
-  @JsProperty
-  boolean isUnique();
+  @JsProperty(
+      name = "unique"
+  )
+  boolean unique();
 
   @JsProperty
   void setUnique(boolean unique);

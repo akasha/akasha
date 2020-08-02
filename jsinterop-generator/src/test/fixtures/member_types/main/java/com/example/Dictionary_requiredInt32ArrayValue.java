@@ -24,9 +24,11 @@ public interface Dictionary_requiredInt32ArrayValue {
     return Js.<Dictionary_requiredInt32ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredInt32ArrayValue( requiredInt32ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredInt32ArrayValue"
+  )
   @Nonnull
-  Int32Array getRequiredInt32ArrayValue();
+  Int32Array requiredInt32ArrayValue();
 
   @JsProperty
   void setRequiredInt32ArrayValue(@Nonnull Int32Array requiredInt32ArrayValue);

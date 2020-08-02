@@ -25,9 +25,11 @@ public interface Dictionary_requiredNullableInt16ArrayValue {
     return Js.<Dictionary_requiredNullableInt16ArrayValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableInt16ArrayValue( requiredNullableInt16ArrayValue );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "requiredNullableInt16ArrayValue"
+  )
   @Nullable
-  Int16Array getRequiredNullableInt16ArrayValue();
+  Int16Array requiredNullableInt16ArrayValue();
 
   @JsProperty
   void setRequiredNullableInt16ArrayValue(@Nullable Int16Array requiredNullableInt16ArrayValue);
