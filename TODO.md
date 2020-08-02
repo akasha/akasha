@@ -104,8 +104,6 @@ complete as there is too much un-said.
 
 * Consider adding a non-standard "event" member to interfaces to webidl language to represent events.
 
-* Change doc scanner to normalize descriptions.
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Put all docs for a type in a directory and delete the entire directory when type is deleted.
