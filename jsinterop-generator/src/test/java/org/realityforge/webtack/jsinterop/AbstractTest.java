@@ -21,9 +21,11 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.tools.DiagnosticCollector;
+import javax.tools.DocumentationTool;
 import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
+import javax.tools.StandardLocation;
 import javax.tools.ToolProvider;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
@@ -172,7 +174,8 @@ public abstract class AbstractTest
     }
 
     new Generator().generate( context );
-    final List<Path> javaFiles = collectJavaFiles( context.getMainJavaDirectory() );
+    final Path mainJavaDirectory = context.getMainJavaDirectory();
+    final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
     final Map<String, Path> generatedSourceFiles = context.getGeneratedSourceFiles();
@@ -183,7 +186,7 @@ public abstract class AbstractTest
       assertFileMatchesFixture( file, directory.resolve( relativePath ) );
     }
 
-    ensureGeneratedCodeCompiles( javaFiles, classpathEntries );
+    ensureGeneratedCodeCompiles( mainJavaDirectory, javaFiles, classpathEntries );
   }
 
   @Nonnull
@@ -197,16 +200,19 @@ public abstract class AbstractTest
   /**
    * Compile the supplied java files and make sure that they compile together.
    *
-   * @param javaFiles the java files.
+   * @param mainJavaDirectory the directory in which java files are compiled.
+   * @param javaFiles         the java files.
    * @throws Exception if there is an error
    */
-  private void ensureGeneratedCodeCompiles( @Nonnull final List<Path> javaFiles,
+  private void ensureGeneratedCodeCompiles( @Nonnull final Path mainJavaDirectory,
+                                            @Nonnull final List<Path> javaFiles,
                                             @Nonnull final List<Path> classpathEntries )
     throws Exception
   {
     if ( !javaFiles.isEmpty() )
     {
       final Path output = javac( javaFiles, classpathEntries );
+      javadoc( mainJavaDirectory, javaFiles, classpathEntries );
       if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
       {
         gwtc( classpathEntries, output );
@@ -252,6 +258,44 @@ public abstract class AbstractTest
             listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
     }
     return output;
+  }
+
+  private void javadoc( @Nonnull final Path mainJavaDirectory,
+                        @Nonnull final List<Path> javaFiles,
+                        @Nonnull final List<Path> classpathEntries )
+    throws Exception
+  {
+    final DocumentationTool javadoc = ToolProvider.getSystemDocumentationTool();
+    final StandardJavaFileManager fileManager = javadoc.getStandardFileManager( null, null, null );
+    final Path output = getWorkingDir().resolve( "target" ).resolve( "javadoc" );
+    Files.createDirectories( output );
+    final Iterable<? extends JavaFileObject> compilationUnits =
+      fileManager.getJavaFileObjectsFromFiles( javaFiles
+                                                 .stream()
+                                                 .map( Path::toFile )
+                                                 .collect( Collectors.toList() ) );
+    final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
+    final List<Path> classpathElements = new ArrayList<>( classpathEntries );
+    classpathElements.addAll( gwtDevLibs() );
+    fileManager.setLocation( DocumentationTool.Location.DOCUMENTATION_OUTPUT,
+                             Collections.singletonList( output.toFile() ) );
+    fileManager.setLocation( StandardLocation.CLASS_PATH,
+                             classpathElements.stream().map( Path::toFile ).collect( Collectors.toList() ) );
+    fileManager.setLocation( StandardLocation.SOURCE_PATH,
+                             Collections.singletonList( mainJavaDirectory.toFile() ) );
+
+    final DocumentationTool.DocumentationTask task =
+      javadoc.getTask( null,
+                       fileManager,
+                       listener,
+                       null,
+                       Collections.singletonList( "-Xdoclint:all" ),
+                       compilationUnits );
+    if ( !task.call() )
+    {
+      fail( "Failed to javadoc files:\n" +
+            listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
+    }
   }
 
   private void gwtc( @Nonnull final List<Path> classpathEntries, @Nonnull final Path output )
