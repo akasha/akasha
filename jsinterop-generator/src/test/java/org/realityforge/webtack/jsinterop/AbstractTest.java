@@ -234,7 +234,7 @@ public abstract class AbstractTest
         .map( Path::toAbsolutePath )
         .map( Path::toString )
         .collect( Collectors.joining( File.pathSeparator ) );
-    final JavaCompiler.CompilationTask compilationTask =
+    final JavaCompiler.CompilationTask task =
       compiler.getTask( null,
                         fileManager,
                         listener,
@@ -246,7 +246,7 @@ public abstract class AbstractTest
                                        "-Werror" ),
                         null,
                         compilationUnits );
-    if ( !compilationTask.call() || !listener.getDiagnostics().isEmpty() )
+    if ( !task.call() || !listener.getDiagnostics().isEmpty() )
     {
       fail( "Failed to compile files:\n" +
             listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
