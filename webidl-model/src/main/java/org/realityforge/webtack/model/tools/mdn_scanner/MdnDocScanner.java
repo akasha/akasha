@@ -1,22 +1,17 @@
 package org.realityforge.webtack.model.tools.mdn_scanner;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
-import javax.json.bind.JsonbConfig;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -36,14 +31,11 @@ public final class MdnDocScanner
   @Nonnull
   private static final String BASE_URL = HOST_URL + API_RELATIVE_URL;
   @Nonnull
-  private final DocRepositoryConfig _repository;
-  @Nonnull
-  private final Path _dataDirectory;
+  private final DocRepositoryRuntime _runtime;
 
-  public MdnDocScanner( @Nonnull final DocRepositoryConfig repository, @Nonnull final Path dataDirectory )
+  public MdnDocScanner( @Nonnull final DocRepositoryRuntime runtime )
   {
-    _repository = Objects.requireNonNull( repository );
-    _dataDirectory = Objects.requireNonNull( dataDirectory );
+    _runtime = Objects.requireNonNull( runtime );
   }
 
   @Nonnull
@@ -56,7 +48,7 @@ public final class MdnDocScanner
   {
     final DocSourceConfig source = findOrCreateDocSourceConfig( kind, type, member );
     final boolean isNew = 0 == source.getLastModifiedAt();
-    final Path target = _dataDirectory.resolve( source.getName() + ".json" );
+    final Path target = _runtime.getDataFileLocation( source );
     final FetchResult result;
     try
     {
@@ -379,14 +371,15 @@ public final class MdnDocScanner
   {
     assert null == member || DocKind.Type != kind;
     final String name = type + ( null == member ? "" : "." + member );
-    DocSourceConfig source = _repository.findSourceByName( name );
+    final DocRepositoryConfig repository = _runtime.getRepository();
+    DocSourceConfig source = repository.findSourceByName( name );
     if ( null == source )
     {
       source = new DocSourceConfig();
       source.setName( name );
       source.setLastModifiedAt( 0 );
       source.setUrl( getElementUrl( type, member, kind ) );
-      _repository.getSources().add( source );
+      repository.getSources().add( source );
       saveRepository();
     }
     return source;
@@ -395,13 +388,14 @@ public final class MdnDocScanner
   private void saveRepository()
     throws RepositorySaveException
   {
+    final DocRepositoryConfig repository = _runtime.getRepository();
     try
     {
-      DocRepositoryConfig.save( _repository );
+      DocRepositoryConfig.save( repository );
     }
     catch ( final Exception e )
     {
-      throw new RepositorySaveException( _repository, e );
+      throw new RepositorySaveException( repository, e );
     }
   }
 

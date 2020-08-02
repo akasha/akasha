@@ -12,6 +12,7 @@ import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocException;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocFetchResult;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceFetchException;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceIOException;
@@ -74,7 +75,7 @@ final class FetchDocsCommand
   {
     final Logger logger = context.environment().logger();
     final MdnDocScanner scanner =
-      new MdnDocScanner( context.docRepository(), context.environment().docDirectory() );
+      new MdnDocScanner( new DocRepositoryRuntime( context.docRepository(), context.environment().docDirectory() ) );
 
     for ( final String typeName : getTypeNames( context ) )
     {
