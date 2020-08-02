@@ -1,0 +1,12 @@
+{
+  "name": "NodeFilter",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter",
+  "description": "Documentation for NodeFilter",
+  "properties": [
+    "FILTER_ACCEPT",
+    "FILTER_REJECT"
+  ],
+  "methods": [
+    "acceptNode"
+  ]
+}

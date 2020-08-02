@@ -1,0 +1,62 @@
+[
+  {
+    "lastModifiedAt": 1,
+    "name": "Event",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Event.AT_TARGET",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/AT_TARGET"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Event.bubbles",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Event.cancelBubble",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelBubble"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Event.composedPath",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Event.Event",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/Event"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Event.filterGlobalEvent",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Event/filterGlobalEvent"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "NodeFilter",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "NodeFilter.acceptNode",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter/acceptNode"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "NodeFilter.FILTER_ACCEPT"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Window",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Window.someVar",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/someVar"
+  }
+
+]
