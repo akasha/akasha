@@ -22,7 +22,7 @@ public final class DocRepositoryRuntime
   }
 
   @Nonnull
-   DocRepositoryConfig getRepository()
+  DocRepositoryConfig getRepository()
   {
     return _repository;
   }
