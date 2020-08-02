@@ -89,10 +89,7 @@ complete as there is too much un-said.
 * Maybe always try to link to MDN documentation via url like https://developer.mozilla.org/en-US/docs/Web/API/{Element}(/{Member})? such as  https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent - Of course we would need to do a http get to verify that the element is documented and it is only available for some element types (interfaces?). We could also scrape the events on interfaces and link to them via
   - https://developer.mozilla.org/en-US/docs/Web/API/XRSession/squeezestart_event
 
-* Add a simple output process that emits java (or closure externs) directly as part of the experiment. Consider
-  how this would look if we created a parallel model hierarchy and then generated source code based on this model.
-  We should also emit browser specific extension with clear markers in the source code (i.e. generate the externs
-  prefixed with `chrome_` etc or add explicit annotations in java code).
+* Emit closure externs for WebIDL types.
 
 * How do we force `XRInputSourcesChangeEvent.XRInputSourcesChangeEvent.type` to a constant value? The spec that
   there is only one valid value but idl does not have a way of specifying that. If we knew that we could force
