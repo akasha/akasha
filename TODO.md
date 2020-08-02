@@ -114,8 +114,6 @@ complete as there is too much un-said.
 
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
 
-* Emit javadocs as part of jsinterop stage.
-
 * Change getter in dictionary to remove prefix. 
 
 ### Validations
