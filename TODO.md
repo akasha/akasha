@@ -116,6 +116,8 @@ complete as there is too much un-said.
 
 * Emit javadocs as part of jsinterop stage.
 
+* Change getter in dictionary to remove prefix. 
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
