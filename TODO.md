@@ -86,8 +86,8 @@ complete as there is too much un-said.
 
   Spec Docs: https://heycam.github.io/webidl/
 
-* Maybe always try to link to MDN documentation via url like https://developer.mozilla.org/en-US/docs/Web/API/{Element}(/{Member})? such as  https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent - Of course we would need to do a http get to verify that the element is documented and it is only available for some element types (interfaces?). We could also scrape the events on interfaces and link to them via
-  - https://developer.mozilla.org/en-US/docs/Web/API/XRSession/squeezestart_event
+* Extract documentation for event types from MDN. This probably involves scraping the type page and looking for events
+  with urls like https://developer.mozilla.org/en-US/docs/Web/API/{{type}}/{{event_name}}_event
 
 * Emit closure externs for WebIDL types.
 
