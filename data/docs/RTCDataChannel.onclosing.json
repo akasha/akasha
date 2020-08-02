@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCDataChannel.onclosing",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclosing",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<div class=\"blockIndicator draft\"> \n <p><strong>Draft</strong><br> This page is not complete.</p> \n</div>\n<p>The <code><strong>RTCDataChannel.onclosing</strong></code> property is an <code>EventHandler</code> which specifies a function to be called by the browser when the <code><a class=\"new\" href=\"https://developer.mozilla.org/en-US/docs/Web/Events/closing\" rel=\"nofollow\" title=\"/en-US/docs/Web/Events/closing\">closing</a></code> event is received by the <code>RTCDataChannel</code>. This is a simple <code>Event</code> which indicates that the data channel is being closed, that is, <code>RTCDataChannel</code> transitions to \"closing\" state. For example, after <code>RTCDataChannel.close()</code> was called but the underlying data transport might not have been closed yet.</p>"
-}

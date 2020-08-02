@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCDataChannel.onerror",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onerror",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCDataChannel.onerror</strong></code> property is an <code>EventHandler</code> which specifies a function to be called when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/error\" title=\"/en-US/docs/Web/Events/error\">error</a></code> event is received. When an error occurs on the data channel, the function receives as input an <code>ErrorEvent</code> object describing the error which occurred.</p>"
-}

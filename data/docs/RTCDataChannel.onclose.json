@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCDataChannel.onclose",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclose",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCDataChannel.onclose</strong></code> property is an <code>EventHandler</code> which specifies a function to be called by the browser when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/close\" title=\"/en-US/docs/Web/Events/close\">close</a></code> event is received by the <code>RTCDataChannel</code>. This is a simple <code>Event</code> which indicates that the data channel has closed down.</p>"
-}

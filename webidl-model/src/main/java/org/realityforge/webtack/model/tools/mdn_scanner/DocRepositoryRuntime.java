@@ -52,6 +52,8 @@ public final class DocRepositoryRuntime
   @Nonnull
   public Path getDataFileLocation( @Nonnull final DocSourceConfig config )
   {
-    return _dataDirectory.resolve( config.getName() + ".json" );
+    final String name = config.getName();
+    final String[] parts = name.split( "\\." );
+    return _dataDirectory.resolve( parts[ 0 ] ).resolve( ( 1 == parts.length ? "__type__" : parts[ 1 ] ) + ".json" );
   }
 }

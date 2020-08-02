@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCPeerConnection.ondatachannel",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCPeerConnection.ondatachannel</strong></code> property is an <code>EventHandler</code> which specifies a function which is called when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/datachannel\" title=\"/en-US/docs/Web/Events/datachannel\">datachannel</a></code> event occurs on an <code>RTCPeerConnection</code>. This event, of type <code>RTCDataChannelEvent</code>, is sent when an <code>RTCDataChannel</code> is added to the connection by the remote peer calling <code>createDataChannel()</code>.</p>\n<p>At the time this event is received, the <code>RTCDataChannel</code> it indicates may not yet actually be open. Be sure to wait for the <code>\"open\"</code> event to be fired on the new <code>RTCDataChannel</code> before using it.</p>"
-}

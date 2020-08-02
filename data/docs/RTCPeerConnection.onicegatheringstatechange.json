@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCPeerConnection.onicegatheringstatechange",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicegatheringstatechange",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCPeerConnection.onicegatheringstatechange</strong></code> property is an <code>EventHandler</code> which specifies a function to be called when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/icegatheringstatechange\" title=\"/en-US/docs/Web/Events/icegatheringstatechange\">icegatheringstatechange</a></code> event is sent to an <code>RTCPeerConnection</code> instance. This happens when the ICE gathering state—that is, whether or not the ICE agent is actively gathering candidates—changes.</p>\n<p>You don't need to watch for this event unless you have specific reasons to want to closely monitor the state of ICE gathering.</p>"
-}

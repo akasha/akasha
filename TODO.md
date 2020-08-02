@@ -106,8 +106,6 @@ complete as there is too much un-said.
 
 * Some doc entries include documentation for constants .. scan for that?.
 
-* Put all docs for a type in a directory and delete the entire directory when type is deleted.
-
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
 
 * Change getter in dictionary to remove prefix. 

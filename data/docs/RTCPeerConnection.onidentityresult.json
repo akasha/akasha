@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCPeerConnection.onidentityresult",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onidentityresult",
-    "description": "<p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n<p>The <code><strong>RTCPeerConnection.onidentityresult</strong></code> event handler is a property containing the code to execute when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/identityresult\" title=\"/en-US/docs/Web/Events/identityresult\">identityresult</a></code> event, of type <code>RTCIdentityEvent</code>, is received by this <code>RTCPeerConnection</code>. Such an event is sent when an identity assertion is generated, via <code>getIdentityAssertion()</code> or during the creation of an offer or an answer.</p>"
-}

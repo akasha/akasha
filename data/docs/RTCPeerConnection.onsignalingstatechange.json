@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCPeerConnection.onsignalingstatechange",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange",
-    "description": "<p> The function receives as input the event object of type <code>Event</code>; this event is sent when the peer connection's <code>signalingState</code> changes, which may happen either because of a call to <code>setLocalDescription()</code> or to <code>setRemoteDescription()</code>.</p>"
-}

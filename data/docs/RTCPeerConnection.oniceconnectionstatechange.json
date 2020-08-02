@@ -1,6 +1,0 @@
-
-{
-    "name": "RTCPeerConnection.oniceconnectionstatechange",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange",
-    "description": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCPeerConnection.oniceconnectionstatechange</strong></code> property is an event handler which specifies a function to be called when the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/iceconnectionstatechange\" title=\"/en-US/docs/Web/Events/iceconnectionstatechange\">iceconnectionstatechange</a></code> event is fired on an <code>RTCPeerConnection</code> instance. This happens when the state of the connection's ICE agent, as represented by the <code>iceConnectionState</code> property, changes.</p>"
-}
