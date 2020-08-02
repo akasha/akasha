@@ -110,6 +110,8 @@ complete as there is too much un-said.
 
 * Put all docs for a type in a directory and delete the entire directory when type is deleted.
 
+* Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
