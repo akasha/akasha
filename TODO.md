@@ -91,10 +91,6 @@ complete as there is too much un-said.
 
 * Emit closure externs for WebIDL types.
 
-* How do we force `XRInputSourcesChangeEvent.XRInputSourcesChangeEvent.type` to a constant value? The spec that
-  there is only one valid value but idl does not have a way of specifying that. If we knew that we could force
-  the java code to have a constructor that specified value for you
-
 * Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
   and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
   browsers to support
