@@ -49,7 +49,7 @@ public final class DocRepositoryConfigTest
     final String content = "\n" +
                            "[\n" +
                            "    {\n" +
-                           "        \"lastModifiedTime\": 1579594580000,\n" +
+                           "        \"lastModifiedAt\": 1579594580000,\n" +
                            "        \"name\": \"XRInputSourcesChangeEvent\",\n" +
                            "        \"url\": \"https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent\"\n" +
                            "    }\n" +
@@ -79,12 +79,12 @@ public final class DocRepositoryConfigTest
       "\n" +
       "[\n" +
       "    {\n" +
-      "        \"lastModifiedTime\": 1579594580000,\n" +
+      "        \"lastModifiedAt\": 1579594580000,\n" +
       "        \"name\": \"XRInputSourcesChangeEvent\",\n" +
       "        \"url\": \"https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent\"\n" +
       "    },\n" +
       "    {\n" +
-      "        \"lastModifiedTime\": 1579594580000,\n" +
+      "        \"lastModifiedAt\": 1579594580000,\n" +
       "        \"name\": \"XRSession\",\n" +
       "        \"url\": \"https://developer.mozilla.org/en-US/docs/Web/API/XRSession\"\n" +
       "    }\n" +
