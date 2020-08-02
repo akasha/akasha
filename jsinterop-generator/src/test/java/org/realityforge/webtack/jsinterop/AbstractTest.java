@@ -234,22 +234,18 @@ public abstract class AbstractTest
                                                  .map( Path::toFile )
                                                  .collect( Collectors.toList() ) );
     final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
-    final String classpath =
-      classpathEntries
-        .stream()
-        .map( Path::toAbsolutePath )
-        .map( Path::toString )
-        .collect( Collectors.joining( File.pathSeparator ) );
+    fileManager.setLocation( StandardLocation.CLASS_OUTPUT,
+                             Collections.singletonList( output.toFile() ) );
+    fileManager.setLocation( StandardLocation.SOURCE_OUTPUT,
+                             Collections.singletonList( output.toFile() ) );
+    fileManager.setLocation( StandardLocation.CLASS_PATH,
+                             classpathEntries.stream().map( Path::toFile ).collect( Collectors.toList() ) );
+
     final JavaCompiler.CompilationTask task =
       compiler.getTask( null,
                         fileManager,
                         listener,
-                        Arrays.asList( "-d",
-                                       output.toString(),
-                                       "-cp",
-                                       classpath,
-                                       "-Xlint:all,-processing,-serial",
-                                       "-Werror" ),
+                        Arrays.asList( "-Xlint:all,-processing,-serial", "-Werror" ),
                         null,
                         compilationUnits );
     if ( !task.call() || !listener.getDiagnostics().isEmpty() )
