@@ -19,8 +19,8 @@ import org.jsoup.nodes.Node;
 import org.realityforge.webtack.model.tools.fetch.FetchException;
 import org.realityforge.webtack.model.tools.fetch.FetchResult;
 import org.realityforge.webtack.model.tools.fetch.FetchUtil;
-import org.realityforge.webtack.model.tools.repository.config.DocRepositoryConfig;
-import org.realityforge.webtack.model.tools.repository.config.DocSourceConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
 
 public final class MdnDocScanner
 {

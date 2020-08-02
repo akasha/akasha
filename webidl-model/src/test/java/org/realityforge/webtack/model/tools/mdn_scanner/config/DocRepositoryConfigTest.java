@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.repository.config;
+package org.realityforge.webtack.model.tools.mdn_scanner.config;
 
 import gir.io.FileUtil;
 import java.nio.charset.StandardCharsets;
@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
+import org.realityforge.webtack.model.tools.repository.config.IllegalConfigException;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 

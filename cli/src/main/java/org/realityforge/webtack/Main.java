@@ -15,7 +15,7 @@ import org.realityforge.getopt4j.CLArgsParser;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.getopt4j.CLUtil;
-import org.realityforge.webtack.model.tools.repository.config.DocRepositoryConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 /**

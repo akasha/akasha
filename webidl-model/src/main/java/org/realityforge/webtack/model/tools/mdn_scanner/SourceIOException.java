@@ -2,7 +2,7 @@ package org.realityforge.webtack.model.tools.mdn_scanner;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.tools.repository.config.DocSourceConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
 
 public final class SourceIOException
   extends DocException

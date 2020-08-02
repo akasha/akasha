@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.repository.config;
+package org.realityforge.webtack.model.tools.mdn_scanner.config;
 
 import javax.annotation.Nullable;
 

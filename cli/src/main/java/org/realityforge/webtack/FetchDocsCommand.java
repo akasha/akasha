@@ -16,7 +16,7 @@ import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceFetchException;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceIOException;
-import org.realityforge.webtack.model.tools.repository.config.DocSourceConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
 
 final class FetchDocsCommand
   extends ConfigurableCommand

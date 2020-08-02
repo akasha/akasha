@@ -1,4 +1,4 @@
-package org.realityforge.webtack.model.tools.repository.config;
+package org.realityforge.webtack.model.tools.mdn_scanner.config;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,6 +16,7 @@ import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
+import org.realityforge.webtack.model.tools.repository.config.IllegalConfigException;
 
 public final class DocRepositoryConfig
 {
