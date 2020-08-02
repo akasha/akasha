@@ -63,7 +63,7 @@ public final class MdnDocScanner
         saveRepository();
         // Documentation has been removed so remove our local caches
         removeExistingTmpFiles( source, target );
-        // TODO: If kind == Type then delete all dependent
+        // TODO: If kind == Type then delete all dependent that is not user created
         return new DocFetchResult( source, null, !isNew );
       }
       else
@@ -133,7 +133,8 @@ public final class MdnDocScanner
           fetchDocumentation( DocKind.Method, type, method, force, removeSource );
         }
       }
-      //TODO: Remove any sources for type if they are not present above
+      //TODO: Remove any sources for type if they are not present above and they are not
+      // user supplied rather than downloaded. User supplied docs have no corresponding url
       return new DocFetchResult( source, entry, extractResult.isChanged() );
     }
     else
