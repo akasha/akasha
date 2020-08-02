@@ -206,68 +206,82 @@ public abstract class AbstractTest
   {
     if ( !javaFiles.isEmpty() )
     {
-      final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-      final StandardJavaFileManager fileManager = compiler.getStandardFileManager( null, null, null );
-      final Path output = getWorkingDir().resolve( "target" ).resolve( "classes" );
-      Files.createDirectories( output );
-      final Iterable<? extends JavaFileObject> compilationUnits =
-        fileManager.getJavaFileObjectsFromFiles( javaFiles
-                                                   .stream()
-                                                   .map( Path::toFile )
-                                                   .collect( Collectors.toList() ) );
-      final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
-      final String classpath =
-        classpathEntries
-          .stream()
-          .map( Path::toAbsolutePath )
-          .map( Path::toString )
-          .collect( Collectors.joining( File.pathSeparator ) );
-      final JavaCompiler.CompilationTask compilationTask =
-        compiler.getTask( null,
-                          fileManager,
-                          listener,
-                          Arrays.asList( "-d",
-                                         output.toString(),
-                                         "-cp",
-                                         classpath,
-                                         "-Xlint:all,-processing,-serial",
-                                         "-Werror" ),
-                          null,
-                          compilationUnits );
-      if ( !compilationTask.call() || !listener.getDiagnostics().isEmpty() )
-      {
-        fail( "Failed to compile files:\n" +
-              listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
-      }
+      final Path output = javac( javaFiles, classpathEntries );
       if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
       {
-        FileUtil.write( output.resolve( "com" ).resolve( "example" ).resolve( "MyModule.gwt.xml" ),
-                        "<module>\n" +
-                        "  <inherits name=\"com.google.gwt.user.User\"/>\n" +
-                        "  <source path=''/>\n" +
-                        "  <collapse-all-properties/>\n" +
-                        "</module>\n" );
-        classpathEntries.add( output );
-        classpathEntries.addAll( gwtDevLibs() );
-        final List<String> gwtClasspath =
-          classpathEntries
-            .stream()
-            .map( Path::toAbsolutePath )
-            .map( Path::toString )
-            .collect( Collectors.toList() );
-        final int exitCode =
-          JavaProcess.exec( "com.google.gwt.dev.Compiler",
-                            Collections.singletonList( "-Dgwt.persistentunitcache=false" ),
-                            Arrays.asList( "-strict",
-                                           "-war",
-                                           getWorkingDir().resolve( "war" ).toAbsolutePath().toString(),
-                                           "-draftCompile",
-                                           "-noincremental",
-                                           "com.example.MyModule" ),
-                            gwtClasspath );
-        assertEquals( exitCode, 0 );
+        gwtc( classpathEntries, output );
       }
     }
+  }
+
+  @Nonnull
+  private Path javac( @Nonnull final List<Path> javaFiles, @Nonnull final List<Path> classpathEntries )
+    throws Exception
+  {
+    final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+    final StandardJavaFileManager fileManager = compiler.getStandardFileManager( null, null, null );
+    final Path output = getWorkingDir().resolve( "target" ).resolve( "classes" );
+    Files.createDirectories( output );
+    final Iterable<? extends JavaFileObject> compilationUnits =
+      fileManager.getJavaFileObjectsFromFiles( javaFiles
+                                                 .stream()
+                                                 .map( Path::toFile )
+                                                 .collect( Collectors.toList() ) );
+    final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
+    final String classpath =
+      classpathEntries
+        .stream()
+        .map( Path::toAbsolutePath )
+        .map( Path::toString )
+        .collect( Collectors.joining( File.pathSeparator ) );
+    final JavaCompiler.CompilationTask compilationTask =
+      compiler.getTask( null,
+                        fileManager,
+                        listener,
+                        Arrays.asList( "-d",
+                                       output.toString(),
+                                       "-cp",
+                                       classpath,
+                                       "-Xlint:all,-processing,-serial",
+                                       "-Werror" ),
+                        null,
+                        compilationUnits );
+    if ( !compilationTask.call() || !listener.getDiagnostics().isEmpty() )
+    {
+      fail( "Failed to compile files:\n" +
+            listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
+    }
+    return output;
+  }
+
+  private void gwtc( @Nonnull final List<Path> classpathEntries, @Nonnull final Path output )
+    throws Exception
+  {
+    FileUtil.write( output.resolve( "com" ).resolve( "example" ).resolve( "MyModule.gwt.xml" ),
+                    "<module>\n" +
+                    "  <inherits name=\"com.google.gwt.user.User\"/>\n" +
+                    "  <source path=''/>\n" +
+                    "  <collapse-all-properties/>\n" +
+                    "</module>\n" );
+    classpathEntries.add( output );
+    classpathEntries.addAll( gwtDevLibs() );
+    final List<String> gwtClasspath =
+      classpathEntries
+        .stream()
+        .map( Path::toAbsolutePath )
+        .map( Path::toString )
+        .collect( Collectors.toList() );
+    final int exitCode =
+      JavaProcess.exec( "com.google.gwt.dev.Compiler",
+                        Collections.singletonList( "-Dgwt.persistentunitcache=false" ),
+                        Arrays.asList( "-strict",
+                                       "-war",
+                                       getWorkingDir().resolve( "war" ).toAbsolutePath().toString(),
+                                       "-draftCompile",
+                                       "-noincremental",
+                                       "com.example.MyModule" ),
+                        gwtClasspath );
+    assertEquals( exitCode, 0 );
   }
 
   @Nonnull
