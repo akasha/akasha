@@ -294,11 +294,7 @@ final class Generator
                           .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
                           .build() );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation )
-    {
-      type.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( definition, type );
 
     final String inherits = definition.getInherits();
     if ( null != inherits )
@@ -435,11 +431,7 @@ final class Generator
                             .builder( Types.JS_PROPERTY )
                             .addMember( "name", "$S", member.getName() )
                             .build() );
-    final DocumentationElement documentation = member.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( member, method );
     if ( context.getSchema().isNullable( member.getType() ) )
     {
       method.addAnnotation( Types.NULLABLE );
@@ -465,11 +457,7 @@ final class Generator
         .methodBuilder( getMutatorName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .addAnnotation( Types.JS_PROPERTY );
-    final DocumentationElement documentation = member.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( member, method );
     final String paramName = safeName( member.getName() );
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName );
@@ -497,11 +485,7 @@ final class Generator
         .methodBuilder( mutatorName )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( Types.JS_OVERLAY );
-    final DocumentationElement documentation = member.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( member, method );
     final String paramName = safeName( member.getName() );
     final TypeName javaType = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
@@ -573,11 +557,7 @@ final class Generator
         .addAnnotation( Types.JS_OVERLAY )
         .addAnnotation( Types.NONNULL )
         .returns( context.lookupTypeByName( dictionary.getName() ) );
-    final DocumentationElement documentation = member.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( member, method );
     if ( addOverride )
     {
       method.addAnnotation( Override.class );
@@ -639,11 +619,7 @@ final class Generator
     type
       .addAnnotation( Types.JS_FUNCTION )
       .addAnnotation( FunctionalInterface.class );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation )
-    {
-      type.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( definition, type );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "onInvoke" )
@@ -686,11 +662,7 @@ final class Generator
                           .addMember( "name", "$S", exposedOnGlobal ? definition.getName() : "?" )
                           .build() )
       .addAnnotation( FunctionalInterface.class );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation )
-    {
-      type.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( definition, type );
 
     generateConstants( context, definition.getConstants(), type );
 
@@ -718,11 +690,7 @@ final class Generator
         .classBuilder( definition.getName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation )
-    {
-      type.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( definition, type );
 
     generateConstants( context, definition.getConstants(), type );
 
@@ -792,11 +760,7 @@ final class Generator
         .classBuilder( definition.getName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation )
-    {
-      type.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( definition, type );
 
     final String inherits = definition.getInherits();
     final OperationMember parentConstructor;
@@ -876,33 +840,6 @@ final class Generator
   }
 
   @Nonnull
-  private String asJavadoc( @Nonnull final DocumentationElement documentation )
-  {
-    final StringBuilder docs = new StringBuilder();
-    docs.append( documentation.getDocumentation() );
-    docs.append( "\n" );
-    final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();
-    if ( !blockTags.isEmpty() )
-    {
-      docs.append( "\n" );
-      for ( final DocumentationBlockTag tag : blockTags )
-      {
-        docs.append( "@" );
-        docs.append( tag.getName() );
-        final String tagDocumentation = tag.getDocumentation();
-        if ( !tagDocumentation.isEmpty() )
-        {
-          docs.append( " " );
-          docs.append( tagDocumentation );
-        }
-        docs.append( "\n" );
-      }
-    }
-
-    return docs.toString();
-  }
-
-  @Nonnull
   private String deriveJavascriptName( @Nonnull final InterfaceDefinition definition )
   {
     final boolean noInterfaceObject =
@@ -944,11 +881,7 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( context.toTypeName( actualType ) )
         .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
-    final DocumentationElement documentation = attribute.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( attribute, method );
     if ( context.getSchema().isNullable( attributeType ) )
     {
       method.addAnnotation( Types.NULLABLE );
@@ -971,11 +904,7 @@ final class Generator
     final String safeName = safeName( name );
     final FieldSpec.Builder field =
       FieldSpec.builder( context.toTypeName( actualType ), safeName, Modifier.PUBLIC );
-    final DocumentationElement documentation = attribute.getDocumentation();
-    if ( null != documentation )
-    {
-      field.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( attribute, field );
     if ( !safeName.equals( name ) )
     {
       field.addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
@@ -1016,11 +945,7 @@ final class Generator
                   Modifier.FINAL )
         .addAnnotation( Types.JS_OVERLAY );
 
-    final DocumentationElement documentation = constant.getDocumentation();
-    if ( null != documentation )
-    {
-      field.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( constant, field );
 
     final ConstValue value = constant.getValue();
     final ConstValue.Kind kind = value.getKind();
@@ -1108,11 +1033,7 @@ final class Generator
       MethodSpec
         .methodBuilder( safeName )
         .addModifiers( Modifier.PUBLIC, javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
-    final DocumentationElement documentation = operation.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( operation, method );
     if ( !safeName.equals( name ) )
     {
       method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
@@ -1161,11 +1082,7 @@ final class Generator
       MethodSpec
         .methodBuilder( safeName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
-    final DocumentationElement documentation = operation.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( operation, method );
     if ( !safeName.equals( name ) )
     {
       method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
@@ -1227,11 +1144,7 @@ final class Generator
                                              @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PUBLIC );
-    final DocumentationElement documentation = operation.getDocumentation();
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( operation, method );
     int index = 0;
     for ( final Argument argument : argumentList )
     {
@@ -1345,11 +1258,7 @@ final class Generator
         .classBuilder( definition.getName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
-    final DocumentationElement documentation = definition.getDocumentation();
-    if ( null != documentation )
-    {
-      type.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( definition, type );
 
     for ( final EnumerationValue enumerationValue : definition.getValues() )
     {
@@ -1361,11 +1270,7 @@ final class Generator
           .builder( Types.STRING, safeName( name ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
           .addAnnotation( Types.NONNULL )
           .initializer( "$S", value );
-        final DocumentationElement fieldDocumentation = enumerationValue.getDocumentation();
-        if ( null != fieldDocumentation )
-        {
-          field.addJavadoc( asJavadoc( fieldDocumentation ) );
-        }
+        maybeAddJavadoc( enumerationValue.getDocumentation(), field );
         type.addField( field.build() );
       }
     }
@@ -1390,6 +1295,65 @@ final class Generator
   boolean addMagicConstantsAnnotation()
   {
     return true;
+  }
+
+  private void maybeAddJavadoc( @Nonnull final Element constant, @Nonnull final FieldSpec.Builder field )
+  {
+    maybeAddJavadoc( constant.getDocumentation(), field );
+  }
+
+  private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final TypeSpec.Builder type )
+  {
+    final DocumentationElement documentation = element.getDocumentation();
+    if ( null != documentation )
+    {
+      type.addJavadoc( asJavadoc( documentation ) );
+    }
+  }
+
+  private void maybeAddJavadoc( @Nullable final DocumentationElement documentation,
+                                @Nonnull final FieldSpec.Builder field )
+  {
+    if ( null != documentation )
+    {
+      field.addJavadoc( asJavadoc( documentation ) );
+    }
+  }
+
+  private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final MethodSpec.Builder method )
+  {
+    final DocumentationElement documentation = element.getDocumentation();
+    if ( null != documentation )
+    {
+      method.addJavadoc( asJavadoc( documentation ) );
+    }
+  }
+
+  @Nonnull
+  private String asJavadoc( @Nonnull final DocumentationElement documentation )
+  {
+    final StringBuilder docs = new StringBuilder();
+    docs.append( documentation.getDocumentation() );
+    docs.append( "\n" );
+    final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();
+    if ( !blockTags.isEmpty() )
+    {
+      docs.append( "\n" );
+      for ( final DocumentationBlockTag tag : blockTags )
+      {
+        docs.append( "@" );
+        docs.append( tag.getName() );
+        final String tagDocumentation = tag.getDocumentation();
+        if ( !tagDocumentation.isEmpty() )
+        {
+          docs.append( " " );
+          docs.append( tagDocumentation );
+        }
+        docs.append( "\n" );
+      }
+    }
+
+    return docs.toString();
   }
 
   private void writeGeneratedAnnotation( @Nonnull final TypeSpec.Builder builder )
