@@ -114,6 +114,8 @@ complete as there is too much un-said.
 
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
 
+* Emit javadocs as part of jsinterop stage.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
