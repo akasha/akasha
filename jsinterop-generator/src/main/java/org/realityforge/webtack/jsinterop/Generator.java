@@ -391,7 +391,7 @@ final class Generator
   @Nonnull
   private String safeName( @Nonnull final String name )
   {
-    return isNameJavaSafe( name ) && !OBJECT_METHODS.contains( name ) ? name : mangleName( name );
+    return isNameJavaSafe( name ) ? name : mangleName( name );
   }
 
   @Nonnull

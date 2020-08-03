@@ -13,11 +13,8 @@ import jsinterop.annotations.JsType;
     name = "MyType2"
 )
 public class MyType2 {
-  @JsProperty(
-      name = "clone"
-  )
   @Nonnull
-  public Object clone_;
+  public Object clone;
 
   @JsProperty(
       name = "default"
@@ -25,44 +22,26 @@ public class MyType2 {
   @Nonnull
   public Object default_;
 
-  @JsProperty(
-      name = "equals"
-  )
   @Nonnull
-  public Object equals_;
+  public Object equals;
 
-  @JsProperty(
-      name = "finalize"
-  )
   @Nonnull
-  public Object finalize_;
+  public Object finalize;
 
-  @JsProperty(
-      name = "getClass"
-  )
   @Nonnull
-  public Object getClass_;
+  public Object getClass;
 
-  @JsProperty(
-      name = "hashCode"
-  )
   @Nonnull
-  public Object hashCode_;
+  public Object hashCode;
 
   @Nonnull
   public Object is;
 
-  @JsProperty(
-      name = "notify"
-  )
   @Nonnull
-  public Object notify_;
+  public Object notify;
 
-  @JsProperty(
-      name = "notifyAll"
-  )
   @Nonnull
-  public Object notifyAll_;
+  public Object notifyAll;
 
   @JsProperty(
       name = "private"
@@ -82,17 +61,11 @@ public class MyType2 {
   @Nonnull
   public Object public_;
 
-  @JsProperty(
-      name = "toString"
-  )
   @Nonnull
-  public Object toString_;
+  public Object toString;
 
-  @JsProperty(
-      name = "wait"
-  )
   @Nonnull
-  public Object wait_;
+  public Object wait;
 
   MyType2() {
   }

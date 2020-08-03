@@ -18,13 +18,13 @@ import jsinterop.base.JsPropertyMap;
 public interface MyDictionary1 {
   @JsOverlay
   @Nonnull
-  static MyDictionary1 create(@Nonnull final Object clone_, @Nonnull final Object default_,
-      @Nonnull final Object equals_, @Nonnull final Object finalize_,
-      @Nonnull final Object getClass_, @Nonnull final Object hashCode_, @Nonnull final Object is,
-      @Nonnull final Object notify_, @Nonnull final Object notifyAll_,
-      @Nonnull final Object private_, @Nonnull final Object protected_,
-      @Nonnull final Object public_, @Nonnull final Object toString_, @Nonnull final Object wait_) {
-    return Js.<MyDictionary1>uncheckedCast( JsPropertyMap.of() ).clone_( clone_ ).default_( default_ ).equals_( equals_ ).finalize_( finalize_ ).getClass_( getClass_ ).hashCode_( hashCode_ ).is( is ).notify_( notify_ ).notifyAll_( notifyAll_ ).private_( private_ ).protected_( protected_ ).public_( public_ ).toString_( toString_ ).wait_( wait_ );
+  static MyDictionary1 create(@Nonnull final Object clone, @Nonnull final Object default_,
+      @Nonnull final Object equals, @Nonnull final Object finalize, @Nonnull final Object getClass,
+      @Nonnull final Object hashCode, @Nonnull final Object is, @Nonnull final Object notify,
+      @Nonnull final Object notifyAll, @Nonnull final Object private_,
+      @Nonnull final Object protected_, @Nonnull final Object public_,
+      @Nonnull final Object toString, @Nonnull final Object wait) {
+    return Js.<MyDictionary1>uncheckedCast( JsPropertyMap.of() ).clone_( clone ).default_( default_ ).equals_( equals ).finalize_( finalize ).getClass_( getClass ).hashCode_( hashCode ).is( is ).notify_( notify ).notifyAll_( notifyAll ).private_( private_ ).protected_( protected_ ).public_( public_ ).toString_( toString ).wait_( wait );
   }
 
   @JsProperty(
@@ -34,12 +34,12 @@ public interface MyDictionary1 {
   Object clone_();
 
   @JsProperty
-  void setClone(@Nonnull Object clone_);
+  void setClone(@Nonnull Object clone);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 clone_(@Nonnull final Object clone_) {
-    setClone( clone_ );
+  default MyDictionary1 clone_(@Nonnull final Object clone) {
+    setClone( clone );
     return this;
   }
 
@@ -66,12 +66,12 @@ public interface MyDictionary1 {
   Object equals_();
 
   @JsProperty
-  void setEquals(@Nonnull Object equals_);
+  void setEquals(@Nonnull Object equals);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 equals_(@Nonnull final Object equals_) {
-    setEquals( equals_ );
+  default MyDictionary1 equals_(@Nonnull final Object equals) {
+    setEquals( equals );
     return this;
   }
 
@@ -82,12 +82,12 @@ public interface MyDictionary1 {
   Object finalize_();
 
   @JsProperty
-  void setFinalize(@Nonnull Object finalize_);
+  void setFinalize(@Nonnull Object finalize);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 finalize_(@Nonnull final Object finalize_) {
-    setFinalize( finalize_ );
+  default MyDictionary1 finalize_(@Nonnull final Object finalize) {
+    setFinalize( finalize );
     return this;
   }
 
@@ -98,12 +98,12 @@ public interface MyDictionary1 {
   Object getClass_();
 
   @JsProperty
-  void setGetClass(@Nonnull Object getClass_);
+  void setGetClass(@Nonnull Object getClass);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 getClass_(@Nonnull final Object getClass_) {
-    setGetClass( getClass_ );
+  default MyDictionary1 getClass_(@Nonnull final Object getClass) {
+    setGetClass( getClass );
     return this;
   }
 
@@ -114,12 +114,12 @@ public interface MyDictionary1 {
   Object hashCode_();
 
   @JsProperty
-  void setHashCode(@Nonnull Object hashCode_);
+  void setHashCode(@Nonnull Object hashCode);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 hashCode_(@Nonnull final Object hashCode_) {
-    setHashCode( hashCode_ );
+  default MyDictionary1 hashCode_(@Nonnull final Object hashCode) {
+    setHashCode( hashCode );
     return this;
   }
 
@@ -146,12 +146,12 @@ public interface MyDictionary1 {
   Object notify_();
 
   @JsProperty
-  void setNotify(@Nonnull Object notify_);
+  void setNotify(@Nonnull Object notify);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 notify_(@Nonnull final Object notify_) {
-    setNotify( notify_ );
+  default MyDictionary1 notify_(@Nonnull final Object notify) {
+    setNotify( notify );
     return this;
   }
 
@@ -162,12 +162,12 @@ public interface MyDictionary1 {
   Object notifyAll_();
 
   @JsProperty
-  void setNotifyAll(@Nonnull Object notifyAll_);
+  void setNotifyAll(@Nonnull Object notifyAll);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 notifyAll_(@Nonnull final Object notifyAll_) {
-    setNotifyAll( notifyAll_ );
+  default MyDictionary1 notifyAll_(@Nonnull final Object notifyAll) {
+    setNotifyAll( notifyAll );
     return this;
   }
 
@@ -226,12 +226,12 @@ public interface MyDictionary1 {
   Object toString_();
 
   @JsProperty
-  void setToString(@Nonnull Object toString_);
+  void setToString(@Nonnull Object toString);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 toString_(@Nonnull final Object toString_) {
-    setToString( toString_ );
+  default MyDictionary1 toString_(@Nonnull final Object toString) {
+    setToString( toString );
     return this;
   }
 
@@ -242,12 +242,12 @@ public interface MyDictionary1 {
   Object wait_();
 
   @JsProperty
-  void setWait(@Nonnull Object wait_);
+  void setWait(@Nonnull Object wait);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary1 wait_(@Nonnull final Object wait_) {
-    setWait( wait_ );
+  default MyDictionary1 wait_(@Nonnull final Object wait) {
+    setWait( wait );
     return this;
   }
 }

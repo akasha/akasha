@@ -19,7 +19,7 @@ public class MyType4 {
   @JsMethod(
       name = "clone"
   )
-  public native void clone_(@Nonnull Object clone_);
+  public native void clone_(@Nonnull Object clone);
 
   @JsMethod(
       name = "default"
@@ -29,34 +29,34 @@ public class MyType4 {
   @JsMethod(
       name = "equals"
   )
-  public native void equals_(@Nonnull Object equals_);
+  public native void equals_(@Nonnull Object equals);
 
   @JsMethod(
       name = "finalize"
   )
-  public native void finalize_(@Nonnull Object finalize_);
+  public native void finalize_(@Nonnull Object finalize);
 
   @JsMethod(
       name = "getClass"
   )
-  public native void getClass_(@Nonnull Object getClass_);
+  public native void getClass_(@Nonnull Object getClass);
 
   @JsMethod(
       name = "hashCode"
   )
-  public native void hashCode_(@Nonnull Object hashCode_);
+  public native void hashCode_(@Nonnull Object hashCode);
 
   public native void is(@Nonnull Object is);
 
   @JsMethod(
       name = "notify"
   )
-  public native void notify_(@Nonnull Object notify_);
+  public native void notify_(@Nonnull Object notify);
 
   @JsMethod(
       name = "notifyAll"
   )
-  public native void notifyAll_(@Nonnull Object notifyAll_);
+  public native void notifyAll_(@Nonnull Object notifyAll);
 
   @JsMethod(
       name = "private"
@@ -76,10 +76,10 @@ public class MyType4 {
   @JsMethod(
       name = "toString"
   )
-  public native void toString_(@Nonnull Object toString_);
+  public native void toString_(@Nonnull Object toString);
 
   @JsMethod(
       name = "wait"
   )
-  public native void wait_(@Nonnull Object wait_);
+  public native void wait_(@Nonnull Object wait);
 }
