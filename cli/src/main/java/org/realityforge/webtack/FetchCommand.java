@@ -217,7 +217,6 @@ final class FetchCommand
             final String message =
               "Error: Failed to save IDL file for the source named '" + sourceName + "' due to " + e;
             throw new TerminalStateException( message, ExitCodes.ERROR_SAVING_IDL_CODE );
-
           }
         }
         else
