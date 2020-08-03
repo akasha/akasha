@@ -88,7 +88,7 @@ define 'webtack' do
       'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}"
     }
     test.options[:java_args] = ['-ea']
-    test.compile.with :gir
+    test.compile.with :gir, Java.tools_jar
     test.compile.enhance do |d|
       GWT_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
