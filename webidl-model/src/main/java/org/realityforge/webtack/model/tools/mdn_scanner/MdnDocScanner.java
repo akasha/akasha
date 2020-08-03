@@ -135,6 +135,14 @@ public final class MdnDocScanner
             fetchDocumentation( DocKind.Method, type, method, force, removeSource );
           }
         }
+        final List<String> events = entry.getEvents();
+        if ( null != events )
+        {
+          for ( final String event : events )
+          {
+            fetchDocumentation( DocKind.Event, type, event, force, removeSource );
+          }
+        }
         //TODO: Remove any sources for type if they are not present above and they are not
         // user supplied rather than downloaded. User supplied docs have no corresponding url
       }
@@ -288,6 +296,20 @@ public final class MdnDocScanner
         if ( !actualMethods.isEmpty() )
         {
           entry.setMethods( actualMethods );
+        }
+
+        final List<String> events =
+          document
+            .select( "#Events + p + dl > dt > code, #Events + dl > dt > code" )
+            .stream()
+            .map( Element::text )
+            // Strip out the type name that sometimes appears in the documentation
+            .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+            .sorted()
+            .collect( Collectors.toList() );
+        if ( !events.isEmpty() )
+        {
+          entry.setEvents( events );
         }
       }
 

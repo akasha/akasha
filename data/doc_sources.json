@@ -1351,7 +1351,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"
     },
     {
-        "lastModifiedAt": 1596496020909,
+        "lastModifiedAt": 1596497194734,
         "name": "SpeechSynthesis.cancel",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel"
     },
@@ -1376,17 +1376,17 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending"
     },
     {
-        "lastModifiedAt": 1596496051083,
+        "lastModifiedAt": 1596497197605,
         "name": "SpeechSynthesis.resume",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume"
     },
     {
-        "lastModifiedAt": 1596496083155,
+        "lastModifiedAt": 1596497198272,
         "name": "SpeechSynthesis.speak",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak"
     },
     {
-        "lastModifiedAt": 1596496020861,
+        "lastModifiedAt": 1596497193603,
         "name": "SpeechSynthesis.speaking",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking"
     },

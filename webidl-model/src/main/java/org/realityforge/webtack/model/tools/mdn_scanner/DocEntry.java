@@ -14,7 +14,15 @@ import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 import javax.json.bind.annotation.JsonbPropertyOrder;
 
-@JsonbPropertyOrder( { "kind", "name", "href", "description", "content", "constructors", "properties", "methods" } )
+@JsonbPropertyOrder( { "kind",
+                       "name",
+                       "href",
+                       "description",
+                       "content",
+                       "constructors",
+                       "properties",
+                       "methods",
+                       "events" } )
 public class DocEntry
 {
   private DocKind kind;
@@ -28,6 +36,8 @@ public class DocEntry
   private List<String> properties;
   @Nullable
   private List<String> methods;
+  @Nullable
+  private List<String> events;
 
   public DocKind getKind()
   {
@@ -110,6 +120,17 @@ public class DocEntry
   public void setMethods( @Nullable final List<String> methods )
   {
     this.methods = methods;
+  }
+
+  @Nullable
+  public List<String> getEvents()
+  {
+    return events;
+  }
+
+  public void setEvents( @Nullable final List<String> events )
+  {
+    this.events = events;
   }
 
   @Nonnull

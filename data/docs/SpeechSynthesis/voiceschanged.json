@@ -1,0 +1,8 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesis.voiceschanged",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event",
+    "description": "The voiceschanged event of the Web Speech API is fired when the list of SpeechSynthesisVoice objects that would be returned by the SpeechSynthesis.getVoices() method has changed (when the voiceschanged event fires.)",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code><strong>voiceschanged</strong></code> event of the Web Speech API is fired when the list of <code>SpeechSynthesisVoice</code> objects that would be returned by the <code>SpeechSynthesis.getVoices()</code> method has changed (when the <code>voiceschanged</code> event fires.)</p>\n<table class=\"properties\"> \n <tbody> \n <tr> \n <th scope=\"row\">Bubbles</th> \n <td>No</td> \n </tr> \n <tr> \n <th scope=\"row\">Cancelable</th> \n <td>No</td> \n </tr> \n <tr> \n <th scope=\"row\">Interface</th> \n <td><code>Event</code></td> \n </tr> \n <tr> \n <th scope=\"row\">Event handler property</th> \n <td><code>onvoiceschanged</code></td> \n </tr> \n </tbody> \n</table>"
+}

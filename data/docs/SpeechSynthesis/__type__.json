@@ -16,5 +16,8 @@
         "pause",
         "resume",
         "speak"
+    ],
+    "events": [
+        "voiceschanged"
     ]
 }
