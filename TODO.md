@@ -4,6 +4,30 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+# Docs Integration
+
+* Add option to FetchDocs to fetch everything in a webidl source
+
+* Make sure fetch doc mechanisms also fetch docs for callback interfaces
+
+* Some doc entries include documentation for constants .. scan for that?.
+
+* Extract param docs for methods and constructors.
+
+* The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
+  so it should be possible with a little bit of heuristics to extract the documentation for different
+  members and definitions.
+
+  Spec Docs: https://heycam.github.io/webidl/
+  
+  We could make the doc repository populate docs from multiple sources
+
+* Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
+  and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
+  browsers to support
+
+# Apps to Stretch Implementation
+
 * use webrtc video chat ala ZipCall.io as another example
 
 * webgl renderer of some kind.
@@ -13,16 +37,9 @@ complete as there is too much un-said.
 
 * use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system. Possibly even add video layers via https://github.com/immersive-web/layers for desktop users?
 
-* Generate a global object ala `DomGlobal` based on a specific interface name.
+# Events
 
-* Generate `GETTER`, `SETTER`, `DELETER` and `STRINGIFIER` operations
-
-* Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
-
-* Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
-  which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
-
-* Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
+* Consider adding a non-standard "event" member to interfaces to webidl language to represent events.
 
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
   code a whole lot nicer. We could do this after we have emitted closure externs.
@@ -56,6 +73,29 @@ complete as there is too much un-said.
 
 * Type the `on[someevent]` properties on interfaces using the typed interface as specified above.
 
+* Extract documentation for event types from MDN. This probably involves scraping the type page and looking for events
+  with urls like https://developer.mozilla.org/en-US/docs/Web/API/{{type}}/{{event_name}}_event
+
+# Java Generation
+
+* Generate a global object ala `DomGlobal` based on a specific interface name.
+
+* Generate `GETTER`, `SETTER`, `DELETER` and `STRINGIFIER` operations
+
+* Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
+
+* Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
+
+* Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
+  would use raw inspection of objects to see if they line up with what is in WebIDL
+
+* Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
+  which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
+
+# Other
+
+* Also change the constructor properties ala `Constructor( DOMString type, optional MouseEventInit eventInitDict )` into actual constructors.
+
 * Add a `complete` method on `Action`, `Combiner` and `Processor` interfaces that will be invoked once the code will no longer have any schemas passed in. This allows the processor to perform cleanup and/or check that it is still needed. i.e. if a `RenameX` processor does not perform any renames we could alert in the complete to indicate that no match occurred. We could also add statistics (i.e. renamed 2 elements).
 
 * Support defining and using variables in pipeline json. It probably means string values can be
@@ -67,11 +107,6 @@ complete as there is too much un-said.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
 
-* Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
-
-* Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
-  would use raw inspection of objects to see if they line up with what is in WebIDL
-
 * Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
   have the same name and parameters then they should be collapsed into a single operation but with potentially
   merged extended attributes. The intention is for this to be used to import gecko and/or chrome WebIDL and combine
@@ -80,32 +115,9 @@ complete as there is too much un-said.
   added which features. Questions exist such as: Should blend of multiple Extended attribute `Ident` types produce
   an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
 
-* The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
-  so it should be possible with a little bit of heuristics to extract the documentation for different
-  members and definitions.
-
-  Spec Docs: https://heycam.github.io/webidl/
-
-* Extract documentation for event types from MDN. This probably involves scraping the type page and looking for events
-  with urls like https://developer.mozilla.org/en-US/docs/Web/API/{{type}}/{{event_name}}_event
-
-* Extract param docs for methods and constructors.
-
 * Emit closure externs for WebIDL types.
 
-* Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
-  and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
-  browsers to support
-
-* Consider adding a non-standard "event" member to interfaces to webidl language to represent events.
-
-* Some doc entries include documentation for constants .. scan for that?.
-
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
-
-* Add option to FetchDocs to fetch everything in a webidl source
-
-* Make sure fetch doc mechanisms also fetch docs for callback interfaces
 
 ### Validations
 
