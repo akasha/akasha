@@ -1391,6 +1391,11 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking"
     },
     {
+        "lastModifiedAt": 0,
+        "name": "SpeechSynthesis.voiceschanged",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event"
+    },
+    {
         "lastModifiedAt": 1596495716858,
         "name": "SpeechSynthesisErrorEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent"
