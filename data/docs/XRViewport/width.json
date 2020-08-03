@@ -1,0 +1,7 @@
+
+{
+    "name": "XRViewport.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/width",
+    "description": "The read-only XRViewport property width specifies the width of the viewport, in pixels, onto the drawing surface the 3D scene is to be rendered into.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRViewport</code> property <strong><code>width</code></strong> specifies the width of the viewport, in pixels, onto the drawing surface the 3D scene is to be rendered into. This is defined using this property along with the viewport's <code>height</code> and its origin given by its properties <code>x</code> and <code>y</code>.</p>"
+}

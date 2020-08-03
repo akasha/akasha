@@ -1,0 +1,7 @@
+
+{
+    "name": "XRSession.renderState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/renderState",
+    "description": "The read-only renderState property of an XRSession object indicates the returns a XRRenderState object describing how the user's environment which should be rendered.",
+    "content": "<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p>The <em>read-only</em><strong><code>renderState</code></strong>property of an <code>XRSession</code> object indicates the returns a <code>XRRenderState</code> object describing how the user's environment which should be rendered.The information provided covers the minimum and maximum distance at which to render objects, the vertical field of view to use when rendering the in the<code>inline</code>session mode, and the <code>XRWebGLLayer</code> to render into for inline composition.</p>\n<p>While this property is read only, you can call the <code>XRSession</code> method <code>updateRenderState()</code> to make changes.</p>"
+}

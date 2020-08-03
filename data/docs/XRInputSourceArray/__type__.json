@@ -1,0 +1,16 @@
+
+{
+    "name": "XRInputSourceArray",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray",
+    "description": "The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The interface<code><strong>XRInputSourceArray</strong></code>represents a<em>live</em>list of WebXR input sources, and is used as the return value of the<code>XRSession</code> property<code>inputSources</code>. Each entry is an<code>XRInputSource</code> representing one input device connected to the WebXR system.</p>\n<p>In addition to being able to access the input sources in the list using standard array notation (that is, with index numbers insize square brackets), methods are available to allow the use of iterators and the <code>forEach()</code>method is also available.</p>",
+    "properties": [
+        "length"
+    ],
+    "methods": [
+        "entries",
+        "forEach",
+        "keys",
+        "values"
+    ]
+}

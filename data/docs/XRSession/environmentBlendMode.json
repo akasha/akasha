@@ -1,0 +1,7 @@
+
+{
+    "name": "XRSession.environmentBlendMode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode",
+    "description": "The XRSession interface's read-only environmentBlendMode property identifies if—and to  what degree—the computer-generated imagery is overlaid atop the real world.",
+    "content": "<p>The <code>XRSession</code> interface's <em>read-only</em><code><strong>environmentBlendMode</strong></code>property identifies if—and to what degree—the computer-generated imagery is overlaid atop the real world. This is used to differentiate between fully-immersive VR sessions and AR sessions which render overa pass-through image of the real world, possibly partially transparently.</p>\n<p>The value is a <code>DOMString</code> which contains one of the values defined by the <code>XREnvironmentBlendMode</code> enumerated type.</p>\n<div class=\"blockIndicator warning\"> \n <p><strong>Important:</strong><code>environmentBlendMode</code>is part of the <a class=\"external\" href=\"https://immersive-web.github.io/webxr-ar-module/\" rel=\"noopener\">WebXR Augmented Reality Module</a>, which has not yet reached a stable state. You should use caution when using its features.</p> \n</div>"
+}

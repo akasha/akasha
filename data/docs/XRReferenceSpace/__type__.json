@@ -1,0 +1,10 @@
+
+{
+    "name": "XRReferenceSpace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace",
+    "description": "The WebXR Device API's XRReferenceSpace interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The WebXR Device API's<code><strong>XRReferenceSpace</strong></code>interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior.The tracking behavior is defined by the selected <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace#Reference_space_types\">reference space type</a>. It expands upon the base class, <code>XRSpace</code>, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.</p>\n<p>All reference spaces—with the sole exception being bounded reference spaces—are described using the<code>XRReferenceSpace</code>type. Bounded spaces are implemented as <code>XRBoundedReferenceSpace</code> objects. These are special spaces which let you establish a perimeter within which it's \"safe\" for the viewer to move. For XR systems that allow the user to physically move around, such as those that track movement with a real-world camera, this boundary establishes the edges of the area the user is able to move around in, whether due to physical obstacles or due to limitations of the XR hardware. See the article Using bounded reference spaces to protect the viewer for more on using boundaries to keep the user from colliding with obstacles both physical and virtual.</p>",
+    "methods": [
+        "getOffsetReferenceSpace"
+    ]
+}

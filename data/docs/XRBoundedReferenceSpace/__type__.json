@@ -1,0 +1,10 @@
+
+{
+    "name": "XRBoundedReferenceSpace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace",
+    "description": "The WebXR Device API's XRBoundedReferenceSpace interface describes a virtual world reference space which has preset boundaries. This extends XRReferenceSpace, which describes an essentially unrestricted space around the viewer's position.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The WebXR Device API's<code><strong>XRBoundedReferenceSpace</strong></code>interface describes a virtual world reference space which has preset boundaries. This extends <code>XRReferenceSpace</code>, which describes an essentially unrestricted space around the viewer's position. These bounds are defined using an array ofpoints, each of which defines a vertex in a polygon inside which the user is allowed to move.</p>\n<p>This is typically used when the XR system is capable of tracking the user's physical movement within a limited distance of their starting position. The specified bounds may, in fact, describe the shape and size of the room the user is located in, in order to let the WebXR site or application prevent the user from colliding with the walls or other obstacles in the real world. At a minimum, the boundaries indicate the area in which the XR device is capable of tracking the user's movement. See the article Using bounded reference spaces for details on how bounded spaces work and why they're useful.</p>",
+    "properties": [
+        "boundsGeometry"
+    ]
+}

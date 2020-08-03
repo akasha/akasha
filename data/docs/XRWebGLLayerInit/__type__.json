@@ -1,0 +1,15 @@
+
+{
+    "name": "XRWebGLLayerInit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit",
+    "description": "The WebXR Device API's XRWebGLLayerInit dictionary is used to provide configuration options when creating a new XRWebGLLayer object with the XRWebGLLayer() constructor.",
+    "content": "The WebXR Device API's <code><strong>XRWebGLLayerInit</strong></code> dictionary is used to provide configuration options when creating a new <code>XRWebGLLayer</code> object with the <code>XRWebGLLayer()</code> constructor. The constructor's optional <code>layerInit</code> parameter takes an object which must conform to this dictionary.",
+    "properties": [
+        "alpha",
+        "antialias",
+        "depth",
+        "framebufferScaleFactor",
+        "ignoreDepthValues",
+        "stencil"
+    ]
+}

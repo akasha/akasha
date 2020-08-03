@@ -1,0 +1,7 @@
+
+{
+    "name": "XRSession.requestReferenceSpace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace",
+    "description": "The requestReferenceSpace() method of the XRSession interface returns a promise that resolves with an instance of either XRReferenceSpace or XRBoundedReferenceSpace as appropriate given the type of reference space requested.",
+    "content": "<p><strong>Draft</strong><br> This page is not complete.</p>\n<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p class=\"summary\">The <strong><code>requestReferenceSpace()</code></strong> method of the <code>XRSession</code> interface returns a <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise\"><code>promise</code></a> that resolves with an instance of either <code>XRReferenceSpace</code> or<code>XRBoundedReferenceSpace</code>as appropriate given the type of reference space requested.</p>"
+}

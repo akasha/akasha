@@ -1,6 +1,106 @@
 
 [
     {
+        "lastModifiedAt": 1596456543003,
+        "name": "Navigator",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator"
+    },
+    {
+        "lastModifiedAt": 1596456543323,
+        "name": "Navigator.buildID",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/buildID"
+    },
+    {
+        "lastModifiedAt": 1596456544279,
+        "name": "Navigator.credentials",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials"
+    },
+    {
+        "lastModifiedAt": 1596456545087,
+        "name": "Navigator.deviceMemory",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory"
+    },
+    {
+        "lastModifiedAt": 1596456545480,
+        "name": "Navigator.doNotTrack",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack"
+    },
+    {
+        "lastModifiedAt": 1596456545864,
+        "name": "Navigator.mediaDevices",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices"
+    },
+    {
+        "lastModifiedAt": 1596456546164,
+        "name": "Navigator.mediaSession",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaSession"
+    },
+    {
+        "lastModifiedAt": 1596456546646,
+        "name": "Navigator.mozNotification",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mozNotification"
+    },
+    {
+        "lastModifiedAt": 1596456547529,
+        "name": "Navigator.mozSocial",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mozSocial"
+    },
+    {
+        "lastModifiedAt": 1596456547840,
+        "name": "Navigator.oscpu",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu"
+    },
+    {
+        "lastModifiedAt": 1596456548650,
+        "name": "Navigator.presentation",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/presentation"
+    },
+    {
+        "lastModifiedAt": 1596456549059,
+        "name": "Navigator.productSub",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Navigator.securitypolicy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/securitypolicy"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Navigator.standalone",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/standalone"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Navigator.storageQuota",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/storageQuota"
+    },
+    {
+        "lastModifiedAt": 1596456550507,
+        "name": "Navigator.vendor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor"
+    },
+    {
+        "lastModifiedAt": 1596456551323,
+        "name": "Navigator.vendorSub",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendorSub"
+    },
+    {
+        "lastModifiedAt": 1596456551617,
+        "name": "Navigator.wakeLock",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Navigator.webkitNotification",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webkitNotification"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Navigator.webkitPointer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webkitPointer"
+    },
+    {
         "lastModifiedAt": 1596368377212,
         "name": "RTCCertificate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate"
@@ -694,5 +794,525 @@
         "lastModifiedAt": 1596368348268,
         "name": "RTCTrackEvent.transceiver",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "WebGLContextAttributes",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextAttributes"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "WebGLRenderingContextBase",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContextBase"
+    },
+    {
+        "lastModifiedAt": 1596456536699,
+        "name": "XR",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR"
+    },
+    {
+        "lastModifiedAt": 1596456537532,
+        "name": "XR.isSessionSupported",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported"
+    },
+    {
+        "lastModifiedAt": 1596456538161,
+        "name": "XR.requestSession",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession"
+    },
+    {
+        "lastModifiedAt": 1596456538949,
+        "name": "XRBoundedReferenceSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace"
+    },
+    {
+        "lastModifiedAt": 1596456539347,
+        "name": "XRBoundedReferenceSpace.boundsGeometry",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace/boundsGeometry"
+    },
+    {
+        "lastModifiedAt": 1596456523362,
+        "name": "XRFrame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame"
+    },
+    {
+        "lastModifiedAt": 1596456524466,
+        "name": "XRFrame.getPose",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose"
+    },
+    {
+        "lastModifiedAt": 1596456524786,
+        "name": "XRFrame.getViewerPose",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose"
+    },
+    {
+        "lastModifiedAt": 1596456523677,
+        "name": "XRFrame.session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/session"
+    },
+    {
+        "lastModifiedAt": 1596456525162,
+        "name": "XRInputSource",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRInputSource.gamepad",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gamepad"
+    },
+    {
+        "lastModifiedAt": 1596456525773,
+        "name": "XRInputSource.gripSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gripSpace"
+    },
+    {
+        "lastModifiedAt": 1596456526116,
+        "name": "XRInputSource.handedness",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/handedness"
+    },
+    {
+        "lastModifiedAt": 1596456526424,
+        "name": "XRInputSource.profiles",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles"
+    },
+    {
+        "lastModifiedAt": 1596456527220,
+        "name": "XRInputSource.targetRayMode",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRayMode"
+    },
+    {
+        "lastModifiedAt": 1596456527611,
+        "name": "XRInputSource.targetRaySpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace"
+    },
+    {
+        "lastModifiedAt": 1596456504098,
+        "name": "XRInputSourceArray",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray"
+    },
+    {
+        "lastModifiedAt": 1596456504742,
+        "name": "XRInputSourceArray.entries",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries"
+    },
+    {
+        "lastModifiedAt": 1596456505541,
+        "name": "XRInputSourceArray.forEach",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach"
+    },
+    {
+        "lastModifiedAt": 1596456506404,
+        "name": "XRInputSourceArray.keys",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys"
+    },
+    {
+        "lastModifiedAt": 1596456504355,
+        "name": "XRInputSourceArray.length",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/length"
+    },
+    {
+        "lastModifiedAt": 1596456506770,
+        "name": "XRInputSourceArray.values",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values"
+    },
+    {
+        "lastModifiedAt": 1596456509732,
+        "name": "XRInputSourceEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent"
+    },
+    {
+        "lastModifiedAt": 1596456509968,
+        "name": "XRInputSourceEvent.frame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/frame"
+    },
+    {
+        "lastModifiedAt": 1596456510243,
+        "name": "XRInputSourceEvent.inputSource",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource"
+    },
+    {
+        "lastModifiedAt": 1596456499889,
+        "name": "XRInputSourceEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit"
+    },
+    {
+        "lastModifiedAt": 1596456500209,
+        "name": "XRInputSourceEventInit.frame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/frame"
+    },
+    {
+        "lastModifiedAt": 1596456500993,
+        "name": "XRInputSourceEventInit.inputSource",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource"
+    },
+    {
+        "lastModifiedAt": 1596456507154,
+        "name": "XRInputSourcesChangeEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent"
+    },
+    {
+        "lastModifiedAt": 1596456507949,
+        "name": "XRInputSourcesChangeEvent.added",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/added"
+    },
+    {
+        "lastModifiedAt": 1596456508545,
+        "name": "XRInputSourcesChangeEvent.removed",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/removed"
+    },
+    {
+        "lastModifiedAt": 1596456509365,
+        "name": "XRInputSourcesChangeEvent.session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/session"
+    },
+    {
+        "lastModifiedAt": 1596456490193,
+        "name": "XRInputSourcesChangeEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit"
+    },
+    {
+        "lastModifiedAt": 1596456491004,
+        "name": "XRInputSourcesChangeEventInit.added",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added"
+    },
+    {
+        "lastModifiedAt": 1596456491879,
+        "name": "XRInputSourcesChangeEventInit.removed",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed"
+    },
+    {
+        "lastModifiedAt": 1596456492222,
+        "name": "XRInputSourcesChangeEventInit.session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session"
+    },
+    {
+        "lastModifiedAt": 1596456541734,
+        "name": "XRPose",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose"
+    },
+    {
+        "lastModifiedAt": 1596456542092,
+        "name": "XRPose.emulatedPosition",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/emulatedPosition"
+    },
+    {
+        "lastModifiedAt": 1596456542398,
+        "name": "XRPose.transform",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/transform"
+    },
+    {
+        "lastModifiedAt": 1596456540561,
+        "name": "XRReferenceSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace"
+    },
+    {
+        "lastModifiedAt": 1596456541352,
+        "name": "XRReferenceSpace.getOffsetReferenceSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/getOffsetReferenceSpace"
+    },
+    {
+        "lastModifiedAt": 1596456513938,
+        "name": "XRReferenceSpaceEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent"
+    },
+    {
+        "lastModifiedAt": 1596456514443,
+        "name": "XRReferenceSpaceEvent.referenceSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/referenceSpace"
+    },
+    {
+        "lastModifiedAt": 1596456515324,
+        "name": "XRReferenceSpaceEvent.transform",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/transform"
+    },
+    {
+        "lastModifiedAt": 1596456497362,
+        "name": "XRReferenceSpaceEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit"
+    },
+    {
+        "lastModifiedAt": 1596456498160,
+        "name": "XRReferenceSpaceEventInit.referenceSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace"
+    },
+    {
+        "lastModifiedAt": 1596456498467,
+        "name": "XRReferenceSpaceEventInit.transform",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform"
+    },
+    {
+        "lastModifiedAt": 1596456516389,
+        "name": "XRRenderState",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState"
+    },
+    {
+        "lastModifiedAt": 1596456516696,
+        "name": "XRRenderState.baseLayer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/baseLayer"
+    },
+    {
+        "lastModifiedAt": 1596456516927,
+        "name": "XRRenderState.depthFar",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthFar"
+    },
+    {
+        "lastModifiedAt": 1596456517736,
+        "name": "XRRenderState.depthNear",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthNear"
+    },
+    {
+        "lastModifiedAt": 1596456518026,
+        "name": "XRRenderState.inlineVerticalFieldOfView",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView"
+    },
+    {
+        "lastModifiedAt": 1596456501226,
+        "name": "XRRenderStateInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRRenderStateInit.baseLayer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit/baseLayer"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRRenderStateInit.depthFar",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit/depthFar"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRRenderStateInit.depthNear",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit/depthNear"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRRenderStateInit.inlineVerticalFieldOfView",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit/inlineVerticalFieldOfView"
+    },
+    {
+        "lastModifiedAt": 1596456511166,
+        "name": "XRRigidTransform",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform"
+    },
+    {
+        "lastModifiedAt": 1596456528033,
+        "name": "XRSession",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession"
+    },
+    {
+        "lastModifiedAt": 1596456530678,
+        "name": "XRSession.cancelAnimationFrame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/cancelAnimationFrame"
+    },
+    {
+        "lastModifiedAt": 1596456531033,
+        "name": "XRSession.end",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end"
+    },
+    {
+        "lastModifiedAt": 1596456528820,
+        "name": "XRSession.environmentBlendMode",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode"
+    },
+    {
+        "lastModifiedAt": 1596456529189,
+        "name": "XRSession.inputSources",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources"
+    },
+    {
+        "lastModifiedAt": 1596456529496,
+        "name": "XRSession.renderState",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/renderState"
+    },
+    {
+        "lastModifiedAt": 1596456531403,
+        "name": "XRSession.requestAnimationFrame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame"
+    },
+    {
+        "lastModifiedAt": 1596456532264,
+        "name": "XRSession.requestReferenceSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace"
+    },
+    {
+        "lastModifiedAt": 1596456533094,
+        "name": "XRSession.updateRenderState",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/updateRenderState"
+    },
+    {
+        "lastModifiedAt": 1596456530315,
+        "name": "XRSession.visibilityState",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState"
+    },
+    {
+        "lastModifiedAt": 1596456533328,
+        "name": "XRSessionEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent"
+    },
+    {
+        "lastModifiedAt": 1596456533592,
+        "name": "XRSessionEvent.session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session"
+    },
+    {
+        "lastModifiedAt": 1596456498776,
+        "name": "XRSessionEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit"
+    },
+    {
+        "lastModifiedAt": 1596456499082,
+        "name": "XRSessionEventInit.session",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session"
+    },
+    {
+        "lastModifiedAt": 1596456488343,
+        "name": "XRSessionInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRSessionInit.optionalFeatures",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/optionalFeatures"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "XRSessionInit.requiredFeatures",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/requiredFeatures"
+    },
+    {
+        "lastModifiedAt": 1596456539634,
+        "name": "XRSpace",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSpace"
+    },
+    {
+        "lastModifiedAt": 1596456511644,
+        "name": "XRView",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView"
+    },
+    {
+        "lastModifiedAt": 1596456511984,
+        "name": "XRView.eye",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye"
+    },
+    {
+        "lastModifiedAt": 1596456512821,
+        "name": "XRView.projectionMatrix",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/projectionMatrix"
+    },
+    {
+        "lastModifiedAt": 1596456513112,
+        "name": "XRView.transform",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform"
+    },
+    {
+        "lastModifiedAt": 1596456515711,
+        "name": "XRViewerPose",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose"
+    },
+    {
+        "lastModifiedAt": 1596456516090,
+        "name": "XRViewerPose.views",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose/views"
+    },
+    {
+        "lastModifiedAt": 1596456533899,
+        "name": "XRViewport",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport"
+    },
+    {
+        "lastModifiedAt": 1596456534757,
+        "name": "XRViewport.height",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/height"
+    },
+    {
+        "lastModifiedAt": 1596456535026,
+        "name": "XRViewport.width",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/width"
+    },
+    {
+        "lastModifiedAt": 1596456535406,
+        "name": "XRViewport.x",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/x"
+    },
+    {
+        "lastModifiedAt": 1596456535742,
+        "name": "XRViewport.y",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/y"
+    },
+    {
+        "lastModifiedAt": 1596456518337,
+        "name": "XRWebGLLayer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer"
+    },
+    {
+        "lastModifiedAt": 1596456519152,
+        "name": "XRWebGLLayer.antialias",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/antialias"
+    },
+    {
+        "lastModifiedAt": 1596456519994,
+        "name": "XRWebGLLayer.frameBufferHeight",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferHeight"
+    },
+    {
+        "lastModifiedAt": 1596456520278,
+        "name": "XRWebGLLayer.frameBufferWidth",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferWidth"
+    },
+    {
+        "lastModifiedAt": 1596456520586,
+        "name": "XRWebGLLayer.framebuffer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer"
+    },
+    {
+        "lastModifiedAt": 1596456521771,
+        "name": "XRWebGLLayer.getNativeFramebufferScaleFactor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor"
+    },
+    {
+        "lastModifiedAt": 1596456522574,
+        "name": "XRWebGLLayer.getViewport",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport"
+    },
+    {
+        "lastModifiedAt": 1596456520975,
+        "name": "XRWebGLLayer.ignoreDepthValues",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/ignoreDepthValues"
+    },
+    {
+        "lastModifiedAt": 1596456493166,
+        "name": "XRWebGLLayerInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit"
+    },
+    {
+        "lastModifiedAt": 1596456493574,
+        "name": "XRWebGLLayerInit.alpha",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha"
+    },
+    {
+        "lastModifiedAt": 1596456494455,
+        "name": "XRWebGLLayerInit.antialias",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/antialias"
+    },
+    {
+        "lastModifiedAt": 1596456495007,
+        "name": "XRWebGLLayerInit.depth",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth"
+    },
+    {
+        "lastModifiedAt": 1596456495535,
+        "name": "XRWebGLLayerInit.framebufferScaleFactor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/framebufferScaleFactor"
+    },
+    {
+        "lastModifiedAt": 1596456496018,
+        "name": "XRWebGLLayerInit.ignoreDepthValues",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/ignoreDepthValues"
+    },
+    {
+        "lastModifiedAt": 1596456496557,
+        "name": "XRWebGLLayerInit.stencil",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil"
     }
 ]

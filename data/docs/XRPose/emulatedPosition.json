@@ -1,0 +1,7 @@
+
+{
+    "name": "XRPose.emulatedPosition",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/emulatedPosition",
+    "description": "The emulatedPosition read-only attribute of the XRPose interface is a Boolean value indicating whether or not both the the position component of the pose's transform is directly taken from the XR device, or it's simulated or computed based on other sources.",
+    "content": "<div class=\"blockIndicator draft\"> \n <p><strong>Draft</strong><br> This page is not complete.</p> \n</div>\n<p>The <code>emulatedPosition</code> read-only attribute of the <code>XRPose</code> interface is a Boolean value indicating whether or not both the the <code>position</code> component of the pose's <code>transform</code> is directly taken from the XR device, or it's simulated or computed based on other sources.</p>"
+}

@@ -1,0 +1,7 @@
+
+{
+    "name": "Navigator.vendor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor",
+    "description": "The value of the Navigator vendor property is always either \"Google Inc.\", \"Apple Computer, Inc.\", or (in Firefox) the empty string.",
+    "content": "The value of the <code>Navigator</code> <code><strong>vendor</strong></code> property is always either \"<code>Google Inc.</code>\", \"<code>Apple Computer, Inc.</code>\", or (in Firefox) the empty string."
+}

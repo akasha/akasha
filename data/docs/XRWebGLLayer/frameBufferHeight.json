@@ -1,0 +1,7 @@
+
+{
+    "name": "XRWebGLLayer.frameBufferHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferHeight",
+    "description": "The read-only XRWebGLLayer property framebufferHeight indicates the height of the framebuffer, in pixels.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRWebGLLayer</code> property <strong><code>framebufferHeight</code></strong> indicates the height of the framebuffer, in pixels.</p>\n<p>You can get the width of the framebuffer using the <code>framebufferWidth</code> property.</p>"
+}

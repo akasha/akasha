@@ -1,0 +1,7 @@
+
+{
+    "name": "XRInputSourcesChangeEventInit.removed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed",
+    "description": "The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code>XRInputSourcesChangeEventInit</code> property <code>removed</code> is an array of zero or more <code>XRInputSource</code> objects, each representing one input source which has been removed from the <code>XRSession</code>.</p>"
+}

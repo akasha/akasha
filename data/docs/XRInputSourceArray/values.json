@@ -1,0 +1,7 @@
+
+{
+    "name": "XRInputSourceArray.values",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values",
+    "description": "The XRInputSourceArray method  values() returns a JavaScript iterator that can walk over the list of XRInputSource objects contained in the array, from first to last.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The<code>XRInputSourceArray</code> method<code><strong>values()</strong></code>returns a <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/JavaScript\">JavaScript</a> <code><a class=\"new\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator\" rel=\"nofollow\">iterator</a></code> that can walk over the list of <code>XRInputSource</code> objects contained in the array, from first to last.</p>"
+}

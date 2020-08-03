@@ -1,0 +1,7 @@
+
+{
+    "name": "XRInputSource.targetRaySpace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace",
+    "description": "The read-only XRInputSource property targetRaySpace returns an XRSpace (typically an XRReferenceSpace) representing the position and orientation of the target ray in the virtual space.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRInputSource</code> property <code><strong>targetRaySpace</strong></code> returns an <code>XRSpace</code> (typically an <code>XRReferenceSpace</code>) representing the position and orientation of the target ray in the virtual space. Its native origin tracks the position of the origin point of the target ray, and its orientation indicates the orientation of the controller device itself. These values, interpreted in the context of the input source's <code>targetRayMode</code>, can be used both to fully interpret the device as an input source.</p>\n<p><strong>&lt;&lt;&lt;--- needs diagram showing targetRaySpace relative to gripSpace and world space ---&gt;&gt;&gt;</strong></p>\n<p>To obtain an <code>XRSpace</code> representing the input controller's position and orientation in virtual space, use the <code>gripSpace</code> property.</p>"
+}

@@ -1,0 +1,7 @@
+
+{
+    "name": "XRPose.transform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/transform",
+    "description": "The transform read-only attribute of the XRPose interface is a XRRigidTransform object providing the position and orientation of the pose relative to the base XRSpace as specified when the pose was obtained by calling XRFrame.getPose().",
+    "content": "<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p>The <code>transform</code> read-only attribute of the <code>XRPose</code> interface is a <code>XRRigidTransform</code> object providing the position and orientation of the pose relative to the base <code>XRSpace</code> as specified when the pose was obtained by calling <code>XRFrame.getPose()</code>.</p>"
+}
