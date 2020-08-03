@@ -1,6 +1,5 @@
 package org.realityforge.webtack;
 
-import java.io.Console;
 import java.nio.file.Path;
 import java.util.Objects;
 import java.util.logging.Logger;
