@@ -20,11 +20,11 @@ public interface MyDictionary1 {
   @Nonnull
   static MyDictionary1 create(@Nonnull final Object _clone, @Nonnull final Object _default,
       @Nonnull final Object _equals, @Nonnull final Object _finalize,
-      @Nonnull final Object _getClass, @Nonnull final Object _hashCode,
+      @Nonnull final Object _getClass, @Nonnull final Object _hashCode, @Nonnull final Object is,
       @Nonnull final Object _notify, @Nonnull final Object _notifyAll,
       @Nonnull final Object _private, @Nonnull final Object _protected,
       @Nonnull final Object _public, @Nonnull final Object _toString, @Nonnull final Object _wait) {
-    return Js.<MyDictionary1>uncheckedCast( JsPropertyMap.of() )._clone( _clone )._default( _default )._equals( _equals )._finalize( _finalize )._getClass( _getClass )._hashCode( _hashCode )._notify( _notify )._notifyAll( _notifyAll )._private( _private )._protected( _protected )._public( _public )._toString( _toString )._wait( _wait );
+    return Js.<MyDictionary1>uncheckedCast( JsPropertyMap.of() )._clone( _clone )._default( _default )._equals( _equals )._finalize( _finalize )._getClass( _getClass )._hashCode( _hashCode ).is( is )._notify( _notify )._notifyAll( _notifyAll )._private( _private )._protected( _protected )._public( _public )._toString( _toString )._wait( _wait );
   }
 
   @JsProperty(
@@ -120,6 +120,22 @@ public interface MyDictionary1 {
   @Nonnull
   default MyDictionary1 _hashCode(@Nonnull final Object _hashCode) {
     setHashCode( _hashCode );
+    return this;
+  }
+
+  @JsProperty(
+      name = "is"
+  )
+  @Nonnull
+  Object _is();
+
+  @JsProperty
+  void setIs(@Nonnull Object is);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary1 is(@Nonnull final Object is) {
+    setIs( is );
     return this;
   }
 

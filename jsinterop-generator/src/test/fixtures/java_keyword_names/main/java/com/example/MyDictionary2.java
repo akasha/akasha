@@ -113,6 +113,21 @@ public interface MyDictionary2 {
   }
 
   @JsProperty(
+      name = "is"
+  )
+  Object _is();
+
+  @JsProperty
+  void setIs(@Nonnull Object is);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary2 is(@Nonnull final Object is) {
+    setIs( is );
+    return this;
+  }
+
+  @JsProperty(
       name = "notify"
   )
   Object _notify();

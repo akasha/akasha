@@ -53,6 +53,12 @@ public class MyType1 {
   public native Object _hashCode();
 
   @JsProperty(
+      name = "is"
+  )
+  @Nonnull
+  public native Object _is();
+
+  @JsProperty(
       name = "notify"
   )
   @Nonnull

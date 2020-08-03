@@ -11,6 +11,7 @@ dictionary MyDictionary1 {
   required object finalize;
   required object getClass;
   required object hashCode;
+  required object is;
   required object notify;
   required object notifyAll;
   required object private;
@@ -27,6 +28,7 @@ dictionary MyDictionary2 {
   object finalize;
   object getClass;
   object hashCode;
+  object is;
   object notify;
   object notifyAll;
   object private;
@@ -43,6 +45,7 @@ interface MyType1 {
   readonly attribute object finalize;
   readonly attribute object getClass;
   readonly attribute object hashCode;
+  readonly attribute object is;
   readonly attribute object notify;
   readonly attribute object notifyAll;
   readonly attribute object private;
@@ -59,6 +62,7 @@ interface MyType2 {
   attribute object finalize;
   attribute object getClass;
   attribute object hashCode;
+  attribute object is;
   attribute object notify;
   attribute object notifyAll;
   attribute object private;
@@ -75,6 +79,7 @@ interface MyType3 {
   static void finalize( object finalize );
   static void getClass( object getClass );
   static void hashCode( object hashCode );
+  static void is( object is );
   static void notify( object notify );
   static void notifyAll( object notifyAll );
   static void private( object private );
@@ -91,6 +96,7 @@ interface MyType4 {
   void finalize( object finalize );
   void getClass( object getClass );
   void hashCode( object hashCode );
+  void is( object is );
   void notify( object notify );
   void notifyAll( object notifyAll );
   void private( object private );

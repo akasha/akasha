@@ -49,6 +49,9 @@ public class MyType2 {
   @Nonnull
   public Object _hashCode;
 
+  @Nonnull
+  public Object is;
+
   @JsProperty(
       name = "notify"
   )

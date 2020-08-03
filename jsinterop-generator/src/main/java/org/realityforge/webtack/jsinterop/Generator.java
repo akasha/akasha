@@ -374,7 +374,7 @@ final class Generator
       {
         final String paramName = safeName( member.getName() );
         sb.append( ".$N( $N )" );
-        params.add( paramName );
+        params.add( safeMethodName( member.getName() ) );
         params.add( paramName );
 
         final TypedValue memberType = types.get( index++ );
@@ -391,7 +391,42 @@ final class Generator
   @Nonnull
   private String safeName( @Nonnull final String name )
   {
-    return SourceVersion.isName( name ) && !OBJECT_METHODS.contains( name ) ? name : "_" + name;
+    return isNameJavaSafe( name ) && !OBJECT_METHODS.contains( name ) ? name : mangleName( name );
+  }
+
+  @Nonnull
+  private String safeMethodName( @Nonnull final String name )
+  {
+    return isMethodNameJavaSafe( name ) ? name : mangleName( name );
+  }
+
+  @Nonnull
+  private String safeJsPropertyMethodName( @Nonnull final String name )
+  {
+    // This method is a work around for a bug in GWTs validation of properties
+    // https://github.com/gwtproject/gwt/issues/9703
+    return isJsPropertyMethodNameSafe( name ) ? name : mangleName( name );
+  }
+
+  private boolean isJsPropertyMethodNameSafe( @Nonnull final String name )
+  {
+    return isMethodNameJavaSafe( name ) && !"is".equals( name );
+  }
+
+  private boolean isMethodNameJavaSafe( @Nonnull final String name )
+  {
+    return isNameJavaSafe( name ) && !OBJECT_METHODS.contains( name );
+  }
+
+  private boolean isNameJavaSafe( @Nonnull final String name )
+  {
+    return SourceVersion.isName( name );
+  }
+
+  @Nonnull
+  private String mangleName( @Nonnull final String name )
+  {
+    return "_" + name;
   }
 
   @Nonnull
@@ -424,7 +459,7 @@ final class Generator
   {
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeName( member.getName() ) )
+        .methodBuilder( safeJsPropertyMethodName( member.getName() ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .returns( javaType );
     method.addAnnotation( AnnotationSpec
@@ -458,9 +493,8 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .addAnnotation( Types.JS_PROPERTY );
     maybeAddJavadoc( member, method );
-    final String paramName = safeName( member.getName() );
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( javaType, paramName );
+      ParameterSpec.builder( javaType, safeName( member.getName() ) );
 
     if ( context.getSchema().isNullable( member.getType() ) )
     {
@@ -549,10 +583,9 @@ final class Generator
                                                             final boolean addOverride,
                                                             @Nonnull final TypeSpec.Builder type )
   {
-    final String paramName = safeName( member.getName() );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( paramName )
+        .methodBuilder( safeMethodName( member.getName() ) )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( Types.JS_OVERLAY )
         .addAnnotation( Types.NONNULL )
@@ -563,6 +596,7 @@ final class Generator
       method.addAnnotation( Override.class );
     }
     final TypeName javaType = typedValue.getJavaType();
+    final String paramName = safeName( member.getName() );
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
@@ -877,7 +911,7 @@ final class Generator
     final String name = attribute.getName();
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeName( name ) )
+        .methodBuilder( safeJsPropertyMethodName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( context.toTypeName( actualType ) )
         .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
@@ -901,11 +935,11 @@ final class Generator
     final Type attributeType = attribute.getType();
     final Type actualType = context.getSchema().resolveType( attributeType );
     final String name = attribute.getName();
-    final String safeName = safeName( name );
+    final String fieldName = safeName( name );
     final FieldSpec.Builder field =
-      FieldSpec.builder( context.toTypeName( actualType ), safeName, Modifier.PUBLIC );
+      FieldSpec.builder( context.toTypeName( actualType ), fieldName, Modifier.PUBLIC );
     maybeAddJavadoc( attribute, field );
-    if ( !safeName.equals( name ) )
+    if ( !fieldName.equals( name ) )
     {
       field.addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     }
@@ -1028,13 +1062,13 @@ final class Generator
     assert OperationMember.Kind.DEFAULT == operation.getKind();
     final String name = operation.getName();
     assert null != name;
-    final String safeName = safeName( name );
+    final String methodName = safeMethodName( name );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeName )
+        .methodBuilder( methodName )
         .addModifiers( Modifier.PUBLIC, javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
     maybeAddJavadoc( operation, method );
-    if ( !safeName.equals( name ) )
+    if ( !methodName.equals( name ) )
     {
       method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
     }
@@ -1077,13 +1111,13 @@ final class Generator
     assert OperationMember.Kind.STATIC == operation.getKind();
     final String name = operation.getName();
     assert null != name;
-    final String safeName = safeName( name );
+    final String methodName = safeMethodName( name );
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeName )
+        .methodBuilder( methodName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
     maybeAddJavadoc( operation, method );
-    if ( !safeName.equals( name ) )
+    if ( !methodName.equals( name ) )
     {
       method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
     }
@@ -1265,9 +1299,8 @@ final class Generator
       final String value = enumerationValue.getValue();
       if ( !value.isEmpty() )
       {
-        final String name = safeName( toName( value ) );
         final FieldSpec.Builder field = FieldSpec
-          .builder( Types.STRING, safeName( name ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+          .builder( Types.STRING, safeName( toName( value ) ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
           .addAnnotation( Types.NONNULL )
           .initializer( "$S", value );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );

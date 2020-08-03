@@ -46,6 +46,8 @@ public class MyType3 {
   )
   public static native void _hashCode(@Nonnull Object _hashCode);
 
+  public static native void is(@Nonnull Object is);
+
   @JsMethod(
       name = "notify"
   )
