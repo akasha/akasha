@@ -107,6 +107,8 @@ complete as there is too much un-said.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
 
+* Start to download gecko WebIDL as well https://github.com/mozilla/gecko-dev/tree/master/dom/webidl
+
 * Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
   have the same name and parameters then they should be collapsed into a single operation but with potentially
   merged extended attributes. The intention is for this to be used to import gecko and/or chrome WebIDL and combine
