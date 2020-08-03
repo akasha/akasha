@@ -1,0 +1,13 @@
+
+{
+    "name": "SpeechRecognitionResultList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList",
+    "description": "The SpeechRecognitionResultList interface of the Web Speech API represents a list of SpeechRecognitionResult objects, or a single one if results are being captured in continuous mode.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechRecognitionResultList</code></strong> interface of the Web Speech API represents a list of <code>SpeechRecognitionResult</code> objects, or a single one if results are being captured in <code>continuous</code> mode.</p>",
+    "properties": [
+        "length"
+    ],
+    "methods": [
+        "item"
+    ]
+}

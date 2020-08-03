@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.matchMedia",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia",
+    "description": "The Window interface's matchMedia() method returns a new MediaQueryList object that can then be used to determine if the document matches the media query string, as well as to monitor the document to detect when it matches (or stops matching) that media query.",
+    "content": "<p>The <code>Window</code> interface's <code><strong>matchMedia()</strong></code> method returns a new <code>MediaQueryList</code> object that can then be used to determine if the <code>document</code>matches the <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries\">media query</a> string, as well as to monitor thedocument to detect when it matches (or stops matching) that media query.</p>"
+}

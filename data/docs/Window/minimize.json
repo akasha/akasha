@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.minimize",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/minimize",
+    "description": "The Window.minimize() method sets the window to a minimized state.",
+    "content": "<p>The <code><strong>Window.minimize()</strong></code> method sets the window to a minimized state.</p>\n<p>A way to undo this method programatically is by calling <code>window.moveTo()</code>.</p>"
+}

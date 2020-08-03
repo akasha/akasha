@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognition.stop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop",
+    "description": "The stop() method of the Web Speech API stops the speech recognition service from listening to incoming audio, and attempts to return a SpeechRecognitionResult using the audio captured so far.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>stop()</strong></code> method of the Web Speech API stops the speech recognition service from listening to incoming audio, and attempts to return a <code>SpeechRecognitionResult</code> using the audio captured so far.</p>"
+}

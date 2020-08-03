@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognitionErrorEvent.message",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message",
+    "description": "The message read-only property of the SpeechRecognitionErrorEvent interface returns a message describing the error in more detail.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code><strong>message</strong></code> read-only property of the <code>SpeechRecognitionErrorEvent</code> interface returns a message describing the error in more detail.</p>"
+}

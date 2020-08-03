@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechSynthesisUtterance.rate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate",
+    "description": "The rate property of the SpeechSynthesisUtterance interface gets and sets the speed at which the utterance will be spoken at.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>rate</code></strong> property of the <code>SpeechSynthesisUtterance</code> interface gets and sets the speed at which the utterance will be spoken at.</p>\n<p>If unset, a default value of 1 will be used.</p>"
+}

@@ -1,0 +1,20 @@
+
+{
+    "name": "SpeechRecognition",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition",
+    "description": "The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechRecognition</code></strong> interface of the Web Speech API is the controller interface for the recognition service; this also handles the <code>SpeechRecognitionEvent</code> sent from the recognition service.</p>\n<div class=\"note\"> \n <p><strong>Note</strong>: On some browsers, like Chrome, using Speech Recognition on a web page involves a server-based recognition engine. Your audio is sent to a web service for recognition processing, so it won't work offline.</p> \n</div>",
+    "properties": [
+        "continuous",
+        "grammars",
+        "interimResults",
+        "lang",
+        "maxAlternatives",
+        "serviceURI"
+    ],
+    "methods": [
+        "abort",
+        "start",
+        "stop"
+    ]
+}

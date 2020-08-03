@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.cancelAnimationFrame",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame",
+    "description": "The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame().",
+    "content": "<p>The <code><strong>window.cancelAnimationFrame()</strong></code> method cancels an animation frame request previously scheduled through a call to <code>window.requestAnimationFrame()</code>.</p>"
+}

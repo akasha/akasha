@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/close",
+    "description": "The Window.close() method closes the current window, or the window on which it was called.",
+    "content": "<p>The <code><strong>Window.close()</strong></code> method closes the current window, or the window on which it was called.</p>\n<p>This method can only be called on windows that were opened by a script using the <code>Window.open()</code> method. If the window was not opened by a script, an error similar to this one appears in the console: <code>Scripts may not close windows that were not opened by script.</code></p>\n<p>Note also that <code>close()</code> has no effect when called on <code>Window</code> objects returned by <code>HTMLIFrame​Element​.content​Window</code>.</p>"
+}

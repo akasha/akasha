@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.scrollByPages",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByPages",
+    "description": "The Window.scrollByPages() method scrolls the current document by the specified number of pages.",
+    "content": "<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<p>The <code><strong>Window.scrollByPages()</strong></code> method scrolls the current document by the specified number of pages.</p>"
+}

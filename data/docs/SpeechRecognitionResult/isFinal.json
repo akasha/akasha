@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognitionResult.isFinal",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/isFinal",
+    "description": "The isFinal read-only property of the SpeechRecognitionResult interface is a Boolean that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>isFinal</strong></code> read-only property of the <code>SpeechRecognitionResult</code> interface is a <code>Boolean</code> that states whether this result is final (<code>true</code>) or not (<code>false</code>) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on.</p>"
+}

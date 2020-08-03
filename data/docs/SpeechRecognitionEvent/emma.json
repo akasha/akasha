@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognitionEvent.emma",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/emma",
+    "description": "The emma read-only property of the SpeechRecognitionEvent interface returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.",
+    "content": "<div class=\"blockIndicator obsolete obsoleteHeader\">\n <p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n</div>\n<p>The <strong><code>emma</code></strong> read-only property of the <code>SpeechRecognitionEvent</code> interface returns an <cite>E</cite><cite>xtensible MultiModal Annotation markup language (EMMA) — XML — representation of the result.</cite></p>\n<div class=\"note\"> \n <p><cite><strong>Note</strong>: EMMA is defined in the specification </cite><a class=\"external\" href=\"http://www.w3.org/TR/emma/\" rel=\"noopener\">EMMA: Extensible MultiModal Annotation markup language</a>. You can see muliple EMMA examples in the spec.</p> \n</div>"
+}

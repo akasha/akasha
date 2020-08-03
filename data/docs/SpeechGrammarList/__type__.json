@@ -1,0 +1,15 @@
+
+{
+    "name": "SpeechGrammarList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList",
+    "description": "The SpeechGrammarList interface of the Web Speech API represents a list of SpeechGrammar objects containing words or patterns of words that we want the recognition service to recognize.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechGrammarList</code></strong> interface of the Web Speech API represents a list of <code>SpeechGrammar</code> objects containing words or patterns of words that we want the recognition service to recognize.</p>\n<p>Grammar is defined using <a class=\"external external-icon\" href=\"http://www.w3.org/TR/jsgf/\" rel=\"noopener\">JSpeech Grammar Format</a> (<strong>JSGF</strong>.) Other formats may also be supported in the future.</p>",
+    "properties": [
+        "length"
+    ],
+    "methods": [
+        "addFromString",
+        "addFromURI",
+        "item"
+    ]
+}

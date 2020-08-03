@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.open",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/open",
+    "description": "The Window interface's open() method loads the specified resource into the new or existing browsing context (window, iframe or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.",
+    "content": "<p>The <code>Window</code> interface's <strong><code>open()</code></strong> method loads the specified resource into the new or existing browsing context (window, <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe\" title=\"The HTML Inline Frame element (<iframe>) represents a nested browsing context, embedding another HTML page into the current one.\"><code>&lt;iframe&gt;</code></a> or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.</p>"
+}

@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognitionResult.item",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/item",
+    "description": "The item getter of the SpeechRecognitionResult interface is a standard getter that allows SpeechRecognitionAlternative objects within the result to be accessed via array syntax.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>item</strong></code> getter of the <code>SpeechRecognitionResult</code> interface is a standard getter that allows <code>SpeechRecognitionAlternative</code> objects within the result to be accessed via array syntax.</p>"
+}

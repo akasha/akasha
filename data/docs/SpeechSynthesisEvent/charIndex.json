@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechSynthesisEvent.charIndex",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charIndex",
+    "description": "The charIndex read-only property of the SpeechSynthesisUtterance interface returns the index position of the character in the SpeechSynthesisUtterance.text that was being spoken when the event was triggered.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>charIndex</code></strong> read-only property of the <code>SpeechSynthesisUtterance</code> interface returns the index position of the character in the <code>SpeechSynthesisUtterance.text</code> that was being spoken when the event was triggered.</p>"
+}

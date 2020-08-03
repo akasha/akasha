@@ -1,0 +1,14 @@
+
+{
+    "name": "SpeechSynthesisVoice",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice",
+    "description": "The SpeechSynthesisVoice interface of the Web Speech API represents a voice that the system supports. Every SpeechSynthesisVoice has its own relative speech service including information about language, name and URI.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechSynthesisVoice</code></strong> interface of the Web Speech API represents a voice that the system supports. Every <code>SpeechSynthesisVoice</code> has its own relative speech service including information about language, name and URI.</p>",
+    "properties": [
+        "default",
+        "lang",
+        "localService",
+        "name",
+        "voiceURI"
+    ]
+}

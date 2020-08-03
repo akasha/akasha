@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechSynthesisVoice.default",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default",
+    "description": "The default read-only property of the SpeechSynthesisVoice interface returns a Boolean indicating whether the voice is the default voice for the current app (true), or not (false.)",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>default</code></strong> read-only property of the <code>SpeechSynthesisVoice</code> interface returns a <code>Boolean</code> indicating whether the voice is the default voice for the current app (<code>true</code>), or not (<code>false</code>.)</p>\n<div class=\"note\"> \n <p><strong>Note</strong>: For some devices, it might be the default voice for the voice's language. The spec is not very clear on which it should be, so some implementations may differ.</p> \n</div>"
+}

@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.confirm",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm",
+    "description": "The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.",
+    "content": "<p>The <code><strong>Window.confirm()</strong></code> method displays a modal dialog with an optional message and two buttons: OK and Cancel.</p>"
+}

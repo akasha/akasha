@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.resizeTo",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeTo",
+    "description": "The Window.resizeTo() method dynamically resizes the window.",
+    "content": "<p>The <strong><code>Window.resizeTo()</code></strong> method dynamically resizes the window.</p>"
+}

@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognition.continuous",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous",
+    "description": "The continuous property of the SpeechRecognition interface controls whether continuous results are returned for each recognition, or only a single result.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>continuous</code></strong> property of the <code>SpeechRecognition</code> interface controls whether continuous results are returned for each recognition, or only a single result.</p>\n<p>It defaults to single results (<code>false</code>.)</p>"
+}

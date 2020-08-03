@@ -796,6 +796,351 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver"
     },
     {
+        "lastModifiedAt": 1596457153394,
+        "name": "SpeechGrammar",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar"
+    },
+    {
+        "lastModifiedAt": 1596457154242,
+        "name": "SpeechGrammar.src",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/src"
+    },
+    {
+        "lastModifiedAt": 1596457155079,
+        "name": "SpeechGrammar.weight",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/weight"
+    },
+    {
+        "lastModifiedAt": 1596457179739,
+        "name": "SpeechGrammarList",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList"
+    },
+    {
+        "lastModifiedAt": 1596457180329,
+        "name": "SpeechGrammarList.addFromString",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString"
+    },
+    {
+        "lastModifiedAt": 1596457181164,
+        "name": "SpeechGrammarList.addFromURI",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI"
+    },
+    {
+        "lastModifiedAt": 1596457181555,
+        "name": "SpeechGrammarList.item",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item"
+    },
+    {
+        "lastModifiedAt": 1596457180060,
+        "name": "SpeechGrammarList.length",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length"
+    },
+    {
+        "lastModifiedAt": 1596457155799,
+        "name": "SpeechRecognition",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"
+    },
+    {
+        "lastModifiedAt": 1596457161297,
+        "name": "SpeechRecognition.abort",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/abort"
+    },
+    {
+        "lastModifiedAt": 1596457156766,
+        "name": "SpeechRecognition.continuous",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous"
+    },
+    {
+        "lastModifiedAt": 1596457157296,
+        "name": "SpeechRecognition.grammars",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars"
+    },
+    {
+        "lastModifiedAt": 1596457158235,
+        "name": "SpeechRecognition.interimResults",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults"
+    },
+    {
+        "lastModifiedAt": 1596457159271,
+        "name": "SpeechRecognition.lang",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang"
+    },
+    {
+        "lastModifiedAt": 1596457159814,
+        "name": "SpeechRecognition.maxAlternatives",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives"
+    },
+    {
+        "lastModifiedAt": 1596457160325,
+        "name": "SpeechRecognition.serviceURI",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/serviceURI"
+    },
+    {
+        "lastModifiedAt": 1596457161630,
+        "name": "SpeechRecognition.start",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start"
+    },
+    {
+        "lastModifiedAt": 1596457162590,
+        "name": "SpeechRecognition.stop",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop"
+    },
+    {
+        "lastModifiedAt": 1596457172284,
+        "name": "SpeechRecognitionAlternative",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"
+    },
+    {
+        "lastModifiedAt": 1596457172587,
+        "name": "SpeechRecognitionAlternative.confidence",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/confidence"
+    },
+    {
+        "lastModifiedAt": 1596457172898,
+        "name": "SpeechRecognitionAlternative.transcript",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript"
+    },
+    {
+        "lastModifiedAt": 1596457182347,
+        "name": "SpeechRecognitionErrorEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent"
+    },
+    {
+        "lastModifiedAt": 1596457182629,
+        "name": "SpeechRecognitionErrorEvent.error",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error"
+    },
+    {
+        "lastModifiedAt": 1596457182864,
+        "name": "SpeechRecognitionErrorEvent.message",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "SpeechRecognitionErrorEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEventInit"
+    },
+    {
+        "lastModifiedAt": 1596457165188,
+        "name": "SpeechRecognitionEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent"
+    },
+    {
+        "lastModifiedAt": 1596457165521,
+        "name": "SpeechRecognitionEvent.emma",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/emma"
+    },
+    {
+        "lastModifiedAt": 1596457165828,
+        "name": "SpeechRecognitionEvent.interpretation",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation"
+    },
+    {
+        "lastModifiedAt": 1596457166134,
+        "name": "SpeechRecognitionEvent.resultIndex",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex"
+    },
+    {
+        "lastModifiedAt": 1596457166443,
+        "name": "SpeechRecognitionEvent.results",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "SpeechRecognitionEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEventInit"
+    },
+    {
+        "lastModifiedAt": 1596457166828,
+        "name": "SpeechRecognitionResult",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult"
+    },
+    {
+        "lastModifiedAt": 1596457167641,
+        "name": "SpeechRecognitionResult.isFinal",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/isFinal"
+    },
+    {
+        "lastModifiedAt": 1596457168286,
+        "name": "SpeechRecognitionResult.item",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/item"
+    },
+    {
+        "lastModifiedAt": 1596457167955,
+        "name": "SpeechRecognitionResult.length",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length"
+    },
+    {
+        "lastModifiedAt": 1596457184262,
+        "name": "SpeechRecognitionResultList",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList"
+    },
+    {
+        "lastModifiedAt": 1596457184771,
+        "name": "SpeechRecognitionResultList.item",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/item"
+    },
+    {
+        "lastModifiedAt": 1596457184506,
+        "name": "SpeechRecognitionResultList.length",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/length"
+    },
+    {
+        "lastModifiedAt": 1596457175532,
+        "name": "SpeechSynthesis",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"
+    },
+    {
+        "lastModifiedAt": 1596457177502,
+        "name": "SpeechSynthesis.cancel",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel"
+    },
+    {
+        "lastModifiedAt": 1596457177809,
+        "name": "SpeechSynthesis.getVoices",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices"
+    },
+    {
+        "lastModifiedAt": 1596457178618,
+        "name": "SpeechSynthesis.pause",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause"
+    },
+    {
+        "lastModifiedAt": 1596457176354,
+        "name": "SpeechSynthesis.paused",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused"
+    },
+    {
+        "lastModifiedAt": 1596457176865,
+        "name": "SpeechSynthesis.pending",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending"
+    },
+    {
+        "lastModifiedAt": 1596457179002,
+        "name": "SpeechSynthesis.resume",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume"
+    },
+    {
+        "lastModifiedAt": 1596457179345,
+        "name": "SpeechSynthesis.speak",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak"
+    },
+    {
+        "lastModifiedAt": 1596457177244,
+        "name": "SpeechSynthesis.speaking",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking"
+    },
+    {
+        "lastModifiedAt": 1596457183670,
+        "name": "SpeechSynthesisErrorEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent"
+    },
+    {
+        "lastModifiedAt": 1596457183954,
+        "name": "SpeechSynthesisErrorEvent.error",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "SpeechSynthesisErrorEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEventInit"
+    },
+    {
+        "lastModifiedAt": 1596457173202,
+        "name": "SpeechSynthesisEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent"
+    },
+    {
+        "lastModifiedAt": 1596457173506,
+        "name": "SpeechSynthesisEvent.charIndex",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charIndex"
+    },
+    {
+        "lastModifiedAt": 1596457174349,
+        "name": "SpeechSynthesisEvent.elapsedTime",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/elapsedTime"
+    },
+    {
+        "lastModifiedAt": 1596457174900,
+        "name": "SpeechSynthesisEvent.name",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/name"
+    },
+    {
+        "lastModifiedAt": 1596457175248,
+        "name": "SpeechSynthesisEvent.utterance",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/utterance"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "SpeechSynthesisEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEventInit"
+    },
+    {
+        "lastModifiedAt": 1596457168727,
+        "name": "SpeechSynthesisUtterance",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance"
+    },
+    {
+        "lastModifiedAt": 1596457169539,
+        "name": "SpeechSynthesisUtterance.lang",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/lang"
+    },
+    {
+        "lastModifiedAt": 1596457169778,
+        "name": "SpeechSynthesisUtterance.pitch",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch"
+    },
+    {
+        "lastModifiedAt": 1596457170572,
+        "name": "SpeechSynthesisUtterance.rate",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate"
+    },
+    {
+        "lastModifiedAt": 1596457170811,
+        "name": "SpeechSynthesisUtterance.text",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text"
+    },
+    {
+        "lastModifiedAt": 1596457171196,
+        "name": "SpeechSynthesisUtterance.voice",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice"
+    },
+    {
+        "lastModifiedAt": 1596457171994,
+        "name": "SpeechSynthesisUtterance.volume",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/volume"
+    },
+    {
+        "lastModifiedAt": 1596457162859,
+        "name": "SpeechSynthesisVoice",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice"
+    },
+    {
+        "lastModifiedAt": 1596457163107,
+        "name": "SpeechSynthesisVoice.default",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default"
+    },
+    {
+        "lastModifiedAt": 1596457163371,
+        "name": "SpeechSynthesisVoice.lang",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/lang"
+    },
+    {
+        "lastModifiedAt": 1596457163678,
+        "name": "SpeechSynthesisVoice.localService",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/localService"
+    },
+    {
+        "lastModifiedAt": 1596457164483,
+        "name": "SpeechSynthesisVoice.name",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/name"
+    },
+    {
+        "lastModifiedAt": 1596457164803,
+        "name": "SpeechSynthesisVoice.voiceURI",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI"
+    },
+    {
         "lastModifiedAt": 0,
         "name": "WebGLContextAttributes",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextAttributes"
@@ -804,6 +1149,256 @@
         "lastModifiedAt": 0,
         "name": "WebGLRenderingContextBase",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContextBase"
+    },
+    {
+        "lastModifiedAt": 1596457185718,
+        "name": "Window",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.DOMParser",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMParser"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.Image",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/Image"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.Option",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/Option"
+    },
+    {
+        "lastModifiedAt": 1596457188158,
+        "name": "Window.StaticRange",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.collapsed",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange.collapsed"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.endContainer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange.endContainer"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.endOffset",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange.endOffset"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.startContainer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange.startContainer"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.startOffset",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange.startOffset"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.toRange",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange.toRange"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.Worker",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/Worker"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.XMLSerializer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/XMLSerializer"
+    },
+    {
+        "lastModifiedAt": 1596457191634,
+        "name": "Window.alert",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"
+    },
+    {
+        "lastModifiedAt": 1596457192303,
+        "name": "Window.blur",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur"
+    },
+    {
+        "lastModifiedAt": 1596457192676,
+        "name": "Window.cancelAnimationFrame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame"
+    },
+    {
+        "lastModifiedAt": 1596457192968,
+        "name": "Window.cancelIdleCallback",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelIdleCallback"
+    },
+    {
+        "lastModifiedAt": 1596457193502,
+        "name": "Window.clearImmediate",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearImmediate"
+    },
+    {
+        "lastModifiedAt": 1596457193901,
+        "name": "Window.close",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/close"
+    },
+    {
+        "lastModifiedAt": 1596457194224,
+        "name": "Window.confirm",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm"
+    },
+    {
+        "lastModifiedAt": 1596457194523,
+        "name": "Window.dump",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/dump"
+    },
+    {
+        "lastModifiedAt": 1596457194810,
+        "name": "Window.find",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/find"
+    },
+    {
+        "lastModifiedAt": 1596457195079,
+        "name": "Window.focus",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"
+    },
+    {
+        "lastModifiedAt": 1596457195427,
+        "name": "Window.getComputedStyle",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle"
+    },
+    {
+        "lastModifiedAt": 1596457195737,
+        "name": "Window.getDefaultComputedStyle",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getDefaultComputedStyle"
+    },
+    {
+        "lastModifiedAt": 1596457196145,
+        "name": "Window.getSelection",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection"
+    },
+    {
+        "lastModifiedAt": 1596457196553,
+        "name": "Window.matchMedia",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.maximize",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/maximize"
+    },
+    {
+        "lastModifiedAt": 1596457197086,
+        "name": "Window.minimize",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/minimize"
+    },
+    {
+        "lastModifiedAt": 1596457197381,
+        "name": "Window.moveBy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy"
+    },
+    {
+        "lastModifiedAt": 1596457198378,
+        "name": "Window.moveTo",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo"
+    },
+    {
+        "lastModifiedAt": 1596457198750,
+        "name": "Window.open",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/open"
+    },
+    {
+        "lastModifiedAt": 1596457199146,
+        "name": "Window.postMessage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"
+    },
+    {
+        "lastModifiedAt": 1596457199537,
+        "name": "Window.print",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/print"
+    },
+    {
+        "lastModifiedAt": 1596457199946,
+        "name": "Window.prompt",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"
+    },
+    {
+        "lastModifiedAt": 1596457200357,
+        "name": "Window.requestAnimationFrame",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame"
+    },
+    {
+        "lastModifiedAt": 1596457201574,
+        "name": "Window.requestIdleCallback",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback"
+    },
+    {
+        "lastModifiedAt": 1596457202009,
+        "name": "Window.resizeBy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy"
+    },
+    {
+        "lastModifiedAt": 1596457202293,
+        "name": "Window.resizeTo",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeTo"
+    },
+    {
+        "lastModifiedAt": 1596457202599,
+        "name": "Window.scroll",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll"
+    },
+    {
+        "lastModifiedAt": 1596457203725,
+        "name": "Window.scrollBy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy"
+    },
+    {
+        "lastModifiedAt": 1596457204059,
+        "name": "Window.scrollByLines",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByLines"
+    },
+    {
+        "lastModifiedAt": 1596457205055,
+        "name": "Window.scrollByPages",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByPages"
+    },
+    {
+        "lastModifiedAt": 1596457205387,
+        "name": "Window.scrollTo",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo"
+    },
+    {
+        "lastModifiedAt": 1596457205783,
+        "name": "Window.setCursor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setCursor"
+    },
+    {
+        "lastModifiedAt": 1596457206201,
+        "name": "Window.setImmediate",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.setResizable",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setResizable"
+    },
+    {
+        "lastModifiedAt": 1596457207196,
+        "name": "Window.sizeToContent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sizeToContent"
+    },
+    {
+        "lastModifiedAt": 1596457208160,
+        "name": "Window.stop",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/stop"
+    },
+    {
+        "lastModifiedAt": 1596457208696,
+        "name": "Window.updateCommands",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/updateCommands"
     },
     {
         "lastModifiedAt": 1596456536699,

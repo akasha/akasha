@@ -1,0 +1,13 @@
+
+{
+    "name": "SpeechSynthesisEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent",
+    "description": "The SpeechSynthesisEvent interface of the Web Speech API contains information about the current state of SpeechSynthesisUtterance objects that have been processed in the speech service.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechSynthesisEvent</code></strong> interface of the Web Speech API contains information about the current state of <code>SpeechSynthesisUtterance</code> objects that have been processed in the speech service.</p>",
+    "properties": [
+        "charIndex",
+        "elapsedTime",
+        "name",
+        "utterance"
+    ]
+}

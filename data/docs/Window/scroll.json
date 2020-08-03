@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.scroll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll",
+    "description": "The Window.scroll() method scrolls the window to a particular place in the document.",
+    "content": "<p>The <code><strong>Window.scroll()</strong></code> method scrolls the window to a particular place in the document.</p>"
+}

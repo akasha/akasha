@@ -1,0 +1,19 @@
+
+{
+    "name": "SpeechSynthesis",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis",
+    "description": "The SpeechSynthesis interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechSynthesis</code></strong> interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.</p>",
+    "properties": [
+        "paused",
+        "pending",
+        "speaking"
+    ],
+    "methods": [
+        "cancel",
+        "getVoices",
+        "pause",
+        "resume",
+        "speak"
+    ]
+}

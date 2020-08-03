@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechSynthesisUtterance.volume",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/volume",
+    "description": "The volume property of the SpeechSynthesisUtterance interface gets and sets the volume that the utterance will be spoken at.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>volume</code></strong> property of the <code>SpeechSynthesisUtterance</code> interface gets and sets the volume that the utterance will be spoken at.</p>\n<p>If not set, the default value 1 will be used.</p>"
+}

@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechGrammarList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length",
+    "description": "The length read-only property of the SpeechGrammarList interface returns the number of SpeechGrammar objects contained in the SpeechGrammarList.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>length</strong></code> read-only property of the <code>SpeechGrammarList</code> interface returns the number of <code>SpeechGrammar</code> objects contained in the <code>SpeechGrammarList</code>.</p>"
+}

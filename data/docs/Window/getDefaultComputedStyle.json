@@ -1,0 +1,7 @@
+
+{
+    "name": "Window.getDefaultComputedStyle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getDefaultComputedStyle",
+    "description": "The getDefaultComputedStyle() method gives the default computed values of all the CSS properties of an element, ignoring author styling. That is, only user-agent and user styles are taken into account.",
+    "content": "<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<p>The <strong><code>getDefaultComputedStyle()</code></strong> method gives the default <a href=\"https://developer.mozilla.org/en-US/docs/Web/CSS/computed_value\">computed values</a> of all the CSS properties of an element, ignoring author styling. That is, only user-agent and user styles are taken into account.</p>"
+}

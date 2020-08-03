@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechSynthesis.paused",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused",
+    "description": "The paused read-only property of the SpeechSynthesis interface is a Boolean that returns true if the SpeechSynthesis object is in a paused state, or false if not.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>paused</code></strong> read-only property of the <code>SpeechSynthesis</code> interface is a <code>Boolean</code> that returns <code>true</code> if the <code>SpeechSynthesis</code> object is in a paused state, or <code>false</code> if not.</p>\n<p>It can be set to <code>paused</code> even if nothing is currently being spoken through it. If <code>utterances</code> are then added to the utterance queue, they will not be spoken until the <code>SpeechSynthesis</code> object is unpaused, using <code>SpeechSynthesis.resume()</code>.</p>"
+}

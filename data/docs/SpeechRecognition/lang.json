@@ -1,0 +1,7 @@
+
+{
+    "name": "SpeechRecognition.lang",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang",
+    "description": "The lang property of the SpeechRecognition interface returns and sets the language of the current SpeechRecognition. If not specified, this defaults to the HTML lang attribute value, or the user agent's language setting if that isn't set either.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>lang</code></strong> property of the <code>SpeechRecognition</code> interface returns and sets the language of the current <code>SpeechRecognition</code>. If not specified, this defaults to the HTML <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html#attr-lang\">lang</a></code> attribute value, or the user agent's language setting if that isn't set either.</p>"
+}

@@ -1,0 +1,17 @@
+
+{
+    "name": "Window.StaticRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange",
+    "description": "The DOM StaticRange interface extends AbstractRange to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.",
+    "content": "The DOM<strong><code>StaticRange</code></strong> interface extends <code>AbstractRange</code> to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree. It offers the same set of properties and methods as<code>AbstractRange</code>.\n<p><code>AbstractRange</code> and<code>StaticRange</code> are not available from web workers.</p>\n<div class=\"hidden\" id=\"inheritance_diagram\"> \n <pre class=\"brush: html notranslate\"> &lt;div id=\"interfaceDiagram\" style=\"display: inline-block; position: relative; width: 100%; padding-bottom: 11.666666666666666%; vertical-align: middle; overflow: hidden;\"&gt;&lt;svg style=\"display: inline-block; position: absolute; top: 0; left: 0;\" viewbox=\"-50 0 600 70\" preserveAspectRatio=\"xMinYMin meet\"&gt;&lt;a xlink:href=\"https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange\" target=\"_top\"&gt;&lt;rect x=\"1\" y=\"1\" width=\"130\" height=\"50\" fill=\"#fff\" stroke=\"#D4DDE4\" stroke-width=\"2px\" /&gt;&lt;text x=\"66\" y=\"30\" font-size=\"12px\" font-family=\"Consolas,Monaco,Andale Mono,monospace\" fill=\"#4D4E53\" text-anchor=\"middle\" alignment-baseline=\"middle\"&gt;AbstractRange&lt;/text&gt;&lt;/a&gt;&lt;polyline points=\"131,25 141,20 141,30 131,25\" stroke=\"#D4DDE4\" fill=\"none\"/&gt;&lt;line x1=\"141\" y1=\"25\" x2=\"171\" y2=\"25\" stroke=\"#D4DDE4\"/&gt;&lt;a xlink:href=\"https://developer.mozilla.org/en-US/docs/Web/API/StaticRange\" target=\"_top\"&gt;&lt;rect x=\"171\" y=\"1\" width=\"110\" height=\"50\" fill=\"#F4F7F8\" stroke=\"#D4DDE4\" stroke-width=\"2px\" /&gt;&lt;text x=\"226\" y=\"30\" font-size=\"12px\" font-family=\"Consolas,Monaco,Andale Mono,monospace\" fill=\"#4D4E53\" text-anchor=\"middle\" alignment-baseline=\"middle\"&gt;StaticRange&lt;/text&gt;&lt;/a&gt;&lt;/svg&gt;&lt;/div&gt;\n</pre> \n <pre class=\"brush: css notranslate\"> a:hover text { fill: #0095DD; pointer-events: all;}\n</pre> \n</div>\n<iframe class=\"live-sample-frame inheritance-diagram-frame\" frameborder=\"0\" height=\"70\" id=\"frame_inheritance_diagram\" src=\"https://mdn.mozillademos.org/en-US/docs/Web/API/StaticRange$samples/inheritance_diagram?revision=1582701\" width=\"600\"></iframe>",
+    "properties": [
+        "StaticRange.collapsed",
+        "StaticRange.endContainer",
+        "StaticRange.endOffset",
+        "StaticRange.startContainer",
+        "StaticRange.startOffset"
+    ],
+    "methods": [
+        "StaticRange.toRange"
+    ]
+}
