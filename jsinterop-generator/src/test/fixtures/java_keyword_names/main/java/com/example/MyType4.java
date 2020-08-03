@@ -19,67 +19,67 @@ public class MyType4 {
   @JsMethod(
       name = "clone"
   )
-  public native void _clone(@Nonnull Object _clone);
+  public native void clone_(@Nonnull Object clone_);
 
   @JsMethod(
       name = "default"
   )
-  public native void _default(@Nonnull Object _default);
+  public native void default_(@Nonnull Object default_);
 
   @JsMethod(
       name = "equals"
   )
-  public native void _equals(@Nonnull Object _equals);
+  public native void equals_(@Nonnull Object equals_);
 
   @JsMethod(
       name = "finalize"
   )
-  public native void _finalize(@Nonnull Object _finalize);
+  public native void finalize_(@Nonnull Object finalize_);
 
   @JsMethod(
       name = "getClass"
   )
-  public native void _getClass(@Nonnull Object _getClass);
+  public native void getClass_(@Nonnull Object getClass_);
 
   @JsMethod(
       name = "hashCode"
   )
-  public native void _hashCode(@Nonnull Object _hashCode);
+  public native void hashCode_(@Nonnull Object hashCode_);
 
   public native void is(@Nonnull Object is);
 
   @JsMethod(
       name = "notify"
   )
-  public native void _notify(@Nonnull Object _notify);
+  public native void notify_(@Nonnull Object notify_);
 
   @JsMethod(
       name = "notifyAll"
   )
-  public native void _notifyAll(@Nonnull Object _notifyAll);
+  public native void notifyAll_(@Nonnull Object notifyAll_);
 
   @JsMethod(
       name = "private"
   )
-  public native void _private(@Nonnull Object _private);
+  public native void private_(@Nonnull Object private_);
 
   @JsMethod(
       name = "protected"
   )
-  public native void _protected(@Nonnull Object _protected);
+  public native void protected_(@Nonnull Object protected_);
 
   @JsMethod(
       name = "public"
   )
-  public native void _public(@Nonnull Object _public);
+  public native void public_(@Nonnull Object public_);
 
   @JsMethod(
       name = "toString"
   )
-  public native void _toString(@Nonnull Object _toString);
+  public native void toString_(@Nonnull Object toString_);
 
   @JsMethod(
       name = "wait"
   )
-  public native void _wait(@Nonnull Object _wait);
+  public native void wait_(@Nonnull Object wait_);
 }

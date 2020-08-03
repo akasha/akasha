@@ -25,97 +25,97 @@ public interface MyDictionary2 {
   @JsProperty(
       name = "clone"
   )
-  Object _clone();
+  Object clone_();
 
   @JsProperty
-  void setClone(@Nonnull Object _clone);
+  void setClone(@Nonnull Object clone_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _clone(@Nonnull final Object _clone) {
-    setClone( _clone );
+  default MyDictionary2 clone_(@Nonnull final Object clone_) {
+    setClone( clone_ );
     return this;
   }
 
   @JsProperty(
       name = "default"
   )
-  Object _default();
+  Object default_();
 
   @JsProperty
-  void setDefault(@Nonnull Object _default);
+  void setDefault(@Nonnull Object default_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _default(@Nonnull final Object _default) {
-    setDefault( _default );
+  default MyDictionary2 default_(@Nonnull final Object default_) {
+    setDefault( default_ );
     return this;
   }
 
   @JsProperty(
       name = "equals"
   )
-  Object _equals();
+  Object equals_();
 
   @JsProperty
-  void setEquals(@Nonnull Object _equals);
+  void setEquals(@Nonnull Object equals_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _equals(@Nonnull final Object _equals) {
-    setEquals( _equals );
+  default MyDictionary2 equals_(@Nonnull final Object equals_) {
+    setEquals( equals_ );
     return this;
   }
 
   @JsProperty(
       name = "finalize"
   )
-  Object _finalize();
+  Object finalize_();
 
   @JsProperty
-  void setFinalize(@Nonnull Object _finalize);
+  void setFinalize(@Nonnull Object finalize_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _finalize(@Nonnull final Object _finalize) {
-    setFinalize( _finalize );
+  default MyDictionary2 finalize_(@Nonnull final Object finalize_) {
+    setFinalize( finalize_ );
     return this;
   }
 
   @JsProperty(
       name = "getClass"
   )
-  Object _getClass();
+  Object getClass_();
 
   @JsProperty
-  void setGetClass(@Nonnull Object _getClass);
+  void setGetClass(@Nonnull Object getClass_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _getClass(@Nonnull final Object _getClass) {
-    setGetClass( _getClass );
+  default MyDictionary2 getClass_(@Nonnull final Object getClass_) {
+    setGetClass( getClass_ );
     return this;
   }
 
   @JsProperty(
       name = "hashCode"
   )
-  Object _hashCode();
+  Object hashCode_();
 
   @JsProperty
-  void setHashCode(@Nonnull Object _hashCode);
+  void setHashCode(@Nonnull Object hashCode_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _hashCode(@Nonnull final Object _hashCode) {
-    setHashCode( _hashCode );
+  default MyDictionary2 hashCode_(@Nonnull final Object hashCode_) {
+    setHashCode( hashCode_ );
     return this;
   }
 
   @JsProperty(
       name = "is"
   )
-  Object _is();
+  Object is_();
 
   @JsProperty
   void setIs(@Nonnull Object is);
@@ -130,105 +130,105 @@ public interface MyDictionary2 {
   @JsProperty(
       name = "notify"
   )
-  Object _notify();
+  Object notify_();
 
   @JsProperty
-  void setNotify(@Nonnull Object _notify);
+  void setNotify(@Nonnull Object notify_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _notify(@Nonnull final Object _notify) {
-    setNotify( _notify );
+  default MyDictionary2 notify_(@Nonnull final Object notify_) {
+    setNotify( notify_ );
     return this;
   }
 
   @JsProperty(
       name = "notifyAll"
   )
-  Object _notifyAll();
+  Object notifyAll_();
 
   @JsProperty
-  void setNotifyAll(@Nonnull Object _notifyAll);
+  void setNotifyAll(@Nonnull Object notifyAll_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _notifyAll(@Nonnull final Object _notifyAll) {
-    setNotifyAll( _notifyAll );
+  default MyDictionary2 notifyAll_(@Nonnull final Object notifyAll_) {
+    setNotifyAll( notifyAll_ );
     return this;
   }
 
   @JsProperty(
       name = "private"
   )
-  Object _private();
+  Object private_();
 
   @JsProperty
-  void setPrivate(@Nonnull Object _private);
+  void setPrivate(@Nonnull Object private_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _private(@Nonnull final Object _private) {
-    setPrivate( _private );
+  default MyDictionary2 private_(@Nonnull final Object private_) {
+    setPrivate( private_ );
     return this;
   }
 
   @JsProperty(
       name = "protected"
   )
-  Object _protected();
+  Object protected_();
 
   @JsProperty
-  void setProtected(@Nonnull Object _protected);
+  void setProtected(@Nonnull Object protected_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _protected(@Nonnull final Object _protected) {
-    setProtected( _protected );
+  default MyDictionary2 protected_(@Nonnull final Object protected_) {
+    setProtected( protected_ );
     return this;
   }
 
   @JsProperty(
       name = "public"
   )
-  Object _public();
+  Object public_();
 
   @JsProperty
-  void setPublic(@Nonnull Object _public);
+  void setPublic(@Nonnull Object public_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _public(@Nonnull final Object _public) {
-    setPublic( _public );
+  default MyDictionary2 public_(@Nonnull final Object public_) {
+    setPublic( public_ );
     return this;
   }
 
   @JsProperty(
       name = "toString"
   )
-  Object _toString();
+  Object toString_();
 
   @JsProperty
-  void setToString(@Nonnull Object _toString);
+  void setToString(@Nonnull Object toString_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _toString(@Nonnull final Object _toString) {
-    setToString( _toString );
+  default MyDictionary2 toString_(@Nonnull final Object toString_) {
+    setToString( toString_ );
     return this;
   }
 
   @JsProperty(
       name = "wait"
   )
-  Object _wait();
+  Object wait_();
 
   @JsProperty
-  void setWait(@Nonnull Object _wait);
+  void setWait(@Nonnull Object wait_);
 
   @JsOverlay
   @Nonnull
-  default MyDictionary2 _wait(@Nonnull final Object _wait) {
-    setWait( _wait );
+  default MyDictionary2 wait_(@Nonnull final Object wait_) {
+    setWait( wait_ );
     return this;
   }
 }

@@ -426,7 +426,7 @@ final class Generator
   @Nonnull
   private String mangleName( @Nonnull final String name )
   {
-    return "_" + name;
+    return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
   }
 
   @Nonnull

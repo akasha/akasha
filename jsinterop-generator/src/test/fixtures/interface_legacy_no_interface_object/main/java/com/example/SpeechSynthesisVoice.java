@@ -19,7 +19,7 @@ public class SpeechSynthesisVoice {
   @JsProperty(
       name = "default"
   )
-  public native boolean _default();
+  public native boolean default_();
 
   @JsProperty(
       name = "lang"

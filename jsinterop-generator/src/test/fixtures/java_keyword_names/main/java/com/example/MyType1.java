@@ -20,83 +20,83 @@ public class MyType1 {
       name = "clone"
   )
   @Nonnull
-  public native Object _clone();
+  public native Object clone_();
 
   @JsProperty(
       name = "default"
   )
   @Nonnull
-  public native Object _default();
+  public native Object default_();
 
   @JsProperty(
       name = "equals"
   )
   @Nonnull
-  public native Object _equals();
+  public native Object equals_();
 
   @JsProperty(
       name = "finalize"
   )
   @Nonnull
-  public native Object _finalize();
+  public native Object finalize_();
 
   @JsProperty(
       name = "getClass"
   )
   @Nonnull
-  public native Object _getClass();
+  public native Object getClass_();
 
   @JsProperty(
       name = "hashCode"
   )
   @Nonnull
-  public native Object _hashCode();
+  public native Object hashCode_();
 
   @JsProperty(
       name = "is"
   )
   @Nonnull
-  public native Object _is();
+  public native Object is_();
 
   @JsProperty(
       name = "notify"
   )
   @Nonnull
-  public native Object _notify();
+  public native Object notify_();
 
   @JsProperty(
       name = "notifyAll"
   )
   @Nonnull
-  public native Object _notifyAll();
+  public native Object notifyAll_();
 
   @JsProperty(
       name = "private"
   )
   @Nonnull
-  public native Object _private();
+  public native Object private_();
 
   @JsProperty(
       name = "protected"
   )
   @Nonnull
-  public native Object _protected();
+  public native Object protected_();
 
   @JsProperty(
       name = "public"
   )
   @Nonnull
-  public native Object _public();
+  public native Object public_();
 
   @JsProperty(
       name = "toString"
   )
   @Nonnull
-  public native Object _toString();
+  public native Object toString_();
 
   @JsProperty(
       name = "wait"
   )
   @Nonnull
-  public native Object _wait();
+  public native Object wait_();
 }

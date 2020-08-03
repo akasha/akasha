@@ -19,67 +19,67 @@ public class MyType3 {
   @JsMethod(
       name = "clone"
   )
-  public static native void _clone(@Nonnull Object _clone);
+  public static native void clone_(@Nonnull Object clone_);
 
   @JsMethod(
       name = "default"
   )
-  public static native void _default(@Nonnull Object _default);
+  public static native void default_(@Nonnull Object default_);
 
   @JsMethod(
       name = "equals"
   )
-  public static native void _equals(@Nonnull Object _equals);
+  public static native void equals_(@Nonnull Object equals_);
 
   @JsMethod(
       name = "finalize"
   )
-  public static native void _finalize(@Nonnull Object _finalize);
+  public static native void finalize_(@Nonnull Object finalize_);
 
   @JsMethod(
       name = "getClass"
   )
-  public static native void _getClass(@Nonnull Object _getClass);
+  public static native void getClass_(@Nonnull Object getClass_);
 
   @JsMethod(
       name = "hashCode"
   )
-  public static native void _hashCode(@Nonnull Object _hashCode);
+  public static native void hashCode_(@Nonnull Object hashCode_);
 
   public static native void is(@Nonnull Object is);
 
   @JsMethod(
       name = "notify"
   )
-  public static native void _notify(@Nonnull Object _notify);
+  public static native void notify_(@Nonnull Object notify_);
 
   @JsMethod(
       name = "notifyAll"
   )
-  public static native void _notifyAll(@Nonnull Object _notifyAll);
+  public static native void notifyAll_(@Nonnull Object notifyAll_);
 
   @JsMethod(
       name = "private"
   )
-  public static native void _private(@Nonnull Object _private);
+  public static native void private_(@Nonnull Object private_);
 
   @JsMethod(
       name = "protected"
   )
-  public static native void _protected(@Nonnull Object _protected);
+  public static native void protected_(@Nonnull Object protected_);
 
   @JsMethod(
       name = "public"
   )
-  public static native void _public(@Nonnull Object _public);
+  public static native void public_(@Nonnull Object public_);
 
   @JsMethod(
       name = "toString"
   )
-  public static native void _toString(@Nonnull Object _toString);
+  public static native void toString_(@Nonnull Object toString_);
 
   @JsMethod(
       name = "wait"
   )
-  public static native void _wait(@Nonnull Object _wait);
+  public static native void wait_(@Nonnull Object wait_);
 }

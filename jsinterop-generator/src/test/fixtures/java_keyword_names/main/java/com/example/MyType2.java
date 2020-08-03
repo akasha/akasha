@@ -17,37 +17,37 @@ public class MyType2 {
       name = "clone"
   )
   @Nonnull
-  public Object _clone;
+  public Object clone_;
 
   @JsProperty(
       name = "default"
   )
   @Nonnull
-  public Object _default;
+  public Object default_;
 
   @JsProperty(
       name = "equals"
   )
   @Nonnull
-  public Object _equals;
+  public Object equals_;
 
   @JsProperty(
       name = "finalize"
   )
   @Nonnull
-  public Object _finalize;
+  public Object finalize_;
 
   @JsProperty(
       name = "getClass"
   )
   @Nonnull
-  public Object _getClass;
+  public Object getClass_;
 
   @JsProperty(
       name = "hashCode"
   )
   @Nonnull
-  public Object _hashCode;
+  public Object hashCode_;
 
   @Nonnull
   public Object is;
@@ -56,43 +56,43 @@ public class MyType2 {
       name = "notify"
   )
   @Nonnull
-  public Object _notify;
+  public Object notify_;
 
   @JsProperty(
       name = "notifyAll"
   )
   @Nonnull
-  public Object _notifyAll;
+  public Object notifyAll_;
 
   @JsProperty(
       name = "private"
   )
   @Nonnull
-  public Object _private;
+  public Object private_;
 
   @JsProperty(
       name = "protected"
   )
   @Nonnull
-  public Object _protected;
+  public Object protected_;
 
   @JsProperty(
       name = "public"
   )
   @Nonnull
-  public Object _public;
+  public Object public_;
 
   @JsProperty(
       name = "toString"
   )
   @Nonnull
-  public Object _toString;
+  public Object toString_;
 
   @JsProperty(
       name = "wait"
   )
   @Nonnull
-  public Object _wait;
+  public Object wait_;
 
   MyType2() {
   }
