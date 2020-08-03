@@ -89,6 +89,8 @@ complete as there is too much un-said.
 * Extract documentation for event types from MDN. This probably involves scraping the type page and looking for events
   with urls like https://developer.mozilla.org/en-US/docs/Web/API/{{type}}/{{event_name}}_event
 
+* Extract param docs for methods and constructors.
+
 * Emit closure externs for WebIDL types.
 
 * Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
@@ -100,6 +102,10 @@ complete as there is too much un-said.
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
+
+* Add option to FetchDocs to fetch everything in a webidl source
+
+* Make sure fetch doc mechanisms also fetch docs for callback interfaces
 
 ### Validations
 
