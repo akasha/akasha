@@ -1,0 +1,19 @@
+
+{
+    "name": "BluetoothDevice",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice",
+    "description": "The BluetoothDevice interface of the Web Bluetooth API represents a Bluetooth device inside a particular script execution environment.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The BluetoothDevice interface of the <a href=\"https://developer.mozilla.org/Web/API/Web_Bluetooth_API\">Web Bluetooth API</a>represents a Bluetooth device inside a particular script execution environment.</p>\n<div class=\"hidden\" id=\"inheritance_diagram\"> \n <pre class=\"brush: html notranslate\"> &lt;div id=\"interfaceDiagram\" style=\"display: inline-block; position: relative; width: 100%; padding-bottom: 11.666666666666666%; vertical-align: middle; overflow: hidden;\"&gt;&lt;svg style=\"display: inline-block; position: absolute; top: 0; left: 0;\" viewbox=\"-50 0 600 70\" preserveAspectRatio=\"xMinYMin meet\"&gt;&lt;a xlink:href=\"https://developer.mozilla.org/en-US/docs/Web/API/EventTarget\" target=\"_top\"&gt;&lt;rect x=\"1\" y=\"1\" width=\"110\" height=\"50\" fill=\"#fff\" stroke=\"#D4DDE4\" stroke-width=\"2px\" /&gt;&lt;text x=\"56\" y=\"30\" font-size=\"12px\" font-family=\"Consolas,Monaco,Andale Mono,monospace\" fill=\"#4D4E53\" text-anchor=\"middle\" alignment-baseline=\"middle\"&gt;EventTarget&lt;/text&gt;&lt;/a&gt;&lt;polyline points=\"111,25 121,20 121,30 111,25\" stroke=\"#D4DDE4\" fill=\"none\"/&gt;&lt;line x1=\"121\" y1=\"25\" x2=\"151\" y2=\"25\" stroke=\"#D4DDE4\"/&gt;&lt;a xlink:href=\"https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice\" target=\"_top\"&gt;&lt;rect x=\"151\" y=\"1\" width=\"150\" height=\"50\" fill=\"#F4F7F8\" stroke=\"#D4DDE4\" stroke-width=\"2px\" /&gt;&lt;text x=\"226\" y=\"30\" font-size=\"12px\" font-family=\"Consolas,Monaco,Andale Mono,monospace\" fill=\"#4D4E53\" text-anchor=\"middle\" alignment-baseline=\"middle\"&gt;BluetoothDevice&lt;/text&gt;&lt;/a&gt;&lt;/svg&gt;&lt;/div&gt;\n</pre> \n <pre class=\"brush: css notranslate\"> a:hover text { fill: #0095DD; pointer-events: all;}\n</pre> \n</div>\n<iframe class=\"live-sample-frame inheritance-diagram-frame\" frameborder=\"0\" height=\"70\" id=\"frame_inheritance_diagram\" src=\"https://mdn.mozillademos.org/en-US/docs/Web/API/BluetoothDevice$samples/inheritance_diagram?revision=1501674\" width=\"600\"></iframe>",
+    "properties": [
+        "gatt",
+        "id",
+        "name",
+        "uuids",
+        "watchingAdvertisements"
+    ],
+    "methods": [
+        "connectGATT",
+        "unwatchAdvertisments",
+        "watchAdvertisments"
+    ]
+}

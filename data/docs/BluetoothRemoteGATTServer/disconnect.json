@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothRemoteGATTServer.disconnect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/disconnect",
+    "description": "The BluetoothRemoteGATTServer.disconnect() method causes the script execution environment to disconnect from this.device.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTServer.disconnect()</code></strong> method causes the script execution environment to disconnect from<code>this.device</code>.</p>"
+}

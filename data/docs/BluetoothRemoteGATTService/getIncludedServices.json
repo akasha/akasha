@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothRemoteGATTService.getIncludedServices",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices",
+    "description": "The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothGATTService.getIncludedServices()</code></strong> method returnsa <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> toan <code>Array</code>of <code>BluetoothGATTService</code> instancesfor an optional universally unique identifier (UUID).</p>"
+}

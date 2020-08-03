@@ -1,0 +1,7 @@
+
+{
+    "name": "Bluetooth.referringDevice",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice",
+    "description": "The Bluetooth.referringDevice attribute of the Bluetooth interface returns a BluetoothDevice if the current document was opened in response to an instruction sent by this device and null otherwise.",
+    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>Bluetooth.referringDevice</code></strong> attribute of the <code>Bluetooth</code> interface returnsa <code>BluetoothDevice</code> if the current document was opened in response to an instruction sent by this device and <code>null</code> otherwise.</p>"
+}

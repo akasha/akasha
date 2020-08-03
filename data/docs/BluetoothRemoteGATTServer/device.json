@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothRemoteGATTServer.device",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/device",
+    "description": "The BluetoothRemoteGATTServer.device read-only property returns a reference to the BluetoothDevice running the server.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTServer.device</code></strong> read-only property returns areference to the <code>BluetoothDevice</code> running the server.</p>"
+}

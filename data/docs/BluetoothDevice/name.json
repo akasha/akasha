@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothDevice.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name",
+    "description": "The BluetoothDevice.name read-only property returns a DOMString that provides a human-readable name for the device.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>BluetoothDevice.name</code></strong> read-only property returns a <code>DOMString</code> that provides a human-readable name for the device.</p>\n<div class=\"note\"> \n <p>This page describes the W3C Community GroupBluetoothDevice.name property. For the Firefox OS propery of the same name, see <code>BluetoothDevice.name (FirefoxOS)</code>.</p> \n</div>"
+}

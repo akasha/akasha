@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothRemoteGATTDescriptor.characteristic",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/characteristic",
+    "description": "The BluetoothRemoteGATTDescriptor.characteristic read-only property returns the BluetoothRemoteGATTCharacteristic this descriptor belongs to.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTDescriptor.characteristic</code></strong> read-only property returns the <code>BluetoothRemoteGATTCharacteristic</code> this descriptor belongs to.</p>"
+}

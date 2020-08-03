@@ -1,7 +1,357 @@
 
 [
     {
+        "lastModifiedAt": 0,
+        "name": "AllowedBluetoothDevice",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/AllowedBluetoothDevice"
+    },
+    {
+        "lastModifiedAt": 1596457386364,
+        "name": "Bluetooth",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth"
+    },
+    {
+        "lastModifiedAt": 1596457387156,
+        "name": "Bluetooth.getAvailability",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getAvailability"
+    },
+    {
+        "lastModifiedAt": 1596457387415,
+        "name": "Bluetooth.getDevices",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"
+    },
+    {
+        "lastModifiedAt": 1596457386736,
+        "name": "Bluetooth.referringDevice",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice"
+    },
+    {
+        "lastModifiedAt": 1596457387706,
+        "name": "Bluetooth.requestDevice",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothAdvertisingEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothAdvertisingEvent"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothAdvertisingEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothAdvertisingEventInit"
+    },
+    {
+        "lastModifiedAt": 1596457388090,
+        "name": "BluetoothCharacteristicProperties",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties"
+    },
+    {
+        "lastModifiedAt": 1596457388340,
+        "name": "BluetoothCharacteristicProperties.authenticatedSignedWrites",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites"
+    },
+    {
+        "lastModifiedAt": 1596457388587,
+        "name": "BluetoothCharacteristicProperties.broadcast",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/broadcast"
+    },
+    {
+        "lastModifiedAt": 1596457388993,
+        "name": "BluetoothCharacteristicProperties.indicate",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/indicate"
+    },
+    {
+        "lastModifiedAt": 1596457389256,
+        "name": "BluetoothCharacteristicProperties.notify",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/notify"
+    },
+    {
+        "lastModifiedAt": 1596457389506,
+        "name": "BluetoothCharacteristicProperties.read",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/read"
+    },
+    {
+        "lastModifiedAt": 1596457389754,
+        "name": "BluetoothCharacteristicProperties.reliableWrite",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/reliableWrite"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothCharacteristicProperties.writableAuxiliaries",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliaries"
+    },
+    {
+        "lastModifiedAt": 1596457390276,
+        "name": "BluetoothCharacteristicProperties.write",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/write"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothCharacteristicProperties.writeWithoutResponse",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writeWithoutResponse"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothDataFilterInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDataFilterInit"
+    },
+    {
+        "lastModifiedAt": 1596457390946,
+        "name": "BluetoothDevice",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice"
+    },
+    {
+        "lastModifiedAt": 1596457393144,
+        "name": "BluetoothDevice.connectGATT",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/connectGATT"
+    },
+    {
+        "lastModifiedAt": 1596457391194,
+        "name": "BluetoothDevice.gatt",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/gatt"
+    },
+    {
+        "lastModifiedAt": 1596457391468,
+        "name": "BluetoothDevice.id",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/id"
+    },
+    {
+        "lastModifiedAt": 1596457392247,
+        "name": "BluetoothDevice.name",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothDevice.unwatchAdvertisments",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/unwatchAdvertisments"
+    },
+    {
+        "lastModifiedAt": 1596457392475,
+        "name": "BluetoothDevice.uuids",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/uuids"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothDevice.watchAdvertisments",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/watchAdvertisments"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothDevice.watchingAdvertisements",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/watchingAdvertisements"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothDeviceEventHandlers",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDeviceEventHandlers"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothLEScanFilterInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothLEScanFilterInit"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothManufacturerDataMap",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothManufacturerDataMap"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothPermissionDescriptor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothPermissionDescriptor"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothPermissionResult",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothPermissionResult"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothPermissionStorage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothPermissionStorage"
+    },
+    {
+        "lastModifiedAt": 1596457397002,
+        "name": "BluetoothRemoteGATTCharacteristic",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic"
+    },
+    {
+        "lastModifiedAt": 1596457398956,
+        "name": "BluetoothRemoteGATTCharacteristic.getDescriptor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor"
+    },
+    {
+        "lastModifiedAt": 1596457399215,
+        "name": "BluetoothRemoteGATTCharacteristic.getDescriptors",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors"
+    },
+    {
+        "lastModifiedAt": 1596457397330,
+        "name": "BluetoothRemoteGATTCharacteristic.properties",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/properties"
+    },
+    {
+        "lastModifiedAt": 1596457399774,
+        "name": "BluetoothRemoteGATTCharacteristic.readValue",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/readValue"
+    },
+    {
+        "lastModifiedAt": 1596457398142,
+        "name": "BluetoothRemoteGATTCharacteristic.service",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/service"
+    },
+    {
+        "lastModifiedAt": 1596457400708,
+        "name": "BluetoothRemoteGATTCharacteristic.startNotifications",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/startNotifications"
+    },
+    {
+        "lastModifiedAt": 1596457401071,
+        "name": "BluetoothRemoteGATTCharacteristic.stopNotifications",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications"
+    },
+    {
+        "lastModifiedAt": 1596457398440,
+        "name": "BluetoothRemoteGATTCharacteristic.uuid",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/uuid"
+    },
+    {
+        "lastModifiedAt": 1596457398685,
+        "name": "BluetoothRemoteGATTCharacteristic.value",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/value"
+    },
+    {
+        "lastModifiedAt": 1596457401590,
+        "name": "BluetoothRemoteGATTCharacteristic.writeValue",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue"
+    },
+    {
+        "lastModifiedAt": 1596457401930,
+        "name": "BluetoothRemoteGATTDescriptor",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor"
+    },
+    {
+        "lastModifiedAt": 1596457402196,
+        "name": "BluetoothRemoteGATTDescriptor.characteristic",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/characteristic"
+    },
+    {
+        "lastModifiedAt": 1596457403636,
+        "name": "BluetoothRemoteGATTDescriptor.readValue",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/readValue"
+    },
+    {
+        "lastModifiedAt": 1596457403120,
+        "name": "BluetoothRemoteGATTDescriptor.uuid",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/uuid"
+    },
+    {
+        "lastModifiedAt": 1596457403378,
+        "name": "BluetoothRemoteGATTDescriptor.value",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/value"
+    },
+    {
+        "lastModifiedAt": 1596457403884,
+        "name": "BluetoothRemoteGATTDescriptor.writeValue",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue"
+    },
+    {
+        "lastModifiedAt": 1596457393979,
+        "name": "BluetoothRemoteGATTServer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer"
+    },
+    {
+        "lastModifiedAt": 1596457394740,
+        "name": "BluetoothRemoteGATTServer.connect",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connect"
+    },
+    {
+        "lastModifiedAt": 1596457394254,
+        "name": "BluetoothRemoteGATTServer.connected",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connected"
+    },
+    {
+        "lastModifiedAt": 1596457394490,
+        "name": "BluetoothRemoteGATTServer.device",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/device"
+    },
+    {
+        "lastModifiedAt": 1596457394988,
+        "name": "BluetoothRemoteGATTServer.disconnect",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/disconnect"
+    },
+    {
+        "lastModifiedAt": 1596457395225,
+        "name": "BluetoothRemoteGATTServer.getPrimaryService",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryService"
+    },
+    {
+        "lastModifiedAt": 1596457396084,
+        "name": "BluetoothRemoteGATTServer.getPrimaryServices",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices"
+    },
+    {
+        "lastModifiedAt": 1596457383126,
+        "name": "BluetoothRemoteGATTService",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService"
+    },
+    {
+        "lastModifiedAt": 1596457383538,
+        "name": "BluetoothRemoteGATTService.device",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device"
+    },
+    {
+        "lastModifiedAt": 1596457385037,
+        "name": "BluetoothRemoteGATTService.getCharacteristic",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic"
+    },
+    {
+        "lastModifiedAt": 1596457385297,
+        "name": "BluetoothRemoteGATTService.getCharacteristics",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics"
+    },
+    {
+        "lastModifiedAt": 1596457385688,
+        "name": "BluetoothRemoteGATTService.getIncludedService",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService"
+    },
+    {
+        "lastModifiedAt": 1596457385964,
+        "name": "BluetoothRemoteGATTService.getIncludedServices",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices"
+    },
+    {
+        "lastModifiedAt": 1596457383813,
+        "name": "BluetoothRemoteGATTService.isPrimary",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary"
+    },
+    {
+        "lastModifiedAt": 1596457384636,
+        "name": "BluetoothRemoteGATTService.uuid",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothServiceDataMap",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothServiceDataMap"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "BluetoothUUID",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothUUID"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "CharacteristicEventHandlers",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/CharacteristicEventHandlers"
+    },
+    {
         "lastModifiedAt": 1596456543003,
+        "name": "Navigator",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator"
+    },
+    {
+        "lastModifiedAt": 0,
         "name": "Navigator",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator"
     },
@@ -796,6 +1146,16 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver"
     },
     {
+        "lastModifiedAt": 0,
+        "name": "RequestDeviceOptions",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/RequestDeviceOptions"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "ServiceEventHandlers",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceEventHandlers"
+    },
+    {
         "lastModifiedAt": 1596457153394,
         "name": "SpeechGrammar",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar"
@@ -1139,6 +1499,21 @@
         "lastModifiedAt": 1596457164803,
         "name": "SpeechSynthesisVoice.voiceURI",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "ValueEvent",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/ValueEvent"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "ValueEventInit",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/ValueEventInit"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "WatchAdvertisementsOptions",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WatchAdvertisementsOptions"
     },
     {
         "lastModifiedAt": 0,

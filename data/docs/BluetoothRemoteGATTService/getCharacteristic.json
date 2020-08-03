@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothRemoteGATTService.getCharacteristic",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic",
+    "description": "The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothGATTService.getCharacteristic()</code></strong> method returnsa <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> to an instance of <code>BluetoothGATTCharacteristic</code> for a given universally unique identifier (UUID).</p>"
+}

@@ -1,0 +1,18 @@
+
+{
+    "name": "BluetoothRemoteGATTService",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService",
+    "description": "The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div> \n<div class=\"overheadIndicator note\"> \n <p>This page describes the W3C Community GroupBluetoothRemoteGATTService, formerly called BluethoothGATTService. For the Firefox OS interface of the same name, see<code><a href=\"https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/BluetoothGattService\">BluetoothGattService</a></code>.</p> \n</div>\n<p>The <code>BluetoothRemoteGATTService</code> interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.</p>",
+    "properties": [
+        "device",
+        "isPrimary",
+        "uuid"
+    ],
+    "methods": [
+        "getCharacteristic",
+        "getCharacteristics",
+        "getIncludedService",
+        "getIncludedServices"
+    ]
+}

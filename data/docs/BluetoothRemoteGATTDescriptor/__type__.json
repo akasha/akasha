@@ -1,0 +1,16 @@
+
+{
+    "name": "BluetoothRemoteGATTDescriptor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor",
+    "description": "The BluetoothRemoteGATTDescriptor interface of the Web Bluetooth API provides a GATT Descriptor, which provides further information about a characteristic’s value.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code>BluetoothRemoteGATTDescriptor</code> interface of the <a href=\"https://developer.mozilla.org/Web/API/Web_Bluetooth_API\">Web Bluetooth API</a>providesa GATTDescriptor, which provides further information about a characteristic’s value.</p>\n<div class=\"note\"> \n <p>This page describes the W3C Community GroupWeb Bluetooth API. For the Firefox OS Bluetooth API, see <a href=\"https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/BluetoothGattDescriptor\"><code>BluetoothGattDescriptor</code> (Firefox OS)</a>.</p> \n</div>",
+    "properties": [
+        "characteristic",
+        "uuid",
+        "value"
+    ],
+    "methods": [
+        "readValue",
+        "writeValue"
+    ]
+}

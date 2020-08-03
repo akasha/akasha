@@ -1,0 +1,21 @@
+
+{
+    "name": "BluetoothRemoteGATTCharacteristic",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic",
+    "description": "The BluetoothRemoteGattCharacteristic interface of the Web Bluetooth API represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.",
+    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code>BluetoothRemoteGattCharacteristic</code>interface of the Web Bluetooth API represents a GATTCharacteristic, which is a basic data element that provides further information about a peripheral’s service.</p>",
+    "properties": [
+        "properties",
+        "service",
+        "uuid",
+        "value"
+    ],
+    "methods": [
+        "getDescriptor",
+        "getDescriptors",
+        "readValue",
+        "startNotifications",
+        "stopNotifications",
+        "writeValue"
+    ]
+}

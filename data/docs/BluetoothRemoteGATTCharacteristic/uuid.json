@@ -1,0 +1,7 @@
+
+{
+    "name": "BluetoothRemoteGATTCharacteristic.uuid",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/uuid",
+    "description": "The BluetoothRemoteGATTCharacteristic.uuid read-only property returns DOMString containing the UUID of the characteristic, for example '00002a37-0000-1000-8000-00805f9b34fb' for the Heart Rate Measurement characteristic.",
+    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The<strong><code>BluetoothRemoteGATTCharacteristic.uuid</code></strong> read-only property returns<code>DOMString</code> containingthe UUID of the characteristic, for example<code>'00002a37-0000-1000-8000-00805f9b34fb'</code>for theHeart Rate Measurementcharacteristic.</p>"
+}
