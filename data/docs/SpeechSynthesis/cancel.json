@@ -1,6 +1,6 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "SpeechSynthesis.cancel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel",
     "description": "The cancel() method of the SpeechSynthesis interface removes all utterances from the utterance queue.",

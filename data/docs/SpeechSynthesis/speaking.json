@@ -1,6 +1,6 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechSynthesis.speaking",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking",
     "description": "The speaking read-only property of the SpeechSynthesis interface is a Boolean that returns true if an utterance is currently in the process of being spoken — even if SpeechSynthesis is in a paused state.",

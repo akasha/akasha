@@ -1,6 +1,6 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "Bluetooth.referringDevice",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice",
     "description": "The Bluetooth.referringDevice attribute of the Bluetooth interface returns a BluetoothDevice if the current document was opened in response to an instruction sent by this device and null otherwise.",

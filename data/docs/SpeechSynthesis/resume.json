@@ -1,6 +1,6 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "SpeechSynthesis.resume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume",
     "description": "The resume() method of the SpeechSynthesis interface puts the SpeechSynthesis object into a non-paused state: resumes it if it was already paused.",

@@ -126,7 +126,12 @@ final class FetchDocsCommand
   private Set<String> getTypeNames( @Nonnull final Context context )
   {
     return _typeNames.isEmpty() ?
-           context.docRepository().getSources().stream().map( DocSourceConfig::getName ).collect( Collectors.toSet() ) :
+           context.docRepository()
+             .getSources()
+             .stream()
+             .map( DocSourceConfig::getName )
+             .filter( n -> !n.contains( "." ) )
+             .collect( Collectors.toSet() ) :
            _typeNames;
   }
 }
