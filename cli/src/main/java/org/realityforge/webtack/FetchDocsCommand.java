@@ -125,7 +125,6 @@ final class FetchDocsCommand
   @Nonnull
   private Set<String> getTypeNames( @Nonnull final Context context )
   {
-
     return _typeNames.isEmpty() ?
            context.docRepository().getSources().stream().map( DocSourceConfig::getName ).collect( Collectors.toSet() ) :
            _typeNames;
