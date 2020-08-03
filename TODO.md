@@ -8,7 +8,7 @@ complete as there is too much un-said.
 
 * Add option to FetchDocs to fetch everything in a webidl source
 
-* Make sure fetch doc mechanisms also fetch docs for callback interfaces
+* Make sure fetch doc mechanisms also fetch docs for callback interfaces, mixins and dictionaries
 
 * Some doc entries include documentation for constants .. scan for that?.
 
