@@ -29,7 +29,7 @@ public final class MdnDocScanner
   @Nonnull
   private static final String HOST_URL = "https://developer.mozilla.org";
   @Nonnull
-  private static final String BASE_URL = HOST_URL + API_RELATIVE_URL;
+  public static final String BASE_URL = HOST_URL + API_RELATIVE_URL;
   @Nonnull
   private final DocRepositoryRuntime _runtime;
 
