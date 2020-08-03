@@ -61,6 +61,13 @@
       }
     },
     {
+      "name": "MergeDocs",
+      "description": "Add documentation from doc repository",
+      "config": {
+        "docsRepositoryConfigFile": "data/doc_sources.json"
+      }
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/bluetooth/complete.webidl"
