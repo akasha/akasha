@@ -6,8 +6,6 @@ complete as there is too much un-said.
 
 # Docs Integration
 
-* Add option to FetchDocs to fetch everything in a webidl source
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
