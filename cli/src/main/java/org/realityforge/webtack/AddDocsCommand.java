@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
@@ -92,15 +91,6 @@ final class AddDocsCommand
   {
     final Logger logger = context.environment().logger();
     final RepositoryConfig config = context.config();
-
-    final List<SourceConfig> idlSources =
-      _idlSourceNames.isEmpty() ?
-      Collections.emptyList() :
-      config
-        .getSources()
-        .stream()
-        .filter( s -> _idlSourceNames.contains( s.getName() ) )
-        .collect( Collectors.toList() );
 
     final List<SourceConfig> sourceConfigs = new ArrayList<>();
     for ( final String idlSourceName : _idlSourceNames )
