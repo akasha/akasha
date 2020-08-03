@@ -56,7 +56,7 @@ public class MyType1 {
       name = "is"
   )
   @Nonnull
-  public native Object is_();
+  public native Object _is();
 
   @JsProperty(
       name = "notify"

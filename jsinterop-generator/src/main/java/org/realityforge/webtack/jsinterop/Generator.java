@@ -403,14 +403,16 @@ final class Generator
   @Nonnull
   private String safeJsPropertyMethodName( @Nonnull final String name )
   {
-    // This method is a work around for a bug in GWTs validation of properties
-    // https://github.com/gwtproject/gwt/issues/9703
-    return isJsPropertyMethodNameSafe( name ) ? name : mangleName( name );
-  }
-
-  private boolean isJsPropertyMethodNameSafe( @Nonnull final String name )
-  {
-    return isMethodNameJavaSafe( name ) && !"is".equals( name );
+    if ( "is".equals( name ) )
+    {
+      // This method is a work around for a bug in GWTs validation of properties
+      // https://github.com/gwtproject/gwt/issues/9703
+      return "_" + name;
+    }
+    else
+    {
+      return isMethodNameJavaSafe( name ) ? name : mangleName( name );
+    }
   }
 
   private boolean isMethodNameJavaSafe( @Nonnull final String name )

@@ -127,7 +127,7 @@ public interface MyDictionary1 {
       name = "is"
   )
   @Nonnull
-  Object is_();
+  Object _is();
 
   @JsProperty
   void setIs(@Nonnull Object is);
