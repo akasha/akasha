@@ -281,7 +281,8 @@ public final class MdnDocScanner
       {
         // Sometimes constructors are documented as methods so instead register them as constructors
         final List<String> newConstructors =
-          methods.stream()
+          methods
+            .stream()
             .filter( m -> m.equals( source.getName() ) )
             .map( m -> m + "." + m )
             .collect( Collectors.toList() );
