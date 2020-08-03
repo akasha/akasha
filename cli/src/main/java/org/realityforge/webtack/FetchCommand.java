@@ -52,6 +52,7 @@ final class FetchCommand
   private static final int FORCE_OPT = 'f';
   private static final int NO_VERIFY_OPT = 2;
   private static final int NO_REMOVE_SOURCE_OPT = 3;
+  private static final int NO_ADD_DOCS_OPT = 3;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
       new CLOptionDescriptor( "force",
@@ -65,13 +66,18 @@ final class FetchCommand
       new CLOptionDescriptor( "no-remove-source",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_REMOVE_SOURCE_OPT,
-                              "Do not remove source after fetching and extracting WebIDL." )
+                              "Do not remove source after fetching and extracting WebIDL." ),
+      new CLOptionDescriptor( "no-add-docs",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              NO_ADD_DOCS_OPT,
+                              "Do not add doc source for elements within WebIDL after fetching WebIDL." )
     };
   @Nonnull
   private final Set<String> _sourceNames = new LinkedHashSet<>();
   private boolean _force;
   private boolean _noVerify;
   private boolean _noRemoveSource;
+  private boolean _noAddDocs;
 
   FetchCommand()
   {
@@ -95,6 +101,10 @@ final class FetchCommand
       else if ( NO_REMOVE_SOURCE_OPT == optionId )
       {
         _noRemoveSource = true;
+      }
+      else if ( NO_ADD_DOCS_OPT == optionId )
+      {
+        _noAddDocs = true;
       }
       else
       {
@@ -325,6 +335,16 @@ final class FetchCommand
               sourceName + "' with the error: " + ioe;
             throw new TerminalStateException( message, ExitCodes.ERROR_REMOVING_SOURCE_CODE );
           }
+        }
+        if ( !_noAddDocs )
+        {
+          final AddDocsCommand command = new AddDocsCommand();
+          command.processOptions( context.environment(), "--idl-source-name", sourceName );
+          return command.run( context );
+        }
+        else
+        {
+          return ExitCodes.SUCCESS_EXIT_CODE;
         }
       }
     }
