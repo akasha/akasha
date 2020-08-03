@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Window.dump",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/dump",
     "description": "Window.dump() prints messages to the (native) console.",

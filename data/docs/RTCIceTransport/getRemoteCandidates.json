@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCIceTransport.getRemoteCandidates",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteCandidates",
     "description": "The RTCIceTransport method getRemoteCandidates() returns an array which contains one RTCIceCandidate for each of the candidates that have been received from the remote peer so far during the current ICE gathering session.",

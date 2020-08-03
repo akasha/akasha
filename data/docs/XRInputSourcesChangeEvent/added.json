@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourcesChangeEvent.added",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/added",
     "description": "The read-only XRInputSourcesChangeEvent property added is a list of zero or more input sources, each identified using an XRInputSource object, which have been newly made available for use.",

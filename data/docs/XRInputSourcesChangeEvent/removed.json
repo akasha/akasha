@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourcesChangeEvent.removed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/removed",
     "description": "The read-only XRInputSourcesChangeEvent property removed is an array of zero or more XRInputSource objects representing the input sources which have been removed from the XRSession.",

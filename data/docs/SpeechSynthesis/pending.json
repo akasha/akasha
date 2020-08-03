@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesis.pending",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending",
     "description": "The pending read-only property of the SpeechSynthesis interface is a Boolean that returns true if the utterance queue contains as-yet-unspoken utterances.",

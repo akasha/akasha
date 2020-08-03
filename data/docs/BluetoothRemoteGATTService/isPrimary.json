@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothRemoteGATTService.isPrimary",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary",
     "description": "The BluetoothGATTService.isPrimary read-only property returns a Boolean that indicates whether this is a primary service. If it is not a primary service, it is a secondary service.",

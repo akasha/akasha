@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.maxRetransmits",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxRetransmits",
     "description": "The read-only RTCDataChannel property maxRetransmits returns the maximum number of times the browser should try to retransmit a message before giving up, as set when the data channel was created, or null, which indicates that there is no maximum.",

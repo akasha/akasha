@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCPeerConnection.peerIdentity",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity",
     "description": "The read-only RTCPeerConnection property peerIdentity returns a JavaScript Promise that resolves to an RTCIdentityAssertion which contains a DOMString identifying the remote peer.",

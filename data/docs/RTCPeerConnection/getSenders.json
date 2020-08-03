@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.getSenders",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders",
     "description": "The RTCPeerConnection method getSenders() returns an array of RTCRtpSender objects, each of which represents the RTP sender responsible for transmitting one track's data.",

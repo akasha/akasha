@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "XRSession.requestReferenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace",
     "description": "The requestReferenceSpace() method of the XRSession interface returns a promise that resolves with an instance of either XRReferenceSpace or XRBoundedReferenceSpace as appropriate given the type of reference space requested.",

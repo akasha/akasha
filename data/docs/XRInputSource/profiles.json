@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRInputSource.profiles",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles",
     "description": "The read-only XRInputSource property profiles returns an array of strings, each describing a configuration profile for the input source.",

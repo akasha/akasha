@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource",
     "description": "The WebXR Device API's XRInputSource interface describes a single source of control input which is part of the user's WebXR-compatible virtual or augmented reality system.",

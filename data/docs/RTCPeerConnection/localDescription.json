@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCPeerConnection.localDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/localDescription",
     "description": "The read-only property RTCPeerConnection.localDescription returns an RTCSessionDescription describing the session for the local end of the connection. If it has not yet been set, this is\nnull\n.",

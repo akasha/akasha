@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.getIdentityAssertion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion",
     "description": "The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not \"closed\".",

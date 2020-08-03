@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/close",
     "description": "The Window.close() method closes the current window, or the window on which it was called.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRWebGLLayerInit.ignoreDepthValues",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/ignoreDepthValues",
     "description": "The XRWebGLLayerInit dictionary's Boolean ignoreDepthValues property can be provided in the options passed into the XRWebGLLayer() constructor to indicate that the depth buffer, if it exists, should be ignored while composing the scene.",

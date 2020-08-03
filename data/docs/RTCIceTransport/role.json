@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceTransport.role",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/role",
     "description": "The read-only RTCIceTransport property role indicates which ICE role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.",

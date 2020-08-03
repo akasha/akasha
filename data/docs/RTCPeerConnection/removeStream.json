@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.removeStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeStream",
     "description": "The RTCPeerConnection.removeStream() method removes a MediaStream as a local source of audio or video. If the negotiation already happened, a new one will be needed for the remote peer to be able to use it. Because this method has been deprecated, you should instead use removeTrack() if your target browser versions have implemented it.",

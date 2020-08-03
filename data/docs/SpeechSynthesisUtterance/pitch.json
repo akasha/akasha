@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisUtterance.pitch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch",
     "description": "The pitch property of the SpeechSynthesisUtterance interface gets and sets the pitch at which the utterance will be spoken at.",

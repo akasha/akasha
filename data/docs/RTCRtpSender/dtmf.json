@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCRtpSender.dtmf",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/dtmf",
     "description": "The read-only dtmf property on the RTCRtpSender interface returns a RTCDTMFSender object which can be used to send DTMF tones over the RTCPeerConnection. See Using DTMF for details on how to make use of the returned RTCDTMFSender object.",

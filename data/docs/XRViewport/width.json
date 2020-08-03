@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRViewport.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/width",
     "description": "The read-only XRViewport property width specifies the width of the viewport, in pixels, onto the drawing surface the 3D scene is to be rendered into.",

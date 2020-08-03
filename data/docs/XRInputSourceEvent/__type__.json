@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent",
     "description": "The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system.",

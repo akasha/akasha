@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRSession.renderState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/renderState",
     "description": "The read-only renderState property of an XRSession object indicates the returns a XRRenderState object describing how the user's environment which should be rendered.",

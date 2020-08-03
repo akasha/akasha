@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothRemoteGATTServer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer",
     "description": "The BluetoothRemoteGATTServer interface of the Web Bluetooth API represents a GATT Server on a remote device.",

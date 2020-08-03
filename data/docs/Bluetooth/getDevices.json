@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Bluetooth.getDevices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices",
     "description": "The getDevices() method of Bluetooth interface of Web Bluetooth API exposes the Bluetooth devices this origin is allowed to access. This method does not display any permission prompts.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.getConfiguration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration",
     "description": "The RTCPeerConnection.getConfiguration() method returns an RTCConfiguration object which indicates the current configuration of the RTCPeerConnection on which the method is called.",

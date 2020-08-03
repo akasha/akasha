@@ -14,9 +14,10 @@ import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
 import javax.json.bind.annotation.JsonbPropertyOrder;
 
-@JsonbPropertyOrder( { "name", "href", "description", "content", "constructors", "properties", "methods" } )
+@JsonbPropertyOrder( { "kind", "name", "href", "description", "content", "constructors", "properties", "methods" } )
 public class DocEntry
 {
+  private DocKind kind;
   private String name;
   private String href;
   private String description;
@@ -27,6 +28,16 @@ public class DocEntry
   private List<String> properties;
   @Nullable
   private List<String> methods;
+
+  public DocKind getKind()
+  {
+    return kind;
+  }
+
+  public void setKind( final DocKind kind )
+  {
+    this.kind = kind;
+  }
 
   public String getName()
   {

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.blur",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur",
     "description": "Shifts focus away from the window.",

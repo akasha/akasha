@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.usernameFragment",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/usernameFragment",
     "description": "The read-only usernameFragment property on the RTCIceCandidate interface is a string indicating the username fragment (\"ufrag\") that uniquely identifies a single ICE interaction session.",

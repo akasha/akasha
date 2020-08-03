@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisEvent.elapsedTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/elapsedTime",
     "description": "The elapsedTime read-only property of the SpeechSynthesisUtterance interface returns the elapsed time in seconds after the SpeechSynthesisUtterance.text started being spoken that the event was triggered at.",

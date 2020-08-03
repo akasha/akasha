@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "BluetoothDevice.uuids",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/uuids",
     "description": "The BluetoothDevice.uuids read-only property lists the UUIDs of GATT services provided by the device, that the current origin is allowed to access.",

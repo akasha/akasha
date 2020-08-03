@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRInputSourceEvent.inputSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource",
     "description": "The XRInputSourceEvent interface's read-only inputSource property specifies the XRInputSource which generated the input event.",

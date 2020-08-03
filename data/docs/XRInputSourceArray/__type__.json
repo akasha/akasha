@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourceArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray",
     "description": "The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources.",

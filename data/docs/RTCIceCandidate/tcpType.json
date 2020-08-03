@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.tcpType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/tcpType",
     "description": "The RTCIceCandidate interface's read-only tcpType property is included on TCP candidates to provide additional details about the candidate type.",

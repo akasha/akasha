@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.scrollByLines",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByLines",
     "description": "The Window.scrollByLines() method scrolls the document by the specified number of lines.",

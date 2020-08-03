@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRSessionEventInit.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session",
     "description": "The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.",

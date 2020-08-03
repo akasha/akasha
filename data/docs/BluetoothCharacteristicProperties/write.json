@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothCharacteristicProperties.write",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/write",
     "description": "The write read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if the writing to the characteristic with response is permitted.",

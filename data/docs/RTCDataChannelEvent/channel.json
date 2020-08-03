@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannelEvent.channel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/channel",
     "description": "The read-only property RTCDataChannelEvent.channel returns the RTCDataChannel associated with the event.",

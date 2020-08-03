@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCDataChannelEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent",
     "description": "The RTCDataChannelEvent() constructor returns a new RTCDataChannelEvent object, which represents a datachannel event. These events sent to an RTCPeerConnection when its remote peer is asking to open an RTCDataChannel between the two peers.",

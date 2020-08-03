@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.getStreamById",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStreamById",
     "description": "The RTCPeerConnection.getStreamById() method returns the MediaStream with the given id that is associated with local or remote end of the connection. If no stream matches, it returns null.",

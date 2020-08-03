@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRWebGLLayer.antialias",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/antialias",
     "description": "The read-only XRWebGLLayer property antialias is a Boolean value which is true if the rendering layer's frame buffer supports antialiasing.",

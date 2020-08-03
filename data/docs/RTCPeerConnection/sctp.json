@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCPeerConnection.sctp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/sctp",
     "description": "The read-only sctp property on the RTCPeerConnection interface returns an RTCSctpTransport describing the SCTP transport over which SCTP data is being sent and received. If SCTP hasn't been negotiated, this value is null.",

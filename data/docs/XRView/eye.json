@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRView.eye",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye",
     "description": "The XRView interface's read-only eye property is a string taken from the XREye enumerated type, indicating which eye's viewpoint the XRView represents: left or right. For views which represent neither eye, such as monoscopic views, this property's value is none.",

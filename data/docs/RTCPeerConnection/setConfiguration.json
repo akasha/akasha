@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCPeerConnection.setConfiguration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setConfiguration",
     "description": "The RTCPeerConnection.setConfiguration() method sets the current configuration of the RTCPeerConnection based on the values included in the specified RTCConfiguration object. This lets you change the ICE servers used by the connection and which transport policies to use.",

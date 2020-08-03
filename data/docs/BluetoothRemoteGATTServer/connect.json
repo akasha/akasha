@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothRemoteGATTServer.connect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connect",
     "description": "The BluetoothRemoteGATTServer.connect() method causes the script execution environment to connect to this.device.",

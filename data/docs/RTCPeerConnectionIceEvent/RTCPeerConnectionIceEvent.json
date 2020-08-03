@@ -1,5 +1,6 @@
 
 {
+    "kind": "Constructor",
     "name": "RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent",
     "description": "The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.",

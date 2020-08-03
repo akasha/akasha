@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCPeerConnectionIceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent",
     "description": "The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection.",

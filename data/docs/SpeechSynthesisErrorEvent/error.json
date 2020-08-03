@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisErrorEvent.error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error",
     "description": "The error property of the SpeechSynthesisErrorEvent interface returns an error code indicating what has gone wrong with a speech synthesis attempt.",

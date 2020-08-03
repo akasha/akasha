@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothRemoteGATTCharacteristic.writeValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue",
     "description": "The BluetoothRemoteGATTCharacteristic.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.",

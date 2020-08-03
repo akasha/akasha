@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesis",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis",
     "description": "The SpeechSynthesis interface of the Web Speech API is the controller interface for the speech service; this can be used to retrieve information about the synthesis voices available on the device, start and pause speech, and other commands besides.",

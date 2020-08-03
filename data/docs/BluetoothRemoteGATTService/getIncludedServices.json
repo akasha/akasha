@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "BluetoothRemoteGATTService.getIncludedServices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices",
     "description": "The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).",

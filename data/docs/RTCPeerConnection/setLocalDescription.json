@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.setLocalDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription",
     "description": "The RTCPeerConnection method setLocalDescription() changes the local description associated with the connection. This description specifies the properties of the local end of the connection, including the media format.",

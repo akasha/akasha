@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechRecognitionResult.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length",
     "description": "The length read-only property of the SpeechRecognitionResult interface returns the length of the \"array\" — the number of SpeechRecognitionAlternative objects contained in the result (also referred to as \"n-best alternatives\".)",

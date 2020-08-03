@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechGrammarList.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item",
     "description": "The item getter of the SpeechGrammarList interface is a standard getter — it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognitionResult",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult",
     "description": "The SpeechRecognitionResult interface of the Web Speech API represents a single recognition match, which may contain multiple SpeechRecognitionAlternative objects.",

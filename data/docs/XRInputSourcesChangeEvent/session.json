@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourcesChangeEvent.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/session",
     "description": "The XRInputSourcesChangeEvent property session specifies the XRSession to which the input source list change event applies.",

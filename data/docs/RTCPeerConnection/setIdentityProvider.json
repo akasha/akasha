@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.setIdentityProvider",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider",
     "description": "The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed.",

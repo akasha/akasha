@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Window.scrollByPages",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByPages",
     "description": "The Window.scrollByPages() method scrolls the current document by the specified number of pages.",

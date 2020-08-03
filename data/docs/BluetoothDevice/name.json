@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothDevice.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name",
     "description": "The BluetoothDevice.name read-only property returns a DOMString that provides a human-readable name for the device.",

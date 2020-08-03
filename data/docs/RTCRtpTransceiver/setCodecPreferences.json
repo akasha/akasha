@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCRtpTransceiver.setCodecPreferences",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences",
     "description": "The RTCRtpTransceiver method setCodecPreferences() configures the transceiver's codecs given a list of RTCRtpCodecCapability objects specifying the new preferences for each codec.",

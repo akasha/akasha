@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRSession.updateRenderState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/updateRenderState",
     "description": "The updateRenderState() method of the XRSession interface of WebXR API schedules changes to be applied to the active render state prior to rendering of the next frame.",

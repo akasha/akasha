@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRViewport.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/height",
     "description": "The read-only XRViewport property height specifies the height, in pixels, of the viewport onto the drawing surface within which the WebXR view is to be rendered.",

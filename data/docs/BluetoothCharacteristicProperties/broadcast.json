@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "BluetoothCharacteristicProperties.broadcast",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/broadcast",
     "description": "The broadcast read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if the broadcast of the characteristic value is permitted using the Server Characteristic Configuration Descriptor.",

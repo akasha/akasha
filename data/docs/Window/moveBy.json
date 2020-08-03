@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.moveBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy",
     "description": "The moveBy() method of the Window interface moves the current window by a specified amount.",

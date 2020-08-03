@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Navigator.deviceMemory",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory",
     "description": "The deviceMemory read-only property of the Navigator interface returns the approximate amount of device memory in gigabytes.",

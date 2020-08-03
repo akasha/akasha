@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCRtpTransceiver.mid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/mid",
     "description": "The read-only RTCRtpTransceiver interface's mid property specifies the negotiated media ID (mid) which the local and remote peers have agreed upon to uniquely identify the stream's pairing of sender and receiver.",

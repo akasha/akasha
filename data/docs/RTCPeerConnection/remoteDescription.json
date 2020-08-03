@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCPeerConnection.remoteDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription",
     "description": "The read-only property RTCPeerConnection.remoteDescription returns a RTCSessionDescription describing the session (which includes configuration and media information) for the remote end of the connection. If this hasn't been set yet, this is null.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognition.grammars",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars",
     "description": "The grammars property of the SpeechRecognition interface returns and sets a collection of SpeechGrammar objects that represent the grammars that will be understood by the current SpeechRecognition.",

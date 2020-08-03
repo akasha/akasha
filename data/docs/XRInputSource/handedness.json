@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSource.handedness",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/handedness",
     "description": "The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechGrammarList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length",
     "description": "The length read-only property of the SpeechGrammarList interface returns the number of SpeechGrammar objects contained in the SpeechGrammarList.",

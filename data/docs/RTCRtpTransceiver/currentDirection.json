@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCRtpTransceiver.currentDirection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection",
     "description": "The read-only RTCRtpTransceiver property currentDirection is a string which indicates the current directionality of the transceiver.",

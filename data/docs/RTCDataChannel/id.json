@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/id",
     "description": "The read-only RTCDataChannel property id returns an ID number (between 0 and 65,534) which uniquely identifies the RTCDataChannel.",

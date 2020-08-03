@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisUtterance.lang",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/lang",
     "description": "The lang property of the SpeechSynthesisUtterance interface gets and sets the language of the utterance.",

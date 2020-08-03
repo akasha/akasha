@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.minimize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/minimize",
     "description": "The Window.minimize() method sets the window to a minimized state.",

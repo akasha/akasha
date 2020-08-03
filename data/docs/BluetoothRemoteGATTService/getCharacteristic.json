@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothRemoteGATTService.getCharacteristic",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic",
     "description": "The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).",

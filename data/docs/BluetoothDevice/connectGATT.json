@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "BluetoothDevice.connectGATT",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/connectGATT",
     "description": "The BluetoothDevice.connectGATT() method returns a Promise that resolves to an instance of BluetoothGATTRemoteServer.",

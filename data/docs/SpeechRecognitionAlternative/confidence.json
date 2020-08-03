@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognitionAlternative.confidence",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/confidence",
     "description": "The confidence read-only property of the SpeechRecognitionResult interface returns a numeric estimate of how confident the speech recognition system is that the recognition is correct.",

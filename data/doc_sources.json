@@ -6,27 +6,27 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/AllowedBluetoothDevice"
     },
     {
-        "lastModifiedAt": 1596457386364,
+        "lastModifiedAt": 1596495525012,
         "name": "Bluetooth",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth"
     },
     {
-        "lastModifiedAt": 1596457387156,
+        "lastModifiedAt": 1596495945420,
         "name": "Bluetooth.getAvailability",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getAvailability"
     },
     {
-        "lastModifiedAt": 1596457387415,
+        "lastModifiedAt": 1596495946618,
         "name": "Bluetooth.getDevices",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"
     },
     {
-        "lastModifiedAt": 1596457386736,
+        "lastModifiedAt": 1596496050949,
         "name": "Bluetooth.referringDevice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice"
     },
     {
-        "lastModifiedAt": 1596457387706,
+        "lastModifiedAt": 1596495947778,
         "name": "Bluetooth.requestDevice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice"
     },
@@ -41,37 +41,37 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothAdvertisingEventInit"
     },
     {
-        "lastModifiedAt": 1596457388090,
+        "lastModifiedAt": 1596496015959,
         "name": "BluetoothCharacteristicProperties",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties"
     },
     {
-        "lastModifiedAt": 1596457388340,
+        "lastModifiedAt": 1596496016014,
         "name": "BluetoothCharacteristicProperties.authenticatedSignedWrites",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites"
     },
     {
-        "lastModifiedAt": 1596457388587,
+        "lastModifiedAt": 1596496016059,
         "name": "BluetoothCharacteristicProperties.broadcast",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/broadcast"
     },
     {
-        "lastModifiedAt": 1596457388993,
+        "lastModifiedAt": 1596496016112,
         "name": "BluetoothCharacteristicProperties.indicate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/indicate"
     },
     {
-        "lastModifiedAt": 1596457389256,
+        "lastModifiedAt": 1596496016165,
         "name": "BluetoothCharacteristicProperties.notify",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/notify"
     },
     {
-        "lastModifiedAt": 1596457389506,
+        "lastModifiedAt": 1596496016215,
         "name": "BluetoothCharacteristicProperties.read",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/read"
     },
     {
-        "lastModifiedAt": 1596457389754,
+        "lastModifiedAt": 1596496027191,
         "name": "BluetoothCharacteristicProperties.reliableWrite",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/reliableWrite"
     },
@@ -81,7 +81,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/writableAuxiliaries"
     },
     {
-        "lastModifiedAt": 1596457390276,
+        "lastModifiedAt": 1596496056923,
         "name": "BluetoothCharacteristicProperties.write",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/write"
     },
@@ -96,27 +96,27 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDataFilterInit"
     },
     {
-        "lastModifiedAt": 1596457390946,
+        "lastModifiedAt": 1596495620374,
         "name": "BluetoothDevice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice"
     },
     {
-        "lastModifiedAt": 1596457393144,
+        "lastModifiedAt": 1596496042662,
         "name": "BluetoothDevice.connectGATT",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/connectGATT"
     },
     {
-        "lastModifiedAt": 1596457391194,
+        "lastModifiedAt": 1596496039458,
         "name": "BluetoothDevice.gatt",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/gatt"
     },
     {
-        "lastModifiedAt": 1596457391468,
+        "lastModifiedAt": 1596496040207,
         "name": "BluetoothDevice.id",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/id"
     },
     {
-        "lastModifiedAt": 1596457392247,
+        "lastModifiedAt": 1596496050859,
         "name": "BluetoothDevice.name",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name"
     },
@@ -126,7 +126,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/unwatchAdvertisments"
     },
     {
-        "lastModifiedAt": 1596457392475,
+        "lastModifiedAt": 1596496041162,
         "name": "BluetoothDevice.uuids",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/uuids"
     },
@@ -171,162 +171,162 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothPermissionStorage"
     },
     {
-        "lastModifiedAt": 1596457397002,
+        "lastModifiedAt": 1596496002902,
         "name": "BluetoothRemoteGATTCharacteristic",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic"
     },
     {
-        "lastModifiedAt": 1596457398956,
+        "lastModifiedAt": 1596496004190,
         "name": "BluetoothRemoteGATTCharacteristic.getDescriptor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor"
     },
     {
-        "lastModifiedAt": 1596457399215,
+        "lastModifiedAt": 1596496004236,
         "name": "BluetoothRemoteGATTCharacteristic.getDescriptors",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors"
     },
     {
-        "lastModifiedAt": 1596457397330,
+        "lastModifiedAt": 1596496057073,
         "name": "BluetoothRemoteGATTCharacteristic.properties",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/properties"
     },
     {
-        "lastModifiedAt": 1596457399774,
+        "lastModifiedAt": 1596496004287,
         "name": "BluetoothRemoteGATTCharacteristic.readValue",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/readValue"
     },
     {
-        "lastModifiedAt": 1596457398142,
+        "lastModifiedAt": 1596496003592,
         "name": "BluetoothRemoteGATTCharacteristic.service",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/service"
     },
     {
-        "lastModifiedAt": 1596457400708,
+        "lastModifiedAt": 1596496004333,
         "name": "BluetoothRemoteGATTCharacteristic.startNotifications",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/startNotifications"
     },
     {
-        "lastModifiedAt": 1596457401071,
+        "lastModifiedAt": 1596496004378,
         "name": "BluetoothRemoteGATTCharacteristic.stopNotifications",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications"
     },
     {
-        "lastModifiedAt": 1596457398440,
+        "lastModifiedAt": 1596496010833,
         "name": "BluetoothRemoteGATTCharacteristic.uuid",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/uuid"
     },
     {
-        "lastModifiedAt": 1596457398685,
+        "lastModifiedAt": 1596496004145,
         "name": "BluetoothRemoteGATTCharacteristic.value",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/value"
     },
     {
-        "lastModifiedAt": 1596457401590,
+        "lastModifiedAt": 1596496021274,
         "name": "BluetoothRemoteGATTCharacteristic.writeValue",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/writeValue"
     },
     {
-        "lastModifiedAt": 1596457401930,
+        "lastModifiedAt": 1596495994388,
         "name": "BluetoothRemoteGATTDescriptor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor"
     },
     {
-        "lastModifiedAt": 1596457402196,
+        "lastModifiedAt": 1596495994437,
         "name": "BluetoothRemoteGATTDescriptor.characteristic",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/characteristic"
     },
     {
-        "lastModifiedAt": 1596457403636,
+        "lastModifiedAt": 1596495995590,
         "name": "BluetoothRemoteGATTDescriptor.readValue",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/readValue"
     },
     {
-        "lastModifiedAt": 1596457403120,
+        "lastModifiedAt": 1596496027277,
         "name": "BluetoothRemoteGATTDescriptor.uuid",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/uuid"
     },
     {
-        "lastModifiedAt": 1596457403378,
+        "lastModifiedAt": 1596495995545,
         "name": "BluetoothRemoteGATTDescriptor.value",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/value"
     },
     {
-        "lastModifiedAt": 1596457403884,
+        "lastModifiedAt": 1596496062770,
         "name": "BluetoothRemoteGATTDescriptor.writeValue",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue"
     },
     {
-        "lastModifiedAt": 1596457393979,
+        "lastModifiedAt": 1596495812368,
         "name": "BluetoothRemoteGATTServer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer"
     },
     {
-        "lastModifiedAt": 1596457394740,
+        "lastModifiedAt": 1596495876711,
         "name": "BluetoothRemoteGATTServer.connect",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connect"
     },
     {
-        "lastModifiedAt": 1596457394254,
+        "lastModifiedAt": 1596495941681,
         "name": "BluetoothRemoteGATTServer.connected",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connected"
     },
     {
-        "lastModifiedAt": 1596457394490,
+        "lastModifiedAt": 1596495813181,
         "name": "BluetoothRemoteGATTServer.device",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/device"
     },
     {
-        "lastModifiedAt": 1596457394988,
+        "lastModifiedAt": 1596496020524,
         "name": "BluetoothRemoteGATTServer.disconnect",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/disconnect"
     },
     {
-        "lastModifiedAt": 1596457395225,
+        "lastModifiedAt": 1596496020481,
         "name": "BluetoothRemoteGATTServer.getPrimaryService",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryService"
     },
     {
-        "lastModifiedAt": 1596457396084,
+        "lastModifiedAt": 1596495999488,
         "name": "BluetoothRemoteGATTServer.getPrimaryServices",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices"
     },
     {
-        "lastModifiedAt": 1596457383126,
+        "lastModifiedAt": 1596495887740,
         "name": "BluetoothRemoteGATTService",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService"
     },
     {
-        "lastModifiedAt": 1596457383538,
+        "lastModifiedAt": 1596496069861,
         "name": "BluetoothRemoteGATTService.device",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device"
     },
     {
-        "lastModifiedAt": 1596457385037,
+        "lastModifiedAt": 1596495911167,
         "name": "BluetoothRemoteGATTService.getCharacteristic",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic"
     },
     {
-        "lastModifiedAt": 1596457385297,
+        "lastModifiedAt": 1596495890085,
         "name": "BluetoothRemoteGATTService.getCharacteristics",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics"
     },
     {
-        "lastModifiedAt": 1596457385688,
+        "lastModifiedAt": 1596495890131,
         "name": "BluetoothRemoteGATTService.getIncludedService",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService"
     },
     {
-        "lastModifiedAt": 1596457385964,
+        "lastModifiedAt": 1596495890178,
         "name": "BluetoothRemoteGATTService.getIncludedServices",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices"
     },
     {
-        "lastModifiedAt": 1596457383813,
+        "lastModifiedAt": 1596496056829,
         "name": "BluetoothRemoteGATTService.isPrimary",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary"
     },
     {
-        "lastModifiedAt": 1596457384636,
+        "lastModifiedAt": 1596496090533,
         "name": "BluetoothRemoteGATTService.uuid",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid"
     },
@@ -346,7 +346,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/CharacteristicEventHandlers"
     },
     {
-        "lastModifiedAt": 1596456543003,
+        "lastModifiedAt": 1596495983425,
         "name": "Navigator",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator"
     },
@@ -356,57 +356,57 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator"
     },
     {
-        "lastModifiedAt": 1596456543323,
+        "lastModifiedAt": 1596495983497,
         "name": "Navigator.buildID",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/buildID"
     },
     {
-        "lastModifiedAt": 1596456544279,
+        "lastModifiedAt": 1596495983555,
         "name": "Navigator.credentials",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials"
     },
     {
-        "lastModifiedAt": 1596456545087,
+        "lastModifiedAt": 1596495983599,
         "name": "Navigator.deviceMemory",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory"
     },
     {
-        "lastModifiedAt": 1596456545480,
+        "lastModifiedAt": 1596496050813,
         "name": "Navigator.doNotTrack",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack"
     },
     {
-        "lastModifiedAt": 1596456545864,
+        "lastModifiedAt": 1596495985039,
         "name": "Navigator.mediaDevices",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices"
     },
     {
-        "lastModifiedAt": 1596456546164,
+        "lastModifiedAt": 1596495985090,
         "name": "Navigator.mediaSession",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaSession"
     },
     {
-        "lastModifiedAt": 1596456546646,
+        "lastModifiedAt": 1596495985275,
         "name": "Navigator.mozNotification",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mozNotification"
     },
     {
-        "lastModifiedAt": 1596456547529,
+        "lastModifiedAt": 1596496083500,
         "name": "Navigator.mozSocial",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mozSocial"
     },
     {
-        "lastModifiedAt": 1596456547840,
+        "lastModifiedAt": 1596495986709,
         "name": "Navigator.oscpu",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu"
     },
     {
-        "lastModifiedAt": 1596456548650,
+        "lastModifiedAt": 1596495986758,
         "name": "Navigator.presentation",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/presentation"
     },
     {
-        "lastModifiedAt": 1596456549059,
+        "lastModifiedAt": 1596496056976,
         "name": "Navigator.productSub",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub"
     },
@@ -426,17 +426,17 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/storageQuota"
     },
     {
-        "lastModifiedAt": 1596456550507,
+        "lastModifiedAt": 1596496082385,
         "name": "Navigator.vendor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor"
     },
     {
-        "lastModifiedAt": 1596456551323,
+        "lastModifiedAt": 1596495990347,
         "name": "Navigator.vendorSub",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendorSub"
     },
     {
-        "lastModifiedAt": 1596456551617,
+        "lastModifiedAt": 1596495990397,
         "name": "Navigator.wakeLock",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock"
     },
@@ -451,7 +451,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webkitPointer"
     },
     {
-        "lastModifiedAt": 1596368377212,
+        "lastModifiedAt": 1596496084234,
         "name": "RTCCertificate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate"
     },
@@ -461,22 +461,22 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate/expires"
     },
     {
-        "lastModifiedAt": 1596368352354,
+        "lastModifiedAt": 1596495883461,
         "name": "RTCDTMFSender",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender"
     },
     {
-        "lastModifiedAt": 1596368309017,
+        "lastModifiedAt": 1596495883509,
         "name": "RTCDTMFSender.toneBuffer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer"
     },
     {
-        "lastModifiedAt": 1596368374335,
+        "lastModifiedAt": 1596495803589,
         "name": "RTCDTMFToneChangeEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent"
     },
     {
-        "lastModifiedAt": 1596368263549,
+        "lastModifiedAt": 1596495827549,
         "name": "RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent"
     },
@@ -486,32 +486,32 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent()"
     },
     {
-        "lastModifiedAt": 1596368375406,
+        "lastModifiedAt": 1596495906647,
         "name": "RTCDTMFToneChangeEvent.tone",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/tone"
     },
     {
-        "lastModifiedAt": 1596368314228,
+        "lastModifiedAt": 1596495950546,
         "name": "RTCDataChannel",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel"
     },
     {
-        "lastModifiedAt": 1596368291712,
+        "lastModifiedAt": 1596495950608,
         "name": "RTCDataChannel.binaryType",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/binaryType"
     },
     {
-        "lastModifiedAt": 1596368315044,
+        "lastModifiedAt": 1596495950654,
         "name": "RTCDataChannel.bufferedAmount",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmount"
     },
     {
-        "lastModifiedAt": 1596368315675,
+        "lastModifiedAt": 1596495950700,
         "name": "RTCDataChannel.bufferedAmountLowThreshold",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold"
     },
     {
-        "lastModifiedAt": 1596368320594,
+        "lastModifiedAt": 1596496057025,
         "name": "RTCDataChannel.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close"
     },
@@ -521,47 +521,47 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close()"
     },
     {
-        "lastModifiedAt": 1596368316304,
+        "lastModifiedAt": 1596495950738,
         "name": "RTCDataChannel.id",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/id"
     },
     {
-        "lastModifiedAt": 1596368268022,
+        "lastModifiedAt": 1596495950783,
         "name": "RTCDataChannel.label",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/label"
     },
     {
-        "lastModifiedAt": 1596368317399,
+        "lastModifiedAt": 1596495950828,
         "name": "RTCDataChannel.maxPacketLifeTime",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxPacketLifeTime"
     },
     {
-        "lastModifiedAt": 1596368307169,
+        "lastModifiedAt": 1596495950872,
         "name": "RTCDataChannel.maxRetransmits",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxRetransmits"
     },
     {
-        "lastModifiedAt": 1596368318837,
+        "lastModifiedAt": 1596496069919,
         "name": "RTCDataChannel.negotiated",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/negotiated"
     },
     {
-        "lastModifiedAt": 1596368307789,
+        "lastModifiedAt": 1596495952038,
         "name": "RTCDataChannel.ordered",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/ordered"
     },
     {
-        "lastModifiedAt": 1596368319962,
+        "lastModifiedAt": 1596495952090,
         "name": "RTCDataChannel.protocol",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/protocol"
     },
     {
-        "lastModifiedAt": 1596368292507,
+        "lastModifiedAt": 1596495952141,
         "name": "RTCDataChannel.readyState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState"
     },
     {
-        "lastModifiedAt": 1596368321182,
+        "lastModifiedAt": 1596495952746,
         "name": "RTCDataChannel.send",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send"
     },
@@ -571,27 +571,27 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send()"
     },
     {
-        "lastModifiedAt": 1596368385613,
+        "lastModifiedAt": 1596496091986,
         "name": "RTCDataChannelEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent"
     },
     {
-        "lastModifiedAt": 1596368312191,
+        "lastModifiedAt": 1596496092038,
         "name": "RTCDataChannelEvent.channel",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/channel"
     },
     {
-        "lastModifiedAt": 1596368361654,
+        "lastModifiedAt": 1596496010656,
         "name": "RTCDtlsTransport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport"
     },
     {
-        "lastModifiedAt": 1596368324889,
+        "lastModifiedAt": 1596496010704,
         "name": "RTCDtlsTransport.iceTransport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport"
     },
     {
-        "lastModifiedAt": 1596368355097,
+        "lastModifiedAt": 1596496010747,
         "name": "RTCDtlsTransport.state",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/state"
     },
@@ -606,202 +606,202 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCErrorEvent"
     },
     {
-        "lastModifiedAt": 1596368293496,
+        "lastModifiedAt": 1596495937205,
         "name": "RTCIceCandidate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate"
     },
     {
-        "lastModifiedAt": 1596368294591,
+        "lastModifiedAt": 1596495937256,
         "name": "RTCIceCandidate.candidate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/candidate"
     },
     {
-        "lastModifiedAt": 1596368295192,
+        "lastModifiedAt": 1596496021391,
         "name": "RTCIceCandidate.component",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/component"
     },
     {
-        "lastModifiedAt": 1596368295656,
+        "lastModifiedAt": 1596495937761,
         "name": "RTCIceCandidate.foundation",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/foundation"
     },
     {
-        "lastModifiedAt": 1596368296808,
+        "lastModifiedAt": 1596495937943,
         "name": "RTCIceCandidate.ip",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/ip"
     },
     {
-        "lastModifiedAt": 1596368297445,
+        "lastModifiedAt": 1596495937987,
         "name": "RTCIceCandidate.port",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/port"
     },
     {
-        "lastModifiedAt": 1596368298059,
+        "lastModifiedAt": 1596495938027,
         "name": "RTCIceCandidate.priority",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/priority"
     },
     {
-        "lastModifiedAt": 1596368298732,
+        "lastModifiedAt": 1596495938069,
         "name": "RTCIceCandidate.protocol",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/protocol"
     },
     {
-        "lastModifiedAt": 1596368299289,
+        "lastModifiedAt": 1596496069963,
         "name": "RTCIceCandidate.relatedAddress",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedAddress"
     },
     {
-        "lastModifiedAt": 1596368300521,
+        "lastModifiedAt": 1596496026837,
         "name": "RTCIceCandidate.relatedPort",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedPort"
     },
     {
-        "lastModifiedAt": 1596368301640,
+        "lastModifiedAt": 1596495940343,
         "name": "RTCIceCandidate.sdpMLineIndex",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex"
     },
     {
-        "lastModifiedAt": 1596368302258,
+        "lastModifiedAt": 1596496009072,
         "name": "RTCIceCandidate.sdpMid",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMid"
     },
     {
-        "lastModifiedAt": 1596368303476,
+        "lastModifiedAt": 1596495940916,
         "name": "RTCIceCandidate.tcpType",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/tcpType"
     },
     {
-        "lastModifiedAt": 1596368306048,
+        "lastModifiedAt": 1596495941614,
         "name": "RTCIceCandidate.toJSON",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/toJSON"
     },
     {
-        "lastModifiedAt": 1596368304154,
+        "lastModifiedAt": 1596496071425,
         "name": "RTCIceCandidate.type",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/type"
     },
     {
-        "lastModifiedAt": 1596368305237,
+        "lastModifiedAt": 1596495941562,
         "name": "RTCIceCandidate.usernameFragment",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/usernameFragment"
     },
     {
-        "lastModifiedAt": 1596368281391,
+        "lastModifiedAt": 1596496036698,
         "name": "RTCIceTransport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport"
     },
     {
-        "lastModifiedAt": 1596368281856,
+        "lastModifiedAt": 1596496036749,
         "name": "RTCIceTransport.component",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/component"
     },
     {
-        "lastModifiedAt": 1596368282494,
+        "lastModifiedAt": 1596496036787,
         "name": "RTCIceTransport.gatheringState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringState"
     },
     {
-        "lastModifiedAt": 1596368284798,
+        "lastModifiedAt": 1596496036930,
         "name": "RTCIceTransport.getLocalCandidates",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates"
     },
     {
-        "lastModifiedAt": 1596368285871,
+        "lastModifiedAt": 1596496037483,
         "name": "RTCIceTransport.getLocalParameters",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters"
     },
     {
-        "lastModifiedAt": 1596368286487,
+        "lastModifiedAt": 1596496037534,
         "name": "RTCIceTransport.getRemoteCandidates",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteCandidates"
     },
     {
-        "lastModifiedAt": 1596368287605,
+        "lastModifiedAt": 1596496057853,
         "name": "RTCIceTransport.getRemoteParameters",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteParameters"
     },
     {
-        "lastModifiedAt": 1596368271829,
+        "lastModifiedAt": 1596496038109,
         "name": "RTCIceTransport.getSelectedCandidatePair",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair"
     },
     {
-        "lastModifiedAt": 1596368283624,
+        "lastModifiedAt": 1596496036848,
         "name": "RTCIceTransport.role",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/role"
     },
     {
-        "lastModifiedAt": 1596368284236,
+        "lastModifiedAt": 1596496036886,
         "name": "RTCIceTransport.state",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/state"
     },
     {
-        "lastModifiedAt": 1596368363824,
+        "lastModifiedAt": 1596496074861,
         "name": "RTCPeerConnection",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection"
     },
     {
-        "lastModifiedAt": 1596368278216,
+        "lastModifiedAt": 1596496078534,
         "name": "RTCPeerConnection.addIceCandidate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate"
     },
     {
-        "lastModifiedAt": 1596368367491,
+        "lastModifiedAt": 1596496078590,
         "name": "RTCPeerConnection.addStream",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addStream"
     },
     {
-        "lastModifiedAt": 1596368360175,
+        "lastModifiedAt": 1596496078645,
         "name": "RTCPeerConnection.addTrack",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTrack"
     },
     {
-        "lastModifiedAt": 1596368364520,
+        "lastModifiedAt": 1596496074943,
         "name": "RTCPeerConnection.canTrickleIceCandidates",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates"
     },
     {
-        "lastModifiedAt": 1596368264984,
+        "lastModifiedAt": 1596496078695,
         "name": "RTCPeerConnection.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/close"
     },
     {
-        "lastModifiedAt": 1596368358124,
+        "lastModifiedAt": 1596496075002,
         "name": "RTCPeerConnection.connectionState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionState"
     },
     {
-        "lastModifiedAt": 1596368273246,
+        "lastModifiedAt": 1596496079916,
         "name": "RTCPeerConnection.createAnswer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createAnswer"
     },
     {
-        "lastModifiedAt": 1596368368978,
+        "lastModifiedAt": 1596496079970,
         "name": "RTCPeerConnection.createDataChannel",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel"
     },
     {
-        "lastModifiedAt": 1596368328576,
+        "lastModifiedAt": 1596496080027,
         "name": "RTCPeerConnection.createOffer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer"
     },
     {
-        "lastModifiedAt": 1596368308403,
+        "lastModifiedAt": 1596496076085,
         "name": "RTCPeerConnection.currentLocalDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/currentLocalDescription"
     },
     {
-        "lastModifiedAt": 1596368327950,
+        "lastModifiedAt": 1596496076128,
         "name": "RTCPeerConnection.currentRemoteDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/currentRemoteDescription"
     },
     {
-        "lastModifiedAt": 1596368354484,
+        "lastModifiedAt": 1596496080085,
         "name": "RTCPeerConnection.generateCertificate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate"
     },
     {
-        "lastModifiedAt": 1596368353165,
+        "lastModifiedAt": 1596496080147,
         "name": "RTCPeerConnection.getConfiguration",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration"
     },
@@ -811,112 +811,112 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getDefaultIceServers()"
     },
     {
-        "lastModifiedAt": 1596368343658,
+        "lastModifiedAt": 1596496080200,
         "name": "RTCPeerConnection.getIdentityAssertion",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion"
     },
     {
-        "lastModifiedAt": 1596368289161,
+        "lastModifiedAt": 1596496080251,
         "name": "RTCPeerConnection.getReceivers",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getReceivers"
     },
     {
-        "lastModifiedAt": 1596368268682,
+        "lastModifiedAt": 1596496080317,
         "name": "RTCPeerConnection.getSenders",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders"
     },
     {
-        "lastModifiedAt": 1596368339598,
+        "lastModifiedAt": 1596496080369,
         "name": "RTCPeerConnection.getStats",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats"
     },
     {
-        "lastModifiedAt": 1596368272542,
+        "lastModifiedAt": 1596496080434,
         "name": "RTCPeerConnection.getStreamById",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStreamById"
     },
     {
-        "lastModifiedAt": 1596368269907,
+        "lastModifiedAt": 1596496080491,
         "name": "RTCPeerConnection.getTransceivers",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers"
     },
     {
-        "lastModifiedAt": 1596368330677,
+        "lastModifiedAt": 1596496076800,
         "name": "RTCPeerConnection.iceConnectionState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState"
     },
     {
-        "lastModifiedAt": 1596368289848,
+        "lastModifiedAt": 1596496076855,
         "name": "RTCPeerConnection.iceGatheringState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState"
     },
     {
-        "lastModifiedAt": 1596368365615,
+        "lastModifiedAt": 1596496092083,
         "name": "RTCPeerConnection.localDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/localDescription"
     },
     {
-        "lastModifiedAt": 1596368326801,
+        "lastModifiedAt": 1596496078214,
         "name": "RTCPeerConnection.peerIdentity",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peerIdentity"
     },
     {
-        "lastModifiedAt": 1596368355639,
+        "lastModifiedAt": 1596496078255,
         "name": "RTCPeerConnection.pendingLocalDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingLocalDescription"
     },
     {
-        "lastModifiedAt": 1596368366161,
+        "lastModifiedAt": 1596496078292,
         "name": "RTCPeerConnection.pendingRemoteDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/pendingRemoteDescription"
     },
     {
-        "lastModifiedAt": 1596368291098,
+        "lastModifiedAt": 1596496078357,
         "name": "RTCPeerConnection.remoteDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/remoteDescription"
     },
     {
-        "lastModifiedAt": 1596368356841,
+        "lastModifiedAt": 1596496080545,
         "name": "RTCPeerConnection.removeStream",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeStream"
     },
     {
-        "lastModifiedAt": 1596368370822,
+        "lastModifiedAt": 1596496080604,
         "name": "RTCPeerConnection.removeTrack",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeTrack"
     },
     {
-        "lastModifiedAt": 1596368271191,
+        "lastModifiedAt": 1596496080663,
         "name": "RTCPeerConnection.restartIce",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/restartIce"
     },
     {
-        "lastModifiedAt": 1596368366773,
+        "lastModifiedAt": 1596496078409,
         "name": "RTCPeerConnection.sctp",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/sctp"
     },
     {
-        "lastModifiedAt": 1596368371623,
+        "lastModifiedAt": 1596496088500,
         "name": "RTCPeerConnection.setConfiguration",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setConfiguration"
     },
     {
-        "lastModifiedAt": 1596368361091,
+        "lastModifiedAt": 1596496081452,
         "name": "RTCPeerConnection.setIdentityProvider",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider"
     },
     {
-        "lastModifiedAt": 1596368277348,
+        "lastModifiedAt": 1596496081508,
         "name": "RTCPeerConnection.setLocalDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription"
     },
     {
-        "lastModifiedAt": 1596368331895,
+        "lastModifiedAt": 1596496081591,
         "name": "RTCPeerConnection.setRemoteDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription"
     },
     {
-        "lastModifiedAt": 1596368290473,
+        "lastModifiedAt": 1596496078460,
         "name": "RTCPeerConnection.signalingState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingState"
     },
@@ -926,12 +926,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent"
     },
     {
-        "lastModifiedAt": 1596368341789,
+        "lastModifiedAt": 1596496060181,
         "name": "RTCPeerConnectionIceEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent"
     },
     {
-        "lastModifiedAt": 1596368342311,
+        "lastModifiedAt": 1596496060238,
         "name": "RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent"
     },
@@ -941,12 +941,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent()"
     },
     {
-        "lastModifiedAt": 1596368325504,
+        "lastModifiedAt": 1596496060734,
         "name": "RTCPeerConnectionIceEvent.candidate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate"
     },
     {
-        "lastModifiedAt": 1596368379381,
+        "lastModifiedAt": 1596496022567,
         "name": "RTCRtpReceiver",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver"
     },
@@ -956,7 +956,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities"
     },
     {
-        "lastModifiedAt": 1596368356224,
+        "lastModifiedAt": 1596496023961,
         "name": "RTCRtpReceiver.getContributingSources",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources"
     },
@@ -966,12 +966,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters"
     },
     {
-        "lastModifiedAt": 1596368382042,
+        "lastModifiedAt": 1596496024288,
         "name": "RTCRtpReceiver.getStats",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getStats"
     },
     {
-        "lastModifiedAt": 1596368322338,
+        "lastModifiedAt": 1596496024339,
         "name": "RTCRtpReceiver.getSynchronizationSources",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources"
     },
@@ -981,7 +981,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/rtcpTransport"
     },
     {
-        "lastModifiedAt": 1596368332678,
+        "lastModifiedAt": 1596496022875,
         "name": "RTCRtpReceiver.track",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/track"
     },
@@ -991,12 +991,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/transport"
     },
     {
-        "lastModifiedAt": 1596368309515,
+        "lastModifiedAt": 1596495740111,
         "name": "RTCRtpSender",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender"
     },
     {
-        "lastModifiedAt": 1596368310054,
+        "lastModifiedAt": 1596496029311,
         "name": "RTCRtpSender.dtmf",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/dtmf"
     },
@@ -1011,7 +1011,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/rtcpTransport"
     },
     {
-        "lastModifiedAt": 1596368270451,
+        "lastModifiedAt": 1596495834697,
         "name": "RTCRtpSender.track",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/track"
     },
@@ -1021,52 +1021,52 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/transport"
     },
     {
-        "lastModifiedAt": 1596368349649,
+        "lastModifiedAt": 1596495775673,
         "name": "RTCRtpTransceiver",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver"
     },
     {
-        "lastModifiedAt": 1596368323461,
+        "lastModifiedAt": 1596496050986,
         "name": "RTCRtpTransceiver.currentDirection",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection"
     },
     {
-        "lastModifiedAt": 1596368266096,
+        "lastModifiedAt": 1596495918844,
         "name": "RTCRtpTransceiver.direction",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction"
     },
     {
-        "lastModifiedAt": 1596368346377,
+        "lastModifiedAt": 1596495881318,
         "name": "RTCRtpTransceiver.mid",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/mid"
     },
     {
-        "lastModifiedAt": 1596368267358,
+        "lastModifiedAt": 1596495778026,
         "name": "RTCRtpTransceiver.receiver",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/receiver"
     },
     {
-        "lastModifiedAt": 1596368333791,
+        "lastModifiedAt": 1596496056877,
         "name": "RTCRtpTransceiver.sender",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender"
     },
     {
-        "lastModifiedAt": 1596368266769,
+        "lastModifiedAt": 1596495778759,
         "name": "RTCRtpTransceiver.setCodecPreferences",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences"
     },
     {
-        "lastModifiedAt": 1596368351114,
+        "lastModifiedAt": 1596495911841,
         "name": "RTCRtpTransceiver.stop",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stop"
     },
     {
-        "lastModifiedAt": 1596368334412,
+        "lastModifiedAt": 1596495778695,
         "name": "RTCRtpTransceiver.stopped",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stopped"
     },
     {
-        "lastModifiedAt": 1596368273956,
+        "lastModifiedAt": 1596496033617,
         "name": "RTCSctpTransport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport"
     },
@@ -1081,7 +1081,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/maxMessageSize"
     },
     {
-        "lastModifiedAt": 1596368275789,
+        "lastModifiedAt": 1596496034193,
         "name": "RTCSctpTransport.state",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state"
     },
@@ -1091,12 +1091,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/transport"
     },
     {
-        "lastModifiedAt": 1596368220586,
+        "lastModifiedAt": 1596495762553,
         "name": "RTCSessionDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription"
     },
     {
-        "lastModifiedAt": 1596368338146,
+        "lastModifiedAt": 1596496000324,
         "name": "RTCSessionDescription.RTCSessionDescription",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription"
     },
@@ -1106,42 +1106,42 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription.RTCSessionDescription"
     },
     {
-        "lastModifiedAt": 1596368223394,
+        "lastModifiedAt": 1596496050080,
         "name": "RTCSessionDescription.toJSON",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/toJSON"
     },
     {
-        "lastModifiedAt": 1596368222284,
+        "lastModifiedAt": 1596496009384,
         "name": "RTCSessionDescription.type",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type"
     },
     {
-        "lastModifiedAt": 1596368373009,
+        "lastModifiedAt": 1596495901066,
         "name": "RTCStatsReport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport"
     },
     {
-        "lastModifiedAt": 1596368347646,
+        "lastModifiedAt": 1596496065370,
         "name": "RTCTrackEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent"
     },
     {
-        "lastModifiedAt": 1596368324275,
+        "lastModifiedAt": 1596496065643,
         "name": "RTCTrackEvent.receiver",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/receiver"
     },
     {
-        "lastModifiedAt": 1596368340249,
+        "lastModifiedAt": 1596496065687,
         "name": "RTCTrackEvent.streams",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/streams"
     },
     {
-        "lastModifiedAt": 1596368278859,
+        "lastModifiedAt": 1596496065861,
         "name": "RTCTrackEvent.track",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/track"
     },
     {
-        "lastModifiedAt": 1596368348268,
+        "lastModifiedAt": 1596496066707,
         "name": "RTCTrackEvent.transceiver",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver"
     },
@@ -1156,122 +1156,122 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceEventHandlers"
     },
     {
-        "lastModifiedAt": 1596457153394,
+        "lastModifiedAt": 1596496031652,
         "name": "SpeechGrammar",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar"
     },
     {
-        "lastModifiedAt": 1596457154242,
+        "lastModifiedAt": 1596496031712,
         "name": "SpeechGrammar.src",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/src"
     },
     {
-        "lastModifiedAt": 1596457155079,
+        "lastModifiedAt": 1596496031761,
         "name": "SpeechGrammar.weight",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/weight"
     },
     {
-        "lastModifiedAt": 1596457179739,
+        "lastModifiedAt": 1596495732632,
         "name": "SpeechGrammarList",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList"
     },
     {
-        "lastModifiedAt": 1596457180329,
+        "lastModifiedAt": 1596495910451,
         "name": "SpeechGrammarList.addFromString",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString"
     },
     {
-        "lastModifiedAt": 1596457181164,
+        "lastModifiedAt": 1596496088376,
         "name": "SpeechGrammarList.addFromURI",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI"
     },
     {
-        "lastModifiedAt": 1596457181555,
+        "lastModifiedAt": 1596496035272,
         "name": "SpeechGrammarList.item",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item"
     },
     {
-        "lastModifiedAt": 1596457180060,
+        "lastModifiedAt": 1596496086643,
         "name": "SpeechGrammarList.length",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length"
     },
     {
-        "lastModifiedAt": 1596457155799,
+        "lastModifiedAt": 1596495719511,
         "name": "SpeechRecognition",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"
     },
     {
-        "lastModifiedAt": 1596457161297,
+        "lastModifiedAt": 1596495817158,
         "name": "SpeechRecognition.abort",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/abort"
     },
     {
-        "lastModifiedAt": 1596457156766,
+        "lastModifiedAt": 1596496055833,
         "name": "SpeechRecognition.continuous",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous"
     },
     {
-        "lastModifiedAt": 1596457157296,
+        "lastModifiedAt": 1596495820179,
         "name": "SpeechRecognition.grammars",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars"
     },
     {
-        "lastModifiedAt": 1596457158235,
+        "lastModifiedAt": 1596496048133,
         "name": "SpeechRecognition.interimResults",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults"
     },
     {
-        "lastModifiedAt": 1596457159271,
+        "lastModifiedAt": 1596495802537,
         "name": "SpeechRecognition.lang",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang"
     },
     {
-        "lastModifiedAt": 1596457159814,
+        "lastModifiedAt": 1596496064039,
         "name": "SpeechRecognition.maxAlternatives",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives"
     },
     {
-        "lastModifiedAt": 1596457160325,
+        "lastModifiedAt": 1596495764165,
         "name": "SpeechRecognition.serviceURI",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/serviceURI"
     },
     {
-        "lastModifiedAt": 1596457161630,
+        "lastModifiedAt": 1596495743178,
         "name": "SpeechRecognition.start",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start"
     },
     {
-        "lastModifiedAt": 1596457162590,
+        "lastModifiedAt": 1596496025526,
         "name": "SpeechRecognition.stop",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop"
     },
     {
-        "lastModifiedAt": 1596457172284,
+        "lastModifiedAt": 1596495855604,
         "name": "SpeechRecognitionAlternative",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative"
     },
     {
-        "lastModifiedAt": 1596457172587,
+        "lastModifiedAt": 1596495890287,
         "name": "SpeechRecognitionAlternative.confidence",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/confidence"
     },
     {
-        "lastModifiedAt": 1596457172898,
+        "lastModifiedAt": 1596495897444,
         "name": "SpeechRecognitionAlternative.transcript",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript"
     },
     {
-        "lastModifiedAt": 1596457182347,
+        "lastModifiedAt": 1596495955036,
         "name": "SpeechRecognitionErrorEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent"
     },
     {
-        "lastModifiedAt": 1596457182629,
+        "lastModifiedAt": 1596495955086,
         "name": "SpeechRecognitionErrorEvent.error",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/error"
     },
     {
-        "lastModifiedAt": 1596457182864,
+        "lastModifiedAt": 1596496013212,
         "name": "SpeechRecognitionErrorEvent.message",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message"
     },
@@ -1281,27 +1281,27 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEventInit"
     },
     {
-        "lastModifiedAt": 1596457165188,
+        "lastModifiedAt": 1596495847851,
         "name": "SpeechRecognitionEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent"
     },
     {
-        "lastModifiedAt": 1596457165521,
+        "lastModifiedAt": 1596495847903,
         "name": "SpeechRecognitionEvent.emma",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/emma"
     },
     {
-        "lastModifiedAt": 1596457165828,
+        "lastModifiedAt": 1596495847950,
         "name": "SpeechRecognitionEvent.interpretation",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation"
     },
     {
-        "lastModifiedAt": 1596457166134,
+        "lastModifiedAt": 1596495943488,
         "name": "SpeechRecognitionEvent.resultIndex",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex"
     },
     {
-        "lastModifiedAt": 1596457166443,
+        "lastModifiedAt": 1596495930123,
         "name": "SpeechRecognitionEvent.results",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results"
     },
@@ -1311,92 +1311,92 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEventInit"
     },
     {
-        "lastModifiedAt": 1596457166828,
+        "lastModifiedAt": 1596496006073,
         "name": "SpeechRecognitionResult",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult"
     },
     {
-        "lastModifiedAt": 1596457167641,
+        "lastModifiedAt": 1596496006253,
         "name": "SpeechRecognitionResult.isFinal",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/isFinal"
     },
     {
-        "lastModifiedAt": 1596457168286,
+        "lastModifiedAt": 1596496006571,
         "name": "SpeechRecognitionResult.item",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/item"
     },
     {
-        "lastModifiedAt": 1596457167955,
+        "lastModifiedAt": 1596496006393,
         "name": "SpeechRecognitionResult.length",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length"
     },
     {
-        "lastModifiedAt": 1596457184262,
+        "lastModifiedAt": 1596495867494,
         "name": "SpeechRecognitionResultList",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList"
     },
     {
-        "lastModifiedAt": 1596457184771,
+        "lastModifiedAt": 1596495867599,
         "name": "SpeechRecognitionResultList.item",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/item"
     },
     {
-        "lastModifiedAt": 1596457184506,
+        "lastModifiedAt": 1596495867550,
         "name": "SpeechRecognitionResultList.length",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/length"
     },
     {
-        "lastModifiedAt": 1596457175532,
+        "lastModifiedAt": 1596495922610,
         "name": "SpeechSynthesis",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis"
     },
     {
-        "lastModifiedAt": 1596457177502,
+        "lastModifiedAt": 1596496020909,
         "name": "SpeechSynthesis.cancel",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel"
     },
     {
-        "lastModifiedAt": 1596457177809,
+        "lastModifiedAt": 1596495923951,
         "name": "SpeechSynthesis.getVoices",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices"
     },
     {
-        "lastModifiedAt": 1596457178618,
+        "lastModifiedAt": 1596495923991,
         "name": "SpeechSynthesis.pause",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause"
     },
     {
-        "lastModifiedAt": 1596457176354,
+        "lastModifiedAt": 1596495922660,
         "name": "SpeechSynthesis.paused",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused"
     },
     {
-        "lastModifiedAt": 1596457176865,
+        "lastModifiedAt": 1596495922706,
         "name": "SpeechSynthesis.pending",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending"
     },
     {
-        "lastModifiedAt": 1596457179002,
+        "lastModifiedAt": 1596496051083,
         "name": "SpeechSynthesis.resume",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume"
     },
     {
-        "lastModifiedAt": 1596457179345,
+        "lastModifiedAt": 1596496083155,
         "name": "SpeechSynthesis.speak",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak"
     },
     {
-        "lastModifiedAt": 1596457177244,
+        "lastModifiedAt": 1596496020861,
         "name": "SpeechSynthesis.speaking",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking"
     },
     {
-        "lastModifiedAt": 1596457183670,
+        "lastModifiedAt": 1596495716858,
         "name": "SpeechSynthesisErrorEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent"
     },
     {
-        "lastModifiedAt": 1596457183954,
+        "lastModifiedAt": 1596495871758,
         "name": "SpeechSynthesisErrorEvent.error",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error"
     },
@@ -1406,27 +1406,27 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEventInit"
     },
     {
-        "lastModifiedAt": 1596457173202,
+        "lastModifiedAt": 1596496007074,
         "name": "SpeechSynthesisEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent"
     },
     {
-        "lastModifiedAt": 1596457173506,
+        "lastModifiedAt": 1596496007178,
         "name": "SpeechSynthesisEvent.charIndex",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charIndex"
     },
     {
-        "lastModifiedAt": 1596457174349,
+        "lastModifiedAt": 1596496026514,
         "name": "SpeechSynthesisEvent.elapsedTime",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/elapsedTime"
     },
     {
-        "lastModifiedAt": 1596457174900,
+        "lastModifiedAt": 1596496008603,
         "name": "SpeechSynthesisEvent.name",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/name"
     },
     {
-        "lastModifiedAt": 1596457175248,
+        "lastModifiedAt": 1596496008661,
         "name": "SpeechSynthesisEvent.utterance",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/utterance"
     },
@@ -1436,67 +1436,67 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEventInit"
     },
     {
-        "lastModifiedAt": 1596457168727,
+        "lastModifiedAt": 1596495908013,
         "name": "SpeechSynthesisUtterance",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance"
     },
     {
-        "lastModifiedAt": 1596457169539,
+        "lastModifiedAt": 1596495908063,
         "name": "SpeechSynthesisUtterance.lang",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/lang"
     },
     {
-        "lastModifiedAt": 1596457169778,
+        "lastModifiedAt": 1596495908107,
         "name": "SpeechSynthesisUtterance.pitch",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch"
     },
     {
-        "lastModifiedAt": 1596457170572,
+        "lastModifiedAt": 1596495918232,
         "name": "SpeechSynthesisUtterance.rate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate"
     },
     {
-        "lastModifiedAt": 1596457170811,
+        "lastModifiedAt": 1596495909139,
         "name": "SpeechSynthesisUtterance.text",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text"
     },
     {
-        "lastModifiedAt": 1596457171196,
+        "lastModifiedAt": 1596495927670,
         "name": "SpeechSynthesisUtterance.voice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice"
     },
     {
-        "lastModifiedAt": 1596457171994,
+        "lastModifiedAt": 1596495956424,
         "name": "SpeechSynthesisUtterance.volume",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/volume"
     },
     {
-        "lastModifiedAt": 1596457162859,
+        "lastModifiedAt": 1596496045298,
         "name": "SpeechSynthesisVoice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice"
     },
     {
-        "lastModifiedAt": 1596457163107,
+        "lastModifiedAt": 1596496066535,
         "name": "SpeechSynthesisVoice.default",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default"
     },
     {
-        "lastModifiedAt": 1596457163371,
+        "lastModifiedAt": 1596496046382,
         "name": "SpeechSynthesisVoice.lang",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/lang"
     },
     {
-        "lastModifiedAt": 1596457163678,
+        "lastModifiedAt": 1596496046428,
         "name": "SpeechSynthesisVoice.localService",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/localService"
     },
     {
-        "lastModifiedAt": 1596457164483,
+        "lastModifiedAt": 1596496046467,
         "name": "SpeechSynthesisVoice.name",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/name"
     },
     {
-        "lastModifiedAt": 1596457164803,
+        "lastModifiedAt": 1596496085547,
         "name": "SpeechSynthesisVoice.voiceURI",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI"
     },
@@ -1526,7 +1526,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContextBase"
     },
     {
-        "lastModifiedAt": 1596457185718,
+        "lastModifiedAt": 1596495957920,
         "name": "Window",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window"
     },
@@ -1546,9 +1546,39 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/Option"
     },
     {
-        "lastModifiedAt": 1596457188158,
+        "lastModifiedAt": 1596496052705,
         "name": "Window.StaticRange",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.StaticRange.collapsed",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window.StaticRange/StaticRange.collapsed"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.StaticRange.endContainer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window.StaticRange/StaticRange.endContainer"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.StaticRange.endOffset",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window.StaticRange/StaticRange.endOffset"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.StaticRange.startContainer",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window.StaticRange/StaticRange.startContainer"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.StaticRange.startOffset",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window.StaticRange/StaticRange.startOffset"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.StaticRange.StaticRange.toRange",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window.StaticRange/StaticRange.toRange"
     },
     {
         "lastModifiedAt": 0,
@@ -1591,72 +1621,72 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/XMLSerializer"
     },
     {
-        "lastModifiedAt": 1596457191634,
+        "lastModifiedAt": 1596496021344,
         "name": "Window.alert",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"
     },
     {
-        "lastModifiedAt": 1596457192303,
+        "lastModifiedAt": 1596495965305,
         "name": "Window.blur",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur"
     },
     {
-        "lastModifiedAt": 1596457192676,
+        "lastModifiedAt": 1596496030724,
         "name": "Window.cancelAnimationFrame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame"
     },
     {
-        "lastModifiedAt": 1596457192968,
+        "lastModifiedAt": 1596496035349,
         "name": "Window.cancelIdleCallback",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelIdleCallback"
     },
     {
-        "lastModifiedAt": 1596457193502,
+        "lastModifiedAt": 1596496087797,
         "name": "Window.clearImmediate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearImmediate"
     },
     {
-        "lastModifiedAt": 1596457193901,
+        "lastModifiedAt": 1596495968211,
         "name": "Window.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/close"
     },
     {
-        "lastModifiedAt": 1596457194224,
+        "lastModifiedAt": 1596495999554,
         "name": "Window.confirm",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm"
     },
     {
-        "lastModifiedAt": 1596457194523,
+        "lastModifiedAt": 1596496083110,
         "name": "Window.dump",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/dump"
     },
     {
-        "lastModifiedAt": 1596457194810,
+        "lastModifiedAt": 1596495970648,
         "name": "Window.find",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/find"
     },
     {
-        "lastModifiedAt": 1596457195079,
+        "lastModifiedAt": 1596495970712,
         "name": "Window.focus",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"
     },
     {
-        "lastModifiedAt": 1596457195427,
+        "lastModifiedAt": 1596495970789,
         "name": "Window.getComputedStyle",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle"
     },
     {
-        "lastModifiedAt": 1596457195737,
+        "lastModifiedAt": 1596496083222,
         "name": "Window.getDefaultComputedStyle",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getDefaultComputedStyle"
     },
     {
-        "lastModifiedAt": 1596457196145,
+        "lastModifiedAt": 1596495971407,
         "name": "Window.getSelection",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection"
     },
     {
-        "lastModifiedAt": 1596457196553,
+        "lastModifiedAt": 1596496009222,
         "name": "Window.matchMedia",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia"
     },
@@ -1666,92 +1696,92 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/maximize"
     },
     {
-        "lastModifiedAt": 1596457197086,
+        "lastModifiedAt": 1596495972784,
         "name": "Window.minimize",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/minimize"
     },
     {
-        "lastModifiedAt": 1596457197381,
+        "lastModifiedAt": 1596495972857,
         "name": "Window.moveBy",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy"
     },
     {
-        "lastModifiedAt": 1596457198378,
+        "lastModifiedAt": 1596496072197,
         "name": "Window.moveTo",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo"
     },
     {
-        "lastModifiedAt": 1596457198750,
+        "lastModifiedAt": 1596496082476,
         "name": "Window.open",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/open"
     },
     {
-        "lastModifiedAt": 1596457199146,
+        "lastModifiedAt": 1596495975722,
         "name": "Window.postMessage",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"
     },
     {
-        "lastModifiedAt": 1596457199537,
+        "lastModifiedAt": 1596495975797,
         "name": "Window.print",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/print"
     },
     {
-        "lastModifiedAt": 1596457199946,
+        "lastModifiedAt": 1596496009333,
         "name": "Window.prompt",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"
     },
     {
-        "lastModifiedAt": 1596457200357,
+        "lastModifiedAt": 1596496088449,
         "name": "Window.requestAnimationFrame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame"
     },
     {
-        "lastModifiedAt": 1596457201574,
+        "lastModifiedAt": 1596495977931,
         "name": "Window.requestIdleCallback",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback"
     },
     {
-        "lastModifiedAt": 1596457202009,
+        "lastModifiedAt": 1596495978001,
         "name": "Window.resizeBy",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy"
     },
     {
-        "lastModifiedAt": 1596457202293,
+        "lastModifiedAt": 1596495978069,
         "name": "Window.resizeTo",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeTo"
     },
     {
-        "lastModifiedAt": 1596457202599,
+        "lastModifiedAt": 1596495978139,
         "name": "Window.scroll",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scroll"
     },
     {
-        "lastModifiedAt": 1596457203725,
+        "lastModifiedAt": 1596495978202,
         "name": "Window.scrollBy",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy"
     },
     {
-        "lastModifiedAt": 1596457204059,
+        "lastModifiedAt": 1596495978272,
         "name": "Window.scrollByLines",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByLines"
     },
     {
-        "lastModifiedAt": 1596457205055,
+        "lastModifiedAt": 1596496050764,
         "name": "Window.scrollByPages",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollByPages"
     },
     {
-        "lastModifiedAt": 1596457205387,
+        "lastModifiedAt": 1596496009137,
         "name": "Window.scrollTo",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo"
     },
     {
-        "lastModifiedAt": 1596457205783,
+        "lastModifiedAt": 1596495980112,
         "name": "Window.setCursor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setCursor"
     },
     {
-        "lastModifiedAt": 1596457206201,
+        "lastModifiedAt": 1596496083295,
         "name": "Window.setImmediate",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setImmediate"
     },
@@ -1761,67 +1791,67 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setResizable"
     },
     {
-        "lastModifiedAt": 1596457207196,
+        "lastModifiedAt": 1596495981304,
         "name": "Window.sizeToContent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sizeToContent"
     },
     {
-        "lastModifiedAt": 1596457208160,
+        "lastModifiedAt": 1596495981381,
         "name": "Window.stop",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/stop"
     },
     {
-        "lastModifiedAt": 1596457208696,
+        "lastModifiedAt": 1596496056729,
         "name": "Window.updateCommands",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/updateCommands"
     },
     {
-        "lastModifiedAt": 1596456536699,
+        "lastModifiedAt": 1596496030282,
         "name": "XR",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR"
     },
     {
-        "lastModifiedAt": 1596456537532,
+        "lastModifiedAt": 1596496030460,
         "name": "XR.isSessionSupported",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported"
     },
     {
-        "lastModifiedAt": 1596456538161,
+        "lastModifiedAt": 1596496030649,
         "name": "XR.requestSession",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession"
     },
     {
-        "lastModifiedAt": 1596456538949,
+        "lastModifiedAt": 1596495781679,
         "name": "XRBoundedReferenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace"
     },
     {
-        "lastModifiedAt": 1596456539347,
+        "lastModifiedAt": 1596496050122,
         "name": "XRBoundedReferenceSpace.boundsGeometry",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace/boundsGeometry"
     },
     {
-        "lastModifiedAt": 1596456523362,
+        "lastModifiedAt": 1596495896772,
         "name": "XRFrame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame"
     },
     {
-        "lastModifiedAt": 1596456524466,
+        "lastModifiedAt": 1596495896864,
         "name": "XRFrame.getPose",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose"
     },
     {
-        "lastModifiedAt": 1596456524786,
+        "lastModifiedAt": 1596496049983,
         "name": "XRFrame.getViewerPose",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose"
     },
     {
-        "lastModifiedAt": 1596456523677,
+        "lastModifiedAt": 1596495896823,
         "name": "XRFrame.session",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/session"
     },
     {
-        "lastModifiedAt": 1596456525162,
+        "lastModifiedAt": 1596495914806,
         "name": "XRInputSource",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource"
     },
@@ -1831,212 +1861,212 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gamepad"
     },
     {
-        "lastModifiedAt": 1596456525773,
+        "lastModifiedAt": 1596495915304,
         "name": "XRInputSource.gripSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gripSpace"
     },
     {
-        "lastModifiedAt": 1596456526116,
+        "lastModifiedAt": 1596496059570,
         "name": "XRInputSource.handedness",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/handedness"
     },
     {
-        "lastModifiedAt": 1596456526424,
+        "lastModifiedAt": 1596495915964,
         "name": "XRInputSource.profiles",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles"
     },
     {
-        "lastModifiedAt": 1596456527220,
+        "lastModifiedAt": 1596496038148,
         "name": "XRInputSource.targetRayMode",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRayMode"
     },
     {
-        "lastModifiedAt": 1596456527611,
+        "lastModifiedAt": 1596496050907,
         "name": "XRInputSource.targetRaySpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace"
     },
     {
-        "lastModifiedAt": 1596456504098,
+        "lastModifiedAt": 1596495753640,
         "name": "XRInputSourceArray",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray"
     },
     {
-        "lastModifiedAt": 1596456504742,
+        "lastModifiedAt": 1596495769696,
         "name": "XRInputSourceArray.entries",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries"
     },
     {
-        "lastModifiedAt": 1596456505541,
+        "lastModifiedAt": 1596495821524,
         "name": "XRInputSourceArray.forEach",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach"
     },
     {
-        "lastModifiedAt": 1596456506404,
+        "lastModifiedAt": 1596495911124,
         "name": "XRInputSourceArray.keys",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys"
     },
     {
-        "lastModifiedAt": 1596456504355,
+        "lastModifiedAt": 1596495811734,
         "name": "XRInputSourceArray.length",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/length"
     },
     {
-        "lastModifiedAt": 1596456506770,
+        "lastModifiedAt": 1596496093198,
         "name": "XRInputSourceArray.values",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values"
     },
     {
-        "lastModifiedAt": 1596456509732,
+        "lastModifiedAt": 1596496089098,
         "name": "XRInputSourceEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent"
     },
     {
-        "lastModifiedAt": 1596456509968,
+        "lastModifiedAt": 1596496093241,
         "name": "XRInputSourceEvent.frame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/frame"
     },
     {
-        "lastModifiedAt": 1596456510243,
+        "lastModifiedAt": 1596496089754,
         "name": "XRInputSourceEvent.inputSource",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource"
     },
     {
-        "lastModifiedAt": 1596456499889,
+        "lastModifiedAt": 1596495737668,
         "name": "XRInputSourceEventInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit"
     },
     {
-        "lastModifiedAt": 1596456500209,
+        "lastModifiedAt": 1596495737722,
         "name": "XRInputSourceEventInit.frame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/frame"
     },
     {
-        "lastModifiedAt": 1596456500993,
+        "lastModifiedAt": 1596496021226,
         "name": "XRInputSourceEventInit.inputSource",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource"
     },
     {
-        "lastModifiedAt": 1596456507154,
+        "lastModifiedAt": 1596495903618,
         "name": "XRInputSourcesChangeEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent"
     },
     {
-        "lastModifiedAt": 1596456507949,
+        "lastModifiedAt": 1596496010790,
         "name": "XRInputSourcesChangeEvent.added",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/added"
     },
     {
-        "lastModifiedAt": 1596456508545,
+        "lastModifiedAt": 1596496027147,
         "name": "XRInputSourcesChangeEvent.removed",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/removed"
     },
     {
-        "lastModifiedAt": 1596456509365,
+        "lastModifiedAt": 1596496057900,
         "name": "XRInputSourcesChangeEvent.session",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/session"
     },
     {
-        "lastModifiedAt": 1596456490193,
+        "lastModifiedAt": 1596495794070,
         "name": "XRInputSourcesChangeEventInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit"
     },
     {
-        "lastModifiedAt": 1596456491004,
+        "lastModifiedAt": 1596496009263,
         "name": "XRInputSourcesChangeEventInit.added",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added"
     },
     {
-        "lastModifiedAt": 1596456491879,
+        "lastModifiedAt": 1596495795259,
         "name": "XRInputSourcesChangeEventInit.removed",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed"
     },
     {
-        "lastModifiedAt": 1596456492222,
+        "lastModifiedAt": 1596495874710,
         "name": "XRInputSourcesChangeEventInit.session",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session"
     },
     {
-        "lastModifiedAt": 1596456541734,
+        "lastModifiedAt": 1596495765495,
         "name": "XRPose",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose"
     },
     {
-        "lastModifiedAt": 1596456542092,
+        "lastModifiedAt": 1596495911065,
         "name": "XRPose.emulatedPosition",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/emulatedPosition"
     },
     {
-        "lastModifiedAt": 1596456542398,
+        "lastModifiedAt": 1596495993278,
         "name": "XRPose.transform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/transform"
     },
     {
-        "lastModifiedAt": 1596456540561,
+        "lastModifiedAt": 1596496026014,
         "name": "XRReferenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace"
     },
     {
-        "lastModifiedAt": 1596456541352,
+        "lastModifiedAt": 1596496071383,
         "name": "XRReferenceSpace.getOffsetReferenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/getOffsetReferenceSpace"
     },
     {
-        "lastModifiedAt": 1596456513938,
+        "lastModifiedAt": 1596496048807,
         "name": "XRReferenceSpaceEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent"
     },
     {
-        "lastModifiedAt": 1596456514443,
+        "lastModifiedAt": 1596496051037,
         "name": "XRReferenceSpaceEvent.referenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/referenceSpace"
     },
     {
-        "lastModifiedAt": 1596456515324,
+        "lastModifiedAt": 1596496049940,
         "name": "XRReferenceSpaceEvent.transform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/transform"
     },
     {
-        "lastModifiedAt": 1596456497362,
+        "lastModifiedAt": 1596495704548,
         "name": "XRReferenceSpaceEventInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit"
     },
     {
-        "lastModifiedAt": 1596456498160,
+        "lastModifiedAt": 1596495901112,
         "name": "XRReferenceSpaceEventInit.referenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace"
     },
     {
-        "lastModifiedAt": 1596456498467,
+        "lastModifiedAt": 1596495943444,
         "name": "XRReferenceSpaceEventInit.transform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform"
     },
     {
-        "lastModifiedAt": 1596456516389,
+        "lastModifiedAt": 1596495822625,
         "name": "XRRenderState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState"
     },
     {
-        "lastModifiedAt": 1596456516696,
+        "lastModifiedAt": 1596495952785,
         "name": "XRRenderState.baseLayer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/baseLayer"
     },
     {
-        "lastModifiedAt": 1596456516927,
+        "lastModifiedAt": 1596495853411,
         "name": "XRRenderState.depthFar",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthFar"
     },
     {
-        "lastModifiedAt": 1596456517736,
+        "lastModifiedAt": 1596495933392,
         "name": "XRRenderState.depthNear",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthNear"
     },
     {
-        "lastModifiedAt": 1596456518026,
+        "lastModifiedAt": 1596496025452,
         "name": "XRRenderState.inlineVerticalFieldOfView",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView"
     },
     {
-        "lastModifiedAt": 1596456501226,
+        "lastModifiedAt": 1596495996738,
         "name": "XRRenderStateInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit"
     },
@@ -2061,82 +2091,82 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit/inlineVerticalFieldOfView"
     },
     {
-        "lastModifiedAt": 1596456511166,
+        "lastModifiedAt": 1596496050691,
         "name": "XRRigidTransform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform"
     },
     {
-        "lastModifiedAt": 1596456528033,
+        "lastModifiedAt": 1596495835311,
         "name": "XRSession",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession"
     },
     {
-        "lastModifiedAt": 1596456530678,
+        "lastModifiedAt": 1596495897484,
         "name": "XRSession.cancelAnimationFrame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/cancelAnimationFrame"
     },
     {
-        "lastModifiedAt": 1596456531033,
+        "lastModifiedAt": 1596496085507,
         "name": "XRSession.end",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end"
     },
     {
-        "lastModifiedAt": 1596456528820,
+        "lastModifiedAt": 1596496001289,
         "name": "XRSession.environmentBlendMode",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode"
     },
     {
-        "lastModifiedAt": 1596456529189,
+        "lastModifiedAt": 1596496066915,
         "name": "XRSession.inputSources",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources"
     },
     {
-        "lastModifiedAt": 1596456529496,
+        "lastModifiedAt": 1596495931482,
         "name": "XRSession.renderState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/renderState"
     },
     {
-        "lastModifiedAt": 1596456531403,
+        "lastModifiedAt": 1596495840205,
         "name": "XRSession.requestAnimationFrame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame"
     },
     {
-        "lastModifiedAt": 1596456532264,
+        "lastModifiedAt": 1596495840267,
         "name": "XRSession.requestReferenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestReferenceSpace"
     },
     {
-        "lastModifiedAt": 1596456533094,
+        "lastModifiedAt": 1596496050024,
         "name": "XRSession.updateRenderState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/updateRenderState"
     },
     {
-        "lastModifiedAt": 1596456530315,
+        "lastModifiedAt": 1596495912383,
         "name": "XRSession.visibilityState",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState"
     },
     {
-        "lastModifiedAt": 1596456533328,
+        "lastModifiedAt": 1596495714656,
         "name": "XRSessionEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent"
     },
     {
-        "lastModifiedAt": 1596456533592,
+        "lastModifiedAt": 1596496087725,
         "name": "XRSessionEvent.session",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session"
     },
     {
-        "lastModifiedAt": 1596456498776,
+        "lastModifiedAt": 1596495931392,
         "name": "XRSessionEventInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit"
     },
     {
-        "lastModifiedAt": 1596456499082,
+        "lastModifiedAt": 1596495931441,
         "name": "XRSessionEventInit.session",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session"
     },
     {
-        "lastModifiedAt": 1596456488343,
+        "lastModifiedAt": 1596495773287,
         "name": "XRSessionInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit"
     },
@@ -2151,137 +2181,137 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/requiredFeatures"
     },
     {
-        "lastModifiedAt": 1596456539634,
+        "lastModifiedAt": 1596495918798,
         "name": "XRSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSpace"
     },
     {
-        "lastModifiedAt": 1596456511644,
+        "lastModifiedAt": 1596495991720,
         "name": "XRView",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView"
     },
     {
-        "lastModifiedAt": 1596456511984,
+        "lastModifiedAt": 1596496013171,
         "name": "XRView.eye",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye"
     },
     {
-        "lastModifiedAt": 1596456512821,
+        "lastModifiedAt": 1596495992782,
         "name": "XRView.projectionMatrix",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/projectionMatrix"
     },
     {
-        "lastModifiedAt": 1596456513112,
+        "lastModifiedAt": 1596496030768,
         "name": "XRView.transform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform"
     },
     {
-        "lastModifiedAt": 1596456515711,
+        "lastModifiedAt": 1596495818340,
         "name": "XRViewerPose",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose"
     },
     {
-        "lastModifiedAt": 1596456516090,
+        "lastModifiedAt": 1596495936124,
         "name": "XRViewerPose.views",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose/views"
     },
     {
-        "lastModifiedAt": 1596456533899,
+        "lastModifiedAt": 1596496067673,
         "name": "XRViewport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport"
     },
     {
-        "lastModifiedAt": 1596456534757,
+        "lastModifiedAt": 1596496068688,
         "name": "XRViewport.height",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/height"
     },
     {
-        "lastModifiedAt": 1596456535026,
+        "lastModifiedAt": 1596496072946,
         "name": "XRViewport.width",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/width"
     },
     {
-        "lastModifiedAt": 1596456535406,
+        "lastModifiedAt": 1596496069779,
         "name": "XRViewport.x",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/x"
     },
     {
-        "lastModifiedAt": 1596456535742,
+        "lastModifiedAt": 1596496069821,
         "name": "XRViewport.y",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/y"
     },
     {
-        "lastModifiedAt": 1596456518337,
+        "lastModifiedAt": 1596495746155,
         "name": "XRWebGLLayer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer"
     },
     {
-        "lastModifiedAt": 1596456519152,
+        "lastModifiedAt": 1596495746203,
         "name": "XRWebGLLayer.antialias",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/antialias"
     },
     {
-        "lastModifiedAt": 1596456519994,
+        "lastModifiedAt": 1596495800417,
         "name": "XRWebGLLayer.frameBufferHeight",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferHeight"
     },
     {
-        "lastModifiedAt": 1596456520278,
+        "lastModifiedAt": 1596495746811,
         "name": "XRWebGLLayer.frameBufferWidth",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferWidth"
     },
     {
-        "lastModifiedAt": 1596456520586,
+        "lastModifiedAt": 1596496031814,
         "name": "XRWebGLLayer.framebuffer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer"
     },
     {
-        "lastModifiedAt": 1596456521771,
+        "lastModifiedAt": 1596495876666,
         "name": "XRWebGLLayer.getNativeFramebufferScaleFactor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor"
     },
     {
-        "lastModifiedAt": 1596456522574,
+        "lastModifiedAt": 1596496057807,
         "name": "XRWebGLLayer.getViewport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport"
     },
     {
-        "lastModifiedAt": 1596456520975,
+        "lastModifiedAt": 1596496082946,
         "name": "XRWebGLLayer.ignoreDepthValues",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/ignoreDepthValues"
     },
     {
-        "lastModifiedAt": 1596456493166,
+        "lastModifiedAt": 1596495878463,
         "name": "XRWebGLLayerInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit"
     },
     {
-        "lastModifiedAt": 1596456493574,
+        "lastModifiedAt": 1596495878511,
         "name": "XRWebGLLayerInit.alpha",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha"
     },
     {
-        "lastModifiedAt": 1596456494455,
+        "lastModifiedAt": 1596495878556,
         "name": "XRWebGLLayerInit.antialias",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/antialias"
     },
     {
-        "lastModifiedAt": 1596456495007,
+        "lastModifiedAt": 1596496001244,
         "name": "XRWebGLLayerInit.depth",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth"
     },
     {
-        "lastModifiedAt": 1596456495535,
+        "lastModifiedAt": 1596495879049,
         "name": "XRWebGLLayerInit.framebufferScaleFactor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/framebufferScaleFactor"
     },
     {
-        "lastModifiedAt": 1596456496018,
+        "lastModifiedAt": 1596496027234,
         "name": "XRWebGLLayerInit.ignoreDepthValues",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/ignoreDepthValues"
     },
     {
-        "lastModifiedAt": 1596456496557,
+        "lastModifiedAt": 1596496008712,
         "name": "XRWebGLLayerInit.stencil",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil"
     }

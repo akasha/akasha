@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "XRSession.requestAnimationFrame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame",
     "description": "The XRSession method requestAnimationFrame(), much like the Window method of the same name, schedules a callback to be executed the next time the browser is ready to paint the session's virtual environment to the XR display.",

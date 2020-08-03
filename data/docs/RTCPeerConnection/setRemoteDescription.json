@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.setRemoteDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription",
     "description": "The RTCPeerConnection method setRemoteDescription() sets the specified session description as the remote peer's current offer or answer. The description specifies the properties of the remote end of the connection, including the media format.",

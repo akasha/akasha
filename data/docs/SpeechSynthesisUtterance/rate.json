@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisUtterance.rate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate",
     "description": "The rate property of the SpeechSynthesisUtterance interface gets and sets the speed at which the utterance will be spoken at.",

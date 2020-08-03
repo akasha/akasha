@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRReferenceSpaceEventInit.referenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace",
     "description": "The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor.",

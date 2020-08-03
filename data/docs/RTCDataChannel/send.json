@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCDataChannel.send",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send",
     "description": "The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.",

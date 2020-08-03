@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCIceCandidate.sdpMid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMid",
     "description": "The read-only property sdpMid on the RTCIceCandidate interface returns a DOMString specifying the media stream identification tag of the media component with which the candidate is associated.",

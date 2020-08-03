@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCSessionDescription.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/type",
     "description": "The property RTCSessionDescription.type is a read-only value of type RTCSdpType which describes the description's type.",

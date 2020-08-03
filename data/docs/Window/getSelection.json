@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.getSelection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection",
     "description": "The Window.getSelection() method returns a Selection object representing the range of text selected by the user or the current position of the caret.",

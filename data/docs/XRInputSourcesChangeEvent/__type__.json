@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourcesChangeEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent",
     "description": "The WebXR Device API interface XRInputSourcesChangeEvent is used to represent the inputsourceschange event sent to an XRSession when the set of available WebXR input controllers changes.",

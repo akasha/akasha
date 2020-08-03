@@ -88,7 +88,7 @@ public final class MdnDocScanner
         throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
       }
 
-      final ExtractResult extractResult = extractDocs( source, tmpTarget, target );
+      final ExtractResult extractResult = extractDocs( source, kind, tmpTarget, target );
 
       if ( extractResult.isChanged() )
       {
@@ -109,32 +109,35 @@ public final class MdnDocScanner
       }
 
       final DocEntry entry = extractResult.getEntry();
-      final List<String> constructors = entry.getConstructors();
-      if ( null != constructors )
+      if ( DocKind.Type == entry.getKind() )
       {
-        for ( final String constructor : constructors )
+        final List<String> constructors = entry.getConstructors();
+        if ( null != constructors )
         {
-          fetchDocumentation( DocKind.Constructor, type, constructor, force, removeSource );
+          for ( final String constructor : constructors )
+          {
+            fetchDocumentation( DocKind.Constructor, type, constructor, force, removeSource );
+          }
         }
-      }
-      final List<String> properties = entry.getProperties();
-      if ( null != properties )
-      {
-        for ( final String property : properties )
+        final List<String> properties = entry.getProperties();
+        if ( null != properties )
         {
-          fetchDocumentation( DocKind.Property, type, property, force, removeSource );
+          for ( final String property : properties )
+          {
+            fetchDocumentation( DocKind.Property, type, property, force, removeSource );
+          }
         }
-      }
-      final List<String> methods = entry.getMethods();
-      if ( null != methods )
-      {
-        for ( final String method : methods )
+        final List<String> methods = entry.getMethods();
+        if ( null != methods )
         {
-          fetchDocumentation( DocKind.Method, type, method, force, removeSource );
+          for ( final String method : methods )
+          {
+            fetchDocumentation( DocKind.Method, type, method, force, removeSource );
+          }
         }
+        //TODO: Remove any sources for type if they are not present above and they are not
+        // user supplied rather than downloaded. User supplied docs have no corresponding url
       }
-      //TODO: Remove any sources for type if they are not present above and they are not
-      // user supplied rather than downloaded. User supplied docs have no corresponding url
       return new DocFetchResult( source, entry, extractResult.isChanged() );
     }
     else
@@ -159,6 +162,7 @@ public final class MdnDocScanner
 
   @Nonnull
   private ExtractResult extractDocs( @Nonnull final DocSourceConfig source,
+                                     @Nonnull final DocKind kind,
                                      @Nonnull final Path input,
                                      @Nonnull final Path output )
     throws SourceIOException
@@ -221,6 +225,7 @@ public final class MdnDocScanner
 
       final Element element = document.selectFirst( "meta[name=\"description\"]" );
       final String description = null != element ? element.attr( "content" ) : "";
+      entry.setKind( kind );
       entry.setName( source.getName() );
       entry.setHref( source.getUrl() );
       entry.setDescription( description );

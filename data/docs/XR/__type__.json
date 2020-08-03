@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XR",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XR",
     "description": "The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.",

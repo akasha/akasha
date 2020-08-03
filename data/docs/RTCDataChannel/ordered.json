@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.ordered",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/ordered",
     "description": "The read-only RTCDataChannel property ordered indicates whether or not the data channel guarantees in-order delivery of messages; the default is true, which indicates that the data channel is indeed ordered.",

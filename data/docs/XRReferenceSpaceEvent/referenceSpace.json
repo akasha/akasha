@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRReferenceSpaceEvent.referenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/referenceSpace",
     "description": "The read-only XRReferenceSpaceEvent property referenceSpace specifies the reference space which is the originator of the event.",

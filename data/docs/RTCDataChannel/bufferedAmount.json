@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.bufferedAmount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmount",
     "description": "The read-only RTCDataChannel property bufferedAmount returns the number of bytes of data currently queued to be sent over the data channel.",

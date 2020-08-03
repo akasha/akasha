@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisEvent.charIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charIndex",
     "description": "The charIndex read-only property of the SpeechSynthesisUtterance interface returns the index position of the character in the SpeechSynthesisUtterance.text that was being spoken when the event was triggered.",

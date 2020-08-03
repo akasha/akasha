@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourceArray.values",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values",
     "description": "The XRInputSourceArray method  values() returns a JavaScript iterator that can walk over the list of XRInputSource objects contained in the array, from first to last.",

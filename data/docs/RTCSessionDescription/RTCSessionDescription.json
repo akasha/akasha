@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCSessionDescription.RTCSessionDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription",
     "description": "The RTCSessionDescription() constructor creates a new RTCSessionDescription with its properties initialized as described in the specified object.",

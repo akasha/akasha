@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRReferenceSpaceEvent.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/transform",
     "description": "The read-only XRReferenceSpaceEvent property transform indicates the position and orientation of the affected referenceSpace's native origin after the changes the event represents are applied.",

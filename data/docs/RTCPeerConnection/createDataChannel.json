@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.createDataChannel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createDataChannel",
     "description": "The createDataChannel() method on the RTCPeerConnection interface creates a new channel linked with the remote peer, over which any kind of data may be transmitted.",

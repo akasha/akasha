@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisVoice.voiceURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/voiceURI",
     "description": "The voiceURI read-only property of the SpeechSynthesisVoice interface returns the type of URI and location of the speech synthesis service for this voice.",

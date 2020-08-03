@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCIceCandidate.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/type",
     "description": "The RTCIceCandidate interface's read-only type specifies the type of candidate the object represents.",

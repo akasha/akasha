@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisEvent.utterance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/utterance",
     "description": "The utterance read-only property of the SpeechSynthesisUtterance interface returns the SpeechSynthesisUtterance instance that the event was triggered on.",

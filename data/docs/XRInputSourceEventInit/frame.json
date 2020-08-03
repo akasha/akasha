@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRInputSourceEventInit.frame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/frame",
     "description": "The XRInputSourceEventInit dictionary's property frame specifies an XRFrame providing information about the timestamp at which the new input source event took place, as well as access to the XRFrame method getPose() which can be used to map the coordinates of any XRReferenceSpace to the space in which the event took place.",

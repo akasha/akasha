@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesis.paused",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused",
     "description": "The paused read-only property of the SpeechSynthesis interface is a Boolean that returns true if the SpeechSynthesis object is in a paused state, or false if not.",

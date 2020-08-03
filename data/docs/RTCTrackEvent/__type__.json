@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCTrackEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent",
     "description": "The WebRTC API interface RTCTrackEvent represents the track event, which is sent when a new MediaStreamTrack is added to an RTCRtpReceiver which is part of the RTCPeerConnection.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCIceCandidate.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/toJSON",
     "description": "The RTCIceCandidate method toJSON() converts the RTCIceCandidate on which it's called into JSON in the form of an RTCIceCandidateInit object.",

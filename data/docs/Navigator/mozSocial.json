@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Navigator.mozSocial",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mozSocial",
     "description": "Returns a MozSocial object, is available within the social media provider's panel to provide functionality it may need.",

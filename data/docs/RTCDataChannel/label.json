@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.label",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/label",
     "description": "The read-only RTCDataChannel property label returns a DOMString containing a name describing the data channel. These labels are not required to be unique.",

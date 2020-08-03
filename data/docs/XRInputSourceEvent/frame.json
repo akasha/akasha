@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSourceEvent.frame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/frame",
     "description": "The read-only XRInputSourceEvent property frame specifies an XRFrame object representing the event frame during which a WebXR user input occurred.",

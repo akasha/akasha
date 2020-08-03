@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.getComputedStyle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle",
     "description": "The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.",

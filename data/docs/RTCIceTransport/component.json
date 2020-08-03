@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceTransport.component",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/component",
     "description": "The read-only RTCIceTransport property component specifies whether the object is serving to transport RTP or RTCP. The value is one of the strings in RTCIceComponent.",

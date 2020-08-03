@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCIceCandidate.relatedAddress",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedAddress",
     "description": "The RTCIceCandidate interface's read-only relatedAddress property is a string indicating the related address of a relay or reflexive candidate.",

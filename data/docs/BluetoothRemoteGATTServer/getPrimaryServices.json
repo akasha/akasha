@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "BluetoothRemoteGATTServer.getPrimaryServices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices",
     "description": "The BluetoothRemoteGATTServer.getPrimaryServices() method returns a promise to a list of primary BluetoothGATTService objects offered by the bluetooth device for a specified BluetoothServiceUUID.",

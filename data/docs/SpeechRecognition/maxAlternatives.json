@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognition.maxAlternatives",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives",
     "description": "The maxAlternatives property of the SpeechRecognition interface sets the maximum number of SpeechRecognitionAlternatives provided per SpeechRecognitionResult.",

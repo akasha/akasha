@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRWebGLLayer.framebuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer",
     "description": "The read-only XRWebGLLayer property framebuffer is an opaque WebGLFramebuffer which is used to buffer the rendered image if the XR compositor is being used. Otherwise, this property's value is null.",

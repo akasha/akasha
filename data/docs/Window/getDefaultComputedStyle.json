@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Window.getDefaultComputedStyle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getDefaultComputedStyle",
     "description": "The getDefaultComputedStyle() method gives the default computed values of all the CSS properties of an element, ignoring author styling. That is, only user-agent and user styles are taken into account.",

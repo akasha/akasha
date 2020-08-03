@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCDtlsTransport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport",
     "description": "The RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisVoice.default",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/default",
     "description": "The default read-only property of the SpeechSynthesisVoice interface returns a Boolean indicating whether the voice is the default voice for the current app (true), or not (false.)",

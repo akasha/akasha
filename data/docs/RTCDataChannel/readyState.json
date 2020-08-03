@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.readyState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/readyState",
     "description": "The read-only RTCDataChannel property readyState returns an enum of type RTCDataChannelState which indicates the state of the data channel's underlying data connection.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "SpeechSynthesis.pause",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause",
     "description": "The pause() method of the SpeechSynthesis interface puts the SpeechSynthesis object into a paused state.",

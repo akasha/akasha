@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCRtpTransceiver.stopped",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stopped",
     "description": "The read-only stopped property on the RTCRtpTransceiver interface indicates whether or not the transceiver's associated sender and receiver have both been stopped.",

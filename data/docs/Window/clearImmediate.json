@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Window.clearImmediate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearImmediate",
     "description": "This method clears the action specified by window.setImmediate.",

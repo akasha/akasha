@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRReferenceSpaceEventInit.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform",
     "description": "The XRReferenceSpaceEventInit property transform indicates the position and orientation of the affected reference space's native origin after the changes the event represents are applied.",

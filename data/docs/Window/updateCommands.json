@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Window.updateCommands",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/updateCommands",
     "description": "Updates the state of commands of the current chrome window (UI).",

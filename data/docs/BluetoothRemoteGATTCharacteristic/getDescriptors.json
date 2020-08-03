@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "BluetoothRemoteGATTCharacteristic.getDescriptors",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors",
     "description": "The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCTrackEvent.transceiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver",
     "description": "The WebRTC API interface RTCTrackEvent's read-only transceiver property indicates the RTCRtpTransceiver affiliated with the event's track.",

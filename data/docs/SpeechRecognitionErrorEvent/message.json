@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognitionErrorEvent.message",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message",
     "description": "The message read-only property of the SpeechRecognitionErrorEvent interface returns a message describing the error in more detail.",

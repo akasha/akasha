@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.priority",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/priority",
     "description": "The RTCIceCandidate interface's read-only priority property specifies the candidate's priority according to the remote peer; the higher this value is, the better the remote peer considers the candidate to be.",

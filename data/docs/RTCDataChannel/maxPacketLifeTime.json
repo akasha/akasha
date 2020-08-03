@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.maxPacketLifeTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxPacketLifeTime",
     "description": "The read-only RTCDataChannel property maxPacketLifeTime returns the amount of time, in milliseconds, the browser is allowed to take to attempt to transmit a message, as set when the data channel was created, or null.",

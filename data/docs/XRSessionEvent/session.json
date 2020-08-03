@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRSessionEvent.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session",
     "description": "The read-only XRSessionEvent interface's session property indicates which XRSession the event is about.",

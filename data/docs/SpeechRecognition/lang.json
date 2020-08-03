@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognition.lang",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang",
     "description": "The lang property of the SpeechRecognition interface returns and sets the language of the current SpeechRecognition. If not specified, this defaults to the HTML lang attribute value, or the user agent's language setting if that isn't set either.",

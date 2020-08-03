@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRInputSourcesChangeEventInit.removed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed",
     "description": "The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.",

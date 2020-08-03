@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.addTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addTrack",
     "description": "The RTCPeerConnection method addTrack() adds a new media track to the set of tracks which will be transmitted to the other peer.",

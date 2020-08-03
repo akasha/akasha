@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "SpeechRecognitionResultList.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/item",
     "description": "The item getter of the SpeechRecognitionResultList interface is a standard getter — it allows SpeechRecognitionResult objects in the list to be accessed via array syntax.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCDataChannel.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close",
     "description": "The RTCDataChannel.close() method closes the RTCDataChannel. Either peer is permitted to call this method to initiate closure of the channel.",

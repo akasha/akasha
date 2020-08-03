@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCIceTransport.getSelectedCandidatePair",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair",
     "description": "The RTCIceTransport method getSelectedCandidatePair() returns an RTCIceCandidatePair object containing the current best-choice pair of ICE candidates describing the configuration of the endpoints of the transport.",

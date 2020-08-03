@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Navigator.wakeLock",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/wakeLock",
     "description": "The wakeLock read-only property returns a WakeLock interface which allows a document to acquire a screen wake lock. While a screen wake lock is active, the user agent will try to prevent the device from dimming the screen, turning it off completely, or showing a screensaver.",

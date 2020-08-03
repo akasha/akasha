@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRWebGLLayer.getViewport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport",
     "description": "The XRWebGLLayer interface's getViewport() method returns the XRViewport that should be used to render the specified XRView into the WebGL layer.",

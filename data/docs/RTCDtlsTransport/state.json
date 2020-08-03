@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDtlsTransport.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/state",
     "description": "The state read-only property of the RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport state.",

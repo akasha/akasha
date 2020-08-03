@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCIceCandidate.relatedPort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedPort",
     "description": "The RTCIceCandidate interface's read-only relatedPort property indicates the port number of reflexive or relay candidates.",

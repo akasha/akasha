@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition",
     "description": "The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.",

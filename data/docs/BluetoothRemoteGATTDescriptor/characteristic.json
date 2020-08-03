@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "BluetoothRemoteGATTDescriptor.characteristic",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/characteristic",
     "description": "The BluetoothRemoteGATTDescriptor.characteristic read-only property returns the BluetoothRemoteGATTCharacteristic this descriptor belongs to.",

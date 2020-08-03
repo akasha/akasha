@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRView.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform",
     "description": "The read-only transform property of the XRView interface is an XRRigidTransform object which provides the position and orientation of the viewpoint relative to the XRReferenceSpace specified when the XRFrame.getViewerPose() method was called to obtain the view object.",

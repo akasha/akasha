@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognitionEvent.results",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results",
     "description": "The results read-only property of the SpeechRecognitionEvent interface returns a SpeechRecognitionResultList object representing all the speech recognition results for the current session.",

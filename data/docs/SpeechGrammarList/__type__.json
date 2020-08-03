@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechGrammarList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList",
     "description": "The SpeechGrammarList interface of the Web Speech API represents a list of SpeechGrammar objects containing words or patterns of words that we want the recognition service to recognize.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRInputSource.targetRaySpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace",
     "description": "The read-only XRInputSource property targetRaySpace returns an XRSpace (typically an XRReferenceSpace) representing the position and orientation of the target ray in the virtual space.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCIceTransport.getRemoteParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteParameters",
     "description": "The RTCIceTransport method getRemoteParameters() returns an RTCIceParameters object which provides information uniquely identifying the remote peer for the duration of the ICE session.",

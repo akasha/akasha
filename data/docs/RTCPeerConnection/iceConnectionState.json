@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCPeerConnection.iceConnectionState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState",
     "description": "The read-only property RTCPeerConnection.iceConnectionState returns an enum of type RTCIceConnectionState which state of the ICE agent associated with the RTCPeerConnection.",

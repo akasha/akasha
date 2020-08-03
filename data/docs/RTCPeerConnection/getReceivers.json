@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.getReceivers",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getReceivers",
     "description": "The RTCPeerConnection.getReceivers() method returns an array of RTCRtpReceiver objects, each of which represents one RTP receiver. Each RTP receiver manages the reception and decoding of data for a MediaStreamTrack on an RTCPeerConnection",

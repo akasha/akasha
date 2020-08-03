@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.sdpMLineIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMLineIndex",
     "description": "The read-only sdpMLineIndex property on the RTCIceCandidate interface is a zero-based index of the m-line describing the media associated with the candidate.",

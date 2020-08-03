@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.restartIce",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/restartIce",
     "description": "The WebRTC API's RTCPeerConnection interface offers the restartIce() method to allow a web application to easily request that ICE candidate gathering be redone on both ends of the connection.",

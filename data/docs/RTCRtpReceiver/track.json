@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCRtpReceiver.track",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/track",
     "description": "The track read-only property of the RTCRtpReceiver interface returns the MediaStreamTrack associated with the current RTCRtpReceiver instance.",

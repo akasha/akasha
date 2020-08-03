@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.addStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addStream",
     "description": "The obsolete RTCPeerConnection method addStream() adds a MediaStream as a local source of audio or video. Instead of using this obsolete method, you should instead use addTrack() once for each track you wish to send to the remote peer.",

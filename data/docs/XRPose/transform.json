@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRPose.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/transform",
     "description": "The transform read-only attribute of the XRPose interface is a XRRigidTransform object providing the position and orientation of the pose relative to the base XRSpace as specified when the pose was obtained by calling XRFrame.getPose().",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesis.speak",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak",
     "description": "The speak() method of the SpeechSynthesis interface adds an utterance to the utterance queue; it will be spoken when any other utterances queued before it have been spoken.",

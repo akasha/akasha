@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/protocol",
     "description": "The read-only RTCDataChannel property protocol returns a DOMString containing the name of the subprotocol in use. If no protocol was specified when the data channel was created, then this property's value is \"\" (the empty string).",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCRtpReceiver.getContributingSources",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources",
     "description": "The getContributingSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one CSRC (contributing source) identifier received by the current RTCRtpReceiver in the last ten seconds.",

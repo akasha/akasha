@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDtlsTransport.iceTransport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport",
     "description": "The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisUtterance.text",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text",
     "description": "The text property of the SpeechSynthesisUtterance interface gets and sets the text that will be synthesised when the utterance is spoken.",

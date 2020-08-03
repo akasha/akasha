@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Bluetooth.requestDevice",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice",
     "description": "The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.",

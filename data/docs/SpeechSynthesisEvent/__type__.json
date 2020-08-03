@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent",
     "description": "The SpeechSynthesisEvent interface of the Web Speech API contains information about the current state of SpeechSynthesisUtterance objects that have been processed in the speech service.",

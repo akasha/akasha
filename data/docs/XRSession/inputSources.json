@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRSession.inputSources",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources",
     "description": "The read-only inputSources property of the XRSession interface returns an XRInputSourceArray object which lists all controllers and input devices which are expressly associated with the XR device and are currently available.",

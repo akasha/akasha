@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.candidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/candidate",
     "description": "The read-only property candidate on the RTCIceCandidate interface returns a DOMString describing the candidate in detail.",

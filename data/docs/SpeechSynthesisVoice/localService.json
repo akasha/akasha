@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisVoice.localService",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/localService",
     "description": "The localService read-only property of the SpeechSynthesisVoice interface returns a Boolean indicating whether the voice is supplied by a local speech synthesizer service (true), or a remote speech synthesizer service (false.)",

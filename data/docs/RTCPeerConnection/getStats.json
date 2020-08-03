@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.getStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getStats",
     "description": "The RTCPeerConnection method getStats() returns a promise which resolves with data providing statistics about either the overall connection or about the specified MediaStreamTrack.",

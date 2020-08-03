@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/port",
     "description": "The RTCIceCandidate interface's read-only port property contains the port number on the device at the address given by ip at which the candidate's peer can be reached.",

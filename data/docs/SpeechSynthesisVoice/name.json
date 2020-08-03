@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechSynthesisVoice.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/name",
     "description": "The name read-only property of the SpeechSynthesisVoice interface returns a human-readable name that represents the voice.",

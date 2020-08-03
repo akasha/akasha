@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognition.continuous",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous",
     "description": "The continuous property of the SpeechRecognition interface controls whether continuous results are returned for each recognition, or only a single result.",

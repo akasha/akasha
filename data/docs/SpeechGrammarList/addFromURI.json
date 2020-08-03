@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechGrammarList.addFromURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI",
     "description": "The addFromURI() method of the SpeechGrammarList interface takes a grammar present at a specific URI and adds it to the SpeechGrammarList as a new SpeechGrammar object.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCDataChannel.binaryType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/binaryType",
     "description": "The property binaryType on the RTCDataChannel interface is a DOMString which specifies the type of JavaScript object which should be used to represent binary data received on the RTCDataChannel. Values allowed by the WebSocket.binaryType property are also permitted here: \"blob\" if Blob objects are being used or \"arraybuffer\" if ArrayBuffer objects are being used. The default is \"blob\".",

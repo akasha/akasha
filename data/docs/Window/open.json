@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "Window.open",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/open",
     "description": "The Window interface's open() method loads the specified resource into the new or existing browsing context (window, iframe or tab) with the specified name. If the name doesn't exist, then a new browsing context is opened in a new tab or a new window, and the specified resource is loaded into it.",

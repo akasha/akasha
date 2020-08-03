@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechGrammarList.addFromString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString",
     "description": "The addFromString() method of the SpeechGrammarList interface takes a grammar present in a specific DOMString within the code base (e.g. stored in a variable) and adds it to the SpeechGrammarList as a new SpeechGrammar object.",

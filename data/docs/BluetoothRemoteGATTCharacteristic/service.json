@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "BluetoothRemoteGATTCharacteristic.service",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/service",
     "description": "The BluetoothRemoteGATTCharacteristic.service read-only property returns the BluetoothGATTService this characteristic belongs to.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechRecognitionAlternative.transcript",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript",
     "description": "The transcript read-only property of the SpeechRecognitionResult interface returns a string containing the transcript of the recognised word(s).",

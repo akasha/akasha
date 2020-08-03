@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRSessionEventInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit",
     "description": "The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.",

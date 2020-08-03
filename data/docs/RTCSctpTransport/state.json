@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCSctpTransport.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state",
     "description": "The state read-only property of the RTCSctpTransport interface provides information which describes a Stream Control Transmission Protocol (SCTP) transport state.",

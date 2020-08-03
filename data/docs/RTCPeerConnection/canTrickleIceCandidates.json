@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCPeerConnection.canTrickleIceCandidates",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates",
     "description": "The read-only RTCPeerConnection property canTrickleIceCandidates returns a Boolean which indicates whether or not the remote peer can accept trickled ICE candidates.",

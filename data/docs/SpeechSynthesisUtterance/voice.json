@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "SpeechSynthesisUtterance.voice",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice",
     "description": "The voice property of the SpeechSynthesisUtterance interface gets and sets the voice that will be used to speak the utterance.",

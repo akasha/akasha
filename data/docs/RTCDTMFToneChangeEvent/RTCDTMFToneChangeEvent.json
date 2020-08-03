@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent",
     "description": "The RTCDTMFToneChangeEvent() constructor creates a new RTCDTMFToneChangeEvent.",

@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCPeerConnection.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/close",
     "description": "The RTCPeerConnection.close() method closes the current peer connection.",

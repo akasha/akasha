@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "RTCIceTransport.getLocalParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters",
     "description": "The RTCIceTransport method getLocalParameters() returns an RTCIceParameters object which provides information uniquely identifying the local peer for the duration of the ICE session.",

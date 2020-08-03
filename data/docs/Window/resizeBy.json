@@ -1,5 +1,6 @@
 
 {
+    "kind": "Method",
     "name": "Window.resizeBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy",
     "description": "The Window.resizeBy() method resizes the current window by a specified amount.",

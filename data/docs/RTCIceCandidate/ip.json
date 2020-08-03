@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "RTCIceCandidate.ip",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/ip",
     "description": "The RTCIceCandidate interface's read-only address property is a string providing the address of the device which is the source of the candidate.",

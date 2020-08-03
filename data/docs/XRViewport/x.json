@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "XRViewport.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/x",
     "description": "The read-only XRViewport interface's x property indicates the offset from the left edge of the destination surface (typically a XRWebGLLayer to the left edge of the viewport within the surface into which WebXR content is to be rendered.",

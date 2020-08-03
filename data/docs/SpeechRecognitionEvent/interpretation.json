@@ -1,5 +1,6 @@
 
 {
+    "kind": "Property",
     "name": "SpeechRecognitionEvent.interpretation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation",
     "description": "The interpretation read-only property of the SpeechRecognitionEvent interface returns the semantic meaning of what the user said.",

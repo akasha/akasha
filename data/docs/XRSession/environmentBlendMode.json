@@ -1,5 +1,6 @@
 
 {
+    "kind": "Type",
     "name": "XRSession.environmentBlendMode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode",
     "description": "The XRSession interface's read-only environmentBlendMode property identifies if—and to  what degree—the computer-generated imagery is overlaid atop the real world.",
