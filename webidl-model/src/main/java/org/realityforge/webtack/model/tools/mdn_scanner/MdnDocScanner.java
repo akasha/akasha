@@ -179,69 +179,23 @@ public final class MdnDocScanner
     {
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
 
-      for ( final Element anchor : document.select( "a[href^=\"/en-US/docs/Web/API/\"]" ) )
-      {
-        // TODO: In the future we can try to process href and add local {@link } in.
-        //  For now we are just replacing the link with text.
-        replaceElementWithChildren( anchor );
-      }
-      // Remove span element and just nest content.
-      for ( final Element span : document.select( "span[class=\"seoSummary\"]" ) )
-      {
-        replaceElementWithChildren( span );
-      }
       // Make all anchors absolute so anything we include will correctly crosslink
-      for ( final Element anchor : document.select( "a[href^=\"/\"]" ) )
+      for ( final Element anchor : document.select( "[href^=\"/\"]" ) )
       {
         anchor.attr( "href", HOST_URL + anchor.attr( "href" ) );
       }
 
       final DocEntry entry = new DocEntry();
-      final Element article = document.selectFirst( "#wikiArticle" );
-      final StringBuilder content = new StringBuilder();
-      boolean firstNode = true;
-      for ( final Node node : article.childNodes() )
-      {
-        if ( firstNode )
-        {
-          // Ignore the first div which seems to be notices about state of element
-          assert node instanceof Element && "div".equals( ( (Element) node ).tagName() );
-          firstNode = false;
-        }
-        if ( node instanceof Element )
-        {
-          final Element child = (Element) node;
-          if ( "h2".equals( child.tagName() ) )
-          {
-            break;
-          }
-          else
-          {
-            if ( 0 == content.length() )
-            {
-              content.append( child.html() );
-              content.append( "\n" );
-            }
-            else
-            {
-              content.append( child.outerHtml() );
-              content.append( "\n" );
-            }
-          }
-        }
-      }
-
       final Element element = document.selectFirst( "meta[name=\"description\"]" );
       final String description = null != element ? element.attr( "content" ) : "";
       entry.setKind( kind );
       entry.setName( source.getName() );
       entry.setHref( source.getUrl() );
       entry.setDescription( description );
-      entry.setContent( cleanDescription( content.toString() ) );
 
       final List<String> constructors =
         document
-          .select( "#Constructors + p + dl > dt > code, #Constructors + dl > dt > code" )
+          .select( "#Constructors + p + dl > dt > a > code, #Constructors + dl > dt > a > code" )
           .stream()
           .map( Element::text )
           // Strip the brackets at end of constructors
@@ -268,7 +222,7 @@ public final class MdnDocScanner
       final List<String> methods =
         document
           .select(
-            "#Methods + p + dl > dt > code, #Methods + dl > dt > code, #Static_methods + p + dl > dt > code, #Static_methods + dl > dt > code" )
+            "#Methods + p + dl > dt > a > code, #Methods + dl > dt > a code, #Static_methods + p + dl > dt > a > code, #Static_methods + dl > dt > a > code" )
           .stream()
           .map( Element::text )
           // Strip the brackets at end of methods
@@ -301,7 +255,7 @@ public final class MdnDocScanner
 
         final List<String> events =
           document
-            .select( "#Events + p + dl > dt > code, #Events + dl > dt > code" )
+            .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, #Events + dl > dt > a[href$=\"_event\"] > code" )
             .stream()
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation

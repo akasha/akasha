@@ -6,27 +6,27 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/AllowedBluetoothDevice"
     },
     {
-        "lastModifiedAt": 1596495525012,
+        "lastModifiedAt": 1596499304189,
         "name": "Bluetooth",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth"
     },
     {
-        "lastModifiedAt": 1596495945420,
+        "lastModifiedAt": 1596499310351,
         "name": "Bluetooth.getAvailability",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getAvailability"
     },
     {
-        "lastModifiedAt": 1596495946618,
+        "lastModifiedAt": 1596499310402,
         "name": "Bluetooth.getDevices",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"
     },
     {
-        "lastModifiedAt": 1596496050949,
+        "lastModifiedAt": 1596499310283,
         "name": "Bluetooth.referringDevice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice"
     },
     {
-        "lastModifiedAt": 1596495947778,
+        "lastModifiedAt": 1596499310454,
         "name": "Bluetooth.requestDevice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice"
     },

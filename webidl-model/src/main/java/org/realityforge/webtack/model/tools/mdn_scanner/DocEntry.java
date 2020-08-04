@@ -29,7 +29,6 @@ public class DocEntry
   private String name;
   private String href;
   private String description;
-  private String content;
   @Nullable
   private List<String> constructors;
   @Nullable
@@ -77,16 +76,6 @@ public class DocEntry
   public void setDescription( final String description )
   {
     this.description = description;
-  }
-
-  public String getContent()
-  {
-    return content;
-  }
-
-  public void setContent( final String content )
-  {
-    this.content = content;
   }
 
   @Nullable
