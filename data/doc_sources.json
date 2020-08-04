@@ -1816,7 +1816,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/updateCommands"
     },
     {
-        "lastModifiedAt": 1596537801379,
+        "lastModifiedAt": 1596543954384,
         "name": "XR",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR"
     },
@@ -1829,6 +1829,11 @@
         "lastModifiedAt": 1596537801730,
         "name": "XR.isSessionSupported",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported"
+    },
+    {
+        "lastModifiedAt": 1596543955616,
+        "name": "XR.ondevicechange",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/ondevicechange"
     },
     {
         "lastModifiedAt": 1596537801956,
