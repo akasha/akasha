@@ -234,86 +234,88 @@ public final class MdnDocScanner
       entry.setName( source.getName() );
       entry.setHref( source.getUrl() );
       entry.setDescription( description );
-
-      final List<String> constructors =
-        document
-          .select( "#Constructors + p + dl > dt > a > code, " +
-                   "#Constructors + dl > dt > a > code" )
-          .stream()
-          .map( Element::text )
-          // Strip the brackets at end of constructors
-          .map( text -> text.replaceAll( "\\(.*", "" ) )
-          .sorted()
-          .collect( Collectors.toList() );
-      if ( !constructors.isEmpty() )
+      if ( DocKind.Type == kind )
       {
-        entry.setConstructors( constructors );
-      }
-      final List<String> properties =
-        document
-          .select( "#Properties + p + dl > dt > a > code, " +
-                   "#Properties + dl > dt > a > code, " +
-                   "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
-                   "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
-          .stream()
-          .map( Element::text )
-          // Strip out the type name that sometimes appears in the documentation
-          .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
-          .sorted()
-          .collect( Collectors.toList() );
-      if ( !properties.isEmpty() )
-      {
-        entry.setProperties( properties );
-      }
-      final List<String> methods =
-        document
-          .select( "#Methods + p + dl > dt > a > code, " +
-                   "#Methods + dl > dt > a code, " +
-                   "#Static_methods + p + dl > dt > a > code, " +
-                   "#Static_methods + dl > dt > a > code" )
-          .stream()
-          .map( Element::text )
-          // Strip the brackets at end of methods
-          .map( text -> text.replaceAll( "\\(.*", "" ) )
-          // Strip out the type name that sometimes appears in the documentation
-          .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
-          .sorted()
-          .collect( Collectors.toList() );
-      if ( !methods.isEmpty() )
-      {
-        // Sometimes constructors are documented as methods so instead register them as constructors
-        final List<String> newConstructors =
-          methods
-            .stream()
-            .filter( m -> m.equals( source.getName() ) )
-            .map( m -> m + "." + m )
-            .collect( Collectors.toList() );
-        if ( !newConstructors.isEmpty() )
-        {
-          newConstructors.addAll( constructors );
-          entry.setConstructors( newConstructors.stream().sorted().collect( Collectors.toList() ) );
-        }
-
-        final List<String> actualMethods =
-          methods.stream().filter( m -> !m.equals( source.getName() ) ).collect( Collectors.toList() );
-        if ( !actualMethods.isEmpty() )
-        {
-          entry.setMethods( actualMethods );
-        }
-
-        final List<String> events =
+        final List<String> constructors =
           document
-            .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
-                     "#Events + dl > dt > a[href$=\"_event\"] > code" )
+            .select( "#Constructors + p + dl > dt > a > code, " +
+                     "#Constructors + dl > dt > a > code" )
+            .stream()
+            .map( Element::text )
+            // Strip the brackets at end of constructors
+            .map( text -> text.replaceAll( "\\(.*", "" ) )
+            .sorted()
+            .collect( Collectors.toList() );
+        if ( !constructors.isEmpty() )
+        {
+          entry.setConstructors( constructors );
+        }
+        final List<String> properties =
+          document
+            .select( "#Properties + p + dl > dt > a > code, " +
+                     "#Properties + dl > dt > a > code, " +
+                     "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
+                     "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
             .stream()
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
             .sorted()
             .collect( Collectors.toList() );
-        if ( !events.isEmpty() )
+        if ( !properties.isEmpty() )
         {
-          entry.setEvents( events );
+          entry.setProperties( properties );
+        }
+        final List<String> methods =
+          document
+            .select( "#Methods + p + dl > dt > a > code, " +
+                     "#Methods + dl > dt > a code, " +
+                     "#Static_methods + p + dl > dt > a > code, " +
+                     "#Static_methods + dl > dt > a > code" )
+            .stream()
+            .map( Element::text )
+            // Strip the brackets at end of methods
+            .map( text -> text.replaceAll( "\\(.*", "" ) )
+            // Strip out the type name that sometimes appears in the documentation
+            .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+            .sorted()
+            .collect( Collectors.toList() );
+        if ( !methods.isEmpty() )
+        {
+          // Sometimes constructors are documented as methods so instead register them as constructors
+          final List<String> newConstructors =
+            methods
+              .stream()
+              .filter( m -> m.equals( source.getName() ) )
+              .map( m -> m + "." + m )
+              .collect( Collectors.toList() );
+          if ( !newConstructors.isEmpty() )
+          {
+            newConstructors.addAll( constructors );
+            entry.setConstructors( newConstructors.stream().sorted().collect( Collectors.toList() ) );
+          }
+
+          final List<String> actualMethods =
+            methods.stream().filter( m -> !m.equals( source.getName() ) ).collect( Collectors.toList() );
+          if ( !actualMethods.isEmpty() )
+          {
+            entry.setMethods( actualMethods );
+          }
+
+          final List<String> events =
+            document
+              .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
+                       "#Events + dl > dt > a[href$=\"_event\"] > code" )
+              .stream()
+              .map( Element::text )
+              // Strip out the type name that sometimes appears in the documentation
+              .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+              .sorted()
+              .collect( Collectors.toList() );
+          if ( !events.isEmpty() )
+          {
+            entry.setEvents( events );
+          }
         }
       }
 
