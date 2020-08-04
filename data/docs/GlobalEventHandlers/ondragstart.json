@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.ondragstart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart",
+    "description": "A global event handler for the dragstart event."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.ondragleave",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave",
+    "description": "A global event handler for the dragleave event."
+}

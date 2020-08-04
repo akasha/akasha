@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.ondragover",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover",
+    "description": "A global event handler for the dragover event."
+}

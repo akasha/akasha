@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.onmouseenter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmouseenter",
+    "description": "The onmouseenter property of the GlobalEventHandlers mixin is the EventHandler for processing mouseenter events."
+}

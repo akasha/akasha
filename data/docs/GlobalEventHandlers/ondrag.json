@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.ondrag",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag",
+    "description": "A global event handler for the drag event."
+}

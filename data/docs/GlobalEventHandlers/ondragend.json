@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.ondragend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend",
+    "description": "A global event handler for the dragend event."
+}

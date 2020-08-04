@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.onemptied",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onemptied",
+    "description": "The onemptied property sets and returns the event handler for the emptied event."
+}

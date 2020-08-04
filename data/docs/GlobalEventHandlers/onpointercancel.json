@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.onpointercancel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointercancel",
+    "description": "The onpointercancel property of the GlobalEventHandlers mixin is an EventHandler that processes pointercancel events."
+}

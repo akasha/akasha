@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.onmousewheel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onmousewheel",
+    "description": "The onmousewheel property sets and returns the event handler for the mousewheel event."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GlobalEventHandlers.onloadend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadend",
+    "description": "The onloadend property of the GlobalEventHandlers mixin is an EventHandler representing the code to be called when the loadend event is raised (when progress has stopped on the loading of a resource.)"
+}
