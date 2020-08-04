@@ -321,6 +321,20 @@ public final class MdnDocScanner
           if ( !events.isEmpty() )
           {
             entry.setEvents( events );
+
+            // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
+            // to try and find them
+            final List<String> newProperties =
+              events
+                .stream()
+                .map( e -> "on" + e )
+                .filter( e -> !document.select( "a[href=\"" + BASE_URL + localName + "/" + e + "\"]" ).isEmpty() )
+                .collect( Collectors.toList() );
+            if ( !newProperties.isEmpty() )
+            {
+              newProperties.addAll( properties );
+              entry.setProperties( newProperties.stream().sorted().distinct().collect( Collectors.toList() ) );
+            }
           }
         }
       }
