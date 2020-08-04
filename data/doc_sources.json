@@ -1821,7 +1821,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR"
     },
     {
-        "lastModifiedAt": 1596537802119,
+        "lastModifiedAt": 1596543911889,
         "name": "XR.devicechange",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/devicechange_event"
     },
