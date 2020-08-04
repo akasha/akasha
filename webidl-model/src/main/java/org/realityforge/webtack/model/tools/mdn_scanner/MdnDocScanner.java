@@ -225,7 +225,8 @@ public final class MdnDocScanner
 
       final List<String> constructors =
         document
-          .select( "#Constructors + p + dl > dt > a > code, #Constructors + dl > dt > a > code" )
+          .select( "#Constructors + p + dl > dt > a > code, " +
+                   "#Constructors + dl > dt > a > code" )
           .stream()
           .map( Element::text )
           // Strip the brackets at end of constructors
@@ -238,7 +239,10 @@ public final class MdnDocScanner
       }
       final List<String> properties =
         document
-          .select( "#Properties + p + dl > dt > a > code, #Properties + dl > dt > a > code, #Events + p + dl > dt > a:not([href$=\"_event\"]) > code, #Events + dl > dt > a:not([href$=\"_event\"]) > code" )
+          .select( "#Properties + p + dl > dt > a > code, " +
+                   "#Properties + dl > dt > a > code, " +
+                   "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
+                   "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
           .stream()
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
@@ -251,8 +255,10 @@ public final class MdnDocScanner
       }
       final List<String> methods =
         document
-          .select(
-            "#Methods + p + dl > dt > a > code, #Methods + dl > dt > a code, #Static_methods + p + dl > dt > a > code, #Static_methods + dl > dt > a > code" )
+          .select( "#Methods + p + dl > dt > a > code, " +
+                   "#Methods + dl > dt > a code, " +
+                   "#Static_methods + p + dl > dt > a > code, " +
+                   "#Static_methods + dl > dt > a > code" )
           .stream()
           .map( Element::text )
           // Strip the brackets at end of methods
@@ -285,7 +291,8 @@ public final class MdnDocScanner
 
         final List<String> events =
           document
-            .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, #Events + dl > dt > a[href$=\"_event\"] > code" )
+            .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
+                     "#Events + dl > dt > a[href$=\"_event\"] > code" )
             .stream()
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
