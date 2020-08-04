@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -62,7 +63,10 @@ public final class MdnDocScanner
         saveRepository();
         // Documentation has been removed so remove our local caches
         removeExistingTmpFiles( source, target );
-        // TODO: If kind == Type then delete all dependent that is not user created
+        if ( DocKind.Type == kind )
+        {
+          removeUnexpectedConfigs( source.getName(), Collections.emptyList() );
+        }
         return new DocFetchResult( source, null, !isNew );
       }
       else
@@ -150,39 +154,45 @@ public final class MdnDocScanner
             expected.add( docResult.getSource() );
           }
         }
-        final DocRepositoryConfig repository = _runtime.getRepository();
-        final List<DocSourceConfig> sourcesToRemove =
-          repository
-            .getSources()
-            .stream()
-            .filter( s -> s.getName().startsWith( entry.getName() + "." ) )
-            .filter( s -> null != s.getUrl() && s.getUrl().startsWith( BASE_URL ) )
-            .filter( s -> !expected.contains( s ) )
-            .collect( Collectors.toList() );
-
-        for ( final DocSourceConfig sourceToRemove : sourcesToRemove )
-        {
-          repository.getSources().remove( sourceToRemove );
-          final Path path = _runtime.getDataFileLocation( sourceToRemove );
-          try
-          {
-            Files.deleteIfExists( path );
-          }
-          catch ( final IOException ioe )
-          {
-            throw new SourceIOException( sourceToRemove, "Failed to remove existing file for removed source", ioe );
-          }
-        }
-        if ( !sourcesToRemove.isEmpty() )
-        {
-          saveRepository();
-        }
+        removeUnexpectedConfigs( entry.getName(), expected );
       }
       return new DocFetchResult( source, entry, extractResult.isChanged() );
     }
     else
     {
       return new DocFetchResult( source, null, !isNew );
+    }
+  }
+
+  private void removeUnexpectedConfigs( @Nonnull final String typeName, @Nonnull final List<DocSourceConfig> expected )
+    throws SourceIOException, RepositorySaveException
+  {
+    final DocRepositoryConfig repository = _runtime.getRepository();
+    final List<DocSourceConfig> sourcesToRemove =
+      repository
+        .getSources()
+        .stream()
+        .filter( s -> s.getName().startsWith( typeName + "." ) )
+        .filter( s -> null != s.getUrl() && s.getUrl().startsWith( BASE_URL ) )
+        .filter( s -> !expected.contains( s ) )
+        .collect( Collectors.toList() );
+
+    for ( final DocSourceConfig source : sourcesToRemove )
+    {
+      repository.getSources().remove( source );
+      final Path path = _runtime.getDataFileLocation( source );
+      try
+      {
+        Files.deleteIfExists( path );
+      }
+      catch ( final IOException ioe )
+      {
+        throw new SourceIOException( source, "Failed to remove existing file for removed source", ioe );
+      }
+    }
+    if ( !sourcesToRemove.isEmpty() )
+    {
+      saveRepository();
     }
   }
 
