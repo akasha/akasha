@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "RTCRtpTransceiver.direction",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction",
-    "description": "The RTCRtpTransceiver property direction is a string which indicates the transceiver's preferred directionality.",
-    "content": "<p>The <code>RTCRtpTransceiver</code> property <code><strong>direction</strong></code> is a string which indicates the transceiver's preferred directionality. Its value must be one of the strings defined by the <code>RTCRtpTransceiverDirection</code> enumeration.</p>\n<p>The transceiver's <em>current</em> direction is indicated by the <code>currentDirection</code> property.</p>"
+    "description": "The RTCRtpTransceiver property direction is a string which indicates the transceiver's preferred directionality."
 }

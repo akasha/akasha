@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "RTCRtpCodecParameters",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecParameters",
+    "description": "The RTCRtpCodecParameters dictionary, part of the WebRTC API, is used to describe the configuration parameters for a single media codec.",
+    "properties": [
+        "channels",
+        "clockRate",
+        "mimeType",
+        "payloadType",
+        "sdpFmtpLine"
+    ]
+}

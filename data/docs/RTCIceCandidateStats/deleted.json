@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.deleted",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted",
+    "description": "The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released."
+}

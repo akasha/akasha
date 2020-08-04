@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.availableOutgoingBitrate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate",
+    "description": "The RTCIceCandidatePairStats property availableOutgoingBitrate returns a value indicative of the available outbound capacity of the network connection represented by the candidate pair."
+}

@@ -4,7 +4,6 @@
     "name": "RTCRtpTransceiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver",
     "description": "The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state.",
-    "content": "<p>The WebRTC interface <strong><code>RTCRtpTransceiver</code></strong> describes a permanent pairing of an <code>RTCRtpSender</code> and an <code>RTCRtpReceiver</code>, along with some shared state.</p>\n<p>Each <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/SDP\">SDP</a> media section describes one bidirectional SRTP (\"Secure Real Time Protocol\") stream (excepting the media section for <code>RTCDataChannel</code>, if present). This pairing of send and receive SRTP streams is significant for some applications, so <code>RTCRtpTransceiver</code> is used to represent this pairing, along with other important state from the media section. Each non-disabled SRTP media section is always represented by exactly one transceiver.</p>\n<p>A transceiver is uniquely identified using its <code>mid</code> property, which is the same as the media ID (<code>mid</code>) of its corresponding m-line. An <code>RTCRtpTransceiver</code> is <strong>associated</strong> with an m-line if its <code>mid</code> is non-null; otherwise it's considered disassociated.</p>",
     "properties": [
         "currentDirection",
         "direction",

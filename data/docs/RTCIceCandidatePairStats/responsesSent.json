@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.responsesSent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/responsesSent",
+    "description": "The RTCIceCandidatePairStats dictionary's responsesSent property indicates the total number of STUN connectivity check responses that have been sent so far on the connection described by this pair of candidates."
+}

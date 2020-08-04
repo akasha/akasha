@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorderErrorEvent.error",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent/error",
+    "description": "The read-only error property in the MediaRecorderErrorEvent interface is a DOMException object providing details about the exception that was thrown by a MediaRecorder instance."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.url",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/url",
+    "description": "The RTCIceCandidateStats dictionary's url property specifies the URL of the ICE server from which the described candidate was obtained. This property is only available for local candidates."
+}

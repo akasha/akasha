@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.transportId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId",
+    "description": "The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken."
+}

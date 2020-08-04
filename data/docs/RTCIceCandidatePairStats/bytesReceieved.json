@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.bytesReceieved",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved",
+    "description": "The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes—that is, bytes which aren't overhead such as headers or padding—that hve been received to date on the connection described by the candidate pair."
+}

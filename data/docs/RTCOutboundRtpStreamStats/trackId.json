@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCOutboundRtpStreamStats.trackId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/trackId",
+    "description": "The trackId property of the RTCOutboundRtpStreamStats dictionary indicates the id of the RTCSenderAudioTrackAttachmentStats or RTCSenderVideoTrackAttachmentStats object representing the MediaStreamTrack which is being sent on this stream."
+}

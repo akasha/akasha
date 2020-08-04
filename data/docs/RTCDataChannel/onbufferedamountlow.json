@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCDataChannel.onbufferedamountlow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onbufferedamountlow",
+    "description": "The RTCDataChannel.onbufferedamountlow property is an EventHandler which specifies a function the browser calls when the bufferedamountlow event is sent to the RTCDataChannel. This event, which is represented by a simple Event object, is sent when the amount of data buffered to be sent falls to or below the threshold specified by the channel's bufferedAmountLowThreshold."
+}

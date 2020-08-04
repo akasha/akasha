@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCOutboundRtpStreamStats.qualityLimitationReason",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason",
+    "description": "The qualityLimitationReason property of the RTCOutboundRtpStreamStats dictionary is a string indicating the reason why the media quality in the stream is currently being reduced by the codec during encoding, or none if no quality reduction is being performed."
+}

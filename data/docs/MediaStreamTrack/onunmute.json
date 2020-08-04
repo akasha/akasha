@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamTrack.onunmute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onunmute",
+    "description": "MediaStreamTrack's onunmute event handler is called when the unmute event is received. Such an event is sent when the track is again able to send data."
+}

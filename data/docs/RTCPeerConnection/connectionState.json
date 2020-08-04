@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "RTCPeerConnection.connectionState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionState",
-    "description": "The read-only connectionState property of the RTCPeerConnection interface indicates the current state of the peer connection by returning one of the string values specified by the enum RTCPeerConnectionState.",
-    "content": "The read-only <strong><code>connectionState</code></strong> property of the <code>RTCPeerConnection</code> interface indicates the current state of the peer connection by returning one of the string values specified by the enum <code><a href=\"#RTCPeerConnectionState_enum\">RTCPeerConnectionState</a></code>.\n<p>When this property's value changes, a <code><a class=\"new\" href=\"https://developer.mozilla.org/en-US/docs/Web/Events/connectionstatechange\" rel=\"nofollow\" title=\"/en-US/docs/Web/Events/connectionstatechange\">connectionstatechange</a></code> event is sent to the <code>RTCPeerConnection</code> instance.</p>"
+    "description": "The read-only connectionState property of the RTCPeerConnection interface indicates the current state of the peer connection by returning one of the string values specified by the enum RTCPeerConnectionState."
 }

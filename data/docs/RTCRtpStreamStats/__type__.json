@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RTCRtpStreamStats",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats",
+    "description": "The RTCRtpStreamStats dictionary is returned by the RTCPeerConnection.getStats(), RTCRtpSender.getStats(), and RTCRtpReceiver.getStats() methods to provide detailed statistics about WebRTC connectivity."
+}

@@ -1,0 +1,23 @@
+
+{
+    "kind": "Type",
+    "name": "MediaRecorder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder",
+    "description": "The MediaRecorder interface of the MediaStream Recording API provides functionality to easily record media. It is created using the MediaRecorder() constructor.",
+    "properties": [
+        "audioBitsPerSecond",
+        "ignoreMutedMedia",
+        "mimeType",
+        "state",
+        "stream",
+        "videoBitsPerSecond"
+    ],
+    "methods": [
+        "isTypeSupported",
+        "pause",
+        "requestData",
+        "resume",
+        "start",
+        "stop"
+    ]
+}

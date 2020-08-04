@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.firstRequestTimestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/firstRequestTimestamp",
+    "description": "The RTCIceCandidatePairStats property firstRequestTimestamp specifies the time at which the first STUN request was sent on the described candidate pair."
+}

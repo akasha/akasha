@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.datachannel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/datachannel_event",
+    "description": "A datachannel event is sent to an RTCPeerConnection instance when an RTCDataChannel has been added to the connection, as a result of the remote peer calling RTCPeerConnection.createDataChannel().",
+    "eventType": "RTCDataChannelEvent",
+    "eventHandlerProperty": "ondatachannel"
+}

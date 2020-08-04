@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.ontrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack",
+    "description": "The RTCPeerConnection property ontrack is an EventHandler which specifies a function to be called when the track event occurs, indicating that a track has been added to the RTCPeerConnection."
+}

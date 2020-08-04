@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaDeviceInfo.deviceId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/deviceId",
+    "description": "The deviceId readonly property of the MediaDeviceInfo interface returns a DOMString that is an identifier for the represented device and is persisted across sessions."
+}

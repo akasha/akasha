@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onconnectionstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onconnectionstatechange",
+    "description": "The RTCPeerConnection.onconnectionstatechange property specifies an EventHandler which is called to handle the connectionstatechange event when it occurs on an instance of RTCPeerConnection. This happens whenever the aggregate state of the connection changes."
+}

@@ -1,0 +1,26 @@
+
+{
+    "kind": "Type",
+    "name": "RTCInboundRtpStreamStats",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats",
+    "description": "The WebRTC API's RTCInboundRtpStreamStats dictionary, based upon RTCReceivedRtpStreamStats and RTCStats, contains statistics related to the receiving end of an RTP stream on the local end of the RTCPeerConnection.",
+    "properties": [
+        "averageRtcpInterval",
+        "bytesReceived",
+        "fecPacketsDiscarded",
+        "fecPacketsReceived",
+        "firCount",
+        "framesDecoded",
+        "lastPacketReceivedTimestamp",
+        "nackCount",
+        "packetsDuplicated",
+        "packetsFailedDecryption",
+        "perDscpPacketsReceived",
+        "pliCount",
+        "qpSum",
+        "receiverId",
+        "remoteId",
+        "sliCount",
+        "trackId"
+    ]
+}

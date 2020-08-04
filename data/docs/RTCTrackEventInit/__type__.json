@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RTCTrackEventInit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit",
+    "description": "The WebRTC API's RTCTrackEventInit dictionary is used to provide information describing an RTCTrackEvent when instantiating a new track event using new RTCTrackEvent()."
+}

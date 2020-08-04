@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStream.ended",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/ended",
+    "description": "The ended read-only property of the MediaStream interface returns a Boolean value which is true if the stream has been completely read, or false if the end of the stream has not been reached. This value  once the ended event has been fired."
+}

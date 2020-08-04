@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceTransport.ongatheringstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/ongatheringstatechange",
+    "description": "The ongatheringstatechange event handler for the RTCIceTransport interface specifies an event handler that is to be called when the gatheringstatechange event occurs on the transport."
+}

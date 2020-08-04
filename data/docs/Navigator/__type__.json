@@ -4,7 +4,6 @@
     "name": "Navigator",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator",
     "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
-    "content": "<p>The <code><strong>Navigator</strong></code> interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.</p>\n<p>A <code>Navigator</code> object can be retrieved using the read-only <code>window.navigator</code> property.</p>",
     "methods": [
         "buildID",
         "credentials",

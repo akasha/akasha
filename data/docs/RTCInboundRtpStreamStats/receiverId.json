@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.receiverId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId",
+    "description": "The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream."
+}

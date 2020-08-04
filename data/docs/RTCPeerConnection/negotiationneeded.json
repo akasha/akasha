@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.negotiationneeded",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event",
+    "description": "A negotiationneeded event is sent to the RTCPeerConnection when negotiation of the connection through the signaling channel is required.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onnegotiationneeded"
+}

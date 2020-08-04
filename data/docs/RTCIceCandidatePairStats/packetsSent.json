@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.packetsSent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsSent",
+    "description": "The RTCIceCandidatePairStats dictionary's packetsSent property indicates the total number of packets which have been sent on the connection described by the pair of candidates."
+}

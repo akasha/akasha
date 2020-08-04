@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamTrack.onoverconstrained",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onoverconstrained",
+    "description": "The MediaStreamTrack.onoverconstrained event handler is a property called when the overconstrained event is received. Such an event is sent when the track is again able to send data."
+}

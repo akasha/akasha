@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.audioBitsPerSecond",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/audioBitsPerSecond",
+    "description": "The audioBitsPerSecond read-only property of the MediaRecorder interface returns the audio encoding bit rate in use."
+}

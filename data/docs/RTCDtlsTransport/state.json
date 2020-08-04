@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "RTCDtlsTransport.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/state",
-    "description": "The state read-only property of the RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport state.",
-    "content": "<p><strong>Draft</strong><br> This page is not complete.</p>\n<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>state</code></strong> read-only property of the <code>RTCDtlsTransport</code> interface provides information which describes a Datagram Transport Layer Security (<strong><a href=\"https://developer.mozilla.org/en-US/docs/Glossary/DTLS\">DTLS</a></strong>) transport state.</p>"
+    "description": "The state read-only property of the RTCDtlsTransport interface provides information which describes a Datagram Transport Layer Security (DTLS) transport state."
 }

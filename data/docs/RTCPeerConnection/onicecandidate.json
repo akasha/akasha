@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onicecandidate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidate",
+    "description": "The RTCPeerConnection property onicecandidate property is an EventHandler which specifies a function to be called when the icecandidate event occurs on an RTCPeerConnection instance. This happens whenever the local ICE agent needs to deliver a message to the other peer through the signaling server."
+}

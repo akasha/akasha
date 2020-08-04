@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaRecorder.stop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/stop",
+    "description": "The MediaRecorder.stop() method (part of the MediaRecorder API) is used to stop media capture."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCStats.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id",
+    "description": "The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics."
+}

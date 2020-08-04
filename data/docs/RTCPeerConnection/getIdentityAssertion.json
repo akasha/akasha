@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "RTCPeerConnection.getIdentityAssertion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getIdentityAssertion",
-    "description": "The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not \"closed\".",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>RTCPeerConnection.getIdentityAssertion()</strong></code> method initiates the gathering of an identity assertion. This has an effect only if the <code>signalingState</code> is not <code>\"closed\"</code>.</p>\n<p>The method returns immediately. If the assertion cannot be generated, an <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/idpassertionerror\" title=\"/en-US/docs/Web/Events/idpassertionerror\">idpassertionerror</a></code> will be sent to the object.</p>\n<p>It is not expected for the application dealing with the <code>RTCPeerConnection</code>: this is automatically done; an explicit call only allows to anticipate the need.</p>"
+    "description": "The RTCPeerConnection.getIdentityAssertion() method initiates the gathering of an identity assertion. This has an effect only if the signalingState is not \"closed\"."
 }

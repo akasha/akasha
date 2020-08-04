@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.bytesReceived",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/bytesReceived",
+    "description": "The RTCInboundRtpStreamStats dictionary's bytesReceived property is an integer value which indicates the total number of bytes received so far from this synchronization source (SSRC)."
+}

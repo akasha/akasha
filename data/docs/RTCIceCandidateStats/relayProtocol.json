@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.relayProtocol",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/relayProtocol",
+    "description": "The RTCIceCandidateStats dictionary's relayProtocol property specifies the protocol being used by a local ICE candidate to communicate with the TURN server."
+}

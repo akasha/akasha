@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onicegatheringstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicegatheringstatechange",
+    "description": "The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state—that is, whether or not the ICE agent is actively gathering candidates—changes."
+}

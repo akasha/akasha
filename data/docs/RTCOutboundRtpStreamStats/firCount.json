@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCOutboundRtpStreamStats.firCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/firCount",
+    "description": "The firCount property of the RTCOutboundRtpStreamStats dictionary indicates the number of Full Intra Request (FIR) that the remote RTCRtpReceiver has sent to this RTCRtpSender."
+}

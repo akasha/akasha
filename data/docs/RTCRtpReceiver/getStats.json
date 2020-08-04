@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "RTCRtpReceiver.getStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getStats",
-    "description": "The RTCRtpReceiver method getStats() asynchronously requests an RTCStatsReport object which provides statistics about incoming traffic on the owning RTCPeerConnection, returning a Promise whose fulfillment handler will be called once the results are available.",
-    "content": "<p>The <code>RTCRtpReceiver</code> method <code><strong>getStats()</strong></code> asynchronously requests an <code>RTCStatsReport</code> object which provides statistics about incoming traffic on the owning <code>RTCPeerConnection</code>, returning a <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> whose fulfillment handler will be called once the results are available.</p>"
+    "description": "The RTCRtpReceiver method getStats() asynchronously requests an RTCStatsReport object which provides statistics about incoming traffic on the owning RTCPeerConnection, returning a Promise whose fulfillment handler will be called once the results are available."
 }

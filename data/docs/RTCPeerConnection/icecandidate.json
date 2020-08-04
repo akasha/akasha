@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.icecandidate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event",
+    "description": "An icecandidate event is sent to an RTCPeerConnection  when an RTCIceCandidate has been identified and added to the local peer by a call to RTCPeerConnection.setLocalDescription(). The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.",
+    "eventType": "RTCPeerConnectionIceEvent",
+    "eventHandlerProperty": "onicecandidate"
+}

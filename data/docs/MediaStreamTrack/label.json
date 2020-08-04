@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamTrack.label",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/label",
+    "description": "The MediaStreamTrack.label read-only property returns a DOMString containing a user agent-assigned label that identifies the track source, as in \"internal microphone\"."
+}

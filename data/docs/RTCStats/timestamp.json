@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCStats.timestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/timestamp",
+    "description": "The timestamp property of the RTCStats dictionary is a DOMHighResTimeStamp object specifying the time at which the data in the object was sampled."
+}

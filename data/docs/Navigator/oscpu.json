@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "Navigator.oscpu",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu",
-    "description": "The Navigator.oscpu property returns a string that identifies the current operating system.",
-    "content": "The <code><strong>Navigator.oscpu</strong></code> property returns a string that identifies the current operating system."
+    "description": "The Navigator.oscpu property returns a string that identifies the current operating system."
 }

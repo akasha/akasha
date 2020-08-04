@@ -1,0 +1,12 @@
+
+{
+    "kind": "Type",
+    "name": "RTCRemoteOutboundRtpStreamStats",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats",
+    "description": "The WebRTC statistics model's RTCRemoteOutboundRtpStreamStats dictionary extends the underlying RTCSentRtpStreamStats dictionary with properties measuring metrics specific to outgoing RTP streams.",
+    "properties": [
+        "localId",
+        "remoteTimestamp",
+        "reportsSent"
+    ]
+}

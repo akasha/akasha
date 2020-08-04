@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateInit.sdpMid",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid",
+    "description": "The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property."
+}

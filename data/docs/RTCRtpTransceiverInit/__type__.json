@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RTCRtpTransceiverInit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiverInit",
+    "description": "The RTCRtpTransceiverInit dictionary is used when calling the WebRTC function RTCPeerConnection.addTransceiver() to provide configuration options for the new transceiver."
+}

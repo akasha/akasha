@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamTrack.onmute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onmute",
+    "description": "MediaStreamTrack's onmute event handler is called when the mute event is received."
+}

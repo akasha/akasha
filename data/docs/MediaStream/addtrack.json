@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "MediaStream.addtrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addtrack_event",
+    "description": "The addtrack event is fired when a new MediaStreamTrack object has been added to a MediaStream.",
+    "eventType": "MediaStreamTrackEvent",
+    "eventHandlerProperty": "onaddtrack"
+}

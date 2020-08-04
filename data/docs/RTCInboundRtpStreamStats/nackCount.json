@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.nackCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/nackCount",
+    "description": "The nackCount property of the RTCInboundRtpStreamStats dictionary is a numeric value indicating the number of times the receiver sent a NACK packet to the sender."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.lastRequestTimestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastRequestTimestamp",
+    "description": "The RTCIceCandidatePairStats property lastRequestTimestamp indicates the time at which the most recent STUN request was sent on the described candidate pair."
+}

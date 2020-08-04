@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.packetsReceived",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/packetsReceived",
+    "description": "The RTCIceCandidatePairStats dictionary's packetsReceived property indicates the total number of packets of any kind that have been received on the connection described by the pair of candidates."
+}

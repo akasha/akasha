@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceTransport.onstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onstatechange",
+    "description": "The onstatechange event handler for the RTCIceTransport interface is a property which specifies a function to serve as the EventHandler for the statechange event that is fired whenever the transport's state changes."
+}

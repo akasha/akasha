@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "Navigator.productSub",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub",
-    "description": "The Navigator.productSub read-only property returns the build number of the current browser.",
-    "content": "<p>The <code><strong>Navigator.productSub</strong></code> read-only property returns the build number of the current browser.</p>"
+    "description": "The Navigator.productSub read-only property returns the build number of the current browser."
 }

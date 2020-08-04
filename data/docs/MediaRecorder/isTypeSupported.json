@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaRecorder.isTypeSupported",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/isTypeSupported",
+    "description": "The MediaRecorder.isTypeSupported() static method returns a Boolean which is true if the MIME type specified is one the user agent should be able to successfully record."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpSynchronizationSource.voiceActivityFlag",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag",
+    "description": "The read-only voiceActivityFlag property of the RTCRtpSynchronizationSource interface indicates whether or not the most recent RTP packet on the source includes voice activity."
+}

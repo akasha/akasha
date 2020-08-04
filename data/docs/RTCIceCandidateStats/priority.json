@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.priority",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority",
+    "description": "The RTCIceCandidateStats dictionary's priority property is a positive integer value indicating the priority (or desirability) of the described candidate."
+}

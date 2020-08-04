@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpContributingSource.audioLevel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/audioLevel",
+    "description": "The read-only audioLevel property of the RTCRtpContributingSource interface indicates the audio level contained in the last RTP packet played from the described source."
+}

@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.signalingstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event",
+    "description": "An signalingstatechange event is sent to an RTCPeerConnection to notify it that its signaling state, as indicated by the signalingState property, has changed.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onsignalingstatechange"
+}

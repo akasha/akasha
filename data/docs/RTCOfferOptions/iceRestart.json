@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCOfferOptions.iceRestart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions/iceRestart",
+    "description": "The iceRestart property of the RTCOfferOptions dictionary is a Boolean value which, when true, tells the RTCPeerConnection to start ICE renegotiation."
+}

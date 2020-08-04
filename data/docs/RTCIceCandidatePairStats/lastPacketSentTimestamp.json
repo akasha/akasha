@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.lastPacketSentTimestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp",
+    "description": "The RTCIceCandidatePairStats property lastPacketSentTimestamp indicates the time at which the connection described by the candidate pair last sent a packet, not including STUN packets."
+}

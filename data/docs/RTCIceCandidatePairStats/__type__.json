@@ -1,0 +1,36 @@
+
+{
+    "kind": "Type",
+    "name": "RTCIceCandidatePairStats",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats",
+    "description": "The WebRTC RTCIceCandidatePairStats dictionary reports statistics which provide insight into the quality and performance of an RTCPeerConnection while connected and configured as described by the specified pair of ICE candidates.",
+    "properties": [
+        "availableIncomingBitrate",
+        "availableOutgoingBitrate",
+        "bytesReceieved",
+        "bytesSent",
+        "circuitBreakerTriggerCount",
+        "consentExpiredTimestamp",
+        "consentRequestsSent",
+        "currentRoundTripTime",
+        "firstRequestTimestamp",
+        "lastPacketReceivedTimestamp",
+        "lastPacketSentTimestamp",
+        "lastRequestTimestamp",
+        "lastResponseTimestamp",
+        "localCandidateId",
+        "nominated",
+        "packetsReceived",
+        "packetsSent",
+        "remoteCandidateId",
+        "requestsReceived",
+        "requestsSent",
+        "responsesReceived",
+        "responsesSent",
+        "retransmissionsReceived",
+        "retransmissionsSent",
+        "state",
+        "totalRoundTripTime",
+        "transportId"
+    ]
+}

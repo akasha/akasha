@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.framesDecoded",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/framesDecoded",
+    "description": "The framesDecoded property of the RTCInboundRtpStreamStats dictionary indicates the total number of frames which have been decoded successfully for this media source."
+}

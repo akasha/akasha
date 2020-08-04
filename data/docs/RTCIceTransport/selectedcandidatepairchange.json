@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCIceTransport.selectedcandidatepairchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event",
+    "description": "A selectedcandidatepairchange event is sent to an RTCIceTransport when the ICE agent selects a new pair of candidates that describe the endpoints of a viable connection.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onselectedcandidatepairchange"
+}

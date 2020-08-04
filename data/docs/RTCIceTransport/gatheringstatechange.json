@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCIceTransport.gatheringstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange_event",
+    "description": "A gatheringstatechange event is sent to an RTCIceTransport when its ICE candidate gathering state changes.",
+    "eventType": "Event",
+    "eventHandlerProperty": "ongatheringstatechange"
+}

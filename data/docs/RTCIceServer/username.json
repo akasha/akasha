@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceServer.username",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/username",
+    "description": "The RTCIceServer dictionary's username property is a string which specifies the username to use when authenticating with the ICE server being described."
+}

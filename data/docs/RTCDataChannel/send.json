@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "RTCDataChannel.send",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send",
-    "description": "The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.",
-    "content": "<p>The <code><strong>send()</strong></code> method of the <code>RTCDataChannel</code> interface sends data across the data channel to the remote peer. This can be done any time except during the initial process of creating the underlying transport channel. Data sent before connecting is buffered if possible (or an error occurs if it's not possible), and is also buffered if sent while the connection is closing or closed.</p>\n<div class=\"note\"> \n <p>Different browsers have different limitations on the size of the message you can send. Specifications exist to define how to automatically fragment large messages, but not all browsers implement them, and those that do have various additional restrictions. This will get less complicated over time, but for now, if you have questions, see Understanding message size limits in Using WebRTC data channels.</p> \n</div>"
+    "description": "The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer."
 }

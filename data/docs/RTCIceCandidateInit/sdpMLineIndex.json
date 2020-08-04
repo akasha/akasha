@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateInit.sdpMLineIndex",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMLineIndex",
+    "description": "The optional property sdpMLineIndex in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMLineIndex property."
+}

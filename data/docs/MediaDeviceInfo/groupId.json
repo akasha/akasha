@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaDeviceInfo.groupId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/groupId",
+    "description": "The groupId readonly property of the MediaDeviceInfo interface returns a DOMString that is a group identifier."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateInit.candidate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate",
+    "description": "The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property."
+}

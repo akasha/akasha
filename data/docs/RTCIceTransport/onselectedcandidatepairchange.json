@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceTransport.onselectedcandidatepairchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onselectedcandidatepairchange",
+    "description": "The RTCIceTransport interface's onselectedcandidatepairchange event handler specifies a function to be called to handle the selectedcandidatepairchange event, which is fired when the ICE agent selects a new candidate pair to be used for the connection."
+}

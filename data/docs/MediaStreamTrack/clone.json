@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaStreamTrack.clone",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/clone",
+    "description": "The clone() method of the MediaStreamTrack interface creates a duplicate of the MediaStreamTrack. This new MediaStreamTrack object is identical except for its unique id."
+}

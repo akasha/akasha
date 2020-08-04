@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.protocol",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol",
+    "description": "The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer."
+}

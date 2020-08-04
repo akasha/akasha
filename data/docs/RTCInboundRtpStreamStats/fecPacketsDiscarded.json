@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.fecPacketsDiscarded",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsDiscarded",
+    "description": "The fecPacketsDiscarded property of the RTCInboundRtpStreamStats dictionary is a numeric value indicating the number of RTP Forward Error Correction (FEC) packets that have been discarded."
+}

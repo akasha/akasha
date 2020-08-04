@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.connectionstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event",
+    "description": "The connectionstatechange event is sent to the ontrack event handler on an RTCPeerConnection object after a new track has been added to an RTCRtpReceiver which is part of the connection.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onconnectionstatechange"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.candidateType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType",
+    "description": "The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents."
+}

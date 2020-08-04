@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.track",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/track_event",
+    "description": "The track event is sent to the ontrack event handler on RTCPeerConnections after a new track has been added to an RTCRtpReceiver which is part of the connection.",
+    "eventType": "RTCTrackEvent",
+    "eventHandlerProperty": "ontrack"
+}

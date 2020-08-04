@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "RTCIceCandidate.ip",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/ip",
-    "description": "The RTCIceCandidate interface's read-only address property is a string providing the address of the device which is the source of the candidate.",
-    "content": "<p>The <strong><code>RTCIceCandidate</code></strong> interface's read-only <strong><code>address</code></strong> property is a string providing the address of the device which is the source of the candidate. <code>address</code> is <code>null</code> by default if not otherwise specified.</p>\n<p>The <code>address</code> field's value is set when the <code>RTCIceCandidate()</code> constructor is used. You can't specify the <code>address</code> in the options object, but the address is automatically extracted from the <code>candidate</code> a-line, if it's formatted properly.</p>"
+    "description": "The RTCIceCandidate interface's read-only address property is a string providing the address of the device which is the source of the candidate."
 }

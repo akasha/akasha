@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.retransmissionsSent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsSent",
+    "description": "The RTCIceCandidatePairStats dictionary's retransmissionsSent property indicates the total number of STUN connectivity check request retransmissions that have been sent so far on the pair of candidates."
+}

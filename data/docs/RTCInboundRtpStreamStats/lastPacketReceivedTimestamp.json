@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.lastPacketReceivedTimestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp",
+    "description": "The lastPacketReceivedTimestamp property of the RTCInboundRtpStreamStats dictionary indicates the time at which the most recently received packet arrived from this source."
+}

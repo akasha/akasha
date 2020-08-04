@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaDevices.getUserMedia",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia",
+    "description": "The MediaDevices.getUserMedia() method prompts the user for permission to use a media input which produces a MediaStream with tracks containing the requested types of media."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRemoteOutboundRtpStreamStats.reportsSent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/reportsSent",
+    "description": "The RTCRemoteOutboundRtpStreamStats dictionary's reportsSent property provides the number of Sender Reports (SRs) the remote peer has transmitted to the local peer."
+}

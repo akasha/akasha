@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.ignoreMutedMedia",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ignoreMutedMedia",
+    "description": "The ignoreMutedMedia property of the MediaRecorder interface indicates whether the MediaRecorder instance will record input, when the input MediaStreamTrack is muted."
+}

@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "RTCTrackEvent.receiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/receiver",
-    "description": "The read-only receiver property of the RTCTrackEvent interface indicates the RTCRtpReceiver which is used to receive data containing media for the track to which the event refers.",
-    "content": "<p>The read-only <code><strong>receiver</strong></code> property of the <code>RTCTrackEvent</code> interface indicates the <code>RTCRtpReceiver</code> which is used to receive data containing media for the <code>track</code> to which the event refers.</p>"
+    "description": "The read-only receiver property of the RTCTrackEvent interface indicates the RTCRtpReceiver which is used to receive data containing media for the track to which the event refers."
 }

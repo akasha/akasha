@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.port",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port",
+    "description": "The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate."
+}

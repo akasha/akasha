@@ -4,7 +4,6 @@
     "name": "RTCCertificate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCCertificate",
     "description": "The interface of the the WebRTC API provides an object represents a certificate that an RTCPeerConnection uses to authenticate.",
-    "content": "The interface of the the WebRTC API provides an object represents a certificate that an <code>RTCPeerConnection</code>uses to authenticate.",
     "properties": [
         "expires"
     ]

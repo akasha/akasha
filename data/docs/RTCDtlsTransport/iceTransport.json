@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "RTCDtlsTransport.iceTransport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDtlsTransport/iceTransport",
-    "description": "The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport.",
-    "content": "<p><strong>Draft</strong><br> This page is not complete.</p>\n<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The read-only <strong><code>RTCDtlsTransport</code></strong> property <code><strong>iceTransport</strong></code> contains areference totheunderlying <code>RTCIceTransport</code>.</p>"
+    "description": "The read-only RTCDtlsTransport property iceTransport contains a reference to the underlying RTCIceTransport."
 }

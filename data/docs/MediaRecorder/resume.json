@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaRecorder.resume",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/resume",
+    "description": "The MediaRecorder.resume() method (part of the MediaRecorder API) is used to resume media recording when it has been previously paused."
+}

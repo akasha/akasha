@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "RTCPeerConnection.iceConnectionState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceConnectionState",
-    "description": "The read-only property RTCPeerConnection.iceConnectionState returns an enum of type RTCIceConnectionState which state of the ICE agent associated with the RTCPeerConnection.",
-    "content": "The read-only property <code><strong>RTCPeerConnection.iceConnectionState</strong></code> returns an enum of type <code>RTCIceConnectionState</code> which state of the ICE agent associated with the <code>RTCPeerConnection</code>.\n<p>You can detect when this value has changed by watching for the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/iceconnectionstatechange\" title=\"/en-US/docs/Web/Events/iceconnectionstatechange\">iceconnectionstatechange</a></code> event.</p>"
+    "description": "The read-only property RTCPeerConnection.iceConnectionState returns an enum of type RTCIceConnectionState which state of the ICE agent associated with the RTCPeerConnection."
 }

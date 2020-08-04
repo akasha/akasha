@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamTrack.kind",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/kind",
+    "description": "The MediaStreamTrack.kind read-only property returns a DOMString set to \"audio\" if the track is an audio track and to \"video\", if it is a video track."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.fecPacketsReceived",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsReceived",
+    "description": "The fecPacketsReceived property of the RTCInboundRtpStreamStats dictionary indicates how many Forward Error Correction (FEC) packets have been received by this RTP receiver from the remote peer."
+}

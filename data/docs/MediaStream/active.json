@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStream.active",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/active",
+    "description": "The active read-only property of the MediaStream interface returns a Boolean value which is true if the stream is currently active; otherwise, it returns false. A stream is considered active if at least one of its MediaStreamTracks is not in the MediaStreamTrack.ended state. Once every track has ended, the stream's active property becomes false."
+}

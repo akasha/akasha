@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCInboundRtpStreamStats.pliCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/pliCount",
+    "description": "The pliCount property of the RTCInboundRtpStreamStats dictionary states the number of times the RTCRtpReceiver described by these statistics sent a Picture Loss Indication (PLI) packet to the sender."
+}

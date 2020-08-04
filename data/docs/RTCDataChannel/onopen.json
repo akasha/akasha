@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCDataChannel.onopen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen",
+    "description": "The RTCDataChannel.onopen property is an EventHandler which specifies a function to be called when the open event is fired; this is a simple Event which is sent when the data channel's underlying data transport—the link over which the RTCDataChannel's messages flow—is established or re-established."
+}

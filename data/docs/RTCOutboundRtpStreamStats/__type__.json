@@ -1,0 +1,28 @@
+
+{
+    "kind": "Type",
+    "name": "RTCOutboundRtpStreamStats",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats",
+    "description": "The RTCOutboundRtpStreamStats dictionary is the RTCStats-based object which provides metrics and statistics related to an outbound RTP stream being sent by an RTCRtpSender.",
+    "properties": [
+        "averageRtcpInterval",
+        "firCount",
+        "framesEncoded",
+        "lastPacketSentTimestamp",
+        "nackCount",
+        "perDscpPacketsSent",
+        "pliCount",
+        "qpSum",
+        "qualityLimitationDurations",
+        "qualityLimitationReason",
+        "remoteId",
+        "retransmittedBytesSent",
+        "retransmittedPacketsSent",
+        "senderId",
+        "sliCount",
+        "targetBitrate",
+        "totalEncodeTime",
+        "totalEncodedBytesTarget",
+        "trackId"
+    ]
+}

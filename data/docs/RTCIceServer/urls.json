@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceServer.urls",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/urls",
+    "description": "The RTCIceServer dictionary's urls property specifies the URL or URLs of the servers to be used for ICE negotiations. These are typically STUN and/or TURN servers."
+}

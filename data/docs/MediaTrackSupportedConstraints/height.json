@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSupportedConstraints.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/height",
+    "description": "The MediaTrackSupportedConstraints dictionary's height property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the height constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false."
+}

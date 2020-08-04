@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpContributingSource.timestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp",
+    "description": "The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpContributingSource.source",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/source",
+    "description": "The read-only source property of the RTCRtpContributingSource interface returns the source identifier of a particular stream of RTP packets."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DisplayMediaStreamConstraints.audio",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/audio",
+    "description": "The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream."
+}

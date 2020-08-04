@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaStreamTrack.getConstraints",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getConstraints",
+    "description": "The getConstraints() method of the MediaStreamTrack interface returns a MediaTrackConstraints object containing the set of constraints most recently established for the track using a prior call to applyConstraints(). These constraints indicate values and ranges of values that the Web site or application has specified are required or acceptable for the included constrainable properties."
+}

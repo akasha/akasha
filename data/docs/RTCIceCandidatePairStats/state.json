@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidatePairStats.state",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state",
+    "description": "The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member."
+}

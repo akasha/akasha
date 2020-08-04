@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCIceCandidateStats.networkType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/networkType",
+    "description": "The RTCIceCandidateStats dictionary's networkType property specifies the type of network used by a local candidate to communicate with a remote peer."
+}
