@@ -111,12 +111,16 @@ public final class MdnDocScanner
       final DocEntry entry = extractResult.getEntry();
       if ( DocKind.Type == kind )
       {
+        final List<DocSourceConfig> expected = new ArrayList<>();
+        expected.add( source );
         final List<String> constructors = entry.getConstructors();
         if ( null != constructors )
         {
           for ( final String constructor : constructors )
           {
-            fetchDocumentation( DocKind.Constructor, type, constructor, force, removeSource );
+            final DocFetchResult docResult =
+              fetchDocumentation( DocKind.Constructor, type, constructor, force, removeSource );
+            expected.add( docResult.getSource() );
           }
         }
         final List<String> properties = entry.getProperties();
@@ -124,7 +128,9 @@ public final class MdnDocScanner
         {
           for ( final String property : properties )
           {
-            fetchDocumentation( DocKind.Property, type, property, force, removeSource );
+            final DocFetchResult docResult =
+              fetchDocumentation( DocKind.Property, type, property, force, removeSource );
+            expected.add( docResult.getSource() );
           }
         }
         final List<String> methods = entry.getMethods();
@@ -132,7 +138,8 @@ public final class MdnDocScanner
         {
           for ( final String method : methods )
           {
-            fetchDocumentation( DocKind.Method, type, method, force, removeSource );
+            final DocFetchResult docResult = fetchDocumentation( DocKind.Method, type, method, force, removeSource );
+            expected.add( docResult.getSource() );
           }
         }
         final List<String> events = entry.getEvents();
@@ -140,11 +147,34 @@ public final class MdnDocScanner
         {
           for ( final String event : events )
           {
-            fetchDocumentation( DocKind.Event, type, event, force, removeSource );
+            final DocFetchResult docResult = fetchDocumentation( DocKind.Event, type, event, force, removeSource );
+            expected.add( docResult.getSource() );
           }
         }
-        //TODO: Remove any sources for type if they are not present above and they are not
-        // user supplied rather than downloaded. User supplied docs have no corresponding url
+        final DocRepositoryConfig repository = _runtime.getRepository();
+        final List<DocSourceConfig> sourcesToRemove =
+          repository
+            .getSources()
+            .stream()
+            .filter( s -> s.getName().startsWith( entry.getName() + "." ) )
+            .filter( s -> null != s.getUrl() && s.getUrl().startsWith( BASE_URL ) )
+            .filter( s -> !expected.contains( s ) )
+            .collect( Collectors.toList() );
+
+        for ( final DocSourceConfig sourceToRemove : sourcesToRemove )
+        {
+          repository.getSources().remove( sourceToRemove );
+          final Path path = _runtime.getDataFileLocation( sourceToRemove );
+          try
+          {
+            Files.deleteIfExists( path );
+          }
+          catch ( final IOException ioe )
+          {
+            throw new SourceIOException( source, "Failed to remove existing file for removed source", ioe );
+          }
+        }
+        saveRepository();
       }
       return new DocFetchResult( source, entry, extractResult.isChanged() );
     }

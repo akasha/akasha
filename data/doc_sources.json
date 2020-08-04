@@ -1816,17 +1816,22 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/updateCommands"
     },
     {
-        "lastModifiedAt": 1596496030282,
+        "lastModifiedAt": 1596537801379,
         "name": "XR",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR"
     },
     {
-        "lastModifiedAt": 1596496030460,
+        "lastModifiedAt": 1596537802119,
+        "name": "XR.devicechange",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/devicechange_event"
+    },
+    {
+        "lastModifiedAt": 1596537801730,
         "name": "XR.isSessionSupported",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported"
     },
     {
-        "lastModifiedAt": 1596496030649,
+        "lastModifiedAt": 1596537801956,
         "name": "XR.requestSession",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession"
     },

@@ -4,9 +4,11 @@
     "name": "XR",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XR",
     "description": "The WebXR Device API interface XRSystem provides methods which let you get access to an XRSession object representing a WebXR session. With that XRSession in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p class=\"summary\">The WebXR Device API interface <code><strong>XRSystem</strong></code> provides methods which let you get access to an <code>XRSession</code> object representing a WebXR session. With that <code>XRSession</code> in hand, you can use it to interact with the Augmented Reality (AR) or Virtual Reality (VR) device.</p>",
     "methods": [
         "isSessionSupported",
         "requestSession"
+    ],
+    "events": [
+        "devicechange"
     ]
 }
