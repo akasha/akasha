@@ -29,12 +29,17 @@ public class DocEntry
   private String name;
   private String href;
   private String description;
+
+  // field is only present when kind == Type
   @Nullable
   private List<String> constructors;
+  // field is only present when kind == Type
   @Nullable
   private List<String> properties;
+  // field is only present when kind == Type
   @Nullable
   private List<String> methods;
+  // field is only present when kind == Type
   @Nullable
   private List<String> events;
 
