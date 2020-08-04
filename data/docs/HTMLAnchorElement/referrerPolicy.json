@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAnchorElement.referrerPolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/referrerPolicy",
+    "description": "The HTMLAnchorElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the a element defining which referrer is sent when fetching the resource."
+}

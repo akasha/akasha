@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.getAnimations",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getAnimations",
+    "description": "The getAnimations() method of the Document interface returns an array of all Animation objects currently in effect whose target elements are descendants of the document. This array includes CSS Animations, CSS Transitions, and Web Animations."
+}

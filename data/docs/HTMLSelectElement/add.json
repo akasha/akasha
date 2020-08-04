@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLSelectElement.add",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add",
+    "description": "The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element."
+}

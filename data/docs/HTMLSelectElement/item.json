@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLSelectElement.item",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/item",
+    "description": "The HTMLSelectElement.item() method returns the Element corresponding to the HTMLOptionElement whose position in the options list corresponds to the index given in the parameter, or null if there are none."
+}

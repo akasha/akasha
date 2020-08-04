@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLSelectElement.selectedOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/selectedOptions",
+    "description": "The read-only HTMLSelectElement property selectedOptions contains a list of the option elements contained within the select element that are currently selected. The list of selected options is an HTMLCollection object with one entry per currently selected option."
+}

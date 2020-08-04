@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DocumentOrShadowRoot.fullscreenElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement",
+    "description": "The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransferItem.kind",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/kind",
+    "description": "The read-only DataTransferItem.kind property returns a DataTransferItem representing the drag data item kind: some text or some file."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WebSocket.binaryType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType",
+    "description": "The WebSocket.binaryType property returns the type of binary data being transmitted by the connection."
+}

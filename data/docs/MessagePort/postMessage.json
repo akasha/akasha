@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MessagePort.postMessage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage",
+    "description": "The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Storage.key",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Storage/key",
+    "description": "The key() method of the Storage interface, when passed a number n, returns the name of the nth key in a given Storage object. The order of keys is user-agent defined, so you should not rely on it."
+}

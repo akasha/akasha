@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.crossOrigin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/crossOrigin",
+    "description": "The HTMLMediaElement.crossOrigin property is the CORS setting for this image element. See CORS settings attributes for details."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoTrack.language",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/language",
+    "description": "The read-only VideoTrack property language returns a string identifying the language used in the video track."
+}

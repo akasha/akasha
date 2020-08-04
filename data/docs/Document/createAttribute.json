@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createAttribute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttribute",
+    "description": "The Document.createAttribute() method creates a new attribute node, and returns it. The object created a node implementing the Attr interface. The DOM does not enforce what sort of attributes can be added to a particular element in this manner."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WindowLocalStorage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowLocalStorage",
+    "description": "The read-only localStorage property allows you to access a Storage object for the Document's origin; the stored data is saved across browser sessions."
+}

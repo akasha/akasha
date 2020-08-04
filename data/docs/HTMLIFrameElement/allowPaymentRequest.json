@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLIFrameElement.allowPaymentRequest",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/allowPaymentRequest",
+    "description": "The allowPaymentRequest property of the HTMLIFrameElement interface returns a Boolean indicating whether the Payment Request API may be invoked on a cross-origin iframe."
+}

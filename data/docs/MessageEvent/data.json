@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MessageEvent.data",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/data",
+    "description": "The data read-only property of the MessageEvent interface represents the data sent by the message emitter."
+}

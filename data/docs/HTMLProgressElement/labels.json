@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLProgressElement.labels",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement/labels",
+    "description": "The HTMLProgressElement.labels read-only property returns a NodeList of the label elements associated with the progress element."
+}

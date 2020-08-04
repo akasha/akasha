@@ -1,0 +1,12 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLLabelElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement",
+    "description": "The HTMLLabelElement interface gives access to properties specific to label elements. It inherits methods and properties from the base HTMLElement interface.",
+    "properties": [
+        "control",
+        "form",
+        "htmlFor"
+    ]
+}

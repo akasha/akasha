@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ImageBitmap.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/close",
+    "description": "The ImageBitmap.close() method disposes of all graphical resources associated with an ImageBitmap."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.deleteRow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteRow",
+    "description": "The HTMLTableElement.deleteRow() method removes a specific row (tr) from a given table."
+}

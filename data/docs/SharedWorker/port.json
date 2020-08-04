@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SharedWorker.port",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/port",
+    "description": "The port property of the SharedWorker interface returns a MessagePort object used to communicate and control the shared worker."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLObjectElement.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/name",
+    "description": "The name property of the HTMLObjectElement interface returns a DOMString that reflects the name HTML attribute, specifying the name of the browsing context."
+}

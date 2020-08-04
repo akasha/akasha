@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.caption",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/caption",
+    "description": "The HTMLTableElement.caption property represents the table caption. If no caption element is associated with the table, this property is null."
+}

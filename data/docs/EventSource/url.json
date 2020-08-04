@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EventSource.url",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/url",
+    "description": "The url read-only property of the EventSource interface returns a DOMString representing the URL of the source."
+}

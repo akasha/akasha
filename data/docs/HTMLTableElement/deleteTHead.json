@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.deleteTHead",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTHead",
+    "description": "The HTMLTableElement.deleteTHead() removes the thead element from a given table."
+}

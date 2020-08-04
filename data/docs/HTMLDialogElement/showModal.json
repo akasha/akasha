@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLDialogElement.showModal",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal",
+    "description": "The showModal() method of the HTMLDialogElement interface displays the dialog as a modal, over the top of any other dialogs that might be present. It displays into the top layer, along with a ::backdrop pseudo-element. Interaction outside the dialog is blocked and the content outside it is rendered inert."
+}

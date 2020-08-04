@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLDialogElement.show",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/show",
+    "description": "The show() method of the HTMLDialogElement interface displays the dialog modelessly, i.e. still allowing interaction with content outside of the dialog."
+}

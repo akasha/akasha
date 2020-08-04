@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ImageData.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageData/height",
+    "description": "The readonly ImageData.height property returns the number of rows in the ImageData object."
+}

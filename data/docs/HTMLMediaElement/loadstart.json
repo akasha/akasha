@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.loadstart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadstart_event",
+    "description": "The loadstart event is fired when the browser has started to load a resource.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onloadstart"
+}

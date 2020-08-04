@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CloseEvent.initCloseEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/initCloseEvent",
+    "description": "The CloseEvent.initCloseEvent() method initializes the value of a close event once it's been created (normally using the Document.createEvent() method)."
+}

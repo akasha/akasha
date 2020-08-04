@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ImageBitmap.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap/height",
+    "description": "The read-only ImageBitmap.height property returns the ImageBitmap object's height in CSS pixels."
+}

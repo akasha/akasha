@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.requestStorageAccess",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccess",
+    "description": "The requestStorageAccess() method of the Document interface returns a Promise that resolves if the access to first-party storage was granted, and rejects if access was denied."
+}

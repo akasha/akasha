@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.controls",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/controls",
+    "description": "The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls for playing the media item will be displayed."
+}

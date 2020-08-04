@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.mediaGroup",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/mediaGroup",
+    "description": "The HTMLMediaElement.mediaGroup property reflects the mediagroup HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common controller."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Location.reload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload",
+    "description": "The Location.reload() method reloads the current URL, like the Refresh button."
+}

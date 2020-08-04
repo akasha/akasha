@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLFormElement.requestSubmit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit",
+    "description": "The HTMLFormElement method requestSubmit() requests that the form be submitted using a specific submit button."
+}

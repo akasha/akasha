@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLHeadingElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHeadingElement",
+    "description": "The HTMLHeadingElement interface represents the different heading elements, h1 through h6. It inherits methods and properties from the HTMLElement interface.",
+    "properties": [
+        "align"
+    ]
+}

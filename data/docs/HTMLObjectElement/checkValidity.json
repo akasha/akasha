@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLObjectElement.checkValidity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/checkValidity",
+    "description": "The checkValidity() method of the HTMLObjectElement interface returns a Boolean that always is true, because object objects are never candidates for constraint validation."
+}

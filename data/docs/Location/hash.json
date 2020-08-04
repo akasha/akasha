@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Location.hash",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/hash",
+    "description": "The hash property of the Location interface returns a USVString containing a '#' followed by the fragment identifier of the URL."
+}

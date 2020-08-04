@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ValidityState.stepMismatch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/stepMismatch",
+    "description": "The read-only stepMismatch property of a ValidityState object indicates if the value of an input, after having been edited by the user, does not conform to the constraints set by the element's step attribute."
+}

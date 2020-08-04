@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.body",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/body",
+    "description": "The Document.body property represents the body or frameset node of the current document, or null if no such element exists."
+}

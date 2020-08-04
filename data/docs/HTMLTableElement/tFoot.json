@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.tFoot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tFoot",
+    "description": "The HTMLTableElement.tFoot property represents the tfoot element of a table. Its value will be null if there is no such element."
+}

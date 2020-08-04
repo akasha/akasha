@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.progress",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/progress_event",
+    "description": "The progress event is fired periodically as the browser loads a resource.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onprogress"
+}

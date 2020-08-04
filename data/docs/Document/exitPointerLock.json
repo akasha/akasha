@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.exitPointerLock",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/exitPointerLock",
+    "description": "The exitPointerLock() method asynchronously releases a pointer lock previously requested through Element.requestPointerLock."
+}

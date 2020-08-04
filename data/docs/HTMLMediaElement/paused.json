@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.paused",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/paused",
+    "description": "The read-only HTMLMediaElement.paused property tells whether the media element is paused."
+}

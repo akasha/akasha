@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ValidityState.tooShort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/tooShort",
+    "description": "The read-only tooShort property of a ValidityState object indicates if the value of an input, button, select, output, fieldset or textarea, after having been edited by the user, is less than the minimum code-unit length established by the element's minlength attribute."
+}

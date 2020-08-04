@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.lang",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/lang",
+    "description": "The HTMLElement.lang property gets or sets the base language of an element's attribute values and text content."
+}

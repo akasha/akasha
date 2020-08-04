@@ -1,0 +1,16 @@
+
+{
+    "kind": "Type",
+    "name": "DataTransferItem",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem",
+    "description": "The DataTransferItem object represents one drag data item. During a drag operation, each drag event has a dataTransfer property which contains a list of drag data items. Each item in the list is a DataTransferItem object.",
+    "properties": [
+        "kind",
+        "type"
+    ],
+    "methods": [
+        "getAsFile",
+        "getAsString",
+        "webkitGetAsEntry"
+    ]
+}

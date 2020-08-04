@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.loading",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading",
+    "description": "The HTMLImageElement property loading is a string whose value provides a hint to the user agent that tells the browser how to handle loading images which are currently outside the window's visual viewport."
+}

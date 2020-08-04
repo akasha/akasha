@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.hidden",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/hidden",
+    "description": "The Document.hidden read-only property returns a Boolean value indicating if the page is considered hidden or not."
+}

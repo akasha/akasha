@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "WebSocket.open",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/open_event",
+    "description": "The open event is fired when a connection with a WebSocket is opened.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onopen"
+}

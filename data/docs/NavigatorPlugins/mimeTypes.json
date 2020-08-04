@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NavigatorPlugins.mimeTypes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes",
+    "description": "Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser."
+}

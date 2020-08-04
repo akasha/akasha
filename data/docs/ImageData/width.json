@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ImageData.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageData/width",
+    "description": "The readonly ImageData.width property returns the number of pixels per row in the ImageData object."
+}

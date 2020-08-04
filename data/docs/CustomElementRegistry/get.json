@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CustomElementRegistry.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/get",
+    "description": "The get() method of the CustomElementRegistry interface returns the constructor for a previously-defined custom element."
+}

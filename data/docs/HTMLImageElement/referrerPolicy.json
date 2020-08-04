@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.referrerPolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy",
+    "description": "The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource."
+}

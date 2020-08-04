@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.releaseCapture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/releaseCapture",
+    "description": "The releaseCapture() method releases mouse capture if it's currently enabled on an element within this document. Enabling mouse capture on an element is done by calling element.setCapture()."
+}

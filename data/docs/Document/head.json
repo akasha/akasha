@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.head",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/head",
+    "description": "The head read-only property of the Document interface returns the head element of the current document."
+}

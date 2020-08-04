@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.alphabeticBaseline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/alphabeticBaseline",
+    "description": "The read-only alphabeticBaseline property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the alphabetic baseline of the line box, in CSS pixels."
+}

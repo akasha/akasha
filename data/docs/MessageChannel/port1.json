@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MessageChannel.port1",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port1",
+    "description": "The port1 read-only property of the MessageChannel interface returns the first port of the message channel — the port attached to the context that originated the channel."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrackList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/length",
+    "description": "The read-only AudioTrackList property length returns the number of entries in the AudioTrackList, each of which is an AudioTrack representing one audio track in the media element."
+}

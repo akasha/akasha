@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.defaultPlaybackRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/defaultPlaybackRate",
+    "description": "The HTMLMediaElement.defaultPlaybackRate property indicates the default playback rate for the media."
+}

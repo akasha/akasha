@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "History.pushState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/pushState",
+    "description": "In an HTML document, the history.pushState() method adds a state to the browser's session history stack."
+}

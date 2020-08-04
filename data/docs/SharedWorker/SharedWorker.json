@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "SharedWorker.SharedWorker",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker/SharedWorker",
+    "description": "The SharedWorker() constructor creates a SharedWorker object that executes the script at the specified URL. This script must obey the same-origin policy."
+}

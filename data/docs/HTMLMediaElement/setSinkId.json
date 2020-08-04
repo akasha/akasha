@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLMediaElement.setSinkId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setSinkId",
+    "description": "The HTMLMediaElement.setSinkId() method sets the ID of the audio device to use for output and returns a Promise. This only works when the application is authorized to use the specified device."
+}

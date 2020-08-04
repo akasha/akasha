@@ -1,0 +1,24 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLTableElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement",
+    "description": "The HTMLTableElement interface provides special properties and methods (beyond the regular HTMLElement object interface it also has available to it by inheritance) for manipulating the layout and presentation of tables in an HTML document.",
+    "properties": [
+        "caption",
+        "rows",
+        "tBodies",
+        "tFoot",
+        "tHead"
+    ],
+    "methods": [
+        "createCaption",
+        "createTFoot",
+        "createTHead",
+        "deleteCaption",
+        "deleteRow",
+        "deleteTFoot",
+        "deleteTHead",
+        "insertRow"
+    ]
+}

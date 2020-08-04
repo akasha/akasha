@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.src",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/src",
+    "description": "The HTMLImageElement property src, which reflects the HTML src attribute, specifies the image to display in the img element."
+}

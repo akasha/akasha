@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "OffscreenCanvas.getContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/getContext",
+    "description": "The OffscreenCanvas.getContext() method returns a drawing context for an offscreen canvas, or null if the context identifier is not supported."
+}

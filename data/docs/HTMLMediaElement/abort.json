@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/abort_event",
+    "description": "The abort event is fired when the resource was not fully loaded, but not as the result of an error.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onabort"
+}

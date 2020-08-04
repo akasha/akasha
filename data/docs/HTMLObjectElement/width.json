@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLObjectElement.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/width",
+    "description": "The width property of the HTMLObjectElement interface returns a DOMString that reflects the width HTML attribute, specifying the displayed width of the resource in CSS pixels."
+}

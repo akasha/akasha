@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLMediaElement.fastSeek",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/fastSeek",
+    "description": "The HTMLMediaElement.fastSeek() method quickly seeks the media to the new time with precision tradeoff."
+}

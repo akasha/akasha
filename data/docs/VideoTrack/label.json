@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoTrack.label",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/label",
+    "description": "The read-only VideoTrack property label returns a string specifying the video track's human-readable label, if one is available; otherwise, it returns an empty string."
+}

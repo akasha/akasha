@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.sizes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/sizes",
+    "description": "The HTMLImageElement property sizes allows you to specify the layout width of the image for each of a list of media conditions. This provides the ability to automatically select among different images—even images of different orientations or aspect ratios—as the document state changes to match different media conditions."
+}

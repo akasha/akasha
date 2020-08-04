@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.lastStyleSheetSet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/lastStyleSheetSet",
+    "description": "The Document.lastStyleSheetSet property returns the last enabled style sheet set. This property's value changes whenever the document.selectedStyleSheetSet property is changed."
+}

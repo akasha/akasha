@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.deleteTFoot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTFoot",
+    "description": "The HTMLTableElement.deleteTFoot() method removes the tfoot element from a given table."
+}

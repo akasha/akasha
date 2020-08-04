@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransferItem.getAsFile",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsFile",
+    "description": "If the item is a file, the DataTransferItem.getAsFile() method returns the drag data item's File object. If the item is not a file, this method returns null."
+}

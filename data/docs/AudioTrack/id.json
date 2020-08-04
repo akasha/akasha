@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrack.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/id",
+    "description": "The id property contains a string which uniquely identifies the track represented by the AudioTrack."
+}

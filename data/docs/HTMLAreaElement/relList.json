@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAreaElement.relList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/relList",
+    "description": "The HTMLAreaElement.relList read-only property reflects the rel attribute. It is a live DOMTokenList containing the set of link types indicating the relationship between the resource represented by the area element and the current document."
+}

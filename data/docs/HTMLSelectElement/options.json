@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLSelectElement.options",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/options",
+    "description": "The HTMLSelectElement.options read-only property returns a HTMLOptionsCollection of the option elements contained by the select element."
+}

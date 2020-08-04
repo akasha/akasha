@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasPattern.setTransform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern/setTransform",
+    "description": "The CanvasPattern.setTransform() method uses an SVGMatrix or DOMMatrix object as the pattern's transformation matrix and invokes it on the pattern."
+}

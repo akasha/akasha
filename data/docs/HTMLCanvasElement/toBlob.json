@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLCanvasElement.toBlob",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toBlob",
+    "description": "The HTMLCanvasElement.toBlob() method creates a Blob object representing the image contained in the canvas; this file may be cached on the disk or stored in memory at the discretion of the user agent. If type is not specified, the image type is image/png. The created image is in a resolution of 96dpi."
+}

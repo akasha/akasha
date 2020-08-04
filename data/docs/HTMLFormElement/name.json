@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFormElement.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name",
+    "description": "The HTMLFormElement.name property represents the name of the current form element as a string."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "History.state",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/state",
+    "description": "The History.state property returns a value representing the state at the top of the history stack."
+}

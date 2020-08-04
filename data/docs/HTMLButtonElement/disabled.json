@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLButtonElement.disabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/disabled",
+    "description": "Is a Boolean indicating whether or not the control is disabled, meaning that it does not accept any clicks."
+}

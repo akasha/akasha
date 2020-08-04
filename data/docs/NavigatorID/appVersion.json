@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NavigatorID.appVersion",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/appVersion",
+    "description": "Returns either \"4.0\" or a string representing version information about the browser."
+}

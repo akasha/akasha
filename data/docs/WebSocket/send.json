@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebSocket.send",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/send",
+    "description": "The WebSocket.send() method enqueues the specified data to be transmitted to the server over the WebSocket connection, increasing the value of bufferedAmount by the number of bytes needed to contain the data. If the data can't be sent (for example, because it needs to be buffered but the buffer is full), the socket is closed automatically."
+}

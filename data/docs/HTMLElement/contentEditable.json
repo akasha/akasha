@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.contentEditable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable",
+    "description": "The contentEditable property of the HTMLElement interface specifies whether or not the element is editable."
+}

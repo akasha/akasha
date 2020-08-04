@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLHtmlElement.version",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHtmlElement/version",
+    "description": "Returns version information about the document type definition (DTD) of a document. While this property is recognized by Mozilla, the return value for this property is always an empty string."
+}

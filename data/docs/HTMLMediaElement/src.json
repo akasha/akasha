@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.src",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/src",
+    "description": "The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element."
+}

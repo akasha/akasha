@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.isContentEditable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/isContentEditable",
+    "description": "The HTMLElement.isContentEditable read-only property returns a Boolean that is true if the contents of the element are editable; otherwise it returns false."
+}

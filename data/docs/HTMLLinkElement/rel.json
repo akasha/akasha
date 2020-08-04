@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLLinkElement.rel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLLinkElement/rel",
+    "description": "The HTMLLinkElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the link element and the current document."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoTrack.sourceBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/sourceBuffer",
+    "description": "The read-only VideoTrack property sourceBuffer returns the SourceBuffer that created the track, or null if the track was not created by a SourceBuffer or the SourceBuffer has been removed from the MediaSource.sourceBuffers attribute of its parent media source."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.getElementsByClassName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName",
+    "description": "returns an array-like object of all child elements which have all of the given class name(s)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TrackEvent.track",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/track",
+    "description": "The read-only track property of the TrackEvent interface specifies the media track object to which the event applies."
+}

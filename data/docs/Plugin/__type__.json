@@ -1,0 +1,17 @@
+
+{
+    "kind": "Type",
+    "name": "Plugin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Plugin",
+    "description": "The Plugin interface provides information about a browser plugin.",
+    "properties": [
+        "description",
+        "filename",
+        "name",
+        "version"
+    ],
+    "methods": [
+        "item",
+        "namedItem"
+    ]
+}

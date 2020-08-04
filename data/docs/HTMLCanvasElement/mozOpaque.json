@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLCanvasElement.mozOpaque",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/mozOpaque",
+    "description": "The non-standard HTMLCanvasElement.mozOpaque property is a Boolean reflecting the moz-opaque HTML attribute of the canvas element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized."
+}

@@ -1,0 +1,29 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLIFrameElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement",
+    "description": "The HTMLIFrameElement interface provides special properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of inline frame elements.",
+    "properties": [
+        "align",
+        "allow",
+        "allowPaymentRequest",
+        "allowfullscreen",
+        "contentDocument",
+        "contentWindow",
+        "csp",
+        "featurePolicy",
+        "frameBorder",
+        "height",
+        "longDesc",
+        "marginHeight",
+        "marginWidth",
+        "name",
+        "referrerPolicy",
+        "sandbox",
+        "scrolling",
+        "src",
+        "srcdoc",
+        "width"
+    ]
+}

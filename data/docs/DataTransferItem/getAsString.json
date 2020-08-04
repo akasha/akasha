@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransferItem.getAsString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsString",
+    "description": "The DataTransferItem.getAsString() method invokes the given callback with the drag data item's string data as the argument if the item's kind is a Plain unicode string (i.e. kind is string)."
+}

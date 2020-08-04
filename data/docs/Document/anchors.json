@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.anchors",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/anchors",
+    "description": "The anchors read-only property of the Document interface returns a list of all of the anchors in the document."
+}

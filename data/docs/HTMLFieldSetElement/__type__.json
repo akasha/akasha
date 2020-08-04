@@ -1,0 +1,22 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLFieldSetElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFieldSetElement",
+    "description": "The HTMLFieldSetElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of fieldset elements.",
+    "properties": [
+        "disabled",
+        "elements",
+        "form",
+        "name",
+        "type",
+        "validationMessage",
+        "validity",
+        "willValidate"
+    ],
+    "methods": [
+        "checkValidity",
+        "reportValidity",
+        "setCustomValidity"
+    ]
+}

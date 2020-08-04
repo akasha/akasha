@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "EventSource.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close",
+    "description": "The close() method of the EventSource interface closes the connection, if one is made, and sets the EventSource.readyState attribute to 2 (closed)."
+}

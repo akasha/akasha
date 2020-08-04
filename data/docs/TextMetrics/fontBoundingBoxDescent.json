@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.fontBoundingBoxDescent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/fontBoundingBoxDescent",
+    "description": "The read-only fontBoundingBoxDescent property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attribute to the bottom of the bounding rectangle of all the fonts used to render the text, in CSS pixels."
+}

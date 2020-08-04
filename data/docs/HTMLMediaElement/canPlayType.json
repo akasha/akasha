@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLMediaElement.canPlayType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType",
+    "description": "The HTMLMediaElement method canPlayType() reports how likely it is that the current browser will be able to play media of a given MIME type."
+}

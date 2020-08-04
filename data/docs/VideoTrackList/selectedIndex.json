@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoTrackList.selectedIndex",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/selectedIndex",
+    "description": "The read-only VideoTrackList property selectedIndex returns the index of the currently selected track, if any, or -1 otherwise."
+}

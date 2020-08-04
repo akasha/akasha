@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent",
+    "description": "Creates an event of the type specified. The returned object should be first initialized and can then be passed to EventTarget.dispatchEvent."
+}

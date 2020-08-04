@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DocumentOrShadowRoot.activeElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement",
+    "description": "The activeElement read-only property of the Document and ShadowRoot interfaces returns the Element within the DOM or shadow DOM tree that currently has focus."
+}

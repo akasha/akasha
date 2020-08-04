@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLOutputElement.labels",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement/labels",
+    "description": "The HTMLOutputElement.labels read-only property returns a NodeList of the label elements associated with the output element."
+}

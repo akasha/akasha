@@ -1,0 +1,7 @@
+
+{
+    "kind": "Event",
+    "name": "WebSocket.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/close",
+    "description": "The WebSocket.close() method closes the WebSocket connection or connection attempt, if any. If the connection is already CLOSED, this method does nothing."
+}

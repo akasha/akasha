@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLObjectElement.useMap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/useMap",
+    "description": "The useMap property of the HTMLObjectElement interface returns a DOMString that reflects the usemap HTML attribute, specifying a map element to use."
+}

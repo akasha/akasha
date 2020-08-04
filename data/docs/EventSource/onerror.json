@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EventSource.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onerror",
+    "description": "The onerror property of the EventSource interface is an EventHandler called when an error occurs and the error event is dispatched on an EventSource object."
+}

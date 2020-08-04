@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.deleteCaption",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteCaption",
+    "description": "The HTMLTableElement.deleteCaption() method removes the caption element from a given table. If there is no caption element associated with the table, this method does nothing."
+}

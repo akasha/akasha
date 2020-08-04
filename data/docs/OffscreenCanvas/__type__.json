@@ -1,0 +1,17 @@
+
+{
+    "kind": "Type",
+    "name": "OffscreenCanvas",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas",
+    "description": "The OffscreenCanvas interface provides a canvas that can be rendered off screen. It is available in both the window and worker contexts.",
+    "constructors": [
+        "OffscreenCanvas"
+    ],
+    "properties": [
+        "height",
+        "width"
+    ],
+    "methods": [
+        "getContext"
+    ]
+}

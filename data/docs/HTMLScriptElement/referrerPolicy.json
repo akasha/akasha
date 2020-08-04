@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLScriptElement.referrerPolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy",
+    "description": "The referrerPolicy property of the HTMLScriptElement interface reflects the HTML referrerpolicy of the script element and fetches made by that script, defining which referrer is sent when fetching the resource."
+}

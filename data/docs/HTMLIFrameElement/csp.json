@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLIFrameElement.csp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/csp",
+    "description": "The csp property of the HTMLIFrameElement interface specifies the Content Security Policy that an embedded document must agree to enforce upon itself."
+}

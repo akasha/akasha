@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.defaultMuted",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/defaultMuted",
+    "description": "The HTMLMediaElement.defaultMuted property reflects the muted HTML attribute, which indicates whether the media element's audio output should be muted by default. This property has no dynamic effect. To mute and unmute the audio output, use the muted property."
+}

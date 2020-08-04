@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onvisibilitychange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onvisibilitychange",
+    "description": "The Document.onvisibilitychange property represents the event handler that is called when a visibilitychange event reaches this object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.importNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode",
+    "description": "The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later."
+}

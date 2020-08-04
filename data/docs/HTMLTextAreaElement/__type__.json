@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLTextAreaElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement",
+    "description": "The HTMLTextAreaElement interface provides special properties and methods for manipulating the layout and presentation of textarea elements."
+}

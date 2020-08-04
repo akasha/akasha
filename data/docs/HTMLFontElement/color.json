@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFontElement.color",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/color",
+    "description": "The obsolete HTMLFontElement.color property is a DOMString that reflects the color HTML attribute, containing either a named color or a color specified in the hexadecimal #RRGGBB format."
+}

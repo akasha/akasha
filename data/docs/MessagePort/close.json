@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MessagePort.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/close",
+    "description": "The close() method of the MessagePort interface disconnects the port, so it is no longer active. This stops the flow of messages to that port."
+}

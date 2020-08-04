@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLMediaElement.seekToNextFrame",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seekToNextFrame",
+    "description": "The HTMLMediaElement.seekToNextFrame() method asynchronously advances the the current play position to the next frame in the media."
+}

@@ -1,0 +1,25 @@
+
+{
+    "kind": "Type",
+    "name": "WindowEventHandlers",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers",
+    "description": "The WindowEventHandlers mixin describes the event handlers common to several interfaces like Window, or HTMLBodyElement and HTMLFrameSetElement. Each of these interfaces can implement additional specific event handlers.",
+    "properties": [
+        "onafterprint",
+        "onbeforeprint",
+        "onbeforeunload",
+        "onhashchange",
+        "onlanguagechange",
+        "onmessage",
+        "onmessageerror",
+        "onoffline",
+        "ononline",
+        "onpagehide",
+        "onpageshow",
+        "onpopstate",
+        "onrejectionhandled",
+        "onstorage",
+        "onunhandledrejection",
+        "onunload"
+    ]
+}

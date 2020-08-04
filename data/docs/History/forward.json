@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "History.forward",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/forward",
+    "description": "The History.forward() method causes the browser to move forward one page in the session history. It has the same effect as calling history.go(1)."
+}

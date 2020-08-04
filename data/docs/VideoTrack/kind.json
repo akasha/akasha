@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoTrack.kind",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/kind",
+    "description": "The kind property contains a string indicating the category of video contained in the VideoTrack."
+}

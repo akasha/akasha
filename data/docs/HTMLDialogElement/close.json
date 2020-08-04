@@ -1,0 +1,7 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLDialogElement.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close",
+    "description": "Void."
+}

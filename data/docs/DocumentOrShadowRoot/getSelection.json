@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DocumentOrShadowRoot.getSelection",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/getSelection",
+    "description": "The getSelection() property of the DocumentOrShadowRoot interface returns a Selection object representing the range of text selected by the user, or the current position of the caret."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.characterSet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/characterSet",
+    "description": "The Document.characterSet read-only property returns the character encoding of the document that it's currently rendered with."
+}

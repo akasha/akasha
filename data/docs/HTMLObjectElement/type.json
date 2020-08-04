@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLObjectElement.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/type",
+    "description": "The type property of the HTMLObjectElement interface returns a DOMString that reflects the type HTML attribute, specifying the MIME type of the resource."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrack.enabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/enabled",
+    "description": "The AudioTrack property enabled specifies whether or not the described audio track is currently enabled for use. If the track is disabled by setting enabled to false, the track is muted and does not produce audio."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createCDATASection",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createCDATASection",
+    "description": "createCDATASection() creates a new CDATA section node, and returns it."
+}

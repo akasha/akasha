@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WindowOrWorkerGlobalScope.queueMicrotask",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask",
+    "description": "The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLVideoElement.getVideoPlaybackQuality",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality",
+    "description": "The HTMLVideoElement method getVideoPlaybackQuality() creates and returns a VideoPlaybackQuality object containing metrics including how many frames have been lost."
+}

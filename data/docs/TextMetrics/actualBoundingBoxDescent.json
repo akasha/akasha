@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.actualBoundingBoxDescent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/actualBoundingBoxDescent",
+    "description": "The read-only actualBoundingBoxDescent property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline attribute to the bottom of the bounding rectangle used to render the text, in CSS pixels."
+}

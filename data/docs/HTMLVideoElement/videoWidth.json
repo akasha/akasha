@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.videoWidth",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoWidth",
+    "description": "The HTMLVideoElement interface's read-only videoWidth property indicates the intrinsic width of the video, expressed in CSS pixels. In simple terms, this is the width of the media in its natural size."
+}

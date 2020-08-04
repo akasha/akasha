@@ -1,0 +1,17 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLSlotElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement",
+    "description": "Fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change.",
+    "properties": [
+        "name"
+    ],
+    "methods": [
+        "assignedElements",
+        "assignedNodes"
+    ],
+    "events": [
+        "slotchange"
+    ]
+}

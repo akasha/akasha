@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.accessKeyLabel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel",
+    "description": "The HTMLElement.accessKeyLabel read-only property returns a String that represents the element's assigned access key (if any); otherwise it returns an empty string."
+}

@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "Window.deviceorientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/deviceorientation_event",
+    "description": "The deviceorientation event is fired when fresh data is available from an orientation sensor about the current orientation of the device as compared to the Earth coordinate frame. This data is gathered from a magnetometer inside the device.",
+    "eventType": "DeviceOrientationEvent",
+    "eventHandlerProperty": "ondeviceorientation"
+}

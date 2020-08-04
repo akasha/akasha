@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFontElement.face",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/face",
+    "description": "The obsolete HTMLFontElement.face property is a DOMString that reflects the face HTML attribute, containing a comma-separated list of one or more font names."
+}

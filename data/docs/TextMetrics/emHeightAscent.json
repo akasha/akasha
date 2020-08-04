@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.emHeightAscent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/emHeightAscent",
+    "description": "The read-only emHeightAscent property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the top of the em square in the line box, in CSS pixels."
+}

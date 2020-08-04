@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "Window.dump",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/dump",
-    "description": "Window.dump() prints messages to the (native) console.",
-    "content": "<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<p><code><strong>Window.dump()</strong></code> prints messages to the (native) console.</p>"
+    "description": "Window.dump() prints messages to the (native) console."
 }

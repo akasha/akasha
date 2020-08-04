@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.selectedStyleSheetSet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/selectedStyleSheetSet",
+    "description": "The selectedStyleSheetSet property indicates the name of the style sheet set that's currently in use."
+}

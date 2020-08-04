@@ -1,0 +1,11 @@
+
+{
+    "kind": "Type",
+    "name": "NavigatorLanguage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage",
+    "description": "NavigatorLanguage contains methods and properties related to the language of the navigator.",
+    "properties": [
+        "language",
+        "languages"
+    ]
+}

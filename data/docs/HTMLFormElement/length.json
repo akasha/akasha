@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFormElement.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/length",
+    "description": "The HTMLFormElement.length read-only property returns the number of controls in the form element."
+}

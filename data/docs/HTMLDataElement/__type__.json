@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLDataElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataElement",
+    "description": "The HTMLDataElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating data elements.",
+    "properties": [
+        "value"
+    ]
+}

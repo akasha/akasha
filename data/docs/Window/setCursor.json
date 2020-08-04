@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "Window.setCursor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/setCursor",
-    "description": "The Window.setCursor() method sets the cursor for the current window.",
-    "content": "<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<p>The <code><strong>Window.setCursor()</strong></code> method sets the cursor for the current window.</p>"
+    "description": "The Window.setCursor() method sets the cursor for the current window."
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CustomElementRegistry.define",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define",
+    "description": "The define() method of the CustomElementRegistry interface defines a new custom element."
+}

@@ -1,0 +1,15 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLBodyElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement",
+    "description": "The HTMLBodyElement interface provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating body elements.",
+    "properties": [
+        "aLink",
+        "background",
+        "bgColor",
+        "link",
+        "text",
+        "vLink"
+    ]
+}

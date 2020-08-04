@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLCanvasElement.toDataURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL",
+    "description": "The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi."
+}

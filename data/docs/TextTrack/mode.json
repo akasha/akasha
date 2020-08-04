@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextTrack.mode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/mode",
+    "description": "The TextTrack interface's mode property is a string specifying and controlling the text track's mode: disabled, hidden, or showing."
+}

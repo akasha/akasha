@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLDataElement.value",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataElement/value",
+    "description": "The value property of the HTMLDataElement interface returns a DOMString reflecting the value HTML attribute."
+}

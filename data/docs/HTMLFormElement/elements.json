@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFormElement.elements",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/elements",
+    "description": "The HTMLFormElement property elements returns an HTMLFormControlsCollection listing all the form controls contained in the form element."
+}

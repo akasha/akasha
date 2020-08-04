@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLSelectElement.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/type",
+    "description": "The HTMLSelectElement.type read-only property returns the form control's type."
+}

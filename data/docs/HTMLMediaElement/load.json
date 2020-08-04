@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLMediaElement.load",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/load",
+    "description": "The HTMLMediaElement method load() resets the media element to its initial state and begins the process of selecting a media source and loading the media in preparation for playback to begin at the beginning."
+}

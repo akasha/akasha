@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasGradient.addColorStop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient/addColorStop",
+    "description": "The CanvasGradient.addColorStop() method adds a new color stop, defined by an offset and a color, to a given canvas gradient."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/width",
+    "description": "The read-only width property of the TextMetrics interface contains the text's advance width (the width of that inline box) in CSS pixels."
+}

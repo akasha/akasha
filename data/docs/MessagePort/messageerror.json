@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "MessagePort.messageerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/messageerror_event",
+    "description": "The messageerror event is fired on a MessagePort object when it receives a message that can't be deserialized.",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onmessageerror"
+}

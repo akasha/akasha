@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "Window.moveBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy",
-    "description": "The moveBy() method of the Window interface moves the current window by a specified amount.",
-    "content": "<p>The <code><strong>moveBy()</strong></code> method of the <code>Window</code> interface moves the current window by a specified amount.</p>\n<div class=\"blockIndicator note\"> \n <p><strong>Note:</strong> This function moves the window relative to its current location. In contrast, <code>window.moveTo()</code> moves the window to an absolute location.</p> \n</div>"
+    "description": "The moveBy() method of the Window interface moves the current window by a specified amount."
 }

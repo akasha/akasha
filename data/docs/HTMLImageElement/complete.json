@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.complete",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/complete",
+    "description": "The read-only HTMLImageElement interface's complete attribute is a Boolean value which indicates whether or not the image has completely loaded."
+}

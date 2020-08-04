@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLOptionsCollection",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionsCollection",
+    "description": "This interface inherits the methods of its parent, HTMLCollection."
+}

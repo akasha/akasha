@@ -1,0 +1,19 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLScriptElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement",
+    "description": "HTML script elements expose the HTMLScriptElement interface, which provides special properties and methods for manipulating the behavior and execution of script elements (beyond the inherited HTMLElement interface).",
+    "properties": [
+        "async",
+        "charset",
+        "crossOrigin",
+        "defer",
+        "event",
+        "noModule",
+        "referrerPolicy",
+        "src",
+        "text",
+        "type"
+    ]
+}

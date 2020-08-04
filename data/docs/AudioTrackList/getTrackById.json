@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioTrackList.getTrackById",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/getTrackById",
+    "description": "The AudioTrackList method getTrackById() returns the first AudioTrack object from the track list whose id matches the specified string."
+}

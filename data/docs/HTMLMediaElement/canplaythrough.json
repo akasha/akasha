@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.canplaythrough",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event",
+    "description": "The canplaythrough event is fired when the user agent can play the media, and estimates that enough data has been loaded to play the media up to its end without having to stop for further buffering of content.",
+    "eventType": "Event",
+    "eventHandlerProperty": "oncanplaythrough"
+}

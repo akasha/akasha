@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransferItemList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/length",
+    "description": "The read-only length property of the DataTransferItemList interface returns the number of items currently in the drag item list."
+}

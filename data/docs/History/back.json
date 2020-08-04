@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "History.back",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/back",
+    "description": "The History.back() method causes the browser to move back one page in the session history."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFormElement.encoding",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/encoding",
+    "description": "The HTMLFormElement.encoding property is an alternative name for the enctype element on the DOM HTMLFormElement object."
+}

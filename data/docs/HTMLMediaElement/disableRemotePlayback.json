@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.disableRemotePlayback",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/disableRemotePlayback",
+    "description": "The HTMLMediaElement.disableRemotePlayback property determines whether the media element is allowed to have a remote playback UI."
+}

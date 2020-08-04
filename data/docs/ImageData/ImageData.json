@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ImageData.ImageData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageData/ImageData",
+    "description": "The ImageData() constructor returns a newly instantiated ImageData object built from the typed array given and having the specified width and height."
+}

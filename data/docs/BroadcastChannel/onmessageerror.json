@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BroadcastChannel.onmessageerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessageerror",
+    "description": "The onmessageerror event handler of the BroadcastChannel interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the BroadcastChannel instance — that is, when it receives a message that cannot be deserialized."
+}

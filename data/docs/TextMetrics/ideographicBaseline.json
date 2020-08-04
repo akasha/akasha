@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.ideographicBaseline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/ideographicBaseline",
+    "description": "The read-only ideographicBaseline property of the TextMetrics interface is a double giving the distance from the horizontal line indicated by the CanvasRenderingContext2D.textBaseline property to the ideographic baseline of the line box, in CSS pixels."
+}

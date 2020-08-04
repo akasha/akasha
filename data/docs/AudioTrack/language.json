@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrack.language",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/language",
+    "description": "The read-only AudioTrack property language returns a string identifying the language used in the audio track."
+}

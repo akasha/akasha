@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.insertRow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow",
+    "description": "The HTMLTableElement.insertRow() method inserts a new row (tr) in a given table, and returns a reference to the new row."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrack.label",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/label",
+    "description": "The read-only AudioTrack property label returns a string specifying the audio track's human-readable label, if one is available; otherwise, it returns an empty string."
+}

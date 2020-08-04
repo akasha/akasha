@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "OffscreenCanvas.OffscreenCanvas",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas",
+    "description": "The OffscreenCanvas() constructor returns a newly instantiated OffscreenCanvas object."
+}

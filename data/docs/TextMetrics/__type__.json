@@ -1,0 +1,21 @@
+
+{
+    "kind": "Type",
+    "name": "TextMetrics",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics",
+    "description": "The TextMetrics interface represents the dimensions of a piece of text in the canvas; a textMetrics() instance can be retrieved using the CanvasRenderingContext2D.measureText() method.",
+    "properties": [
+        "actualBoundingBoxAscent",
+        "actualBoundingBoxDescent",
+        "actualBoundingBoxLeft",
+        "actualBoundingBoxRight",
+        "alphabeticBaseline",
+        "emHeightAscent",
+        "emHeightDescent",
+        "fontBoundingBoxAscent",
+        "fontBoundingBoxDescent",
+        "hangingBaseline",
+        "ideographicBaseline",
+        "width"
+    ]
+}

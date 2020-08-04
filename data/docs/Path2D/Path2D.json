@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Path2D.Path2D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D",
+    "description": "The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data."
+}

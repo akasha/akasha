@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransferItemList.add",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/add",
+    "description": "The DataTransferItemList.add() method creates a new DataTransferItem using the specified data and adds it to the drag data list. The item may be a File or a string of a given type. If the item is successfully added to the list, the newly-created DataTransferItem object is returned."
+}

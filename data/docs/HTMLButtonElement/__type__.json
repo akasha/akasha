@@ -1,0 +1,27 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLButtonElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement",
+    "description": "The HTMLButtonElement interface provides properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating button elements.",
+    "properties": [
+        "accessKey",
+        "autofocus",
+        "disabled",
+        "form",
+        "formAction",
+        "formEnctype",
+        "formMethod",
+        "formNoValidate",
+        "formTarget",
+        "labels",
+        "menu",
+        "name",
+        "tabIndex",
+        "type",
+        "validationMessage",
+        "validity",
+        "value",
+        "willValidate"
+    ]
+}

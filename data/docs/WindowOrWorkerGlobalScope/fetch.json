@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WindowOrWorkerGlobalScope.fetch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch",
+    "description": "The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available."
+}

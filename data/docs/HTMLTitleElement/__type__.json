@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLTitleElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTitleElement",
+    "description": "The HTMLTitleElement interface contains the title for a document. This element inherits all of the properties and methods of the HTMLElement interface.",
+    "properties": [
+        "text"
+    ]
+}

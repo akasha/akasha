@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLDetailsElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement",
+    "description": "The HTMLDetailsElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating details elements.",
+    "properties": [
+        "open"
+    ]
+}

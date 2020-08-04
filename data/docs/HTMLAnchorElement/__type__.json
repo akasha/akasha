@@ -1,0 +1,36 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLAnchorElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement",
+    "description": "The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to a element; not to be confused with link, which is represented by HTMLLinkElement)",
+    "properties": [
+        "Element.accessKey",
+        "HTMLElement.tabindex",
+        "HTMLHyperlinkElementUtils.hash",
+        "HTMLHyperlinkElementUtils.host",
+        "HTMLHyperlinkElementUtils.hostname",
+        "HTMLHyperlinkElementUtils.href",
+        "HTMLHyperlinkElementUtils.origin",
+        "HTMLHyperlinkElementUtils.password",
+        "HTMLHyperlinkElementUtils.pathname",
+        "HTMLHyperlinkElementUtils.port",
+        "HTMLHyperlinkElementUtils.protocol",
+        "HTMLHyperlinkElementUtils.search",
+        "HTMLHyperlinkElementUtils.username",
+        "download",
+        "hreflang",
+        "media",
+        "referrerPolicy",
+        "rel",
+        "relList",
+        "target",
+        "text",
+        "type"
+    ],
+    "methods": [
+        "HTMLElement.blur",
+        "HTMLElement.focus",
+        "HTMLHyperlinkElementUtils.toString"
+    ]
+}

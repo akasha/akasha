@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "Window.sizeToContent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sizeToContent",
-    "description": "The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called—for example, once the DOMContentLoaded event has been thrown.",
-    "content": "<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<p>The <code><strong>Window.sizeToContent()</strong></code> method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called—for example, once the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded\" title=\"/en-US/docs/Web/Events/DOMContentLoaded\">DOMContentLoaded</a></code> event has been thrown.</p>\n<p>The minimal size of the window can be clamped.</p>"
+    "description": "The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called—for example, once the DOMContentLoaded event has been thrown."
 }

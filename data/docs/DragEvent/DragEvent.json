@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DragEvent.DragEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent",
+    "description": "This constructor is used to create a synthetic DragEvent object."
+}

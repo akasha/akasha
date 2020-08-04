@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLLabelElement.form",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/form",
+    "description": "The read-only HTMLLabelElement.form property returns an HTMLFormElement object which represents the form of which the label's associated control is a part, or null if there is either no associated control, or if that control isn't in a form."
+}

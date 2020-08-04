@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.textTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/textTracks",
+    "description": "The read-only textTracks property on HTMLMediaElement objects returns a TextTrackList object listing all of the TextTrack objects representing the media element's text tracks"
+}

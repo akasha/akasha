@@ -1,0 +1,22 @@
+
+{
+    "kind": "Type",
+    "name": "VideoTrackList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList",
+    "description": "The VideoTrackList interface is used to represent a list of the video tracks contained within a video element, with each track represented by a separate VideoTrack object in the list.",
+    "properties": [
+        "length",
+        "onaddtrack",
+        "onchange",
+        "onremovetrack",
+        "selectedIndex"
+    ],
+    "methods": [
+        "getTrackById"
+    ],
+    "events": [
+        "addtrack",
+        "change",
+        "removetrack"
+    ]
+}

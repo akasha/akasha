@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransferItem.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/type",
+    "description": "The read-only DataTransferItem.type property returns the type (format) of the DataTransferItem object representing the drag data item. The type is a Unicode string generally given by a MIME type, although a MIME type is not required."
+}

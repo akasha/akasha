@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLSelectElement.setCustomValidity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity",
+    "description": "The HTMLSelectElement.setCustomValidity() method sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does not have a custom validity error."
+}

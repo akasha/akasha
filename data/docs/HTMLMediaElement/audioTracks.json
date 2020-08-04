@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.audioTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/audioTracks",
+    "description": "The read-only audioTracks property on HTMLMediaElement objects returns an AudioTrackList object listing all of the  AudioTrack objects representing the media element's audio tracks."
+}

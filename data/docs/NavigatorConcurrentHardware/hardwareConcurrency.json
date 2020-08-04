@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NavigatorConcurrentHardware.hardwareConcurrency",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency",
+    "description": "The navigator.hardwareConcurrency read-only property returns the number of logical processors available to run threads on the user's computer."
+}

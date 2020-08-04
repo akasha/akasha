@@ -1,0 +1,15 @@
+
+{
+    "kind": "Type",
+    "name": "AudioTrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack",
+    "description": "The AudioTrack interface represents a single audio track from one of the HTML media elements, audio or video.",
+    "properties": [
+        "enabled",
+        "id",
+        "kind",
+        "label",
+        "language",
+        "sourceBuffer"
+    ]
+}

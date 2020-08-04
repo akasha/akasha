@@ -1,0 +1,51 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement",
+    "description": "The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.",
+    "properties": [
+        "HTMLOrForeignElement.dataset",
+        "HTMLOrForeignElement.nonce",
+        "HTMLOrForeignElement.tabIndex",
+        "accessKey",
+        "accessKeyLabel",
+        "contentEditable",
+        "contextMenu",
+        "dir",
+        "draggable",
+        "dropzone",
+        "hidden",
+        "inert",
+        "innerText",
+        "isContentEditable",
+        "itemId",
+        "itemProp",
+        "itemRef",
+        "itemScope",
+        "itemType",
+        "itemValue",
+        "lang",
+        "noModule",
+        "offsetHeight",
+        "offsetLeft",
+        "offsetParent",
+        "offsetTop",
+        "offsetWidth",
+        "properties",
+        "spellcheck",
+        "style",
+        "title",
+        "translate"
+    ],
+    "methods": [
+        "HTMLOrForeignElement.blur",
+        "HTMLOrForeignElement.focus",
+        "attachInternals",
+        "click",
+        "forceSpellCheck"
+    ],
+    "events": [
+        "invalid"
+    ]
+}

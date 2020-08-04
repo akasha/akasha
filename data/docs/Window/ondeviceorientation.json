@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.ondeviceorientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation",
+    "description": "An event handler for the deviceorientation event, which contains information about a relative device orientation change."
+}

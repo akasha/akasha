@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "NavigatorOnLine",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine",
+    "description": "The NavigatorOnLine interface contains methods and properties related to the connectivity status of the browser.",
+    "properties": [
+        "onLine"
+    ]
+}

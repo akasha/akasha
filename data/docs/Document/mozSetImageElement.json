@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.mozSetImageElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/mozSetImageElement",
+    "description": "The Document.mozSetImageElement() method changes the element being used as the CSS background for a background with a given background element ID."
+}

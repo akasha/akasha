@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Path2D.addPath",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Path2D/addPath",
+    "description": "The Path2D.addPath() method of the Canvas 2D API adds one Path2D object to another Path2D object."
+}

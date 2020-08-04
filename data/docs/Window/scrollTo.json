@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "Window.scrollTo",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo",
-    "description": "Window.scrollTo() scrolls to a particular set of coordinates in the document.",
-    "content": "<strong><code>Window.scrollTo()</code></strong> scrolls to a particular set of coordinates in the document."
+    "description": "Window.scrollTo() scrolls to a particular set of coordinates in the document."
 }

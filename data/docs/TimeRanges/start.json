@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TimeRanges.start",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges/start",
+    "description": "Returns the time offset at which a specified time range begins."
+}

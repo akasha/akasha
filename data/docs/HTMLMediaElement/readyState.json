@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.readyState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/readyState",
+    "description": "The HTMLMediaElement.readyState property indicates the readiness state of the media."
+}

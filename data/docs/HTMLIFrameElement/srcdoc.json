@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLIFrameElement.srcdoc",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc",
+    "description": "The srcdoc property of the HTMLIFrameElement specifies the content of the page."
+}

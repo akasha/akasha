@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLFormControlsCollection.namedItem",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem",
+    "description": "The HTMLFormControlsCollection.namedItem() method returns the RadioNodeList or the Element in the collection whose name or id match the specified name, or null if no node matches."
+}

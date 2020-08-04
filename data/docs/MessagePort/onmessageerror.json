@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MessagePort.onmessageerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessageerror",
+    "description": "The onmessageerror event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the port—that is, when it receives a message that cannot be deserialized."
+}

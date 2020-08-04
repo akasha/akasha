@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLSpanElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSpanElement",
+    "description": "The HTMLSpanElement interface represents a span element and derives from the HTMLElement interface, but without implementing any additional properties or methods."
+}

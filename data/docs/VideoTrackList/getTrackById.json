@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "VideoTrackList.getTrackById",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/getTrackById",
+    "description": "The VideoTrackList method getTrackById() returns the first VideoTrack object from the track list whose id matches the specified string."
+}

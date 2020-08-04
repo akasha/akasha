@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SharedWorkerGlobalScope.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/name",
+    "description": "The name read-only property of the SharedWorkerGlobalScope interface returns the name that the SharedWorker was (optionally) given when it was created. This is the name that the SharedWorker() constructor can pass to get a reference to the SharedWorkerGlobalScope."
+}

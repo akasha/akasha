@@ -1,0 +1,17 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLOptionElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement",
+    "description": "The HTMLOptionElement interface represents option elements and inherits all classes and methods of the HTMLElement interface.",
+    "properties": [
+        "defaultSelected",
+        "disabled",
+        "form",
+        "index",
+        "label",
+        "selected",
+        "text",
+        "value"
+    ]
+}

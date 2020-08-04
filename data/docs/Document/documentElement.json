@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.documentElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/documentElement",
+    "description": "Document.documentElement returns the Element that is the root element of the document (for example, the html element for HTML documents)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransferItem.webkitGetAsEntry",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/webkitGetAsEntry",
+    "description": "If the item described by the DataTransferItem is a file, webkitGetAsEntry() returns a FileSystemFileEntry or FileSystemDirectoryEntry representing it. If the item isn't a file, null is returned."
+}

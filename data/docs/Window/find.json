@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "Window.find",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/find",
-    "description": "The Window.find() method finds a string in a window.",
-    "content": "<div class=\"blockIndicator nonStandard nonStandardHeader\"> \n <p><strong>Non-standard</strong><br> This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p> \n</div>\n<div class=\"blockIndicator note\"> \n <p><strong>Note:</strong> Support for <code>Window.find()</code> might change in future versions of Gecko. See <a class=\"external\" href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=672395\" rel=\"noopener\">bug672395</a>.</p> \n</div>\n<p>The <code><strong>Window.find()</strong></code> method finds a string in a window.</p>"
+    "description": "The Window.find() method finds a string in a window."
 }

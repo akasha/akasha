@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createTouch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createTouch",
+    "description": "The Document.createTouch() method creates and returns a new Touch object."
+}

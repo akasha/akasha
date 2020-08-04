@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.tBodies",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tBodies",
+    "description": "The HTMLTableElement.tBodies read-only property returns a live HTMLCollection of the bodies in a table."
+}

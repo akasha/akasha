@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextMetrics.actualBoundingBoxRight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextMetrics/actualBoundingBoxRight",
+    "description": "The read-only actualBoundingBoxRight property of the TextMetrics interface is a double giving the distance parallel to the baseline from the alignment point given by the CanvasRenderingContext2D.textAlign property to the right side of the bounding rectangle of the given text, in CSS pixels."
+}

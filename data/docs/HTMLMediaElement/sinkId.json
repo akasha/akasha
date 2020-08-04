@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.sinkId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/sinkId",
+    "description": "The HTMLMediaElement.sinkId read-only property returns a DOMString that is the unique ID of the audio device delivering output. If it is using the user agent default, it returns an empty string. This ID should be one of the MediaDeviceInfo.deviceId values returned from MediaDevices.enumerateDevices(), id-multimedia, or id-communications."
+}

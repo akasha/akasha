@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLObjectElement.setCustomValidity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity",
+    "description": "The setCustomValidity() method of the HTMLObjectElement interface sets a custom validity message for the element."
+}

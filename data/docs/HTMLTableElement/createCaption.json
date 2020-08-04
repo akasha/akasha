@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.createCaption",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createCaption",
+    "description": "The HTMLTableElement.createCaption() method returns the caption element associated with a given table. If no caption element exists on the table, this method creates it, and then returns it."
+}

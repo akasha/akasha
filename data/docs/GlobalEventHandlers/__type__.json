@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "GlobalEventHandlers",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers",
+    "description": "The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window."
+}

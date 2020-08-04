@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTemplateElement.content",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTemplateElement/content",
+    "description": "The HTMLTemplateElement.content property returns a template element's template contents (a DocumentFragment)."
+}

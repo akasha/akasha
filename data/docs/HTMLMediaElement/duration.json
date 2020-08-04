@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.duration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/duration",
+    "description": "The read-only HTMLMediaElement property duration indicates the length of the element's media in seconds."
+}

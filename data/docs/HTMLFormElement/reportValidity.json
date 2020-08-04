@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLFormElement.reportValidity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reportValidity",
+    "description": "The HTMLFormElement.reportValidity() method returns true if the element's child controls satisfy their validation constraints. When false is returned, cancelable invalid events are fired for each invalid child and validation problems are reported to the user."
+}

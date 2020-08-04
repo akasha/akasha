@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.dir",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dir",
+    "description": "The HTMLElement.dir property gets or sets the text writing directionality of the content of the current element."
+}

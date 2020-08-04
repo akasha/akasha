@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MessagePort.start",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start",
+    "description": "The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage."
+}

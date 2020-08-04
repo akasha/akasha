@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.links",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/links",
+    "description": "The links read-only property of the Document interface returns a collection of all area elements and a elements in a document with a value for the href attribute."
+}

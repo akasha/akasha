@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.videoHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight",
+    "description": "The HTMLVideoElement interface's read-only videoHeight property indicates the intrinsic height of the video, expressed in CSS pixels. In simple terms, this is the height of the media in its natural size."
+}

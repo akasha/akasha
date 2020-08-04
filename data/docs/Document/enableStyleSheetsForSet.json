@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.enableStyleSheetsForSet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/enableStyleSheetsForSet",
+    "description": "Enables the style sheets matching the specified name in the current style sheet set, and disables all other style sheets (except those without a title, which are always enabled)."
+}

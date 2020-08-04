@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerNavigator.locks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/locks",
+    "description": "The locks read-only property of the WorkerNavigator interface returns a LockManager object which provides methods for requesting a new Lock object and querying for an existing Lock object."
+}

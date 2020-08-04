@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.hidden",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden",
+    "description": "The HTMLElement property hidden is a Boolean which is true if the element is hidden; otherwise the value is false. This is quite different from using the CSS property display to control the visibility of an element."
+}

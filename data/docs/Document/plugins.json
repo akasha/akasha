@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.plugins",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/plugins",
+    "description": "The plugins read-only property of the Document interface returns an HTMLCollection object containing one or more HTMLEmbedElements representing the embed elements in the current document."
+}

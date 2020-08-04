@@ -1,0 +1,7 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLFormElement.reset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset",
+    "description": "The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button."
+}

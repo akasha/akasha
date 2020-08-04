@@ -1,0 +1,15 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLTableColElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableColElement",
+    "description": "The HTMLTableColElement interface provides special properties (beyond the HTMLElement interface it also has available to it inheritance) for manipulating single or grouped table column elements.",
+    "properties": [
+        "align",
+        "ch",
+        "chOff",
+        "span",
+        "vAlign",
+        "width"
+    ]
+}

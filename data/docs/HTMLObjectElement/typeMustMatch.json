@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLObjectElement.typeMustMatch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/typeMustMatch",
+    "description": "The HTMLObjectElement.typeMustMatch property is a Boolean that reflects the typemustmatch attribute of the object element. It indicates if the resource linked by it must match the MIME type given by HTMLObjectElement.type in order for this resource to be used."
+}

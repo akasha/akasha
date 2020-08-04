@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLSelectElement.remove",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/remove",
+    "description": "The HTMLSelectElement.remove() method removes the element at the specified index from the options collection for this select element."
+}

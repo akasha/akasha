@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "NavigatorConcurrentHardware",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorConcurrentHardware",
+    "description": "The NavigatorConcurrentHardware mixin adds to the Navigator interface features which allow Web content to determine how many logical processors the user has available, in order to let content and Web apps optimize their operations to best take advantage of the user's CPU.",
+    "properties": [
+        "hardwareConcurrency"
+    ]
+}

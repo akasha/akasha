@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WindowOrWorkerGlobalScope.setTimeout",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout",
+    "description": "The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires."
+}

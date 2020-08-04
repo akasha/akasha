@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.fonts",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/fonts",
+    "description": "The fonts property of the Document interface returns the FontFaceSet interface of the document."
+}

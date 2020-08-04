@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MessageEvent.lastEventId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/lastEventId",
+    "description": "The lastEventId read-only property of the MessageEvent interface is a DOMString representing a unique ID for the event."
+}

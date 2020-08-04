@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "FormDataEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent",
+    "description": "The FormDataEvent interface represents a formdata event — such an event is fired on an HTMLFormElement object after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.",
+    "properties": [
+        "formData"
+    ]
+}

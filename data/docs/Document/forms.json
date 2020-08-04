@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.forms",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/forms",
+    "description": "The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document."
+}

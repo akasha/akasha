@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DedicatedWorkerGlobalScope.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/close",
+    "description": "The close() method of the DedicatedWorkerGlobalScope interface discards any tasks queued in the DedicatedWorkerGlobalScope's event loop, effectively closing this particular scope."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.alt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt",
+    "description": "The HTMLImageElement property alt provides fallback (alternate) text to display when the image specified by the img element is not loaded."
+}

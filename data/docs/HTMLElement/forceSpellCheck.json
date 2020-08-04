@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLElement.forceSpellCheck",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/forceSpellCheck",
+    "description": "The forceSpellCheck() method of the HTMLElement interface forces a spelling and grammar check on HTML elements, even if the user has not focused on the elements. This method overrides user agent behavior. The specific user interface of the check, for example whether red underlining appears, is determined by the user agent."
+}

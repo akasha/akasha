@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PromiseRejectionEvent.promise",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/promise",
+    "description": "The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.implementation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/implementation",
+    "description": "The Document.implementation property returns a DOMImplementation object associated with the current document."
+}

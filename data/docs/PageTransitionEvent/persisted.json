@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PageTransitionEvent.persisted",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PageTransitionEvent/persisted",
+    "description": "The persisted read-only property indicates if a webpage is loading from a cache."
+}

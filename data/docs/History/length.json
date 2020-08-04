@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "History.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/length",
+    "description": "The History.length read-only property returns an integer representing the number of elements in the session history, including the currently loaded page."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoTrackList.onchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onchange",
+    "description": "The VideoTrackList property onchange is an event handler which is called when the change event occurs, indicating that a VideoTrack in the VideoTrackList has been made active."
+}

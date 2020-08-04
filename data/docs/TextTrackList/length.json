@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextTrackList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/length",
+    "description": "The read-only TextTrackList property length returns the number of entries in the TextTrackList, each of which is a TextTrack representing one track in the media element."
+}

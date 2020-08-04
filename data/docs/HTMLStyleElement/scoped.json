@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLStyleElement.scoped",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/scoped",
+    "description": "The HTMLStyleElement.scoped property is a Boolean value indicating if the element applies to the whole document (false) or only to the parent's sub-tree (true)."
+}

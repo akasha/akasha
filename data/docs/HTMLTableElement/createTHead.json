@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLTableElement.createTHead",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTHead",
+    "description": "The HTMLTableElement.createTHead() method returns the thead element associated with a given table. If no header exists in the table, this method creates it, and then returns it."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTrackElement.src",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/src",
+    "description": "The HTMLTrackElement.src property reflects the value of the track element's src attribute, which indicates the URL of the text track's data."
+}

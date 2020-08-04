@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.loop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loop",
+    "description": "The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the media element should start over when it reaches the end."
+}

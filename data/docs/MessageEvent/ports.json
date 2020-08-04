@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MessageEvent.ports",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/ports",
+    "description": "The ports read-only property of the MessageEvent interface is an array of MessagePort objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker)."
+}

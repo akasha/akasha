@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createComment",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createComment",
+    "description": "createComment() creates a new comment node, and returns it."
+}

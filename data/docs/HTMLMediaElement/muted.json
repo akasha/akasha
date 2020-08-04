@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.muted",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/muted",
+    "description": "The HTMLMediaElement.muted indicates whether the media element muted."
+}

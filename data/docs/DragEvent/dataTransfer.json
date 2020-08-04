@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DragEvent.dataTransfer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/dataTransfer",
+    "description": "The DragEvent.dataTransfer property holds the drag operation's data (as a DataTransfer object)."
+}

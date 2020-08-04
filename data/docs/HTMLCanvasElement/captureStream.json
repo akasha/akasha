@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLCanvasElement.captureStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/captureStream",
+    "description": "The HTMLCanvasElement captureStream() method returns a MediaStream which includes a CanvasCaptureMediaStreamTrack containing a real-time video capture of the canvas's contents."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Location.host",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/host",
+    "description": "The host property of the Location interface is a USVString containing the host, that is the hostname, and then, if the port of the URL is nonempty, a ':', and the port of the URL."
+}

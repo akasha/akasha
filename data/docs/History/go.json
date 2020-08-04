@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "History.go",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/go",
+    "description": "The History.go() method loads a specific page from the session history. You can use it to move forwards and backwards through the history depending on the value of a parameter."
+}

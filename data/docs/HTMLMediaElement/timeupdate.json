@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.timeupdate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event",
+    "description": "The timeupdate event is fired when the time indicated by the currentTime attribute has been updated.",
+    "eventType": "Event",
+    "eventHandlerProperty": "ontimeupdate"
+}

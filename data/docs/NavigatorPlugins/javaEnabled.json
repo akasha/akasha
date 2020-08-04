@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "NavigatorPlugins.javaEnabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/javaEnabled",
+    "description": "This method indicates whether the current browser is Java-enabled or not."
+}

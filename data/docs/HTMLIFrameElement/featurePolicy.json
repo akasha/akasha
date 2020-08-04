@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLIFrameElement.featurePolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/featurePolicy",
+    "description": "The featurePolicy read-only property of the HTMLIFrameElement interface returns the FeaturePolicy interface which provides a simple API for introspecting the feature policies applied to a specific frame."
+}

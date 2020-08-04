@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLCanvasElement.transferControlToOffscreen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen",
+    "description": "The HTMLCanvasElement.transferControlToOffscreen() method transfers control to an OffscreenCanvas object, either on the main thread or on a worker."
+}

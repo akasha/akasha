@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.embeds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/embeds",
+    "description": "The embeds read-only property of the Document interface returns a list of the embedded object elements within the current document."
+}

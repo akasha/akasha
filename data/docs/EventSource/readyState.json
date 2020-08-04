@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EventSource.readyState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/readyState",
+    "description": "The readyState read-only property of the EventSource interface returns a number representing the state of the connection."
+}

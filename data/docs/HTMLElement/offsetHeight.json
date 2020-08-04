@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.offsetHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight",
+    "description": "The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer."
+}

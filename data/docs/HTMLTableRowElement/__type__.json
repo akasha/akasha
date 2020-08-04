@@ -1,0 +1,21 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLTableRowElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement",
+    "description": "The HTMLTableRowElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.",
+    "properties": [
+        "align",
+        "bgColor",
+        "cells",
+        "ch",
+        "chOff",
+        "rowIndex",
+        "sectionRowIndex",
+        "vAlign"
+    ],
+    "methods": [
+        "deleteCell",
+        "insertCell"
+    ]
+}

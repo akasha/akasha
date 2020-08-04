@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.naturalHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/naturalHeight",
+    "description": "The HTMLImageElement interface's naturalHeight property is a read-only value which returns the intrinsic (natural), density-corrected height of the image in CSS pixels."
+}

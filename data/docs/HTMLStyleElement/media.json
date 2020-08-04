@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLStyleElement.media",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/media",
+    "description": "The HTMLStyleElement.media property specifies the intended destination medium for style information."
+}

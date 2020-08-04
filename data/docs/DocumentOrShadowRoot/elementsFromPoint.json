@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DocumentOrShadowRoot.elementsFromPoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint",
+    "description": "The elementsFromPoint() method of the DocumentOrShadowRoot interface returns an array of all elements at the specified coordinates (relative to the viewport)."
+}

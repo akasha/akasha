@@ -1,0 +1,10 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLBRElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBRElement",
+    "description": "The HTMLBRElement interface represents a HTML line break element (br). It inherits from HTMLElement.",
+    "properties": [
+        "clear"
+    ]
+}

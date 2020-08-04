@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OffscreenCanvas.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/width",
+    "description": "The width property returns and sets the width of an OffscreenCanvas object."
+}

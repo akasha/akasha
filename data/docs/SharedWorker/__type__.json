@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "SharedWorker",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker",
+    "description": "The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts, such as several windows, iframes or even workers. They implement an interface different than dedicated workers and have a different global scope, SharedWorkerGlobalScope.",
+    "constructors": [
+        "SharedWorker"
+    ],
+    "properties": [
+        "AbstractWorker.onerror",
+        "port"
+    ]
+}

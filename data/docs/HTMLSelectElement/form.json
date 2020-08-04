@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLSelectElement.form",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/form",
+    "description": "The HTMLSelectElement.form read-only property returns a HTMLFormElement representing the form that this element is associated with. If the element is not associated with of a form element, then it returns null."
+}

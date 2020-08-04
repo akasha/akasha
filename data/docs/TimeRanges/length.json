@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TimeRanges.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges/length",
+    "description": "The TimeRanges.length read-only property returns the number of ranges in the object."
+}

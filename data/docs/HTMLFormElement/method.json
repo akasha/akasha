@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFormElement.method",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method",
+    "description": "The HTMLFormElement.method property represents the HTTP method used to submit the form."
+}

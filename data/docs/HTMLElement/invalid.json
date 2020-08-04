@@ -1,0 +1,7 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLElement.invalid",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/invalid_event",
+    "description": "The invalid event fires when a submittable element has been checked for validity and doesn't satisfy its constraints."
+}

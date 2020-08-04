@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.styleSheetSets",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/styleSheetSets",
+    "description": "The styleSheetSets read-only property returns a live list of all of the currently-available style sheet sets."
+}

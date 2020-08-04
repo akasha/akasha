@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFontElement.size",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFontElement/size",
+    "description": "The obsolete HTMLFontElement.size property is a DOMString that reflects the size HTML attribute. It contains either an integer number in the range of 1-7 or a relative value to increase/decrease the value of the size attribute of the basefont element."
+}

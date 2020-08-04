@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.inert",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert",
+    "description": "The boolean inert attribute, when present, may make the browser \"ignore\" the element from assistive technologies, page search and text selection. This can be useful when building UIs such as modals where you would want to \"trap\" the focus inside the modal when it's visible."
+}

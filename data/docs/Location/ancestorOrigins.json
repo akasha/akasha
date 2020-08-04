@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Location.ancestorOrigins",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/ancestorOrigins",
+    "description": "The ancestorOrigins read-only property of the Location interface is a static DOMStringList containing, in reverse order, the origins of all ancestor browsing contexts of the document associated with the given Location object."
+}

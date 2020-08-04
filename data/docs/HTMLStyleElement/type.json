@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLStyleElement.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement/type",
+    "description": "The HTMLStyleElement.type read-only property returns the type of the current style."
+}

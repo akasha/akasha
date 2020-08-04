@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.mozSyntheticDocument",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/mozSyntheticDocument",
+    "description": "The Document.mozSyntheticDocument property indicates whether or not the document is a synthetic one; that is, a document representing a standalone image, video, audio, or the like."
+}

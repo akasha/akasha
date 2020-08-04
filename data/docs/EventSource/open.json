@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "EventSource.open",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open_event",
+    "description": "The open event of the EventSource API is fired when a connection with an event source is opened.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onopen"
+}

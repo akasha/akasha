@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WebSocket.readyState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/readyState",
+    "description": "The WebSocket.readyState read-only property returns the current state of the WebSocket connection."
+}

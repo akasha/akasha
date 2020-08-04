@@ -1,0 +1,40 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLSelectElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement",
+    "description": "The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.",
+    "properties": [
+        "autofocus",
+        "disabled",
+        "form",
+        "labels",
+        "length",
+        "multiple",
+        "name",
+        "options",
+        "required",
+        "selectedIndex",
+        "selectedOptions",
+        "size",
+        "type",
+        "validationMessage",
+        "validity",
+        "value",
+        "willValidate"
+    ],
+    "methods": [
+        "add",
+        "blur",
+        "checkValidity",
+        "focus",
+        "item",
+        "namedItem",
+        "remove",
+        "reportValidity",
+        "setCustomValidity"
+    ],
+    "events": [
+        "input"
+    ]
+}

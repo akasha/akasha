@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableRowElement.rowIndex",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/rowIndex",
+    "description": "The HTMLTableRowElement.rowIndex read-only property represents the position of a row in relation to the whole table."
+}

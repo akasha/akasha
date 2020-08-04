@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLDialogElement.returnValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/returnValue",
+    "description": "The returnValue property of the HTMLDialogElement interface gets or sets the return value for the dialog, usually to indicate which button the user pressed to close it."
+}

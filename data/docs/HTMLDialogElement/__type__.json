@@ -1,0 +1,19 @@
+
+{
+    "kind": "Type",
+    "name": "HTMLDialogElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement",
+    "description": "The HTMLDialogElement interface provides methods to manipulate dialog elements. It inherits properties and methods from the HTMLElement interface.",
+    "properties": [
+        "open",
+        "returnValue"
+    ],
+    "methods": [
+        "close",
+        "show",
+        "showModal"
+    ],
+    "events": [
+        "close"
+    ]
+}

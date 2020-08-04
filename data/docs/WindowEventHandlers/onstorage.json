@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WindowEventHandlers.onstorage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onstorage",
+    "description": "The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events."
+}

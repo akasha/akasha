@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.buffered",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/buffered",
+    "description": "The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed."
+}

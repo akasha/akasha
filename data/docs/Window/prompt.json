@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "Window.prompt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt",
-    "description": "The Window.prompt() displays a dialog with an optional message prompting the user to input some text.",
-    "content": "<p>The <code>Window.prompt()</code> displays a dialog with an optional message prompting the user to input some text.</p>"
+    "description": "The Window.prompt() displays a dialog with an optional message prompting the user to input some text."
 }

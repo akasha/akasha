@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.networkState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/networkState",
+    "description": "The HTMLMediaElement.networkState property indicates the current state of the fetching of media over the network."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DocumentOrShadowRoot.styleSheets",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets",
+    "description": "The styleSheets read-only property of the DocumentOrShadowRoot interface returns a StyleSheetList of CSSStyleSheet objects, for stylesheets explicitly linked into or embedded in a document."
+}

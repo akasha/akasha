@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WindowEventHandlers.onpopstate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onpopstate",
+    "description": "The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window."
+}

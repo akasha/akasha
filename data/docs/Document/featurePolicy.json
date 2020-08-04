@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.featurePolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/featurePolicy",
+    "description": "The featurePolicy read-only property of the Document interface returns the FeaturePolicy interface which provides a simple API for inspecting the feature policies applied to a specific document."
+}

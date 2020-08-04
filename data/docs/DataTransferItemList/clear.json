@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransferItemList.clear",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/clear",
+    "description": "The DataTransferItemList method clear() removes all DataTransferItem objects from the drag data items list, leaving the list empty."
+}

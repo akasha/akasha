@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLObjectElement.form",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/form",
+    "description": "The form read-only property of the HTMLObjectElement interface Retuns a HTMLFormElement representing the object element's form owner, or null if there isn't one."
+}

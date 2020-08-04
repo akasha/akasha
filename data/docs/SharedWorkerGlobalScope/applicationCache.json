@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SharedWorkerGlobalScope.applicationCache",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/applicationCache",
+    "description": "The applicationCache read-only property of the SharedWorkerGlobalScope interface returns the ApplicationCache object for the worker (see Using the application cache)."
+}

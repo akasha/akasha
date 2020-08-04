@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLMediaElement.srcObject",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject",
+    "description": "The srcObject property of the HTMLMediaElement interface sets or returns the object which serves as the source of the media associated with the HTMLMediaElement."
+}

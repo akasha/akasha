@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HashChangeEvent.newURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/newURL",
+    "description": "The newURL read-only property of the HashChangeEvent interface returns the new URL to which the window is navigating."
+}

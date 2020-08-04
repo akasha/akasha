@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.tHead",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tHead",
+    "description": "The HTMLTableElement.tHead represents the thead element of a table. Its value will be null if there is no such element."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DocumentOrShadowRoot.nodeFromPoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint",
+    "description": "The nodeFromPoint() property of the DocumentOrShadowRoot interface returns the topmost node at the specified coordinates (relative to the viewport)."
+}

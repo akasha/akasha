@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createDocumentFragment",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment",
+    "description": "Creates a new empty DocumentFragment into which DOM nodes can be added to build an offscreen DOM tree."
+}

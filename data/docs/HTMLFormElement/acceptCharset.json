@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFormElement.acceptCharset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/acceptCharset",
+    "description": "The HTMLFormElement.acceptCharset property represents a list of the supported character encodings for the given form element. This list can be comma-separated or space-separated."
+}
