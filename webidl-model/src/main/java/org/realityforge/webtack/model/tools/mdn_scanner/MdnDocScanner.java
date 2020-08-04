@@ -208,7 +208,7 @@ public final class MdnDocScanner
       }
       final List<String> properties =
         document
-          .select( "#Properties + p + dl > dt > code, #Properties + dl > dt > code" )
+          .select( "#Properties + p + dl > dt > a > code, #Properties + dl > dt > a > code, #Events + p + dl > dt > a:not([href$=\"_event\"]) > code, #Events + dl > dt > a:not([href$=\"_event\"]) > code" )
           .stream()
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation

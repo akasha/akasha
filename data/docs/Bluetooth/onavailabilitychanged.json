@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Bluetooth.onavailabilitychanged",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/onavailabilitychanged",
+    "description": "The onavailabilitychanged property of the Bluetooth interface is an EventHandler that processes availabilitychanged events that fire when the Bluetooth system as a whole becomes available or unavailable to the User Agent."
+}

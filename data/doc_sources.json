@@ -21,6 +21,11 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getDevices"
     },
     {
+        "lastModifiedAt": 1596499309287,
+        "name": "Bluetooth.onavailabilitychanged",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/onavailabilitychanged"
+    },
+    {
         "lastModifiedAt": 1596499310283,
         "name": "Bluetooth.referringDevice",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice"

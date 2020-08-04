@@ -5,6 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth",
     "description": "The Bluetooth interface of the Web Bluetooth API returns a Promise to a BluetoothDevice object with the specified options.",
     "properties": [
+        "onavailabilitychanged",
         "referringDevice"
     ],
     "methods": [
