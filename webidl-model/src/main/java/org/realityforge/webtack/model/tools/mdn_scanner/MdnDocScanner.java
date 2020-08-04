@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
 import org.realityforge.webtack.model.tools.fetch.FetchException;
 import org.realityforge.webtack.model.tools.fetch.FetchResult;
 import org.realityforge.webtack.model.tools.fetch.FetchUtil;
@@ -344,21 +343,6 @@ public final class MdnDocScanner
     {
       return false;
     }
-  }
-
-  private void replaceElementWithChildren( final Element span )
-  {
-    for ( final Node child : new ArrayList<>( span.childNodes() ) )
-    {
-      span.before( child );
-    }
-    span.remove();
-  }
-
-  @Nonnull
-  private String cleanDescription( @Nonnull final String text )
-  {
-    return text.replaceAll( " +", " " ).replace( "&nbsp;", "" ).trim();
   }
 
   @Nonnull
