@@ -170,7 +170,7 @@ public final class MdnDocScanner
           }
           catch ( final IOException ioe )
           {
-            throw new SourceIOException( source, "Failed to remove existing file for removed source", ioe );
+            throw new SourceIOException( sourceToRemove, "Failed to remove existing file for removed source", ioe );
           }
         }
         if ( !sourcesToRemove.isEmpty() )
