@@ -43,6 +43,13 @@ public class DocEntry
   @Nullable
   private List<String> events;
 
+  // field is only present when kind == Event
+  @Nullable
+  private String eventType;
+  // field is only present when kind == Event
+  @Nullable
+  private String eventHandlerProperty;
+
   public DocKind getKind()
   {
     return kind;
@@ -125,6 +132,28 @@ public class DocEntry
   public void setEvents( @Nullable final List<String> events )
   {
     this.events = events;
+  }
+
+  @Nullable
+  public String getEventType()
+  {
+    return eventType;
+  }
+
+  public void setEventType( @Nullable final String eventType )
+  {
+    this.eventType = eventType;
+  }
+
+  @Nullable
+  public String getEventHandlerProperty()
+  {
+    return eventHandlerProperty;
+  }
+
+  public void setEventHandlerProperty( @Nullable final String eventHandlerProperty )
+  {
+    this.eventHandlerProperty = eventHandlerProperty;
   }
 
   @Nonnull

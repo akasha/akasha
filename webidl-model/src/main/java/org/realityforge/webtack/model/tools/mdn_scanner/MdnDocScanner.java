@@ -16,6 +16,7 @@ import javax.annotation.Nullable;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.realityforge.webtack.model.tools.fetch.FetchException;
 import org.realityforge.webtack.model.tools.fetch.FetchResult;
 import org.realityforge.webtack.model.tools.fetch.FetchUtil;
@@ -335,6 +336,25 @@ public final class MdnDocScanner
               newProperties.addAll( properties );
               entry.setProperties( newProperties.stream().sorted().distinct().collect( Collectors.toList() ) );
             }
+          }
+        }
+      }
+      else if ( DocKind.Event == kind )
+      {
+        final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th[scope=\"row\"]" );
+        for ( final Element th : headers )
+        {
+          final Element td = th.nextElementSibling();
+          assert "td".equals( td.tagName() );
+
+          final String text = th.text();
+          if ( "Interface".equals( text ) )
+          {
+            entry.setEventType( td.text() );
+          }
+          else if ( "Event handler".equals( text ) || "Event handler property".equals( text ) )
+          {
+            entry.setEventHandlerProperty( td.text().replaceAll( "^.*\\.", "" ) );
           }
         }
       }
