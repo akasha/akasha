@@ -230,6 +230,12 @@ public final class MdnDocScanner
       final DocEntry entry = new DocEntry();
       final Element element = document.selectFirst( "meta[name=\"description\"]" );
       final String description = null != element ? element.attr( "content" ) : "";
+
+      // We use the localName as some APIs have been updated in spec but MDN still uses "old"
+      // name and redirects at http level when you request the new name. i.e. XR type was called XRSystem
+      final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
+      final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
+
       entry.setKind( kind );
       entry.setName( source.getName() );
       entry.setHref( source.getUrl() );
@@ -259,7 +265,7 @@ public final class MdnDocScanner
             .stream()
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
-            .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+            .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
             .sorted()
             .collect( Collectors.toList() );
         if ( !properties.isEmpty() )
@@ -277,7 +283,7 @@ public final class MdnDocScanner
             // Strip the brackets at end of methods
             .map( text -> text.replaceAll( "\\(.*", "" ) )
             // Strip out the type name that sometimes appears in the documentation
-            .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+            .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
             .sorted()
             .collect( Collectors.toList() );
         if ( !methods.isEmpty() )
@@ -286,7 +292,7 @@ public final class MdnDocScanner
           final List<String> newConstructors =
             methods
               .stream()
-              .filter( m -> m.equals( source.getName() ) )
+              .filter( m -> m.equals( localName ) )
               .map( m -> m + "." + m )
               .collect( Collectors.toList() );
           if ( !newConstructors.isEmpty() )
@@ -296,7 +302,7 @@ public final class MdnDocScanner
           }
 
           final List<String> actualMethods =
-            methods.stream().filter( m -> !m.equals( source.getName() ) ).collect( Collectors.toList() );
+            methods.stream().filter( m -> !m.equals( localName ) ).collect( Collectors.toList() );
           if ( !actualMethods.isEmpty() )
           {
             entry.setMethods( actualMethods );
@@ -309,7 +315,7 @@ public final class MdnDocScanner
               .stream()
               .map( Element::text )
               // Strip out the type name that sometimes appears in the documentation
-              .map( text -> text.replaceAll( "^" + source.getName() + "\\.", "" ) )
+              .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
               .sorted()
               .collect( Collectors.toList() );
           if ( !events.isEmpty() )
