@@ -298,7 +298,7 @@ public final class MdnDocScanner
           if ( !newConstructors.isEmpty() )
           {
             newConstructors.addAll( constructors );
-            entry.setConstructors( newConstructors.stream().sorted().collect( Collectors.toList() ) );
+            entry.setConstructors( newConstructors.stream().sorted().distinct().collect( Collectors.toList() ) );
           }
 
           final List<String> actualMethods =
