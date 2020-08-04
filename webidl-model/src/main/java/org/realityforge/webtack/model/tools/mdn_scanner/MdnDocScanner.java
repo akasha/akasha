@@ -109,7 +109,7 @@ public final class MdnDocScanner
       }
 
       final DocEntry entry = extractResult.getEntry();
-      if ( DocKind.Type == entry.getKind() )
+      if ( DocKind.Type == kind )
       {
         final List<String> constructors = entry.getConstructors();
         if ( null != constructors )
