@@ -51,6 +51,11 @@
   },
   {
     "lastModifiedAt": 1,
+    "name": "GlobalEventHandlers.focus",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/focus"
+  },
+  {
+    "lastModifiedAt": 1,
     "name": "NodeFilter",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter"
   },
@@ -67,6 +72,16 @@
     "lastModifiedAt": 1,
     "name": "Window",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Window.focus",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "Window.orientationchange",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event"
   },
   {
     "lastModifiedAt": 1,

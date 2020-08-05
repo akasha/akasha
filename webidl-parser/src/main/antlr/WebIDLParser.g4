@@ -39,6 +39,7 @@ definition
 argumentNameKeyword
 	: ASYNC
 	| ATTRIBUTE
+	| EVENT
 	| CALLBACK
 	| CONST
 	| CONSTRUCTOR
@@ -116,6 +117,7 @@ partialInterfaceMember
   : constMember
   | operation
   | stringifier
+  | event
   | staticMember
   | iterable
   | asyncIterable
@@ -218,6 +220,7 @@ attributeName
 
 attributeNameKeyword
   : ASYNC
+  | EVENT
   | REQUIRED
 ;
 
@@ -307,6 +310,10 @@ returnType
 
 constructor
   : CONSTRUCTOR OPEN_BRACKET argumentList CLOSE_BRACKET SEMI_COLON
+;
+
+event
+  : EVENT IDENTIFIER IDENTIFIER SEMI_COLON
 ;
 
 stringifier

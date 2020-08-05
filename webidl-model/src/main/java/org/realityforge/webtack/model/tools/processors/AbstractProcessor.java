@@ -22,6 +22,7 @@ import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.IncludesStatement;
@@ -322,6 +323,7 @@ public abstract class AbstractProcessor
                                     transformConstants( input.getConstants() ),
                                     transformAttributeMembers( input.getAttributes() ),
                                     transformOperationMembers( input.getOperations() ),
+                                    transformEventMembers( input.getEvents() ),
                                     transformIterableMember( input.getIterable() ),
                                     transformAsyncIterableMember( input.getAsyncIterable() ),
                                     transformMapLikeMember( input.getMapLikeMember() ),
@@ -408,6 +410,7 @@ public abstract class AbstractProcessor
                                            transformConstants( input.getConstants() ),
                                            transformAttributeMembers( input.getAttributes() ),
                                            transformOperationMembers( input.getOperations() ),
+                                           transformEventMembers( input.getEvents() ),
                                            transformIterableMember( input.getIterable() ),
                                            transformAsyncIterableMember( input.getAsyncIterable() ),
                                            transformMapLikeMember( input.getMapLikeMember() ),
@@ -467,6 +470,31 @@ public abstract class AbstractProcessor
                                            transformDocumentation( input.getDocumentation() ),
                                            transformExtendedAttributes( input.getExtendedAttributes() ),
                                            transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  protected List<EventMember> transformEventMembers( @Nonnull final List<EventMember> inputs )
+  {
+    final List<EventMember> outputs = new ArrayList<>();
+    for ( final EventMember member : inputs )
+    {
+      final EventMember output = transformEventMember( member );
+      if ( null != output )
+      {
+        outputs.add( output );
+      }
+    }
+    return outputs;
+  }
+
+  @Nullable
+  protected EventMember transformEventMember( @Nonnull final EventMember input )
+  {
+    return new EventMember( input.getName(),
+                            transformType( input.getEventType() ),
+                            transformDocumentation( input.getDocumentation() ),
+                            transformExtendedAttributes( input.getExtendedAttributes() ),
+                            transformSourceLocations( input.getSourceLocations() ) );
   }
 
   @Nonnull

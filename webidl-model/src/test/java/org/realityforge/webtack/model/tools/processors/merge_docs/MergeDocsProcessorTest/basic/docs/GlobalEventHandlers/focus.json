@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "GlobalEventHandlers.focus",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event",
+    "description": "The focus event fires when an element has received focus.",
+    "eventType": "FocusEvent",
+    "eventHandlerProperty": "onfocus"
+}

@@ -11,6 +11,7 @@ import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
 import org.realityforge.webtack.model.DocumentationElement;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.OperationMember;
@@ -67,6 +68,7 @@ final class MergeDocsProcessor
                                transformConstants( input.getConstants() ),
                                transformAttributeMembers( input.getAttributes() ),
                                transformOperationMembers( input.getOperations() ),
+                               transformEventMembers( input.getEvents() ),
                                transformIterableMember( input.getIterable() ),
                                transformAsyncIterableMember( input.getAsyncIterable() ),
                                transformMapLikeMember( input.getMapLikeMember() ),
@@ -91,6 +93,7 @@ final class MergeDocsProcessor
                                       transformConstants( input.getConstants() ),
                                       transformAttributeMembers( input.getAttributes() ),
                                       transformOperationMembers( input.getOperations() ),
+                                      transformEventMembers( input.getEvents() ),
                                       transformIterableMember( input.getIterable() ),
                                       transformAsyncIterableMember( input.getAsyncIterable() ),
                                       transformMapLikeMember( input.getMapLikeMember() ),
@@ -189,6 +192,20 @@ final class MergeDocsProcessor
     return new ConstMember( input.getName(),
                             transformType( input.getType() ),
                             transformConstValue( input.getValue() ),
+                            null == docEntry ?
+                            transformDocumentation( input.getDocumentation() ) :
+                            createDocumentationElement( docEntry ),
+                            transformExtendedAttributes( input.getExtendedAttributes() ),
+                            transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  @Override
+  protected EventMember transformEventMember( @Nonnull final EventMember input )
+  {
+    final DocEntry docEntry = null != _type ? _runtime.getDocEntry( _type + "." + input.getName() ) : null;
+    return new EventMember( input.getName(),
+                            transformType( input.getEventType() ),
                             null == docEntry ?
                             transformDocumentation( input.getDocumentation() ) :
                             createDocumentationElement( docEntry ),

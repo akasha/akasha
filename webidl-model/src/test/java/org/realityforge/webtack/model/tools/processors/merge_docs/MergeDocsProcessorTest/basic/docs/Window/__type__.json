@@ -4,5 +4,9 @@
   "description": "Documentation for Window partial.",
   "properties": [
     "someVar"
+  ],
+  "events": [
+    "focus",
+    "orientationchange"
   ]
 }

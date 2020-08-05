@@ -10,4 +10,6 @@ interface Window : EventTarget {
   attribute EventHandler ondeviceorientation;
   [SecureContext]
   attribute EventHandler ondeviceorientationabsolute;
+  event DeviceOrientationEvent deviceorientation;
+  event Event orientationchange;
 };

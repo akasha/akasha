@@ -58,6 +58,11 @@ public final class FlattenProcessorTest
                     "input.webidl:5:2\n" +
                     "Attempting to add member defined in:\n" +
                     "input.webidl:14:2" },
+      new Object[]{ "partial_interface_duplicate_event",
+                    "Failed to merge event named 'deviceorientation' into interface named 'Window' as the interface already contains an event with the same name. Existing defined in:\n" +
+                    "input.webidl:2:2\n" +
+                    "Attempting to add member defined in:\n" +
+                    "input.webidl:11:2" },
       new Object[]{ "partial_interface_duplicate_constant_no_interface",
                     "Failed to merge constant named 'COMPRESSED_RGB_S3TC_DXT1_EXT' into partial interface named 'Window' as the partial interface already contains a constant with the same name. Existing defined in:\n" +
                     "input.webidl:5:2\n" +

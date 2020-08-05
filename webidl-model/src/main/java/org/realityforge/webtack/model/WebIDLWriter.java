@@ -573,6 +573,7 @@ public final class WebIDLWriter
       writeAsyncIterableMember( writer, asyncIterableMember );
     }
     writeAttributes( writer, definition.getAttributes() );
+    writeEvents( writer, definition.getEvents() );
     writeOperations( writer, definition.getOperations() );
     writer.write( "};\n" );
   }
@@ -608,6 +609,7 @@ public final class WebIDLWriter
       writeAsyncIterableMember( writer, asyncIterableMember );
     }
     writeAttributes( writer, definition.getAttributes() );
+    writeEvents( writer, definition.getEvents() );
     writeOperations( writer, definition.getOperations() );
     writer.write( "};\n" );
   }
@@ -715,6 +717,34 @@ public final class WebIDLWriter
     {
       writeOperationMember( writer, operation );
     }
+  }
+
+  private static void writeEvents( @Nonnull final Writer writer, @Nonnull final List<EventMember> members )
+    throws IOException
+  {
+    final List<EventMember> events =
+      members
+        .stream()
+        .sorted( Comparator.comparing( EventMember::getName ) )
+        .collect( Collectors.toList() );
+    for ( final EventMember event : events )
+    {
+      writeEventMember( writer, event );
+    }
+  }
+
+  static void writeEventMember( @Nonnull final Writer writer, @Nonnull final EventMember event )
+    throws IOException
+  {
+    writeDocumentationIfRequired( writer, event.getDocumentation(), "  " );
+    // Attributes are always nested in a container so add some leading space
+    writeIndent( writer );
+    writeAttributesIfRequired( writer, event.getExtendedAttributes(), "\n  " );
+    writer.write( "event " );
+    writeType( writer, event.getEventType() );
+    writer.write( " " );
+    writer.write( event.getName() );
+    writer.write( ";\n" );
   }
 
   static void writeDictionaryMember( @Nonnull final Writer writer, @Nonnull final DictionaryMember member )

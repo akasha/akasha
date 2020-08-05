@@ -27,10 +27,16 @@ interface EventTarget {
 };
 
 interface Node {
+  event Event eventnoexisto;
+};
+
+interface Window {
+  event Event focus;
 };
 
 partial interface Window {
   readonly attribute DOMString someVar;
+  event Event orientationchange;
 };
 
 interface mixin GlobalEventHandlers {

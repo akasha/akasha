@@ -3,6 +3,7 @@ lexer grammar WebIDLLexer;
 
 ASYNC : 'async';
 ATTRIBUTE : 'attribute';
+EVENT : 'event';
 CALLBACK : 'callback';
 CONST : 'const';
 CONSTRUCTOR : 'constructor';

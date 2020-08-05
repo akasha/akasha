@@ -666,6 +666,23 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
+  static EventMember parse( @Nonnull final WebIDLParser.EventContext ctx,
+                            @Nullable final DocumentationElement documentation,
+                            @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                            @Nonnull final SourcePosition startPosition )
+  {
+    final String typeName = ctx.IDENTIFIER( 0 ).getText();
+    final String eventName = ctx.IDENTIFIER( 1 ).getText();
+    final Type eventType =
+      new TypeReference( typeName, Collections.emptyList(), false, parseSourceIntervals( startPosition, ctx ) );
+    return new EventMember( eventName,
+                            eventType,
+                            documentation,
+                            extendedAttributes,
+                            parseSourceIntervals( startPosition, ctx ) );
+  }
+
+  @Nonnull
   static MapLikeMember parse( @Nonnull final WebIDLParser.MaplikeRestContext ctx,
                               final boolean readOnly,
                               @Nullable final DocumentationElement documentation,
@@ -1094,6 +1111,7 @@ public final class WebIDLModelParser
     final List<ConstMember> constants = new ArrayList<>();
     final List<AttributeMember> attributes = new ArrayList<>();
     final List<OperationMember> operations = new ArrayList<>();
+    final List<EventMember> events = new ArrayList<>();
     IterableMember iterable = null;
     AsyncIterableMember asyncIterable = null;
     MapLikeMember mapLike = null;
@@ -1125,6 +1143,10 @@ public final class WebIDLModelParser
         else if ( member instanceof OperationMember )
         {
           operations.add( (OperationMember) member );
+        }
+        else if ( member instanceof EventMember )
+        {
+          events.add( (EventMember) member );
         }
         else if ( member instanceof MapLikeMember )
         {
@@ -1182,6 +1204,7 @@ public final class WebIDLModelParser
                                     Collections.unmodifiableList( constants ),
                                     Collections.unmodifiableList( attributes ),
                                     Collections.unmodifiableList( operations ),
+                                    Collections.unmodifiableList( events ),
                                     iterable,
                                     asyncIterable,
                                     mapLike,
@@ -1202,6 +1225,7 @@ public final class WebIDLModelParser
     final List<ConstMember> constants = new ArrayList<>();
     final List<AttributeMember> attributes = new ArrayList<>();
     final List<OperationMember> operations = new ArrayList<>();
+    final List<EventMember> events = new ArrayList<>();
     IterableMember iterable = null;
     AsyncIterableMember asyncIterable = null;
     MapLikeMember mapLike = null;
@@ -1231,6 +1255,10 @@ public final class WebIDLModelParser
       else if ( member instanceof OperationMember )
       {
         operations.add( (OperationMember) member );
+      }
+      else if ( member instanceof EventMember )
+      {
+        events.add( (EventMember) member );
       }
       else if ( member instanceof MapLikeMember )
       {
@@ -1277,6 +1305,7 @@ public final class WebIDLModelParser
                                            Collections.unmodifiableList( constants ),
                                            Collections.unmodifiableList( attributes ),
                                            Collections.unmodifiableList( operations ),
+                                           events,
                                            iterable,
                                            asyncIterable,
                                            mapLike,
@@ -1336,6 +1365,11 @@ public final class WebIDLModelParser
     if ( null != readWriteMaplikeContext )
     {
       return parse( readWriteMaplikeContext.maplikeRest(), false, documentation, extendedAttributes, startPosition );
+    }
+    final WebIDLParser.EventContext eventContext = ctx.event();
+    if ( null != eventContext )
+    {
+      return parse( eventContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.ReadWriteSetlikeContext readWriteSetlikeContext = ctx.readWriteSetlike();
     assert null != readWriteSetlikeContext;

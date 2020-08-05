@@ -129,6 +129,21 @@ interface EventTarget {
 };
 
 interface Node {
+  event Event eventnoexisto;
+};
+
+/**
+ * Documentation for Window partial.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window - MDN</a>
+ */
+interface Window {
+  /**
+   * The focus event fires when a Window has received focus.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event">Window.focus - MDN</a>
+   */
+  event Event focus;
 };
 
 /**
@@ -143,4 +158,10 @@ partial interface Window {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/someVar">Window.someVar - MDN</a>
    */
   readonly attribute DOMString someVar;
+  /**
+   * The orientationchange event is fired when the orientation of the device has changed.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event">Window.orientationchange - MDN</a>
+   */
+  event Event orientationchange;
 };

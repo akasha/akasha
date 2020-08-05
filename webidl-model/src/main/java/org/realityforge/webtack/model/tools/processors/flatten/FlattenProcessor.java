@@ -21,6 +21,7 @@ import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.IllegalModelException;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.IterableMember;
@@ -279,6 +280,7 @@ final class FlattenProcessor
 
     final Map<String, ConstMember> constants = new LinkedHashMap<>();
     final Map<String, AttributeMember> attributes = new LinkedHashMap<>();
+    final Map<String, EventMember> events = new LinkedHashMap<>();
     for ( final ConstMember constant : definition.getConstants() )
     {
       constants.put( constant.getName(), constant );
@@ -286,6 +288,10 @@ final class FlattenProcessor
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
       attributes.put( attribute.getName(), attribute );
+    }
+    for ( final EventMember event : definition.getEvents() )
+    {
+      events.put( event.getName(), event );
     }
     final Set<OperationMember> operations = new LinkedHashSet<>( definition.getOperations() );
     final List<SourceInterval> sourceLocations = new ArrayList<>( definition.getSourceLocations() );
@@ -326,6 +332,21 @@ final class FlattenProcessor
                                            describeLocations( attribute, "\n" ) );
         }
         attributes.put( name, attribute );
+      }
+      for ( final EventMember event : partial.getEvents() )
+      {
+        final String name = event.getName();
+        final EventMember existing = events.get( name );
+        if ( null != existing )
+        {
+          throw new IllegalModelException( "Failed to merge event named '" + name + "' into interface " +
+                                           "named '" + definition.getName() + "' as the interface already " +
+                                           "contains an event with the same name. Existing defined in:\n" +
+                                           describeLocations( existing, "\n" ) + "\n" +
+                                           "Attempting to add member defined in:\n" +
+                                           describeLocations( event, "\n" ) );
+        }
+        events.put( name, event );
       }
       operations.addAll( partial.getOperations() );
     }
@@ -372,6 +393,7 @@ final class FlattenProcessor
                                     Collections.unmodifiableList( new ArrayList<>( constants.values() ) ),
                                     Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
                                     Collections.unmodifiableList( new ArrayList<>( operations ) ),
+                                    Collections.unmodifiableList( new ArrayList<>( events.values() ) ),
                                     iterable,
                                     asyncIterable,
                                     mapLikeMember,
@@ -391,6 +413,7 @@ final class FlattenProcessor
 
     final Map<String, ConstMember> constants = new LinkedHashMap<>();
     final Map<String, AttributeMember> attributes = new LinkedHashMap<>();
+    final Map<String, EventMember> events = new LinkedHashMap<>();
     final Set<OperationMember> operations = new LinkedHashSet<>();
     final List<SourceInterval> sourceLocations = new ArrayList<>();
     for ( final PartialInterfaceDefinition partial : partials )
@@ -431,12 +454,28 @@ final class FlattenProcessor
         }
         attributes.put( name, attribute );
       }
+      for ( final EventMember event : partial.getEvents() )
+      {
+        final String name = event.getName();
+        final EventMember existing = events.get( name );
+        if ( null != existing )
+        {
+          throw new IllegalModelException( "Failed to merge event named '" + name + "' into partial interface " +
+                                           "named '" + partial.getName() + "' as the partial interface already " +
+                                           "contains an event with the same name. Existing defined in:\n" +
+                                           describeLocations( existing, "\n" ) + "\n" +
+                                           "Attempting to add member defined in:\n" +
+                                           describeLocations( event, "\n" ) );
+        }
+        events.put( name, event );
+      }
       operations.addAll( partial.getOperations() );
     }
     return new PartialInterfaceDefinition( partials.get( 0 ).getName(),
                                            Collections.unmodifiableList( new ArrayList<>( constants.values() ) ),
                                            Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
                                            Collections.unmodifiableList( new ArrayList<>( operations ) ),
+                                           Collections.unmodifiableList( new ArrayList<>( events.values() ) ),
                                            iterable,
                                            asyncIterable,
                                            mapLikeMember,

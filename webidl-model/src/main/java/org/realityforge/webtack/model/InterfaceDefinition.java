@@ -21,6 +21,8 @@ public final class InterfaceDefinition
   private final List<AttributeMember> _attributes;
   @Nonnull
   private final List<OperationMember> _operations;
+  @Nonnull
+  private final List<EventMember> _events;
   @Nullable
   private final IterableMember _iterable;
   @Nullable
@@ -40,6 +42,7 @@ public final class InterfaceDefinition
                               @Nonnull final List<ConstMember> constants,
                               @Nonnull final List<AttributeMember> attributes,
                               @Nonnull final List<OperationMember> operations,
+                              @Nonnull final List<EventMember> events,
                               @Nullable final IterableMember iterable,
                               @Nullable final AsyncIterableMember asyncIterable,
                               @Nullable final MapLikeMember mapLikeMember,
@@ -54,6 +57,7 @@ public final class InterfaceDefinition
     _constants = Objects.requireNonNull( constants );
     _attributes = Objects.requireNonNull( attributes );
     _operations = Objects.requireNonNull( operations );
+    _events = Objects.requireNonNull( events );
     _iterable = iterable;
     _asyncIterable = asyncIterable;
     _mapLikeMember = mapLikeMember;
@@ -103,6 +107,12 @@ public final class InterfaceDefinition
   public List<OperationMember> getOperations()
   {
     return _operations;
+  }
+
+  @Nonnull
+  public List<EventMember> getEvents()
+  {
+    return _events;
   }
 
   @Nullable

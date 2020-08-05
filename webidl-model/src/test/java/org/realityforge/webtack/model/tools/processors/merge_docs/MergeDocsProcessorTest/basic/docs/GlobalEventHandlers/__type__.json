@@ -6,5 +6,8 @@
   "properties": [
     "onabort",
     "onblur"
+  ],
+  "events": [
+    "focus"
   ]
 }

@@ -196,6 +196,12 @@ interface Document {
    */
   stringifier attribute USVString href;
   /**
+   * The scroll event fires when the document view or an element has been scrolled.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event">MDN - scroll</a>
+   */
+  event Event scroll;
+  /**
    * This constructor is documented.
    *
    * @param callback the callback.
@@ -233,6 +239,15 @@ interface FormData {
    * @see http://example.com/#iterable
    */
   iterable<USVString, FormDataEntryValue>;
+};
+
+partial interface Document {
+  /**
+   * The wheel event fires when the user rotates a wheel button on a pointing device (typically a mouse)..
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/wheel_event">MDN - wheel</a>
+   */
+  event WheelEvent wheel;
 };
 
 /**
