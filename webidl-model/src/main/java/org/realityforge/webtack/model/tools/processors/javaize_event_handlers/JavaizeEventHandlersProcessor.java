@@ -8,6 +8,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.CallbackDefinition;
+import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Type;
@@ -94,14 +95,16 @@ final class JavaizeEventHandlersProcessor
                         false,
                         false,
                         null,
-                        null,
+                        new DocumentationElement( "the event", Collections.emptyList(), Collections.emptyList() ),
                         Collections.emptyList(),
                         Collections.emptyList() );
         final CallbackDefinition callback =
           new CallbackDefinition( name,
                                   newVoidType(),
                                   Collections.singletonList( argument ),
-                                  null,
+                                  new DocumentationElement( "Handle events of type " + name,
+                                                            Collections.emptyList(),
+                                                            Collections.emptyList() ),
                                   Collections.emptyList(),
                                   Collections.emptyList() );
         definitions.put( name, callback );
