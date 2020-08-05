@@ -12,14 +12,14 @@ callback EventHandler = void ( Event event );
  *
  * @param event the event
  */
-callback SpeechSynthesisErrorEvent = void ( SpeechSynthesisErrorEvent event );
+callback SpeechSynthesisErrorEventHandler = void ( SpeechSynthesisErrorEvent event );
 
 /**
  * Handle events of type SpeechSynthesisEvent
  *
  * @param event the event
  */
-callback SpeechSynthesisEvent = void ( SpeechSynthesisEvent event );
+callback SpeechSynthesisEventHandler = void ( SpeechSynthesisEvent event );
 
 interface Event {
 };

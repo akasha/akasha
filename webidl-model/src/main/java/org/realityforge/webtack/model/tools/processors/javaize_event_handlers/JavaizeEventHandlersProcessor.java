@@ -90,6 +90,7 @@ final class JavaizeEventHandlersProcessor
       final String name = definition.getName();
       if ( name.endsWith( "Event" ) && isSubclassOfEvent( definition ) )
       {
+        final String handlerName = name + "Handler";
         final TypeReference eventType =
           new TypeReference( name, Collections.emptyList(), false, Collections.emptyList() );
         final Argument argument =
@@ -102,7 +103,7 @@ final class JavaizeEventHandlersProcessor
                         Collections.emptyList(),
                         Collections.emptyList() );
         final CallbackDefinition callback =
-          new CallbackDefinition( name,
+          new CallbackDefinition( handlerName,
                                   newVoidType(),
                                   Collections.singletonList( argument ),
                                   new DocumentationElement( "Handle events of type " + name,
@@ -110,7 +111,7 @@ final class JavaizeEventHandlersProcessor
                                                             Collections.emptyList() ),
                                   Collections.emptyList(),
                                   Collections.emptyList() );
-        definitions.put( name, callback );
+        definitions.put( handlerName, callback );
       }
     }
 
