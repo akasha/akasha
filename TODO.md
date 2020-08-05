@@ -38,6 +38,8 @@ complete as there is too much un-said.
 
 # Events
 
+* Validate should validate event types are present for event members
+
 * Update doc scanner to allow per-type css selectors so that we can somehow collect events
   for something like:
   https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
