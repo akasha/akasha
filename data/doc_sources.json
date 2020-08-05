@@ -1131,7 +1131,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState"
     },
     {
-        "lastModifiedAt": 1596581620791,
+        "lastModifiedAt": 1596666663923,
         "name": "Document.visibilitychange",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"
     },
