@@ -2,6 +2,13 @@
   "sourceSelector": "name=minimal_event name=common name=web_bluetooth name=permissions name=bluetooth_common",
   "stages": [
     {
+      "name": "MergeDocs",
+      "description": "Add documentation from doc repository. This needs to be done before Flatten and renames as some documentation applies to Mixins or to elements before they are renamed",
+      "config": {
+        "docsRepositoryConfigFile": "data/doc_sources.json"
+      }
+    },
+    {
       "name": "Merge"
     },
     {
@@ -62,7 +69,7 @@
     },
     {
       "name": "MergeDocs",
-      "description": "Add documentation from doc repository",
+      "description": "Add documentation from doc repository. We need to this here again as some documentation is defined on interfaces when it comes form a mixin",
       "config": {
         "docsRepositoryConfigFile": "data/doc_sources.json"
       }

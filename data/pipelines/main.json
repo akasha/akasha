@@ -215,7 +215,7 @@
     },
     {
       "name": "MergeDocs",
-      "description": "Add documentation from doc repository",
+      "description": "Add documentation from doc repository. We need to this here again as some documentation is defined on interfaces when it comes form a mixin",
       "config": {
         "docsRepositoryConfigFile": "data/doc_sources.json"
       }
