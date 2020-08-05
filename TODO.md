@@ -42,6 +42,8 @@ complete as there is too much un-said.
 
 * Validate should validate event types are present for event members
 
+* Validate callback names do not collide with other named elements
+
 * Update doc scanner to allow per-type css selectors so that we can somehow collect events
   for something like: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
   Alternatively we may just manually import these docs.
