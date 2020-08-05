@@ -4,7 +4,6 @@
     "name": "XRSessionInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit",
     "description": "The WebXR Device API dictionary XRSessionInit specifies required and/or optional features when requesting a new XRSession by calling the navigator.xr.requestSession() method.",
-    "content": "<p><strong>Draft</strong><br> This page is not complete.</p>\n<p>The WebXR Device API dictionary <code><strong>XRSessionInit</strong></code>specifies required and/or optional features when requesting a new <code>XRSession</code> by calling the <code>navigator.xr.requestSession()</code> method.</p>",
     "properties": [
         "optionalFeatures",
         "requiredFeatures"
