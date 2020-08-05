@@ -221,6 +221,9 @@
       }
     },
     {
+      "name": "JavaizeEventHandlers"
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/main/complete.webidl"

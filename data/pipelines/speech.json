@@ -91,6 +91,9 @@
       }
     },
     {
+      "name": "JavaizeEventHandlers"
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/speech/complete.webidl"

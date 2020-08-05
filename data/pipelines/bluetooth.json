@@ -75,6 +75,9 @@
       }
     },
     {
+      "name": "JavaizeEventHandlers"
+    },
+    {
       "name": "Emit",
       "config": {
         "filePattern": "data/output/bluetooth/complete.webidl"

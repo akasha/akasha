@@ -44,9 +44,6 @@ complete as there is too much un-said.
   for something like:
   https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
 
-* Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
-  code a whole lot nicer. We could do this after we have emitted closure externs.
-
 * Add code that "specializes" event handlers in some way. So we can make an event handler for a
   particular `on[myevent]` attribute take an event of type `MyEvent`. We could have a processor that
   adds webidl `callback` instances for all these event handlers.
