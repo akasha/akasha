@@ -1091,9 +1091,9 @@ public final class WebIDLModelParser
   {
     final String name = ctx.IDENTIFIER().getText();
 
-    final ArrayList<ConstMember> constants = new ArrayList<>();
-    final ArrayList<AttributeMember> attributes = new ArrayList<>();
-    final ArrayList<OperationMember> operations = new ArrayList<>();
+    final List<ConstMember> constants = new ArrayList<>();
+    final List<AttributeMember> attributes = new ArrayList<>();
+    final List<OperationMember> operations = new ArrayList<>();
     IterableMember iterable = null;
     AsyncIterableMember asyncIterable = null;
     MapLikeMember mapLike = null;
@@ -1199,9 +1199,9 @@ public final class WebIDLModelParser
   {
     final String name = ctx.IDENTIFIER().getText();
 
-    final ArrayList<ConstMember> constants = new ArrayList<>();
-    final ArrayList<AttributeMember> attributes = new ArrayList<>();
-    final ArrayList<OperationMember> operations = new ArrayList<>();
+    final List<ConstMember> constants = new ArrayList<>();
+    final List<AttributeMember> attributes = new ArrayList<>();
+    final List<OperationMember> operations = new ArrayList<>();
     IterableMember iterable = null;
     AsyncIterableMember asyncIterable = null;
     MapLikeMember mapLike = null;
