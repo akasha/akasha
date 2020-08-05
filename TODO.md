@@ -9,6 +9,7 @@ complete as there is too much un-said.
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
+  - See example at https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset
 
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
   so it should be possible with a little bit of heuristics to extract the documentation for different
