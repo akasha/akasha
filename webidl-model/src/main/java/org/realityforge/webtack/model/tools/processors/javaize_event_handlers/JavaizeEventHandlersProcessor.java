@@ -45,12 +45,6 @@ final class JavaizeEventHandlersProcessor
     }
   }
 
-  @Nonnull
-  private Type newVoidType()
-  {
-    return new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() );
-  }
-
   @Nullable
   @Override
   public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
@@ -118,5 +112,11 @@ final class JavaizeEventHandlersProcessor
   {
     final InterfaceDefinition parent = definition.getSuperInterface();
     return null != parent && ( parent.getName().equals( "Event" ) || isSubclassOfEvent( parent ) );
+  }
+
+  @Nonnull
+  private Type newVoidType()
+  {
+    return new Type( Kind.Void, Collections.emptyList(), false, Collections.emptyList() );
   }
 }
