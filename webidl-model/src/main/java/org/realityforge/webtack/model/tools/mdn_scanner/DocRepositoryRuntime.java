@@ -2,7 +2,11 @@ package org.realityforge.webtack.model.tools.mdn_scanner;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
@@ -12,6 +16,10 @@ public final class DocRepositoryRuntime
 {
   @Nonnull
   private final DocRepositoryConfig _repository;
+  @Nonnull
+  private final Map<String, DocEntry> _cache = new HashMap<>();
+  @Nonnull
+  private final Set<String> _negativeCache = new HashSet<>();
   @Nonnull
   private final Path _dataDirectory;
 
@@ -30,8 +38,37 @@ public final class DocRepositoryRuntime
   @Nullable
   public DocEntry getDocEntry( @Nonnull final String name )
   {
-    final DocSourceConfig config = _repository.findSourceByName( name );
-    return null == config ? null : getDocEntry( config );
+    final DocEntry entry = _cache.get( name );
+    if ( null != entry )
+    {
+      return entry;
+    }
+    else if ( _negativeCache.contains( name ) )
+    {
+      return null;
+    }
+    else
+    {
+      final DocSourceConfig config = _repository.findSourceByName( name );
+      if ( null == config )
+      {
+        _negativeCache.add( name );
+        return null;
+      }
+      else
+      {
+        final DocEntry docEntry = getDocEntry( config );
+        if ( null == docEntry )
+        {
+          _negativeCache.add( name );
+        }
+        else
+        {
+          _cache.put( name, docEntry );
+        }
+        return docEntry;
+      }
+    }
   }
 
   @Nullable
