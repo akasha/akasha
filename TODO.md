@@ -40,6 +40,10 @@ complete as there is too much un-said.
 
 * Consider adding a non-standard "event" member to interfaces to webidl language to represent events.
 
+* Update doc scanner to allow per-type css selectors so that we can somehow collect events
+  for something like:
+  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+
 * Add `VoidReturnCallback` processor so can make `EventHandler` return `Void`. Makes the java
   code a whole lot nicer. We could do this after we have emitted closure externs.
 
