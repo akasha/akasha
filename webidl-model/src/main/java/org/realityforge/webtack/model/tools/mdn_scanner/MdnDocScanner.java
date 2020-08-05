@@ -261,7 +261,11 @@ public final class MdnDocScanner
           document
             .select( "#Properties + p + dl > dt > a > code, " +
                      "#Properties + dl > dt > a > code, " +
+
+                     // GlobalEventHandlers has event handler properties here
                      "#Properties > dl > dt > a > code, " +
+
+                     // Sometimes events section actually lists event handler properties
                      "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
                      "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
             .stream()
