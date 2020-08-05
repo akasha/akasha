@@ -23,6 +23,20 @@ final class JavaizeEventHandlersProcessor
 
   JavaizeEventHandlersProcessor()
   {
+  @Nullable
+  @Override
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
+  {
+    try
+    {
+      _schema = schema;
+      schema.link();
+      return super.process( schema );
+    }
+    finally
+    {
+      _schema = null;
+    }
   }
 
   @Nullable
@@ -42,22 +56,6 @@ final class JavaizeEventHandlersProcessor
     else
     {
       return super.transformCallback( input );
-    }
-  }
-
-  @Nullable
-  @Override
-  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
-  {
-    try
-    {
-      _schema = schema;
-      schema.link();
-      return super.process( schema );
-    }
-    finally
-    {
-      _schema = null;
     }
   }
 
