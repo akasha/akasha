@@ -9,10 +9,13 @@ import org.realityforge.webtack.model.tools.spi.Processor;
 public final class JavaizeEventHandlersProcessorFactory
   extends AbstractProcessorFactory
 {
+  public String docsRepositoryConfigFile;
+
   @Nonnull
   @Override
   public Processor create()
   {
-    return new JavaizeEventHandlersProcessor();
+    return new JavaizeEventHandlersProcessor( requireDocRepository( "docsRepositoryConfigFile",
+                                                                    docsRepositoryConfigFile ) );
   }
 }

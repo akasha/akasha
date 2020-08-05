@@ -75,7 +75,10 @@
       }
     },
     {
-      "name": "JavaizeEventHandlers"
+      "name": "JavaizeEventHandlers",
+      "config": {
+        "docsRepositoryConfigFile": "data/doc_sources.json"
+      }
     },
     {
       "name": "Emit",

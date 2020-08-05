@@ -14,17 +14,23 @@ import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
 final class JavaizeEventHandlersProcessor
   extends AbstractProcessor
 {
+  @Nonnull
+  private final DocRepositoryRuntime _runtime;
   private WebIDLSchema _schema;
   @Nullable
   private String _type;
 
-  JavaizeEventHandlersProcessor()
+  JavaizeEventHandlersProcessor( @Nonnull final DocRepositoryRuntime runtime )
   {
+    _runtime = Objects.requireNonNull( runtime );
+  }
+
   @Nullable
   @Override
   public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
