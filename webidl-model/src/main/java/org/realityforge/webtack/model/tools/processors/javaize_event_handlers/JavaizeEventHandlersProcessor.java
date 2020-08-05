@@ -20,6 +20,8 @@ final class JavaizeEventHandlersProcessor
   extends AbstractProcessor
 {
   private WebIDLSchema _schema;
+  @Nullable
+  private String _type;
 
   JavaizeEventHandlersProcessor()
   {
@@ -104,6 +106,66 @@ final class JavaizeEventHandlersProcessor
     }
 
     return definitions;
+  }
+
+  @Nullable
+  @Override
+  protected MixinDefinition transformMixin( @Nonnull final MixinDefinition input )
+  {
+    try
+    {
+      _type = input.getName();
+      return super.transformMixin( input );
+    }
+    finally
+    {
+      _type = null;
+    }
+  }
+
+  @Nullable
+  @Override
+  protected PartialMixinDefinition transformPartialMixin( @Nonnull final PartialMixinDefinition input )
+  {
+    try
+    {
+      _type = input.getName();
+      return super.transformPartialMixin( input );
+    }
+    finally
+    {
+      _type = null;
+    }
+  }
+
+  @Nullable
+  @Override
+  protected InterfaceDefinition transformInterface( @Nonnull final InterfaceDefinition input )
+  {
+    try
+    {
+      _type = input.getName();
+      return super.transformInterface( input );
+    }
+    finally
+    {
+      _type = null;
+    }
+  }
+
+  @Nullable
+  @Override
+  protected PartialInterfaceDefinition transformPartialInterface( @Nonnull final PartialInterfaceDefinition input )
+  {
+    try
+    {
+      _type = input.getName();
+      return super.transformPartialInterface( input );
+    }
+    finally
+    {
+      _type = null;
+    }
   }
 
   private boolean isSubclassOfEvent( @Nonnull final InterfaceDefinition definition )
