@@ -1096,7 +1096,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scripts"
     },
     {
-        "lastModifiedAt": 1596581620374,
+        "lastModifiedAt": 1596633488648,
         "name": "Document.scroll",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event"
     },
@@ -1136,7 +1136,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"
     },
     {
-        "lastModifiedAt": 1596581621268,
+        "lastModifiedAt": 1596633488793,
         "name": "Document.wheel",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/wheel_event"
     },
