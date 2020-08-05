@@ -9,8 +9,10 @@ import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.InterfaceDefinition;
+import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
+import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
@@ -94,6 +96,46 @@ final class MergeDocsProcessor
                                       createDocumentationElement( docEntry ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
+    _type = null;
+    return definition;
+  }
+
+  @Nonnull
+  @Override
+  protected MixinDefinition transformMixin( @Nonnull final MixinDefinition input )
+  {
+    _type = input.getName();
+    final DocEntry docEntry = _runtime.getDocEntry( _type );
+    final MixinDefinition definition =
+      new MixinDefinition( input.getName(),
+                           transformConstants( input.getConstants() ),
+                           transformAttributeMembers( input.getAttributes() ),
+                           transformOperationMembers( input.getOperations() ),
+                           null == docEntry ?
+                           transformDocumentation( input.getDocumentation() ) :
+                           createDocumentationElement( docEntry ),
+                           transformExtendedAttributes( input.getExtendedAttributes() ),
+                           transformSourceLocations( input.getSourceLocations() ) );
+    _type = null;
+    return definition;
+  }
+
+  @Nonnull
+  @Override
+  protected PartialMixinDefinition transformPartialMixin( @Nonnull final PartialMixinDefinition input )
+  {
+    _type = input.getName();
+    final DocEntry docEntry = _runtime.getDocEntry( _type );
+    final PartialMixinDefinition definition =
+      new PartialMixinDefinition( input.getName(),
+                                  transformConstants( input.getConstants() ),
+                                  transformAttributeMembers( input.getAttributes() ),
+                                  transformOperationMembers( input.getOperations() ),
+                                  null == docEntry ?
+                                  transformDocumentation( input.getDocumentation() ) :
+                                  createDocumentationElement( docEntry ),
+                                  transformExtendedAttributes( input.getExtendedAttributes() ),
+                                  transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
     return definition;
   }

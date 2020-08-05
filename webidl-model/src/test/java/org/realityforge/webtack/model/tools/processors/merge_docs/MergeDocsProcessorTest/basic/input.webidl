@@ -32,3 +32,11 @@ interface Node {
 partial interface Window {
   readonly attribute DOMString someVar;
 };
+
+interface mixin GlobalEventHandlers {
+  attribute EventHandler onabort;
+};
+
+partial interface mixin GlobalEventHandlers {
+  attribute EventHandler onblur;
+};

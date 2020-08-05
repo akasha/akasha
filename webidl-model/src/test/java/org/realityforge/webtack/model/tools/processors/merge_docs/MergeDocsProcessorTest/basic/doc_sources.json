@@ -36,6 +36,21 @@
   },
   {
     "lastModifiedAt": 1,
+    "name": "GlobalEventHandlers",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "GlobalEventHandlers.onabort",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "GlobalEventHandlers.onblur",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur"
+  },
+  {
+    "lastModifiedAt": 1,
     "name": "NodeFilter",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter"
   },

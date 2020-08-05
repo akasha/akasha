@@ -29,6 +29,34 @@ dictionary EventInit {
 };
 
 /**
+ * The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers">GlobalEventHandlers - MDN</a>
+ */
+interface mixin GlobalEventHandlers {
+  /**
+   * The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
+   */
+  attribute EventHandler onabort;
+};
+
+/**
+ * The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers">GlobalEventHandlers - MDN</a>
+ */
+partial interface mixin GlobalEventHandlers {
+  /**
+   * The onblur property of the GlobalEventHandlers mixin is the EventHandler for processing blur events. It's available on Element, Document, and Window.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">GlobalEventHandlers.onblur - MDN</a>
+   */
+  attribute EventHandler onblur;
+};
+
+/**
  * Documentation for Event. It covers multiple
  * lines.
  *
