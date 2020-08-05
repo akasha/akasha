@@ -43,8 +43,8 @@ complete as there is too much un-said.
 * Validate should validate event types are present for event members
 
 * Update doc scanner to allow per-type css selectors so that we can somehow collect events
-  for something like:
-  https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+  for something like: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
+  Alternatively we may just manually import these docs.
 
 * Add code that "specializes" event handlers in some way. So we can make an event handler for a
   particular `on[myevent]` attribute take an event of type `MyEvent`. We could have a processor that
