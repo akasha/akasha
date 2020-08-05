@@ -2,6 +2,13 @@
   "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common",
   "stages": [
     {
+      "name": "MergeDocs",
+      "description": "Add documentation from doc repository. This needs to be done before Flatten and renames as some documentation applies to Mixins or to elements before they are renamed",
+      "config": {
+        "docsRepositoryConfigFile": "data/doc_sources.json"
+      }
+    },
+    {
       "name": "RenameType",
       "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
       "sourceSelector": "name=deviceorientation",
