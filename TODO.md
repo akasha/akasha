@@ -74,9 +74,6 @@ complete as there is too much un-said.
 
 * Type the `on[someevent]` properties on interfaces using the typed interface as specified above.
 
-* Extract documentation for event types from MDN. This probably involves scraping the type page and looking for events
-  with urls like https://developer.mozilla.org/en-US/docs/Web/API/{{type}}/{{event_name}}_event
-
 # Java Generation
 
 * Generate a global object ala `DomGlobal` based on a specific interface name.
