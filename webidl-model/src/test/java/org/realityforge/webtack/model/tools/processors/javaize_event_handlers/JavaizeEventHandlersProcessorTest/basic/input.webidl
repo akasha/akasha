@@ -9,3 +9,9 @@ callback EventHandler = any ( Event event );
 
 interface Event {
 };
+
+interface SpeechSynthesisEvent : Event {
+};
+
+interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
+};
