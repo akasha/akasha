@@ -22,6 +22,7 @@ public abstract class AbstractProcessorFactory
     }
   }
 
+  @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   protected final ExtendedAttribute requireExtendedAttribute( @Nonnull final String key, @Nonnull final String value )
   {
