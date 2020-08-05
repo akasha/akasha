@@ -265,6 +265,9 @@ public final class MdnDocScanner
                      // GlobalEventHandlers has event handler properties here
                      "#Properties > dl > dt > a > code, " +
 
+                     // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
+                     "#Properties + p + dl > dt > code, " +
+
                      // Sometimes events section actually lists event handler properties
                      "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
                      "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
