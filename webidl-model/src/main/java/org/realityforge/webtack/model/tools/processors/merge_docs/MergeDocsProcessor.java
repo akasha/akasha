@@ -3,14 +3,18 @@ package org.realityforge.webtack.model.tools.processors.merge_docs;
 import java.util.Collections;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
+import org.realityforge.webtack.model.DictionaryDefinition;
+import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.OperationMember;
+import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
@@ -142,6 +146,43 @@ final class MergeDocsProcessor
 
   @Nonnull
   @Override
+  protected DictionaryDefinition transformDictionary( @Nonnull final DictionaryDefinition input )
+  {
+    _type = input.getName();
+    final DocEntry docEntry = _runtime.getDocEntry( _type );
+    final DictionaryDefinition definition =
+      new DictionaryDefinition( input.getName(),
+                                input.getInherits(),
+                                transformDictionaryMembers( input.getMembers() ),
+                                null == docEntry ?
+                                transformDocumentation( input.getDocumentation() ) :
+                                createDocumentationElement( docEntry ),
+                                transformExtendedAttributes( input.getExtendedAttributes() ),
+                                transformSourceLocations( input.getSourceLocations() ) );
+    _type = null;
+    return definition;
+  }
+
+  @Nonnull
+  @Override
+  protected PartialDictionaryDefinition transformPartialDictionary( @Nonnull final PartialDictionaryDefinition input )
+  {
+    _type = input.getName();
+    final DocEntry docEntry = _runtime.getDocEntry( _type );
+    final PartialDictionaryDefinition definition =
+      new PartialDictionaryDefinition( input.getName(),
+                                       transformDictionaryMembers( input.getMembers() ),
+                                       null == docEntry ?
+                                       transformDocumentation( input.getDocumentation() ) :
+                                       createDocumentationElement( docEntry ),
+                                       transformExtendedAttributes( input.getExtendedAttributes() ),
+                                       transformSourceLocations( input.getSourceLocations() ) );
+    _type = null;
+    return definition;
+  }
+
+  @Nonnull
+  @Override
   protected ConstMember transformConstant( @Nonnull final ConstMember input )
   {
     final DocEntry docEntry = null != _type ? _runtime.getDocEntry( _type + "." + input.getName() ) : null;
@@ -153,6 +194,22 @@ final class MergeDocsProcessor
                             createDocumentationElement( docEntry ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
                             transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  @Override
+  protected DictionaryMember transformDictionaryMember( @Nonnull final DictionaryMember input )
+  {
+    final DocEntry docEntry = null != _type ? _runtime.getDocEntry( _type + "." + input.getName() ) : null;
+    return new DictionaryMember( input.getName(),
+                                 transformType( input.getType() ),
+                                 input.isOptional(),
+                                 input.getDefaultValue(),
+                                 null == docEntry ?
+                                 transformDocumentation( input.getDocumentation() ) :
+                                 createDocumentationElement( docEntry ),
+                                 transformExtendedAttributes( input.getExtendedAttributes() ),
+                                 transformSourceLocations( input.getSourceLocations() ) );
   }
 
   @Nonnull

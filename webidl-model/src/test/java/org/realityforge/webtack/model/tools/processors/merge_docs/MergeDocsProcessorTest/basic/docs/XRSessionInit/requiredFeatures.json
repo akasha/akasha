@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "XRSessionEventInit.requiredFeatures",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/requiredFeatures",
+  "description": "The XRSessionInit dictionary's requiredFeatures property specifies ..."
+}

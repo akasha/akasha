@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "XRSessionEventInit.optionalFeatures",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/optionalFeatures",
+  "description": "The XRSessionInit dictionary's optionalFeatures property specifies ..."
+}

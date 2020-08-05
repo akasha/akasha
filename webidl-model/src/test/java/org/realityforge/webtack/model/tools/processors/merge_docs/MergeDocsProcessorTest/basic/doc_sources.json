@@ -72,6 +72,20 @@
     "lastModifiedAt": 1,
     "name": "Window.someVar",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/someVar"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "XRSessionInit",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "XRSessionInit.optionalFeatures",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/optionalFeatures"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "XRSessionInit.requiredFeatures",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/requiredFeatures"
   }
-
 ]

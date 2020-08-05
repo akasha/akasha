@@ -40,3 +40,11 @@ interface mixin GlobalEventHandlers {
 partial interface mixin GlobalEventHandlers {
   attribute EventHandler onblur;
 };
+
+dictionary XRSessionInit {
+  sequence<any> optionalFeatures;
+};
+
+partial dictionary XRSessionInit {
+  sequence<any> requiredFeatures;
+};

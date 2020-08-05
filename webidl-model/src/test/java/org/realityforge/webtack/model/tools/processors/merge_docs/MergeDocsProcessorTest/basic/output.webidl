@@ -29,6 +29,34 @@ dictionary EventInit {
 };
 
 /**
+ * The WebXR Device API dictionary XRSessionInit specifies required and/or optional features when requesting a new XRSession by calling the navigator.xr.requestSession() method.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit">XRSessionInit - MDN</a>
+ */
+dictionary XRSessionInit {
+  /**
+   * The XRSessionInit dictionary's optionalFeatures property specifies ...
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/optionalFeatures">XRSessionEventInit.optionalFeatures - MDN</a>
+   */
+  sequence<any> optionalFeatures;
+};
+
+/**
+ * The WebXR Device API dictionary XRSessionInit specifies required and/or optional features when requesting a new XRSession by calling the navigator.xr.requestSession() method.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit">XRSessionInit - MDN</a>
+ */
+partial dictionary XRSessionInit {
+  /**
+   * The XRSessionInit dictionary's requiredFeatures property specifies ...
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRSessionInit/requiredFeatures">XRSessionEventInit.requiredFeatures - MDN</a>
+   */
+  sequence<any> requiredFeatures;
+};
+
+/**
  * The GlobalEventHandlers mixin describes the event handlers common to several interfaces like HTMLElement, Document, or Window.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers">GlobalEventHandlers - MDN</a>
