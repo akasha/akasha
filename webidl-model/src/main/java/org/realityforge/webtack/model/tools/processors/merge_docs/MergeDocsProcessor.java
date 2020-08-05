@@ -3,7 +3,6 @@ package org.realityforge.webtack.model.tools.processors.merge_docs;
 import java.util.Collections;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
