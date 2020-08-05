@@ -216,10 +216,22 @@ public final class WebIDLModelParser
           final Type returnType = parse( callbackRestContext.returnType() );
           final List<Argument> arguments = parse( callbackRestContext.argumentList(), documentation );
 
+          DocumentationElement callbackDocumentation = null;
+          if ( null != documentation )
+          {
+            callbackDocumentation = new DocumentationElement( documentation.getDocumentation(),
+                                                               documentation
+                                                                 .getBlockTags()
+                                                                 .stream()
+                                                                 .filter( t -> !"param".equals( t.getName() ) )
+                                                                 .collect( Collectors.toList() ),
+                                                               documentation.getSourceLocations() );
+          }
+
           return new CallbackDefinition( name,
                                          returnType,
                                          arguments,
-                                         documentation,
+                                         callbackDocumentation,
                                          extendedAttributes,
                                          parseSourceIntervals( startPosition, callbackRestContext ) );
         }

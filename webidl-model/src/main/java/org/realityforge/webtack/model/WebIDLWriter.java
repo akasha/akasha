@@ -178,7 +178,7 @@ public final class WebIDLWriter
   static void writeCallbackDefinition( @Nonnull final Writer writer, @Nonnull final CallbackDefinition definition )
     throws IOException
   {
-    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
+    writeOperationDocumentationIfRequired( writer, definition.getDocumentation(), definition.getArguments(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "callback " );
     writer.write( definition.getName() );
@@ -886,31 +886,7 @@ public final class WebIDLWriter
   static void writeOperationMember( @Nonnull final Writer writer, @Nonnull final OperationMember operation )
     throws IOException
   {
-    final DocumentationElement documentation = operation.getDocumentation();
-    final List<Argument> documentedArguments =
-      operation.getArguments().stream().filter( a -> null != a.getDocumentation() ).collect( Collectors.toList() );
-    if ( null != documentation || !documentedArguments.isEmpty() )
-    {
-      final List<DocumentationBlockTag> blockTags = new ArrayList<>();
-      for ( final Argument documentedArgument : documentedArguments )
-      {
-        final DocumentationElement argumentDocumentation = documentedArgument.getDocumentation();
-        assert null != argumentDocumentation;
-        blockTags.add( new DocumentationBlockTag( "param",
-                                                  documentedArgument.getName() +
-                                                  " " +
-                                                  argumentDocumentation.getDocumentation() ) );
-      }
-      if ( null != documentation )
-      {
-        blockTags.addAll( documentation.getBlockTags() );
-      }
-      final DocumentationElement operationDocumentation =
-        new DocumentationElement( null == documentation ? null : documentation.getDocumentation(),
-                                  blockTags,
-                                  Collections.emptyList() );
-      writeDocumentationIfRequired( writer, operationDocumentation, "  " );
-    }
+    writeOperationDocumentationIfRequired( writer, operation.getDocumentation(), operation.getArguments(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, operation.getExtendedAttributes(), "\n  " );
     final OperationMember.Kind kind = operation.getKind();
@@ -958,6 +934,38 @@ public final class WebIDLWriter
       writeArgumentList( writer, operation.getArguments() );
     }
     writer.write( ";\n" );
+  }
+
+  private static void writeOperationDocumentationIfRequired( @Nonnull final Writer writer,
+                                                             @Nullable final DocumentationElement documentation,
+                                                             @Nonnull final List<Argument> arguments,
+                                                             @Nonnull final String prefix )
+    throws IOException
+  {
+    final List<Argument> documentedArguments =
+      arguments.stream().filter( a -> null != a.getDocumentation() ).collect( Collectors.toList() );
+    if ( null != documentation || !documentedArguments.isEmpty() )
+    {
+      final List<DocumentationBlockTag> blockTags = new ArrayList<>();
+      for ( final Argument documentedArgument : documentedArguments )
+      {
+        final DocumentationElement argumentDocumentation = documentedArgument.getDocumentation();
+        assert null != argumentDocumentation;
+        blockTags.add( new DocumentationBlockTag( "param",
+                                                  documentedArgument.getName() +
+                                                  " " +
+                                                  argumentDocumentation.getDocumentation() ) );
+      }
+      if ( null != documentation )
+      {
+        blockTags.addAll( documentation.getBlockTags() );
+      }
+      final DocumentationElement operationDocumentation =
+        new DocumentationElement( null == documentation ? null : documentation.getDocumentation(),
+                                  blockTags,
+                                  Collections.emptyList() );
+      writeDocumentationIfRequired( writer, operationDocumentation, prefix );
+    }
   }
 
   static void writeType( @Nonnull final Writer writer, @Nonnull final Type type )

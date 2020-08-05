@@ -62,6 +62,15 @@ partial namespace WebAssembly {
 };
 
 /**
+ * This is event handler documentation.
+ *
+ * @param event the event.
+ * @version 1.2.3
+ */
+[LegacyTreatNonObjectAsNull]
+callback EventHandler = void ( Event event );
+
+/**
  * Documentation for FullscreenNavigationUI.
  *
  * @version 23
