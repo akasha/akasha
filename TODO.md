@@ -16,7 +16,7 @@ complete as there is too much un-said.
   members and definitions. Alternatively we could just cross link and add other @see tags
 
   Spec Docs: https://heycam.github.io/webidl/
-  
+
   We could make the doc repository populate docs from multiple sources
 
 * Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
