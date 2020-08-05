@@ -349,7 +349,7 @@ public final class MdnDocScanner
       }
       else if ( DocKind.Event == kind )
       {
-        final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th[scope=\"row\"]" );
+        final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th" );
         for ( final Element th : headers )
         {
           final Element td = th.nextElementSibling();
