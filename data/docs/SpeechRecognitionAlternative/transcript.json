@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechRecognitionAlternative.transcript",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript",
-    "description": "The transcript read-only property of the SpeechRecognitionResult interface returns a string containing the transcript of the recognised word(s).",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>transcript</strong></code> read-only property of the <code>SpeechRecognitionResult</code> interface returns a string containing the transcript of the recognised word(s).</p>\n<p>For continuous recognition, leading or trailing whitespace will be included where necessary so that concatenation of consecutive <code>SpeechRecognitionResult</code>s produces a proper transcript of the session.</p>"
+    "description": "The transcript read-only property of the SpeechRecognitionResult interface returns a string containing the transcript of the recognised word(s)."
 }

@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "BluetoothRemoteGATTCharacteristic.properties",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/properties",
-    "description": "The BluetoothRemoteGATTCharacteristic.properties read-only property returns a BluetoothCharacteristicProperties instance containing the properties of this characteristic.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The<strong><code>BluetoothRemoteGATTCharacteristic.properties</code></strong> read-only property returns a <code>BluetoothCharacteristicProperties</code> instance containingthe properties of this characteristic.</p>"
+    "description": "The BluetoothRemoteGATTCharacteristic.properties read-only property returns a BluetoothCharacteristicProperties instance containing the properties of this characteristic."
 }

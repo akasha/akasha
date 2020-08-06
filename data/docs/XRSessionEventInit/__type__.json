@@ -4,7 +4,6 @@
     "name": "XRSessionEventInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit",
     "description": "The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code><strong>XRSessionEventInit</strong></code> dictionary is used when calling the <code>XRSessionEvent()</code> constructor to provide the new event's initial values. You're unlikely to need to create these events yourself, however, as they're created by the XR system.</p>",
     "properties": [
         "session"
     ]

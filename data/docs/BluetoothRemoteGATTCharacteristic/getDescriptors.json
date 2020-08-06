@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTCharacteristic.getDescriptors",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptors",
-    "description": "The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The<strong><code>BluetoothRemoteGATTCharacteristic.getDescriptors()</code></strong>method returns a <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> that resolves to an <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array\"><code>Array</code></a> of all <code>BluetoothGATTDescriptor</code> objects for a given descriptor UUID.</p>"
+    "description": "The BluetoothRemoteGATTCharacteristic.getDescriptors() method returns a Promise that resolves to an Array of all BluetoothGATTDescriptor objects for a given descriptor UUID."
 }

@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRInputSourceEvent.inputSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource",
-    "description": "The XRInputSourceEvent interface's read-only inputSource property specifies the XRInputSource which generated the input event.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code>XRInputSourceEvent</code> interface's read-only <code><strong>inputSource</strong></code> property specifies the <code>XRInputSource</code> which generated the input event. This information lets you handle the event appropriately given the particulars of the user input device being manipulated.</p>"
+    "description": "The XRInputSourceEvent interface's read-only inputSource property specifies the XRInputSource which generated the input event."
 }

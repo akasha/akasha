@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "BluetoothRemoteGATTServer.connect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/connect",
-    "description": "The BluetoothRemoteGATTServer.connect() method causes the script execution environment to connect to this.device.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTServer.connect()</code></strong> method causes the script execution environment to connect to <code>this.device</code>.</p>"
+    "description": "The BluetoothRemoteGATTServer.connect() method causes the script execution environment to connect to this.device."
 }

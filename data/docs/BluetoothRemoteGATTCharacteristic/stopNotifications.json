@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTCharacteristic.stopNotifications",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/stopNotifications",
-    "description": "The BluetoothRemoteGATTCharacteristic.stopNotifications() method returns a Promise to the BluetoothRemoteGATTCharacteristic instance when there is no longer an active notification on it.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The<strong><code>BluetoothRemoteGATTCharacteristic.stopNotifications()</code></strong>method returns a <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a> to theBluetoothRemoteGATTCharacteristic instancewhen there is no longer an active notification on it.</p>"
+    "description": "The BluetoothRemoteGATTCharacteristic.stopNotifications() method returns a Promise to the BluetoothRemoteGATTCharacteristic instance when there is no longer an active notification on it."
 }

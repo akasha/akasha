@@ -3,6 +3,5 @@
     "kind": "Type",
     "name": "XRRigidTransform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform",
-    "description": "The XRRigidTransform is a WebXR API interface that represents the 3D geometric transform described by a position and orientation.",
-    "content": "The <code>XRRigidTransform</code>is a WebXR API interface that represents the 3D geometric transform described by a position and orientation.\n<p><code>XRRigidTransform</code> is used to specify transforms throughout the WebXR APIs, including:</p>\n<ul> \n <li>The offset and orientation relative to the parent reference space to use when creating a new reference space with <code>getOffsetReferenceSpace()</code>.</li> \n <li>The <code>transform</code> of an <code>XRView</code>.</li> \n <li>The <code>transform</code> of an <code>XRPose</code>.</li> \n <li>The <code>XRReferenceSpaceEvent</code> event's <code>transform</code> property, as found in the <code>reset</code> event received by an <code>XRReferenceSpace</code>.</li> \n</ul>\n<p>The advantage to using <code>XRRigidTransform</code> in these places rather than bare arrays that providing the matrix data is that the <code>XRRigidTransform</code> automatically does things like computing the inverse of the transform. Even better, once it's been computed, it's cached so that subsequent requests are significantly faster.</p>"
+    "description": "The XRRigidTransform is a WebXR API interface that represents the 3D geometric transform described by a position and orientation."
 }

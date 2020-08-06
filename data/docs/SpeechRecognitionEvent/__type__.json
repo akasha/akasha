@@ -4,7 +4,6 @@
     "name": "SpeechRecognitionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent",
     "description": "The SpeechRecognitionEvent interface of the Web Speech API represents the event object for the result and nomatch events, and contains all the data associated with an interim or final speech recognition result.",
-    "content": "The <strong><code>SpeechRecognitionEvent</code></strong> interface of the Web Speech API represents the event object for the <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/result\" title=\"/en-US/docs/Web/Events/result\">result</a></code> and <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/nomatch\" title=\"/en-US/docs/Web/Events/nomatch\">nomatch</a></code> events, and contains all the data associated with an interim or final speech recognition result.",
     "properties": [
         "emma",
         "interpretation",

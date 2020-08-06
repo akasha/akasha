@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRView.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform",
-    "description": "The read-only transform property of the XRView interface is an XRRigidTransform object which provides the position and orientation of the viewpoint relative to the XRReferenceSpace specified when the XRFrame.getViewerPose() method was called to obtain the view object.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<div class=\"blockIndicator draft\"> \n <p><strong>Draft</strong><br> This page is not complete.</p> \n</div>\n<p>The read-only <code><strong>transform</strong></code> property of the <code>XRView</code> interface is an <code>XRRigidTransform</code> object which provides the position and orientation of the viewpoint relative to the <code>XRReferenceSpace</code> specified when the <code>XRFrame.getViewerPose()</code> method was called to obtain the view object.</p>\n<p>With the <code>transform</code>, you can then position the view as a camera within the 3D scene. If you instead need the more traditional view matrix, you can get using <code>view.transform.inverse.matrix</code>; this gets the underlying <code>matrix</code> of the transform's <code>inverse</code>.</p>"
+    "description": "The read-only transform property of the XRView interface is an XRRigidTransform object which provides the position and orientation of the viewpoint relative to the XRReferenceSpace specified when the XRFrame.getViewerPose() method was called to obtain the view object."
 }

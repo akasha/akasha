@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "BluetoothCharacteristicProperties.indicate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/indicate",
-    "description": "The indicate read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if indications of the characteristic value with acknowledgement is permitted.",
-    "content": "<div class=\"blockIndicator draft\"> \n <p><strong>Draft</strong><br> This page is not complete.</p> \n</div>\n<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p class=\"summary\">The <strong><code>indicate</code></strong> read-only property of the <code>BluetoothCharacteristicProperties</code> interface returns a <code>boolean</code> that is <code>true</code> if indications of the characteristic value with acknowledgement is permitted.</p>"
+    "description": "The indicate read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if indications of the characteristic value with acknowledgement is permitted."
 }

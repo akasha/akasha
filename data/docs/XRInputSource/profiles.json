@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRInputSource.profiles",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/profiles",
-    "description": "The read-only XRInputSource property profiles returns an array of strings, each describing a configuration profile for the input source.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRInputSource</code> property <code><strong>profiles</strong></code> returns an array of strings, each describing a configuration profile for the input source. The profile stings are listed in order of specificity, with the most specific profile listed first.</p>\n<div class=\"blockIndicator note\"> \n <p><strong>Note:</strong> The <code>profiles</code> list is always empty when the WebXR session is in inline mode.</p> \n</div>"
+    "description": "The read-only XRInputSource property profiles returns an array of strings, each describing a configuration profile for the input source."
 }

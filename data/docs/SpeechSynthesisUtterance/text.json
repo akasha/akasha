@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.text",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text",
-    "description": "The text property of the SpeechSynthesisUtterance interface gets and sets the text that will be synthesised when the utterance is spoken.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>text</code></strong> property of the <code>SpeechSynthesisUtterance</code> interface gets and sets the text that will be synthesised when the utterance is spoken.</p>\n<p>The text may be provided as plain text, or a well-formed <a class=\"external external-icon\" href=\"http://www.w3.org/TR/speech-synthesis/\" rel=\"noopener\">SSML</a> document. The SSML tags will be stripped away by devices that don't support SSML.</p>"
+    "description": "The text property of the SpeechSynthesisUtterance interface gets and sets the text that will be synthesised when the utterance is spoken."
 }

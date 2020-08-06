@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRViewport.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/x",
-    "description": "The read-only XRViewport interface's x property indicates the offset from the left edge of the destination surface (typically a XRWebGLLayer to the left edge of the viewport within the surface into which WebXR content is to be rendered.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRViewport</code> interface's <code><strong>x</strong></code> property indicates the offset from the left edge of the destination surface (typically a <code>XRWebGLLayer</code> to the left edge of the viewport within the surface into which WebXR content is to be rendered. The viewport's <code>y</code> property identifies the <code>y</code> component of the origin, and its is given by the <code>width</code> and <code>height</code> properties.</p>"
+    "description": "The read-only XRViewport interface's x property indicates the offset from the left edge of the destination surface (typically a XRWebGLLayer to the left edge of the viewport within the surface into which WebXR content is to be rendered."
 }

@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "SpeechRecognitionResult.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length",
-    "description": "The length read-only property of the SpeechRecognitionResult interface returns the length of the \"array\" — the number of SpeechRecognitionAlternative objects contained in the result (also referred to as \"n-best alternatives\".)",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>length</strong></code> read-only property of the <code>SpeechRecognitionResult</code> interface returns <cite>the length of the \"array\" — the </cite>number of <code>SpeechRecognitionAlternative</code> objects contained in the result (also referred to as \"n-best alternatives\".)</p>\n<p>The number of alternatives contained in the result depends on what the <code>SpeechRecognition.maxAlternatives</code> property was set to when the speech recognition was first initiated.</p>"
+    "description": "The length read-only property of the SpeechRecognitionResult interface returns the length of the \"array\" — the number of SpeechRecognitionAlternative objects contained in the result (also referred to as \"n-best alternatives\".)"
 }

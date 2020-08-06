@@ -4,7 +4,6 @@
     "name": "BluetoothCharacteristicProperties",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties",
     "description": "The BluetoothCharacteristicProperties interface of the the Web Bluetooth API provides the operations that are valid on the given BluetoothRemoteGATTCharacteristic.",
-    "content": "<p><strong>Draft</strong><br> This page is not complete.</p>\n<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>BluetoothCharacteristicProperties</code></strong>interface of the the <a href=\"https://developer.mozilla.org/Web/API/Web_Bluetooth_API\">Web Bluetooth API</a> provides the operations that are valid on the given <code>BluetoothRemoteGATTCharacteristic</code>. This interface is returned by calling <code>BluetoothRemoteGATTCharacteristic.properties</code>.</p>",
     "properties": [
         "authenticatedSignedWrites",
         "broadcast",

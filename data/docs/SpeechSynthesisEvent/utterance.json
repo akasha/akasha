@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "SpeechSynthesisEvent.utterance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/utterance",
-    "description": "The utterance read-only property of the SpeechSynthesisUtterance interface returns the SpeechSynthesisUtterance instance that the event was triggered on.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>utterance</code></strong> read-only property of the <code>SpeechSynthesisUtterance</code> interface returns the <code>SpeechSynthesisUtterance</code> instance that the event was triggered on.</p>"
+    "description": "The utterance read-only property of the SpeechSynthesisUtterance interface returns the SpeechSynthesisUtterance instance that the event was triggered on."
 }

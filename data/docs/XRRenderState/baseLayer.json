@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRRenderState.baseLayer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/baseLayer",
-    "description": "The read-only baseLayer property of the XRRenderState interface returns the XRWebGLLayer instance that is the source of bitmap images and a description of how the image is to be rendered in the device.",
-    "content": "<div class=\"blockIndicator draft\"> \n <p><strong>Draft</strong><br> This page is not complete.</p> \n</div>\n<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p class=\"summary\">The read-only<strong><code>baseLayer</code></strong>property of the <code>XRRenderState</code> interface returns the <code>XRWebGLLayer</code> instance that is the source of bitmap images and a description of how the image is to be rendered in the device.</p>\n<p class=\"summary\">This property is read-only; however, you can indirectly change its value using<code>XRSession.updateRenderState</code>.</p>"
+    "description": "The read-only baseLayer property of the XRRenderState interface returns the XRWebGLLayer instance that is the source of bitmap images and a description of how the image is to be rendered in the device."
 }

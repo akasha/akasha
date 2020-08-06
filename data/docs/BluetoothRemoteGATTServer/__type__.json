@@ -4,7 +4,6 @@
     "name": "BluetoothRemoteGATTServer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer",
     "description": "The BluetoothRemoteGATTServer interface of the Web Bluetooth API represents a GATT Server on a remote device.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code><strong>BluetoothRemoteGATTServer</strong></code> interface of the Web Bluetooth API represents aGATT Serveron a remote device.</p>\n<div class=\"note\"> \n <p>This page describes the W3C Community GroupWeb Bluetooth API. For the Firefox OS Bluetooth API, see <a href=\"https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/BluetoothGattServer\"><code>BluetoothGattServer</code> (Firefox OS)</a>.</p> \n</div>",
     "properties": [
         "connected",
         "device"

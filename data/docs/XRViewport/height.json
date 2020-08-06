@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRViewport.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/height",
-    "description": "The read-only XRViewport property height specifies the height, in pixels, of the viewport onto the drawing surface within which the WebXR view is to be rendered.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRViewport</code> property <code><strong>height</strong></code> specifies the height, in pixels, of the viewport onto the drawing surface within which the WebXR view is to be rendered. Along with <code>width</code> and the origin point given by <code>x</code> and <code>y</code>, this defines the area within which rendered content will be drawn.</p>"
+    "description": "The read-only XRViewport property height specifies the height, in pixels, of the viewport onto the drawing surface within which the WebXR view is to be rendered."
 }

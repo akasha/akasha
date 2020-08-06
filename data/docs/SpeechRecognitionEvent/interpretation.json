@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "SpeechRecognitionEvent.interpretation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/interpretation",
-    "description": "The interpretation read-only property of the SpeechRecognitionEvent interface returns the semantic meaning of what the user said.",
-    "content": "<div class=\"blockIndicator obsolete obsoleteHeader\">\n <p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n</div>\n<p>The <code><strong>interpretation</strong></code> read-only property of the <code>SpeechRecognitionEvent</code> interface returns the semantic meaning of what the user said.</p>\n<p>This might be determined, for instance, through the SISR specification of semantics in a grammar (see <a class=\"external\" href=\"http://www.w3.org/TR/semantic-interpretation/\" rel=\"noopener\">Semantic Interpretation for Speech Recognition (SISR) Version 1.0</a> for specification and examples.)</p>"
+    "description": "The interpretation read-only property of the SpeechRecognitionEvent interface returns the semantic meaning of what the user said."
 }

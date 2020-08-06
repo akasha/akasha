@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "BluetoothRemoteGATTDescriptor.uuid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/uuid",
-    "description": "The BluetoothRemoteGATTDescriptor.uuid read-only property returns the UUID of the characteristic descriptor, for example '00002902-0000-1000-8000-00805f9b34fb' for theClient Characteristic Configuration descriptor.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTDescriptor.uuid</code></strong> read-only property returns the UUID of the characteristic descriptor, for example'<code>00002902-0000-1000-8000-00805f9b34fb</code>'for theClient Characteristic Configurationdescriptor.</p>"
+    "description": "The BluetoothRemoteGATTDescriptor.uuid read-only property returns the UUID of the characteristic descriptor, for example '00002902-0000-1000-8000-00805f9b34fb' for theClient Characteristic Configuration descriptor."
 }

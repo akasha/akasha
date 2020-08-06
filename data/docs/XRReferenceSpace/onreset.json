@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XRReferenceSpace.onreset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/onreset",
+    "description": "The XRReferenceSpace interface's onreset event handler property can be set to a function which is called when the XRReferenceSpace receives a reset event, signaling that the  XR device has experienced a discontinuity large enough to require that the position and/or orientation of the origin be significantly altered to compensate."
+}

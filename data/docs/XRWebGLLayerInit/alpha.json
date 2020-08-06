@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRWebGLLayerInit.alpha",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha",
-    "description": "The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code><strong>alpha</strong></code> property is a Boolean value which, if present and set to <code>true</code> in the <code>XRWebGLLayerInit</code> dictionary passed into the <code>XRWebGLLayer()</code> constructor, specifies that the new layer's color buffer is to include an <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/alpha\">alpha channel</a>. Otherwise, the color buffer won't have an alpha channel. The default is <code>true</code>.</p>"
+    "description": "The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel."
 }

@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "BluetoothRemoteGATTServer.getPrimaryServices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/getPrimaryServices",
-    "description": "The BluetoothRemoteGATTServer.getPrimaryServices() method returns a promise to a list of primary BluetoothGATTService objects offered by the bluetooth device for a specified BluetoothServiceUUID.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong>BluetoothRemoteGATTServer.getPrimaryServices()</strong> method returns a promise to a list of primary <code>BluetoothGATTService</code> objects offered by the bluetooth devicefor a specified <code>BluetoothServiceUUID</code>.</p>"
+    "description": "The BluetoothRemoteGATTServer.getPrimaryServices() method returns a promise to a list of primary BluetoothGATTService objects offered by the bluetooth device for a specified BluetoothServiceUUID."
 }

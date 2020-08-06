@@ -4,7 +4,6 @@
     "name": "XRViewerPose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose",
     "description": "The WebXR Device API interface XRViewerPose represents the pose (the position and orientation) of a viewer's point of view on the scene. Each XRViewerPose can have multiple views to represent, for example, the slight separation between the left and right eye.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The WebXR Device API interface <code><strong>XRViewerPose</strong></code> represents the pose (the position and orientation) of a viewer's point of view on the scene. Each <code>XRViewerPose</code> can have multiple views to represent, for example, the slight separation between the left and right eye. This view can represent anything from the point-of-view of a user's XR headset to the viewpoint represented by a player's movement of an avatar using mouse and keyboard, presented on the screen, to a virtual camera capturing the scene for a spectator.</p>",
     "properties": [
         "views"
     ]

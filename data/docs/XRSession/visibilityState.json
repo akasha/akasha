@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRSession.visibilityState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState",
-    "description": "The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus.",
-    "content": "<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p>The <em>read-only</em><strong><code>visibilityState</code></strong>property of the <code>XRSession</code> interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus.</p>\n<p>Every time the visibility state changes, a <code>visibilitychange</code> event is fired on the <code>XRSession</code> object.</p>"
+    "description": "The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus."
 }

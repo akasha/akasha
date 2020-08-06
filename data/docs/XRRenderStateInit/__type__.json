@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "XRRenderStateInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderStateInit",
-    "description": "The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame.",
-    "content": "<p><strong>Draft</strong><br> This page is not complete.</p>\n<p>The<code><strong>XRRenderStateInit</strong></code>dictionary is a writeable version of the <code>XRRenderState</code> interface, and is used when calling an <code>XRSession</code>'s <code>updateRenderState()</code> method to apply changes to the render state prior to rendering the next frame.</p>\n<p>All distances are specified as floating-point values in <a class=\"external\" href=\"https://en.wikipedia.org/wiki/meter\" rel=\"noopener\" title=\"meters\">meters</a>; you can specify a value of 50 centimeters using a value of 0.5, for example.</p>",
-    "properties": [
-        "baseLayer",
-        "depthFar",
-        "depthNear",
-        "inlineVerticalFieldOfView"
-    ]
+    "description": "The XRRenderStateInit dictionary is a writeable version of the XRRenderState interface, and is used when calling an XRSession's updateRenderState() method to apply changes to the render state prior to rendering the next frame."
 }

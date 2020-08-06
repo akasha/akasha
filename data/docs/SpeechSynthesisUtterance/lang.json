@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.lang",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/lang",
-    "description": "The lang property of the SpeechSynthesisUtterance interface gets and sets the language of the utterance.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>lang</code></strong> property of the <code>SpeechSynthesisUtterance</code> interface gets and sets the language of the utterance.</p>\n<p>If unset, the app's (i.e. the <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html\" title=\"The HTML <html> element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.\"><code>&lt;html&gt;</code></a> <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html#attr-lang\">lang</a></code> value) lang will be used, or the user-agent default if that is unset too.</p>"
+    "description": "The lang property of the SpeechSynthesisUtterance interface gets and sets the language of the utterance."
 }

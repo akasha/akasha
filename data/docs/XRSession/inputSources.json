@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRSession.inputSources",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/inputSources",
-    "description": "The read-only inputSources property of the XRSession interface returns an XRInputSourceArray object which lists all controllers and input devices which are expressly associated with the XR device and are currently available.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <em>read-only</em><strong><code>inputSources</code></strong>property of the <code>XRSession</code> interface returns an <code>XRInputSourceArray</code> object which lists all controllersand input devices which are expressly associated with the XR device and are currently available. These controllersmay include handheld controllers, XR-equipped gloves,optically tracked hands, and gaze-based input methods. Keyboards, gamepads, and mice are <em>not</em> considered WebXR input sources.</p>\n<div class=\"blockIndicator note\"> \n <p><strong>Note:</strong>Traditional gamepad controllersare supported using theGamepad API.</p> \n</div>"
+    "description": "The read-only inputSources property of the XRSession interface returns an XRInputSourceArray object which lists all controllers and input devices which are expressly associated with the XR device and are currently available."
 }

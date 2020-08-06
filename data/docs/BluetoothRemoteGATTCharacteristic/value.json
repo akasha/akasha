@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTCharacteristic.value",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/value",
-    "description": "The BluetoothRemoteGATTCharacteristic.value read-only property returns currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The<strong><code>BluetoothRemoteGATTCharacteristic.value</code></strong> read-only property returnscurrently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication.</p>"
+    "description": "The BluetoothRemoteGATTCharacteristic.value read-only property returns currently cached characteristic value. This value gets updated when the value of the characteristic is read or updated via a notification or indication."
 }

@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "BluetoothDevice.uuids",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/uuids",
-    "description": "The BluetoothDevice.uuids read-only property lists the UUIDs of GATT services provided by the device, that the current origin is allowed to access.",
-    "content": "<div class=\"blockIndicator obsolete obsoleteHeader\">\n <p><strong>Obsolete</strong><br>This feature is obsolete. Although it may still work in some browsers, its use is discouraged since it could be removed at any time. Try to avoid using it.</p>\n</div>\n<div class=\"blockIndicator note\"> \n <p>Use <code>BluetoothRemoteGATTServer.getPrimaryServices</code> instead.</p> \n</div>\n<p>The <strong><code>BluetoothDevice.uuids</code></strong> read-only property liststhe UUIDs of GATT services provided by the device, that the current origin is allowed to access.</p>"
+    "description": "The BluetoothDevice.uuids read-only property lists the UUIDs of GATT services provided by the device, that the current origin is allowed to access."
 }

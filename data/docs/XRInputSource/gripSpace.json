@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRInputSource.gripSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gripSpace",
-    "description": "The read-only XRInputSource property gripSpace returns an XRSpace whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand.",
-    "content": "<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p class=\"summary\">The read-only <code>XRInputSource</code> property <code><strong>gripSpace</strong></code> returns an <code>XRSpace</code> whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand. For example, if a user were holding a virtual straight rod, the native origin of this <code>XRSpace</code> would be located at the approximate center of mass of the user's fist.</p>"
+    "description": "The read-only XRInputSource property gripSpace returns an XRSpace whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand."
 }

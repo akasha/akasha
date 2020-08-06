@@ -4,7 +4,6 @@
     "name": "XRInputSourceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent",
     "description": "The WebXR Device API's XRInputSourceEvent interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The WebXR Device API's <code><strong>XRInputSourceEvent</strong></code> interface describes an event which has occurred on a WebXR user input device such as a hand controller, gaze tracking system, or motion tracking system. More specifically, they represent a change in the state of an <code>XRInputSource</code>.</p>\n<p>To learn more about handling inputs in a WebXR project, see the article Inputs and input sources.</p>",
     "properties": [
         "frame",
         "inputSource"

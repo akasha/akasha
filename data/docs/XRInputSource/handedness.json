@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRInputSource.handedness",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/handedness",
-    "description": "The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only<code>XRInputSource</code> property <code><strong>handedness</strong></code>indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.</p>"
+    "description": "The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all."
 }

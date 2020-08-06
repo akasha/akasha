@@ -4,7 +4,6 @@
     "name": "XRView",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView",
     "description": "The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The WebXR Device API's <code><strong>XRView</strong></code> interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint. You can think of it as a description of a specific eye or camera and how it views the world. A 3D frame will involve two views, one for each eye, separated by an appropriate distance which approximates the distance between the viewer's eyes. This allows the two views, when projected in isolation into the appropriate eyes, to simulate a 3D world.</p>",
     "properties": [
         "eye",
         "projectionMatrix",

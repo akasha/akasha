@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechSynthesisUtterance.voice",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice",
-    "description": "The voice property of the SpeechSynthesisUtterance interface gets and sets the voice that will be used to speak the utterance.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>voice</code></strong> property of the <code>SpeechSynthesisUtterance</code> interface gets and sets the voice that will be used to speak the utterance.</p>\n<p>This should be set to one of the <code>SpeechSynthesisVoice</code> objects returned by <code>SpeechSynthesis.getVoices()</code>. If not set by the time the utterance is spoken, the voice used will be the most suitable default voice available for the utterance's <code>lang</code> setting.</p>"
+    "description": "The voice property of the SpeechSynthesisUtterance interface gets and sets the voice that will be used to speak the utterance."
 }

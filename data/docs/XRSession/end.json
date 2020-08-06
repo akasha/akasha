@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "XRSession.end",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end",
-    "description": "The end() method shuts down the XRSession on which it's called, returning a promise which resolves once the session has fully shut down.",
-    "content": "<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p>The<code><strong>end()</strong></code>method shuts down the <code>XRSession</code>on which it's called, returning a promise which resolves once the session has fully shut down.</p>"
+    "description": "The end() method shuts down the XRSession on which it's called, returning a promise which resolves once the session has fully shut down."
 }

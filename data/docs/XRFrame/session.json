@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRFrame.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/session",
-    "description": "An XRFrame object's read-only session property returns the XRSession object that generated the frame.",
-    "content": "<p>An<code>XRFrame</code>object's <em>read-only</em><code><strong>session</strong></code>property returns the <code>XRSession</code> object that generated the frame.</p>"
+    "description": "An XRFrame object's read-only session property returns the XRSession object that generated the frame."
 }

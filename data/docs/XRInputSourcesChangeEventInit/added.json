@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRInputSourcesChangeEventInit.added",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added",
-    "description": "The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code>XRInputSourcesChangeEventInit</code> property <code>added</code> specifies a list of input sources, each identified using an <code>XRInputSource</code> object, which the represented<code>inputsourceschange</code> event is to indicate are newly available for use.</p>"
+    "description": "The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use."
 }

@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRWebGLLayerInit.stencil",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil",
-    "description": "When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>When using the<code>XRWebGLLayer()</code> constructor to create a new WebGL rendering layer for WebXR, providing as the <code>layerInit</code> parameter an object whose <code><strong>stencil</strong></code> property is <code>false</code> requests that the new layer be created without a stencil buffer.</p>\n<p>The <strong>stencil buffer</strong> is an optional buffer which, just like the depth buffer, contains one entry for every pixel in the frame buffer. Also just like the depth buffer, the value of an enter in the stencil buffer directly affects how (or if) the corresponding pixel is drawn during rendering. You can store values into each entry in the stencil bufer, then specify an operation that determines which stencil buffer values correspond to pixels which should be drawn to the screen during each frame.</p>"
+    "description": "When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer."
 }

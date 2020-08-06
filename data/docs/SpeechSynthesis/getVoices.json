@@ -3,6 +3,5 @@
     "kind": "Method",
     "name": "SpeechSynthesis.getVoices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices",
-    "description": "The getVoices() method of the SpeechSynthesis interface returns a list of SpeechSynthesisVoice objects representing all the available voices on the current device.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code><strong>getVoices()</strong></code> method of the <code>SpeechSynthesis</code> interface returns a list of <code>SpeechSynthesisVoice</code> objects representing all the available voices on the current device.</p>"
+    "description": "The getVoices() method of the SpeechSynthesis interface returns a list of SpeechSynthesisVoice objects representing all the available voices on the current device."
 }

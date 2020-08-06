@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "SpeechSynthesis.pending",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending",
-    "description": "The pending read-only property of the SpeechSynthesis interface is a Boolean that returns true if the utterance queue contains as-yet-unspoken utterances.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>pending</code></strong> read-only property of the <code>SpeechSynthesis</code> interface is a <code>Boolean</code> that returns <code>true</code> if the utterance queue contains as-yet-unspoken utterances.</p>"
+    "description": "The pending read-only property of the SpeechSynthesis interface is a Boolean that returns true if the utterance queue contains as-yet-unspoken utterances."
 }

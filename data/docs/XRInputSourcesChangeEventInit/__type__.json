@@ -4,7 +4,6 @@
     "name": "XRInputSourcesChangeEventInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit",
     "description": "The XRInputSourcesChangeEventInit dictionary is used to provide options to the XRInputSourcesChangeEvent() constructor in order to set the initial state of the new XRInputSourcesChangeEvent object.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code><strong>XRInputSourcesChangeEventInit</strong></code> dictionary is used to provide options to the <code>XRInputSourcesChangeEvent()</code> constructor in order to set the initial state of the new<code>XRInputSourcesChangeEvent</code> object.</p>",
     "properties": [
         "added",
         "removed",

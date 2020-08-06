@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTDescriptor.value",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/value",
-    "description": "The BluetoothRemoteGATTDescriptor.value read-only property returns an ArrayBuffer containing the currently cached descriptor value. This value gets updated when the value of the descriptor is read.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTDescriptor</code></strong><strong><code>.value</code></strong> read-only property returnsan <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer\"><code>ArrayBuffer</code></a> containingthe currently cached descriptor value. This value gets updated when the value of the descriptor is read.</p>"
+    "description": "The BluetoothRemoteGATTDescriptor.value read-only property returns an ArrayBuffer containing the currently cached descriptor value. This value gets updated when the value of the descriptor is read."
 }

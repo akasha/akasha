@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "WebSocket.onopen",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onopen",
-    "description": "The WebSocket.onopen property is an EventHandler that is called when the WebSocket connection's readyState changes to OPEN; this indicates that the connection is ready to send and receive data. It is called with an Event."
+    "description": "The WebSocket.onopen property is an EventHandler that is called when the WebSocket connection's readyState changes to 1; this indicates that the connection is ready to send and receive data. It is called with an Event."
 }

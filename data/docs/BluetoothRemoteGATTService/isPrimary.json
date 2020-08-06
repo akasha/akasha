@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "BluetoothRemoteGATTService.isPrimary",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary",
-    "description": "The BluetoothGATTService.isPrimary read-only property returns a Boolean that indicates whether this is a primary service. If it is not a primary service, it is a secondary service.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothGATTService.isPrimary</code></strong> read-only property returnsa <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean\"><code>Boolean</code></a> that indicateswhether this is a primaryservice. If it is not a primary service, it is a secondary service.</p>"
+    "description": "The BluetoothGATTService.isPrimary read-only property returns a Boolean that indicates whether this is a primary service. If it is not a primary service, it is a secondary service."
 }

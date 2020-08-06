@@ -3,6 +3,5 @@
     "kind": "Property",
     "name": "XRSessionEventInit.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit/session",
-    "description": "The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code>XRSessionEventInit</code> dictionary's <code><strong>session</strong></code> property specifies the <code>XRSession</code> for which the event describes a state change.</p>"
+    "description": "The XRSessionEventInit dictionary's session property specifies the XRSession for which the event describes a state change."
 }

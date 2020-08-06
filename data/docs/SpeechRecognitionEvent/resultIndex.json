@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechRecognitionEvent.resultIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/resultIndex",
-    "description": "The resultIndex read-only property of the SpeechRecognitionEvent interface returns the lowest index value result in the SpeechRecognitionResultList \"array\" that has actually changed.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code><strong>resultIndex</strong></code> read-only property of the <code>SpeechRecognitionEvent</code> interface returns the lowest index value result in the <code>SpeechRecognitionResultList</code> \"array\" that has actually changed.</p>\n<p>The <code>SpeechRecognitionResultList</code> object is not an array, but it has a getter that allows it to be accessed by array syntax.</p>"
+    "description": "The resultIndex read-only property of the SpeechRecognitionEvent interface returns the lowest index value result in the SpeechRecognitionResultList \"array\" that has actually changed."
 }

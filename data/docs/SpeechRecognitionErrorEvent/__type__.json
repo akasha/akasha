@@ -4,7 +4,6 @@
     "name": "SpeechRecognitionErrorEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent",
     "description": "The SpeechRecognitionErrorEvent interface of the Web Speech API represents error messages from the recognition service.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechRecognitionErrorEvent</code></strong> interface of the Web Speech API represents error messages from the recognition service.</p>",
     "properties": [
         "error",
         "message"

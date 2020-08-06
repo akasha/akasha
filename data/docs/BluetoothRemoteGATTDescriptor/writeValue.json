@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "BluetoothRemoteGATTDescriptor.writeValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue",
-    "description": "The BluetoothRemoteGATTDescriptor.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>BluetoothRemoteGATTDescriptor</code></strong><strong><code>.writeValue()</code></strong> method sets the value property to the bytes contained in an<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer\"><code>ArrayBuffer</code></a>and returns a<a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise\"><code>Promise</code></a>.</p>"
+    "description": "The BluetoothRemoteGATTDescriptor.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise."
 }

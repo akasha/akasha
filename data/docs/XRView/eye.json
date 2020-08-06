@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRView.eye",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye",
-    "description": "The XRView interface's read-only eye property is a string taken from the XREye enumerated type, indicating which eye's viewpoint the XRView represents: left or right. For views which represent neither eye, such as monoscopic views, this property's value is none.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code>XRView</code> interface's read-only <code><strong>eye</strong></code> property is a string taken from the <code>XREye</code> enumerated type, indicating which eye's viewpoint the <code>XRView</code> represents: <code>left</code> or <code>right</code>. For views which represent neither eye, such as monoscopic views, this property's value is <code>none</code>.</p>"
+    "description": "The XRView interface's read-only eye property is a string taken from the XREye enumerated type, indicating which eye's viewpoint the XRView represents: left or right. For views which represent neither eye, such as monoscopic views, this property's value is none."
 }

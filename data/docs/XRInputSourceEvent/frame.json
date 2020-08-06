@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRInputSourceEvent.frame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/frame",
-    "description": "The read-only XRInputSourceEvent property frame specifies an XRFrame object representing the event frame during which a WebXR user input occurred.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRInputSourceEvent</code> property <code><strong>frame</strong></code> specifies an <code>XRFrame</code> object representing the event frame during which a WebXR user input occurred. This may thus be an event which occurred in the past rather than a current or impending event.</p>"
+    "description": "The read-only XRInputSourceEvent property frame specifies an XRFrame object representing the event frame during which a WebXR user input occurred."
 }

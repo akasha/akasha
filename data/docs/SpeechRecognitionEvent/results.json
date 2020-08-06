@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechRecognitionEvent.results",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results",
-    "description": "The results read-only property of the SpeechRecognitionEvent interface returns a SpeechRecognitionResultList object representing all the speech recognition results for the current session.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <code><strong>results</strong></code> read-only property of the <code>SpeechRecognitionEvent</code> interface returns a <code>SpeechRecognitionResultList</code> object representing all the speech recognition results for the current session.</p>\n<p>Specifically this object will contain all final results that have been returned, followed by the current best hypothesis for all interim results. When subsequent <code><a href=\"https://developer.mozilla.org/en-US/docs/Web/Events/result\" title=\"/en-US/docs/Web/Events/result\">result</a></code> events are fired, interim results may be overwritten by a newer interim result or by a final result — they may even be removed, if they are at the end of the \"results\" array and the array length decreases. Final results on the other hand will not be overwritten or removed.</p>"
+    "description": "The results read-only property of the SpeechRecognitionEvent interface returns a SpeechRecognitionResultList object representing all the speech recognition results for the current session."
 }

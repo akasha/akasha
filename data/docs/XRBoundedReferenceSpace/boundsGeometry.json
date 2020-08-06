@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRBoundedReferenceSpace.boundsGeometry",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace/boundsGeometry",
-    "description": "The read-only XRBoundedReferenceSpace property boundsGeometry is an array of DOMPointReadOnly objects which specifies the points making up a polygon inside which the viewer is allowed to move.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<div class=\"blockIndicator draft\"> \n <p><strong>Draft</strong><br> This page is not complete.</p> \n</div>\n<p>The read-only <code>XRBoundedReferenceSpace</code> property<code><strong>boundsGeometry</strong></code>is an array of <code>DOMPointReadOnly</code> objects which specifies the points making up a polygon inside which the viewer is allowed to move. Each point is treated as a two-dimensional point, and must be located at ground level (that is, its<code>y</code>coordinate must be 0).</p>\n<p>This boundary is typically configured by the user, using the software that controls their XR hardware. This may be done by walking the border of the space they wish to use, or by drawing the shape of their room using their XR input device. Theoretically, a more advanced system might use sensors or other detection methods to determine the bounds of a dedicated XR room (notice how we carefully don't call it a holodeck?).</p>"
+    "description": "The read-only XRBoundedReferenceSpace property boundsGeometry is an array of DOMPointReadOnly objects which specifies the points making up a polygon inside which the viewer is allowed to move."
 }

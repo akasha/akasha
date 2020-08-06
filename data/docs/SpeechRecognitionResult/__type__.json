@@ -4,7 +4,6 @@
     "name": "SpeechRecognitionResult",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult",
     "description": "The SpeechRecognitionResult interface of the Web Speech API represents a single recognition match, which may contain multiple SpeechRecognitionAlternative objects.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <strong><code>SpeechRecognitionResult</code></strong> interface of the Web Speech API represents a single recognition match, which may contain multiple <code>SpeechRecognitionAlternative</code> objects.</p>",
     "properties": [
         "isFinal",
         "length"
