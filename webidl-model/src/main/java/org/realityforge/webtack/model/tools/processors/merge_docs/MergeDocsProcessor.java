@@ -267,7 +267,7 @@ final class MergeDocsProcessor
   }
 
   @Nonnull
-  private DocumentationElement createDocumentationElement( final DocEntry docEntry )
+  private DocumentationElement createDocumentationElement( @Nonnull final DocEntry docEntry )
   {
     return new DocumentationElement( docEntry.getDescription(),
                                      Collections.singletonList( seeTag( docEntry ) ),
