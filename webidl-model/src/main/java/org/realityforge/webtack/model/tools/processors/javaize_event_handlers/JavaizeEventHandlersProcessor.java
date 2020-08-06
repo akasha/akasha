@@ -104,8 +104,7 @@ final class JavaizeEventHandlersProcessor
       }
     }
 
-    final Collection<InterfaceDefinition> interfaces = _schema.getInterfaces();
-    for ( final InterfaceDefinition definition : interfaces )
+    for ( final InterfaceDefinition definition : _schema.getInterfaces() )
     {
       final String name = definition.getName();
       if ( name.endsWith( "Event" ) && isSubclassOfEvent( definition ) )
