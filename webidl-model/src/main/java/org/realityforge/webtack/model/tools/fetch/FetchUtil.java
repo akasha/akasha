@@ -17,8 +17,8 @@ import javax.annotation.Nullable;
 
 public final class FetchUtil
 {
-  private static final int CONNECT_TIMEOUT = 15_000;
-  private static final int READ_TIMEOUT = 10_000;
+  private static final int CONNECT_TIMEOUT = 60_000;
+  private static final int READ_TIMEOUT = 60_000;
 
   private FetchUtil()
   {
