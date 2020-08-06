@@ -523,7 +523,7 @@ public abstract class AbstractProcessor
   protected EventMember transformEventMember( @Nonnull final EventMember input )
   {
     return new EventMember( input.getName(),
-                            transformType( input.getEventType() ),
+                            input.getEventType(),
                             transformDocumentation( input.getDocumentation() ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
                             transformSourceLocations( input.getSourceLocations() ) );

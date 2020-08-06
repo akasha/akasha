@@ -204,7 +204,7 @@ final class MergeDocsProcessor
   {
     final DocEntry docEntry = null != _type ? _runtime.getDocEntry( _type + "." + input.getName() ) : null;
     return new EventMember( input.getName(),
-                            transformType( input.getEventType() ),
+                            input.getEventType(),
                             null == docEntry ?
                             transformDocumentation( input.getDocumentation() ) :
                             createDocumentationElement( docEntry ),

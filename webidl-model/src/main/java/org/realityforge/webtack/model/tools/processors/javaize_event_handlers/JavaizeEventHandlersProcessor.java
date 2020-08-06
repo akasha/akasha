@@ -317,7 +317,7 @@ final class JavaizeEventHandlersProcessor
   {
     final EventMember output = super.transformEventMember( input );
     assert null != output;
-    _usedListeners.add( ( (TypeReference) output.getEventType() ).getName() + "Listener" );
+    _usedListeners.add( output.getEventType().getName() + "Listener" );
     return output;
   }
 

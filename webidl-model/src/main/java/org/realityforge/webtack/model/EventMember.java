@@ -10,12 +10,12 @@ public final class EventMember
   implements Member
 {
   @Nonnull
-  private final Type _eventType;
+  private final TypeReference _eventType;
   @Nonnull
   private final String _name;
 
   public EventMember( @Nonnull final String name,
-                      @Nonnull final Type eventType,
+                      @Nonnull final TypeReference eventType,
                       @Nullable final DocumentationElement documentation,
                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
                       @Nonnull final List<SourceInterval> sourceLocations )
@@ -26,7 +26,7 @@ public final class EventMember
   }
 
   @Nonnull
-  public Type getEventType()
+  public TypeReference getEventType()
   {
     return _eventType;
   }

@@ -856,9 +856,8 @@ final class Generator
 
     for ( final EventMember event : definition.getEvents() )
     {
-      final String listenerName = ( (TypeReference) event.getEventType() ).getName() + "Listener";
       final CallbackInterfaceDefinition callbackInterface =
-        context.getSchema().findCallbackInterfaceByName( listenerName );
+        context.getSchema().findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
       if ( null != callbackInterface )
       {
         generateAddEventListener( context, event, 0, type );
@@ -899,8 +898,7 @@ final class Generator
                                          @Nonnull final TypeSpec.Builder type )
   {
     final String eventName = event.getName();
-    final TypeName listenerType =
-      context.lookupTypeByName( ( (TypeReference) event.getEventType() ).getName() + "Listener" );
+    final TypeName listenerType = context.lookupTypeByName( event.getEventType().getName() + "Listener" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
@@ -944,8 +942,7 @@ final class Generator
                                             @Nonnull final TypeSpec.Builder type )
   {
     final String eventName = event.getName();
-    final TypeName listenerType =
-      context.lookupTypeByName( ( (TypeReference) event.getEventType() ).getName() + "Listener" );
+    final TypeName listenerType = context.lookupTypeByName( event.getEventType().getName() + "Listener" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )

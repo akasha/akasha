@@ -685,7 +685,7 @@ public final class WebIDLModelParser
   {
     final String typeName = ctx.IDENTIFIER( 0 ).getText();
     final String eventName = ctx.IDENTIFIER( 1 ).getText();
-    final Type eventType =
+    final TypeReference eventType =
       new TypeReference( typeName, Collections.emptyList(), false, parseSourceIntervals( startPosition, ctx ) );
     return new EventMember( eventName,
                             eventType,
