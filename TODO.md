@@ -51,6 +51,8 @@ complete as there is too much un-said.
   for something like: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
   Alternatively we may just manually import these docs.
 
+* Add events to mixins and partial mixins
+
 # Java Generation
 
 * Generate a global object ala `DomGlobal` based on a specific interface name.
