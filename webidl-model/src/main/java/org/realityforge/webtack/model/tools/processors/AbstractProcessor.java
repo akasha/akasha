@@ -81,6 +81,38 @@ public abstract class AbstractProcessor
     final List<IncludesStatement> includes = transformIncludesStatements( schema.getIncludes() );
     final Map<String, TypedefDefinition> typedefs = transformTypedefs( schema.getTypedefs() );
 
+    return createSchema( schema,
+                         callbacks,
+                         callbackInterfaces,
+                         enumerations,
+                         dictionaries,
+                         partialDictionaries,
+                         namespaces,
+                         partialNamespaces,
+                         mixins,
+                         partialMixins,
+                         interfaces,
+                         partialInterfaces,
+                         includes,
+                         typedefs );
+  }
+
+  @Nonnull
+  protected WebIDLSchema createSchema( @Nonnull final WebIDLSchema schema,
+                                       @Nonnull final Map<String, CallbackDefinition> callbacks,
+                                       @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
+                                       @Nonnull final Map<String, EnumerationDefinition> enumerations,
+                                       @Nonnull final Map<String, DictionaryDefinition> dictionaries,
+                                       @Nonnull final Map<String, List<PartialDictionaryDefinition>> partialDictionaries,
+                                       @Nonnull final Map<String, NamespaceDefinition> namespaces,
+                                       @Nonnull final Map<String, List<PartialNamespaceDefinition>> partialNamespaces,
+                                       @Nonnull final Map<String, MixinDefinition> mixins,
+                                       @Nonnull final Map<String, List<PartialMixinDefinition>> partialMixins,
+                                       @Nonnull final Map<String, InterfaceDefinition> interfaces,
+                                       @Nonnull final Map<String, List<PartialInterfaceDefinition>> partialInterfaces,
+                                       @Nonnull final List<IncludesStatement> includes,
+                                       @Nonnull final Map<String, TypedefDefinition> typedefs )
+  {
     return new WebIDLSchema( callbacks,
                              callbackInterfaces,
                              dictionaries,
