@@ -19,11 +19,16 @@ interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
 interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onstart;
   attribute NullableEventHandler onend;
+
+  event SpeechSynthesisEvent start;
+  event SpeechSynthesisEvent end;
 };
 
 partial interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onpause;
   attribute NullableEventHandler onresume;
+
+  event SpeechSynthesisEvent resume;
 };
 
 interface EventSource {

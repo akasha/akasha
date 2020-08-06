@@ -17,11 +17,13 @@ import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.IncludesStatement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
+import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
@@ -44,6 +46,10 @@ final class JavaizeEventHandlersProcessor
   private final Set<String> _declaredHandlers = new HashSet<>();
   @Nonnull
   private final Set<String> _usedHandlers = new HashSet<>();
+  @Nonnull
+  private final Set<String> _declaredListeners = new HashSet<>();
+  @Nonnull
+  private final Set<String> _usedListeners = new HashSet<>();
   @Nullable
   private String _type;
 
@@ -66,6 +72,8 @@ final class JavaizeEventHandlersProcessor
     {
       _declaredHandlers.clear();
       _usedHandlers.clear();
+      _declaredListeners.clear();
+      _usedListeners.clear();
       _schema = null;
     }
   }
@@ -135,6 +143,63 @@ final class JavaizeEventHandlersProcessor
       }
     }
 
+    return definitions;
+  }
+
+  @Nonnull
+  @Override
+  protected Map<String, CallbackInterfaceDefinition> transformCallbackInterfaces( @Nonnull final Collection<CallbackInterfaceDefinition> inputs )
+  {
+    final Map<String, CallbackInterfaceDefinition> definitions = new HashMap<>();
+    for ( final CallbackInterfaceDefinition input : inputs )
+    {
+      final CallbackInterfaceDefinition output = transformCallbackInterface( input );
+      if ( null != output )
+      {
+        definitions.put( output.getName(), output );
+      }
+    }
+    for ( final InterfaceDefinition definition : _schema.getInterfaces() )
+    {
+      final String name = definition.getName();
+      if ( name.endsWith( "Event" ) && isSubclassOfEvent( definition ) )
+      {
+        final String listenerName = name + "Listener";
+        _declaredListeners.add( listenerName );
+
+        final TypeReference eventType =
+          new TypeReference( name, Collections.emptyList(), false, Collections.emptyList() );
+        final Argument argument =
+          new Argument( "event",
+                        eventType,
+                        false,
+                        false,
+                        null,
+                        new DocumentationElement( "the event", Collections.emptyList(), Collections.emptyList() ),
+                        Collections.emptyList(),
+                        Collections.emptyList() );
+        final OperationMember operation =
+          new OperationMember( OperationMember.Kind.DEFAULT,
+                               "handleEvent",
+                               Collections.singletonList( argument ),
+                               newVoidType(),
+                               new DocumentationElement( "Handle event of type " + name,
+                                                         Collections.emptyList(),
+                                                         Collections.emptyList() ),
+                               Collections.emptyList(),
+                               Collections.emptyList() );
+        final CallbackInterfaceDefinition callbackInterface =
+          new CallbackInterfaceDefinition( listenerName,
+                                           operation,
+                                           Collections.emptyList(),
+                                           new DocumentationElement( "Listener for events of type " + name,
+                                                                     Collections.emptyList(),
+                                                                     Collections.emptyList() ),
+                                           Collections.emptyList(),
+                                           Collections.emptyList() );
+        definitions.put( listenerName, callbackInterface );
+      }
+    }
     return definitions;
   }
 
@@ -248,6 +313,16 @@ final class JavaizeEventHandlersProcessor
 
   @Nonnull
   @Override
+  protected EventMember transformEventMember( @Nonnull final EventMember input )
+  {
+    final EventMember output = super.transformEventMember( input );
+    assert null != output;
+    _usedListeners.add( ( (TypeReference) output.getEventType() ).getName() + "Listener" );
+    return output;
+  }
+
+  @Nonnull
+  @Override
   protected WebIDLSchema createSchema( @Nonnull final WebIDLSchema schema,
                                        @Nonnull final Map<String, CallbackDefinition> callbacks,
                                        @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
@@ -269,6 +344,14 @@ final class JavaizeEventHandlersProcessor
     for ( final String unusedHandler : unusedHandlers )
     {
       callbacks.remove( unusedHandler );
+    }
+
+    // Remove any event listeners that were not actually used
+    final Set<String> unusedListeners = new HashSet<>( _declaredListeners );
+    unusedListeners.removeAll( _usedListeners );
+    for ( final String unusedListener : unusedListeners )
+    {
+      callbackInterfaces.remove( unusedListener );
     }
 
     return super.createSchema( schema,
