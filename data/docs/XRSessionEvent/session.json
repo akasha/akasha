@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "XRSessionEvent.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session",
-    "description": "The read-only XRSessionEvent interface's session property indicates which XRSession the event is about.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The read-only <code>XRSessionEvent</code> interface's <code><strong>session</strong></code> property indicates which <code>XRSession</code> the event is about.</p>"
+    "description": "The read-only XRSessionEvent interface's session property indicates which XRSession the event is about."
 }

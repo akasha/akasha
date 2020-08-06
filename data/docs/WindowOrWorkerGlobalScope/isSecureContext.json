@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WindowOrWorkerGlobalScope.isSecureContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext",
+    "description": "The isSecureContext read-only property of the WindowOrWorkerGlobalScope interface returns a boolean indicating whether the current context is secure (true) or not (false)."
+}

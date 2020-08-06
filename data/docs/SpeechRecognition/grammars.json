@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechRecognition.grammars",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars",
-    "description": "The grammars property of the SpeechRecognition interface returns and sets a collection of SpeechGrammar objects that represent the grammars that will be understood by the current SpeechRecognition.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>grammars</code></strong> property of the <code>SpeechRecognition</code> interface returns and sets a collection of <code>SpeechGrammar</code> objects that represent the grammars that will be understood by the current <code>SpeechRecognition</code>.</p>"
+    "description": "The grammars property of the SpeechRecognition interface returns and sets a collection of SpeechGrammar objects that represent the grammars that will be understood by the current SpeechRecognition."
 }

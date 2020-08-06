@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WindowOrWorkerGlobalScope.origin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin",
+    "description": "The origin read-only property of the WindowOrWorkerGlobalScope interface returns the origin of the global scope, serialized as a string."
+}

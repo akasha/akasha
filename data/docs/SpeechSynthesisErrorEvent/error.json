@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechSynthesisErrorEvent.error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error",
-    "description": "The error property of the SpeechSynthesisErrorEvent interface returns an error code indicating what has gone wrong with a speech synthesis attempt.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>error</code></strong> property of the <code>SpeechSynthesisErrorEvent</code> interface returns an error code indicating what has gone wrong with a speech synthesis attempt.</p>"
+    "description": "The error property of the SpeechSynthesisErrorEvent interface returns an error code indicating what has gone wrong with a speech synthesis attempt."
 }

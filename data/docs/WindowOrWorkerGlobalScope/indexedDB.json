@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WindowOrWorkerGlobalScope.indexedDB",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB",
+    "description": "The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases."
+}

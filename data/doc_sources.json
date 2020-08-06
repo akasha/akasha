@@ -2341,7 +2341,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement"
     },
     {
-        "lastModifiedAt": 1596581349351,
+        "lastModifiedAt": 1596711598505,
         "name": "HTMLDialogElement.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close"
     },
@@ -2741,7 +2741,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype"
     },
     {
-        "lastModifiedAt": 1596581388615,
+        "lastModifiedAt": 1596711451611,
         "name": "HTMLFormElement.formdata",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event"
     },
@@ -2776,12 +2776,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit"
     },
     {
-        "lastModifiedAt": 1596581388675,
+        "lastModifiedAt": 1596711602314,
         "name": "HTMLFormElement.reset",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset"
     },
     {
-        "lastModifiedAt": 1596581388752,
+        "lastModifiedAt": 1596711602359,
         "name": "HTMLFormElement.submit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"
     },
@@ -7966,77 +7966,97 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/weight"
     },
     {
-        "lastModifiedAt": 1596495732632,
+        "lastModifiedAt": 1596711367076,
         "name": "SpeechGrammarList",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList"
     },
     {
-        "lastModifiedAt": 1596495910451,
+        "lastModifiedAt": 1596711368518,
         "name": "SpeechGrammarList.addFromString",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromString"
     },
     {
-        "lastModifiedAt": 1596496088376,
+        "lastModifiedAt": 1596711369189,
         "name": "SpeechGrammarList.addFromURI",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI"
     },
     {
-        "lastModifiedAt": 1596496035272,
+        "lastModifiedAt": 1596711370398,
         "name": "SpeechGrammarList.item",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item"
     },
     {
-        "lastModifiedAt": 1596496086643,
+        "lastModifiedAt": 1596711368001,
         "name": "SpeechGrammarList.length",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length"
     },
     {
-        "lastModifiedAt": 1596495719511,
+        "lastModifiedAt": 1596711336820,
         "name": "SpeechRecognition",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition"
     },
     {
-        "lastModifiedAt": 1596495817158,
+        "lastModifiedAt": 1596711344209,
         "name": "SpeechRecognition.abort",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/abort"
     },
     {
-        "lastModifiedAt": 1596496055833,
+        "lastModifiedAt": 1596711346036,
+        "name": "SpeechRecognition.audioend",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audioend_event"
+    },
+    {
+        "lastModifiedAt": 1596711346566,
+        "name": "SpeechRecognition.audiostart",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audiostart_event"
+    },
+    {
+        "lastModifiedAt": 1596711338001,
         "name": "SpeechRecognition.continuous",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/continuous"
     },
     {
-        "lastModifiedAt": 1596495820179,
+        "lastModifiedAt": 1596711338561,
         "name": "SpeechRecognition.grammars",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars"
     },
     {
-        "lastModifiedAt": 1596496048133,
+        "lastModifiedAt": 1596711339239,
         "name": "SpeechRecognition.interimResults",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults"
     },
     {
-        "lastModifiedAt": 1596495802537,
+        "lastModifiedAt": 1596711340419,
         "name": "SpeechRecognition.lang",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/lang"
     },
     {
-        "lastModifiedAt": 1596496064039,
+        "lastModifiedAt": 1596711341021,
         "name": "SpeechRecognition.maxAlternatives",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives"
     },
     {
-        "lastModifiedAt": 1596495764165,
+        "lastModifiedAt": 1596711341570,
+        "name": "SpeechRecognition.onaudioend",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudioend"
+    },
+    {
+        "lastModifiedAt": 1596711341940,
+        "name": "SpeechRecognition.onaudiostart",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudiostart"
+    },
+    {
+        "lastModifiedAt": 1596711343075,
         "name": "SpeechRecognition.serviceURI",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/serviceURI"
     },
     {
-        "lastModifiedAt": 1596495743178,
+        "lastModifiedAt": 1596711345114,
         "name": "SpeechRecognition.start",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start"
     },
     {
-        "lastModifiedAt": 1596496025526,
+        "lastModifiedAt": 1596711345659,
         "name": "SpeechRecognition.stop",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/stop"
     },
@@ -8191,12 +8211,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event"
     },
     {
-        "lastModifiedAt": 1596495716858,
+        "lastModifiedAt": 1596711323446,
         "name": "SpeechSynthesisErrorEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent"
     },
     {
-        "lastModifiedAt": 1596495871758,
+        "lastModifiedAt": 1596711324210,
         "name": "SpeechSynthesisErrorEvent.error",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent/error"
     },
@@ -9141,12 +9161,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowLocalStorage"
     },
     {
-        "lastModifiedAt": 1596581122797,
+        "lastModifiedAt": 1596711351217,
         "name": "WindowOrWorkerGlobalScope",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope"
     },
     {
-        "lastModifiedAt": 1596581123544,
+        "lastModifiedAt": 1596711354645,
         "name": "WindowOrWorkerGlobalScope.atob",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob"
     },
@@ -9154,6 +9174,11 @@
         "lastModifiedAt": 1596581123830,
         "name": "WindowOrWorkerGlobalScope.btoa",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa"
+    },
+    {
+        "lastModifiedAt": 1596711351570,
+        "name": "WindowOrWorkerGlobalScope.caches",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches"
     },
     {
         "lastModifiedAt": 1596581124230,
@@ -9171,9 +9196,29 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap"
     },
     {
+        "lastModifiedAt": 1596711351962,
+        "name": "WindowOrWorkerGlobalScope.crossOriginIsolated",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated"
+    },
+    {
         "lastModifiedAt": 1596581125855,
         "name": "WindowOrWorkerGlobalScope.fetch",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch"
+    },
+    {
+        "lastModifiedAt": 1596711352222,
+        "name": "WindowOrWorkerGlobalScope.indexedDB",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB"
+    },
+    {
+        "lastModifiedAt": 1596711353019,
+        "name": "WindowOrWorkerGlobalScope.isSecureContext",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/isSecureContext"
+    },
+    {
+        "lastModifiedAt": 1596711353434,
+        "name": "WindowOrWorkerGlobalScope.origin",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/origin"
     },
     {
         "lastModifiedAt": 1596581126255,
@@ -9401,32 +9446,32 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace"
     },
     {
-        "lastModifiedAt": 1596495753640,
+        "lastModifiedAt": 1596711390614,
         "name": "XRInputSourceArray",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray"
     },
     {
-        "lastModifiedAt": 1596495769696,
+        "lastModifiedAt": 1596711392115,
         "name": "XRInputSourceArray.entries",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries"
     },
     {
-        "lastModifiedAt": 1596495821524,
+        "lastModifiedAt": 1596711393037,
         "name": "XRInputSourceArray.forEach",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach"
     },
     {
-        "lastModifiedAt": 1596495911124,
+        "lastModifiedAt": 1596711393549,
         "name": "XRInputSourceArray.keys",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys"
     },
     {
-        "lastModifiedAt": 1596495811734,
+        "lastModifiedAt": 1596711391193,
         "name": "XRInputSourceArray.length",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/length"
     },
     {
-        "lastModifiedAt": 1596496093198,
+        "lastModifiedAt": 1596711394165,
         "name": "XRInputSourceArray.values",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values"
     },
@@ -9446,17 +9491,17 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource"
     },
     {
-        "lastModifiedAt": 1596495737668,
+        "lastModifiedAt": 1596711371463,
         "name": "XRInputSourceEventInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit"
     },
     {
-        "lastModifiedAt": 1596495737722,
+        "lastModifiedAt": 1596711372542,
         "name": "XRInputSourceEventInit.frame",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/frame"
     },
     {
-        "lastModifiedAt": 1596496021226,
+        "lastModifiedAt": 1596711372996,
         "name": "XRInputSourceEventInit.inputSource",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource"
     },
@@ -9501,17 +9546,17 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/session"
     },
     {
-        "lastModifiedAt": 1596495765495,
+        "lastModifiedAt": 1596711428129,
         "name": "XRPose",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose"
     },
     {
-        "lastModifiedAt": 1596495911065,
+        "lastModifiedAt": 1596711428670,
         "name": "XRPose.emulatedPosition",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/emulatedPosition"
     },
     {
-        "lastModifiedAt": 1596495993278,
+        "lastModifiedAt": 1596711429148,
         "name": "XRPose.transform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/transform"
     },
@@ -9541,17 +9586,17 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/transform"
     },
     {
-        "lastModifiedAt": 1596495704548,
+        "lastModifiedAt": 1596711317113,
         "name": "XRReferenceSpaceEventInit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit"
     },
     {
-        "lastModifiedAt": 1596495901112,
+        "lastModifiedAt": 1596711318166,
         "name": "XRReferenceSpaceEventInit.referenceSpace",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace"
     },
     {
-        "lastModifiedAt": 1596495943444,
+        "lastModifiedAt": 1596711318611,
         "name": "XRReferenceSpaceEventInit.transform",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/transform"
     },
@@ -9661,12 +9706,12 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState"
     },
     {
-        "lastModifiedAt": 1596495714656,
+        "lastModifiedAt": 1596711321016,
         "name": "XRSessionEvent",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent"
     },
     {
-        "lastModifiedAt": 1596496087725,
+        "lastModifiedAt": 1596711321538,
         "name": "XRSessionEvent.session",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session"
     },
@@ -9756,42 +9801,42 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/y"
     },
     {
-        "lastModifiedAt": 1596495746155,
+        "lastModifiedAt": 1596711379898,
         "name": "XRWebGLLayer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer"
     },
     {
-        "lastModifiedAt": 1596495746203,
+        "lastModifiedAt": 1596711380462,
         "name": "XRWebGLLayer.antialias",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/antialias"
     },
     {
-        "lastModifiedAt": 1596495800417,
+        "lastModifiedAt": 1596711381363,
         "name": "XRWebGLLayer.frameBufferHeight",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferHeight"
     },
     {
-        "lastModifiedAt": 1596495746811,
+        "lastModifiedAt": 1596711381987,
         "name": "XRWebGLLayer.frameBufferWidth",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferWidth"
     },
     {
-        "lastModifiedAt": 1596496031814,
+        "lastModifiedAt": 1596711383103,
         "name": "XRWebGLLayer.framebuffer",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebuffer"
     },
     {
-        "lastModifiedAt": 1596495876666,
+        "lastModifiedAt": 1596711384237,
         "name": "XRWebGLLayer.getNativeFramebufferScaleFactor",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor"
     },
     {
-        "lastModifiedAt": 1596496057807,
+        "lastModifiedAt": 1596711384947,
         "name": "XRWebGLLayer.getViewport",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport"
     },
     {
-        "lastModifiedAt": 1596496082946,
+        "lastModifiedAt": 1596711383778,
         "name": "XRWebGLLayer.ignoreDepthValues",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/ignoreDepthValues"
     },

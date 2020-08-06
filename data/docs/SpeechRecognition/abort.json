@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "SpeechRecognition.abort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/abort",
-    "description": "The abort() method of the Web Speech API stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a SpeechRecognitionResult.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>abort()</strong></code> method of the Web Speech API stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a <code>SpeechRecognitionResult</code>.</p>"
+    "description": "The abort() method of the Web Speech API stops the speech recognition service from listening to incoming audio, and doesn't attempt to return a SpeechRecognitionResult."
 }

@@ -4,7 +4,6 @@
     "name": "XRWebGLLayer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer",
     "description": "The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device.",
-    "content": "<div class=\"blockIndicator secureContexts\">\n <p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n</div>\n<p class=\"summary\">The <strong><code>XRWebGLLayer</code></strong> interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device. In particular, it provides access to the WebGL framebuffer and viewport to ease access to the context.</p>\n<p class=\"summary\">Although <code>XRWebGLLayer</code> is currently the only type of framebuffer layer supported by WebGL, it's entirely possible that future updates to the WebXR specification may allow for other layer types and corresponding image sources.</p>",
     "properties": [
         "antialias",
         "frameBufferHeight",

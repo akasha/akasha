@@ -4,7 +4,6 @@
     "name": "XRSessionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent",
     "description": "The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession.",
-    "content": "The WebXR Device API's <code><strong>XRSessionEvent</strong></code> interface describes an event which indicates the change of the state of an <code>XRSession</code>. These events occur, for example, when the session ends or the visibility of its context changes.",
     "properties": [
         "session"
     ]

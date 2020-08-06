@@ -4,7 +4,6 @@
     "name": "XRReferenceSpaceEventInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit",
     "description": "The XRReferenceSpaceEventInit dictionary is used when calling the XRReferenceSpaceEvent() constructor to provide the values for its properties. Since the properties are read-only, this is the only opportunity available to set their values.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The <code><strong>XRReferenceSpaceEventInit</strong></code> dictionary is used when calling the <code>XRReferenceSpaceEvent()</code> constructor to provide the values for its properties. Since the properties are read-only, this is the only opportunity available to set their values.</p>\n<p>You will not usually need to use this, since these events are created by the WebXR infrastructure.</p>",
     "properties": [
         "referenceSpace",
         "transform"

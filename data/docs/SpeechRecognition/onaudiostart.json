@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechRecognition.onaudiostart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onaudiostart",
+    "description": "The onaudiostart property of the SpeechRecognition interface represents an event handler that will run when the user agent has started to capture audio (when the audiostart event fires.)"
+}

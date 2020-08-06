@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechRecognition.serviceURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/serviceURI",
-    "description": "The serviceURI property of the SpeechRecognition interface specifies the location of the speech recognition service used by the current SpeechRecognition to handle the actual recognition. The default is the user agent's default speech service.",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>serviceURI</code></strong> property of the <code>SpeechRecognition</code> interface specifies the location of the speech recognition service used by the current <code>SpeechRecognition</code> to handle the actual recognition. The default is the user agent's default speech service.</p>"
+    "description": "The serviceURI property of the SpeechRecognition interface specifies the location of the speech recognition service used by the current SpeechRecognition to handle the actual recognition. The default is the user agent's default speech service."
 }

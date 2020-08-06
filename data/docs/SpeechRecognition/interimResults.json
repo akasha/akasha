@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Property",
     "name": "SpeechRecognition.interimResults",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults",
-    "description": "The interimResults property of the SpeechRecognition interface controls whether interim results should be returned (true) or not (false.) Interim results are results that are not yet final (e.g. the SpeechRecognitionResult.isFinal property is false.)",
-    "content": "<div class=\"blockIndicator experimental indicator-warning\"> \n <p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p> \n</div>\n<p>The <strong><code>interimResults</code></strong> property of the <code>SpeechRecognition</code> interface controls whether interim results should be returned (<code>true</code>) or not (<code>false</code>.) Interim results are results that are not yet final (e.g. the <code>SpeechRecognitionResult.isFinal</code> property is <code>false</code>.)</p>\n<p>The default value for <strong><code>interimResults</code></strong>is <code>false</code>.</p>"
+    "description": "The interimResults property of the SpeechRecognition interface controls whether interim results should be returned (true) or not (false.) Interim results are results that are not yet final (e.g. the SpeechRecognitionResult.isFinal property is false.)"
 }

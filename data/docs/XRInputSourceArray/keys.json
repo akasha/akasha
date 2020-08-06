@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "XRInputSourceArray.keys",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/keys",
-    "description": "The keys() method in the XRInputSourceArray interface returns a JavaScript iterator which can then be used to iterate over the keys used to reference each item in the array of input sources.",
-    "content": "<p><strong>Secure context</strong><br>This feature is available only in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts\">secure contexts</a> (HTTPS), in some or all <a href=\"#Browser_compatibility\">supporting browsers</a>.</p>\n<p>The<code><strong>keys()</strong></code>method in the <code>XRInputSourceArray</code> interface returns a <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/JavaScript\">JavaScript</a> <code><a class=\"new\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator\" rel=\"nofollow\">iterator</a></code> which can then be used to iterate over the keys used to reference each item in the array of input sources.</p>"
+    "description": "The keys() method in the XRInputSourceArray interface returns a JavaScript iterator which can then be used to iterate over the keys used to reference each item in the array of input sources."
 }

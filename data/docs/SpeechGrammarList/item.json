@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "SpeechGrammarList.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item",
-    "description": "The item getter of the SpeechGrammarList interface is a standard getter — it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>item</strong></code> getter of the <code>SpeechGrammarList</code> interface is a standard getter — it allows individual <code>SpeechGrammar</code> objects to be retrieved from the <code>SpeechGrammarList</code> using array syntax.</p>"
+    "description": "The item getter of the SpeechGrammarList interface is a standard getter — it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax."
 }

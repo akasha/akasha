@@ -1,8 +1,7 @@
 
 {
-    "kind": "Type",
+    "kind": "Method",
     "name": "SpeechGrammarList.addFromURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/addFromURI",
-    "description": "The addFromURI() method of the SpeechGrammarList interface takes a grammar present at a specific URI and adds it to the SpeechGrammarList as a new SpeechGrammar object.",
-    "content": "<p><strong>This is an <a href=\"https://developer.mozilla.org/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#Experimental\">experimental technology</a></strong><br>Check the <a href=\"#Browser_compatibility\">Browser compatibility table</a> carefully before using this in production.</p>\n<p>The <code><strong>addFromURI()</strong></code> method of the <code>SpeechGrammarList</code> interface takes a grammar present at a specific URI and adds it to the <code>SpeechGrammarList</code> as a new <code>SpeechGrammar</code> object.</p>\n<p>Note that some speech recognition services may support built-in grammars that can be specified by URI.</p>"
+    "description": "The addFromURI() method of the SpeechGrammarList interface takes a grammar present at a specific URI and adds it to the SpeechGrammarList as a new SpeechGrammar object."
 }
