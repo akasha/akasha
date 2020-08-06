@@ -3,22 +3,32 @@ package org.realityforge.webtack.model.tools.processors.javaize_event_handlers;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackDefinition;
+import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DocumentationElement;
+import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.IncludesStatement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MixinDefinition;
+import org.realityforge.webtack.model.NamespaceDefinition;
+import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
+import org.realityforge.webtack.model.PartialNamespaceDefinition;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
+import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
@@ -30,6 +40,10 @@ final class JavaizeEventHandlersProcessor
   @Nonnull
   private final DocRepositoryRuntime _runtime;
   private WebIDLSchema _schema;
+  @Nonnull
+  private final Set<String> _declaredHandlers = new HashSet<>();
+  @Nonnull
+  private final Set<String> _usedHandlers = new HashSet<>();
   @Nullable
   private String _type;
 
@@ -50,6 +64,8 @@ final class JavaizeEventHandlersProcessor
     }
     finally
     {
+      _declaredHandlers.clear();
+      _usedHandlers.clear();
       _schema = null;
     }
   }
@@ -95,6 +111,7 @@ final class JavaizeEventHandlersProcessor
       if ( name.endsWith( "Event" ) && isSubclassOfEvent( definition ) )
       {
         final String handlerName = name + "Handler";
+        _declaredHandlers.add( handlerName );
         final TypeReference eventType =
           new TypeReference( name, Collections.emptyList(), false, Collections.emptyList() );
         final Argument argument =
@@ -186,12 +203,7 @@ final class JavaizeEventHandlersProcessor
   @Override
   protected AttributeMember transformAttributeMember( @Nonnull final AttributeMember input )
   {
-    final String name = input.getName();
-    final Type type = input.getType();
-    // Assume NullableEventHandler rename has already occurred
-    if ( Kind.TypeReference == type.getKind() &&
-         "NullableEventHandler".equals( ( (TypeReference) type ).getName() ) &&
-         name.startsWith( "on" ) )
+    if ( isEventHandlerProperty( input ) )
     {
       assert null != _type;
       final DocEntry typeDocEntry = _runtime.getDocEntry( _type );
@@ -206,7 +218,7 @@ final class JavaizeEventHandlersProcessor
             if ( null != eventDocEntry )
             {
               final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
-              if ( name.equals( eventHandlerProperty ) )
+              if ( input.getName().equals( eventHandlerProperty ) )
               {
                 final String eventTypeName = eventDocEntry.getEventType();
                 assert null != eventTypeName;
@@ -214,8 +226,10 @@ final class JavaizeEventHandlersProcessor
                 // against this scenario which would generate bad code
                 if ( !eventTypeName.contains( " or " ) )
                 {
+                  final String handlerName = eventTypeName + "Handler";
+                  _usedHandlers.add( handlerName );
                   return new AttributeMember( input.getName(),
-                                              new TypeReference( eventTypeName + "Handler",
+                                              new TypeReference( handlerName,
                                                                  Collections.emptyList(),
                                                                  true,
                                                                  Collections.emptyList() ),
@@ -231,6 +245,56 @@ final class JavaizeEventHandlersProcessor
       }
     }
     return super.transformAttributeMember( input );
+  }
+
+  @Nonnull
+  @Override
+  protected WebIDLSchema createSchema( @Nonnull final WebIDLSchema schema,
+                                       @Nonnull final Map<String, CallbackDefinition> callbacks,
+                                       @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
+                                       @Nonnull final Map<String, EnumerationDefinition> enumerations,
+                                       @Nonnull final Map<String, DictionaryDefinition> dictionaries,
+                                       @Nonnull final Map<String, List<PartialDictionaryDefinition>> partialDictionaries,
+                                       @Nonnull final Map<String, NamespaceDefinition> namespaces,
+                                       @Nonnull final Map<String, List<PartialNamespaceDefinition>> partialNamespaces,
+                                       @Nonnull final Map<String, MixinDefinition> mixins,
+                                       @Nonnull final Map<String, List<PartialMixinDefinition>> partialMixins,
+                                       @Nonnull final Map<String, InterfaceDefinition> interfaces,
+                                       @Nonnull final Map<String, List<PartialInterfaceDefinition>> partialInterfaces,
+                                       @Nonnull final List<IncludesStatement> includes,
+                                       @Nonnull final Map<String, TypedefDefinition> typedefs )
+  {
+    // Remove any handlers that were not actually used
+    final Set<String> unusedHandlers = new HashSet<>( _declaredHandlers );
+    unusedHandlers.removeAll( _usedHandlers );
+    for ( final String unusedHandler : unusedHandlers )
+    {
+      callbacks.remove( unusedHandler );
+    }
+
+    return super.createSchema( schema,
+                               callbacks,
+                               callbackInterfaces,
+                               enumerations,
+                               dictionaries,
+                               partialDictionaries,
+                               namespaces,
+                               partialNamespaces,
+                               mixins,
+                               partialMixins,
+                               interfaces,
+                               partialInterfaces,
+                               includes,
+                               typedefs );
+  }
+
+  private boolean isEventHandlerProperty( @Nonnull final AttributeMember input )
+  {
+    // Assume NullableEventHandler rename has already occurred
+    final Type type = input.getType();
+    return Kind.TypeReference == type.getKind() &&
+           "NullableEventHandler".equals( ( (TypeReference) type ).getName() ) &&
+           input.getName().startsWith( "on" );
   }
 
   private boolean isSubclassOfEvent( @Nonnull final InterfaceDefinition definition )

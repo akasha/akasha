@@ -8,13 +8,6 @@
 callback EventHandler = void ( Event event );
 
 /**
- * Handle events of type SpeechSynthesisErrorEvent
- *
- * @param event the event
- */
-callback SpeechSynthesisErrorEventHandler = void ( SpeechSynthesisErrorEvent event );
-
-/**
  * Handle events of type SpeechSynthesisEvent
  *
  * @param event the event
