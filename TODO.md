@@ -40,6 +40,9 @@ complete as there is too much un-said.
 
 # Events
 
+* Another place to scan events from
+  - https://html.spec.whatwg.org/multipage/indices.html#events-2
+
 * Validate should validate event types are present for event members
 
 * Validate callback names do not collide with other named elements
