@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "SpeechSynthesisUtterance.onend",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onend",
+  "description": "The SpeechSynthesisUtterance.onend property."
+}

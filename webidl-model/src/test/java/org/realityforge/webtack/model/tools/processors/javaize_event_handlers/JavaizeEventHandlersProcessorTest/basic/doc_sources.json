@@ -1,2 +1,32 @@
 [
+  {
+    "lastModifiedAt": 1,
+    "name": "SpeechSynthesisUtterance",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "SpeechSynthesisUtterance.onend",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onend"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "SpeechSynthesisUtterance.onresume",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "SpeechSynthesisUtterance.onstart",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "SpeechSynthesisUtterance.pause",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "SpeechSynthesisUtterance.start",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event"
+  }
 ]

@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "SpeechSynthesisUtterance.onresume",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume",
+  "description": "The SpeechSynthesisUtterance.onresume property."
+}

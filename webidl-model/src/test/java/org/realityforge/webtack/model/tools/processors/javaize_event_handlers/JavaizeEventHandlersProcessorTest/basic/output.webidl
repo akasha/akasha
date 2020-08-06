@@ -29,3 +29,13 @@ interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
 
 interface SpeechSynthesisEvent : Event {
 };
+
+interface SpeechSynthesisUtterance {
+  attribute NullableEventHandler onend;
+  attribute SpeechSynthesisEventHandler? onstart;
+};
+
+partial interface SpeechSynthesisUtterance {
+  attribute SpeechSynthesisEventHandler? onpause;
+  attribute NullableEventHandler onresume;
+};

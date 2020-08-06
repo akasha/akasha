@@ -3,10 +3,13 @@ package org.realityforge.webtack.model.tools.processors.javaize_event_handlers;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
+import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.InterfaceDefinition;
@@ -17,6 +20,7 @@ import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
@@ -176,6 +180,57 @@ final class JavaizeEventHandlersProcessor
     {
       _type = null;
     }
+  }
+
+  @Nullable
+  @Override
+  protected AttributeMember transformAttributeMember( @Nonnull final AttributeMember input )
+  {
+    final String name = input.getName();
+    final Type type = input.getType();
+    // Assume NullableEventHandler rename has already occurred
+    if ( Kind.TypeReference == type.getKind() &&
+         "NullableEventHandler".equals( ( (TypeReference) type ).getName() ) &&
+         name.startsWith( "on" ) )
+    {
+      assert null != _type;
+      final DocEntry typeDocEntry = _runtime.getDocEntry( _type );
+      if ( null != typeDocEntry )
+      {
+        final List<String> events = typeDocEntry.getEvents();
+        if ( null != events )
+        {
+          for ( final String event : events )
+          {
+            final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + event );
+            if ( null != eventDocEntry )
+            {
+              final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
+              if ( name.equals( eventHandlerProperty ) )
+              {
+                final String eventTypeName = eventDocEntry.getEventType();
+                assert null != eventTypeName;
+                // EventSource.error is documented as so this code essentially guards
+                // against this scenario which would generate bad code
+                if ( !eventTypeName.contains( " or " ) )
+                {
+                  return new AttributeMember( input.getName(),
+                                              new TypeReference( eventTypeName + "Handler",
+                                                                 Collections.emptyList(),
+                                                                 true,
+                                                                 Collections.emptyList() ),
+                                              input.getModifiers(),
+                                              transformDocumentation( input.getDocumentation() ),
+                                              transformExtendedAttributes( input.getExtendedAttributes() ),
+                                              transformSourceLocations( input.getSourceLocations() ) );
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return super.transformAttributeMember( input );
   }
 
   private boolean isSubclassOfEvent( @Nonnull final InterfaceDefinition definition )

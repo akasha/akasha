@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.start",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event",
+    "description": "The start event",
+    "eventType": "SpeechSynthesisEvent",
+    "eventHandlerProperty": "onstart"
+}

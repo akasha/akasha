@@ -15,3 +15,13 @@ interface SpeechSynthesisEvent : Event {
 
 interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
 };
+
+interface SpeechSynthesisUtterance {
+  attribute NullableEventHandler onstart;
+  attribute NullableEventHandler onend;
+};
+
+partial interface SpeechSynthesisUtterance {
+  attribute NullableEventHandler onpause;
+  attribute NullableEventHandler onresume;
+};

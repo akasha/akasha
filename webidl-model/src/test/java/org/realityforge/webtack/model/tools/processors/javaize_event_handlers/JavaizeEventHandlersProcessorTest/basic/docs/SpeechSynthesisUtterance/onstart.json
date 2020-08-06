@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "SpeechSynthesisUtterance.onstart",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart",
+  "description": "The SpeechSynthesisUtterance.onstart property."
+}

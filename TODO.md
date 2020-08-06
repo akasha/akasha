@@ -51,10 +51,6 @@ complete as there is too much un-said.
   for something like: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
   Alternatively we may just manually import these docs.
 
-* Add code that "specializes" event handlers in some way. So we can make an event handler for a
-  particular `on[myevent]` attribute take an event of type `MyEvent`. We could have a processor that
-  adds webidl `callback` instances for all these event handlers.
-
 * We could also add overlap methods on the interfaces that wrapped and generated methods like:
 
 ```java
@@ -77,8 +73,6 @@ complete as there is too much un-said.
   }
 
 ```
-
-* Type the `on[someevent]` properties on interfaces using the typed interface as specified above.
 
 # Java Generation
 

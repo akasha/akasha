@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.pause",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event",
+    "description": "The pause event",
+    "eventType": "SpeechSynthesisEvent",
+    "eventHandlerProperty": "onpause"
+}
