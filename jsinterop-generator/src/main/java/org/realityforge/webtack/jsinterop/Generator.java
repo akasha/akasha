@@ -35,6 +35,7 @@ import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
@@ -852,6 +853,23 @@ final class Generator
         generateStaticOperation( context, operation, type );
       }
     }
+
+    for ( final EventMember event : definition.getEvents() )
+    {
+      final String listenerName = ( (TypeReference) event.getEventType() ).getName() + "Listener";
+      final CallbackInterfaceDefinition callbackInterface =
+        context.getSchema().findCallbackInterfaceByName( listenerName );
+      if ( null != callbackInterface )
+      {
+        generateAddEventListener( context, event, 0, type );
+        generateAddEventListener( context, event, 1, type );
+        generateAddEventListener( context, event, 2, type );
+        generateRemoveEventListener( context, event, 0, type );
+        generateRemoveEventListener( context, event, 1, type );
+        generateRemoveEventListener( context, event, 2, type );
+      }
+    }
+
     final AnnotationSpec.Builder jsTypeAnnotation =
       AnnotationSpec
         .builder( Types.JS_TYPE )
@@ -873,6 +891,96 @@ final class Generator
     }
 
     context.writeTopLevelType( type );
+  }
+
+  private void generateAddEventListener( @Nonnull final CodeGenContext context,
+                                         @Nonnull final EventMember event,
+                                         final int variant,
+                                         @Nonnull final TypeSpec.Builder type )
+  {
+    final String eventName = event.getName();
+    final TypeName listenerType =
+      context.lookupTypeByName( ( (TypeReference) event.getEventType() ).getName() + "Listener" );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
+        .addModifiers( Modifier.PUBLIC )
+        .addAnnotation( Types.JS_OVERLAY )
+        .addParameter( ParameterSpec
+                         .builder( listenerType, "callback", Modifier.FINAL )
+                         .addAnnotation( Types.NONNULL )
+                         .build() );
+    if ( 0 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( context.lookupTypeByName( "AddEventListenerOptions" ),
+                                   "options",
+                                   Modifier.FINAL )
+                         .addAnnotation( Types.NONNULL )
+                         .build() )
+        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+    }
+    else if ( 1 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( TypeName.BOOLEAN, "options", Modifier.FINAL )
+                         .build() )
+        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+    }
+    else
+    {
+      assert 2 == variant;
+      method.addStatement( "addEventListener( $S, $T.cast( callback ) )", eventName, Types.JS );
+    }
+
+    type.addMethod( method.build() );
+  }
+
+  private void generateRemoveEventListener( @Nonnull final CodeGenContext context,
+                                            @Nonnull final EventMember event,
+                                            final int variant,
+                                            @Nonnull final TypeSpec.Builder type )
+  {
+    final String eventName = event.getName();
+    final TypeName listenerType =
+      context.lookupTypeByName( ( (TypeReference) event.getEventType() ).getName() + "Listener" );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
+        .addModifiers( Modifier.PUBLIC )
+        .addAnnotation( Types.JS_OVERLAY )
+        .addParameter( ParameterSpec
+                         .builder( listenerType, "callback", Modifier.FINAL )
+                         .addAnnotation( Types.NONNULL )
+                         .build() );
+    if ( 0 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( context.lookupTypeByName( "EventListenerOptions" ),
+                                   "options",
+                                   Modifier.FINAL )
+                         .addAnnotation( Types.NONNULL )
+                         .build() )
+        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+    }
+    else if ( 1 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( TypeName.BOOLEAN, "options", Modifier.FINAL )
+                         .build() )
+        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+    }
+    else
+    {
+      assert 2 == variant;
+      method.addStatement( "removeEventListener( $S, $T.cast( callback ) )", eventName, Types.JS );
+    }
+
+    type.addMethod( method.build() );
   }
 
   @Nonnull

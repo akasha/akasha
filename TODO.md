@@ -51,29 +51,6 @@ complete as there is too much un-said.
   for something like: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
   Alternatively we may just manually import these docs.
 
-* We could also add overlap methods on the interfaces that wrapped and generated methods like:
-
-```java
-  @JsOverlay
-  public void addProgressListener(@Nonnull final ProgressEventListener callback, @Nonnull AddEventListenerOptions options)
-  {
-    addEventListener( "progress", callback, options );
-  }
-
-  @JsOverlay
-  public void addProgressListener(@Nonnull final ProgressEventListener callback, boolean options)
-  {
-    addEventListener( "progress", callback, options );
-  }
-
-  @JsOverlay
-  public void addProgressListener(@Nonnull final ProgressEventListener callback)
-  {
-    addEventListener( "progress", callback );
-  }
-
-```
-
 # Java Generation
 
 * Generate a global object ala `DomGlobal` based on a specific interface name.
