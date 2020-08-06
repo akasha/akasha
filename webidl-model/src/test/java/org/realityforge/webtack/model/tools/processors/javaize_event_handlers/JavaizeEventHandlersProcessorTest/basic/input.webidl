@@ -25,3 +25,7 @@ partial interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onpause;
   attribute NullableEventHandler onresume;
 };
+
+interface EventSource {
+    attribute NullableEventHandler onerror;
+};

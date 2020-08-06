@@ -24,6 +24,10 @@ callback SpeechSynthesisEventHandler = void ( SpeechSynthesisEvent event );
 interface Event {
 };
 
+interface EventSource {
+  attribute NullableEventHandler onerror;
+};
+
 interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
 };
 

@@ -1,6 +1,16 @@
 [
   {
     "lastModifiedAt": 1,
+    "name": "EventSource",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "EventSource.error",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error_event"
+  },
+  {
+    "lastModifiedAt": 1,
     "name": "SpeechSynthesisUtterance",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance"
   },

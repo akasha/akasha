@@ -1,0 +1,9 @@
+{
+  "kind": "Type",
+  "name": "EventSource",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource",
+  "description": "The EventSource type...",
+  "events": [
+    "error"
+  ]
+}
