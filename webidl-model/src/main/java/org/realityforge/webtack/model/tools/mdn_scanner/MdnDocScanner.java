@@ -92,7 +92,7 @@ public final class MdnDocScanner
         throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
       }
 
-      final ExtractResult extractResult = extractDocs( source, kind, tmpTarget, target );
+      final ExtractResult extractResult = extractDocs( source, kind, member, tmpTarget, target );
 
       if ( extractResult.isChanged() )
       {
@@ -214,6 +214,7 @@ public final class MdnDocScanner
   @Nonnull
   private ExtractResult extractDocs( @Nonnull final DocSourceConfig source,
                                      @Nonnull final DocKind kind,
+                                     @Nullable final String member,
                                      @Nonnull final Path input,
                                      @Nonnull final Path output )
     throws SourceIOException
@@ -349,6 +350,7 @@ public final class MdnDocScanner
       }
       else if ( DocKind.Event == kind )
       {
+        entry.setEventName( member );
         final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th" );
         for ( final Element th : headers )
         {
