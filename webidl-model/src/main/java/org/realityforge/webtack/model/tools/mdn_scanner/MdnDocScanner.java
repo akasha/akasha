@@ -437,7 +437,7 @@ public final class MdnDocScanner
     throws RepositorySaveException
   {
     assert null == member || DocKind.Type != kind;
-    final String name = type + ( null == member ? "" : "." + member );
+    final String name = type + ( null == member ? "" : "." + member + ( DocKind.Event == kind ? "_event" : "" ) );
     final DocRepositoryConfig repository = _runtime.getRepository();
     DocSourceConfig source = repository.findSourceByName( name );
     if ( null == source )

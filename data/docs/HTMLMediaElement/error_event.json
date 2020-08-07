@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.error_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/error_event",
+    "description": "The error event is fired when the resource could not be loaded due to an error (for example, a network connectivity problem).",
+    "eventType": "Event",
+    "eventHandlerProperty": "onerror"
+}

@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.waiting_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/waiting_event",
+    "description": "The waiting event is fired when playback has stopped because of a temporary lack of data.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onwaiting"
+}

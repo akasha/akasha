@@ -116,7 +116,7 @@ final class MergeDocsProcessor
       {
         for ( final String eventName : eventNames )
         {
-          final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + eventName );
+          final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + eventName + "_event" );
           if ( null != eventDocEntry &&
                events.stream().noneMatch( e -> e.getName().equals( eventName ) ) &&
                !anyPartialInterfaceContainEvent( eventName ) )
@@ -276,7 +276,7 @@ final class MergeDocsProcessor
   @Override
   protected EventMember transformEventMember( @Nonnull final EventMember input )
   {
-    final DocEntry docEntry = null != _type ? _runtime.getDocEntry( _type + "." + input.getName() ) : null;
+    final DocEntry docEntry = null != _type ? _runtime.getDocEntry( _type + "." + input.getName() + "_event" ) : null;
     return new EventMember( input.getName(),
                             input.getEventType(),
                             null == docEntry ?

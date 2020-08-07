@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCDataChannel.close_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close_event",
+    "description": "The close event is sent to the onclose event handler on an RTCDataChannel instance when the data transport being used for the data channel has closed.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onclose"
+}

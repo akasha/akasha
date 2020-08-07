@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.stalled_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/stalled_event",
+    "description": "The stalled event is fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onstalled"
+}

@@ -1,9 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "Document.scroll",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event",
-    "description": "The scroll event fires when the document view or an element has been scrolled.",
-    "eventType": "Event",
-    "eventHandlerProperty": "onscroll"
-}

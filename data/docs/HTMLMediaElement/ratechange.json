@@ -1,9 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "HTMLMediaElement.ratechange",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ratechange_event",
-    "description": "The ratechange event is fired when the playback rate has changed.",
-    "eventType": "Event",
-    "eventHandlerProperty": "onratechange"
-}

@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "RTCDataChannel.message_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/message_event",
+    "description": "The WebRTC message event is sent to the onmessage event handler on an RTCDataChannel object when a message has been received from the remote peer.",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onmessage"
+}

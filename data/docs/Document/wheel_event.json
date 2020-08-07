@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "Document.wheel_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/wheel_event",
+    "description": "The wheel event fires when the user rotates a wheel button on a pointing device (typically a mouse).",
+    "eventType": "WheelEvent",
+    "eventHandlerProperty": "onwheel"
+}

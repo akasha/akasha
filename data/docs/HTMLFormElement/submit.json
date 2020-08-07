@@ -1,6 +1,6 @@
 
 {
-    "kind": "Event",
+    "kind": "Method",
     "name": "HTMLFormElement.submit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit",
     "description": "The HTMLFormElement.submit() method submits a given form."

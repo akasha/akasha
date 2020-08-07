@@ -1,9 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "EventSource.message",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message_event",
-    "description": "The message event of the EventSource API is fired when data is received through an event source.",
-    "eventType": "MessageEvent",
-    "eventHandlerProperty": "onmessage"
-}

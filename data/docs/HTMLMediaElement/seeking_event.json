@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.seeking_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seeking_event",
+    "description": "The seeking event is fired when a seek operation starts, meaning the Boolean seeking attribute has changed to true and the media is seeking a new position.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onseeking"
+}

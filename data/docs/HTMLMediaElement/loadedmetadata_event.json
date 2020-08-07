@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.loadedmetadata_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event",
+    "description": "The loadedmetadata event is fired when the metadata has been loaded.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onloadedmetadata"
+}

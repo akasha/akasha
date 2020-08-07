@@ -1,6 +1,6 @@
 
 {
-    "kind": "Event",
+    "kind": "Property",
     "name": "HTMLMediaElement.ended",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended",
     "description": "The HTMLMediaElement.ended indicates whether the media element has ended playback."

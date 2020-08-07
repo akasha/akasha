@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.volumechange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volumechange_event",
+    "description": "The volumechange event is fired when the volume has changed.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onvolumechange"
+}

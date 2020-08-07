@@ -1,7 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "XRReferenceSpace.reset",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/reset_event",
-    "description": "The reset event is sent to an XRReferenceSpace object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space."
-}

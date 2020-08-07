@@ -1096,8 +1096,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scripts"
     },
     {
-        "lastModifiedAt": 1596633488648,
-        "name": "Document.scroll",
+        "lastModifiedAt": 1596794615549,
+        "name": "Document.scroll_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event"
     },
     {
@@ -1131,13 +1131,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState"
     },
     {
-        "lastModifiedAt": 1596666663923,
-        "name": "Document.visibilitychange",
+        "lastModifiedAt": 1596794616582,
+        "name": "Document.visibilitychange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event"
     },
     {
-        "lastModifiedAt": 1596633488793,
-        "name": "Document.wheel",
+        "lastModifiedAt": 1596794617049,
+        "name": "Document.wheel_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/wheel_event"
     },
     {
@@ -1286,13 +1286,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/close"
     },
     {
-        "lastModifiedAt": 1596581431355,
-        "name": "EventSource.error",
+        "lastModifiedAt": 1596794624952,
+        "name": "EventSource.error_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error_event"
     },
     {
-        "lastModifiedAt": 1596581431598,
-        "name": "EventSource.message",
+        "lastModifiedAt": 1596794625259,
+        "name": "EventSource.message_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/message_event"
     },
     {
@@ -1311,8 +1311,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onopen"
     },
     {
-        "lastModifiedAt": 1596581431944,
-        "name": "EventSource.open",
+        "lastModifiedAt": 1596794626243,
+        "name": "EventSource.open_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/open_event"
     },
     {
@@ -2341,9 +2341,14 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement"
     },
     {
-        "lastModifiedAt": 1596711598505,
+        "lastModifiedAt": 1596790523265,
         "name": "HTMLDialogElement.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close"
+    },
+    {
+        "lastModifiedAt": 1596794631934,
+        "name": "HTMLDialogElement.close_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close_event"
     },
     {
         "lastModifiedAt": 1596581346763,
@@ -2477,7 +2482,7 @@
     },
     {
         "lastModifiedAt": 1596711223114,
-        "name": "HTMLElement.invalid",
+        "name": "HTMLElement.invalid_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/invalid_event"
     },
     {
@@ -2741,8 +2746,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype"
     },
     {
-        "lastModifiedAt": 1596711451611,
-        "name": "HTMLFormElement.formdata",
+        "lastModifiedAt": 1596790567045,
+        "name": "HTMLFormElement.formdata_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event"
     },
     {
@@ -2776,14 +2781,24 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit"
     },
     {
-        "lastModifiedAt": 1596711602314,
+        "lastModifiedAt": 1596790566124,
         "name": "HTMLFormElement.reset",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset"
     },
     {
-        "lastModifiedAt": 1596711602359,
+        "lastModifiedAt": 1596790567862,
+        "name": "HTMLFormElement.reset_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event"
+    },
+    {
+        "lastModifiedAt": 1596790566719,
         "name": "HTMLFormElement.submit",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit"
+    },
+    {
+        "lastModifiedAt": 1596790568925,
+        "name": "HTMLFormElement.submit_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event"
     },
     {
         "lastModifiedAt": 1596581386691,
@@ -3296,8 +3311,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement"
     },
     {
-        "lastModifiedAt": 1596581468949,
-        "name": "HTMLMediaElement.abort",
+        "lastModifiedAt": 1596790605327,
+        "name": "HTMLMediaElement.abort_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/abort_event"
     },
     {
@@ -3326,13 +3341,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType"
     },
     {
-        "lastModifiedAt": 1596581469198,
-        "name": "HTMLMediaElement.canplay",
+        "lastModifiedAt": 1596790605729,
+        "name": "HTMLMediaElement.canplay_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canplay_event"
     },
     {
-        "lastModifiedAt": 1596581469462,
-        "name": "HTMLMediaElement.canplaythrough",
+        "lastModifiedAt": 1596790606231,
+        "name": "HTMLMediaElement.canplaythrough_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canplaythrough_event"
     },
     {
@@ -3391,24 +3406,34 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/duration"
     },
     {
-        "lastModifiedAt": 1596581469732,
-        "name": "HTMLMediaElement.durationchange",
+        "lastModifiedAt": 1596790606573,
+        "name": "HTMLMediaElement.durationchange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/durationchange_event"
     },
     {
-        "lastModifiedAt": 1596581470014,
-        "name": "HTMLMediaElement.emptied",
+        "lastModifiedAt": 1596790606984,
+        "name": "HTMLMediaElement.emptied_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/emptied_event"
     },
     {
-        "lastModifiedAt": 1596712304571,
+        "lastModifiedAt": 1596790583328,
         "name": "HTMLMediaElement.ended",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended"
     },
     {
-        "lastModifiedAt": 1596712304669,
+        "lastModifiedAt": 1596790607290,
+        "name": "HTMLMediaElement.ended_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended_event"
+    },
+    {
+        "lastModifiedAt": 1596790583741,
         "name": "HTMLMediaElement.error",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/error"
+    },
+    {
+        "lastModifiedAt": 1596790607598,
+        "name": "HTMLMediaElement.error_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/error_event"
     },
     {
         "lastModifiedAt": 1596581464798,
@@ -3421,18 +3446,18 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/load"
     },
     {
-        "lastModifiedAt": 1596581471058,
-        "name": "HTMLMediaElement.loadeddata",
+        "lastModifiedAt": 1596790608674,
+        "name": "HTMLMediaElement.loadeddata_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event"
     },
     {
-        "lastModifiedAt": 1596581471320,
-        "name": "HTMLMediaElement.loadedmetadata",
+        "lastModifiedAt": 1596790609728,
+        "name": "HTMLMediaElement.loadedmetadata_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event"
     },
     {
-        "lastModifiedAt": 1596581471583,
-        "name": "HTMLMediaElement.loadstart",
+        "lastModifiedAt": 1596790610064,
+        "name": "HTMLMediaElement.loadstart_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadstart_event"
     },
     {
@@ -3501,9 +3526,14 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/onerror"
     },
     {
-        "lastModifiedAt": 1596712307089,
+        "lastModifiedAt": 1596790602906,
         "name": "HTMLMediaElement.pause",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/pause"
+    },
+    {
+        "lastModifiedAt": 1596790610363,
+        "name": "HTMLMediaElement.pause_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/pause_event"
     },
     {
         "lastModifiedAt": 1596581453736,
@@ -3511,9 +3541,14 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/paused"
     },
     {
-        "lastModifiedAt": 1596712307155,
+        "lastModifiedAt": 1596790603319,
         "name": "HTMLMediaElement.play",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play"
+    },
+    {
+        "lastModifiedAt": 1596790611157,
+        "name": "HTMLMediaElement.play_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play_event"
     },
     {
         "lastModifiedAt": 1596581454678,
@@ -3526,8 +3561,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/played"
     },
     {
-        "lastModifiedAt": 1596581471964,
-        "name": "HTMLMediaElement.playing",
+        "lastModifiedAt": 1596790611489,
+        "name": "HTMLMediaElement.playing_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/playing_event"
     },
     {
@@ -3541,13 +3576,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/preservesPitch"
     },
     {
-        "lastModifiedAt": 1596581472264,
-        "name": "HTMLMediaElement.progress",
+        "lastModifiedAt": 1596790612363,
+        "name": "HTMLMediaElement.progress_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/progress_event"
     },
     {
-        "lastModifiedAt": 1596581472950,
-        "name": "HTMLMediaElement.ratechange",
+        "lastModifiedAt": 1596790612796,
+        "name": "HTMLMediaElement.ratechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ratechange_event"
     },
     {
@@ -3566,14 +3601,19 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seekable"
     },
     {
-        "lastModifiedAt": 1596581473300,
-        "name": "HTMLMediaElement.seeked",
+        "lastModifiedAt": 1596790614004,
+        "name": "HTMLMediaElement.seeked_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seeked_event"
     },
     {
         "lastModifiedAt": 0,
         "name": "HTMLMediaElement.seeking",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seeking"
+    },
+    {
+        "lastModifiedAt": 1596790614629,
+        "name": "HTMLMediaElement.seeking_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seeking_event"
     },
     {
         "lastModifiedAt": 1596581468337,
@@ -3601,13 +3641,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/srcObject"
     },
     {
-        "lastModifiedAt": 1596581475799,
-        "name": "HTMLMediaElement.stalled",
+        "lastModifiedAt": 1596790615110,
+        "name": "HTMLMediaElement.stalled_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/stalled_event"
     },
     {
-        "lastModifiedAt": 1596581476182,
-        "name": "HTMLMediaElement.suspend",
+        "lastModifiedAt": 1596790615622,
+        "name": "HTMLMediaElement.suspend_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/suspend_event"
     },
     {
@@ -3616,8 +3656,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/textTracks"
     },
     {
-        "lastModifiedAt": 1596581476638,
-        "name": "HTMLMediaElement.timeupdate",
+        "lastModifiedAt": 1596790616592,
+        "name": "HTMLMediaElement.timeupdate_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/timeupdate_event"
     },
     {
@@ -3631,13 +3671,13 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume"
     },
     {
-        "lastModifiedAt": 1596581476981,
-        "name": "HTMLMediaElement.volumechange",
+        "lastModifiedAt": 1596790617603,
+        "name": "HTMLMediaElement.volumechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volumechange_event"
     },
     {
-        "lastModifiedAt": 1596581477328,
-        "name": "HTMLMediaElement.waiting",
+        "lastModifiedAt": 1596790618030,
+        "name": "HTMLMediaElement.waiting_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/waiting_event"
     },
     {
@@ -4332,7 +4372,7 @@
     },
     {
         "lastModifiedAt": 1596581526386,
-        "name": "HTMLSlotElement.slotchange",
+        "name": "HTMLSlotElement.slotchange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event"
     },
     {
@@ -5152,7 +5192,7 @@
     },
     {
         "lastModifiedAt": 1596712542668,
-        "name": "MediaStream.addTrack",
+        "name": "MediaStream.addTrack_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addTrack"
     },
     {
@@ -5177,7 +5217,7 @@
     },
     {
         "lastModifiedAt": 1596544759113,
-        "name": "MediaStream.removetrack",
+        "name": "MediaStream.removetrack_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/removetrack_event"
     },
     {
@@ -5212,7 +5252,7 @@
     },
     {
         "lastModifiedAt": 1596544771125,
-        "name": "MediaStreamTrack.ended",
+        "name": "MediaStreamTrack.ended_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/ended_event"
     },
     {
@@ -5257,7 +5297,7 @@
     },
     {
         "lastModifiedAt": 1596544772075,
-        "name": "MediaStreamTrack.mute",
+        "name": "MediaStreamTrack.mute_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/mute_event"
     },
     {
@@ -5317,7 +5357,7 @@
     },
     {
         "lastModifiedAt": 1596544772594,
-        "name": "MediaStreamTrack.unmute",
+        "name": "MediaStreamTrack.unmute_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/unmute_event"
     },
     {
@@ -5507,12 +5547,12 @@
     },
     {
         "lastModifiedAt": 1596581226505,
-        "name": "MessagePort.message",
+        "name": "MessagePort.message_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/message_event"
     },
     {
         "lastModifiedAt": 1596581226762,
-        "name": "MessagePort.messageerror",
+        "name": "MessagePort.messageerror_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/messageerror_event"
     },
     {
@@ -6161,18 +6201,23 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold"
     },
     {
-        "lastModifiedAt": 1596544587345,
-        "name": "RTCDataChannel.bufferedamountlow",
+        "lastModifiedAt": 1596790665769,
+        "name": "RTCDataChannel.bufferedamountlow_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event"
     },
     {
-        "lastModifiedAt": 1596712102675,
+        "lastModifiedAt": 1596790663272,
         "name": "RTCDataChannel.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close"
     },
     {
-        "lastModifiedAt": 1596544588240,
-        "name": "RTCDataChannel.error",
+        "lastModifiedAt": 1596790666692,
+        "name": "RTCDataChannel.close_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close_event"
+    },
+    {
+        "lastModifiedAt": 1596790667675,
+        "name": "RTCDataChannel.error_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/error_event"
     },
     {
@@ -6196,8 +6241,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxRetransmits"
     },
     {
-        "lastModifiedAt": 1596544588612,
-        "name": "RTCDataChannel.message",
+        "lastModifiedAt": 1596790668637,
+        "name": "RTCDataChannel.message_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/message_event"
     },
     {
@@ -6231,8 +6276,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onopen"
     },
     {
-        "lastModifiedAt": 1596544589029,
-        "name": "RTCDataChannel.open",
+        "lastModifiedAt": 1596790669132,
+        "name": "RTCDataChannel.open_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/open_event"
     },
     {
@@ -6727,7 +6772,7 @@
     },
     {
         "lastModifiedAt": 1596544688456,
-        "name": "RTCIceTransport.gatheringstatechange",
+        "name": "RTCIceTransport.gatheringstatechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange_event"
     },
     {
@@ -6777,7 +6822,7 @@
     },
     {
         "lastModifiedAt": 1596544689313,
-        "name": "RTCIceTransport.selectedcandidatepairchange",
+        "name": "RTCIceTransport.selectedcandidatepairchange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event"
     },
     {
@@ -6787,7 +6832,7 @@
     },
     {
         "lastModifiedAt": 1596544689685,
-        "name": "RTCIceTransport.statechange",
+        "name": "RTCIceTransport.statechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/statechange_event"
     },
     {
@@ -7062,7 +7107,7 @@
     },
     {
         "lastModifiedAt": 1596544653536,
-        "name": "RTCPeerConnection.connectionstatechange",
+        "name": "RTCPeerConnection.connectionstatechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event"
     },
     {
@@ -7092,7 +7137,7 @@
     },
     {
         "lastModifiedAt": 1596544653948,
-        "name": "RTCPeerConnection.datachannel",
+        "name": "RTCPeerConnection.datachannel_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/datachannel_event"
     },
     {
@@ -7152,7 +7197,7 @@
     },
     {
         "lastModifiedAt": 1596544654242,
-        "name": "RTCPeerConnection.icecandidate",
+        "name": "RTCPeerConnection.icecandidate_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event"
     },
     {
@@ -7162,12 +7207,12 @@
     },
     {
         "lastModifiedAt": 1596544655284,
-        "name": "RTCPeerConnection.iceconnectionstatechange",
+        "name": "RTCPeerConnection.iceconnectionstatechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event"
     },
     {
         "lastModifiedAt": 1596544655598,
-        "name": "RTCPeerConnection.icegatheringstatechange",
+        "name": "RTCPeerConnection.icegatheringstatechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event"
     },
     {
@@ -7182,7 +7227,7 @@
     },
     {
         "lastModifiedAt": 1596544656823,
-        "name": "RTCPeerConnection.negotiationneeded",
+        "name": "RTCPeerConnection.negotiationneeded_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event"
     },
     {
@@ -7307,7 +7352,7 @@
     },
     {
         "lastModifiedAt": 1596544657632,
-        "name": "RTCPeerConnection.signalingstatechange",
+        "name": "RTCPeerConnection.signalingstatechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event"
     },
     {
@@ -7317,7 +7362,7 @@
     },
     {
         "lastModifiedAt": 1596544658751,
-        "name": "RTCPeerConnection.track",
+        "name": "RTCPeerConnection.track_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/track_event"
     },
     {
@@ -8007,12 +8052,12 @@
     },
     {
         "lastModifiedAt": 1596711346036,
-        "name": "SpeechRecognition.audioend",
+        "name": "SpeechRecognition.audioend_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audioend_event"
     },
     {
         "lastModifiedAt": 1596711346566,
-        "name": "SpeechRecognition.audiostart",
+        "name": "SpeechRecognition.audiostart_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audiostart_event"
     },
     {
@@ -8677,12 +8722,12 @@
     },
     {
         "lastModifiedAt": 1596581500837,
-        "name": "VideoTrackList.addtrack",
+        "name": "VideoTrackList.addtrack_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/addtrack_event"
     },
     {
         "lastModifiedAt": 1596581501284,
-        "name": "VideoTrackList.change",
+        "name": "VideoTrackList.change_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event"
     },
     {
@@ -8712,7 +8757,7 @@
     },
     {
         "lastModifiedAt": 1596581501540,
-        "name": "VideoTrackList.removetrack",
+        "name": "VideoTrackList.removetrack_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event"
     },
     {
@@ -8751,13 +8796,18 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/bufferedAmount"
     },
     {
-        "lastModifiedAt": 1596711728215,
+        "lastModifiedAt": 1596790677948,
         "name": "WebSocket.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/close"
     },
     {
-        "lastModifiedAt": 1596581550357,
-        "name": "WebSocket.error",
+        "lastModifiedAt": 1596790680805,
+        "name": "WebSocket.close_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/close_event"
+    },
+    {
+        "lastModifiedAt": 1596790681191,
+        "name": "WebSocket.error_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/error_event"
     },
     {
@@ -8766,8 +8816,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/extensions"
     },
     {
-        "lastModifiedAt": 1596581550618,
-        "name": "WebSocket.message",
+        "lastModifiedAt": 1596790681532,
+        "name": "WebSocket.message_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/message_event"
     },
     {
@@ -8791,8 +8841,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onopen"
     },
     {
-        "lastModifiedAt": 1596581550911,
-        "name": "WebSocket.open",
+        "lastModifiedAt": 1596790681941,
+        "name": "WebSocket.open_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/open_event"
     },
     {
@@ -8892,12 +8942,12 @@
     },
     {
         "lastModifiedAt": 1596581285223,
-        "name": "Window.devicemotion",
+        "name": "Window.devicemotion_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/devicemotion_event"
     },
     {
         "lastModifiedAt": 1596581285628,
-        "name": "Window.deviceorientation",
+        "name": "Window.deviceorientation_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/deviceorientation_event"
     },
     {
@@ -8907,7 +8957,7 @@
     },
     {
         "lastModifiedAt": 1596581286040,
-        "name": "Window.error",
+        "name": "Window.error_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/error_event"
     },
     {
@@ -8937,7 +8987,7 @@
     },
     {
         "lastModifiedAt": 1596581286405,
-        "name": "Window.languagechange",
+        "name": "Window.languagechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/languagechange_event"
     },
     {
@@ -8987,7 +9037,7 @@
     },
     {
         "lastModifiedAt": 1596581287143,
-        "name": "Window.orientationchange",
+        "name": "Window.orientationchange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event"
     },
     {
@@ -9372,7 +9422,7 @@
     },
     {
         "lastModifiedAt": 1596543911889,
-        "name": "XR.devicechange",
+        "name": "XR.devicechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XR/devicechange_event"
     },
     {
@@ -9586,8 +9636,8 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/onreset"
     },
     {
-        "lastModifiedAt": 1596712422950,
-        "name": "XRReferenceSpace.reset",
+        "lastModifiedAt": 1596794986536,
+        "name": "XRReferenceSpace.reset_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/reset_event"
     },
     {

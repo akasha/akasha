@@ -1,9 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "HTMLMediaElement.suspend",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/suspend_event",
-    "description": "The suspend event is fired when media data loading has been suspended.",
-    "eventType": "Event",
-    "eventHandlerProperty": "onsuspend"
-}

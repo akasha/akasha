@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLMediaElement.seeked_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seeked_event",
+    "description": "The seeked event is fired when a seek operation completed, the current playback position has changed, and the Boolean seeking attribute is changed to false.",
+    "eventType": "Event",
+    "eventHandlerProperty": "onseeked"
+}

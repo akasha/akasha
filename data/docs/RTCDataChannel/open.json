@@ -1,9 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "RTCDataChannel.open",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/open_event",
-    "description": "The WebRTC open event is sent to an RTCDataChannel object's onopen event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.",
-    "eventType": "RTCDataChannelEvent",
-    "eventHandlerProperty": "onopen"
-}

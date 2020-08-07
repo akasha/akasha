@@ -1,9 +1,0 @@
-
-{
-    "kind": "Event",
-    "name": "EventSource.error",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/error_event",
-    "description": "The error event of the EventSource API is fired when a connection with an event source fails to be opened.",
-    "eventType": "Event or ErrorEvent",
-    "eventHandlerProperty": "onerror"
-}
