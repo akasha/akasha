@@ -107,9 +107,17 @@ final class Generator
   private void deleteDirectory( @Nonnull final Path directory )
     throws IOException
   {
-    for ( final Path path : Files.walk( directory ).sorted( Comparator.reverseOrder() ).collect( Collectors.toList() ) )
+    if ( Files.exists( directory ) )
     {
-      Files.delete( path );
+      final List<Path> pathsToDelete =
+        Files
+          .walk( directory )
+          .sorted( Comparator.reverseOrder() )
+          .collect( Collectors.toList() );
+      for ( final Path path : pathsToDelete )
+      {
+        Files.delete( path );
+      }
     }
   }
 
