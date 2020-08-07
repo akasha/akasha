@@ -6,6 +6,7 @@
     "someVar"
   ],
   "events": [
+    "devicemotion",
     "focus",
     "orientationchange"
   ]

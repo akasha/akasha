@@ -55,6 +55,7 @@ public final class MergeDocsProcessorTest
                                      Json
                                        .createObjectBuilder()
                                        .add( "docsRepositoryConfigFile", configFile.toString() )
+                                       .add( "createEvents", true )
                                        .build() );
   }
 }

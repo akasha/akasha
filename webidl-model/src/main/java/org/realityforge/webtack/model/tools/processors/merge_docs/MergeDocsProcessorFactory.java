@@ -15,11 +15,13 @@ public final class MergeDocsProcessorFactory
   extends AbstractProcessorFactory
 {
   public String docsRepositoryConfigFile;
+  public boolean createEvents;
 
   @Nonnull
   @Override
   public Processor create()
   {
-    return new MergeDocsProcessor( requireDocRepository( "docsRepositoryConfigFile", docsRepositoryConfigFile ) );
+    return new MergeDocsProcessor( requireDocRepository( "docsRepositoryConfigFile", docsRepositoryConfigFile ),
+                                   createEvents );
   }
 }

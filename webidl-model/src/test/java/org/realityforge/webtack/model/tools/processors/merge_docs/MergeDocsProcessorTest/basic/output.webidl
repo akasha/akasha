@@ -139,6 +139,12 @@ interface Node {
  */
 interface Window {
   /**
+   * Documentation for Window partial.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window - MDN</a>
+   */
+  event DeviceMotionEvent devicemotion;
+  /**
    * The focus event fires when a Window has received focus.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event">Window.focus - MDN</a>

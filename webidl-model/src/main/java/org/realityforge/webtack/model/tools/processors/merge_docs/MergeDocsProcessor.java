@@ -1,8 +1,10 @@
 package org.realityforge.webtack.model.tools.processors.merge_docs;
 
 import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
@@ -17,6 +19,8 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
+import org.realityforge.webtack.model.TypeReference;
+import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
@@ -29,11 +33,29 @@ final class MergeDocsProcessor
 {
   @Nonnull
   private final DocRepositoryRuntime _runtime;
+  private final boolean _createEvents;
   private String _type;
+  private WebIDLSchema _schema;
 
-  MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime )
+  MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime, final boolean createEvents )
   {
     _runtime = Objects.requireNonNull( runtime );
+    _createEvents = createEvents;
+  }
+
+  @Nullable
+  @Override
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
+  {
+    try
+    {
+      _schema = schema;
+      return super.process( schema );
+    }
+    finally
+    {
+      _schema = null;
+    }
   }
 
   @Nonnull
@@ -83,6 +105,54 @@ final class MergeDocsProcessor
 
   @Nonnull
   @Override
+  protected List<EventMember> transformEventMembers( @Nonnull final List<EventMember> inputs )
+  {
+    final List<EventMember> events = super.transformEventMembers( inputs );
+    if ( _createEvents )
+    {
+      final DocEntry docEntry = _runtime.getDocEntry( _type );
+      final List<String> eventNames = null != docEntry ? docEntry.getEvents() : null;
+      if ( null != eventNames )
+      {
+        for ( final String eventName : eventNames )
+        {
+          final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + eventName );
+          if ( null != eventDocEntry &&
+               events.stream().noneMatch( e -> e.getName().equals( eventName ) ) &&
+               !anyPartialInterfaceContainEvent( eventName ) )
+          {
+            final String eventType = eventDocEntry.getEventType();
+            assert null != eventType;
+            events.add( new EventMember( eventName,
+                                         new TypeReference( eventType,
+                                                            Collections.emptyList(),
+                                                            false,
+                                                            Collections.emptyList() ),
+                                         createDocumentationElement( docEntry ),
+                                         Collections.emptyList(),
+                                         Collections.emptyList() ) );
+          }
+        }
+      }
+    }
+    return events;
+  }
+
+  private boolean anyPartialInterfaceContainEvent( @Nonnull final String eventName )
+  {
+    // TODO: In the future when mixins can contain events we will need an equiv for mixins
+    for ( final PartialInterfaceDefinition definition : _schema.findPartialInterfacesByName( _type ) )
+    {
+      if ( definition.getEvents().stream().anyMatch( e -> e.getName().equals( eventName ) ) )
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  @Nonnull
+  @Override
   protected PartialInterfaceDefinition transformPartialInterface( @Nonnull final PartialInterfaceDefinition input )
   {
     _type = input.getName();
@@ -92,7 +162,11 @@ final class MergeDocsProcessor
                                       transformConstants( input.getConstants() ),
                                       transformAttributeMembers( input.getAttributes() ),
                                       transformOperationMembers( input.getOperations() ),
-                                      transformEventMembers( input.getEvents() ),
+                                      // Deliberately call super here so that only interfaces
+                                      // pick up events otherwise multiple partial interfaces
+                                      // or a partial and an actual interface would both receive
+                                      // events that are part of the docs which would cause errors
+                                      super.transformEventMembers( input.getEvents() ),
                                       transformIterableMember( input.getIterable() ),
                                       transformAsyncIterableMember( input.getAsyncIterable() ),
                                       transformMapLikeMember( input.getMapLikeMember() ),
