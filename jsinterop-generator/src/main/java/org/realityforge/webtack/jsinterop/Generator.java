@@ -939,7 +939,7 @@ final class Generator
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
-        .addModifiers( Modifier.PUBLIC )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .addAnnotation( Types.JS_OVERLAY )
         .addParameter( ParameterSpec
                          .builder( listenerType, "callback", Modifier.FINAL )
@@ -983,7 +983,7 @@ final class Generator
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
-        .addModifiers( Modifier.PUBLIC )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .addAnnotation( Types.JS_OVERLAY )
         .addParameter( ParameterSpec
                          .builder( listenerType, "callback", Modifier.FINAL )
