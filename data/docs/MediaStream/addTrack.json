@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaStream.addTrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/addTrack",
+    "description": "The MediaStream.addTrack() method adds a new track to the stream. The track is specified as a parameter of type MediaStreamTrack."
+}
