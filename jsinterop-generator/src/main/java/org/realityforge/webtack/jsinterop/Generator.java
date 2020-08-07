@@ -10,6 +10,7 @@ import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -93,6 +94,30 @@ final class Generator
       final UnionType unionType = entry.getValue();
       generateUnion( context, name, unionType );
     }
+
+    if ( context.shouldGenerateGwtModule() )
+    {
+      writeGwtModule( context );
+    }
+  }
+
+  private void writeGwtModule( @Nonnull final CodeGenContext context )
+    throws IOException
+  {
+    final String gwtModuleContent =
+      "<module>\n" +
+      "  <inherits name='jsinterop.base.Base'/>\n" +
+      "  <inherits name='elemental2.promise.Promise'/>\n" +
+      "  <inherits name='elemental2.core.Core'/>\n" +
+      "\n" +
+      "  <source path=''/>\n" +
+      "</module>\n";
+    final String packageName = context.getPackageName();
+    final String name =
+      packageName.isEmpty() ?
+      "core" :
+      NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
+    context.writeResourceFile( name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
   private void generateTypedef( @Nonnull final CodeGenContext context, @Nonnull final TypedefDefinition definition )

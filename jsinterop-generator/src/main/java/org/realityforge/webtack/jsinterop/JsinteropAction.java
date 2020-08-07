@@ -13,11 +13,15 @@ final class JsinteropAction
   private final String _outputDirectory;
   @Nonnull
   private final String _packageName;
+  private final boolean _generateGwtModule;
 
-  JsinteropAction( @Nonnull final String outputDirectory, @Nonnull final String packageName )
+  JsinteropAction( @Nonnull final String outputDirectory,
+                   @Nonnull final String packageName,
+                   final boolean generateGwtModule )
   {
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+    _generateGwtModule = generateGwtModule;
   }
 
   @Override
@@ -25,7 +29,7 @@ final class JsinteropAction
     throws Exception
   {
     final CodeGenContext context =
-      new CodeGenContext( schema, Paths.get( _outputDirectory ), _packageName );
+      new CodeGenContext( schema, Paths.get( _outputDirectory ), _packageName, _generateGwtModule );
     new Generator().generate( context );
   }
 }

@@ -7,7 +7,9 @@ import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,17 +39,19 @@ final class CodeGenContext
   private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
+  private final boolean _generateGwtModule;
   // Maps Classname -> Path of source file
   @Nonnull
   private final Map<String, Path> _generatedSourceFiles = new HashMap<>();
 
   CodeGenContext( @Nonnull final WebIDLSchema schema,
                   @Nonnull final Path outputDirectory,
-                  @Nonnull final String packageName )
+                  @Nonnull final String packageName, final boolean generateGwtModule )
   {
     _schema = Objects.requireNonNull( schema );
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+    _generateGwtModule = generateGwtModule;
   }
 
   @Nonnull
@@ -72,6 +76,11 @@ final class CodeGenContext
   String getPackageName()
   {
     return _packageName;
+  }
+
+  boolean shouldGenerateGwtModule()
+  {
+    return _generateGwtModule;
   }
 
   @Nonnull
@@ -102,6 +111,17 @@ final class CodeGenContext
     {
       return getMainJavaDirectory();
     }
+  }
+
+  void writeResourceFile( @Nonnull final String name, @Nonnull final byte[] content )
+    throws IOException
+  {
+    final Path path = getPackageDirectory().resolve( name );
+    final String qualifiedName = getPackageName() + "." + name;
+    assert !_generatedSourceFiles.containsKey( qualifiedName );
+    _generatedSourceFiles.put( qualifiedName, path );
+
+    Files.write( path, content, StandardOpenOption.CREATE_NEW );
   }
 
   void writeTopLevelType( @Nonnull final TypeSpec.Builder type )

@@ -194,7 +194,7 @@ public abstract class AbstractTest
     throws Exception
   {
     schema.link();
-    return new CodeGenContext( schema, getWorkingDir(), "com.example" );
+    return new CodeGenContext( schema, getWorkingDir(), "com.example", true );
   }
 
   /**
