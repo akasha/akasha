@@ -31,12 +31,12 @@
   },
   {
     "lastModifiedAt": 1,
-    "name": "SpeechSynthesisUtterance.pause",
+    "name": "SpeechSynthesisUtterance.pause_event",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pause_event"
   },
   {
     "lastModifiedAt": 1,
-    "name": "SpeechSynthesisUtterance.start",
+    "name": "SpeechSynthesisUtterance.start_event",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event"
   }
 ]
