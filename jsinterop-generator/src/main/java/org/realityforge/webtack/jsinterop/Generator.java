@@ -104,7 +104,7 @@ final class Generator
     }
   }
 
-  private void deleteDirectory( final Path directory )
+  private void deleteDirectory( @Nonnull final Path directory )
     throws IOException
   {
     for ( final Path path : Files.walk( directory ).sorted( Comparator.reverseOrder() ).collect( Collectors.toList() ) )
