@@ -178,7 +178,7 @@ public class DocEntry
     }
   }
 
-  public static void save( @Nonnull final DocEntry entry, @Nonnull final Path path )
+  static void save( @Nonnull final DocEntry entry, @Nonnull final Path path )
     throws Exception
   {
     Files.createDirectories( path.getParent() );

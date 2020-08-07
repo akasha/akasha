@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -49,7 +48,7 @@ public final class MdnDocScanner
   {
     final DocSourceConfig source = findOrCreateDocSourceConfig( kind, type, member );
     final boolean isNew = 0 == source.getLastModifiedAt();
-    final Path target = _runtime.getDataFileLocation( source );
+    final Path target = _runtime.getDocEntryPath( source );
     final FetchResult result;
     try
     {
@@ -92,7 +91,7 @@ public final class MdnDocScanner
         throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
       }
 
-      final ExtractResult extractResult = extractDocs( source, kind, member, tmpTarget, target );
+      final ExtractResult extractResult = extractDocs( source, kind, member, tmpTarget );
 
       if ( extractResult.isChanged() )
       {
@@ -181,7 +180,7 @@ public final class MdnDocScanner
     for ( final DocSourceConfig source : sourcesToRemove )
     {
       repository.getSources().remove( source );
-      final Path path = _runtime.getDataFileLocation( source );
+      final Path path = _runtime.getDocEntryPath( source );
       try
       {
         Files.deleteIfExists( path );
@@ -215,8 +214,7 @@ public final class MdnDocScanner
   private ExtractResult extractDocs( @Nonnull final DocSourceConfig source,
                                      @Nonnull final DocKind kind,
                                      @Nullable final String member,
-                                     @Nonnull final Path input,
-                                     @Nonnull final Path output )
+                                     @Nonnull final Path input )
     throws SourceIOException
   {
     try
@@ -372,45 +370,11 @@ public final class MdnDocScanner
           }
         }
       }
-
-      final Path tmpOutput = asTmpTarget( output, "" );
-      DocEntry.save( entry, tmpOutput );
-      if ( Files.exists( output ) && doFileContentsMatch( output, tmpOutput ) )
-      {
-        Files.delete( tmpOutput );
-        return new ExtractResult( entry, false );
-      }
-      else
-      {
-        Files.move( tmpOutput, output, StandardCopyOption.REPLACE_EXISTING );
-        return new ExtractResult( entry, true );
-      }
+      return new ExtractResult( entry, _runtime.save( entry ) );
     }
     catch ( final Exception e )
     {
       throw new SourceIOException( source, "Failed to read local file for source", e );
-    }
-  }
-
-  private boolean doFileContentsMatch( @Nonnull final Path path1, @Nonnull final Path path2 )
-    throws IOException
-  {
-    final byte[] path1Bytes = Files.readAllBytes( path1 );
-    final byte[] path2Bytes = Files.readAllBytes( path2 );
-    if ( path1Bytes.length == path2Bytes.length )
-    {
-      for ( int i = 0; i < path1Bytes.length; i++ )
-      {
-        if ( path1Bytes[ i ] != path2Bytes[ i ] )
-        {
-          return false;
-        }
-      }
-      return true;
-    }
-    else
-    {
-      return false;
     }
   }
 
