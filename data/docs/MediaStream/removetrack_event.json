@@ -1,7 +1,7 @@
 
 {
     "kind": "Event",
-    "name": "MediaStream.removetrack",
+    "name": "MediaStream.removetrack_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/removetrack_event",
     "description": "The removetrack event is fired when a new MediaStreamTrack object has been removed from a MediaStream.",
     "eventType": "MediaStreamTrackEvent",
