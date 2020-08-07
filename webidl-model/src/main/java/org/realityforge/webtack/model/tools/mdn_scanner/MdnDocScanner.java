@@ -322,7 +322,9 @@ public final class MdnDocScanner
             document
               .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
                        "#Events + dl > dt > a[href$=\"_event\"] > code, " +
+
                        "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
+                       // This pattern added for Window docs
                        "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
               .stream()
               .map( Element::text )
