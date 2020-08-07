@@ -4,6 +4,7 @@
     "name": "WebSocket.close_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/close_event",
     "description": "The close event is fired when a connection with a WebSocket is closed.",
+    "eventName": "close",
     "eventType": "CloseEvent",
     "eventHandlerProperty": "onclose"
 }

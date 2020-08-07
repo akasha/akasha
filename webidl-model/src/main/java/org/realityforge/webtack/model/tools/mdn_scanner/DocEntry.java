@@ -29,7 +29,6 @@ public class DocEntry
   private String name;
   private String href;
   private String description;
-
   // field is only present when kind == Type
   @Nullable
   private List<String> constructors;
@@ -42,7 +41,9 @@ public class DocEntry
   // field is only present when kind == Type
   @Nullable
   private List<String> events;
-
+  // field is only present when kind == Event
+  @Nullable
+  private String eventName;
   // field is only present when kind == Event
   @Nullable
   private String eventType;
@@ -132,6 +133,17 @@ public class DocEntry
   public void setEvents( @Nullable final List<String> events )
   {
     this.events = events;
+  }
+
+  @Nullable
+  public String getEventName()
+  {
+    return eventName;
+  }
+
+  public void setEventName( @Nullable final String eventName )
+  {
+    this.eventName = eventName;
   }
 
   @Nullable

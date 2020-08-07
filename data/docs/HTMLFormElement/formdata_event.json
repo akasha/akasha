@@ -4,6 +4,7 @@
     "name": "HTMLFormElement.formdata_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/formdata_event",
     "description": "The formdata event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor.",
+    "eventName": "formdata",
     "eventType": "FormDataEvent",
     "eventHandlerProperty": "onformdata"
 }

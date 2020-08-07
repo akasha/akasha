@@ -4,6 +4,7 @@
     "name": "RTCDataChannel.error_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/error_event",
     "description": "A WebRTC error event is sent to an RTCDataChannel object's onerror error handler when an error occurs on the data channel.",
+    "eventName": "error",
     "eventType": "RTCErrorEvent",
     "eventHandlerProperty": "onerror"
 }

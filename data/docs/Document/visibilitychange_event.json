@@ -4,6 +4,7 @@
     "name": "Document.visibilitychange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event",
     "description": "The visibilitychange event is fired at the document when the content of its tab have become visible or have been hidden.",
+    "eventName": "visibilitychange",
     "eventType": "Event",
     "eventHandlerProperty": "onvisibilitychange"
 }

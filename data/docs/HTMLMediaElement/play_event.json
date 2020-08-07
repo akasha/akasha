@@ -4,6 +4,7 @@
     "name": "HTMLMediaElement.play_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play_event",
     "description": "The play event is fired when the paused property is changed from true to false, as a result of the play method, or the autoplay attribute.",
+    "eventName": "play",
     "eventType": "Event",
     "eventHandlerProperty": "onplay"
 }

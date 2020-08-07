@@ -4,6 +4,7 @@
     "name": "HTMLMediaElement.suspend_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/suspend_event",
     "description": "The suspend event is fired when media data loading has been suspended.",
+    "eventName": "suspend",
     "eventType": "Event",
     "eventHandlerProperty": "onsuspend"
 }

@@ -4,6 +4,7 @@
     "name": "HTMLMediaElement.durationchange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/durationchange_event",
     "description": "The durationchange event is fired when the duration attribute has been updated.",
+    "eventName": "durationchange",
     "eventType": "Event",
     "eventHandlerProperty": "ondurationchange"
 }

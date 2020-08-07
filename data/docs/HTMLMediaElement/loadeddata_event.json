@@ -4,6 +4,7 @@
     "name": "HTMLMediaElement.loadeddata_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loadeddata_event",
     "description": "The loadeddata event is fired when the frame at the current playback position of the media has finished loading; often the first frame.",
+    "eventName": "loadeddata",
     "eventType": "Event",
     "eventHandlerProperty": "onloadeddata"
 }

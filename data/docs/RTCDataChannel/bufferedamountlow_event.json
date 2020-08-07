@@ -4,6 +4,7 @@
     "name": "RTCDataChannel.bufferedamountlow_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event",
     "description": "A bufferedamountlow event is sent to an RTCDataChannel when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in bufferedAmountLowThreshold.",
+    "eventName": "bufferedamountlow",
     "eventType": "Event",
     "eventHandlerProperty": "onbufferedamountlow"
 }
