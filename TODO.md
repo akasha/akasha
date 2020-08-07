@@ -57,6 +57,8 @@ complete as there is too much un-said.
 
 * Generate `GETTER`, `SETTER`, `DELETER` and `STRINGIFIER` operations
 
+* Add codegen for `IterableMember`, `AsyncIterableMember`, `MapLikeMember` and `SetLikeMember`
+
 * Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
 
 * Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
