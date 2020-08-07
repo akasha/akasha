@@ -11,6 +11,8 @@ import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -58,6 +60,7 @@ final class Generator
   void generate( @Nonnull final CodeGenContext context )
     throws IOException
   {
+    deleteDirectory( context.getMainJavaDirectory() );
     final WebIDLSchema schema = context.getSchema();
     for ( final TypedefDefinition definition : schema.getTypedefs() )
     {
@@ -98,6 +101,15 @@ final class Generator
     if ( context.shouldGenerateGwtModule() )
     {
       writeGwtModule( context );
+    }
+  }
+
+  private void deleteDirectory( final Path directory )
+    throws IOException
+  {
+    for ( final Path path : Files.walk( directory ).sorted( Comparator.reverseOrder() ).collect( Collectors.toList() ) )
+    {
+      Files.delete( path );
     }
   }
 
