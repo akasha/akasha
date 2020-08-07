@@ -99,7 +99,7 @@ public final class DocRepositoryRuntime
   public boolean save( @Nonnull final DocEntry entry )
     throws Exception
   {
-    final Path output = getDocEntryPath( entry );
+    final Path output = getDocEntryPath( entry.getName() );
     final Path tmpOutput = asTmpTarget( output );
     DocEntry.save( entry, tmpOutput );
     if ( Files.exists( output ) && doFileContentsMatch( output, tmpOutput ) )
@@ -112,12 +112,6 @@ public final class DocRepositoryRuntime
       Files.move( tmpOutput, output, StandardCopyOption.REPLACE_EXISTING );
       return true;
     }
-  }
-
-  @Nonnull
-  private Path getDocEntryPath( @Nonnull final DocEntry entry )
-  {
-    return getDocEntryPath( entry.getName() );
   }
 
   @Nonnull
