@@ -90,6 +90,20 @@ final class CodeGenContext
     }
   }
 
+  @Nonnull
+  Path getPackageDirectory()
+  {
+    final String packageName = getPackageName();
+    if ( !packageName.isEmpty() )
+    {
+      return getMainJavaDirectory().resolve( packageName.replaceAll( "\\.", File.separator ) );
+    }
+    else
+    {
+      return getMainJavaDirectory();
+    }
+  }
+
   void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
@@ -97,12 +111,7 @@ final class CodeGenContext
     final TypeSpec typeSpec = type.build();
     final String packageName = getPackageName();
     final String name = typeSpec.name;
-    Path path = outputDirectory;
-    if ( !packageName.isEmpty() )
-    {
-      path = outputDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
-    }
-    path = path.resolve( name + ".java" );
+    final Path path = getPackageDirectory().resolve( name + ".java" );
     final String qualifiedName = packageName + "." + name;
     assert !_generatedSourceFiles.containsKey( qualifiedName );
     _generatedSourceFiles.put( qualifiedName, path );
