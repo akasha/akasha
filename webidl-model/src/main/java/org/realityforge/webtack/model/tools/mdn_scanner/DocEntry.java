@@ -169,7 +169,7 @@ public class DocEntry
   }
 
   @Nonnull
-  public static DocEntry load( @Nonnull final Path path )
+  static DocEntry load( @Nonnull final Path path )
     throws Exception
   {
     try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
