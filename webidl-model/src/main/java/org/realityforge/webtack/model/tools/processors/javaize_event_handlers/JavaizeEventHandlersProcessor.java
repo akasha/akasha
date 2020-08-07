@@ -278,7 +278,7 @@ final class JavaizeEventHandlersProcessor
         {
           for ( final String event : events )
           {
-            final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + event );
+            final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + event + "_event" );
             if ( null != eventDocEntry )
             {
               final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
