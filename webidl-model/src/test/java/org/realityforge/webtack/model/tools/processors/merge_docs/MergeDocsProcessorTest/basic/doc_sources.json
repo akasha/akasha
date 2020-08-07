@@ -75,17 +75,17 @@
   },
   {
     "lastModifiedAt": 1,
-    "name": "Window.devicemotion",
+    "name": "Window.devicemotion_event",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/devicemotion_event"
   },
   {
     "lastModifiedAt": 1,
-    "name": "Window.focus",
+    "name": "Window.focus_event",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event"
   },
   {
     "lastModifiedAt": 1,
-    "name": "Window.orientationchange",
+    "name": "Window.orientationchange_event",
     "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event"
   },
   {

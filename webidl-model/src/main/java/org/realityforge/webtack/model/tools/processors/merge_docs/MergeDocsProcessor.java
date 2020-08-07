@@ -22,6 +22,7 @@ import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
@@ -351,7 +352,8 @@ final class MergeDocsProcessor
   @Nonnull
   private DocumentationBlockTag seeTag( @Nonnull final DocEntry docEntry )
   {
-    final String seeLink = "<a href=\"" + docEntry.getHref() + "\">" + docEntry.getName() + " - MDN</a>";
+    final String label = docEntry.getKind() == DocKind.Event ? docEntry.getEventName() + " event" : docEntry.getName();
+    final String seeLink = "<a href=\"" + docEntry.getHref() + "\">" + label + " - MDN</a>";
     return new DocumentationBlockTag( "see", seeLink );
   }
 }

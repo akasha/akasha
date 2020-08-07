@@ -147,7 +147,7 @@ interface Window {
   /**
    * The focus event fires when a Window has received focus.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event">Window.focus - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event">focus event - MDN</a>
    */
   event Event focus;
 };
@@ -167,7 +167,7 @@ partial interface Window {
   /**
    * The orientationchange event is fired when the orientation of the device has changed.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event">Window.orientationchange - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event">orientationchange event - MDN</a>
    */
   event Event orientationchange;
 };
