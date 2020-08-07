@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onappinstalled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onappinstalled",
+    "description": "The onappinstalled attribute of the Window object serves as an event handler for the appinstalled event, which is dispatched once the web application is successfully installed as a progressive web app. The event that is fired is a \"simple event\" that implements the Event interface."
+}

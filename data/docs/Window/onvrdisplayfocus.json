@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onvrdisplayfocus",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayfocus",
+    "description": "The onvrdisplayfocus property of the Window interface represents an event handler that will run when presentation to a display has resumed after being blurred (when the vrdisplayfocus event fires)."
+}

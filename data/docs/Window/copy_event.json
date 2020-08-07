@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.copy_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/copy_event",
+    "description": "The copy event fires when the user initiates a copy action through the browser's user interface.",
+    "eventName": "copy",
+    "eventType": "ClipboardEvent",
+    "eventHandlerProperty": "oncopy"
+}

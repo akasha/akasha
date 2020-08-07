@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.vrdisplayactivate_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayactivate_event",
+    "description": "You can use the vrdisplayactivate event in an addEventListener method:",
+    "eventName": "vrdisplayactivate",
+    "eventType": "VRDisplayEvent",
+    "eventHandlerProperty": "onvrdisplayactivate"
+}

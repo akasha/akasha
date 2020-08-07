@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.DOMContentLoaded_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event",
+    "description": "The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.",
+    "eventName": "DOMContentLoaded",
+    "eventType": "Event",
+    "eventHandlerProperty": "None"
+}

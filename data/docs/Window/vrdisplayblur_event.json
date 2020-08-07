@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.vrdisplayblur_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayblur_event",
+    "description": "You can use the vrdisplayblur event in an addEventListener method:",
+    "eventName": "vrdisplayblur",
+    "eventType": "VRDisplayEvent",
+    "eventHandlerProperty": "onvrdisplayblur"
+}

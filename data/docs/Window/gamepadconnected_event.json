@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.gamepadconnected_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/gamepadconnected_event",
+    "description": "The gamepadconnected event is fired when the browser detects that a gamepad has been connected or the first time a button/axis of the gamepad is used.",
+    "eventName": "gamepadconnected",
+    "eventType": "GamepadEvent",
+    "eventHandlerProperty": "ongamepadconnected"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.transitioncancel_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/transitioncancel_event",
+    "description": "The transitioncancel event is fired when a CSS transition is canceled.",
+    "eventName": "transitioncancel",
+    "eventType": "TransitionEvent",
+    "eventHandlerProperty": "ontransitioncancel"
+}

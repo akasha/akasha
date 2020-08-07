@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.vrdisplaypresentchange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaypresentchange_event",
+    "description": "You can use the vrdisplaypresentchange event in an addEventListener method:",
+    "eventName": "vrdisplaypresentchange",
+    "eventType": "VRDisplayEvent",
+    "eventHandlerProperty": "onvrdisplaypresentchange"
+}

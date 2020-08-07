@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "Window.languagechange",
+    "name": "Window.languagechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/languagechange_event",
     "description": "The languagechange event is fired at the global scope object when the user's preferred language changes.",
+    "eventName": "languagechange",
     "eventType": "Event",
     "eventHandlerProperty": "onlanguagechange"
 }

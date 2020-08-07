@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.unhandledrejection_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event",
+    "description": "The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker.",
+    "eventName": "unhandledrejection",
+    "eventType": "PromiseRejectionEvent",
+    "eventHandlerProperty": "onunhandledrejection"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.online_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/online_event",
+    "description": "The online event of the Window interface is fired when the browser has gained access to the network and the value of Navigator.onLine switches to true.",
+    "eventName": "online",
+    "eventType": "Event",
+    "eventHandlerProperty": "ononline"
+}

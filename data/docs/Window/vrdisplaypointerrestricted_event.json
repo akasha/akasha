@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.vrdisplaypointerrestricted_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event",
+    "description": "You can use the vrdisplaypointerrestricted event in an addEventListener method:",
+    "eventName": "vrdisplaypointerrestricted",
+    "eventType": "VRDisplayEvent",
+    "eventHandlerProperty": "onvrdisplaypointerrestricted"
+}

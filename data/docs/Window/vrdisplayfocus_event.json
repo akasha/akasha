@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.vrdisplayfocus_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayfocus_event",
+    "description": "You can use the vrdisplayfocus event in an addEventListener method:",
+    "eventName": "vrdisplayfocus",
+    "eventType": "VRDisplayEvent",
+    "eventHandlerProperty": "onvrdisplayfocus"
+}

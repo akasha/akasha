@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.hashchange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event",
+    "description": "The hashchange event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the # symbol).",
+    "eventName": "hashchange",
+    "eventType": "HashChangeEvent",
+    "eventHandlerProperty": "onhashchange"
+}

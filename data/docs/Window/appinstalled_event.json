@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.appinstalled_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/appinstalled_event",
+    "description": "You can use the appinstalled event in an addEventListener method:",
+    "eventName": "appinstalled",
+    "eventType": "Event",
+    "eventHandlerProperty": "onappinstalled"
+}

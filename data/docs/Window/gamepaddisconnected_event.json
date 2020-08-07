@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.gamepaddisconnected_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/gamepaddisconnected_event",
+    "description": "The gamepaddisconnected event is fired when the browser detects that a gamepad has been disconnected.",
+    "eventName": "gamepaddisconnected",
+    "eventType": "GamepadEvent",
+    "eventHandlerProperty": "ongamepaddisconnected"
+}

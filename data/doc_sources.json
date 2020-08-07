@@ -8866,7 +8866,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/url"
     },
     {
-        "lastModifiedAt": 1596581236477,
+        "lastModifiedAt": 1596797793890,
         "name": "Window",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window"
     },
@@ -8874,6 +8874,11 @@
         "lastModifiedAt": 0,
         "name": "Window",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window"
+    },
+    {
+        "lastModifiedAt": 1596797851145,
+        "name": "Window.DOMContentLoaded_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event"
     },
     {
         "lastModifiedAt": 0,
@@ -8906,14 +8911,64 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/XMLSerializer"
     },
     {
+        "lastModifiedAt": 1596797851453,
+        "name": "Window.afterprint_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/afterprint_event"
+    },
+    {
         "lastModifiedAt": 1596581244437,
         "name": "Window.alert",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/alert"
     },
     {
+        "lastModifiedAt": 1596797851811,
+        "name": "Window.animationcancel_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/animationcancel_event"
+    },
+    {
+        "lastModifiedAt": 1596797852754,
+        "name": "Window.animationend_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/animationend_event"
+    },
+    {
+        "lastModifiedAt": 1596797853212,
+        "name": "Window.animationiteration_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/animationiteration_event"
+    },
+    {
+        "lastModifiedAt": 1596797854631,
+        "name": "Window.animationstart_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/animationstart_event"
+    },
+    {
+        "lastModifiedAt": 1596797854930,
+        "name": "Window.appinstalled_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/appinstalled_event"
+    },
+    {
+        "lastModifiedAt": 0,
+        "name": "Window.beforeinstallprompt_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event"
+    },
+    {
+        "lastModifiedAt": 1596797856397,
+        "name": "Window.beforeprint_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeprint_event"
+    },
+    {
+        "lastModifiedAt": 1596797856836,
+        "name": "Window.beforeunload_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event"
+    },
+    {
         "lastModifiedAt": 1596581245048,
         "name": "Window.blur",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur"
+    },
+    {
+        "lastModifiedAt": 1596797858100,
+        "name": "Window.blur_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur_event"
     },
     {
         "lastModifiedAt": 1596581245740,
@@ -8931,6 +8986,11 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearImmediate"
     },
     {
+        "lastModifiedAt": 1596797859222,
+        "name": "Window.clipboardchange_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clipboardchange_event"
+    },
+    {
         "lastModifiedAt": 1596581249921,
         "name": "Window.close",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/close"
@@ -8941,12 +9001,22 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm"
     },
     {
-        "lastModifiedAt": 1596581285223,
+        "lastModifiedAt": 1596797859829,
+        "name": "Window.copy_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/copy_event"
+    },
+    {
+        "lastModifiedAt": 1596797860283,
+        "name": "Window.cut_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cut_event"
+    },
+    {
+        "lastModifiedAt": 1596797861624,
         "name": "Window.devicemotion_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/devicemotion_event"
     },
     {
-        "lastModifiedAt": 1596581285628,
+        "lastModifiedAt": 1596797862391,
         "name": "Window.deviceorientation_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/deviceorientation_event"
     },
@@ -8956,7 +9026,7 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/dump"
     },
     {
-        "lastModifiedAt": 1596581286040,
+        "lastModifiedAt": 1596797863146,
         "name": "Window.error_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/error_event"
     },
@@ -8969,6 +9039,21 @@
         "lastModifiedAt": 1596581254460,
         "name": "Window.focus",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus"
+    },
+    {
+        "lastModifiedAt": 1596797863643,
+        "name": "Window.focus_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event"
+    },
+    {
+        "lastModifiedAt": 1596797864741,
+        "name": "Window.gamepadconnected_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/gamepadconnected_event"
+    },
+    {
+        "lastModifiedAt": 1596797865080,
+        "name": "Window.gamepaddisconnected_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/gamepaddisconnected_event"
     },
     {
         "lastModifiedAt": 1596581256039,
@@ -8986,9 +9071,19 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection"
     },
     {
-        "lastModifiedAt": 1596581286405,
+        "lastModifiedAt": 1596797865519,
+        "name": "Window.hashchange_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event"
+    },
+    {
+        "lastModifiedAt": 1596797866171,
         "name": "Window.languagechange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/languagechange_event"
+    },
+    {
+        "lastModifiedAt": 1596797866492,
+        "name": "Window.load_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event"
     },
     {
         "lastModifiedAt": 1596581258848,
@@ -8999,6 +9094,16 @@
         "lastModifiedAt": 0,
         "name": "Window.maximize",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/maximize"
+    },
+    {
+        "lastModifiedAt": 1596797867256,
+        "name": "Window.message_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/message_event"
+    },
+    {
+        "lastModifiedAt": 1596797867565,
+        "name": "Window.messageerror_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/messageerror_event"
     },
     {
         "lastModifiedAt": 1596581259706,
@@ -9016,6 +9121,21 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo"
     },
     {
+        "lastModifiedAt": 1596797867945,
+        "name": "Window.offline_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event"
+    },
+    {
+        "lastModifiedAt": 1596797799647,
+        "name": "Window.onappinstalled",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onappinstalled"
+    },
+    {
+        "lastModifiedAt": 1596797800032,
+        "name": "Window.onbeforeinstallprompt",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onbeforeinstallprompt"
+    },
+    {
         "lastModifiedAt": 1596581241256,
         "name": "Window.ondevicemotion",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicemotion"
@@ -9026,9 +9146,74 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientation"
     },
     {
+        "lastModifiedAt": 1596797803226,
+        "name": "Window.ongamepadconnected",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepadconnected"
+    },
+    {
+        "lastModifiedAt": 1596797803558,
+        "name": "Window.ongamepaddisconnected",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepaddisconnected"
+    },
+    {
+        "lastModifiedAt": 1596797868250,
+        "name": "Window.online_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/online_event"
+    },
+    {
         "lastModifiedAt": 0,
         "name": "Window.onorientationchange",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onorientationchange"
+    },
+    {
+        "lastModifiedAt": 1596797805062,
+        "name": "Window.onrejectionhandled",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onrejectionhandled"
+    },
+    {
+        "lastModifiedAt": 1596797805983,
+        "name": "Window.onvrdisplayactivate",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayactivate"
+    },
+    {
+        "lastModifiedAt": 1596797806425,
+        "name": "Window.onvrdisplayblur",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayblur"
+    },
+    {
+        "lastModifiedAt": 1596797806874,
+        "name": "Window.onvrdisplayconnect",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect"
+    },
+    {
+        "lastModifiedAt": 1596797807182,
+        "name": "Window.onvrdisplaydeactivate",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydeactivate"
+    },
+    {
+        "lastModifiedAt": 1596797807518,
+        "name": "Window.onvrdisplaydisconnect",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect"
+    },
+    {
+        "lastModifiedAt": 1596797807797,
+        "name": "Window.onvrdisplayfocus",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayfocus"
+    },
+    {
+        "lastModifiedAt": 1596797808104,
+        "name": "Window.onvrdisplaypointerrestricted",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted"
+    },
+    {
+        "lastModifiedAt": 1596797808702,
+        "name": "Window.onvrdisplaypointerunrestricted",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaypointerunrestricted"
+    },
+    {
+        "lastModifiedAt": 1596797809032,
+        "name": "Window.onvrdisplaypresentchange",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaypresentchange"
     },
     {
         "lastModifiedAt": 1596581263625,
@@ -9036,9 +9221,24 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/open"
     },
     {
-        "lastModifiedAt": 1596581287143,
+        "lastModifiedAt": 1596797869715,
         "name": "Window.orientationchange_event",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event"
+    },
+    {
+        "lastModifiedAt": 1596797870016,
+        "name": "Window.pagehide_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event"
+    },
+    {
+        "lastModifiedAt": 1596797871315,
+        "name": "Window.pageshow_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event"
+    },
+    {
+        "lastModifiedAt": 1596797871764,
+        "name": "Window.paste_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/paste_event"
     },
     {
         "lastModifiedAt": 1596581264397,
@@ -9054,6 +9254,11 @@
         "lastModifiedAt": 1596581266552,
         "name": "Window.prompt",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt"
+    },
+    {
+        "lastModifiedAt": 1596797872270,
+        "name": "Window.rejectionhandled_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/rejectionhandled_event"
     },
     {
         "lastModifiedAt": 1596581267962,
@@ -9126,9 +9331,84 @@
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/stop"
     },
     {
+        "lastModifiedAt": 1596797872939,
+        "name": "Window.transitioncancel_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/transitioncancel_event"
+    },
+    {
+        "lastModifiedAt": 1596797874172,
+        "name": "Window.transitionend_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/transitionend_event"
+    },
+    {
+        "lastModifiedAt": 1596797875563,
+        "name": "Window.transitionrun_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/transitionrun_event"
+    },
+    {
+        "lastModifiedAt": 1596797876068,
+        "name": "Window.transitionstart_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/transitionstart_event"
+    },
+    {
+        "lastModifiedAt": 1596797876544,
+        "name": "Window.unhandledrejection_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event"
+    },
+    {
+        "lastModifiedAt": 1596797876864,
+        "name": "Window.unload_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event"
+    },
+    {
         "lastModifiedAt": 1596581284502,
         "name": "Window.updateCommands",
         "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/updateCommands"
+    },
+    {
+        "lastModifiedAt": 1596797877244,
+        "name": "Window.vrdisplayactivate_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayactivate_event"
+    },
+    {
+        "lastModifiedAt": 1596797877716,
+        "name": "Window.vrdisplayblur_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayblur_event"
+    },
+    {
+        "lastModifiedAt": 1596797878110,
+        "name": "Window.vrdisplayconnect_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayconnect_event"
+    },
+    {
+        "lastModifiedAt": 1596797879266,
+        "name": "Window.vrdisplaydeactivate_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaydeactivate_event"
+    },
+    {
+        "lastModifiedAt": 1596797879633,
+        "name": "Window.vrdisplaydisconnect_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaydisconnect_event"
+    },
+    {
+        "lastModifiedAt": 1596797879978,
+        "name": "Window.vrdisplayfocus_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayfocus_event"
+    },
+    {
+        "lastModifiedAt": 1596797880316,
+        "name": "Window.vrdisplaypointerrestricted_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaypointerrestricted_event"
+    },
+    {
+        "lastModifiedAt": 1596797881467,
+        "name": "Window.vrdisplaypointerunrestricted_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event"
+    },
+    {
+        "lastModifiedAt": 1596797882911,
+        "name": "Window.vrdisplaypresentchange_event",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaypresentchange_event"
     },
     {
         "lastModifiedAt": 1596581105987,

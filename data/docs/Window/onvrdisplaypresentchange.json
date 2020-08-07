@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onvrdisplaypresentchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaypresentchange",
+    "description": "The onvrdisplaypresentchange property of the Window interface represents an event handler that will run when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa (when the vrdisplaypresentchange event fires)."
+}

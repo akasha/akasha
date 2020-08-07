@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.clipboardchange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clipboardchange_event",
+    "description": "The clipboardchange event fires when the system clipboard content changes.",
+    "eventName": "clipboardchange",
+    "eventType": "ClipboardEvent",
+    "eventHandlerProperty": "None"
+}

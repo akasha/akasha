@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.pageshow_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event",
+    "description": "The pageshow event is sent to a Window when the browser displays the window's document due to navigation.",
+    "eventName": "pageshow",
+    "eventType": "PageTransitionEvent",
+    "eventHandlerProperty": "onpageshow"
+}

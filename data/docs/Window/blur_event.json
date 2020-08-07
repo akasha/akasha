@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.blur_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur_event",
+    "description": "The blur event fires when an element has lost focus.",
+    "eventName": "blur",
+    "eventType": "FocusEvent",
+    "eventHandlerProperty": "onblur"
+}

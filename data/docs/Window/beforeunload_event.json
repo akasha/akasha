@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.beforeunload_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event",
+    "description": "The beforeunload event is fired when the window, the document and its resources are about to be unloaded.",
+    "eventName": "beforeunload",
+    "eventType": "Event",
+    "eventHandlerProperty": "onbeforeunload"
+}

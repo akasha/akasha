@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.offline_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/offline_event",
+    "description": "The offline event of the Window interface is fired when the browser has lost access to the network and the value of Navigator.onLine switches to false.",
+    "eventName": "offline",
+    "eventType": "Event",
+    "eventHandlerProperty": "onoffline"
+}

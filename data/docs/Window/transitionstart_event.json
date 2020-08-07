@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.transitionstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/transitionstart_event",
+    "description": "The transitionstart event is fired when a CSS transition has actually started, i.e., after any transition-delay has ended.",
+    "eventName": "transitionstart",
+    "eventType": "TransitionEvent",
+    "eventHandlerProperty": "ontransitionstart"
+}

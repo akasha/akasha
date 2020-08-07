@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.afterprint_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/afterprint_event",
+    "description": "The afterprint event is fired after the associated document has started printing or the print preview has been closed.",
+    "eventName": "afterprint",
+    "eventType": "Event",
+    "eventHandlerProperty": "onafterprint"
+}

@@ -321,7 +321,9 @@ public final class MdnDocScanner
           final List<String> events =
             document
               .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
-                       "#Events + dl > dt > a[href$=\"_event\"] > code" )
+                       "#Events + dl > dt > a[href$=\"_event\"] > code, " +
+                       "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
+                       "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
               .stream()
               .map( Element::text )
               // Strip out the type name that sometimes appears in the documentation

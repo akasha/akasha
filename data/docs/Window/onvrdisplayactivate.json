@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onvrdisplayactivate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayactivate",
+    "description": "The onvrdisplayactivate property of the Window interface represents an event handler that will run when a display is able to be presented to (when the vrdisplayactivate event fires), for example if an HMD has been moved to bring it out of standby, or woken up by being put on."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.ongamepadconnected",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ongamepadconnected",
+    "description": "The ongamepadconnected property of the Window interface represents an event handler that will run when a gamepad is connected (when the gamepadconnected event fires)."
+}

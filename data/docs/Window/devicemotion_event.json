@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "Window.devicemotion",
+    "name": "Window.devicemotion_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/devicemotion_event",
     "description": "The devicemotion event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.",
+    "eventName": "devicemotion",
     "eventType": "DeviceMotionEvent",
     "eventHandlerProperty": "ondevicemotion"
 }

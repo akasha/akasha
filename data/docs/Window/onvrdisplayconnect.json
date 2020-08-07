@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onvrdisplayconnect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect",
+    "description": "The onvrdisplayconnect property of the Window interface represents an event handler that will run when a compatible VR display has been connected to the computer (when the vrdisplayconnect event fires)."
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.unload_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event",
+    "description": "The unload event is fired when the document or a child resource is being unloaded.",
+    "eventName": "unload",
+    "eventType": "Event",
+    "eventHandlerProperty": "onunload"
+}

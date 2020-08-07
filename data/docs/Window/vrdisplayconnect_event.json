@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.vrdisplayconnect_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayconnect_event",
+    "description": "You can use the vrdisplayconnect event in an addEventListener method:",
+    "eventName": "vrdisplayconnect",
+    "eventType": "VRDisplayEvent",
+    "eventHandlerProperty": "onvrdisplayconnect"
+}

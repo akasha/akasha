@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.message_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/message_event",
+    "description": "The message event is fired on a Window object when the window receives a message, for example from a call to Window.postMessage() from another browsing context.",
+    "eventName": "message",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onmessage"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onvrdisplaydisconnect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect",
+    "description": "The onvrdisplaydisconnect event handler property of the Window interface is called when a compatible VR display has been disconnected from the computer (when the vrdisplaydisconnect event fires)."
+}
