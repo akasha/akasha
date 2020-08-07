@@ -76,7 +76,6 @@ public final class MdnDocScanner
     }
     if ( null != result )
     {
-      createParentDirectoryIfRequired( source, target );
       removeExistingTmpFiles( source, target );
 
       final Path tmpTarget = asTmpTarget( target, ".html" );
@@ -382,22 +381,6 @@ public final class MdnDocScanner
   private Path asTmpTarget( @Nonnull final Path target, @Nonnull final String suffix )
   {
     return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp" + suffix );
-  }
-
-  private void createParentDirectoryIfRequired( @Nonnull final DocSourceConfig source, @Nonnull final Path path )
-    throws SourceIOException
-  {
-    if ( !Files.exists( path.getParent() ) )
-    {
-      try
-      {
-        Files.createDirectories( path.getParent() );
-      }
-      catch ( final IOException ioe )
-      {
-        throw new SourceIOException( source, "Failed to create directory to contain source", ioe );
-      }
-    }
   }
 
   @Nonnull
