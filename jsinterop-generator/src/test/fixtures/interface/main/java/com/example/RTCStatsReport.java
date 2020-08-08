@@ -47,7 +47,7 @@ public class RTCStatsReport {
       name = "?",
       namespace = JsPackage.GLOBAL
   )
-  interface Entry {
+  public interface Entry {
     @JsOverlay
     default String key() {
       return Js.asArray( this )[ 0 ].cast();

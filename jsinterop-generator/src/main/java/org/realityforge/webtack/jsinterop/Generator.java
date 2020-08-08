@@ -1009,6 +1009,7 @@ final class Generator
                       .build() );
     type.addType( TypeSpec
                     .interfaceBuilder( "Entry" )
+                    .addModifiers( Modifier.PUBLIC )
                     .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                                       .addMember( "isNative", "true" )
                                       .addMember( "name", "$S", "?" )

@@ -54,7 +54,7 @@ public class SomeOtherType {
       name = "?",
       namespace = JsPackage.GLOBAL
   )
-  interface Entry {
+  public interface Entry {
     @JsOverlay
     default int key() {
       return Js.asArray( this )[ 0 ].cast();
