@@ -145,6 +145,7 @@ mixinMember
   : constMember
   | regularOperation
   | stringifier
+  | event
   | readOnly attributeRest
 ;
 

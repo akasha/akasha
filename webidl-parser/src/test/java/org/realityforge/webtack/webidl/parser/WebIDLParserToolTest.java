@@ -52,6 +52,9 @@ public final class WebIDLParserToolTest
       "           attribute USVString hash;\n" +
       "\n" +
       "  USVString toJSON();\n" +
+      "\n" +
+      "  event FocusEvent focus;\n" +
+      "  event GamepadEvent gamepadconnected;\n" +
       "};\n";
     final WebIDLParser parser = WebIDLParserTool.createParser( "myschema", new StringReader( webidl ) );
     final WebIDLParser.WebIDLContext context = parser.webIDL();
