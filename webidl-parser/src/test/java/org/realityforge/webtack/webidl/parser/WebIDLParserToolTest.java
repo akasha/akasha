@@ -13,8 +13,7 @@ public final class WebIDLParserToolTest
   public void basicParse()
     throws Exception
   {
-    // Test just performs a parse of a fragment from whatwg url spec.
-    // Mostly to verify that basic parsing infrastructure works
+    // Test just performs a parse of a fragment to verify that the basic parsing infrastructure works
     final String webidl =
       "/**\n" +
       " * This is a multiline description for the\n" +
