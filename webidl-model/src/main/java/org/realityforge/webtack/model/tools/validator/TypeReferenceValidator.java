@@ -148,21 +148,9 @@ final class TypeReferenceValidator
     {
       final String containerType = "partial interface";
       final String containerName = definition.getName();
-      validateConstantTypeReference( schema,
-                                     errors,
-                                     containerType,
-                                     containerName,
-                                     definition.getConstants() );
-      validateAttributeTypeReference( schema,
-                                      errors,
-                                      containerType,
-                                      containerName,
-                                      definition.getAttributes() );
-      validateOperationsTypeReference( schema,
-                                       errors,
-                                       containerType,
-                                       containerName,
-                                       definition.getOperations() );
+      validateConstantTypeReference( schema, errors, containerType, containerName, definition.getConstants() );
+      validateAttributeTypeReference( schema, errors, containerType, containerName, definition.getAttributes() );
+      validateOperationsTypeReference( schema, errors, containerType, containerName, definition.getOperations() );
       validateIterableMember( schema, errors, containerType, containerName, definition.getIterable() );
       validateAsyncIterableMember( schema, errors, containerType, containerName, definition.getAsyncIterable() );
       validateMapLikeMember( schema, errors, containerType, containerName, definition.getMapLikeMember() );
