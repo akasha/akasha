@@ -42,6 +42,7 @@ import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.SequenceType;
@@ -907,6 +908,12 @@ final class Generator
       }
     }
 
+    final MapLikeMember mapLike = definition.getMapLikeMember();
+    if ( null != mapLike )
+    {
+      generateMapLikeOperations( context, definition, mapLike, type );
+    }
+
     for ( final EventMember event : definition.getEvents() )
     {
       final CallbackInterfaceDefinition callbackInterface =
@@ -943,6 +950,125 @@ final class Generator
     }
 
     context.writeTopLevelType( type );
+  }
+
+  private void generateMapLikeOperations( @Nonnull final CodeGenContext context,
+                                          @Nonnull final InterfaceDefinition definition,
+                                          @Nonnull final MapLikeMember mapLike,
+                                          @Nonnull final TypeSpec.Builder type )
+  {
+    type.addMethod( MethodSpec
+                      .methodBuilder( "size" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY )
+                                        .addMember( "name", "$S", "size" )
+                                        .build() )
+                      .returns( TypeName.INT )
+                      .build() );
+    final TypeName keyType = context.toTypeName( mapLike.getKeyType() );
+    final TypeName boxedKeyType = context.toTypeName( mapLike.getKeyType(), true );
+    final TypeName valueType = context.toTypeName( mapLike.getValueType() );
+    final TypeName boxedValueType = context.toTypeName( mapLike.getValueType(), true );
+
+    final ParameterSpec.Builder keyParamBuilder = ParameterSpec.builder( keyType, "key" );
+    addNullabilityAnnotationIfRequired( context, mapLike.getKeyType(), keyParamBuilder );
+    final ParameterSpec keyParam = keyParamBuilder.build();
+
+    type.addMethod( MethodSpec
+                      .methodBuilder( "has" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addParameter( keyParam )
+                      .returns( TypeName.BOOLEAN )
+                      .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "get" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addAnnotation( Types.NULLABLE )
+                      .addParameter( keyParam )
+                      .returns( boxedValueType )
+                      .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "keys" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addAnnotation( Types.NONNULL )
+                      .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedKeyType ) )
+                      .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "values" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addAnnotation( Types.NONNULL )
+                      .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedValueType ) )
+                      .build() );
+    //TODO: entries - define inner class Entry that wraps entry array
+    if ( !mapLike.isReadOnly() )
+    {
+      final boolean setPresent =
+        definition
+          .getOperations()
+          .stream()
+          .anyMatch( o -> "set".equals( o.getName() ) &&
+                          2 == o.getArguments().size() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !setPresent )
+      {
+        final ParameterSpec.Builder valueParamBuilder = ParameterSpec.builder( valueType, "value" );
+        addNullabilityAnnotationIfRequired( context, mapLike.getValueType(), valueParamBuilder );
+        final ParameterSpec valueParam = valueParamBuilder.build();
+
+        type.addMethod( MethodSpec
+                          .methodBuilder( "set" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                          .addParameter( keyParam )
+                          .addParameter( valueParam )
+                          .build() );
+      }
+
+      final boolean deletePresent =
+        definition
+          .getOperations()
+          .stream()
+          .anyMatch( o -> "delete".equals( o.getName() ) &&
+                          1 == o.getArguments().size() &&
+                          Kind.Boolean == o.getReturnType().getKind() );
+      if ( !deletePresent )
+      {
+        type.addMethod( MethodSpec
+                          .methodBuilder( "delete" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                          .addParameter( keyParam )
+                          .returns( TypeName.BOOLEAN )
+                          .build() );
+      }
+
+      final boolean clearPresent =
+        definition
+          .getOperations()
+          .stream()
+          .anyMatch( o -> "clear".equals( o.getName() ) &&
+                          o.getArguments().isEmpty() &&
+                          Kind.Void == o.getReturnType().getKind() );
+      if ( !clearPresent )
+      {
+        type.addMethod( MethodSpec
+                          .methodBuilder( "clear" )
+                          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                          .build() );
+      }
+    }
+  }
+
+  private void addNullabilityAnnotationIfRequired( @Nonnull final CodeGenContext context,
+                                                   @Nonnull final Type type,
+                                                   final ParameterSpec.Builder builder )
+  {
+    if ( context.getSchema().isNullable( type ) )
+    {
+      builder.addAnnotation( Types.NULLABLE );
+    }
+    else if ( !context.getSchema().resolveType( type ).getKind().isPrimitive() )
+    {
+      builder.addAnnotation( Types.NONNULL );
+    }
   }
 
   private void generateAddEventListener( @Nonnull final CodeGenContext context,

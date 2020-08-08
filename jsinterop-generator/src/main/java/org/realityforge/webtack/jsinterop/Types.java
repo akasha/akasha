@@ -26,6 +26,8 @@ final class Types
   @Nonnull
   static final ClassName JS_ARRAY = ClassName.get( "elemental2.core", "JsArray" );
   @Nonnull
+  static final ClassName JS_ITERATOR = ClassName.get( "elemental2.core", "JsIterator" );
+  @Nonnull
   static final ClassName SYMBOL = ClassName.get( "elemental2.core", "Symbol" );
   @Nonnull
   static final ClassName PROMISE = ClassName.get( "elemental2.promise", "Promise" );
