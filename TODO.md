@@ -45,10 +45,6 @@ complete as there is too much un-said.
 
 * Validate should validate event types are present for event members
 
-* Update doc scanner to allow per-type css selectors so that we can somehow collect events
-  for something like: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers
-  Alternatively we may just manually import these docs.
-
 * Add events to mixins and partial mixins
 
 # Java Generation
