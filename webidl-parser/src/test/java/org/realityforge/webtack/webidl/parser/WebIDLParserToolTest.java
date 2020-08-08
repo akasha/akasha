@@ -69,9 +69,15 @@ public final class WebIDLParserToolTest
     assertDocumentationContent( interfaceMembersContext.documentation(),
                                 "This is a multiline description for the\nconstructor" );
     assertNotNull( interfaceMembersContext.interfaceMember().constructor() );
-    final WebIDLParser.InterfaceMembersContext attributeInterfaceMembersContext = interfaceMembersContext.interfaceMembers();
-    assertNotNull( attributeInterfaceMembersContext.interfaceMember().partialInterfaceMember().readWriteAttribute().attributeRest().attributeName().getText(),
-                   "protocol");
+    final WebIDLParser.InterfaceMembersContext attributeInterfaceMembersContext =
+      interfaceMembersContext.interfaceMembers();
+    assertNotNull( attributeInterfaceMembersContext.interfaceMember()
+                     .partialInterfaceMember()
+                     .readWriteAttribute()
+                     .attributeRest()
+                     .attributeName()
+                     .getText(),
+                   "protocol" );
     assertDocumentationContent( attributeInterfaceMembersContext.documentation(),
                                 "This is a multiline description for the\nprotocol attribute" );
   }
