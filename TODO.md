@@ -57,7 +57,7 @@ complete as there is too much un-said.
 
 * Generate `GETTER`, `SETTER` and `DELETER` operations
 
-* Add codegen for `IterableMember`, `AsyncIterableMember` and `SetLikeMember`
+* Add codegen for `IterableMember`
 
 * Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
 
