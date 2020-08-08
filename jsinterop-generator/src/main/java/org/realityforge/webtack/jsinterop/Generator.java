@@ -819,7 +819,19 @@ final class Generator
         generateDefaultOperation( context, operation, type );
       }
     }
-
+    final MapLikeMember mapLike = definition.getMapLikeMember();
+    if ( null != mapLike )
+    {
+      generateMapLikeOperations( context, definition.getName(), definition.getOperations(), mapLike, type );
+    }
+    if ( null != definition.getAsyncIterable() )
+    {
+      throw new UnsupportedOperationException( "async iterable not yet supported in code generator" );
+    }
+    if ( null != definition.getSetLikeMember() )
+    {
+      throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
+    }
     final boolean noPublicSymbol = shouldExpectNoGlobalSymbol( definition );
 
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
