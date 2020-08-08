@@ -64,7 +64,7 @@ public final class EventMember
   public boolean equiv( @Nonnull final EventMember other )
   {
     return super.equiv( other ) &&
-           _name.equals( other._name ) ||
+           _name.equals( other._name ) &&
            _eventType.equiv( other._eventType );
   }
 }
