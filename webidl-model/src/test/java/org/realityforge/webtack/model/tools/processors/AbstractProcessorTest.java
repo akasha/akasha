@@ -23,6 +23,7 @@ public abstract class AbstractProcessorTest
                         "output" );
   }
 
+  @SuppressWarnings( "SameParameterValue" )
   protected final void performFixtureTest( @Nonnull final String label,
                                            @Nonnull final Supplier<Processor> supplier,
                                            @Nonnull final Path dir,
