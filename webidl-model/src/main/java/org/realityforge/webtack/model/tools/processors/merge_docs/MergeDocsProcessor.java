@@ -124,14 +124,18 @@ final class MergeDocsProcessor
           {
             final String eventType = eventDocEntry.getEventType();
             assert null != eventType;
-            events.add( new EventMember( eventName,
-                                         new TypeReference( eventType,
-                                                            Collections.emptyList(),
-                                                            false,
-                                                            Collections.emptyList() ),
-                                         createDocumentationElement( eventDocEntry ),
-                                         Collections.emptyList(),
-                                         Collections.emptyList() ) );
+            // Some events are a union and we don't yet represent this scenario
+            if ( !eventType.contains( " or " ) )
+            {
+              events.add( new EventMember( eventName,
+                                           new TypeReference( eventType,
+                                                              Collections.emptyList(),
+                                                              false,
+                                                              Collections.emptyList() ),
+                                           createDocumentationElement( eventDocEntry ),
+                                           Collections.emptyList(),
+                                           Collections.emptyList() ) );
+            }
           }
         }
       }
