@@ -16,6 +16,7 @@ import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.RepositorySaveException;
 import org.realityforge.webtack.model.tools.repository.config.IllegalConfigException;
 
 public final class DocRepositoryConfig
@@ -31,6 +32,12 @@ public final class DocRepositoryConfig
   {
     _configLocation = Objects.requireNonNull( configLocation );
     _sources = Objects.requireNonNull( sources );
+  }
+
+  public void save()
+    throws RepositorySaveException
+  {
+    DocRepositoryConfig.save( this );
   }
 
   @Nonnull
@@ -61,23 +68,30 @@ public final class DocRepositoryConfig
   }
 
   public static void save( @Nonnull final DocRepositoryConfig config )
-    throws Exception
+    throws RepositorySaveException
   {
-    final Path path = config.getConfigLocation();
-    Files.createDirectories( path.getParent() );
-    final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
-    final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
-    try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
+    try
     {
-      jsonb.toJson( config.getSources()
-                      .stream()
-                      .sorted( Comparator.comparing( DocSourceConfig::getName ) )
-                      .collect( Collectors.toList() ),
-                    outputStream );
+      final Path path = config.getConfigLocation();
+      Files.createDirectories( path.getParent() );
+      final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
+      final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
+      try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
+      {
+        jsonb.toJson( config.getSources()
+                        .stream()
+                        .sorted( Comparator.comparing( DocSourceConfig::getName ) )
+                        .collect( Collectors.toList() ),
+                      outputStream );
+      }
+      jsonb.close();
+      // Add newline as json output omits trailing new line
+      Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
     }
-    jsonb.close();
-    // Add newline as json output omits trailing new line
-    Files.write( path, new byte[]{ '\n' }, StandardOpenOption.APPEND );
+    catch ( final Exception e )
+    {
+      throw new RepositorySaveException( config, e );
+    }
   }
 
   @Nonnull

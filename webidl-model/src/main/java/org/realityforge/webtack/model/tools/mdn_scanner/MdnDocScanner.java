@@ -50,6 +50,7 @@ public final class MdnDocScanner
     final boolean isNew = 0 == source.getLastModifiedAt();
     final Path target = _runtime.getDocEntryPath( source );
     final FetchResult result;
+    final DocRepositoryConfig repository = _runtime.getRepository();
     try
     {
       final String url = source.getUrl();
@@ -60,7 +61,7 @@ public final class MdnDocScanner
       if ( fe.getCause() instanceof FileNotFoundException )
       {
         source.setLastModifiedAt( 0 );
-        saveRepository();
+        repository.save();
         // Documentation has been removed so remove our local caches
         removeExistingTmpFiles( source, target );
         if ( DocKind.Type == kind )
@@ -95,7 +96,7 @@ public final class MdnDocScanner
       if ( extractResult.isChanged() )
       {
         source.setLastModifiedAt( result.getLastModifiedAt() );
-        saveRepository();
+        repository.save();
       }
 
       if ( removeSource )
@@ -191,7 +192,7 @@ public final class MdnDocScanner
     }
     if ( !sourcesToRemove.isEmpty() )
     {
-      saveRepository();
+      repository.save();
     }
   }
 
@@ -400,7 +401,7 @@ public final class MdnDocScanner
       source.setLastModifiedAt( 0 );
       source.setUrl( getElementUrl( type, member, kind ) );
       repository.getSources().add( source );
-      saveRepository();
+      repository.save();
     }
     return source;
   }
