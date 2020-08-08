@@ -373,8 +373,7 @@ public final class WebIDLSchema
          _partialInterfaces.size() == other._partialInterfaces.size() &&
          _partialMixins.size() == other._partialMixins.size() &&
          _partialNamespaces.size() == other._partialNamespaces.size() &&
-         _typedefs.size() == other._typedefs.size()
-    )
+         _typedefs.size() == other._typedefs.size() )
     {
       final Set<CallbackDefinition> otherCallbacks = new HashSet<>( _callbacks.values() );
       for ( final CallbackDefinition definition : _callbacks.values() )
