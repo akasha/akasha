@@ -4,9 +4,11 @@ import elemental2.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * A test for a read-write maplike.
@@ -38,9 +40,29 @@ public class SomeOtherType {
   @Nonnull
   public native JsIterator<Double> values();
 
+  @Nonnull
+  public native JsIterator<Entry> entries();
+
   public native void set(int key, int value);
 
   public native boolean delete(int key);
 
   public native void clear();
+
+  @JsType(
+      isNative = true,
+      name = "?",
+      namespace = JsPackage.GLOBAL
+  )
+  interface Entry {
+    @JsOverlay
+    default int key() {
+      return Js.asArray( this )[ 0 ].cast();
+    }
+
+    @JsOverlay
+    default int value() {
+      return Js.asArray( this )[ 1 ].cast();
+    }
+  }
 }

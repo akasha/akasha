@@ -1007,7 +1007,32 @@ final class Generator
                       .addAnnotation( Types.NONNULL )
                       .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedValueType ) )
                       .build() );
-    //TODO: entries - define inner class Entry that wraps entry array
+    type.addType( TypeSpec
+                    .interfaceBuilder( "Entry" )
+                    .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                                      .addMember( "isNative", "true" )
+                                      .addMember( "name", "$S", "?" )
+                                      .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                                      .build() )
+                    .addMethod( MethodSpec.methodBuilder( "key" )
+                                  .addAnnotation( Types.JS_OVERLAY )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+                                  .returns( keyType )
+                                  .addStatement( "return $T.asArray( this )[ 0 ].cast()", Types.JS )
+                                  .build() )
+                    .addMethod( MethodSpec.methodBuilder( "value" )
+                                  .addAnnotation( Types.JS_OVERLAY )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
+                                  .returns( valueType )
+                                  .addStatement( "return $T.asArray( this )[ 1 ].cast()", Types.JS )
+                                  .build() )
+                    .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "entries" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addAnnotation( Types.NONNULL )
+                      .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, ClassName.bestGuess( "Entry" ) ) )
+                      .build() );
     //TODO: forEach - based on map equiv
     if ( !mapLike.isReadOnly() )
     {
