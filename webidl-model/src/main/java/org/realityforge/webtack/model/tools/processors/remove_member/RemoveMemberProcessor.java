@@ -9,6 +9,7 @@ import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
@@ -66,6 +67,13 @@ final class RemoveMemberProcessor
   protected DictionaryMember transformDictionaryMember( @Nonnull final DictionaryMember input )
   {
     return matchesMemberName( input.getName() ) ? null : super.transformDictionaryMember( input );
+  }
+
+  @Nullable
+  @Override
+  protected EventMember transformEventMember( @Nonnull final EventMember input )
+  {
+    return matchesMemberName( input.getName() ) ? null : super.transformEventMember( input );
   }
 
   @Nullable

@@ -31,6 +31,16 @@ public final class RemoveMemberProcessorTest
                                                        ElementType.dictionary ) );
   }
 
+  @Test
+  public void remove_event()
+    throws Exception
+  {
+    performStandardFixtureTest( "remove_event",
+                                () -> createProcessor( "^Window$",
+                                                       "^vrdisplay.*$",
+                                                       ElementType.interface_type ) );
+  }
+
   @Nonnull
   private Processor createProcessor( @Nonnull final String elementNamePattern,
                                      @Nonnull final String memberNamePattern,
