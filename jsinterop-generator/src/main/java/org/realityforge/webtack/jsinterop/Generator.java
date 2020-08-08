@@ -911,7 +911,7 @@ final class Generator
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( context, definition, mapLike, type );
+      generateMapLikeOperations( context, definition.getName(), definition.getOperations(), mapLike, type );
     }
     if ( null != definition.getAsyncIterable() )
     {
@@ -961,7 +961,8 @@ final class Generator
   }
 
   private void generateMapLikeOperations( @Nonnull final CodeGenContext context,
-                                          @Nonnull final InterfaceDefinition definition,
+                                          @Nonnull final String definitionName,
+                                          @Nonnull final List<OperationMember> operations,
                                           @Nonnull final MapLikeMember mapLike,
                                           @Nonnull final TypeSpec.Builder type )
   {
@@ -1072,7 +1073,7 @@ final class Generator
                                   .addParameter( valueParam )
                                   .addParameter( keyParam )
                                   .addParameter( ParameterSpec
-                                                   .builder( ClassName.bestGuess( definition.getName() ), "map" )
+                                                   .builder( ClassName.bestGuess( definitionName ), "map" )
                                                    .addAnnotation( Types.NONNULL )
                                                    .build() )
                                   .build() )
@@ -1101,8 +1102,7 @@ final class Generator
     if ( !mapLike.isReadOnly() )
     {
       final boolean setPresent =
-        definition
-          .getOperations()
+        operations
           .stream()
           .anyMatch( o -> "set".equals( o.getName() ) &&
                           2 == o.getArguments().size() &&
@@ -1118,8 +1118,7 @@ final class Generator
       }
 
       final boolean deletePresent =
-        definition
-          .getOperations()
+        operations
           .stream()
           .anyMatch( o -> "delete".equals( o.getName() ) &&
                           1 == o.getArguments().size() &&
@@ -1135,8 +1134,7 @@ final class Generator
       }
 
       final boolean clearPresent =
-        definition
-          .getOperations()
+        operations
           .stream()
           .anyMatch( o -> "clear".equals( o.getName() ) &&
                           o.getArguments().isEmpty() &&
