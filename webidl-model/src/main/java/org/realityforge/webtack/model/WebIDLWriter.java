@@ -625,6 +625,7 @@ public final class WebIDLWriter
     writeConstants( writer, definition.getConstants() );
     writeAttributes( writer, definition.getAttributes() );
     writeOperations( writer, definition.getOperations() );
+    writeEvents( writer, definition.getEvents() );
     writer.write( "};\n" );
   }
 
@@ -640,6 +641,7 @@ public final class WebIDLWriter
     writeConstants( writer, definition.getConstants() );
     writeAttributes( writer, definition.getAttributes() );
     writeOperations( writer, definition.getOperations() );
+    writeEvents( writer, definition.getEvents() );
     writer.write( "};\n" );
   }
 

@@ -214,6 +214,7 @@ final class FlattenProcessor
   {
     final Map<String, ConstMember> constants = new LinkedHashMap<>();
     final Map<String, AttributeMember> attributes = new LinkedHashMap<>();
+    final Map<String, EventMember> events = new LinkedHashMap<>();
     for ( final ConstMember constant : definition.getConstants() )
     {
       constants.put( constant.getName(), constant );
@@ -221,6 +222,10 @@ final class FlattenProcessor
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
       attributes.put( attribute.getName(), attribute );
+    }
+    for ( final EventMember event : definition.getEvents() )
+    {
+      events.put( event.getName(), event );
     }
     final Set<OperationMember> operations = new LinkedHashSet<>( definition.getOperations() );
     final List<SourceInterval> sourceLocations = new ArrayList<>( definition.getSourceLocations() );
@@ -258,11 +263,27 @@ final class FlattenProcessor
         attributes.put( name, attribute );
       }
       operations.addAll( partial.getOperations() );
+      for ( final EventMember event : partial.getEvents() )
+      {
+        final String name = event.getName();
+        final EventMember existing = events.get( name );
+        if ( null != existing )
+        {
+          throw new IllegalModelException( "Failed to merge event named '" + name + "' into mixin " +
+                                           "named '" + definition.getName() + "' as the mixin already " +
+                                           "contains an event with the same name. Existing defined in:\n" +
+                                           describeLocations( existing, "\n" ) + "\n" +
+                                           "Attempting to add member defined in:\n" +
+                                           describeLocations( event, "\n" ) );
+        }
+        events.put( name, event );
+      }
     }
     return new MixinDefinition( definition.getName(),
                                 Collections.unmodifiableList( new ArrayList<>( constants.values() ) ),
                                 Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
                                 Collections.unmodifiableList( new ArrayList<>( operations ) ),
+                                Collections.unmodifiableList( new ArrayList<>( events.values() ) ),
                                 definition.getDocumentation(),
                                 definition.getExtendedAttributes(),
                                 Collections.unmodifiableList( sourceLocations ) );
@@ -387,6 +408,22 @@ final class FlattenProcessor
         attributes.put( name, attribute );
       }
       operations.addAll( mixin.getOperations() );
+      for ( final EventMember event : mixin.getEvents() )
+      {
+        final String name = event.getName();
+        final EventMember existing = events.get( name );
+        if ( null != existing )
+        {
+          throw new IllegalModelException( "Failed to merge event named '" + name + "' from mixin named '" +
+                                           mixin.getName() + "' into interface " +
+                                           "named '" + definition.getName() + "' as the interface already " +
+                                           "contains an event with the same name. Existing defined in:\n" +
+                                           describeLocations( existing, "\n" ) + "\n" +
+                                           "Attempting to add member defined in:\n" +
+                                           describeLocations( event, "\n" ) );
+        }
+        events.put( name, event );
+      }
     }
     return new InterfaceDefinition( definition.getName(),
                                     definition.getInherits(),

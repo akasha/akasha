@@ -88,6 +88,7 @@ final class AddExtendedAttributeProcessor
                                 transformConstants( input.getConstants() ),
                                 transformAttributeMembers( input.getAttributes() ),
                                 transformOperationMembers( input.getOperations() ),
+                                transformEventMembers( input.getEvents() ),
                                 transformDocumentation( input.getDocumentation() ),
                                 matches( input ) ?
                                 expandExtendedAttributes( input.getExtendedAttributes() ) :
@@ -103,6 +104,7 @@ final class AddExtendedAttributeProcessor
                                        transformConstants( input.getConstants() ),
                                        transformAttributeMembers( input.getAttributes() ),
                                        transformOperationMembers( input.getOperations() ),
+                                       transformEventMembers( input.getEvents() ),
                                        transformDocumentation( input.getDocumentation() ),
                                        matches( input ) ?
                                        expandExtendedAttributes( input.getExtendedAttributes() ) :

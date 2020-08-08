@@ -36,6 +36,7 @@ final class MergeDocsProcessor
   private final DocRepositoryRuntime _runtime;
   private final boolean _createEvents;
   private String _type;
+  private boolean _typeIsMixin;
   private WebIDLSchema _schema;
 
   MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime, final boolean createEvents )
@@ -64,6 +65,7 @@ final class MergeDocsProcessor
   protected CallbackInterfaceDefinition transformCallbackInterface( @Nonnull final CallbackInterfaceDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = false;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final CallbackInterfaceDefinition definition =
       new CallbackInterfaceDefinition( input.getName(),
@@ -83,6 +85,7 @@ final class MergeDocsProcessor
   protected InterfaceDefinition transformInterface( @Nonnull final InterfaceDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = false;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final InterfaceDefinition definition =
       new InterfaceDefinition( input.getName(),
@@ -120,7 +123,7 @@ final class MergeDocsProcessor
           final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + eventName + "_event" );
           if ( null != eventDocEntry &&
                events.stream().noneMatch( e -> e.getName().equals( eventName ) ) &&
-               !anyPartialInterfaceContainEvent( eventName ) )
+               !partialContainsEvent( eventName ) )
           {
             final String eventType = eventDocEntry.getEventType();
             assert null != eventType;
@@ -143,9 +146,25 @@ final class MergeDocsProcessor
     return events;
   }
 
+  private boolean partialContainsEvent( @Nonnull final String eventName )
+  {
+    return _typeIsMixin ? anyPartialMixinContainEvent( eventName ) : anyPartialInterfaceContainEvent( eventName );
+  }
+
+  private boolean anyPartialMixinContainEvent( @Nonnull final String eventName )
+  {
+    for ( final PartialMixinDefinition definition : _schema.findPartialMixinsByName( _type ) )
+    {
+      if ( definition.getEvents().stream().anyMatch( e -> e.getName().equals( eventName ) ) )
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+
   private boolean anyPartialInterfaceContainEvent( @Nonnull final String eventName )
   {
-    // TODO: In the future when mixins can contain events we will need an equiv for mixins
     for ( final PartialInterfaceDefinition definition : _schema.findPartialInterfacesByName( _type ) )
     {
       if ( definition.getEvents().stream().anyMatch( e -> e.getName().equals( eventName ) ) )
@@ -161,6 +180,7 @@ final class MergeDocsProcessor
   protected PartialInterfaceDefinition transformPartialInterface( @Nonnull final PartialInterfaceDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = false;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final PartialInterfaceDefinition definition =
       new PartialInterfaceDefinition( input.getName(),
@@ -190,12 +210,14 @@ final class MergeDocsProcessor
   protected MixinDefinition transformMixin( @Nonnull final MixinDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = true;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final MixinDefinition definition =
       new MixinDefinition( input.getName(),
                            transformConstants( input.getConstants() ),
                            transformAttributeMembers( input.getAttributes() ),
                            transformOperationMembers( input.getOperations() ),
+                           transformEventMembers( input.getEvents() ),
                            null == docEntry ?
                            transformDocumentation( input.getDocumentation() ) :
                            createDocumentationElement( docEntry ),
@@ -210,12 +232,14 @@ final class MergeDocsProcessor
   protected PartialMixinDefinition transformPartialMixin( @Nonnull final PartialMixinDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = true;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final PartialMixinDefinition definition =
       new PartialMixinDefinition( input.getName(),
                                   transformConstants( input.getConstants() ),
                                   transformAttributeMembers( input.getAttributes() ),
                                   transformOperationMembers( input.getOperations() ),
+                                  transformEventMembers( input.getEvents() ),
                                   null == docEntry ?
                                   transformDocumentation( input.getDocumentation() ) :
                                   createDocumentationElement( docEntry ),
@@ -230,6 +254,7 @@ final class MergeDocsProcessor
   protected DictionaryDefinition transformDictionary( @Nonnull final DictionaryDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = false;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final DictionaryDefinition definition =
       new DictionaryDefinition( input.getName(),
@@ -249,6 +274,7 @@ final class MergeDocsProcessor
   protected PartialDictionaryDefinition transformPartialDictionary( @Nonnull final PartialDictionaryDefinition input )
   {
     _type = input.getName();
+    _typeIsMixin = false;
     final DocEntry docEntry = _runtime.getDocEntry( _type );
     final PartialDictionaryDefinition definition =
       new PartialDictionaryDefinition( input.getName(),

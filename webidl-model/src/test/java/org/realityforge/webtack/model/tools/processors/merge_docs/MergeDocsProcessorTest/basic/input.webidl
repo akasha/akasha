@@ -23,6 +23,9 @@ interface Event {
   sequence<EventTarget> composedPath();
 };
 
+interface BlurEvent : Event {
+};
+
 interface EventTarget {
 };
 
@@ -41,10 +44,18 @@ partial interface Window {
 
 interface mixin GlobalEventHandlers {
   attribute EventHandler onabort;
+  event Event abort;
+  event Event undocumented2;
 };
 
 partial interface mixin GlobalEventHandlers {
   attribute EventHandler onblur;
+  event BlurEvent blur;
+  /**
+   * Existing documentation...
+   */
+  event Event other;
+  event Event undocumented;
 };
 
 dictionary XRSessionInit {

@@ -68,6 +68,19 @@ interface mixin GlobalEventHandlers {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onabort">GlobalEventHandlers.onabort - MDN</a>
    */
   attribute EventHandler onabort;
+  /**
+   * The abort event...
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/abort_event">abort event - MDN</a>
+   */
+  event Event abort;
+  /**
+   * The focus event fires when an element has received focus.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">focus event - MDN</a>
+   */
+  event FocusEvent focus;
+  event Event undocumented2;
 };
 
 /**
@@ -82,6 +95,32 @@ partial interface mixin GlobalEventHandlers {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onblur">GlobalEventHandlers.onblur - MDN</a>
    */
   attribute EventHandler onblur;
+  /**
+   * The abort event...
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/abort_event">abort event - MDN</a>
+   */
+  event Event abort;
+  /**
+   * The blur event...
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event">blur event - MDN</a>
+   */
+  event BlurEvent blur;
+  /**
+   * The focus event fires when an element has received focus.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">focus event - MDN</a>
+   */
+  event FocusEvent focus;
+  /**
+   * Existing documentation...
+   */
+  event Event other;
+  event Event undocumented;
+};
+
+interface BlurEvent : Event {
 };
 
 /**

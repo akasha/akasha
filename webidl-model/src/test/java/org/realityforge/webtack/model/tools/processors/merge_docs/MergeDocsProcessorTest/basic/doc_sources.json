@@ -51,8 +51,18 @@
   },
   {
     "lastModifiedAt": 1,
-    "name": "GlobalEventHandlers.focus",
-    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/focus"
+    "name": "GlobalEventHandlers.abort_event",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/abort_event"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "GlobalEventHandlers.blur_event",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/blur_event"
+  },
+  {
+    "lastModifiedAt": 1,
+    "name": "GlobalEventHandlers.focus_event",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/focus_event"
   },
   {
     "lastModifiedAt": 1,

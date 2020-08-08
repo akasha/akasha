@@ -8,6 +8,8 @@
     "onblur"
   ],
   "events": [
+    "abort",
+    "blur",
     "focus"
   ]
 }

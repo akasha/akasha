@@ -300,6 +300,7 @@ public abstract class AbstractProcessor
                                 transformConstants( input.getConstants() ),
                                 transformAttributeMembers( input.getAttributes() ),
                                 transformOperationMembers( input.getOperations() ),
+                                transformEventMembers( input.getEvents() ),
                                 transformDocumentation( input.getDocumentation() ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
@@ -327,6 +328,7 @@ public abstract class AbstractProcessor
                                        transformConstants( input.getConstants() ),
                                        transformAttributeMembers( input.getAttributes() ),
                                        transformOperationMembers( input.getOperations() ),
+                                       transformEventMembers( input.getEvents() ),
                                        transformDocumentation( input.getDocumentation() ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
                                        transformSourceLocations( input.getSourceLocations() ) );

@@ -78,6 +78,11 @@ public final class FlattenProcessorTest
                     "input.webidl:12:2\n" +
                     "Attempting to add member defined in:\n" +
                     "input.webidl:17:0" },
+      new Object[]{ "mixin_and_partial_interface_into_interface_duplicate_event",
+                    "Failed to merge event named 'myevent' from mixin named 'DocumentOrShadowRoot' into interface named 'Document' as the interface already contains an event with the same name. Existing defined in:\n" +
+                    "input.webidl:14:2\n" +
+                    "Attempting to add member defined in:\n" +
+                    "input.webidl:1:0" },
       new Object[]{ "partial_namespace_duplicate_attribute",
                     "Failed to merge attribute named 'URL' into namespace named 'WebAssembly' as the namespace already contains an attribute with the same name. Existing defined in:\n" +
                     "input.webidl:8:2\n" +
@@ -87,7 +92,12 @@ public final class FlattenProcessorTest
                     "Failed to merge constant named 'CHARSET_RULE' into mixin named 'DocumentOrShadowRoot' as the mixin already contains a constant with the same name. Existing defined in:\n" +
                     "input.webidl:1:0\n" +
                     "Attempting to add member defined in:\n" +
-                    "input.webidl:7:0" }
+                    "input.webidl:7:0" },
+      new Object[]{ "partial_mixin_duplicate_event",
+                    "Failed to merge event named 'close' into mixin named 'DocumentOrShadowRoot' as the mixin already contains an event with the same name. Existing defined in:\n" +
+                    "input.webidl:1:0\n" +
+                    "Attempting to add member defined in:\n" +
+                    "input.webidl:9:0" }
     };
   }
 

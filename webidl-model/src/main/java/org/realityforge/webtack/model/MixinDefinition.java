@@ -18,11 +18,14 @@ public final class MixinDefinition
   private final List<AttributeMember> _attributes;
   @Nonnull
   private final List<OperationMember> _operations;
+  @Nonnull
+  private final List<EventMember> _events;
 
   public MixinDefinition( @Nonnull final String name,
                           @Nonnull final List<ConstMember> constants,
                           @Nonnull final List<AttributeMember> attributes,
                           @Nonnull final List<OperationMember> operations,
+                          @Nonnull final List<EventMember> events,
                           @Nullable final DocumentationElement documentation,
                           @Nonnull final List<ExtendedAttribute> extendedAttributes,
                           @Nonnull final List<SourceInterval> sourceLocations )
@@ -32,6 +35,7 @@ public final class MixinDefinition
     _constants = Objects.requireNonNull( constants );
     _attributes = Objects.requireNonNull( attributes );
     _operations = Objects.requireNonNull( operations );
+    _events = Objects.requireNonNull( events );
   }
 
   @Nonnull
@@ -58,6 +62,12 @@ public final class MixinDefinition
     return _operations;
   }
 
+  @Nonnull
+  public List<EventMember> getEvents()
+  {
+    return _events;
+  }
+
   @Override
   public boolean equals( final Object o )
   {
@@ -75,14 +85,15 @@ public final class MixinDefinition
       return _name.equals( other._name ) &&
              _constants.equals( other._constants ) &&
              _attributes.equals( other._attributes ) &&
-             _operations.equals( other._operations );
+             _operations.equals( other._operations ) &&
+             _events.equals( other._events );
     }
   }
 
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _constants, _attributes, _operations );
+    return Objects.hash( super.hashCode(), _name, _constants, _attributes, _operations, _events );
   }
 
   public boolean equiv( @Nonnull final MixinDefinition other )
@@ -91,7 +102,8 @@ public final class MixinDefinition
          _name.equals( other._name ) &&
          _constants.size() == other._constants.size() &&
          _attributes.size() == other._attributes.size() &&
-         _operations.size() == other._operations.size() )
+         _operations.size() == other._operations.size() &&
+         _events.size() == other._events.size() )
     {
       final Set<ConstMember> otherConstants = new HashSet<>( other._constants );
       for ( final ConstMember member : _constants )
@@ -113,6 +125,14 @@ public final class MixinDefinition
       for ( final OperationMember member : _operations )
       {
         if ( !otherOperations.removeIf( member::equiv ) )
+        {
+          return false;
+        }
+      }
+      final Set<EventMember> otherEvents = new HashSet<>( other._events );
+      for ( final EventMember member : _events )
+      {
+        if ( !otherEvents.removeIf( member::equiv ) )
         {
           return false;
         }

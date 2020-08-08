@@ -116,6 +116,13 @@ interface mixin DocumentOrShadowRoot {
    */
   [LegacyLenientSetter]
   readonly attribute Element? pointerLockElement;
+  /**
+   * This is some basic documentation for DocumentOrShadowRoot
+   * element.
+   *
+   * @see http://example.com/#DocumentOrShadowRoot
+   */
+  event DeviceMotionEvent devicemotion;
 };
 
 /**
@@ -135,6 +142,14 @@ partial interface mixin DocumentOrShadowRoot {
    */
   [LegacyLenientSetter]
   readonly attribute Element? fullscreenElement;
+  /**
+   * This is from spec blah blah that decorates the mixin
+   * by adding full screen.
+   *
+   * @see http://example.com/#DocumentOrShadowRoot
+   * @version 2
+   */
+  event Event focus;
 };
 
 /**

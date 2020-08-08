@@ -220,12 +220,12 @@ public final class WebIDLModelParser
           if ( null != documentation )
           {
             callbackDocumentation = new DocumentationElement( documentation.getDocumentation(),
-                                                               documentation
-                                                                 .getBlockTags()
-                                                                 .stream()
-                                                                 .filter( t -> !"param".equals( t.getName() ) )
-                                                                 .collect( Collectors.toList() ),
-                                                               documentation.getSourceLocations() );
+                                                              documentation
+                                                                .getBlockTags()
+                                                                .stream()
+                                                                .filter( t -> !"param".equals( t.getName() ) )
+                                                                .collect( Collectors.toList() ),
+                                                              documentation.getSourceLocations() );
           }
 
           return new CallbackDefinition( name,
@@ -395,6 +395,7 @@ public final class WebIDLModelParser
     final List<ConstMember> constants = new ArrayList<>();
     final List<AttributeMember> attributes = new ArrayList<>();
     final List<OperationMember> operations = new ArrayList<>();
+    final List<EventMember> events = new ArrayList<>();
 
     final String name = ctx.IDENTIFIER().getText();
     WebIDLParser.MixinMembersContext mixinMembersContext = ctx.mixinMembers();
@@ -436,16 +437,24 @@ public final class WebIDLModelParser
           }
           else
           {
-            final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
-            if ( mixinMemberContext.readOnly().getChildCount() > 0 )
+            final WebIDLParser.EventContext eventContext = mixinMemberContext.event();
+            if ( null != eventContext )
             {
-              modifiers.add( AttributeMember.Modifier.READ_ONLY );
+              events.add( parse( eventContext, memberDocumentation, memberExtendedAttributes, startPosition ) );
             }
-            attributes.add( parse( mixinMemberContext.attributeRest(),
-                                   modifiers,
-                                   memberDocumentation,
-                                   memberExtendedAttributes,
-                                   startPosition ) );
+            else
+            {
+              final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
+              if ( mixinMemberContext.readOnly().getChildCount() > 0 )
+              {
+                modifiers.add( AttributeMember.Modifier.READ_ONLY );
+              }
+              attributes.add( parse( mixinMemberContext.attributeRest(),
+                                     modifiers,
+                                     memberDocumentation,
+                                     memberExtendedAttributes,
+                                     startPosition ) );
+            }
           }
         }
       }
@@ -457,6 +466,7 @@ public final class WebIDLModelParser
                                        Collections.unmodifiableList( constants ),
                                        Collections.unmodifiableList( attributes ),
                                        Collections.unmodifiableList( operations ),
+                                       Collections.unmodifiableList( events ),
                                        documentation,
                                        extendedAttributes,
                                        parseSourceIntervals( startPosition, ctx ) ) :
@@ -464,6 +474,7 @@ public final class WebIDLModelParser
                                 Collections.unmodifiableList( constants ),
                                 Collections.unmodifiableList( attributes ),
                                 Collections.unmodifiableList( operations ),
+                                Collections.unmodifiableList( events ),
                                 documentation,
                                 extendedAttributes,
                                 parseSourceIntervals( startPosition, ctx ) );

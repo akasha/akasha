@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "GlobalEventHandlers.blur_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event",
+    "description": "The blur event...",
+    "eventName": "blur",
+    "eventType": "BlurEvent",
+    "eventHandlerProperty": "onblur"
+}

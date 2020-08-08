@@ -5,17 +5,33 @@ partial interface mixin DocumentOrShadowRoot {
 
 partial interface mixin DocumentOrShadowRoot {
   readonly attribute Element? activeElement;
+  event Event close;
 };
 
 partial interface mixin DocumentOrShadowRoot {
   [SameObject]
   readonly attribute StyleSheetList styleSheets;
+  /**
+   * Documentation attached to event from partial mixin.
+   */
+  event FocusEvent focus;
 };
 
 interface mixin DocumentOrShadowRoot {
+event BlurEvent blur;
 };
 
 Document includes DocumentOrShadowRoot;
+
+interface Event {
+
+};
+
+interface FocusEvent : Event {
+};
+
+interface BlurEvent : Event {
+};
 
 [Exposed=Window]
 interface Document : Node {

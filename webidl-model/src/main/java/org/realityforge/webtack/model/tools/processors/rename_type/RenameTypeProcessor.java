@@ -126,6 +126,7 @@ final class RenameTypeProcessor
                                   transformConstants( input.getConstants() ),
                                   transformAttributeMembers( input.getAttributes() ),
                                   transformOperationMembers( input.getOperations() ),
+                                  transformEventMembers( input.getEvents() ),
                                   transformDocumentation( input.getDocumentation() ),
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
                                   transformSourceLocations( input.getSourceLocations() ) );
@@ -147,6 +148,7 @@ final class RenameTypeProcessor
                                          transformConstants( input.getConstants() ),
                                          transformAttributeMembers( input.getAttributes() ),
                                          transformOperationMembers( input.getOperations() ),
+                                         transformEventMembers( input.getEvents() ),
                                          transformDocumentation( input.getDocumentation() ),
                                          transformExtendedAttributes( input.getExtendedAttributes() ),
                                          transformSourceLocations( input.getSourceLocations() ) );
