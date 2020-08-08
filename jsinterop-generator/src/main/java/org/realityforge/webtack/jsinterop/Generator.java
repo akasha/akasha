@@ -982,6 +982,10 @@ final class Generator
     addNullabilityAnnotationIfRequired( context, mapLike.getKeyType(), keyParamBuilder );
     final ParameterSpec keyParam = keyParamBuilder.build();
 
+    final ParameterSpec.Builder valueParamBuilder = ParameterSpec.builder( valueType, "value" );
+    addNullabilityAnnotationIfRequired( context, mapLike.getValueType(), valueParamBuilder );
+    final ParameterSpec valueParam = valueParamBuilder.build();
+
     type.addMethod( MethodSpec
                       .methodBuilder( "has" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
@@ -1046,10 +1050,6 @@ final class Generator
                           Kind.Void == o.getReturnType().getKind() );
       if ( !setPresent )
       {
-        final ParameterSpec.Builder valueParamBuilder = ParameterSpec.builder( valueType, "value" );
-        addNullabilityAnnotationIfRequired( context, mapLike.getValueType(), valueParamBuilder );
-        final ParameterSpec valueParam = valueParamBuilder.build();
-
         type.addMethod( MethodSpec
                           .methodBuilder( "set" )
                           .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
