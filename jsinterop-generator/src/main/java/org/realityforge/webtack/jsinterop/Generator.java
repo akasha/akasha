@@ -813,6 +813,10 @@ final class Generator
       {
         generateDefaultOperation( context, operation, type );
       }
+      else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
+      {
+        generateDefaultOperation( context, operation, type );
+      }
     }
 
     final boolean noPublicSymbol = shouldExpectNoGlobalSymbol( definition );
@@ -885,6 +889,10 @@ final class Generator
     {
       final OperationMember.Kind operationKind = operation.getKind();
       if ( OperationMember.Kind.DEFAULT == operationKind )
+      {
+        generateDefaultOperation( context, operation, type );
+      }
+      else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
       {
         generateDefaultOperation( context, operation, type );
       }
@@ -1211,7 +1219,8 @@ final class Generator
                                          @Nonnull final List<TypedValue> typeList,
                                          @Nonnull final TypeSpec.Builder type )
   {
-    assert OperationMember.Kind.DEFAULT == operation.getKind();
+    assert OperationMember.Kind.DEFAULT == operation.getKind() ||
+           OperationMember.Kind.STRINGIFIER == operation.getKind();
     final String name = operation.getName();
     assert null != name;
     final String methodName = safeMethodName( name );

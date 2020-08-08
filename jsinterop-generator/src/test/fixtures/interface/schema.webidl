@@ -41,4 +41,5 @@ interface EventTarget {
 interface SpeechRecognitionErrorEvent : Event {
   readonly attribute DOMString message;
   constructor( DOMString type );
+  stringifier DOMString messageDescription();
 };

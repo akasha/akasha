@@ -22,4 +22,7 @@ public class SpeechRecognitionErrorEvent extends Event {
   )
   @Nonnull
   public native String message();
+
+  @Nonnull
+  public native String messageDescription();
 }

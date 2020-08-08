@@ -55,7 +55,7 @@ complete as there is too much un-said.
 
 * Generate a global object ala `DomGlobal` based on a specific interface name.
 
-* Generate `GETTER`, `SETTER`, `DELETER` and `STRINGIFIER` operations
+* Generate `GETTER`, `SETTER` and `DELETER` operations
 
 * Add codegen for `IterableMember`, `AsyncIterableMember`, `MapLikeMember` and `SetLikeMember`
 
