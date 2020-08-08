@@ -174,10 +174,14 @@ final class CodeGenContext
   @Nonnull
   TypeName toTypeName( @Nonnull final Type type )
   {
-    final Kind kind = type.getKind();
+    return toTypeName( type, type.isNullable() );
+  }
 
-    final boolean nullable = type.isNullable();
-    if ( nullable &&
+  @Nonnull
+  TypeName toTypeName( @Nonnull final Type type, final boolean boxed )
+  {
+    final Kind kind = type.getKind();
+    if ( boxed &&
          ( Kind.Byte == kind ||
            Kind.Octet == kind ||
            Kind.Short == kind ||
@@ -201,7 +205,7 @@ final class CodeGenContext
     }
     else if ( Kind.Boolean == kind )
     {
-      return nullable ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
+      return boxed ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
     }
     else if ( Kind.Byte == kind )
     {
@@ -244,11 +248,11 @@ final class CodeGenContext
     }
     else if ( Kind.Float == kind || Kind.UnrestrictedFloat == kind )
     {
-      return nullable ? TypeName.DOUBLE.box() : TypeName.FLOAT;
+      return boxed ? TypeName.DOUBLE.box() : TypeName.FLOAT;
     }
     else if ( Kind.Double == kind || Kind.UnrestrictedDouble == kind )
     {
-      return nullable ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
+      return boxed ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
     }
     else if ( Kind.DOMString == kind || Kind.ByteString == kind || Kind.USVString == kind )
     {
