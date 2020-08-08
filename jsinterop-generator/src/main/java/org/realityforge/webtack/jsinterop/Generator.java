@@ -1008,6 +1008,7 @@ final class Generator
                       .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedValueType ) )
                       .build() );
     //TODO: entries - define inner class Entry that wraps entry array
+    //TODO: forEach - based on map equiv
     if ( !mapLike.isReadOnly() )
     {
       final boolean setPresent =
