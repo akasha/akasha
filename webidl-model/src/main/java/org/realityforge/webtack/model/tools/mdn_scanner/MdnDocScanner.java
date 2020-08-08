@@ -46,11 +46,11 @@ public final class MdnDocScanner
                                             final boolean removeSource )
     throws DocException
   {
+    final DocRepositoryConfig repository = _runtime.getRepository();
     final DocSourceConfig source = findOrCreateDocSourceConfig( kind, type, member );
     final boolean isNew = 0 == source.getLastModifiedAt();
     final Path target = _runtime.getDocEntryPath( source );
     final FetchResult result;
-    final DocRepositoryConfig repository = _runtime.getRepository();
     try
     {
       final String url = source.getUrl();
