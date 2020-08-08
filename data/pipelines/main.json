@@ -10,6 +10,28 @@
       }
     },
     {
+      "name": "RemoveExtendedAttribute",
+      "description": "Remove Constructor attribute as one of the arguments 'newTarget' is of type 'Animatable' which is a mixin which is seemingly invalid. We will re-add an equivalent with a union for impls of Animatable in next step",
+      "sourceSelector": "name=svg2",
+      "config": {
+        "namePattern": "^ShadowAnimation$",
+        "extendedAttribute": "Constructor( Animation source, Animatable newTarget )"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "See previous step for explanation",
+      "sourceSelector": "name=svg2",
+      "config": {
+        "namePattern": "^ShadowAnimation$",
+        "extendedAttribute": "Constructor( Animation source, (CSSPseudoElement or Element) newTarget )"
+      }
+    },
+    {
+      "name": "ConvertConstructorAttribute",
+      "description": "Convert from historic constructor attributes"
+    },
+    {
       "name": "RenameType",
       "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
       "sourceSelector": "name=deviceorientation",

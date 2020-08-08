@@ -10,6 +10,10 @@
       }
     },
     {
+      "name": "ConvertConstructorAttribute",
+      "description": "Convert from historic constructor attributes"
+    },
+    {
       "name": "Merge"
     },
     {
