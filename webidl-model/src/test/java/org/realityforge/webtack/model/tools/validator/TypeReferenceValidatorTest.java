@@ -134,10 +134,24 @@ public final class TypeReferenceValidatorTest
   }
 
   @Test
+  public void interface_badEvent()
+  {
+    assertError( "Interface_badEvent" + WebIDLSchema.EXTENSION,
+                 "Event named 'vrdisplayactivate' contained by interface named 'InterfaceUnderTest' has a type but it does not reference a known value" );
+  }
+
+  @Test
   public void partialInterface_badOperation()
   {
     assertError( "PartialInterface_badOperation" + WebIDLSchema.EXTENSION,
                  "Operation named 'myOperation' contained by partial interface named 'PartialInterfaceUnderTest' has a return type that contains or is a type reference but it does not reference a known value" );
+  }
+
+  @Test
+  public void partialInterface_badEvent()
+  {
+    assertError( "PartialInterface_badEvent" + WebIDLSchema.EXTENSION,
+                 "Event named 'vrdisplayactivate' contained by partial interface named 'PartialInterfaceUnderTest' has a type but it does not reference a known value" );
   }
 
   @Test

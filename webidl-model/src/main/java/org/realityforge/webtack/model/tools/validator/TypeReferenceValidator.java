@@ -14,6 +14,7 @@ import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
+import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.IterableMember;
@@ -139,6 +140,7 @@ final class TypeReferenceValidator
       validateConstantTypeReference( schema, errors, containerType, containerName, definition.getConstants() );
       validateAttributeTypeReference( schema, errors, containerType, containerName, definition.getAttributes() );
       validateOperationsTypeReference( schema, errors, containerType, containerName, definition.getOperations() );
+      validateEventsTypeReference( schema, errors, containerType, containerName, definition.getEvents() );
       validateIterableMember( schema, errors, containerType, containerName, definition.getIterable() );
       validateAsyncIterableMember( schema, errors, containerType, containerName, definition.getAsyncIterable() );
       validateMapLikeMember( schema, errors, containerType, containerName, definition.getMapLikeMember() );
@@ -151,6 +153,7 @@ final class TypeReferenceValidator
       validateConstantTypeReference( schema, errors, containerType, containerName, definition.getConstants() );
       validateAttributeTypeReference( schema, errors, containerType, containerName, definition.getAttributes() );
       validateOperationsTypeReference( schema, errors, containerType, containerName, definition.getOperations() );
+      validateEventsTypeReference( schema, errors, containerType, containerName, definition.getEvents() );
       validateIterableMember( schema, errors, containerType, containerName, definition.getIterable() );
       validateAsyncIterableMember( schema, errors, containerType, containerName, definition.getAsyncIterable() );
       validateMapLikeMember( schema, errors, containerType, containerName, definition.getMapLikeMember() );
@@ -166,6 +169,30 @@ final class TypeReferenceValidator
     }
 
     return errors;
+  }
+
+  private void validateEventsTypeReference( @Nonnull final WebIDLSchema schema,
+                                            @Nonnull final Collection<ValidationError> errors,
+                                            @Nonnull final String containerType,
+                                            @Nonnull final String containerName,
+                                            @Nonnull final List<EventMember> events )
+  {
+    for ( final EventMember event : events )
+    {
+      validateEventTypeReference( schema, errors, containerType, containerName, event );
+    }
+  }
+
+  private void validateEventTypeReference( @Nonnull final WebIDLSchema schema,
+                                           @Nonnull final Collection<ValidationError> errors,
+                                           @Nonnull final String containerType,
+                                           @Nonnull final String containerName,
+                                           @Nonnull final EventMember event )
+  {
+    final Supplier<String> returnTypeMessage =
+      () -> "Event named '" + event.getName() + "' contained by " + containerType + " named '" +
+            containerName + "' has a type but it does not reference a known value";
+    validateType( schema, errors, event.getEventType(), event, returnTypeMessage );
   }
 
   private void validateIterableMember( @Nonnull final WebIDLSchema schema,

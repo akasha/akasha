@@ -43,8 +43,6 @@ complete as there is too much un-said.
 * Another place to scan events from
   - https://html.spec.whatwg.org/multipage/indices.html#events-2
 
-* Validate should validate event types are present for event members
-
 * Add events to mixins and partial mixins
 
 # Java Generation
