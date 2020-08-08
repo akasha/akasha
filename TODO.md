@@ -68,8 +68,7 @@ complete as there is too much un-said.
 * Change the way we index elements per-type in docs so that index is separate from type description.
   We want to manually add event/method/property documentation to index without it being scrubbed when
   we re-fetch type documentation. Once we do fill out some useful ones.
-  i.e. Add "hashchange" to window (use in vchat), "voiceschanged" to SpeechSynthesis and everything
-  to SpeechUtterance (use in speech demo)
+  i.e. Add "voiceschanged" to SpeechSynthesis and everything to SpeechUtterance (use in speech demo)
 
 * Change pipeline so that doc runtime is shared across pipeline stages? Or maybe we can each repository?
 
