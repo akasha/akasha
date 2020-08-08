@@ -1013,7 +1013,7 @@ final class Generator
                       .build() );
     type.addType( TypeSpec
                     .interfaceBuilder( "Entry" )
-                    .addModifiers( Modifier.PUBLIC )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                     .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                                       .addMember( "isNative", "true" )
                                       .addMember( "name", "$S", "?" )
