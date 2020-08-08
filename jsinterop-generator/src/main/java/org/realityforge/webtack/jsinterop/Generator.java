@@ -1038,7 +1038,66 @@ final class Generator
                       .addAnnotation( Types.NONNULL )
                       .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, ClassName.bestGuess( "Entry" ) ) )
                       .build() );
-    //TODO: forEach - based on map equiv
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( Types.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( valueParam )
+                                  .build() )
+                    .build() );
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback2" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( Types.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( valueParam )
+                                  .addParameter( keyParam )
+                                  .build() )
+                    .build() );
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback3" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( Types.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( valueParam )
+                                  .addParameter( keyParam )
+                                  .addParameter( ParameterSpec
+                                                   .builder( ClassName.bestGuess( definition.getName() ), "map" )
+                                                   .addAnnotation( Types.NONNULL )
+                                                   .build() )
+                                  .build() )
+                    .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "forEach" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
+                                       .addAnnotation( Types.NONNULL )
+                                       .build() )
+                      .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "forEach" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
+                                       .addAnnotation( Types.NONNULL )
+                                       .build() )
+                      .build() );
+    type.addMethod( MethodSpec
+                      .methodBuilder( "forEach" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
+                                       .addAnnotation( Types.NONNULL )
+                                       .build() )
+                      .build() );
     if ( !mapLike.isReadOnly() )
     {
       final boolean setPresent =
