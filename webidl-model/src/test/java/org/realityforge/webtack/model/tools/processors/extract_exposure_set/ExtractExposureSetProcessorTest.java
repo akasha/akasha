@@ -22,7 +22,6 @@ public class ExtractExposureSetProcessorTest
   public void interfaceTest()
     throws Exception
   {
-
     performFixtureTest( "ExposureSetExtractorProcessor - interface",
                         () -> createProcessor( "other" ),
                         getTestLocalFixtureDir().resolve( "interface" ),
