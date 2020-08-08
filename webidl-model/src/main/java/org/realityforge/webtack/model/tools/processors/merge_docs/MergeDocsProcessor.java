@@ -129,7 +129,7 @@ final class MergeDocsProcessor
                                                             Collections.emptyList(),
                                                             false,
                                                             Collections.emptyList() ),
-                                         createDocumentationElement( docEntry ),
+                                         createDocumentationElement( eventDocEntry ),
                                          Collections.emptyList(),
                                          Collections.emptyList() ) );
           }

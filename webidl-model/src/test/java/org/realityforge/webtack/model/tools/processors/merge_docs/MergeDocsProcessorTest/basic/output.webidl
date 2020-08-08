@@ -139,9 +139,9 @@ interface Node {
  */
 interface Window {
   /**
-   * Documentation for Window partial.
+   * The devicemotion event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window - MDN</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicemotion_event">devicemotion event - MDN</a>
    */
   event DeviceMotionEvent devicemotion;
   /**
