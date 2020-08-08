@@ -40,6 +40,31 @@ public final class DocRepositoryConfig
     DocRepositoryConfig.save( this );
   }
 
+  /**
+   * Find or create a DocSourceConfig for specified name.
+   *
+   * @param name       the name of the DocSourceConfig.
+   * @param defaultUrl the url to use if need to create the DocSourceConfig.
+   * @return a DocSourceConfig that was either looked up or created.
+   * @throws RepositorySaveException if there was an error saving the repository after the config was created.
+   */
+  @Nonnull
+  public DocSourceConfig findOrCreateDocSourceConfig( @Nonnull final String name, @Nullable final String defaultUrl )
+    throws RepositorySaveException
+  {
+    DocSourceConfig source = findSourceByName( name );
+    if ( null == source )
+    {
+      source = new DocSourceConfig();
+      source.setName( name );
+      source.setLastModifiedAt( 0 );
+      source.setUrl( defaultUrl );
+      _sources.add( source );
+      save();
+    }
+    return source;
+  }
+
   @Nonnull
   public static DocRepositoryConfig create( @Nonnull final Path path )
   {

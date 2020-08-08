@@ -47,7 +47,8 @@ public final class MdnDocScanner
     throws DocException
   {
     final DocRepositoryConfig repository = _runtime.getRepository();
-    final DocSourceConfig source = findOrCreateDocSourceConfig( kind, type, member );
+    final DocSourceConfig source =
+      repository.findOrCreateDocSourceConfig( deriveName( kind, type, member ), deriveMdnUrl( type, member, kind ) );
     final boolean isNew = 0 == source.getLastModifiedAt();
     final Path target = _runtime.getDocEntryPath( source );
     final FetchResult result;
@@ -385,45 +386,18 @@ public final class MdnDocScanner
   }
 
   @Nonnull
-  private DocSourceConfig findOrCreateDocSourceConfig( @Nonnull final DocKind kind,
-                                                       @Nonnull final String type,
-                                                       @Nullable final String member )
-    throws RepositorySaveException
+  private String deriveName( @Nonnull final DocKind kind,
+                             @Nonnull final String type,
+                             @Nullable final String member )
   {
     assert null == member || DocKind.Type != kind;
-    final String name = type + ( null == member ? "" : "." + member + ( DocKind.Event == kind ? "_event" : "" ) );
-    final DocRepositoryConfig repository = _runtime.getRepository();
-    DocSourceConfig source = repository.findSourceByName( name );
-    if ( null == source )
-    {
-      source = new DocSourceConfig();
-      source.setName( name );
-      source.setLastModifiedAt( 0 );
-      source.setUrl( getElementUrl( type, member, kind ) );
-      repository.getSources().add( source );
-      repository.save();
-    }
-    return source;
-  }
-
-  private void saveRepository()
-    throws RepositorySaveException
-  {
-    final DocRepositoryConfig repository = _runtime.getRepository();
-    try
-    {
-      DocRepositoryConfig.save( repository );
-    }
-    catch ( final Exception e )
-    {
-      throw new RepositorySaveException( repository, e );
-    }
+    return type + ( null == member ? "" : "." + member + ( DocKind.Event == kind ? "_event" : "" ) );
   }
 
   @Nonnull
-  private String getElementUrl( @Nonnull final String type,
-                                @Nullable final String member,
-                                @Nonnull final DocKind kind )
+  private String deriveMdnUrl( @Nonnull final String type,
+                               @Nullable final String member,
+                               @Nonnull final DocKind kind )
   {
     return BASE_URL + type + ( null == member ? "" : "/" + member ) + ( DocKind.Event == kind ? "_event" : "" );
   }
