@@ -103,6 +103,48 @@ final class Generator
     {
       writeGwtModule( context );
     }
+
+    final String globalInterface = context.getGlobalInterface();
+    if ( null != globalInterface )
+    {
+      generateGlobal( context, globalInterface );
+    }
+  }
+
+  private void generateGlobal( @Nonnull final CodeGenContext context, @Nonnull final String globalInterface )
+    throws IOException
+  {
+    final InterfaceDefinition definition = context.getSchema().findInterfaceByName( globalInterface );
+    if ( null == definition )
+    {
+      throw new IllegalStateException( "Declared globalInterface '" + globalInterface + "' does not exist in schema" );
+    }
+    final TypeSpec.Builder type =
+      TypeSpec
+        .classBuilder( "Global" )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "name", "$S", "goog.global" )
+                          .build() );
+
+    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
+
+    final TypeName globalType = context.lookupTypeByName( definition.getName() );
+
+    type.addField( FieldSpec.builder( globalType, "globalThis", Modifier.PRIVATE, Modifier.STATIC ).build() );
+
+    type.addMethod( MethodSpec.methodBuilder( "globalThis" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                      .addAnnotation( Types.JS_OVERLAY )
+                      .addAnnotation( Types.NONNULL )
+                      .returns( globalType )
+                      .addStatement( "return globalThis" )
+                      .build() );
+
+    context.writeTopLevelType( type );
   }
 
   private void deleteDirectory( @Nonnull final Path directory )

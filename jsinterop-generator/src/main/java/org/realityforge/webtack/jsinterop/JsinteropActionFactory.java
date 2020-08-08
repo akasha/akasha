@@ -11,6 +11,7 @@ public final class JsinteropActionFactory
 {
   public String outputDirectory;
   public String packageName;
+  public String globalInterface;
   public boolean generateGwtModule = true;
 
   @Nonnull
@@ -25,6 +26,6 @@ public final class JsinteropActionFactory
     {
       throw new IllegalArgumentException( "Jsinterop missing required packageName configuration value" );
     }
-    return new JsinteropAction( outputDirectory, packageName, generateGwtModule );
+    return new JsinteropAction( outputDirectory, packageName, globalInterface, generateGwtModule );
   }
 }

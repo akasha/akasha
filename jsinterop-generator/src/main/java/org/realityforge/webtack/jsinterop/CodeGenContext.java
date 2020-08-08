@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.Kind;
@@ -39,6 +40,8 @@ final class CodeGenContext
   private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
+  @Nullable
+  private final String _globalInterface;
   private final boolean _generateGwtModule;
   // Maps Classname -> Path of source file
   @Nonnull
@@ -46,11 +49,14 @@ final class CodeGenContext
 
   CodeGenContext( @Nonnull final WebIDLSchema schema,
                   @Nonnull final Path outputDirectory,
-                  @Nonnull final String packageName, final boolean generateGwtModule )
+                  @Nonnull final String packageName,
+                  @Nullable final String globalInterface,
+                  final boolean generateGwtModule )
   {
     _schema = Objects.requireNonNull( schema );
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+    _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
   }
 
@@ -76,6 +82,12 @@ final class CodeGenContext
   String getPackageName()
   {
     return _packageName;
+  }
+
+  @Nullable
+  String getGlobalInterface()
+  {
+    return _globalInterface;
   }
 
   boolean shouldGenerateGwtModule()

@@ -270,7 +270,8 @@
       "name": "Jsinterop",
       "config": {
         "outputDirectory": "data/output/main",
-        "packageName": "elemental3"
+        "packageName": "elemental3",
+        "globalInterface": "Window"
       }
     }
   ]

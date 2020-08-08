@@ -133,30 +133,35 @@ public abstract class AbstractTest
     assertEquals( actualContents, expectedContents, "File " + file + " should match fixture file " + fixtureFile );
   }
 
-  protected final void generateCode( @Nonnull final Path directory, @Nonnull final ValidatorRuleConfig validator )
+  protected final void generateCode( @Nonnull final Path directory,
+                                     @Nullable final String globalInterface,
+                                     @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
     generateCode( directory,
                   new String( Files.readAllBytes( directory.resolve( "schema.webidl" ) ), StandardCharsets.UTF_8 ),
+                  globalInterface,
                   validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
                              @Nonnull final String content,
+                             @Nullable final String globalInterface,
                              @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
-    generateCode( directory, loadSchema( content ), validator );
+    generateCode( directory, loadSchema( content ), globalInterface, validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
                              @Nonnull final WebIDLSchema schema,
+                             @Nullable final String globalInterface,
                              @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
     final Collection<ValidationError> errors = ValidatorTool.create( validator ).validate( schema );
     assertTrue( errors.isEmpty(), "Unexpected Errors: " + asString( errors ) );
-    final CodeGenContext context = newContext( schema );
+    final CodeGenContext context = newContext( schema, globalInterface );
 
     if ( writeOutputFixtures() )
     {
@@ -190,11 +195,12 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected final CodeGenContext newContext( @Nonnull final WebIDLSchema schema )
+  protected final CodeGenContext newContext( @Nonnull final WebIDLSchema schema,
+                                             @Nullable final String globalInterface )
     throws Exception
   {
     schema.link();
-    return new CodeGenContext( schema, getWorkingDir(), "com.example", true );
+    return new CodeGenContext( schema, getWorkingDir(), "com.example", globalInterface, true );
   }
 
   /**

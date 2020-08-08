@@ -45,8 +45,6 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Generate a global object ala `DomGlobal` based on a specific interface name.
-
 * Generate `GETTER`, `SETTER` and `DELETER` operations
 
 * Add codegen for `IterableMember`
