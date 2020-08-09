@@ -92,7 +92,7 @@ public final class MdnDocScanner
         throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
       }
 
-      final ExtractResult extractResult = extractDocs( source, kind, member, tmpTarget );
+      final ExtractResult extractResult = extractDocs( source, kind, member, tmpTarget, result.getLastModifiedAt() );
 
       if ( extractResult.isChanged() )
       {
@@ -215,7 +215,8 @@ public final class MdnDocScanner
   private ExtractResult extractDocs( @Nonnull final DocSourceConfig source,
                                      @Nonnull final DocKind kind,
                                      @Nullable final String member,
-                                     @Nonnull final Path input )
+                                     @Nonnull final Path input,
+                                     final long modifiedAt )
     throws SourceIOException
   {
     try
@@ -371,7 +372,7 @@ public final class MdnDocScanner
           }
         }
       }
-      return new ExtractResult( entry, _runtime.save( entry ) );
+      return new ExtractResult( entry, _runtime.save( entry, modifiedAt ) );
     }
     catch ( final Exception e )
     {

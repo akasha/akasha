@@ -13,6 +13,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexException;
 
 public final class DocRepositoryRuntime
 {
@@ -96,7 +99,7 @@ public final class DocRepositoryRuntime
    * @return true if the entry has changed and thus the entry was saved.
    * @throws Exception if an error occurs saving the entry.
    */
-  public boolean save( @Nonnull final DocEntry entry )
+  public boolean save( @Nonnull final DocEntry entry, final long modifiedAt )
     throws Exception
   {
     final Path output = getDocEntryPath( entry.getName() );
@@ -109,9 +112,20 @@ public final class DocRepositoryRuntime
     }
     else
     {
+      updateIndex( entry, modifiedAt );
       Files.move( tmpOutput, output, StandardCopyOption.REPLACE_EXISTING );
       return true;
     }
+  }
+
+  public void updateIndex( @Nonnull final DocEntry entry, final long modifiedAt )
+    throws IndexException
+  {
+    final String[] parts = entry.getName().split( "\\." );
+    final DocIndex index = DocIndex.open( _dataDirectory.resolve( parts[ 0 ] ) );
+    final EntryIndex entryIndex = index.findOrCreateEntry( 1 == parts.length ? "__type__" : parts[ 1 ] );
+    entryIndex.setLastModifiedAt( modifiedAt );
+    index.save();
   }
 
   @Nonnull
