@@ -1,0 +1,63 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "buildID",
+        "lastModifiedAt": 1596544774063
+    },
+    {
+        "name": "credentials",
+        "lastModifiedAt": 1596544774714
+    },
+    {
+        "name": "deviceMemory",
+        "lastModifiedAt": 1596544775369
+    },
+    {
+        "name": "doNotTrack",
+        "lastModifiedAt": 1596544776678
+    },
+    {
+        "name": "mediaDevices",
+        "lastModifiedAt": 1596544777992
+    },
+    {
+        "name": "mediaSession",
+        "lastModifiedAt": 1596544778553
+    },
+    {
+        "name": "mozNotification",
+        "lastModifiedAt": 1596544780276
+    },
+    {
+        "name": "mozSocial",
+        "lastModifiedAt": 1596544781559
+    },
+    {
+        "name": "oscpu",
+        "lastModifiedAt": 1596544782803
+    },
+    {
+        "name": "presentation",
+        "lastModifiedAt": 1596544783458
+    },
+    {
+        "name": "productSub",
+        "lastModifiedAt": 1596544784177
+    },
+    {
+        "name": "vendor",
+        "lastModifiedAt": 1596544786360
+    },
+    {
+        "name": "vendorSub",
+        "lastModifiedAt": 1596544786968
+    },
+    {
+        "name": "wakeLock",
+        "lastModifiedAt": 1596544788089
+    }
+]

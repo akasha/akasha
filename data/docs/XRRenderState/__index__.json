@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711730554
+    },
+    {
+        "name": "baseLayer",
+        "lastModifiedAt": 1596711731403
+    },
+    {
+        "name": "depthFar",
+        "lastModifiedAt": 1596711731906
+    },
+    {
+        "name": "depthNear",
+        "lastModifiedAt": 1596711733072
+    },
+    {
+        "name": "inlineVerticalFieldOfView",
+        "lastModifiedAt": 1596711733729
+    }
+]

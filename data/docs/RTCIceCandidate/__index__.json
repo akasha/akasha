@@ -1,0 +1,67 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "candidate",
+        "lastModifiedAt": 1596544600698
+    },
+    {
+        "name": "component",
+        "lastModifiedAt": 1596544601363
+    },
+    {
+        "name": "foundation",
+        "lastModifiedAt": 1596544601824
+    },
+    {
+        "name": "ip",
+        "lastModifiedAt": 1596544603373
+    },
+    {
+        "name": "port",
+        "lastModifiedAt": 1596544603973
+    },
+    {
+        "name": "priority",
+        "lastModifiedAt": 1596544604505
+    },
+    {
+        "name": "protocol",
+        "lastModifiedAt": 1596544605597
+    },
+    {
+        "name": "relatedAddress",
+        "lastModifiedAt": 1596544606279
+    },
+    {
+        "name": "relatedPort",
+        "lastModifiedAt": 1596544606944
+    },
+    {
+        "name": "sdpMLineIndex",
+        "lastModifiedAt": 1596544607433
+    },
+    {
+        "name": "sdpMid",
+        "lastModifiedAt": 1596544607982
+    },
+    {
+        "name": "tcpType",
+        "lastModifiedAt": 1596544608636
+    },
+    {
+        "name": "toJSON",
+        "lastModifiedAt": 1596544611454
+    },
+    {
+        "name": "type",
+        "lastModifiedAt": 1596544609714
+    },
+    {
+        "name": "usernameFragment",
+        "lastModifiedAt": 1596544610934
+    }
+]

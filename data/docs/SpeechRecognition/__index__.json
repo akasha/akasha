@@ -1,0 +1,59 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711336820
+    },
+    {
+        "name": "abort",
+        "lastModifiedAt": 1596711344209
+    },
+    {
+        "name": "audioend",
+        "lastModifiedAt": 1596711346036
+    },
+    {
+        "name": "audiostart",
+        "lastModifiedAt": 1596711346566
+    },
+    {
+        "name": "continuous",
+        "lastModifiedAt": 1596711338001
+    },
+    {
+        "name": "grammars",
+        "lastModifiedAt": 1596711338561
+    },
+    {
+        "name": "interimResults",
+        "lastModifiedAt": 1596711339239
+    },
+    {
+        "name": "lang",
+        "lastModifiedAt": 1596711340419
+    },
+    {
+        "name": "maxAlternatives",
+        "lastModifiedAt": 1596711341021
+    },
+    {
+        "name": "onaudioend",
+        "lastModifiedAt": 1596711341570
+    },
+    {
+        "name": "onaudiostart",
+        "lastModifiedAt": 1596711341940
+    },
+    {
+        "name": "serviceURI",
+        "lastModifiedAt": 1596711343075
+    },
+    {
+        "name": "start",
+        "lastModifiedAt": 1596711345114
+    },
+    {
+        "name": "stop",
+        "lastModifiedAt": 1596711345659
+    }
+]

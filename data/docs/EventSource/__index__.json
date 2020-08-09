@@ -1,0 +1,47 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581428071
+    },
+    {
+        "name": "close",
+        "lastModifiedAt": 1596581431107
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1596794624952
+    },
+    {
+        "name": "message_event",
+        "lastModifiedAt": 1596794625259
+    },
+    {
+        "name": "onerror",
+        "lastModifiedAt": 1596581428446
+    },
+    {
+        "name": "onmessage",
+        "lastModifiedAt": 1596581428747
+    },
+    {
+        "name": "onopen",
+        "lastModifiedAt": 1596581429158
+    },
+    {
+        "name": "open_event",
+        "lastModifiedAt": 1596794626243
+    },
+    {
+        "name": "readyState",
+        "lastModifiedAt": 1596581429549
+    },
+    {
+        "name": "url",
+        "lastModifiedAt": 1596581429872
+    },
+    {
+        "name": "withCredentials",
+        "lastModifiedAt": 1596581430240
+    }
+]

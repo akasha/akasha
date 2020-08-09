@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596499304189
+    },
+    {
+        "name": "getAvailability",
+        "lastModifiedAt": 1596499310351
+    },
+    {
+        "name": "getDevices",
+        "lastModifiedAt": 1596499310402
+    },
+    {
+        "name": "onavailabilitychanged",
+        "lastModifiedAt": 1596499309287
+    },
+    {
+        "name": "referringDevice",
+        "lastModifiedAt": 1596499310283
+    },
+    {
+        "name": "requestDevice",
+        "lastModifiedAt": 1596499310454
+    }
+]

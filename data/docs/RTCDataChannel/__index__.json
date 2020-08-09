@@ -1,0 +1,99 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "binaryType",
+        "lastModifiedAt": 1596544574160
+    },
+    {
+        "name": "bufferedAmount",
+        "lastModifiedAt": 1596544574861
+    },
+    {
+        "name": "bufferedAmountLowThreshold",
+        "lastModifiedAt": 1596544575313
+    },
+    {
+        "name": "bufferedamountlow_event",
+        "lastModifiedAt": 1596790665769
+    },
+    {
+        "name": "close",
+        "lastModifiedAt": 1596790663272
+    },
+    {
+        "name": "close_event",
+        "lastModifiedAt": 1596790666692
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1596790667675
+    },
+    {
+        "name": "id",
+        "lastModifiedAt": 1596544576423
+    },
+    {
+        "name": "label",
+        "lastModifiedAt": 1596544577027
+    },
+    {
+        "name": "maxPacketLifeTime",
+        "lastModifiedAt": 1596544577657
+    },
+    {
+        "name": "maxRetransmits",
+        "lastModifiedAt": 1596544578808
+    },
+    {
+        "name": "message_event",
+        "lastModifiedAt": 1596790668637
+    },
+    {
+        "name": "negotiated",
+        "lastModifiedAt": 1596544579899
+    },
+    {
+        "name": "onbufferedamountlow",
+        "lastModifiedAt": 1596544580306
+    },
+    {
+        "name": "onclose",
+        "lastModifiedAt": 1596544580628
+    },
+    {
+        "name": "onerror",
+        "lastModifiedAt": 1596544580936
+    },
+    {
+        "name": "onmessage",
+        "lastModifiedAt": 1596544581177
+    },
+    {
+        "name": "onopen",
+        "lastModifiedAt": 1596544581550
+    },
+    {
+        "name": "open_event",
+        "lastModifiedAt": 1596790669132
+    },
+    {
+        "name": "ordered",
+        "lastModifiedAt": 1596544582847
+    },
+    {
+        "name": "protocol",
+        "lastModifiedAt": 1596544583953
+    },
+    {
+        "name": "readyState",
+        "lastModifiedAt": 1596544585172
+    },
+    {
+        "name": "send",
+        "lastModifiedAt": 1596544586888
+    }
+]

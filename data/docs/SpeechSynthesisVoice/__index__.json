@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596712529979
+    },
+    {
+        "name": "default",
+        "lastModifiedAt": 1596712530652
+    },
+    {
+        "name": "lang",
+        "lastModifiedAt": 1596712531155
+    },
+    {
+        "name": "localService",
+        "lastModifiedAt": 1596712532160
+    },
+    {
+        "name": "name",
+        "lastModifiedAt": 1596712533310
+    },
+    {
+        "name": "voiceURI",
+        "lastModifiedAt": 1596712533966
+    }
+]

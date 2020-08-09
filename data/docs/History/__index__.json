@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581144837
+    },
+    {
+        "name": "back",
+        "lastModifiedAt": 1596581146874
+    },
+    {
+        "name": "forward",
+        "lastModifiedAt": 1596581147707
+    },
+    {
+        "name": "go",
+        "lastModifiedAt": 1596581148073
+    },
+    {
+        "name": "length",
+        "lastModifiedAt": 1596581145657
+    },
+    {
+        "name": "pushState",
+        "lastModifiedAt": 1596581148509
+    },
+    {
+        "name": "replaceState",
+        "lastModifiedAt": 1596581148890
+    },
+    {
+        "name": "scrollRestoration",
+        "lastModifiedAt": 1596581146032
+    },
+    {
+        "name": "state",
+        "lastModifiedAt": 1596581146306
+    }
+]

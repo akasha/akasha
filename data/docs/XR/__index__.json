@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596543954384
+    },
+    {
+        "name": "devicechange",
+        "lastModifiedAt": 1596543911889
+    },
+    {
+        "name": "isSessionSupported",
+        "lastModifiedAt": 1596537801730
+    },
+    {
+        "name": "ondevicechange",
+        "lastModifiedAt": 1596543955616
+    },
+    {
+        "name": "requestSession",
+        "lastModifiedAt": 1596537801956
+    }
+]

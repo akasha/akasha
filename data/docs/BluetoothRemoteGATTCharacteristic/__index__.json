@@ -1,0 +1,47 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596712219507
+    },
+    {
+        "name": "getDescriptor",
+        "lastModifiedAt": 1596712223624
+    },
+    {
+        "name": "getDescriptors",
+        "lastModifiedAt": 1596712224339
+    },
+    {
+        "name": "properties",
+        "lastModifiedAt": 1596712220675
+    },
+    {
+        "name": "readValue",
+        "lastModifiedAt": 1596712225003
+    },
+    {
+        "name": "service",
+        "lastModifiedAt": 1596712221268
+    },
+    {
+        "name": "startNotifications",
+        "lastModifiedAt": 1596712226162
+    },
+    {
+        "name": "stopNotifications",
+        "lastModifiedAt": 1596712226798
+    },
+    {
+        "name": "uuid",
+        "lastModifiedAt": 1596712222382
+    },
+    {
+        "name": "value",
+        "lastModifiedAt": 1596712223009
+    },
+    {
+        "name": "writeValue",
+        "lastModifiedAt": 1596712227252
+    }
+]

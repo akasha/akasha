@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711876625
+    },
+    {
+        "name": "device",
+        "lastModifiedAt": 1596711877298
+    },
+    {
+        "name": "getCharacteristic",
+        "lastModifiedAt": 1596711879244
+    },
+    {
+        "name": "getCharacteristics",
+        "lastModifiedAt": 1596711879773
+    },
+    {
+        "name": "getIncludedService",
+        "lastModifiedAt": 1596711880370
+    },
+    {
+        "name": "getIncludedServices",
+        "lastModifiedAt": 1596711880885
+    },
+    {
+        "name": "isPrimary",
+        "lastModifiedAt": 1596711877913
+    },
+    {
+        "name": "uuid",
+        "lastModifiedAt": 1596711878582
+    }
+]

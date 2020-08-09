@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711702235
+    },
+    {
+        "name": "connect",
+        "lastModifiedAt": 1596711704101
+    },
+    {
+        "name": "connected",
+        "lastModifiedAt": 1596711702732
+    },
+    {
+        "name": "device",
+        "lastModifiedAt": 1596711703331
+    },
+    {
+        "name": "disconnect",
+        "lastModifiedAt": 1596711704801
+    },
+    {
+        "name": "getPrimaryService",
+        "lastModifiedAt": 1596711705364
+    },
+    {
+        "name": "getPrimaryServices",
+        "lastModifiedAt": 1596711706081
+    }
+]

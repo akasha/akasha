@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596712328899
+    },
+    {
+        "name": "authenticatedSignedWrites",
+        "lastModifiedAt": 1596712329536
+    },
+    {
+        "name": "broadcast",
+        "lastModifiedAt": 1596712330065
+    },
+    {
+        "name": "indicate",
+        "lastModifiedAt": 1596712331145
+    },
+    {
+        "name": "notify",
+        "lastModifiedAt": 1596712331966
+    },
+    {
+        "name": "read",
+        "lastModifiedAt": 1596712332478
+    },
+    {
+        "name": "reliableWrite",
+        "lastModifiedAt": 1596712333271
+    },
+    {
+        "name": "write",
+        "lastModifiedAt": 1596712334557
+    }
+]

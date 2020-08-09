@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711927782
+    },
+    {
+        "name": "lang",
+        "lastModifiedAt": 1596711928277
+    },
+    {
+        "name": "pitch",
+        "lastModifiedAt": 1596711928892
+    },
+    {
+        "name": "rate",
+        "lastModifiedAt": 1596711930056
+    },
+    {
+        "name": "text",
+        "lastModifiedAt": 1596711930647
+    },
+    {
+        "name": "voice",
+        "lastModifiedAt": 1596711931310
+    },
+    {
+        "name": "volume",
+        "lastModifiedAt": 1596711931982
+    }
+]

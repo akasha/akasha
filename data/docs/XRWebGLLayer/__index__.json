@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711379898
+    },
+    {
+        "name": "antialias",
+        "lastModifiedAt": 1596711380462
+    },
+    {
+        "name": "frameBufferHeight",
+        "lastModifiedAt": 1596711381363
+    },
+    {
+        "name": "frameBufferWidth",
+        "lastModifiedAt": 1596711381987
+    },
+    {
+        "name": "framebuffer",
+        "lastModifiedAt": 1596711383103
+    },
+    {
+        "name": "getNativeFramebufferScaleFactor",
+        "lastModifiedAt": 1596711384237
+    },
+    {
+        "name": "getViewport",
+        "lastModifiedAt": 1596711384947
+    },
+    {
+        "name": "ignoreDepthValues",
+        "lastModifiedAt": 1596711383778
+    }
+]

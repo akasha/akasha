@@ -1,0 +1,63 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711351217
+    },
+    {
+        "name": "atob",
+        "lastModifiedAt": 1596711354645
+    },
+    {
+        "name": "btoa",
+        "lastModifiedAt": 1596581123830
+    },
+    {
+        "name": "caches",
+        "lastModifiedAt": 1596711351570
+    },
+    {
+        "name": "clearInterval",
+        "lastModifiedAt": 1596581124230
+    },
+    {
+        "name": "clearTimeout",
+        "lastModifiedAt": 1596581124515
+    },
+    {
+        "name": "createImageBitmap",
+        "lastModifiedAt": 1596581125465
+    },
+    {
+        "name": "crossOriginIsolated",
+        "lastModifiedAt": 1596711351962
+    },
+    {
+        "name": "fetch",
+        "lastModifiedAt": 1596581125855
+    },
+    {
+        "name": "indexedDB",
+        "lastModifiedAt": 1596711352222
+    },
+    {
+        "name": "isSecureContext",
+        "lastModifiedAt": 1596711353019
+    },
+    {
+        "name": "origin",
+        "lastModifiedAt": 1596711353434
+    },
+    {
+        "name": "queueMicrotask",
+        "lastModifiedAt": 1596581126255
+    },
+    {
+        "name": "setInterval",
+        "lastModifiedAt": 1596581126697
+    },
+    {
+        "name": "setTimeout",
+        "lastModifiedAt": 1596581127088
+    }
+]

@@ -1,0 +1,47 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596544698099
+    },
+    {
+        "name": "address",
+        "lastModifiedAt": 1596544698477
+    },
+    {
+        "name": "candidateType",
+        "lastModifiedAt": 1596544699270
+    },
+    {
+        "name": "deleted",
+        "lastModifiedAt": 1596544699514
+    },
+    {
+        "name": "networkType",
+        "lastModifiedAt": 1596544699908
+    },
+    {
+        "name": "port",
+        "lastModifiedAt": 1596544700232
+    },
+    {
+        "name": "priority",
+        "lastModifiedAt": 1596544700538
+    },
+    {
+        "name": "protocol",
+        "lastModifiedAt": 1596544700847
+    },
+    {
+        "name": "relayProtocol",
+        "lastModifiedAt": 1596544701655
+    },
+    {
+        "name": "transportId",
+        "lastModifiedAt": 1596544702075
+    },
+    {
+        "name": "url",
+        "lastModifiedAt": 1596544702880
+    }
+]

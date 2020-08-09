@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711850920
+    },
+    {
+        "name": "alpha",
+        "lastModifiedAt": 1596711851998
+    },
+    {
+        "name": "antialias",
+        "lastModifiedAt": 1596711852619
+    },
+    {
+        "name": "depth",
+        "lastModifiedAt": 1596711853234
+    },
+    {
+        "name": "framebufferScaleFactor",
+        "lastModifiedAt": 1596711853905
+    },
+    {
+        "name": "ignoreDepthValues",
+        "lastModifiedAt": 1596711854371
+    },
+    {
+        "name": "stencil",
+        "lastModifiedAt": 1596711854884
+    }
+]

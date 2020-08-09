@@ -1,0 +1,19 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596712200482
+    },
+    {
+        "name": "eye",
+        "lastModifiedAt": 1596712201622
+    },
+    {
+        "name": "projectionMatrix",
+        "lastModifiedAt": 1596712202846
+    },
+    {
+        "name": "transform",
+        "lastModifiedAt": 1596712203450
+    }
+]

@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596712336678
+    },
+    {
+        "name": "badInput",
+        "lastModifiedAt": 1596581485685
+    },
+    {
+        "name": "patternMismatch",
+        "lastModifiedAt": 1596581486472
+    },
+    {
+        "name": "rangeOverflow",
+        "lastModifiedAt": 1596581486869
+    },
+    {
+        "name": "rangeUnderflow",
+        "lastModifiedAt": 1596581487128
+    },
+    {
+        "name": "stepMismatch",
+        "lastModifiedAt": 1596581487649
+    },
+    {
+        "name": "tooLong",
+        "lastModifiedAt": 1596581488448
+    },
+    {
+        "name": "tooShort",
+        "lastModifiedAt": 1596581488698
+    },
+    {
+        "name": "typeMismatch",
+        "lastModifiedAt": 1596581488961
+    }
+]

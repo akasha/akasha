@@ -1,0 +1,83 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581373820
+    },
+    {
+        "name": "alt",
+        "lastModifiedAt": 1596581374230
+    },
+    {
+        "name": "complete",
+        "lastModifiedAt": 1596581374631
+    },
+    {
+        "name": "crossOrigin",
+        "lastModifiedAt": 1596581375017
+    },
+    {
+        "name": "currentSrc",
+        "lastModifiedAt": 1596581375319
+    },
+    {
+        "name": "decode",
+        "lastModifiedAt": 1596581381975
+    },
+    {
+        "name": "decoding",
+        "lastModifiedAt": 1596581376168
+    },
+    {
+        "name": "height",
+        "lastModifiedAt": 1596581376578
+    },
+    {
+        "name": "isMap",
+        "lastModifiedAt": 1596581376856
+    },
+    {
+        "name": "loading",
+        "lastModifiedAt": 1596581377809
+    },
+    {
+        "name": "naturalHeight",
+        "lastModifiedAt": 1596581378068
+    },
+    {
+        "name": "naturalWidth",
+        "lastModifiedAt": 1596581378442
+    },
+    {
+        "name": "referrerPolicy",
+        "lastModifiedAt": 1596581378785
+    },
+    {
+        "name": "sizes",
+        "lastModifiedAt": 1596581379196
+    },
+    {
+        "name": "src",
+        "lastModifiedAt": 1596581380063
+    },
+    {
+        "name": "srcset",
+        "lastModifiedAt": 1596581380359
+    },
+    {
+        "name": "useMap",
+        "lastModifiedAt": 1596581380624
+    },
+    {
+        "name": "width",
+        "lastModifiedAt": 1596581380906
+    },
+    {
+        "name": "x",
+        "lastModifiedAt": 1596581381260
+    },
+    {
+        "name": "y",
+        "lastModifiedAt": 1596581381658
+    }
+]

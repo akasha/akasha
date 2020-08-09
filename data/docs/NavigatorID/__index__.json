@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581128340
+    },
+    {
+        "name": "appCodeName",
+        "lastModifiedAt": 1596581128712
+    },
+    {
+        "name": "appName",
+        "lastModifiedAt": 1596581128971
+    },
+    {
+        "name": "appVersion",
+        "lastModifiedAt": 1596581129777
+    },
+    {
+        "name": "platform",
+        "lastModifiedAt": 1596581130226
+    },
+    {
+        "name": "product",
+        "lastModifiedAt": 1596581130554
+    },
+    {
+        "name": "taintEnabled",
+        "lastModifiedAt": 1596581131178
+    },
+    {
+        "name": "userAgent",
+        "lastModifiedAt": 1596581130869
+    }
+]

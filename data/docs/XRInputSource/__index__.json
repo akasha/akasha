@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596711957449
+    },
+    {
+        "name": "gripSpace",
+        "lastModifiedAt": 1596711958418
+    },
+    {
+        "name": "handedness",
+        "lastModifiedAt": 1596711959027
+    },
+    {
+        "name": "profiles",
+        "lastModifiedAt": 1596711959540
+    },
+    {
+        "name": "targetRayMode",
+        "lastModifiedAt": 1596711960244
+    },
+    {
+        "name": "targetRaySpace",
+        "lastModifiedAt": 1596711960960
+    }
+]

@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581571004
+    },
+    {
+        "name": "captureStream",
+        "lastModifiedAt": 1596581573200
+    },
+    {
+        "name": "getContext",
+        "lastModifiedAt": 1596581573619
+    },
+    {
+        "name": "height",
+        "lastModifiedAt": 1596581571293
+    },
+    {
+        "name": "mozOpaque",
+        "lastModifiedAt": 1596581571601
+    },
+    {
+        "name": "toBlob",
+        "lastModifiedAt": 1596581573881
+    },
+    {
+        "name": "toDataURL",
+        "lastModifiedAt": 1596581574685
+    },
+    {
+        "name": "transferControlToOffscreen",
+        "lastModifiedAt": 1596581574976
+    },
+    {
+        "name": "width",
+        "lastModifiedAt": 1596581572814
+    }
+]

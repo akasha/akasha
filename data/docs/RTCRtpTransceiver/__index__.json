@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "currentDirection",
+        "lastModifiedAt": 1596544661684
+    },
+    {
+        "name": "direction",
+        "lastModifiedAt": 1596544662374
+    },
+    {
+        "name": "mid",
+        "lastModifiedAt": 1596544663435
+    },
+    {
+        "name": "receiver",
+        "lastModifiedAt": 1596544664490
+    },
+    {
+        "name": "sender",
+        "lastModifiedAt": 1596544665526
+    },
+    {
+        "name": "setCodecPreferences",
+        "lastModifiedAt": 1596544667440
+    },
+    {
+        "name": "stop",
+        "lastModifiedAt": 1596544668597
+    },
+    {
+        "name": "stopped",
+        "lastModifiedAt": 1596544666713
+    }
+]

@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596544563904
+    },
+    {
+        "name": "audioLevel",
+        "lastModifiedAt": 1596544564286
+    },
+    {
+        "name": "rtpTimestamp",
+        "lastModifiedAt": 1596544564661
+    },
+    {
+        "name": "source",
+        "lastModifiedAt": 1596544565461
+    },
+    {
+        "name": "timestamp",
+        "lastModifiedAt": 1596544565778
+    }
+]

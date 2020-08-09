@@ -1,0 +1,19 @@
+
+[
+    {
+        "name": "Worker",
+        "lastModifiedAt": 1596581230091
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581229700
+    },
+    {
+        "name": "postMessage",
+        "lastModifiedAt": 1596581230413
+    },
+    {
+        "name": "terminate",
+        "lastModifiedAt": 1596581230710
+    }
+]

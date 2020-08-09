@@ -1,0 +1,47 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581134915
+    },
+    {
+        "name": "activeElement",
+        "lastModifiedAt": 1596581135736
+    },
+    {
+        "name": "caretPositionFromPoint",
+        "lastModifiedAt": 1596581137436
+    },
+    {
+        "name": "elementFromPoint",
+        "lastModifiedAt": 1596581137723
+    },
+    {
+        "name": "elementsFromPoint",
+        "lastModifiedAt": 1596581138044
+    },
+    {
+        "name": "fullscreenElement",
+        "lastModifiedAt": 1596581136316
+    },
+    {
+        "name": "getSelection",
+        "lastModifiedAt": 1596581138441
+    },
+    {
+        "name": "nodeFromPoint",
+        "lastModifiedAt": 1596581138746
+    },
+    {
+        "name": "nodesFromPoint",
+        "lastModifiedAt": 1596581139021
+    },
+    {
+        "name": "pointerLockElement",
+        "lastModifiedAt": 1596581136595
+    },
+    {
+        "name": "styleSheets",
+        "lastModifiedAt": 1596581136911
+    }
+]

@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581564498
+    },
+    {
+        "name": "close",
+        "lastModifiedAt": 1596581566565
+    },
+    {
+        "name": "name",
+        "lastModifiedAt": 1596581565306
+    },
+    {
+        "name": "onmessage",
+        "lastModifiedAt": 1596581565709
+    },
+    {
+        "name": "onmessageerror",
+        "lastModifiedAt": 1596581566180
+    },
+    {
+        "name": "postMessage",
+        "lastModifiedAt": 1596581566834
+    }
+]

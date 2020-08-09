@@ -1,0 +1,67 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "component",
+        "lastModifiedAt": 1596544679046
+    },
+    {
+        "name": "gatheringState",
+        "lastModifiedAt": 1596544680172
+    },
+    {
+        "name": "gatheringstatechange",
+        "lastModifiedAt": 1596544688456
+    },
+    {
+        "name": "getLocalCandidates",
+        "lastModifiedAt": 1596544684939
+    },
+    {
+        "name": "getLocalParameters",
+        "lastModifiedAt": 1596544685394
+    },
+    {
+        "name": "getRemoteCandidates",
+        "lastModifiedAt": 1596544685998
+    },
+    {
+        "name": "getRemoteParameters",
+        "lastModifiedAt": 1596544687123
+    },
+    {
+        "name": "getSelectedCandidatePair",
+        "lastModifiedAt": 1596544688169
+    },
+    {
+        "name": "ongatheringstatechange",
+        "lastModifiedAt": 1596544680973
+    },
+    {
+        "name": "onselectedcandidatepairchange",
+        "lastModifiedAt": 1596544681817
+    },
+    {
+        "name": "onstatechange",
+        "lastModifiedAt": 1596544682214
+    },
+    {
+        "name": "role",
+        "lastModifiedAt": 1596544683401
+    },
+    {
+        "name": "selectedcandidatepairchange",
+        "lastModifiedAt": 1596544689313
+    },
+    {
+        "name": "state",
+        "lastModifiedAt": 1596544683950
+    },
+    {
+        "name": "statechange",
+        "lastModifiedAt": 1596544689685
+    }
+]

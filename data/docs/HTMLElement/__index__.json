@@ -1,0 +1,83 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1596581172954
+    },
+    {
+        "name": "accessKeyLabel",
+        "lastModifiedAt": 1596581176588
+    },
+    {
+        "name": "click",
+        "lastModifiedAt": 1596581189269
+    },
+    {
+        "name": "contentEditable",
+        "lastModifiedAt": 1596581176957
+    },
+    {
+        "name": "contextMenu",
+        "lastModifiedAt": 1596581177370
+    },
+    {
+        "name": "dir",
+        "lastModifiedAt": 1596581177760
+    },
+    {
+        "name": "forceSpellCheck",
+        "lastModifiedAt": 1596581189551
+    },
+    {
+        "name": "hidden",
+        "lastModifiedAt": 1596581179768
+    },
+    {
+        "name": "inert",
+        "lastModifiedAt": 1596581180013
+    },
+    {
+        "name": "innerText",
+        "lastModifiedAt": 1596581180356
+    },
+    {
+        "name": "invalid",
+        "lastModifiedAt": 1596711223114
+    },
+    {
+        "name": "isContentEditable",
+        "lastModifiedAt": 1596581180878
+    },
+    {
+        "name": "lang",
+        "lastModifiedAt": 1596581183476
+    },
+    {
+        "name": "offsetHeight",
+        "lastModifiedAt": 1596581184163
+    },
+    {
+        "name": "offsetLeft",
+        "lastModifiedAt": 1596581184550
+    },
+    {
+        "name": "offsetParent",
+        "lastModifiedAt": 1596581184822
+    },
+    {
+        "name": "offsetTop",
+        "lastModifiedAt": 1596581185076
+    },
+    {
+        "name": "offsetWidth",
+        "lastModifiedAt": 1596581185443
+    },
+    {
+        "name": "style",
+        "lastModifiedAt": 1596581187017
+    },
+    {
+        "name": "title",
+        "lastModifiedAt": 1596581187362
+    }
+]
