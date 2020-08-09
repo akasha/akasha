@@ -115,7 +115,7 @@ public final class DocRepositoryRuntime
   }
 
   @Nonnull
-  private Path getDocEntryPath( final String name )
+  private Path getDocEntryPath( @Nonnull final String name )
   {
     final String[] parts = name.split( "\\." );
     return _dataDirectory.resolve( parts[ 0 ] ).resolve( ( 1 == parts.length ? "__type__" : parts[ 1 ] ) + ".json" );
