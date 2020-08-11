@@ -124,7 +124,7 @@ public final class DocIndex
     }
   }
 
-   static void save( @Nonnull final DocIndex index )
+  static void save( @Nonnull final DocIndex index )
     throws IndexSaveException
   {
     try
