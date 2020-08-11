@@ -14,14 +14,13 @@ import org.realityforge.webtack.model.tools.spi.Processor;
 public final class MergeDocsProcessorFactory
   extends AbstractProcessorFactory
 {
-  public String docsRepositoryConfigFile;
+  public String docsDirectory;
   public boolean createEvents;
 
   @Nonnull
   @Override
   public Processor create()
   {
-    return new MergeDocsProcessor( requireDocRepository( "docsRepositoryConfigFile", docsRepositoryConfigFile ),
-                                   createEvents );
+    return new MergeDocsProcessor( requireDocRepository( "docsDirectory", docsDirectory ), createEvents );
   }
 }

@@ -9,7 +9,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.spi.ProcessorFactory;
 
 public abstract class AbstractProcessorFactory
@@ -62,25 +61,12 @@ public abstract class AbstractProcessorFactory
   {
     final String filename = requireNonNull( key, value );
     final Path path = Paths.get( "." ).resolve( filename );
-    if ( !Files.exists( path ) )
+    if ( !Files.isDirectory( path ) )
     {
       throw new IllegalArgumentException( getProcessorName() + " supplied " + key + " configuration value " +
-                                          value + " but no such file exists at " + path );
+                                          value + " but no such directory exists at " + path );
     }
-    return new DocRepositoryRuntime( loadDocRepositoryConfig( path ), path.getParent().resolve( "docs" ) );
-  }
-
-  @Nonnull
-  private DocRepositoryConfig loadDocRepositoryConfig( @Nonnull final Path path )
-  {
-    try
-    {
-      return DocRepositoryConfig.load( path );
-    }
-    catch ( final Exception e )
-    {
-      throw new IllegalArgumentException( getProcessorName() + " failed to load doc repository from " + path, e );
-    }
+    return new DocRepositoryRuntime( path );
   }
 
   @Nonnull

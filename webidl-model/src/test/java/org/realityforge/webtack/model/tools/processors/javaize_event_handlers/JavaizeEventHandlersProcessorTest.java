@@ -3,7 +3,6 @@ package org.realityforge.webtack.model.tools.processors.javaize_event_handlers;
 import java.nio.file.Path;
 import javax.annotation.Nonnull;
 import javax.json.Json;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorTest;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.Registry;
@@ -31,11 +30,11 @@ public final class JavaizeEventHandlersProcessorTest
   @Nonnull
   private Processor createProcessor( @Nonnull final String subDirectory )
   {
-    final Path configFile = getTestLocalFixtureDir().resolve( subDirectory ).resolve( DocRepositoryConfig.FILENAME );
+    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory );
     return Registry.createProcessor( "JavaizeEventHandlers",
                                      Json
                                        .createObjectBuilder()
-                                       .add( "docsRepositoryConfigFile", configFile.toString() )
+                                       .add( "docsDirectory", docsDir.toString() )
                                        .build() );
   }
 }

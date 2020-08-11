@@ -3,7 +3,6 @@ package org.realityforge.webtack.model.tools.processors.merge_docs;
 import java.nio.file.Path;
 import javax.annotation.Nonnull;
 import javax.json.Json;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorTest;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.Registry;
@@ -46,15 +45,14 @@ public final class MergeDocsProcessorTest
                   "MergeDocsProcessor missing required docsRepositoryConfigFile configuration value" );
   }
 
-  @SuppressWarnings( "SameParameterValue" )
   @Nonnull
   private Processor createProcessor( @Nonnull final String subDirectory )
   {
-    final Path configFile = getTestLocalFixtureDir().resolve( subDirectory ).resolve( DocRepositoryConfig.FILENAME );
+    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory );
     return Registry.createProcessor( "MergeDocs",
                                      Json
                                        .createObjectBuilder()
-                                       .add( "docsRepositoryConfigFile", configFile.toString() )
+                                       .add( "docsDirectory", docsDir.toString() )
                                        .add( "createEvents", true )
                                        .build() );
   }
