@@ -23,18 +23,27 @@ public final class DocIndex
   @Nonnull
   public static final String FILENAME = "__index__.json";
   @Nonnull
+  private final String _name;
+  @Nonnull
   private final Path _directory;
   @Nonnull
   private final List<EntryIndex> _entries;
 
-  DocIndex( @Nonnull final Path directory, @Nonnull final List<EntryIndex> entries )
+  DocIndex( @Nonnull final String name, @Nonnull final Path directory, @Nonnull final List<EntryIndex> entries )
   {
+    _name = Objects.requireNonNull( name );
     _directory = Objects.requireNonNull( directory );
     _entries = Objects.requireNonNull( entries );
     for ( final EntryIndex entry : _entries )
     {
       entry.setDocIndex( this );
     }
+  }
+
+  @Nonnull
+  public String getName()
+  {
+    return _name;
   }
 
   @Nonnull
@@ -102,7 +111,7 @@ public final class DocIndex
   @Nonnull
   private static DocIndex create( @Nonnull final Path directory )
   {
-    return new DocIndex( directory, new ArrayList<>() );
+    return new DocIndex( directory.getFileName().toString(), directory, new ArrayList<>() );
   }
 
   @Nonnull
@@ -123,7 +132,7 @@ public final class DocIndex
           throw new IndexFormatException( "DocIndex at " + path + " contains an entry missing the name value" );
         }
       }
-      return new DocIndex( directory, entries );
+      return new DocIndex( directory.getFileName().toString(), directory, entries );
     }
     catch ( final IOException ioe )
     {

@@ -107,7 +107,7 @@ public final class DocIndexTest
     final Path outputDir = getWorkingDirectory().resolve( "output" );
     final DocIndex index = DocIndex.open( directory );
     final Path outputFile = outputDir.resolve( DocIndex.FILENAME );
-    DocIndex.save( new DocIndex( outputDir, new ArrayList<>( index.getEntries() ) ) );
+    DocIndex.save( new DocIndex( index.getName(), outputDir, new ArrayList<>( index.getEntries() ) ) );
     final String actualOutput = new String( Files.readAllBytes( outputFile ), StandardCharsets.UTF_8 );
     assertEquals( actualOutput, expectedOutput );
     return index;
