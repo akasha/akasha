@@ -5,8 +5,20 @@ import javax.json.bind.annotation.JsonbPropertyOrder;
 @JsonbPropertyOrder( { "name", "lastModifiedAt" } )
 public class EntryIndex
 {
+  @JsonbTransient
+  private DocIndex docIndex;
   private String name;
   private long lastModifiedAt;
+
+  public DocIndex getDocIndex()
+  {
+    return docIndex;
+  }
+
+  void setDocIndex( @Nonnull final DocIndex docIndex )
+  {
+    this.docIndex = Objects.requireNonNull( docIndex );
+  }
 
   public String getName()
   {

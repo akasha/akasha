@@ -31,6 +31,10 @@ public final class DocIndex
   {
     _directory = Objects.requireNonNull( directory );
     _entries = Objects.requireNonNull( entries );
+    for ( final EntryIndex entry : _entries )
+    {
+      entry.setDocIndex( this );
+    }
   }
 
   @Nonnull
