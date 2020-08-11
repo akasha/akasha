@@ -49,6 +49,13 @@ public final class DocIndex
     return _entries;
   }
 
+  public void removeEntry( @Nonnull final EntryIndex entry )
+    throws IndexSaveException
+  {
+    _entries.remove( entry );
+    save();
+  }
+
   @Nullable
   public EntryIndex findEntry( @Nonnull final String name )
   {
