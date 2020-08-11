@@ -58,7 +58,7 @@ public final class FetchUtil
             outputStream.write( buffer, 0, count );
           }
         }
-        return new FetchResult( file, 0 == lastModified ? System.currentTimeMillis() : lastModified );
+        return new FetchResult( url, file, 0 == lastModified ? System.currentTimeMillis() : lastModified );
       }
     }
     catch ( final IOException ioe )
