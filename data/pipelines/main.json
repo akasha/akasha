@@ -257,7 +257,7 @@
     {
       "name": "JavaizeEventHandlers",
       "config": {
-        "docsRepositoryConfigFile": "data/doc_sources.json"
+        "docsDirectory": "data/docs"
       }
     },
     {
