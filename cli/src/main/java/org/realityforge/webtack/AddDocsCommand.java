@@ -22,9 +22,6 @@ import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
-import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 
@@ -140,7 +137,6 @@ final class AddDocsCommand
       }
     }
 
-    final DocRepositoryConfig docRepository = context.docRepository();
     for ( final String typeName : typeNamesToAdd )
     {
       if ( logger.isLoggable( Level.INFO ) )
@@ -148,23 +144,9 @@ final class AddDocsCommand
         logger.log( Level.INFO, "Adding doc source named '" + typeName + "'" );
       }
 
-      final DocSourceConfig source = new DocSourceConfig();
-      source.setName( typeName );
-      source.setLastModifiedAt( 0 );
-      source.setUrl( MdnDocScanner.BASE_URL + typeName );
-
-      docRepository.getSources().add( source );
+      context.docRuntime().findOrCreateIndexForType( typeName );
     }
 
-    try
-    {
-      DocRepositoryConfig.save( docRepository );
-    }
-    catch ( final Exception e )
-    {
-      logger.log( Level.SEVERE, "Error: Failed to save doc repository" );
-      return ExitCodes.ERROR_SAVING_CONFIG_CODE;
-    }
     if ( !_noFetch )
     {
       final FetchDocsCommand command = new FetchDocsCommand();

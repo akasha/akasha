@@ -2,7 +2,7 @@ package org.realityforge.webtack;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 final class CommandContextImpl
@@ -10,10 +10,13 @@ final class CommandContextImpl
 {
   @Nonnull
   private final Environment _environment;
+  @Nonnull
+  private final DocRepositoryRuntime _docRuntime;
 
   CommandContextImpl( @Nonnull final Environment environment )
   {
     _environment = Objects.requireNonNull( environment );
+    _docRuntime = new DocRepositoryRuntime( _environment.docDirectory() );
   }
 
   @Nonnull
@@ -32,8 +35,8 @@ final class CommandContextImpl
 
   @Nonnull
   @Override
-  public DocRepositoryConfig docRepository()
+  public DocRepositoryRuntime docRuntime()
   {
-    return Main.loadDocRepositoryConfig( _environment );
+    return _docRuntime;
   }
 }

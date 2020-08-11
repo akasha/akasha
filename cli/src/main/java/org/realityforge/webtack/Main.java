@@ -15,7 +15,6 @@ import org.realityforge.getopt4j.CLArgsParser;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
 import org.realityforge.getopt4j.CLUtil;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 
 /**
@@ -126,22 +125,6 @@ public final class Main
       throw new TerminalStateException( "Error: Failed to load config file " + configFile,
                                         t,
                                         ExitCodes.ERROR_LOADING_CONFIG_CODE );
-    }
-  }
-
-  @Nonnull
-  static DocRepositoryConfig loadDocRepositoryConfig( @Nonnull final Environment environment )
-  {
-    final Path file = environment.getDocRepositoryConfigFile();
-    try
-    {
-      return Files.exists( file ) ? DocRepositoryConfig.load( file ) : DocRepositoryConfig.create( file );
-    }
-    catch ( final Throwable t )
-    {
-      throw new TerminalStateException( "Error: Failed to load docs config file " + file,
-                                        t,
-                                        ExitCodes.ERROR_LOADING_DOC_CONFIG_CODE );
     }
   }
 
@@ -273,13 +256,6 @@ public final class Main
         return false;
       }
       environment.setRepositoryConfigFile( configFile );
-    }
-    if ( !environment.hasDocRepositoryConfigFile() )
-    {
-      environment.setDocRepositoryConfigFile( environment.currentDirectory()
-                                                .resolve( DocRepositoryConfig.FILENAME )
-                                                .toAbsolutePath()
-                                                .normalize() );
     }
     return true;
   }

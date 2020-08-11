@@ -2,21 +2,23 @@ package org.realityforge.webtack;
 
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import org.realityforge.getopt4j.CLOption;
 import org.realityforge.getopt4j.CLOptionDescriptor;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocException;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocFetchResult;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
+import org.realityforge.webtack.model.tools.mdn_scanner.MdnScannerListener;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceFetchException;
-import org.realityforge.webtack.model.tools.mdn_scanner.SourceIOException;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException;
 
 final class FetchDocsCommand
   extends ConfigurableCommand
@@ -75,9 +77,10 @@ final class FetchDocsCommand
   {
     final Logger logger = context.environment().logger();
     final MdnDocScanner scanner =
-      new MdnDocScanner( new DocRepositoryRuntime( context.docRepository(), context.environment().docDirectory() ) );
+      new MdnDocScanner( new DocRepositoryRuntime( context.environment().docDirectory() ), new Listener( logger ) );
 
-    for ( final String typeName : getTypeNames( context ) )
+    final Set<String> typeNames = _typeNames.isEmpty() ? context.docRuntime().findTypes() : _typeNames;
+    for ( final String typeName : typeNames )
     {
       if ( logger.isLoggable( Level.FINE ) )
       {
@@ -86,52 +89,102 @@ final class FetchDocsCommand
 
       try
       {
-        final DocFetchResult result =
-          scanner.fetchDocumentation( DocKind.Type, typeName, null, _force, !_noRemoveSource );
-        if ( logger.isLoggable( Level.FINE ) && !result.isChanged() )
-        {
-          logger.log( Level.FINE, "Documentation for element named '" + typeName + "' is unchanged." );
-        }
-        else if ( logger.isLoggable( Level.FINE ) && result.isChanged() )
-        {
-          logger.log( Level.FINE, "Documentation for element named '" + typeName + "' created or updated." );
-        }
+        scanner.fetchDocumentation( typeName, null, _force, !_noRemoveSource );
       }
       catch ( final SourceFetchException sfe )
       {
         final String message =
-          "Error: Failed to fetch documentation for type named '" + sfe.getSource().getName() +
+          "Error: Failed to fetch documentation for type named '" + sfe.getQualifiedName() +
           "' with the error: " + sfe.getCause();
-        throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_FETCH_FAILED_CODE );
+        throw new TerminalStateException( message, sfe, ExitCodes.ERROR_DOC_SOURCE_FETCH_FAILED_CODE );
       }
-      catch ( final SourceIOException sioe )
+      catch ( final IndexIOException ioe )
+      {
+        throw new TerminalStateException( "Error: " + ioe.getMessage(), ioe, ExitCodes.ERROR_DOC_SOURCE_IO_ERROR_CODE );
+      }
+      catch ( final DocException de )
       {
         final String message =
-          "Error: " + sioe.getMessage() + ". Element: " + sioe.getSource().getName() +
-          " Error: " + sioe.getCause();
-        throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_IO_ERROR_CODE );
-      }
-      catch ( final DocException sioe )
-      {
-        final String message =
-          "Error: Unexpected error fetching documentation. Error: " + sioe.getCause();
-        throw new TerminalStateException( message, ExitCodes.ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE );
+          "Error: Unexpected error fetching documentation. Error: " + de.getCause();
+        throw new TerminalStateException( message, de, ExitCodes.ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE );
       }
     }
 
     return ExitCodes.SUCCESS_EXIT_CODE;
   }
 
-  @Nonnull
-  private Set<String> getTypeNames( @Nonnull final Context context )
+  private static final class Listener
+    implements MdnScannerListener
   {
-    return _typeNames.isEmpty() ?
-           context.docRepository()
-             .getSources()
-             .stream()
-             .map( DocSourceConfig::getName )
-             .filter( n -> !n.contains( "." ) )
-             .collect( Collectors.toSet() ) :
-           _typeNames;
+    @Nonnull
+    private final Logger _logger;
+
+    Listener( @Nonnull final Logger logger )
+    {
+      _logger = Objects.requireNonNull( logger );
+    }
+
+    @Override
+    public void queueScan( @Nonnull final DocKind kind, @Nonnull final String typeName, @Nullable final String name )
+    {
+      if ( _logger.isLoggable( Level.FINER ) )
+      {
+        _logger.log( Level.FINER,
+                     "Queuing fetch for documentation for type named '" +
+                     typeName + ( null != name ? "." + name : "" ) + "' of type " + kind + "." );
+      }
+    }
+
+    @Override
+    public void preEntryFetch( @Nonnull final EntryIndex entryIndex, @Nonnull final String url )
+    {
+      if ( _logger.isLoggable( Level.FINER ) )
+      {
+        _logger.log( Level.FINER,
+                     "Documentation source for element named '" +
+                     entryIndex.getQualifiedName() +
+                     "' beginning fetch." );
+      }
+    }
+
+    @Override
+    public void entryDeleted( @Nonnull final EntryIndex entryIndex )
+    {
+      if ( _logger.isLoggable( Level.INFO ) )
+      {
+        _logger.log( Level.INFO, "Documentation for element named '" + entryIndex.getQualifiedName() + "' deleted." );
+      }
+    }
+
+    @Override
+    public void postEntryFetch( @Nonnull final EntryIndex entryIndex, @Nonnull final String url )
+    {
+      if ( _logger.isLoggable( Level.FINER ) )
+      {
+        _logger.log( Level.FINER,
+                     "Documentation source for element named '" +
+                     entryIndex.getQualifiedName() +
+                     "' completed fetch." );
+      }
+    }
+
+    @Override
+    public void entryUpdated( @Nonnull final EntryIndex entryIndex, @Nonnull final DocEntry entry )
+    {
+      if ( _logger.isLoggable( Level.INFO ) )
+      {
+        _logger.log( Level.INFO, "Documentation for element named '" + entryIndex.getQualifiedName() + "' updated." );
+      }
+    }
+
+    @Override
+    public void entryUnmodified( @Nonnull final EntryIndex entryIndex, @Nonnull final DocEntry entry )
+    {
+      if ( _logger.isLoggable( Level.FINE ) )
+      {
+        _logger.log( Level.FINE,
+                     "Documentation for element named '" + entryIndex.getQualifiedName() + "' is unchanged." );
+      }
+    }
   }
 }
