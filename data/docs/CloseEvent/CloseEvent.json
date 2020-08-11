@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "CloseEvent.CloseEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent",
+    "description": "The CloseEvent() constructor creates a new CloseEvent."
+}

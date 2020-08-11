@@ -1,11 +1,15 @@
 
 [
     {
+        "name": "CloseEvent",
+        "lastModifiedAt": 1597189205080
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 1596581169585
+        "lastModifiedAt": 1597189204158
     },
     {
         "name": "initCloseEvent",
-        "lastModifiedAt": 1596581170647
+        "lastModifiedAt": 1597189208121
     }
 ]
