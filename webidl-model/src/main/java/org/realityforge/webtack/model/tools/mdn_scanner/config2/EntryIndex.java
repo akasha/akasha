@@ -1,6 +1,9 @@
 package org.realityforge.webtack.model.tools.mdn_scanner.config2;
 
+import java.util.Objects;
+import javax.annotation.Nonnull;
 import javax.json.bind.annotation.JsonbPropertyOrder;
+import javax.json.bind.annotation.JsonbTransient;
 
 @JsonbPropertyOrder( { "name", "lastModifiedAt" } )
 public class EntryIndex
