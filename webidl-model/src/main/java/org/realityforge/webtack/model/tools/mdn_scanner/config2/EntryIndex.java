@@ -51,4 +51,10 @@ public class EntryIndex
   {
     this.lastModifiedAt = lastModifiedAt;
   }
+
+  public void remove()
+    throws IndexSaveException
+  {
+    docIndex.removeEntry( this );
+  }
 }

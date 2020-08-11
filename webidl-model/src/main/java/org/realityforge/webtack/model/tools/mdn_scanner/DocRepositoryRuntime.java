@@ -4,23 +4,24 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexException;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException;
 
 public final class DocRepositoryRuntime
 {
   @Nonnull
-  private final DocRepositoryConfig _repository;
+  private final Map<String, DocIndex> _indexes = new HashMap<>();
   @Nonnull
   private final Map<String, DocEntry> _cache = new HashMap<>();
   @Nonnull
@@ -28,20 +29,32 @@ public final class DocRepositoryRuntime
   @Nonnull
   private final Path _dataDirectory;
 
-  public DocRepositoryRuntime( @Nonnull final DocRepositoryConfig repository, @Nonnull final Path dataDirectory )
+  public DocRepositoryRuntime( @Nonnull final Path dataDirectory )
   {
-    _repository = Objects.requireNonNull( repository );
     _dataDirectory = Objects.requireNonNull( dataDirectory );
   }
 
   @Nonnull
-  DocRepositoryConfig getRepository()
+  public Set<String> findTypes()
   {
-    return _repository;
+    try
+    {
+      return Files
+        .list( _dataDirectory )
+        .filter( Files::isDirectory )
+        .filter( p -> Files.exists( p.resolve( DocIndex.FILENAME ) ) )
+        .map( Path::getFileName )
+        .map( Path::toString )
+        .collect( Collectors.toSet() );
+    }
+    catch ( final IOException ignored )
+    {
+      return Collections.emptySet();
+    }
   }
 
   @Nullable
-  public DocEntry getDocEntry( @Nonnull final String name )
+  public DocEntry findDocEntry( @Nonnull final String name )
   {
     final DocEntry entry = _cache.get( name );
     if ( null != entry )
@@ -54,39 +67,76 @@ public final class DocRepositoryRuntime
     }
     else
     {
-      final DocSourceConfig config = _repository.findSourceByName( name );
-      if ( null == config )
+      final String[] parts = name.split( "\\." );
+      final DocIndex index = findIndexForType( parts[ 0 ] );
+      if ( null == index )
       {
         _negativeCache.add( name );
         return null;
       }
       else
       {
-        final DocEntry docEntry = getDocEntry( config );
-        if ( null == docEntry )
+        final EntryIndex entryIndex = index.findEntry( 1 == parts.length ? "__type__" : parts[ 1 ] );
+        if ( null == entryIndex )
         {
           _negativeCache.add( name );
+          return null;
         }
         else
         {
-          _cache.put( name, docEntry );
+          return findDocEntry( index, entryIndex );
         }
-        return docEntry;
       }
     }
   }
 
-  @Nullable
-  private DocEntry getDocEntry( @Nonnull final DocSourceConfig config )
+  public void removeEntry( @Nonnull final EntryIndex entryIndex )
+    throws IndexException
   {
-    final Path path = getDocEntryPath( config );
+    final String qualifiedName = entryIndex.getQualifiedName();
+    final Path path = getDocEntryPath( entryIndex );
     try
     {
-      return Files.exists( path ) ? DocEntry.load( path ) : null;
+      Files.deleteIfExists( path );
     }
-    catch ( final Exception e )
+    catch ( final IOException ioe )
     {
-      //TODO: Log error message here
+      throw new IndexIOException( "Error removing " + path + " for entry " + qualifiedName, ioe );
+    }
+    _cache.remove( qualifiedName );
+    _negativeCache.remove( qualifiedName );
+    entryIndex.remove();
+  }
+
+  @Nonnull
+  public DocEntry findDocEntry( @Nonnull final DocIndex index, @Nonnull final EntryIndex entryIndex )
+  {
+    final String name = index.getName() + "." + entryIndex.getName();
+    final Path path = getDocEntryPath( name );
+    final DocEntry docEntry = tryLoadDocEntry( path );
+    // We assume that if we have an entry index then we have an entry
+    assert null != docEntry;
+    _cache.put( name, docEntry );
+    return docEntry;
+  }
+
+  @Nullable
+  private DocEntry tryLoadDocEntry( @Nonnull final Path path )
+  {
+    if ( Files.exists( path ) )
+    {
+      try
+      {
+        return DocEntry.load( path );
+      }
+      catch ( final Exception e )
+      {
+        //TODO: Log error message here
+        return null;
+      }
+    }
+    else
+    {
       return null;
     }
   }
@@ -102,7 +152,10 @@ public final class DocRepositoryRuntime
   public boolean save( @Nonnull final DocEntry entry, final long modifiedAt )
     throws Exception
   {
-    final Path output = getDocEntryPath( entry.getName() );
+    final String name = entry.getName();
+    _cache.put( name, entry );
+    _negativeCache.remove( name );
+    final Path output = getDocEntryPath( name );
     final Path tmpOutput = asTmpTarget( output );
     DocEntry.save( entry, tmpOutput );
     if ( Files.exists( output ) && doFileContentsMatch( output, tmpOutput ) )
@@ -118,20 +171,20 @@ public final class DocRepositoryRuntime
     }
   }
 
-  public void updateIndex( @Nonnull final DocEntry entry, final long modifiedAt )
+  private void updateIndex( @Nonnull final DocEntry entry, final long modifiedAt )
     throws IndexException
   {
     final String[] parts = entry.getName().split( "\\." );
-    final DocIndex index = DocIndex.open( _dataDirectory.resolve( parts[ 0 ] ) );
+    final DocIndex index = findOrCreateIndexForType( parts[ 0 ] );
     final EntryIndex entryIndex = index.findOrCreateEntry( 1 == parts.length ? "__type__" : parts[ 1 ] );
     entryIndex.setLastModifiedAt( modifiedAt );
     index.save();
   }
 
   @Nonnull
-  private Path getDocEntryPath( @Nonnull final String name )
+  private Path getDocEntryPath( @Nonnull final String qualifiedName )
   {
-    final String[] parts = name.split( "\\." );
+    final String[] parts = qualifiedName.split( "\\." );
     return _dataDirectory.resolve( parts[ 0 ] ).resolve( ( 1 == parts.length ? "__type__" : parts[ 1 ] ) + ".json" );
   }
 
@@ -164,8 +217,50 @@ public final class DocRepositoryRuntime
   }
 
   @Nonnull
-  public Path getDocEntryPath( @Nonnull final DocSourceConfig config )
+  public Path getDocEntryPath( @Nonnull final EntryIndex entryIndex )
   {
-    return getDocEntryPath( config.getName() );
+    return _dataDirectory.resolve( entryIndex.getDocIndex().getName() ).resolve( entryIndex.getName() + ".json" );
+  }
+
+  @Nonnull
+  public DocIndex findOrCreateIndexForType( @Nonnull final String name )
+    throws IndexException
+  {
+    final DocIndex index = _indexes.get( name );
+    if ( null != index )
+    {
+      return index;
+    }
+    else
+    {
+      final DocIndex newIndex = DocIndex.open( _dataDirectory.resolve( name ) );
+      _indexes.put( name, newIndex );
+      return newIndex;
+    }
+  }
+
+  @Nullable
+  public DocIndex findIndexForType( @Nonnull final String name )
+    throws IndexException
+  {
+    final DocIndex index = _indexes.get( name );
+    if ( null != index )
+    {
+      return index;
+    }
+    else
+    {
+      final Path path = _dataDirectory.resolve( name );
+      if ( Files.exists( path.resolve( DocIndex.FILENAME ) ) )
+      {
+        final DocIndex newIndex = DocIndex.open( path );
+        _indexes.put( name, newIndex );
+        return newIndex;
+      }
+      else
+      {
+        return null;
+      }
+    }
   }
 }

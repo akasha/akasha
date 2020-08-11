@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -19,8 +19,10 @@ import org.jsoup.select.Elements;
 import org.realityforge.webtack.model.tools.fetch.FetchException;
 import org.realityforge.webtack.model.tools.fetch.FetchResult;
 import org.realityforge.webtack.model.tools.fetch.FetchUtil;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexException;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException;
 
 public final class MdnDocScanner
 {
@@ -32,204 +34,133 @@ public final class MdnDocScanner
   public static final String BASE_URL = HOST_URL + API_RELATIVE_URL;
   @Nonnull
   private final DocRepositoryRuntime _runtime;
+  @Nonnull
+  private final MdnScannerListener _listener;
+  @Nonnull
+  private final Deque<ScanRequest> _requestQueue = new LinkedList<>();
 
-  public MdnDocScanner( @Nonnull final DocRepositoryRuntime runtime )
+  public MdnDocScanner( @Nonnull final DocRepositoryRuntime runtime,
+                        @Nonnull final MdnScannerListener listener )
   {
     _runtime = Objects.requireNonNull( runtime );
+    _listener = Objects.requireNonNull( listener );
   }
 
-  @Nonnull
-  public DocFetchResult fetchDocumentation( @Nonnull final DocKind kind,
-                                            @Nonnull final String type,
-                                            @Nullable final String member,
-                                            final boolean force,
-                                            final boolean removeSource )
+  public void fetchDocumentation( @Nonnull final String type,
+                                  @Nullable final String member,
+                                  final boolean force,
+                                  final boolean removeSource )
     throws DocException
   {
-    final DocRepositoryConfig repository = _runtime.getRepository();
-    final DocSourceConfig source =
-      repository.findOrCreateDocSourceConfig( deriveName( kind, type, member ), deriveMdnUrl( type, member, kind ) );
-    final boolean isNew = 0 == source.getLastModifiedAt();
-    final Path target = _runtime.getDocEntryPath( source );
-    final FetchResult result;
-    try
+    queueRequest( DocKind.Type, type, member );
+    processRequests( force, removeSource );
+  }
+
+  private void processRequests( final boolean force, final boolean removeSource )
+  {
+    while ( !_requestQueue.isEmpty() )
     {
-      final String url = source.getUrl();
-      result = null != url ? FetchUtil.downloadURL( url, force ? 0 : source.getLastModifiedAt() ) : null;
+      final ScanRequest request = _requestQueue.removeFirst();
+      doFetchDocumentation( request.getKind(), request.getType(), request.getMember(), force, removeSource );
     }
-    catch ( final FetchException fe )
-    {
-      if ( fe.getCause() instanceof FileNotFoundException )
-      {
-        source.setLastModifiedAt( 0 );
-        repository.save();
-        // Documentation has been removed so remove our local caches
-        removeExistingTmpFiles( source, target );
-        if ( DocKind.Type == kind )
-        {
-          removeUnexpectedConfigs( source.getName(), Collections.emptyList() );
-        }
-        return new DocFetchResult( source, null, !isNew );
-      }
-      else
-      {
-        throw new SourceFetchException( source, fe.getCause() );
-      }
-    }
+  }
+
+  private void doFetchDocumentation( @Nonnull final DocKind kind,
+                                     @Nonnull final String type,
+                                     @Nullable final String member,
+                                     final boolean force,
+                                     final boolean removeSource )
+    throws DocException
+  {
+    final DocIndex index = _runtime.findOrCreateIndexForType( type );
+    final EntryIndex entryIndex =
+      index.findOrCreateEntry( DocKind.Type == kind ? "__type__" :
+                               DocKind.Event == kind ? member + "_event" :
+                               Objects.requireNonNull( member ) );
+    removeTempFile( entryIndex );
+    final String url = BASE_URL + type + ( DocKind.Type == kind ? "" : "/" + entryIndex.getName() );
+    _listener.preEntryFetch( entryIndex, url );
+    final FetchResult result = fetchEntry( entryIndex, url, force );
     if ( null != result )
     {
-      removeExistingTmpFiles( source, target );
-
-      final Path tmpTarget = asTmpTarget( target, ".html" );
-
-      // just copy to tmp file for now
+      _listener.postEntryFetch( entryIndex, url );
+      final Path tmpTarget = getTmpTarget( entryIndex );
       try
       {
         Files.move( result.getPath(), tmpTarget );
       }
       catch ( final IOException ioe )
       {
-        throw new SourceIOException( source, "Failed to copy fetched content to temp file", ioe );
+        throw new IndexIOException( "Failed to copy fetched content to temp file", ioe );
       }
 
-      final ExtractResult extractResult = extractDocs( source, kind, member, tmpTarget, result.getLastModifiedAt() );
-
-      if ( extractResult.isChanged() )
-      {
-        source.setLastModifiedAt( result.getLastModifiedAt() );
-        repository.save();
-      }
+      extractEntry( entryIndex, kind, result.getUrl(), tmpTarget, result.getLastModifiedAt() );
 
       if ( removeSource )
       {
-        try
-        {
-          Files.delete( tmpTarget );
-        }
-        catch ( final IOException ioe )
-        {
-          throw new SourceIOException( source, "Failed to remove temp file", ioe );
-        }
+        removeTempFile( entryIndex );
       }
-
-      final DocEntry entry = extractResult.getEntry();
-      if ( DocKind.Type == kind )
-      {
-        final List<DocSourceConfig> expected = new ArrayList<>();
-        expected.add( source );
-        final List<String> constructors = entry.getConstructors();
-        if ( null != constructors )
-        {
-          for ( final String constructor : constructors )
-          {
-            final DocFetchResult docResult =
-              fetchDocumentation( DocKind.Constructor, type, constructor, force, removeSource );
-            expected.add( docResult.getSource() );
-          }
-        }
-        final List<String> properties = entry.getProperties();
-        if ( null != properties )
-        {
-          for ( final String property : properties )
-          {
-            final DocFetchResult docResult =
-              fetchDocumentation( DocKind.Property, type, property, force, removeSource );
-            expected.add( docResult.getSource() );
-          }
-        }
-        final List<String> methods = entry.getMethods();
-        if ( null != methods )
-        {
-          for ( final String method : methods )
-          {
-            final DocFetchResult docResult = fetchDocumentation( DocKind.Method, type, method, force, removeSource );
-            expected.add( docResult.getSource() );
-          }
-        }
-        final List<String> events = entry.getEvents();
-        if ( null != events )
-        {
-          for ( final String event : events )
-          {
-            final DocFetchResult docResult = fetchDocumentation( DocKind.Event, type, event, force, removeSource );
-            expected.add( docResult.getSource() );
-          }
-        }
-        removeUnexpectedConfigs( entry.getName(), expected );
-      }
-      return new DocFetchResult( source, entry, extractResult.isChanged() );
-    }
-    else
-    {
-      return new DocFetchResult( source, null, !isNew );
-    }
-  }
-
-  private void removeUnexpectedConfigs( @Nonnull final String typeName, @Nonnull final List<DocSourceConfig> expected )
-    throws SourceIOException, RepositorySaveException
-  {
-    final DocRepositoryConfig repository = _runtime.getRepository();
-    final List<DocSourceConfig> sourcesToRemove =
-      repository
-        .getSources()
-        .stream()
-        .filter( s -> s.getName().startsWith( typeName + "." ) )
-        .filter( s -> null != s.getUrl() && s.getUrl().startsWith( BASE_URL ) )
-        .filter( s -> !expected.contains( s ) )
-        .collect( Collectors.toList() );
-
-    for ( final DocSourceConfig source : sourcesToRemove )
-    {
-      repository.getSources().remove( source );
-      final Path path = _runtime.getDocEntryPath( source );
-      try
-      {
-        Files.deleteIfExists( path );
-      }
-      catch ( final IOException ioe )
-      {
-        throw new SourceIOException( source, "Failed to remove existing file for removed source", ioe );
-      }
-    }
-    if ( !sourcesToRemove.isEmpty() )
-    {
-      repository.save();
-    }
-  }
-
-  private void removeExistingTmpFiles( @Nonnull final DocSourceConfig source, @Nonnull final Path target )
-    throws SourceIOException
-  {
-    try
-    {
-      Files.deleteIfExists( asTmpTarget( target, ".html" ) );
-      Files.deleteIfExists( asTmpTarget( target, "" ) );
-    }
-    catch ( final IOException ioe )
-    {
-      throw new SourceIOException( source, "Failed to remove existing files for source", ioe );
     }
   }
 
   @Nonnull
-  private ExtractResult extractDocs( @Nonnull final DocSourceConfig source,
-                                     @Nonnull final DocKind kind,
-                                     @Nullable final String member,
-                                     @Nonnull final Path input,
-                                     final long modifiedAt )
-    throws SourceIOException
+  private Path getTmpTarget( @Nonnull final EntryIndex entryIndex )
   {
+    final Path target = _runtime.getDocEntryPath( entryIndex );
+    return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp.html" );
+  }
+
+  @Nullable
+  private FetchResult fetchEntry( @Nonnull final EntryIndex entryIndex, @Nonnull final String url, final boolean force )
+    throws IndexException, SourceFetchException
+  {
+    try
+    {
+      return FetchUtil.downloadURL( url, force ? 0 : entryIndex.getLastModifiedAt() );
+    }
+    catch ( final FetchException fe )
+    {
+      if ( fe.getCause() instanceof FileNotFoundException )
+      {
+        if ( 0 != entryIndex.getLastModifiedAt() )
+        {
+          _listener.entryDeleted( entryIndex );
+        }
+        _runtime.removeEntry( entryIndex );
+        return null;
+      }
+      else
+      {
+        throw new SourceFetchException( entryIndex.getQualifiedName(), fe.getCause() );
+      }
+    }
+  }
+
+  private void removeTempFile( @Nonnull final EntryIndex entryIndex )
+    throws IndexIOException
+  {
+    try
+    {
+      Files.deleteIfExists( getTmpTarget( entryIndex ) );
+    }
+    catch ( final IOException ioe )
+    {
+      throw new IndexIOException( "Failed to remove temp file", ioe );
+    }
+  }
+
+  private void extractEntry( @Nonnull final EntryIndex entryIndex,
+                             @Nonnull final DocKind kind,
+                             @Nonnull final String url,
+                             @Nonnull final Path input,
+                             final long modifiedAt )
+    throws IndexIOException
+  {
+    //TODO: Pass in DocEntry and update it?
     try
     {
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
 
-      // Make all anchors absolute so anything we include will correctly crosslink
-      for ( final Element anchor : document.select( "[href^=\"/\"]" ) )
-      {
-        anchor.attr( "href", HOST_URL + anchor.attr( "href" ) );
-      }
-
-      final DocEntry entry = new DocEntry();
       final Element element = document.selectFirst( "meta[name=\"description\"]" );
       final String description = null != element ? element.attr( "content" ) : "";
 
@@ -238,123 +169,101 @@ public final class MdnDocScanner
       final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
       final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
+      final String typeName = entryIndex.getDocIndex().getName();
+      final DocEntry entry = new DocEntry();
       entry.setKind( kind );
-      entry.setName( source.getName() );
-      entry.setHref( source.getUrl() );
+      entry.setName( DocKind.Type == kind ? typeName : entryIndex.getQualifiedName() );
+      entry.setHref( url );
       entry.setDescription( description );
       if ( DocKind.Type == kind )
       {
-        final List<String> constructors =
+        document
+          .select( "#Constructors + p + dl > dt > a > code, " +
+                   "#Constructors + dl > dt > a > code" +
+                   "#Constructor + p + dl > dt > a > code, " +
+                   "#Constructor + dl > dt > a > code")
+          .stream()
+          .map( Element::text )
+          // Strip the brackets at end of constructors
+          .map( text -> text.replaceAll( "\\(.*", "" ) )
+          .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
+      }
+      document
+        .select( "#Properties + p + dl > dt > a > code, " +
+                 "#Properties + dl > dt > a > code, " +
+
+                 // GlobalEventHandlers has event handler properties here
+                 "#Properties > dl > dt > a > code, " +
+
+                 // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
+                 "#Properties + p + dl > dt > code, " +
+
+                 // Sometimes events section actually lists event handler properties
+                 "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
+                 "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
+        .stream()
+        .map( Element::text )
+        // Strip out the type name that sometimes appears in the documentation
+        .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+        .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
+
+      final List<String> methods =
+        document
+          .select( "#Methods + p + dl > dt > a > code, " +
+                   "#Methods + dl > dt > a code, " +
+                   "#Static_methods + p + dl > dt > a > code, " +
+                   "#Static_methods + dl > dt > a > code" )
+          .stream()
+          .map( Element::text )
+          // Strip the brackets at end of methods
+          .map( text -> text.replaceAll( "\\(.*", "" ) )
+          // Strip out the type name that sometimes appears in the documentation
+          .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+          .sorted()
+          .collect( Collectors.toList() );
+      if ( !methods.isEmpty() )
+      {
+        // Sometimes constructors are documented as methods so instead register them as constructors
+        methods
+          .stream()
+          .filter( m -> m.equals( localName ) )
+          .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
+
+        methods
+          .stream()
+          .filter( m -> !m.equals( localName ) )
+          .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
+
+        final List<String> events =
           document
-            .select( "#Constructors + p + dl > dt > a > code, " +
-                     "#Constructors + dl > dt > a > code" )
-            .stream()
-            .map( Element::text )
-            // Strip the brackets at end of constructors
-            .map( text -> text.replaceAll( "\\(.*", "" ) )
-            .sorted()
-            .collect( Collectors.toList() );
-        if ( !constructors.isEmpty() )
-        {
-          entry.setConstructors( constructors );
-        }
-        final List<String> properties =
-          document
-            .select( "#Properties + p + dl > dt > a > code, " +
-                     "#Properties + dl > dt > a > code, " +
+            .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
+                     "#Events + dl > dt > a[href$=\"_event\"] > code, " +
 
-                     // GlobalEventHandlers has event handler properties here
-                     "#Properties > dl > dt > a > code, " +
-
-                     // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
-                     "#Properties + p + dl > dt > code, " +
-
-                     // Sometimes events section actually lists event handler properties
-                     "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
-                     "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
+                     "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
+                     // This pattern added for Window docs
+                     "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
             .stream()
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
             .sorted()
             .collect( Collectors.toList() );
-        if ( !properties.isEmpty() )
+        if ( !events.isEmpty() )
         {
-          entry.setProperties( properties );
-        }
-        final List<String> methods =
-          document
-            .select( "#Methods + p + dl > dt > a > code, " +
-                     "#Methods + dl > dt > a code, " +
-                     "#Static_methods + p + dl > dt > a > code, " +
-                     "#Static_methods + dl > dt > a > code" )
+          events.forEach( event -> queueRequest( DocKind.Event, typeName, event + "_event" ) );
+
+          // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
+          // to try and find them
+          events
             .stream()
-            .map( Element::text )
-            // Strip the brackets at end of methods
-            .map( text -> text.replaceAll( "\\(.*", "" ) )
-            // Strip out the type name that sometimes appears in the documentation
-            .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-            .sorted()
-            .collect( Collectors.toList() );
-        if ( !methods.isEmpty() )
-        {
-          // Sometimes constructors are documented as methods so instead register them as constructors
-          final List<String> newConstructors =
-            methods
-              .stream()
-              .filter( m -> m.equals( localName ) )
-              .map( m -> m + "." + m )
-              .collect( Collectors.toList() );
-          if ( !newConstructors.isEmpty() )
-          {
-            newConstructors.addAll( constructors );
-            entry.setConstructors( newConstructors.stream().sorted().distinct().collect( Collectors.toList() ) );
-          }
-
-          final List<String> actualMethods =
-            methods.stream().filter( m -> !m.equals( localName ) ).collect( Collectors.toList() );
-          if ( !actualMethods.isEmpty() )
-          {
-            entry.setMethods( actualMethods );
-          }
-
-          final List<String> events =
-            document
-              .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
-                       "#Events + dl > dt > a[href$=\"_event\"] > code, " +
-
-                       "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
-                       // This pattern added for Window docs
-                       "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
-              .stream()
-              .map( Element::text )
-              // Strip out the type name that sometimes appears in the documentation
-              .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-              .sorted()
-              .collect( Collectors.toList() );
-          if ( !events.isEmpty() )
-          {
-            entry.setEvents( events );
-
-            // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
-            // to try and find them
-            final List<String> newProperties =
-              events
-                .stream()
-                .map( e -> "on" + e )
-                .filter( e -> !document.select( "a[href=\"" + BASE_URL + localName + "/" + e + "\"]" ).isEmpty() )
-                .collect( Collectors.toList() );
-            if ( !newProperties.isEmpty() )
-            {
-              newProperties.addAll( properties );
-              entry.setProperties( newProperties.stream().sorted().distinct().collect( Collectors.toList() ) );
-            }
-          }
+            .map( e -> "on" + e )
+            .filter( e -> !document.select( "a[href$=\"/" + localName + "/" + e + "\"]" ).isEmpty() )
+            .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
         }
       }
       else if ( DocKind.Event == kind )
       {
-        entry.setEventName( member );
+        entry.setEventName( entryIndex.getName().replaceAll( "_event$", "" ) );
         final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th" );
         for ( final Element th : headers )
         {
@@ -372,34 +281,25 @@ public final class MdnDocScanner
           }
         }
       }
-      return new ExtractResult( entry, _runtime.save( entry, modifiedAt ) );
+      if ( _runtime.save( entry, modifiedAt ) )
+      {
+        _listener.entryUpdated( entryIndex, entry );
+      }
+      else
+      {
+        _listener.entryUnmodified( entryIndex, entry );
+      }
+
     }
     catch ( final Exception e )
     {
-      throw new SourceIOException( source, "Failed to read local file for source", e );
+      throw new IndexIOException( "Failed to read local file for " + entryIndex.getQualifiedName(), e );
     }
   }
 
-  @Nonnull
-  private Path asTmpTarget( @Nonnull final Path target, @Nonnull final String suffix )
+  private void queueRequest( @Nonnull final DocKind kind, @Nonnull final String typeName, @Nullable final String name )
   {
-    return target.getParent().resolve( target.getName( target.getNameCount() - 1 ) + ".tmp" + suffix );
-  }
-
-  @Nonnull
-  private String deriveName( @Nonnull final DocKind kind,
-                             @Nonnull final String type,
-                             @Nullable final String member )
-  {
-    assert null == member || DocKind.Type != kind;
-    return type + ( null == member ? "" : "." + member + ( DocKind.Event == kind ? "_event" : "" ) );
-  }
-
-  @Nonnull
-  private String deriveMdnUrl( @Nonnull final String type,
-                               @Nullable final String member,
-                               @Nonnull final DocKind kind )
-  {
-    return BASE_URL + type + ( null == member ? "" : "/" + member ) + ( DocKind.Event == kind ? "_event" : "" );
+    _listener.queueScan( kind, typeName, name );
+    _requestQueue.add( new ScanRequest( kind, typeName, name ) );
   }
 }

@@ -6,7 +6,7 @@ import javax.annotation.Nonnull;
  * Base exception for all errors that occur fetching, processing and saving documentation for web apis.
  */
 public abstract class DocException
-  extends Exception
+  extends RuntimeException
 {
   public DocException()
   {

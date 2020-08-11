@@ -2,23 +2,22 @@ package org.realityforge.webtack.model.tools.mdn_scanner;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocSourceConfig;
 
 public final class SourceFetchException
   extends DocException
 {
   @Nonnull
-  private final DocSourceConfig _source;
+  private final String _qualifiedName;
 
-  public SourceFetchException( @Nonnull final DocSourceConfig source, @Nonnull final Throwable cause )
+  public SourceFetchException( @Nonnull final String qualifiedName, @Nonnull final Throwable cause )
   {
     super( cause );
-    _source = Objects.requireNonNull( source );
+    _qualifiedName = Objects.requireNonNull( qualifiedName );
   }
 
   @Nonnull
-  public DocSourceConfig getSource()
+  public String getQualifiedName()
   {
-    return _source;
+    return _qualifiedName;
   }
 }

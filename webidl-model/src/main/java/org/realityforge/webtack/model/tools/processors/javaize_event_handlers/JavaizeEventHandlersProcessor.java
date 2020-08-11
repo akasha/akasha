@@ -270,7 +270,7 @@ final class JavaizeEventHandlersProcessor
     if ( isEventHandlerProperty( input ) )
     {
       assert null != _type;
-      final DocEntry typeDocEntry = _runtime.getDocEntry( _type );
+      final DocEntry typeDocEntry = _runtime.findDocEntry( _type );
       if ( null != typeDocEntry )
       {
         final List<String> events = typeDocEntry.getEvents();
@@ -278,7 +278,7 @@ final class JavaizeEventHandlersProcessor
         {
           for ( final String event : events )
           {
-            final DocEntry eventDocEntry = _runtime.getDocEntry( _type + "." + event + "_event" );
+            final DocEntry eventDocEntry = _runtime.findDocEntry( _type + "." + event + "_event" );
             if ( null != eventDocEntry )
             {
               final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
