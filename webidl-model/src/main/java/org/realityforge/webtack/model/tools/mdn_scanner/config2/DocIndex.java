@@ -70,6 +70,7 @@ public final class DocIndex
     if ( null == entry )
     {
       entry = new EntryIndex();
+      entry.setDocIndex( this );
       entry.setName( name );
       entry.setLastModifiedAt( 0 );
       _entries.add( entry );
