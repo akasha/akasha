@@ -136,7 +136,8 @@ public final class DocIndex
       final Path path = directory.resolve( FILENAME );
       try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
       {
-        jsonb.toJson( index.getEntries()
+        jsonb.toJson( index
+                        .getEntries()
                         .stream()
                         .sorted( Comparator.comparing( EntryIndex::getName ) )
                         .collect( Collectors.toList() ),
