@@ -1,11 +1,6 @@
 package org.realityforge.webtack.model.tools.processors.merge_docs;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import javax.annotation.Nonnull;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
-import org.realityforge.webtack.model.tools.mdn_scanner.config.DocRepositoryConfig;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
 import org.realityforge.webtack.model.tools.spi.Processor;
