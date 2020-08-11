@@ -8,6 +8,9 @@ import javax.json.bind.annotation.JsonbTransient;
 @JsonbPropertyOrder( { "name", "lastModifiedAt" } )
 public class EntryIndex
 {
+  //qualifiedName exists to stop Jsonb crashing when it can not find field for @JsonbTransient setter
+  @SuppressWarnings( "unused" )
+  private String qualifiedName;
   @JsonbTransient
   private DocIndex docIndex;
   private String name;
@@ -21,6 +24,12 @@ public class EntryIndex
   void setDocIndex( @Nonnull final DocIndex docIndex )
   {
     this.docIndex = Objects.requireNonNull( docIndex );
+  }
+
+  @JsonbTransient
+  public String getQualifiedName()
+  {
+    return docIndex.getName() + "." + name;
   }
 
   public String getName()
