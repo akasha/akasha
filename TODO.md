@@ -61,11 +61,6 @@ complete as there is too much un-said.
 
 # Other
 
-* Change the way we index elements per-type in docs so that index is separate from type description.
-  We want to manually add event/method/property documentation to index without it being scrubbed when
-  we re-fetch type documentation. Once we do fill out some useful ones.
-  i.e. Add "voiceschanged" to SpeechSynthesis and everything to SpeechUtterance (use in speech demo)
-
 * Change pipeline so that doc runtime is shared across pipeline stages? Or maybe we can each repository?
 
 * Add a `complete` method on `Action`, `Combiner` and `Processor` interfaces that will be invoked once the code will no longer have any schemas passed in. This allows the processor to perform cleanup and/or check that it is still needed. i.e. if a `RenameX` processor does not perform any renames we could alert in the complete to indicate that no match occurred. We could also add statistics (i.e. renamed 2 elements).
