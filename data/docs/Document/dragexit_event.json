@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.dragexit_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragexit_event",
+    "description": "The dragexit event is fired when an element is no longer the drag operation's immediate selection target.",
+    "eventName": "dragexit",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondragexit"
+}

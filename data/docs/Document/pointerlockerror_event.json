@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.pointerlockerror_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/pointerlockerror_event",
+    "description": "The pointerlockerror event is fired when locking the pointer failed (for technical reasons or because the permission was denied).",
+    "eventName": "pointerlockerror",
+    "eventType": "Event",
+    "eventHandlerProperty": "onpointerlockerror"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.dragstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragstart_event",
+    "description": "The dragstart event is fired when the user starts dragging an element or text selection.",
+    "eventName": "dragstart",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondragstart"
+}

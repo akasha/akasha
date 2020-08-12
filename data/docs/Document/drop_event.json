@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.drop_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/drop_event",
+    "description": "The drop event is fired when an element or text selection is dropped on a valid drop target.",
+    "eventName": "drop",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondrop"
+}

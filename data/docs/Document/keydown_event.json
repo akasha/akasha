@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.keydown_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/keydown_event",
+    "description": "The keydown event is fired when a key is pressed.",
+    "eventName": "keydown",
+    "eventType": "KeyboardEvent",
+    "eventHandlerProperty": "onkeydown"
+}

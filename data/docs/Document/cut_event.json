@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.cut_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/cut_event",
+    "description": "The cut event is fired when the user has initiated a \"cut\" action through the browser's user interface.",
+    "eventName": "cut",
+    "eventType": "ClipboardEvent",
+    "eventHandlerProperty": "oncut"
+}

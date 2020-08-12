@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.pointermove_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/pointermove_event",
+    "description": "The pointermove event is fired when a pointer changes coordinates, and the pointer has not been canceled by a browser touch-action.",
+    "eventName": "pointermove",
+    "eventType": "PointerEvent",
+    "eventHandlerProperty": "onpointermove"
+}

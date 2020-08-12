@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.lostpointercapture_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/lostpointercapture_event",
+    "description": "The lostpointercapture event is fired when a captured pointer is released.",
+    "eventName": "lostpointercapture",
+    "eventType": "PointerEvent",
+    "eventHandlerProperty": "onlostpointercapture"
+}

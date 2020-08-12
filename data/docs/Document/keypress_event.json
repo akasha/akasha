@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "Document.keypress_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/keypress_event",
+    "description": "The keypress event is fired when a key that produces a character value is pressed down.",
+    "eventName": "keypress",
+    "eventType": "KeyboardEvent"
+}

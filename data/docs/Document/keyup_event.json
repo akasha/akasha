@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.keyup_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/keyup_event",
+    "description": "The keyup event is fired when a key is released.",
+    "eventName": "keyup",
+    "eventType": "KeyboardEvent",
+    "eventHandlerProperty": "onkeyup"
+}

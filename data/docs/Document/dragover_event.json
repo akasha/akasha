@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.dragover_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragover_event",
+    "description": "The dragover event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).",
+    "eventName": "dragover",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondragover"
+}

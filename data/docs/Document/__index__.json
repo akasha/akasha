@@ -1,6 +1,10 @@
 
 [
     {
+        "name": "DOMContentLoaded_event",
+        "lastModifiedAt": 1597266682676
+    },
+    {
         "name": "Document",
         "lastModifiedAt": 1597190898956
     },
@@ -15,6 +19,22 @@
     {
         "name": "anchors",
         "lastModifiedAt": 1596581585625
+    },
+    {
+        "name": "animationcancel_event",
+        "lastModifiedAt": 1597266667741
+    },
+    {
+        "name": "animationend_event",
+        "lastModifiedAt": 1597266668282
+    },
+    {
+        "name": "animationiteration_event",
+        "lastModifiedAt": 1597266668703
+    },
+    {
+        "name": "animationstart_event",
+        "lastModifiedAt": 1597266669879
     },
     {
         "name": "body",
@@ -35,6 +55,10 @@
     {
         "name": "contentType",
         "lastModifiedAt": 1596581588698
+    },
+    {
+        "name": "copy_event",
+        "lastModifiedAt": 1597266670967
     },
     {
         "name": "createAttribute",
@@ -97,6 +121,10 @@
         "lastModifiedAt": 1596581612773
     },
     {
+        "name": "cut_event",
+        "lastModifiedAt": 1597266671325
+    },
+    {
         "name": "doctype",
         "lastModifiedAt": 1596581589015
     },
@@ -107,6 +135,38 @@
     {
         "name": "documentURI",
         "lastModifiedAt": 1596581590357
+    },
+    {
+        "name": "drag_event",
+        "lastModifiedAt": 1597266672966
+    },
+    {
+        "name": "dragend_event",
+        "lastModifiedAt": 1597266673539
+    },
+    {
+        "name": "dragenter_event",
+        "lastModifiedAt": 1597266674606
+    },
+    {
+        "name": "dragexit_event",
+        "lastModifiedAt": 1597266675004
+    },
+    {
+        "name": "dragleave_event",
+        "lastModifiedAt": 1597266675350
+    },
+    {
+        "name": "dragover_event",
+        "lastModifiedAt": 1597266676366
+    },
+    {
+        "name": "dragstart_event",
+        "lastModifiedAt": 1597266676805
+    },
+    {
+        "name": "drop_event",
+        "lastModifiedAt": 1597266677847
     },
     {
         "name": "embeds",
@@ -133,6 +193,10 @@
         "lastModifiedAt": 1596581592597
     },
     {
+        "name": "fullscreenchange_event",
+        "lastModifiedAt": 1597266678865
+    },
+    {
         "name": "getAnimations",
         "lastModifiedAt": 1596581614704
     },
@@ -147,6 +211,10 @@
     {
         "name": "getElementsByTagNameNS",
         "lastModifiedAt": 1596581615635
+    },
+    {
+        "name": "gotpointercapture_event",
+        "lastModifiedAt": 1597266683493
     },
     {
         "name": "hasStorageAccess",
@@ -173,12 +241,28 @@
         "lastModifiedAt": 1596581617302
     },
     {
+        "name": "keydown_event",
+        "lastModifiedAt": 1597266679878
+    },
+    {
+        "name": "keypress_event",
+        "lastModifiedAt": 1597266680870
+    },
+    {
+        "name": "keyup_event",
+        "lastModifiedAt": 1597266681913
+    },
+    {
         "name": "lastStyleSheetSet",
         "lastModifiedAt": 1596581595666
     },
     {
         "name": "links",
         "lastModifiedAt": 1596581596645
+    },
+    {
+        "name": "lostpointercapture_event",
+        "lastModifiedAt": 1597266683902
     },
     {
         "name": "mozSetImageElement",
@@ -201,12 +285,60 @@
         "lastModifiedAt": 1596581597306
     },
     {
+        "name": "paste_event",
+        "lastModifiedAt": 1597266671920
+    },
+    {
         "name": "plugins",
         "lastModifiedAt": 1596581597732
     },
     {
+        "name": "pointercancel_event",
+        "lastModifiedAt": 1597266684276
+    },
+    {
+        "name": "pointerdown_event",
+        "lastModifiedAt": 1597266685282
+    },
+    {
+        "name": "pointerenter_event",
+        "lastModifiedAt": 1597266686293
+    },
+    {
+        "name": "pointerleave_event",
+        "lastModifiedAt": 1597266686719
+    },
+    {
+        "name": "pointerlockchange_event",
+        "lastModifiedAt": 1597266687149
+    },
+    {
+        "name": "pointerlockerror_event",
+        "lastModifiedAt": 1597266687568
+    },
+    {
+        "name": "pointermove_event",
+        "lastModifiedAt": 1597266687966
+    },
+    {
+        "name": "pointerout_event",
+        "lastModifiedAt": 1597266688964
+    },
+    {
+        "name": "pointerover_event",
+        "lastModifiedAt": 1597266689385
+    },
+    {
+        "name": "pointerup_event",
+        "lastModifiedAt": 1597266690423
+    },
+    {
         "name": "preferredStyleSheetSet",
         "lastModifiedAt": 1596581598142
+    },
+    {
+        "name": "readystatechange_event",
+        "lastModifiedAt": 1597266683071
     },
     {
         "name": "releaseCapture",
@@ -233,12 +365,52 @@
         "lastModifiedAt": 1596581599871
     },
     {
+        "name": "selectionchange_event",
+        "lastModifiedAt": 1597266690803
+    },
+    {
+        "name": "selectstart_event",
+        "lastModifiedAt": 1597266691788
+    },
+    {
         "name": "styleSheetSets",
         "lastModifiedAt": 1596581600869
     },
     {
         "name": "timeline",
         "lastModifiedAt": 1596581601331
+    },
+    {
+        "name": "touchcancel_event",
+        "lastModifiedAt": 1597266692801
+    },
+    {
+        "name": "touchend_event",
+        "lastModifiedAt": 1597266693576
+    },
+    {
+        "name": "touchmove_event",
+        "lastModifiedAt": 1597266693946
+    },
+    {
+        "name": "touchstart_event",
+        "lastModifiedAt": 1597266694962
+    },
+    {
+        "name": "transitioncancel_event",
+        "lastModifiedAt": 1597266695393
+    },
+    {
+        "name": "transitionend_event",
+        "lastModifiedAt": 1597266695885
+    },
+    {
+        "name": "transitionrun_event",
+        "lastModifiedAt": 1597266696975
+    },
+    {
+        "name": "transitionstart_event",
+        "lastModifiedAt": 1597266697580
     },
     {
         "name": "visibilityState",

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.dragend_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragend_event",
+    "description": "The dragend event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).",
+    "eventName": "dragend",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondragend"
+}

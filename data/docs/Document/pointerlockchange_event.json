@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.pointerlockchange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/pointerlockchange_event",
+    "description": "The pointerlockchange event is fired when the pointer is locked/unlocked.",
+    "eventName": "pointerlockchange",
+    "eventType": "Event",
+    "eventHandlerProperty": "onpointerlockchange"
+}

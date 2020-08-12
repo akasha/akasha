@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.dragleave_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragleave_event",
+    "description": "The dragleave event is fired when a dragged element or text selection leaves a valid drop target.",
+    "eventName": "dragleave",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondragleave"
+}

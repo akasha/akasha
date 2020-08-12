@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Document.drag_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/drag_event",
+    "description": "The drag event is fired every few hundred milliseconds as an element or text selection is being dragged by the user.",
+    "eventName": "drag",
+    "eventType": "DragEvent",
+    "eventHandlerProperty": "ondrag"
+}
