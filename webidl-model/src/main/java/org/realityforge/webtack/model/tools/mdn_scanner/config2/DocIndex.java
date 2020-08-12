@@ -17,6 +17,7 @@ import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.json.bind.JsonbConfig;
+import org.realityforge.webtack.model.tools.io.FilesUtil;
 
 public final class DocIndex
 {
@@ -62,7 +63,28 @@ public final class DocIndex
     throws IndexSaveException
   {
     _entries.remove( entry );
-    save();
+    if ( _entries.isEmpty() )
+    {
+      remove();
+    }
+    else
+    {
+      save();
+    }
+  }
+
+  public void remove()
+    throws IndexSaveException
+  {
+    _entries.clear();
+    try
+    {
+      FilesUtil.deleteDirectory( _directory );
+    }
+    catch ( final IOException ioe )
+    {
+      throw new IndexSaveException( this, ioe );
+    }
   }
 
   @Nullable
