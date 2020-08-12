@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMPointReadOnly.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/toJSON",
+    "description": "The DOMPointReadOnly method toJSON() returns a DOMPointInit object giving the JSON form of the point object."
+}

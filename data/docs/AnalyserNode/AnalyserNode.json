@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "AnalyserNode.AnalyserNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/AnalyserNode",
+    "description": "The AnalyserNode constructor of the Web Audio API creates a new AnalyserNode object instance."
+}

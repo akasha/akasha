@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DocumentFragment.DocumentFragment",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/DocumentFragment",
+    "description": "The DocumentFragment() constructor returns a new, empty DocumentFragment object."
+}

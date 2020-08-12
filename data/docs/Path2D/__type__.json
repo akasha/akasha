@@ -3,20 +3,5 @@
     "kind": "Type",
     "name": "Path2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Path2D",
-    "description": "The Path2D interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired.",
-    "constructors": [
-        "Path2D"
-    ],
-    "methods": [
-        "addPath",
-        "arc",
-        "arcTo",
-        "bezierCurveTo",
-        "closePath",
-        "ellipse",
-        "lineTo",
-        "moveTo",
-        "quadraticCurveTo",
-        "rect"
-    ]
+    "description": "The Path2D interface of the Canvas 2D API is used to declare a path that can then be used on a CanvasRenderingContext2D object. The path methods of the CanvasRenderingContext2D interface are also present on this interface, which gives you the convenience of being able to retain and replay your path whenever desired."
 }

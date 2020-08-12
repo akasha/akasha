@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CSSGroupingRule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule",
+    "description": "An object implementing the CSSGroupingRule interface represents any CSS at-rule that contains other rules nested within it."
+}

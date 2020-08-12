@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/type",
+    "description": "The type read-only property of the Event interface returns a string containing the event's type. It is set when the event is constructed and is the name commonly used to refer to the specific event, such as click, load, or error."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeyStatusMap.entries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/entries",
+    "description": "The entries() read-only property of the MediaKeyStatusMap interface returns a new Iterator object, containing an array of [key, value] pairs for each element in the status map, in insertion order."
+}

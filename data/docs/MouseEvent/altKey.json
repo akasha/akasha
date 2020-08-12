@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.altKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/altKey",
+    "description": "The MouseEvent.altKey read-only property is a Boolean that indicates whether the alt key was pressed or not when a given mouse event occurs."
+}

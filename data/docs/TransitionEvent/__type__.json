@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "TransitionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent",
+    "description": "The TransitionEvent interface represents events providing information related to transitions."
+}

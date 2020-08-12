@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MutationObserverInit.subtree",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/subtree",
+    "description": "The MutationObserverInit dictionary's optional subtree property can be set to true to monitor the targeted node and all of its descendants."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.getBoundingClientRect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/getBoundingClientRect",
+    "description": "The Range.getBoundingClientRect() method returns a DOMRect object that bounds the contents of the range; this is a rectangle enclosing the union of the bounding rectangles for all the elements in the range."
+}

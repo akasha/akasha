@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DynamicsCompressorNode.attack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/attack",
+    "description": "An AudioParam."
+}

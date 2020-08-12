@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "OscillatorNode.start",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/start",
+    "description": "The following example shows basic usage of an AudioContext to create an oscillator node. For an applied example, check out our Violent Theremin demo (see app.js for relevant code)."
+}

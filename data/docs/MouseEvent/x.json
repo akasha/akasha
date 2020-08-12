@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.x",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/x",
+    "description": "The MouseEvent.x property is an alias for the MouseEvent.clientX property."
+}

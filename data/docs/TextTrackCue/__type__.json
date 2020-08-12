@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "TextTrackCue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue",
-    "description": "TextTrackCue is an abstract class which is used as the basis for the various derived cue types, such as VTTCue; you will instead work with those derived types.",
-    "properties": [
-        "endTime",
-        "id",
-        "pauseOnExit",
-        "startTime",
-        "track"
-    ]
+    "description": "TextTrackCue is an abstract class which is used as the basis for the various derived cue types, such as VTTCue; you will instead work with those derived types."
 }

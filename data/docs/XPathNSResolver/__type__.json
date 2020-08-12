@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "XPathNSResolver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathNSResolver",
+    "description": "The XPathNSResolver interface permits prefix strings in an XPath expression to be properly bound to namespace URI strings."
+}

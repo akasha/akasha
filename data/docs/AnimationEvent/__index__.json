@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "AnimationEvent",
+        "lastModifiedAt": 1597190643041
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190642768
+    },
+    {
+        "name": "animationName",
+        "lastModifiedAt": 1597190643299
+    },
+    {
+        "name": "elapsedTime",
+        "lastModifiedAt": 1597190644100
+    },
+    {
+        "name": "initAnimationEvent",
+        "lastModifiedAt": 1597190645307
+    },
+    {
+        "name": "pseudoElement",
+        "lastModifiedAt": 1597190644929
+    }
+]

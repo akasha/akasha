@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FileReader.readAsArrayBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsArrayBuffer",
+    "description": "The FileReader interface's readAsArrayBuffer() method is used to start reading the contents of a specified Blob or File. When the read operation is finished, the readyState becomes DONE, and the loadend is triggered. At that time, the result attribute contains an ArrayBuffer representing the file's data."
+}

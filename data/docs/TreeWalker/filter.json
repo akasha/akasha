@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TreeWalker.filter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/filter",
+    "description": "The TreeWalker.filter read-only property returns a NodeFilter that is the filtering object associated with the TreeWalker."
+}

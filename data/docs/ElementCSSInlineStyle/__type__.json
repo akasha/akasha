@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "ElementCSSInlineStyle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle",
+    "description": "The ElementCSSInlineStyle mixin describes CSSOM-specific features common to the HTMLElement, SVGElement and MathMLElement interfaces."
+}

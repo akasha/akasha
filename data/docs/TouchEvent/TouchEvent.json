@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "TouchEvent.TouchEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/TouchEvent",
+    "description": "The TouchEvent() constructor creates a new TouchEvent."
+}

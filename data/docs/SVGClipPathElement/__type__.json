@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGClipPathElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement",
+    "description": "The SVGClipPathElement interface provides access to the properties of clipPath elements, as well as methods to manipulate them."
+}

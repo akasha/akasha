@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "OfflineAudioContext.startRendering",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering",
+    "description": "The startRendering() method of the OfflineAudioContext Interface starts rendering the audio graph, taking into account the current connections and the current scheduled changes."
+}

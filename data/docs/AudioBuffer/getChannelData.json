@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioBuffer.getChannelData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/getChannelData",
+    "description": "The getChannelData() method of the AudioBuffer Interface returns a Float32Array containing the PCM data associated with the channel, defined by the channel parameter (with 0 representing the first channel)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Performance.now",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now",
+    "description": "The performance.now() method returns a DOMHighResTimeStamp, measured in milliseconds."
+}

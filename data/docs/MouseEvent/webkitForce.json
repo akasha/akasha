@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.webkitForce",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/webkitForce",
+    "description": "MouseEvent.webkitForce is a proprietary, WebKit-specific numeric property whose value represents the amount of pressure that is being applied on the touchpad or touchscreen."
+}

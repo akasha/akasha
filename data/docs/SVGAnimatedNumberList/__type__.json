@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGAnimatedNumberList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedNumberList",
+    "description": "The SVGAnimatedNumber interface is used for attributes which take a list of numbers and which can be animated."
+}

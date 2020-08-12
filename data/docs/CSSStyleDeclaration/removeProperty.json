@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSSStyleDeclaration.removeProperty",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/removeProperty",
+    "description": "The CSSStyleDeclaration.removeProperty() method interface removes a property from a CSS style declaration object."
+}

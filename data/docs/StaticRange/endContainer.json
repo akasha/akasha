@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StaticRange.endContainer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endContainer",
+    "description": "The endContainer property of the StaticRange interface returns the end Node for the range."
+}

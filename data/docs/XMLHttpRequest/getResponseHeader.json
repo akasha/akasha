@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XMLHttpRequest.getResponseHeader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getResponseHeader",
+    "description": "The XMLHttpRequest method getResponseHeader() returns the string containing the text of a particular header's value."
+}

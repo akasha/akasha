@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192310061
+    },
+    {
+        "name": "delete",
+        "lastModifiedAt": 1597192312527
+    },
+    {
+        "name": "has",
+        "lastModifiedAt": 1597192311287
+    },
+    {
+        "name": "keys",
+        "lastModifiedAt": 1597192312958
+    },
+    {
+        "name": "match",
+        "lastModifiedAt": 1597192310869
+    },
+    {
+        "name": "open",
+        "lastModifiedAt": 1597192312260
+    }
+]

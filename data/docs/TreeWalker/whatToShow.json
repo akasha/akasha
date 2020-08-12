@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TreeWalker.whatToShow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/whatToShow",
+    "description": "The TreeWalker.whatToShow read-only property returns an unsigned long being a bitmask made of constants describing the types of Node that must to be presented. Non-matching nodes are skipped, but their children may be included, if relevant. The possible values are:"
+}

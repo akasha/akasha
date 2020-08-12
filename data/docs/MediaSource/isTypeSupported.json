@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaSource.isTypeSupported",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/isTypeSupported",
+    "description": "The MediaSource.isTypeSupported() static method returns a Boolean value which is true if the given MIME type is likely to be supported by the current user agent."
+}

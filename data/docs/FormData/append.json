@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.append",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/append",
+    "description": "The append() method of the FormData interface appends a new value onto an existing key inside a FormData object, or adds the key if it does not already exist."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.nodeValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue",
+    "description": "The nodeValue property of the Node interface returns or sets the value of the current node."
+}

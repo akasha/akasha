@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ParentNode.prepend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/prepend",
+    "description": "The ParentNode.prepend() method inserts a set of Node objects or DOMString objects before the first child of the ParentNode. DOMString objects are inserted as equivalent Text nodes."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ConvolverNode.ConvolverNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/ConvolverNode",
+    "description": "The ConvolverNode() constructor of the Web Audio API creates a new ConvolverNode object instance."
+}

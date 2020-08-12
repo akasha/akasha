@@ -3,8 +3,5 @@
     "kind": "Type",
     "name": "RTCOfferAnswerOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferAnswerOptions",
-    "description": "The WebRTC API's RTCOfferAnswerOptions dictionary is used to specify options that configure and control the process of creating WebRTC offers or answers.",
-    "properties": [
-        "voiceActivityDetection"
-    ]
+    "description": "The WebRTC API's RTCOfferAnswerOptions dictionary is used to specify options that configure and control the process of creating WebRTC offers or answers."
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaStreamAudioSourceOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions",
+    "description": "The MediaStreamAudioSourceOptions dictionary provides configuration options used when creating a MediaStreamAudioSourceNode using its constructor."
+}

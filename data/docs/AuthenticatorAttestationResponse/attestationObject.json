@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AuthenticatorAttestationResponse.attestationObject",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/attestationObject",
+    "description": "The attestationObject property of the AuthenticatorAttestationResponse interface returns an ArrayBuffer containing the new public key, as well as signature over the entire attestationObject with a private key that is stored in the authenticator when it is manufactured."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FileReader.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/abort",
+    "description": "The abort method aborts the read operation. Upon return, the readyState will be DONE."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GainNode.gain",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GainNode/gain",
+    "description": "An AudioParam."
+}

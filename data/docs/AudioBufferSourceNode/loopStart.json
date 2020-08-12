@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioBufferSourceNode.loopStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopStart",
+    "description": "The loopStart property of the AudioBufferSourceNode interface is a floating-point value indicating, in seconds, where in the AudioBuffer the restart of the play must happen."
+}

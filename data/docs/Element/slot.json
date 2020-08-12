@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.slot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/slot",
+    "description": "The slot property of the Element interface returns the name of the shadow DOM slot the element is inserted in."
+}

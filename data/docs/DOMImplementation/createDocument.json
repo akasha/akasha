@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMImplementation.createDocument",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createDocument",
+    "description": "The DOMImplementation.createDocument() method creates and returns an XMLDocument."
+}

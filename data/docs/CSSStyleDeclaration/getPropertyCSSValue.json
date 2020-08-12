@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSSStyleDeclaration.getPropertyCSSValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyCSSValue",
+    "description": "The CSSStyleDeclaration.getPropertyCSSValue() method interface returns a CSSValue containing the CSS value for a property."
+}

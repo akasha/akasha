@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFilterPrimitiveStandardAttributes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterPrimitiveStandardAttributes",
+    "description": "The SVGFilterPrimitiveStandardAttributes interface defines the set of DOM attributes that are common across the filter primitive interfaces."
+}

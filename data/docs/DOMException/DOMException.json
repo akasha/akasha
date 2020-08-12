@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DOMException.DOMException",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException",
+    "description": "The DOMException() constructor returns a DOMException object with a specified message and name."
+}

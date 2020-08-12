@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.insertBefore",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore",
+    "description": "The Node.insertBefore() method inserts a node before a reference node as a child of a specified parent node."
+}

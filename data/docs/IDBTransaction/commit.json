@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBTransaction.commit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/commit",
+    "description": "The commit() method of the IDBTransaction interface commits the transaction if it is called on an active transaction."
+}

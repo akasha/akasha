@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XMLHttpRequest.open",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open",
+    "description": "The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one."
+}

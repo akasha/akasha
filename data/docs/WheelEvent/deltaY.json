@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WheelEvent.deltaY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaY",
+    "description": "The WheelEvent.deltaY read-only property is a double representing the vertical scroll amount in the WheelEvent.deltaMode unit."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.metaKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/metaKey",
+    "description": "The KeyboardEvent.metaKey read-only property returning a Boolean that indicates if the Meta key was pressed (true) or not (false) when the event occurred. Some operating systems may intercept the key so it is never detected."
+}

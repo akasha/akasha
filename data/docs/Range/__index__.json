@@ -1,0 +1,135 @@
+
+[
+    {
+        "name": "Range",
+        "lastModifiedAt": 1597190881448
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190881158
+    },
+    {
+        "name": "cloneContents",
+        "lastModifiedAt": 1597190884041
+    },
+    {
+        "name": "cloneRange",
+        "lastModifiedAt": 1597190884336
+    },
+    {
+        "name": "collapse",
+        "lastModifiedAt": 1597190884642
+    },
+    {
+        "name": "collapsed",
+        "lastModifiedAt": 1597190881774
+    },
+    {
+        "name": "commonAncestorContainer",
+        "lastModifiedAt": 1597190882090
+    },
+    {
+        "name": "compareBoundaryPoints",
+        "lastModifiedAt": 1597190885035
+    },
+    {
+        "name": "compareNode",
+        "lastModifiedAt": 1597190885878
+    },
+    {
+        "name": "comparePoint",
+        "lastModifiedAt": 1597190886206
+    },
+    {
+        "name": "createContextualFragment",
+        "lastModifiedAt": 1597190886628
+    },
+    {
+        "name": "deleteContents",
+        "lastModifiedAt": 1597190887433
+    },
+    {
+        "name": "detach",
+        "lastModifiedAt": 1597190887693
+    },
+    {
+        "name": "endContainer",
+        "lastModifiedAt": 1597190882619
+    },
+    {
+        "name": "endOffset",
+        "lastModifiedAt": 1597190883176
+    },
+    {
+        "name": "extractContents",
+        "lastModifiedAt": 1597190888026
+    },
+    {
+        "name": "getBoundingClientRect",
+        "lastModifiedAt": 1597190888854
+    },
+    {
+        "name": "getClientRects",
+        "lastModifiedAt": 1597190889252
+    },
+    {
+        "name": "insertNode",
+        "lastModifiedAt": 1597190889575
+    },
+    {
+        "name": "intersectsNode",
+        "lastModifiedAt": 1597190890124
+    },
+    {
+        "name": "isPointInRange",
+        "lastModifiedAt": 1597190890937
+    },
+    {
+        "name": "selectNode",
+        "lastModifiedAt": 1597190891210
+    },
+    {
+        "name": "selectNodeContents",
+        "lastModifiedAt": 1597190891611
+    },
+    {
+        "name": "setEnd",
+        "lastModifiedAt": 1597190892040
+    },
+    {
+        "name": "setEndAfter",
+        "lastModifiedAt": 1597190892459
+    },
+    {
+        "name": "setEndBefore",
+        "lastModifiedAt": 1597190892962
+    },
+    {
+        "name": "setStart",
+        "lastModifiedAt": 1597190893801
+    },
+    {
+        "name": "setStartAfter",
+        "lastModifiedAt": 1597190894657
+    },
+    {
+        "name": "setStartBefore",
+        "lastModifiedAt": 1597190895046
+    },
+    {
+        "name": "startContainer",
+        "lastModifiedAt": 1597190883451
+    },
+    {
+        "name": "startOffset",
+        "lastModifiedAt": 1597190883732
+    },
+    {
+        "name": "surroundContents",
+        "lastModifiedAt": 1597190895327
+    },
+    {
+        "name": "toString",
+        "lastModifiedAt": 1597190895608
+    }
+]

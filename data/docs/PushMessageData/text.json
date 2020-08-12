@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PushMessageData.text",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/text",
+    "description": "The text()method of the PushMessageData interface extracts push message data as a plain text string."
+}

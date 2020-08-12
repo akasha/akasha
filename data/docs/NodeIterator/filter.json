@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NodeIterator.filter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/filter",
+    "description": "The NodeIterator.filter read-only method returns a NodeFilter object, that is an object implement an acceptNode(node) method, used to screen nodes."
+}

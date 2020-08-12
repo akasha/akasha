@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBuffer.updating",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/updating",
+    "description": "The updating read-only property of the SourceBuffer interface indicates whether the SourceBuffer is currently being updated — i.e. whether an SourceBuffer.appendBuffer(),  SourceBuffer.appendStream(), or SourceBuffer.remove() operation is currently in progress."
+}

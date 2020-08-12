@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AbstractRange.startContainer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/startContainer",
+    "description": "The read-only startContainer property of the AbstractRange interface returns the start Node for the range."
+}

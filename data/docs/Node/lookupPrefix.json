@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.lookupPrefix",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupPrefix",
+    "description": "The Node.lookupPrefix() method returns a DOMString containing the prefix for a given namespace URI, if present, and null if not. When multiple prefixes are possible, the result is implementation-dependent."
+}

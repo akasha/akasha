@@ -3,24 +3,5 @@
     "kind": "Type",
     "name": "SpeechRecognition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition",
-    "description": "The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service.",
-    "properties": [
-        "continuous",
-        "grammars",
-        "interimResults",
-        "lang",
-        "maxAlternatives",
-        "onaudioend",
-        "onaudiostart",
-        "serviceURI"
-    ],
-    "methods": [
-        "abort",
-        "start",
-        "stop"
-    ],
-    "events": [
-        "audioend",
-        "audiostart"
-    ]
+    "description": "The SpeechRecognition interface of the Web Speech API is the controller interface for the recognition service; this also handles the SpeechRecognitionEvent sent from the recognition service."
 }

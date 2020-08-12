@@ -3,14 +3,5 @@
     "kind": "Type",
     "name": "HTMLMeterElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement",
-    "description": "The HTML meter elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of meter elements.",
-    "properties": [
-        "high",
-        "labels",
-        "low",
-        "max",
-        "min",
-        "optimum",
-        "value"
-    ]
+    "description": "The HTML meter elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of meter elements."
 }

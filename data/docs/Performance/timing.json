@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Performance.timing",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/timing",
+    "description": "The legacy Performance.timing read-only property returns a PerformanceTiming object containing latency-related performance information."
+}

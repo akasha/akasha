@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.getRootNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/getRootNode",
+    "description": "The getRootNode() method of the Node interface returns the context object's root, which optionally includes the shadow root if it is available."
+}

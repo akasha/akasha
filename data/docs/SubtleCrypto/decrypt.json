@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.decrypt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/decrypt",
+    "description": "The decrypt() method of the SubtleCrypto interface decrypts some encrypted data. It takes as arguments a key to decrypt with, some optional extra parameters, and the data to decrypt (also known as \"ciphertext\"). It returns a Promise which will be fulfilled with the decrypted data (also known as \"plaintext\")."
+}

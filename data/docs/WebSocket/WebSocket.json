@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "WebSocket.WebSocket",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket",
+    "description": "The WebSocket() constructor returns a new WebSocket object."
+}

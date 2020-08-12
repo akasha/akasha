@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "WritableStream.WritableStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/WritableStream",
+    "description": "The WritableStream() constructor creates a new WritableStream object instance."
+}

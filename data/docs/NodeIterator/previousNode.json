@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "NodeIterator.previousNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/previousNode",
+    "description": "The NodeIterator.previousNode() method returns the previous node in the set represented by the NodeIterator and moves the position of the iterator backwards within the set."
+}

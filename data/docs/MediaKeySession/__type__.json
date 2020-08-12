@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaKeySession",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession",
+    "description": "The MediaKeySession interface of the EncryptedMediaExtensions API represents a context for message exchange with a content decryption module (CDM)."
+}

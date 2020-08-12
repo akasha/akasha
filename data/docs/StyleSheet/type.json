@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StyleSheet.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/type",
+    "description": "The type property of the StyleSheet interface specifies the style sheet language for the given style sheet."
+}

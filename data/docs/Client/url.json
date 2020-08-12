@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Client.url",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Client/url",
+    "description": "The url read-only property of the Client interface returns the URL of the current service worker client."
+}

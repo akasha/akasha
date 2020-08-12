@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "RTCIceCandidate",
+        "lastModifiedAt": 1597192771180
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 0
+        "lastModifiedAt": 1597192770917
     },
     {
         "name": "candidate",

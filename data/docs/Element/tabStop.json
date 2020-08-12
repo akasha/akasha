@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.tabStop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/tabStop",
+    "description": "The tabStop property of the Element interface returns a Boolean indicating if the element can receive input focus via the tab key. If the specified element is a shadow host tab navigation is delegated to its children."
+}

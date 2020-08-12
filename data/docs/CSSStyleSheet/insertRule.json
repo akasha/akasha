@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSSStyleSheet.insertRule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule",
+    "description": "The CSSStyleSheet.insertRule() method inserts a new CSS rule into the current style sheet, with some restrictions."
+}

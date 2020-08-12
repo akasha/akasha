@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/get",
+    "description": "If a value is found, then a structured clone of it is created and set as the result of the request object: this returns the record the key is associated with."
+}

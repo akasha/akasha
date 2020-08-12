@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FileReader.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onerror",
+    "description": "The FileReader onerror handler receives an Event object, not an Error object, as a parameter, but an error can be accessed from the FileReader object, as instanceOfFileReader.error"
+}

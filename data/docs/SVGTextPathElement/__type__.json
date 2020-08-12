@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGTextPathElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPathElement",
+    "description": "The SVGTextPathElement interface corresponds to the textPath element."
+}

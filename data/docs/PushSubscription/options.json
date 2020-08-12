@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PushSubscription.options",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/options",
+    "description": "The options read-only property of the PushSubscription interface is an object containing containing the options used to create the subscription."
+}

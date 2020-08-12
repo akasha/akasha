@@ -3,16 +3,5 @@
     "kind": "Type",
     "name": "HTMLTableSectionElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement",
-    "description": "The HTMLTableSectionElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table.",
-    "properties": [
-        "align",
-        "ch",
-        "chOff",
-        "rows",
-        "vAlign"
-    ],
-    "methods": [
-        "deleteRow",
-        "insertRow"
-    ]
+    "description": "The HTMLTableSectionElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table."
 }

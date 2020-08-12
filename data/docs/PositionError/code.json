@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PositionError.code",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PositionError/code",
+    "description": "The GeolocationPositionError.code read-only property is an unsigned short representing the error code."
+}

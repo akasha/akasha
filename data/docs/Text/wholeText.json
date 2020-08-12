@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Text.wholeText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Text/wholeText",
+    "description": "The Text.wholeText read-only property returns the full text of all Text nodes logically adjacent to the node."
+}

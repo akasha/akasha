@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ParentNode.querySelectorAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelectorAll",
+    "description": "The ParentNode mixin defines the querySelectorAll() method as returning a NodeList representing a list of elements matching the specified group of selectors which are descendants of the object on which the method was called."
+}

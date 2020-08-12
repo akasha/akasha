@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.isComposing",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing",
+    "description": "The KeyboardEvent.isComposing read-only property returns a Boolean value indicating if the event is fired within a composition session, i.e. after compositionstart and before compositionend."
+}

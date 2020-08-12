@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XPathNSResolver.lookupNamespaceURI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathNSResolver/lookupNamespaceURI",
+    "description": "The lookupNamespaceURI method looks up the namespace URI associated to the given namespace prefix within an XPath expression evaluated by the XPathEvaluator interface."
+}

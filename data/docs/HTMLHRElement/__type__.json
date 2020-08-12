@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "HTMLHRElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHRElement",
-    "description": "The HTMLHRElement interface provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating hr elements.",
-    "properties": [
-        "align",
-        "color",
-        "noshade",
-        "size",
-        "width"
-    ]
+    "description": "The HTMLHRElement interface provides special properties (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating hr elements."
 }

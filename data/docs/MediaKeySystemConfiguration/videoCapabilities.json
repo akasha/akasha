@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaKeySystemConfiguration.videoCapabilities",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities",
+    "description": "The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGGeometryElement.pathLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/pathLength",
+    "description": "The SVGGeometryElement.pathLength property reflects the pathLength attribute and returns the total length of the path, in user units."
+}

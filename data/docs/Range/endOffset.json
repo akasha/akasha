@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Range.endOffset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/endOffset",
+    "description": "The Range.endOffset read-only property returns a number representing where in the Range.endContainer the Range ends."
+}

@@ -1,7 +1,7 @@
 
 {
     "kind": "Property",
-    "name": "XRWebGLLayer.frameBufferHeight",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferHeight",
+    "name": "XRWebGLLayer.framebufferHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferHeight",
     "description": "The read-only XRWebGLLayer property framebufferHeight indicates the height of the framebuffer, in pixels."
 }

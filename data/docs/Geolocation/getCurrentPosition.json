@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Geolocation.getCurrentPosition",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition",
+    "description": "The Geolocation.getCurrentPosition() method is used to get the current position of the device."
+}

@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190724120
+    },
+    {
+        "name": "getPropertyCSSValue",
+        "lastModifiedAt": 1597190724482
+    },
+    {
+        "name": "getPropertyPriority",
+        "lastModifiedAt": 1597190725310
+    },
+    {
+        "name": "getPropertyValue",
+        "lastModifiedAt": 1597190725695
+    },
+    {
+        "name": "item",
+        "lastModifiedAt": 1597190726489
+    },
+    {
+        "name": "removeProperty",
+        "lastModifiedAt": 1597190726872
+    },
+    {
+        "name": "setProperty",
+        "lastModifiedAt": 1597190727152
+    }
+]

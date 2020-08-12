@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.insertAdjacentText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentText",
+    "description": "The insertAdjacentText() method of the Element interface inserts a given text node at a given position relative to the element it is invoked upon."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CustomEvent.initCustomEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/initCustomEvent",
+    "description": "The CustomEvent.initCustomEvent() method initializes a CustomEvent object. If the event has already been dispatched, this method does nothing."
+}

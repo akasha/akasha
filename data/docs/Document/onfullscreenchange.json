@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onfullscreenchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onfullscreenchange",
+    "description": "The Document interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired immediately before a document transitions into or out of full-screen mode."
+}

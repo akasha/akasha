@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFETileElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFETileElement",
+    "description": "The SVGFETileElement interface corresponds to the feTile element."
+}

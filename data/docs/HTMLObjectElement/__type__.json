@@ -3,35 +3,5 @@
     "kind": "Type",
     "name": "HTMLObjectElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement",
-    "description": "The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of object element, representing external resources.",
-    "properties": [
-        "align",
-        "archive",
-        "border",
-        "code",
-        "codeBase",
-        "codeType",
-        "contentDocument",
-        "contentWindow",
-        "data",
-        "declare",
-        "form",
-        "height",
-        "hspace",
-        "name",
-        "standby",
-        "tabindex",
-        "type",
-        "typeMustMatch",
-        "useMap",
-        "validationMessage",
-        "validity",
-        "vspace",
-        "width",
-        "willValidate"
-    ],
-    "methods": [
-        "checkValidity",
-        "setCustomValidity"
-    ]
+    "description": "The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of object element, representing external resources."
 }

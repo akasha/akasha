@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBuffer.textTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/textTracks",
+    "description": "The textTracks read-only property of the SourceBuffer interface returns a list of the text tracks currently contained inside the SourceBuffer."
+}

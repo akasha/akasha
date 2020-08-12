@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.openCursor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openCursor",
+    "description": "The method sets the position of the cursor to the appropriate record, based on the specified direction."
+}

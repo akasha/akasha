@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGAElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAElement",
+    "description": "The SVGAElement interface provides access to the properties of a element, as well as methods to manipulate them."
+}

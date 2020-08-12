@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerRegistration.navigationPreload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/navigationPreload",
+    "description": "The navigationPreload read-only property of the ServiceWorkerRegistration interface returns the NavigationPreloadManager associated with the current service worker registration."
+}

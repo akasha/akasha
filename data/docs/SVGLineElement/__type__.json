@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGLineElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLineElement",
+    "description": "The SVGLineElement interface provides access to the properties of line elements, as well as methods to manipulate them."
+}

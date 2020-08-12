@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGCircleElement.cy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGCircleElement/cy",
+    "description": "The cy read-only property of the SVGCircleElement interface reflects the cy attribute of a circle element and by that defines the y-coordinate of the circleʼs center."
+}

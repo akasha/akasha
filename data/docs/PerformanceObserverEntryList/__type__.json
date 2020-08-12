@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "PerformanceObserverEntryList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList",
+    "description": "The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."
+}

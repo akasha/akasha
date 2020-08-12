@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.extractContents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/extractContents",
+    "description": "The Range.extractContents() method moves contents of the Range from the document tree into a DocumentFragment."
+}

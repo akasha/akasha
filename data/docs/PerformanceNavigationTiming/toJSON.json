@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PerformanceNavigationTiming.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/toJSON",
+    "description": "The toJSON() method is a serializer - it returns a JSON representation of the PerformanceNavigationTiming object."
+}

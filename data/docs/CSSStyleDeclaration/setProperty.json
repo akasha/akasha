@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSSStyleDeclaration.setProperty",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/setProperty",
+    "description": "The CSSStyleDeclaration.setProperty() method interface sets a new value for a property on a CSS style declaration object."
+}

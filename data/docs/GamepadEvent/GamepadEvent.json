@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "GamepadEvent.GamepadEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent/GamepadEvent",
+    "description": "The GamepadEvent() constructor creates a new GamepadEvent object."
+}

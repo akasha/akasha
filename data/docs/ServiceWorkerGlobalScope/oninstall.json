@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerGlobalScope.oninstall",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/oninstall",
+    "description": "The oninstall property of the ServiceWorkerGlobalScope interface is an event handler fired whenever an install event occurs (when the service worker installs). This happens before activation."
+}

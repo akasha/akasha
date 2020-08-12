@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.scrollHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight",
+    "description": "The Element.scrollHeight read-only property is a measurement of the height of an element's content, including content not visible on the screen due to overflow."
+}

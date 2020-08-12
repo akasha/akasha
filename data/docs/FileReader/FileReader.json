@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "FileReader.FileReader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/FileReader",
+    "description": "The FileReader() constructor creates a new FileReader."
+}

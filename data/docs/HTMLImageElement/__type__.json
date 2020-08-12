@@ -3,28 +3,5 @@
     "kind": "Type",
     "name": "HTMLImageElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement",
-    "description": "The HTMLImageElement interface represents an HTML img element, providing the properties and methods used to manipulate image elements.",
-    "properties": [
-        "alt",
-        "complete",
-        "crossOrigin",
-        "currentSrc",
-        "decoding",
-        "height",
-        "isMap",
-        "loading",
-        "naturalHeight",
-        "naturalWidth",
-        "referrerPolicy",
-        "sizes",
-        "src",
-        "srcset",
-        "useMap",
-        "width",
-        "x",
-        "y"
-    ],
-    "methods": [
-        "decode"
-    ]
+    "description": "The HTMLImageElement interface represents an HTML img element, providing the properties and methods used to manipulate image elements."
 }

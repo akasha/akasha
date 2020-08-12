@@ -3,18 +3,5 @@
     "kind": "Type",
     "name": "MediaStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream",
-    "description": "The MediaStream interface represents a stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack.",
-    "properties": [
-        "active",
-        "ended",
-        "onaddtrack",
-        "onremovetrack"
-    ],
-    "methods": [
-        "addTrack"
-    ],
-    "events": [
-        "addtrack",
-        "removetrack"
-    ]
+    "description": "The MediaStream interface represents a stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack."
 }

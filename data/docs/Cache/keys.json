@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Cache.keys",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/keys",
+    "description": "The keys() method of the Cache interface returns a Promise that resolves to an array of Cache keys."
+}

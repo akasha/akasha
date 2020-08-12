@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.clientTop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/clientTop",
+    "description": "The width of the top border of an element in pixels. It is a read-only, integer property of element."
+}

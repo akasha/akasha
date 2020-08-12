@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSPseudoElement.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/type",
+    "description": "The type read-only property of the CSSPseudoElement interface returns the type of the pseudo-element as a string, represented in the form of a CSS selector."
+}

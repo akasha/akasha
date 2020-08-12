@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEComponentTransferElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEComponentTransferElement",
+    "description": "The SVGFEComponentTransferElement interface corresponds to the feComponentTransfer element."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaStreamAudioDestinationNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode",
+    "description": "Inherits properties from its parent, AudioNode."
+}

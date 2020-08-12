@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Performance.getEntries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntries",
+    "description": "The getEntries() method returns a list of all PerformanceEntry objects for the page. The list's members (entries) can be created by making performance marks or measures (for example by calling the mark() method) at explicit points in time. If you are only interested in performance entries of certain types or that have certain names, see getEntriesByType() and getEntriesByName()."
+}

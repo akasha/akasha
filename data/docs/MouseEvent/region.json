@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.region",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/region",
+    "description": "The MouseEvent.region read-only property returns the id of the canvas hit region affected by the event. If no hit region is affected, null is returned."
+}

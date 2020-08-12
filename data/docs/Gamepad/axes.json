@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.axes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/axes",
+    "description": "The Gamepad.axes property of the Gamepad interface returns an array representing the controls with axes present on the device (e.g. analog thumb sticks).-"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBufferList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList/length",
+    "description": "The length read-only property of the SourceBufferList interface returns the number of SourceBuffer objects in the list."
+}

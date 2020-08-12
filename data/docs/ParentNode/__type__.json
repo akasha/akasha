@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "ParentNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode",
+    "description": "The ParentNode mixin contains methods and properties that are common to all types of Node objects that can have children."
+}

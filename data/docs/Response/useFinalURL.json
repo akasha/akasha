@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.useFinalURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/useFinalURL",
+    "description": "The useFinalURL property of the Response interface contains a boolean stating whether this is the final URL of the response."
+}

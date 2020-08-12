@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "StaticRange.StaticRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/StaticRange",
+    "description": "The StaticRange() constructor creates a new StaticRange object representing a span of content within the DOM."
+}

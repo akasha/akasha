@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.cancelBubble",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelBubble",
+    "description": "The cancelBubble property of the Event interface is a historical alias to Event.stopPropagation(). Setting its value to true before returning from an event handler prevents propagation of the event. In later implementations, setting this to false does nothing. See Browser compatibility for details."
+}

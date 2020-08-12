@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSStyleRule.style",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/style",
+    "description": "The CSSRule.style property is the CSSStyleDeclaration interface for the declaration block of the CSSRule."
+}

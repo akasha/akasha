@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.collapseToEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/collapseToEnd",
+    "description": "The Selection.collapseToEnd() method collapses the selection to the end of the last range in the selection. If the content of the selection is focused and editable, the caret will blink there."
+}

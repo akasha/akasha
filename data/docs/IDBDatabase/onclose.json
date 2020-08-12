@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBDatabase.onclose",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onclose",
+    "description": "A function which is called when the close event is fired."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Range",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range",
+    "description": "The Range interface represents a fragment of a document that can contain nodes and parts of text nodes."
+}

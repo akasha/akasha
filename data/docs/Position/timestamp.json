@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Position.timestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Position/timestamp",
+    "description": "The GeolocationPosition.timestamp read-only property returns a DOMTimeStamp object, represents the date and the time of the creation of the GeolocationPosition object it belongs to. The precision is to the millisecond."
+}

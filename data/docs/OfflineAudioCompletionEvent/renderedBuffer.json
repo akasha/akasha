@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OfflineAudioCompletionEvent.renderedBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/renderedBuffer",
+    "description": "The renderedBuffer read-only property of the OfflineAudioCompletionEvent interface is an AudioBuffer containing the result of processing an OfflineAudioContext."
+}

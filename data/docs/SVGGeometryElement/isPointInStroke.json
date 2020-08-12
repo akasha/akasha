@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SVGGeometryElement.isPointInStroke",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/isPointInStroke",
+    "description": "The SVGGeometryElement.isPointInStroke() method determines whether a given point is within the stroke shape of an element. Normal hit testing rules apply; the value of the pointer-events property on the element determines whether a point is considered to be within the stroke. The point argument is interpreted as a point in the local coordiante system of the element."
+}

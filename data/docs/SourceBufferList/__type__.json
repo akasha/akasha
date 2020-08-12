@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SourceBufferList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList",
+    "description": "The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects."
+}

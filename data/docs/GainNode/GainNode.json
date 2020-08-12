@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "GainNode.GainNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GainNode/GainNode",
+    "description": "The GainNode() constructor of the Web Audio API creates a new GainNode object which an AudioNode that represents a change in volume."
+}

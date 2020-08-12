@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WebGLActiveInfo.size",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLActiveInfo/size",
+    "description": "The read-only WebGLActiveInfo.size property is a Number representing the size of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods."
+}

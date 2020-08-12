@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "KeyboardEvent.KeyboardEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/KeyboardEvent",
+    "description": "The KeyboardEvent() constructor creates a new KeyboardEvent."
+}

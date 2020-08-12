@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XPathResult.numberValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/numberValue",
+    "description": "The read-only numberValue property of the XPathResult interface returns the numeric value of a result with XPathResult.resultType being NUMBER_TYPE."
+}

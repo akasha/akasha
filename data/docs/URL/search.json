@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "URL.search",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/search",
+    "description": "The search property of the URL interface is a search string, also called a query string, that is a USVString containing a '?' followed by the parameters of the URL."
+}

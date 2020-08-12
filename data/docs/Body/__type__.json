@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Body",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Body",
+    "description": "The Body mixin of the Fetch API represents the body of the response/request, allowing you to declare what its content type is and how it should be handled."
+}

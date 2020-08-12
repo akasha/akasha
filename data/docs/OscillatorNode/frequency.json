@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OscillatorNode.frequency",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/frequency",
+    "description": "An a-rate AudioParam."
+}

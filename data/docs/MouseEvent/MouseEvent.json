@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MouseEvent.MouseEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent",
+    "description": "The MouseEvent() constructor creates a new MouseEvent."
+}

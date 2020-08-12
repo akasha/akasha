@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PointerEvent.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/height",
+    "description": "The height read-only property of the PointerEvent interface represents the height of the pointer's contact geometry, along the y-axis (in CSS pixels). Depending on the source of the pointer device (for example a finger), for a given pointer, each event may produce a different value."
+}

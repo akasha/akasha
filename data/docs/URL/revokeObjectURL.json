@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URL.revokeObjectURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL",
+    "description": "The URL.revokeObjectURL() static method releases an existing object URL which was previously created by calling URL.createObjectURL()."
+}

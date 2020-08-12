@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XMLHttpRequest.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort",
+    "description": "The XMLHttpRequest.abort() method aborts the request if it has already been sent. When a request is aborted, its readyState is changed to XMLHttpRequest.UNSENT (0) and the request's status code is set to 0."
+}

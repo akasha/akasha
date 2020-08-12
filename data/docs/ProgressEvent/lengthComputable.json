@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ProgressEvent.lengthComputable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/lengthComputable",
+    "description": "The ProgressEvent.lengthComputable read-only property is a Boolean flag indicating if the resource concerned by the ProgressEvent has a length that can be calculated. If not, the ProgressEvent.total property has no significant value."
+}

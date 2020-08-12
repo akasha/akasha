@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.set",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/set",
+    "description": "The set() method of the FormData interface sets a new value for an existing key inside a FormData object, or adds the key/value if it does not already exist."
+}

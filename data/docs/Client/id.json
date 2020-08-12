@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Client.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Client/id",
+    "description": "The id read-only property of the Client interface returns the universally unique identifier of the Client object."
+}

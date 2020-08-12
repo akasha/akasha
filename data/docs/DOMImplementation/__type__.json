@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DOMImplementation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation",
+    "description": "The DOMImplementation interface represents an object providing methods which are not dependent on any particular document. Such an object is returned by the Document.implementation property."
+}

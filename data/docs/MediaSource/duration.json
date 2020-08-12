@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaSource.duration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/duration",
+    "description": "The duration property of the MediaSource interface gets and sets the duration of the current media being presented."
+}

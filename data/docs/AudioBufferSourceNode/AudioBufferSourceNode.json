@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "AudioBufferSourceNode.AudioBufferSourceNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/AudioBufferSourceNode",
+    "description": "The AudioBufferSourceNode() constructor creates a new AudioBufferSourceNode object instance."
+}

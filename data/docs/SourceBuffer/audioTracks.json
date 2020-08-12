@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBuffer.audioTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/audioTracks",
+    "description": "The audioTracks read-only property of the SourceBuffer interface returns a list of the audio tracks currently contained inside the SourceBuffer."
+}

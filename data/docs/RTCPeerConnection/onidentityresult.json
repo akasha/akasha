@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onidentityresult",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onidentityresult",
+    "description": "The RTCPeerConnection.onidentityresult event handler is a property containing the code to execute when the identityresult event, of type RTCIdentityEvent, is received by this RTCPeerConnection. Such an event is sent when an identity assertion is generated, via getIdentityAssertion() or during the creation of an offer or an answer."
+}

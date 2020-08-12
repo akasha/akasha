@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeyStatusMap.values",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/values",
+    "description": "The values property of the MediaKeyStatusMap interface returns a new Iterator object, containing values for each element in the status map, in insertion order."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.compareBoundaryPoints",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/compareBoundaryPoints",
+    "description": "The Range.compareBoundaryPoints() method compares the boundary points of the Range with those of another range."
+}

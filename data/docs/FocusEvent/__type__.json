@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "FocusEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent",
+    "description": "The FocusEvent interface represents focus-related events, including focus, blur, focusin, and focusout."
+}

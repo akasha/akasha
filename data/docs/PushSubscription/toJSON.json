@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PushSubscription.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/toJSON",
+    "description": "The toJSON() method of the PushSubscription interface is a standard serializer: it returns a JSON representation of the subscription properties, providing a useful shortcut."
+}

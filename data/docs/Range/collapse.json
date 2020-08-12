@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.collapse",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/collapse",
+    "description": "The Range.collapse() method collapses the Range to one of its boundary points."
+}

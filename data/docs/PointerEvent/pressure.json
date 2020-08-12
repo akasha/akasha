@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PointerEvent.pressure",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pressure",
+    "description": "The pressure read-only property of the PointerEvent interface indicates the normalized pressure of the pointer input."
+}

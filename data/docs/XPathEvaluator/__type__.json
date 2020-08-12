@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "XPathEvaluator",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator",
+    "description": "The XPathEvaluator interface allows to compile and evaluate XPath expressions."
+}

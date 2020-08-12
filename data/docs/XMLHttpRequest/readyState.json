@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequest.readyState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState",
+    "description": "The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:"
+}

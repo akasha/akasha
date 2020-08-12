@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "InputEvent",
+        "lastModifiedAt": 1597192491371
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192491123
+    },
+    {
+        "name": "data",
+        "lastModifiedAt": 1597192491630
+    },
+    {
+        "name": "dataTransfer",
+        "lastModifiedAt": 1597192491894
+    },
+    {
+        "name": "getTargetRanges",
+        "lastModifiedAt": 1597192493221
+    },
+    {
+        "name": "inputType",
+        "lastModifiedAt": 1597192492683
+    },
+    {
+        "name": "isComposing",
+        "lastModifiedAt": 1597192492978
+    }
+]

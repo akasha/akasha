@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ScreenOrientation.angle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/angle",
+    "description": "The angle read-only property of the ScreenOrientation interface returns the document's current orientation angle."
+}

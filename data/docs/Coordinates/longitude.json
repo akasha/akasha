@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Coordinates.longitude",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/longitude",
+    "description": "The GeolocationCoordinates interface's read-only longitude property is a double-precision floating point value which represents the longitude of a geographical position, specified in decimal degrees. Together with a DOMTimeStamp indicating a time of measurement, the GeolocationCoordinates object is part of the GeolocationPosition interface, which is the object type returned by Geolocation API functions that obtain and return a geographical position."
+}

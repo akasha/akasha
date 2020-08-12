@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioBufferSourceNode.loopEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loopEnd",
+    "description": "A floating-point number indicating the offset, in seconds, into the audio buffer at which each loop will loop return to the beginning of the loop (that is, the current play time gets reset to AudioBufferSourceNode.loopStart). This property is only used if the loop property is true."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEGaussianBlurElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement",
+    "description": "The SVGFEGaussianBlurElement interface corresponds to the feGaussianBlur element."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.getRangeAt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt",
+    "description": "The Selection.getRangeAt() method returns a range object representing one of the ranges currently selected."
+}

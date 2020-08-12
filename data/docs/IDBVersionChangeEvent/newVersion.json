@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBVersionChangeEvent.newVersion",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion",
+    "description": "A 64-bit integer."
+}

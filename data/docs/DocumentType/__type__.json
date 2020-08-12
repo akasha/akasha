@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DocumentType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentType",
+    "description": "The DocumentType interface represents a Node containing a doctype."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaQueryList.matches",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/matches",
+    "description": "The matches read-only property of the MediaQueryList interface is a Boolean that returns true if the document currently matches the media query list, or false if not."
+}

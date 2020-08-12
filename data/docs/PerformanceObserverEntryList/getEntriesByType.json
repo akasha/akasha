@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PerformanceObserverEntryList.getEntriesByType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntriesByType",
+    "description": "The getEntriesByType() method of the PerformanceObserverEntryList returns a list of explicitly observed performance entry objects for a given performance entry type. The list's members are determined by the set of entry types specified in the call to the observe() method. The list is available in the observer's callback function (as the first parameter in the callback)."
+}

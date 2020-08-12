@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "PasswordCredential",
+        "lastModifiedAt": 1597190567196
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190566308
+    },
+    {
+        "name": "additionalData",
+        "lastModifiedAt": 1597190567473
+    },
+    {
+        "name": "iconURL",
+        "lastModifiedAt": 1597190567810
+    },
+    {
+        "name": "idName",
+        "lastModifiedAt": 1597190568069
+    },
+    {
+        "name": "name",
+        "lastModifiedAt": 1597190568646
+    },
+    {
+        "name": "password",
+        "lastModifiedAt": 1597190568974
+    },
+    {
+        "name": "passwordName",
+        "lastModifiedAt": 1597190569769
+    }
+]

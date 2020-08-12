@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MediaQueryListEvent.MediaQueryListEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent/MediaQueryListEvent",
+    "description": "The MediaQueryListEvent constructor creates a new MediaQueryListEvent instance."
+}

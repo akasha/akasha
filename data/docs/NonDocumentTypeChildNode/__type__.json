@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "NonDocumentTypeChildNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode",
+    "description": "The NonDocumentTypeChildNode interface contains methods that are particular to Node objects that can have a parent, but not suitable for DocumentType."
+}

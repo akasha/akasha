@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DeviceMotionEventRotationRate.beta",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/beta",
+    "description": "This property indicates the rate of rotation around the X axis -- in degrees per second -- in a DeviceMotionEventRotationRate object."
+}

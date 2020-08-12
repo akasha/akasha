@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IntersectionObserverEntry.rootBounds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/rootBounds",
+    "description": "The IntersectionObserverEntry interface's read-only rootBounds property is a DOMRectReadOnly corresponding to the target's root intersection rectangle, offset by the IntersectionObserver.rootMargin if one is specified."
+}

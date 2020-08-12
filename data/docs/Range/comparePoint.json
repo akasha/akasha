@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.comparePoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/comparePoint",
+    "description": "The Range.comparePoint() method returns -1, 0, or 1 depending on whether the referenceNode is before, the same as, or after the Range."
+}

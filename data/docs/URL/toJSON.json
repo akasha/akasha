@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URL.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/toJSON",
+    "description": "The toJSON() method of the URL interface returns a USVString containing a serialized version of the URL, although in practice it seems to have the same effect as URL.toString()."
+}

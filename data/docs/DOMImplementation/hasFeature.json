@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMImplementation.hasFeature",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/hasFeature",
+    "description": "The DOMImplementation.hasFeature() method returns a Boolean flag indicating if a given feature is supported. It is deprecated and modern browsers return true in all cases."
+}

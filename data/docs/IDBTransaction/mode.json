@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBTransaction.mode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/mode",
+    "description": "An IDBTransactionMode object defining the mode for isolating access to data in the current object stores:"
+}

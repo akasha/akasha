@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IntersectionObserver.thresholds",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/thresholds",
+    "description": "The IntersectionObserver interface's read-only thresholds property returns the list of intersection thresholds that was specified when the observer was instantiated with IntersectionObserver(). If only one threshold ratio was provided when instanitating the object, this will be an array containing that single value."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/toString",
+    "description": "The Range.toString() method is a stringifier returning the text of the Range."
+}

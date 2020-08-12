@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getAttribute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute",
+    "description": "The getAttribute() method of the Element interface returns the value of a specified attribute on the element."
+}

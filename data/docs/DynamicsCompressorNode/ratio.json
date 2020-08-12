@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DynamicsCompressorNode.ratio",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/ratio",
+    "description": "An AudioParam."
+}

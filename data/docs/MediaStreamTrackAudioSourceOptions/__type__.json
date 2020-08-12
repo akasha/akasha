@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaStreamTrackAudioSourceOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions",
+    "description": "The MediaStreamTrackAudioSourceOptions dictionary is used when specifying options to the MediaStreamTrackAudioSourceNode() constructor."
+}

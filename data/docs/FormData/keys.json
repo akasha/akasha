@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.keys",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/keys",
+    "description": "The FormData.keys() method returns an iterator allowing to go through all keys contained in this object. The keys are USVString objects."
+}

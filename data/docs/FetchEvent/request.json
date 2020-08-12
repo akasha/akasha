@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FetchEvent.request",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/request",
+    "description": "The request read-only property of the FetchEvent interface returns the Request that triggered the event handler."
+}

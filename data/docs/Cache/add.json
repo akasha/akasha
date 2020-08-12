@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Cache.add",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/add",
+    "description": "The add() method of the Cache interface takes a URL, retrieves it, and adds the resulting response object to the given cache."
+}

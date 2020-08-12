@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGAnimatedString.baseVal",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString/baseVal",
+    "description": "BaseVal gets or sets the base value of the given attribute before any animations are applied.The base value of the given attribute before applying any animations. Setter throws DOMException."
+}

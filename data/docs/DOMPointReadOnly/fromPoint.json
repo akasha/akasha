@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMPointReadOnly.fromPoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/fromPoint",
+    "description": "The static DOMPointReadOnly method fromPoint() creates and returns a new DOMPointReadOnly object given a source point."
+}

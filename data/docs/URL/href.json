@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "URL.href",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/href",
+    "description": "The href property of the URL interface is a USVString containing the whole URL."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ParentNode.append",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append",
+    "description": "The ParentNode.append() method inserts a set of Node objects or DOMString objects after the last child of the ParentNode."
+}

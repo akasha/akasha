@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Performance.clearMeasures",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearMeasures",
+    "description": "The clearMeasures() method removes the named measure from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of \"measure\" will be removed from the performance entry buffer."
+}

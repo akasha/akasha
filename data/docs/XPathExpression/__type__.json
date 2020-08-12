@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "XPathExpression",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathExpression",
+    "description": "This interface is a compiled XPath expression that can be evaluated on a document or specific node to return information from its DOM tree."
+}

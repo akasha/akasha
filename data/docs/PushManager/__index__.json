@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192278407
+    },
+    {
+        "name": "getSubscription",
+        "lastModifiedAt": 1597192278944
+    },
+    {
+        "name": "permissionState",
+        "lastModifiedAt": 1597192279201
+    },
+    {
+        "name": "subscribe",
+        "lastModifiedAt": 1597192279479
+    },
+    {
+        "name": "supportedContentEncodings",
+        "lastModifiedAt": 1597192278664
+    }
+]

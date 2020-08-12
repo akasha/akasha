@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192018899
+    },
+    {
+        "name": "accuracy",
+        "lastModifiedAt": 1597192021837
+    },
+    {
+        "name": "altitude",
+        "lastModifiedAt": 1597192021057
+    },
+    {
+        "name": "altitudeAccuracy",
+        "lastModifiedAt": 1597192022385
+    },
+    {
+        "name": "heading",
+        "lastModifiedAt": 1597192022896
+    },
+    {
+        "name": "latitude",
+        "lastModifiedAt": 1597192019796
+    },
+    {
+        "name": "longitude",
+        "lastModifiedAt": 1597192020564
+    },
+    {
+        "name": "speed",
+        "lastModifiedAt": 1597192023442
+    }
+]

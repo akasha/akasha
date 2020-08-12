@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeySession.load",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/load",
+    "description": "The MediaKeySession.load() method returns a Promise that resolves to a boolean value after loading data for a specified session object."
+}

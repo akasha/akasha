@@ -3,8 +3,5 @@
     "kind": "Type",
     "name": "RTCRtpSynchronizationSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource",
-    "description": "The RTCRtpSynchronizationSource dictionary of the the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC).",
-    "properties": [
-        "voiceActivityFlag"
-    ]
+    "description": "The RTCRtpSynchronizationSource dictionary of the the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC)."
 }

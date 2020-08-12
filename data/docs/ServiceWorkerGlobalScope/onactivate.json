@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerGlobalScope.onactivate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onactivate",
+    "description": "The onactivate property of the ServiceWorkerGlobalScope interface is an event handler fired whenever an activate event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes."
+}

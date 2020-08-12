@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.removeChild",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild",
+    "description": "The Node.removeChild() method removes a child node from the DOM and returns the removed node."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Performance.getEntriesByType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntriesByType",
+    "description": "The getEntriesByType() method returns a list of PerformanceEntry objects for a given type. The list's members (entries) can be created by making performance marks or measures (for example by calling the mark() method) at explicit points in time."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMRectReadOnly.fromRect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect",
+    "description": "The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions."
+}

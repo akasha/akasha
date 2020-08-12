@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.clientHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/clientHeight",
+    "description": "The Element.clientHeight read-only property is zero for elements with no CSS or inline layout boxes; otherwise, it's the inner height of an element in pixels. It includes padding but excludes borders, margins, and horizontal scrollbars (if present)."
+}

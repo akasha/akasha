@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaElementAudioSourceNode.mediaElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode/mediaElement",
+    "description": "The MediaElementAudioSourceNode interface's read-only mediaElement property indicates the HTMLMediaElement that contains the audio track from which the node is receiving audio."
+}

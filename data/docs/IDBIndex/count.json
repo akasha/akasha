@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.count",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/count",
+    "description": "A IDBRequest object on which subsequent events related to this operation are fired."
+}

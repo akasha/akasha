@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.hasAttributes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes",
+    "description": "The hasAttributes() method of the Element interface returns a Boolean indicating whether the current element has any attributes or not."
+}

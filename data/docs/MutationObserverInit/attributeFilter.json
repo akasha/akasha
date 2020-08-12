@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MutationObserverInit.attributeFilter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributeFilter",
+    "description": "The MutationObserverInit dictionary's optional attributeFilter property is an array of strings specifying the names of the attributes whose values are to be monitored for changes."
+}

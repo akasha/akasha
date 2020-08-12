@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "InputEvent.getTargetRanges",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/getTargetRanges",
+    "description": "The getTargetRanges() property of the InputEvent interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled."
+}

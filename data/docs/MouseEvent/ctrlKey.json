@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.ctrlKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/ctrlKey",
+    "description": "The MouseEvent.ctrlKey read-only property is a Boolean that indicates whether the ctrl key was pressed or not when a given mouse event occurs."
+}

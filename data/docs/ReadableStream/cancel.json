@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReadableStream.cancel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/cancel",
+    "description": "The cancel() method of the ReadableStream interface cancels the associated stream. The supplied reason parameter will be given to the underlying source, which may or may not use it."
+}

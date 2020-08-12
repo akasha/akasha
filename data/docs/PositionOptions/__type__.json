@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "PositionOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions",
+    "description": "The PositionOptions dictionary describes an object containing option properties to pass as a parameter of Geolocation.getCurrentPosition() and Geolocation.watchPosition()."
+}

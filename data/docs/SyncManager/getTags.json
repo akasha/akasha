@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SyncManager.getTags",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncManager/getTags",
+    "description": "The SyncManager.getTags method of the SyncManager interface returns a list of developer-defined identifiers for SyncManager registrations."
+}

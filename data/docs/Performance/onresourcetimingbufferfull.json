@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Performance.onresourcetimingbufferfull",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/onresourcetimingbufferfull",
+    "description": "The onresourcetimingbufferfull property is an event handler that will be called when the resourcetimingbufferfull event is fired. This event is fired when the browser's resource timing performance buffer is full."
+}

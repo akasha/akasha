@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SourceBuffer.removeAsync",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/removeAsync",
+    "description": "The removeAsync() method of the SourceBuffer interface starts the process of asynchronously removing from the SourceBuffer media segments found within a specific time range."
+}

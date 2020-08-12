@@ -3,15 +3,5 @@
     "kind": "Type",
     "name": "TextTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrack",
-    "description": "This interface also inherits properties from EventTarget.",
-    "properties": [
-        "activeCues",
-        "cues",
-        "id",
-        "inBandMetadataTrackDispatchType",
-        "kind",
-        "label",
-        "language",
-        "mode"
-    ]
+    "description": "This interface also inherits properties from EventTarget."
 }

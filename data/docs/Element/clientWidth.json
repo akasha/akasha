@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.clientWidth",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth",
+    "description": "The Element.clientWidth property is zero for inline elements and elements with no CSS; otherwise, it's the inner width of an element in pixels. It includes padding but excludes borders, margins, and vertical scrollbars (if present)."
+}

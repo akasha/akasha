@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/id",
+    "description": "The id property of the Element interface represents the element's identifier, reflecting the id global attribute."
+}

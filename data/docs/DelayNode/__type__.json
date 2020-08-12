@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DelayNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DelayNode",
+    "description": "The DelayNode interface represents a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data and its propagation to the output."
+}

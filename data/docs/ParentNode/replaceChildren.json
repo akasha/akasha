@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ParentNode.replaceChildren",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/replaceChildren",
+    "description": "The ParentNode.replaceChildren() method replaces the existing children of a Node with a specified new set of children. These can be DOMString or Node objects."
+}

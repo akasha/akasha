@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onidpvalidationerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onidpvalidationerror",
+    "description": "The RTCPeerConnection.onidpvalidationerror event handler is a property containing the code to execute whent the idpvalidationerror event, of type RTCIdentityErrorEvent, is received by this RTCPeerConnection. Such an event is sent when the associated identity provider (IdP) encounters an error while validating an identity assertion."
+}

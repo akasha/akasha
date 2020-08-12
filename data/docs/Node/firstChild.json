@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.firstChild",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/firstChild",
+    "description": "The Node.firstChild read-only property returns the node's first child in the tree, or null if the node has no children."
+}

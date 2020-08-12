@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.surroundContents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/surroundContents",
+    "description": "The Range.surroundContents() method moves content of the Range into a new node, placing the new node at the start of the specified range."
+}

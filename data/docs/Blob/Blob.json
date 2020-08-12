@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Blob.Blob",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob",
+    "description": "The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array."
+}

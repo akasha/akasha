@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Request.mode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/mode",
+    "description": "The mode read-only property of the Request interface contains the mode of the request (e.g., cors, no-cors, same-origin, or navigate.) This is used to determine if cross-origin requests lead to valid responses, and which properties of the response are readable."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.unwrapKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/unwrapKey",
+    "description": "The unwrapKey() method of the SubtleCrypto interface \"unwraps\" a key. This means that it takes as its input a key that has been exported and then encrypted (also called \"wrapped\"). It decrypts the key and then imports it, returning a CryptoKey object that can be used in the Web Crypto API."
+}

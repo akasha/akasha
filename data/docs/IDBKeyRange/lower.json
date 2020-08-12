@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBKeyRange.lower",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lower",
+    "description": "The lower bound of the key range (can be any type.)"
+}

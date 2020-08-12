@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "EXT_texture_filter_anisotropic",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_filter_anisotropic",
+    "description": "The EXT_texture_filter_anisotropic extension is part of the WebGL API and exposes two constants for anisotropic filtering (AF)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MutationObserverInit.attributeOldValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributeOldValue",
+    "description": "The MutationObserverInit dictionary's optional attributeOldValue property is used to specify whether or not to record the prior value of the altered attribute in MutationRecord objects denoting attribute value changes."
+}

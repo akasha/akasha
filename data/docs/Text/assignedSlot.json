@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Text.assignedSlot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Text/assignedSlot",
+    "description": "The assignedSlot property of the Text interface returns the HTMLSlotElement object associated with the element."
+}

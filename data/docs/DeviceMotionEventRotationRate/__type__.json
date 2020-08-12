@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DeviceMotionEventRotationRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate",
+    "description": "A DeviceMotionEventRotationRate object provides information about the rate at which the device is rotating around all three axes."
+}

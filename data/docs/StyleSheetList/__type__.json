@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "StyleSheetList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList",
+    "description": "The StyleSheetList interface represents a list of StyleSheet."
+}

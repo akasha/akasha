@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGUseElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGUseElement",
+    "description": "The SVGUseElement interface corresponds to the use element."
+}

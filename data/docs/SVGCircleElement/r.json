@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGCircleElement.r",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGCircleElement/r",
+    "description": "The r read-only property of the SVGCircleElement interface reflects the r attribute of a circle element and by that defines the radius of the circle."
+}

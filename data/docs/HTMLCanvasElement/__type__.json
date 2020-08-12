@@ -3,18 +3,5 @@
     "kind": "Type",
     "name": "HTMLCanvasElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement",
-    "description": "The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.",
-    "properties": [
-        "height",
-        "mozOpaque",
-        "mozPrintCallback",
-        "width"
-    ],
-    "methods": [
-        "captureStream",
-        "getContext",
-        "toBlob",
-        "toDataURL",
-        "transferControlToOffscreen"
-    ]
+    "description": "The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface."
 }

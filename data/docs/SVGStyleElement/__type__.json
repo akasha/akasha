@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGStyleElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGStyleElement",
+    "description": "The SVGStyleElement interface corresponds to the SVG style element."
+}

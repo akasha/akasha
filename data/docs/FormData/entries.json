@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.entries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/entries",
+    "description": "The FormData.entries() method returns an iterator allowing to go through all key/value pairs contained in this object. The key of each pair is a USVString object; the value either a USVString, or a Blob."
+}

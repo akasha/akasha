@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "NodeIterator.detach",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/detach",
+    "description": "The NodeIterator.detach() method is a no-op, kept for backward compatibility only."
+}

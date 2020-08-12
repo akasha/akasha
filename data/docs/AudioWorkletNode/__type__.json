@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AudioWorkletNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode",
+    "description": "The AudioWorkletNode interface of the Web Audio API represents a base class for a user-defined AudioNode, which can be connected to an audio routing graph along with other nodes. It has an associated AudioWorkletProcessor, which does the actual audio processing in a Web Audio rendering thread."
+}

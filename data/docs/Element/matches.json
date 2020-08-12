@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.matches",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/matches",
+    "description": "The matches() method checks to see if the Element would be selected by the provided selectorString -- in other words -- checks if the element \"is\" the selector."
+}

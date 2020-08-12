@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGImageElement.preserveAspectRatio",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/preserveAspectRatio",
+    "description": "The preserveAspectRatio read-only property of the SVGImageElement interface returns an SVGAnimatedPreserveAspectRatio corresponding to the preserveAspectRatio attribute of the given image element."
+}

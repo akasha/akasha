@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TransitionEvent.initTransitionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/initTransitionEvent",
+    "description": "The TransitionEvent.initTransitionEvent() method Initializes a transition event created using the deprecated Document.createEvent(\"TransitionEvent\") method."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredentialRequestOptions.rpId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/rpId",
+    "description": "The rpId property, of the PublicKeyCredentialRequestOptions dictionary, is an optional property which indicates the relying party's identifier as a USVString. Its value can only be a suffix of the current origin's domain. For example, if you are browsing on foo.example.com, the rpId value may be \"example.com\" but not \"bar.org\" or \"baz.example.com\"."
+}

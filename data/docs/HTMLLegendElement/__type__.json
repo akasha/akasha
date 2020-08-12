@@ -3,10 +3,5 @@
     "kind": "Type",
     "name": "HTMLLegendElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLLegendElement",
-    "description": "The HTMLLegendElement is an interface allowing to access properties of the legend elements. It inherits properties and methods from the HTMLElement interface.",
-    "properties": [
-        "accessKey",
-        "align",
-        "form"
-    ]
+    "description": "The HTMLLegendElement is an interface allowing to access properties of the legend elements. It inherits properties and methods from the HTMLElement interface."
 }

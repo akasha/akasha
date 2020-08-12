@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeySession.remove",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/remove",
+    "description": "The MediaKeySession.remove() method returns a Promise after removing any session data associated with the current object."
+}

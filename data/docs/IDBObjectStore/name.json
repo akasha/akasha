@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBObjectStore.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/name",
+    "description": "A DOMString containing the object store's name."
+}

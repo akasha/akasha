@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SyncManager.register",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncManager/register",
+    "description": "The SyncManager.register method of the SyncManager interface returns a Promise that resolves to a SyncRegistration instance."
+}

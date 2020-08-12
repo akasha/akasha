@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGUnitTypes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGUnitTypes",
+    "description": "The SVGUnitTypes interface defines a commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes."
+}

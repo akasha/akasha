@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeys.setServerCertificate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/setServerCertificate",
+    "description": "The MediaKeys.setServerCertificate() method a Promise to a server certificate to be used to encrypt messages to the license server."
+}

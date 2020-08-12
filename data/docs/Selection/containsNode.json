@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.containsNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/containsNode",
+    "description": "The Selection.containsNode() method indicates whether a specfied node is part of the selection."
+}

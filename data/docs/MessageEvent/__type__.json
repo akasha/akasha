@@ -3,15 +3,5 @@
     "kind": "Type",
     "name": "MessageEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent",
-    "description": "The MessageEvent interface represents a message received by a target object.",
-    "properties": [
-        "data",
-        "lastEventId",
-        "origin",
-        "ports",
-        "source"
-    ],
-    "methods": [
-        "initMessageEvent"
-    ]
+    "description": "The MessageEvent interface represents a message received by a target object."
 }

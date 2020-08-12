@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioDestinationNode.maxChannelCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount",
+    "description": "An unsigned long."
+}

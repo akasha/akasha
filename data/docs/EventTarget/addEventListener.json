@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "EventTarget.addEventListener",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
+    "description": "The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."
+}

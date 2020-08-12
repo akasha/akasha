@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLCollection.item",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection/item",
+    "description": "The HTMLCollection method item() returns the node located at the specified offset into the collection."
+}

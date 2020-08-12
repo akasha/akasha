@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/get",
+    "description": "The get() method of the FormData interface returns the first value associated with a given key from within a FormData object. If you expect multiple values and want all of them, use the getAll() method instead."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EffectTiming.direction",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/direction",
+    "description": "The direction property of the Web Animations API dictionary EffectTiming indicates an animation's playback direction along its timeline, as well as its behavior when it reaches the end of an iteration"
+}

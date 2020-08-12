@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBObjectStore.clear",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/clear",
+    "description": "Clearing an object store consists of removing all records from the object store and removing all records in indexes that reference the object store. To remove only some of the records in a store, use IDBObjectStore.delete passing a key or IDBKeyRange."
+}

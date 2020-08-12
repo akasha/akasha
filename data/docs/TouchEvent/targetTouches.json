@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TouchEvent.targetTouches",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/targetTouches",
+    "description": "The targetTouches read-only property is a TouchList listing all the Touch objects for touch points that are still in contact with the touch surface and whose touchstart event occurred inside the same target element as the current target element."
+}

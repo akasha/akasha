@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Clipboard.read",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/read",
+    "description": "The read() method of the Clipboard interface requests a copy of the clipboard's contents, delivering the data to the returned Promise when the promise is resolved. Unlike readText(), the read() method can return arbitrary data, such as images. This method can also return text."
+}

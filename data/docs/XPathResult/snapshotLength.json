@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XPathResult.snapshotLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/snapshotLength",
+    "description": "The read-only snapshotLength property of the XPathResult interface represents the number of nodes in the result snapshot."
+}

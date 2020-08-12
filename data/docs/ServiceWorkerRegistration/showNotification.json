@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ServiceWorkerRegistration.showNotification",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification",
+    "description": "The showNotification() method of the ServiceWorkerRegistration interface creates a notification on an active service worker."
+}

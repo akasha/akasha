@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.querySelector",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector",
+    "description": "The querySelector() method of the Element interface returns the first element that is a descendant of the element on which it is invoked that matches the specified group of selectors."
+}

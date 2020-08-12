@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.setAttributeNodeNS",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNodeNS",
+    "description": "setAttributeNodeNS adds a new namespaced attribute node to an element."
+}

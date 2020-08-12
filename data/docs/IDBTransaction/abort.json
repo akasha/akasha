@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBTransaction.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort",
+    "description": "The abort() method of the IDBTransaction interface rolls back all the changes to objects in the database associated with this transaction."
+}

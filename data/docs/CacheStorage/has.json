@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CacheStorage.has",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/has",
+    "description": "The has() method of the CacheStorage interface returns a Promise that resolves to true if a Cache object matches the cacheName."
+}

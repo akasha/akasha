@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "RTCIceCandidate.RTCIceCandidate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/RTCIceCandidate",
+    "description": "The RTCIceCandidate() constructor creates and returns a new RTCIceCandidate object, which can be configured to represent a single ICE candidate."
+}

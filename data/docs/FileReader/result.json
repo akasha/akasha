@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FileReader.result",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/result",
+    "description": "The FileReader result property returns the file's contents. This property is only valid after the read operation is complete, and the format of the data depends on which of the methods was used to initiate the read operation."
+}

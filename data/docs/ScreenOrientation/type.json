@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ScreenOrientation.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/type",
+    "description": "The type read-only property of the ScreenOrientation interface returns the document's current orientation type, one of \"portrait-primary\", \"portrait-secondary\", \"landscape-primary\", or \"landscape-secondary\"."
+}

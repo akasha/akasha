@@ -3,35 +3,5 @@
     "kind": "Type",
     "name": "HTMLAreaElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement",
-    "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements.",
-    "properties": [
-        "Element.accessKey",
-        "HTMLElement.tabIndex",
-        "HTMLHyperlinkElementUtils.hash",
-        "HTMLHyperlinkElementUtils.host",
-        "HTMLHyperlinkElementUtils.hostname",
-        "HTMLHyperlinkElementUtils.href",
-        "HTMLHyperlinkElementUtils.origin",
-        "HTMLHyperlinkElementUtils.password",
-        "HTMLHyperlinkElementUtils.pathname",
-        "HTMLHyperlinkElementUtils.port",
-        "HTMLHyperlinkElementUtils.protocol",
-        "HTMLHyperlinkElementUtils.search",
-        "HTMLHyperlinkElementUtils.username",
-        "alt",
-        "coords",
-        "download",
-        "hreflang",
-        "media",
-        "noHref",
-        "referrerPolicy",
-        "rel",
-        "relList",
-        "shape",
-        "target",
-        "type"
-    ],
-    "methods": [
-        "HTMLHyperlinkElementUtils.toString"
-    ]
+    "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements."
 }

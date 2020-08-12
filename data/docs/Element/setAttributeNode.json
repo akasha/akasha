@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.setAttributeNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttributeNode",
+    "description": "The setAttributeNode() method adds a new Attr node to the specified element."
+}

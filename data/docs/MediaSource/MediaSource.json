@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MediaSource.MediaSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/MediaSource",
+    "description": "The MediaSource() constructor of the MediaSource interface constructs and returns a new MediaSource object with no associated source buffers."
+}

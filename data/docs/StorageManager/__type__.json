@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "StorageManager",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager",
+    "description": "The StorageManager interface of the the Storage API provides an interface for managing persistance permissions and estimating available storage. You can get a reference to this interface using either navigator.storage or WorkerNavigator.storage."
+}

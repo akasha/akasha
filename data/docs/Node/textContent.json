@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.textContent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent",
+    "description": "The textContent property of the Node interface represents the text content of the node and its descendants."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPointInit.z",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/z",
+    "description": "The DOMPointInit dictionary's z property is used to specify the z-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object."
+}

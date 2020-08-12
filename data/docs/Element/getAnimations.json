@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getAnimations",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAnimations",
+    "description": "The getAnimations() method of the Element interface (specified on the Animatable mixin) returns an array of all Animation objects affecting this element or which are scheduled to do so in future. It can optionally return Animation objects for descendant elements too."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.openOrClosedShadowRoot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/openOrClosedShadowRoot",
+    "description": "The Element.openOrCloseShadowRoot read-only property represents the shadow root hosted by the element, regardless if its mode is open or closed."
+}

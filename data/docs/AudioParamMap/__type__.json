@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AudioParamMap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParamMap",
+    "description": "The Web Audio API interface AudioParamMap represents a set of multiple audio parameters, each described as a mapping of a DOMString identifying the parameter to the AudioParam object representing its value."
+}

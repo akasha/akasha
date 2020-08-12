@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.eventPhase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/eventPhase",
+    "description": "The eventPhase read-only property of the Event interface indicates which phase of the event flow is currently being evaluated."
+}

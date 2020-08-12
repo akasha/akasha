@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PointerEvent.tangentialPressure",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tangentialPressure",
+    "description": "The tangentialPressure read-only property of the PointerEvent interface represents the normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress)."
+}

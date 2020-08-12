@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMImplementation.createDocumentType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createDocumentType",
+    "description": "The DOMImplementation.createDocumentType() method returns a DocumentType object which can either be used with DOMImplementation.createDocument upon document creation or can be put into the document via methods like Node.insertBefore() or Node.replaceChild()."
+}

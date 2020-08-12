@@ -3,8 +3,5 @@
     "kind": "Type",
     "name": "HTMLDivElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement",
-    "description": "The HTMLDivElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating div elements.",
-    "properties": [
-        "align"
-    ]
+    "description": "The HTMLDivElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating div elements."
 }

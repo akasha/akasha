@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NodeList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/length",
+    "description": "The NodeList.length property returns the number of items in a NodeList."
+}

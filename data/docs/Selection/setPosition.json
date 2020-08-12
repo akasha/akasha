@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.setPosition",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/setPosition",
+    "description": "The Selection.collapse() method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there."
+}

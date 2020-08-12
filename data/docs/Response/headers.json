@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.headers",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/headers",
+    "description": "The headers read-only property of the Response interface contains the Headers object associated with the response."
+}

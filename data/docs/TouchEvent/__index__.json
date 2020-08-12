@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "TouchEvent",
+        "lastModifiedAt": 1597192473884
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192473607
+    },
+    {
+        "name": "altKey",
+        "lastModifiedAt": 1597192474135
+    },
+    {
+        "name": "changedTouches",
+        "lastModifiedAt": 1597192474370
+    },
+    {
+        "name": "ctrlKey",
+        "lastModifiedAt": 1597192474628
+    },
+    {
+        "name": "metaKey",
+        "lastModifiedAt": 1597192475148
+    },
+    {
+        "name": "shiftKey",
+        "lastModifiedAt": 1597192475941
+    },
+    {
+        "name": "targetTouches",
+        "lastModifiedAt": 1597192476732
+    },
+    {
+        "name": "touches",
+        "lastModifiedAt": 1597192477150
+    }
+]

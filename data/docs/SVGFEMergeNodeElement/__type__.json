@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEMergeNodeElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMergeNodeElement",
+    "description": "The SVGFEMergeNodeElement interface corresponds to the feMergeNode element."
+}

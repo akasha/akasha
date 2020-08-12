@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.requestFullscreen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen",
+    "description": "The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode."
+}

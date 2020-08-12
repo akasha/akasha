@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "GamepadHapticActuator.pulse",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/pulse",
+    "description": "The pulse() method of the GamepadHapticActuator interface makes the hardware pulse at a certain intensity for a specified duration."
+}

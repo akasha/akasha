@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.empty",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/empty",
+    "description": "The Selection.removeAllRanges() method removes all ranges from the selection, leaving the anchorNode and focusNode properties equal to null and leaving nothing selected."
+}

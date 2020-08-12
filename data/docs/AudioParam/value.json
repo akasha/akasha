@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioParam.value",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/value",
+    "description": "The Web Audio API's AudioParam interface property value gets or sets the value of this AudioParam at the current time."
+}

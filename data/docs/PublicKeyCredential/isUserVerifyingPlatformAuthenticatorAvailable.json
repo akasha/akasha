@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable",
+    "description": "isUserVerifyingPlatformAuthenticatorAvailable() is a static method of the PublicKeyCredential interface that returns a Promise which resolves to true if a user-verifying platform authenticator is available."
+}

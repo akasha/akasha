@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaQueryList.removeListener",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/removeListener",
+    "description": "The removeListener() method of the MediaQueryList interface removes a listener from the MediaQueryListener."
+}

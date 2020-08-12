@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPointReadOnly.y",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/y",
+    "description": "The DOMPointReadOnly interface's y property holds the vertical coordinate, y, for a read-only point in space."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.ownerDocument",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/ownerDocument",
+    "description": "The ownerDocument read-only property of the Node interface returns the top-level document object of the node."
+}

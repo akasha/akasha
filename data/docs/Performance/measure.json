@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Performance.measure",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure",
+    "description": "The measure() method creates a named timestamp in the browser's performance entry buffer between marks, the navigation start time, or the current time. When measuring between two marks, there is a start mark and end mark, respectively. The named timestamp is referred to as a measure."
+}

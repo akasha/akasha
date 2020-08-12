@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioBufferSourceNode.loop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loop",
+    "description": "The loop property's default value is false."
+}

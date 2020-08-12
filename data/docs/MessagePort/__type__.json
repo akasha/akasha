@@ -3,18 +3,5 @@
     "kind": "Type",
     "name": "MessagePort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort",
-    "description": "The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other.",
-    "properties": [
-        "onmessage",
-        "onmessageerror"
-    ],
-    "methods": [
-        "close",
-        "postMessage",
-        "start"
-    ],
-    "events": [
-        "message",
-        "messageerror"
-    ]
+    "description": "The MessagePort interface of the Channel Messaging API represents one of the two ports of a MessageChannel, allowing messages to be sent from one port and listening out for them arriving at the other."
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "BiquadFilterNode.BiquadFilterNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/BiquadFilterNode",
+    "description": "The BiquadFilterNode() constructor of the Web Audio API creates a new BiquadFilterNode object, which represents a simple low-order filter, and is created using the AudioContext.createBiquadFilter() method."
+}

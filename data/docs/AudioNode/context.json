@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioNode.context",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/context",
+    "description": "The read-only context property of the AudioNode interface returns the associated BaseAudioContext, that is the object representing the processing graph the node is participating in."
+}

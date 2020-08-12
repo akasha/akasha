@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.altKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/altKey",
+    "description": "The KeyboardEvent.altKey read-only property is a Boolean that indicates if the alt key (Option or ⌥ on OS X) was pressed (true) or not (false) when the event occured."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id",
+    "description": "The Gamepad.id property of the Gamepad interface returns a string containing some information about the controller."
+}

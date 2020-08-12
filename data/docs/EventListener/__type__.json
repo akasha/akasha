@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "EventListener",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventListener",
+    "description": "The EventListener interface represents an object that can handle an event dispatched by an EventTarget object."
+}

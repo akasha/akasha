@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.nodeName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName",
+    "description": "The nodeName read-only property returns the name of the current Node as a string."
+}

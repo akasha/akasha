@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.encrypt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt",
+    "description": "The encrypt() method of the SubtleCrypto interface encrypts data."
+}

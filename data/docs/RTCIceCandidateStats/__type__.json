@@ -3,17 +3,5 @@
     "kind": "Type",
     "name": "RTCIceCandidateStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats",
-    "description": "The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate.",
-    "properties": [
-        "address",
-        "candidateType",
-        "deleted",
-        "networkType",
-        "port",
-        "priority",
-        "protocol",
-        "relayProtocol",
-        "transportId",
-        "url"
-    ]
+    "description": "The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate."
 }

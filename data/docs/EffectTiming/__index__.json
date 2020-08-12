@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192509022
+    },
+    {
+        "name": "delay",
+        "lastModifiedAt": 1597192509258
+    },
+    {
+        "name": "direction",
+        "lastModifiedAt": 1597192509637
+    },
+    {
+        "name": "duration",
+        "lastModifiedAt": 1597192510039
+    },
+    {
+        "name": "easing",
+        "lastModifiedAt": 1597192510353
+    },
+    {
+        "name": "endDelay",
+        "lastModifiedAt": 1597192511165
+    },
+    {
+        "name": "fill",
+        "lastModifiedAt": 1597192511549
+    },
+    {
+        "name": "iterationStart",
+        "lastModifiedAt": 1597192511801
+    },
+    {
+        "name": "iterations",
+        "lastModifiedAt": 1597192512068
+    }
+]

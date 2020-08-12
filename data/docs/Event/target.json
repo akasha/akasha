@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.target",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/target",
+    "description": "The target property of the Event interface is a reference to the object onto which the event was dispatched. It is different from Event.currentTarget when the event handler is called during the bubbling or capturing phase of the event."
+}

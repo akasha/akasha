@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AnalyserNode.fftSize",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/fftSize",
+    "description": "The fftSize property of the AnalyserNode interface is an unsigned long value and represents the window size in samples that is used when performing a Fast Fourier Transform (FFT) to get frequency domain data."
+}

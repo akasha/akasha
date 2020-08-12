@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.baseURIObject",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURIObject",
+    "description": "The Node.baseURIObject property returns the nsIURI representing the node's (typically a document or an element) base URL. It's similar to Node.baseURI, except it returns an nsIURI instead of a string."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.prefix",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/prefix",
+    "description": "The Element.prefix read-only property returns the namespace prefix of the specified element, or null if no prefix is specified."
+}

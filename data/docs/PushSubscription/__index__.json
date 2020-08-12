@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192284733
+    },
+    {
+        "name": "endpoint",
+        "lastModifiedAt": 1597192285084
+    },
+    {
+        "name": "expirationTime",
+        "lastModifiedAt": 1597192286013
+    },
+    {
+        "name": "getKey",
+        "lastModifiedAt": 1597192287049
+    },
+    {
+        "name": "options",
+        "lastModifiedAt": 1597192286248
+    },
+    {
+        "name": "toJSON",
+        "lastModifiedAt": 1597192287832
+    },
+    {
+        "name": "unsubscribe",
+        "lastModifiedAt": 1597192288224
+    }
+]

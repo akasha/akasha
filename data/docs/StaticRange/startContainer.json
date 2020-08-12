@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StaticRange.startContainer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/startContainer",
+    "description": "The read-only startContainer property of the StaticRange interface returns the start Node for the range."
+}

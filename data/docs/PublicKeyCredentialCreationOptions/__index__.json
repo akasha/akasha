@@ -1,0 +1,43 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192642771
+    },
+    {
+        "name": "attestation",
+        "lastModifiedAt": 1597192646122
+    },
+    {
+        "name": "authenticatorSelection",
+        "lastModifiedAt": 1597192645579
+    },
+    {
+        "name": "challenge",
+        "lastModifiedAt": 1597192644037
+    },
+    {
+        "name": "excludeCredentials",
+        "lastModifiedAt": 1597192645026
+    },
+    {
+        "name": "extensions",
+        "lastModifiedAt": 1597192646466
+    },
+    {
+        "name": "pubKeyCredParams",
+        "lastModifiedAt": 1597192644308
+    },
+    {
+        "name": "rp",
+        "lastModifiedAt": 1597192643291
+    },
+    {
+        "name": "timeout",
+        "lastModifiedAt": 1597192644717
+    },
+    {
+        "name": "user",
+        "lastModifiedAt": 1597192643735
+    }
+]

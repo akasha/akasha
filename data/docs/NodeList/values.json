@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "NodeList.values",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/values",
+    "description": "The NodeList.values() method returns an iterator allowing to go through all values contained in this object. The values are Node objects."
+}

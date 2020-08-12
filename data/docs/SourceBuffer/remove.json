@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SourceBuffer.remove",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/remove",
+    "description": "The remove() method of the SourceBuffer interface removes media segments within a specific time range from the SourceBuffer. This method can only be called when SourceBuffer.updating equals false. If SourceBuffer.updating is not equal to false, call SourceBuffer.abort()."
+}

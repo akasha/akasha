@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.mapping",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/mapping",
+    "description": "The Gamepad.mapping property of the Gamepad interface returns a string indicating whether the browser has remapped the controls on the device to a known layout."
+}

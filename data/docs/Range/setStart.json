@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.setStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/setStart",
+    "description": "The Range.setStart() method sets the start position of a Range."
+}

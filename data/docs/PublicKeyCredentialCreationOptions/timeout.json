@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredentialCreationOptions.timeout",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/timeout",
+    "description": "The timeout property, of the PublicKeyCredentialCreationOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the creation operation."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBRequest.transaction",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/transaction",
+    "description": "An IDBTransaction."
+}

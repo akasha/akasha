@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DocumentFragment.querySelectorAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelectorAll",
+    "description": "The DocumentFragment.querySelectorAll() method returns a NodeList of elements within the DocumentFragment (using depth-first pre-order traversal of the document's nodes) that matches the specified group of selectors."
+}

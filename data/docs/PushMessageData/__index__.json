@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192281923
+    },
+    {
+        "name": "arrayBuffer",
+        "lastModifiedAt": 1597192282182
+    },
+    {
+        "name": "blob",
+        "lastModifiedAt": 1597192282988
+    },
+    {
+        "name": "json",
+        "lastModifiedAt": 1597192283332
+    },
+    {
+        "name": "text",
+        "lastModifiedAt": 1597192284142
+    }
+]

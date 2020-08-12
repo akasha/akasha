@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FileReader.onabort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onabort",
+    "description": "The FileReader.onabort property contains an event handler executed when the abort event is fired, i.e. when the process of reading the file is aborted."
+}

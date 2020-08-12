@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/toString",
+    "description": "The Selection.toString() method returns a string currently being represented by the selection object, i.e. the currently selected text."
+}

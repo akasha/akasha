@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Attr",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr",
+    "description": "The Attr interface represents one of a DOM element's attributes as an object. In most DOM methods, you will directly retrieve the attribute as a string (e.g., Element.getAttribute()), but certain functions (e.g., Element.getAttributeNode()) or means of iterating return Attr types."
+}

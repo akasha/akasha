@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.selectNodeContents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/selectNodeContents",
+    "description": "The Range.selectNodeContents() method sets the Range to contain the contents of a Node."
+}

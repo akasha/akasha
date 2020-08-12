@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IntersectionObserverEntry.target",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/target",
+    "description": "The IntersectionObserverEntry interface's read-only target property indicates which targeted Element has changed its amount of intersection with the intersection root."
+}

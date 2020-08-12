@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGURIReference",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGURIReference",
+    "description": "The SVGURIReference interface is used to reflect the href attribute and the deprecated xlink:href attribute."
+}

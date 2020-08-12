@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequest.responseType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType",
+    "description": "The XMLHttpRequest property responseType is an enumerated string value specifying the type of data contained in the response."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.getAllKeys",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAllKeys",
+    "description": "An IDBRequest object on which subsequent events related to this operation are fired."
+}

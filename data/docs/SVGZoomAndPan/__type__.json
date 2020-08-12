@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGZoomAndPan",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGZoomAndPan",
+    "description": "The SVGZoomAndPan interface is used to reflect the zoomAndPan attribute, and is mixed in to other interfaces for elements that support this attribute."
+}

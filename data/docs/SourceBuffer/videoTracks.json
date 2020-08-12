@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBuffer.videoTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/videoTracks",
+    "description": "The videoTracks read-only property of the SourceBuffer interface returns a list of the video tracks currently contained inside the SourceBuffer."
+}

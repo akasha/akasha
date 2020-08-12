@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192103255
+    },
+    {
+        "name": "bound",
+        "lastModifiedAt": 1597192105454
+    },
+    {
+        "name": "lower",
+        "lastModifiedAt": 1597192103648
+    },
+    {
+        "name": "lowerBound",
+        "lastModifiedAt": 1597192106688
+    },
+    {
+        "name": "lowerOpen",
+        "lastModifiedAt": 1597192104348
+    },
+    {
+        "name": "only",
+        "lastModifiedAt": 1597192105848
+    },
+    {
+        "name": "upper",
+        "lastModifiedAt": 1597192103950
+    },
+    {
+        "name": "upperBound",
+        "lastModifiedAt": 1597192106997
+    },
+    {
+        "name": "upperOpen",
+        "lastModifiedAt": 1597192104636
+    }
+]

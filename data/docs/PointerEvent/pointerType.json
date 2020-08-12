@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PointerEvent.pointerType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerType",
+    "description": "The pointerType read-only property of the PointerEvent interface indicates the device type (mouse, pen, or touch) that caused a given pointer event."
+}

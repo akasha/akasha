@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.createShadowRoot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/createShadowRoot",
+    "description": "Use Element.createShadowRoot to create an instance of shadow DOM. When shadow DOM is created, it is always attached to an existing element. After the shadow DOM is created, the element that it is attached to is called the shadow root."
+}

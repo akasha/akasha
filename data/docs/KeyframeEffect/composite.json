@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyframeEffect.composite",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/composite",
+    "description": "The composite property of a KeyframeEffect resolves how an element's animation impacts its underlying property values."
+}

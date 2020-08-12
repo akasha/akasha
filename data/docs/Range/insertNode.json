@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.insertNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/insertNode",
+    "description": "The Range.insertNode() method inserts a node at the start of the Range."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "FocusEvent.FocusEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/FocusEvent",
+    "description": "The FocusEvent() constructor returns a newly created FocusEvent object with an optional EventTarget. When the event has both a source and a destination, the relatedTarget value must be set to the other target."
+}

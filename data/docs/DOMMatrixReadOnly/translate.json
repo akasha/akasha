@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMMatrixReadOnly.translate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate",
+    "description": "The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied."
+}

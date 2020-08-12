@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeyStatusMap.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/get",
+    "description": "The get property of the MediaKeyStatusMap interface returns the value associated with the given key, or undefined if there is none."
+}

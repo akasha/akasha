@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.modify",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/modify",
+    "description": "The Selection.modify() method applies a change to the current selection or cursor position, using simple textual commands."
+}

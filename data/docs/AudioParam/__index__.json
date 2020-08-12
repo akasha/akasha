@@ -1,0 +1,51 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192586660
+    },
+    {
+        "name": "cancelAndHoldAtTime",
+        "lastModifiedAt": 1597192589914
+    },
+    {
+        "name": "cancelScheduledValues",
+        "lastModifiedAt": 1597192589654
+    },
+    {
+        "name": "defaultValue",
+        "lastModifiedAt": 1597192586948
+    },
+    {
+        "name": "exponentialRampToValueAtTime",
+        "lastModifiedAt": 1597192588787
+    },
+    {
+        "name": "linearRampToValueAtTime",
+        "lastModifiedAt": 1597192588453
+    },
+    {
+        "name": "maxValue",
+        "lastModifiedAt": 1597192587220
+    },
+    {
+        "name": "minValue",
+        "lastModifiedAt": 1597192587586
+    },
+    {
+        "name": "setTargetAtTime",
+        "lastModifiedAt": 1597192589097
+    },
+    {
+        "name": "setValueAtTime",
+        "lastModifiedAt": 1597192588189
+    },
+    {
+        "name": "setValueCurveAtTime",
+        "lastModifiedAt": 1597192589407
+    },
+    {
+        "name": "value",
+        "lastModifiedAt": 1597192587915
+    }
+]

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.onfullscreenchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/onfullscreenchange",
+    "description": "The Element interface's onfullscreenchange property is an event handler for the fullscreenchange event that is fired when the element has transitioned into or out of full-screen mode."
+}

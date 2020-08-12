@@ -3,9 +3,5 @@
     "kind": "Type",
     "name": "RTCIceCandidatePair",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair",
-    "description": "The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.",
-    "properties": [
-        "local",
-        "remote"
-    ]
+    "description": "The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints."
 }

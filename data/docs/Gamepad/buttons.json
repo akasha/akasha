@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.buttons",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/buttons",
+    "description": "The Gamepad.buttons property of the Gamepad interface returns an array of gamepadButton objects representing the buttons present on the device."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ConvolverNode.normalize",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/normalize",
+    "description": "The normalize property of the ConvolverNode interface is a boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the buffer attribute is set, or not."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "TransitionEvent.TransitionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/TransitionEvent",
+    "description": "The TransitionEvent() constructor returns a newly created TransitionEvent, representing an event in relation with an transition."
+}

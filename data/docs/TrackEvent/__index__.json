@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "TrackEvent",
+        "lastModifiedAt": 1597193417542
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 1596581416764
+        "lastModifiedAt": 1597193416744
     },
     {
         "name": "track",

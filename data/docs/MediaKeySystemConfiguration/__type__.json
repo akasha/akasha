@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaKeySystemConfiguration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration",
+    "description": "The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use."
+}

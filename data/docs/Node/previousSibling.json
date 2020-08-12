@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.previousSibling",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/previousSibling",
+    "description": "The Node.previousSibling read-only property returns the node immediately preceding the specified one in its parent's childNodes list, or null if the specified node is the first in that list."
+}

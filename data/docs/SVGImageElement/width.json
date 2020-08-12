@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGImageElement.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/width",
+    "description": "The width read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the width attribute of the given image element."
+}

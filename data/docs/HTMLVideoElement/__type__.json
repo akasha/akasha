@@ -3,15 +3,5 @@
     "kind": "Type",
     "name": "HTMLVideoElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement",
-    "description": "The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement.",
-    "properties": [
-        "height",
-        "poster",
-        "videoHeight",
-        "videoWidth",
-        "width"
-    ],
-    "methods": [
-        "getVideoPlaybackQuality"
-    ]
+    "description": "The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement."
 }

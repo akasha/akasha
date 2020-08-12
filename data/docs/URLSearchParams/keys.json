@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URLSearchParams.keys",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/keys",
+    "description": "The keys() method of the URLSearchParams interface returns an iterator allowing iteration through all keys contained in this object. The keys are USVString objects."
+}

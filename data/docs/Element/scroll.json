@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.scroll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll",
+    "description": "The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element."
+}

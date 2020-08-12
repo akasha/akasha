@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WheelEvent.deltaMode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode",
+    "description": "The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of the delta values scroll amount. Permitted values are:"
+}

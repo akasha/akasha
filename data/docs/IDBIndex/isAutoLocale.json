@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBIndex.isAutoLocale",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/isAutoLocale",
+    "description": "The isAutoLocale read-only property of the IDBIndex interface returns a Boolean indicating whether the index had a locale value of auto specified upon its creation (see createIndex()'s optionalParameters.)"
+}

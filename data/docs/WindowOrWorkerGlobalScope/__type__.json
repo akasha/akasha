@@ -3,23 +3,5 @@
     "kind": "Type",
     "name": "WindowOrWorkerGlobalScope",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope",
-    "description": "The WindowOrWorkerGlobalScope mixin describes several features common to the Window and WorkerGlobalScope interfaces.",
-    "properties": [
-        "caches",
-        "crossOriginIsolated",
-        "indexedDB",
-        "isSecureContext",
-        "origin"
-    ],
-    "methods": [
-        "atob",
-        "btoa",
-        "clearInterval",
-        "clearTimeout",
-        "createImageBitmap",
-        "fetch",
-        "queueMicrotask",
-        "setInterval",
-        "setTimeout"
-    ]
+    "description": "The WindowOrWorkerGlobalScope mixin describes several features common to the Window and WorkerGlobalScope interfaces."
 }

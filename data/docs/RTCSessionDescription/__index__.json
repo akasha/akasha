@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "RTCSessionDescription",
+        "lastModifiedAt": 1597192764104
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 0
+        "lastModifiedAt": 1597192763180
     },
     {
         "name": "toJSON",

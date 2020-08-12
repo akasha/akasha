@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.setEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/setEnd",
+    "description": "The Range.setEnd() method sets the end position of a Range to be located at the given offset into the specified node x.Setting the end point above (higher in the document) than the start point will result in a collapsed range with the start and end points both set to the specified end position."
+}

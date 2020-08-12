@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MutationObserverInit.characterDataOldValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/characterDataOldValue",
+    "description": "The MutationObserverInit dictionary's optional characterDataOldValue property is used to specify whether or not the MutationRecord.oldValue property for DOM mutations should be set to the previous value of text nodes which changed."
+}

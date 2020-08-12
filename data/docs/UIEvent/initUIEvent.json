@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "UIEvent.initUIEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/initUIEvent",
+    "description": "The UIEvent.initUIEvent() method initializes a UI event once it's been created."
+}

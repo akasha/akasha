@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaQueryList.media",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/media",
+    "description": "The media read-only property of the MediaQueryList interface is a DOMString representing a serialized media query."
+}

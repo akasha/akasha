@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBIndex.keyPath",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/keyPath",
+    "description": "Any data type that can be used as a key path."
+}

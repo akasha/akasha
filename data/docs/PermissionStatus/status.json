@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PermissionStatus.status",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/status",
+    "description": "The state read-only property of the PermissionStatus interface returns the state of a requested permission. This property returns one of 'granted', 'denied', or 'prompt'."
+}

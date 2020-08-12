@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredentialRequestOptions.extensions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/extensions",
+    "description": "extensions, an optional property of the PublicKeyCredentialRequestOptions dictionary, is an object providing the client extensions and their input values."
+}

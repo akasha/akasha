@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "BroadcastChannel",
+        "lastModifiedAt": 1597193563663
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 1596581564498
+        "lastModifiedAt": 1597193563367
     },
     {
         "name": "close",

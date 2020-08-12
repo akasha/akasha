@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Request.Request",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/Request",
+    "description": "The Request() constructor creates a new Request object."
+}

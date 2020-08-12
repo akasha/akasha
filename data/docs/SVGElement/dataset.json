@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGElement.dataset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset",
+    "description": "The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element."
+}

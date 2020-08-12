@@ -1,0 +1,83 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192086976
+    },
+    {
+        "name": "add",
+        "lastModifiedAt": 1597192089386
+    },
+    {
+        "name": "autoIncrement",
+        "lastModifiedAt": 1597192089076
+    },
+    {
+        "name": "clear",
+        "lastModifiedAt": 1597192089691
+    },
+    {
+        "name": "count",
+        "lastModifiedAt": 1597192089930
+    },
+    {
+        "name": "createIndex",
+        "lastModifiedAt": 1597192090747
+    },
+    {
+        "name": "delete",
+        "lastModifiedAt": 1597192091034
+    },
+    {
+        "name": "deleteIndex",
+        "lastModifiedAt": 1597192091336
+    },
+    {
+        "name": "get",
+        "lastModifiedAt": 1597192092145
+    },
+    {
+        "name": "getAll",
+        "lastModifiedAt": 1597192092766
+    },
+    {
+        "name": "getAllKeys",
+        "lastModifiedAt": 1597192093083
+    },
+    {
+        "name": "getKey",
+        "lastModifiedAt": 1597192092458
+    },
+    {
+        "name": "index",
+        "lastModifiedAt": 1597192093392
+    },
+    {
+        "name": "indexNames",
+        "lastModifiedAt": 1597192087376
+    },
+    {
+        "name": "keyPath",
+        "lastModifiedAt": 1597192087640
+    },
+    {
+        "name": "name",
+        "lastModifiedAt": 1597192087949
+    },
+    {
+        "name": "openCursor",
+        "lastModifiedAt": 1597192093690
+    },
+    {
+        "name": "openKeyCursor",
+        "lastModifiedAt": 1597192093929
+    },
+    {
+        "name": "put",
+        "lastModifiedAt": 1597192094197
+    },
+    {
+        "name": "transaction",
+        "lastModifiedAt": 1597192088763
+    }
+]

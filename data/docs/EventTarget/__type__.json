@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "EventTarget",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget",
+    "description": "EventTarget is a DOM interface implemented by objects that can receive events and may have listeners for them."
+}

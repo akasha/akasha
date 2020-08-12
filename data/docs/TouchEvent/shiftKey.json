@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TouchEvent.shiftKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/shiftKey",
+    "description": "A Boolean value indicating whether or not the shift key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false."
+}

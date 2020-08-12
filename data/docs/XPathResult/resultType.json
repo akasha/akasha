@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XPathResult.resultType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/resultType",
+    "description": "The read-only resultType property of the XPathResult interface represents the type of the result, as defined by the type constants."
+}

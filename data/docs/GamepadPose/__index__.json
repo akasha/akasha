@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192005727
+    },
+    {
+        "name": "angularAcceleration",
+        "lastModifiedAt": 1597192008899
+    },
+    {
+        "name": "angularVelocity",
+        "lastModifiedAt": 1597192008590
+    },
+    {
+        "name": "hasOrientation",
+        "lastModifiedAt": 1597192006597
+    },
+    {
+        "name": "hasPosition",
+        "lastModifiedAt": 1597192006861
+    },
+    {
+        "name": "linearAcceleration",
+        "lastModifiedAt": 1597192007771
+    },
+    {
+        "name": "linearVelocity",
+        "lastModifiedAt": 1597192007467
+    },
+    {
+        "name": "orientation",
+        "lastModifiedAt": 1597192008278
+    },
+    {
+        "name": "position",
+        "lastModifiedAt": 1597192007106
+    }
+]

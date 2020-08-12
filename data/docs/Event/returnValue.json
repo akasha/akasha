@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.returnValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/returnValue",
+    "description": "The Event property returnValue indicates whether the default action for this event has been prevented or not."
+}

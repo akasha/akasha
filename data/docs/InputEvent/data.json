@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "InputEvent.data",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/data",
+    "description": "The data read-only property of the InputEvent interface returns a DOMString with the inserted characters. This may be an empty string if the change doesn't insert text (such as when deleting characters, for example)."
+}

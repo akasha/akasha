@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Attr.localName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr/localName",
+    "description": "The Attr.localName read-only property returns the local part of the qualified name of an attribute."
+}

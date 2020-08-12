@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.cloneNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode",
+    "description": "The Node.cloneNode() method returns a duplicate of the node on which this method was called."
+}

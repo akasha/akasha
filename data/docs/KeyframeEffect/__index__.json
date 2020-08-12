@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "KeyframeEffect",
+        "lastModifiedAt": 1597192518815
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192517980
+    },
+    {
+        "name": "composite",
+        "lastModifiedAt": 1597192519847
+    },
+    {
+        "name": "getKeyframes",
+        "lastModifiedAt": 1597192520831
+    },
+    {
+        "name": "iterationComposite",
+        "lastModifiedAt": 1597192519606
+    },
+    {
+        "name": "target",
+        "lastModifiedAt": 1597192519069
+    }
+]

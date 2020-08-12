@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Screen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen",
+    "description": "The Screen interface represents a screen, usually the one on which the current window is being rendered, and is obtained using window.screen."
+}

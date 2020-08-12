@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FetchEvent.preloadResponse",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/preloadResponse",
+    "description": "The preloadResponse read-only property of the FetchEvent interface returns a Promise that resolves to the navigation preload Response if navigation preload was triggered or undefined otherwise."
+}

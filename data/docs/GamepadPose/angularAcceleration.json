@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadPose.angularAcceleration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/angularAcceleration",
+    "description": "The angularAcceleration read-only property of the GamepadPose interface returns an array representing the angular acceleration vector of the Gamepad, in meters per second per second."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceEntry.duration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/duration",
+    "description": "The duration property returns a timestamp that is the duration of the performance entry."
+}

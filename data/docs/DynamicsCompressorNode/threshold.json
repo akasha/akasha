@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DynamicsCompressorNode.threshold",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/threshold",
+    "description": "An AudioParam."
+}

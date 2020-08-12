@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Selection.focusOffset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/focusOffset",
+    "description": "The Selection.focusOffset read-only property returns the number of characters that the selection's focus is offset within the Selection.focusNode."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.hasPointerCapture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/hasPointerCapture",
+    "description": "The hasPointerCapture() method of the Element interface sets whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID."
+}

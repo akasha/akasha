@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "AudioWorkletNode.AudioWorkletNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode",
+    "description": "The AudioWorkletNode() constructor creates a new AudioWorkletNode object, which represents an AudioNode that uses a JavaScript function to perform custom audio processing."
+}

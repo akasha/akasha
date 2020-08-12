@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGComponentTransferFunctionElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement",
+    "description": "The SVGComponentTransferFunctionElement interface defines a base interface used by the component transfer function interfaces."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.scrollTo",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo",
+    "description": "The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element."
+}

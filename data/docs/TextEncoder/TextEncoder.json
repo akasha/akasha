@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "TextEncoder.TextEncoder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder",
+    "description": "The TextEncoder() constructor returns a newly created utf-8 TextEncoder object."
+}

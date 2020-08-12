@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.removeAttributeNS",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNS",
+    "description": "The removeAttributeNS() method of the Element interface removes the specified attribute from an element."
+}

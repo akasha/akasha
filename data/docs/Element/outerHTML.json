@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.outerHTML",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML",
+    "description": "The outerHTML attribute of the Element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can also be set to replace the element with nodes parsed from the given string."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBFactory.cmp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/cmp",
+    "description": "An integer that indicates the result of the comparison; the table below lists the possible values and their meanings:"
+}

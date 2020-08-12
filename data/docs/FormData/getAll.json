@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.getAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/getAll",
+    "description": "The getAll() method of the FormData interface returns all the values associated with a given key from within a FormData object."
+}

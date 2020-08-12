@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FileReader.error",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/error",
+    "description": "The FileReader error property returns the error that occurred while reading the file."
+}

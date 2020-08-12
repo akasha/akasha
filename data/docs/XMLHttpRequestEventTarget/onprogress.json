@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequestEventTarget.onprogress",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onprogress",
+    "description": "The XMLHttpRequestEventTarget.onprogress is the function called periodically with information when an XMLHttpRequest before success completely."
+}

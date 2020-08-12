@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IntersectionObserver.disconnect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/disconnect",
+    "description": "The IntersectionObserver method disconnect() stops watching all of its target elements for visibility changes."
+}

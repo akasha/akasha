@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPoint.w",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/w",
+    "description": "The DOMPoint interface's w property holds the point's perspective value, w, for a point in space."
+}

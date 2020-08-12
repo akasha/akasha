@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190976986
+    },
+    {
+        "name": "acceleration",
+        "lastModifiedAt": 1597190978026
+    },
+    {
+        "name": "accelerationIncludingGravity",
+        "lastModifiedAt": 1597190978410
+    },
+    {
+        "name": "interval",
+        "lastModifiedAt": 1597190979054
+    },
+    {
+        "name": "rotationRate",
+        "lastModifiedAt": 1597190978684
+    }
+]

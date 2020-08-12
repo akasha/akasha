@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "LinkStyle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/LinkStyle",
+    "description": "The LinkStyle interface provides access to the associated CSS style sheet of a node."
+}

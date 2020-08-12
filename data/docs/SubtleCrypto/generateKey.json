@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.generateKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey",
+    "description": "Use the generateKey() method of the SubtleCrypto interface to generate a new key (for symmetric algorithms) or key pair (for public-key algorithms)."
+}

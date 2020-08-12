@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AnimationEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent",
+    "description": "The AnimationEvent interface represents events providing information related to animations."
+}

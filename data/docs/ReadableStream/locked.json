@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ReadableStream.locked",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/locked",
+    "description": "The locked read-only property of the ReadableStream interface returns whether or not the readable stream is locked to a reader."
+}

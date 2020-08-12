@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IntersectionObserver.observe",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/observe",
+    "description": "The IntersectionObserver method observe() adds an element to the set of target elements being watched by the IntersectionObserver. One observer has one set of thresholds and one root, but can watch multiple target elements for visibility changes in keeping with those."
+}

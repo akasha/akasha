@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DOMPointInit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit",
+    "description": "The DOMPointInit dictionary is used to provide the values of the coordinates and perspective when creating and JSONifying a DOMPoint or DOMPointReadOnly object."
+}

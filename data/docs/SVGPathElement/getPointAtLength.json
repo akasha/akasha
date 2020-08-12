@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SVGPathElement.getPointAtLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getPointAtLength",
+    "description": "The SVGPathElement.getPointAtLength() method returns the point at a given distance along the path."
+}

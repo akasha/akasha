@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.redirected",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected",
+    "description": "The read-only redirected property of the Response interface indicates whether or not the response is the result of a request you made which was redirected."
+}

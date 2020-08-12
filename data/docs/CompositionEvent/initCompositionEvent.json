@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CompositionEvent.initCompositionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent",
+    "description": "The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ParentNode.querySelector",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelector",
+    "description": "The ParentNode mixin defines the querySelector() method as returning an Element representing the first element matching the specified group of selectors which are descendants of the object on which the method was called."
+}

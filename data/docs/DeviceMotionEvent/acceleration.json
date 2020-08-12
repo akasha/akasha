@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DeviceMotionEvent.acceleration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/acceleration",
+    "description": "The acceleration property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2)."
+}

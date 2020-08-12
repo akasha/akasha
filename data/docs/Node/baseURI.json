@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.baseURI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI",
+    "description": "The baseURI read-only property returns the absolute base URL of a Node."
+}

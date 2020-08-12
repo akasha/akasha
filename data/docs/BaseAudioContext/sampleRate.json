@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BaseAudioContext.sampleRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/sampleRate",
+    "description": "The sampleRate property of the BaseAudioContext interface returns a floating point number representing the sample rate, in samples per second, used by all nodes in this audio context."
+}

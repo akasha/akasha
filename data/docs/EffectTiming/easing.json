@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EffectTiming.easing",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/easing",
+    "description": "The EffectTiming dictionary's easing property in the Web Animations API specifies the timing function used to scale the time to produce easing effects, where easing is the rate of the animation's change over time."
+}

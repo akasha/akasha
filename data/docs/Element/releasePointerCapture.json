@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.releasePointerCapture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/releasePointerCapture",
+    "description": "The releasePointerCapture() method of the Element interface releases (stops) pointer capture that was previously set for a specific (PointerEvent) pointer."
+}

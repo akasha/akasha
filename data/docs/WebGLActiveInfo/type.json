@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WebGLActiveInfo.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLActiveInfo/type",
+    "description": "The read-only WebGLActiveInfo.type property represents the type of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods."
+}

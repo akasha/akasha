@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Clipboard.write",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write",
+    "description": "The Clipboard method write() writes arbitrary data, such as images, to the clipboard."
+}

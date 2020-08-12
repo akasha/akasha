@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceEntry.entryType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType",
+    "description": "The entryType property returns a DOMString representing the type of performance metric such as, for example, \"mark\". This property is read only."
+}

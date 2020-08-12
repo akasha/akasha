@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Request.referrer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/referrer",
+    "description": "The referrer read-only property of the Request interface is set by the user agent to be the referrer of the Request. (e.g., client, no-referrer, or a URL.)"
+}

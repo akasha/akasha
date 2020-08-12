@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeySession.generateRequest",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/generateRequest",
+    "description": "The MediaKeySession.generateRequest() method returns a Promise after generating a media request based on initialization data."
+}

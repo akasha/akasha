@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "NamedNodeMap.getNamedItem",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap/getNamedItem",
+    "description": "The getNamedItem() method of the NamedNodeMap interface returns the Attr corresponding to the given name, or null if there is no corresponding attribute."
+}

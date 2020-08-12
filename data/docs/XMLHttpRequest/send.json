@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XMLHttpRequest.send",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send",
+    "description": "The XMLHttpRequest method send() sends the request to the server."
+}

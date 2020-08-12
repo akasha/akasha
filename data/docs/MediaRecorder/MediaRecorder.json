@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MediaRecorder.MediaRecorder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder",
+    "description": "The MediaRecorder() constructor creates a new MediaRecorder object that will record a specified MediaStream."
+}

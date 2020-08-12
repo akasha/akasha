@@ -3,9 +3,5 @@
     "kind": "Type",
     "name": "MediaError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaError",
-    "description": "The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as audio or video.",
-    "properties": [
-        "code",
-        "message"
-    ]
+    "description": "The MediaError interface represents an error which occurred while handling media in an HTML media element based on HTMLMediaElement, such as audio or video."
 }

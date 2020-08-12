@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TouchEvent.changedTouches",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/changedTouches",
+    "description": "The changedTouches read-only property is a TouchList whose touch points (Touch objects) varies depending on the event type, as follows:"
+}

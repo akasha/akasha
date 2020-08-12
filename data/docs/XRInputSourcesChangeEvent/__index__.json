@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "XRInputSourcesChangeEvent",
+        "lastModifiedAt": 1597192949932
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 1596711923893
+        "lastModifiedAt": 1597192949107
     },
     {
         "name": "added",

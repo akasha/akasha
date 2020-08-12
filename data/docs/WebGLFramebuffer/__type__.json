@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WebGLFramebuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLFramebuffer",
+    "description": "The WebGLFramebuffer interface is part of the WebGL API and represents a collection of buffers that serve as a rendering destination."
+}

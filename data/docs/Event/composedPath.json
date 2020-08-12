@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Event.composedPath",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath",
+    "description": "The composedPath() method of the Event interface returns the event’s path which is an array of the objects on which listeners will be invoked. This does not include nodes in shadow trees if the shadow root was created with its ShadowRoot.mode closed."
+}

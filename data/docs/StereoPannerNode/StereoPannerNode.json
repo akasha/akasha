@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "StereoPannerNode.StereoPannerNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/StereoPannerNode",
+    "description": "The StereoPannerNode() constructor of the Web Audio API creates a new StereoPannerNode object which is an AudioNode that represents a simple stereo panner node that can be used to pan an audio stream left or right."
+}

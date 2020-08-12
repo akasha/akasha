@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.ctrlKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/ctrlKey",
+    "description": "The KeyboardEvent.ctrlKey read-only property returns a Boolean that indicates if the control key was pressed (true) or not (false) when the event occured."
+}

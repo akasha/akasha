@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Headers.append",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Headers/append",
+    "description": "The append() method of the Headers interface appends a new value onto an existing header inside a Headers object, or adds the header if it does not already exist."
+}

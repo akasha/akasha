@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSSStyleDeclaration.item",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/item",
+    "description": "The CSSStyleDeclaration.item() method interface returns a CSS property name from a CSSStyleDeclaration by index"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredentialCreationOptions.user",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/user",
+    "description": "The user property of the PublicKeyCredentialCreationOptions dictionary is an object describing the user account for which the credentials are generated (via navigator.credentials.create())."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.insertAdjacentElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement",
+    "description": "The insertAdjacentElement() method of the Element interface inserts a given element node at a given position relative to the element it is invoked upon."
+}

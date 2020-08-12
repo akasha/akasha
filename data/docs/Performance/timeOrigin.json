@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Performance.timeOrigin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/timeOrigin",
+    "description": "The timeOrigin read-only property of the Performance interface returns the high resolution timestamp of the start time of the performance measurement."
+}

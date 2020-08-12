@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Headers.entries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Headers/entries",
+    "description": "The Headers.entries() method returns an iterator allowing to go through all key/value pairs contained in this object. The both the key and value of each pairs are ByteString objects."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.cloneRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneRange",
+    "description": "The Range.cloneRange() method returns a Range object with boundary points identical to the cloned Range."
+}

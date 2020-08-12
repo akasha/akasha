@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFETurbulenceElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement",
+    "description": "The SVGFETurbulenceElement interface corresponds to the feTurbulence element."
+}

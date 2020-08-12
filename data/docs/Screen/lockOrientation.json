@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Screen.lockOrientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation",
+    "description": "The lockOrientation() method of the Screen interface locks the screen into a specified orientation. The ScreenOrientation.lock() method should be used instead."
+}

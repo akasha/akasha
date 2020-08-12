@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FocusEvent.relatedTarget",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/relatedTarget",
+    "description": "The FocusEvent.relatedTarget read-only property is the secondary target, depending on the type of event:"
+}

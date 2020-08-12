@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Notification.requestPermission",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/requestPermission",
+    "description": "The requestPermission() method of the Notification interface requests permission from the user for the current origin to display notifications."
+}

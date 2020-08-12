@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ExtendableMessageEvent.ports",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/ports",
+    "description": "The ports read-only property of the ExtendableMessageEvent interface returns the array containing the MessagePort objects representing the ports of the associated message channel (the channel the message is being sent through.)"
+}

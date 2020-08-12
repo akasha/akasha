@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MediaKeyMessageEvent.MediaKeyMessageEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent",
+    "description": "The MediaKeyMessageEvent constructor creates a new MediaKeyMessageEvent object which creates a new instance of MediaKeyMessageEvent."
+}

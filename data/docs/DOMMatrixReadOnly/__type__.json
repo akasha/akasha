@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DOMMatrixReadOnly",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly",
+    "description": "The DOMMatrixReadOnly interface represents a read-only 4×4 matrix, suitable for 2D and 3D operations. The DOMMatrix interrface—which is based upon DOMMatrixReadOnly—adds mutability, allowing you to alter the matrix after creating it."
+}

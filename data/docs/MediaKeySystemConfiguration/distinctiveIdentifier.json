@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaKeySystemConfiguration.distinctiveIdentifier",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier",
+    "description": "The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required."
+}

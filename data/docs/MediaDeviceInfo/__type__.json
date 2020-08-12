@@ -3,11 +3,5 @@
     "kind": "Type",
     "name": "MediaDeviceInfo",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo",
-    "description": "The MediaDevicesInfo interface contains information that describes a single media input or output device.",
-    "properties": [
-        "deviceId",
-        "groupId",
-        "kind",
-        "label"
-    ]
+    "description": "The MediaDevicesInfo interface contains information that describes a single media input or output device."
 }

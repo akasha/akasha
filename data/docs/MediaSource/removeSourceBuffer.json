@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaSource.removeSourceBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/removeSourceBuffer",
+    "description": "The removeSourceBuffer() method of the MediaSource interface removes the given SourceBuffer from the SourceBuffers list associated with this MediaSource object."
+}

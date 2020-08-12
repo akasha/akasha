@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGTests",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTests",
+    "description": "The SVGTests interface is used to reflect conditional processing attributes and is mixed into other interfaces for elements that support these attributes."
+}

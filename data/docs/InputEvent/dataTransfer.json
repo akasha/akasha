@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "InputEvent.dataTransfer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/dataTransfer",
+    "description": "The dataTransfer read-only property of the InputEvent interface returns a DataTransfer object containing information about richtext or plaintext data being added to or removed from editible content."
+}

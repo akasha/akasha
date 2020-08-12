@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BaseAudioContext.listener",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/listener",
+    "description": "An AudioListener object."
+}

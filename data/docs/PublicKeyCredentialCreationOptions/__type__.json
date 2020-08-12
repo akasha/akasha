@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "PublicKeyCredentialCreationOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions",
+    "description": "The PublicKeyCredentialCreationOptions dictionary of the Web Authentication API holds options passed to navigators.credentials.create() in order to create a PublicKeyCredential."
+}

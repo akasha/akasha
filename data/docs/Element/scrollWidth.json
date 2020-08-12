@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.scrollWidth",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollWidth",
+    "description": "The Element.scrollWidth read-only property is a measurement of the width of an element's content, including content not visible on the screen due to overflow."
+}

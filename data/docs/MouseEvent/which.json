@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.which",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/which",
+    "description": "The MouseEvent.which read-only property indicates which button was pressed on the mouse to trigger the event. The standard alternatives to this property are MouseEvent.button and MouseEvent.buttons."
+}

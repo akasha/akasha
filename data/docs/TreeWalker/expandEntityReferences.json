@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TreeWalker.expandEntityReferences",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/expandEntityReferences",
+    "description": "The TreeWalker.expandEntityReferences read-only property returns a Boolean flag indicating whether or not the children of entity reference nodes are visible to the TreeWalker."
+}

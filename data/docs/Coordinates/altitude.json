@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Coordinates.altitude",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/altitude",
+    "description": "The GeolocationCoordinates.altitude read-only property is a double representing the altitude of the position in meters, relative to sea level. This value is null if the implementation cannot provide this data."
+}

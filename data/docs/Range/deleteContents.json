@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.deleteContents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/deleteContents",
+    "description": "The Range.deleteContents() method removes the contents of the Range from the Document."
+}

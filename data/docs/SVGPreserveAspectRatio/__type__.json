@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGPreserveAspectRatio",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPreserveAspectRatio",
+    "description": "The SVGPreserveAspectRatio interface corresponds to the preserveAspectRatio attribute, which is available for some of SVG's elements."
+}

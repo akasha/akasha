@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.childNodes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes",
+    "description": "The Node.childNodes read-only property returns a live NodeList of child nodes of the given element where the first child node is assigned index 0."
+}

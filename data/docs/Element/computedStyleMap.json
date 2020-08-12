@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.computedStyleMap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/computedStyleMap",
+    "description": "The computedStyleMap() method of the Element interface returns a StylePropertyMapReadOnly interface which provides a read-only representation of a CSS declaration block that is an alternative to CSSStyleDeclaration."
+}

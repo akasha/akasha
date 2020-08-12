@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaKeySystemConfiguration.audioCapabilities",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities",
+    "description": "The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs."
+}

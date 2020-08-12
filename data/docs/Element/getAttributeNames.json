@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getAttributeNames",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNames",
+    "description": "The getAttributeNames() method of the Element interface returns the attribute names of the element as an Array of strings. If the element has no attributes it returns an empty array."
+}

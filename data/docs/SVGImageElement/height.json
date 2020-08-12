@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGImageElement.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/height",
+    "description": "The height read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the height attribute of the given image element."
+}

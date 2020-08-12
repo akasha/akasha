@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGLinearGradientElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement",
+    "description": "The SVGLinearGradientElement interface corresponds to the linearGradient element."
+}

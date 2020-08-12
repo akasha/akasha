@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Clients.matchAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clients/matchAll",
+    "description": "The matchAll() method of the Clients interface returns a Promise for a list of service worker Client objects. Include the options parameter to return all service worker clients whose origin is the same as the associated service worker's origin. If options are not included, the method returns only the service worker clients controlled by the service worker."
+}

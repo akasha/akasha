@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeys.createSession",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys/createSession",
+    "description": "The MediaKeys.createSession() method returns a new MediaKeySession object, which represents a context for message exchange with a content decryption module (CDM)."
+}

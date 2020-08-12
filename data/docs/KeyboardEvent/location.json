@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.location",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/location",
+    "description": "The KeyboardEvent.location read-only property returns an unsigned long representing the location of the key on the keyboard or other input device."
+}

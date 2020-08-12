@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getElementsByTagName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagName",
+    "description": "The Element.getElementsByTagName() method returns a live HTMLCollection of elements with the given tag name."
+}

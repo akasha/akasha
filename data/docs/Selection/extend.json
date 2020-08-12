@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.extend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/extend",
+    "description": "The Selection.extend() method moves the focus of the selection to a specified point. The anchor of the selection does not move. The selection will be from the anchor to the new focus, regardless of direction."
+}

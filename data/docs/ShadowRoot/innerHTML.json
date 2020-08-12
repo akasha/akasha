@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ShadowRoot.innerHTML",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/innerHTML",
+    "description": "The innerHTML property of the ShadowRoot interface sets or returns a reference to the DOM tree inside the ShadowRoot."
+}

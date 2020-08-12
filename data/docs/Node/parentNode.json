@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.parentNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode",
+    "description": "The Node.parentNode read-only property returns the parent of the specified node in the DOM tree."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredential.id",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/id",
+    "description": "The id read-only property of the PublicKeyCredential interface is a DOMString, inherited from Credential, which represents the identifier of the current PublicKeyCredential instance."
+}

@@ -1,0 +1,31 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192648715
+    },
+    {
+        "name": "allowCredentials",
+        "lastModifiedAt": 1597192650155
+    },
+    {
+        "name": "challenge",
+        "lastModifiedAt": 1597192649006
+    },
+    {
+        "name": "extensions",
+        "lastModifiedAt": 1597192650694
+    },
+    {
+        "name": "rpId",
+        "lastModifiedAt": 1597192649635
+    },
+    {
+        "name": "timeout",
+        "lastModifiedAt": 1597192649385
+    },
+    {
+        "name": "userVerification",
+        "lastModifiedAt": 1597192650435
+    }
+]

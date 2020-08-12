@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Coordinates.latitude",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/latitude",
+    "description": "The GeolocationCoordinates.latitude read-only property is a double representing the latitude of the position in decimal degrees."
+}

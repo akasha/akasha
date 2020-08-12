@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBObjectStore.put",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/put",
+    "description": "The put method is an update or insert method. See the IDBObjectStore.add method for an insert only method."
+}

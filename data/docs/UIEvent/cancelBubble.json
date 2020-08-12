@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "UIEvent.cancelBubble",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/cancelBubble",
+    "description": "The UIEvent.cancelBubble property indicates if event bubbling for this event has been canceled or not. It is set to false by default, allowing the event to bubble up the DOM, if it is a bubbleable event. Setting this property to true stops the event from bubbling up the DOM. Not all events are allowed to bubble up the DOM."
+}

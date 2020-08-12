@@ -3,11 +3,5 @@
     "kind": "Type",
     "name": "HTMLOListElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOListElement",
-    "description": "The HTMLOListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements.",
-    "properties": [
-        "compact",
-        "reversed",
-        "start",
-        "type"
-    ]
+    "description": "The HTMLOListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements."
 }

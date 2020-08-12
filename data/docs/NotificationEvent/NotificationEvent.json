@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "NotificationEvent.NotificationEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/NotificationEvent",
+    "description": "The NotificationEvent() constructor creates a new NotificationEvent object."
+}

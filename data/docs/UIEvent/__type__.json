@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "UIEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent",
+    "description": "The UIEvent interface represents simple user interface events."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DOMRectReadOnly",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly",
+    "description": "The DOMRectReadOnly interface specifies the standard properties used by DOMRect to define a rectangle whose properties are immutable."
+}

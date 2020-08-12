@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "URL.searchParams",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/searchParams",
+    "description": "The searchParams readonly property of the URL interface returns a URLSearchParams object allowing access to the GET decoded query arguments contained in the URL."
+}

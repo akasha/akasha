@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.closest",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/closest",
+    "description": "For browsers that do not support Element.closest(), but carry support for element.matches() (or a prefixed equivalent, meaning IE9+), a polyfill exists:"
+}

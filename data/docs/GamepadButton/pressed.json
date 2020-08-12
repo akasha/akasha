@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadButton.pressed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton/pressed",
+    "description": "The GamepadButton.pressed property of the GamepadButton interface returns a boolean indicating whether the button is currently pressed (true) or unpressed (false)."
+}

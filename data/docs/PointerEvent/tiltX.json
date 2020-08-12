@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PointerEvent.tiltX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tiltX",
+    "description": "The tiltX read-only property of the PointerEvent interface is the angle (in degrees) between the Y-Z plane of the pointer and the screen. This property is typically only useful for a pen/stylus pointer type."
+}

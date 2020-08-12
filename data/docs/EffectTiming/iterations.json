@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EffectTiming.iterations",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/iterations",
+    "description": "The Web Animations API dictionary EffectTiming's iterations property specifies the number of times the animation should repeat. The default value is 1, indicating that it should only play once, but you can set it to any floating-point value (including positive Infinity defaults to 1, and can also take a value of Infinity to make it loop infinitely."
+}

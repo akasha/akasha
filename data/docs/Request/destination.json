@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Request.destination",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/destination",
+    "description": "The destination read-only property of the Request interface returns a string describing the type of content being requested."
+}

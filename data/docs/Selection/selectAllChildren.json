@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.selectAllChildren",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/selectAllChildren",
+    "description": "The Selection.selectAllChildren() method adds all the children of the specified node to the selection. Previous selection is lost."
+}

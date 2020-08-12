@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.displayId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/displayId",
+    "description": "The displayId read-only property of the Gamepad interface returns the VRDisplay.displayId of the associated VRDisplay — the VRDisplay that the gamepad is controlling the displayed scene of."
+}

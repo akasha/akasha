@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TouchList.identifiedTouch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchList/identifiedTouch",
+    "description": "The identifiedTouch() method returns the first Touch item in the TouchList that matches the specified identifier."
+}

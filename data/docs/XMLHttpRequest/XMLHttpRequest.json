@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "XMLHttpRequest.XMLHttpRequest",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest",
+    "description": "The XMLHttpRequest() constructor creates a new XMLHttpRequest."
+}

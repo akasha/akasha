@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.digest",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest",
+    "description": "The digest() method of the SubtleCrypto interface generates a digest of the given data. A digest is a short fixed-length value derived from some variable-length input. Cryptographic digests should exhibit collision-resistance, meaning that it's hard to come up with two different inputs that have the same digest value."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBIndex.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/name",
+    "description": "A DOMString specifying a name for the index."
+}

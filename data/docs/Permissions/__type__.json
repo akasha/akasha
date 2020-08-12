@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Permissions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Permissions",
+    "description": "The Permissions interface of the Permissions API provides the core Permission API functionality, such as methods for querying and revoking permissions"
+}

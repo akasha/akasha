@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AuthenticatorAttestationResponse.getTransports",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAttestationResponse/getTransports",
+    "description": "getTransports() is a method of the AuthenticatorAttestationResponse interface that returns an Array containing strings describing the different transports which may be used by the authenticator."
+}

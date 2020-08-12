@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TreeWalker.currentNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/currentNode",
+    "description": "The TreeWalker.currentNode property represents the Node on which the TreeWalker is currently pointing at."
+}

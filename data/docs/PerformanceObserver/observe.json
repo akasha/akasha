@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PerformanceObserver.observe",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/observe",
+    "description": "The observe() method of the PerformanceObserver interface is used to specify the set of performance entry types to observe."
+}

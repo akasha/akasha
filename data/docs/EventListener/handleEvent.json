@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "EventListener.handleEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventListener/handleEvent",
+    "description": "The EventListener method handleEvent() method is called by the user agent when an event is sent to the EventListener, in order to handle events that occur on an observed EventTarget."
+}

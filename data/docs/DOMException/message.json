@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMException.message",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException/message",
+    "description": "The message read-only property of the DOMException interface returns a DOMString representing a message or description associated with the given error name."
+}

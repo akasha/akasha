@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NodeIterator.root",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/root",
+    "description": "The NodeIterator.root read-only property represents the Node that is the root of what the NodeIterator traverses."
+}

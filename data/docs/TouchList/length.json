@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TouchList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchList/length",
+    "description": "The length read-only property indicates the number of items (touch points) in a given TouchList."
+}

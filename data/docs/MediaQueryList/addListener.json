@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaQueryList.addListener",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/addListener",
+    "description": "The addListener() method of the MediaQueryList interface adds a listener to the MediaQueryListener that will run a custom callback function in response to the media query status changing."
+}

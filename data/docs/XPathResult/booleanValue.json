@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XPathResult.booleanValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/booleanValue",
+    "description": "The read-only booleanValue property of the XPathResult interface returns the boolean value of a result with XPathResult.resultType being BOOLEAN_TYPE."
+}

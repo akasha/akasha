@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SourceBuffer.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/abort",
+    "description": "The abort() method of the SourceBuffer interface aborts the current segment and resets the segment parser."
+}

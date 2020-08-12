@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ShadowRoot.delegatesFocus",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus",
+    "description": "The delegatesFocus read-only property of the ShadowRoot interface returns a boolean that indicates whether delegatesFocus was set when the shadow was attached (see Element.attachShadow())."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBObjectStore.indexNames",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/indexNames",
+    "description": "A DOMStringList."
+}

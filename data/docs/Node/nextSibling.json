@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.nextSibling",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/nextSibling",
+    "description": "The Node.nextSibling read-only property returns the node immediately following the specified one in their parent's childNodes, or returns null if the specified node is the last child in the parent element."
+}

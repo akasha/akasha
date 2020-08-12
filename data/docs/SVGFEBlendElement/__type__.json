@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEBlendElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEBlendElement",
+    "description": "The SVGFEBlendElement interface corresponds to the feBlend element."
+}

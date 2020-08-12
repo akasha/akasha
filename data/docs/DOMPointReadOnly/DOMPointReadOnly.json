@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DOMPointReadOnly.DOMPointReadOnly",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/DOMPointReadOnly",
+    "description": "The DOMPointReadOnly() constructor returns a new DOMPointReadOnly object representing a point in 2D or 3D space, optionally with perspective, whose values cannot be altered by script code."
+}

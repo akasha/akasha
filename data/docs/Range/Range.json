@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Range.Range",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/Range",
+    "description": "The Range() constructor returns a newly created Range object whose start and end is the global Document object."
+}

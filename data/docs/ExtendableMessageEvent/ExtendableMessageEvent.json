@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ExtendableMessageEvent.ExtendableMessageEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/ExtendableMessageEvent",
+    "description": "The ExtendableMessageEvent() constructor creates a new ExtendableMessageEvent object instance."
+}

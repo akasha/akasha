@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.url",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/url",
+    "description": "The url read-only property of the Response interface contains the URL of the response. The value of the url property will be the final URL obtained after any redirects."
+}

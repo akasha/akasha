@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamAudioSourceOptions.mediaStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream",
+    "description": "The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor."
+}

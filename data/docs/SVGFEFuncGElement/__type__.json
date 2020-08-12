@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEFuncGElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFuncGElement",
+    "description": "The SVGFEFuncGElement interface corresponds to the feFuncG element."
+}

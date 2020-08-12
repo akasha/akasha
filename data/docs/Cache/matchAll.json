@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Cache.matchAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/matchAll",
+    "description": "The matchAll() method of the Cache interface returns a Promise that resolves to an array of all matching responses in the Cache object."
+}

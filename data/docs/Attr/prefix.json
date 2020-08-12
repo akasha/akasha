@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Attr.prefix",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr/prefix",
+    "description": "The Attr.prefix read-only property returns the namespace prefix of the specified attribute, or null if no prefix is specified."
+}

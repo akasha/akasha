@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.verify",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify",
+    "description": "The verify() method of the SubtleCrypto interface verifies a digital signature."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMTokenList.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/length",
+    "description": "The length read-only property of the DOMTokenList interface is an integer representing the number of objects stored in the object."
+}

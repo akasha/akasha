@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.collapseToStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/collapseToStart",
+    "description": "The Selection.collapseToStart() method collapses the selection to the start of the first range in the selection. If the content of the selection is focused and editable, the caret will blink there."
+}

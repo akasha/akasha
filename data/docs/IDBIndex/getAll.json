@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.getAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getAll",
+    "description": "There is a performance cost associated with looking at the value property of a cursor, because the object is created lazily. To use a feature like getAll(), the browser has to create all the objects at once. If you are just interested in looking at each of the keys, for instance, it is more efficient to use a cursor. If you are trying to get an array of all the objects in an object store, though, you should use getAll()."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.cancelable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelable",
+    "description": "The cancelable read-only property of the Event interface indicates whether the event can be canceled, and therefore prevented as if the event never happened."
+}

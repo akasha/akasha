@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBFactory.deleteDatabase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase",
+    "description": "The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately, and performs the deletion operation asynchronously."
+}

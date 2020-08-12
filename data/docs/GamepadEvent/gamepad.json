@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadEvent.gamepad",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadEvent/gamepad",
+    "description": "The GamepadEvent.gamepad property of the GamepadEvent interface returns a Gamepad object, providing access to the associated gamepad data for fired gamepadconnected and gamepaddisconnected events."
+}

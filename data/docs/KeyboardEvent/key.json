@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.key",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key",
+    "description": "The KeyboardEvent interface's key read-only property returns the value of the key pressed by the user, taking into consideration the state of modifier keys such as Shift as well as the keyboard locale and layout."
+}

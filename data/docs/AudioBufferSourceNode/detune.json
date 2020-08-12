@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioBufferSourceNode.detune",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/detune",
+    "description": "The detune property of the AudioBufferSourceNode interface is a k-rate AudioParam representing detuning of oscillation in cents."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SourceBuffer.appendBufferAsync",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendBufferAsync",
+    "description": "The appendBufferAsync() method of the SourceBuffer interface begins the process of asynchronously appending media segment data from an ArrayBuffer or ArrayBufferView object to the SourceBuffer."
+}

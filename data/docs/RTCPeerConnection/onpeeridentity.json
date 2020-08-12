@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onpeeridentity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onpeeridentity",
+    "description": "The RTCPeerConnection.onpeeridentity event handler is a property containing the code to execute whent the peeridentity event, of type Event, is received by this RTCPeerConnection. Such an event is sent when an identity assertion, received from a peer, has been successfully validated."
+}

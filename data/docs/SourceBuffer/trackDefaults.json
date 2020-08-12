@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBuffer.trackDefaults",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/trackDefaults",
+    "description": "The trackDefaults property of the SourceBuffer interface specifies the default values to use if kind, label, and/or language information is not available in the initialization segment of the media to be appended to the SourceBuffer."
+}

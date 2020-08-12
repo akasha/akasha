@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Range.startOffset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/startOffset",
+    "description": "The Range.startOffset read-only property returns a number representing where in the startContainer the Range starts."
+}

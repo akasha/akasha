@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPointInit.w",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/w",
+    "description": "The DOMPointInit dictionary's w property is used to specify the w perspective value of a point in space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object."
+}

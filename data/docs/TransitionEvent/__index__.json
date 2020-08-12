@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "TransitionEvent",
+        "lastModifiedAt": 1597190706668
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190706300
+    },
+    {
+        "name": "elapsedTime",
+        "lastModifiedAt": 1597190707191
+    },
+    {
+        "name": "initTransitionEvent",
+        "lastModifiedAt": 1597190707822
+    },
+    {
+        "name": "pseudoElement",
+        "lastModifiedAt": 1597190707494
+    }
+]

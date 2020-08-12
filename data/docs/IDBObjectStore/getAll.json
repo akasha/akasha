@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBObjectStore.getAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getAll",
+    "description": "If a value is successfully found, then a structured clone of it is created and set as the result of the request object."
+}

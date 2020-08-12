@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Headers.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Headers/get",
+    "description": "The get() method of the Headers interface returns a byte string of all the values of a header within a Headers object with a given name. If the requested header doesn't exist in the Headers object, it returns null."
+}

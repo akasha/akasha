@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBTransaction.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/onerror",
+    "description": "The onerror event handler of the IDBTransaction interface handles the error event, fired when a request returns an error and bubbles up to the transaction object."
+}

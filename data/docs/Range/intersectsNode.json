@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.intersectsNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/intersectsNode",
+    "description": "The Range.intersectsNode() method returns a boolean indicating whether the given Node intersects the Range."
+}

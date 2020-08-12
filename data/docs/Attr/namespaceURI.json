@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Attr.namespaceURI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr/namespaceURI",
+    "description": "The Attr.namespaceURI read-only property returns the namespace URI of the attribute, or null if the element is not in a namespace."
+}

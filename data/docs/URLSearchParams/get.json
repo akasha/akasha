@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URLSearchParams.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get",
+    "description": "The get() method of the URLSearchParams interface returns the first value associated to the given search parameter."
+}

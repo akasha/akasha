@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FileReader.onload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/onload",
+    "description": "The FileReader.onload property contains an event handler executed when the load event is fired, when content read with readAsArrayBuffer, readAsBinaryString, readAsDataURL or readAsText is available."
+}

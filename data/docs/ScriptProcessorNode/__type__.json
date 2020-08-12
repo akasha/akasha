@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "ScriptProcessorNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode",
+    "description": "The ScriptProcessorNode interface allows the generation, processing, or analyzing of audio using JavaScript."
+}

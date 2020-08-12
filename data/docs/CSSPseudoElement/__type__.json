@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CSSPseudoElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement",
+    "description": "The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo()."
+}

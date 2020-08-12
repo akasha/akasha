@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.scrollTopMax",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTopMax",
+    "description": "The Element.scrollTopMax read-only property returns a Number representing the maximum top scroll offset possible for the element."
+}

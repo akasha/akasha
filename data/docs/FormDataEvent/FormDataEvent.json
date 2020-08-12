@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "FormDataEvent.FormDataEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent",
+    "description": "The FormDataEvent() constructor creates a new FormDataEvent object instance."
+}

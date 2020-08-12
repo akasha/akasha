@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "ScrollToOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions",
+    "description": "The ScrollToOptions dictionary of the CSSOM View spec contains properties specifying where an element should be scrolled to, and whether the scrolling should be smooth."
+}

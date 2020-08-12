@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TreeWalker.root",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/root",
+    "description": "The TreeWalker.root read-only property returns the node that is the root of what the TreeWalker traverses."
+}

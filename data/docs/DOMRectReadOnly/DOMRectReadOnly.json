@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DOMRectReadOnly.DOMRectReadOnly",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly",
+    "description": "The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaKeys",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeys",
+    "description": "The MediaKeys interface of EncryptedMediaExtensions API represents a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback."
+}

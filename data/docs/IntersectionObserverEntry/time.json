@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IntersectionObserverEntry.time",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/time",
+    "description": "The IntersectionObserverEntry interface's read-only time property is a DOMHighResTimeStamp that indicates the time at which the intersection change occurred relative to the time at which the document was created."
+}

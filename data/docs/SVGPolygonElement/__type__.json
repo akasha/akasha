@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGPolygonElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPolygonElement",
+    "description": "The SVGPolygonElement interface provides access to the properties of polygon elements, as well as methods to manipulate them."
+}

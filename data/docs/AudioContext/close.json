@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioContext.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close",
+    "description": "The close() method of the AudioContext Interface closes the audio context, releasing any system audio resources that it uses."
+}

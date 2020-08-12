@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Comment",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Comment",
+    "description": "The Comment interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view."
+}

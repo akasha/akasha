@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Animation.Animation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation",
+    "description": "The Animation() constructor of the Web Animations API returns a new Animation object instance."
+}

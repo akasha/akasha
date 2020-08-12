@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "IIRFilterNode.IIRFilterNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IIRFilterNode/IIRFilterNode",
+    "description": "The IIRFilterNode() constructor of the Web Audio API creates a new IIRFilterNode object which an AudioNode processor which implements a general infinite impulse response filter."
+}

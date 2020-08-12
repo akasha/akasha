@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StyleSheet.title",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/title",
+    "description": "The title property of the StyleSheet interface returns the advisory title of the current style sheet."
+}

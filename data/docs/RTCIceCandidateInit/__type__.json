@@ -3,11 +3,5 @@
     "kind": "Type",
     "name": "RTCIceCandidateInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit",
-    "description": "The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.",
-    "properties": [
-        "candidate",
-        "sdpMLineIndex",
-        "sdpMid",
-        "usernameFragment"
-    ]
+    "description": "The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate."
 }

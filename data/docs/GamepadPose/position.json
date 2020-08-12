@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadPose.position",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/position",
+    "description": "The position read-only property of the GamepadPose interface returns the position of the Gamepad as a 3D vector."
+}

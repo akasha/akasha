@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.scrollTop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop",
+    "description": "The Element.scrollTop property gets or sets the number of pixels that an element's content is scrolled vertically."
+}

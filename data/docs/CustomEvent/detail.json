@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CustomEvent.detail",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail",
+    "description": "The detail readonly property of the CustomEvent interface returns any data passed when initializing the event."
+}

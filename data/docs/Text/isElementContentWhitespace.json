@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Text.isElementContentWhitespace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Text/isElementContentWhitespace",
+    "description": "The Text.isElementContentWhitespace read-only property returns a Boolean flag indicating whether or not the text node's content consists solely of whitespace."
+}

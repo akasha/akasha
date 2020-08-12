@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DocumentFragment.querySelector",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/querySelector",
+    "description": "The DocumentFragment.querySelector() method returns the first element, or null if no matches are found, within the DocumentFragment (using depth-first pre-order traversal of the document's nodes) that matches the specified group of selectors."
+}

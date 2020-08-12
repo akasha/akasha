@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGForeignObjectElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGForeignObjectElement",
+    "description": "The SVGForeignObjectElement interface provides access to the properties of foreignObject elements, as well as methods to manipulate them."
+}

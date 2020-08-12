@@ -3,8 +3,5 @@
     "kind": "Type",
     "name": "CanvasGradient",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasGradient",
-    "description": "The CanvasGradient interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient() or CanvasRenderingContext2D.createRadialGradient().",
-    "methods": [
-        "addColorStop"
-    ]
+    "description": "The CanvasGradient interface represents an opaque object describing a gradient. It is returned by the methods CanvasRenderingContext2D.createLinearGradient() or CanvasRenderingContext2D.createRadialGradient()."
 }

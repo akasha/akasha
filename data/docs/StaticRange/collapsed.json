@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StaticRange.collapsed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/collapsed",
+    "description": "The collapsed read-only property of the StaticRange interface returns true if the range's start position and end position are the same."
+}

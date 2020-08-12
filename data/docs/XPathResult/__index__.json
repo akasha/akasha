@@ -1,0 +1,43 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597193058515
+    },
+    {
+        "name": "booleanValue",
+        "lastModifiedAt": 1597193058744
+    },
+    {
+        "name": "invalidIteratorState",
+        "lastModifiedAt": 1597193059536
+    },
+    {
+        "name": "iterateNext",
+        "lastModifiedAt": 1597193061682
+    },
+    {
+        "name": "numberValue",
+        "lastModifiedAt": 1597193059761
+    },
+    {
+        "name": "resultType",
+        "lastModifiedAt": 1597193060089
+    },
+    {
+        "name": "singleNodeValue",
+        "lastModifiedAt": 1597193060936
+    },
+    {
+        "name": "snapshotItem",
+        "lastModifiedAt": 1597193062061
+    },
+    {
+        "name": "snapshotLength",
+        "lastModifiedAt": 1597193061181
+    },
+    {
+        "name": "stringValue",
+        "lastModifiedAt": 1597193061428
+    }
+]

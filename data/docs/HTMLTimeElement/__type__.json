@@ -3,8 +3,5 @@
     "kind": "Type",
     "name": "HTMLTimeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement",
-    "description": "The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating time elements.",
-    "properties": [
-        "dateTime"
-    ]
+    "description": "The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating time elements."
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.cloneContents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneContents",
+    "description": "The Range.cloneContents() returns a DocumentFragment copying the objects of type Node included in the Range."
+}

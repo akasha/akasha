@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBTransaction.db",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/db",
+    "description": "An IDBDatabase object."
+}

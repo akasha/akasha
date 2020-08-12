@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Coordinates.accuracy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/accuracy",
+    "description": "The GeolocationCoordinates.accuracy read-only property is a strictly positive double representing the accuracy, with a 95% confidence level, of the GeolocationCoordinates.latitude and GeolocationCoordinates.longitude properties expressed in meters."
+}

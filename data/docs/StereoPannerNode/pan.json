@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StereoPannerNode.pan",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/pan",
+    "description": "An a-rate AudioParam containing the panning to apply."
+}

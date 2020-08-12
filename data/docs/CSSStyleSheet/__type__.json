@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CSSStyleSheet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet",
+    "description": "The CSSStyleSheet interface represents a single CSS stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.toggleAttribute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute",
+    "description": "The toggleAttribute() method of the Element interface toggles a Boolean attribute (removing it if it is present and adding it if it is not present) on the given element."
+}

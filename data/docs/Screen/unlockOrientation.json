@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Screen.unlockOrientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/unlockOrientation",
+    "description": "The Screen.unlockOrientation() method removes all the previous screen locks set by the page/app. The ScreenOrientation.unlock() method should be used instead."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ClipboardItem.types",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/types",
+    "description": "The read-only types property of the ClipboardItem interface returns an Array of MIME types available within the ClipboardItem"
+}

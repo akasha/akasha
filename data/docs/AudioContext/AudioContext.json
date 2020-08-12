@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "AudioContext.AudioContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext",
+    "description": "The AudioContext() constructor creates a new AudioContext object which represents an audio-processing graph, built from audio modules linked together, each represented by an AudioNode."
+}

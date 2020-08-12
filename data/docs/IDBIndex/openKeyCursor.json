@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.openKeyCursor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/openKeyCursor",
+    "description": "The method sets the position of the cursor to the appropriate key, based on the specified direction."
+}

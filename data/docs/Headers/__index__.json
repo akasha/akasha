@@ -1,0 +1,43 @@
+
+[
+    {
+        "name": "Headers",
+        "lastModifiedAt": 1597193113600
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597193113267
+    },
+    {
+        "name": "append",
+        "lastModifiedAt": 1597193113899
+    },
+    {
+        "name": "delete",
+        "lastModifiedAt": 1597193114277
+    },
+    {
+        "name": "entries",
+        "lastModifiedAt": 1597193114625
+    },
+    {
+        "name": "get",
+        "lastModifiedAt": 1597193115664
+    },
+    {
+        "name": "has",
+        "lastModifiedAt": 1597193115961
+    },
+    {
+        "name": "keys",
+        "lastModifiedAt": 1597193116192
+    },
+    {
+        "name": "set",
+        "lastModifiedAt": 1597193116708
+    },
+    {
+        "name": "values",
+        "lastModifiedAt": 1597193117085
+    }
+]

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "FetchEvent.FetchEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/FetchEvent",
+    "description": "The FetchEvent() constructor creates a new FetchEvent object."
+}

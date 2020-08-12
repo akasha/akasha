@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceEntry.startTime",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/startTime",
+    "description": "The startTime property returns the first recorded timestamp of the performance entry."
+}

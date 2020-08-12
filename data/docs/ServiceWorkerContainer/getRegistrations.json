@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ServiceWorkerContainer.getRegistrations",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistrations",
+    "description": "The getRegistrations() method of the ServiceWorkerContainer interface gets all ServiceWorkerRegistrations associated with a ServiceWorkerContainer, in an array. The method returns a Promise that resolves to an array of ServiceWorkerRegistration."
+}

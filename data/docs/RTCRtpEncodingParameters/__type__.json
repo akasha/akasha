@@ -3,15 +3,5 @@
     "kind": "Type",
     "name": "RTCRtpEncodingParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters",
-    "description": "An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.",
-    "properties": [
-        "active",
-        "codecPayloadType",
-        "dtx",
-        "maxBitrate",
-        "maxFramerate",
-        "ptime",
-        "rid",
-        "scaleResolutionDownBy"
-    ]
+    "description": "An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender."
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredential.rawId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId",
+    "description": "The rawId read-only property of the PublicKeyCredential interface is an ArrayBuffer object containing the identifier of the credentials."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEFloodElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFloodElement",
+    "description": "The SVGFEFloodElement interface corresponds to the feFlood element."
+}

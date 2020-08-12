@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "RTCTrackEvent",
+        "lastModifiedAt": 1597192765738
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 0
+        "lastModifiedAt": 1597192765447
     },
     {
         "name": "receiver",

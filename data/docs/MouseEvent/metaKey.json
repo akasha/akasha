@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.metaKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/metaKey",
+    "description": "The MouseEvent.metaKey read-only property is a Boolean that indicates whether the meta key was pressed or not when a given mouse event occurs."
+}

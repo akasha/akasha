@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMTokenList.values",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/values",
+    "description": "The values() method of the DOMTokenList interface returns an iterator allowing developers to go through all values contained in the DOMTokenList. The individual values are DOMString objects."
+}

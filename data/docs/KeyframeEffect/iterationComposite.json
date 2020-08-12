@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyframeEffect.iterationComposite",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/iterationComposite",
+    "description": "The iterationComposite property of a KeyframeEffect resolves how the animation's property value changes accumulate or override each other upon each of the animation's iterations."
+}

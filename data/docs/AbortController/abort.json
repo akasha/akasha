@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AbortController.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController/abort",
+    "description": "The abort() method of the AbortController interface aborts a DOM request (e.g. a Fetch request) before it has completed. This is able to abort fetch requests, consumption of any response Body, and streams."
+}

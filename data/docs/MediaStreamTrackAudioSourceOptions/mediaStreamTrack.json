@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaStreamTrackAudioSourceOptions.mediaStreamTrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack",
+    "description": "The MediaStreamTrackAudioSourceOptions dictionary's mediaStreamTrack property must contain a reference to the MediaStreamTrack from which the MediaStreamTrackAudioSourceNode being created using the MediaStreamTrackAudioSourceNode() constructor."
+}

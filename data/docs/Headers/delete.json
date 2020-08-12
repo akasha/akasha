@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Headers.delete",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Headers/delete",
+    "description": "The delete() method of the Headers interface deletes a header from the current Headers object."
+}

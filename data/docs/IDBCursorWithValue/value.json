@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBCursorWithValue.value",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue/value",
+    "description": "The value of the current cursor."
+}

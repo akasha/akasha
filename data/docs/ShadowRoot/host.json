@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ShadowRoot.host",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/host",
+    "description": "The host read-only property of the ShadowRoot returns a reference to the DOM element the ShadowRoot is attached to."
+}

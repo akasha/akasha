@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSStyleRule.styleMap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/styleMap",
+    "description": "The styleMap read-only property of the CSSStyleRule interface returns a StylePropertyMap object which provides access to the rule's property-value pairs."
+}

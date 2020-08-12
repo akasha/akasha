@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PushSubscription.unsubscribe",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/unsubscribe",
+    "description": "The unsubscribe() method of the PushSubscription interface returns a Promise that resolves to a Boolean when the current subscription is successfully unsubscribed."
+}

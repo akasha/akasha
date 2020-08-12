@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequestEventTarget.onload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload",
+    "description": "The XMLHttpRequestEventTarget.onload is the function called when an XMLHttpRequest transaction completes successfully."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PerformanceEntry.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/toJSON",
+    "description": "The toJSON() method is a serializer; it returns a JSON representation of the performance entry object."
+}

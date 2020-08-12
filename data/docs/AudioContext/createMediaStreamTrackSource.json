@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioContext.createMediaStreamTrackSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamTrackSource",
+    "description": "A MediaStreamTrackAudioSourceNode object which acts as a source for audio data found in the specified audio track."
+}

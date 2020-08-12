@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeySystemAccess.getConfiguration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/getConfiguration",
+    "description": "The MediaKeySystemAccess.getConfiguration() method returns a MediaKeySystemConfiguration object with the supported combination of configuration options."
+}

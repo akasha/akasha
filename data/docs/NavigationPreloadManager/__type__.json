@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "NavigationPreloadManager",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigationPreloadManager",
+    "description": "The NavigationPreloadManager interface of the the Service Worker API provides methods for managing the preloading of resources with a service worker."
+}

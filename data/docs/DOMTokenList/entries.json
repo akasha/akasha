@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMTokenList.entries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/entries",
+    "description": "The DOMTokenList.entries() method returns an iterator allowing you to go through all key/value pairs contained in this object. The values are DOMString objects, each representing a single token."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "FormData.FormData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData",
+    "description": "The FormData() constructor creates a new FormData object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "URL.protocol",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol",
+    "description": "The protocol property of the URL interface is a USVString representing the protocol scheme of the URL, including the final ':'."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getElementsByTagNameNS",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagNameNS",
+    "description": "The Element.getElementsByTagNameNS() method returns a live HTMLCollection of elements with the given tag name belonging to the given namespace. It is similar to Document.getElementsByTagNameNS, except that its search is restricted to descendants of the specified element."
+}

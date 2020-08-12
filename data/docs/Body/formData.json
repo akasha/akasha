@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Body.formData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Body/formData",
+    "description": "The formData() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a FormData object."
+}

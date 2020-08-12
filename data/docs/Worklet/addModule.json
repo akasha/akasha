@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Worklet.addModule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Worklet/addModule",
+    "description": "The addModule() method of the Worklet interface loads the module in the given JavaScript file and adds it to the current Worklet."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TouchEvent.altKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/altKey",
+    "description": "A Boolean value indicating whether or not the alt (Alternate) key is enabled when the touch event is created. If the alt key is enabled, the attribute's value is true. Otherwise, it is false."
+}

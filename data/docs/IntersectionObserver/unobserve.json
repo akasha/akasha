@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IntersectionObserver.unobserve",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/unobserve",
+    "description": "The IntersectionObserver method unobserve() instructs the IntersectionObserver to stop observing the specified target element."
+}

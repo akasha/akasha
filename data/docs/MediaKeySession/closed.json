@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaKeySession.closed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/closed",
+    "description": "The MediaKeySession.closed read-only property returns a Promise signaling when a MediaKeySession closes. This promise can only be fulfilled and is never rejected. Closing a session means that licenses and keys associated with it are no longer valid for decrypting media data."
+}

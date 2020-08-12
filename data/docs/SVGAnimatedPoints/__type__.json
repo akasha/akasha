@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGAnimatedPoints",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedPoints",
+    "description": "The SVGAnimatedPoints interface supports elements which have a points attribute which holds a list of coordinate values and which support the ability to animate that attribute."
+}

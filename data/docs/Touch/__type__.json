@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Touch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch",
+    "description": "The Touch interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad."
+}

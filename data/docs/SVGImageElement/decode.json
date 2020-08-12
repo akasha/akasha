@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SVGImageElement.decode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decode",
+    "description": "The decode() method of the SVGImageElement interface initiates asynchronous decoding of an image, returning a Promise that"
+}

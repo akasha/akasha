@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192452730
+    },
+    {
+        "name": "getPointAtLength",
+        "lastModifiedAt": 1597192454343
+    },
+    {
+        "name": "getTotalLength",
+        "lastModifiedAt": 1597192453946
+    },
+    {
+        "name": "isPointInFill",
+        "lastModifiedAt": 1597192453384
+    },
+    {
+        "name": "isPointInStroke",
+        "lastModifiedAt": 1597192453640
+    },
+    {
+        "name": "pathLength",
+        "lastModifiedAt": 1597192453124
+    }
+]

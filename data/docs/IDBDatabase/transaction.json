@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBDatabase.transaction",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/transaction",
+    "description": "An IDBTransaction object."
+}

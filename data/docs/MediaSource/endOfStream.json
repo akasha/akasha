@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaSource.endOfStream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/endOfStream",
+    "description": "The endOfStream() method of the MediaSource interface signals the end of the stream."
+}

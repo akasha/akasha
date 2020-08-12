@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PerformanceObserver.disconnect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/disconnect",
+    "description": "The disconnect() method of the PerformanceObserver interface is used to stop the performance observer from receiving any performance entry events."
+}

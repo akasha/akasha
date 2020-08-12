@@ -3,8 +3,5 @@
     "kind": "Type",
     "name": "RTCDTMFSender",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender",
-    "description": "Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface.",
-    "properties": [
-        "toneBuffer"
-    ]
+    "description": "Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface."
 }

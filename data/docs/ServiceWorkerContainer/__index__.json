@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192328070
+    },
+    {
+        "name": "controller",
+        "lastModifiedAt": 1597192328351
+    },
+    {
+        "name": "getRegistration",
+        "lastModifiedAt": 1597192329413
+    },
+    {
+        "name": "getRegistrations",
+        "lastModifiedAt": 1597192329654
+    },
+    {
+        "name": "register",
+        "lastModifiedAt": 1597192329147
+    },
+    {
+        "name": "startMessages",
+        "lastModifiedAt": 1597192329899
+    }
+]

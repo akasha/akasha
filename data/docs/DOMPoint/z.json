@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPoint.z",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/z",
+    "description": "The DOMPoint interface's z property specifies the depth coordinate of a point in space."
+}

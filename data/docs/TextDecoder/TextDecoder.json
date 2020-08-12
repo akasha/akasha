@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "TextDecoder.TextDecoder",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/TextDecoder",
+    "description": "The TextDecoder() constructor returns a newly created TextDecoder object for the encoding specified in parameter."
+}

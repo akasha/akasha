@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSNamespaceRule.namespaceURI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSNamespaceRule/namespaceURI",
+    "description": "The CSSNamespaceRule.namespaceURI read-only property returns a DOMString containing the text of the URI of the given namespace."
+}

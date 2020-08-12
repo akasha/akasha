@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSPseudoElement.element",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/element",
+    "description": "The element read-only property of the CSSPseudoElement interface returns a reference to the originating element of the pseudo-element, in other words its parent element."
+}

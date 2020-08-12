@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PositionError.message",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PositionError/message",
+    "description": "The GeolocationPositionError.message read-only property returns a human-readable DOMString describing the details of the error."
+}

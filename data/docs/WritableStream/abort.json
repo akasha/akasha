@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WritableStream.abort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/abort",
+    "description": "The abort() method of the WritableStream interface aborts the stream, signaling that the producer can no longer successfully write to the stream and it is to be immediately moved to an error state, with any queued writes discarded."
+}

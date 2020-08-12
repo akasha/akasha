@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "XMLSerializer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer",
+    "description": "The XMLSerializer interface provides the serializeToString() method to construct an XML string representing a DOM tree."
+}

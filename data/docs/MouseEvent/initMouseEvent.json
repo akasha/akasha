@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MouseEvent.initMouseEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent",
+    "description": "The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method)."
+}

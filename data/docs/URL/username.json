@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "URL.username",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/username",
+    "description": "The username property of the URL interface is a USVString containing the username specified before the domain name."
+}

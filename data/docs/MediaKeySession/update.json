@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeySession.update",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/update",
+    "description": "The MediaKeySession.update() method loads messages and licenses to the CDM, and then returns a Promise."
+}

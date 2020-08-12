@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.explicitOriginalTarget",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/explicitOriginalTarget",
+    "description": "The explicit original target of the event. (Mozilla-specific)"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ExtendableMessageEvent.origin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/origin",
+    "description": "The origin read-only property of the ExtendableMessageEvent interface returns the origin of the Client that sent the message."
+}

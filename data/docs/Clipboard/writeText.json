@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Clipboard.writeText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText",
+    "description": "The Clipboard interface's writeText() property writes the specified text string to the system clipboard. Text may be read back using either read() or readText()."
+}

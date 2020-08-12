@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "NodeList.forEach",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach",
+    "description": "The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order."
+}

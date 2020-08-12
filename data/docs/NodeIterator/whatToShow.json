@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NodeIterator.whatToShow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/whatToShow",
+    "description": "The NodeIterator.whatToShow read-only property represents an unsigned integer representing a bitmask signifying what types of nodes should be returned by the NodeIterator."
+}

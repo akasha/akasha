@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1596711379898
+        "lastModifiedAt": 1597192964454
     },
     {
         "name": "antialias",
@@ -19,6 +19,14 @@
     {
         "name": "framebuffer",
         "lastModifiedAt": 1596711383103
+    },
+    {
+        "name": "framebufferHeight",
+        "lastModifiedAt": 1597192966596
+    },
+    {
+        "name": "framebufferWidth",
+        "lastModifiedAt": 1597192966348
     },
     {
         "name": "getNativeFramebufferScaleFactor",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerRegistration.installing",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/installing",
+    "description": "The installing property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installing. This property is initially set to null."
+}

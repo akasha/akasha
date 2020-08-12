@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaKeySystemAccess.keySystem",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/keySystem",
+    "description": "The MediaKeySystemAccess.keySystem read-only property returns a DOMString identifying the key system being used."
+}

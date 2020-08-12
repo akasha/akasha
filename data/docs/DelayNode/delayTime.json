@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DelayNode.delayTime",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/delayTime",
+    "description": "An AudioParam."
+}

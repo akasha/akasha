@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredentialCreationOptions.attestation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialCreationOptions/attestation",
+    "description": "attestation is an optional property of the PublicKeyCredentialCreationOptions dictionary. This is a string whose value indicates the preference regarding the attestation transport, between the authenticator, the client and the relying party."
+}

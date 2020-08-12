@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XMLHttpRequest.setRequestHeader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader",
+    "description": "The XMLHttpRequest method setRequestHeader() sets the value of an HTTP request header. When using setRequestHeader(), you must call it after calling open(), but before calling send(). If this method is called several times with the same header, the values are merged into one single request header."
+}

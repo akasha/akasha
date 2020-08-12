@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.querySelectorAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll",
+    "description": "The Element method querySelectorAll() returns a static (not live) NodeList representing a list of elements matching the specified group of selectors which are descendants of the element on which the method was called."
+}

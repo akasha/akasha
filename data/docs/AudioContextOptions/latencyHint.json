@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioContextOptions.latencyHint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/latencyHint",
+    "description": "The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named latencyHint, which indicates the preferred maximum latency in seconds for the audio context."
+}

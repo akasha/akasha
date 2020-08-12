@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ShadowRoot.mode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/mode",
+    "description": "The mode property of the ShadowRoot specifies its mode — either open or closed. This defines whether or not the shadow root's internal features are accessible from JavaScript."
+}

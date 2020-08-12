@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Clients.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clients/get",
+    "description": "The get() method of the Clients interface gets a service worker client matching a given id and returns it in a Promise."
+}

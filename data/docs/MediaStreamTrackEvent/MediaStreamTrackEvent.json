@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MediaStreamTrackEvent.MediaStreamTrackEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackEvent/MediaStreamTrackEvent",
+    "description": "The MediaStreamTrackEvent() constructor returns a newly created MediaStreamTrackEvent object, which represents an event announcing that a MediaStreamTrack has been added to or removed from a MediaStream."
+}

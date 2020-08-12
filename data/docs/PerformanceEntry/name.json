@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceEntry.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/name",
+    "description": "The name property of the PerformanceEntry interface returns a value that further specifies the value returned by the PerformanceEntry.entryType property. This property is read only."
+}

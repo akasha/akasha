@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Range.endContainer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/endContainer",
+    "description": "The Range.endContainer read-only property returns the Node within which the Range ends. To change the end position of a node, use the Range.setEnd() method or a similar one."
+}

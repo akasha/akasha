@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URLSearchParams.append",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/append",
+    "description": "The append() method of the URLSearchParams interface appends a specified key/value pair as a new search parameter."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SVGPathElement.getTotalLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getTotalLength",
+    "description": "The SVGPathElement.getTotalLength() method returns the user agent's computed value for the total length of the path in user units."
+}

@@ -3,16 +3,5 @@
     "kind": "Type",
     "name": "NavigatorID",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID",
-    "description": "The NavigatorID interface contains methods and properties related to the identity of the browser.",
-    "properties": [
-        "appCodeName",
-        "appName",
-        "appVersion",
-        "platform",
-        "product",
-        "userAgent"
-    ],
-    "methods": [
-        "taintEnabled"
-    ]
+    "description": "The NavigatorID interface contains methods and properties related to the identity of the browser."
 }

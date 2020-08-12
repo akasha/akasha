@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DOMPoint.DOMPoint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint",
+    "description": "The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties."
+}

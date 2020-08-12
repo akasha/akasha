@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaSource.readyState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/readyState",
+    "description": "The readyState read-only property of the MediaSource interface returns an enum representing the state of the current MediaSource. The three possible values are:"
+}

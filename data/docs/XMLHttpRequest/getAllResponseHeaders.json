@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XMLHttpRequest.getAllResponseHeaders",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders",
+    "description": "The XMLHttpRequest method getAllResponseHeaders() returns all the response headers, separated by CRLF, as a string, or returns null if no response has been received."
+}

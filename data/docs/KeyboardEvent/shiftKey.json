@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.shiftKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/shiftKey",
+    "description": "The KeyboardEvent.shiftKey read-only property is a Boolean that indicates if the shift key was pressed (true) or not (false) when the event occurred."
+}

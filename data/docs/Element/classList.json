@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.classList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/classList",
+    "description": "The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list."
+}

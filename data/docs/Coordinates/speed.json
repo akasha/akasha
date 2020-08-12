@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Coordinates.speed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/speed",
+    "description": "The GeolocationCoordinates.speed read-only property is a double representing the velocity of the device in meters per second. This value is null if the implementation is not able to measure it."
+}

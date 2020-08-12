@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EffectTiming.delay",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/delay",
+    "description": "The EffectTiming dictionary's delay property in the Web Animations API represents the number of milliseconds to delay the start of the animation."
+}

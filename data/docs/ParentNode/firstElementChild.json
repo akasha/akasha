@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ParentNode.firstElementChild",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/firstElementChild",
+    "description": "The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements."
+}

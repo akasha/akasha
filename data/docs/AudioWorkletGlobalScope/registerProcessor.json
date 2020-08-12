@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioWorkletGlobalScope.registerProcessor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope/registerProcessor",
+    "description": "The registerProcessor method of the AudioWorkletGlobalScope interface registers a class constructor derived from AudioWorkletProcessor interface under a specified name."
+}

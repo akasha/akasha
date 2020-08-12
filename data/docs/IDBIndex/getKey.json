@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBIndex.getKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/getKey",
+    "description": "If a primary key is found, it is set as the result of the request object. Note that this doesn't return the whole record as IDBIndex.get does."
+}

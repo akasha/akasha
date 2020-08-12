@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AnimationPlaybackEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent",
+    "description": "The AnimationPlaybackEvent interface of the Web Animations API represents animation events."
+}

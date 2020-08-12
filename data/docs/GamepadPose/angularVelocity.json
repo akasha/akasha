@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadPose.angularVelocity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/angularVelocity",
+    "description": "The angularVelocity read-only property of the GamepadPose interface returns an array representing the angular velocity vector of the Gamepad, in radians per second."
+}

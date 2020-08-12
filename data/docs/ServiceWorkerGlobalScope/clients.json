@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerGlobalScope.clients",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/clients",
+    "description": "The clients read-only property of the ServiceWorkerGlobalScope interface returns the Clients object associated with the service worker."
+}

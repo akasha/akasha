@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ProgressEvent.total",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/total",
+    "description": "The ProgressEvent.total read-only property is an integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this only represent the content itself, not headers and other overhead."
+}

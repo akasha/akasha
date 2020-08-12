@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "OscillatorNode",
+        "lastModifiedAt": 1597192534208
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192533952
+    },
+    {
+        "name": "frequency",
+        "lastModifiedAt": 1597192534583
+    },
+    {
+        "name": "setPeriodicWave",
+        "lastModifiedAt": 1597192534852
+    },
+    {
+        "name": "start",
+        "lastModifiedAt": 1597192535644
+    },
+    {
+        "name": "stop",
+        "lastModifiedAt": 1597192536027
+    }
+]

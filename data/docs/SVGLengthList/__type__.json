@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGLengthList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLengthList",
+    "description": "The SVGLengthList defines a list of SVGLength objects."
+}

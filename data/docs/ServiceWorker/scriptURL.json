@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorker.scriptURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/scriptURL",
+    "description": "Returns the ServiceWorker serialized script URL defined as part of ServiceWorkerRegistration. Must be on the same origin as the document that registers the ServiceWorker."
+}

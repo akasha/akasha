@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PointerEvent.isPrimary",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/isPrimary",
+    "description": "The isPrimary read-only property of the PointerEvent interface indicates whether or not the pointer device that created the event is the primary pointer. It returns true if the pointer that caused the event to be fired is the primary device and returns false otherwise."
+}

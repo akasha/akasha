@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMTokenList.replace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/replace",
+    "description": "The replace() method of the DOMTokenList interface replaces an existing token with a new token. If the first token doesn't exist, replace() returns false immediately, without adding the new token to the token list."
+}

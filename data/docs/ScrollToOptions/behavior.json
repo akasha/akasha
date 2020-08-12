@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ScrollToOptions.behavior",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/behavior",
+    "description": "An enum, the value of which can be one of the following:"
+}

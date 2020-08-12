@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBRequest.readyState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/readyState",
+    "description": "The IDBRequestReadyState of the request, which takes one of the following two values:"
+}

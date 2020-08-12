@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DynamicsCompressorNode.release",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/release",
+    "description": "An AudioParam."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.setEndBefore",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/setEndBefore",
+    "description": "The Range.setEndBefore() method sets the end position of a Range relative to another Node. The parent Node of end of the Range will be the same as that for the referenceNode."
+}

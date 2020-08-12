@@ -1,0 +1,19 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192653323
+    },
+    {
+        "name": "authenticatorData",
+        "lastModifiedAt": 1597192653607
+    },
+    {
+        "name": "signature",
+        "lastModifiedAt": 1597192653846
+    },
+    {
+        "name": "userHandle",
+        "lastModifiedAt": 1597192654247
+    }
+]

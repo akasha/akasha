@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CacheStorage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage",
+    "description": "The CacheStorage interface represents the storage for Cache objects."
+}

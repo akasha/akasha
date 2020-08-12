@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "CustomEvent.CustomEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent",
+    "description": "The CustomEvent() constructor creates a new CustomEvent."
+}

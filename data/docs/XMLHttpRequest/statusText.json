@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequest.statusText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/statusText",
+    "description": "The read-only XMLHttpRequest.statusText property returns a DOMString containing the response's status message as returned by the HTTP server. Unlike XMLHTTPRequest.status which indicates a numerical status code, this property contains the text of the response status, such as \"OK\" or \"Not Found\". If the request's readyState is in UNSENT or OPENED state, the value of statusText will be an empty string."
+}

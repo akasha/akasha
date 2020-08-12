@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.appendChild",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild",
+    "description": "The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node)."
+}

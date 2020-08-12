@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DataTransfer.DataTransfer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer",
+    "description": "The DataTransfer constructor creates a new DataTransfer object instance."
+}

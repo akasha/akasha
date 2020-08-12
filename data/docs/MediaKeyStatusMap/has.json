@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeyStatusMap.has",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/has",
+    "description": "The has property of the MediaKeyStatusMap interface returns a Boolean, asserting whether a value has been associated with the given key."
+}

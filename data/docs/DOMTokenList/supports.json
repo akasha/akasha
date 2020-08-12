@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMTokenList.supports",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/supports",
+    "description": "The supports() method of the DOMTokenList interface returns true if a given token is in the associated attribute's supported tokens. This method is intended to support feature detection."
+}

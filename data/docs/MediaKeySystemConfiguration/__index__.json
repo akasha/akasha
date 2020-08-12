@@ -1,0 +1,27 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597190985325
+    },
+    {
+        "name": "audioCapabilities",
+        "lastModifiedAt": 1597190985914
+    },
+    {
+        "name": "distinctiveIdentifier",
+        "lastModifiedAt": 1597190986392
+    },
+    {
+        "name": "initDataTypes",
+        "lastModifiedAt": 1597190985565
+    },
+    {
+        "name": "persistentState",
+        "lastModifiedAt": 1597190986734
+    },
+    {
+        "name": "videoCapabilities",
+        "lastModifiedAt": 1597190986158
+    }
+]

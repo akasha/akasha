@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AudioParamDescriptor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParamDescriptor",
+    "description": "The AudioParamDescriptor dictionary of the Web Audio API specifies properties for an AudioParam objects."
+}

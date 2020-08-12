@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SubtleCrypto.sign",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign",
+    "description": "The sign() method of the SubtleCrypto interface generates a digital signature."
+}

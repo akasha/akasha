@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DOMTokenList.remove",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove",
+    "description": "The remove() method of the DOMTokenList interface removes the specified tokens from the list."
+}

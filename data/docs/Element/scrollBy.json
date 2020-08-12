@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.scrollBy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollBy",
+    "description": "The scrollBy() method of the Element interface scrolls an element by the given amount."
+}

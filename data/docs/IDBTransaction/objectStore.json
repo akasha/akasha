@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBTransaction.objectStore",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStore",
+    "description": "The objectStore() method of the IDBTransaction interface returns an object store that has already been added to the scope of this transaction."
+}

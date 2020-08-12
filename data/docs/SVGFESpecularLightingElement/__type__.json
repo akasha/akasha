@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFESpecularLightingElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement",
+    "description": "The SVGFESpecularLightingElement interface corresponds to the feSpecularLighting element."
+}

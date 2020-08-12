@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Request.redirect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/redirect",
+    "description": "The redirect read-only property of the Request interface contains the mode for how redirects are handled."
+}

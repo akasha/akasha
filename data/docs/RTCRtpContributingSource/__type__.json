@@ -3,11 +3,5 @@
     "kind": "Type",
     "name": "RTCRtpContributingSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource",
-    "description": "The RTCRtpContributingSource dictionary of the the WebRTC API is used by getContributingSources() to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out.",
-    "properties": [
-        "audioLevel",
-        "rtpTimestamp",
-        "source",
-        "timestamp"
-    ]
+    "description": "The RTCRtpContributingSource dictionary of the the WebRTC API is used by getContributingSources() to provide information about a given contributing source (CSRC), including the most recent time a packet that the source contributed was played out."
 }

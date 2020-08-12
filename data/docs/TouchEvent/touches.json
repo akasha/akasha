@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TouchEvent.touches",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/touches",
+    "description": "touches is a read-only TouchList listing all the Touch objects for touch points that are currently in contact with the touch surface, regardless of whether or not they've changed or what their target element was at touchstart time."
+}

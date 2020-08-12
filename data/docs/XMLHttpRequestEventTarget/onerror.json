@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequestEventTarget.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onerror",
+    "description": "The XMLHttpRequestEventTarget.onerror is the function called when an XMLHttpRequest transaction fails due to an error."
+}

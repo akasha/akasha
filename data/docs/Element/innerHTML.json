@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.innerHTML",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML",
+    "description": "The Element property innerHTML gets or sets the HTML or XML markup contained within the element."
+}

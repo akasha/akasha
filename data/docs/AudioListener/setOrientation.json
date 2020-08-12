@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioListener.setOrientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setOrientation",
+    "description": "Void."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DeviceMotionEventRotationRate.gamma",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma",
+    "description": "This property indicates the rate of rotation around the Y axis -- in degrees per second -- in a DeviceMotionEventRotationRate object."
+}

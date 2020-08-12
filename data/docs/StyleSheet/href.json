@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StyleSheet.href",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/href",
+    "description": "The href property of the StyleSheet interface returns the location of the style sheet."
+}

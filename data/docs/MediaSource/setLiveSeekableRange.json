@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaSource.setLiveSeekableRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/setLiveSeekableRange",
+    "description": "The setLiveSeekableRange() method of the MediaSource interface sets the range that the user can seek to in the media element."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "FullscreenOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions",
+    "description": "The FullscreenOptions dictionary is used to provide configuration options when calling requestFullscreen() on an element to place that element into full-screen mode."
+}

@@ -1,0 +1,23 @@
+
+[
+    {
+        "name": "WritableStream",
+        "lastModifiedAt": 1597192138458
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192138092
+    },
+    {
+        "name": "abort",
+        "lastModifiedAt": 1597192139146
+    },
+    {
+        "name": "getWriter",
+        "lastModifiedAt": 1597192140194
+    },
+    {
+        "name": "locked",
+        "lastModifiedAt": 1597192138842
+    }
+]

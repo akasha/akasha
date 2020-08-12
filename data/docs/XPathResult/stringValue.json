@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XPathResult.stringValue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/stringValue",
+    "description": "The read-only stringValue property of the XPathResult interface returns the string value of a result with XPathResult.resultType being STRING_TYPE."
+}

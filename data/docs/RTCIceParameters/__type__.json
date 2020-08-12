@@ -3,9 +3,5 @@
     "kind": "Type",
     "name": "RTCIceParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceParameters",
-    "description": "The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session.",
-    "properties": [
-        "password",
-        "usernameFragment"
-    ]
+    "description": "The RTCIceParameters dictionary specifies the username fragment and password assigned to an ICE session."
 }

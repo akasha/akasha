@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XPathEvaluator.evaluate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/evaluate",
+    "description": "The evaluate() method of the XPathEvaluator interface executes an XPath expression on the given node or document and returns an XPathResult."
+}

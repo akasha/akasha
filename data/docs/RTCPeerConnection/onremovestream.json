@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnection.onremovestream",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onremovestream",
+    "description": "The RTCPeerConnection.onremovestream event handler is a property containing the code to execute when the removestream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is removed from this connection."
+}

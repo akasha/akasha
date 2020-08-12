@@ -3,11 +3,5 @@
     "kind": "Type",
     "name": "CustomElementRegistry",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry",
-    "description": "The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property.",
-    "methods": [
-        "define",
-        "get",
-        "upgrade",
-        "whenDefined"
-    ]
+    "description": "The CustomElementRegistry interface provides methods for registering custom elements and querying registered elements. To get an instance of it, use the window.customElements property."
 }

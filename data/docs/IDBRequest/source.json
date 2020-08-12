@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBRequest.source",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/source",
+    "description": "An object representing the source of the request, such as an IDBIndex, IDBObjectStore or IDBCursor."
+}

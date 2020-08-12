@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TouchList.item",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchList/item",
+    "description": "The item() method returns the Touch object at the specified index in the TouchList."
+}

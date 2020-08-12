@@ -3,13 +3,5 @@
     "kind": "Type",
     "name": "VideoTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack",
-    "description": "The VideoTrack interface represents a single video track from a video element.",
-    "properties": [
-        "id",
-        "kind",
-        "label",
-        "language",
-        "selected",
-        "sourceBuffer"
-    ]
+    "description": "The VideoTrack interface represents a single video track from a video element."
 }

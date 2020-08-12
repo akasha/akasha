@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Coordinates.altitudeAccuracy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/altitudeAccuracy",
+    "description": "The GeolocationCoordinates.altitudeAccuracy read-only property is a strictly positive double representing the accuracy, with a 95% confidence level, of the altitude expressed in meters. This value is null if the implementation doesn't support measuring altitude."
+}

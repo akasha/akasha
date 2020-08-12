@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IntersectionObserver.takeRecords",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/takeRecords",
+    "description": "The IntersectionObserver method takeRecords() returns an array of IntersectionObserverEntry objects, one for each targeted element which has experienced an intersection change since the last time the intersections were checked, either explicitly through a call to this method or implicitly by an automatic call to the observer's callback."
+}

@@ -3,22 +3,5 @@
     "kind": "Type",
     "name": "HTMLOutputElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement",
-    "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of output elements.",
-    "properties": [
-        "defaultValue",
-        "form",
-        "htmlFor",
-        "labels",
-        "name",
-        "type",
-        "validationMessage",
-        "validity",
-        "value",
-        "willValidate"
-    ],
-    "methods": [
-        "checkValidity",
-        "reportValidity",
-        "setCustomValidity"
-    ]
+    "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of output elements."
 }

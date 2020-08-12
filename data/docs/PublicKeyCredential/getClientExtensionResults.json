@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PublicKeyCredential.getClientExtensionResults",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResults",
+    "description": "getClientExtensionResults() is a method of the PublicKeyCredential interface that returns an ArrayBuffer which contains a map between the extensions identifiers and their results after having being processed by the client."
+}

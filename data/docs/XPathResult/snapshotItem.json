@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XPathResult.snapshotItem",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/snapshotItem",
+    "description": "The snapshotItem() method of the XPathResult interface returns an item of the snapshot collection or null in case the index is not within the range of nodes. Unlike the iterator result, the snapshot does not become invalid, but may not correspond to the current document if it is mutated."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "StaticRange.toRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/toRange",
+    "description": "The toRange() property of the StaticRange interface converts the StaticRange object to a Range object."
+}

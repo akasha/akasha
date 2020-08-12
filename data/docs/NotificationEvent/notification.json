@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NotificationEvent.notification",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/notification",
+    "description": "The notification read-only property of the NotificationEvent interface returns the instance of the Notification that was clicked to fire the event. The Notification provides read-only access to many properties that were set at the instantiation time of the Notification such as tag and data attributes that allow you to store information for defered use in the notificationclick event."
+}

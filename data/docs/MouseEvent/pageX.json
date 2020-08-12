@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.pageX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX",
+    "description": "The pageX read-only property of the MouseEvent interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document."
+}

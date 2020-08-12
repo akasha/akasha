@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGNumberList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGNumberList",
+    "description": "The SVGNumberList defines a list of SVGNumber objects."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "RTCDataChannelEvent.RTCDataChannelEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/RTCDataChannelEvent",
+    "description": "The RTCDataChannelEvent() constructor creates a new RTCDataChannelEvent."
+}

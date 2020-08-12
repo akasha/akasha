@@ -1,0 +1,55 @@
+
+[
+    {
+        "name": "FileReader",
+        "lastModifiedAt": 1597191935593
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597191935335
+    },
+    {
+        "name": "abort",
+        "lastModifiedAt": 1597191937425
+    },
+    {
+        "name": "error",
+        "lastModifiedAt": 1597191935992
+    },
+    {
+        "name": "onabort",
+        "lastModifiedAt": 1597191942055
+    },
+    {
+        "name": "onerror",
+        "lastModifiedAt": 1597191942702
+    },
+    {
+        "name": "onload",
+        "lastModifiedAt": 1597191943089
+    },
+    {
+        "name": "readAsArrayBuffer",
+        "lastModifiedAt": 1597191938243
+    },
+    {
+        "name": "readAsBinaryString",
+        "lastModifiedAt": 1597191938496
+    },
+    {
+        "name": "readAsDataURL",
+        "lastModifiedAt": 1597191938907
+    },
+    {
+        "name": "readAsText",
+        "lastModifiedAt": 1597191939186
+    },
+    {
+        "name": "readyState",
+        "lastModifiedAt": 1597191936298
+    },
+    {
+        "name": "result",
+        "lastModifiedAt": 1597191936598
+    }
+]

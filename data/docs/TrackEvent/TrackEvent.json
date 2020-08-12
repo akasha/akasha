@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "TrackEvent.TrackEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent",
+    "description": "The TrackEvent() constructor creates and returns a new TrackEvent object describing an event which occurred on a list of tracks (AudioTrackList, VideoTrackList, or TextTrackList)."
+}

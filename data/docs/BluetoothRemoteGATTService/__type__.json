@@ -3,16 +3,5 @@
     "kind": "Type",
     "name": "BluetoothRemoteGATTService",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService",
-    "description": "The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.",
-    "properties": [
-        "device",
-        "isPrimary",
-        "uuid"
-    ],
-    "methods": [
-        "getCharacteristic",
-        "getCharacteristics",
-        "getIncludedService",
-        "getIncludedServices"
-    ]
+    "description": "The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service."
 }

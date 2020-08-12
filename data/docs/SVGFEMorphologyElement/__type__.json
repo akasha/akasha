@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEMorphologyElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEMorphologyElement",
+    "description": "The SVGFEMorphologyElement interface corresponds to the feMorphology element."
+}

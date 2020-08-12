@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PerformanceResourceTiming.toJSON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/toJSON",
+    "description": "The toJSON() method is a serializer that returns a JSON representation of the PerformanceResourceTiming object."
+}

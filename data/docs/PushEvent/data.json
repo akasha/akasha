@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PushEvent.data",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushEvent/data",
+    "description": "The data read-only property of the PushEvent interface returns a reference to a PushMessageData object containing data sent to the PushSubscription."
+}

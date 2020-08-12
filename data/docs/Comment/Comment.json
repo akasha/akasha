@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Comment.Comment",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Comment/Comment",
+    "description": "The Comment() constructor returns a newly created Comment object with the optional DOMString given in parameter as its textual content."
+}

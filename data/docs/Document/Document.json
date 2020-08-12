@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Document.Document",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/Document",
+    "description": "The Document constructor creates a new Document object that is a web page loaded in the browser and serving as an entry point into the page's content."
+}

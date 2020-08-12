@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.deleteFromDocument",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/deleteFromDocument",
+    "description": "The deleteFromDocument() method of the Selection interface deletes the selected text from the document's DOM."
+}

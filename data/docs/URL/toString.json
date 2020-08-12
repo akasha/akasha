@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URL.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString",
+    "description": "The URL.toString() stringifier method returns a USVString containing the whole URL. It is effectively a read-only version of URL.href."
+}

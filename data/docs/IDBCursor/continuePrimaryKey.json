@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBCursor.continuePrimaryKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey",
+    "description": "The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter."
+}

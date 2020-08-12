@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Cache.match",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/match",
+    "description": "The match() method of the Cache interface returns a Promise that resolves to the Response associated with the first matching request in the Cache object. If no match is found, the Promise resolves to undefined."
+}

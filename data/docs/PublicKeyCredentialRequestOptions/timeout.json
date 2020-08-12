@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PublicKeyCredentialRequestOptions.timeout",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/timeout",
+    "description": "The timeout property, of the PublicKeyCredentialRequestOptions dictionary, represents an hint, given in milliseconds, for the time the script is willing to wait for the completion of the retrieval operation."
+}

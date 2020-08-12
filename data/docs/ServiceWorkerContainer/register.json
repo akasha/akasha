@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ServiceWorkerContainer.register",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register",
+    "description": "The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL."
+}

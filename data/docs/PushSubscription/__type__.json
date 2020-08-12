@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "PushSubscription",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription",
+    "description": "The PushSubscription interface of the Push API provides a subcription's URL endpoint and allows unsubscription from a push service."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioNode.connect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect",
+    "description": "If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.addRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/addRange",
+    "description": "The Selection.addRange() method adds a Range to a Selection."
+}

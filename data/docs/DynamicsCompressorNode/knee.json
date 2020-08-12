@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DynamicsCompressorNode.knee",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/knee",
+    "description": "An AudioParam."
+}

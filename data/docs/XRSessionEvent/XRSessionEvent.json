@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "XRSessionEvent.XRSessionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent",
+    "description": "The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object."
+}

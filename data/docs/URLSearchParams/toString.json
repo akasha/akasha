@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URLSearchParams.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/toString",
+    "description": "The toString() method of the URLSearchParams interface returns a query string suitable for use in a URL."
+}

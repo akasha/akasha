@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.scrollLeftMax",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeftMax",
+    "description": "The Element.scrollLeftMax read-only property returns a Number representing the maximum left scroll offset possible for the element."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CacheStorage.open",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open",
+    "description": "The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."
+}

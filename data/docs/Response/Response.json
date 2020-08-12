@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Response.Response",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/Response",
+    "description": "The Response() constructor creates a new Response object."
+}

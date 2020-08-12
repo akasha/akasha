@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "SourceBuffer.changeType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/changeType",
+    "description": "The changeType() method of the SourceBuffer interface sets the MIME type that future calls to appendBuffer() should expect the new media data to conform to."
+}

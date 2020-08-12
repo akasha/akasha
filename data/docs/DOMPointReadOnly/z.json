@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPointReadOnly.z",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/z",
+    "description": "The DOMPointReadOnly interface's z property holds the depth coordinate, z, for a read-only point in space."
+}

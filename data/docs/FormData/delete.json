@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "FormData.delete",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/delete",
+    "description": "The delete() method of the FormData interface deletes a key and its value(s) from a FormData object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Selection.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/type",
+    "description": "The type read-only property of the Selection interface returns a DOMString describing the type of the current selection."
+}

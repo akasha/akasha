@@ -3,30 +3,5 @@
     "kind": "Type",
     "name": "HTMLFormElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement",
-    "description": "The HTMLFormElement interface represents a form element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements.",
-    "properties": [
-        "acceptCharset",
-        "action",
-        "autocomplete",
-        "elements",
-        "encoding",
-        "enctype",
-        "length",
-        "method",
-        "name",
-        "noValidate",
-        "target"
-    ],
-    "methods": [
-        "checkValidity",
-        "reportValidity",
-        "requestSubmit",
-        "reset",
-        "submit"
-    ],
-    "events": [
-        "formdata",
-        "reset",
-        "submit"
-    ]
+    "description": "The HTMLFormElement interface represents a form element in the DOM. It allows access to—and, in some cases, modification of—aspects of the form, as well as access to its component elements."
 }

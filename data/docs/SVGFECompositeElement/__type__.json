@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFECompositeElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement",
+    "description": "The SVGFECompositeElement interface corresponds to the feComposite element."
+}

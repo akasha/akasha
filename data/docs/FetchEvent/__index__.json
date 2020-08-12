@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "FetchEvent",
+        "lastModifiedAt": 1597192313635
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192313365
+    },
+    {
+        "name": "clientId",
+        "lastModifiedAt": 1597192313869
+    },
+    {
+        "name": "preloadResponse",
+        "lastModifiedAt": 1597192314124
+    },
+    {
+        "name": "replacesClientId",
+        "lastModifiedAt": 1597192314386
+    },
+    {
+        "name": "request",
+        "lastModifiedAt": 1597192314998
+    },
+    {
+        "name": "respondWith",
+        "lastModifiedAt": 1597192315260
+    },
+    {
+        "name": "resultingClientId",
+        "lastModifiedAt": 1597192314681
+    }
+]

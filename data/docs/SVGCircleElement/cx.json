@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGCircleElement.cx",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGCircleElement/cx",
+    "description": "The cx read-only property of the SVGCircleElement interface reflects the cx attribute of a circle element and by that defines the x-coordinate of the circleʼs center."
+}

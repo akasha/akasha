@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DOMMatrix",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrix",
+    "description": "The DOMMatrix interface represents 4×4 matrices, suitable for 2D and 3D operations including rotation and translation. It is a mutable version of the DOMMatrixReadOnly interface."
+}

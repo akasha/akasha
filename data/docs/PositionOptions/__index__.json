@@ -1,0 +1,19 @@
+
+[
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192011021
+    },
+    {
+        "name": "enableHighAccuracy",
+        "lastModifiedAt": 1597192011409
+    },
+    {
+        "name": "maximumAge",
+        "lastModifiedAt": 1597192012011
+    },
+    {
+        "name": "timeout",
+        "lastModifiedAt": 1597192011758
+    }
+]

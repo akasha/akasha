@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "MediaKeyStatusMap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap",
+    "description": "The MediaKeyStatusMap interface of the EncryptedMediaExtensions API is a read-only map of media key statuses by key IDs."
+}

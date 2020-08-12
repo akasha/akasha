@@ -1,0 +1,39 @@
+
+[
+    {
+        "name": "AudioBuffer",
+        "lastModifiedAt": 1597192557894
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192557643
+    },
+    {
+        "name": "copyFromChannel",
+        "lastModifiedAt": 1597192559612
+    },
+    {
+        "name": "copyToChannel",
+        "lastModifiedAt": 1597192560406
+    },
+    {
+        "name": "duration",
+        "lastModifiedAt": 1597192558783
+    },
+    {
+        "name": "getChannelData",
+        "lastModifiedAt": 1597192559368
+    },
+    {
+        "name": "length",
+        "lastModifiedAt": 1597192558377
+    },
+    {
+        "name": "numberOfChannels",
+        "lastModifiedAt": 1597192559074
+    },
+    {
+        "name": "sampleRate",
+        "lastModifiedAt": 1597192558143
+    }
+]

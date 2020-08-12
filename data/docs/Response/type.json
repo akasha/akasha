@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/type",
+    "description": "The type read-only property of the Response interface contains the type of the response. It can be one of the following:"
+}

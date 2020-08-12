@@ -3,22 +3,5 @@
     "kind": "Type",
     "name": "HTMLMarqueeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMarqueeElement",
-    "description": "The HTMLMarqueeElement interface provides methods to manipulate marquee elements.",
-    "properties": [
-        "behavior",
-        "bgColor",
-        "direction",
-        "height",
-        "hspace",
-        "loop",
-        "scrollAmount",
-        "scrollDelay",
-        "trueSpeed",
-        "vspace",
-        "width"
-    ],
-    "methods": [
-        "start",
-        "stop"
-    ]
+    "description": "The HTMLMarqueeElement interface provides methods to manipulate marquee elements."
 }

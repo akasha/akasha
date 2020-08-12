@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "NodeIterator.pointerBeforeReferenceNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/pointerBeforeReferenceNode",
+    "description": "The NodeIterator.pointerBeforeReferenceNode read-only property returns a Boolean flag that indicates whether the NodeFilter is anchored before (if this value is true) or after (if this value is false) the anchor node indicated by the NodeIterator.referenceNode property."
+}

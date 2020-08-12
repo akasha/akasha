@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "CompositionEvent.CompositionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/CompositionEvent",
+    "description": "The CompositionEvent() constructor creates a new CompositionEvent object instance."
+}

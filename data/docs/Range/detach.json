@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.detach",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/detach",
+    "description": "The Range.detach() method does nothing. It used to disable the Range object and enable the browser to release associated resources. The method has been kept for compatibility."
+}

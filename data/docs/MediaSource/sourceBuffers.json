@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaSource.sourceBuffers",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/sourceBuffers",
+    "description": "The sourceBuffers read-only property of the MediaSource interface returns a SourceBufferList object containing the list of SourceBuffer objects associated with this MediaSource."
+}

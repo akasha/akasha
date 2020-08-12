@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WebGL2RenderingContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext",
+    "description": "The WebGL2RenderingContext interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML canvas element."
+}

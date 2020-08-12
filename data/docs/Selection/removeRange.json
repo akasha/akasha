@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Selection.removeRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeRange",
+    "description": "The Selection.removeRange() method removes a range from a selection."
+}

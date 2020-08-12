@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AudioContext.createMediaElementSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaElementSource",
+    "description": "For more details about media element audio source nodes, check out the MediaElementAudioSourceNode reference page."
+}

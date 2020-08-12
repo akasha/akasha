@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBDatabase.deleteObjectStore",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/deleteObjectStore",
+    "description": "As with IDBDatabase.createObjectStore, this method can be called only within a versionchange transaction."
+}

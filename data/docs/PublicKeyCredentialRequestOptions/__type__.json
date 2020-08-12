@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "PublicKeyCredentialRequestOptions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions",
+    "description": "The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential."
+}

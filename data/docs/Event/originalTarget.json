@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.originalTarget",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/originalTarget",
+    "description": "The original target of the event before any retargetings. (Mozilla-specific)"
+}

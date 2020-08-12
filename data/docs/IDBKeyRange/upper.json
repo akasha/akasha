@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBKeyRange.upper",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upper",
+    "description": "The upper bound of the key range (can be any type.)"
+}

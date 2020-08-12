@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FetchEvent.resultingClientId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/resultingClientId",
+    "description": "The resultingClientId read-only property of the FetchEvent interface is the id of the client that replaces the previous client during a page navigation."
+}

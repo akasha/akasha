@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEColorMatrixElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEColorMatrixElement",
+    "description": "The SVGFEColorMatrixElement interface corresponds to the feColorMatrix element."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.isSameNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode",
+    "description": "The isSameNode() method for Node objects tests whether two nodes are the same (that is, whether they reference the same object)."
+}

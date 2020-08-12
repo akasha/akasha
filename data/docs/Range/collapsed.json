@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Range.collapsed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/collapsed",
+    "description": "The Range.collapsed read-only property returns a Boolean flag indicating whether the start and end points of the Range are at the same position. It returns true if the start and end boundary points of the Range are the same point in the DOM, false if not."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "InputEvent.InputEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/InputEvent",
+    "description": "The InputEvent() constructor creates a new InputEvent."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGTransformList",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList",
+    "description": "The SVGTransformList defines a list of SVGTransform objects."
+}

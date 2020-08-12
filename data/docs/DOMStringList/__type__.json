@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "DOMStringList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMStringList",
-    "description": "A type returned by some APIs which contains a list of DOMString (strings).",
-    "properties": [
-        "length"
-    ],
-    "methods": [
-        "contains",
-        "item"
-    ]
+    "description": "A type returned by some APIs which contains a list of DOMString (strings)."
 }

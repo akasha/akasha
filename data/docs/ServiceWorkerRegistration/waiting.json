@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerRegistration.waiting",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/waiting",
+    "description": "The waiting property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is installed. This property is initially set to null."
+}

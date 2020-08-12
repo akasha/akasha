@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGPathElement.pathLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/pathLength",
+    "description": "The SVGPathElement.pathLength property reflects the pathLength attribute and returns the total length of the path, in user units."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Range.compareNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/compareNode",
+    "description": "The Range.compareNode() returns a constant indicating the position of the Node."
+}

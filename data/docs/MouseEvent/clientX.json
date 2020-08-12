@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.clientX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX",
+    "description": "The clientX read-only property of the MouseEvent interface provides the horizontal coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.setAttribute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute",
+    "description": "Sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value."
+}

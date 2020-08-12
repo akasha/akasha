@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequest.responseXML",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseXML",
+    "description": "The XMLHttpRequest.responseXML read-only property returns a Document containing the HTML or XML retrieved by the request; or null if the request was unsuccessful, has not yet been sent, or if the data can't be parsed as XML or HTML."
+}

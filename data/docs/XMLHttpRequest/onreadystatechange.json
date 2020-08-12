@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLHttpRequest.onreadystatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange",
+    "description": "An EventHandler that is called whenever the readyState attribute changes. The callback is called from the user interface thread. The XMLHttpRequest.onreadystatechange property contains the event handler to be called when the readystatechange event is fired, that is every time the readyState property of the XMLHttpRequest changes."
+}

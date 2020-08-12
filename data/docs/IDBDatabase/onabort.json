@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBDatabase.onabort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onabort",
+    "description": "The onabort event handler of the IDBDatabase interface handles the abort event, fired when a transaction is aborted and bubbles up to the connection object."
+}

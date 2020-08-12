@@ -1,7 +1,7 @@
 
 {
     "kind": "Property",
-    "name": "XRWebGLLayer.frameBufferWidth",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/frameBufferWidth",
+    "name": "XRWebGLLayer.framebufferWidth",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferWidth",
     "description": "The read-only XRWebGLLayer property framebufferWidth specifies the width of the framebuffer, in pixels."
 }

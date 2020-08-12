@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Animation.cancel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/cancel",
+    "description": "The Web Animations API's cancel() method of the Animation interface clears all KeyframeEffects caused by this animation and aborts its playback."
+}

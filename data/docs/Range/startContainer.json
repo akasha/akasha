@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Range.startContainer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/startContainer",
+    "description": "The Range.startContainer read-only property returns the Node within which the Range starts. To change the start position of a node, use one of the Range.setStart() methods."
+}

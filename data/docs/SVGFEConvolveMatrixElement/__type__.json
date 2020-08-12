@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEConvolveMatrixElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEConvolveMatrixElement",
+    "description": "The SVGFEConvolveMatrixElement interface corresponds to the feConvolveMatrix element."
+}

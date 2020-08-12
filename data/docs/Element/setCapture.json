@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.setCapture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setCapture",
+    "description": "Call this method during the handling of a mousedown event to retarget all mouse events to this element until the mouse button is released or document.releaseCapture() is called."
+}

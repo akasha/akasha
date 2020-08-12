@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "URL.createObjectURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL",
+    "description": "The URL.createObjectURL() static method creates a DOMString containing a URL representing the object given in the parameter."
+}

@@ -1,0 +1,87 @@
+
+[
+    {
+        "name": "XMLHttpRequest",
+        "lastModifiedAt": 1597193616097
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597193615829
+    },
+    {
+        "name": "abort",
+        "lastModifiedAt": 1597193620287
+    },
+    {
+        "name": "getAllResponseHeaders",
+        "lastModifiedAt": 1597193620545
+    },
+    {
+        "name": "getResponseHeader",
+        "lastModifiedAt": 1597193620905
+    },
+    {
+        "name": "onreadystatechange",
+        "lastModifiedAt": 1597193616338
+    },
+    {
+        "name": "open",
+        "lastModifiedAt": 1597193621172
+    },
+    {
+        "name": "overrideMimeType",
+        "lastModifiedAt": 1597193621510
+    },
+    {
+        "name": "readyState",
+        "lastModifiedAt": 1597193616580
+    },
+    {
+        "name": "response",
+        "lastModifiedAt": 1597193616848
+    },
+    {
+        "name": "responseText",
+        "lastModifiedAt": 1597193617143
+    },
+    {
+        "name": "responseType",
+        "lastModifiedAt": 1597193617434
+    },
+    {
+        "name": "responseURL",
+        "lastModifiedAt": 1597193617843
+    },
+    {
+        "name": "responseXML",
+        "lastModifiedAt": 1597193618141
+    },
+    {
+        "name": "send",
+        "lastModifiedAt": 1597193622504
+    },
+    {
+        "name": "setRequestHeader",
+        "lastModifiedAt": 1597193622846
+    },
+    {
+        "name": "status",
+        "lastModifiedAt": 1597193618550
+    },
+    {
+        "name": "statusText",
+        "lastModifiedAt": 1597193618856
+    },
+    {
+        "name": "timeout",
+        "lastModifiedAt": 1597193619167
+    },
+    {
+        "name": "upload",
+        "lastModifiedAt": 1597193619737
+    },
+    {
+        "name": "withCredentials",
+        "lastModifiedAt": 1597193620026
+    }
+]

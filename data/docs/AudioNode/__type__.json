@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AudioNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode",
+    "description": "The AudioNode interface is a generic interface for representing an audio processing module."
+}

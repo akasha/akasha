@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.lookupNamespaceURI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI",
+    "description": "The Node.lookupNamespaceURI() method accepts a prefix and returns the namespace URI associated with it on the given node if found (and null if not)."
+}

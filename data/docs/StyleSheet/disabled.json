@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "StyleSheet.disabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled",
+    "description": "The disabled property of the StyleSheet interface determines whether the style sheet is prevented from applying to the document."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Event.composed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/composed",
+    "description": "The read-only composed property of the Event interface returns a Boolean which indicates whether or not the event will propagate across the shadow DOM boundary into the standard DOM."
+}

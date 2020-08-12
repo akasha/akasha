@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getAttributeNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNode",
+    "description": "Returns the specified attribute of the specified element, as an Attr node."
+}

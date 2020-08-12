@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Node.isDefaultNamespace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/isDefaultNamespace",
+    "description": "The Node.isDefaultNamespace() method accepts a namespace URI as an argument and returns a Boolean with a value of true if the namespace is the default namespace on the given node or false if not."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CryptoKeyPair",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair",
+    "description": "The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm."
+}

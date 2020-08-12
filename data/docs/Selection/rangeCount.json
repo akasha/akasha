@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Selection.rangeCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/rangeCount",
+    "description": "The Selection.rangeCount read-only property returns the number of ranges in the selection."
+}

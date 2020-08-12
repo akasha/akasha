@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AnimationEvent.animationName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent/animationName",
+    "description": "The AnimationEvent.animationName read-only property is a DOMString containing the value of the animation-name CSS property associated with the transition."
+}

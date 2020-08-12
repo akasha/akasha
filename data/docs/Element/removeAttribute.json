@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.removeAttribute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute",
+    "description": "The Element method removeAttribute() removes the attribute with the specified name from the element."
+}

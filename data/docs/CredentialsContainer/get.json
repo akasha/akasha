@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CredentialsContainer.get",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get",
+    "description": "The get() method of the CredentialsContainer interface returns a Promise to a single Credential instance that matches the provided parameters. If no match is found the Promise will resolve to null."
+}

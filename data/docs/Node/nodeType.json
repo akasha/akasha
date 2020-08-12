@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Node.nodeType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType",
+    "description": "The read-only Node.nodeType property is an integer that identifies what the node is. It distinguishes different kind of nodes from each other, such as elements, text and comments."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "PromiseRejectionEvent.PromiseRejectionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/PromiseRejectionEvent",
+    "description": "The PromiseRejectionEvent() constructor returns a newly created PromiseRejectionEvent, which represents events fired when a JavaScript Promise is rejected."
+}

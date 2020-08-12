@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WEBGL_lose_context.loseContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_lose_context/loseContext",
+    "description": "The WEBGL_lose_context.loseContext() method is part of the WebGL API and allows you to simulate losing the context of a WebGLRenderingContext context."
+}

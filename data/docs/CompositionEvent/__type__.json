@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CompositionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent",
+    "description": "The DOM CompositionEvent represents events that occur due to the user indirectly entering text."
+}

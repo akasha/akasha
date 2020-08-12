@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.className",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/className",
+    "description": "The className property of the Element interface gets and sets the value of the class attribute of the specified element."
+}

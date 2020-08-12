@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBFactory.open",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open",
+    "description": "If an error occurs while the database connection is being opened, then an error event is fired on the request object returned from this method."
+}

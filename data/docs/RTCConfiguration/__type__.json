@@ -3,14 +3,5 @@
     "kind": "Type",
     "name": "RTCConfiguration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration",
-    "description": "The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established.",
-    "properties": [
-        "bundlePolicy",
-        "certificates",
-        "iceCandidatePoolSize",
-        "iceServers",
-        "iceTransportPolicy",
-        "peerIdentity",
-        "rtcpMuxPolicy"
-    ]
+    "description": "The RTCConfiguration dictionary is used to provide configuration options for an RTCPeerConnection. It may be passed into the constructor when instantiating a connection, or used with the RTCPeerConnection.getConfiguration() and RTCPeerConnection.setConfiguration() methods, which allow inspecting and changing the configuration while a connection is established."
 }

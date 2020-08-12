@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "DOMRect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRect",
+    "description": "A DOMRect represents a rectangle."
+}

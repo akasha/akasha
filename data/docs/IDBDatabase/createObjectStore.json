@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBDatabase.createObjectStore",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/createObjectStore",
+    "description": "The method takes the name of the store as well as a parameter object that lets you define important optional properties. You can use the property to uniquely identify individual objects in the store. As the property is an identifier, it should be unique to every object, and every object should have that property."
+}

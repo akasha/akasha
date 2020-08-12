@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.removeAttributeNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttributeNode",
+    "description": "The removeAttributeNode() method of the Element object removes the specified attribute from the current element."
+}

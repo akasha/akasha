@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadPose.linearVelocity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/linearVelocity",
+    "description": "The linearVelocity read-only property of the GamepadPose interface returns an array representing the linear velocity vector of the Gamepad, in meters per second."
+}

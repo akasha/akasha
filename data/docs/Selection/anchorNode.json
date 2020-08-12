@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Selection.anchorNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/anchorNode",
+    "description": "The Selection.anchorNode read-only property returns the Node in which the selection begins."
+}

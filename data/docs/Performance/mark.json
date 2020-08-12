@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Performance.mark",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark",
+    "description": "The mark() method creates a timestamp in the browser's performance entry buffer with the given name."
+}

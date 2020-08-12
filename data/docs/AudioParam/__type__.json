@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "AudioParam",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam",
+    "description": "The Web Audio API's AudioParam interface represents an audio-related parameter, usually a parameter of an AudioNode (such as GainNode.gain)."
+}

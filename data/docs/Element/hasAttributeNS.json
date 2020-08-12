@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.hasAttributeNS",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributeNS",
+    "description": "hasAttributeNS returns a boolean value indicating whether the current element has the specified attribute."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEDisplacementMapElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEDisplacementMapElement",
+    "description": "The SVGFEDisplacementMapElement interface corresponds to the feDisplacementMap element."
+}

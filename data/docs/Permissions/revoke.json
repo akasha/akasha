@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Permissions.revoke",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Permissions/revoke",
+    "description": "The Permissions.revoke() method of the Permissions interface reverts a currently set permission back to its default state, which is usually prompt."
+}

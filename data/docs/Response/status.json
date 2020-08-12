@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.status",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/status",
+    "description": "The status read-only property of the Response interface contains the status code of the response (e.g., 200 for a success)."
+}

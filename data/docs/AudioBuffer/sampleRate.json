@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioBuffer.sampleRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/sampleRate",
+    "description": "A floating-point value indicating the current sample rate of the buffers data, in samples per second."
+}

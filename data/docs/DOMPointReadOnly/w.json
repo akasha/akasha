@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMPointReadOnly.w",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/w",
+    "description": "The DOMPointReadOnly interface's w property holds the point's perspective value, w, for a read-only point in space."
+}

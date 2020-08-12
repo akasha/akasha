@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OfflineAudioContext.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/length",
+    "description": "The length property of the OfflineAudioContext interface returns an integer representing the size of the buffer in sample-frames."
+}

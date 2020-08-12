@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "XRReferenceSpaceEvent.XRReferenceSpaceEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent",
+    "description": "The XRReferenceSpaceEvent() constructor is used to create a new XRReferenceSpaceEvent object, which represents an event regarding the state of a WebXR reference space object, XRReferenceSpace."
+}

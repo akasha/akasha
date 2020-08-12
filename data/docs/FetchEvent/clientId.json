@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FetchEvent.clientId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/clientId",
+    "description": "The clientId read-only property of the FetchEvent interface returns the id of the Client that the current service worker is controlling."
+}

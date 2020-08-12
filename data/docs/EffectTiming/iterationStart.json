@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "EffectTiming.iterationStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/iterationStart",
+    "description": "Web Animations API's EffectTiming dictionary's  iterationStart property specifies the repetition number which repetition the animation begins at and its progress through it."
+}

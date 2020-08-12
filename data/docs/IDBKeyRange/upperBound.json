@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBKeyRange.upperBound",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upperBound",
+    "description": "IDBKeyRange: The newly created key range."
+}

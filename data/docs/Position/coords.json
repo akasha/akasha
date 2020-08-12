@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Position.coords",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Position/coords",
+    "description": "The GeolocationPosition.coords read-only property returns a GeolocationCoordinates object representing a geographic position. It contains the location, that is longitude and latitude on the Earth, the altitude, and the speed of the object concerned, regrouped inside the returned value. It also contains accuracy information about these values."
+}

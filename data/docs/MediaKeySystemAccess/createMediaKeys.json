@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaKeySystemAccess.createMediaKeys",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/createMediaKeys",
+    "description": "The MediaKeySystemAccess.createMediaKeys() method returns a Promise that resolves to a new MediaKeys object."
+}

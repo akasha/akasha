@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGEllipseElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGEllipseElement",
+    "description": "The SVGEllipseElement interface provides access to the properties of ellipse elements."
+}

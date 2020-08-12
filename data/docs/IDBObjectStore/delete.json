@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBObjectStore.delete",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/delete",
+    "description": "An IDBRequest object on which subsequent events related to this operation are fired. The request.result attribute is set to undefined."
+}

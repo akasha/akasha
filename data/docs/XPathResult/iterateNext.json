@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XPathResult.iterateNext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/iterateNext",
+    "description": "The iterateNext() method of the XPathResult interface iterates over a node set result and returns the next node from it or null if there are no more nodes."
+}

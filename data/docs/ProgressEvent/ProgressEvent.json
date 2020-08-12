@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ProgressEvent.ProgressEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/ProgressEvent",
+    "description": "The ProgressEvent() constructor returns a newly created ProgressEvent, representing the current completion of a long process."
+}

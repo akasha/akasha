@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SourceBuffer.timestampOffset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset",
+    "description": "The timestampOffset property of the SourceBuffer interface controls the offset applied to timestamps inside media segments that are appended to the SourceBuffer."
+}

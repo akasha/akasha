@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "IDBKeyRange.bound",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/bound",
+    "description": "IDBKeyRange: The newly created key range."
+}

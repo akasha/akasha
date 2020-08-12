@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MutationObserverInit.attributes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/attributes",
+    "description": "The MutationObserverInit dictionary's optional attributes property is used to specify whether or not to watch for attribute value changes on the node or nodes being observed."
+}

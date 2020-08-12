@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WindowClient.focus",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/focus",
+    "description": "The focus() method of the WindowClient interface gives user input focus to the current client and returns a Promise that resolves to the existing WindowClient."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.offsetX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX",
+    "description": "The offsetX read-only property of the MouseEvent interface provides the offset in the X coordinate of the mouse pointer between that event and the padding edge of the target node."
+}

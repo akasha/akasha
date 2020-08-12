@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "GamepadPose.orientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/orientation",
+    "description": "The orientation read-only property of the GamepadPose interface returns the orientation of the Gamepad, as a quarternion value."
+}

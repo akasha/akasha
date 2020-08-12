@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "DynamicsCompressorNode",
+        "lastModifiedAt": 1597192564336
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597192564094
+    },
+    {
+        "name": "attack",
+        "lastModifiedAt": 1597192566340
+    },
+    {
+        "name": "knee",
+        "lastModifiedAt": 1597192564911
+    },
+    {
+        "name": "ratio",
+        "lastModifiedAt": 1597192565734
+    },
+    {
+        "name": "reduction",
+        "lastModifiedAt": 1597192565979
+    },
+    {
+        "name": "release",
+        "lastModifiedAt": 1597192566610
+    },
+    {
+        "name": "threshold",
+        "lastModifiedAt": 1597192564639
+    }
+]

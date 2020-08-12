@@ -1,8 +1,12 @@
 
 [
     {
+        "name": "Document",
+        "lastModifiedAt": 1597190898956
+    },
+    {
         "name": "__type__",
-        "lastModifiedAt": 1596581585259
+        "lastModifiedAt": 1597190898289
     },
     {
         "name": "adoptNode",
@@ -183,6 +187,14 @@
     {
         "name": "mozSyntheticDocument",
         "lastModifiedAt": 1596581596940
+    },
+    {
+        "name": "onfullscreenchange",
+        "lastModifiedAt": 1597190970755
+    },
+    {
+        "name": "onselectionchange",
+        "lastModifiedAt": 1597190972675
     },
     {
         "name": "onvisibilitychange",

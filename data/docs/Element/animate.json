@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.animate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/animate",
+    "description": "The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."
+}

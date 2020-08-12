@@ -1,0 +1,35 @@
+
+[
+    {
+        "name": "StaticRange",
+        "lastModifiedAt": 1597193092928
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597193092536
+    },
+    {
+        "name": "collapsed",
+        "lastModifiedAt": 1597193093230
+    },
+    {
+        "name": "endContainer",
+        "lastModifiedAt": 1597193093532
+    },
+    {
+        "name": "endOffset",
+        "lastModifiedAt": 1597193093864
+    },
+    {
+        "name": "startContainer",
+        "lastModifiedAt": 1597193094253
+    },
+    {
+        "name": "startOffset",
+        "lastModifiedAt": 1597193095049
+    },
+    {
+        "name": "toRange",
+        "lastModifiedAt": 1597193095285
+    }
+]

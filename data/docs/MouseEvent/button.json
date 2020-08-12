@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.button",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button",
+    "description": "The MouseEvent.button read-only property indicates which button was pressed on the mouse to trigger the event."
+}

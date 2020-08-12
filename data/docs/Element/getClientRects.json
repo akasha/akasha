@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.getClientRects",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getClientRects",
+    "description": "The getClientRects() method of the Element interface returns a collection of DOMRect objects that indicate the bounding rectangles for each CSS border box in a client."
+}

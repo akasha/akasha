@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "WheelEvent.WheelEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/WheelEvent",
+    "description": "The WheelEvent() constructor returns a newly created WheelEvent object."
+}

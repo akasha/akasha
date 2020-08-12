@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "XRInputSourcesChangeEvent.XRInputSourcesChangeEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/XRInputSourcesChangeEvent",
+    "description": "The XRInputSourcesChangeEvent() constructor creates and returns a new XRInputSourcesChangeEvent object, representing an update to the list of available WebXR input devices."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "EXT_sRGB",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/EXT_sRGB",
+    "description": "The EXT_sRGB extension is part of the WebGL API and adds sRGB support to textures and framebuffer objects."
+}

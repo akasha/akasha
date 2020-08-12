@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSStyleRule.selectorText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/selectorText",
+    "description": "The CSSRule.selectorText property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see Using dynamic styling information."
+}

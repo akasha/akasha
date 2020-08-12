@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ConvolverNode.buffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/buffer",
+    "description": "An AudioBuffer."
+}

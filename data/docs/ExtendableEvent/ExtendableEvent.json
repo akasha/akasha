@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ExtendableEvent.ExtendableEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/ExtendableEvent",
+    "description": "The ExtendableEvent() constructor creates a new ExtendableEvent object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SVGFEOffsetElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEOffsetElement",
+    "description": "The SVGFEOffsetElement interface corresponds to the feOffset element."
+}

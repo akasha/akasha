@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FederatedCredential.protocol",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/protocol",
+    "description": "The protocol property of the FederatedCredential interface returns a read-only DOMString containing a credential's federated identity protocol. If this property is null, the protocol may be inferred from the FederatedCredential.provider property."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Selection.isCollapsed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/isCollapsed",
+    "description": "The Selection.isCollapsed read-only property returns a Boolean which indicates whether or not there is currently any text selected. No text is selected when the selection's start and end points are at the same position in the content."
+}

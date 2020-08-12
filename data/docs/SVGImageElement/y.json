@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGImageElement.y",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/y",
+    "description": "The y read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the y attribute of the given image element."
+}

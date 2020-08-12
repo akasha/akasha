@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WritableStream.locked",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/locked",
+    "description": "The locked read-only property of the WritableStream interface returns a boolean indicating whether the WritableStream is locked to a writer."
+}

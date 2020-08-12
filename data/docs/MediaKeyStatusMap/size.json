@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaKeyStatusMap.size",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/size",
+    "description": "The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map."
+}

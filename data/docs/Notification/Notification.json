@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Notification.Notification",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification",
+    "description": "The Notification() constructor creates a new Notification object instance, which represents a user notification."
+}

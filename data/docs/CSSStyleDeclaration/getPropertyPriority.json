@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSSStyleDeclaration.getPropertyPriority",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyPriority",
+    "description": "The CSSStyleDeclaration.getPropertyPriority() method interface returns a DOMString that provides all explicitly set priorities on the CSS property."
+}

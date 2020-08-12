@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceNavigation.redirectCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/redirectCount",
+    "description": "The legacy PerformanceNavigation.redirectCount read-only property returns an unsigned short representing the number of REDIRECTs done before reaching the page."
+}

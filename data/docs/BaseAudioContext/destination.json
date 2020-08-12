@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BaseAudioContext.destination",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/destination",
+    "description": "An AudioDestinationNode."
+}
