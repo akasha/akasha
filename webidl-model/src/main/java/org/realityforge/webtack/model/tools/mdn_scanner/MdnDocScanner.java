@@ -218,6 +218,7 @@ public final class MdnDocScanner
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+          .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
           .filter( SourceVersion::isName )
           .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
 
@@ -233,6 +234,7 @@ public final class MdnDocScanner
             .map( text -> text.replaceAll( "\\(.*", "" ) )
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+            .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
             .filter( SourceVersion::isName )
             .collect( Collectors.toList() );
         if ( !methods.isEmpty() )
@@ -240,12 +242,12 @@ public final class MdnDocScanner
           // Sometimes constructors are documented as methods so instead register them as constructors
           methods
             .stream()
-            .filter( m -> m.equals( localName ) )
+            .filter( m -> m.equals( localName ) || m.equals( typeName ) )
             .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
 
           methods
             .stream()
-            .filter( m -> !m.equals( localName ) )
+            .filter( m -> !m.equals( localName ) && !m.equals( typeName ) )
             .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
         }
         final List<String> events =
@@ -264,6 +266,7 @@ public final class MdnDocScanner
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+            .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
             .filter( SourceVersion::isName )
             .collect( Collectors.toList() );
         if ( !events.isEmpty() )
@@ -276,6 +279,7 @@ public final class MdnDocScanner
             .stream()
             .map( e -> "on" + e )
             .filter( e -> !document.select( "a[href$=\"/" + localName + "/" + e + "\"]" ).isEmpty() )
+            .filter( e -> !document.select( "a[href$=\"/" + typeName + "/" + e + "\"]" ).isEmpty() )
             .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
         }
       }
