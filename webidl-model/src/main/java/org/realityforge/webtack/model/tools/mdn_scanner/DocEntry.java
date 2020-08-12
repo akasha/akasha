@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
@@ -29,8 +28,6 @@ public class DocEntry
   private String name;
   private String href;
   private String description;
-  @Nullable
-  private List<String> events;
   // field is only present when kind == Event
   @Nullable
   private String eventName;
@@ -79,17 +76,6 @@ public class DocEntry
   public void setDescription( final String description )
   {
     this.description = description;
-  }
-
-  @Nullable
-  public List<String> getEvents()
-  {
-    return events;
-  }
-
-  public void setEvents( @Nullable final List<String> events )
-  {
-    this.events = events;
   }
 
   @Nullable

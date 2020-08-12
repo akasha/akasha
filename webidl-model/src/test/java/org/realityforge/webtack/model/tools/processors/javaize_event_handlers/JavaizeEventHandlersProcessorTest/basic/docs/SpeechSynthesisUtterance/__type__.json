@@ -2,15 +2,5 @@
   "kind": "Type",
   "name": "SpeechSynthesisUtterance",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance",
-  "description": "The SpeechSynthesisUtterance type...",
-  "properties": [
-    "onstart",
-    "onend",
-    "onpause",
-    "onresume"
-  ],
-  "events": [
-    "start",
-    "pause"
-  ]
+  "description": "The SpeechSynthesisUtterance type..."
 }

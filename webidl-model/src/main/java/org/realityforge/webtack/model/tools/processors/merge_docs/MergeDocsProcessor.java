@@ -3,6 +3,7 @@ package org.realityforge.webtack.model.tools.processors.merge_docs;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.AttributeMember;
@@ -24,6 +25,8 @@ import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
 /**
@@ -114,16 +117,19 @@ final class MergeDocsProcessor
     final List<EventMember> events = super.transformEventMembers( inputs );
     if ( _createEvents )
     {
-      final DocEntry docEntry = _runtime.findDocEntry( _type );
-      final List<String> eventNames = null != docEntry ? docEntry.getEvents() : null;
-      if ( null != eventNames )
+      final DocIndex index = _runtime.findIndexForType( _type );
+      final List<EntryIndex> entries =
+        null != index ?
+        index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
+        null;
+      if ( null != entries )
       {
-        for ( final String eventName : eventNames )
+        for ( final EntryIndex eventIndex : entries )
         {
-          final DocEntry eventDocEntry = _runtime.findDocEntry( _type + "." + eventName + "_event" );
-          if ( null != eventDocEntry &&
-               events.stream().noneMatch( e -> e.getName().equals( eventName ) ) &&
-               !partialContainsEvent( eventName ) )
+          final DocEntry eventDocEntry = _runtime.findDocEntry( index, eventIndex );
+          final String eventName = eventDocEntry.getEventName();
+          assert null != eventName;
+          if ( events.stream().noneMatch( e -> e.getName().equals( eventName ) ) && !partialContainsEvent( eventName ) )
           {
             final String eventType = eventDocEntry.getEventType();
             assert null != eventType;

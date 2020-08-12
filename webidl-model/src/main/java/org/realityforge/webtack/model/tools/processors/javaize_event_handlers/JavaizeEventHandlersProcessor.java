@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
@@ -34,6 +35,8 @@ import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
 final class JavaizeEventHandlersProcessor
@@ -270,39 +273,36 @@ final class JavaizeEventHandlersProcessor
     if ( isEventHandlerProperty( input ) )
     {
       assert null != _type;
-      final DocEntry typeDocEntry = _runtime.findDocEntry( _type );
-      if ( null != typeDocEntry )
+      final DocIndex index = _runtime.findIndexForType( _type );
+      final List<EntryIndex> eventEntries =
+        null != index ?
+        index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
+        null;
+      if ( null != eventEntries )
       {
-        final List<String> events = typeDocEntry.getEvents();
-        if ( null != events )
+        for ( final EntryIndex eventIndex : eventEntries )
         {
-          for ( final String event : events )
+          final DocEntry eventDocEntry = _runtime.findDocEntry( index, eventIndex );
+          final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
+          if ( input.getName().equals( eventHandlerProperty ) )
           {
-            final DocEntry eventDocEntry = _runtime.findDocEntry( _type + "." + event + "_event" );
-            if ( null != eventDocEntry )
+            final String eventTypeName = eventDocEntry.getEventType();
+            assert null != eventTypeName;
+            // EventSource.error is documented as so this code essentially guards
+            // against this scenario which would generate bad code
+            if ( !eventTypeName.contains( " or " ) )
             {
-              final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
-              if ( input.getName().equals( eventHandlerProperty ) )
-              {
-                final String eventTypeName = eventDocEntry.getEventType();
-                assert null != eventTypeName;
-                // EventSource.error is documented as so this code essentially guards
-                // against this scenario which would generate bad code
-                if ( !eventTypeName.contains( " or " ) )
-                {
-                  final String handlerName = eventTypeName + "Handler";
-                  _usedHandlers.add( handlerName );
-                  return new AttributeMember( input.getName(),
-                                              new TypeReference( handlerName,
-                                                                 Collections.emptyList(),
-                                                                 true,
-                                                                 Collections.emptyList() ),
-                                              input.getModifiers(),
-                                              transformDocumentation( input.getDocumentation() ),
-                                              transformExtendedAttributes( input.getExtendedAttributes() ),
-                                              transformSourceLocations( input.getSourceLocations() ) );
-                }
-              }
+              final String handlerName = eventTypeName + "Handler";
+              _usedHandlers.add( handlerName );
+              return new AttributeMember( input.getName(),
+                                          new TypeReference( handlerName,
+                                                             Collections.emptyList(),
+                                                             true,
+                                                             Collections.emptyList() ),
+                                          input.getModifiers(),
+                                          transformDocumentation( input.getDocumentation() ),
+                                          transformExtendedAttributes( input.getExtendedAttributes() ),
+                                          transformSourceLocations( input.getSourceLocations() ) );
             }
           }
         }
