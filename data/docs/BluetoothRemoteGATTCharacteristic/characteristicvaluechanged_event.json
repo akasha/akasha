@@ -1,0 +1,8 @@
+{
+  "kind": "Event",
+  "name": "BluetoothRemoteGATTCharacteristic.characteristicvaluechanged_event",
+  "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-characteristicvaluechanged",
+  "description": "Fired on a BluetoothRemoteGATTCharacteristic when its value changes, either as a result of a read request , or a value change notification/indication.",
+  "eventName": "characteristicvaluechanged",
+  "eventType": "ValueEvent"
+}

@@ -5,6 +5,10 @@
         "lastModifiedAt": 1597192603449
     },
     {
+        "name": "availabilitychanged",
+        "lastModifiedAt": 0
+    },
+    {
         "name": "getAvailability",
         "lastModifiedAt": 1596499310351
     },

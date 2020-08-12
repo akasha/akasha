@@ -5,6 +5,10 @@
         "lastModifiedAt": 1597192627618
     },
     {
+        "name": "characteristicvaluechanged_event",
+        "lastModifiedAt": 0
+    },
+    {
         "name": "getDescriptor",
         "lastModifiedAt": 1596712223624
     },

@@ -31,5 +31,17 @@
     {
         "name": "uuid",
         "lastModifiedAt": 1596711878582
+    },
+    {
+        "name": "serviceadded_event",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "servicechanged_event",
+        "lastModifiedAt": 0
+    },
+    {
+        "name": "serviceremoved_event",
+        "lastModifiedAt": 0
     }
 ]

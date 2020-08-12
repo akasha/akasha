@@ -1,0 +1,8 @@
+{
+  "kind": "Event",
+  "name": "BluetoothRemoteGATTService.serviceadded_event",
+  "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-serviceadded",
+  "description": "Fired on a new BluetoothRemoteGATTService when it has been discovered on a remote device, just after it is added to the Bluetooth tree.",
+  "eventName": "serviceadded",
+  "eventType": "Event"
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "Event",
+  "name": "BluetoothRemoteGATTService.servicechanged_event",
+  "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-servicechanged",
+  "description": "Fired on a BluetoothRemoteGATTService when its state changes. This involves any characteristics and/or descriptors that get added or removed from the service, as well as Service Changed indications from the remote device.",
+  "eventName": "servicechanged",
+  "eventType": "Event"
+}

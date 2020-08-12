@@ -1,0 +1,8 @@
+{
+  "kind": "Event",
+  "name": "BluetoothDevice.gattserverdisconnected_event",
+  "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-gattserverdisconnected",
+  "description": "Fired on a BluetoothDevice when an active GATT connection is lost.",
+  "eventName": "gattserverdisconnected",
+  "eventType": "Event"
+}

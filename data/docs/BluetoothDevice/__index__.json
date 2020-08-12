@@ -5,12 +5,20 @@
         "lastModifiedAt": 1597192614863
     },
     {
+        "name": "advertisementreceived_event",
+        "lastModifiedAt": 0
+    },
+    {
         "name": "connectGATT",
         "lastModifiedAt": 1596712494805
     },
     {
         "name": "gatt",
         "lastModifiedAt": 1596712491404
+    },
+    {
+        "name": "gattserverdisconnected_event",
+        "lastModifiedAt": 0
     },
     {
         "name": "id",

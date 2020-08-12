@@ -1,0 +1,8 @@
+{
+  "kind": "Event",
+  "name": "BluetoothRemoteGATTService.serviceremoved_event",
+  "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-serviceremoved",
+  "description": "Fired on a BluetoothRemoteGATTService when it has been removed from its device, just before it is removed from the Bluetooth tree.",
+  "eventName": "serviceremoved",
+  "eventType": "Event"
+}

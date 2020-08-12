@@ -1,0 +1,8 @@
+{
+  "kind": "Event",
+  "name": "BluetoothDevice.advertisementreceived_event",
+  "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-advertisementreceived",
+  "description": "Fired on a BluetoothDevice when an advertising event is received from that device.",
+  "eventName": "advertisementreceived",
+  "eventType": "BluetoothAdvertisingEvent"
+}
