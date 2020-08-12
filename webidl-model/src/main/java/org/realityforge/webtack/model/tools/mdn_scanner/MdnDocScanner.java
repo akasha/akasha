@@ -157,7 +157,14 @@ public final class MdnDocScanner
                              final long modifiedAt )
     throws IndexIOException
   {
-    //TODO: Pass in DocEntry and update it rather than recreating?
+    DocEntry entry = _runtime.findDocEntry( entryIndex );
+    if ( null == entry )
+    {
+      entry = new DocEntry();
+      entry.setKind( kind );
+      entry.setName( DocKind.Type == kind ? entryIndex.getDocIndex().getName() : entryIndex.getQualifiedName() );
+      entry.setHref( url );
+    }
     try
     {
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
@@ -171,10 +178,6 @@ public final class MdnDocScanner
       final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
       final String typeName = entryIndex.getDocIndex().getName();
-      final DocEntry entry = new DocEntry();
-      entry.setKind( kind );
-      entry.setName( DocKind.Type == kind ? typeName : entryIndex.getQualifiedName() );
-      entry.setHref( url );
       entry.setDescription( description );
       if ( DocKind.Type == kind )
       {
