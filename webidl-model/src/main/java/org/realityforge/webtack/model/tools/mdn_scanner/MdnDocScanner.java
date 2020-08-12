@@ -256,7 +256,7 @@ public final class MdnDocScanner
             .collect( Collectors.toList() );
         if ( !events.isEmpty() )
         {
-          events.forEach( event -> queueRequest( DocKind.Event, typeName, event + "_event" ) );
+          events.forEach( event -> queueRequest( DocKind.Event, typeName, event ) );
 
           // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
           // to try and find them
