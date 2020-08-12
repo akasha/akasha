@@ -165,6 +165,14 @@ public final class MdnDocScanner
       entry.setName( DocKind.Type == kind ? entryIndex.getDocIndex().getName() : entryIndex.getQualifiedName() );
       entry.setHref( url );
     }
+    else
+    {
+      final String href = entry.getHref();
+      if ( !url.equals( href ) )
+      {
+        return;
+      }
+    }
     try
     {
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
