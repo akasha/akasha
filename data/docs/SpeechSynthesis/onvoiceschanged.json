@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechSynthesis.onvoiceschanged",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/onvoiceschanged",
+    "description": "The onvoiceschanged property of the SpeechSynthesis interface represents an event handler that will run when the list of SpeechSynthesisVoice objects that would be returned by the SpeechSynthesis.getVoices() method has changed (when the voiceschanged event fires.)"
+}

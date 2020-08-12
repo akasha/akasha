@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesis.voiceschanged_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/voiceschanged_event",
+    "description": "The voiceschanged event of the Web Speech API is fired when the list of SpeechSynthesisVoice objects that would be returned by the SpeechSynthesis.getVoices() method has changed (when the voiceschanged event fires.)",
+    "eventName": "voiceschanged",
+    "eventType": "Event",
+    "eventHandlerProperty": "onvoiceschanged"
+}

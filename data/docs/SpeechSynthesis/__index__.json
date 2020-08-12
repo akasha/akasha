@@ -13,6 +13,10 @@
         "lastModifiedAt": 1596712037307
     },
     {
+        "name": "onvoiceschanged",
+        "lastModifiedAt": 1597238896605
+    },
+    {
         "name": "pause",
         "lastModifiedAt": 1596712037969
     },
@@ -35,5 +39,9 @@
     {
         "name": "speaking",
         "lastModifiedAt": 1596712035715
+    },
+    {
+        "name": "voiceschanged_event",
+        "lastModifiedAt": 1597238896286
     }
 ]
