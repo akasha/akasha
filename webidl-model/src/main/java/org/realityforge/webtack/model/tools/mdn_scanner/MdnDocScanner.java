@@ -156,7 +156,7 @@ public final class MdnDocScanner
                              final long modifiedAt )
     throws IndexIOException
   {
-    //TODO: Pass in DocEntry and update it?
+    //TODO: Pass in DocEntry and update it rather than recreating?
     try
     {
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
