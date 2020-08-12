@@ -245,6 +245,10 @@ public final class MdnDocScanner
             .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
                      "#Events + dl > dt > a[href$=\"_event\"] > code, " +
 
+                     // SpeechSynthesisUtterance among others nests <a/> in code
+                     "#Events + p + dl > dt > code > a[href$=\"_event\"], " +
+                     "#Events + dl > dt > code > a[href$=\"_event\"], " +
+
                      "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
                      // This pattern added for Window docs
                      "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
