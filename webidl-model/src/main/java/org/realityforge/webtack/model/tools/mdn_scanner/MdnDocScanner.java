@@ -219,7 +219,6 @@ public final class MdnDocScanner
           .map( text -> text.replaceAll( "\\(.*", "" ) )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-          .sorted()
           .collect( Collectors.toList() );
       if ( !methods.isEmpty() )
       {
@@ -246,7 +245,6 @@ public final class MdnDocScanner
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-            .sorted()
             .collect( Collectors.toList() );
         if ( !events.isEmpty() )
         {
