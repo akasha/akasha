@@ -126,7 +126,7 @@ final class MergeDocsProcessor
       {
         for ( final EntryIndex eventIndex : entries )
         {
-          final DocEntry eventDocEntry = _runtime.findDocEntry( index, eventIndex );
+          final DocEntry eventDocEntry = _runtime.getDocEntry( eventIndex );
           final String eventName = eventDocEntry.getEventName();
           assert null != eventName;
           if ( events.stream().noneMatch( e -> e.getName().equals( eventName ) ) && !partialContainsEvent( eventName ) )

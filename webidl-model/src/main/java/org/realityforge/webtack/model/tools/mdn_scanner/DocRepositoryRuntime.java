@@ -84,7 +84,7 @@ public final class DocRepositoryRuntime
         }
         else
         {
-          return findDocEntry( index, entryIndex );
+          return getDocEntry( entryIndex );
         }
       }
     }
@@ -109,15 +109,24 @@ public final class DocRepositoryRuntime
   }
 
   @Nonnull
-  public DocEntry findDocEntry( @Nonnull final DocIndex index, @Nonnull final EntryIndex entryIndex )
+  public DocEntry getDocEntry( @Nonnull final EntryIndex entryIndex )
   {
-    final String name = index.getName() + "." + entryIndex.getName();
+    final DocEntry entry = findDocEntry( entryIndex );
+    assert null != entry;
+    return entry;
+  }
+
+  @Nullable
+  public DocEntry findDocEntry( @Nonnull final EntryIndex entryIndex )
+  {
+    final String name = entryIndex.getDocIndex().getName() + "." + entryIndex.getName();
     final Path path = getDocEntryPath( name );
-    final DocEntry docEntry = tryLoadDocEntry( path );
-    // We assume that if we have an entry index then we have an entry
-    assert null != docEntry;
-    _cache.put( name, docEntry );
-    return docEntry;
+    final DocEntry entry = tryLoadDocEntry( path );
+    if ( null != entry )
+    {
+      _cache.put( name, entry );
+    }
+    return entry;
   }
 
   @Nullable
