@@ -21,6 +21,8 @@ complete as there is too much un-said.
 
   We could make the doc repository populate docs from multiple sources
 
+* Another place to scan events from https://html.spec.whatwg.org/multipage/indices.html#events-2
+
 * Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
   and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
   browsers to support
@@ -37,11 +39,6 @@ complete as there is too much un-said.
 * use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system. Possibly even add video layers via https://github.com/immersive-web/layers for desktop users?
  - https://github.com/marlon360/webxr-handtracking
  - https://cabanier.github.io/WebXRLayers-samples/index.html
-
-# Events
-
-* Another place to scan events from
-  - https://html.spec.whatwg.org/multipage/indices.html#events-2
 
 # Java Generation
 
