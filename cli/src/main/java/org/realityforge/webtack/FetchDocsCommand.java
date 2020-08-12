@@ -136,6 +136,18 @@ final class FetchDocsCommand
     }
 
     @Override
+    public void entrySkipped( @Nonnull final DocEntry entry )
+    {
+      if ( _logger.isLoggable( Level.FINE ) )
+      {
+        _logger.log( Level.FINE,
+                     "Documentation for element named '" +
+                     entry.getName() +
+                     "' not fetched as not sourced from standard MDN location." );
+      }
+    }
+
+    @Override
     public void preEntryFetch( @Nonnull final EntryIndex entryIndex, @Nonnull final String url )
     {
       if ( _logger.isLoggable( Level.FINER ) )

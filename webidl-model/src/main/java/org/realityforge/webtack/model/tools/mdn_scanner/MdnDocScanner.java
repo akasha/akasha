@@ -79,7 +79,16 @@ public final class MdnDocScanner
                                DocKind.Event == kind ? member + "_event" :
                                Objects.requireNonNull( member ) );
     removeTempFile( entryIndex );
+
     final String url = BASE_URL + type + ( DocKind.Type == kind ? "" : "/" + entryIndex.getName() );
+
+    final DocEntry entry = _runtime.findDocEntry( entryIndex );
+    if( null != entry && null != entry.getHref() && !entry.getHref().equals( url ))
+    {
+      _listener.entrySkipped( entry );
+      return;
+    }
+
     _listener.preEntryFetch( entryIndex, url );
     final FetchResult result = fetchEntry( entryIndex, url, force );
     if ( null != result )
@@ -164,14 +173,6 @@ public final class MdnDocScanner
       entry.setKind( kind );
       entry.setName( DocKind.Type == kind ? entryIndex.getDocIndex().getName() : entryIndex.getQualifiedName() );
       entry.setHref( url );
-    }
-    else
-    {
-      final String href = entry.getHref();
-      if ( !url.equals( href ) )
-      {
-        return;
-      }
     }
     try
     {

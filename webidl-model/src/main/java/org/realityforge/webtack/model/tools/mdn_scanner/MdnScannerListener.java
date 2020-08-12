@@ -53,4 +53,11 @@ public interface MdnScannerListener
    * @param entry      the updated entry.
    */
   void entryUnmodified( @Nonnull EntryIndex entryIndex, @Nonnull DocEntry entry );
+
+  /**
+   * The fetch of the specified entry was skipped as entry exists but is not imported from standard MDN location.
+   *
+   * @param entry the entry.
+   */
+  void entrySkipped( @Nonnull DocEntry entry );
 }
