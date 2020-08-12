@@ -182,7 +182,7 @@ public final class MdnDocScanner
           .select( "#Constructors + p + dl > dt > a > code, " +
                    "#Constructors + dl > dt > a > code" +
                    "#Constructor + p + dl > dt > a > code, " +
-                   "#Constructor + dl > dt > a > code")
+                   "#Constructor + dl > dt > a > code" )
           .stream()
           .map( Element::text )
           // Strip the brackets at end of constructors
