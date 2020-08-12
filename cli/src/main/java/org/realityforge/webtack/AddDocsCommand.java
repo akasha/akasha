@@ -32,8 +32,14 @@ final class AddDocsCommand
   static final String COMMAND = "add-docs";
   private static final int IDL_SOURCE_NAME_OPT = 1;
   private static final int NO_FETCH_OPT = 2;
+  private static final int ALL_IDL_SOURCES_OPT = 3;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
+      new CLOptionDescriptor( "all-idl-sources",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              ALL_IDL_SOURCES_OPT,
+                              "Scan all the idl sources and add documentation for all types within the idl source.",
+                              new int[]{ IDL_SOURCE_NAME_OPT } ),
       new CLOptionDescriptor( "idl-source-name",
                               CLOptionDescriptor.ARGUMENT_REQUIRED | CLOptionDescriptor.DUPLICATES_ALLOWED,
                               IDL_SOURCE_NAME_OPT,
@@ -48,6 +54,7 @@ final class AddDocsCommand
   private final List<String> _names = new ArrayList<>();
   @Nonnull
   private final List<String> _idlSourceNames = new ArrayList<>();
+  private boolean _addAllSources;
 
   AddDocsCommand()
   {
@@ -57,6 +64,7 @@ final class AddDocsCommand
   @Override
   boolean processArguments( @Nonnull final Environment environment, @Nonnull final List<CLOption> arguments )
   {
+    _addAllSources = false;
     for ( final CLOption option : arguments )
     {
       if ( CLOption.TEXT_ARGUMENT == option.getId() )
@@ -67,6 +75,10 @@ final class AddDocsCommand
       {
         _idlSourceNames.add( option.getArgument() );
       }
+      else if ( ALL_IDL_SOURCES_OPT == option.getId() )
+      {
+        _addAllSources = true;
+      }
       else
       {
         assert NO_FETCH_OPT == option.getId();
@@ -74,7 +86,7 @@ final class AddDocsCommand
       }
     }
 
-    if ( _names.isEmpty() && _idlSourceNames.isEmpty() )
+    if ( _names.isEmpty() && _idlSourceNames.isEmpty() && !_addAllSources )
     {
       environment.logger().log( Level.SEVERE, "Error: No elements to document specified" );
       return false;
@@ -90,17 +102,24 @@ final class AddDocsCommand
     final RepositoryConfig config = context.config();
 
     final List<SourceConfig> sourceConfigs = new ArrayList<>();
-    for ( final String idlSourceName : _idlSourceNames )
+    if ( _addAllSources )
     {
-      final SourceConfig source = config.findSourceByName( idlSourceName );
-      if ( null == source )
+      sourceConfigs.addAll( config.getSources() );
+    }
+    else
+    {
+      for ( final String idlSourceName : _idlSourceNames )
       {
-        final String message =
-          "Error: Idl source with name " + idlSourceName + " specified but no such source is registered.";
-        logger.log( Level.SEVERE, message );
-        return ExitCodes.ERROR_SOURCE_DOES_NOT_EXIST_CODE;
+        final SourceConfig source = config.findSourceByName( idlSourceName );
+        if ( null == source )
+        {
+          final String message =
+            "Error: Idl source with name " + idlSourceName + " specified but no such source is registered.";
+          logger.log( Level.SEVERE, message );
+          return ExitCodes.ERROR_SOURCE_DOES_NOT_EXIST_CODE;
+        }
+        sourceConfigs.add( source );
       }
-      sourceConfigs.add( source );
     }
 
     final Set<String> typeNamesToAdd = new LinkedHashSet<>( _names );
