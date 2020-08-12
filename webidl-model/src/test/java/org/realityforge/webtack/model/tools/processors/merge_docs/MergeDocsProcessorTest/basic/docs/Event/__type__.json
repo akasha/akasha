@@ -1,17 +1,5 @@
 {
   "name": "Event",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
-  "description": "Documentation for Event. It covers multiple\nlines.",
-  "constructors": [
-    "Event"
-  ],
-  "properties": [
-    "AT_TARGET",
-    "bubbles",
-    "cancelBubble"
-  ],
-  "methods": [
-    "filterGlobalEvent",
-    "composedPath"
-  ]
+  "description": "Documentation for Event. It covers multiple\nlines."
 }

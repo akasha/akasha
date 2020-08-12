@@ -32,7 +32,9 @@ public final class MergeDocsProcessorTest
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
                     () -> createProcessor( "broken" ) );
-    assertTrue( exception.getMessage().startsWith( "MergeDocsProcessor failed to load doc repository from" ) );
+    final String message = exception.getMessage();
+    assertTrue( message.contains( "MergeDocsProcessor supplied docsDirectory configuration value " ) );
+    assertTrue( message.contains( " but no such directory exists at " ) );
   }
 
   @Test
@@ -42,13 +44,13 @@ public final class MergeDocsProcessorTest
       expectThrows( IllegalArgumentException.class,
                     () -> Registry.createProcessor( "MergeDocs", Json.createObjectBuilder().build() ) );
     assertEquals( exception.getMessage(),
-                  "MergeDocsProcessor missing required docsRepositoryConfigFile configuration value" );
+                  "MergeDocsProcessor missing required docsDirectory configuration value" );
   }
 
   @Nonnull
   private Processor createProcessor( @Nonnull final String subDirectory )
   {
-    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory );
+    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory ).resolve( "docs" );
     return Registry.createProcessor( "MergeDocs",
                                      Json
                                        .createObjectBuilder()
