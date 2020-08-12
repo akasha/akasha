@@ -29,16 +29,6 @@ public class DocEntry
   private String name;
   private String href;
   private String description;
-  // field is only present when kind == Type
-  @Nullable
-  private List<String> constructors;
-  // field is only present when kind == Type
-  @Nullable
-  private List<String> properties;
-  // field is only present when kind == Type
-  @Nullable
-  private List<String> methods;
-  // field is only present when kind == Type
   @Nullable
   private List<String> events;
   // field is only present when kind == Event
@@ -89,39 +79,6 @@ public class DocEntry
   public void setDescription( final String description )
   {
     this.description = description;
-  }
-
-  @Nullable
-  public List<String> getConstructors()
-  {
-    return constructors;
-  }
-
-  public void setConstructors( @Nullable final List<String> constructors )
-  {
-    this.constructors = constructors;
-  }
-
-  @Nullable
-  public List<String> getProperties()
-  {
-    return properties;
-  }
-
-  public void setProperties( @Nullable final List<String> properties )
-  {
-    this.properties = properties;
-  }
-
-  @Nullable
-  public List<String> getMethods()
-  {
-    return methods;
-  }
-
-  public void setMethods( @Nullable final List<String> methods )
-  {
-    this.methods = methods;
   }
 
   @Nullable
