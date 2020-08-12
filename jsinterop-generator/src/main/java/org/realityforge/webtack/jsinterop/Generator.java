@@ -11,8 +11,6 @@ import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -51,6 +49,7 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.io.FilesUtil;
 
 final class Generator
 {
@@ -61,7 +60,7 @@ final class Generator
   void generate( @Nonnull final CodeGenContext context )
     throws IOException
   {
-    deleteDirectory( context.getMainJavaDirectory() );
+    FilesUtil.deleteDirectory( context.getMainJavaDirectory() );
     final WebIDLSchema schema = context.getSchema();
     for ( final TypedefDefinition definition : schema.getTypedefs() )
     {
@@ -145,23 +144,6 @@ final class Generator
                       .build() );
 
     context.writeTopLevelType( type );
-  }
-
-  private void deleteDirectory( @Nonnull final Path directory )
-    throws IOException
-  {
-    if ( Files.exists( directory ) )
-    {
-      final List<Path> pathsToDelete =
-        Files
-          .walk( directory )
-          .sorted( Comparator.reverseOrder() )
-          .collect( Collectors.toList() );
-      for ( final Path path : pathsToDelete )
-      {
-        Files.delete( path );
-      }
-    }
   }
 
   private void writeGwtModule( @Nonnull final CodeGenContext context )
