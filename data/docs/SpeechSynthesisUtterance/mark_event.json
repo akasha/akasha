@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.mark_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/mark_event",
+    "description": "You can use the mark event in an addEventListener method:",
+    "eventName": "mark",
+    "eventType": "SpeechSynthesisEvent",
+    "eventHandlerProperty": "onmark"
+}

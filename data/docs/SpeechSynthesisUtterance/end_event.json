@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.end_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/end_event",
+    "description": "You can use the end event in an addEventListener method:",
+    "eventName": "end",
+    "eventType": "SpeechSynthesisEvent",
+    "eventHandlerProperty": "onend"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.error_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event",
+    "description": "You can use the error event in an addEventListener method:",
+    "eventName": "error",
+    "eventType": "SpeechSynthesisErrorEvent",
+    "eventHandlerProperty": "onerror"
+}

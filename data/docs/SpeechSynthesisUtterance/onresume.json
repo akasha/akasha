@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechSynthesisUtterance.onresume",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onresume",
+    "description": "The onresume property of the SpeechSynthesisUtterance interface represents an event handler that will run when a paused utterance is resumed (when the resume event fires.)"
+}

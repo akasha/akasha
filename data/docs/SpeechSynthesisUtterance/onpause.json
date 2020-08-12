@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechSynthesisUtterance.onpause",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause",
+    "description": "The onpause property of the SpeechSynthesisUtterance interface represents an event handler that will run when the utterance is paused part way through (when the pause event fires.)"
+}

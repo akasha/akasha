@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.resume_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/resume_event",
+    "description": "The resume event of the Web Speech API SpeechSynthesisUtterance object is fired when a paused utterance is resumed.",
+    "eventName": "resume",
+    "eventType": "SpeechSynthesisEvent",
+    "eventHandlerProperty": "onresume"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechSynthesisUtterance.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onerror",
+    "description": "The onerror property of the SpeechSynthesisUtterance interface represents an event handler that will run when an error occurs that prevents the utterance from being succesfully spoken (when the error event fires.)"
+}

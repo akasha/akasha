@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechSynthesisUtterance.start_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/start_event",
+    "description": "You can use the start event in an addEventListener method:",
+    "eventName": "start",
+    "eventType": "SpeechSynthesisEvent",
+    "eventHandlerProperty": "onstart"
+}

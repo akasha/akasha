@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechSynthesisUtterance.onmark",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onmark",
+    "description": "The onmark property of the SpeechSynthesisUtterance interface represents an event handler that will run when the spoken utterance reaches a named SSML mark tag (when the mark event fires.)"
+}

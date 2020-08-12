@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechSynthesisUtterance.onstart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onstart",
+    "description": "The onstart property of the SpeechSynthesisUtterance interface represents an event handler that will run when the utterance has begun to be spoken (when the start event fires.)"
+}
