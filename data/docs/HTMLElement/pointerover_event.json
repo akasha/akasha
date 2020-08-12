@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLElement.pointerover_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerover_event",
+    "description": "The pointerover event is fired when a pointing device is moved into an element's hit test boundaries.",
+    "eventName": "pointerover",
+    "eventType": "PointerEvent",
+    "eventHandlerProperty": "onpointerover"
+}

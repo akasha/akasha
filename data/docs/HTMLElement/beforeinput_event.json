@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLElement.beforeinput_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforeinput_event",
+    "description": "The DOM beforeinput event fires when the value of an input, select, or textarea element is about to be modified. The event also applies to elements with contenteditable enabled, and to any element when designMode is turned on.",
+    "eventName": "beforeinput",
+    "eventType": "InputEvent",
+    "eventHandlerProperty": "None"
+}

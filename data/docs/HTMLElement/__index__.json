@@ -9,6 +9,26 @@
         "lastModifiedAt": 1596581176588
     },
     {
+        "name": "animationcancel_event",
+        "lastModifiedAt": 1597276700761
+    },
+    {
+        "name": "animationend_event",
+        "lastModifiedAt": 1597276701153
+    },
+    {
+        "name": "animationiteration_event",
+        "lastModifiedAt": 1597276701549
+    },
+    {
+        "name": "animationstart_event",
+        "lastModifiedAt": 1597276701971
+    },
+    {
+        "name": "beforeinput_event",
+        "lastModifiedAt": 1597276702273
+    },
+    {
         "name": "click",
         "lastModifiedAt": 1596581189269
     },
@@ -29,6 +49,10 @@
         "lastModifiedAt": 1596581189551
     },
     {
+        "name": "gotpointercapture_event",
+        "lastModifiedAt": 1597276702856
+    },
+    {
         "name": "hidden",
         "lastModifiedAt": 1596581179768
     },
@@ -41,8 +65,12 @@
         "lastModifiedAt": 1596581180356
     },
     {
-        "name": "invalid",
-        "lastModifiedAt": 1596711223114
+        "name": "input_event",
+        "lastModifiedAt": 1597276702570
+    },
+    {
+        "name": "invalid_event",
+        "lastModifiedAt": 1597276699988
     },
     {
         "name": "isContentEditable",
@@ -51,6 +79,10 @@
     {
         "name": "lang",
         "lastModifiedAt": 1596581183476
+    },
+    {
+        "name": "lostpointercapture_event",
+        "lastModifiedAt": 1597276703990
     },
     {
         "name": "offsetHeight",
@@ -73,11 +105,59 @@
         "lastModifiedAt": 1596581185443
     },
     {
+        "name": "pointercancel_event",
+        "lastModifiedAt": 1597276704676
+    },
+    {
+        "name": "pointerdown_event",
+        "lastModifiedAt": 1597276705628
+    },
+    {
+        "name": "pointerenter_event",
+        "lastModifiedAt": 1597276705934
+    },
+    {
+        "name": "pointerleave_event",
+        "lastModifiedAt": 1597276706350
+    },
+    {
+        "name": "pointermove_event",
+        "lastModifiedAt": 1597276706661
+    },
+    {
+        "name": "pointerout_event",
+        "lastModifiedAt": 1597276707092
+    },
+    {
+        "name": "pointerover_event",
+        "lastModifiedAt": 1597276708092
+    },
+    {
+        "name": "pointerup_event",
+        "lastModifiedAt": 1597276708526
+    },
+    {
         "name": "style",
         "lastModifiedAt": 1596581187017
     },
     {
         "name": "title",
         "lastModifiedAt": 1596581187362
+    },
+    {
+        "name": "transitioncancel_event",
+        "lastModifiedAt": 1597276708866
+    },
+    {
+        "name": "transitionend_event",
+        "lastModifiedAt": 1597276709238
+    },
+    {
+        "name": "transitionrun_event",
+        "lastModifiedAt": 1597276709640
+    },
+    {
+        "name": "transitionstart_event",
+        "lastModifiedAt": 1597276709962
     }
 ]

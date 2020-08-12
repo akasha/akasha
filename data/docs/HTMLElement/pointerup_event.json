@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLElement.pointerup_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/pointerup_event",
+    "description": "The pointerup event is fired when a pointer is no longer active.",
+    "eventName": "pointerup",
+    "eventType": "PointerEvent",
+    "eventHandlerProperty": "onpointerup"
+}
