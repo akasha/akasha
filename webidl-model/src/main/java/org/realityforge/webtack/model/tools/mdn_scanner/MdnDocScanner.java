@@ -12,6 +12,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.lang.model.SourceVersion;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -186,6 +187,7 @@ public final class MdnDocScanner
           .map( Element::text )
           // Strip the brackets at end of constructors
           .map( text -> text.replaceAll( "\\(.*", "" ) )
+          .filter( SourceVersion::isName )
           .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
       }
       document
@@ -205,6 +207,7 @@ public final class MdnDocScanner
         .map( Element::text )
         // Strip out the type name that sometimes appears in the documentation
         .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+        .filter( SourceVersion::isName )
         .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
 
       final List<String> methods =
@@ -219,6 +222,7 @@ public final class MdnDocScanner
           .map( text -> text.replaceAll( "\\(.*", "" ) )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+          .filter( SourceVersion::isName )
           .collect( Collectors.toList() );
       if ( !methods.isEmpty() )
       {
@@ -245,6 +249,7 @@ public final class MdnDocScanner
             .map( Element::text )
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+            .filter( SourceVersion::isName )
             .collect( Collectors.toList() );
         if ( !events.isEmpty() )
         {
