@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "HTMLSlotElement.slotchange",
+    "name": "HTMLSlotElement.slotchange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event",
     "description": "The slotchange event is fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change.",
+    "eventName": "slotchange",
     "eventType": "Event",
     "eventHandlerProperty": "None"
 }
