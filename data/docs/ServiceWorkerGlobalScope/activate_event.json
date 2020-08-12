@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "ServiceWorkerGlobalScope.activate_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event",
+    "description": "The activate event of the ServiceWorkerGlobalScope interface is fired when a ServiceWorkerRegistration acquires a new ServiceWorkerRegistration.active worker.",
+    "eventName": "activate",
+    "eventType": "ExtendableEvent",
+    "eventHandlerProperty": "onactivate"
+}

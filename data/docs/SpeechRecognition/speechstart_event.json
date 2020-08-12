@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechRecognition.speechstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/speechstart_event",
+    "description": "You can use the speechstart event in an addEventListener method:",
+    "eventName": "speechstart",
+    "eventType": "Event",
+    "eventHandlerProperty": "onspeechstart"
+}

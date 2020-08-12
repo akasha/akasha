@@ -3,5 +3,21 @@
     {
         "name": "__type__",
         "lastModifiedAt": 1597192086468
+    },
+    {
+        "name": "blocked_event",
+        "lastModifiedAt": 1597241252128
+    },
+    {
+        "name": "onblocked",
+        "lastModifiedAt": 1597241253114
+    },
+    {
+        "name": "onupgradeneeded",
+        "lastModifiedAt": 1597241253499
+    },
+    {
+        "name": "upgradeneeded_event",
+        "lastModifiedAt": 1597241252612
     }
 ]

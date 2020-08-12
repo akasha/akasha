@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onerror",
+    "description": "The MediaRecorder interface's onerror event handler is called by the MediaStream Recording API when an error occurs. You can provide an event handler to deal with errors that occur while creating or using a media recorder"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "AudioTrackList.removetrack_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/removetrack_event",
+    "description": "The removetrack event is fired when a track is removed from an AudioTrackList.",
+    "eventName": "removetrack",
+    "eventType": "TrackEvent",
+    "eventHandlerProperty": "onremovetrack"
+}

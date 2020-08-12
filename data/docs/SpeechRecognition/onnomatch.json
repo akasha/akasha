@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechRecognition.onnomatch",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onnomatch",
+    "description": "The onnomatch property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service returns a final result with no significant recognition (when the nomatch event fires.)"
+}

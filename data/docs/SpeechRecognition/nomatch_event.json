@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechRecognition.nomatch_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/nomatch_event",
+    "description": "The nomatch event of the Web Speech API is fired when the speech recognition service returns a final result with no significant recognition.",
+    "eventName": "nomatch",
+    "eventType": "SpeechRecognitionEvent",
+    "eventHandlerProperty": "onnomatch"
+}

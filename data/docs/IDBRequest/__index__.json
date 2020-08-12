@@ -9,6 +9,18 @@
         "lastModifiedAt": 1597192118264
     },
     {
+        "name": "error_event",
+        "lastModifiedAt": 1597241613048
+    },
+    {
+        "name": "onerror",
+        "lastModifiedAt": 1597241614122
+    },
+    {
+        "name": "onsuccess",
+        "lastModifiedAt": 1597241614420
+    },
+    {
         "name": "readyState",
         "lastModifiedAt": 1597192119062
     },
@@ -19,6 +31,10 @@
     {
         "name": "source",
         "lastModifiedAt": 1597192118800
+    },
+    {
+        "name": "success_event",
+        "lastModifiedAt": 1597241613881
     },
     {
         "name": "transaction",

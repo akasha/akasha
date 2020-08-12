@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechRecognition.audiostart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audiostart_event",
+    "description": "You can use the audiostart event in an onaudiostart method:",
+    "eventName": "audiostart",
+    "eventType": "Event",
+    "eventHandlerProperty": "onaudiostart"
+}

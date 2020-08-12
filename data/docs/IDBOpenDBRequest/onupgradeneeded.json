@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBOpenDBRequest.onupgradeneeded",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded",
+    "description": "In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our To-do Notifications app (view example live.)"
+}

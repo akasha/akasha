@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "IDBTransaction.complete_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/complete_event",
+    "description": "The complete handler is executed when a transaction successfully completed.",
+    "eventName": "complete",
+    "eventType": "Event",
+    "eventHandlerProperty": "oncomplete"
+}

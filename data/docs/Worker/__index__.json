@@ -9,6 +9,22 @@
         "lastModifiedAt": 1597193266003
     },
     {
+        "name": "message_event",
+        "lastModifiedAt": 1597241367334
+    },
+    {
+        "name": "messageerror_event",
+        "lastModifiedAt": 1597241367634
+    },
+    {
+        "name": "onmessage",
+        "lastModifiedAt": 1597241368439
+    },
+    {
+        "name": "onmessageerror",
+        "lastModifiedAt": 1597241368827
+    },
+    {
         "name": "postMessage",
         "lastModifiedAt": 1596581230413
     },

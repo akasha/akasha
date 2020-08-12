@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "DedicatedWorkerGlobalScope.message_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/message_event",
+    "description": "The message event is fired on a DedicatedWorkerGlobalScope object when the worker receives a message from its parent (i.e. when the parent sends a message using Worker.postMessage()).",
+    "eventName": "message",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onmessage"
+}

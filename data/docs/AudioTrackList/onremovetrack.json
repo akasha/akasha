@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrackList.onremovetrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onremovetrack",
+    "description": "The AudioTrackList onremovetrack event handler is called when the removetrack event occurs, indicating that an audio track has been removed from the media element, and therefore also from the AudioTrackList."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioTrackList.onchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onchange",
+    "description": "The AudioTrackList property onchange is an event handler which is called when the change event occurs, indicating that one or more of the AudioTracks in the AudioTrackList have been enabled or disabled."
+}

@@ -6,11 +6,19 @@
     },
     {
         "name": "addtrack",
-        "lastModifiedAt": 1596581500837
+        "lastModifiedAt": 1597241060818
+    },
+    {
+        "name": "addtrack_event",
+        "lastModifiedAt": 0
     },
     {
         "name": "change",
-        "lastModifiedAt": 1596581501284
+        "lastModifiedAt": 1597241061146
+    },
+    {
+        "name": "change_event",
+        "lastModifiedAt": 0
     },
     {
         "name": "getTrackById",
@@ -34,7 +42,11 @@
     },
     {
         "name": "removetrack",
-        "lastModifiedAt": 1596581501540
+        "lastModifiedAt": 1597241061941
+    },
+    {
+        "name": "removetrack_event",
+        "lastModifiedAt": 0
     },
     {
         "name": "selectedIndex",

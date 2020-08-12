@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SharedWorkerGlobalScope.connect_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/connect_event",
+    "description": "The connect event is fired in shared workers at their SharedWorkerGlobalScope when a new client connects.",
+    "eventName": "connect",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onconnect"
+}

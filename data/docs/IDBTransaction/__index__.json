@@ -9,8 +9,16 @@
         "lastModifiedAt": 1597192112424
     },
     {
+        "name": "abort_event",
+        "lastModifiedAt": 1597240662605
+    },
+    {
         "name": "commit",
         "lastModifiedAt": 1597192113747
+    },
+    {
+        "name": "complete_event",
+        "lastModifiedAt": 1597240662910
     },
     {
         "name": "db",
@@ -19,6 +27,10 @@
     {
         "name": "error",
         "lastModifiedAt": 1597192110857
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597240663286
     },
     {
         "name": "mode",

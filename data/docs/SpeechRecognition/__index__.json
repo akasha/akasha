@@ -10,15 +10,31 @@
     },
     {
         "name": "audioend",
-        "lastModifiedAt": 1596711346036
+        "lastModifiedAt": 1597240611401
+    },
+    {
+        "name": "audioend_event",
+        "lastModifiedAt": 0
     },
     {
         "name": "audiostart",
-        "lastModifiedAt": 1596711346566
+        "lastModifiedAt": 1597240610579
+    },
+    {
+        "name": "audiostart_event",
+        "lastModifiedAt": 0
     },
     {
         "name": "continuous",
         "lastModifiedAt": 1596711338001
+    },
+    {
+        "name": "end_event",
+        "lastModifiedAt": 1597240611712
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597240612549
     },
     {
         "name": "grammars",
@@ -37,6 +53,10 @@
         "lastModifiedAt": 1596711341021
     },
     {
+        "name": "nomatch_event",
+        "lastModifiedAt": 1597240612933
+    },
+    {
         "name": "onaudioend",
         "lastModifiedAt": 1596711341570
     },
@@ -45,12 +65,72 @@
         "lastModifiedAt": 1596711341940
     },
     {
+        "name": "onend",
+        "lastModifiedAt": 1597240617857
+    },
+    {
+        "name": "onerror",
+        "lastModifiedAt": 1597240618712
+    },
+    {
+        "name": "onnomatch",
+        "lastModifiedAt": 1597240618955
+    },
+    {
+        "name": "onresult",
+        "lastModifiedAt": 1597240619362
+    },
+    {
+        "name": "onsoundend",
+        "lastModifiedAt": 1597240620598
+    },
+    {
+        "name": "onsoundstart",
+        "lastModifiedAt": 1597240619771
+    },
+    {
+        "name": "onspeechend",
+        "lastModifiedAt": 1597240621744
+    },
+    {
+        "name": "onspeechstart",
+        "lastModifiedAt": 1597240621423
+    },
+    {
+        "name": "onstart",
+        "lastModifiedAt": 1597240622048
+    },
+    {
+        "name": "result_event",
+        "lastModifiedAt": 1597240613739
+    },
+    {
         "name": "serviceURI",
         "lastModifiedAt": 1596711343075
     },
     {
+        "name": "soundend_event",
+        "lastModifiedAt": 1597240614391
+    },
+    {
+        "name": "soundstart_event",
+        "lastModifiedAt": 1597240613999
+    },
+    {
+        "name": "speechend_event",
+        "lastModifiedAt": 1597240615291
+    },
+    {
+        "name": "speechstart_event",
+        "lastModifiedAt": 1597240614780
+    },
+    {
         "name": "start",
         "lastModifiedAt": 1596711345114
+    },
+    {
+        "name": "start_event",
+        "lastModifiedAt": 1597240615599
     },
     {
         "name": "stop",

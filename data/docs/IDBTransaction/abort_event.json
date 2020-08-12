@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "IDBTransaction.abort_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/abort_event",
+    "description": "The abort event is fired when an IndexedDB transaction is aborted.",
+    "eventName": "abort",
+    "eventType": "Event",
+    "eventHandlerProperty": "onabort"
+}

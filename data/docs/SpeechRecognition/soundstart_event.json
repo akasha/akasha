@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SpeechRecognition.soundstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/soundstart_event",
+    "description": "The soundstart event of the Web Speech API is fired when any sound — recognisable speech or not — has been detected.",
+    "eventName": "soundstart",
+    "eventType": "Event",
+    "eventHandlerProperty": "onsoundstart"
+}

@@ -13,7 +13,15 @@
         "lastModifiedAt": 1596581307149
     },
     {
+        "name": "connect_event",
+        "lastModifiedAt": 1597240791849
+    },
+    {
         "name": "name",
         "lastModifiedAt": 1596581306910
+    },
+    {
+        "name": "onconnect",
+        "lastModifiedAt": 1597240792225
     }
 ]

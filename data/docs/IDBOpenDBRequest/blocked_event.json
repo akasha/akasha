@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "IDBOpenDBRequest.blocked_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event",
+    "description": "The blocked handler is executed when an open connection to a database is blocking a versionchange transaction on the same database.",
+    "eventName": "blocked",
+    "eventType": "IDBVersionChangeEvent",
+    "eventHandlerProperty": "onblocked"
+}

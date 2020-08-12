@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "ServiceWorkerGlobalScope.notificationclick_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event",
+    "description": "The notificationclick event is fired to indicate that a system notification spawned by ServiceWorkerRegistration.showNotification() has been clicked.",
+    "eventName": "notificationclick",
+    "eventType": "NotificationEvent",
+    "eventHandlerProperty": "onnotificationclick"
+}

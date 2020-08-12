@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechRecognition.onend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onend",
+    "description": "The onend property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has disconnected (when the end event fires.)"
+}

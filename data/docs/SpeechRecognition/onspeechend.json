@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SpeechRecognition.onspeechend",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onspeechend",
+    "description": "The onspeechend property of the SpeechRecognition interface represents an event handler that will run when speech recognised by the speech recognition service has stopped being detected (when the speechend event fires.)"
+}

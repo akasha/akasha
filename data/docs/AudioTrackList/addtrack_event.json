@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "AudioTrackList.addtrack_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/addtrack_event",
+    "description": "The addtrack event is fired when a track is added to an AudioTrackList.",
+    "eventName": "addtrack",
+    "eventType": "TrackEvent",
+    "eventHandlerProperty": "onaddtrack"
+}

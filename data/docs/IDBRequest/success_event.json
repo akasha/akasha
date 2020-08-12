@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "IDBRequest.success_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/success_event",
+    "description": "The success event is fired when an IDBRequest succeeds.",
+    "eventName": "success",
+    "eventType": "Event",
+    "eventHandlerProperty": "onsuccess"
+}

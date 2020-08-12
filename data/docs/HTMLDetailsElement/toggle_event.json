@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLDetailsElement.toggle_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/toggle_event",
+    "description": "The toggle event fires when the open/closed state of a details element is toggled.",
+    "eventName": "toggle",
+    "eventType": "Event",
+    "eventHandlerProperty": "None"
+}

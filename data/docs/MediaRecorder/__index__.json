@@ -13,6 +13,10 @@
         "lastModifiedAt": 1596544794472
     },
     {
+        "name": "error_event",
+        "lastModifiedAt": 1597241023229
+    },
+    {
         "name": "ignoreMutedMedia",
         "lastModifiedAt": 1596544794863
     },
@@ -23,6 +27,10 @@
     {
         "name": "mimeType",
         "lastModifiedAt": 1596544795253
+    },
+    {
+        "name": "onerror",
+        "lastModifiedAt": 1597241023577
     },
     {
         "name": "pause",

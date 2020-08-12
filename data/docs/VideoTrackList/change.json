@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "VideoTrackList.change",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/change_event",
+    "description": "The change event is fired when a video track is made active or inactive, for example by changing the track's selected property.",
+    "eventName": "change",
+    "eventType": "Event",
+    "eventHandlerProperty": "onchange"
+}
