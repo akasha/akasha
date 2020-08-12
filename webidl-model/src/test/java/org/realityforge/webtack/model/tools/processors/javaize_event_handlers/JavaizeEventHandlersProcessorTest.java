@@ -30,7 +30,7 @@ public final class JavaizeEventHandlersProcessorTest
   @Nonnull
   private Processor createProcessor( @Nonnull final String subDirectory )
   {
-    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory );
+    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory ).resolve( "docs" );
     return Registry.createProcessor( "JavaizeEventHandlers",
                                      Json
                                        .createObjectBuilder()
