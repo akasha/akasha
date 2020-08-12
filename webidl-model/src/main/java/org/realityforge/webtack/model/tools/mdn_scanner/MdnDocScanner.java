@@ -192,54 +192,53 @@ public final class MdnDocScanner
           .map( text -> text.replaceAll( "\\(.*", "" ) )
           .filter( SourceVersion::isName )
           .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
-      }
-      document
-        .select( "#Properties + p + dl > dt > a > code, " +
-                 "#Properties + dl > dt > a > code, " +
-
-                 // GlobalEventHandlers has event handler properties here
-                 "#Properties > dl > dt > a > code, " +
-
-                 // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
-                 "#Properties + p + dl > dt > code, " +
-
-                 // Sometimes events section actually lists event handler properties
-                 "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
-                 "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
-        .stream()
-        .map( Element::text )
-        // Strip out the type name that sometimes appears in the documentation
-        .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-        .filter( SourceVersion::isName )
-        .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
-
-      final List<String> methods =
         document
-          .select( "#Methods + p + dl > dt > a > code, " +
-                   "#Methods + dl > dt > a code, " +
-                   "#Static_methods + p + dl > dt > a > code, " +
-                   "#Static_methods + dl > dt > a > code" )
+          .select( "#Properties + p + dl > dt > a > code, " +
+                   "#Properties + dl > dt > a > code, " +
+
+                   // GlobalEventHandlers has event handler properties here
+                   "#Properties > dl > dt > a > code, " +
+
+                   // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
+                   "#Properties + p + dl > dt > code, " +
+
+                   // Sometimes events section actually lists event handler properties
+                   "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
+                   "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
           .stream()
           .map( Element::text )
-          // Strip the brackets at end of methods
-          .map( text -> text.replaceAll( "\\(.*", "" ) )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
           .filter( SourceVersion::isName )
-          .collect( Collectors.toList() );
-      if ( !methods.isEmpty() )
-      {
-        // Sometimes constructors are documented as methods so instead register them as constructors
-        methods
-          .stream()
-          .filter( m -> m.equals( localName ) )
-          .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
+          .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
 
-        methods
-          .stream()
-          .filter( m -> !m.equals( localName ) )
-          .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
+        final List<String> methods =
+          document
+            .select( "#Methods + p + dl > dt > a > code, " +
+                     "#Methods + dl > dt > a code, " +
+                     "#Static_methods + p + dl > dt > a > code, " +
+                     "#Static_methods + dl > dt > a > code" )
+            .stream()
+            .map( Element::text )
+            // Strip the brackets at end of methods
+            .map( text -> text.replaceAll( "\\(.*", "" ) )
+            // Strip out the type name that sometimes appears in the documentation
+            .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+            .filter( SourceVersion::isName )
+            .collect( Collectors.toList() );
+        if ( !methods.isEmpty() )
+        {
+          // Sometimes constructors are documented as methods so instead register them as constructors
+          methods
+            .stream()
+            .filter( m -> m.equals( localName ) )
+            .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
 
+          methods
+            .stream()
+            .filter( m -> !m.equals( localName ) )
+            .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
+        }
         final List<String> events =
           document
             .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
