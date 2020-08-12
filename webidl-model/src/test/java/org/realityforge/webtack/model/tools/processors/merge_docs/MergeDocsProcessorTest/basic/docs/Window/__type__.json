@@ -1,13 +1,5 @@
 {
   "name": "Window",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window",
-  "description": "Documentation for Window partial.",
-  "properties": [
-    "someVar"
-  ],
-  "events": [
-    "devicemotion",
-    "focus",
-    "orientationchange"
-  ]
+  "description": "Documentation for Window partial."
 }
