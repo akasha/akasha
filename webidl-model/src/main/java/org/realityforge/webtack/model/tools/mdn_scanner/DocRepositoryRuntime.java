@@ -158,13 +158,13 @@ public final class DocRepositoryRuntime
    * @return true if the entry has changed and thus the entry was saved.
    * @throws Exception if an error occurs saving the entry.
    */
-  public boolean save( @Nonnull final DocEntry entry, final long modifiedAt )
+  public boolean save( @Nonnull final EntryIndex entryIndex, @Nonnull final DocEntry entry, final long modifiedAt )
     throws Exception
   {
-    final String name = entry.getName();
-    _cache.put( name, entry );
-    _negativeCache.remove( name );
-    final Path output = getDocEntryPath( name );
+    final String qualifiedName = entryIndex.getQualifiedName();
+    _cache.put( qualifiedName, entry );
+    _negativeCache.remove( qualifiedName );
+    final Path output = getDocEntryPath( entryIndex );
     final Path tmpOutput = asTmpTarget( output );
     DocEntry.save( entry, tmpOutput );
     if ( Files.exists( output ) && doFileContentsMatch( output, tmpOutput ) )
