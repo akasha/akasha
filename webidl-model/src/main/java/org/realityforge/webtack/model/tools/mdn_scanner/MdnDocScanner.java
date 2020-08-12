@@ -172,7 +172,7 @@ public final class MdnDocScanner
     {
       entry = new DocEntry();
       entry.setKind( kind );
-      entry.setName( DocKind.Type == kind ? entryIndex.getDocIndex().getName() : entryIndex.getQualifiedName() );
+      entry.setName( deriveName( kind, entryIndex ) );
       entry.setHref( url );
     }
     try
@@ -318,6 +318,11 @@ public final class MdnDocScanner
     {
       throw new IndexIOException( "Failed to read local file for " + entryIndex.getQualifiedName(), e );
     }
+  }
+
+  private String deriveName( @Nonnull final DocKind kind, @Nonnull final EntryIndex entryIndex )
+  {
+    return DocKind.Type == kind ? entryIndex.getDocIndex().getName() : entryIndex.getQualifiedName();
   }
 
   private void queueRequest( @Nonnull final DocKind kind, @Nonnull final String typeName, @Nullable final String name )
