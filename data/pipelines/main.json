@@ -10,16 +10,6 @@
       }
     },
     {
-      "name": "RemoveMember",
-      "description": "MDN docs still reference WebVR spec and the previous stage adds a whole bunch of events related to it. This pass just removes them",
-      "sourceSelector": "name=whatwg_html",
-      "config": {
-        "elementNamePattern": "^Window$",
-        "memberNamePattern": "^vrdisplay.*$",
-        "types": ["interface_type"]
-      }
-    },
-    {
       "name": "RemoveExtendedAttribute",
       "description": "Remove Constructor attribute as one of the arguments 'newTarget' is of type 'Animatable' which is a mixin which is seemingly invalid. We will re-add an equivalent with a union for impls of Animatable in next step",
       "sourceSelector": "name=svg2",

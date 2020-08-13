@@ -288,9 +288,9 @@ final class JavaizeEventHandlersProcessor
           {
             final String eventTypeName = eventDocEntry.getEventType();
             assert null != eventTypeName;
-            // EventSource.error is documented as so this code essentially guards
+            // Several events are documented that are historic (or unions) so this code essentially guards
             // against this scenario which would generate bad code
-            if ( !eventTypeName.contains( " or " ) )
+            if ( null != _schema.findInterfaceByName( eventTypeName ) )
             {
               final String handlerName = eventTypeName + "Handler";
               _usedHandlers.add( handlerName );

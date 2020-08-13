@@ -133,8 +133,9 @@ final class MergeDocsProcessor
           {
             final String eventType = eventDocEntry.getEventType();
             assert null != eventType;
-            // Some events are a union and we don't yet represent this scenario
-            if ( !eventType.contains( " or " ) )
+            // Some events are a union and we don't yet represent this scenario so this will fail
+            // It will also skip adding events that are documented on MDN but are deprecated and no longer part of the spec
+            if ( null != _schema.findInterfaceByName( eventType ) )
             {
               events.add( new EventMember( eventName,
                                            new TypeReference( eventType,
