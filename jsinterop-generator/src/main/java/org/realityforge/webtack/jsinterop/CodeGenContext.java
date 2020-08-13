@@ -16,8 +16,11 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
+import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.RecordType;
@@ -112,23 +115,18 @@ final class CodeGenContext
   }
 
   @Nonnull
-  Path getPackageDirectory()
+  Path getPackageDirectory( @Nonnull final String packageName )
   {
-    final String packageName = getPackageName();
-    if ( !packageName.isEmpty() )
-    {
-      return getMainJavaDirectory().resolve( packageName.replaceAll( "\\.", File.separator ) );
-    }
-    else
-    {
-      return getMainJavaDirectory();
-    }
+    final Path baseDirectory = getMainJavaDirectory();
+    return packageName.isEmpty() ?
+           baseDirectory :
+           baseDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
   }
 
   void writeResourceFile( @Nonnull final String name, @Nonnull final byte[] content )
     throws IOException
   {
-    final Path path = getPackageDirectory().resolve( name );
+    final Path path = getPackageDirectory( getPackageName() ).resolve( name );
     final String qualifiedName = getPackageName() + "." + name;
     assert !_generatedSourceFiles.containsKey( qualifiedName );
     _generatedSourceFiles.put( qualifiedName, path );
@@ -139,11 +137,17 @@ final class CodeGenContext
   void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
+    writeTopLevelType( type, null );
+  }
+
+  void writeTopLevelType( @Nonnull final TypeSpec.Builder type, @Nullable final String namespace )
+    throws IOException
+  {
     final Path outputDirectory = getMainJavaDirectory();
     final TypeSpec typeSpec = type.build();
-    final String packageName = getPackageName();
+    final String packageName = derivePackage( namespace );
     final String name = typeSpec.name;
-    final Path path = getPackageDirectory().resolve( name + ".java" );
+    final Path path = getPackageDirectory( packageName ).resolve( name + ".java" );
     final String qualifiedName = packageName + "." + name;
     assert !_generatedSourceFiles.containsKey( qualifiedName );
     _generatedSourceFiles.put( qualifiedName, path );
@@ -152,6 +156,12 @@ final class CodeGenContext
       .skipJavaLangImports( true )
       .build()
       .writeTo( outputDirectory );
+  }
+
+  @Nonnull
+  private String derivePackage( @Nullable final String namespace )
+  {
+    return getPackageName() + ( null == namespace ? "" : "." + NamingUtil.underscore( namespace ) );
   }
 
   @Nonnull
@@ -180,6 +190,11 @@ final class CodeGenContext
         //TODO: resolve typedef
       }
     }
+    final InterfaceDefinition interfaceDefinition = getSchema().findInterfaceByName( name );
+    if ( null != interfaceDefinition )
+    {
+      return ClassName.get( derivePackage( getNamespace( interfaceDefinition ) ), name );
+    }
     return ClassName.get( getPackageName(), name );
   }
 
@@ -187,6 +202,17 @@ final class CodeGenContext
   TypeName toTypeName( @Nonnull final Type type )
   {
     return toTypeName( type, type.isNullable() );
+  }
+
+  @Nullable
+  String getNamespace( @Nonnull final Definition definition )
+  {
+    return definition.getExtendedAttributes()
+      .stream()
+      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
+      .map( ExtendedAttribute::getIdent )
+      .findAny()
+      .orElse( null );
   }
 
   @Nonnull

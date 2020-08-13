@@ -48,8 +48,6 @@ complete as there is too much un-said.
 
 * Add codegen for `IterableMember`
 
-* Classes with `LegacyNamespace` should  default to different package based on namespace or maybe prefix all classes?
-
 * Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
 
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test

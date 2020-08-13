@@ -993,7 +993,7 @@ final class Generator
       type.addMethod( method.build() );
     }
 
-    context.writeTopLevelType( type );
+    context.writeTopLevelType( type, context.getNamespace( definition ) );
   }
 
   private void generateMapLikeOperations( @Nonnull final CodeGenContext context,
