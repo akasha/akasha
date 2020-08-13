@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "VideoTrackList.removetrack",
+    "name": "VideoTrackList.removetrack_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/removetrack_event",
     "description": "The removetrack event is fired when a track is removed from a VideoTrackList.",
+    "eventName": "removetrack",
     "eventType": "TrackEvent",
     "eventHandlerProperty": "onremovetrack"
 }
