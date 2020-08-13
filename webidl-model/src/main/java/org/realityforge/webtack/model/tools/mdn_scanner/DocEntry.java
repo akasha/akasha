@@ -17,11 +17,9 @@ import javax.json.bind.annotation.JsonbPropertyOrder;
                        "name",
                        "href",
                        "description",
-                       "content",
-                       "constructors",
-                       "properties",
-                       "methods",
-                       "events" } )
+                       "eventName",
+                       "eventType",
+                       "eventHandlerProperty" } )
 public class DocEntry
 {
   private DocKind kind;
