@@ -175,6 +175,12 @@ public final class MdnDocScanner
       entry.setName( deriveName( kind, entryIndex ) );
       entry.setHref( url );
     }
+    else
+    {
+      assert Objects.equals( entry.getKind(), kind );
+      assert Objects.equals( entry.getName(), deriveName( kind, entryIndex ) );
+      assert Objects.equals( entry.getHref(), url );
+    }
     try
     {
       final Document document = Jsoup.parse( input.toFile(), StandardCharsets.UTF_8.name() );
