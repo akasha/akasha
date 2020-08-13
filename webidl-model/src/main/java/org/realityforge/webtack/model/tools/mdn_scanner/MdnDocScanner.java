@@ -309,6 +309,12 @@ public final class MdnDocScanner
             entry.setEventHandlerProperty( td.text().replaceAll( "^.*\\.", "" ) );
           }
         }
+        if ( null == entry.getEventType() )
+        {
+          entryIndex.remove();
+          _listener.entryInvalid( entryIndex, entry );
+          return;
+        }
       }
       if ( _runtime.save( entryIndex, entry, modifiedAt ) )
       {

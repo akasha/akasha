@@ -60,4 +60,12 @@ public interface MdnScannerListener
    * @param entry the entry.
    */
   void entrySkipped( @Nonnull DocEntry entry );
+
+  /**
+   * The entry was skipped and deleted because we could not scrape the required fields.
+   *
+   * @param entryIndex the entry index.
+   * @param entry      the updated entry.
+   */
+  void entryInvalid( @Nonnull EntryIndex entryIndex, @Nonnull DocEntry entry );
 }
