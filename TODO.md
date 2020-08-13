@@ -56,6 +56,10 @@ complete as there is too much un-said.
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
+# React4j Host Element Factories
+
+Generate host element factories in the current style Generate one prop object per HTML element with parallel inheritance. The `ref` param would be typed and all the other attributes would be as-is. Events would need to be specially handled to map to reacts event system but we could control whether we generate a capture handler using the `[NoBubble]` attribute on events.
+
 # Other
 
 * Change pipeline so that doc runtime is shared across pipeline stages? Or maybe we can each repository?
