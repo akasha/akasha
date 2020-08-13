@@ -6,5 +6,7 @@
     "description": "The pointerup event is fired when a pointer is no longer active.",
     "eventName": "pointerup",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onpointerup"
+    "eventHandlerProperty": "onpointerup",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

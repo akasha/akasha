@@ -6,5 +6,7 @@
     "description": "The pointermove event is fired when a pointer changes coordinates, and the pointer has not been canceled by a browser touch-action.",
     "eventName": "pointermove",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onpointermove"
+    "eventHandlerProperty": "onpointermove",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

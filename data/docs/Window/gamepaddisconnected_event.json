@@ -6,5 +6,7 @@
     "description": "The gamepaddisconnected event is fired when the browser detects that a gamepad has been disconnected.",
     "eventName": "gamepaddisconnected",
     "eventType": "GamepadEvent",
-    "eventHandlerProperty": "ongamepaddisconnected"
+    "eventHandlerProperty": "ongamepaddisconnected",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

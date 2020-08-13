@@ -6,5 +6,7 @@
     "description": "The loadend event is fired when a request has completed, whether successfully (after load) or unsuccessfully (after abort or error).",
     "eventName": "loadend",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onloadend"
+    "eventHandlerProperty": "onloadend",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

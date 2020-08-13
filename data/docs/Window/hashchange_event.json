@@ -6,5 +6,7 @@
     "description": "The hashchange event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the # symbol).",
     "eventName": "hashchange",
     "eventType": "HashChangeEvent",
-    "eventHandlerProperty": "onhashchange"
+    "eventHandlerProperty": "onhashchange",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

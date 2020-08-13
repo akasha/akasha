@@ -6,5 +6,7 @@
     "description": "The unload event is fired when the document or a child resource is being unloaded.",
     "eventName": "unload",
     "eventType": "Event",
-    "eventHandlerProperty": "onunload"
+    "eventHandlerProperty": "onunload",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

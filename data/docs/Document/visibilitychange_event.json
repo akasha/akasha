@@ -6,5 +6,7 @@
     "description": "The visibilitychange event is fired at the document when the content of its tab have become visible or have been hidden.",
     "eventName": "visibilitychange",
     "eventType": "Event",
-    "eventHandlerProperty": "onvisibilitychange"
+    "eventHandlerProperty": "onvisibilitychange",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

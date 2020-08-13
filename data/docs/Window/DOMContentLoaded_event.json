@@ -6,5 +6,7 @@
     "description": "The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.",
     "eventName": "DOMContentLoaded",
     "eventType": "Event",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

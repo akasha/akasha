@@ -6,5 +6,7 @@
     "description": "The pointerlockerror event is fired when locking the pointer failed (for technical reasons or because the permission was denied).",
     "eventName": "pointerlockerror",
     "eventType": "Event",
-    "eventHandlerProperty": "onpointerlockerror"
+    "eventHandlerProperty": "onpointerlockerror",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

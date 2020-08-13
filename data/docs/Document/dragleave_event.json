@@ -6,5 +6,7 @@
     "description": "The dragleave event is fired when a dragged element or text selection leaves a valid drop target.",
     "eventName": "dragleave",
     "eventType": "DragEvent",
-    "eventHandlerProperty": "ondragleave"
+    "eventHandlerProperty": "ondragleave",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

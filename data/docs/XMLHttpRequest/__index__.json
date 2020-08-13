@@ -14,11 +14,11 @@
     },
     {
         "name": "abort_event",
-        "lastModifiedAt": 1597278462386
+        "lastModifiedAt": 1597359201996
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1597278462627
+        "lastModifiedAt": 1597359203129
     },
     {
         "name": "getAllResponseHeaders",
@@ -30,15 +30,15 @@
     },
     {
         "name": "load_event",
-        "lastModifiedAt": 1597278463152
+        "lastModifiedAt": 1597359204263
     },
     {
         "name": "loadend_event",
-        "lastModifiedAt": 1597278463525
+        "lastModifiedAt": 1597359205373
     },
     {
         "name": "loadstart_event",
-        "lastModifiedAt": 1597278463825
+        "lastModifiedAt": 1597359206491
     },
     {
         "name": "onreadystatechange",
@@ -54,7 +54,7 @@
     },
     {
         "name": "progress_event",
-        "lastModifiedAt": 1597278464054
+        "lastModifiedAt": 1597359207539
     },
     {
         "name": "readyState",
@@ -102,7 +102,7 @@
     },
     {
         "name": "timeout_event",
-        "lastModifiedAt": 1597280428919
+        "lastModifiedAt": 1597359208141
     },
     {
         "name": "upload",

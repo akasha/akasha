@@ -6,5 +6,7 @@
     "description": "The WebRTC message event is sent to the onmessage event handler on an RTCDataChannel object when a message has been received from the remote peer.",
     "eventName": "message",
     "eventType": "MessageEvent",
-    "eventHandlerProperty": "onmessage"
+    "eventHandlerProperty": "onmessage",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

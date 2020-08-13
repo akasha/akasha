@@ -6,5 +6,7 @@
     "description": "The error event is fired when an SVG element does not load properly or when an error occurs during script execution.",
     "eventName": "error",
     "eventType": "SVGEvent",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

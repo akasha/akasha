@@ -6,5 +6,7 @@
     "description": "",
     "eventName": "selectstart",
     "eventType": "Event",
-    "eventHandlerProperty": "onselectstart"
+    "eventHandlerProperty": "onselectstart",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

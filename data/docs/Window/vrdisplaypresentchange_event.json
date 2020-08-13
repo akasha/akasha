@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplaypresentchange event in an addEventListener method:",
     "eventName": "vrdisplaypresentchange",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplaypresentchange"
+    "eventHandlerProperty": "onvrdisplaypresentchange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

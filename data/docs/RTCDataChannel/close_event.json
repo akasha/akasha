@@ -6,5 +6,7 @@
     "description": "The close event is sent to the onclose event handler on an RTCDataChannel instance when the data transport being used for the data channel has closed.",
     "eventName": "close",
     "eventType": "Event",
-    "eventHandlerProperty": "onclose"
+    "eventHandlerProperty": "onclose",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

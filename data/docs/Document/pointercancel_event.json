@@ -6,5 +6,7 @@
     "description": "The pointercancel event is fired when the browser determines that there are unlikely to be any more pointer events, or if after the pointerdown event is fired, the pointer is then used to manipulate the viewport by panning, zooming, or scrolling.",
     "eventName": "pointercancel",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onpointercancel"
+    "eventHandlerProperty": "onpointercancel",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

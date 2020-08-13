@@ -6,5 +6,7 @@
     "description": "The scroll event is fired when an SVG document view is being shifted along the X and/or Y axes. This basically implements the standard scroll DOM event.",
     "eventName": "scroll",
     "eventType": "SVGEvent",
-    "eventHandlerProperty": "onscroll"
+    "eventHandlerProperty": "onscroll",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The touchstart event is fired when one or more touch points are placed on the touch surface.",
     "eventName": "touchstart",
     "eventType": "TouchEvent",
-    "eventHandlerProperty": "ontouchstart"
+    "eventHandlerProperty": "ontouchstart",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

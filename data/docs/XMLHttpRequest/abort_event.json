@@ -6,5 +6,7 @@
     "description": "The abort event is fired when a request has been aborted, for example because the program called XMLHttpRequest.abort().",
     "eventName": "abort",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onabort"
+    "eventHandlerProperty": "onabort",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

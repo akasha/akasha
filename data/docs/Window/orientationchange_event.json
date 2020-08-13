@@ -6,5 +6,7 @@
     "description": "The orientationchange event is fired when the orientation of the device has changed.",
     "eventName": "orientationchange",
     "eventType": "Event",
-    "eventHandlerProperty": "onorientationchange"
+    "eventHandlerProperty": "onorientationchange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

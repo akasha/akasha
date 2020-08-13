@@ -6,5 +6,7 @@
     "description": "The cut event is fired when the user has initiated a \"cut\" action through the browser's user interface.",
     "eventName": "cut",
     "eventType": "ClipboardEvent",
-    "eventHandlerProperty": "oncut"
+    "eventHandlerProperty": "oncut",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplaydeactivate event in an addEventListener method:",
     "eventName": "vrdisplaydeactivate",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplaydeactivate"
+    "eventHandlerProperty": "onvrdisplaydeactivate",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

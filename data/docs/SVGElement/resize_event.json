@@ -6,5 +6,7 @@
     "description": "The resize event is fired when an SVG document is being resized. This event is only applicable to outermost SVG elements and is dispatched after the resize operation has taken place.",
     "eventName": "resize",
     "eventType": "SVGEvent",
-    "eventHandlerProperty": "onresize"
+    "eventHandlerProperty": "onresize",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

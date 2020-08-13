@@ -6,5 +6,7 @@
     "description": "The devicemotion event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.",
     "eventName": "devicemotion",
     "eventType": "DeviceMotionEvent",
-    "eventHandlerProperty": "ondevicemotion"
+    "eventHandlerProperty": "ondevicemotion",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

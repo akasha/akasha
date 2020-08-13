@@ -6,5 +6,7 @@
     "description": "The voiceschanged event of the Web Speech API is fired when the list of SpeechSynthesisVoice objects that would be returned by the SpeechSynthesis.getVoices() method has changed (when the voiceschanged event fires.)",
     "eventName": "voiceschanged",
     "eventType": "Event",
-    "eventHandlerProperty": "onvoiceschanged"
+    "eventHandlerProperty": "onvoiceschanged",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

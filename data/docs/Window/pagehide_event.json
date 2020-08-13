@@ -6,5 +6,7 @@
     "description": "The pagehide event is sent to a Window when the browser hides the current page in the process of presenting a different page from the session's history.",
     "eventName": "pagehide",
     "eventType": "PageTransitionEvent",
-    "eventHandlerProperty": "onpagehide"
+    "eventHandlerProperty": "onpagehide",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

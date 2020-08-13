@@ -6,5 +6,7 @@
     "description": "The pointerout event is fired for several reasons including: pointing device is moved out of the hit test boundaries of an element; firing the pointerup event for a device that does not support hover (see pointerup); after firing the pointercancel event (see pointercancel); when a pen stylus leaves the hover range detectable by the digitizer.",
     "eventName": "pointerout",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onpointerout"
+    "eventHandlerProperty": "onpointerout",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

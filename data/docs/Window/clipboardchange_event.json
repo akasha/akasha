@@ -6,5 +6,7 @@
     "description": "The clipboardchange event fires when the system clipboard content changes.",
     "eventName": "clipboardchange",
     "eventType": "ClipboardEvent",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The keyup event is fired when a key is released.",
     "eventName": "keyup",
     "eventType": "KeyboardEvent",
-    "eventHandlerProperty": "onkeyup"
+    "eventHandlerProperty": "onkeyup",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

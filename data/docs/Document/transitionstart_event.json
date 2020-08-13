@@ -6,5 +6,7 @@
     "description": "The transitionstart event is fired when a CSS transition has actually started, i.e., after any transition-delay has ended.",
     "eventName": "transitionstart",
     "eventType": "TransitionEvent",
-    "eventHandlerProperty": "ontransitionstart"
+    "eventHandlerProperty": "ontransitionstart",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

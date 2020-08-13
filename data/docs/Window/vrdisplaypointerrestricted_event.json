@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplaypointerrestricted event in an addEventListener method:",
     "eventName": "vrdisplaypointerrestricted",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplaypointerrestricted"
+    "eventHandlerProperty": "onvrdisplaypointerrestricted",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

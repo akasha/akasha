@@ -6,5 +6,7 @@
     "description": "The readystatechange event is fired when the readyState attribute of a document has changed.",
     "eventName": "readystatechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onreadystatechange"
+    "eventHandlerProperty": "onreadystatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

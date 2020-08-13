@@ -6,5 +6,7 @@
     "description": "The touchend event fires when one or more touch points are removed from the touch surface.",
     "eventName": "touchend",
     "eventType": "TouchEvent",
-    "eventHandlerProperty": "ontouchend"
+    "eventHandlerProperty": "ontouchend",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

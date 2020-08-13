@@ -5,5 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/keypress_event",
     "description": "The keypress event is fired when a key that produces a character value is pressed down.",
     "eventName": "keypress",
-    "eventType": "KeyboardEvent"
+    "eventType": "KeyboardEvent",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

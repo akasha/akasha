@@ -6,5 +6,7 @@
     "description": "The pageshow event is sent to a Window when the browser displays the window's document due to navigation.",
     "eventName": "pageshow",
     "eventType": "PageTransitionEvent",
-    "eventHandlerProperty": "onpageshow"
+    "eventHandlerProperty": "onpageshow",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

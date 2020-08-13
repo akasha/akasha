@@ -6,5 +6,7 @@
     "description": "The drop event is fired when an element or text selection is dropped on a valid drop target.",
     "eventName": "drop",
     "eventType": "DragEvent",
-    "eventHandlerProperty": "ondrop"
+    "eventHandlerProperty": "ondrop",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

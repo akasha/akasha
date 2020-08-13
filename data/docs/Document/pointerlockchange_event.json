@@ -6,5 +6,7 @@
     "description": "The pointerlockchange event is fired when the pointer is locked/unlocked.",
     "eventName": "pointerlockchange",
     "eventType": "Event",
-    "eventHandlerProperty": "onpointerlockchange"
+    "eventHandlerProperty": "onpointerlockchange",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

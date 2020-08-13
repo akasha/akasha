@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplayblur event in an addEventListener method:",
     "eventName": "vrdisplayblur",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplayblur"
+    "eventHandlerProperty": "onvrdisplayblur",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

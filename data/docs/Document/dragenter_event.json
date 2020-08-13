@@ -6,5 +6,7 @@
     "description": "The dragenter event is fired when a dragged element or text selection enters a valid drop target.",
     "eventName": "dragenter",
     "eventType": "DragEvent",
-    "eventHandlerProperty": "ondragenter"
+    "eventHandlerProperty": "ondragenter",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

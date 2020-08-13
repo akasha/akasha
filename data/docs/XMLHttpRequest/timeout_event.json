@@ -6,5 +6,7 @@
     "description": "The timeout event is fired when progression is terminated due to preset time expiring.",
     "eventName": "timeout",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "ontimeout"
+    "eventHandlerProperty": "ontimeout",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

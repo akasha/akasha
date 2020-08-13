@@ -6,5 +6,7 @@
     "description": "The error event is fired on a Window object when a resource failed to load or couldn't be used — for example if a script has an execution error.",
     "eventName": "error",
     "eventType": "Event or UIEvent",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

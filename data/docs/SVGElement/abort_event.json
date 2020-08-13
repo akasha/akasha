@@ -6,5 +6,7 @@
     "description": "The abort event is fired when page loading is stopped before an SVG element has been allowed to load completely. This basically implements the standard abort DOM event.",
     "eventName": "abort",
     "eventType": "SVGEvent",
-    "eventHandlerProperty": "onabort"
+    "eventHandlerProperty": "onabort",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

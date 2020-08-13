@@ -14,11 +14,11 @@
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1596794624952
+        "lastModifiedAt": 1597359370652
     },
     {
         "name": "message_event",
-        "lastModifiedAt": 1596794625259
+        "lastModifiedAt": 1597359371326
     },
     {
         "name": "onerror",
@@ -34,7 +34,7 @@
     },
     {
         "name": "open_event",
-        "lastModifiedAt": 1596794626243
+        "lastModifiedAt": 1597359372391
     },
     {
         "name": "readyState",

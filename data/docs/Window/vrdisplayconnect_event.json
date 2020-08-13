@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplayconnect event in an addEventListener method:",
     "eventName": "vrdisplayconnect",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplayconnect"
+    "eventHandlerProperty": "onvrdisplayconnect",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

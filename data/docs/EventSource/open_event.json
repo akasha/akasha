@@ -6,5 +6,7 @@
     "description": "The open event of the EventSource API is fired when a connection with an event source is opened.",
     "eventName": "open",
     "eventType": "Event",
-    "eventHandlerProperty": "onopen"
+    "eventHandlerProperty": "onopen",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

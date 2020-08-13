@@ -18,7 +18,7 @@
     },
     {
         "name": "bufferedamountlow_event",
-        "lastModifiedAt": 1596790665769
+        "lastModifiedAt": 1597358950153
     },
     {
         "name": "close",
@@ -26,11 +26,11 @@
     },
     {
         "name": "close_event",
-        "lastModifiedAt": 1596790666692
+        "lastModifiedAt": 1597358950605
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1596790667675
+        "lastModifiedAt": 1597358951366
     },
     {
         "name": "id",
@@ -50,7 +50,7 @@
     },
     {
         "name": "message_event",
-        "lastModifiedAt": 1596790668637
+        "lastModifiedAt": 1597358952034
     },
     {
         "name": "negotiated",
@@ -78,7 +78,7 @@
     },
     {
         "name": "open_event",
-        "lastModifiedAt": 1596790669132
+        "lastModifiedAt": 1597358952750
     },
     {
         "name": "ordered",

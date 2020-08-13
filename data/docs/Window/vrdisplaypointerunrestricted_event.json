@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplaypointerunrestricted event in an addEventListener method:",
     "eventName": "vrdisplaypointerunrestricted",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplaypointerunrestricted"
+    "eventHandlerProperty": "onvrdisplaypointerunrestricted",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplaydisconnect event in an addEventListener method:",
     "eventName": "vrdisplaydisconnect",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplaydisconnect"
+    "eventHandlerProperty": "onvrdisplaydisconnect",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

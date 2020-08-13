@@ -6,5 +6,7 @@
     "description": "You can use the vrdisplayfocus event in an addEventListener method:",
     "eventName": "vrdisplayfocus",
     "eventType": "VRDisplayEvent",
-    "eventHandlerProperty": "onvrdisplayfocus"
+    "eventHandlerProperty": "onvrdisplayfocus",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

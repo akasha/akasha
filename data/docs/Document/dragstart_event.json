@@ -6,5 +6,7 @@
     "description": "The dragstart event is fired when the user starts dragging an element or text selection.",
     "eventName": "dragstart",
     "eventType": "DragEvent",
-    "eventHandlerProperty": "ondragstart"
+    "eventHandlerProperty": "ondragstart",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

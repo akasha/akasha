@@ -6,5 +6,7 @@
     "description": "The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled.",
     "eventName": "rejectionhandled",
     "eventType": "PromiseRejectionEvent",
-    "eventHandlerProperty": "onrejectionhandled"
+    "eventHandlerProperty": "onrejectionhandled",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

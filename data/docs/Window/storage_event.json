@@ -6,5 +6,7 @@
     "description": "The storage event of the Window interface fires when a storage area (localStorage) has been modified in the context of another document.",
     "eventName": "storage",
     "eventType": "StorageEvent",
-    "eventHandlerProperty": "onstorage"
+    "eventHandlerProperty": "onstorage",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The copy event fires when the user initiates a copy action through the browser's user interface.",
     "eventName": "copy",
     "eventType": "ClipboardEvent",
-    "eventHandlerProperty": "oncopy"
+    "eventHandlerProperty": "oncopy",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

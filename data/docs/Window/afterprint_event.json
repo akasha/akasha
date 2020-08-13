@@ -6,5 +6,7 @@
     "description": "The afterprint event is fired after the associated document has started printing or the print preview has been closed.",
     "eventName": "afterprint",
     "eventType": "Event",
-    "eventHandlerProperty": "onafterprint"
+    "eventHandlerProperty": "onafterprint",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

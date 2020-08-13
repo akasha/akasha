@@ -6,5 +6,7 @@
     "description": "The ended event of the AudioScheduledSourceNode interface is fired when the source node has stopped playing.",
     "eventName": "ended",
     "eventType": "Event",
-    "eventHandlerProperty": "onended"
+    "eventHandlerProperty": "onended",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

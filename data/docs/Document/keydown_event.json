@@ -6,5 +6,7 @@
     "description": "The keydown event is fired when a key is pressed.",
     "eventName": "keydown",
     "eventType": "KeyboardEvent",
-    "eventHandlerProperty": "onkeydown"
+    "eventHandlerProperty": "onkeydown",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

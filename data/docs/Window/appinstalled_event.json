@@ -6,5 +6,7 @@
     "description": "You can use the appinstalled event in an addEventListener method:",
     "eventName": "appinstalled",
     "eventType": "Event",
-    "eventHandlerProperty": "onappinstalled"
+    "eventHandlerProperty": "onappinstalled",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

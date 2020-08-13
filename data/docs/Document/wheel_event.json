@@ -6,5 +6,7 @@
     "description": "The wheel event fires when the user rotates a wheel button on a pointing device (typically a mouse).",
     "eventName": "wheel",
     "eventType": "WheelEvent",
-    "eventHandlerProperty": "onwheel"
+    "eventHandlerProperty": "onwheel",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

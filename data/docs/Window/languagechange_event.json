@@ -6,5 +6,7 @@
     "description": "The languagechange event is fired at the global scope object when the user's preferred language changes.",
     "eventName": "languagechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onlanguagechange"
+    "eventHandlerProperty": "onlanguagechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

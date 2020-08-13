@@ -6,5 +6,7 @@
     "description": "A bufferedamountlow event is sent to an RTCDataChannel when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in bufferedAmountLowThreshold.",
     "eventName": "bufferedamountlow",
     "eventType": "Event",
-    "eventHandlerProperty": "onbufferedamountlow"
+    "eventHandlerProperty": "onbufferedamountlow",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

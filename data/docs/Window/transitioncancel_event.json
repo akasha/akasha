@@ -6,5 +6,7 @@
     "description": "The transitioncancel event is fired when a CSS transition is canceled.",
     "eventName": "transitioncancel",
     "eventType": "TransitionEvent",
-    "eventHandlerProperty": "ontransitioncancel"
+    "eventHandlerProperty": "ontransitioncancel",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The WebRTC open event is sent to an RTCDataChannel object's onopen event handler when the underlying transport used to send and receive the data channel's messages is opened or re-opened.",
     "eventName": "open",
     "eventType": "RTCDataChannelEvent",
-    "eventHandlerProperty": "onopen"
+    "eventHandlerProperty": "onopen",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

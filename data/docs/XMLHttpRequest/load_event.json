@@ -6,5 +6,7 @@
     "description": "The load event is fired when an XMLHttpRequest transaction completes successfully.",
     "eventName": "load",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onload"
+    "eventHandlerProperty": "onload",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

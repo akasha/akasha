@@ -6,5 +6,7 @@
     "description": "The messageerror event is fired on a Window object when it receives a message that can't be deserialized.",
     "eventName": "messageerror",
     "eventType": "MessageEvent",
-    "eventHandlerProperty": "onmessageerror"
+    "eventHandlerProperty": "onmessageerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

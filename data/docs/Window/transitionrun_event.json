@@ -6,5 +6,7 @@
     "description": "The transitionrun event is fired when a CSS transition is first created, i.e. before any transition-delay has begun.",
     "eventName": "transitionrun",
     "eventType": "TransitionEvent",
-    "eventHandlerProperty": "ontransitionrun"
+    "eventHandlerProperty": "ontransitionrun",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

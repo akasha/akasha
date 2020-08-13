@@ -6,5 +6,7 @@
     "description": "The dragexit event is fired when an element is no longer the drag operation's immediate selection target.",
     "eventName": "dragexit",
     "eventType": "DragEvent",
-    "eventHandlerProperty": "ondragexit"
+    "eventHandlerProperty": "ondragexit",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The beforeprint event is fired when the associated document is about to be printed or previewed for printing.",
     "eventName": "beforeprint",
     "eventType": "Event",
-    "eventHandlerProperty": "onbeforeprint"
+    "eventHandlerProperty": "onbeforeprint",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

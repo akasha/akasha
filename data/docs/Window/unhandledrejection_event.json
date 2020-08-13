@@ -6,5 +6,7 @@
     "description": "The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker.",
     "eventName": "unhandledrejection",
     "eventType": "PromiseRejectionEvent",
-    "eventHandlerProperty": "onunhandledrejection"
+    "eventHandlerProperty": "onunhandledrejection",
+    "eventBubbles": true,
+    "eventCancelable": false
 }
