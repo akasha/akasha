@@ -6,5 +6,7 @@
     "description": "With the help of the WEBGL_lose_context extension, you can simulate the webglcontextlost event:",
     "eventName": "webglcontextlost",
     "eventType": "WebGLContextEvent",
-    "eventHandlerProperty": "none"
+    "eventHandlerProperty": "none",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

@@ -6,5 +6,7 @@
     "description": "The ended event of the MediaStreamTrack interface is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.",
     "eventName": "ended",
     "eventType": "Event",
-    "eventHandlerProperty": "onended"
+    "eventHandlerProperty": "onended",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

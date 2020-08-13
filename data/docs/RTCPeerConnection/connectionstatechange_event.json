@@ -6,5 +6,7 @@
     "description": "The connectionstatechange event is sent to the ontrack event handler on an RTCPeerConnection object after a new track has been added to an RTCRtpReceiver which is part of the connection.",
     "eventName": "connectionstatechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onconnectionstatechange"
+    "eventHandlerProperty": "onconnectionstatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

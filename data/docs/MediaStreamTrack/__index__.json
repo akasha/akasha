@@ -18,7 +18,7 @@
     },
     {
         "name": "ended_event",
-        "lastModifiedAt": 1597279385951
+        "lastModifiedAt": 1597360192645
     },
     {
         "name": "getCapabilities",
@@ -46,7 +46,7 @@
     },
     {
         "name": "mute_event",
-        "lastModifiedAt": 1597279386260
+        "lastModifiedAt": 1597360193150
     },
     {
         "name": "muted",
@@ -82,6 +82,6 @@
     },
     {
         "name": "unmute_event",
-        "lastModifiedAt": 1597279387023
+        "lastModifiedAt": 1597360194239
     }
 ]

@@ -6,5 +6,7 @@
     "description": "A negotiationneeded event is sent to the RTCPeerConnection when negotiation of the connection through the signaling channel is required.",
     "eventName": "negotiationneeded",
     "eventType": "Event",
-    "eventHandlerProperty": "onnegotiationneeded"
+    "eventHandlerProperty": "onnegotiationneeded",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The slotchange event is fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change.",
     "eventName": "slotchange",
     "eventType": "Event",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

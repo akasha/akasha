@@ -6,5 +6,7 @@
     "description": "An idpvalidationerror event informs the target, a RTCPeerConnection object's onidpvalidationerror event handler, that the identity provider (IdP) encountered an error while validating an identity assertion.",
     "eventName": "idpvalidationerror",
     "eventType": "RTCIdentityErrorEvent",
-    "eventHandlerProperty": "onidpvalidationerror"
+    "eventHandlerProperty": "onidpvalidationerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

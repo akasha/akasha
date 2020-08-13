@@ -6,5 +6,7 @@
     "description": "The obsolete addstream event is sent to an RTCPeerConnection when new media, in the form of a MediaStream object, has been added to it.",
     "eventName": "addstream",
     "eventType": "MediaStreamEvent",
-    "eventHandlerProperty": "onaddstream"
+    "eventHandlerProperty": "onaddstream",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

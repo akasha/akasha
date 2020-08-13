@@ -6,5 +6,7 @@
     "description": "An iceconnectionstatechange event is sent to an RTCPeerConnection object each time the ICE connection state changes during the negotiation process.",
     "eventName": "iceconnectionstatechange",
     "eventType": "Event",
-    "eventHandlerProperty": "oniceconnectionstatechange"
+    "eventHandlerProperty": "oniceconnectionstatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

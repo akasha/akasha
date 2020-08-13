@@ -6,5 +6,7 @@
     "description": "The icegatheringstatechange event is sent to the onicegatheringstatechange event handler on an RTCPeerConnection when the state of the ICE candidate gathering process changes.",
     "eventName": "icegatheringstatechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onicegatheringstatechange"
+    "eventHandlerProperty": "onicegatheringstatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "A datachannel event is sent to an RTCPeerConnection instance when an RTCDataChannel has been added to the connection, as a result of the remote peer calling RTCPeerConnection.createDataChannel().",
     "eventName": "datachannel",
     "eventType": "RTCDataChannelEvent",
-    "eventHandlerProperty": "ondatachannel"
+    "eventHandlerProperty": "ondatachannel",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

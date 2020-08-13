@@ -6,5 +6,7 @@
     "description": "An icecandidate event is sent to an RTCPeerConnection  when an RTCIceCandidate has been identified and added to the local peer by a call to RTCPeerConnection.setLocalDescription(). The event handler should transmit the candidate to the remote peer over the signaling channel so the remote peer can add it to its set of remote candidates.",
     "eventName": "icecandidate",
     "eventType": "RTCPeerConnectionIceEvent",
-    "eventHandlerProperty": "onicecandidate"
+    "eventHandlerProperty": "onicecandidate",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

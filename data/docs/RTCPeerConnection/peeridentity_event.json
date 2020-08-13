@@ -6,5 +6,7 @@
     "description": "The peeridentity event is sent to the connection concerned when peer identity has been set and verified on it. The new identiy can be access using the RTCPeerConnection.peerIdentity property.",
     "eventName": "peeridentity",
     "eventType": "Event",
-    "eventHandlerProperty": "onpeeridentity"
+    "eventHandlerProperty": "onpeeridentity",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

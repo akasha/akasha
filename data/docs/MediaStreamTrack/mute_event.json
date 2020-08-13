@@ -6,5 +6,7 @@
     "description": "The mute event is sent to a MediaStreamTrack when the track's source is temporarily unable to provide media data.",
     "eventName": "mute",
     "eventType": "Event",
-    "eventHandlerProperty": "onmute"
+    "eventHandlerProperty": "onmute",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

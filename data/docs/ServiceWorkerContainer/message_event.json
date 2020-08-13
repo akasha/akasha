@@ -6,5 +6,7 @@
     "description": "The message event is used in a page controlled by a service worker to receive messages from the service worker.",
     "eventName": "message",
     "eventType": "MessageEvent",
-    "eventHandlerProperty": "onmessage"
+    "eventHandlerProperty": "onmessage",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

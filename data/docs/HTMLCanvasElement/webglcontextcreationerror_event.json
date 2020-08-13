@@ -6,5 +6,7 @@
     "description": "",
     "eventName": "webglcontextcreationerror",
     "eventType": "WebGLContextEvent",
-    "eventHandlerProperty": "none"
+    "eventHandlerProperty": "none",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

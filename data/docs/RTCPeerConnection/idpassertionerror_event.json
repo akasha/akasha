@@ -6,5 +6,7 @@
     "description": "An idpassertionerror event informs the target, a RTCPeerConnection object, that the identity provider (IdP) encountered an error when trying to generate an identity assertion.",
     "eventName": "idpassertionerror",
     "eventType": "RTCIdentityErrorEvent",
-    "eventHandlerProperty": "onidpassertionerror"
+    "eventHandlerProperty": "onidpassertionerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The track event is sent to the ontrack event handler on RTCPeerConnections after a new track has been added to an RTCRtpReceiver which is part of the connection.",
     "eventName": "track",
     "eventType": "RTCTrackEvent",
-    "eventHandlerProperty": "ontrack"
+    "eventHandlerProperty": "ontrack",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "An signalingstatechange event is sent to an RTCPeerConnection to notify it that its signaling state, as indicated by the signalingState property, has changed.",
     "eventName": "signalingstatechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onsignalingstatechange"
+    "eventHandlerProperty": "onsignalingstatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

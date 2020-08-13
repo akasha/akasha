@@ -6,5 +6,7 @@
     "description": "The obsolete removestream event was sent to an RTCPeerConnection to inform it that a MediaStream had been removed from the connection.",
     "eventName": "removestream",
     "eventType": "MediaStreamEvent",
-    "eventHandlerProperty": "onremovestream"
+    "eventHandlerProperty": "onremovestream",
+    "eventBubbles": true,
+    "eventCancelable": true
 }
