@@ -6,5 +6,7 @@
     "description": "In the below example a page gets a handle to the ServiceWorker object via ServiceWorkerRegistration.active, and then calls its postMessage() function.",
     "eventName": "message",
     "eventType": "ExtendableMessageEvent",
-    "eventHandlerProperty": "onmessage"
+    "eventHandlerProperty": "onmessage",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

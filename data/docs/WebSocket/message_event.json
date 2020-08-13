@@ -6,5 +6,7 @@
     "description": "The message event is fired when data is received through a WebSocket.",
     "eventName": "message",
     "eventType": "MessageEvent",
-    "eventHandlerProperty": "onmessage"
+    "eventHandlerProperty": "onmessage",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

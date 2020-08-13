@@ -6,5 +6,7 @@
     "description": "The speechend event of the Web Speech API is fired when speech recognized by the speech recognition service has stopped being detected.",
     "eventName": "speechend",
     "eventType": "Event",
-    "eventHandlerProperty": "onspeechend"
+    "eventHandlerProperty": "onspeechend",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The message event is fired on a Worker object when the worker's parent receives a message from its worker (i.e. when the worker sends a message using DedicatedWorkerGlobalScope.postMessage()).",
     "eventName": "message",
     "eventType": "MessageEvent",
-    "eventHandlerProperty": "onmessage"
+    "eventHandlerProperty": "onmessage",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The pushsubscriptionchange event is sent to the global scope of a ServiceWorker to indicate a change in push subscription that was triggered outside the application's control.",
     "eventName": "pushsubscriptionchange",
     "eventType": "PushSubscriptionChangeEvent",
-    "eventHandlerProperty": "onpushsubscriptionchange"
+    "eventHandlerProperty": "onpushsubscriptionchange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "You can use the end event in an addEventListener method:",
     "eventName": "end",
     "eventType": "SpeechSynthesisEvent",
-    "eventHandlerProperty": "onend"
+    "eventHandlerProperty": "onend",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

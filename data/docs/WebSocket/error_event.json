@@ -6,5 +6,7 @@
     "description": "The error event is fired when a connection with a WebSocket has been closed due to an error (some data couldn't be sent for example).",
     "eventName": "error",
     "eventType": "Event",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

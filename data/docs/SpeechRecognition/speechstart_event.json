@@ -6,5 +6,7 @@
     "description": "You can use the speechstart event in an addEventListener method:",
     "eventName": "speechstart",
     "eventType": "Event",
-    "eventHandlerProperty": "onspeechstart"
+    "eventHandlerProperty": "onspeechstart",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

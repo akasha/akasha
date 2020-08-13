@@ -6,5 +6,7 @@
     "description": "You can use the audiostart event in an onaudiostart method:",
     "eventName": "audiostart",
     "eventType": "Event",
-    "eventHandlerProperty": "onaudiostart"
+    "eventHandlerProperty": "onaudiostart",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

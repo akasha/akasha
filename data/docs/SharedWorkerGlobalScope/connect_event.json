@@ -6,5 +6,7 @@
     "description": "The connect event is fired in shared workers at their SharedWorkerGlobalScope when a new client connects.",
     "eventName": "connect",
     "eventType": "MessageEvent",
-    "eventHandlerProperty": "onconnect"
+    "eventHandlerProperty": "onconnect",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

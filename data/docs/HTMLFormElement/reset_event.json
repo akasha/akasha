@@ -6,5 +6,7 @@
     "description": "The reset event fires when a form is reset.",
     "eventName": "reset",
     "eventType": "Event",
-    "eventHandlerProperty": "onreset"
+    "eventHandlerProperty": "onreset",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

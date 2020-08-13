@@ -6,5 +6,7 @@
     "description": "You can use the pause event in an addEventListener method:",
     "eventName": "pause",
     "eventType": "SpeechSynthesisEvent",
-    "eventHandlerProperty": "onpause"
+    "eventHandlerProperty": "onpause",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The toggle event fires when the open/closed state of a details element is toggled.",
     "eventName": "toggle",
     "eventType": "Event",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

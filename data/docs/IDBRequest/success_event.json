@@ -6,5 +6,7 @@
     "description": "The success event is fired when an IDBRequest succeeds.",
     "eventName": "success",
     "eventType": "Event",
-    "eventHandlerProperty": "onsuccess"
+    "eventHandlerProperty": "onsuccess",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

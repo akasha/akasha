@@ -6,5 +6,7 @@
     "description": "The versionchange event is fired when a database structure change (IDBOpenDBRequest.onupgradeneeded event or IDBFactory.deleteDatabase) was requested.",
     "eventName": "versionchange",
     "eventType": "Event",
-    "eventHandlerProperty": "onversionchange"
+    "eventHandlerProperty": "onversionchange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

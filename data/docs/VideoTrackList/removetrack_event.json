@@ -6,5 +6,7 @@
     "description": "The removetrack event is fired when a track is removed from a VideoTrackList.",
     "eventName": "removetrack",
     "eventType": "TrackEvent",
-    "eventHandlerProperty": "onremovetrack"
+    "eventHandlerProperty": "onremovetrack",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

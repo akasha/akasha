@@ -6,5 +6,7 @@
     "description": "The MediaRecorder interface's error event is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.",
     "eventName": "error",
     "eventType": "MediaRecorderErrorEvent",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

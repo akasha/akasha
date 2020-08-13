@@ -6,5 +6,7 @@
     "description": "The activate event of the ServiceWorkerGlobalScope interface is fired when a ServiceWorkerRegistration acquires a new ServiceWorkerRegistration.active worker.",
     "eventName": "activate",
     "eventType": "ExtendableEvent",
-    "eventHandlerProperty": "onactivate"
+    "eventHandlerProperty": "onactivate",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

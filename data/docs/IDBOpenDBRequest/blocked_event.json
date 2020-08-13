@@ -6,5 +6,7 @@
     "description": "The blocked handler is executed when an open connection to a database is blocking a versionchange transaction on the same database.",
     "eventName": "blocked",
     "eventType": "IDBVersionChangeEvent",
-    "eventHandlerProperty": "onblocked"
+    "eventHandlerProperty": "onblocked",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

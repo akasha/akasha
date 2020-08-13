@@ -6,5 +6,7 @@
     "description": "The addtrack event is fired when a track is added to a VideoTrackList.",
     "eventName": "addtrack",
     "eventType": "TrackEvent",
-    "eventHandlerProperty": "onaddtrack"
+    "eventHandlerProperty": "onaddtrack",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

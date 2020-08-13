@@ -6,5 +6,7 @@
     "description": "The nomatch event of the Web Speech API is fired when the speech recognition service returns a final result with no significant recognition.",
     "eventName": "nomatch",
     "eventType": "SpeechRecognitionEvent",
-    "eventHandlerProperty": "onnomatch"
+    "eventHandlerProperty": "onnomatch",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

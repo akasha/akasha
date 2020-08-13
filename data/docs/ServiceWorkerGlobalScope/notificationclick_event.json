@@ -6,5 +6,7 @@
     "description": "The notificationclick event is fired to indicate that a system notification spawned by ServiceWorkerRegistration.showNotification() has been clicked.",
     "eventName": "notificationclick",
     "eventType": "NotificationEvent",
-    "eventHandlerProperty": "onnotificationclick"
+    "eventHandlerProperty": "onnotificationclick",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

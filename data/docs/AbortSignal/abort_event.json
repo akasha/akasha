@@ -6,5 +6,7 @@
     "description": "The abort event of the Fetch API is fired when a fetch request is aborted, i.e. using AbortController.abort().",
     "eventName": "abort",
     "eventType": "Event",
-    "eventHandlerProperty": "onabort"
+    "eventHandlerProperty": "onabort",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

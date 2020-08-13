@@ -6,5 +6,7 @@
     "description": "You can use the error event in an addEventListener method:",
     "eventName": "error",
     "eventType": "SpeechSynthesisErrorEvent",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

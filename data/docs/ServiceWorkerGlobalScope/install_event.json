@@ -6,5 +6,7 @@
     "description": "The install event of the ServiceWorkerGlobalScope interface is fired when a ServiceWorkerRegistration acquires a new ServiceWorkerRegistration.installing worker.",
     "eventName": "install",
     "eventType": "ExtendableEvent",
-    "eventHandlerProperty": "oninstall"
+    "eventHandlerProperty": "oninstall",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

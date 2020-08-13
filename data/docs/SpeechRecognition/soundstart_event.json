@@ -6,5 +6,7 @@
     "description": "The soundstart event of the Web Speech API is fired when any sound — recognisable speech or not — has been detected.",
     "eventName": "soundstart",
     "eventType": "Event",
-    "eventHandlerProperty": "onsoundstart"
+    "eventHandlerProperty": "onsoundstart",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

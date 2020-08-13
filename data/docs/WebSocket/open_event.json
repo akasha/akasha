@@ -6,5 +6,7 @@
     "description": "The open event is fired when a connection with a WebSocket is opened.",
     "eventName": "open",
     "eventType": "Event",
-    "eventHandlerProperty": "onopen"
+    "eventHandlerProperty": "onopen",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

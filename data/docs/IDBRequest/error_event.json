@@ -6,5 +6,7 @@
     "description": "The error handler is executed when an error caused a request to fail.",
     "eventName": "error",
     "eventType": "Event",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

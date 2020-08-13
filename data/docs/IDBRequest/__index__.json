@@ -10,7 +10,7 @@
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1597241613048
+        "lastModifiedAt": 1597358529416
     },
     {
         "name": "onerror",
@@ -34,7 +34,7 @@
     },
     {
         "name": "success_event",
-        "lastModifiedAt": 1597241613881
+        "lastModifiedAt": 1597358529970
     },
     {
         "name": "transaction",

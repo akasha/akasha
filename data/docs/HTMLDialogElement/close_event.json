@@ -6,5 +6,7 @@
     "description": "The close event is fired on an HTMLDialogElement object when the dialog it represents has been closed.",
     "eventName": "close",
     "eventType": "Event",
-    "eventHandlerProperty": "onclose"
+    "eventHandlerProperty": "onclose",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The push event is sent to a service worker's global scope (represented by the ServiceWorkerGlobalScope interface) when the service worker has received a push message.",
     "eventName": "push",
     "eventType": "PushEvent",
-    "eventHandlerProperty": "onpush"
+    "eventHandlerProperty": "onpush",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

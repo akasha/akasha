@@ -6,5 +6,7 @@
     "description": "The resume event of the Web Speech API SpeechSynthesisUtterance object is fired when a paused utterance is resumed.",
     "eventName": "resume",
     "eventType": "SpeechSynthesisEvent",
-    "eventHandlerProperty": "onresume"
+    "eventHandlerProperty": "onresume",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

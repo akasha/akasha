@@ -22,11 +22,11 @@
     },
     {
         "name": "close_event",
-        "lastModifiedAt": 1596790680805
+        "lastModifiedAt": 1597358125035
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1596790681191
+        "lastModifiedAt": 1597358125627
     },
     {
         "name": "extensions",
@@ -34,7 +34,7 @@
     },
     {
         "name": "message_event",
-        "lastModifiedAt": 1596790681532
+        "lastModifiedAt": 1597358126159
     },
     {
         "name": "onclose",
@@ -54,7 +54,7 @@
     },
     {
         "name": "open_event",
-        "lastModifiedAt": 1596790681941
+        "lastModifiedAt": 1597358127269
     },
     {
         "name": "protocol",

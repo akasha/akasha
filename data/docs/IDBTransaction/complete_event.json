@@ -6,5 +6,7 @@
     "description": "The complete handler is executed when a transaction successfully completed.",
     "eventName": "complete",
     "eventType": "Event",
-    "eventHandlerProperty": "oncomplete"
+    "eventHandlerProperty": "oncomplete",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

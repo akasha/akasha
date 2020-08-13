@@ -6,5 +6,7 @@
     "description": "The start event of the Web Speech API SpeechRecognition object is fired when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition.",
     "eventName": "start",
     "eventType": "Event",
-    "eventHandlerProperty": "onstart"
+    "eventHandlerProperty": "onstart",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

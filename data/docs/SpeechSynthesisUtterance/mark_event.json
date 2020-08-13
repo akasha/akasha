@@ -6,5 +6,7 @@
     "description": "You can use the mark event in an addEventListener method:",
     "eventName": "mark",
     "eventType": "SpeechSynthesisEvent",
-    "eventHandlerProperty": "onmark"
+    "eventHandlerProperty": "onmark",
+    "eventBubbles": true,
+    "eventCancelable": true
 }
