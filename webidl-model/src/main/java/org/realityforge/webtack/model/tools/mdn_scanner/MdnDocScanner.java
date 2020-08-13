@@ -312,7 +312,10 @@ public final class MdnDocScanner
         if ( null == entry.getEventType() )
         {
           entryIndex.remove();
-          _listener.entryInvalid( entryIndex, entry );
+          if ( 0 != entryIndex.getLastModifiedAt() )
+          {
+            _listener.entryInvalid( entryIndex, entry );
+          }
           return;
         }
       }

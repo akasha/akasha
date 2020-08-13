@@ -150,9 +150,9 @@ final class FetchDocsCommand
     @Override
     public void entryInvalid( @Nonnull final EntryIndex entryIndex, @Nonnull final DocEntry entry )
     {
-      if ( _logger.isLoggable( Level.FINE ) )
+      if ( _logger.isLoggable( Level.INFO ) )
       {
-        _logger.log( Level.FINE,
+        _logger.log( Level.INFO,
                      "Documentation for element named '" +
                      entry.getName() +
                      "' could not extract the required fields from the website. Entry will be deleted." );
