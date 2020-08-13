@@ -33,10 +33,6 @@
         "lastModifiedAt": 1596544615062
     },
     {
-        "name": "connectionstatechange",
-        "lastModifiedAt": 1596544653536
-    },
-    {
         "name": "createAnswer",
         "lastModifiedAt": 1596544635659
     },
@@ -55,10 +51,6 @@
     {
         "name": "currentRemoteDescription",
         "lastModifiedAt": 1596544617294
-    },
-    {
-        "name": "datachannel",
-        "lastModifiedAt": 1596544653948
     },
     {
         "name": "generateCertificate",
@@ -101,24 +93,8 @@
         "lastModifiedAt": 1596544620512
     },
     {
-        "name": "icecandidate",
-        "lastModifiedAt": 1596544654242
-    },
-    {
-        "name": "iceconnectionstatechange",
-        "lastModifiedAt": 1596544655284
-    },
-    {
-        "name": "icegatheringstatechange",
-        "lastModifiedAt": 1596544655598
-    },
-    {
         "name": "localDescription",
         "lastModifiedAt": 1596544620987
-    },
-    {
-        "name": "negotiationneeded",
-        "lastModifiedAt": 1596544656823
     },
     {
         "name": "onaddstream",
@@ -231,13 +207,5 @@
     {
         "name": "signalingState",
         "lastModifiedAt": 1596544631517
-    },
-    {
-        "name": "signalingstatechange",
-        "lastModifiedAt": 1596544657632
-    },
-    {
-        "name": "track",
-        "lastModifiedAt": 1596544658751
     }
 ]

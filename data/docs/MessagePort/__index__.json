@@ -9,14 +9,6 @@
         "lastModifiedAt": 1596581225283
     },
     {
-        "name": "message",
-        "lastModifiedAt": 1596581226505
-    },
-    {
-        "name": "messageerror",
-        "lastModifiedAt": 1596581226762
-    },
-    {
         "name": "onmessage",
         "lastModifiedAt": 1596581224459
     },
