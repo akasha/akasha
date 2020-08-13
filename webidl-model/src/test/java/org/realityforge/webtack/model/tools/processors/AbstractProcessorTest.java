@@ -33,8 +33,9 @@ public abstract class AbstractProcessorTest
   {
     final String testDescription = label + " fixture test. Input=" + inputFilename + " Output=" + outputFilename;
 
-    final WebIDLSchema input =
-      loadWebIDLSchema( dir.resolve( inputFilename + WebIDLSchema.EXTENSION ), testDescription );
+    final Path inputFile = dir.resolve( inputFilename + WebIDLSchema.EXTENSION );
+    final WebIDLSchema input = loadWebIDLSchema( inputFile, testDescription );
+    maybeWriteSchemaFixture( inputFile, input );
     final WebIDLSchema output = supplier.get().process( input );
     assertNotNull( output );
 

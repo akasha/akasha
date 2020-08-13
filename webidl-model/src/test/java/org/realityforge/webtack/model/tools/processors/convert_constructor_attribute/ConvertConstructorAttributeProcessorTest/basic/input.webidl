@@ -19,7 +19,6 @@ interface PasswordCredential {
   readonly attribute USVString password;
 };
 
-
 /**
  * Example with no constructor attributes.
  */

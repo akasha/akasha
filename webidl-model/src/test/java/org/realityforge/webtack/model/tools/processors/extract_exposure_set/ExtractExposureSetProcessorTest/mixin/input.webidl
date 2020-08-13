@@ -1,10 +1,10 @@
 [Exposed=(Window,Worker)]
 interface mixin MixinA {
-  [Exposed=Worker]
-  attribute DOMString workerVar;
+  attribute DOMString sharedVar;
   [Exposed=Window]
   attribute DOMString windowVar;
-  attribute DOMString sharedVar;
+  [Exposed=Worker]
+  attribute DOMString workerVar;
 };
 
 [Exposed=Window]
@@ -23,11 +23,11 @@ interface mixin MixinD {
 
 [Exposed=(Window,Worker)]
 partial interface mixin PartialMixinA {
-  [Exposed=Worker]
-  attribute DOMString workerVar;
+  attribute DOMString sharedVar;
   [Exposed=Window]
   attribute DOMString windowVar;
-  attribute DOMString sharedVar;
+  [Exposed=Worker]
+  attribute DOMString workerVar;
 };
 
 [Exposed=Window]
@@ -43,4 +43,3 @@ partial interface mixin PartialMixinD {
   [Exposed=Worker]
   attribute DOMString v1;
 };
-

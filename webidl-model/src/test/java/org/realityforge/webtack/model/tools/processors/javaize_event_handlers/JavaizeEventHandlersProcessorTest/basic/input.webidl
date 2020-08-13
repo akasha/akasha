@@ -10,27 +10,25 @@ callback EventHandler = any ( Event event );
 interface Event {
 };
 
-interface SpeechSynthesisEvent : Event {
+interface EventSource {
+  attribute NullableEventHandler onerror;
 };
 
 interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
 };
 
-interface SpeechSynthesisUtterance {
-  attribute NullableEventHandler onstart;
-  attribute NullableEventHandler onend;
+interface SpeechSynthesisEvent : Event {
+};
 
-  event SpeechSynthesisEvent start;
+interface SpeechSynthesisUtterance {
+  attribute NullableEventHandler onend;
+  attribute NullableEventHandler onstart;
   event SpeechSynthesisEvent end;
+  event SpeechSynthesisEvent start;
 };
 
 partial interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onpause;
   attribute NullableEventHandler onresume;
-
   event SpeechSynthesisEvent resume;
-};
-
-interface EventSource {
-    attribute NullableEventHandler onerror;
 };

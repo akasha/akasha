@@ -1,10 +1,13 @@
+interface mixin DocumentOrShadowRoot {
+};
+
 partial interface mixin DocumentOrShadowRoot {
   [LegacyLenientSetter]
   readonly attribute Element? fullscreenElement;
-    /**
-     * Documentation attached to event from partial mixin.
-     */
-    event FocusEvent focus;
+  /**
+   * Documentation attached to event from partial mixin.
+   */
+  event FocusEvent focus;
 };
 
 partial interface mixin DocumentOrShadowRoot {
@@ -15,17 +18,13 @@ partial interface mixin DocumentOrShadowRoot {
   event Event close;
 };
 
-interface Event {
-
-};
-
-interface FocusEvent : Event {
-};
-
 partial interface mixin DocumentOrShadowRoot {
   [SameObject]
   readonly attribute StyleSheetList styleSheets;
 };
 
-interface mixin DocumentOrShadowRoot {
+interface Event {
+};
+
+interface FocusEvent : Event {
 };

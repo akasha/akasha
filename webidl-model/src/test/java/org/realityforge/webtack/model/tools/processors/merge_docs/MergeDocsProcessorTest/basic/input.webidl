@@ -13,39 +13,12 @@ callback interface NodeFilter {
 dictionary EventInit {
 };
 
-[Exposed=(Window,Worker,AudioWorklet)]
-interface Event {
-  const unsigned short AT_TARGET = 2;
-  readonly attribute boolean bubbles;
-  attribute boolean cancelBubble;
-  static Event filterGlobalEvent( DOMString type );
-  constructor( DOMString type, optional EventInit eventInitDict = {} );
-  sequence<EventTarget> composedPath();
+dictionary XRSessionInit {
+  sequence<any> optionalFeatures;
 };
 
-interface BlurEvent : Event {
-};
-
-interface DeviceMotionEvent : Event {
-};
-
-interface FocusEvent : Event {
-};
-
-interface EventTarget {
-};
-
-interface Node {
-  event Event eventnoexisto;
-};
-
-interface Window {
-  event Event focus;
-};
-
-partial interface Window {
-  readonly attribute DOMString someVar;
-  event Event orientationchange;
+partial dictionary XRSessionInit {
+  sequence<any> requiredFeatures;
 };
 
 interface mixin GlobalEventHandlers {
@@ -64,10 +37,37 @@ partial interface mixin GlobalEventHandlers {
   event Event undocumented;
 };
 
-dictionary XRSessionInit {
-  sequence<any> optionalFeatures;
+interface BlurEvent : Event {
 };
 
-partial dictionary XRSessionInit {
-  sequence<any> requiredFeatures;
+interface DeviceMotionEvent : Event {
+};
+
+[Exposed=(Window,Worker,AudioWorklet)]
+interface Event {
+  const unsigned short AT_TARGET = 2;
+  readonly attribute boolean bubbles;
+  attribute boolean cancelBubble;
+  static Event filterGlobalEvent( DOMString type );
+  constructor( DOMString type, optional EventInit eventInitDict = {} );
+  sequence<EventTarget> composedPath();
+};
+
+interface EventTarget {
+};
+
+interface FocusEvent : Event {
+};
+
+interface Node {
+  event Event eventnoexisto;
+};
+
+interface Window {
+  event Event focus;
+};
+
+partial interface Window {
+  readonly attribute DOMString someVar;
+  event Event orientationchange;
 };

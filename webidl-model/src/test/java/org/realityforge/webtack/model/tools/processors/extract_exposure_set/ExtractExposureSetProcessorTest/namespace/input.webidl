@@ -1,15 +1,15 @@
 [Exposed=(Window,Worker,Worklet)]
 namespace NamespaceA {
-  [Exposed=Worker]
-  readonly attribute DOMString workerVar;
+  readonly attribute DOMString sharedVar;
   [Exposed=Window]
   readonly attribute DOMString windowVar;
-  readonly attribute DOMString sharedVar;
   [Exposed=Worker]
-  void workerMethod();
+  readonly attribute DOMString workerVar;
+  void sharedMethod();
   [Exposed=Window]
   void windowMethod();
-  void sharedMethod();
+  [Exposed=Worker]
+  void workerMethod();
 };
 
 [Exposed=Window]
@@ -30,16 +30,16 @@ namespace NamespaceD {
 
 [Exposed=(Window,Worker)]
 partial namespace PartialNamespaceA {
-  [Exposed=Worker]
-  readonly attribute DOMString workerVar;
+  readonly attribute DOMString sharedVar;
   [Exposed=Window]
   readonly attribute DOMString windowVar;
-  readonly attribute DOMString sharedVar;
   [Exposed=Worker]
-  void workerMethod();
+  readonly attribute DOMString workerVar;
+  void sharedMethod();
   [Exposed=Window]
   void windowMethod();
-  void sharedMethod();
+  [Exposed=Worker]
+  void workerMethod();
 };
 
 [Exposed=Window]
@@ -56,10 +56,9 @@ partial namespace PartialNamespaceC {
 partial namespace PartialNamespaceD {
   [Exposed=Worker]
   readonly attribute DOMString v1;
-  [Exposed=Worker]
-  void workerMethod();
+  void sharedMethod();
   [Exposed=Window]
   void windowMethod();
-  void sharedMethod();
+  [Exposed=Worker]
+  void workerMethod();
 };
-

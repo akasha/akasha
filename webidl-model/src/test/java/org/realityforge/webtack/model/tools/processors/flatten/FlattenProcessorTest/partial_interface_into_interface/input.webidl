@@ -1,3 +1,11 @@
+[Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
+interface Window : EventTarget {
+  [SecureContext]
+  readonly attribute ApplicationCache applicationCache;
+  readonly attribute boolean closed;
+  event Event orientationchange;
+};
+
 partial interface Window {
   [SameObject]
   readonly attribute SpeechSynthesis speechSynthesis;
@@ -16,12 +24,4 @@ partial interface Window {
 
 partial interface Window {
   attribute EventHandler oncompassneedscalibration;
-};
-
-[Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
-interface Window : EventTarget {
-  [SecureContext]
-  readonly attribute ApplicationCache applicationCache;
-  readonly attribute boolean closed;
-  event Event orientationchange;
 };

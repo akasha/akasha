@@ -1,21 +1,20 @@
 [Exposed=(Window,Worker,Worklet)]
 interface InterfaceA {
   const unsigned short VAL_SHARED = 7;
-  [Exposed=Worker]
-  const unsigned short VAL_WORKER = 7;
   [Exposed=Window]
   const unsigned short VAL_WINDOW = 7;
-
   [Exposed=Worker]
-  readonly attribute DOMString workerVar;
+  const unsigned short VAL_WORKER = 7;
+  readonly attribute DOMString sharedVar;
   [Exposed=Window]
   readonly attribute DOMString windowVar;
-  readonly attribute DOMString sharedVar;
   [Exposed=Worker]
-  void workerMethod();
+  readonly attribute DOMString workerVar;
+  void sharedMethod();
   [Exposed=Window]
   void windowMethod();
-  void sharedMethod();
+  [Exposed=Worker]
+  void workerMethod();
 };
 
 [Exposed=Window]
@@ -37,21 +36,20 @@ interface InterfaceD {
 [Exposed=(Window,Worker)]
 partial interface PartialInterfaceA {
   const unsigned short VAL_SHARED = 7;
-  [Exposed=Worker]
-  const unsigned short VAL_WORKER = 7;
   [Exposed=Window]
   const unsigned short VAL_WINDOW = 7;
-
   [Exposed=Worker]
-  readonly attribute DOMString workerVar;
+  const unsigned short VAL_WORKER = 7;
+  readonly attribute DOMString sharedVar;
   [Exposed=Window]
   readonly attribute DOMString windowVar;
-  readonly attribute DOMString sharedVar;
   [Exposed=Worker]
-  void workerMethod();
+  readonly attribute DOMString workerVar;
+  void sharedMethod();
   [Exposed=Window]
   void windowMethod();
-  void sharedMethod();
+  [Exposed=Worker]
+  void workerMethod();
 };
 
 [Exposed=Window]
@@ -68,10 +66,9 @@ partial interface PartialInterfaceC {
 partial interface PartialInterfaceD {
   [Exposed=Worker]
   readonly attribute DOMString v1;
-  [Exposed=Worker]
-  void workerMethod();
+  void sharedMethod();
   [Exposed=Window]
   void windowMethod();
-  void sharedMethod();
+  [Exposed=Worker]
+  void workerMethod();
 };
-
