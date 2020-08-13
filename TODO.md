@@ -11,8 +11,6 @@ complete as there is too much un-said.
 * Extract param docs for methods and constructors.
   - See example at https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/polygonOffset
 
-* Extract `Bubbles` and `Cancelable` properties for events. This will help drive the react host element factor layer.
-
 * Add special handling for `@return` javadoc.
 
 * The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
