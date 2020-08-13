@@ -5,6 +5,6 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/error_event",
     "description": "You can use the error event in an addEventListener method:",
     "eventName": "error",
-    "eventType": "SpeechRecognitionError",
+    "eventType": "SpeechRecognitionErrorEvent",
     "eventHandlerProperty": "onerror"
 }
