@@ -6,5 +6,7 @@
     "description": "The search event is fired when a search is initiated usinng an input element of type=\"search\".",
     "eventName": "search",
     "eventType": "Event",
-    "eventHandlerProperty": "onsearch"
+    "eventHandlerProperty": "onsearch",
+    "eventBubbles": false,
+    "eventCancelable": true
 }
