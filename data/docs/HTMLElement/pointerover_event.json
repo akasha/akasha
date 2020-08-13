@@ -6,5 +6,7 @@
     "description": "The pointerover event is fired when a pointing device is moved into an element's hit test boundaries.",
     "eventName": "pointerover",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onpointerover"
+    "eventHandlerProperty": "onpointerover",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

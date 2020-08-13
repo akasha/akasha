@@ -6,5 +6,7 @@
     "description": "The pointerdown event is fired when a pointer becomes active. For mouse, it is fired when the device transitions from no buttons depressed to at least one button depressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.",
     "eventName": "pointerdown",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onpointerdown"
+    "eventHandlerProperty": "onpointerdown",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

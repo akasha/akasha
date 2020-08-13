@@ -6,5 +6,7 @@
     "description": "The audioprocess event of the ScriptProcessorNode interface is fired when an input buffer of a script processor is ready to be processed.",
     "eventName": "audioprocess",
     "eventType": "AudioProcessingEvent",
-    "eventHandlerProperty": "onaudioprocess"
+    "eventHandlerProperty": "onaudioprocess",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "A gatheringstatechange event is sent to an RTCIceTransport when its ICE candidate gathering state changes.",
     "eventName": "gatheringstatechange",
     "eventType": "Event",
-    "eventHandlerProperty": "ongatheringstatechange"
+    "eventHandlerProperty": "ongatheringstatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

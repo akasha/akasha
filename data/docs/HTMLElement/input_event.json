@@ -6,5 +6,7 @@
     "description": "The input event fires when the value of an input, select, or textarea element has been changed.",
     "eventName": "input",
     "eventType": "InputEvent",
-    "eventHandlerProperty": "oninput"
+    "eventHandlerProperty": "oninput",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The addtrack event is fired when a new MediaStreamTrack object has been added to a MediaStream.",
     "eventName": "addtrack",
     "eventType": "MediaStreamTrackEvent",
-    "eventHandlerProperty": "onaddtrack"
+    "eventHandlerProperty": "onaddtrack",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

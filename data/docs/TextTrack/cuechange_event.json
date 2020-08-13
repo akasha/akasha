@@ -6,5 +6,7 @@
     "description": "The cuechange event fires when a TextTrack has changed the currently displaying cues.",
     "eventName": "cuechange",
     "eventType": "Event",
-    "eventHandlerProperty": "oncuechange"
+    "eventHandlerProperty": "oncuechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

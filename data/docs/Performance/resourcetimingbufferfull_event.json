@@ -6,5 +6,7 @@
     "description": "The resourcetimingbufferfull event is fired when the browser's resource timing buffer is full.",
     "eventName": "resourcetimingbufferfull",
     "eventType": "Event",
-    "eventHandlerProperty": "onresourcetimingbufferfull"
+    "eventHandlerProperty": "onresourcetimingbufferfull",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

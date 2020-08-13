@@ -6,5 +6,7 @@
     "description": "A statechange event occurs when the RTCIceTransport changes state. The state can be used to determine how far through the process of examining, verifying, and selecting a valid candidate pair is prior to successfully connecting the two peers for WebRTC communications.",
     "eventName": "statechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onstatechange"
+    "eventHandlerProperty": "onstatechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The transitionend event is fired when a CSS transition has completed. In the case where a transition is removed before completion, such as if the transition-property is removed or display is set to none, then the event will not be generated.",
     "eventName": "transitionend",
     "eventType": "TransitionEvent",
-    "eventHandlerProperty": "ontransitionend"
+    "eventHandlerProperty": "ontransitionend",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

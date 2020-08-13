@@ -6,5 +6,7 @@
     "description": "The lostpointercapture event is fired when a captured pointer is released.",
     "eventName": "lostpointercapture",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "onlostpointercapture"
+    "eventHandlerProperty": "onlostpointercapture",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

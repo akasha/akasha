@@ -6,5 +6,7 @@
     "description": "The gotpointercapture event is fired when an element captures a pointer using setPointerCapture().",
     "eventName": "gotpointercapture",
     "eventType": "PointerEvent",
-    "eventHandlerProperty": "ongotpointercapture"
+    "eventHandlerProperty": "ongotpointercapture",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

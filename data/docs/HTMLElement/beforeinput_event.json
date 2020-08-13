@@ -6,5 +6,7 @@
     "description": "The DOM beforeinput event fires when the value of an input, select, or textarea element is about to be modified. The event also applies to elements with contenteditable enabled, and to any element when designMode is turned on.",
     "eventName": "beforeinput",
     "eventType": "InputEvent",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": false,
+    "eventCancelable": false
 }
