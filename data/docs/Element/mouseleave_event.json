@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.mouseleave_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseleave_event",
+    "description": "The mouseleave event is fired at an Element when the cursor of a pointing device (usually a mouse) is moved out of it.",
+    "eventName": "mouseleave",
+    "eventType": "MouseEvent",
+    "eventHandlerProperty": "onmouseleave"
+}

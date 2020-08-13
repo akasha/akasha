@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.touchstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/touchstart_event",
+    "description": "The touchstart event is fired when one or more touch points are placed on the touch surface.",
+    "eventName": "touchstart",
+    "eventType": "TouchEvent",
+    "eventHandlerProperty": "ontouchstart"
+}

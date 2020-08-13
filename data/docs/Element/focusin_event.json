@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.focusin_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event",
+    "description": "The focusin event fires when an element is about to receive focus. The main difference between this event and focus is that focusin bubbles while focus does not.",
+    "eventName": "focusin",
+    "eventType": "FocusEvent",
+    "eventHandlerProperty": "onfocusin"
+}

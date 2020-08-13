@@ -13,8 +13,28 @@
         "lastModifiedAt": 1597191937425
     },
     {
+        "name": "abort_event",
+        "lastModifiedAt": 1597278913628
+    },
+    {
         "name": "error",
         "lastModifiedAt": 1597191935992
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597278913908
+    },
+    {
+        "name": "load_event",
+        "lastModifiedAt": 1597278914277
+    },
+    {
+        "name": "loadend_event",
+        "lastModifiedAt": 1597278914525
+    },
+    {
+        "name": "loadstart_event",
+        "lastModifiedAt": 1597278914771
     },
     {
         "name": "onabort",
@@ -27,6 +47,10 @@
     {
         "name": "onload",
         "lastModifiedAt": 1597191943089
+    },
+    {
+        "name": "progress_event",
+        "lastModifiedAt": 1597278915105
     },
     {
         "name": "readAsArrayBuffer",

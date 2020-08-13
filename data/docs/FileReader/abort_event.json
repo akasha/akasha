@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "FileReader.abort_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/abort_event",
+    "description": "The abort event is fired when a read has been aborted: for instance because the program called FileReader.abort().",
+    "eventName": "abort",
+    "eventType": "ProgressEvent",
+    "eventHandlerProperty": "onabort"
+}

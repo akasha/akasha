@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.select_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/select_event",
+    "description": "The select event fires when some text has been selected.",
+    "eventName": "select",
+    "eventType": "UIEvent if generated from a user interface, Event otherwise",
+    "eventHandlerProperty": "onselect"
+}

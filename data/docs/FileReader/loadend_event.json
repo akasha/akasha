@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "FileReader.loadend_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/loadend_event",
+    "description": "The loadend event is fired when a file read has completed, successfully or not.",
+    "eventName": "loadend",
+    "eventType": "ProgressEvent",
+    "eventHandlerProperty": "onloadend"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.removestream_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removestream_event",
+    "description": "The obsolete removestream event was sent to an RTCPeerConnection to inform it that a MediaStream had been removed from the connection.",
+    "eventName": "removestream",
+    "eventType": "MediaStreamEvent",
+    "eventHandlerProperty": "onremovestream"
+}

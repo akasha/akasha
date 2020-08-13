@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "FileReader.loadstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/loadstart_event",
+    "description": "The loadstart event is fired when a file read operation has begun.",
+    "eventName": "loadstart",
+    "eventType": "ProgressEvent",
+    "eventHandlerProperty": "onloadstart"
+}

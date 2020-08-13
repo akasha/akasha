@@ -13,6 +13,10 @@
         "lastModifiedAt": 1596544680172
     },
     {
+        "name": "gatheringstatechange_event",
+        "lastModifiedAt": 1597279048881
+    },
+    {
         "name": "getLocalCandidates",
         "lastModifiedAt": 1596544684939
     },
@@ -49,7 +53,15 @@
         "lastModifiedAt": 1596544683401
     },
     {
+        "name": "selectedcandidatepairchange_event",
+        "lastModifiedAt": 1597279049257
+    },
+    {
         "name": "state",
         "lastModifiedAt": 1596544683950
+    },
+    {
+        "name": "statechange_event",
+        "lastModifiedAt": 1597279050079
     }
 ]

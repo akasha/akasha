@@ -21,6 +21,10 @@
         "lastModifiedAt": 1596544633775
     },
     {
+        "name": "addstream_event",
+        "lastModifiedAt": 1597279467154
+    },
+    {
         "name": "canTrickleIceCandidates",
         "lastModifiedAt": 1596544613843
     },
@@ -31,6 +35,10 @@
     {
         "name": "connectionState",
         "lastModifiedAt": 1596544615062
+    },
+    {
+        "name": "connectionstatechange_event",
+        "lastModifiedAt": 1597279461465
     },
     {
         "name": "createAnswer",
@@ -51,6 +59,10 @@
     {
         "name": "currentRemoteDescription",
         "lastModifiedAt": 1596544617294
+    },
+    {
+        "name": "datachannel_event",
+        "lastModifiedAt": 1597279461858
     },
     {
         "name": "generateCertificate",
@@ -93,8 +105,36 @@
         "lastModifiedAt": 1596544620512
     },
     {
+        "name": "icecandidate_event",
+        "lastModifiedAt": 1597279462708
+    },
+    {
+        "name": "iceconnectionstatechange_event",
+        "lastModifiedAt": 1597279464382
+    },
+    {
+        "name": "icegatheringstatechange_event",
+        "lastModifiedAt": 1597279465070
+    },
+    {
+        "name": "identityresult_event",
+        "lastModifiedAt": 1597279468317
+    },
+    {
+        "name": "idpassertionerror_event",
+        "lastModifiedAt": 1597279469309
+    },
+    {
+        "name": "idpvalidationerror_event",
+        "lastModifiedAt": 1597279469680
+    },
+    {
         "name": "localDescription",
         "lastModifiedAt": 1596544620987
+    },
+    {
+        "name": "negotiationneeded_event",
+        "lastModifiedAt": 1597279465773
     },
     {
         "name": "onaddstream",
@@ -161,6 +201,10 @@
         "lastModifiedAt": 1596544627514
     },
     {
+        "name": "peeridentity_event",
+        "lastModifiedAt": 1597279470620
+    },
+    {
         "name": "pendingLocalDescription",
         "lastModifiedAt": 1596544628646
     },
@@ -179,6 +223,10 @@
     {
         "name": "removeTrack",
         "lastModifiedAt": 1596544648710
+    },
+    {
+        "name": "removestream_event",
+        "lastModifiedAt": 1597279470885
     },
     {
         "name": "restartIce",
@@ -207,5 +255,13 @@
     {
         "name": "signalingState",
         "lastModifiedAt": 1596544631517
+    },
+    {
+        "name": "signalingstatechange_event",
+        "lastModifiedAt": 1597279466186
+    },
+    {
+        "name": "track_event",
+        "lastModifiedAt": 1597279466763
     }
 ]

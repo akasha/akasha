@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.fullscreenerror_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/fullscreenerror_event",
+    "description": "The fullscreenerror event is fired when the browser cannot switch to full-screen mode.",
+    "eventName": "fullscreenerror",
+    "eventType": "Event",
+    "eventHandlerProperty": "onfullscreenerror"
+}

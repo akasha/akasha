@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.fullscreenchange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/fullscreenchange_event",
+    "description": "The fullscreenchange event is fired immediately after an Element switches into or out of full-screen mode.",
+    "eventName": "fullscreenchange",
+    "eventType": "Event",
+    "eventHandlerProperty": "onfullscreenchange"
+}

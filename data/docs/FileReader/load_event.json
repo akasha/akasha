@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "FileReader.load_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/load_event",
+    "description": "The load event is fired when a file has been read successfully.",
+    "eventName": "load",
+    "eventType": "ProgressEvent",
+    "eventHandlerProperty": "onload"
+}

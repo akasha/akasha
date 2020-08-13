@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.scroll_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll_event",
+    "description": "The scroll event fires an element has been scrolled.",
+    "eventName": "scroll",
+    "eventType": "Event",
+    "eventHandlerProperty": "onscroll"
+}

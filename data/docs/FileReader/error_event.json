@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "FileReader.error_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/error_event",
+    "description": "The error event is fired when the read failed due to an error (for example, because the file was not found or not readable).",
+    "eventName": "error",
+    "eventType": "ProgressEvent",
+    "eventHandlerProperty": "onerror"
+}

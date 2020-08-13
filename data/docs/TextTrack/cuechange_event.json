@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "TextTrack.cuechange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/cuechange_event",
+    "description": "The cuechange event fires when a TextTrack has changed the currently displaying cues.",
+    "eventName": "cuechange",
+    "eventType": "Event",
+    "eventHandlerProperty": "oncuechange"
+}

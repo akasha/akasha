@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.blur_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event",
+    "description": "The blur event fires when an element has lost focus. The main difference between this event and focusout is that focusout bubbles while blur does not.",
+    "eventName": "blur",
+    "eventType": "FocusEvent",
+    "eventHandlerProperty": "onblur"
+}

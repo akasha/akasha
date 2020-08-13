@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "MediaStreamTrack.ended",
+    "name": "MediaStreamTrack.ended_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/ended_event",
     "description": "The ended event of the MediaStreamTrack interface is fired when playback or streaming has stopped because the end of the media was reached or because no further data is available.",
+    "eventName": "ended",
     "eventType": "Event",
     "eventHandlerProperty": "onended"
 }

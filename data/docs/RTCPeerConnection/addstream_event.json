@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.addstream_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addstream_event",
+    "description": "The obsolete addstream event is sent to an RTCPeerConnection when new media, in the form of a MediaStream object, has been added to it.",
+    "eventName": "addstream",
+    "eventType": "MediaStreamEvent",
+    "eventHandlerProperty": "onaddstream"
+}

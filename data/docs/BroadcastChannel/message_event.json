@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "BroadcastChannel.message_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/message_event",
+    "description": "The message event is fired on a BroadcastChannel object when a message arrives on that channel.",
+    "eventName": "message",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onmessage"
+}

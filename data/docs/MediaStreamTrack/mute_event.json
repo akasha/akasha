@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "MediaStreamTrack.mute",
+    "name": "MediaStreamTrack.mute_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/mute_event",
     "description": "The mute event is sent to a MediaStreamTrack when the track's source is temporarily unable to provide media data.",
+    "eventName": "mute",
     "eventType": "Event",
     "eventHandlerProperty": "onmute"
 }

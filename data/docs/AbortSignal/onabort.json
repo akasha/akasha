@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AbortSignal.onabort",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/onabort",
+    "description": "The onabort read-only property of the FetchSignal interface is an event handler Invoked when an abort event fires, i.e. when the fetch request(s) the signal is communicating with is/are aborted."
+}

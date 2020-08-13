@@ -53,6 +53,10 @@
         "lastModifiedAt": 1597192084397
     },
     {
+        "name": "resourcetimingbufferfull_event",
+        "lastModifiedAt": 1597279187486
+    },
+    {
         "name": "setResourceTimingBufferSize",
         "lastModifiedAt": 1597192083306
     },

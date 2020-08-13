@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "ServiceWorkerContainer.message_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/message_event",
+    "description": "The message event is used in a page controlled by a service worker to receive messages from the service worker.",
+    "eventName": "message",
+    "eventType": "MessageEvent",
+    "eventHandlerProperty": "onmessage"
+}

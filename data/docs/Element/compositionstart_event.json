@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.compositionstart_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/compositionstart_event",
+    "description": "The compositionstart event is fired when a text composition system such as an input method editor starts a new composition session.",
+    "eventName": "compositionstart",
+    "eventType": "CompositionEvent",
+    "eventHandlerProperty": "None"
+}

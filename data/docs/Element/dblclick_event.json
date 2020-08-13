@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.dblclick_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event",
+    "description": "The dblclick event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time.",
+    "eventName": "dblclick",
+    "eventType": "MouseEvent",
+    "eventHandlerProperty": "ondblclick"
+}

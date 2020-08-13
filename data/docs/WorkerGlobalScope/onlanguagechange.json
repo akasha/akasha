@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerGlobalScope.onlanguagechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onlanguagechange",
+    "description": "The onlanguagechange property of the WorkerGlobalScope interface represents an EventHandler to be called when the languagechange event occurs and bubbles through the Worker."
+}

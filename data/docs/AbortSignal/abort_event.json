@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "AbortSignal.abort_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/abort_event",
+    "description": "The abort event of the Fetch API is fired when a fetch request is aborted, i.e. using AbortController.abort().",
+    "eventName": "abort",
+    "eventType": "Event",
+    "eventHandlerProperty": "onabort"
+}

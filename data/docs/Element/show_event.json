@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.show_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/show_event",
+    "description": "The show event is fired when a contextmenu event was fired on/bubbled to an element that has a contextmenu attribute.",
+    "eventName": "show",
+    "eventType": "Event",
+    "eventHandlerProperty": "onshow"
+}

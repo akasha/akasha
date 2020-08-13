@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.mouseup_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseup_event",
+    "description": "The mouseup event is fired at an Element when a button on a pointing device (such as a mouse or trackpad) is released while the pointer is located inside it.",
+    "eventName": "mouseup",
+    "eventType": "MouseEvent",
+    "eventHandlerProperty": "onmouseup"
+}

@@ -33,6 +33,18 @@
         "lastModifiedAt": 1596581574976
     },
     {
+        "name": "webglcontextcreationerror_event",
+        "lastModifiedAt": 1597279631070
+    },
+    {
+        "name": "webglcontextlost_event",
+        "lastModifiedAt": 1597279631408
+    },
+    {
+        "name": "webglcontextrestored_event",
+        "lastModifiedAt": 1597279632210
+    },
+    {
         "name": "width",
         "lastModifiedAt": 1596581572814
     }

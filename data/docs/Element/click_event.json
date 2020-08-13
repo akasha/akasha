@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.click_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event",
+    "description": "An element receives a click event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.",
+    "eventName": "click",
+    "eventType": "MouseEvent",
+    "eventHandlerProperty": "onclick"
+}

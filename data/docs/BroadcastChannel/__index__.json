@@ -13,6 +13,14 @@
         "lastModifiedAt": 1596581566565
     },
     {
+        "name": "message_event",
+        "lastModifiedAt": 1597278971093
+    },
+    {
+        "name": "messageerror_event",
+        "lastModifiedAt": 1597278971427
+    },
+    {
         "name": "name",
         "lastModifiedAt": 1596581565306
     },

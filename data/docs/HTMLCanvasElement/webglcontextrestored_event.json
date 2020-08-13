@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLCanvasElement.webglcontextrestored_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event",
+    "description": "With the help of the WEBGL_lose_context extension, you can simulate the webglcontextrestored event:",
+    "eventName": "webglcontextrestored",
+    "eventType": "WebGLContextEvent",
+    "eventHandlerProperty": "none"
+}

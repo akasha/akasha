@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.mousedown_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event",
+    "description": "The mousedown event is fired at an Element when a pointing device button is pressed while the pointer is inside the element.",
+    "eventName": "mousedown",
+    "eventType": "MouseEvent",
+    "eventHandlerProperty": "onmousedown"
+}

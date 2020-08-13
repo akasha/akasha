@@ -1,6 +1,10 @@
 
 [
     {
+        "name": "DOMActivate_event",
+        "lastModifiedAt": 1597278807572
+    },
+    {
         "name": "__type__",
         "lastModifiedAt": 1597190656329
     },
@@ -17,12 +21,28 @@
         "lastModifiedAt": 1597190657326
     },
     {
+        "name": "auxclick_event",
+        "lastModifiedAt": 1597278804468
+    },
+    {
+        "name": "blur_event",
+        "lastModifiedAt": 1597278800459
+    },
+    {
+        "name": "cancel_event",
+        "lastModifiedAt": 1597278793087
+    },
+    {
         "name": "classList",
         "lastModifiedAt": 1597190657668
     },
     {
         "name": "className",
         "lastModifiedAt": 1597190658053
+    },
+    {
+        "name": "click_event",
+        "lastModifiedAt": 1597278804741
     },
     {
         "name": "clientHeight",
@@ -45,12 +65,64 @@
         "lastModifiedAt": 1597190673945
     },
     {
+        "name": "compositionend_event",
+        "lastModifiedAt": 1597278798692
+    },
+    {
+        "name": "compositionstart_event",
+        "lastModifiedAt": 1597278799092
+    },
+    {
+        "name": "compositionupdate_event",
+        "lastModifiedAt": 1597278799485
+    },
+    {
         "name": "computedStyleMap",
         "lastModifiedAt": 1597190674335
     },
     {
+        "name": "contextmenu_event",
+        "lastModifiedAt": 1597278805682
+    },
+    {
+        "name": "copy_event",
+        "lastModifiedAt": 1597278797089
+    },
+    {
         "name": "createShadowRoot",
         "lastModifiedAt": 1597190675008
+    },
+    {
+        "name": "cut_event",
+        "lastModifiedAt": 1597278798050
+    },
+    {
+        "name": "dblclick_event",
+        "lastModifiedAt": 1597278806615
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597278793476
+    },
+    {
+        "name": "focus_event",
+        "lastModifiedAt": 1597278801407
+    },
+    {
+        "name": "focusin_event",
+        "lastModifiedAt": 1597278801944
+    },
+    {
+        "name": "focusout_event",
+        "lastModifiedAt": 1597278802606
+    },
+    {
+        "name": "fullscreenchange_event",
+        "lastModifiedAt": 1597278803649
+    },
+    {
+        "name": "fullscreenerror_event",
+        "lastModifiedAt": 1597278804031
     },
     {
         "name": "getAnimations",
@@ -141,6 +213,34 @@
         "lastModifiedAt": 1597190681752
     },
     {
+        "name": "mousedown_event",
+        "lastModifiedAt": 1597278807904
+    },
+    {
+        "name": "mouseenter_event",
+        "lastModifiedAt": 1597278808204
+    },
+    {
+        "name": "mouseleave_event",
+        "lastModifiedAt": 1597278808670
+    },
+    {
+        "name": "mousemove_event",
+        "lastModifiedAt": 1597278809082
+    },
+    {
+        "name": "mouseout_event",
+        "lastModifiedAt": 1597278810037
+    },
+    {
+        "name": "mouseover_event",
+        "lastModifiedAt": 1597278810376
+    },
+    {
+        "name": "mouseup_event",
+        "lastModifiedAt": 1597278810823
+    },
+    {
         "name": "namespaceURI",
         "lastModifiedAt": 1597190662070
     },
@@ -163,6 +263,10 @@
     {
         "name": "part",
         "lastModifiedAt": 1597190663490
+    },
+    {
+        "name": "paste_event",
+        "lastModifiedAt": 1597278798380
     },
     {
         "name": "prefix",
@@ -241,6 +345,14 @@
         "lastModifiedAt": 1597190667862
     },
     {
+        "name": "scroll_event",
+        "lastModifiedAt": 1597278794413
+    },
+    {
+        "name": "select_event",
+        "lastModifiedAt": 1597278795369
+    },
+    {
         "name": "setAttribute",
         "lastModifiedAt": 1597190688651
     },
@@ -269,6 +381,10 @@
         "lastModifiedAt": 1597190668170
     },
     {
+        "name": "show_event",
+        "lastModifiedAt": 1597278796316
+    },
+    {
         "name": "slot",
         "lastModifiedAt": 1597190668806
     },
@@ -283,5 +399,41 @@
     {
         "name": "toggleAttribute",
         "lastModifiedAt": 1597190691522
+    },
+    {
+        "name": "touchcancel_event",
+        "lastModifiedAt": 1597278812785
+    },
+    {
+        "name": "touchend_event",
+        "lastModifiedAt": 1597278813171
+    },
+    {
+        "name": "touchmove_event",
+        "lastModifiedAt": 1597278813595
+    },
+    {
+        "name": "touchstart_event",
+        "lastModifiedAt": 1597278813915
+    },
+    {
+        "name": "webkitmouseforcechanged_event",
+        "lastModifiedAt": 1597278811221
+    },
+    {
+        "name": "webkitmouseforcedown_event",
+        "lastModifiedAt": 1597278811629
+    },
+    {
+        "name": "webkitmouseforceup_event",
+        "lastModifiedAt": 1597278812406
+    },
+    {
+        "name": "webkitmouseforcewillbegin_event",
+        "lastModifiedAt": 1597278811962
+    },
+    {
+        "name": "wheel_event",
+        "lastModifiedAt": 1597278796696
     }
 ]

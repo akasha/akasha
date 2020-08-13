@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Element.mousemove_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/mousemove_event",
+    "description": "The mousemove event is fired at an element when a pointing device (usually a mouse) is moved while the cursor's hotspot is inside it.",
+    "eventName": "mousemove",
+    "eventType": "MouseEvent",
+    "eventHandlerProperty": "onmousemove"
+}
