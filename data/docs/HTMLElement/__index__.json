@@ -29,6 +29,10 @@
         "lastModifiedAt": 1597359879864
     },
     {
+        "name": "change_event",
+        "lastModifiedAt": 1597363110248
+    },
+    {
         "name": "click",
         "lastModifiedAt": 1596581189269
     },

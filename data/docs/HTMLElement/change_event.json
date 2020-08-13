@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLElement.change_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event",
+    "description": "The change event is fired for input, select, and textarea elements when an alteration to the element's value is committed by the user. Unlike the input event, the change event is not necessarily fired for each alteration to an element's value.",
+    "eventName": "change",
+    "eventType": "Event",
+    "eventHandlerProperty": "onchange",
+    "eventBubbles": false,
+    "eventCancelable": true
+}
