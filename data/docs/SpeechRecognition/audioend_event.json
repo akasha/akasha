@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "SpeechRecognition.audioend",
+    "name": "SpeechRecognition.audioend_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/audioend_event",
     "description": "You can use the audioend event in an addEventListener method:",
+    "eventName": "audioend",
     "eventType": "Event",
     "eventHandlerProperty": "onaudioend"
 }
