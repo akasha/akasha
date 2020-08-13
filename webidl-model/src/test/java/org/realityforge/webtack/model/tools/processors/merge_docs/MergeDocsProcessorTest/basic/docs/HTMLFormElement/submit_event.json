@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "HTMLFormElement.submit_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event",
+    "description": "The submit event fires when a form is submitted.",
+    "eventName": "submit",
+    "eventType": "SubmitEvent",
+    "eventHandlerProperty": "onsubmit",
+    "eventBubbles": false,
+    "eventCancelable": false
+}

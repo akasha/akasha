@@ -6,5 +6,7 @@
     "description": "The focus event fires when an element has received focus.",
     "eventName": "focus",
     "eventType": "FocusEvent",
-    "eventHandlerProperty": "onfocus"
+    "eventHandlerProperty": "onfocus",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

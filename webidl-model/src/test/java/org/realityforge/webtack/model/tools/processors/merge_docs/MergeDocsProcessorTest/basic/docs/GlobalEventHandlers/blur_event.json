@@ -6,5 +6,7 @@
     "description": "The blur event...",
     "eventName": "blur",
     "eventType": "BlurEvent",
-    "eventHandlerProperty": "onblur"
+    "eventHandlerProperty": "onblur",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

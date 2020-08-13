@@ -173,6 +173,17 @@ interface EventTarget {
 interface FocusEvent : Event {
 };
 
+interface HTMLFormElement {
+  event Event focus;
+  /**
+   * The reset event fires when a form is reset.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event">reset event - MDN</a>
+   */
+  [NoBubble, NoCancel]
+  event Event reset;
+};
+
 interface Node {
   event Event eventnoexisto;
 };

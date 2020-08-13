@@ -59,6 +59,10 @@ interface EventTarget {
 interface FocusEvent : Event {
 };
 
+interface HTMLFormElement {
+  event Event focus;
+};
+
 interface Node {
   event Event eventnoexisto;
 };

@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model.tools.processors.merge_docs;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -14,6 +15,7 @@ import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EventMember;
+import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
 import org.realityforge.webtack.model.OperationMember;
@@ -137,13 +139,24 @@ final class MergeDocsProcessor
             // It will also skip adding events that are documented on MDN but are deprecated and no longer part of the spec
             if ( null != _schema.findInterfaceByName( eventType ) )
             {
+              final List<ExtendedAttribute> attributes = new ArrayList<>();
+              if ( Boolean.FALSE == eventDocEntry.getEventBubbles() )
+              {
+                attributes.add( ExtendedAttribute.createExtendedAttributeNoArgs( "NoBubble",
+                                                                                 Collections.emptyList() ) );
+              }
+              if ( Boolean.FALSE == eventDocEntry.getEventCancelable() )
+              {
+                attributes.add( ExtendedAttribute.createExtendedAttributeNoArgs( "NoCancel",
+                                                                                 Collections.emptyList() ) );
+              }
               events.add( new EventMember( eventName,
                                            new TypeReference( eventType,
                                                               Collections.emptyList(),
                                                               false,
                                                               Collections.emptyList() ),
                                            createDocumentationElement( eventDocEntry ),
-                                           Collections.emptyList(),
+                                           attributes,
                                            Collections.emptyList() ) );
             }
           }
