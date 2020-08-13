@@ -19,7 +19,9 @@ import javax.json.bind.annotation.JsonbPropertyOrder;
                        "description",
                        "eventName",
                        "eventType",
-                       "eventHandlerProperty" } )
+                       "eventHandlerProperty",
+                       "eventBubbles",
+                       "eventCancelable" } )
 public class DocEntry
 {
   private DocKind kind;
@@ -35,6 +37,12 @@ public class DocEntry
   // field is only present when kind == Event
   @Nullable
   private String eventHandlerProperty;
+  // field is only present when kind == Event
+  @Nullable
+  private Boolean eventBubbles;
+  // field is only present when kind == Event
+  @Nullable
+  private Boolean eventCancelable;
 
   public DocKind getKind()
   {
@@ -107,6 +115,28 @@ public class DocEntry
   public void setEventHandlerProperty( @Nullable final String eventHandlerProperty )
   {
     this.eventHandlerProperty = eventHandlerProperty;
+  }
+
+  @Nullable
+  public Boolean getEventBubbles()
+  {
+    return eventBubbles;
+  }
+
+  public void setEventBubbles( @Nullable final Boolean eventBubbles )
+  {
+    this.eventBubbles = eventBubbles;
+  }
+
+  @Nullable
+  public Boolean getEventCancelable()
+  {
+    return eventCancelable;
+  }
+
+  public void setEventCancelable( @Nullable final Boolean eventCancelable )
+  {
+    this.eventCancelable = eventCancelable;
   }
 
   @Nonnull

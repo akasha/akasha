@@ -304,12 +304,20 @@ public final class MdnDocScanner
           {
             entry.setEventType( td.text() );
           }
+          else if ( "Bubbles".equals( text ) )
+          {
+            entry.setEventBubbles( td.text().equalsIgnoreCase( "no" ) );
+          }
+          else if ( "Cancelable".equals( text ) )
+          {
+            entry.setEventCancelable( td.text().equalsIgnoreCase( "no" ) );
+          }
           else if ( "Event handler".equals( text ) || "Event handler property".equals( text ) )
           {
             entry.setEventHandlerProperty( td.text().replaceAll( "^.*\\.", "" ) );
           }
         }
-        if ( null == entry.getEventType() )
+        if ( null == entry.getEventType() || null == entry.getEventBubbles() || null == entry.getEventCancelable() )
         {
           entryIndex.remove();
           if ( 0 != entryIndex.getLastModifiedAt() )
