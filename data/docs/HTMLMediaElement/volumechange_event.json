@@ -6,5 +6,7 @@
     "description": "The volumechange event is fired when the volume has changed.",
     "eventName": "volumechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onvolumechange"
+    "eventHandlerProperty": "onvolumechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

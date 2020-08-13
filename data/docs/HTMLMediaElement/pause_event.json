@@ -6,5 +6,7 @@
     "description": "The pause event is sent when a request to pause an activity is handled and the activity has entered its paused state, most commonly after the media has been paused through a call to the element's pause() method.",
     "eventName": "pause",
     "eventType": "Event",
-    "eventHandlerProperty": "onpause"
+    "eventHandlerProperty": "onpause",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

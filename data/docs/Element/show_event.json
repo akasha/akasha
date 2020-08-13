@@ -6,5 +6,7 @@
     "description": "The show event is fired when a contextmenu event was fired on/bubbled to an element that has a contextmenu attribute.",
     "eventName": "show",
     "eventType": "Event",
-    "eventHandlerProperty": "onshow"
+    "eventHandlerProperty": "onshow",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

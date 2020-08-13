@@ -6,5 +6,7 @@
     "description": "The loadeddata event is fired when the frame at the current playback position of the media has finished loading; often the first frame.",
     "eventName": "loadeddata",
     "eventType": "Event",
-    "eventHandlerProperty": "onloadeddata"
+    "eventHandlerProperty": "onloadeddata",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

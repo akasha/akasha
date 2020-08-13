@@ -5,5 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/DOMActivate_event",
     "description": "The DOMActivate event is fired at an element when it becomes active, such as when it is clicked on using the mouse or a keypress is used to navigate to it.",
     "eventName": "DOMActivate",
-    "eventType": "MouseEvent"
+    "eventType": "MouseEvent",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

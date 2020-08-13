@@ -6,5 +6,7 @@
     "description": "The stalled event is fired when the user agent is trying to fetch media data, but data is unexpectedly not forthcoming.",
     "eventName": "stalled",
     "eventType": "Event",
-    "eventHandlerProperty": "onstalled"
+    "eventHandlerProperty": "onstalled",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

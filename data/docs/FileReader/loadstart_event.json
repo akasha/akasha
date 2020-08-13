@@ -6,5 +6,7 @@
     "description": "The loadstart event is fired when a file read operation has begun.",
     "eventName": "loadstart",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onloadstart"
+    "eventHandlerProperty": "onloadstart",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

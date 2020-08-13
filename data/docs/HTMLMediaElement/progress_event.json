@@ -6,5 +6,7 @@
     "description": "The progress event is fired periodically as the browser loads a resource.",
     "eventName": "progress",
     "eventType": "Event",
-    "eventHandlerProperty": "onprogress"
+    "eventHandlerProperty": "onprogress",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

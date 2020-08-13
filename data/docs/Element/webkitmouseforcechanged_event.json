@@ -5,5 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/webkitmouseforcechanged_event",
     "description": "The non-standard webkitmouseforcechanged event is fired by Safari each time the amount of pressure changes on the trackpad/touchscreen.",
     "eventName": "webkitmouseforcechanged",
-    "eventType": "MouseEvent"
+    "eventType": "MouseEvent",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

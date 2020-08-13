@@ -6,5 +6,7 @@
     "description": "The mouseup event is fired at an Element when a button on a pointing device (such as a mouse or trackpad) is released while the pointer is located inside it.",
     "eventName": "mouseup",
     "eventType": "MouseEvent",
-    "eventHandlerProperty": "onmouseup"
+    "eventHandlerProperty": "onmouseup",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

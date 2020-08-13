@@ -6,5 +6,7 @@
     "description": "The playing event is fired when playback is ready to start after having been paused or delayed due to lack of data.",
     "eventName": "playing",
     "eventType": "Event",
-    "eventHandlerProperty": "onplaying"
+    "eventHandlerProperty": "onplaying",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The auxclick event is fired at an Element when a non-primary pointing device button (any mouse button other than the primary—usually leftmost—button) has been pressed and released both within the same element.",
     "eventName": "auxclick",
     "eventType": "MouseEvent",
-    "eventHandlerProperty": "onauxclick"
+    "eventHandlerProperty": "onauxclick",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

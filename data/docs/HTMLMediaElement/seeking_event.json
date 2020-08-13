@@ -6,5 +6,7 @@
     "description": "The seeking event is fired when a seek operation starts, meaning the Boolean seeking attribute has changed to true and the media is seeking a new position.",
     "eventName": "seeking",
     "eventType": "Event",
-    "eventHandlerProperty": "onseeking"
+    "eventHandlerProperty": "onseeking",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

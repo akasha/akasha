@@ -6,5 +6,7 @@
     "description": "The ratechange event is fired when the playback rate has changed.",
     "eventName": "ratechange",
     "eventType": "Event",
-    "eventHandlerProperty": "onratechange"
+    "eventHandlerProperty": "onratechange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The compositionupdate event is fired when a new character is received in the context of a text composition session controlled by a text composition system such as an input method editor.",
     "eventName": "compositionupdate",
     "eventType": "CompositionEvent",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

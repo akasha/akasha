@@ -6,7 +6,7 @@
     },
     {
         "name": "abort_event",
-        "lastModifiedAt": 1596790605327
+        "lastModifiedAt": 1597359429123
     },
     {
         "name": "audioTracks",
@@ -26,11 +26,11 @@
     },
     {
         "name": "canplay_event",
-        "lastModifiedAt": 1596790605729
+        "lastModifiedAt": 1597359429738
     },
     {
         "name": "canplaythrough_event",
-        "lastModifiedAt": 1596790606231
+        "lastModifiedAt": 1597359430253
     },
     {
         "name": "captureStream",
@@ -78,11 +78,11 @@
     },
     {
         "name": "durationchange_event",
-        "lastModifiedAt": 1596790606573
+        "lastModifiedAt": 1597359430967
     },
     {
         "name": "emptied_event",
-        "lastModifiedAt": 1596790606984
+        "lastModifiedAt": 1597359431482
     },
     {
         "name": "ended",
@@ -90,7 +90,7 @@
     },
     {
         "name": "ended_event",
-        "lastModifiedAt": 1596790607290
+        "lastModifiedAt": 1597359432093
     },
     {
         "name": "error",
@@ -98,7 +98,7 @@
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1596790607598
+        "lastModifiedAt": 1597359432605
     },
     {
         "name": "fastSeek",
@@ -110,15 +110,15 @@
     },
     {
         "name": "loadeddata_event",
-        "lastModifiedAt": 1596790608674
+        "lastModifiedAt": 1597359433840
     },
     {
         "name": "loadedmetadata_event",
-        "lastModifiedAt": 1596790609728
+        "lastModifiedAt": 1597359434974
     },
     {
         "name": "loadstart_event",
-        "lastModifiedAt": 1596790610064
+        "lastModifiedAt": 1597359435474
     },
     {
         "name": "loop",
@@ -146,7 +146,7 @@
     },
     {
         "name": "pause_event",
-        "lastModifiedAt": 1596790610363
+        "lastModifiedAt": 1597359436072
     },
     {
         "name": "paused",
@@ -158,7 +158,7 @@
     },
     {
         "name": "play_event",
-        "lastModifiedAt": 1596790611157
+        "lastModifiedAt": 1597359437346
     },
     {
         "name": "playbackRate",
@@ -166,15 +166,15 @@
     },
     {
         "name": "playing_event",
-        "lastModifiedAt": 1596790611489
+        "lastModifiedAt": 1597359438556
     },
     {
         "name": "progress_event",
-        "lastModifiedAt": 1596790612363
+        "lastModifiedAt": 1597359439677
     },
     {
         "name": "ratechange_event",
-        "lastModifiedAt": 1596790612796
+        "lastModifiedAt": 1597359440342
     },
     {
         "name": "readyState",
@@ -190,11 +190,11 @@
     },
     {
         "name": "seeked_event",
-        "lastModifiedAt": 1596790614004
+        "lastModifiedAt": 1597359441577
     },
     {
         "name": "seeking_event",
-        "lastModifiedAt": 1596790614629
+        "lastModifiedAt": 1597359442323
     },
     {
         "name": "setMediaKeys",
@@ -218,11 +218,11 @@
     },
     {
         "name": "stalled_event",
-        "lastModifiedAt": 1596790615110
+        "lastModifiedAt": 1597359442847
     },
     {
         "name": "suspend_event",
-        "lastModifiedAt": 1596790615622
+        "lastModifiedAt": 1597359443541
     },
     {
         "name": "textTracks",
@@ -230,7 +230,7 @@
     },
     {
         "name": "timeupdate_event",
-        "lastModifiedAt": 1596790616592
+        "lastModifiedAt": 1597359444248
     },
     {
         "name": "videoTracks",
@@ -242,10 +242,10 @@
     },
     {
         "name": "volumechange_event",
-        "lastModifiedAt": 1596790617603
+        "lastModifiedAt": 1597359445443
     },
     {
         "name": "waiting_event",
-        "lastModifiedAt": 1596790618030
+        "lastModifiedAt": 1597359446051
     }
 ]

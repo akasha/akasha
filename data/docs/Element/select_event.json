@@ -6,5 +6,7 @@
     "description": "The select event fires when some text has been selected.",
     "eventName": "select",
     "eventType": "UIEvent if generated from a user interface, Event otherwise",
-    "eventHandlerProperty": "onselect"
+    "eventHandlerProperty": "onselect",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

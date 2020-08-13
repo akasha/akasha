@@ -6,5 +6,7 @@
     "description": "The suspend event is fired when media data loading has been suspended.",
     "eventName": "suspend",
     "eventType": "Event",
-    "eventHandlerProperty": "onsuspend"
+    "eventHandlerProperty": "onsuspend",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

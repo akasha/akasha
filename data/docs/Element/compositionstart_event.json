@@ -6,5 +6,7 @@
     "description": "The compositionstart event is fired when a text composition system such as an input method editor starts a new composition session.",
     "eventName": "compositionstart",
     "eventType": "CompositionEvent",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

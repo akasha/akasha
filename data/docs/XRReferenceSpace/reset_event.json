@@ -6,5 +6,7 @@
     "description": "The reset event is sent to an XRReferenceSpace object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space.",
     "eventName": "reset",
     "eventType": "XRReferenceSpaceEvent",
-    "eventHandlerProperty": "onreset"
+    "eventHandlerProperty": "onreset",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

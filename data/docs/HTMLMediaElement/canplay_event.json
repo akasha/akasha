@@ -6,5 +6,7 @@
     "description": "The canplay event is fired when the user agent can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.",
     "eventName": "canplay",
     "eventType": "Event",
-    "eventHandlerProperty": "oncanplay"
+    "eventHandlerProperty": "oncanplay",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

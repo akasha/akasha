@@ -6,5 +6,7 @@
     "description": "The load event is fired when a file has been read successfully.",
     "eventName": "load",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onload"
+    "eventHandlerProperty": "onload",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

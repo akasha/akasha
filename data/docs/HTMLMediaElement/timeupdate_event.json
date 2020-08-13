@@ -6,5 +6,7 @@
     "description": "The timeupdate event is fired when the time indicated by the currentTime attribute has been updated.",
     "eventName": "timeupdate",
     "eventType": "Event",
-    "eventHandlerProperty": "ontimeupdate"
+    "eventHandlerProperty": "ontimeupdate",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

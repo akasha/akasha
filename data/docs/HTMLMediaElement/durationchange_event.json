@@ -6,5 +6,7 @@
     "description": "The durationchange event is fired when the duration attribute has been updated.",
     "eventName": "durationchange",
     "eventType": "Event",
-    "eventHandlerProperty": "ondurationchange"
+    "eventHandlerProperty": "ondurationchange",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The seeked event is fired when a seek operation completed, the current playback position has changed, and the Boolean seeking attribute is changed to false.",
     "eventName": "seeked",
     "eventType": "Event",
-    "eventHandlerProperty": "onseeked"
+    "eventHandlerProperty": "onseeked",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

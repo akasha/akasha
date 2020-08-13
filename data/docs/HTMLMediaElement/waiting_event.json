@@ -6,5 +6,7 @@
     "description": "The waiting event is fired when playback has stopped because of a temporary lack of data.",
     "eventName": "waiting",
     "eventType": "Event",
-    "eventHandlerProperty": "onwaiting"
+    "eventHandlerProperty": "onwaiting",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

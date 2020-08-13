@@ -6,5 +6,7 @@
     "description": "The fullscreenerror event is fired when the browser cannot switch to full-screen mode.",
     "eventName": "fullscreenerror",
     "eventType": "Event",
-    "eventHandlerProperty": "onfullscreenerror"
+    "eventHandlerProperty": "onfullscreenerror",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

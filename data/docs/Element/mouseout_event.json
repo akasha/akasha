@@ -6,5 +6,7 @@
     "description": "The mouseout event is fired at an Element when a pointing device (usually a mouse) is used to move the cursor so that it is no longer contained within the element or one of its children.",
     "eventName": "mouseout",
     "eventType": "MouseEvent",
-    "eventHandlerProperty": "onmouseout"
+    "eventHandlerProperty": "onmouseout",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

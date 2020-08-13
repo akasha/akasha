@@ -6,5 +6,7 @@
     "description": "The emptied event is fired when the media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the load() method is called to reload it.",
     "eventName": "emptied",
     "eventType": "Event",
-    "eventHandlerProperty": "onemptied"
+    "eventHandlerProperty": "onemptied",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

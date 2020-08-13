@@ -6,5 +6,7 @@
     "description": "The dblclick event fires when a pointing device button (such as a mouse's primary button) is double-clicked; that is, when it's rapidly clicked twice on a single element within a very short span of time.",
     "eventName": "dblclick",
     "eventType": "MouseEvent",
-    "eventHandlerProperty": "ondblclick"
+    "eventHandlerProperty": "ondblclick",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

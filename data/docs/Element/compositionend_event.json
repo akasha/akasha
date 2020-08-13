@@ -6,5 +6,7 @@
     "description": "The compositionend event is fired when a text composition system such as an input method editor completes or cancels the current composition session.",
     "eventName": "compositionend",
     "eventType": "CompositionEvent",
-    "eventHandlerProperty": "None"
+    "eventHandlerProperty": "None",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

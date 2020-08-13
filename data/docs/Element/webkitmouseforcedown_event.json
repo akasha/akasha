@@ -5,5 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/webkitmouseforcedown_event",
     "description": "After a mousedown event has been fired at the element, if and when sufficient pressure has been applied to the mouse or trackpad button to qualify as a \"force click,\" Safari begins sending webkitmouseforcedown events to the element.",
     "eventName": "webkitmouseforcedown",
-    "eventType": "MouseEvent"
+    "eventType": "MouseEvent",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

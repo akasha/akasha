@@ -6,5 +6,7 @@
     "description": "The fullscreenchange event is fired immediately after an Element switches into or out of full-screen mode.",
     "eventName": "fullscreenchange",
     "eventType": "Event",
-    "eventHandlerProperty": "onfullscreenchange"
+    "eventHandlerProperty": "onfullscreenchange",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

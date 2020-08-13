@@ -6,5 +6,7 @@
     "description": "The focusin event fires when an element is about to receive focus. The main difference between this event and focus is that focusin bubbles while focus does not.",
     "eventName": "focusin",
     "eventType": "FocusEvent",
-    "eventHandlerProperty": "onfocusin"
+    "eventHandlerProperty": "onfocusin",
+    "eventBubbles": false,
+    "eventCancelable": true
 }

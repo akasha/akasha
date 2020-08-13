@@ -6,5 +6,7 @@
     "description": "The mouseleave event is fired at an Element when the cursor of a pointing device (usually a mouse) is moved out of it.",
     "eventName": "mouseleave",
     "eventType": "MouseEvent",
-    "eventHandlerProperty": "onmouseleave"
+    "eventHandlerProperty": "onmouseleave",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

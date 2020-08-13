@@ -14,7 +14,7 @@
     },
     {
         "name": "abort_event",
-        "lastModifiedAt": 1597278913628
+        "lastModifiedAt": 1597359696599
     },
     {
         "name": "error",
@@ -22,19 +22,19 @@
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1597278913908
+        "lastModifiedAt": 1597359697706
     },
     {
         "name": "load_event",
-        "lastModifiedAt": 1597278914277
+        "lastModifiedAt": 1597359698236
     },
     {
         "name": "loadend_event",
-        "lastModifiedAt": 1597278914525
+        "lastModifiedAt": 1597359699362
     },
     {
         "name": "loadstart_event",
-        "lastModifiedAt": 1597278914771
+        "lastModifiedAt": 1597359700070
     },
     {
         "name": "onabort",
@@ -50,7 +50,7 @@
     },
     {
         "name": "progress_event",
-        "lastModifiedAt": 1597278915105
+        "lastModifiedAt": 1597359700695
     },
     {
         "name": "readAsArrayBuffer",

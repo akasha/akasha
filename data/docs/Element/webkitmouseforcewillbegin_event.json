@@ -5,5 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event",
     "description": "Safari for macOS fires the non-standard webkitmouseforcewillbegin event at an Element before firing the initial mousedown event.",
     "eventName": "webkitmouseforcewillbegin",
-    "eventType": "MouseEvent"
+    "eventType": "MouseEvent",
+    "eventBubbles": false,
+    "eventCancelable": false
 }

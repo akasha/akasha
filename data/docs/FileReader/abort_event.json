@@ -6,5 +6,7 @@
     "description": "The abort event is fired when a read has been aborted: for instance because the program called FileReader.abort().",
     "eventName": "abort",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onabort"
+    "eventHandlerProperty": "onabort",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

@@ -6,5 +6,7 @@
     "description": "The loadend event is fired when a file read has completed, successfully or not.",
     "eventName": "loadend",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onloadend"
+    "eventHandlerProperty": "onloadend",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

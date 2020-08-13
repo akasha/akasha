@@ -6,5 +6,7 @@
     "description": "The scroll event fires an element has been scrolled.",
     "eventName": "scroll",
     "eventType": "Event",
-    "eventHandlerProperty": "onscroll"
+    "eventHandlerProperty": "onscroll",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

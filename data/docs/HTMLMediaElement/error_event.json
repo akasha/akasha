@@ -6,5 +6,7 @@
     "description": "The error event is fired when the resource could not be loaded due to an error (for example, a network connectivity problem).",
     "eventName": "error",
     "eventType": "Event",
-    "eventHandlerProperty": "onerror"
+    "eventHandlerProperty": "onerror",
+    "eventBubbles": true,
+    "eventCancelable": true
 }

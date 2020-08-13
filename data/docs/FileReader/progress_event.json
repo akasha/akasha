@@ -6,5 +6,7 @@
     "description": "The progress event is fired periodically as the FileReader reads data.",
     "eventName": "progress",
     "eventType": "ProgressEvent",
-    "eventHandlerProperty": "onprogress"
+    "eventHandlerProperty": "onprogress",
+    "eventBubbles": true,
+    "eventCancelable": true
 }
