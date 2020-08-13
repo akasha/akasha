@@ -245,6 +245,14 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "the invalid event is documented on HTMLInputElement and HTMLElement which causes a problem in codegen as HTMLInputElement extends HTMLElement and overlay methods are final",
+      "config": {
+        "elementNamePattern": "^HTMLInputElement$",
+        "memberNamePattern": "^invalid$"
+      }
+    },
+    {
       "name": "JavaizeEventHandlers",
       "config": {
         "docsDirectory": "data/docs"
