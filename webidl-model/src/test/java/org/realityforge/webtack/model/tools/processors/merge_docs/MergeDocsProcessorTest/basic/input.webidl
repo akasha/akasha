@@ -26,6 +26,12 @@ interface Event {
 interface BlurEvent : Event {
 };
 
+interface DeviceMotionEvent : Event {
+};
+
+interface FocusEvent : Event {
+};
+
 interface EventTarget {
 };
 

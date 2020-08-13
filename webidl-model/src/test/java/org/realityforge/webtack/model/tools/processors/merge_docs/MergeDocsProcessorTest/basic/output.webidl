@@ -123,6 +123,9 @@ partial interface mixin GlobalEventHandlers {
 interface BlurEvent : Event {
 };
 
+interface DeviceMotionEvent : Event {
+};
+
 /**
  * Documentation for Event. It covers multiple
  * lines.
@@ -165,6 +168,9 @@ interface Event {
 };
 
 interface EventTarget {
+};
+
+interface FocusEvent : Event {
 };
 
 interface Node {
