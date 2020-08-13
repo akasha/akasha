@@ -139,6 +139,11 @@ public class DocEntry
     this.eventCancelable = eventCancelable;
   }
 
+  boolean valid()
+  {
+    return null == eventName || ( null != eventType && null != eventBubbles && null != eventCancelable );
+  }
+
   @Nonnull
   static DocEntry load( @Nonnull final Path path )
     throws Exception

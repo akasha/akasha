@@ -317,17 +317,16 @@ public final class MdnDocScanner
             entry.setEventHandlerProperty( td.text().replaceAll( "^.*\\.", "" ) );
           }
         }
-        if ( null == entry.getEventType() || null == entry.getEventBubbles() || null == entry.getEventCancelable() )
+      }
+      if ( !entry.valid() )
+      {
+        entryIndex.remove();
+        if ( 0 != entryIndex.getLastModifiedAt() )
         {
-          entryIndex.remove();
-          if ( 0 != entryIndex.getLastModifiedAt() )
-          {
-            _listener.entryInvalid( entryIndex, entry );
-          }
-          return;
+          _listener.entryInvalid( entryIndex, entry );
         }
       }
-      if ( _runtime.save( entryIndex, entry, modifiedAt ) )
+      else if ( _runtime.save( entryIndex, entry, modifiedAt ) )
       {
         _listener.entryUpdated( entryIndex, entry );
       }
