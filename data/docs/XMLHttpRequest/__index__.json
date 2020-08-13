@@ -13,12 +13,32 @@
         "lastModifiedAt": 1597193620287
     },
     {
+        "name": "abort_event",
+        "lastModifiedAt": 1597278462386
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597278462627
+    },
+    {
         "name": "getAllResponseHeaders",
         "lastModifiedAt": 1597193620545
     },
     {
         "name": "getResponseHeader",
         "lastModifiedAt": 1597193620905
+    },
+    {
+        "name": "load_event",
+        "lastModifiedAt": 1597278463152
+    },
+    {
+        "name": "loadend_event",
+        "lastModifiedAt": 1597278463525
+    },
+    {
+        "name": "loadstart_event",
+        "lastModifiedAt": 1597278463825
     },
     {
         "name": "onreadystatechange",
@@ -31,6 +51,10 @@
     {
         "name": "overrideMimeType",
         "lastModifiedAt": 1597193621510
+    },
+    {
+        "name": "progress_event",
+        "lastModifiedAt": 1597278464054
     },
     {
         "name": "readyState",
@@ -75,6 +99,10 @@
     {
         "name": "timeout",
         "lastModifiedAt": 1597193619167
+    },
+    {
+        "name": "timeout_event",
+        "lastModifiedAt": 1597278464287
     },
     {
         "name": "upload",

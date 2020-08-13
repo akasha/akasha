@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "IDBDatabase.error_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/error_event",
+    "description": "The error event is fired on IDBDatabase when a request returns an error and the event bubbles up to the connection object.",
+    "eventName": "error",
+    "eventType": "Event",
+    "eventHandlerProperty": "onerror"
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SVGElement.abort_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/abort_event",
+    "description": "The abort event is fired when page loading is stopped before an SVG element has been allowed to load completely. This basically implements the standard abort DOM event.",
+    "eventName": "abort",
+    "eventType": "SVGEvent",
+    "eventHandlerProperty": "onabort"
+}

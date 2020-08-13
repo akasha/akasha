@@ -5,7 +5,31 @@
         "lastModifiedAt": 1597192438480
     },
     {
+        "name": "abort_event",
+        "lastModifiedAt": 1597278210238
+    },
+    {
         "name": "dataset",
         "lastModifiedAt": 1597192439129
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597278211163
+    },
+    {
+        "name": "load_event",
+        "lastModifiedAt": 1597278211858
+    },
+    {
+        "name": "resize_event",
+        "lastModifiedAt": 1597278212116
+    },
+    {
+        "name": "scroll_event",
+        "lastModifiedAt": 1597278212492
+    },
+    {
+        "name": "unload_event",
+        "lastModifiedAt": 1597278212733
     }
 ]

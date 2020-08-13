@@ -1,9 +1,10 @@
 
 {
     "kind": "Event",
-    "name": "MessagePort.message",
+    "name": "MessagePort.message_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/message_event",
     "description": "The message event is fired on a MessagePort object when a message arrives on that channel.",
+    "eventName": "message",
     "eventType": "MessageEvent",
     "eventHandlerProperty": "onmessage"
 }

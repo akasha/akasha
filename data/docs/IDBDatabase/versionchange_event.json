@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "IDBDatabase.versionchange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/versionchange_event",
+    "description": "The versionchange event is fired when a database structure change (IDBOpenDBRequest.onupgradeneeded event or IDBFactory.deleteDatabase) was requested.",
+    "eventName": "versionchange",
+    "eventType": "Event",
+    "eventHandlerProperty": "onversionchange"
+}

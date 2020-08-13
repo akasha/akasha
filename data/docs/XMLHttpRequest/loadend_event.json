@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "XMLHttpRequest.loadend_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/loadend_event",
+    "description": "The loadend event is fired when a request has completed, whether successfully (after load) or unsuccessfully (after abort or error).",
+    "eventName": "loadend",
+    "eventType": "ProgressEvent",
+    "eventHandlerProperty": "onloadend"
+}

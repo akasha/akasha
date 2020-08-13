@@ -5,8 +5,16 @@
         "lastModifiedAt": 1597192094606
     },
     {
+        "name": "abort_event",
+        "lastModifiedAt": 1597277809577
+    },
+    {
         "name": "close",
         "lastModifiedAt": 1597192095006
+    },
+    {
+        "name": "close_event",
+        "lastModifiedAt": 1597277809880
     },
     {
         "name": "createObjectStore",
@@ -15,6 +23,10 @@
     {
         "name": "deleteObjectStore",
         "lastModifiedAt": 1597192096224
+    },
+    {
+        "name": "error_event",
+        "lastModifiedAt": 1597277810149
     },
     {
         "name": "onabort",
@@ -35,5 +47,9 @@
     {
         "name": "transaction",
         "lastModifiedAt": 1597192096512
+    },
+    {
+        "name": "versionchange_event",
+        "lastModifiedAt": 1597277810951
     }
 ]

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SVGElement.scroll_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/scroll_event",
+    "description": "The scroll event is fired when an SVG document view is being shifted along the X and/or Y axes. This basically implements the standard scroll DOM event.",
+    "eventName": "scroll",
+    "eventType": "SVGEvent",
+    "eventHandlerProperty": "onscroll"
+}

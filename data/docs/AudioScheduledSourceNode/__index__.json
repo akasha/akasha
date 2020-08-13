@@ -5,6 +5,14 @@
         "lastModifiedAt": 1597192582685
     },
     {
+        "name": "ended_event",
+        "lastModifiedAt": 1597278424899
+    },
+    {
+        "name": "onended",
+        "lastModifiedAt": 1597278425217
+    },
+    {
         "name": "start",
         "lastModifiedAt": 1597192583056
     },

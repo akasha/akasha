@@ -297,6 +297,10 @@
         "lastModifiedAt": 1596581271300
     },
     {
+        "name": "resize_event",
+        "lastModifiedAt": 1597278309020
+    },
+    {
         "name": "scroll",
         "lastModifiedAt": 1596581272468
     },
@@ -331,6 +335,10 @@
     {
         "name": "stop",
         "lastModifiedAt": 1596581283631
+    },
+    {
+        "name": "storage_event",
+        "lastModifiedAt": 1597278309738
     },
     {
         "name": "transitioncancel_event",

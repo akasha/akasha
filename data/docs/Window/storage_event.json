@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "Window.storage_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event",
+    "description": "The storage event of the Window interface fires when a storage area (localStorage) has been modified in the context of another document.",
+    "eventName": "storage",
+    "eventType": "StorageEvent",
+    "eventHandlerProperty": "onstorage"
+}

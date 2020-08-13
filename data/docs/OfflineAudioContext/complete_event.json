@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "OfflineAudioContext.complete_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/complete_event",
+    "description": "The complete event of the OfflineAudioContext interface is fired when the rendering of an offline audio context is complete.",
+    "eventName": "complete",
+    "eventType": "OfflineAudioCompletionEvent",
+    "eventHandlerProperty": "oncomplete"
+}

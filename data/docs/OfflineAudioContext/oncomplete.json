@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OfflineAudioContext.oncomplete",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/oncomplete",
+    "description": "When processing is complete, you might want to use the oncomplete handler the prompt the user that the audio can now be played, and enable the play button."
+}

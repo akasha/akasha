@@ -1,0 +1,8 @@
+
+{
+    "kind": "Event",
+    "name": "XMLHttpRequest.timeout_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout_event",
+    "description": "The timeout event is fired when progression is terminated due to preset time expiring.",
+    "eventName": "timeout"
+}

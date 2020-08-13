@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "SVGElement.resize_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/resize_event",
+    "description": "The resize event is fired when an SVG document is being resized. This event is only applicable to outermost SVG elements and is dispatched after the resize operation has taken place.",
+    "eventName": "resize",
+    "eventType": "SVGEvent",
+    "eventHandlerProperty": "onresize"
+}
