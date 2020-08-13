@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "TextTrackList.addtrack_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/addtrack_event",
+    "description": "The addtrack event is fired when a track is added to a TextTrackList.",
+    "eventName": "addtrack",
+    "eventType": "TrackEvent",
+    "eventHandlerProperty": "onaddtrack"
+}

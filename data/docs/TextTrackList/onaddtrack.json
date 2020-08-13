@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextTrackList.onaddtrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onaddtrack",
+    "description": "The TextTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new text track has been added to the media element whose text tracks the TextTrackList represents."
+}

@@ -1,0 +1,10 @@
+
+{
+    "kind": "Event",
+    "name": "TextTrackList.change_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/change_event",
+    "description": "The change event is fired when a text track is made active or inactive, or a textTrackList is otherwise changed.",
+    "eventName": "change",
+    "eventType": "Event",
+    "eventHandlerProperty": "onchange"
+}
