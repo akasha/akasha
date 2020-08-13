@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.effectiveDirective",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/effectiveDirective",
+    "description": "The effectiveDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation."
+}

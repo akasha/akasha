@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.originalPolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/originalPolicy",
+    "description": "The originalPolicy read-only property of the SecurityPolicyViolationEvent interface is a DOMString containing the policy whose enforcement uncovered the violation."
+}

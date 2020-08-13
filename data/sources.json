@@ -278,6 +278,11 @@
         "url": "https://webbluetoothcg.github.io/web-bluetooth/"
     },
     {
+        "lastModifiedTime": 1592557551000,
+        "name": "webappsec_csp",
+        "url": "https://w3c.github.io/webappsec-csp/"
+    },
+    {
         "lastModifiedTime": 1551474872000,
         "name": "webauthn",
         "url": "https://www.w3.org/TR/2019/REC-webauthn-1-20190304/"

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.statusCode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/statusCode",
+    "description": "The statusCode read-only property of the SecurityPolicyViolationEvent interface is a number representing the HTTP status code of the document or worker in which the violation occurred."
+}

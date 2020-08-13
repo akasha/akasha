@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.disposition",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/disposition",
+    "description": "The disposition read-only property of the SecurityPolicyViolationEvent interface indicates how the violated policy is configured to be treated by the user agent."
+}

@@ -1,0 +1,59 @@
+
+[
+    {
+        "name": "SecurityPolicyViolationEvent",
+        "lastModifiedAt": 1597361359370
+    },
+    {
+        "name": "__type__",
+        "lastModifiedAt": 1597361358538
+    },
+    {
+        "name": "blockedURI",
+        "lastModifiedAt": 1597361360195
+    },
+    {
+        "name": "columnNumber",
+        "lastModifiedAt": 1597361361007
+    },
+    {
+        "name": "disposition",
+        "lastModifiedAt": 1597361361866
+    },
+    {
+        "name": "documentURI",
+        "lastModifiedAt": 1597361362463
+    },
+    {
+        "name": "effectiveDirective",
+        "lastModifiedAt": 1597361363324
+    },
+    {
+        "name": "lineNumber",
+        "lastModifiedAt": 1597361363683
+    },
+    {
+        "name": "originalPolicy",
+        "lastModifiedAt": 1597361364618
+    },
+    {
+        "name": "referrer",
+        "lastModifiedAt": 1597361365012
+    },
+    {
+        "name": "sample",
+        "lastModifiedAt": 1597361365406
+    },
+    {
+        "name": "sourceFile",
+        "lastModifiedAt": 1597361365755
+    },
+    {
+        "name": "statusCode",
+        "lastModifiedAt": 1597361366130
+    },
+    {
+        "name": "violatedDirective",
+        "lastModifiedAt": 1597361366472
+    }
+]

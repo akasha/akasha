@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.violatedDirective",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/violatedDirective",
+    "description": "The violatedDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation."
+}

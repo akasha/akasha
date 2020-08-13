@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.sample",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/sample",
+    "description": "The sample read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing a sample of the resource that caused the violation."
+}

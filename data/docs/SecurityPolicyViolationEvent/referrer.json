@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.referrer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/referrer",
+    "description": "The referrer read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the referrer of the resources whose policy was violated. This will be a URL or null."
+}

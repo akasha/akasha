@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "SecurityPolicyViolationEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent",
+    "description": "The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated."
+}

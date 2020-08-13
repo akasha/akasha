@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SecurityPolicyViolationEvent.blockedURI",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/blockedURI",
+    "description": "The blockedURI read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the URI of the resource that was blocked because it violates a policy."
+}
