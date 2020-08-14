@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ReportingObserver.ReportingObserver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/ReportingObserver",
+    "description": "The ReportingObserver() constructor of the Reporting API creates a new ReportingObserver object instance, which can be used to collect and access reports."
+}

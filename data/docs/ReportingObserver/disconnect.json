@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReportingObserver.disconnect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/disconnect",
+    "description": "The disconnect() method of the ReportingObserver interface stops a reporting observer that had previously started observing from collecting reports."
+}

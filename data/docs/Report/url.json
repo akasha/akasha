@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Report.url",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Report/url",
+    "description": "The url read-only property of the Report interface returns the URL of the document that generated the report."
+}

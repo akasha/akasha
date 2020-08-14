@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Report.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Report/type",
+    "description": "The type read-only property of the Report interface returns the type of report generated, e.g. deprecation or intervention."
+}

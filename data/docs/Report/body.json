@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Report.body",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Report/body",
+    "description": "The body read-only property of the Report interface returns the body of the report, which is a ReportBody object containing the detailed report information."
+}

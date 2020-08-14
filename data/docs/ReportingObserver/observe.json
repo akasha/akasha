@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReportingObserver.observe",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/observe",
+    "description": "The observe() method of the ReportingObserver interface instructs a reporting observer to start collecting reports in its report queue."
+}

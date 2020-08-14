@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReportingObserver.takeRecords",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver/takeRecords",
+    "description": "The takeRecords() method of the ReportingObserver interface returns the current list of reports contained in the observer's report queue, and empties the queue."
+}
