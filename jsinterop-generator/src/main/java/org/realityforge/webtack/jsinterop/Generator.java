@@ -925,14 +925,15 @@ final class Generator
     for ( final OperationMember operation : definition.getOperations() )
     {
       final OperationMember.Kind operationKind = operation.getKind();
-      if ( OperationMember.Kind.DEFAULT == operationKind ||
-           OperationMember.Kind.GETTER == operationKind ||
-           OperationMember.Kind.SETTER == operationKind ||
-           OperationMember.Kind.DELETER == operationKind )
+      if ( OperationMember.Kind.DEFAULT == operationKind )
       {
         generateDefaultOperation( context, operation, type );
       }
-      else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
+      else if ( ( OperationMember.Kind.STRINGIFIER == operationKind ||
+                  OperationMember.Kind.GETTER == operationKind ||
+                  OperationMember.Kind.SETTER == operationKind ||
+                  OperationMember.Kind.DELETER == operationKind ) &&
+                null != operation.getName() )
       {
         generateDefaultOperation( context, operation, type );
       }
