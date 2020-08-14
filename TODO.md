@@ -54,7 +54,7 @@ complete as there is too much un-said.
 
 Generate host element factories in the current style Generate one prop object per HTML element with parallel inheritance. The `ref` param would be typed and all the other attributes would be as-is. Events would need to be specially handled to map to reacts event system but we could control whether we generate a capture handler using the `[NoBubble]` attribute on events.
 
-* boolean input values should have a method that accepts a boolean aswell as one that passes default value of true. i.e. `HtmlProps.required(boolean) { return ...; }` and `HtmlProps.required() { return required(true); }` 
+* boolean input values should have a method that accepts a boolean aswell as one that passes default value of true. i.e. `HtmlProps.required(boolean) { return ...; }` and `HtmlProps.required() { return required(true); }`
 
 # Other
 
