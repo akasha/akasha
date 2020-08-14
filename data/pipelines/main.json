@@ -107,6 +107,15 @@
     },
     {
       "name": "RemoveElement",
+      "description": "The HTMLFormControlsCollection overrides HTMLCollection with incompatible method so we patch it. This is not strictly consistent with js but not sure how else to handle it",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "namePattern": "^HTMLFormControlsCollection$",
+        "type": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveElement",
       "description": "These are no longer needed once Navigator.getUserMedia is removed",
       "sourceSelector": "name=mediacapture_main",
       "config": {
