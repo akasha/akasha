@@ -72,3 +72,13 @@ interface SpeechRecognitionErrorEvent : Event {
   constructor( DOMString type );
   stringifier DOMString messageDescription();
 };
+
+[Exposed=Window]
+interface Storage {
+  readonly attribute unsigned long length;
+  void clear();
+  DOMString? key( unsigned long index );
+  getter DOMString? getItem( DOMString key );
+  setter void setItem( DOMString key, DOMString value );
+  deleter void removeItem( DOMString key );
+};

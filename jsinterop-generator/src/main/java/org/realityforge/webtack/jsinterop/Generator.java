@@ -925,7 +925,10 @@ final class Generator
     for ( final OperationMember operation : definition.getOperations() )
     {
       final OperationMember.Kind operationKind = operation.getKind();
-      if ( OperationMember.Kind.DEFAULT == operationKind )
+      if ( OperationMember.Kind.DEFAULT == operationKind ||
+           OperationMember.Kind.GETTER == operationKind ||
+           OperationMember.Kind.SETTER == operationKind ||
+           OperationMember.Kind.DELETER == operationKind )
       {
         generateDefaultOperation( context, operation, type );
       }
@@ -1473,8 +1476,8 @@ final class Generator
                                          @Nonnull final List<TypedValue> typeList,
                                          @Nonnull final TypeSpec.Builder type )
   {
-    assert OperationMember.Kind.DEFAULT == operation.getKind() ||
-           OperationMember.Kind.STRINGIFIER == operation.getKind();
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
     final String name = operation.getName();
     assert null != name;
     final String methodName = safeMethodName( name );
