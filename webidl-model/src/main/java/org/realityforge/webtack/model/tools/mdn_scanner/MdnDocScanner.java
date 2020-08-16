@@ -5,10 +5,14 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Deque;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -30,7 +34,72 @@ public final class MdnDocScanner
   @Nonnull
   public static final String API_DOCS_BASE_URL = "https://developer.mozilla.org/en-US/docs/Web/API/";
   @Nonnull
+  public static final String JS_DOCS_BASE_URL =
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/";
   @Nonnull
+  public static final Set<String> JS_TYPES = Collections.unmodifiableSet( new HashSet<>( Arrays.asList(
+    "AggregateError",
+    "Array",
+    "ArrayBuffer",
+    "AsyncFunction",
+    "Atomics",
+    "BigInt",
+    "BigInt64Array",
+    "BigUint64Array",
+    "Boolean",
+    "DataView",
+    "Date",
+    "Error",
+    "EvalError",
+    "FinalizationRegistry",
+    "Float32Array",
+    "Float64Array",
+    "Function",
+    "Generator",
+    "GeneratorFunction",
+    "Infinity",
+    "Int16Array",
+    "Int32Array",
+    "Int8Array",
+    "InternalError",
+    "Intl",
+    "JSON",
+    "Map",
+    "Math",
+    "NaN",
+    "Number",
+    "Object",
+    "Promise",
+    "Proxy",
+    "RangeError",
+    "ReferenceError",
+    "Reflect",
+    "RegExp",
+    "Set",
+    "SharedArrayBuffer",
+    "String",
+    "Symbol",
+    "SyntaxError",
+    "TypeError",
+    "TypedArray",
+    "URIError",
+    "Uint16Array",
+    "Uint32Array",
+    "Uint8Array",
+    "Uint8ClampedArray",
+    "WeakMap",
+    "WeakRef",
+    "WeakSet",
+    "WebAssembly",
+    "WebAssembly.Module",
+    "WebAssembly.Global",
+    "WebAssembly.Instance",
+    "WebAssembly.Memory",
+    "WebAssembly.Table",
+    "WebAssembly.CompileError",
+    "WebAssembly.LinkError",
+    "WebAssembly.RuntimeError"
+  ) ) );
   @Nonnull
   private final DocRepositoryRuntime _runtime;
   @Nonnull
@@ -78,7 +147,7 @@ public final class MdnDocScanner
                                Objects.requireNonNull( member ) );
     removeTempFile( entryIndex );
 
-    final String url = BASE_URL + type + ( DocKind.Type == kind ? "" : "/" + entryIndex.getName() );
+    final String url = deriveUrl( kind, type, entryIndex );
 
     final DocEntry entry = _runtime.findDocEntry( entryIndex );
     if ( null != entry && null != entry.getHref() && !entry.getHref().equals( url ) )
@@ -109,6 +178,15 @@ public final class MdnDocScanner
         removeTempFile( entryIndex );
       }
     }
+  }
+
+  @Nonnull
+  private String deriveUrl( @Nonnull final DocKind kind,
+                            @Nonnull final String type,
+                            @Nonnull final EntryIndex entryIndex )
+  {
+    final String baseUrl = JS_TYPES.contains( type ) ? JS_DOCS_BASE_URL : API_DOCS_BASE_URL;
+    return baseUrl + type.replace( '.', '/' ) + ( DocKind.Type == kind ? "" : "/" + entryIndex.getName() );
   }
 
   @Nonnull
@@ -218,12 +296,17 @@ public final class MdnDocScanner
 
                    // Sometimes events section actually lists event handler properties
                    "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
-                   "#Events + dl > dt > a:not([href$=\"_event\"]) > code" )
+                   "#Events + dl > dt > a:not([href$=\"_event\"]) > code, " +
+
+                   // Some regular js methods such as those for WebAssembly
+                   "#Instance_properties + dl > dt > a > code" )
           .stream()
           .map( Element::text )
           // Strip out the type name that sometimes appears in the documentation
           .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
           .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
+          .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
+          .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
           .filter( SourceVersion::isName )
           .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
 
@@ -232,7 +315,10 @@ public final class MdnDocScanner
             .select( "#Methods + p + dl > dt > a > code, " +
                      "#Methods + dl > dt > a code, " +
                      "#Static_methods + p + dl > dt > a > code, " +
-                     "#Static_methods + dl > dt > a > code" )
+                     "#Static_methods + dl > dt > a > code, " +
+
+                     // Some regular js methods such as those for WebAssembly
+                     "#Instance_methods + dl > dt > a > code" )
             .stream()
             .map( Element::text )
             // Strip the brackets at end of methods
@@ -240,6 +326,8 @@ public final class MdnDocScanner
             // Strip out the type name that sometimes appears in the documentation
             .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
             .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
+            .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
+            .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
             .filter( SourceVersion::isName )
             .collect( Collectors.toList() );
         if ( !methods.isEmpty() )
@@ -332,7 +420,6 @@ public final class MdnDocScanner
       {
         _listener.entryUnmodified( entryIndex, entry );
       }
-
     }
     catch ( final Exception e )
     {
