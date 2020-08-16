@@ -154,6 +154,10 @@ final class AddDocsCommand
       {
         typeNamesToAdd.add( definition.getName() );
       }
+      for ( final NamespaceDefinition definition : schema.getNamespaces() )
+      {
+        typeNamesToAdd.add( definition.getName() );
+      }
     }
 
     for ( final String typeName : typeNamesToAdd )
