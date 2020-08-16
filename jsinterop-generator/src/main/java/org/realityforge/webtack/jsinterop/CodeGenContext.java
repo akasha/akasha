@@ -193,7 +193,7 @@ final class CodeGenContext
     final InterfaceDefinition interfaceDefinition = getSchema().findInterfaceByName( name );
     if ( null != interfaceDefinition )
     {
-      return ClassName.get( derivePackage( getNamespace( interfaceDefinition ) ), name );
+      return ClassName.get( derivePackage( interfaceDefinition.getNamespace() ), name );
     }
     return ClassName.get( getPackageName(), name );
   }
@@ -202,17 +202,6 @@ final class CodeGenContext
   TypeName toTypeName( @Nonnull final Type type )
   {
     return toTypeName( type, type.isNullable() );
-  }
-
-  @Nullable
-  String getNamespace( @Nonnull final Definition definition )
-  {
-    return definition.getExtendedAttributes()
-      .stream()
-      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
-      .map( ExtendedAttribute::getIdent )
-      .findAny()
-      .orElse( null );
   }
 
   @Nonnull

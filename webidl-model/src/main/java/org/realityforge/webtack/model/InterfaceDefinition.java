@@ -139,6 +139,17 @@ public final class InterfaceDefinition
     return _setLikeMember;
   }
 
+  @Nullable
+  public String getNamespace()
+  {
+    return getExtendedAttributes()
+      .stream()
+      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
+      .map( ExtendedAttribute::getIdent )
+      .findAny()
+      .orElse( null );
+  }
+
   @Override
   public boolean equals( final Object o )
   {

@@ -1006,7 +1006,7 @@ final class Generator
       type.addMethod( method.build() );
     }
 
-    context.writeTopLevelType( type, context.getNamespace( definition ) );
+    context.writeTopLevelType( type, definition.getNamespace() );
   }
 
   private void generateMapLikeOperations( @Nonnull final CodeGenContext context,
@@ -1315,16 +1315,8 @@ final class Generator
     }
     else
     {
-      final String namespace =
-        definition
-          .getExtendedAttributes()
-          .stream()
-          .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && "LegacyNamespace".equals( a.getName() ) )
-          .map( ExtendedAttribute::getIdent )
-          .map( n -> n + "." )
-          .findAny()
-          .orElse( "" );
-      return namespace + definition.getName();
+      final String namespace = definition.getNamespace();
+      return ( null == namespace ? "" : namespace ) + definition.getName();
     }
   }
 
