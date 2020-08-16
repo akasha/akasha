@@ -254,7 +254,7 @@ final class Generator
         final Type resolvedType = typedef.getType();
         if ( Kind.Union == resolvedType.getKind() )
         {
-          final boolean nullable = context.getSchema().isNullable( resolvedType );
+          final boolean nullable = context.getSchema().isNullable( type );
           values.add( new TypedValue( declaredType,
                                       type,
                                       context.lookupTypeByName( name ),
