@@ -12,8 +12,6 @@ complete as there is too much un-said.
 
 * Generate documentation for interfaces with namespaces
 
-* Scrape WebAssembly documentation from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#WebAssembly
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
