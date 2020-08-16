@@ -17,6 +17,7 @@ import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.MixinDefinition;
+import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
@@ -148,7 +149,8 @@ final class AddDocsCommand
       }
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
-        typeNamesToAdd.add( definition.getName() );
+        final String namespace = definition.getNamespace();
+        typeNamesToAdd.add( ( null == namespace ? "" : namespace + "." ) + definition.getName() );
       }
       for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
       {
