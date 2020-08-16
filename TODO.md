@@ -8,8 +8,6 @@ complete as there is too much un-said.
 
 # Docs Integration
 
-* Document globalThis with content from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis
-
 * Scrape WebAssembly documentation from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects#WebAssembly
 
 * Some doc entries include documentation for constants .. scan for that?.

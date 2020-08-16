@@ -6,6 +6,11 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
+/**
+ * Class to get access to the global <b>globalThis</b> property or the global object.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis">globalThis - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -18,6 +23,12 @@ public final class Global {
   private Global() {
   }
 
+  /**
+   * Accessor for the global <b>globalThis</b> property contains the global <i>this</i> value, which is akin to the global object.
+   *
+   * @return the global object
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis">globalThis - MDN</a>
+   */
   @JsOverlay
   @Nonnull
   public static Window globalThis() {

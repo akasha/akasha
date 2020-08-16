@@ -129,6 +129,10 @@ final class Generator
                           .addMember( "name", "$S", "goog.global" )
                           .build() );
 
+    type.addJavadoc( "Class to get access to the global <b>globalThis</b> property or the global object.\n" +
+                     "\n" +
+                     "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" );
+
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
     final TypeName globalType = context.lookupTypeByName( definition.getName() );
@@ -141,6 +145,11 @@ final class Generator
                       .addAnnotation( Types.NONNULL )
                       .returns( globalType )
                       .addStatement( "return globalThis" )
+                      .addJavadoc( "Accessor for the global <b>globalThis</b> property contains the global " +
+                                   "<i>this</i> value, which is akin to the global object.\n" +
+                                   "\n" +
+                                   "@return the global object\n" +
+                                   "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
                       .build() );
 
     context.writeTopLevelType( type );
