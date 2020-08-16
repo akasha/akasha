@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WebAssembly.Module",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module",
+    "description": "A WebAssembly.Module object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently shared with Workers, and instantiated multiple times."
+}

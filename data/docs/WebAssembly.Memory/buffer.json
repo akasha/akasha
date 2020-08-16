@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WebAssembly.Memory.buffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer",
+    "description": "The buffer prototype property of the WebAssembly.Memory object returns the buffer contained in the memory."
+}

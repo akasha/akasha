@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WebAssembly.Instance",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance",
+    "description": "A WebAssembly.Instance object is a stateful, executable instance of a WebAssembly.Module. Instance objects contain all the Exported WebAssembly functions that allow calling into WebAssembly code from JavaScript."
+}

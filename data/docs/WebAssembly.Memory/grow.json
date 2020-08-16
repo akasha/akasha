@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebAssembly.Memory.grow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow",
+    "description": "The grow() protoype method of the Memory object increases the size of the memory instance by a specified number of WebAssembly pages."
+}

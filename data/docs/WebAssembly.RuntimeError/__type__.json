@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WebAssembly.RuntimeError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError",
+    "description": "The WebAssembly.RuntimeError object is the error type that is thrown whenever WebAssembly specifies a trap."
+}

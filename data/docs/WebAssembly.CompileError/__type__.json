@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WebAssembly.CompileError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError",
+    "description": "The WebAssembly.CompileError object indicates an error during WebAssembly decoding or validation."
+}

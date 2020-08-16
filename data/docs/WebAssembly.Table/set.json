@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebAssembly.Table.set",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set",
+    "description": "The set() prototype method of the WebAssembly.Table object mutates a reference stored at a given index to a different value."
+}
