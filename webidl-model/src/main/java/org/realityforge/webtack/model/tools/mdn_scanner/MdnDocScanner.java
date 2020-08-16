@@ -28,11 +28,9 @@ import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException
 public final class MdnDocScanner
 {
   @Nonnull
-  private static final String API_RELATIVE_URL = "/en-US/docs/Web/API/";
+  public static final String API_DOCS_BASE_URL = "https://developer.mozilla.org/en-US/docs/Web/API/";
   @Nonnull
-  private static final String HOST_URL = "https://developer.mozilla.org";
   @Nonnull
-  public static final String BASE_URL = HOST_URL + API_RELATIVE_URL;
   @Nonnull
   private final DocRepositoryRuntime _runtime;
   @Nonnull
