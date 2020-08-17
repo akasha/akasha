@@ -14,3 +14,15 @@ enum SpeechRecognitionErrorCode {
   "not-allowed",
   "service-not-allowed"
 };
+
+/**
+ * This tests scenario where there is an empty enum value.
+ */
+enum XMLHttpRequestResponseType {
+  "",
+  "arraybuffer",
+  "blob",
+  "document",
+  "json",
+  "text"
+};

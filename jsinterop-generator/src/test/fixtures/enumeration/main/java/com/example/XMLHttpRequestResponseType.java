@@ -3,6 +3,9 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 
+/**
+ * This tests scenario where there is an empty enum value.
+ */
 @Generated("org.realityforge.webtack")
 public final class XMLHttpRequestResponseType {
   @Nonnull
