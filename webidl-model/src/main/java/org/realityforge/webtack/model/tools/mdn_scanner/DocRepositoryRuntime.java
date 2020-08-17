@@ -185,8 +185,8 @@ public final class DocRepositoryRuntime
   {
     final String name = entry.getName();
     final int splitIndex = name.lastIndexOf( "." );
-    final String type = name.substring( 0, splitIndex );
-    final String member = name.substring( splitIndex + 1 );
+    final String type = -1 == splitIndex ? name : name.substring( 0, splitIndex );
+    final String member = -1 == splitIndex ? EntryIndex.TYPE_KEY : name.substring( splitIndex + 1 );
     final DocIndex index = findOrCreateIndexForType( type );
     final EntryIndex entryIndex = index.findOrCreateEntry( member );
     entryIndex.setLastModifiedAt( modifiedAt );
