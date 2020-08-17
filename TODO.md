@@ -8,10 +8,6 @@ complete as there is too much un-said.
 
 # Docs Integration
 
-* Generate documentation for namespaces into package docs
-
-* Generate documentation for interfaces with namespaces
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
