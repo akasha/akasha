@@ -1316,7 +1316,7 @@ final class Generator
     else
     {
       final String namespace = definition.getNamespace();
-      return ( null == namespace ? "" : namespace ) + definition.getName();
+      return ( null == namespace ? "" : namespace + "." ) + definition.getName();
     }
   }
 
