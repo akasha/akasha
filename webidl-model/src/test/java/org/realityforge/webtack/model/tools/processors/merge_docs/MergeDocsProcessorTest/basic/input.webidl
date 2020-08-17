@@ -1,3 +1,11 @@
+[Exposed=(Window,Worker,Worklet)]
+namespace WebAssembly {
+  Promise<Module> compile( BufferSource bytes );
+  Promise<WebAssemblyInstantiatedSource> instantiate( BufferSource bytes, optional object importObject );
+  Promise<Instance> instantiate( Module moduleObject, optional object importObject );
+  boolean validate( BufferSource bytes );
+};
+
 [Exposed=Window]
 callback interface NodeFilter {
   const unsigned short FILTER_ACCEPT = 1;
@@ -61,6 +69,11 @@ interface FocusEvent : Event {
 
 interface HTMLFormElement {
   event Event focus;
+};
+
+[LegacyNamespace=WebAssembly, Constructor( Module module, optional object importObject ), Exposed=(Window,Worker,Worklet)]
+interface Instance {
+  readonly attribute object exports;
 };
 
 interface Node {

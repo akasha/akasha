@@ -54,8 +54,10 @@ public final class DocRepositoryRuntime
   }
 
   @Nullable
-  public DocEntry findDocEntry( @Nonnull final String name )
+  public DocEntry findDocEntry( @Nonnull final String type, @Nullable final String member )
   {
+    final String memberKey = null == member ? EntryIndex.TYPE_KEY : member;
+    final String name = type + "." + memberKey;
     final DocEntry entry = _cache.get( name );
     if ( null != entry )
     {
@@ -67,8 +69,7 @@ public final class DocRepositoryRuntime
     }
     else
     {
-      final String[] parts = name.split( "\\." );
-      final DocIndex index = findIndexForType( parts[ 0 ] );
+      final DocIndex index = findIndexForType( type );
       if ( null == index )
       {
         _negativeCache.add( name );
@@ -76,7 +77,7 @@ public final class DocRepositoryRuntime
       }
       else
       {
-        final EntryIndex entryIndex = index.findEntry( 1 == parts.length ? "__type__" : parts[ 1 ] );
+        final EntryIndex entryIndex = index.findEntry( memberKey );
         if ( null == entryIndex )
         {
           _negativeCache.add( name );
@@ -119,12 +120,11 @@ public final class DocRepositoryRuntime
   @Nullable
   public DocEntry findDocEntry( @Nonnull final EntryIndex entryIndex )
   {
-    final String name = entryIndex.getDocIndex().getName() + "." + entryIndex.getName();
-    final Path path = getDocEntryPath( name );
+    final Path path = getDocEntryPath( entryIndex.getDocIndex().getName(), entryIndex.getName() );
     final DocEntry entry = tryLoadDocEntry( path );
     if ( null != entry )
     {
-      _cache.put( name, entry );
+      _cache.put( entryIndex.getQualifiedName(), entry );
     }
     return entry;
   }
@@ -183,18 +183,20 @@ public final class DocRepositoryRuntime
   private void updateIndex( @Nonnull final DocEntry entry, final long modifiedAt )
     throws IndexException
   {
-    final String[] parts = entry.getName().split( "\\." );
-    final DocIndex index = findOrCreateIndexForType( parts[ 0 ] );
-    final EntryIndex entryIndex = index.findOrCreateEntry( 1 == parts.length ? "__type__" : parts[ 1 ] );
+    final String name = entry.getName();
+    final int splitIndex = name.lastIndexOf( "." );
+    final String type = name.substring( 0, splitIndex );
+    final String member = name.substring( splitIndex + 1 );
+    final DocIndex index = findOrCreateIndexForType( type );
+    final EntryIndex entryIndex = index.findOrCreateEntry( member );
     entryIndex.setLastModifiedAt( modifiedAt );
     index.save();
   }
 
   @Nonnull
-  private Path getDocEntryPath( @Nonnull final String qualifiedName )
+  private Path getDocEntryPath( @Nonnull final String type, @Nonnull final String member )
   {
-    final String[] parts = qualifiedName.split( "\\." );
-    return _dataDirectory.resolve( parts[ 0 ] ).resolve( ( 1 == parts.length ? "__type__" : parts[ 1 ] ) + ".json" );
+    return _dataDirectory.resolve( type ).resolve( member + ".json" );
   }
 
   @Nonnull

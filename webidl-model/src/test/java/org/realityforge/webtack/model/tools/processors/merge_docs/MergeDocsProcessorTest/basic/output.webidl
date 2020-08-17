@@ -1,4 +1,37 @@
 /**
+ * The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly">WebAssembly - MDN</a>
+ */
+[Exposed=(Window,Worker,Worklet)]
+namespace WebAssembly {
+  /**
+   * The WebAssembly.compile() function compiles WebAssembly binary code into a WebAssembly.Module object. This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiate() function should be used).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile">WebAssembly.compile - MDN</a>
+   */
+  Promise<Module> compile( BufferSource bytes );
+  /**
+   * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
+   */
+  Promise<WebAssemblyInstantiatedSource> instantiate( BufferSource bytes, optional object importObject );
+  /**
+   * The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate">WebAssembly.instantiate - MDN</a>
+   */
+  Promise<Instance> instantiate( Module moduleObject, optional object importObject );
+  /**
+   * The WebAssembly.validate() function validates a given typed array of WebAssembly binary code, returning whether the bytes form a valid wasm module (true) or not (false).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/validate">WebAssembly.validate - MDN</a>
+   */
+  boolean validate( BufferSource bytes );
+};
+
+/**
  * Documentation for NodeFilter
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter">NodeFilter - MDN</a>
@@ -158,6 +191,11 @@ interface Event {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/filterGlobalEvent">Event.filterGlobalEvent - MDN</a>
    */
   static Event filterGlobalEvent( DOMString type );
+  /**
+   * Documentation for Event.Event constructor.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/Event">Event.Event - MDN</a>
+   */
   constructor( DOMString type, optional EventInit eventInitDict = {} );
   /**
    * Documentation for Event.composedPath operation.
@@ -182,6 +220,21 @@ interface HTMLFormElement {
    */
   [NoBubble, NoCancel]
   event Event reset;
+};
+
+/**
+ * A WebAssembly.Instance object is a stateful, executable instance of a WebAssembly.Module. Instance objects contain all the Exported WebAssembly functions that allow calling into WebAssembly code from JavaScript.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance">WebAssembly.Instance - MDN</a>
+ */
+[LegacyNamespace=WebAssembly, Constructor( Module module, optional object importObject ), Exposed=(Window,Worker,Worklet)]
+interface Instance {
+  /**
+   * The exports readonly property of the WebAssembly.Instance object prototype returns an object containing as its members all the functions exported from the WebAssembly module instance, to allow them to be accessed and used by JavaScript.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">WebAssembly.Instance.exports - MDN</a>
+   */
+  readonly attribute object exports;
 };
 
 interface Node {

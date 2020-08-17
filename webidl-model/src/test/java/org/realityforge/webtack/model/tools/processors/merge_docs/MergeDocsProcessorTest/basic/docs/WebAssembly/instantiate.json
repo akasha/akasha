@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebAssembly.instantiate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate",
+    "description": "The WebAssembly.instantiate() function allows you to compile and instantiate WebAssembly code. This function has two overloads:"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WebAssembly.Instance.exports",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports",
+    "description": "The exports readonly property of the WebAssembly.Instance object prototype returns an object containing as its members all the functions exported from the WebAssembly module instance, to allow them to be accessed and used by JavaScript."
+}

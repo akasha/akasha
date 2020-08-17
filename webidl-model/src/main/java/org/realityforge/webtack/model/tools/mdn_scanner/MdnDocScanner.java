@@ -142,7 +142,7 @@ public final class MdnDocScanner
   {
     final DocIndex index = _runtime.findOrCreateIndexForType( type );
     final EntryIndex entryIndex =
-      index.findOrCreateEntry( DocKind.Type == kind ? "__type__" :
+      index.findOrCreateEntry( DocKind.Type == kind ? EntryIndex.TYPE_KEY :
                                DocKind.Event == kind ? member + "_event" :
                                Objects.requireNonNull( member ) );
     removeTempFile( entryIndex );
