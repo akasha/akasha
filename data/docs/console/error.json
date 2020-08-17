@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.error",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/error",
+    "description": "Outputs an error message to the Web Console."
+}

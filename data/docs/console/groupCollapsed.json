@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.groupCollapsed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/groupCollapsed",
+    "description": "Creates a new inline group in the Web Console. Unlike console.group(), however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group."
+}

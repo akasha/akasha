@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.timeEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/timeEnd",
+    "description": "Stops a timer that was previously started by calling console.time()."
+}

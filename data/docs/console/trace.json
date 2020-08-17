@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.trace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/trace",
+    "description": "The console interface's trace() method outputs a stack trace to the Web Console."
+}

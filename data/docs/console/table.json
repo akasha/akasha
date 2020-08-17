@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.table",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/table",
+    "description": "Displays tabular data as a table."
+}

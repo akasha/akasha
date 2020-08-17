@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.profileEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/profileEnd",
+    "description": "The profileEnd method stops recording a profile previously started with Console.profile()."
+}

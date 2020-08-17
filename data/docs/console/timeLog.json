@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.timeLog",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/timeLog",
+    "description": "Logs the current value of a timer that was previously started by calling console.time() to the console."
+}

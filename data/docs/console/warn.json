@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.warn",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/warn",
+    "description": "Outputs a warning message to the Web Console."
+}

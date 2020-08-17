@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.groupEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/groupEnd",
+    "description": "Exits the current inline group in the Web Console. See Using groups in the console in the console documentation for details and examples."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.timeStamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/timeStamp",
+    "description": "Adds a single marker to the browser's Performance or Waterfall tool. This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events."
+}

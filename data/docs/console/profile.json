@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "console.profile",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/profile",
+    "description": "Starts recording a performance profile (for example, the Firefox performance tool)."
+}

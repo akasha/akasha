@@ -452,6 +452,11 @@
         "url": "https://compat.spec.whatwg.org/"
     },
     {
+        "lastModifiedTime": 1593420667000,
+        "name": "whatwg_console",
+        "url": "https://console.spec.whatwg.org/"
+    },
+    {
         "lastModifiedTime": 1593431298000,
         "name": "whatwg_dom",
         "url": "https://dom.spec.whatwg.org/"
