@@ -159,6 +159,20 @@ final class Generator
     }
     type.addMethod( method.build() );
 
+    for ( final NamespaceDefinition namespace : context.getSchema().getNamespaces() )
+    {
+      final String name = namespace.getName();
+      type.addMethod( MethodSpec
+                        .methodBuilder( NamingUtil.lowercaseFirstCharacter( safeJsPropertyMethodName( name ) ) )
+                        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+                        .returns( context.lookupTypeByName( namespace.getName() ) )
+                        .addAnnotation( AnnotationSpec
+                                          .builder( Types.JS_PROPERTY )
+                                          .addMember( "name", "$S", name )
+                                          .build() )
+                        .addAnnotation( Types.NONNULL ).build() );
+    }
+
     final TypeName globalType = ClassName.bestGuess( "Global" );
 
     type.addField( FieldSpec.builder( globalType, "globalThis", Modifier.PRIVATE, Modifier.STATIC ).build() );
