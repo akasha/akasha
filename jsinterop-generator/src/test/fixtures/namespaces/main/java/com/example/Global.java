@@ -31,6 +31,12 @@ public final class Global extends Window {
   public native Console console();
 
   @JsProperty(
+      name = "CSS"
+  )
+  @Nonnull
+  public native CSS css();
+
+  @JsProperty(
       name = "WebAssembly"
   )
   @Nonnull

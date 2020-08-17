@@ -1,5 +1,10 @@
 typedef ArrayBuffer BufferSource;
 
+[Exposed=Window]
+namespace CSS {
+  DOMString escape( DOMString ident );
+};
+
 /**
  * The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.
  *

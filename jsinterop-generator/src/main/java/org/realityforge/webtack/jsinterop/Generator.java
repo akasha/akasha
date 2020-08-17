@@ -163,7 +163,7 @@ final class Generator
     {
       final String name = namespace.getName();
       type.addMethod( MethodSpec
-                        .methodBuilder( NamingUtil.lowercaseFirstCharacter( safeJsPropertyMethodName( name ) ) )
+                        .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name ) ) )
                         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                         .returns( context.lookupTypeByName( namespace.getName() ) )
                         .addAnnotation( AnnotationSpec
