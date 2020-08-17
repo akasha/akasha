@@ -927,7 +927,9 @@ final class Generator
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( definition.getName() )
+        // The type "console" starts with a lower case name due to legacy reasons.
+        // This next line just makes sure that an uppercase is used for the java type
+        .classBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );

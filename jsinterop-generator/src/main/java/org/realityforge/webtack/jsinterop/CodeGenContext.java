@@ -16,9 +16,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.EnumerationDefinition;
-import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
@@ -101,15 +99,18 @@ final class CodeGenContext
   @Nonnull
   TypeName lookupTypeByName( @Nonnull final String name )
   {
-    final ClassName existing = _typeMapping.get( name );
+    // The type "console" starts with a lower case name due to legacy reasons.
+    // This next line just makes sure that an uppercase is used for the java type
+    final String typeName = NamingUtil.uppercaseFirstCharacter( name );
+    final ClassName existing = _typeMapping.get( typeName );
     if ( null != existing )
     {
       return existing;
     }
     else
     {
-      final ClassName className = getClassName( name );
-      _typeMapping.put( name, className );
+      final ClassName className = getClassName( typeName );
+      _typeMapping.put( typeName, className );
       return className;
     }
   }
