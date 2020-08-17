@@ -41,6 +41,7 @@ import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
+import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.SequenceType;
@@ -89,6 +90,10 @@ final class Generator
     for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
     {
       generatePartialInterface( context, definition );
+    }
+    for ( final NamespaceDefinition definition : schema.getNamespaces() )
+    {
+      generateNamespace( context, definition );
     }
 
     for ( final Map.Entry<String, UnionType> entry : context.getUnions().entrySet() )
@@ -882,6 +887,43 @@ final class Generator
       .stream()
       .anyMatch( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
                       "LegacyNoInterfaceObject".equals( a.getName() ) );
+  }
+
+  private void generateNamespace( @Nonnull final CodeGenContext context, @Nonnull final NamespaceDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .classBuilder( definition.getName() )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( type );
+    maybeAddJavadoc( definition, type );
+
+    for ( final AttributeMember attribute : definition.getAttributes() )
+    {
+      assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+      generateReadOnlyAttribute( context, attribute, type );
+    }
+
+    for ( final OperationMember operation : definition.getOperations() )
+    {
+      assert OperationMember.Kind.DEFAULT == operation.getKind();
+      generateDefaultOperation( context, operation, type );
+    }
+
+    final AnnotationSpec.Builder jsTypeAnnotation =
+      AnnotationSpec
+        .builder( Types.JS_TYPE )
+        .addMember( "isNative", "true" )
+        .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
+
+    type.addAnnotation( jsTypeAnnotation
+                          .addMember( "name", "$S", definition.getName() )
+                          .build() );
+
+    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
+
+    context.writeTopLevelType( type );
   }
 
   private void generateInterface( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
