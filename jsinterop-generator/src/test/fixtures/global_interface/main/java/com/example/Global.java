@@ -7,7 +7,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * Class to get access to the global <b>globalThis</b> property or the global object.
+ * The global <b>globalThis</b> property or the global object.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis">globalThis - MDN</a>
  */
@@ -17,8 +17,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "goog.global"
 )
-public final class Global {
-  private static Window globalThis;
+public final class Global extends Window {
+  private static Global globalThis;
 
   private Global() {
   }
@@ -31,7 +31,7 @@ public final class Global {
    */
   @JsOverlay
   @Nonnull
-  public static Window globalThis() {
+  public static Global globalThis() {
     return globalThis;
   }
 }

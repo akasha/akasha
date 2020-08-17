@@ -111,11 +111,12 @@ final class Generator
     final String globalInterface = context.getGlobalInterface();
     if ( null != globalInterface )
     {
-      generateGlobal( context, globalInterface );
+      generateGlobalThisInterface( context, globalInterface );
     }
   }
 
-  private void generateGlobal( @Nonnull final CodeGenContext context, @Nonnull final String globalInterface )
+  private void generateGlobalThisInterface( @Nonnull final CodeGenContext context,
+                                            @Nonnull final String globalInterface )
     throws IOException
   {
     final InterfaceDefinition definition = context.getSchema().findInterfaceByName( globalInterface );
@@ -126,7 +127,8 @@ final class Generator
     final TypeSpec.Builder type =
       TypeSpec
         .classBuilder( "Global" )
-        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+        .superclass( context.lookupTypeByName( definition.getName() ) );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                           .addMember( "isNative", "true" )
@@ -134,13 +136,30 @@ final class Generator
                           .addMember( "name", "$S", "goog.global" )
                           .build() );
 
-    type.addJavadoc( "Class to get access to the global <b>globalThis</b> property or the global object.\n" +
+    type.addJavadoc( "The global <b>globalThis</b> property or the global object.\n" +
                      "\n" +
                      "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" );
 
-    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
+    final OperationMember parentConstructor = context
+      .getSchema()
+      .getInterfaceByName( definition.getName() )
+      .getOperations()
+      .stream()
+      .filter( o -> OperationMember.Kind.CONSTRUCTOR == o.getKind() )
+      .min( Comparator.comparingLong( o -> o.getArguments()
+        .stream()
+        .filter( a -> !a.isOptional() && !a.isVariadic() )
+        .count() ) )
+      .orElse( null );
 
-    final TypeName globalType = context.lookupTypeByName( definition.getName() );
+    final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE );
+    if ( null != parentConstructor )
+    {
+      generateSuperCall( context, parentConstructor, method );
+    }
+    type.addMethod( method.build() );
+
+    final TypeName globalType = ClassName.bestGuess( "Global" );
 
     type.addField( FieldSpec.builder( globalType, "globalThis", Modifier.PRIVATE, Modifier.STATIC ).build() );
 
