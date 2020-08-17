@@ -32,6 +32,11 @@ public final class FixtureTest
     {
       validatorRuleConfig.allowDanglingInterfacePartials = true;
     }
-    generateCode( directory, "global_interface".equals( scenario ) ? "Window" : null, validatorRuleConfig );
+    String globalInterface = null;
+    if ( "global_interface".equals( scenario ) || "namespaces".equals( scenario ) )
+    {
+      globalInterface = "Window";
+    }
+    generateCode( directory, globalInterface, validatorRuleConfig );
   }
 }
