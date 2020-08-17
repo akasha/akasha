@@ -1,3 +1,6 @@
+/**
+ * This tests scenario where enum values start with number.
+ */
 enum OverSampleType {
   "2x",
   "4x",
