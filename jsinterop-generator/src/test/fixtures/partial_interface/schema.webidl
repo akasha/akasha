@@ -39,3 +39,10 @@ partial interface Window {
   [SameObject]
   readonly attribute SpeechSynthesis speechSynthesis;
 };
+
+/**
+ * This tests that lowercase name converted to uppercase when converted into java.
+ */
+partial interface rtcThingie {
+  readonly maplike<DOMString, object>;
+};

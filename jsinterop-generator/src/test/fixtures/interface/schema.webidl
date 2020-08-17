@@ -82,3 +82,10 @@ interface Storage {
   setter void setItem( DOMString key, DOMString value );
   deleter void removeItem( DOMString key );
 };
+
+/**
+ * This tests that lowercase name converted to uppercase when converted into java.
+ */
+interface txStorage {
+  readonly attribute unsigned long length;
+};

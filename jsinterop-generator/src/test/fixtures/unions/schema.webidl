@@ -10,6 +10,11 @@ typedef ( ArrayBufferView or ArrayBuffer ) BufferSource;
 
 typedef BufferSource MyNamedBufferSource;
 
+/**
+ * This tests that lowercase name converted to uppercase when converted into java.
+ */
+typedef ( DOMString or unsigned long ) txCode;
+
 callback OnBufferSourceHandler = void ( optional BufferSource buffer );
 
 [LegacyTreatNonObjectAsNull]

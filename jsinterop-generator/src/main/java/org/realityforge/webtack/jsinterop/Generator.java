@@ -98,7 +98,7 @@ final class Generator
 
     for ( final Map.Entry<String, UnionType> entry : context.getUnions().entrySet() )
     {
-      final String name = entry.getKey();
+      final String name = NamingUtil.uppercaseFirstCharacter( entry.getKey() );
       final UnionType unionType = entry.getValue();
       generateUnion( context, name, unionType );
     }
@@ -219,7 +219,7 @@ final class Generator
     final Kind kind = type.getKind();
     if ( Kind.Union == kind )
     {
-      final String name = definition.getName();
+      final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
       final UnionType unionType = (UnionType) type;
       generateUnion( context, name, unionType );
     }
@@ -404,7 +404,7 @@ final class Generator
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( definition.getName() )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
@@ -767,7 +767,7 @@ final class Generator
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( definition.getName() )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type
@@ -807,7 +807,7 @@ final class Generator
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( definition.getName() )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
@@ -839,9 +839,10 @@ final class Generator
                                          @Nonnull final PartialInterfaceDefinition definition )
     throws IOException
   {
+    final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( definition.getName() )
+        .classBuilder( name )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -964,9 +965,10 @@ final class Generator
   private void generateInterface( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
+    final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( definition.getName() )
+        .classBuilder( name )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1199,7 +1201,7 @@ final class Generator
                                   .addParameter( valueParam )
                                   .addParameter( keyParam )
                                   .addParameter( ParameterSpec
-                                                   .builder( ClassName.bestGuess( definitionName ), "map" )
+                                                   .builder( context.lookupTypeByName( definitionName ), "map" )
                                                    .addAnnotation( Types.NONNULL )
                                                    .build() )
                                   .build() )
@@ -1786,7 +1788,7 @@ final class Generator
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( definition.getName() )
+        .classBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );

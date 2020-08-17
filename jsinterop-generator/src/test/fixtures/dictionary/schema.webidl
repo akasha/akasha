@@ -23,6 +23,13 @@ dictionary TransitionEventInit : EventInit {
   DOMString pseudoElement = "";
 };
 
+/**
+ * This tests that lowercase name converted to uppercase when converted into java.
+ */
+dictionary txAuthGenericArg {
+  required USVString contentType;
+};
+
 [Exposed=Window]
 interface Storage {
   readonly attribute unsigned long length;
