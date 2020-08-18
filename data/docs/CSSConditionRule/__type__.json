@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CSSConditionRule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSConditionRule",
+    "description": "An object implementing the CSSConditionRule interface represents a single condition CSS at-rule, which consists of a condition and a statement block. It is a child of CSSGroupingRule."
+}
