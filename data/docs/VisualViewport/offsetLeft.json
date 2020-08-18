@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VisualViewport.offsetLeft",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/offsetLeft",
+    "description": "The offsetLeft read-only property of the VisualViewport interface returns the offset of the left edge of the visual viewport from the left edge of the layout viewport in CSS pixels."
+}

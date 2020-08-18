@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "VisualViewport.scroll_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/scroll_event",
+    "description": "You can use the scroll event in an addEventListener method:",
+    "eventName": "scroll",
+    "eventType": "VisualViewport",
+    "eventHandlerProperty": "onscroll",
+    "eventBubbles": true,
+    "eventCancelable": true
+}

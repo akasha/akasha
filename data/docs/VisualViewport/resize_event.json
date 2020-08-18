@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "VisualViewport.resize_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/resize_event",
+    "description": "You can use the resize event in an addEventListener method:",
+    "eventName": "resize",
+    "eventType": "VisualViewport",
+    "eventHandlerProperty": "onresize",
+    "eventBubbles": true,
+    "eventCancelable": true
+}

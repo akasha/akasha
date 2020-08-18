@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VisualViewport.pageLeft",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/pageLeft",
+    "description": "The pageLeft read-only property of the VisualViewport interface returns the x coordinate of the left edge of the visual viewport relative to the initial containing block origin, in CSS pixels."
+}
