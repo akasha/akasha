@@ -109,6 +109,10 @@
         "lastModifiedAt": 1597360257457
     },
     {
+        "name": "icecandidateerror_event",
+        "lastModifiedAt": 1597756178198
+    },
+    {
         "name": "iceconnectionstatechange_event",
         "lastModifiedAt": 1597360258245
     },

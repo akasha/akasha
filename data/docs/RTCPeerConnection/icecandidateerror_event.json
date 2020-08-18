@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "RTCPeerConnection.icecandidateerror_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icecandidateerror_event",
+    "description": "The WebRTC API event icecandidateerror is sent to an RTCPeerConnection if an error occurs while performing ICE negotiations through a STUN or TURN server. The event object is of type RTCPeerConnectionIceErrorEvent, and contains information describing the error in some amount of detail.",
+    "eventName": "icecandidateerror",
+    "eventType": "RTCPeerConnectionIceErrorEvent",
+    "eventHandlerProperty": "onicecandidateerror",
+    "eventBubbles": true,
+    "eventCancelable": true
+}
