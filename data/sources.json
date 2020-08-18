@@ -447,6 +447,11 @@
         "url": "https://w3c.github.io/webrtc-pc/"
     },
     {
+        "lastModifiedTime": 1575647599000,
+        "name": "webrtc_identity",
+        "url": "https://w3c.github.io/webrtc-identity/"
+    },
+    {
         "lastModifiedTime": 1591799353000,
         "name": "webrtc_priority",
         "url": "https://w3c.github.io/webrtc-priority/"
