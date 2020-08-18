@@ -297,6 +297,11 @@
         "url": "https://webbluetoothcg.github.io/web-bluetooth/"
     },
     {
+        "lastModifiedTime": 1596508658000,
+        "name": "web_share",
+        "url": "https://www.w3.org/TR/web-share/"
+    },
+    {
         "lastModifiedTime": 1592557551000,
         "name": "webappsec_csp",
         "url": "https://w3c.github.io/webappsec-csp/"
