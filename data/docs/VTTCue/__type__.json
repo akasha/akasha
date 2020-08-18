@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "VTTCue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VTTCue",
+    "description": "This interface also inherits properties from TextTrackCue."
+}

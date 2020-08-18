@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "VTTCue.VTTCue",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/VTTCue",
+    "description": "The VTTCue() constructor creates and returns a new VTTCue object."
+}

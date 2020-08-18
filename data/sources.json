@@ -447,6 +447,11 @@
         "url": "https://w3c.github.io/webrtc-stats/"
     },
     {
+        "lastModifiedTime": 1554372319000,
+        "name": "webvtt1",
+        "url": "https://www.w3.org/TR/webvtt1/"
+    },
+    {
         "lastModifiedTime": 1570729391000,
         "name": "webxr",
         "url": "https://www.w3.org/TR/webxr/"
