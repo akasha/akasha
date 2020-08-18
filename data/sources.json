@@ -138,6 +138,11 @@
         "name": "local"
     },
     {
+        "lastModifiedTime": 1579312973000,
+        "name": "media_playback_quality",
+        "url": "https://w3c.github.io/media-playback-quality"
+    },
+    {
         "lastModifiedTime": 1479323342000,
         "name": "media_source",
         "url": "https://www.w3.org/TR/media-source/"

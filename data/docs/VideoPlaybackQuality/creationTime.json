@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "VideoPlaybackQuality.creationTime",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/creationTime",
+    "description": "The read-only creationTime property on the VideoPlaybackQuality interface reports the number of milliseconds since the browsing context was created this quality sample was recorded."
+}
