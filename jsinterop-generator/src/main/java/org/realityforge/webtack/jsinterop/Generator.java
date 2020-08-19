@@ -305,7 +305,8 @@ final class Generator
           values.add( new TypedValue( declaredType,
                                       type,
                                       context.lookupTypeByName( name ),
-                                      nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL ) );
+                                      nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
+                                      false ) );
         }
         explodeType( context, declaredType, resolvedType, values );
       }
@@ -315,8 +316,14 @@ final class Generator
         values.add( new TypedValue( declaredType,
                                     type,
                                     context.toTypeName( type ),
-                                    nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL ) );
+                                    nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
+                                    false ) );
       }
+    }
+    else if ( Kind.Any == kind )
+    {
+      values.add( new TypedValue( declaredType, type, Types.ANY, TypedValue.Nullability.NULLABLE, false ) );
+      values.add( new TypedValue( declaredType, type, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true ) );
     }
     else if ( Kind.Union == kind )
     {
@@ -336,8 +343,8 @@ final class Generator
       final TypeName arrayJavaType = ArrayTypeName.of( context.getUnexpandedType( itemType ) );
       final TypedValue.Nullability nullability =
         nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
-      values.add( new TypedValue( declaredType, type, javaType, nullability ) );
-      values.add( new TypedValue( declaredType, type, arrayJavaType, nullability ) );
+      values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
+      values.add( new TypedValue( declaredType, type, arrayJavaType, nullability, false ) );
     }
     else
     {
@@ -351,7 +358,7 @@ final class Generator
         javaType.isPrimitive() ? TypedValue.Nullability.NA :
         nullable ? TypedValue.Nullability.NULLABLE :
         TypedValue.Nullability.NONNULL;
-      values.add( new TypedValue( declaredType, type, javaType, nullability ) );
+      values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
     }
   }
 
@@ -499,6 +506,7 @@ final class Generator
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
         addNullabilityAnnotation( memberType, parameter );
+        addDoNotAutoboxAnnotation( memberType, parameter );
         method.addParameter( parameter.build() );
       }
       method.addStatement( sb.toString(), params.toArray() );
@@ -660,6 +668,7 @@ final class Generator
     }
 
     addNullabilityAnnotation( typedValue, parameter );
+    addDoNotAutoboxAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
     final WebIDLSchema schema = context.getSchema();
     final Type declaredType = schema.resolveType( typedValue.getDeclaredType() );
@@ -671,6 +680,10 @@ final class Generator
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
       method.addStatement( "$N( $T.asJsArray( $N ) )", mutatorName, Types.JS_ARRAY, paramName );
+    }
+    else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
+    {
+      method.addStatement( "$N( $T.asAny( $N ) )", mutatorName, Types.JS, paramName );
     }
     else
     {
@@ -721,6 +734,7 @@ final class Generator
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
     addNullabilityAnnotation( typedValue, parameter );
+    addDoNotAutoboxAnnotation( typedValue, parameter );
 
     if ( javaType instanceof ArrayTypeName )
     {
@@ -753,6 +767,15 @@ final class Generator
     else if ( TypedValue.Nullability.NONNULL == nullability )
     {
       parameter.addAnnotation( Types.NONNULL );
+    }
+  }
+
+  private void addDoNotAutoboxAnnotation( @Nonnull final TypedValue typedValue,
+                                         @Nonnull final ParameterSpec.Builder parameter )
+  {
+    if ( typedValue.doNotAutobox() )
+    {
+      parameter.addAnnotation( Types.DO_NOT_AUTOBOX );
     }
   }
 
@@ -789,15 +812,24 @@ final class Generator
   }
 
   @Nonnull
-  private TypedValue asTypedValue( @Nonnull final CodeGenContext context, final Type type )
+  private TypedValue asTypedValue( @Nonnull final CodeGenContext context, @Nonnull final Type type )
   {
-    final Type resolveType = context.getSchema().resolveType( type );
-    final TypeName javaType = context.toTypeName( resolveType );
-    final TypedValue.Nullability nullability =
-      javaType.isPrimitive() ? TypedValue.Nullability.NA :
-      context.getSchema().isNullable( type ) ? TypedValue.Nullability.NULLABLE :
-      TypedValue.Nullability.NONNULL;
-    return new TypedValue( type, resolveType, javaType, nullability );
+    // This method is only called for arguments to callback interfaces a callbacks
+    if ( Kind.Any == type.getKind() )
+    {
+      final Type resolveType = context.getSchema().resolveType( type );
+      return new TypedValue( type, resolveType, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true );
+    }
+    else
+    {
+      final Type resolveType = context.getSchema().resolveType( type );
+      final TypeName javaType = context.toTypeName( resolveType );
+      final TypedValue.Nullability nullability =
+        javaType.isPrimitive() ? TypedValue.Nullability.NA :
+        context.getSchema().isNullable( type ) ? TypedValue.Nullability.NULLABLE :
+        TypedValue.Nullability.NONNULL;
+      return new TypedValue( type, resolveType, javaType, nullability, false );
+    }
   }
 
   private void generateCallbackInterface( @Nonnull final CodeGenContext context,
@@ -1754,6 +1786,7 @@ final class Generator
       parameter.addModifiers( Modifier.FINAL );
     }
     addNullabilityAnnotation( typedValue, parameter );
+    addDoNotAutoboxAnnotation( typedValue, parameter );
     // Only the last argument can be variadic
     if ( argument.isVariadic() )
     {

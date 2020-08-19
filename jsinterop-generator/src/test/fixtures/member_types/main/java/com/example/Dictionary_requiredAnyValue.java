@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -24,6 +25,12 @@ public interface Dictionary_requiredAnyValue {
     return Js.<Dictionary_requiredAnyValue>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue );
   }
 
+  @JsOverlay
+  @Nonnull
+  static Dictionary_requiredAnyValue create(@Nullable @DoNotAutobox final Object requiredAnyValue) {
+    return Js.<Dictionary_requiredAnyValue>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue );
+  }
+
   @JsProperty(
       name = "requiredAnyValue"
   )
@@ -36,6 +43,19 @@ public interface Dictionary_requiredAnyValue {
   @JsOverlay
   @Nonnull
   default Dictionary_requiredAnyValue requiredAnyValue(@Nullable final Any requiredAnyValue) {
+    setRequiredAnyValue( requiredAnyValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setRequiredAnyValue(@Nullable @DoNotAutobox final Object requiredAnyValue) {
+    setRequiredAnyValue( Js.asAny( requiredAnyValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default Dictionary_requiredAnyValue requiredAnyValue(
+      @Nullable @DoNotAutobox final Object requiredAnyValue) {
     setRequiredAnyValue( requiredAnyValue );
     return this;
   }

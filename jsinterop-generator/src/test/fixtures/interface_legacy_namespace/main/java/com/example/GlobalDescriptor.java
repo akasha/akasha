@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -21,6 +22,12 @@ public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
   static GlobalDescriptor create(@Nullable final Any value) {
+    return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static GlobalDescriptor create(@Nullable @DoNotAutobox final Object value) {
     return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
   }
 
@@ -51,6 +58,18 @@ public interface GlobalDescriptor {
   @JsOverlay
   @Nonnull
   default GlobalDescriptor value(@Nullable final Any value) {
+    setValue( value );
+    return this;
+  }
+
+  @JsOverlay
+  default void setValue(@Nullable @DoNotAutobox final Object value) {
+    setValue( Js.asAny( value ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default GlobalDescriptor value(@Nullable @DoNotAutobox final Object value) {
     setValue( value );
     return this;
   }

@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
@@ -10,5 +11,5 @@ import jsinterop.base.Any;
 @FunctionalInterface
 public interface Function {
   @Nullable
-  Any onInvoke(@Nullable Any... arguments);
+  Any onInvoke(@Nullable @DoNotAutobox Object... arguments);
 }

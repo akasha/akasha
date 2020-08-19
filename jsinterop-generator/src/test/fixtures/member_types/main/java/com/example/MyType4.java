@@ -14,6 +14,7 @@ import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,7 +37,20 @@ public class MyType4 {
   public static native Any anyMethod(@Nullable Any v1, @Nullable Any v2);
 
   @Nullable
+  public static native Any anyMethod(@Nullable @DoNotAutobox Object v1, @Nullable Any v2);
+
+  @Nullable
+  public static native Any anyMethod(@Nullable Any v1, @Nullable @DoNotAutobox Object v2);
+
+  @Nullable
+  public static native Any anyMethod(@Nullable @DoNotAutobox Object v1,
+      @Nullable @DoNotAutobox Object v2);
+
+  @Nullable
   public static native Any anyMethod(@Nullable Any v1);
+
+  @Nullable
+  public static native Any anyMethod(@Nullable @DoNotAutobox Object v1);
 
   @Nonnull
   public static native ArrayBuffer arrayBufferValueMethod(@Nonnull ArrayBuffer v1,

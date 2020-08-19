@@ -60,6 +60,8 @@ final class Types
   @Nonnull
   static final ClassName NULLABLE = ClassName.get( "javax.annotation", "Nullable" );
   @Nonnull
+  static final ClassName DO_NOT_AUTOBOX = ClassName.get( "javaemul.internal.annotations", "DoNotAutobox" );
+  @Nonnull
   static final ClassName MAGIC_CONSTANT = ClassName.get( "org.intellij.lang.annotations", "MagicConstant" );
 
   private Types()

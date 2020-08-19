@@ -1,6 +1,7 @@
 package com.example;
 
 import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -53,6 +54,18 @@ public interface PromiseRejectionEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default PromiseRejectionEventInit reason(@Nullable final Any reason) {
+    setReason( reason );
+    return this;
+  }
+
+  @JsOverlay
+  default void setReason(@Nullable @DoNotAutobox final Object reason) {
+    setReason( Js.asAny( reason ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default PromiseRejectionEventInit reason(@Nullable @DoNotAutobox final Object reason) {
     setReason( reason );
     return this;
   }

@@ -24,16 +24,23 @@ final class TypedValue
   // An enum indicating whether the Nullability annotation that should appear in java if any
   @Nonnull
   private final Nullability _nullability;
+  /**
+   * Should the type add the javaemul.internal.annotations.DoNotAutobox annotation.
+   * Usually only relevant for parameters.
+   */
+  private final boolean _doNotAutobox;
 
   TypedValue( @Nonnull final Type declaredType,
               @Nonnull final Type type,
               @Nonnull final TypeName javaType,
-              @Nonnull final Nullability nullability )
+              @Nonnull final Nullability nullability,
+              final boolean doNotAutobox )
   {
     _declaredType = Objects.requireNonNull( declaredType );
     _type = Objects.requireNonNull( type );
     _javaType = Objects.requireNonNull( javaType );
     _nullability = Objects.requireNonNull( nullability );
+    _doNotAutobox = doNotAutobox;
   }
 
   @Nonnull
@@ -58,5 +65,10 @@ final class TypedValue
   Nullability getNullability()
   {
     return _nullability;
+  }
+
+  boolean doNotAutobox()
+  {
+    return _doNotAutobox;
   }
 }

@@ -14,6 +14,7 @@ import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -50,6 +51,18 @@ public interface MyDictionary {
   @JsOverlay
   @Nonnull
   default MyDictionary anyValue(@Nullable final Any anyValue) {
+    setAnyValue( anyValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setAnyValue(@Nullable @DoNotAutobox final Object anyValue) {
+    setAnyValue( Js.asAny( anyValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary anyValue(@Nullable @DoNotAutobox final Object anyValue) {
     setAnyValue( anyValue );
     return this;
   }

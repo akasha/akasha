@@ -1,5 +1,6 @@
 package com.example;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsMethod;
@@ -31,6 +32,11 @@ public final class Console {
   @JsMethod(
       name = "assert"
   )
+  public native void assert_(boolean condition, @Nullable @DoNotAutobox Object... data);
+
+  @JsMethod(
+      name = "assert"
+  )
   public native void assert_(boolean condition);
 
   /**
@@ -46,4 +52,11 @@ public final class Console {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
    */
   public native void warn(@Nullable Any... data);
+
+  /**
+   * Outputs a warning message to the Web Console.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
+   */
+  public native void warn(@Nullable @DoNotAutobox Object... data);
 }
