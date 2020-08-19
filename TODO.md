@@ -40,8 +40,6 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Add codegen for namespaces
-
 * Add codegen for `IterableMember`
 
 * Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
