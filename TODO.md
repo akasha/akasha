@@ -42,7 +42,7 @@ complete as there is too much un-said.
 
 * Add codegen for `IterableMember`
 
-* Figure out if we can get string enums represented as enums in j2cl and/or gwt. Otherwise try to use trickery of intellij annotations for enumerations as attributes.
+* Figure out if we can represent WebIDL enums as java enums in j2cl and/or gwt as zero cost abstraction. Otherwise continue to use trickery of intellij annotations to specify allowed values.
 
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
