@@ -40,6 +40,16 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Add the ability for an extended attribute such as `javaSubPackage=mySubPkg` to control which subpackage the
+  type is created in.
+
+* Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
+  and anything that is removed has all references to it removed. This is a way of partitioning the graph into
+  more meaningful subgraphs.
+
+* Add the ability to supply a list of types into jsinterop generator that indicates existing types already
+  defined.
+
 * Add codegen for `IterableMember`
 
 * Figure out if we can represent WebIDL enums as java enums in j2cl and/or gwt as zero cost abstraction. Otherwise continue to use trickery of intellij annotations to specify allowed values.
