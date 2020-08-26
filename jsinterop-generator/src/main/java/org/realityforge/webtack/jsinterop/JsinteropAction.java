@@ -92,7 +92,7 @@ final class JsinteropAction
                    @Nullable final String globalInterface,
                    final boolean generateGwtModule )
   {
-    _outputDirectory = Objects.requireNonNull( outputDirectory ) ;
+    _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
