@@ -27,7 +27,7 @@ complete as there is too much un-said.
 
 # Apps to Stretch Implementation
 
-* use webrtc video chat ala ZipCall.io as another example
+* Complete `react4j-vchat`
 
 * webgl renderer of some kind.
  - a good one is https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/blob/master/script.js
