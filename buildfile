@@ -62,7 +62,8 @@ define 'webtack' do
     compile.with project('webidl-parser').package(:jar),
                  project('webidl-parser').compile.dependencies,
                  JSONB_DEPS,
-                 :jsoup
+                 :jsoup,
+                 :javapoet
 
     test.using :testng
     test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/java') }
@@ -76,8 +77,7 @@ define 'webtack' do
 
   define 'jsinterop-generator' do
     compile.with project('webidl-model').package(:jar),
-                 project('webidl-model').compile.dependencies,
-                 :javapoet
+                 project('webidl-model').compile.dependencies
 
 
     test.using :testng

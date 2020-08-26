@@ -4,7 +4,6 @@ import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ArrayTypeName;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
-import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
@@ -13,11 +12,8 @@ import com.squareup.javapoet.TypeSpec;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -27,7 +23,6 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Modifier;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
@@ -61,20 +56,13 @@ import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
-import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
 import org.realityforge.webtack.model.tools.util.GeneratedAnnotationUtil;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class JsinteropAction
-  implements Action
+  extends AbstractJavaAction
 {
-  @Nonnull
-  private static final List<String> OBJECT_METHODS =
-    Arrays.asList( "hashCode", "equals", "clone", "toString", "finalize", "getClass", "wait", "notifyAll", "notify" );
-  @Nonnull
-  private final Path _outputDirectory;
-  @Nonnull
-  private final String _packageName;
   @Nullable
   private final String _globalInterface;
   private final boolean _generateGwtModule;
@@ -92,8 +80,7 @@ final class JsinteropAction
                    @Nullable final String globalInterface,
                    final boolean generateGwtModule )
   {
-    _outputDirectory = Objects.requireNonNull( outputDirectory );
-    _packageName = Objects.requireNonNull( packageName );
+    super(outputDirectory, packageName );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
   }
@@ -247,10 +234,11 @@ final class JsinteropAction
       "\n" +
       "  <source path=''/>\n" +
       "</module>\n";
+    final String packageName = getPackageName();
     final String name =
-      _packageName.isEmpty() ?
+      packageName.isEmpty() ?
       "core" :
-      NamingUtil.uppercaseFirstCharacter( _packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
+      NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
     writeResourceFile( name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
@@ -548,49 +536,6 @@ final class JsinteropAction
       method.addStatement( sb.toString(), params.toArray() );
     }
     type.addMethod( method.build() );
-  }
-
-  @Nonnull
-  private String safeName( @Nonnull final String name )
-  {
-    return isNameJavaSafe( name ) ? name : mangleName( name );
-  }
-
-  @Nonnull
-  private String safeMethodName( @Nonnull final String name )
-  {
-    return isMethodNameJavaSafe( name ) ? name : mangleName( name );
-  }
-
-  @Nonnull
-  private String safeJsPropertyMethodName( @Nonnull final String name )
-  {
-    if ( "is".equals( name ) )
-    {
-      // This method is a work around for a bug in GWTs validation of properties
-      // https://github.com/gwtproject/gwt/issues/9703
-      return "_" + name;
-    }
-    else
-    {
-      return isMethodNameJavaSafe( name ) ? name : mangleName( name );
-    }
-  }
-
-  private boolean isMethodNameJavaSafe( @Nonnull final String name )
-  {
-    return isNameJavaSafe( name ) && !OBJECT_METHODS.contains( name );
-  }
-
-  private boolean isNameJavaSafe( @Nonnull final String name )
-  {
-    return SourceVersion.isName( name );
-  }
-
-  @Nonnull
-  private String mangleName( @Nonnull final String name )
-  {
-    return Character.isUnicodeIdentifierStart( name.charAt( 0 ) ) ? name + "_" : "_" + name;
   }
 
   @Nonnull
@@ -1945,12 +1890,6 @@ final class JsinteropAction
   }
 
   @Nonnull
-  Path getMainJavaDirectory()
-  {
-    return _outputDirectory.resolve( "main" ).resolve( "java" );
-  }
-
-  @Nonnull
   private TypeName lookupTypeByName( @Nonnull final String name )
   {
     // The type "console" starts with a lower case name due to legacy reasons.
@@ -1978,47 +1917,6 @@ final class JsinteropAction
            baseDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
   }
 
-  private void writeResourceFile( @Nonnull final String name, @Nonnull final byte[] content )
-    throws IOException
-  {
-    final Path path = getPackageDirectory( _packageName ).resolve( name );
-    final String qualifiedName = _packageName + "." + name;
-    assert !_generatedSourceFiles.containsKey( qualifiedName );
-    _generatedSourceFiles.put( qualifiedName, path );
-
-    Files.write( path, content, StandardOpenOption.CREATE_NEW );
-  }
-
-  private void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
-    throws IOException
-  {
-    writeTopLevelType( type, null );
-  }
-
-  private void writeTopLevelType( @Nonnull final TypeSpec.Builder type, @Nullable final String namespace )
-    throws IOException
-  {
-    final Path outputDirectory = getMainJavaDirectory();
-    final TypeSpec typeSpec = type.build();
-    final String packageName = derivePackage( namespace );
-    final String name = typeSpec.name;
-    final Path path = getPackageDirectory( packageName ).resolve( name + ".java" );
-    final String qualifiedName = packageName + "." + name;
-    assert !_generatedSourceFiles.containsKey( qualifiedName );
-    _generatedSourceFiles.put( qualifiedName, path );
-    JavaFile
-      .builder( packageName, typeSpec )
-      .skipJavaLangImports( true )
-      .build()
-      .writeTo( outputDirectory );
-  }
-
-  @Nonnull
-  private String derivePackage( @Nullable final String namespace )
-  {
-    return _packageName + ( null == namespace ? "" : "." + NamingUtil.underscore( namespace ) );
-  }
-
   @Nonnull
   Map<String, Path> getGeneratedSourceFiles()
   {
@@ -2038,7 +1936,7 @@ final class JsinteropAction
     {
       if ( Kind.Union == typedef.getType().getKind() )
       {
-        return ClassName.get( _packageName, name );
+        return ClassName.get( getPackageName(), name );
       }
       else
       {
@@ -2050,7 +1948,7 @@ final class JsinteropAction
     {
       return ClassName.get( derivePackage( interfaceDefinition.getNamespace() ), name );
     }
-    return ClassName.get( _packageName, name );
+    return ClassName.get( getPackageName(), name );
   }
 
   @Nonnull
