@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
@@ -70,9 +69,6 @@ final class JsinteropAction
   private final Map<String, ClassName> _typeMapping = new HashMap<>();
   @Nonnull
   private final Map<String, UnionType> _unions = new HashMap<>();
-  // Maps Classname -> Path of source file
-  @Nonnull
-  private final Map<String, Path> _generatedSourceFiles = new HashMap<>();
   private WebIDLSchema _schema;
 
   JsinteropAction( @Nonnull final Path outputDirectory,
@@ -86,12 +82,18 @@ final class JsinteropAction
   }
 
   @Override
+  protected void processInit()
+  {
+    super.processInit();
+    _typeMapping.clear();
+    _unions.clear();
+  }
+
+  @Override
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    _typeMapping.clear();
-    _unions.clear();
-    _generatedSourceFiles.clear();
+    processInit();
     _schema = Objects.requireNonNull( schema );
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
@@ -1918,9 +1920,10 @@ final class JsinteropAction
   }
 
   @Nonnull
-  Map<String, Path> getGeneratedSourceFiles()
+  @Override
+  protected Map<String, Path> getGeneratedFiles()
   {
-    return Collections.unmodifiableMap( _generatedSourceFiles );
+    return super.getGeneratedFiles();
   }
 
   @Nonnull

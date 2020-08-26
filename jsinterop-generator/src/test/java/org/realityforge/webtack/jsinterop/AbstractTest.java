@@ -185,7 +185,7 @@ public abstract class AbstractTest
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
-    final Map<String, Path> generatedSourceFiles = action.getGeneratedSourceFiles();
+    final Map<String, Path> generatedSourceFiles = action.getGeneratedFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
       final Path file = e.getValue();
