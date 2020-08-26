@@ -246,11 +246,10 @@ final class JsinteropAction
       "\n" +
       "  <source path=''/>\n" +
       "</module>\n";
-    final String packageName = _packageName;
     final String name =
-      packageName.isEmpty() ?
+      _packageName.isEmpty() ?
       "core" :
-      NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
+      NamingUtil.uppercaseFirstCharacter( _packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
     writeResourceFile( name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
