@@ -1,5 +1,6 @@
 package org.realityforge.webtack.jsinterop;
 
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Objects;
 import javax.annotation.Nonnull;
@@ -11,7 +12,7 @@ final class JsinteropAction
   implements Action
 {
   @Nonnull
-  private final String _outputDirectory;
+  private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
   @Nullable
@@ -23,7 +24,7 @@ final class JsinteropAction
                    @Nullable final String globalInterface,
                    final boolean generateGwtModule )
   {
-    _outputDirectory = Objects.requireNonNull( outputDirectory );
+    _outputDirectory = Paths.get( Objects.requireNonNull( outputDirectory ) );
     _packageName = Objects.requireNonNull( packageName );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
@@ -33,11 +34,6 @@ final class JsinteropAction
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    new Generator( schema,
-                   Paths.get( _outputDirectory ),
-                   _packageName,
-                   _globalInterface,
-                   _generateGwtModule )
-      .generate();
+    new Generator( schema, _outputDirectory, _packageName, _globalInterface, _generateGwtModule ).generate();
   }
 }
