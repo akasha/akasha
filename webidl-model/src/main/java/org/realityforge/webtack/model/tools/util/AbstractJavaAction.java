@@ -142,9 +142,9 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected String derivePackage( @Nullable final String namespace )
+  protected String derivePackage( @Nullable final String subPackage )
   {
-    return _packageName + ( null == namespace ? "" : "." + NamingUtil.underscore( namespace ) );
+    return _packageName + ( null == subPackage ? "" : "." + NamingUtil.underscore( subPackage ) );
   }
 
   @Nonnull
