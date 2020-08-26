@@ -42,6 +42,12 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Extract a separate module for building java-generating generators. Move `AbstractJavaAction` and other related
+  infrastructure to this project.
+
+* Extract a separate module for testing java-generating generators. Move `AbstractTest`, `BailErrorListener` and
+  `JavaProcess` from `jsinterop-generator` and `react4j-generator` projects to this module.
+
 * Add the ability for an extended attribute such as `javaSubPackage=mySubPkg` to control which subpackage the
   type is created in.
 
