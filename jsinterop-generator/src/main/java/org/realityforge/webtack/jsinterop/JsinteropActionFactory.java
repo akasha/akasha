@@ -1,5 +1,6 @@
 package org.realityforge.webtack.jsinterop;
 
+import java.nio.file.Paths;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
@@ -26,6 +27,6 @@ public final class JsinteropActionFactory
     {
       throw new IllegalArgumentException( "Jsinterop missing required packageName configuration value" );
     }
-    return new JsinteropAction( outputDirectory, packageName, globalInterface, generateGwtModule );
+    return new JsinteropAction( Paths.get( outputDirectory ), packageName, globalInterface, generateGwtModule );
   }
 }

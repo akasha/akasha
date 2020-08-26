@@ -179,13 +179,13 @@ public abstract class AbstractTest
     }
 
     final Path outputDirectory = getWorkingDir();
-    final Generator generator = new Generator( schema, outputDirectory, "com.example", globalInterface, true );
-    generator.generate();
-    final Path mainJavaDirectory = generator.getMainJavaDirectory();
+    final JsinteropAction action = new JsinteropAction( outputDirectory, "com.example", globalInterface, true );
+    action.process( schema );
+    final Path mainJavaDirectory = action.getMainJavaDirectory();
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
-    final Map<String, Path> generatedSourceFiles = generator.getGeneratedSourceFiles();
+    final Map<String, Path> generatedSourceFiles = action.getGeneratedSourceFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
       final Path file = e.getValue();
