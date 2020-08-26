@@ -62,6 +62,7 @@ import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.util.GeneratedAnnotationUtil;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class JsinteropAction
@@ -1926,33 +1927,12 @@ final class JsinteropAction
 
   private void writeGeneratedAnnotation( @Nonnull final TypeSpec.Builder builder )
   {
-    Class<?> generated = getGeneratedAnnotation();
+    Class<?> generated = GeneratedAnnotationUtil.getGeneratedAnnotation();
     if ( null != generated )
     {
       builder.addAnnotation( AnnotationSpec.builder( ClassName.get( generated ) )
                                .addMember( "value", "$S", "org.realityforge.webtack" )
                                .build() );
-    }
-  }
-
-  @Nullable
-  private Class<?> getGeneratedAnnotation()
-  {
-    try
-    {
-      return Class.forName( "javax.annotation.processing.Generated" );
-    }
-    catch ( final ClassNotFoundException ignored )
-    {
-      try
-      {
-        return Class.forName( "javax.annotation.Generated" );
-      }
-      catch ( final ClassNotFoundException ignored2 )
-      {
-        //Generate no annotation
-        return null;
-      }
     }
   }
 
