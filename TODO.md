@@ -34,6 +34,8 @@ complete as there is too much un-said.
 
 * Maybe mesh+shaders sample app?
 
+* Port https://github.com/toji/webxr-particles
+
 * use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system. Possibly even add video layers via https://github.com/immersive-web/layers for desktop users?
  - https://github.com/marlon360/webxr-handtracking
  - https://cabanier.github.io/WebXRLayers-samples/index.html
