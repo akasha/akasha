@@ -109,6 +109,11 @@ public abstract class AbstractJavaAction
     assert !_generatedFiles.containsKey( qualifiedName );
     _generatedFiles.put( qualifiedName, path );
 
+    final Path parent = path.getParent();
+    if ( !Files.exists( parent ) )
+    {
+      Files.createDirectories( parent );
+    }
     Files.write( path, content, StandardOpenOption.CREATE_NEW );
   }
 
