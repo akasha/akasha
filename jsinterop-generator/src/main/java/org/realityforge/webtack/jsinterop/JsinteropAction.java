@@ -1927,6 +1927,13 @@ final class JsinteropAction
   }
 
   @Nonnull
+  @Override
+  protected Path getMainJavaDirectory()
+  {
+    return super.getMainJavaDirectory();
+  }
+
+  @Nonnull
   private ClassName getClassName( @Nonnull final String name )
   {
     final EnumerationDefinition enumeration = _schema.findEnumerationByName( name );
