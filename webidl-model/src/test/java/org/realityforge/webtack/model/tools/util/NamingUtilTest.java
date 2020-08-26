@@ -1,4 +1,4 @@
-package org.realityforge.webtack.jsinterop;
+package org.realityforge.webtack.model.tools.util;
 
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;

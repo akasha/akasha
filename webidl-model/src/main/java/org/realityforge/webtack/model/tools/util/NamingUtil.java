@@ -1,41 +1,41 @@
-package org.realityforge.webtack.jsinterop;
+package org.realityforge.webtack.model.tools.util;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 
-final class NamingUtil
+public final class NamingUtil
 {
   private NamingUtil()
   {
   }
 
   @Nonnull
-  static String underscore( @Nonnull final String name )
+  public static String underscore( @Nonnull final String name )
   {
     return Arrays.stream( name.split( "(?=\\p{Lu})" ) ).map( String::toLowerCase ).collect( Collectors.joining( "_" ) );
   }
 
   @Nonnull
-  static String lowercaseFirstCharacter( @Nonnull final String name )
+  public static String lowercaseFirstCharacter( @Nonnull final String name )
   {
     return Character.toLowerCase( name.charAt( 0 ) ) + ( name.length() > 1 ? name.substring( 1 ) : "" );
   }
 
   @Nonnull
-  static String uppercaseFirstCharacter( @Nonnull final String name )
+  public static String uppercaseFirstCharacter( @Nonnull final String name )
   {
     return Character.toUpperCase( name.charAt( 0 ) ) + ( name.length() > 1 ? name.substring( 1 ) : "" );
   }
 
-  static boolean isCamelCase( @Nonnull final String name )
+  public static boolean isCamelCase( @Nonnull final String name )
   {
     return name.equals( camelCase( name ) );
   }
 
   @Nonnull
-  static String camelCase( @Nonnull final String name )
+  public static String camelCase( @Nonnull final String name )
   {
     final String[] parts = splitIntoWords( name );
     if ( 0 != parts.length )
@@ -57,13 +57,13 @@ final class NamingUtil
     return String.join( "", parts );
   }
 
-  static boolean isPascalCase( @Nonnull final String name )
+  public static boolean isPascalCase( @Nonnull final String name )
   {
     return name.equals( pascalCase( name ) );
   }
 
   @Nonnull
-  static String pascalCase( @Nonnull final String name )
+  public static String pascalCase( @Nonnull final String name )
   {
     return Stream
       .of( splitIntoWords( name ) )

@@ -63,6 +63,7 @@ import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class JsinteropAction
   implements Action
