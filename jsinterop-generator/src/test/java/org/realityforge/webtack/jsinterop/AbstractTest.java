@@ -161,7 +161,7 @@ public abstract class AbstractTest
   {
     final Collection<ValidationError> errors = ValidatorTool.create( validator ).validate( schema );
     assertTrue( errors.isEmpty(), "Unexpected Errors: " + asString( errors ) );
-    final CodeGenContext context = newContext( schema, globalInterface );
+    schema.link();
 
     if ( writeOutputFixtures() )
     {
@@ -178,29 +178,22 @@ public abstract class AbstractTest
       }
     }
 
-    new Generator().generate( context );
-    final Path mainJavaDirectory = context.getMainJavaDirectory();
+    final Path outputDirectory = getWorkingDir();
+    final Generator generator = new Generator( schema, outputDirectory, "com.example", globalInterface, true );
+    generator.generate();
+    final Path mainJavaDirectory = generator.getMainJavaDirectory();
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
-    final Map<String, Path> generatedSourceFiles = context.getGeneratedSourceFiles();
+    final Map<String, Path> generatedSourceFiles = generator.getGeneratedSourceFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
       final Path file = e.getValue();
-      final Path relativePath = context.getOutputDirectory().relativize( file );
+      final Path relativePath = outputDirectory.relativize( file );
       assertFileMatchesFixture( file, directory.resolve( relativePath ) );
     }
 
     ensureGeneratedCodeCompiles( mainJavaDirectory, javaFiles, classpathEntries );
-  }
-
-  @Nonnull
-  protected final CodeGenContext newContext( @Nonnull final WebIDLSchema schema,
-                                             @Nullable final String globalInterface )
-    throws Exception
-  {
-    schema.link();
-    return new CodeGenContext( schema, getWorkingDir(), "com.example", globalInterface, true );
   }
 
   /**

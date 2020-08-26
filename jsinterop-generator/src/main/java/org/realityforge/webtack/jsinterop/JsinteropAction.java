@@ -33,8 +33,11 @@ final class JsinteropAction
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    final CodeGenContext context =
-      new CodeGenContext( schema, Paths.get( _outputDirectory ), _packageName, _globalInterface, _generateGwtModule );
-    new Generator().generate( context );
+    new Generator( schema,
+                   Paths.get( _outputDirectory ),
+                   _packageName,
+                   _globalInterface,
+                   _generateGwtModule )
+      .generate();
   }
 }

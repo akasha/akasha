@@ -4,16 +4,23 @@ import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ArrayTypeName;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
+import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -38,12 +45,15 @@ import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
+import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
+import org.realityforge.webtack.model.PromiseType;
+import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -57,69 +67,97 @@ final class Generator
   @Nonnull
   private static final List<String> OBJECT_METHODS =
     Arrays.asList( "hashCode", "equals", "clone", "toString", "finalize", "getClass", "wait", "notifyAll", "notify" );
+  @Nonnull
+  private final WebIDLSchema _schema;
+  @Nonnull
+  private final Map<String, ClassName> _typeMapping = new HashMap<>();
+  @Nonnull
+  private final Map<String, UnionType> _unions = new HashMap<>();
+  @Nonnull
+  private final Path _outputDirectory;
+  @Nonnull
+  private final String _packageName;
+  @Nullable
+  private final String _globalInterface;
+  private final boolean _generateGwtModule;
+  // Maps Classname -> Path of source file
+  @Nonnull
+  private final Map<String, Path> _generatedSourceFiles = new HashMap<>();
 
-  void generate( @Nonnull final CodeGenContext context )
+  Generator( @Nonnull final WebIDLSchema schema,
+                  @Nonnull final Path outputDirectory,
+                  @Nonnull final String packageName,
+                  @Nullable final String globalInterface,
+                  final boolean generateGwtModule )
+  {
+    _schema = Objects.requireNonNull( schema );
+    _outputDirectory = Objects.requireNonNull( outputDirectory );
+    _packageName = Objects.requireNonNull( packageName );
+    _globalInterface = globalInterface;
+    _generateGwtModule = generateGwtModule;
+  }
+
+  void generate()
     throws IOException
   {
-    FilesUtil.deleteDirectory( context.getMainJavaDirectory() );
-    final WebIDLSchema schema = context.getSchema();
+    FilesUtil.deleteDirectory( getMainJavaDirectory() );
+    final WebIDLSchema schema = _schema;
     for ( final TypedefDefinition definition : schema.getTypedefs() )
     {
-      generateTypedef( context, definition );
+      generateTypedef( definition );
     }
     for ( final CallbackDefinition definition : schema.getCallbacks() )
     {
-      generateCallback( context, definition );
+      generateCallback( definition );
     }
     for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
     {
-      generateCallbackInterface( context, definition );
+      generateCallbackInterface( definition );
     }
     for ( final DictionaryDefinition definition : schema.getDictionaries() )
     {
-      generateDictionary( context, definition );
+      generateDictionary( definition );
     }
     for ( final EnumerationDefinition definition : schema.getEnumerations() )
     {
-      generateEnumeration( context, definition );
+      generateEnumeration( definition );
     }
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
-      generateInterface( context, definition );
+      generateInterface( definition );
     }
     for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
     {
-      generatePartialInterface( context, definition );
+      generatePartialInterface( definition );
     }
     for ( final NamespaceDefinition definition : schema.getNamespaces() )
     {
-      generateNamespace( context, definition );
+      generateNamespace( definition );
     }
 
-    for ( final Map.Entry<String, UnionType> entry : context.getUnions().entrySet() )
+    for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
     {
       final String name = NamingUtil.uppercaseFirstCharacter( entry.getKey() );
       final UnionType unionType = entry.getValue();
-      generateUnion( context, name, unionType );
+      generateUnion( name, unionType );
     }
 
-    if ( context.shouldGenerateGwtModule() )
+    if ( _generateGwtModule )
     {
-      writeGwtModule( context );
+      writeGwtModule();
     }
 
-    final String globalInterface = context.getGlobalInterface();
+    final String globalInterface = _globalInterface;
     if ( null != globalInterface )
     {
-      generateGlobalThisInterface( context, globalInterface );
+      generateGlobalThisInterface( globalInterface );
     }
   }
 
-  private void generateGlobalThisInterface( @Nonnull final CodeGenContext context,
-                                            @Nonnull final String globalInterface )
+  private void generateGlobalThisInterface( @Nonnull final String globalInterface )
     throws IOException
   {
-    final InterfaceDefinition definition = context.getSchema().findInterfaceByName( globalInterface );
+    final InterfaceDefinition definition = _schema.findInterfaceByName( globalInterface );
     if ( null == definition )
     {
       throw new IllegalStateException( "Declared globalInterface '" + globalInterface + "' does not exist in schema" );
@@ -128,7 +166,7 @@ final class Generator
       TypeSpec
         .classBuilder( "Global" )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-        .superclass( context.lookupTypeByName( definition.getName() ) );
+        .superclass( lookupTypeByName( definition.getName() ) );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                           .addMember( "isNative", "true" )
@@ -140,8 +178,7 @@ final class Generator
                      "\n" +
                      "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" );
 
-    final OperationMember parentConstructor = context
-      .getSchema()
+    final OperationMember parentConstructor = _schema
       .getInterfaceByName( definition.getName() )
       .getOperations()
       .stream()
@@ -155,17 +192,17 @@ final class Generator
     final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE );
     if ( null != parentConstructor )
     {
-      generateSuperCall( context, parentConstructor, method );
+      generateSuperCall( parentConstructor, method );
     }
     type.addMethod( method.build() );
 
-    for ( final NamespaceDefinition namespace : context.getSchema().getNamespaces() )
+    for ( final NamespaceDefinition namespace : _schema.getNamespaces() )
     {
       final String name = namespace.getName();
       type.addMethod( MethodSpec
                         .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name ) ) )
                         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                        .returns( context.lookupTypeByName( namespace.getName() ) )
+                        .returns( lookupTypeByName( namespace.getName() ) )
                         .addAnnotation( AnnotationSpec
                                           .builder( Types.JS_PROPERTY )
                                           .addMember( "name", "$S", name )
@@ -190,10 +227,10 @@ final class Generator
                                    "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
                       .build() );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
-  private void writeGwtModule( @Nonnull final CodeGenContext context )
+  private void writeGwtModule()
     throws IOException
   {
     final String gwtModuleContent =
@@ -204,15 +241,15 @@ final class Generator
       "\n" +
       "  <source path=''/>\n" +
       "</module>\n";
-    final String packageName = context.getPackageName();
+    final String packageName = _packageName;
     final String name =
       packageName.isEmpty() ?
       "core" :
       NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
-    context.writeResourceFile( name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
+    writeResourceFile( name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
-  private void generateTypedef( @Nonnull final CodeGenContext context, @Nonnull final TypedefDefinition definition )
+  private void generateTypedef( @Nonnull final TypedefDefinition definition )
     throws IOException
   {
     final Type type = definition.getType();
@@ -221,12 +258,11 @@ final class Generator
     {
       final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
       final UnionType unionType = (UnionType) type;
-      generateUnion( context, name, unionType );
+      generateUnion( name, unionType );
     }
   }
 
-  private void generateUnion( @Nonnull final CodeGenContext context,
-                              @Nonnull final String name,
+  private void generateUnion( @Nonnull final String name,
                               @Nonnull final UnionType unionType )
     throws IOException
   {
@@ -241,20 +277,19 @@ final class Generator
                           .addMember( "name", "$S", "?" )
                           .build() );
 
-    generateUnionOfMethods( context, name, unionType, type );
+    generateUnionOfMethods( name, unionType, type );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
   @Nonnull
-  private List<List<TypedValue>> explodeTypeList( @Nonnull final CodeGenContext context,
-                                                  @Nonnull final List<Type> types )
+  private List<List<TypedValue>> explodeTypeList( @Nonnull final List<Type> types )
   {
     final List<List<TypedValue>> results = new ArrayList<>();
     results.add( new ArrayList<>() );
     for ( final Type type : types )
     {
-      final List<TypedValue> itemTypes = explodeType( context, type );
+      final List<TypedValue> itemTypes = explodeType( type );
       if ( 1 == itemTypes.size() )
       {
         final TypedValue itemType = itemTypes.get( 0 );
@@ -279,15 +314,14 @@ final class Generator
   }
 
   @Nonnull
-  private List<TypedValue> explodeType( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  private List<TypedValue> explodeType( @Nonnull final Type type )
   {
     final List<TypedValue> values = new ArrayList<>();
-    explodeType( context, type, type, values );
+    explodeType( type, type, values );
     return values;
   }
 
-  private void explodeType( @Nonnull final CodeGenContext context,
-                            @Nonnull final Type declaredType,
+  private void explodeType( @Nonnull final Type declaredType,
                             @Nonnull final Type type,
                             @Nonnull final List<TypedValue> values )
   {
@@ -295,27 +329,27 @@ final class Generator
     if ( Kind.TypeReference == type.getKind() )
     {
       final String name = ( (TypeReference) type ).getName();
-      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      final TypedefDefinition typedef = _schema.findTypedefByName( name );
       if ( null != typedef )
       {
         final Type resolvedType = typedef.getType();
         if ( Kind.Union == resolvedType.getKind() )
         {
-          final boolean nullable = context.getSchema().isNullable( type );
+          final boolean nullable = _schema.isNullable( type );
           values.add( new TypedValue( declaredType,
                                       type,
-                                      context.lookupTypeByName( name ),
+                                      lookupTypeByName( name ),
                                       nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
                                       false ) );
         }
-        explodeType( context, declaredType, resolvedType, values );
+        explodeType( declaredType, resolvedType, values );
       }
       else
       {
-        final boolean nullable = context.getSchema().isNullable( type );
+        final boolean nullable = _schema.isNullable( type );
         values.add( new TypedValue( declaredType,
                                     type,
-                                    context.toTypeName( type ),
+                                    toTypeName( type ),
                                     nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
                                     false ) );
       }
@@ -330,17 +364,17 @@ final class Generator
       final UnionType unionType = (UnionType) type;
       for ( final Type memberType : unionType.getMemberTypes() )
       {
-        explodeType( context, declaredType, memberType, values );
+        explodeType( declaredType, memberType, values );
       }
     }
     else if ( Kind.Sequence == kind )
     {
       final SequenceType sequenceType = (SequenceType) type;
       final Type itemType = sequenceType.getItemType();
-      final boolean nullable = context.getSchema().isNullable( type );
-      final TypeName javaType = context.toTypeName( type );
+      final boolean nullable = _schema.isNullable( type );
+      final TypeName javaType = toTypeName( type );
 
-      final TypeName arrayJavaType = ArrayTypeName.of( context.getUnexpandedType( itemType ) );
+      final TypeName arrayJavaType = ArrayTypeName.of( getUnexpandedType( itemType ) );
       final TypedValue.Nullability nullability =
         nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
       values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
@@ -348,8 +382,8 @@ final class Generator
     }
     else
     {
-      final boolean nullable = context.getSchema().isNullable( type );
-      TypeName javaType = context.toTypeName( type );
+      final boolean nullable = _schema.isNullable( type );
+      TypeName javaType = toTypeName( type );
       if ( nullable )
       {
         javaType = javaType.box();
@@ -362,8 +396,7 @@ final class Generator
     }
   }
 
-  private void generateUnionOfMethods( @Nonnull final CodeGenContext context,
-                                       @Nonnull final String name,
+  private void generateUnionOfMethods( @Nonnull final String name,
                                        @Nonnull final UnionType unionType,
                                        @Nonnull final TypeSpec.Builder type )
   {
@@ -371,7 +404,7 @@ final class Generator
     final List<Type> memberTypes = unionType.getMemberTypes();
     for ( final Type memberType : memberTypes )
     {
-      for ( final TypedValue typedValue : explodeType( context, memberType ) )
+      for ( final TypedValue typedValue : explodeType( memberType ) )
       {
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
@@ -405,8 +438,7 @@ final class Generator
     }
   }
 
-  private void generateDictionary( @Nonnull final CodeGenContext context,
-                                   @Nonnull final DictionaryDefinition definition )
+  private void generateDictionary( @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -424,57 +456,56 @@ final class Generator
     final String inherits = definition.getInherits();
     if ( null != inherits )
     {
-      type.addSuperinterface( context.lookupTypeByName( inherits ) );
+      type.addSuperinterface( lookupTypeByName( inherits ) );
     }
 
-    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( context, definition );
+    final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
     final List<List<TypedValue>> explodedTypeList =
-      explodeTypeList( context,
-                       requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
+      explodeTypeList(
+        requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
     for ( final List<TypedValue> argTypes : explodedTypeList )
     {
-      generateDictionaryCreateMethod( context, definition, requiredMembers, argTypes, type );
+      generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type );
     }
 
     for ( final DictionaryMember member : definition.getMembers() )
     {
-      final Type actualType = context.getSchema().resolveType( member.getType() );
-      final TypeName javaType = context.toTypeName( actualType );
-      generateDictionaryMemberGetter( context, member, actualType, javaType, type );
-      generateDictionaryMemberSetter( context, member, actualType, javaType, type );
-      for ( final TypedValue typedValue : explodeType( context, member.getType() ) )
+      final Type actualType = _schema.resolveType( member.getType() );
+      final TypeName javaType = toTypeName( actualType );
+      generateDictionaryMemberGetter( member, actualType, javaType, type );
+      generateDictionaryMemberSetter( member, actualType, javaType, type );
+      for ( final TypedValue typedValue : explodeType( member.getType() ) )
       {
         if ( !javaType.equals( typedValue.getJavaType() ) )
         {
-          generateDictionaryMemberOverlaySetter( context, member, typedValue, type );
+          generateDictionaryMemberOverlaySetter( member, typedValue, type );
         }
-        generateDictionaryMemberSetterReturningThis( context, definition, member, typedValue, false, type );
+        generateDictionaryMemberSetterReturningThis( definition, member, typedValue, false, type );
       }
     }
     String superName = definition.getInherits();
     while ( null != superName )
     {
-      final DictionaryDefinition parent = context.getSchema().getDictionaryByName( superName );
+      final DictionaryDefinition parent = _schema.getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
-        for ( final TypedValue memberType : explodeType( context, member.getType() ) )
+        for ( final TypedValue memberType : explodeType( member.getType() ) )
         {
-          generateDictionaryMemberSetterReturningThis( context, definition, member, memberType, true, type );
+          generateDictionaryMemberSetterReturningThis( definition, member, memberType, true, type );
         }
       }
       superName = parent.getInherits();
     }
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
-  private void generateDictionaryCreateMethod( @Nonnull final CodeGenContext context,
-                                               @Nonnull final DictionaryDefinition definition,
+  private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition definition,
                                                @Nonnull final List<DictionaryMember> requiredMembers,
                                                @Nonnull final List<TypedValue> types,
                                                @Nonnull final TypeSpec.Builder type )
   {
-    final TypeName self = context.lookupTypeByName( definition.getName() );
+    final TypeName self = lookupTypeByName( definition.getName() );
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
       .addAnnotation( Types.JS_OVERLAY )
@@ -558,29 +589,26 @@ final class Generator
   }
 
   @Nonnull
-  private List<DictionaryMember> getRequiredDictionaryMembers( @Nonnull final CodeGenContext context,
-                                                               @Nonnull final DictionaryDefinition definition )
+  private List<DictionaryMember> getRequiredDictionaryMembers( @Nonnull final DictionaryDefinition definition )
   {
     final List<DictionaryMember> requiredMembers = new ArrayList<>();
-    collectRequiredDictionaryMembers( context, definition, requiredMembers );
+    collectRequiredDictionaryMembers( definition, requiredMembers );
     return requiredMembers;
   }
 
-  private void collectRequiredDictionaryMembers( @Nonnull final CodeGenContext context,
-                                                 @Nonnull final DictionaryDefinition definition,
+  private void collectRequiredDictionaryMembers( @Nonnull final DictionaryDefinition definition,
                                                  @Nonnull final List<DictionaryMember> members )
   {
     final String inherits = definition.getInherits();
     if ( null != inherits )
     {
-      collectRequiredDictionaryMembers( context, context.getSchema().getDictionaryByName( inherits ), members );
+      collectRequiredDictionaryMembers( _schema.getDictionaryByName( inherits ), members );
     }
 
     definition.getMembers().stream().filter( m -> !m.isOptional() ).forEach( members::add );
   }
 
-  private void generateDictionaryMemberGetter( @Nonnull final CodeGenContext context,
-                                               @Nonnull final DictionaryMember member,
+  private void generateDictionaryMemberGetter( @Nonnull final DictionaryMember member,
                                                @Nonnull final Type actualType,
                                                @Nonnull final TypeName javaType,
                                                @Nonnull final TypeSpec.Builder type )
@@ -595,7 +623,7 @@ final class Generator
                             .addMember( "name", "$S", member.getName() )
                             .build() );
     maybeAddJavadoc( member, method );
-    if ( context.getSchema().isNullable( member.getType() ) )
+    if ( _schema.isNullable( member.getType() ) )
     {
       method.addAnnotation( Types.NULLABLE );
     }
@@ -609,8 +637,7 @@ final class Generator
     type.addMethod( method.build() );
   }
 
-  private void generateDictionaryMemberSetter( @Nonnull final CodeGenContext context,
-                                               @Nonnull final DictionaryMember member,
+  private void generateDictionaryMemberSetter( @Nonnull final DictionaryMember member,
                                                @Nonnull final Type actualType,
                                                @Nonnull final TypeName javaType,
                                                @Nonnull final TypeSpec.Builder type )
@@ -624,7 +651,7 @@ final class Generator
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, safeName( member.getName() ) );
 
-    if ( context.getSchema().isNullable( member.getType() ) )
+    if ( _schema.isNullable( member.getType() ) )
     {
       parameter.addAnnotation( Types.NULLABLE );
     }
@@ -636,8 +663,7 @@ final class Generator
     type.addMethod( method.build() );
   }
 
-  private void generateDictionaryMemberOverlaySetter( @Nonnull final CodeGenContext context,
-                                                      @Nonnull final DictionaryMember member,
+  private void generateDictionaryMemberOverlaySetter( @Nonnull final DictionaryMember member,
                                                       @Nonnull final TypedValue typedValue,
                                                       @Nonnull final TypeSpec.Builder type )
   {
@@ -670,12 +696,12 @@ final class Generator
     addNullabilityAnnotation( typedValue, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
-    final WebIDLSchema schema = context.getSchema();
+    final WebIDLSchema schema = _schema;
     final Type declaredType = schema.resolveType( typedValue.getDeclaredType() );
     final Type resolvedType = schema.resolveType( typedValue.getType(), true );
-    if ( Kind.Union == declaredType.getKind() || unwrapsToUnion( context, declaredType ) )
+    if ( Kind.Union == declaredType.getKind() || unwrapsToUnion( declaredType ) )
     {
-      method.addStatement( "$N( $T.of( $N ) )", mutatorName, context.toTypeName( declaredType ), paramName );
+      method.addStatement( "$N( $T.of( $N ) )", mutatorName, toTypeName( declaredType ), paramName );
     }
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
@@ -693,24 +719,23 @@ final class Generator
     type.addMethod( method.build() );
   }
 
-  private boolean unwrapsToUnion( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  private boolean unwrapsToUnion( @Nonnull final Type type )
   {
     final Kind kind = type.getKind();
     if ( Kind.TypeReference == kind )
     {
       final String name = ( (TypeReference) type ).getName();
-      final TypedefDefinition typedef = context.getSchema().findTypedefByName( name );
+      final TypedefDefinition typedef = _schema.findTypedefByName( name );
       if ( null != typedef )
       {
         final Type otherType = typedef.getType();
-        return Kind.Union == otherType.getKind() || unwrapsToUnion( context, otherType );
+        return Kind.Union == otherType.getKind() || unwrapsToUnion( otherType );
       }
     }
     return false;
   }
 
-  private void generateDictionaryMemberSetterReturningThis( @Nonnull final CodeGenContext context,
-                                                            @Nonnull final DictionaryDefinition dictionary,
+  private void generateDictionaryMemberSetterReturningThis( @Nonnull final DictionaryDefinition dictionary,
                                                             @Nonnull final DictionaryMember member,
                                                             @Nonnull final TypedValue typedValue,
                                                             final boolean addOverride,
@@ -722,7 +747,7 @@ final class Generator
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( Types.JS_OVERLAY )
         .addAnnotation( Types.NONNULL )
-        .returns( context.lookupTypeByName( dictionary.getName() ) );
+        .returns( lookupTypeByName( dictionary.getName() ) );
     maybeAddJavadoc( member, method );
     if ( addOverride )
     {
@@ -785,7 +810,7 @@ final class Generator
     return "set" + NamingUtil.uppercaseFirstCharacter( member.getName() );
   }
 
-  private void generateCallback( @Nonnull final CodeGenContext context, @Nonnull final CallbackDefinition definition )
+  private void generateCallback( @Nonnull final CallbackDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -801,39 +826,38 @@ final class Generator
       MethodSpec
         .methodBuilder( "onInvoke" )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT );
-    emitReturnType( context, definition.getReturnType(), method );
+    emitReturnType( definition.getReturnType(), method );
     for ( final Argument argument : definition.getArguments() )
     {
-      generateArgument( context, argument, asTypedValue( context, argument.getType() ), false, method );
+      generateArgument( argument, asTypedValue( argument.getType() ), false, method );
     }
     type.addMethod( method.build() );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
   @Nonnull
-  private TypedValue asTypedValue( @Nonnull final CodeGenContext context, @Nonnull final Type type )
+  private TypedValue asTypedValue( @Nonnull final Type type )
   {
     // This method is only called for arguments to callback interfaces a callbacks
     if ( Kind.Any == type.getKind() )
     {
-      final Type resolveType = context.getSchema().resolveType( type );
+      final Type resolveType = _schema.resolveType( type );
       return new TypedValue( type, resolveType, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true );
     }
     else
     {
-      final Type resolveType = context.getSchema().resolveType( type );
-      final TypeName javaType = context.toTypeName( resolveType );
+      final Type resolveType = _schema.resolveType( type );
+      final TypeName javaType = toTypeName( resolveType );
       final TypedValue.Nullability nullability =
         javaType.isPrimitive() ? TypedValue.Nullability.NA :
-        context.getSchema().isNullable( type ) ? TypedValue.Nullability.NULLABLE :
+        _schema.isNullable( type ) ? TypedValue.Nullability.NULLABLE :
         TypedValue.Nullability.NONNULL;
       return new TypedValue( type, resolveType, javaType, nullability, false );
     }
   }
 
-  private void generateCallbackInterface( @Nonnull final CodeGenContext context,
-                                          @Nonnull final CallbackInterfaceDefinition definition )
+  private void generateCallbackInterface( @Nonnull final CallbackInterfaceDefinition definition )
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
@@ -850,25 +874,23 @@ final class Generator
       .addAnnotation( FunctionalInterface.class );
     maybeAddJavadoc( definition, type );
 
-    generateConstants( context, definition.getConstants(), type );
+    generateConstants( definition.getConstants(), type );
 
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
-    final List<TypedValue> typedValues = asTypedValuesList( context, arguments );
-    generateDefaultOperation( context, operation, true, arguments, typedValues, type );
+    final List<TypedValue> typedValues = asTypedValuesList( arguments );
+    generateDefaultOperation( operation, true, arguments, typedValues, type );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
   @Nonnull
-  private List<TypedValue> asTypedValuesList( @Nonnull final CodeGenContext context,
-                                              @Nonnull final List<Argument> arguments )
+  private List<TypedValue> asTypedValuesList( @Nonnull final List<Argument> arguments )
   {
-    return arguments.stream().map( a -> asTypedValue( context, a.getType() ) ).collect( Collectors.toList() );
+    return arguments.stream().map( a -> asTypedValue( a.getType() ) ).collect( Collectors.toList() );
   }
 
-  private void generatePartialInterface( @Nonnull final CodeGenContext context,
-                                         @Nonnull final PartialInterfaceDefinition definition )
+  private void generatePartialInterface( @Nonnull final PartialInterfaceDefinition definition )
     throws IOException
   {
     final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
@@ -879,14 +901,14 @@ final class Generator
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
-    generateConstants( context, definition.getConstants(), type );
+    generateConstants( definition.getConstants(), type );
 
     type.addMethod( MethodSpec
                       .methodBuilder( "of" )
                       .addAnnotation( Types.JS_OVERLAY )
                       .addAnnotation( Types.NONNULL )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .returns( context.lookupTypeByName( definition.getName() ) )
+                      .returns( lookupTypeByName( definition.getName() ) )
                       .addParameter( ParameterSpec
                                        .builder( TypeName.OBJECT, "object", Modifier.FINAL )
                                        .addAnnotation( Types.NONNULL )
@@ -903,11 +925,11 @@ final class Generator
     {
       if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
       {
-        generateReadOnlyAttribute( context, attribute, type );
+        generateReadOnlyAttribute( attribute, type );
       }
       else
       {
-        generateAttribute( context, attribute, type );
+        generateAttribute( attribute, type );
       }
     }
 
@@ -916,17 +938,17 @@ final class Generator
       final OperationMember.Kind operationKind = operation.getKind();
       if ( OperationMember.Kind.DEFAULT == operationKind )
       {
-        generateDefaultOperation( context, operation, type );
+        generateDefaultOperation( operation, type );
       }
       else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
       {
-        generateDefaultOperation( context, operation, type );
+        generateDefaultOperation( operation, type );
       }
     }
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( context, definition.getName(), definition.getOperations(), mapLike, type );
+      generateMapLikeOperations( definition.getName(), definition.getOperations(), mapLike, type );
     }
     if ( null != definition.getAsyncIterable() )
     {
@@ -944,7 +966,7 @@ final class Generator
                           .addMember( "name", "$S", noPublicSymbol ? "Object" : definition.getName() )
                           .build() );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
   private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
@@ -955,7 +977,7 @@ final class Generator
                       "LegacyNoInterfaceObject".equals( a.getName() ) );
   }
 
-  private void generateNamespace( @Nonnull final CodeGenContext context, @Nonnull final NamespaceDefinition definition )
+  private void generateNamespace( @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -970,13 +992,13 @@ final class Generator
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
       assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
-      generateReadOnlyAttribute( context, attribute, type );
+      generateReadOnlyAttribute( attribute, type );
     }
 
     for ( final OperationMember operation : definition.getOperations() )
     {
       assert OperationMember.Kind.DEFAULT == operation.getKind();
-      generateDefaultOperation( context, operation, type );
+      generateDefaultOperation( operation, type );
     }
 
     final AnnotationSpec.Builder jsTypeAnnotation =
@@ -991,10 +1013,10 @@ final class Generator
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
-  private void generateInterface( @Nonnull final CodeGenContext context, @Nonnull final InterfaceDefinition definition )
+  private void generateInterface( @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
     final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
@@ -1009,8 +1031,7 @@ final class Generator
     final OperationMember parentConstructor;
     if ( null != inherits )
     {
-      parentConstructor = context
-        .getSchema()
+      parentConstructor = _schema
         .getInterfaceByName( inherits )
         .getOperations()
         .stream()
@@ -1020,24 +1041,24 @@ final class Generator
           .filter( a -> !a.isOptional() && !a.isVariadic() )
           .count() ) )
         .orElse( null );
-      type.superclass( context.lookupTypeByName( inherits ) );
+      type.superclass( lookupTypeByName( inherits ) );
     }
     else
     {
       parentConstructor = null;
     }
 
-    generateConstants( context, definition.getConstants(), type );
+    generateConstants( definition.getConstants(), type );
 
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
       if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
       {
-        generateReadOnlyAttribute( context, attribute, type );
+        generateReadOnlyAttribute( attribute, type );
       }
       else
       {
-        generateAttribute( context, attribute, type );
+        generateAttribute( attribute, type );
       }
     }
 
@@ -1047,7 +1068,7 @@ final class Generator
       final OperationMember.Kind operationKind = operation.getKind();
       if ( OperationMember.Kind.DEFAULT == operationKind )
       {
-        generateDefaultOperation( context, operation, type );
+        generateDefaultOperation( operation, type );
       }
       else if ( ( OperationMember.Kind.STRINGIFIER == operationKind ||
                   OperationMember.Kind.GETTER == operationKind ||
@@ -1055,23 +1076,23 @@ final class Generator
                   OperationMember.Kind.DELETER == operationKind ) &&
                 null != operation.getName() )
       {
-        generateDefaultOperation( context, operation, type );
+        generateDefaultOperation( operation, type );
       }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
-        generateConstructorOperation( context, operation, parentConstructor, type );
+        generateConstructorOperation( operation, parentConstructor, type );
         constructorPresent = true;
       }
       else if ( OperationMember.Kind.STATIC == operationKind )
       {
-        generateStaticOperation( context, operation, type );
+        generateStaticOperation( operation, type );
       }
     }
 
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( context, definition.getName(), definition.getOperations(), mapLike, type );
+      generateMapLikeOperations( definition.getName(), definition.getOperations(), mapLike, type );
     }
     if ( null != definition.getAsyncIterable() )
     {
@@ -1085,15 +1106,15 @@ final class Generator
     for ( final EventMember event : definition.getEvents() )
     {
       final CallbackInterfaceDefinition callbackInterface =
-        context.getSchema().findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
+        _schema.findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
       if ( null != callbackInterface )
       {
-        generateAddEventListener( context, event, 0, type );
-        generateAddEventListener( context, event, 1, type );
-        generateAddEventListener( context, event, 2, type );
-        generateRemoveEventListener( context, event, 0, type );
-        generateRemoveEventListener( context, event, 1, type );
-        generateRemoveEventListener( context, event, 2, type );
+        generateAddEventListener( event, 0, type );
+        generateAddEventListener( event, 1, type );
+        generateAddEventListener( event, 2, type );
+        generateRemoveEventListener( event, 0, type );
+        generateRemoveEventListener( event, 1, type );
+        generateRemoveEventListener( event, 2, type );
       }
     }
 
@@ -1112,16 +1133,15 @@ final class Generator
       final MethodSpec.Builder method = MethodSpec.constructorBuilder();
       if ( null != parentConstructor )
       {
-        generateSuperCall( context, parentConstructor, method );
+        generateSuperCall( parentConstructor, method );
       }
       type.addMethod( method.build() );
     }
 
-    context.writeTopLevelType( type, definition.getNamespace() );
+    writeTopLevelType( type, definition.getNamespace() );
   }
 
-  private void generateMapLikeOperations( @Nonnull final CodeGenContext context,
-                                          @Nonnull final String definitionName,
+  private void generateMapLikeOperations( @Nonnull final String definitionName,
                                           @Nonnull final List<OperationMember> operations,
                                           @Nonnull final MapLikeMember mapLike,
                                           @Nonnull final TypeSpec.Builder type )
@@ -1134,17 +1154,17 @@ final class Generator
                                         .build() )
                       .returns( TypeName.INT )
                       .build() );
-    final TypeName keyType = context.toTypeName( mapLike.getKeyType() );
-    final TypeName boxedKeyType = context.toTypeName( mapLike.getKeyType(), true );
-    final TypeName valueType = context.toTypeName( mapLike.getValueType() );
-    final TypeName boxedValueType = context.toTypeName( mapLike.getValueType(), true );
+    final TypeName keyType = toTypeName( mapLike.getKeyType() );
+    final TypeName boxedKeyType = toTypeName( mapLike.getKeyType(), true );
+    final TypeName valueType = toTypeName( mapLike.getValueType() );
+    final TypeName boxedValueType = toTypeName( mapLike.getValueType(), true );
 
     final ParameterSpec.Builder keyParamBuilder = ParameterSpec.builder( keyType, "key" );
-    addNullabilityAnnotationIfRequired( context, mapLike.getKeyType(), keyParamBuilder );
+    addNullabilityAnnotationIfRequired( mapLike.getKeyType(), keyParamBuilder );
     final ParameterSpec keyParam = keyParamBuilder.build();
 
     final ParameterSpec.Builder valueParamBuilder = ParameterSpec.builder( valueType, "value" );
-    addNullabilityAnnotationIfRequired( context, mapLike.getValueType(), valueParamBuilder );
+    addNullabilityAnnotationIfRequired( mapLike.getValueType(), valueParamBuilder );
     final ParameterSpec valueParam = valueParamBuilder.build();
 
     type.addMethod( MethodSpec
@@ -1233,7 +1253,7 @@ final class Generator
                                   .addParameter( valueParam )
                                   .addParameter( keyParam )
                                   .addParameter( ParameterSpec
-                                                   .builder( context.lookupTypeByName( definitionName ), "map" )
+                                                   .builder( lookupTypeByName( definitionName ), "map" )
                                                    .addAnnotation( Types.NONNULL )
                                                    .build() )
                                   .build() )
@@ -1309,27 +1329,25 @@ final class Generator
     }
   }
 
-  private void addNullabilityAnnotationIfRequired( @Nonnull final CodeGenContext context,
-                                                   @Nonnull final Type type,
-                                                   final ParameterSpec.Builder builder )
+  private void addNullabilityAnnotationIfRequired( @Nonnull final Type type,
+                                                   @Nonnull final ParameterSpec.Builder builder )
   {
-    if ( context.getSchema().isNullable( type ) )
+    if ( _schema.isNullable( type ) )
     {
       builder.addAnnotation( Types.NULLABLE );
     }
-    else if ( !context.getSchema().resolveType( type ).getKind().isPrimitive() )
+    else if ( !_schema.resolveType( type ).getKind().isPrimitive() )
     {
       builder.addAnnotation( Types.NONNULL );
     }
   }
 
-  private void generateAddEventListener( @Nonnull final CodeGenContext context,
-                                         @Nonnull final EventMember event,
+  private void generateAddEventListener( @Nonnull final EventMember event,
                                          final int variant,
                                          @Nonnull final TypeSpec.Builder type )
   {
     final String eventName = event.getName();
-    final TypeName listenerType = context.lookupTypeByName( event.getEventType().getName() + "Listener" );
+    final TypeName listenerType = lookupTypeByName( event.getEventType().getName() + "Listener" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
@@ -1343,7 +1361,7 @@ final class Generator
     {
       method
         .addParameter( ParameterSpec
-                         .builder( context.lookupTypeByName( "AddEventListenerOptions" ),
+                         .builder( lookupTypeByName( "AddEventListenerOptions" ),
                                    "options",
                                    Modifier.FINAL )
                          .addAnnotation( Types.NONNULL )
@@ -1367,13 +1385,12 @@ final class Generator
     type.addMethod( method.build() );
   }
 
-  private void generateRemoveEventListener( @Nonnull final CodeGenContext context,
-                                            @Nonnull final EventMember event,
+  private void generateRemoveEventListener( @Nonnull final EventMember event,
                                             final int variant,
                                             @Nonnull final TypeSpec.Builder type )
   {
     final String eventName = event.getName();
-    final TypeName listenerType = context.lookupTypeByName( event.getEventType().getName() + "Listener" );
+    final TypeName listenerType = lookupTypeByName( event.getEventType().getName() + "Listener" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
@@ -1387,7 +1404,7 @@ final class Generator
     {
       method
         .addParameter( ParameterSpec
-                         .builder( context.lookupTypeByName( "EventListenerOptions" ),
+                         .builder( lookupTypeByName( "EventListenerOptions" ),
                                    "options",
                                    Modifier.FINAL )
                          .addAnnotation( Types.NONNULL )
@@ -1431,22 +1448,21 @@ final class Generator
     }
   }
 
-  private void generateReadOnlyAttribute( @Nonnull final CodeGenContext context,
-                                          @Nonnull final AttributeMember attribute,
+  private void generateReadOnlyAttribute( @Nonnull final AttributeMember attribute,
                                           @Nonnull final TypeSpec.Builder type )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
-    final Type actualType = context.getSchema().resolveType( attributeType );
+    final Type actualType = _schema.resolveType( attributeType );
     final String name = attribute.getName();
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( safeJsPropertyMethodName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( context.toTypeName( actualType ) )
+        .returns( toTypeName( actualType ) )
         .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     maybeAddJavadoc( attribute, method );
-    if ( context.getSchema().isNullable( attributeType ) )
+    if ( _schema.isNullable( attributeType ) )
     {
       method.addAnnotation( Types.NULLABLE );
     }
@@ -1457,23 +1473,22 @@ final class Generator
     type.addMethod( method.build() );
   }
 
-  private void generateAttribute( @Nonnull final CodeGenContext context,
-                                  @Nonnull final AttributeMember attribute,
+  private void generateAttribute( @Nonnull final AttributeMember attribute,
                                   @Nonnull final TypeSpec.Builder type )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
-    final Type actualType = context.getSchema().resolveType( attributeType );
+    final Type actualType = _schema.resolveType( attributeType );
     final String name = attribute.getName();
     final String fieldName = safeName( name );
     final FieldSpec.Builder field =
-      FieldSpec.builder( context.toTypeName( actualType ), fieldName, Modifier.PUBLIC );
+      FieldSpec.builder( toTypeName( actualType ), fieldName, Modifier.PUBLIC );
     maybeAddJavadoc( attribute, field );
     if ( !fieldName.equals( name ) )
     {
       field.addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     }
-    if ( context.getSchema().isNullable( attributeType ) )
+    if ( _schema.isNullable( attributeType ) )
     {
       field.addAnnotation( Types.NULLABLE );
     }
@@ -1484,25 +1499,23 @@ final class Generator
     type.addField( field.build() );
   }
 
-  private void generateConstants( @Nonnull final CodeGenContext context,
-                                  @Nonnull final Iterable<ConstMember> constants,
+  private void generateConstants( @Nonnull final Iterable<ConstMember> constants,
                                   @Nonnull final TypeSpec.Builder type )
   {
     for ( final ConstMember constant : constants )
     {
-      generateConstant( context, constant, type );
+      generateConstant( constant, type );
     }
   }
 
-  private void generateConstant( @Nonnull final CodeGenContext context,
-                                 @Nonnull final ConstMember constant,
+  private void generateConstant( @Nonnull final ConstMember constant,
                                  @Nonnull final TypeSpec.Builder type )
   {
     final Type constantType = constant.getType();
-    final Type actualType = context.getSchema().resolveType( constantType );
+    final Type actualType = _schema.resolveType( constantType );
     final FieldSpec.Builder field =
       FieldSpec
-        .builder( context.toTypeName( actualType ),
+        .builder( toTypeName( actualType ),
                   constant.getName(),
                   Modifier.PUBLIC,
                   Modifier.STATIC,
@@ -1563,8 +1576,7 @@ final class Generator
     type.addField( field.build() );
   }
 
-  private void generateDefaultOperation( @Nonnull final CodeGenContext context,
-                                         @Nonnull final OperationMember operation,
+  private void generateDefaultOperation( @Nonnull final OperationMember operation,
                                          @Nonnull final TypeSpec.Builder type )
   {
     final List<Argument> arguments = operation.getArguments();
@@ -1574,16 +1586,15 @@ final class Generator
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateDefaultOperation( context, operation, false, argumentList, typeList, type );
+        generateDefaultOperation( operation, false, argumentList, typeList, type );
       }
     }
   }
 
-  private void generateDefaultOperation( @Nonnull final CodeGenContext context,
-                                         @Nonnull final OperationMember operation,
+  private void generateDefaultOperation( @Nonnull final OperationMember operation,
                                          final boolean javaInterface,
                                          @Nonnull final List<Argument> arguments,
                                          @Nonnull final List<TypedValue> typeList,
@@ -1604,18 +1615,17 @@ final class Generator
       method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
     }
     final Type returnType = operation.getReturnType();
-    emitReturnType( context, returnType, method );
+    emitReturnType( returnType, method );
     int index = 0;
     for ( final Argument argument : arguments )
     {
       final TypedValue typedValue = typeList.get( index++ );
-      generateArgument( context, argument, typedValue, false, method );
+      generateArgument( argument, typedValue, false, method );
     }
     type.addMethod( method.build() );
   }
 
-  private void generateStaticOperation( @Nonnull final CodeGenContext context,
-                                        @Nonnull final OperationMember operation,
+  private void generateStaticOperation( @Nonnull final OperationMember operation,
                                         @Nonnull final TypeSpec.Builder type )
   {
     final List<Argument> arguments = operation.getArguments();
@@ -1625,16 +1635,15 @@ final class Generator
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateStaticOperation( context, operation, argumentList, typeList, type );
+        generateStaticOperation( operation, argumentList, typeList, type );
       }
     }
   }
 
-  private void generateStaticOperation( @Nonnull final CodeGenContext context,
-                                        @Nonnull final OperationMember operation,
+  private void generateStaticOperation( @Nonnull final OperationMember operation,
                                         @Nonnull final List<Argument> arguments,
                                         @Nonnull final List<TypedValue> typeList,
                                         @Nonnull final TypeSpec.Builder type )
@@ -1653,23 +1662,21 @@ final class Generator
       method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
     }
     final Type returnType = operation.getReturnType();
-    emitReturnType( context, returnType, method );
+    emitReturnType( returnType, method );
     int index = 0;
     for ( final Argument argument : arguments )
     {
-      generateArgument( context, argument, typeList.get( index++ ), false, method );
+      generateArgument( argument, typeList.get( index++ ), false, method );
     }
     type.addMethod( method.build() );
   }
 
-  private void emitReturnType( @Nonnull final CodeGenContext context,
-                               @Nonnull final Type returnType,
-                               @Nonnull final MethodSpec.Builder method )
+  private void emitReturnType( @Nonnull final Type returnType, @Nonnull final MethodSpec.Builder method )
   {
     if ( Kind.Void != returnType.getKind() )
     {
-      final Type actualType = context.getSchema().resolveType( returnType );
-      if ( context.getSchema().isNullable( returnType ) )
+      final Type actualType = _schema.resolveType( returnType );
+      if ( _schema.isNullable( returnType ) )
       {
         method.addAnnotation( Types.NULLABLE );
       }
@@ -1677,12 +1684,11 @@ final class Generator
       {
         method.addAnnotation( Types.NONNULL );
       }
-      method.returns( context.toTypeName( returnType ) );
+      method.returns( toTypeName( returnType ) );
     }
   }
 
-  private void generateConstructorOperation( @Nonnull final CodeGenContext context,
-                                             @Nonnull final OperationMember operation,
+  private void generateConstructorOperation( @Nonnull final OperationMember operation,
                                              @Nullable final OperationMember parentConstructor,
                                              @Nonnull final TypeSpec.Builder type )
   {
@@ -1693,16 +1699,15 @@ final class Generator
     {
       final List<Argument> argumentList = arguments.subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( context, argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateConstructorOperation( context, operation, parentConstructor, argumentList, typeList, type );
+        generateConstructorOperation( operation, parentConstructor, argumentList, typeList, type );
       }
     }
   }
 
-  private void generateConstructorOperation( @Nonnull final CodeGenContext context,
-                                             @Nonnull final OperationMember operation,
+  private void generateConstructorOperation( @Nonnull final OperationMember operation,
                                              @Nullable final OperationMember parentConstructor,
                                              @Nonnull final List<Argument> argumentList,
                                              @Nonnull final List<TypedValue> typeList,
@@ -1713,18 +1718,17 @@ final class Generator
     int index = 0;
     for ( final Argument argument : argumentList )
     {
-      generateArgument( context, argument, typeList.get( index++ ), true, method );
+      generateArgument( argument, typeList.get( index++ ), true, method );
     }
     if ( null != parentConstructor )
     {
-      generateSuperCall( context, parentConstructor, method );
+      generateSuperCall( parentConstructor, method );
     }
 
     type.addMethod( method.build() );
   }
 
-  private void generateSuperCall( @Nonnull final CodeGenContext context,
-                                  @Nonnull final OperationMember parentConstructor,
+  private void generateSuperCall( @Nonnull final OperationMember parentConstructor,
                                   @Nonnull final MethodSpec.Builder method )
   {
     final List<Argument> arguments = parentConstructor
@@ -1738,18 +1742,16 @@ final class Generator
       final List<Object> params = new ArrayList<>();
       final String statement =
         "super( " +
-        arguments.stream().map( a -> defaultValue( context, a, params ) ).collect( Collectors.joining( ", " ) ) +
+        arguments.stream().map( a -> defaultValue( a, params ) ).collect( Collectors.joining( ", " ) ) +
         " )";
       method.addStatement( statement, params.toArray() );
     }
   }
 
   @Nonnull
-  private String defaultValue( @Nonnull final CodeGenContext context,
-                               @Nonnull final Argument argument,
-                               @Nonnull final List<Object> params )
+  private String defaultValue( @Nonnull final Argument argument, @Nonnull final List<Object> params )
   {
-    final Type type = context.getSchema().resolveType( argument.getType() );
+    final Type type = _schema.resolveType( argument.getType() );
     final Kind kind = type.getKind();
     if ( kind.isInteger() )
     {
@@ -1765,22 +1767,21 @@ final class Generator
     }
     else
     {
-      params.add( context.toTypeName( type ) );
+      params.add( toTypeName( type ) );
       return "null";
     }
   }
 
-  private void generateArgument( @Nonnull final CodeGenContext context,
-                                 @Nonnull final Argument argument,
+  private void generateArgument( @Nonnull final Argument argument,
                                  @Nonnull final TypedValue typedValue,
                                  final boolean isFinal,
                                  @Nonnull final MethodSpec.Builder method )
   {
-    final Type actualType = context.getSchema().resolveType( argument.getType() );
+    final Type actualType = _schema.resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, safeName( argument.getName() ) );
-    addMagicConstantAnnotationIfNeeded( context, actualType, parameter );
+    addMagicConstantAnnotationIfNeeded( actualType, parameter );
     if ( isFinal )
     {
       parameter.addModifiers( Modifier.FINAL );
@@ -1795,14 +1796,13 @@ final class Generator
     method.addParameter( parameter.build() );
   }
 
-  private void addMagicConstantAnnotationIfNeeded( @Nonnull final CodeGenContext context,
-                                                   @Nonnull final Type type,
+  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
                                                    @Nonnull final ParameterSpec.Builder parameter )
   {
     if ( addMagicConstantsAnnotation() && Kind.TypeReference == type.getKind() )
     {
       final EnumerationDefinition enumeration =
-        context.getSchema().findEnumerationByName( ( (TypeReference) type ).getName() );
+        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
         final AnnotationSpec.Builder annotation = AnnotationSpec.builder( Types.MAGIC_CONSTANT );
@@ -1815,8 +1815,7 @@ final class Generator
     }
   }
 
-  private void generateEnumeration( @Nonnull final CodeGenContext context,
-                                    @Nonnull final EnumerationDefinition definition )
+  private void generateEnumeration( @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -1842,7 +1841,7 @@ final class Generator
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    context.writeTopLevelType( type );
+    writeTopLevelType( type );
   }
 
   @Nonnull
@@ -1959,5 +1958,393 @@ final class Generator
       .stream()
       .filter( a -> a.getKind() == ExtendedAttribute.Kind.IDENT || a.getKind() == ExtendedAttribute.Kind.IDENT_LIST )
       .anyMatch( a -> a.getName().equals( "Exposed" ) );
+  }
+
+  @Nonnull
+  Path getMainJavaDirectory()
+  {
+    return _outputDirectory.resolve( "main" ).resolve( "java" );
+  }
+
+  @Nonnull
+  private  TypeName lookupTypeByName( @Nonnull final String name )
+  {
+    // The type "console" starts with a lower case name due to legacy reasons.
+    // This next line just makes sure that an uppercase is used for the java type
+    final String typeName = NamingUtil.uppercaseFirstCharacter( name );
+    final ClassName existing = _typeMapping.get( typeName );
+    if ( null != existing )
+    {
+      return existing;
+    }
+    else
+    {
+      final ClassName className = getClassName( typeName );
+      _typeMapping.put( typeName, className );
+      return className;
+    }
+  }
+
+  @Nonnull
+  private  Path getPackageDirectory( @Nonnull final String packageName )
+  {
+    final Path baseDirectory = getMainJavaDirectory();
+    return packageName.isEmpty() ?
+           baseDirectory :
+           baseDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
+  }
+
+  private void writeResourceFile( @Nonnull final String name, @Nonnull final byte[] content )
+    throws IOException
+  {
+    final Path path = getPackageDirectory( _packageName ).resolve( name );
+    final String qualifiedName = _packageName + "." + name;
+    assert !_generatedSourceFiles.containsKey( qualifiedName );
+    _generatedSourceFiles.put( qualifiedName, path );
+
+    Files.write( path, content, StandardOpenOption.CREATE_NEW );
+  }
+
+  private   void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
+    throws IOException
+  {
+    writeTopLevelType( type, null );
+  }
+
+  private  void writeTopLevelType( @Nonnull final TypeSpec.Builder type, @Nullable final String namespace )
+    throws IOException
+  {
+    final Path outputDirectory = getMainJavaDirectory();
+    final TypeSpec typeSpec = type.build();
+    final String packageName = derivePackage( namespace );
+    final String name = typeSpec.name;
+    final Path path = getPackageDirectory( packageName ).resolve( name + ".java" );
+    final String qualifiedName = packageName + "." + name;
+    assert !_generatedSourceFiles.containsKey( qualifiedName );
+    _generatedSourceFiles.put( qualifiedName, path );
+    JavaFile
+      .builder( packageName, typeSpec )
+      .skipJavaLangImports( true )
+      .build()
+      .writeTo( outputDirectory );
+  }
+
+  @Nonnull
+  private String derivePackage( @Nullable final String namespace )
+  {
+    return _packageName + ( null == namespace ? "" : "." + NamingUtil.underscore( namespace ) );
+  }
+
+  @Nonnull
+  Map<String, Path> getGeneratedSourceFiles()
+  {
+    return Collections.unmodifiableMap( _generatedSourceFiles );
+  }
+
+  @Nonnull
+  private ClassName getClassName( @Nonnull final String name )
+  {
+    final EnumerationDefinition enumeration = _schema.findEnumerationByName( name );
+    if ( null != enumeration )
+    {
+      return Types.STRING;
+    }
+    final TypedefDefinition typedef = _schema.findTypedefByName( name );
+    if ( null != typedef )
+    {
+      if ( Kind.Union == typedef.getType().getKind() )
+      {
+        return ClassName.get( _packageName, name );
+      }
+      else
+      {
+        //TODO: resolve typedef
+      }
+    }
+    final InterfaceDefinition interfaceDefinition = _schema.findInterfaceByName( name );
+    if ( null != interfaceDefinition )
+    {
+      return ClassName.get( derivePackage( interfaceDefinition.getNamespace() ), name );
+    }
+    return ClassName.get( _packageName, name );
+  }
+
+  @Nonnull
+  private TypeName toTypeName( @Nonnull final Type type )
+  {
+    return toTypeName( type, type.isNullable() );
+  }
+
+  @Nonnull
+  private TypeName toTypeName( @Nonnull final Type type, final boolean boxed )
+  {
+    final Kind kind = type.getKind();
+    if ( boxed &&
+         ( Kind.Byte == kind ||
+           Kind.Octet == kind ||
+           Kind.Short == kind ||
+           Kind.UnsignedShort == kind ||
+           Kind.UnsignedLong == kind ||
+           Kind.Long == kind ||
+           Kind.LongLong == kind ||
+           Kind.UnsignedLongLong == kind ) )
+    {
+      // TODO: This is uncomfortable mapping. Not sure what the solutions is...
+      //  We should emit a warning a deal with it later
+      return TypeName.DOUBLE.box();
+    }
+    else if ( Kind.Any == kind )
+    {
+      return Types.ANY;
+    }
+    else if ( Kind.Void == kind )
+    {
+      return TypeName.VOID;
+    }
+    else if ( Kind.Boolean == kind )
+    {
+      return boxed ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
+    }
+    else if ( Kind.Byte == kind )
+    {
+      return TypeName.BYTE;
+    }
+    else if ( Kind.Octet == kind )
+    {
+      return TypeName.SHORT;
+    }
+    else if ( Kind.Short == kind )
+    {
+      return TypeName.SHORT;
+    }
+    else if ( Kind.UnsignedShort == kind )
+    {
+      return TypeName.INT;
+    }
+    else if ( Kind.Long == kind )
+    {
+      return TypeName.INT;
+    }
+    else if ( Kind.UnsignedLong == kind )
+    {
+      // UnsignedLong is not representable in a JVM but we may it using a signed integer when in jsinterop
+      // and just hope it produces the correct value.
+      return TypeName.INT;
+    }
+    else if ( Kind.LongLong == kind )
+    {
+      // LongLong is actually the same size as a java long in the jre but the way that
+      // it is transpiled by GWT/J2CL means we need to represent it as an integer but
+      // acknowledge that at runtime the value can exceed what the java type represents
+      return TypeName.INT;
+    }
+    else if ( Kind.UnsignedLongLong == kind )
+    {
+      // Not representable natively in java but in jsinterop it is best represented as an integer
+      // See comment on LongLong type
+      return TypeName.INT;
+    }
+    else if ( Kind.Float == kind || Kind.UnrestrictedFloat == kind )
+    {
+      return boxed ? TypeName.DOUBLE.box() : TypeName.FLOAT;
+    }
+    else if ( Kind.Double == kind || Kind.UnrestrictedDouble == kind )
+    {
+      return boxed ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
+    }
+    else if ( Kind.DOMString == kind || Kind.ByteString == kind || Kind.USVString == kind )
+    {
+      return Types.STRING;
+    }
+    else if ( Kind.Object == kind )
+    {
+      return TypeName.OBJECT;
+    }
+    else if ( Kind.Symbol == kind )
+    {
+      return Types.SYMBOL;
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      final TypeReference typeReference = (TypeReference) type;
+      final String name = typeReference.getName();
+      final WebIDLSchema schema = _schema;
+      if ( null != schema.findInterfaceByName( name ) ||
+           null != schema.findDictionaryByName( name ) ||
+           null != schema.findCallbackInterfaceByName( name ) ||
+           null != schema.findCallbackByName( name ) )
+      {
+        return lookupTypeByName( name );
+      }
+      else if ( null != schema.findEnumerationByName( name ) )
+      {
+        return Types.STRING;
+      }
+      else
+      {
+        final TypedefDefinition typedef = schema.getTypedefByName( name );
+        //TODO: Figure out some sensible mechanism for this logic rather than duplicating the logic all over the place
+        if ( Kind.Union == typedef.getType().getKind() )
+        {
+          return lookupTypeByName( name );
+        }
+        else
+        {
+          return toTypeName( typedef.getType() );
+        }
+      }
+    }
+    else if ( Kind.Promise == kind )
+    {
+      return ParameterizedTypeName.get( Types.PROMISE, getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      return ParameterizedTypeName.get( Types.JS_ARRAY, getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
+    }
+    else if ( Kind.Record == kind )
+    {
+      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
+                                        getUnexpandedType( ( (RecordType) type ).getValueType() ) );
+    }
+    else if ( Kind.FrozenArray == kind )
+    {
+      return ParameterizedTypeName.get( Types.JS_ARRAY, getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
+    }
+    else if ( Kind.ArrayBuffer == kind )
+    {
+      return Types.ARRAY_BUFFER;
+    }
+    else if ( Kind.DataView == kind )
+    {
+      return Types.DATA_VIEW;
+    }
+    else if ( Kind.Int8Array == kind )
+    {
+      return Types.INT8_ARRAY;
+    }
+    else if ( Kind.Int16Array == kind )
+    {
+      return Types.INT16_ARRAY;
+    }
+    else if ( Kind.Int32Array == kind )
+    {
+      return Types.INT32_ARRAY;
+    }
+    else if ( Kind.Uint8Array == kind )
+    {
+      return Types.UINT8_ARRAY;
+    }
+    else if ( Kind.Uint16Array == kind )
+    {
+      return Types.UINT16_ARRAY;
+    }
+    else if ( Kind.Uint32Array == kind )
+    {
+      return Types.UINT32_ARRAY;
+    }
+    else if ( Kind.Uint8ClampedArray == kind )
+    {
+      return Types.UINT8_CLAMPED_ARRAY;
+    }
+    else if ( Kind.Float32Array == kind )
+    {
+      return Types.FLOAT32_ARRAY;
+    }
+    else if ( Kind.Float64Array == kind )
+    {
+      return Types.FLOAT64_ARRAY;
+    }
+    else if ( Kind.Union == kind )
+    {
+      return lookupTypeByName( generateUnionType( (UnionType) type ) );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
+    }
+  }
+
+  @Nonnull
+  private TypeName getUnexpandedType( @Nonnull final Type type )
+  {
+    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
+  }
+
+  @Nonnull
+  private Type toJsinteropCompatibleType( @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isPrimitive() &&
+         Kind.Boolean != kind &&
+         Kind.Double != kind &&
+         Kind.UnrestrictedDouble != kind )
+    {
+      return new Type( Kind.Double,
+                       type.getExtendedAttributes(),
+                       type.isNullable(),
+                       type.getSourceLocations() );
+    }
+    else
+    {
+      return type;
+    }
+  }
+
+  @Nonnull
+  private Map<String, UnionType> getUnions()
+  {
+    return _unions;
+  }
+
+  @Nonnull
+  private String generateUnionType( @Nonnull final UnionType type )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( final Type memberType : type.getMemberTypes() )
+    {
+      if ( 0 != sb.length() )
+      {
+        sb.append( "Or" );
+      }
+      appendTypeToUnionName( sb, memberType );
+    }
+    sb.append( "Union" );
+    final String name = sb.toString();
+    if ( !_unions.containsKey( name ) )
+    {
+      _unions.put( name, type );
+    }
+    return name;
+  }
+
+  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isString() )
+    {
+      sb.append( "String" );
+    }
+    else if ( kind.isPrimitive() ||
+              kind.isBufferRelated() ||
+              Kind.FrozenArray == kind ||
+              Kind.Object == kind ||
+              Kind.Symbol == kind )
+    {
+      sb.append( kind.name() );
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      sb.append( ( (TypeReference) type ).getName() );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
+      sb.append( "Array" );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
+    }
   }
 }
