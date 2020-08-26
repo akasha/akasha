@@ -79,7 +79,6 @@ define 'webtack' do
     compile.with project('webidl-model').package(:jar),
                  project('webidl-model').compile.dependencies
 
-
     test.using :testng
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => 'true',
