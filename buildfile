@@ -156,15 +156,6 @@ define 'webtack' do
     test.using :testng
   end
 
-  define 'host-factory-generator' do
-    compile.with :getopt4j,
-                 :jsoup,
-                 :jsonb_api,
-                 :yasson,
-                 :javax_json,
-                 :javax_annotation
-  end
-
   iml.excluded_directories << project._('tmp')
 
   ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webidl-model/src/test/resources')
