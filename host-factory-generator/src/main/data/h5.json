@@ -1,0 +1,12 @@
+
+{
+    "name": "h5",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h5",
+    "contentCategories": [
+        "flow content",
+        "heading content",
+        "palpable content"
+    ],
+    "domInterface": "HTMLHeadingElement",
+    "omitEndTag": false
+}

@@ -1,0 +1,11 @@
+
+{
+    "name": "small",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small",
+    "contentCategories": [
+        "flow content",
+        "phrasing content"
+    ],
+    "domInterface": "HTMLElement",
+    "omitEndTag": false
+}

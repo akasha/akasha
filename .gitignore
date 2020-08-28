@@ -10,3 +10,4 @@
 /*/generated
 /reports
 /target
+/host-factory-generator/src/main/data/*.html

@@ -1,0 +1,9 @@
+
+{
+    "name": "tbody",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tbody",
+    "contentCategories": [
+    ],
+    "domInterface": "HTMLTableSectionElement",
+    "omitEndTag": false
+}

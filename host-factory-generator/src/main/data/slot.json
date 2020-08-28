@@ -1,0 +1,11 @@
+
+{
+    "name": "slot",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot",
+    "contentCategories": [
+        "flow content",
+        "phrasing content"
+    ],
+    "domInterface": "HTMLSlotElement",
+    "omitEndTag": false
+}

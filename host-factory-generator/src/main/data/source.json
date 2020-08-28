@@ -1,0 +1,9 @@
+
+{
+    "name": "source",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source",
+    "contentCategories": [
+    ],
+    "domInterface": "HTMLSourceElement",
+    "omitEndTag": true
+}

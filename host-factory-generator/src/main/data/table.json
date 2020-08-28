@@ -1,0 +1,10 @@
+
+{
+    "name": "table",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table",
+    "contentCategories": [
+        "flow content"
+    ],
+    "domInterface": "HTMLTableElement",
+    "omitEndTag": false
+}

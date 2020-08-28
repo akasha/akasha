@@ -1,0 +1,11 @@
+
+{
+    "name": "ins",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins",
+    "contentCategories": [
+        "flow content",
+        "phrasing content"
+    ],
+    "domInterface": "HTMLModElement",
+    "omitEndTag": false
+}

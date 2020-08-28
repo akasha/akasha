@@ -1,0 +1,12 @@
+
+{
+    "name": "em",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em",
+    "contentCategories": [
+        "flow content",
+        "palpable content",
+        "phrasing content"
+    ],
+    "domInterface": "HTMLElement Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the HTMLSpanElement interface for this element.",
+    "omitEndTag": false
+}

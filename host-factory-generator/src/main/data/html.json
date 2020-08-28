@@ -1,0 +1,9 @@
+
+{
+    "name": "html",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html",
+    "contentCategories": [
+    ],
+    "domInterface": "HTMLHtmlElement",
+    "omitEndTag": false
+}
