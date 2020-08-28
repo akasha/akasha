@@ -127,7 +127,10 @@ public final class Fetch
           }
           else if ( "DOM interface".equals( headerText ) || "DOM Interface".equals( headerText ) )
           {
-            model.setDomInterface( td.text() );
+            // Several of the domInterfaces name the interface and then a historical
+            // interface so we just take the first word
+            final String domInterface = td.text().replaceAll( " .*$", "" );
+            model.setDomInterface( domInterface );
           }
           else
           {

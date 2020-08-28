@@ -6,6 +6,6 @@
         "flow content",
         "phrasing content"
     ],
-    "domInterface": "HTMLSpanElement (before HTML5, the interface was HTMLElement)",
+    "domInterface": "HTMLSpanElement",
     "omitEndTag": false
 }

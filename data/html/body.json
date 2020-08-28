@@ -5,6 +5,6 @@
     "contentCategories": [
         "sectioning root"
     ],
-    "domInterface": "HTMLBodyElement The <body> element exposes the HTMLBodyElement interface. You can access the <body> element through the document.body property.",
+    "domInterface": "HTMLBodyElement",
     "omitEndTag": false
 }
