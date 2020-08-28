@@ -102,6 +102,33 @@ define 'webtack' do
     package(:javadoc)
   end
 
+  define 'react4j-generator' do
+    compile.with project('webidl-model').package(:jar),
+                 project('webidl-model').compile.dependencies
+
+    test.using :testng
+    test.options[:properties] = {
+      'webtack.react4j-generator.gwtc' => 'true',
+      'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
+      'webtack.react4j-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}",
+      'webtack.react4j-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}"
+    }
+    test.options[:java_args] = ['-ea']
+    test.compile.with :gir, Java.tools_jar
+    test.compile.enhance do |d|
+      GWT_DEPS.collect {|a| artifact(a).invoke }
+      Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
+    end
+
+    package(:jar, :classifier => 'all').tap do |jar|
+      [:javapoet].collect { |dep| Buildr.artifact(dep) }.each do |d|
+        jar.merge(d)
+      end
+    end
+    package(:sources)
+    package(:javadoc)
+  end
+
   define 'cli' do
     generate_config_resource(project)
 
@@ -110,6 +137,8 @@ define 'webtack' do
                  project('webidl-model').compile.dependencies,
                  project('jsinterop-generator').package(:jar),
                  project('jsinterop-generator').compile.dependencies,
+                 project('react4j-generator').package(:jar),
+                 project('react4j-generator').compile.dependencies,
                  PACKAGED_DEPS
 
     package(:jar)
@@ -140,6 +169,10 @@ define 'webtack' do
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
                                :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}")
+
+  ipr.add_testng_configuration('react4j-generator',
+                               :module => 'react4j-generator',
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.react4j-generator.fixture_dir=src/test/fixtures -Dwebtack.react4j-generator.gwtc=true -Dwebtack.react4j-generator.fixture.libs=#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s} -Dwebtack.react4j-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}")
 
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - bluetooth', :dir => 'file://$PROJECT_DIR$', :args => '-d data run bluetooth')
 
