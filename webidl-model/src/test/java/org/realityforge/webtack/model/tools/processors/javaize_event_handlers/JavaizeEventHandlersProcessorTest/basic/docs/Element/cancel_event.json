@@ -1,0 +1,9 @@
+
+{
+    "kind": "Event",
+    "name": "Element.cancel_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/cancel_event",
+    "description": "The cancel event",
+    "eventName": "cancel",
+    "eventType": "Event"
+}

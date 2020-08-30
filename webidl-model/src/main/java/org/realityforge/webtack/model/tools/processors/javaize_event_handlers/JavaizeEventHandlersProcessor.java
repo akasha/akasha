@@ -1,5 +1,6 @@
 package org.realityforge.webtack.model.tools.processors.javaize_event_handlers;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -306,7 +307,30 @@ final class JavaizeEventHandlersProcessor
   private List<EntryIndex> deriveEventEntries()
   {
     assert null != _type;
-    final DocIndex index = _runtime.findIndexForType( _type );
+    InterfaceDefinition definition = _schema.findInterfaceByName( _type );
+    if ( null == definition )
+    {
+      return deriveEventEntriesForType( _type );
+    }
+    else
+    {
+      final List<EntryIndex> entries = new ArrayList<>();
+
+      while ( null != definition )
+      {
+        entries.addAll( deriveEventEntriesForType( definition.getName() ) );
+        final String inherits = definition.getInherits();
+        definition = null == inherits ? null : _schema.findInterfaceByName( inherits );
+      }
+
+      return entries;
+    }
+  }
+
+  @Nonnull
+  private List<EntryIndex> deriveEventEntriesForType( @Nonnull final String type )
+  {
+    final DocIndex index = _runtime.findIndexForType( type );
     return null != index ?
            index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
            Collections.emptyList();
