@@ -36,9 +36,13 @@ complete as there is too much un-said.
 
 * Port https://github.com/toji/webxr-particles
 
-* use webrtc + hand-tracking (https://immersive-web.github.io/webxr-hand-input/) for web based comms system. Possibly even add video layers via https://github.com/immersive-web/layers for desktop users?
- - https://github.com/marlon360/webxr-handtracking
- - https://cabanier.github.io/WebXRLayers-samples/index.html
+* WebRTC + XR + Hand-tracking to create VR chat with a real feel of social presence. Each "area" would be hosted
+  independently and other users use webrtc so connect to that peer. The communication could include audio and/or
+  video as well as a data stream. Video would allow the immersion of desktop users into the world. 
+ - Hand Tracking: https://github.com/marlon360/webxr-handtracking
+ - Hand Tracking: https://github.com/stewdio/handy.js
+ - WebXR Layers Spec: https://github.com/immersive-web/layers
+ - WebXR Layers Sample: https://cabanier.github.io/WebXRLayers-samples/index.html
 
 # Java Generation
 
