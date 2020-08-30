@@ -272,43 +272,44 @@ final class JavaizeEventHandlersProcessor
   {
     if ( isEventHandlerProperty( input ) )
     {
-      assert null != _type;
-      final DocIndex index = _runtime.findIndexForType( _type );
-      final List<EntryIndex> eventEntries =
-        null != index ?
-        index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
-        null;
-      if ( null != eventEntries )
+      for ( final EntryIndex eventIndex : deriveEventEntries() )
       {
-        for ( final EntryIndex eventIndex : eventEntries )
+        final DocEntry eventDocEntry = _runtime.getDocEntry( eventIndex );
+        final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
+        if ( input.getName().equals( eventHandlerProperty ) )
         {
-          final DocEntry eventDocEntry = _runtime.getDocEntry( eventIndex );
-          final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
-          if ( input.getName().equals( eventHandlerProperty ) )
+          final String eventTypeName = eventDocEntry.getEventType();
+          assert null != eventTypeName;
+          // Several events are documented that are historic (or unions) so this code essentially guards
+          // against this scenario which would generate bad code
+          if ( null != _schema.findInterfaceByName( eventTypeName ) )
           {
-            final String eventTypeName = eventDocEntry.getEventType();
-            assert null != eventTypeName;
-            // Several events are documented that are historic (or unions) so this code essentially guards
-            // against this scenario which would generate bad code
-            if ( null != _schema.findInterfaceByName( eventTypeName ) )
-            {
-              final String handlerName = eventTypeName + "Handler";
-              _usedHandlers.add( handlerName );
-              return new AttributeMember( input.getName(),
-                                          new TypeReference( handlerName,
-                                                             Collections.emptyList(),
-                                                             true,
-                                                             Collections.emptyList() ),
-                                          input.getModifiers(),
-                                          transformDocumentation( input.getDocumentation() ),
-                                          transformExtendedAttributes( input.getExtendedAttributes() ),
-                                          transformSourceLocations( input.getSourceLocations() ) );
-            }
+            final String handlerName = eventTypeName + "Handler";
+            _usedHandlers.add( handlerName );
+            return new AttributeMember( input.getName(),
+                                        new TypeReference( handlerName,
+                                                           Collections.emptyList(),
+                                                           true,
+                                                           Collections.emptyList() ),
+                                        input.getModifiers(),
+                                        transformDocumentation( input.getDocumentation() ),
+                                        transformExtendedAttributes( input.getExtendedAttributes() ),
+                                        transformSourceLocations( input.getSourceLocations() ) );
           }
         }
       }
     }
     return super.transformAttributeMember( input );
+  }
+
+  @Nonnull
+  private List<EntryIndex> deriveEventEntries()
+  {
+    assert null != _type;
+    final DocIndex index = _runtime.findIndexForType( _type );
+    return null != index ?
+           index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
+           Collections.emptyList();
   }
 
   @Nonnull
