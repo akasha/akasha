@@ -30,6 +30,7 @@ task "data:run_pipelines" do
   in_dir(WORKSPACE_DIR) do
     run_webtack(%w(--verbose -d data run speech))
     run_webtack(%w(--verbose -d data run bluetooth))
+    run_webtack(%w(--verbose -d data run common))
     run_webtack(%w(--verbose -d data run main))
   end
 end

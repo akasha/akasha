@@ -1,5 +1,5 @@
 {
-  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common !name=complete",
+  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common",
   "stages": [
     {
       "name": "MergeDocs",
@@ -262,23 +262,9 @@
       }
     },
     {
-      "name": "JavaizeEventHandlers",
-      "config": {
-        "docsDirectory": "data/docs"
-      }
-    },
-    {
       "name": "Emit",
       "config": {
-        "filePattern": "data/output/main/complete.webidl"
-      }
-    },
-    {
-      "name": "Jsinterop",
-      "config": {
-        "outputDirectory": "data/output/main",
-        "packageName": "elemental3",
-        "globalInterface": "Window"
+        "filePattern": "data/idl/complete.webidl"
       }
     }
   ]
