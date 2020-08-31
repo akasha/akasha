@@ -38,7 +38,7 @@ complete as there is too much un-said.
 
 * WebRTC + XR + Hand-tracking to create VR chat with a real feel of social presence. Each "area" would be hosted
   independently and other users use webrtc so connect to that peer. The communication could include audio and/or
-  video as well as a data stream. Video would allow the immersion of desktop users into the world. 
+  video as well as a data stream. Video would allow the immersion of desktop users into the world.
  - Hand Tracking: https://github.com/marlon360/webxr-handtracking
  - Hand Tracking: https://github.com/stewdio/handy.js
  - WebXR Layers Spec: https://github.com/immersive-web/layers
