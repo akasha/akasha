@@ -1,5 +1,5 @@
 {
-  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common !name=complete",
+  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common",
   "stages": [
     {
       "name": "MergeDocs",

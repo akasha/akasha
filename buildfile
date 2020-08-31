@@ -176,8 +176,6 @@ define 'webtack' do
 
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - bluetooth', :dir => 'file://$PROJECT_DIR$', :args => '-d data run bluetooth')
 
-  ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - complete', :dir => 'file://$PROJECT_DIR$', :args => '-d data run complete')
-
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - main', :dir => 'file://$PROJECT_DIR$', :args => '-d data run main')
 
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - speech', :dir => 'file://$PROJECT_DIR$', :args => '-d data run speech')

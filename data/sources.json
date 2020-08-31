@@ -26,10 +26,6 @@
         "url": "https://heycam.github.io/webidl/"
     },
     {
-        "lastModifiedTime": 0,
-        "name": "complete"
-    },
-    {
         "lastModifiedTime": 1547670576000,
         "name": "credential_management_1",
         "url": "https://www.w3.org/TR/credential-management-1/"
