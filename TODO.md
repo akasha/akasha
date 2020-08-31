@@ -106,6 +106,10 @@ Generate host element factories in the current style Generate one prop object pe
   grammar some how. For example, the `main` pipeline that loads all the schemas, applys transforms and emits
   a complete idl with all annotations takes 18sec but loading that complete idl takes 51sec)
 
+* Add mechanism by which we can import/extend a pipeline from another pipeline. The importing-pipeline will
+  likely get the `sourceSelector` from the parent pipline and the stages are added to the of the current
+  pipeline. The goal is to share code between pipelines like `main` and `react4j`.
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
