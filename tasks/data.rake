@@ -31,5 +31,6 @@ task "data:run_pipelines" do
     run_webtack(%w(--verbose -d data run speech))
     run_webtack(%w(--verbose -d data run bluetooth))
     run_webtack(%w(--verbose -d data run main))
+    run_webtack(%w(--verbose -d data run react4j))
   end
 end

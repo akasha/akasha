@@ -178,6 +178,8 @@ define 'webtack' do
 
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - main', :dir => 'file://$PROJECT_DIR$', :args => '-d data run main')
 
+  ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - react4j', :dir => 'file://$PROJECT_DIR$', :args => '-d data run react4j')
+
   ipr.add_java_configuration(project('cli'), 'org.realityforge.webtack.Main', :name => 'Run - speech', :dir => 'file://$PROJECT_DIR$', :args => '-d data run speech')
 
   ipr.add_component_from_artifact(:idea_codestyle)
