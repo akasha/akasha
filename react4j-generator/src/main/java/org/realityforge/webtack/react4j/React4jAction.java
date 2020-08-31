@@ -7,7 +7,6 @@ import java.nio.file.Path;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
@@ -16,17 +15,13 @@ import org.realityforge.webtack.model.tools.util.NamingUtil;
 final class React4jAction
   extends AbstractJavaAction
 {
-  @Nullable
-  private final String _factoryName;
   private final boolean _generateGwtModule;
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
-                 @Nullable final String factoryName,
                  final boolean generateGwtModule )
   {
     super( outputDirectory, packageName );
-    _factoryName = factoryName;
     _generateGwtModule = generateGwtModule;
   }
 

@@ -133,29 +133,24 @@ public abstract class AbstractTest
     assertEquals( actualContents, expectedContents, "File " + file + " should match fixture file " + fixtureFile );
   }
 
-  protected final void generateCode( @Nonnull final Path directory,
-                                     @Nullable final String factoryName,
-                                     @Nonnull final ValidatorRuleConfig validator )
+  protected final void generateCode( @Nonnull final Path directory, @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
     generateCode( directory,
                   new String( Files.readAllBytes( directory.resolve( "schema.webidl" ) ), StandardCharsets.UTF_8 ),
-                  factoryName,
                   validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
                              @Nonnull final String content,
-                             @Nullable final String factoryName,
                              @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
-    generateCode( directory, loadSchema( content ), factoryName, validator );
+    generateCode( directory, loadSchema( content ), validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
                              @Nonnull final WebIDLSchema schema,
-                             @Nullable final String factoryName,
                              @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
@@ -179,7 +174,7 @@ public abstract class AbstractTest
     }
 
     final Path outputDirectory = getWorkingDir();
-    final React4jAction action = new React4jAction( outputDirectory, "com.example", factoryName, true );
+    final React4jAction action = new React4jAction( outputDirectory, "com.example", true );
     action.process( schema );
     final Path mainJavaDirectory = action.getMainJavaDirectory();
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );

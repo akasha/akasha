@@ -12,7 +12,6 @@ public final class React4jActionFactory
 {
   public String outputDirectory;
   public String packageName;
-  public String factoryName;
   public boolean generateGwtModule = true;
 
   @Nonnull
@@ -27,6 +26,6 @@ public final class React4jActionFactory
     {
       throw new IllegalArgumentException( "React4j missing required packageName configuration value" );
     }
-    return new React4jAction( Paths.get( outputDirectory ), packageName, factoryName, generateGwtModule );
+    return new React4jAction( Paths.get( outputDirectory ), packageName, generateGwtModule );
   }
 }
