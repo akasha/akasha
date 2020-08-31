@@ -1,5 +1,7 @@
 package org.realityforge.webtack.model.tools.util;
 
+import com.squareup.javapoet.AnnotationSpec;
+import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 import java.io.File;
@@ -139,6 +141,23 @@ public abstract class AbstractJavaAction
       .skipJavaLangImports( true )
       .build()
       .writeTo( outputDirectory );
+  }
+
+  protected final void writeGeneratedAnnotation( @Nonnull final TypeSpec.Builder builder )
+  {
+    writeGeneratedAnnotation( builder, "org.realityforge.webtack" );
+  }
+
+  private void writeGeneratedAnnotation( @Nonnull final TypeSpec.Builder builder,
+                                         @Nonnull final String generatorClassName )
+  {
+    final Class<?> generated = GeneratedAnnotationUtil.getGeneratedAnnotation();
+    if ( null != generated )
+    {
+      builder.addAnnotation( AnnotationSpec.builder( ClassName.get( generated ) )
+                               .addMember( "value", "$S", generatorClassName )
+                               .build() );
+    }
   }
 
   @Nonnull

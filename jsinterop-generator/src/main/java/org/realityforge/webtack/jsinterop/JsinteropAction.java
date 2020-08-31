@@ -1872,17 +1872,6 @@ final class JsinteropAction
     return docs.toString();
   }
 
-  private void writeGeneratedAnnotation( @Nonnull final TypeSpec.Builder builder )
-  {
-    Class<?> generated = GeneratedAnnotationUtil.getGeneratedAnnotation();
-    if ( null != generated )
-    {
-      builder.addAnnotation( AnnotationSpec.builder( ClassName.get( generated ) )
-                               .addMember( "value", "$S", "org.realityforge.webtack" )
-                               .build() );
-    }
-  }
-
   private boolean isExposedOnGlobal( @Nonnull final Element element )
   {
     return element.getExtendedAttributes()
