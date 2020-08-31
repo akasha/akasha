@@ -102,6 +102,10 @@ Generate host element factories in the current style Generate one prop object pe
 
 * Add javac compile, gwtc compile and javadoc processing as part of jsinterop pipeline.
 
+* Parser is extremely slow because of it's recursive nature. Is there a way to "fix" this by reworking the
+  grammar some how. For example, the `main` pipeline that loads all the schemas, applys transforms and emits
+  a complete idl with all annotations takes 18sec but loading that complete idl takes 51sec)
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
