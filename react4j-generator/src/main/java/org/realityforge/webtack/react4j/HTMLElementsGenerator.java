@@ -6,6 +6,10 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.annotation.Nonnull;
 
+/**
+ * Rather than representing this data in a separate structure, it should be possible to
+ * add a lot of this data as extended attributes which would simplify generation somewhat.
+ */
 final class HTMLElementsGenerator
 {
   private HTMLElementsGenerator()
