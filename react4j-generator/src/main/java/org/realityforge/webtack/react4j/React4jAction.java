@@ -19,7 +19,6 @@ final class React4jAction
   @Nullable
   private final String _factoryName;
   private final boolean _generateGwtModule;
-  private WebIDLSchema _schema;
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
@@ -37,7 +36,6 @@ final class React4jAction
   {
     schema.link();
     processInit();
-    _schema = Objects.requireNonNull( schema );
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
 
