@@ -35,6 +35,7 @@ final class React4jAction
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
+    schema.link();
     processInit();
     _schema = Objects.requireNonNull( schema );
 
