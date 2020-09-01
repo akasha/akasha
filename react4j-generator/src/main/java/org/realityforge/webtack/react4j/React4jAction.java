@@ -398,6 +398,7 @@ final class React4jAction
            permittedContent.contains( "transparent content" ) ||
            permittedContent.contains( "flow content" ) )
       {
+        // TODO: Asses downstream apps but it seems like we could probably remove all of these except STRING
         type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, Types.STRING ) );
         type.addMethod( emitElementFactoryWithSimpleContent( element, Types.STRING ) );
         type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, TypeName.BYTE ) );
