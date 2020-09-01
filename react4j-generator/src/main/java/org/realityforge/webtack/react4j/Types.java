@@ -17,11 +17,21 @@ final class Types
   @Nonnull
   static final ClassName NULLABLE = ClassName.get( "javax.annotation", "Nullable" );
   @Nonnull
+  static final ClassName JS_TYPE = ClassName.get( "jsinterop.annotations", "JsType" );
+  @Nonnull
+  static final ClassName JS_OVERLAY = ClassName.get( "jsinterop.annotations", "JsOverlay" );
+  @Nonnull
+  static final ClassName JS_PACKAGE = ClassName.get( "jsinterop.annotations", "JsPackage" );
+  @Nonnull
   static final ClassName REACT_ELEMENT = ClassName.get( "react4j", "ReactElement" );
   @Nonnull
   static final ClassName REACT_NODE = ClassName.get( "react4j", "ReactNode" );
   @Nonnull
+  static final ClassName REF_CALLBACK = ClassName.get( "react4j.dom", "RefCallback" );
+  @Nonnull
   static final ArrayTypeName REACT_NODE_ARRAY = ArrayTypeName.of( REACT_NODE );
+  @Nonnull
+  static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );
   @Nonnull
   static final ClassName JS = ClassName.get( "jsinterop.base", "Js" );
   @Nonnull
