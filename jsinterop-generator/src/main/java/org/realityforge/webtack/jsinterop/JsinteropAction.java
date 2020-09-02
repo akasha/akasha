@@ -532,6 +532,7 @@ final class JsinteropAction
         final TypedValue memberType = types.get( index++ );
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
+        addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
         addDoNotAutoboxAnnotation( memberType, parameter );
         addNullabilityAnnotation( memberType, parameter );
         method.addParameter( parameter.build() );
@@ -576,6 +577,7 @@ final class JsinteropAction
                             .addMember( "name", "$S", member.getName() )
                             .build() );
     maybeAddJavadoc( member, method );
+    addMagicConstantAnnotationIfNeeded( member.getType(), method );
     if ( _schema.isNullable( member.getType() ) )
     {
       method.addAnnotation( Types.NULLABLE );
@@ -603,6 +605,7 @@ final class JsinteropAction
     maybeAddJavadoc( member, method );
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, safeName( member.getName() ) );
+    addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
 
     if ( _schema.isNullable( member.getType() ) )
     {
@@ -646,6 +649,7 @@ final class JsinteropAction
       }
     }
 
+    addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
@@ -711,6 +715,7 @@ final class JsinteropAction
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
+    addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
 
@@ -1628,6 +1633,7 @@ final class JsinteropAction
   {
     if ( Kind.Void != returnType.getKind() )
     {
+      addMagicConstantAnnotationIfNeeded( returnType, method );
       final Type actualType = _schema.resolveType( returnType );
       if ( _schema.isNullable( returnType ) )
       {
@@ -1734,11 +1740,11 @@ final class JsinteropAction
     final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, safeName( argument.getName() ) );
-    addMagicConstantAnnotationIfNeeded( actualType, parameter );
     if ( isFinal )
     {
       parameter.addModifiers( Modifier.FINAL );
     }
+    addMagicConstantAnnotationIfNeeded( actualType, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
     // Only the last argument can be variadic
@@ -1759,6 +1765,20 @@ final class JsinteropAction
       if ( null != enumeration )
       {
         parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
+  }
+
+  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
+                                                   @Nonnull final MethodSpec.Builder method )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
+      if ( null != enumeration )
+      {
+        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
     }
   }

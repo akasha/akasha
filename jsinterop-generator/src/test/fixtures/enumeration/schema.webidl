@@ -38,3 +38,42 @@ enum txMode {
   "requires_new",
   "not-allowed"
 };
+
+/**
+ * Callback has both return type and argument as enums.
+ */
+callback SomeCallbackHandler = SpeechRecognitionErrorCode ( txMode blah );
+
+/**
+ * Required attribute is an enum
+ */
+dictionary SpeechRecognitionErrorEventInit {
+  required SpeechRecognitionErrorCode error;
+};
+
+/**
+ * Optional attribute is an enum
+ */
+dictionary WaveShaperOptions {
+  OverSampleType oversample = "none";
+};
+
+interface WaveShaperNode {
+  /**
+   * regular attribute is an enum.
+   */
+  attribute OverSampleType oversample;
+  /**
+   * static attribute is an enum.
+   */
+  attribute OverSampleType static_oversample;
+  constructor( OverSampleType sample );
+  /**
+   * attribute return value is an enum.
+   */
+  OverSampleType getSample();
+  /**
+   * attribute argument is an enum.
+   */
+  void setSample( OverSampleType sample );
+};
