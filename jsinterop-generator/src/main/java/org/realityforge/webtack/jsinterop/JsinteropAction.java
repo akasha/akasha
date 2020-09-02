@@ -532,8 +532,8 @@ final class JsinteropAction
         final TypedValue memberType = types.get( index++ );
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( memberType.getJavaType(), paramName, Modifier.FINAL );
-        addNullabilityAnnotation( memberType, parameter );
         addDoNotAutoboxAnnotation( memberType, parameter );
+        addNullabilityAnnotation( memberType, parameter );
         method.addParameter( parameter.build() );
       }
       method.addStatement( sb.toString(), params.toArray() );
@@ -1739,8 +1739,8 @@ final class JsinteropAction
     {
       parameter.addModifiers( Modifier.FINAL );
     }
-    addNullabilityAnnotation( typedValue, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
+    addNullabilityAnnotation( typedValue, parameter );
     // Only the last argument can be variadic
     if ( argument.isVariadic() )
     {

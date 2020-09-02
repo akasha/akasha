@@ -11,5 +11,5 @@ import jsinterop.base.Any;
 @FunctionalInterface
 public interface Function {
   @Nullable
-  Any onInvoke(@Nullable @DoNotAutobox Object... arguments);
+  Any onInvoke(@DoNotAutobox @Nullable Object... arguments);
 }

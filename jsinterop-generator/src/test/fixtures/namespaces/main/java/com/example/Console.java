@@ -32,7 +32,7 @@ public final class Console {
   @JsMethod(
       name = "assert"
   )
-  public native void assert_(boolean condition, @Nullable @DoNotAutobox Object... data);
+  public native void assert_(boolean condition, @DoNotAutobox @Nullable Object... data);
 
   @JsMethod(
       name = "assert"
@@ -58,5 +58,5 @@ public final class Console {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
    */
-  public native void warn(@Nullable @DoNotAutobox Object... data);
+  public native void warn(@DoNotAutobox @Nullable Object... data);
 }

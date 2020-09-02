@@ -27,7 +27,7 @@ public interface GlobalDescriptor {
 
   @JsOverlay
   @Nonnull
-  static GlobalDescriptor create(@Nullable @DoNotAutobox final Object value) {
+  static GlobalDescriptor create(@DoNotAutobox @Nullable final Object value) {
     return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
   }
 

@@ -13,5 +13,5 @@ import jsinterop.base.Any;
 public interface OnErrorEventHandler {
   @Nullable
   Any onInvoke(@Nonnull EventOrStringUnion event, @Nonnull String source, int lineno, int colno,
-      @Nullable @DoNotAutobox Object error);
+      @DoNotAutobox @Nullable Object error);
 }

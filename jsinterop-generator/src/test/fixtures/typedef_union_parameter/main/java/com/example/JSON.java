@@ -22,24 +22,24 @@ public class JSON {
   public native String stringify(@Nullable Any value, @Nullable StringifySpaceUnionType space);
 
   @Nonnull
-  public native String stringify(@Nullable @DoNotAutobox Object value,
+  public native String stringify(@DoNotAutobox @Nullable Object value,
       @Nullable StringifySpaceUnionType space);
 
   @Nonnull
   public native String stringify(@Nullable Any value, @Nonnull String space);
 
   @Nonnull
-  public native String stringify(@Nullable @DoNotAutobox Object value, @Nonnull String space);
+  public native String stringify(@DoNotAutobox @Nullable Object value, @Nonnull String space);
 
   @Nonnull
   public native String stringify(@Nullable Any value, int space);
 
   @Nonnull
-  public native String stringify(@Nullable @DoNotAutobox Object value, int space);
+  public native String stringify(@DoNotAutobox @Nullable Object value, int space);
 
   @Nonnull
   public native String stringify(@Nullable Any value);
 
   @Nonnull
-  public native String stringify(@Nullable @DoNotAutobox Object value);
+  public native String stringify(@DoNotAutobox @Nullable Object value);
 }

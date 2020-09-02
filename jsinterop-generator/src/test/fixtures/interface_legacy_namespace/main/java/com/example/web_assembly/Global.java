@@ -23,7 +23,7 @@ public class Global {
   }
 
   public Global(@Nonnull final GlobalDescriptor descriptor,
-      @Nullable @DoNotAutobox final Object v) {
+      @DoNotAutobox @Nullable final Object v) {
   }
 
   public Global(@Nonnull final GlobalDescriptor descriptor) {

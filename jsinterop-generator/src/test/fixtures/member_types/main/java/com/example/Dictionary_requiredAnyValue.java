@@ -27,7 +27,7 @@ public interface Dictionary_requiredAnyValue {
 
   @JsOverlay
   @Nonnull
-  static Dictionary_requiredAnyValue create(@Nullable @DoNotAutobox final Object requiredAnyValue) {
+  static Dictionary_requiredAnyValue create(@DoNotAutobox @Nullable final Object requiredAnyValue) {
     return Js.<Dictionary_requiredAnyValue>uncheckedCast( JsPropertyMap.of() ).requiredAnyValue( requiredAnyValue );
   }
 
