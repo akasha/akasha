@@ -63,6 +63,7 @@ final class JsinteropAction
   @Nullable
   private final String _globalInterface;
   private final boolean _generateGwtModule;
+  private final boolean _enableMagicConstants;
   @Nonnull
   private final Map<String, ClassName> _typeMapping = new HashMap<>();
   @Nonnull
@@ -72,11 +73,13 @@ final class JsinteropAction
   JsinteropAction( @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
                    @Nullable final String globalInterface,
-                   final boolean generateGwtModule )
+                   final boolean generateGwtModule,
+                   final boolean enableMagicConstants )
   {
     super( outputDirectory, packageName );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
+    _enableMagicConstants = enableMagicConstants;
   }
 
   @Override
@@ -1818,7 +1821,7 @@ final class JsinteropAction
 
   boolean addMagicConstantsAnnotation()
   {
-    return true;
+    return _enableMagicConstants;
   }
 
   private void maybeAddJavadoc( @Nonnull final Element constant, @Nonnull final FieldSpec.Builder field )

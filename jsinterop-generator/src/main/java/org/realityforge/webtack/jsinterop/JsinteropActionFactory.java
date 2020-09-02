@@ -14,6 +14,7 @@ public final class JsinteropActionFactory
   public String packageName;
   public String globalInterface;
   public boolean generateGwtModule = true;
+  public boolean enableMagicConstants = true;
 
   @Nonnull
   @Override
@@ -27,6 +28,6 @@ public final class JsinteropActionFactory
     {
       throw new IllegalArgumentException( "Jsinterop missing required packageName configuration value" );
     }
-    return new JsinteropAction( Paths.get( outputDirectory ), packageName, globalInterface, generateGwtModule );
+    return new JsinteropAction( Paths.get( outputDirectory ), packageName, globalInterface, generateGwtModule,enableMagicConstants );
   }
 }
