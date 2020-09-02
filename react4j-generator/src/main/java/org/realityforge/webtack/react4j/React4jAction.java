@@ -295,6 +295,8 @@ final class React4jAction
                           .build() )
         .superclass( ParameterizedTypeName.get( superclass, self ) );
 
+    type.addMethod( emitRefSetter( definition ) );
+
     writeTopLevelType( type );
   }
 
