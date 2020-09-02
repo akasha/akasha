@@ -9,7 +9,6 @@ import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
@@ -56,7 +55,6 @@ import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
-import org.realityforge.webtack.model.tools.util.GeneratedAnnotationUtil;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class JsinteropAction
@@ -1897,15 +1895,6 @@ final class JsinteropAction
       _typeMapping.put( typeName, className );
       return className;
     }
-  }
-
-  @Nonnull
-  private Path getPackageDirectory( @Nonnull final String packageName )
-  {
-    final Path baseDirectory = getMainJavaDirectory();
-    return packageName.isEmpty() ?
-           baseDirectory :
-           baseDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
   }
 
   @Nonnull
