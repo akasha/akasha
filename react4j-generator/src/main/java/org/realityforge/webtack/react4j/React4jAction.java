@@ -263,6 +263,7 @@ final class React4jAction
   {
     return MethodSpec
       .methodBuilder( "ref" )
+      .addModifiers( Modifier.PUBLIC )
       .addParameter( ParameterSpec
                        .builder( ParameterizedTypeName.get( Types.REF_CALLBACK,
                                                             ClassName.get( "elemental3",
