@@ -74,7 +74,7 @@ final class JsinteropAction
                    @Nullable final String globalInterface,
                    final boolean generateGwtModule )
   {
-    super(outputDirectory, packageName );
+    super( outputDirectory, packageName );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
   }
@@ -1920,12 +1920,9 @@ final class JsinteropAction
       return Types.STRING;
     }
     final TypedefDefinition typedef = _schema.findTypedefByName( name );
-    if ( null != typedef )
+    if ( null != typedef && Kind.Union == typedef.getType().getKind() )
     {
-      if ( Kind.Union == typedef.getType().getKind() )
-      {
-        return ClassName.get( getPackageName(), name );
-      }
+      return ClassName.get( getPackageName(), name );
     }
     final InterfaceDefinition interfaceDefinition = _schema.findInterfaceByName( name );
     if ( null != interfaceDefinition )
