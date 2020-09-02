@@ -1781,7 +1781,7 @@ final class JsinteropAction
       if ( !value.isEmpty() )
       {
         final FieldSpec.Builder field = FieldSpec
-          .builder( Types.STRING, safeName( toName( value ) ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+          .builder( Types.STRING, safeName( enumerationValueToName( value ) ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
           .addAnnotation( Types.NONNULL )
           .initializer( "$S", value );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
@@ -1795,7 +1795,7 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private String toName( @Nonnull final String value )
+  private String enumerationValueToName( @Nonnull final String value )
   {
     final StringBuilder sb = new StringBuilder();
     for ( int i = 0; i < value.length(); i++ )
