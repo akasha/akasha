@@ -646,8 +646,8 @@ final class JsinteropAction
       }
     }
 
-    addNullabilityAnnotation( typedValue, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
+    addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
     final WebIDLSchema schema = _schema;
     final Type declaredType = schema.resolveType( typedValue.getDeclaredType() );
@@ -711,8 +711,8 @@ final class JsinteropAction
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
-    addNullabilityAnnotation( typedValue, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
+    addNullabilityAnnotation( typedValue, parameter );
 
     if ( javaType instanceof ArrayTypeName )
     {

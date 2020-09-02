@@ -56,13 +56,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setAnyValue(@Nullable @DoNotAutobox final Object anyValue) {
+  default void setAnyValue(@DoNotAutobox @Nullable final Object anyValue) {
     setAnyValue( Js.asAny( anyValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary anyValue(@Nullable @DoNotAutobox final Object anyValue) {
+  default MyDictionary anyValue(@DoNotAutobox @Nullable final Object anyValue) {
     setAnyValue( anyValue );
     return this;
   }

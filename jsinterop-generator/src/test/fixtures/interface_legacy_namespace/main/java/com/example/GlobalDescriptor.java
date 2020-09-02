@@ -63,13 +63,13 @@ public interface GlobalDescriptor {
   }
 
   @JsOverlay
-  default void setValue(@Nullable @DoNotAutobox final Object value) {
+  default void setValue(@DoNotAutobox @Nullable final Object value) {
     setValue( Js.asAny( value ) );
   }
 
   @JsOverlay
   @Nonnull
-  default GlobalDescriptor value(@Nullable @DoNotAutobox final Object value) {
+  default GlobalDescriptor value(@DoNotAutobox @Nullable final Object value) {
     setValue( value );
     return this;
   }

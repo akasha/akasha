@@ -59,13 +59,13 @@ public interface PromiseRejectionEventInit extends EventInit {
   }
 
   @JsOverlay
-  default void setReason(@Nullable @DoNotAutobox final Object reason) {
+  default void setReason(@DoNotAutobox @Nullable final Object reason) {
     setReason( Js.asAny( reason ) );
   }
 
   @JsOverlay
   @Nonnull
-  default PromiseRejectionEventInit reason(@Nullable @DoNotAutobox final Object reason) {
+  default PromiseRejectionEventInit reason(@DoNotAutobox @Nullable final Object reason) {
     setReason( reason );
     return this;
   }

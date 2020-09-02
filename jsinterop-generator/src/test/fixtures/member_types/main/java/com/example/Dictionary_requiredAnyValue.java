@@ -48,14 +48,14 @@ public interface Dictionary_requiredAnyValue {
   }
 
   @JsOverlay
-  default void setRequiredAnyValue(@Nullable @DoNotAutobox final Object requiredAnyValue) {
+  default void setRequiredAnyValue(@DoNotAutobox @Nullable final Object requiredAnyValue) {
     setRequiredAnyValue( Js.asAny( requiredAnyValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredAnyValue requiredAnyValue(
-      @Nullable @DoNotAutobox final Object requiredAnyValue) {
+      @DoNotAutobox @Nullable final Object requiredAnyValue) {
     setRequiredAnyValue( requiredAnyValue );
     return this;
   }
