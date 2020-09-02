@@ -1926,10 +1926,6 @@ final class JsinteropAction
       {
         return ClassName.get( getPackageName(), name );
       }
-      else
-      {
-        //TODO: resolve typedef
-      }
     }
     final InterfaceDefinition interfaceDefinition = _schema.findInterfaceByName( name );
     if ( null != interfaceDefinition )
