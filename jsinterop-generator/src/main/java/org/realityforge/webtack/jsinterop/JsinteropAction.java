@@ -1755,14 +1755,20 @@ final class JsinteropAction
         _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
-        final AnnotationSpec.Builder annotation = AnnotationSpec.builder( Types.MAGIC_CONSTANT );
-        for ( final EnumerationValue value : enumeration.getValues() )
-        {
-          annotation.addMember( "stringValues", "$S", value.getValue() );
-        }
-        parameter.addAnnotation( annotation.build() );
+        parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
     }
+  }
+
+  @Nonnull
+  private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
+  {
+    final ClassName enumerationType =
+      ClassName.get( getPackageName(), NamingUtil.uppercaseFirstCharacter( enumeration.getName() ) );
+    return AnnotationSpec
+      .builder( Types.MAGIC_CONSTANT )
+      .addMember( "valuesFromClass", "$T.class", enumerationType )
+      .build();
   }
 
   private void generateEnumeration( @Nonnull final EnumerationDefinition definition )
