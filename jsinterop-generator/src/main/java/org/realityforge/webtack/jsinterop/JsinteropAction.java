@@ -1781,7 +1781,11 @@ final class JsinteropAction
       if ( !value.isEmpty() )
       {
         final FieldSpec.Builder field = FieldSpec
-          .builder( Types.STRING, safeName( enumerationValueToName( value ) ), Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+          .builder( Types.STRING,
+                    safeName( enumerationValueToName( value ) ),
+                    Modifier.PUBLIC,
+                    Modifier.STATIC,
+                    Modifier.FINAL )
           .addAnnotation( Types.NONNULL )
           .initializer( "$S", value );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
