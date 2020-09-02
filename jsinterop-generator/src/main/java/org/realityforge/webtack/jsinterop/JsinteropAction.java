@@ -1752,7 +1752,7 @@ final class JsinteropAction
   private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
                                                    @Nonnull final ParameterSpec.Builder parameter )
   {
-    if ( addMagicConstantsAnnotation() && Kind.TypeReference == type.getKind() )
+    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
     {
       final EnumerationDefinition enumeration =
         _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
@@ -1817,11 +1817,6 @@ final class JsinteropAction
       sb.append( Character.isUnicodeIdentifierPart( ch ) ? ch : "_" );
     }
     return sb.toString();
-  }
-
-  boolean addMagicConstantsAnnotation()
-  {
-    return _enableMagicConstants;
   }
 
   private void maybeAddJavadoc( @Nonnull final Element constant, @Nonnull final FieldSpec.Builder field )
