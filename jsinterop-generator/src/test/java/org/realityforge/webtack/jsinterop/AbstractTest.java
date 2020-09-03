@@ -179,7 +179,8 @@ public abstract class AbstractTest
     }
 
     final Path outputDirectory = getWorkingDir();
-    final JsinteropAction action = new JsinteropAction( outputDirectory, "com.example", globalInterface, true, true );
+    final JsinteropAction action =
+      new JsinteropAction( outputDirectory.resolve( "output" ), "com.example", globalInterface, true, true );
     action.process( schema );
     final Path mainJavaDirectory = action.getMainJavaDirectory();
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
