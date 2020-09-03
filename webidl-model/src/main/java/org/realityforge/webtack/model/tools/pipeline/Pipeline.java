@@ -61,12 +61,6 @@ public final class Pipeline
     return _pipeline;
   }
 
-  @Nonnull
-  public PipelineContextImpl getPipelineContext()
-  {
-    return _pipelineContext;
-  }
-
   public void process()
     throws PipelineException
   {
@@ -115,8 +109,7 @@ public final class Pipeline
       }
       else if ( Registry.isProcessorPresent( name ) )
       {
-        final Processor processor =
-          Registry.createProcessor( name, getStageConfig( stage ) );
+        final Processor processor = Registry.createProcessor( _pipelineContext, name, getStageConfig( stage ) );
         for ( final WebIDLSchema schema : current )
         {
           if ( isSchemaSelected( schema, selector ) )

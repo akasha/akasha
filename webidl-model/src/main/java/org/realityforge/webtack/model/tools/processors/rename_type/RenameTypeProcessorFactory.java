@@ -3,6 +3,7 @@ package org.realityforge.webtack.model.tools.processors.rename_type;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.spi.Processor;
 
 @Name( "RenameType" )
@@ -14,7 +15,7 @@ public final class RenameTypeProcessorFactory
 
   @Nonnull
   @Override
-  public Processor create()
+  public Processor create( @Nonnull final PipelineContext context )
   {
     return new RenameTypeProcessor( requirePattern( "namePattern", namePattern ),
                                     requireNonNull( "replacement", replacement ) );

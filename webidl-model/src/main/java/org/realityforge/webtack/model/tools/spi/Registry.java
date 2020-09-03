@@ -67,14 +67,16 @@ public final class Registry
   }
 
   @Nonnull
-  public static Processor createProcessor( @Nonnull final String name, @Nonnull final JsonObject config )
+  public static Processor createProcessor( @Nonnull final PipelineContext context,
+                                           @Nonnull final String name,
+                                           @Nonnull final JsonObject config )
   {
     final Class<? extends ProcessorFactory> type = PROCESSORS.get( name );
     if ( null == type )
     {
       throw new IllegalArgumentException( "Unable to locate processor with name '" + name + "'" );
     }
-    return JsonbBuilder.create().fromJson( config.toString(), type ).create();
+    return JsonbBuilder.create().fromJson( config.toString(), type ).create( context );
   }
 
   private static void loadTypes()

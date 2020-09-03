@@ -21,6 +21,7 @@ import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.model.tools.PipelineContextImpl;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
@@ -246,9 +247,15 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  protected PipelineContextImpl newPipelineContext()
-    throws Exception
+  protected PipelineContext newPipelineContext()
   {
-    return new PipelineContextImpl( new DocRepositoryRuntime( getOutputDirectory() ) );
+    try
+    {
+      return new PipelineContextImpl( new DocRepositoryRuntime( getOutputDirectory() ) );
+    }
+    catch ( final Exception e )
+    {
+      throw new IllegalStateException( e );
+    }
   }
 }

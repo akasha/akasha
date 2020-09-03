@@ -2,6 +2,7 @@ package org.realityforge.webtack.model.tools.processors.validate;
 
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.spi.Name;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.ProcessorFactory;
 import org.realityforge.webtack.model.tools.validator.ValidatorRuleConfig;
@@ -14,7 +15,7 @@ public final class ValidateProcessorFactory
 
   @Nonnull
   @Override
-  public Processor create()
+  public Processor create( @Nonnull final PipelineContext context )
   {
     return new ValidateProcessor( ruleConfig );
   }

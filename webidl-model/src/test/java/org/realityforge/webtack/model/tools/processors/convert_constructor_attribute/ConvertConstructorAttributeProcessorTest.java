@@ -28,6 +28,8 @@ public final class ConvertConstructorAttributeProcessorTest
   @Nonnull
   private Processor createProcessor()
   {
-    return Registry.createProcessor( "ConvertConstructorAttribute", Json.createObjectBuilder().build() );
+    return Registry.createProcessor( newPipelineContext(),
+                                     "ConvertConstructorAttribute",
+                                     Json.createObjectBuilder().build() );
   }
 }

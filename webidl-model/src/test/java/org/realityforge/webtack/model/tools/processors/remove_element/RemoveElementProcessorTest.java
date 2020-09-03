@@ -45,7 +45,8 @@ public final class RemoveElementProcessorTest
   public void remove_interface()
     throws Exception
   {
-    performStandardFixtureTest( "remove_interface", () -> createProcessor( "^SpeechRecognition.*", ElementType.interface_type ) );
+    performStandardFixtureTest( "remove_interface",
+                                () -> createProcessor( "^SpeechRecognition.*", ElementType.interface_type ) );
   }
 
   @Nonnull
@@ -63,6 +64,6 @@ public final class RemoveElementProcessorTest
       }
       json.add( "types", typesJson );
     }
-    return Registry.createProcessor( "RemoveElement", json.build() );
+    return Registry.createProcessor( newPipelineContext(), "RemoveElement", json.build() );
   }
 }

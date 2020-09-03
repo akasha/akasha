@@ -23,7 +23,8 @@ public class RemoveIncludesProcessorTest
   {
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
-                    () -> Registry.createProcessor( "RemoveIncludes",
+                    () -> Registry.createProcessor( newPipelineContext(),
+                                                    "RemoveIncludes",
                                                     Json.createObjectBuilder()
                                                       .add( "mixinPattern", "^SVGURIReference$" )
                                                       .build() ) );
@@ -36,7 +37,8 @@ public class RemoveIncludesProcessorTest
   {
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
-                    () -> Registry.createProcessor( "RemoveIncludes",
+                    () -> Registry.createProcessor( newPipelineContext(),
+                                                    "RemoveIncludes",
                                                     Json.createObjectBuilder()
                                                       .add( "interfacePattern", "^SVGAElement$" )
                                                       .build() ) );
@@ -58,7 +60,8 @@ public class RemoveIncludesProcessorTest
   @Nonnull
   private Processor createProcessor( @Nonnull final String interfacePattern, @Nonnull final String mixinPattern )
   {
-    return Registry.createProcessor( "RemoveIncludes",
+    return Registry.createProcessor( newPipelineContext(),
+                                     "RemoveIncludes",
                                      Json.createObjectBuilder()
                                        .add( "interfacePattern", interfacePattern )
                                        .add( "mixinPattern", mixinPattern )

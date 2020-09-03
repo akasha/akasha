@@ -59,6 +59,6 @@ public final class RemoveMemberProcessorTest
       }
       json.add( "types", typesJson );
     }
-    return Registry.createProcessor( "RemoveMember", json.build() );
+    return Registry.createProcessor( newPipelineContext(), "RemoveMember", json.build() );
   }
 }

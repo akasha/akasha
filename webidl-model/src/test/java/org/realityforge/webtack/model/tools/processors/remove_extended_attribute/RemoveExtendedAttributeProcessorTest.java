@@ -57,6 +57,6 @@ public final class RemoveExtendedAttributeProcessorTest
       }
       json.add( "types", typesJson );
     }
-    return Registry.createProcessor( "RemoveExtendedAttribute", json.build() );
+    return Registry.createProcessor( newPipelineContext(), "RemoveExtendedAttribute", json.build() );
   }
 }

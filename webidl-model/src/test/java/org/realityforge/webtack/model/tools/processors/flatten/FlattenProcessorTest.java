@@ -110,6 +110,6 @@ public final class FlattenProcessorTest
   @Nonnull
   private Processor createProcessor()
   {
-    return Registry.createProcessor( "Flatten", Json.createObjectBuilder().build() );
+    return Registry.createProcessor( newPipelineContext(), "Flatten", Json.createObjectBuilder().build() );
   }
 }

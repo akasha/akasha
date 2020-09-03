@@ -31,7 +31,8 @@ public final class JavaizeEventHandlersProcessorTest
   private Processor createProcessor( @Nonnull final String subDirectory )
   {
     final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory ).resolve( "docs" );
-    return Registry.createProcessor( "JavaizeEventHandlers",
+    return Registry.createProcessor( newPipelineContext(),
+                                     "JavaizeEventHandlers",
                                      Json
                                        .createObjectBuilder()
                                        .add( "docsDirectory", docsDir.toString() )

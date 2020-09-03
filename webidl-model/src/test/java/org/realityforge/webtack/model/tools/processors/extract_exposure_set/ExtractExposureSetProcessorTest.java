@@ -105,7 +105,8 @@ public class ExtractExposureSetProcessorTest
   @Nonnull
   private Processor createProcessor( @Nonnull final String globalInterface )
   {
-    return Registry.createProcessor( "ExtractExposureSet",
+    return Registry.createProcessor( newPipelineContext(),
+                                     "ExtractExposureSet",
                                      Json.createObjectBuilder()
                                        .add( "globalInterface", globalInterface )
                                        .build() );

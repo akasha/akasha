@@ -3,18 +3,17 @@ package org.realityforge.webtack.model.tools.processors.javaize_event_handlers;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.spi.Processor;
 
 @Name( "JavaizeEventHandlers" )
 public final class JavaizeEventHandlersProcessorFactory
   extends AbstractProcessorFactory
 {
-  public String docsDirectory;
-
   @Nonnull
   @Override
-  public Processor create()
+  public Processor create( @Nonnull final PipelineContext context )
   {
-    return new JavaizeEventHandlersProcessor( requireDocRepository( "docsDirectory", docsDirectory ) );
+    return new JavaizeEventHandlersProcessor( context.docRepository() );
   }
 }

@@ -5,5 +5,5 @@ import javax.annotation.Nonnull;
 public interface ProcessorFactory
 {
   @Nonnull
-  Processor create();
+  Processor create( @Nonnull PipelineContext context );
 }

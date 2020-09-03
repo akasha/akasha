@@ -57,6 +57,6 @@ public final class AddExtendedAttributeProcessorTest
       }
       json.add( "types", typesJson );
     }
-    return Registry.createProcessor( "AddExtendedAttribute", json.build() );
+    return Registry.createProcessor( newPipelineContext(), "AddExtendedAttribute", json.build() );
   }
 }

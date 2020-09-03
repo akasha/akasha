@@ -49,6 +49,6 @@ public class ValidateProcessorTest
   @Nonnull
   private Processor createProcessor()
   {
-    return Registry.createProcessor( "Validate", Json.createObjectBuilder().build() );
+    return Registry.createProcessor( newPipelineContext(), "Validate", Json.createObjectBuilder().build() );
   }
 }

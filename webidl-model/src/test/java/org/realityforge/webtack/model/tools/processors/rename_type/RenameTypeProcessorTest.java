@@ -23,7 +23,8 @@ public class RenameTypeProcessorTest
   {
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
-                    () -> Registry.createProcessor( "RenameType",
+                    () -> Registry.createProcessor( newPipelineContext(),
+                                                    "RenameType",
                                                     Json.createObjectBuilder()
                                                       .add( "namePattern", "^PermissionState$" )
                                                       .build() ) );
@@ -36,7 +37,8 @@ public class RenameTypeProcessorTest
   {
     final IllegalArgumentException exception =
       expectThrows( IllegalArgumentException.class,
-                    () -> Registry.createProcessor( "RenameType",
+                    () -> Registry.createProcessor( newPipelineContext(),
+                                                    "RenameType",
                                                     Json.createObjectBuilder()
                                                       .add( "replacement", "DevicePermissionState" )
                                                       .build() ) );
@@ -64,7 +66,8 @@ public class RenameTypeProcessorTest
   @Nonnull
   private Processor createProcessor( @Nonnull final String namePattern, @Nonnull final String replacement )
   {
-    return Registry.createProcessor( "RenameType",
+    return Registry.createProcessor( newPipelineContext(),
+                                     "RenameType",
                                      Json.createObjectBuilder()
                                        .add( "namePattern", namePattern )
                                        .add( "replacement", replacement )
