@@ -174,7 +174,7 @@ define 'webtack' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{Buildr.artifact(:javax_annotation).to_s}:#{Buildr.artifact(:jetbrains_annotations).to_s}:#{Buildr.artifact(:jsinterop_annotations).to_s}:#{Buildr.artifact(:jsinterop_base).to_s}:#{Buildr.artifact(:elemental2_core).to_s}:#{Buildr.artifact(:elemental2_promise).to_s}:#{Buildr.artifact(:gwt_user).to_s} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',
