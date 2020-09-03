@@ -145,12 +145,12 @@ public class DocEntry
   }
 
   @Nonnull
-  static DocEntry load( @Nonnull final Path path )
+  static DocEntry load( @Nonnull final Jsonb jsonb,@Nonnull final Path path )
     throws Exception
   {
     try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
     {
-      return JsonbBuilder.create().fromJson( inputStream, DocEntry.class );
+      return jsonb.fromJson( inputStream, DocEntry.class );
     }
   }
 

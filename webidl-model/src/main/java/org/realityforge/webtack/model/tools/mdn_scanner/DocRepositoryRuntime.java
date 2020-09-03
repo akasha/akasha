@@ -13,6 +13,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.json.bind.Jsonb;
+import javax.json.bind.JsonbBuilder;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexException;
@@ -28,6 +30,8 @@ public final class DocRepositoryRuntime
   private final Set<String> _negativeCache = new HashSet<>();
   @Nonnull
   private final Path _dataDirectory;
+  @Nonnull
+  private final Jsonb _jsonb = JsonbBuilder.create();
 
   public DocRepositoryRuntime( @Nonnull final Path dataDirectory )
   {
@@ -136,7 +140,7 @@ public final class DocRepositoryRuntime
     {
       try
       {
-        return DocEntry.load( path );
+        return DocEntry.load( _jsonb, path );
       }
       catch ( final Exception e )
       {
