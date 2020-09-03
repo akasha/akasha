@@ -23,6 +23,8 @@ final class Types
   @Nonnull
   static final ClassName JS_PACKAGE = ClassName.get( "jsinterop.annotations", "JsPackage" );
   @Nonnull
+  static final ClassName JS_FUNCTION = ClassName.get( "jsinterop.annotations", "JsFunction" );
+  @Nonnull
   static final ClassName REACT_ELEMENT = ClassName.get( "react4j", "ReactElement" );
   @Nonnull
   static final ClassName REACT_NODE = ClassName.get( "react4j", "ReactNode" );

@@ -50,6 +50,8 @@ final class React4jAction
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
 
+    generateRefCallback();
+
     generateFactory( schema, "HTML", HTMLElementsGenerator.create() );
 
     if ( _generateGwtModule )
@@ -85,6 +87,41 @@ final class React4jAction
   protected Path getMainJavaDirectory()
   {
     return super.getMainJavaDirectory();
+  }
+
+  @SuppressWarnings( "SameParameterValue" )
+  private void generateRefCallback()
+    throws IOException
+  {
+    final TypeVariableName typeVariable = TypeVariableName.get( "T" );
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( "RefCallback" )
+        .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+        .addTypeVariable( typeVariable )
+        .addJavadoc( "Pass an element instance from the renderer." );
+
+    writeGeneratedAnnotation( type );
+
+    type
+      .addAnnotation( Types.JS_FUNCTION )
+      .addAnnotation( FunctionalInterface.class );
+
+    type.addMethod( MethodSpec
+                      .methodBuilder( "accept" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                      .addParameter( ParameterSpec
+                                       .builder( typeVariable, "reference", Modifier.FINAL )
+                                       .addAnnotation( Types.NULLABLE )
+                                       .build() )
+                      .addJavadoc( "Passes the reference to the component instance or element.\n" +
+                                   "The reference is nonnull when the element has been attached to the DOM and\n" +
+                                   "null when the reference has been detached from the DOM.\n" +
+                                   "\n" +
+                                   "@param reference the reference." )
+                      .build() );
+
+    writeTopLevelType( type );
   }
 
   @SuppressWarnings( "SameParameterValue" )
