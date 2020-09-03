@@ -302,7 +302,7 @@ final class React4jAction
       .methodBuilder( "ref" )
       .addModifiers( Modifier.PUBLIC )
       .addParameter( ParameterSpec
-                       .builder( ParameterizedTypeName.get( Types.REF_CALLBACK,
+                       .builder( ParameterizedTypeName.get( ClassName.get( getPackageName(), "RefCallback" ),
                                                             ClassName.get( "elemental3",
                                                                            definition.getName() ) ),
                                  "callback",

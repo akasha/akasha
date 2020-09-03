@@ -29,8 +29,6 @@ final class Types
   @Nonnull
   static final ClassName REACT_NODE = ClassName.get( "react4j", "ReactNode" );
   @Nonnull
-  static final ClassName REF_CALLBACK = ClassName.get( "react4j.dom", "RefCallback" );
-  @Nonnull
   static final ArrayTypeName REACT_NODE_ARRAY = ArrayTypeName.of( REACT_NODE );
   @Nonnull
   static final ClassName ANY = ClassName.get( "jsinterop.base", "Any" );
