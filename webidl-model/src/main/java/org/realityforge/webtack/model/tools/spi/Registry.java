@@ -49,14 +49,16 @@ public final class Registry
   }
 
   @Nonnull
-  public static Combiner createCombiner( @Nonnull final String name, @Nonnull final JsonObject config )
+  public static Combiner createCombiner( @Nonnull final PipelineContext context,
+                                         @Nonnull final String name,
+                                         @Nonnull final JsonObject config )
   {
     final Class<? extends CombinerFactory> type = COMBINERS.get( name );
     if ( null == type )
     {
       throw new IllegalArgumentException( "Unable to locate combiner with name '" + name + "'" );
     }
-    return JsonbBuilder.create().fromJson( config.toString(), type ).create();
+    return JsonbBuilder.create().fromJson( config.toString(), type ).create( context );
   }
 
   public static boolean isProcessorPresent( @Nonnull final String name )

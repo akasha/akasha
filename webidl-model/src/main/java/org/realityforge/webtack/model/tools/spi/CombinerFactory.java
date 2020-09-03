@@ -5,5 +5,5 @@ import javax.annotation.Nonnull;
 public interface CombinerFactory
 {
   @Nonnull
-  Combiner create();
+  Combiner create( @Nonnull PipelineContext context );
 }

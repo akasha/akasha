@@ -85,7 +85,8 @@ public final class MergeTest
 
   @Nonnull
   private Combiner createCombiner()
+    throws Exception
   {
-    return Registry.createCombiner( "Merge", Json.createObjectBuilder().build() );
+    return Registry.createCombiner( newPipelineContext(), "Merge", Json.createObjectBuilder().build() );
   }
 }

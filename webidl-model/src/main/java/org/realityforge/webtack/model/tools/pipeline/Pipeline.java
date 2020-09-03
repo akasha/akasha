@@ -89,8 +89,7 @@ public final class Pipeline
 
       if ( Registry.isCombinerPresent( name ) )
       {
-        final Combiner processor =
-          Registry.createCombiner( name, getStageConfig( stage ) );
+        final Combiner processor = Registry.createCombiner( _pipelineContext, name, getStageConfig( stage ) );
         final List<WebIDLSchema> matchedSchema = new ArrayList<>();
         final List<WebIDLSchema> unmatchedSchema = new ArrayList<>();
         for ( final WebIDLSchema schema : current )
@@ -143,7 +142,7 @@ public final class Pipeline
       }
       else if ( Registry.isActionPresent( name ) )
       {
-        final Action action = Registry.createAction( getPipelineContext(), name, getStageConfig( stage ) );
+        final Action action = Registry.createAction( _pipelineContext, name, getStageConfig( stage ) );
         for ( final WebIDLSchema schema : current )
         {
           if ( isSchemaSelected( schema, selector ) )

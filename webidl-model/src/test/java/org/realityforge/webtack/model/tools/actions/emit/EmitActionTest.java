@@ -69,7 +69,7 @@ public final class EmitActionTest
   private Action createAction( @Nonnull final String filePattern )
     throws Exception
   {
-    return Registry.createAction( new PipelineContextImpl( new DocRepositoryRuntime( getOutputDirectory() ) ),
+    return Registry.createAction( newPipelineContext(),
                                   "Emit",
                                   Json.createObjectBuilder().add( "filePattern", filePattern ).build() );
   }

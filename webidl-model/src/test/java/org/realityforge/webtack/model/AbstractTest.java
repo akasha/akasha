@@ -19,6 +19,8 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
+import org.realityforge.webtack.model.tools.PipelineContextImpl;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
 import org.testng.Assert;
@@ -241,5 +243,12 @@ public abstract class AbstractTest
       .filter( d -> Files.exists( d.resolve( "input.webidl" ) ) && Files.exists( d.resolve( "output.webidl" ) ) )
       .map( d -> new Object[]{ d.getFileName().toString() } )
       .toArray( Object[][]::new );
+  }
+
+  @Nonnull
+  protected PipelineContextImpl newPipelineContext()
+    throws Exception
+  {
+    return new PipelineContextImpl( new DocRepositoryRuntime( getOutputDirectory() ) );
   }
 }
