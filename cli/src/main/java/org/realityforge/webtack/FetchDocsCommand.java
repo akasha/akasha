@@ -76,7 +76,7 @@ final class FetchDocsCommand
   int run( @Nonnull final Context context )
   {
     final Logger logger = context.environment().logger();
-    final DocRepositoryRuntime runtime = new DocRepositoryRuntime( context.environment().docDirectory() );
+    final DocRepositoryRuntime runtime = context.docRuntime();
     final MdnDocScanner scanner = new MdnDocScanner( runtime, new Listener( logger ) );
 
     final Set<String> typeNames = _typeNames.isEmpty() ? context.docRuntime().findTypes() : _typeNames;
