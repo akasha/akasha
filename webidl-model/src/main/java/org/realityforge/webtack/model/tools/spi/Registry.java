@@ -31,14 +31,16 @@ public final class Registry
   }
 
   @Nonnull
-  public static Action createAction( @Nonnull final String name, @Nonnull final JsonObject config )
+  public static Action createAction( @Nonnull final PipelineContext context,
+                                     @Nonnull final String name,
+                                     @Nonnull final JsonObject config )
   {
     final Class<? extends ActionFactory> type = ACTIONS.get( name );
     if ( null == type )
     {
       throw new IllegalArgumentException( "Unable to locate action with name '" + name + "'" );
     }
-    return JsonbBuilder.create().fromJson( config.toString(), type ).create();
+    return JsonbBuilder.create().fromJson( config.toString(), type ).create( context );
   }
 
   public static boolean isCombinerPresent( @Nonnull final String name )

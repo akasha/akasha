@@ -194,6 +194,7 @@ final class RunCommand
         return new Pipeline( context.config(),
                              pipeline,
                              new ExecutionContext( environment.webidlDirectory(),
+                                                   environment.docDirectory(),
                                                    new ProgressListener( environment.logger() ) ) );
       }
       catch ( final Exception e )

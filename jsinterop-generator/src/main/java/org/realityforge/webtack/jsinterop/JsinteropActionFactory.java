@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 @Name( "Jsinterop" )
 public final class JsinteropActionFactory
@@ -18,7 +19,7 @@ public final class JsinteropActionFactory
 
   @Nonnull
   @Override
-  public Action create()
+  public Action create( @Nonnull final PipelineContext context )
   {
     if ( null == outputDirectory )
     {
@@ -28,6 +29,10 @@ public final class JsinteropActionFactory
     {
       throw new IllegalArgumentException( "Jsinterop missing required packageName configuration value" );
     }
-    return new JsinteropAction( Paths.get( outputDirectory ), packageName, globalInterface, generateGwtModule,enableMagicConstants );
+    return new JsinteropAction( Paths.get( outputDirectory ),
+                                packageName,
+                                globalInterface,
+                                generateGwtModule,
+                                enableMagicConstants );
   }
 }

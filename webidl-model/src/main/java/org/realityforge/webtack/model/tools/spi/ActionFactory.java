@@ -5,5 +5,5 @@ import javax.annotation.Nonnull;
 public interface ActionFactory
 {
   @Nonnull
-  Action create();
+  Action create( @Nonnull PipelineContext context );
 }

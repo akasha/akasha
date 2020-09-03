@@ -6,6 +6,8 @@ import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.PipelineContextImpl;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;
@@ -65,8 +67,10 @@ public final class EmitActionTest
 
   @Nonnull
   private Action createAction( @Nonnull final String filePattern )
+    throws Exception
   {
-    return Registry.createAction( "Emit",
+    return Registry.createAction( new PipelineContextImpl( new DocRepositoryRuntime( getOutputDirectory() ) ),
+                                  "Emit",
                                   Json.createObjectBuilder().add( "filePattern", filePattern ).build() );
   }
 }

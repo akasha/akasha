@@ -17,6 +17,8 @@ import javax.json.JsonObject;
 import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.PipelineContextImpl;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
@@ -34,6 +36,8 @@ public final class Pipeline
   private final PipelineConfig _pipeline;
   @Nonnull
   private final ExecutionContext _context;
+  @Nonnull
+  private final PipelineContextImpl _pipelineContext;
 
   public Pipeline( @Nonnull final RepositoryConfig repository,
                    @Nonnull final PipelineConfig pipeline,
@@ -42,6 +46,7 @@ public final class Pipeline
     _repository = Objects.requireNonNull( repository );
     _pipeline = Objects.requireNonNull( pipeline );
     _context = Objects.requireNonNull( context );
+    _pipelineContext = new PipelineContextImpl( new DocRepositoryRuntime( context.getDocDirectory() ) );
   }
 
   @Nonnull
@@ -54,6 +59,12 @@ public final class Pipeline
   public PipelineConfig getConfig()
   {
     return _pipeline;
+  }
+
+  @Nonnull
+  public PipelineContextImpl getPipelineContext()
+  {
+    return _pipelineContext;
   }
 
   public void process()
@@ -132,8 +143,7 @@ public final class Pipeline
       }
       else if ( Registry.isActionPresent( name ) )
       {
-        final Action action =
-          Registry.createAction( name, getStageConfig( stage ) );
+        final Action action = Registry.createAction( getPipelineContext(), name, getStageConfig( stage ) );
         for ( final WebIDLSchema schema : current )
         {
           if ( isSchemaSelected( schema, selector ) )

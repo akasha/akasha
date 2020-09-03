@@ -4,6 +4,7 @@ import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 @Name( "Emit" )
 public final class EmitActionFactory
@@ -13,7 +14,7 @@ public final class EmitActionFactory
 
   @Nonnull
   @Override
-  public Action create()
+  public Action create( @Nonnull final PipelineContext context )
   {
     if ( null == filePattern )
     {

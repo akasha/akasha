@@ -261,7 +261,9 @@ public final class PipelineTest
                                   @Nonnull final Path idlDirectory,
                                   @Nonnull final TestProgressListener listener )
   {
-    return new Pipeline( repository, config, new ExecutionContext( idlDirectory, listener ) );
+    return new Pipeline( repository,
+                         config,
+                         new ExecutionContext( idlDirectory, idlDirectory.getParent().resolve( "docs" ), listener ) );
   }
 
   @Nonnull
