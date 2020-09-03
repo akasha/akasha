@@ -175,14 +175,15 @@ final class RunCommand
   @Nullable
   private Pipeline loadPipeline( @Nonnull final Context context )
   {
+    final Environment environment = context.environment();
     final Path pipelineFile =
-      context.environment().currentDirectory().resolve( "pipelines" ).resolve( _pipelineName + ".json" );
+      environment.currentDirectory().resolve( "pipelines" ).resolve( _pipelineName + ".json" );
     if ( !Files.exists( pipelineFile ) )
     {
       final String message =
         "Error: Error attempting to load pipeline named '" + _pipelineName +
         "' from " + pipelineFile + " but file does not exist";
-      context.environment().logger().log( Level.SEVERE, message );
+      environment.logger().log( Level.SEVERE, message );
       return null;
     }
     else
@@ -192,15 +193,15 @@ final class RunCommand
         final PipelineConfig pipeline = PipelineConfig.load( pipelineFile );
         return new Pipeline( context.config(),
                              pipeline,
-                             new ExecutionContext( context.environment().webidlDirectory(),
-                                                   new ProgressListener( context.environment().logger() ) ) );
+                             new ExecutionContext( environment.webidlDirectory(),
+                                                   new ProgressListener( environment.logger() ) ) );
       }
       catch ( final Exception e )
       {
         final String message =
           "Error: Error attempting to load pipeline named '" + _pipelineName +
           "' from " + pipelineFile + " Error: " + e;
-        context.environment().logger().log( Level.SEVERE, message, e );
+        environment.logger().log( Level.SEVERE, message, e );
         return null;
       }
     }
