@@ -18,5 +18,5 @@ public abstract interface RefCallback<T> {
    *
    * @param reference the reference.
    */
-  void accept(@Nullable final T reference);
+  void accept(@Nullable T reference);
 }

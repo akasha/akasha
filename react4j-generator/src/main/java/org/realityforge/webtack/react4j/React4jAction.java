@@ -111,7 +111,7 @@ final class React4jAction
                       .methodBuilder( "accept" )
                       .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
                       .addParameter( ParameterSpec
-                                       .builder( typeVariable, "reference", Modifier.FINAL )
+                                       .builder( typeVariable, "reference" )
                                        .addAnnotation( Types.NULLABLE )
                                        .build() )
                       .addJavadoc( "Passes the reference to the component instance or element.\n" +
