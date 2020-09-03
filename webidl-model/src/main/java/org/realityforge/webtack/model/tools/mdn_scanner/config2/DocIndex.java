@@ -124,10 +124,10 @@ public final class DocIndex
   }
 
   @Nonnull
-  public static DocIndex open( @Nonnull final Path directory )
+  public static DocIndex open( @Nonnull final Jsonb jsonb, @Nonnull final Path directory )
     throws IndexException
   {
-    return Files.exists( directory.resolve( FILENAME ) ) ? load( directory ) : create( directory );
+    return Files.exists( directory.resolve( FILENAME ) ) ? load( jsonb, directory ) : create( directory );
   }
 
   @Nonnull
@@ -137,14 +137,14 @@ public final class DocIndex
   }
 
   @Nonnull
-  private static DocIndex load( @Nonnull final Path directory )
+  private static DocIndex load( @Nonnull final Jsonb jsonb, @Nonnull final Path directory )
     throws IndexException
   {
     final Path path = directory.resolve( FILENAME );
     try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
     {
       final List<EntryIndex> entries =
-        JsonbBuilder.create().fromJson( inputStream, new ArrayList<EntryIndex>()
+        jsonb.fromJson( inputStream, new ArrayList<EntryIndex>()
         {
         }.getClass().getGenericSuperclass() );
       for ( final EntryIndex entry : entries )

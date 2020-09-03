@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
+import javax.json.bind.JsonbBuilder;
 import org.realityforge.webtack.model.AbstractTest;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -38,7 +39,7 @@ public final class DocIndexTest
 
     assertThrows( IndexFormatException.class,
                   "DocIndex at " + path + " contains an entry missing the name value",
-                  () -> DocIndex.open( directory ) );
+                  () -> DocIndex.open( JsonbBuilder.create(), directory ) );
   }
 
   @Test
@@ -105,7 +106,7 @@ public final class DocIndexTest
     throws Exception
   {
     final Path outputDir = getWorkingDirectory().resolve( "output" );
-    final DocIndex index = DocIndex.open( directory );
+    final DocIndex index = DocIndex.open( JsonbBuilder.create(), directory );
     final Path outputFile = outputDir.resolve( DocIndex.FILENAME );
     DocIndex.save( new DocIndex( index.getName(), outputDir, new ArrayList<>( index.getEntries() ) ) );
     final String actualOutput = new String( Files.readAllBytes( outputFile ), StandardCharsets.UTF_8 );

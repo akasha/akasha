@@ -248,7 +248,7 @@ public final class DocRepositoryRuntime
     }
     else
     {
-      final DocIndex newIndex = DocIndex.open( _dataDirectory.resolve( name ) );
+      final DocIndex newIndex = DocIndex.open( _jsonb, _dataDirectory.resolve( name ) );
       _indexes.put( name, newIndex );
       return newIndex;
     }
@@ -268,7 +268,7 @@ public final class DocRepositoryRuntime
       final Path path = _dataDirectory.resolve( name );
       if ( Files.exists( path.resolve( DocIndex.FILENAME ) ) )
       {
-        final DocIndex newIndex = DocIndex.open( path );
+        final DocIndex newIndex = DocIndex.open( _jsonb, path );
         _indexes.put( name, newIndex );
         return newIndex;
       }
