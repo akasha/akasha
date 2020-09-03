@@ -10,6 +10,7 @@ PACKAGED_DEPS = [:getopt4j, :jsoup] + JSONB_DEPS + Buildr::Antlr4.runtime_depend
 # GWT dependencies required for compiling generated code
 GWT_DEPS = [
   :javax_annotation,
+  :jetbrains_annotations,
   :jsinterop_annotations,
   :jsinterop_base,
   :elemental2_core,
