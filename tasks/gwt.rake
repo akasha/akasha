@@ -15,10 +15,6 @@ def gwt_enhance(project, options = {})
     a.is_a?(String) ? file(a) : a
   end
 
-  if project.enable_annotation_processor?
-    extra_deps += [project.file(project._(:generated, 'processors/main/java'))]
-  end
-
   project.compile.with Buildr::GWT.dependencies(project.gwt_detect_version(Buildr.artifacts(:gwt_user)))
 
   dependencies = project.compile.dependencies + extra_deps
