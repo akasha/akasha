@@ -162,6 +162,31 @@ define 'webtack' do
     test.using :testng
   end
 
+  define 'elemental3' do
+    %w(speech bluetooth main react4j).each do |pipeline|
+
+      name = 'main' == pipeline ? 'complete' : pipeline
+
+      desc "Elemental3 #{name}"
+      define name do
+        project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/elemental3/#{name}"
+
+        file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+
+        compile.using :javac
+        project.compile.sources << file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java")
+
+        compile.with ('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
+
+        gwt_enhance(project)
+
+        package(:jar)
+        package(:sources)
+        package(:javadoc)
+      end
+    end
+  end
+
   iml.excluded_directories << project._('tmp')
 
   ipr.add_default_testng_configuration(:jvm_args => '-ea -Dwebtack.output_fixture_data=false -Dwebtack.fixture_dir=webidl-model/src/test/resources')

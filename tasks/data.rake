@@ -29,11 +29,15 @@ task 'data:force_fetch' do
   end
 end
 
-task "data:run_pipelines" do
-  in_dir(WORKSPACE_DIR) do
-    run_webtack(%w(--verbose -d data run speech))
-    run_webtack(%w(--verbose -d data run bluetooth))
-    run_webtack(%w(--verbose -d data run main))
-    run_webtack(%w(--verbose -d data run react4j))
+%w(speech bluetooth main react4j).each do |pipeline|
+  desc "Run the #{pipeline} pipeline"
+  task "data:run_#{pipeline}_pipeline" do
+    in_dir(WORKSPACE_DIR) do
+      run_webtack(%W(--verbose -d data run #{pipeline}))
+    end
   end
+  task 'data:run_pipelines' => %W(data:run_#{pipeline}_pipeline)
 end
+
+desc 'Run all of the pipelines'
+task 'data:run_pipelines'
