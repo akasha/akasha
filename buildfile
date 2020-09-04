@@ -73,7 +73,7 @@ define 'webtack' do
 
     test.using :testng
     test.options[:properties] = { 'webtack.fixture_dir' => _('src/test/java') }
-    test.options[:java_args] = ['-ea']
+    test.options[:java_args] = %w(-ea)
     test.compile.with :gir
 
     package(:jar)
@@ -92,7 +92,7 @@ define 'webtack' do
       'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}",
       'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}"
     }
-    test.options[:java_args] = ['-ea']
+    test.options[:java_args] = %w(-ea)
     test.compile.with :gir, Java.tools_jar
     test.compile.enhance do |d|
       GWT_DEPS.collect {|a| artifact(a).invoke }
@@ -119,7 +119,7 @@ define 'webtack' do
       'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}",
       'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}"
     }
-    test.options[:java_args] = ['-ea']
+    test.options[:java_args] = %w(-ea)
     test.compile.with :gir, Java.tools_jar
     test.compile.enhance do |d|
       GWT_DEPS.collect {|a| artifact(a).invoke }
