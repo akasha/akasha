@@ -122,7 +122,7 @@ define 'webtack' do
     test.options[:java_args] = %w(-ea)
     test.compile.with :gir, Java.tools_jar
     test.compile.enhance do |d|
-      GWT_DEPS.collect {|a| artifact(a).invoke }
+      REACT4J_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
     end
 
