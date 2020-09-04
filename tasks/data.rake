@@ -5,9 +5,12 @@ def run_webtack(args)
   jsinterop_pkg = project('webtack:jsinterop-generator').package(:jar, :classifier => 'all')
   jsinterop_pkg.invoke
 
+  react4j_pkg = project('webtack:react4j-generator').package(:jar, :classifier => 'all')
+  react4j_pkg.invoke
+
   actual_args = []
   actual_args << '-cp'
-  actual_args << "#{pkg}:#{jsinterop_pkg}"
+  actual_args << "#{pkg}:#{jsinterop_pkg}:#{react4j_pkg}"
   actual_args << 'org.realityforge.webtack.Main'
   actual_args += args
 
