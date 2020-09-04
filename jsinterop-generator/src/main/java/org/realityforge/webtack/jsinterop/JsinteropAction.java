@@ -1875,8 +1875,13 @@ final class JsinteropAction
   private String asJavadoc( @Nonnull final DocumentationElement documentation )
   {
     final StringBuilder docs = new StringBuilder();
-    docs.append( documentation.getDocumentation() );
-    docs.append( "\n" );
+    final String text = documentation.getDocumentation();
+    if ( null != text )
+    {
+      // TODO: Migrate this to fetch docs process.
+      docs.append( StringUtils.encodeHtml( text ) );
+      docs.append( "\n" );
+    }
     final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();
     if ( !blockTags.isEmpty() )
     {
