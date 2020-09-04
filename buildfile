@@ -171,10 +171,10 @@ define 'webtack' do
       define name do
         project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/elemental3/#{name}"
 
-        file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
 
         compile.using :javac
-        project.compile.sources << file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java")
+        project.compile.sources << src_dir
 
         deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
         compile.with deps
