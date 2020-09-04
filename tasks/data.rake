@@ -17,13 +17,13 @@ def run_webtack(args)
   Java::Commands.java actual_args
 end
 
-task "data:fetch" do
+task 'data:fetch' do
   in_dir(WORKSPACE_DIR) do
     run_webtack(%w(--verbose -d data fetch))
   end
 end
 
-task "data:force_fetch" do
+task 'data:force_fetch' do
   in_dir(WORKSPACE_DIR) do
     run_webtack(%w(--verbose -d data fetch --force))
   end
