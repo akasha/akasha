@@ -78,7 +78,9 @@ CONTENT
     assets.each do |path|
       j.include("#{path}/*")
     end
-    j.include("#{project._(:source, :main, :java)}/*")
+    (project.compile.sources + project.iml.main_generated_resource_directories + project.iml.main_generated_source_directories).flatten.compact do |dep|
+      j.include("#{dep}/*")
+    end
   end if package_jars
 
   config = {}
