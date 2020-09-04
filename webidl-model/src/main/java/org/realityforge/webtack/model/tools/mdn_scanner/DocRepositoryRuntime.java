@@ -156,10 +156,10 @@ public final class DocRepositoryRuntime
 
   /**
    * Attempt to save the specified DocEntry.
-   * The
    *
    * @param entryIndex the index for the entry.
-   * @param entry the DocEntry to save.
+   * @param entry      the DocEntry to save.
+   * @param modifiedAt the time at which the entry was downloaded. If the entry has changed from the cached version then the index records this time as last modified time.
    * @return true if the entry has changed and thus the entry was saved.
    * @throws Exception if an error occurs saving the entry.
    */
