@@ -158,6 +158,7 @@ public final class DocRepositoryRuntime
    * Attempt to save the specified DocEntry.
    * The
    *
+   * @param entryIndex the index for the entry.
    * @param entry the DocEntry to save.
    * @return true if the entry has changed and thus the entry was saved.
    * @throws Exception if an error occurs saving the entry.
