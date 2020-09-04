@@ -179,7 +179,7 @@ define 'webtack' do
         deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
         compile.with deps
 
-        gwt_enhance(project)
+        gwt_enhance(project, :extra_deps => [src_dir])
 
         pom.include_transitive_dependencies << deps
         pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
