@@ -176,9 +176,13 @@ define 'webtack' do
         compile.using :javac
         project.compile.sources << file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java")
 
-        compile.with ('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
+        deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
+        compile.with deps
 
         gwt_enhance(project)
+
+        pom.include_transitive_dependencies << deps
+        pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
 
         package(:jar)
         package(:sources)
