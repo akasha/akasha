@@ -8,6 +8,9 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
+* add a since flag for the fetch and fetch-docs commands and a new since lastUpdatedAt to doc index so
+  we can avoid rechecking if they have been updated recently. This will stop our checks overloadeding MDN
+
 # Docs Integration
 
 * Some doc entries include documentation for constants .. scan for that?.
