@@ -653,9 +653,8 @@ final class JsinteropAction
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
-    final WebIDLSchema schema = _schema;
-    final Type declaredType = schema.resolveType( typedValue.getDeclaredType() );
-    final Type resolvedType = schema.resolveType( typedValue.getType(), true );
+    final Type declaredType = _schema.resolveType( typedValue.getDeclaredType() );
+    final Type resolvedType = _schema.resolveType( typedValue.getType(), true );
     if ( Kind.Union == declaredType.getKind() || unwrapsToUnion( declaredType ) )
     {
       method.addStatement( "$N( $T.of( $N ) )", mutatorName, toTypeName( declaredType ), paramName );
@@ -2063,21 +2062,20 @@ final class JsinteropAction
     {
       final TypeReference typeReference = (TypeReference) type;
       final String name = typeReference.getName();
-      final WebIDLSchema schema = _schema;
-      if ( null != schema.findInterfaceByName( name ) ||
-           null != schema.findDictionaryByName( name ) ||
-           null != schema.findCallbackInterfaceByName( name ) ||
-           null != schema.findCallbackByName( name ) )
+      if ( null != _schema.findInterfaceByName( name ) ||
+           null != _schema.findDictionaryByName( name ) ||
+           null != _schema.findCallbackInterfaceByName( name ) ||
+           null != _schema.findCallbackByName( name ) )
       {
         return lookupTypeByName( name );
       }
-      else if ( null != schema.findEnumerationByName( name ) )
+      else if ( null != _schema.findEnumerationByName( name ) )
       {
         return Types.STRING;
       }
       else
       {
-        final TypedefDefinition typedef = schema.getTypedefByName( name );
+        final TypedefDefinition typedef = _schema.getTypedefByName( name );
         if ( Kind.Union == typedef.getType().getKind() )
         {
           return lookupTypeByName( name );
