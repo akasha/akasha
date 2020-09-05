@@ -237,7 +237,50 @@ final class React4jAction
 
     if ( isBaseType( definition ) )
     {
-      // TODO: Add Magic key() id() className()
+      // TODO: Add the custom logic for combining multiple classnames
+
+      // id is a real "dom" attribute inherited from "Element" WebIDL interface
+      type.addMethod( MethodSpec
+                        .methodBuilder( "id" )
+                        .addAnnotation( Types.JS_OVERLAY )
+                        .addAnnotation( Types.NONNULL )
+                        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                        .addParameter( ParameterSpec
+                                         .builder( Types.STRING, "id", Modifier.FINAL )
+                                         .addAnnotation( Types.NONNULL )
+                                         .build() )
+                        .addStatement( "prop( $S, $T.asAny( id ) )", "id", Types.JS )
+                        .returns( TypeVariableName.get( "T" ) )
+                        .addStatement( "return self()", Types.JS )
+                        .build() );
+      // className is a real "className" attribute inherited from "Element" WebIDL interface
+      type.addMethod( MethodSpec
+                        .methodBuilder( "className" )
+                        .addAnnotation( Types.JS_OVERLAY )
+                        .addAnnotation( Types.NONNULL )
+                        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                        .addParameter( ParameterSpec
+                                         .builder( Types.STRING, "className", Modifier.FINAL )
+                                         .addAnnotation( Types.NONNULL )
+                                         .build() )
+                        .addStatement( "prop( $S, $T.asAny( className ) )", "className", Types.JS )
+                        .returns( TypeVariableName.get( "T" ) )
+                        .addStatement( "return self()", Types.JS )
+                        .build() );
+      // key is a synthetic "react" attribute used for identifying vnodes
+      type.addMethod( MethodSpec
+                        .methodBuilder( "key" )
+                        .addAnnotation( Types.JS_OVERLAY )
+                        .addAnnotation( Types.NONNULL )
+                        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                        .addParameter( ParameterSpec
+                                         .builder( Types.STRING, "key", Modifier.FINAL )
+                                         .addAnnotation( Types.NONNULL )
+                                         .build() )
+                        .addStatement( "prop( $S, $T.asAny( key ) )", "key", Types.JS )
+                        .returns( TypeVariableName.get( "T" ) )
+                        .addStatement( "return self()", Types.JS )
+                        .build() );
       type.addMethod( MethodSpec
                         .methodBuilder( "prop" )
                         .addAnnotation( Types.JS_OVERLAY )
