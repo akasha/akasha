@@ -47,6 +47,22 @@ generated with basic javadocs that makes it relatively easy to explore the API l
 more details. The java API is usually equivalent or better than the equivalent in Elemental2 as it tries to follow
 conventions more comfortable to Java developers.
 
+The outputs are not without limitations. The following limitations that have been discovered while using the
+outputs of WebTack.
+
+#### Large Java Packages
+
+WebTacks jsinterop action generates a java type for every element within the input WebIDL schema. These elements
+are mostly generated within a single java package. If a reasonably complete WebIDL is fed into the action this can
+produce a single package with 1200+ java classes. This is not the simplest structure to navigate and is not expected
+to be an efficient compilation module.
+
+An approach that we have used to address this limitation is manually partitioning the schema into required subset
+needed by the application. This has been surprisingly effective at producing small java packages, at the expense of
+some manual labour. However, it is expected that this would not scale to larger applications. A better approach maybe
+to automatically partition the files into different packages based on the originating specification or some other
+grouping heuristic.
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
