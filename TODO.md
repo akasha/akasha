@@ -108,6 +108,9 @@ Generate host element factories in the current style Generate one prop object pe
   likely get the `sourceSelector` from the parent pipline and the stages are added to the of the current
   pipeline. The goal is to share code between pipelines like `main` and `react4j`.
 
+* It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
+  The Gecko WebIDL files actually have a `[Throws]`  extended attribute that we could look into to drive this?
+
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
