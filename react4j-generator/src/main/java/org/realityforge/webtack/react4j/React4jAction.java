@@ -52,7 +52,16 @@ final class React4jAction
 
     generateRefCallback();
 
-    generateFactory( schema, "HTML", HTMLElementsGenerator.create() );
+    final List<Element> elements =
+      HTMLElementsGenerator
+        .create()
+        .elements()
+        .stream()
+        .filter( element -> null != schema.findInterfaceByName( element.getDomInterface() ) )
+        .collect( Collectors.toList() );
+
+    emitInputTypes( schema, elements );
+    emitFactoryType( "HTML", elements );
 
     if ( _generateGwtModule )
     {
@@ -125,9 +134,7 @@ final class React4jAction
   }
 
   @SuppressWarnings( "SameParameterValue" )
-  private void generateFactory( @Nonnull final WebIDLSchema schema,
-                                @Nonnull final String className,
-                                @Nonnull final ElementCollection elements )
+  private void emitFactoryType( @Nonnull final String className, @Nonnull final List<Element> elements )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -140,13 +147,21 @@ final class React4jAction
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    final List<Element> elementSelection =
-      elements
-        .elements()
-        .stream()
-        .filter( element -> null != schema.findInterfaceByName( element.getDomInterface() ) )
-        .collect( Collectors.toList() );
+    for ( final Element element : elements )
+    {
+      emitElementFactoryMethods( type, element );
+    }
 
+    type.addMethod( emitToArray() );
+
+    type.addMethod( emitCreateElement() );
+
+    writeTopLevelType( type );
+  }
+
+  private void emitInputTypes( @Nonnull final WebIDLSchema schema, @Nonnull final List<Element> elementSelection )
+    throws IOException
+  {
     final Set<String> inputTypeNames =
       elementSelection
         .stream()
@@ -180,17 +195,6 @@ final class React4jAction
         emitElementInputsType( definition );
       }
     }
-
-    for ( final Element element : elementSelection )
-    {
-      emitElementFactoryMethods( type, element );
-    }
-
-    type.addMethod( emitToArray() );
-
-    type.addMethod( emitCreateElement() );
-
-    writeTopLevelType( type );
   }
 
   private void collectParentTypes( @Nonnull final WebIDLSchema schema,
