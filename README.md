@@ -39,6 +39,14 @@ explicitly declare events emitted by interfaces (i.e. there is a new member elem
 `event ProgressEvent load;`). It also supports a [Javadoc-like](https://en.wikipedia.org/wiki/Javadoc) syntax for
 documenting the WebIDL elements.
 
+### The Future
+
+WebTack is an alpha project that is surprisingly useful as is. It is extremely useful to start using web APIs
+that are not covered by [elemental2](https://github.com/google/elemental2) with minimal fuss. The web APIs are also
+generated with basic javadocs that makes it relatively easy to explore the API locally or follow a link to MDN for
+more details. The java API is usually equivalent or better than the equivalent in Elemental2 as it tries to follow
+conventions more comfortable to Java developers.
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
