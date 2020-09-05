@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "SubtleCrypto.exportKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/exportKey",
-    "description": "The exportKey() method of the SubtleCrypto interface exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."
+    "description": "The exportKey() method of the SubtleCrypto interface exports a key: that is, it takes as input a CryptoKey object and gives you the key in an external, portable format."
 }

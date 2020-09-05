@@ -6,11 +6,7 @@
     },
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192515971
-    },
-    {
-        "name": "animation.commitStyles",
-        "lastModifiedAt": 0
+        "lastModifiedAt": 1599279570327
     },
     {
         "name": "cancel",
@@ -18,6 +14,6 @@
     },
     {
         "name": "currentTime",
-        "lastModifiedAt": 1597192516698
+        "lastModifiedAt": 1599279571517
     }
 ]

@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBObjectStore.index",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/index",
-    "description": "An IDBIndex object for accessing the index."
+    "description": "An IDBIndex object for accessing the index."
 }

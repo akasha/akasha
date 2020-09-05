@@ -3,5 +3,5 @@
     "kind": "Constructor",
     "name": "HTMLAudioElement.Audio",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio",
-    "description": "The Audio() constructor creates and returns a new HTMLAudioElement which can be either attached to a document for the user to interact with and/or listen to, or can be used offscreen to manage and play audio."
+    "description": "The Audio() constructor creates and returns a new HTMLAudioElement which can be either attached to a document for the user to interact with and/or listen to, or can be used offscreen to manage and play audio."
 }

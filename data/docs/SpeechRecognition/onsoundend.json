@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "SpeechRecognition.onsoundend",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onsoundend",
-    "description": "The onsoundend property of the SpeechRecognition interface represents an event handler that will run when any sound — recognisable speech or not — has stopped being detected (when the soundend event fires.)"
+    "description": "The onsoundend property of the SpeechRecognition interface represents an event handler that will run when any sound &mdash; recognisable speech or not &mdash; has stopped being detected (when the soundend event fires.)"
 }

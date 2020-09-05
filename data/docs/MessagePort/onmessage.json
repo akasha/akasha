@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MessagePort.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/onmessage",
-    "description": "The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port — that is, when the port receives a message."
+    "description": "The onmessage event handler of the MessagePort interface is an EventListener, called whenever an MessageEvent of type message is fired on the port &mdash; that is, when the port receives a message."
 }

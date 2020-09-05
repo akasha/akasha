@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLMediaElement.volume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume",
-    "description": "The HTMLMediaElement.volume property sets the volume at which the media will be played."
+    "description": "The HTMLMediaElement.volume property sets the volume at which the media will be played."
 }

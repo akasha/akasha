@@ -6,7 +6,7 @@
     },
     {
         "name": "StaticRange",
-        "lastModifiedAt": 1596712127443
+        "lastModifiedAt": 1599280264166
     },
     {
         "name": "__type__",
@@ -86,7 +86,7 @@
     },
     {
         "name": "cut_event",
-        "lastModifiedAt": 1597359039443
+        "lastModifiedAt": 1599280318515
     },
     {
         "name": "devicemotion_event",
@@ -102,7 +102,7 @@
     },
     {
         "name": "error_event",
-        "lastModifiedAt": 1597359027550
+        "lastModifiedAt": 1599280306146
     },
     {
         "name": "find",
@@ -150,7 +150,7 @@
     },
     {
         "name": "matchMedia",
-        "lastModifiedAt": 1596581258848
+        "lastModifiedAt": 1599280283502
     },
     {
         "name": "message_event",
@@ -178,11 +178,11 @@
     },
     {
         "name": "onappinstalled",
-        "lastModifiedAt": 1596797799647
+        "lastModifiedAt": 1599280358169
     },
     {
         "name": "onbeforeinstallprompt",
-        "lastModifiedAt": 1596797800032
+        "lastModifiedAt": 1599280358784
     },
     {
         "name": "ondevicemotion",
@@ -206,7 +206,7 @@
     },
     {
         "name": "onrejectionhandled",
-        "lastModifiedAt": 1596797805062
+        "lastModifiedAt": 1599280360448
     },
     {
         "name": "onvrdisplayactivate",
@@ -214,7 +214,7 @@
     },
     {
         "name": "onvrdisplayblur",
-        "lastModifiedAt": 1596797806425
+        "lastModifiedAt": 1599280361572
     },
     {
         "name": "onvrdisplayconnect",
@@ -242,7 +242,7 @@
     },
     {
         "name": "onvrdisplaypresentchange",
-        "lastModifiedAt": 1596797809032
+        "lastModifiedAt": 1599280365230
     },
     {
         "name": "open",
@@ -262,7 +262,7 @@
     },
     {
         "name": "paste_event",
-        "lastModifiedAt": 1597359040819
+        "lastModifiedAt": 1599280319218
     },
     {
         "name": "postMessage",
@@ -330,7 +330,7 @@
     },
     {
         "name": "sizeToContent",
-        "lastModifiedAt": 1596581282274
+        "lastModifiedAt": 1599280304153
     },
     {
         "name": "stop",

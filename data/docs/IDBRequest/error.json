@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "IDBRequest.error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/error",
-    "description": "A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The following error codes are returned under certain conditions:"
+    "description": "A DOMError containing the relevant error. In Chrome 48+/Firefox 58+ this property returns a DOMException because DOMError has been removed from the DOM standard. The following error codes are returned under certain conditions:"
 }

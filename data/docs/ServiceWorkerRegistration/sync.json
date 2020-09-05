@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "ServiceWorkerRegistration.sync",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/sync",
-    "description": "The sync property of the ServiceWorkerRegistration interface returns a reference to the SyncManager interface, which manages background synchronization processes."
+    "description": "The sync property of the ServiceWorkerRegistration interface returns a reference to the SyncManager interface, which manages background synchronization processes."
 }

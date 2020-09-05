@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192637389
+        "lastModifiedAt": 1599280404899
     },
     {
         "name": "characteristic",
@@ -10,18 +10,18 @@
     },
     {
         "name": "readValue",
-        "lastModifiedAt": 1596712206934
+        "lastModifiedAt": 1599280406930
     },
     {
         "name": "uuid",
-        "lastModifiedAt": 1596712205507
+        "lastModifiedAt": 1599280405933
     },
     {
         "name": "value",
-        "lastModifiedAt": 1596712206037
+        "lastModifiedAt": 1599280406442
     },
     {
         "name": "writeValue",
-        "lastModifiedAt": 1596712208078
+        "lastModifiedAt": 1599280408031
     }
 ]

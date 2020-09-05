@@ -2,22 +2,22 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192200524
+        "lastModifiedAt": 1599279600295
     },
     {
         "name": "deviceId",
-        "lastModifiedAt": 1596544759830
+        "lastModifiedAt": 1599279600953
     },
     {
         "name": "groupId",
-        "lastModifiedAt": 1596544760216
+        "lastModifiedAt": 1599279601543
     },
     {
         "name": "kind",
-        "lastModifiedAt": 1596544760482
+        "lastModifiedAt": 1599279602125
     },
     {
         "name": "label",
-        "lastModifiedAt": 1596544760740
+        "lastModifiedAt": 1599279602659
     }
 ]

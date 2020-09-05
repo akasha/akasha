@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192620512
+        "lastModifiedAt": 1599279252772
     },
     {
         "name": "connect",
@@ -10,22 +10,22 @@
     },
     {
         "name": "connected",
-        "lastModifiedAt": 1596711702732
+        "lastModifiedAt": 1599279253319
     },
     {
         "name": "device",
-        "lastModifiedAt": 1596711703331
+        "lastModifiedAt": 1599279254054
     },
     {
         "name": "disconnect",
-        "lastModifiedAt": 1596711704801
+        "lastModifiedAt": 1599279255912
     },
     {
         "name": "getPrimaryService",
-        "lastModifiedAt": 1596711705364
+        "lastModifiedAt": 1599279256396
     },
     {
         "name": "getPrimaryServices",
-        "lastModifiedAt": 1596711706081
+        "lastModifiedAt": 1599279256883
     }
 ]

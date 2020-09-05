@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTService.uuid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid",
-    "description": "The BluetoothGATTService.uuid read-only property returns a DOMString representing the UUID of this service."
+    "description": "The BluetoothGATTService.uuid read-only property returns a DOMString representing the UUID of this service."
 }

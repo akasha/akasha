@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "URL.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/port",
-    "description": "The port property of the URL interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''."
+    "description": "The port property of the URL interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''."
 }

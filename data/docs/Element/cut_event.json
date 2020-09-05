@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "Element.cut_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/cut_event",
-    "description": "The cut event is fired when the user has initiated a \"cut\" action through the browser's user interface.",
+    "description": "The cut event is fired when the user has initiated a &quot;cut&quot; action through the browser's user interface.",
     "eventName": "cut",
     "eventType": "ClipboardEvent",
     "eventHandlerProperty": "oncut",

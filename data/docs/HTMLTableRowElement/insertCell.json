@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "HTMLTableRowElement.insertCell",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell",
-    "description": "The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell."
+    "description": "The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell."
 }

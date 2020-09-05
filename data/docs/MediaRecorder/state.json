@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MediaRecorder.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/state",
-    "description": "The MediaRecorder.state read-only property returns the current state of the current MediaRecorder object."
+    "description": "The MediaRecorder.state read-only property returns the current state of the current MediaRecorder object."
 }

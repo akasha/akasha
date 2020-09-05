@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Cache.delete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/delete",
-    "description": "The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false."
+    "description": "The delete() method of the Cache interface finds the Cache entry whose key is the request, and if found, deletes the Cache entry and returns a Promise that resolves to true. If no Cache entry is found, it resolves to false."
 }

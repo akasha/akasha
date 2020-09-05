@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCConfiguration.certificates",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates",
+    "description": "The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process."
+}

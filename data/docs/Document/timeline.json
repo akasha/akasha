@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "Document.timeline",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/timeline",
-    "description": "The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load."
+    "description": "The timeline readonly property of the Document interface represents the default timeline of the current document. This timeline is a special instance of DocumentTimeline that is automatically created on page load."
 }

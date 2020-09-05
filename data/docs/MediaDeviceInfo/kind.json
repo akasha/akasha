@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MediaDeviceInfo.kind",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/kind",
-    "description": "The kind readonly property of the MediaDeviceInfo interface returns an enumerated value, that is either \"videoinput\", \"audioinput\" or \"audiooutput\"."
+    "description": "The kind readonly property of the MediaDeviceInfo interface returns an enumerated value, that is either &quot;videoinput&quot;, &quot;audioinput&quot; or &quot;audiooutput&quot;."
 }

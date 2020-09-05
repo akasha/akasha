@@ -28,6 +28,7 @@ import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexException;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException;
+import org.realityforge.webtack.model.tools.util.StringUtils;
 
 public final class MdnDocScanner
 {
@@ -270,7 +271,10 @@ public final class MdnDocScanner
       final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
       final String typeName = entryIndex.getDocIndex().getName();
-      entry.setDescription( description );
+      // Replace any non-breaking-space characters with a space as that is the best way for downstream consumers
+      // Then replace any other special characters with their equivalent html entities as the description is
+      // expected to be HTML "phrasing content" soo that it can easily be added to javadoc like tools
+      entry.setDescription( StringUtils.encodeHtml( description.replace( '\u00A0', ' ' ) ) );
       if ( DocKind.Type == kind )
       {
         document

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.registration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/registration",
-    "description": "The registration read-only property of the ServiceWorkerGlobalScope interface returns a reference to the ServiceWorkerRegistration object, which represents the service worker's registration."
+    "description": "The registration read-only property of the ServiceWorkerGlobalScope interface returns a reference to the ServiceWorkerRegistration object, which represents the service worker's registration."
 }

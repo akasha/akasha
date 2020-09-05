@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLSelectElement.disabled",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/disabled",
-    "description": "The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable."
+    "description": "The HTMLSelectElement.disabled is a Boolean that reflects the disabled HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks. A disabled element is unusable and un-clickable."
 }

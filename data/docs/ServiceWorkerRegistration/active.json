@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "ServiceWorkerRegistration.active",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/active",
-    "description": "The active property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is activating or activated. This property is initially set to null."
+    "description": "The active property of the ServiceWorkerRegistration interface returns a service worker whose ServiceWorker.state is activating or activated. This property is initially set to null."
 }

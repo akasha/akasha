@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "IDBTransaction.oncomplete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/oncomplete",
-    "description": "The oncomplete event handler of the IDBTransaction interface handles the complete event, fired when the transaction successfully completes."
+    "description": "The oncomplete event handler of the IDBTransaction interface handles the complete event, fired when the transaction successfully completes."
 }

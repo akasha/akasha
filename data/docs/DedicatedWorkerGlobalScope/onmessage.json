@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "DedicatedWorkerGlobalScope.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessage",
-    "description": "The onmessage property of the DedicatedWorkerGlobalScope interface represents an EventHandler to be called when the message event occurs and bubbles through the Worker — i.e. when a message is sent to the worker using the Worker.postMessage method."
+    "description": "The onmessage property of the DedicatedWorkerGlobalScope interface represents an EventHandler to be called when the message event occurs and bubbles through the Worker &mdash; i.e. when a message is sent to the worker using the Worker.postMessage method."
 }

@@ -6,7 +6,7 @@
     },
     {
         "name": "binaryType",
-        "lastModifiedAt": 1596544574160
+        "lastModifiedAt": 1599280214574
     },
     {
         "name": "bufferedAmount",
@@ -14,7 +14,7 @@
     },
     {
         "name": "bufferedAmountLowThreshold",
-        "lastModifiedAt": 1596544575313
+        "lastModifiedAt": 1599280215712
     },
     {
         "name": "bufferedamountlow_event",
@@ -74,7 +74,7 @@
     },
     {
         "name": "onopen",
-        "lastModifiedAt": 1596544581550
+        "lastModifiedAt": 1599280230671
     },
     {
         "name": "open_event",
@@ -86,7 +86,7 @@
     },
     {
         "name": "protocol",
-        "lastModifiedAt": 1596544583953
+        "lastModifiedAt": 1599280221362
     },
     {
         "name": "readyState",

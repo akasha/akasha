@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "WebAssembly.Table.get",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get",
-    "description": "The get() prototype method of the WebAssembly.Table() object retrieves a function reference stored at a given index."
+    "description": "The get() prototype method of the WebAssembly.Table() object retrieves a function reference stored at a given index."
 }

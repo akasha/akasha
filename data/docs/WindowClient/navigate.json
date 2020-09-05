@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "WindowClient.navigate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/navigate",
-    "description": "The navigate() method of the WindowClient interface loads a specified URL into a controlled client page then returns a Promise that resolves to the existing WindowClient."
+    "description": "The navigate() method of the WindowClient interface loads a specified URL into a controlled client page then returns a Promise that resolves to the existing WindowClient."
 }

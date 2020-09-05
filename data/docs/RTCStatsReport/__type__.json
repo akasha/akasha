@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "RTCStatsReport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStatsReport",
-    "description": "The RTCStatsReport interface provides a statistics report obtained by calling one of the RTCPeerConnection.getStats(), RTCRtpReceiver.getStats(), and RTCRtpSender.getStats() methods."
+    "description": "The RTCStatsReport interface provides a statistics report obtained by calling one of the RTCPeerConnection.getStats(), RTCRtpReceiver.getStats(), and RTCRtpSender.getStats() methods."
 }

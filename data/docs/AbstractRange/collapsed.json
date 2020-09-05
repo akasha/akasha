@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "AbstractRange.collapsed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/collapsed",
-    "description": "The collapsed read-only property of the AbstractRange interface returns true if the range's start position and end position are the same."
+    "description": "The collapsed read-only property of the AbstractRange interface returns true if the range's start position and end position are the same."
 }

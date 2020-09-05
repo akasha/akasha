@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "NodeFilter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeFilter",
-    "description": "A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter."
+    "description": "A NodeFilter interface represents an object used to filter the nodes in a NodeIterator or TreeWalker. A NodeFilter knows nothing about the document or traversing nodes; it only knows how to evaluate a single node against the provided filter."
 }

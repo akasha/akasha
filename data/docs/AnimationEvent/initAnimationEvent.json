@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "AnimationEvent.initAnimationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent/initAnimationEvent",
-    "description": "The AnimationEvent.initAnimationEvent() method Initializes an animation event created using the deprecated Document.createEvent(\"AnimationEvent\") method."
+    "description": "The AnimationEvent.initAnimationEvent() method Initializes an animation event created using the deprecated Document.createEvent(&quot;AnimationEvent&quot;) method."
 }

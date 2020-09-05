@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Node.compareDocumentPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/compareDocumentPosition",
-    "description": "The Node.compareDocumentPosition() method reports the position of the given node relative to another node in any document — not just the given node’s document."
+    "description": "The Node.compareDocumentPosition() method reports the position of the given node relative to another node in any document &mdash; not just the given node&rsquo;s document."
 }

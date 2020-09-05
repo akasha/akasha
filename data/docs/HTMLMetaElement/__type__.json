@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "HTMLMetaElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMetaElement",
-    "description": "The HTMLMetaElement interface contains descriptive metadata about a document. It inherits all of the properties and methods described in the HTMLElement interface."
+    "description": "The HTMLMetaElement interface contains descriptive metadata about a document. It inherits all of the properties and methods described in the HTMLElement interface."
 }

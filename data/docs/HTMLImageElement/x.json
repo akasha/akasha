@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLImageElement.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/x",
-    "description": "The read-only HTMLImageElement property x indicates the x-coordinate of the  img element's left border edge relative to the root element's origin."
+    "description": "The read-only HTMLImageElement property x indicates the x-coordinate of the  img element's left border edge relative to the root element's origin."
 }

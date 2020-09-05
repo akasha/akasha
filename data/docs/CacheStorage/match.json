@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "CacheStorage.match",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match",
-    "description": "The match() method of the CacheStorage interface checks if a given Request or url string is a key for a stored Response. This method returns a Promise for a Response, or a Promise which resolves to undefined if no match is found."
+    "description": "The match() method of the CacheStorage interface checks if a given Request or url string is a key for a stored Response. This method returns a Promise for a Response, or a Promise which resolves to undefined if no match is found."
 }

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "DeviceOrientationEvent.gamma",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/gamma",
-    "description": "Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is tilted left or right. See Orientation and motion data explained for details."
+    "description": "Returns the rotation of the device around the Y axis; that is, the number of degrees, ranged between -90 and 90, by which the device is tilted left or right. See Orientation and motion data explained for details."
 }

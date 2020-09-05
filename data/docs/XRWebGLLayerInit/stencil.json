@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRWebGLLayerInit.stencil",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/stencil",
-    "description": "When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer."
+    "description": "When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose stencil property is false requests that the new layer be created without a stencil buffer."
 }

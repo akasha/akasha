@@ -14,11 +14,11 @@
     },
     {
         "name": "bytesReceieved",
-        "lastModifiedAt": 1596544715901
+        "lastModifiedAt": 1599280382230
     },
     {
         "name": "bytesSent",
-        "lastModifiedAt": 1596544716206
+        "lastModifiedAt": 1599280382690
     },
     {
         "name": "circuitBreakerTriggerCount",

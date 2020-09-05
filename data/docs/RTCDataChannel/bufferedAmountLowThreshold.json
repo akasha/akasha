@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "RTCDataChannel.bufferedAmountLowThreshold",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold",
-    "description": "The RTCDataChannel property bufferedAmountLowThreshold is used to specify the number of bytes of buffered outgoing data that is considered \"low.\" The default value is 0."
+    "description": "The RTCDataChannel property bufferedAmountLowThreshold is used to specify the number of bytes of buffered outgoing data that is considered &quot;low.&quot; The default value is 0."
 }

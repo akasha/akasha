@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192627618
+        "lastModifiedAt": 1599280493872
     },
     {
         "name": "characteristicvaluechanged_event",
@@ -10,42 +10,42 @@
     },
     {
         "name": "getDescriptor",
-        "lastModifiedAt": 1596712223624
+        "lastModifiedAt": 1599280497992
     },
     {
         "name": "getDescriptors",
-        "lastModifiedAt": 1596712224339
+        "lastModifiedAt": 1599280498558
     },
     {
         "name": "properties",
-        "lastModifiedAt": 1596712220675
+        "lastModifiedAt": 1599280496180
     },
     {
         "name": "readValue",
-        "lastModifiedAt": 1596712225003
+        "lastModifiedAt": 1599280499561
     },
     {
         "name": "service",
-        "lastModifiedAt": 1596712221268
+        "lastModifiedAt": 1599280494483
     },
     {
         "name": "startNotifications",
-        "lastModifiedAt": 1596712226162
+        "lastModifiedAt": 1599280501747
     },
     {
         "name": "stopNotifications",
-        "lastModifiedAt": 1596712226798
+        "lastModifiedAt": 1599280502217
     },
     {
         "name": "uuid",
-        "lastModifiedAt": 1596712222382
+        "lastModifiedAt": 1599280495092
     },
     {
         "name": "value",
-        "lastModifiedAt": 1596712223009
+        "lastModifiedAt": 1599280497241
     },
     {
         "name": "writeValue",
-        "lastModifiedAt": 1596712227252
+        "lastModifiedAt": 1599280500617
     }
 ]

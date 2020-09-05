@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRRenderState.baseLayer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/baseLayer",
-    "description": "The read-only baseLayer property of the XRRenderState interface returns the XRWebGLLayer instance that is the source of bitmap images and a description of how the image is to be rendered in the device."
+    "description": "The read-only baseLayer property of the XRRenderState interface returns the XRWebGLLayer instance that is the source of bitmap images and a description of how the image is to be rendered in the device."
 }

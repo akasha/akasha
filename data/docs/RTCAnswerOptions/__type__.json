@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "RTCAnswerOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCAnswerOptions",
-    "description": "The RTCAnswerOptions dictionary is used to provide optional settings when creating an SDP answer using RTCPeerConnection.createOffer() after receiving an offer from a remote peer."
+    "description": "The RTCAnswerOptions dictionary is used to provide optional settings when creating an SDP answer using RTCPeerConnection.createOffer() after receiving an offer from a remote peer."
 }

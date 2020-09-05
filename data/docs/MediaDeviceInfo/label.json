@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MediaDeviceInfo.label",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/label",
-    "description": "The label readonlyinline property of the MediaDeviceInfo interface returns a DOMString, that is a label describing this device (for example \"External USB Webcam\")."
+    "description": "The label readonlyinline property of the MediaDeviceInfo interface returns a DOMString, that is a label describing this device (for example &quot;External USB Webcam&quot;)."
 }

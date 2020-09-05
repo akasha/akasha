@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Navigator.canShare",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/canShare",
+    "description": "The Navigator.canShare() method of the Web Share API returns true if a call to navigator.share() would succeed."
+}

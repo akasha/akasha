@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597660634458
+        "lastModifiedAt": 1599279860595
     },
     {
         "name": "clear",
@@ -18,7 +18,7 @@
     },
     {
         "name": "debug",
-        "lastModifiedAt": 1597660636971
+        "lastModifiedAt": 1599279863731
     },
     {
         "name": "dir",
@@ -26,7 +26,7 @@
     },
     {
         "name": "dirxml",
-        "lastModifiedAt": 1597660637954
+        "lastModifiedAt": 1599279864755
     },
     {
         "name": "error",
@@ -46,7 +46,7 @@
     },
     {
         "name": "info",
-        "lastModifiedAt": 1597660641587
+        "lastModifiedAt": 1599279868833
     },
     {
         "name": "log",

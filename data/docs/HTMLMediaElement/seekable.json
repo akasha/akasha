@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLMediaElement.seekable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seekable",
-    "description": "The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any."
+    "description": "The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any."
 }

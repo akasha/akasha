@@ -34,7 +34,7 @@
     },
     {
         "name": "onactivate",
-        "lastModifiedAt": 1597190531162
+        "lastModifiedAt": 1599279459138
     },
     {
         "name": "oncontentdelete",
@@ -46,7 +46,7 @@
     },
     {
         "name": "onmessage",
-        "lastModifiedAt": 1597190531767
+        "lastModifiedAt": 1599279461918
     },
     {
         "name": "onnotificationclick",
@@ -70,7 +70,7 @@
     },
     {
         "name": "registration",
-        "lastModifiedAt": 1597190527392
+        "lastModifiedAt": 1599279451692
     },
     {
         "name": "skipWaiting",

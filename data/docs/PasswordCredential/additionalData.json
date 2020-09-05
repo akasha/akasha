@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "PasswordCredential.additionalData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/additionalData",
-    "description": "The additionalData property of the PasswordCredential interface takes one of a FormData instance, a URLSearchParams instance, or null."
+    "description": "The additionalData property of the PasswordCredential interface takes one of a FormData instance, a URLSearchParams instance, or null."
 }

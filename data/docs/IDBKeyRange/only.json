@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBKeyRange.only",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/only",
-    "description": "value is the value for the new key range."
+    "description": "value is the value for the new key range."
 }

@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBObjectStore.openKeyCursor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor",
-    "description": "To determine if the add operation has completed successfully, listen for the results’s success event."
+    "description": "To determine if the add operation has completed successfully, listen for the results&rsquo;s success event."
 }

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "WebAssembly.Table.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length",
-    "description": "The length prototype property of the WebAssembly.Table object returns the length of the table, i.e. the number of elements in the table."
+    "description": "The length prototype property of the WebAssembly.Table object returns the length of the table, i.e. the number of elements in the table."
 }

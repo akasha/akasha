@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "SharedWorkerGlobalScope.onconnect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorkerGlobalScope/onconnect",
-    "description": "The onconnect property of the SharedWorkerGlobalScope interface is an event handler representing the code to be called when the connect event is raised — that is, when a MessagePort connection is opened between the associated SharedWorker and the main thread."
+    "description": "The onconnect property of the SharedWorkerGlobalScope interface is an event handler representing the code to be called when the connect event is raised &mdash; that is, when a MessagePort connection is opened between the associated SharedWorker and the main thread."
 }

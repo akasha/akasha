@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "XRReferenceSpace.getOffsetReferenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/getOffsetReferenceSpace",
-    "description": "The XRReferenceSpace interface's getOffsetReferenceSpace() method returns a new reference space object which describes the relative difference in position between the object on which the method is called and a given point in 3D space."
+    "description": "The XRReferenceSpace interface's getOffsetReferenceSpace() method returns a new reference space object which describes the relative difference in position between the object on which the method is called and a given point in 3D space."
 }

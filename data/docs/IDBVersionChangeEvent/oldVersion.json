@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "IDBVersionChangeEvent.oldVersion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/oldVersion",
-    "description": "The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database."
+    "description": "The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database."
 }

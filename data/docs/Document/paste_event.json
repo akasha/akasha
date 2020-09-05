@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "Document.paste_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/paste_event",
-    "description": "The paste event is fired when the user has initiated a \"paste\" action through the browser's user interface.",
+    "description": "The paste event is fired when the user has initiated a &quot;paste&quot; action through the browser's user interface.",
     "eventName": "paste",
     "eventType": "ClipboardEvent",
     "eventHandlerProperty": "onpaste",

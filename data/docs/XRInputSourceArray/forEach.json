@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "XRInputSourceArray.forEach",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/forEach",
-    "description": "The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list."
+    "description": "The XRInputSourceArray method forEach() executes the specified callback once for each input source in the array, starting at index 0 and progressing until the end of the list."
 }

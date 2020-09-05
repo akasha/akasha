@@ -6,7 +6,7 @@
     },
     {
         "name": "active",
-        "lastModifiedAt": 1599278003246
+        "lastModifiedAt": 1599279497293
     },
     {
         "name": "getNotifications",
@@ -18,7 +18,7 @@
     },
     {
         "name": "installing",
-        "lastModifiedAt": 1597190519988
+        "lastModifiedAt": 1599279496167
     },
     {
         "name": "navigationPreload",
@@ -26,11 +26,11 @@
     },
     {
         "name": "pushManager",
-        "lastModifiedAt": 1597190522956
+        "lastModifiedAt": 1599279499620
     },
     {
         "name": "scope",
-        "lastModifiedAt": 1597190519142
+        "lastModifiedAt": 1599279495638
     },
     {
         "name": "showNotification",
@@ -38,7 +38,7 @@
     },
     {
         "name": "sync",
-        "lastModifiedAt": 1597190523559
+        "lastModifiedAt": 1599279500731
     },
     {
         "name": "unregister",
@@ -46,10 +46,10 @@
     },
     {
         "name": "update",
-        "lastModifiedAt": 1597190524912
+        "lastModifiedAt": 1599279502821
     },
     {
         "name": "waiting",
-        "lastModifiedAt": 1597190520816
+        "lastModifiedAt": 1599279496835
     }
 ]

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "WindowEventHandlers.onrejectionhandled",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onrejectionhandled",
-    "description": "The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected."
+    "description": "The onrejectionhandled property of the WindowEventHandlers mixin is the EventHandler for processing rejectionhandled events. These events are raised when Promises are rejected."
 }

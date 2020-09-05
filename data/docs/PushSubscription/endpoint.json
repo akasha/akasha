@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "PushSubscription.endpoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/endpoint",
-    "description": "The endpoint read-only property of the PushSubscription interface returns a USVString containing the endpoint associated with the push subscription."
+    "description": "The endpoint read-only property of the PushSubscription interface returns a USVString containing the endpoint associated with the push subscription."
 }

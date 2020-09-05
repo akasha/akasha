@@ -38,11 +38,11 @@
     },
     {
         "name": "onclose",
-        "lastModifiedAt": 1596581547027
+        "lastModifiedAt": 1599279280376
     },
     {
         "name": "onerror",
-        "lastModifiedAt": 1596581547330
+        "lastModifiedAt": 1599279281040
     },
     {
         "name": "onmessage",

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRBoundedReferenceSpace.boundsGeometry",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace/boundsGeometry",
-    "description": "The read-only XRBoundedReferenceSpace property boundsGeometry is an array of DOMPointReadOnly objects which specifies the points making up a polygon inside which the viewer is allowed to move."
+    "description": "The read-only XRBoundedReferenceSpace property boundsGeometry is an array of DOMPointReadOnly objects which specifies the points making up a polygon inside which the viewer is allowed to move."
 }

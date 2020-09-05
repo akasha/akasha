@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597193035069
+        "lastModifiedAt": 1599279944577
     },
     {
         "name": "appendChild",
@@ -26,7 +26,7 @@
     },
     {
         "name": "compareDocumentPosition",
-        "lastModifiedAt": 1597193041065
+        "lastModifiedAt": 1599279958504
     },
     {
         "name": "contains",
@@ -58,7 +58,7 @@
     },
     {
         "name": "isEqualNode",
-        "lastModifiedAt": 1597193044416
+        "lastModifiedAt": 1599279963300
     },
     {
         "name": "isSameNode",
@@ -94,7 +94,7 @@
     },
     {
         "name": "normalize",
-        "lastModifiedAt": 1597193045817
+        "lastModifiedAt": 1599279965553
     },
     {
         "name": "ownerDocument",

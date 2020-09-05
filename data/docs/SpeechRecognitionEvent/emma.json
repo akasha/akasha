@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "SpeechRecognitionEvent.emma",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/emma",
-    "description": "The emma read-only property of the SpeechRecognitionEvent interface returns an Extensible MultiModal Annotation markup language (EMMA) — XML — representation of the result."
+    "description": "The emma read-only property of the SpeechRecognitionEvent interface returns an Extensible MultiModal Annotation markup language (EMMA) &mdash; XML &mdash; representation of the result."
 }

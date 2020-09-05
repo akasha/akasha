@@ -3,5 +3,5 @@
     "kind": "Constructor",
     "name": "SubmitEvent.SubmitEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubmitEvent/SubmitEvent",
-    "description": "The SubmitEvent() constructor creates and returns a new SubmitEvent object, which is used to represent a submit event fired at an HTML form."
+    "description": "The SubmitEvent() constructor creates and returns a new SubmitEvent object, which is used to represent a submit event fired at an HTML form."
 }

@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBFactory.databases",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/databases",
-    "description": "The databases method of the IDBFactory interface returns a list represening all the available databases, including their names and versions."
+    "description": "The databases method of the IDBFactory interface returns a list represening all the available databases, including their names and versions."
 }

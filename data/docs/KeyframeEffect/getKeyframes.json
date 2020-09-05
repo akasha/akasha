@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "KeyframeEffect.getKeyframes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/getKeyframes",
-    "description": "The getKeyframes() method of a KeyframeEffect returns an Array of the computed keyframes that make up this animation along with their computed offsets."
+    "description": "The getKeyframes() method of a KeyframeEffect returns an Array of the computed keyframes that make up this animation along with their computed offsets."
 }

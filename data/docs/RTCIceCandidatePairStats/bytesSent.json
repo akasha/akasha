@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.bytesSent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesSent",
-    "description": "The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes—that is, bytes which aren't overhead such as headers or padding—that hve been sent so far on the connection described by the candidate pair."
+    "description": "The RTCIceCandidatePairStats property bytesSent indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been sent so far on the connection described by the candidate pair."
 }

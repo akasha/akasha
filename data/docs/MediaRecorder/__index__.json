@@ -26,7 +26,7 @@
     },
     {
         "name": "mimeType",
-        "lastModifiedAt": 1596544795253
+        "lastModifiedAt": 1599279136416
     },
     {
         "name": "onerror",
@@ -50,7 +50,7 @@
     },
     {
         "name": "state",
-        "lastModifiedAt": 1596544795496
+        "lastModifiedAt": 1599279136928
     },
     {
         "name": "stop",
@@ -58,7 +58,7 @@
     },
     {
         "name": "stream",
-        "lastModifiedAt": 1596544795876
+        "lastModifiedAt": 1599279138044
     },
     {
         "name": "videoBitsPerSecond",

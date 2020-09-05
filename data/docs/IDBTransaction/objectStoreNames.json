@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "IDBTransaction.objectStoreNames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStoreNames",
-    "description": "The objectStoreNames read-only property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects."
+    "description": "The objectStoreNames read-only property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects."
 }

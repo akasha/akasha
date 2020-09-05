@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "ServiceWorkerRegistration.scope",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/scope",
-    "description": "The scope read-only property of the ServiceWorkerRegistration interface returns a unique identifier for a service worker registration. The service worker must be on the same origin as the document that registers the ServiceWorker."
+    "description": "The scope read-only property of the ServiceWorkerRegistration interface returns a unique identifier for a service worker registration. The service worker must be on the same origin as the document that registers the ServiceWorker."
 }

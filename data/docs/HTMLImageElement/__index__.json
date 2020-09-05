@@ -14,11 +14,11 @@
     },
     {
         "name": "complete",
-        "lastModifiedAt": 1596581374631
+        "lastModifiedAt": 1599279630478
     },
     {
         "name": "crossOrigin",
-        "lastModifiedAt": 1596581375017
+        "lastModifiedAt": 1599279630956
     },
     {
         "name": "currentSrc",
@@ -38,11 +38,11 @@
     },
     {
         "name": "isMap",
-        "lastModifiedAt": 1596581376856
+        "lastModifiedAt": 1599279633154
     },
     {
         "name": "loading",
-        "lastModifiedAt": 1596581377809
+        "lastModifiedAt": 1599279634441
     },
     {
         "name": "naturalHeight",
@@ -58,7 +58,7 @@
     },
     {
         "name": "sizes",
-        "lastModifiedAt": 1596581379196
+        "lastModifiedAt": 1599279638315
     },
     {
         "name": "src",
@@ -70,15 +70,15 @@
     },
     {
         "name": "useMap",
-        "lastModifiedAt": 1596581380624
+        "lastModifiedAt": 1599279639999
     },
     {
         "name": "width",
-        "lastModifiedAt": 1596581380906
+        "lastModifiedAt": 1599279641192
     },
     {
         "name": "x",
-        "lastModifiedAt": 1596581381260
+        "lastModifiedAt": 1599279642399
     },
     {
         "name": "y",

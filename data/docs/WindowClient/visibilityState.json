@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "WindowClient.visibilityState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/visibilityState",
-    "description": "The visibilityState read-only property of the WindowClient interface indicates the visibility of the current client. This value can be one of \"hidden\", \"visible\", or \"prerender\"."
+    "description": "The visibilityState read-only property of the WindowClient interface indicates the visibility of the current client. This value can be one of &quot;hidden&quot;, &quot;visible&quot;, or &quot;prerender&quot;."
 }

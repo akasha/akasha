@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "VisualViewport.pageTop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/pageTop",
-    "description": "The pageTop read-only property of the VisualViewport interface returns the y coordinate of the top edge of the visual viewport relative to the initial containing block origin, in CSS pixels."
+    "description": "The pageTop read-only property of the VisualViewport interface returns the y coordinate of the top edge of the visual viewport relative to the initial containing block origin, in CSS pixels."
 }

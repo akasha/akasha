@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "PasswordCredential.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/name",
-    "description": "The name read-only property of the PasswordCredential interface returns a USVSTring containing a human-readable public name for display in a credential chooser."
+    "description": "The name read-only property of the PasswordCredential interface returns a USVSTring containing a human-readable public name for display in a credential chooser."
 }

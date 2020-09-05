@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRInputSourcesChangeEventInit.added",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/added",
-    "description": "The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use."
+    "description": "The XRInputSourcesChangeEventInit property added specifies a list of input sources, each identified using an XRInputSource object, which the represented inputsourceschange event is to indicate are newly available for use."
 }

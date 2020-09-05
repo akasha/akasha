@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "Element.touchcancel_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/touchcancel_event",
-    "description": "The touchcancel event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).",
+    "description": "The touchcancel event is fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).",
     "eventName": "touchcancel",
     "eventType": "TouchEvent",
     "eventHandlerProperty": "ontouchcancel",

@@ -56,7 +56,6 @@ import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
-import org.realityforge.webtack.model.tools.util.StringUtils;
 
 final class JsinteropAction
   extends AbstractJavaAction
@@ -1879,8 +1878,7 @@ final class JsinteropAction
     final String text = documentation.getDocumentation();
     if ( null != text )
     {
-      // TODO: Migrate this to fetch docs process.
-      docs.append( StringUtils.encodeHtml( text ) );
+      docs.append( text );
       docs.append( "\n" );
     }
     final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();

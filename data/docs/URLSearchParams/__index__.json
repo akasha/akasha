@@ -10,11 +10,11 @@
     },
     {
         "name": "append",
-        "lastModifiedAt": 1597193604392
+        "lastModifiedAt": 1599279099696
     },
     {
         "name": "delete",
-        "lastModifiedAt": 1597193604635
+        "lastModifiedAt": 1599279100249
     },
     {
         "name": "entries",
@@ -30,7 +30,7 @@
     },
     {
         "name": "getAll",
-        "lastModifiedAt": 1597193606421
+        "lastModifiedAt": 1599279103993
     },
     {
         "name": "has",
@@ -50,7 +50,7 @@
     },
     {
         "name": "toString",
-        "lastModifiedAt": 1597193607855
+        "lastModifiedAt": 1599279108555
     },
     {
         "name": "values",

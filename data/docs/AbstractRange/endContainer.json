@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "AbstractRange.endContainer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/endContainer",
-    "description": "The endContainer property of the AbstractRange interface returns the Node in which the end of the range is located."
+    "description": "The endContainer property of the AbstractRange interface returns the Node in which the end of the range is located."
 }

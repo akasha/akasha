@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "DOMTokenList.value",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/value",
-    "description": "The value property of the DOMTokenList interface is a stringifier that returns the value of the list as a DOMString, or clears and sets the list to the given value."
+    "description": "The value property of the DOMTokenList interface is a stringifier that returns the value of the list as a DOMString, or clears and sets the list to the given value."
 }

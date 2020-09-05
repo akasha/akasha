@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "TouchEvent.metaKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/metaKey",
-    "description": "A Boolean value indicating whether or not the Meta key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false."
+    "description": "A Boolean value indicating whether or not the Meta key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false."
 }

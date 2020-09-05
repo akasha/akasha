@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "SpeechRecognitionResultList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResultList/length",
-    "description": "The length read-only property of the SpeechRecognitionResultList interface returns the length of the \"array\" — the number of SpeechRecognitionResult objects in the list."
+    "description": "The length read-only property of the SpeechRecognitionResultList interface returns the length of the &quot;array&quot; &mdash; the number of SpeechRecognitionResult objects in the list."
 }

@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "HTMLInputElement.search_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/search_event",
-    "description": "The search event is fired when a search is initiated usinng an input element of type=\"search\".",
+    "description": "The search event is fired when a search is initiated usinng an input element of type=&quot;search&quot;.",
     "eventName": "search",
     "eventType": "Event",
     "eventHandlerProperty": "onsearch",

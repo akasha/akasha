@@ -2,11 +2,11 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192086976
+        "lastModifiedAt": 1599280562928
     },
     {
         "name": "add",
-        "lastModifiedAt": 1597192089386
+        "lastModifiedAt": 1599280567375
     },
     {
         "name": "autoIncrement",
@@ -14,7 +14,7 @@
     },
     {
         "name": "clear",
-        "lastModifiedAt": 1597192089691
+        "lastModifiedAt": 1599280568065
     },
     {
         "name": "count",
@@ -22,15 +22,15 @@
     },
     {
         "name": "createIndex",
-        "lastModifiedAt": 1597192090747
+        "lastModifiedAt": 1599280570359
     },
     {
         "name": "delete",
-        "lastModifiedAt": 1597192091034
+        "lastModifiedAt": 1599280570994
     },
     {
         "name": "deleteIndex",
-        "lastModifiedAt": 1597192091336
+        "lastModifiedAt": 1599280571661
     },
     {
         "name": "get",
@@ -50,7 +50,7 @@
     },
     {
         "name": "index",
-        "lastModifiedAt": 1597192093392
+        "lastModifiedAt": 1599280576292
     },
     {
         "name": "indexNames",
@@ -66,11 +66,11 @@
     },
     {
         "name": "openCursor",
-        "lastModifiedAt": 1597192093690
+        "lastModifiedAt": 1599280576808
     },
     {
         "name": "openKeyCursor",
-        "lastModifiedAt": 1597192093929
+        "lastModifiedAt": 1599280577405
     },
     {
         "name": "put",

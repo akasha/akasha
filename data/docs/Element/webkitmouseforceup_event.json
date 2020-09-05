@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "Element.webkitmouseforceup_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/webkitmouseforceup_event",
-    "description": "The non-standard webkitmouseforceup event is fired by Safari at an Element some time after the webkitmouseforcedown event, when pressure on the button has been reduced sufficiently to end the \"force click\".",
+    "description": "The non-standard webkitmouseforceup event is fired by Safari at an Element some time after the webkitmouseforcedown event, when pressure on the button has been reduced sufficiently to end the &quot;force click&quot;.",
     "eventName": "webkitmouseforceup",
     "eventType": "MouseEvent",
     "eventBubbles": false,

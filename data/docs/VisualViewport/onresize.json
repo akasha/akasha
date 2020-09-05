@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "VisualViewport.onresize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onresize",
-    "description": "The onresize event handler of the VisualViewport interface is called when a viewport is resized, i.e. when the resize event is fired."
+    "description": "The onresize event handler of the VisualViewport interface is called when a viewport is resized, i.e. when the resize event is fired."
 }

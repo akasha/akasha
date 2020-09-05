@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBObjectStore.deleteIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/deleteIndex",
-    "description": "Note that this method must be called only from a VersionChange transaction mode callback. Note that this method synchronously modifies the IDBObjectStore.indexNames property."
+    "description": "Note that this method must be called only from a VersionChange transaction mode callback. Note that this method synchronously modifies the IDBObjectStore.indexNames property."
 }

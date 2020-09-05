@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "RTCRtpReceiver.getParameters",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters",
+    "description": "The getParameters() method of the RTCRtpReceiver interface returns an RTCRtpReceiveParameters object describing the current configuration for the encoding and transmission of media on the receiver's track."
+}

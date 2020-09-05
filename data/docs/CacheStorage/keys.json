@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "CacheStorage.keys",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/keys",
-    "description": "The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object in the order they were created. Use this method to iterate over a list of all Cache objects."
+    "description": "The keys() method of the CacheStorage interface returns a Promise that will resolve with an array containing strings corresponding to all of the named Cache objects tracked by the CacheStorage object in the order they were created. Use this method to iterate over a list of all Cache objects."
 }

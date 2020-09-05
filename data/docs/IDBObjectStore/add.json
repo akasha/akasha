@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBObjectStore.add",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/add",
-    "description": "To determine if the add operation has completed successfully, listen for the transaction’s complete event in addition to the IDBObjectStore.add request’s success event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued."
+    "description": "To determine if the add operation has completed successfully, listen for the transaction&rsquo;s complete event in addition to the IDBObjectStore.add request&rsquo;s success event, because the transaction may still fail after the success event fires. In other words, the success event is only triggered when the transaction has been successfully queued."
 }

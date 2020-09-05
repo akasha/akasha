@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "Clipboard",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard",
-    "description": "The Clipboard interface implements the Clipboard API, providing—if the user grants permission—both read and write access to the contents of the system clipboard."
+    "description": "The Clipboard interface implements the Clipboard API, providing&mdash;if the user grants permission&mdash;both read and write access to the contents of the system clipboard."
 }

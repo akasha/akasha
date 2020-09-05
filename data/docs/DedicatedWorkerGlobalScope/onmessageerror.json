@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "DedicatedWorkerGlobalScope.onmessageerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/onmessageerror",
-    "description": "The onmessageerror event handler of the DedicatedWorkerGlobalScope interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the worker—that is, when it receives a message that cannot be deserialized."
+    "description": "The onmessageerror event handler of the DedicatedWorkerGlobalScope interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on the worker&mdash;that is, when it receives a message that cannot be deserialized."
 }

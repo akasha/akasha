@@ -30,7 +30,7 @@
     },
     {
         "name": "onmessageerror",
-        "lastModifiedAt": 1596581109528
+        "lastModifiedAt": 1599278714136
     },
     {
         "name": "onpopstate",
@@ -38,7 +38,7 @@
     },
     {
         "name": "onrejectionhandled",
-        "lastModifiedAt": 1596581111593
+        "lastModifiedAt": 1599278717775
     },
     {
         "name": "onstorage",

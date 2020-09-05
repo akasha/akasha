@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRSession.visibilityState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/visibilityState",
-    "description": "The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus."
+    "description": "The read-only visibilityState property of the XRSession interface is a string indicating whether the WebXR content is currently visible to the user, and if it is, whether it's the primary focus."
 }

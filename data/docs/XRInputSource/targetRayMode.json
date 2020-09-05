@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRInputSource.targetRayMode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRayMode",
-    "description": "The read-only XRInputSource property targetRayMode indicates the method by which the target ray for the input source should be generated and how it should be presented to the user."
+    "description": "The read-only XRInputSource property targetRayMode indicates the method by which the target ray for the input source should be generated and how it should be presented to the user."
 }

@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "IDBTransaction.error_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/error_event",
-    "description": "The error event is fired on IDBTransaction when a request returns an error and the event bubbles up to the transaction object.",
+    "description": "The error event is fired on IDBTransaction when a request returns an error and the event bubbles up to the transaction object.",
     "eventName": "error",
     "eventType": "Event",
     "eventHandlerProperty": "onerror",

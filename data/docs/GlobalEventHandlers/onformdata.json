@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onformdata",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onformdata",
-    "description": "The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement."
+    "description": "The onformdata property of the GlobalEventHandlers mixin is the EventHandler for processing formdata events, fired after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a FormData() constructor. onformdata is available on HTMLFormElement."
 }

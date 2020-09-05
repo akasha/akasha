@@ -3,7 +3,7 @@
     "kind": "Event",
     "name": "Window.error_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/error_event",
-    "description": "The error event is fired on a Window object when a resource failed to load or couldn't be used — for example if a script has an execution error.",
+    "description": "The error event is fired on a Window object when a resource failed to load or couldn't be used &mdash; for example if a script has an execution error.",
     "eventName": "error",
     "eventType": "Event or UIEvent",
     "eventHandlerProperty": "onerror",

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "EffectTiming.duration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/duration",
-    "description": "The duration property of the dictionary EffectTiming in the Web Animations API specifies the duration in milliseconds that a single iteration (from beginning to end) the animation should take to complete."
+    "description": "The duration property of the dictionary EffectTiming in the Web Animations API specifies the duration in milliseconds that a single iteration (from beginning to end) the animation should take to complete."
 }

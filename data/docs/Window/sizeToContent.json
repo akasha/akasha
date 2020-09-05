@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Window.sizeToContent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sizeToContent",
-    "description": "The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called—for example, once the DOMContentLoaded event has been thrown."
+    "description": "The Window.sizeToContent() method sizes the window according to its content. In order for it to work, the DOM content should be loaded when this function is called&mdash;for example, once the DOMContentLoaded event has been thrown."
 }

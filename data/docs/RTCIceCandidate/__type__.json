@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "RTCIceCandidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate",
-    "description": "The RTCIceCandidate interface—part of the WebRTC API—represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection."
+    "description": "The RTCIceCandidate interface&mdash;part of the WebRTC API&mdash;represents a candidate Internet Connectivity Establishment (ICE) configuration which may be used to establish an RTCPeerConnection."
 }

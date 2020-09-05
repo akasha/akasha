@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "console.dirxml",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/dirxml",
-    "description": "Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes."
+    "description": "Displays an interactive tree of the descendant elements of the specified XML/HTML element. If it is not possible to display as an element the JavaScript Object view is shown instead. The output is presented as a hierarchical listing of expandable nodes that let you see the contents of child nodes."
 }

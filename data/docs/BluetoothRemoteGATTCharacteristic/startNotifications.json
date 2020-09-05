@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTCharacteristic.startNotifications",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/startNotifications",
-    "description": "The BluetoothRemoteGATTCharacteristic.startNotifications() method returns a Promise to the BluetoothRemoteGATTCharacteristic instance when there is an active notification on it."
+    "description": "The BluetoothRemoteGATTCharacteristic.startNotifications() method returns a Promise to the BluetoothRemoteGATTCharacteristic instance when there is an active notification on it."
 }

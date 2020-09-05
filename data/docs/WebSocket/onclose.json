@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "WebSocket.onclose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onclose",
-    "description": "The WebSocket.onclose property is an EventHandler that is called when the WebSocket connection's readyState changes to CLOSED. It is called with a CloseEvent."
+    "description": "The WebSocket.onclose property is an EventHandler that is called when the WebSocket connection's readyState changes to CLOSED. It is called with a CloseEvent."
 }

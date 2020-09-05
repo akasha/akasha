@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "KeyboardEvent.getModifierState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/getModifierState",
-    "description": "The KeyboardEvent.getModifierState() method returns the current state of the specified modifier key: true if the modifier is active (that is the modifier key is pressed or locked), otherwise, false."
+    "description": "The KeyboardEvent.getModifierState() method returns the current state of the specified modifier key: true if the modifier is active (that is the modifier key is pressed or locked), otherwise, false."
 }

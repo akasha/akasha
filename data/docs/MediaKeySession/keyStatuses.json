@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MediaKeySession.keyStatuses",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/keyStatuses",
-    "description": "The MediaKeySession.keyStatuses read-only property returns a reference to a read-only MediaKeyStatusMap of the current session's keys and their statuses."
+    "description": "The MediaKeySession.keyStatuses read-only property returns a reference to a read-only MediaKeyStatusMap of the current session's keys and their statuses."
 }

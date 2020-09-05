@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "AnimationTimeline.currentTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationTimeline/currentTime",
-    "description": "The currentTime read-only property of the Web Animations API's AnimationTimeline interface returns the timeline's current time in milliseconds, or null if the timeline is inactive."
+    "description": "The currentTime read-only property of the Web Animations API's AnimationTimeline interface returns the timeline's current time in milliseconds, or null if the timeline is inactive."
 }

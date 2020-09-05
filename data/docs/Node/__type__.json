@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "Node",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
-    "description": "The DOM Node interface is a key base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably."
+    "description": "The DOM Node interface is an abstract base class upon which many other DOM API objects are based, thus letting those object types to be used similarly and often interchangeably."
 }

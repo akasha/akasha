@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Navigator.registerProtocolHandler",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/registerProtocolHandler",
+    "description": "The Navigator method registerProtocolHandler() lets web sites register their ability to open or handle particular URL schemes (aka protocols)."
+}

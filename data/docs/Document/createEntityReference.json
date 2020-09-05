@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Document.createEntityReference",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createEntityReference",
-    "description": "Prior to Gecko 7.0 this method showed up as present, due to bug bug 9850, it always only returned null. The only workaround is to create a text node, CDATA section, attribute node value, etc. which has the value referred to by the entity, using Unicode escape sequences or fromCharCode() as necessary."
+    "description": "Prior to Gecko 7.0 this method showed up as present, due to bug bug 9850, it always only returned null. The only workaround is to create a text node, CDATA section, attribute node value, etc. which has the value referred to by the entity, using Unicode escape sequences or fromCharCode() as necessary."
 }

@@ -6,7 +6,7 @@
     },
     {
         "name": "createObjectURL",
-        "lastModifiedAt": 1597191951802
+        "lastModifiedAt": 1599279479815
     },
     {
         "name": "hash",
@@ -38,7 +38,7 @@
     },
     {
         "name": "port",
-        "lastModifiedAt": 1597191949865
+        "lastModifiedAt": 1599279475453
     },
     {
         "name": "protocol",
@@ -54,11 +54,11 @@
     },
     {
         "name": "searchParams",
-        "lastModifiedAt": 1597191950831
+        "lastModifiedAt": 1599279477091
     },
     {
         "name": "toJSON",
-        "lastModifiedAt": 1597191951553
+        "lastModifiedAt": 1599279479139
     },
     {
         "name": "toString",

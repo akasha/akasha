@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "SpeechRecognitionResult.isFinal",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/isFinal",
-    "description": "The isFinal read-only property of the SpeechRecognitionResult interface is a Boolean that states whether this result is final (true) or not (false) — if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on."
+    "description": "The isFinal read-only property of the SpeechRecognitionResult interface is a Boolean that states whether this result is final (true) or not (false) &mdash; if so, then this is the final time this result will be returned; if not, then this result is an interim result, and may be updated later on."
 }

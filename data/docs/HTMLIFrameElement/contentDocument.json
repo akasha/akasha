@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLIFrameElement.contentDocument",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument",
-    "description": "If the iframe and the iframe's parent document are Same Origin, returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null."
+    "description": "If the iframe and the iframe's parent document are Same Origin, returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null."
 }

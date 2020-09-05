@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCConfiguration.iceTransportPolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/iceTransportPolicy",
+    "description": "The WebRTC Device API dictionary RTCConfiguration's iceTransportPolicy property is a string indicating the transport selection policy the ICE agent should use during negotiation of connections. Its value must come from the RTCIceTransportPolicy enumerated type."
+}

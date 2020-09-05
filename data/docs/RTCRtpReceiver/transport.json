@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpReceiver.transport",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/transport",
+    "description": "The read-only transport property of an RTCRtpReceiver object provides the RTCDtlsTransport object used to interact with the underlying transport over which the receiver is exchanging Real-time Transport Control Protocol (RTCP) packets."
+}

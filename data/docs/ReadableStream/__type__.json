@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "ReadableStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream",
-    "description": "The ReadableStream interface of the Streams API represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object."
+    "description": "The ReadableStream interface of the Streams API represents a readable stream of byte data. The Fetch API offers a concrete instance of a ReadableStream through the body property of a Response object."
 }

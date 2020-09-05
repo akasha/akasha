@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "RTCRtpSender.getCapabilities",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getCapabilities",
-    "description": "The static function RTCRtpSender.getCapabilities() returns an RTCRtpCapabilities object describing the codecs and capabilities supported by the RTCRtpSender."
+    "description": "The static function RTCRtpSender.getCapabilities() returns an RTCRtpCapabilities object describing the codecs and capabilities supported by the RTCRtpSender."
 }

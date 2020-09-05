@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "BluetoothRemoteGATTDescriptor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor",
-    "description": "The BluetoothRemoteGATTDescriptor interface of the Web Bluetooth API provides a GATT Descriptor, which provides further information about a characteristic’s value."
+    "description": "The BluetoothRemoteGATTDescriptor interface of the Web Bluetooth API provides a GATT Descriptor, which provides further information about a characteristic&rsquo;s value."
 }

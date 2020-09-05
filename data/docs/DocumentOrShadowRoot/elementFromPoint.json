@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "DocumentOrShadowRoot.elementFromPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/elementFromPoint",
-    "description": "The elementFromPoint() method—available on both the Document and ShadowRoot objects—returns the topmost Element at the specified coordinates (relative to the viewport)."
+    "description": "The elementFromPoint() method&mdash;available on both the Document and ShadowRoot objects&mdash;returns the topmost Element at the specified coordinates (relative to the viewport)."
 }

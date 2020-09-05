@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLImageElement.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width",
-    "description": "The width property of the HTMLImageElement interface indicates the width at which the image is drawn, in CSS pixels if the image is being drawn or rendered to any visual medium such as the screen or a printer; otherwise, it's the natural, pixel density corrected width of the image."
+    "description": "The width property of the HTMLImageElement interface indicates the width at which an image is drawn in CSS pixels if it's being drawn or rendered to any visual medium such as a screen or printer. Otherwise, it's the natural, pixel density-corrected width of the image."
 }

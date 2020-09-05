@@ -6,15 +6,15 @@
     },
     {
         "name": "appCodeName",
-        "lastModifiedAt": 1596581128712
+        "lastModifiedAt": 1599279118652
     },
     {
         "name": "appName",
-        "lastModifiedAt": 1596581128971
+        "lastModifiedAt": 1599279119195
     },
     {
         "name": "appVersion",
-        "lastModifiedAt": 1596581129777
+        "lastModifiedAt": 1599279120313
     },
     {
         "name": "platform",
@@ -22,7 +22,7 @@
     },
     {
         "name": "product",
-        "lastModifiedAt": 1596581130554
+        "lastModifiedAt": 1599279122736
     },
     {
         "name": "taintEnabled",

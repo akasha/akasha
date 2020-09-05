@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCConfiguration.bundlePolicy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy",
+    "description": "The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection."
+}

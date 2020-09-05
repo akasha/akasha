@@ -2,11 +2,19 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597192842347
+        "lastModifiedAt": 1599280944312
+    },
+    {
+        "name": "getCapabilities",
+        "lastModifiedAt": 1599280948674
     },
     {
         "name": "getContributingSources",
         "lastModifiedAt": 1596544674748
+    },
+    {
+        "name": "getParameters",
+        "lastModifiedAt": 1599280946096
     },
     {
         "name": "getStats",
@@ -19,5 +27,9 @@
     {
         "name": "track",
         "lastModifiedAt": 1596544673105
+    },
+    {
+        "name": "transport",
+        "lastModifiedAt": 1599280945177
     }
 ]

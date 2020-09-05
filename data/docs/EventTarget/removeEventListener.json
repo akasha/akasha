@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "EventTarget.removeEventListener",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener",
-    "description": "The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"
+    "description": "The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"
 }

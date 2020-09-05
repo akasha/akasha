@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "XRInputSourceArray.entries",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/entries",
-    "description": "The XRInputSourceArray interface's entries() method returns a JavaScript iterator which can then be used to iterate over the key/value pairs in the input source array."
+    "description": "The XRInputSourceArray interface's entries() method returns a JavaScript iterator which can then be used to iterate over the key/value pairs in the input source array."
 }

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "Window.onvrdisplayblur",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayblur",
-    "description": "The onvrdisplayblur property of the Window interface represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the vrdisplayblur event fires) — for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience."
+    "description": "The onvrdisplayblur property of the Window interface represents an event handler that will run when presentation to a display has been paused for some reason by the browser, OS, or VR hardware (when the vrdisplayblur event fires) &mdash; for example, while the user is interacting with a system menu or browser, to prevent tracking or loss of experience."
 }

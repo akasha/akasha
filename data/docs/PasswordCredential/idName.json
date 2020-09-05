@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "PasswordCredential.idName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/idName",
-    "description": "The idName property of the PasswordCredential interface returns a USVString, representing the name that will be used for the ID field"
+    "description": "The idName property of the PasswordCredential interface returns a USVString, representing the name that will be used for the ID field"
 }

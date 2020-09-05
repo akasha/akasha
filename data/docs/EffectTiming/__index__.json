@@ -6,34 +6,34 @@
     },
     {
         "name": "delay",
-        "lastModifiedAt": 1597192509258
+        "lastModifiedAt": 1599280584399
     },
     {
         "name": "direction",
-        "lastModifiedAt": 1597192509637
+        "lastModifiedAt": 1599280585457
     },
     {
         "name": "duration",
-        "lastModifiedAt": 1597192510039
+        "lastModifiedAt": 1599280586554
     },
     {
         "name": "easing",
-        "lastModifiedAt": 1597192510353
+        "lastModifiedAt": 1599280587211
     },
     {
         "name": "endDelay",
-        "lastModifiedAt": 1597192511165
+        "lastModifiedAt": 1599280587826
     },
     {
         "name": "fill",
-        "lastModifiedAt": 1597192511549
+        "lastModifiedAt": 1599280589022
     },
     {
         "name": "iterationStart",
-        "lastModifiedAt": 1597192511801
+        "lastModifiedAt": 1599280590088
     },
     {
         "name": "iterations",
-        "lastModifiedAt": 1597192512068
+        "lastModifiedAt": 1599280590644
     }
 ]

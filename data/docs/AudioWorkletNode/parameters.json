@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "AudioWorkletNode.parameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/parameters",
-    "description": "The read-only parameters property of the AudioWorkletNode interface returns the associated AudioParamMap — that is, a Map-like collection of AudioParam objects. They are instantiated during creation of the underlying AudioWorkletProcessor according to its parameterDescriptors static getter."
+    "description": "The read-only parameters property of the AudioWorkletNode interface returns the associated AudioParamMap &mdash; that is, a Map-like collection of AudioParam objects. They are instantiated during creation of the underlying AudioWorkletProcessor according to its parameterDescriptors static getter."
 }

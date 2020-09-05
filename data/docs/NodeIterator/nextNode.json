@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "NodeIterator.nextNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeIterator/nextNode",
-    "description": "The NodeIterator.nextNode() method returns the next node in the set represented by the NodeIterator and advances the position of the iterator within the set.  The first call to nextNode() returns the first node in the set."
+    "description": "The NodeIterator.nextNode() method returns the next node in the set represented by the NodeIterator and advances the position of the iterator within the set.  The first call to nextNode() returns the first node in the set."
 }

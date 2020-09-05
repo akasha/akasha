@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTDescriptor.writeValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/writeValue",
-    "description": "The BluetoothRemoteGATTDescriptor.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise."
+    "description": "The BluetoothRemoteGATTDescriptor.writeValue() method sets the value property to the bytes contained in an ArrayBuffer and returns a Promise."
 }

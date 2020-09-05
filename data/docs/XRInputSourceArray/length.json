@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "XRInputSourceArray.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/length",
-    "description": "The read-only length property returns an integer value indicating the number of items in the input source list represented by the XRInputSourceArray object."
+    "description": "The read-only length property returns an integer value indicating the number of items in the input source list represented by the XRInputSourceArray object."
 }

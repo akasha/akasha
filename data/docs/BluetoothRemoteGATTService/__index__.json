@@ -6,31 +6,27 @@
     },
     {
         "name": "device",
-        "lastModifiedAt": 1596711877298
+        "lastModifiedAt": 1599279656214
     },
     {
         "name": "getCharacteristic",
-        "lastModifiedAt": 1596711879244
+        "lastModifiedAt": 1599279658446
     },
     {
         "name": "getCharacteristics",
-        "lastModifiedAt": 1596711879773
+        "lastModifiedAt": 1599279658934
     },
     {
         "name": "getIncludedService",
-        "lastModifiedAt": 1596711880370
+        "lastModifiedAt": 1599279659968
     },
     {
         "name": "getIncludedServices",
-        "lastModifiedAt": 1596711880885
+        "lastModifiedAt": 1599279660984
     },
     {
         "name": "isPrimary",
-        "lastModifiedAt": 1596711877913
-    },
-    {
-        "name": "uuid",
-        "lastModifiedAt": 1596711878582
+        "lastModifiedAt": 1599279657358
     },
     {
         "name": "serviceadded_event",
@@ -43,5 +39,9 @@
     {
         "name": "serviceremoved_event",
         "lastModifiedAt": 0
+    },
+    {
+        "name": "uuid",
+        "lastModifiedAt": 1599279657873
     }
 ]

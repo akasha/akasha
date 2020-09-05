@@ -10,7 +10,7 @@
     },
     {
         "name": "audioTracks",
-        "lastModifiedAt": 1596581440348
+        "lastModifiedAt": 1599280649630
     },
     {
         "name": "autoplay",
@@ -18,7 +18,7 @@
     },
     {
         "name": "buffered",
-        "lastModifiedAt": 1596581441051
+        "lastModifiedAt": 1599280650832
     },
     {
         "name": "canPlayType",
@@ -42,11 +42,11 @@
     },
     {
         "name": "controls",
-        "lastModifiedAt": 1596581442314
+        "lastModifiedAt": 1599280652543
     },
     {
         "name": "controlsList",
-        "lastModifiedAt": 1596581443331
+        "lastModifiedAt": 1599280653744
     },
     {
         "name": "crossOrigin",
@@ -54,7 +54,7 @@
     },
     {
         "name": "currentSrc",
-        "lastModifiedAt": 1596581444669
+        "lastModifiedAt": 1599280655569
     },
     {
         "name": "currentTime",
@@ -150,7 +150,7 @@
     },
     {
         "name": "paused",
-        "lastModifiedAt": 1596581453736
+        "lastModifiedAt": 1599280670515
     },
     {
         "name": "play",
@@ -186,7 +186,7 @@
     },
     {
         "name": "seekable",
-        "lastModifiedAt": 1596581457277
+        "lastModifiedAt": 1599280674514
     },
     {
         "name": "seeked_event",
@@ -202,7 +202,7 @@
     },
     {
         "name": "setSinkId",
-        "lastModifiedAt": 1596581468687
+        "lastModifiedAt": 1599280688009
     },
     {
         "name": "sinkId",
@@ -214,7 +214,7 @@
     },
     {
         "name": "srcObject",
-        "lastModifiedAt": 1596581460193
+        "lastModifiedAt": 1599280677477
     },
     {
         "name": "stalled_event",
@@ -238,7 +238,7 @@
     },
     {
         "name": "volume",
-        "lastModifiedAt": 1596581462096
+        "lastModifiedAt": 1599280679660
     },
     {
         "name": "volumechange_event",

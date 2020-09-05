@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "Crypto.subtle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/subtle",
-    "description": "The Crypto.subtle read-only property returns a SubtleCrypto which can then be used to perform low-level cryptographic operations."
+    "description": "The Crypto.subtle read-only property returns a SubtleCrypto which can then be used to perform low-level cryptographic operations."
 }

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.sender",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender",
-    "description": "The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream."
+    "description": "The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream."
 }
