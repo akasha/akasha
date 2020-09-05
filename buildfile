@@ -176,6 +176,8 @@ define 'webtack' do
 
         src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
 
+        project.doc.options.merge!('Xdoclint:all,-missing' => true)
+
         compile.using :javac
         project.compile.sources << src_dir
 
