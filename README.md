@@ -39,6 +39,26 @@ explicitly declare events emitted by interfaces (i.e. there is a new member elem
 `event ProgressEvent load;`). It also supports a [Javadoc-like](https://en.wikipedia.org/wiki/Javadoc) syntax for
 documenting the WebIDL elements.
 
+The WebTack jsinterop action generates source code with a more java-esque feel than is present in
+[elemental2](https://github.com/google/elemental2). It also aims to offer affordances that make working with
+the browser API easier for java developers. A few differences from Elemental2 include:
+
+* Javadocs are added for most fields, methods and types if the element is documented on MDN.
+* Constants in WebIDL are represented as constants in java. This typically results in smaller code size and may open
+  up additional optimization opportunities.
+* Fields, methods and parameters are annotated with `@Nonnull` or `@Nullable` if the type is a non-primitive, non-void type.
+* Read-only attributes in WebIDL are implemented as methods rather than mutable fields of properties with setters.
+* Dictionaries in WebIDL use a "builder" pattern to make construction of these types much easier.
+* No parameterized types exist in WebTack as WebIDL does not define such constructs.
+* Event handlers and event listeners are typed according to type of event expected to be delivered and have a void
+  return type. This simplifies the use of lambdas and method references in java code.
+* `@JsOverlay` methods are added for known events emitted by an interface. For example, it is possible to use code such
+  as `e.addBlurListener(this::processBlurEvent)` rather than the more verbose `e.addEventListener("blur", e -> processBlurEvent((FocusEvent) e)`
+* WebIDL enumerations are annotated with the `@MagicConstant` annotation when translated to java code. The
+  Jetbrains/IntelliJ IDE suite will detect this annotation and allow auto-completion of enumeration values or
+  report errors when incorrect values are supplied.
+* Several other minor usability improvements, particularly with respect to union types.
+
 ### The Now
 
 Experiments with WebTack are ongoing but so far the experiments have largely proved successful. Several web apps
