@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerRegistration.index",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/index",
+    "description": "The index read-only property of the ServiceWorkerRegistration interface returns a reference to the ContentIndex interface, which allows for indexing of offline content."
+}

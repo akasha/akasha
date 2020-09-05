@@ -2,7 +2,7 @@
 [
     {
         "name": "__type__",
-        "lastModifiedAt": 1597190526029
+        "lastModifiedAt": 1599278008971
     },
     {
         "name": "activate_event",
@@ -15,6 +15,10 @@
     {
         "name": "clients",
         "lastModifiedAt": 1597190526582
+    },
+    {
+        "name": "contentdelete_event",
+        "lastModifiedAt": 1599278013963
     },
     {
         "name": "install_event",
@@ -31,6 +35,10 @@
     {
         "name": "onactivate",
         "lastModifiedAt": 1597190531162
+    },
+    {
+        "name": "oncontentdelete",
+        "lastModifiedAt": 1599278018160
     },
     {
         "name": "oninstall",

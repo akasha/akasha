@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "ServiceWorkerGlobalScope",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope",
-    "description": "The ServiceWorkerGlobalScope interface of the ServiceWorker API represents the global execution context of a service worker."
+    "description": "The ServiceWorkerGlobalScope interface of the Service Worker API represents the global execution context of a service worker."
 }

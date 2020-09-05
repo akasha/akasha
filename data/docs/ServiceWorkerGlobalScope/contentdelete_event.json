@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "ServiceWorkerGlobalScope.contentdelete_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event",
+    "description": "The contentdelete event of the ServiceWorkerGlobalScope interface is fired when an item is removed from the indexed content via the user agent.",
+    "eventName": "contentdelete",
+    "eventType": "ContentIndexEvent",
+    "eventHandlerProperty": "oncontentdelete",
+    "eventBubbles": true,
+    "eventCancelable": true
+}
