@@ -1,7 +1,6 @@
 # webtack: Generate jsinterop types from WebIDL
 
 [![Build Status](https://api.travis-ci.com/realityforge/webtack.svg?branch=master)](http://travis-ci.com/realityforge/webtack)
-[<img src="https://img.shields.io/maven-central/v/org.realityforge.webtack/webtack.svg?label=latest%20release"/>](https://search.maven.org/search?q=g:org.realityforge.webtack%20a:webtack)
 
 ## What is webtack?
 
