@@ -19,6 +19,13 @@ The types of source code artifacts that WebTack generates or will generate inclu
   [J2CL](https://github.com/google/j2cl) based projects.
 * [React4j](https://github.com/react4j/react4j) element factories.
 
+WebIDL published as part of the official specifications are not always perfect representations of the interfaces as
+implemented by the web browsers. Nor is there a central place that contains the complete WebIDL that a browser is
+expected to implement. WebTack defines a pipeline for processing WebIDL schemas. The pipeline defines a series of
+stages. Each stage will either transform a schema, combine multiple schemas or perform an action for the schema.
+This capability allows WebIDL or process the WebIDL schemas fetched from the specifications and combine them into
+a consistent document.
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
