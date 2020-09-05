@@ -39,6 +39,27 @@ explicitly declare events emitted by interfaces (i.e. there is a new member elem
 `event ProgressEvent load;`). It also supports a [Javadoc-like](https://en.wikipedia.org/wiki/Javadoc) syntax for
 documenting the WebIDL elements.
 
+### The Now
+
+Experiments with WebTack are ongoing but so far the experiments have largely proved successful. Several web apps
+have been created to explore the feel of using the generated code. This has included experiments with the
+[Web Bluetooth API](https://webbluetoothcg.github.io/web-bluetooth/) by creating a browser based
+[Heart Rate Monitor](https://github.com/react4j/react4j-heart-rate-monitor), experiments with [speech synthesis](https://github.com/react4j/react4j-webspeechdemo) using the [Web Speech API](https://wicg.github.io/speech-api/), experiments
+with [WebRTC](https://w3c.github.io/webrtc-pc/) by creating a [video chat application](https://github.com/react4j/react4j-vchat)
+and several other experiments that are not open source.
+
+The experiments to date, have copied the WebTack generated source into the source tree. To facilitate experiments
+by third parties, the generated source code for the has been packaged and published to maven central. This artifact
+can be added as a maven dependency:
+
+```xml
+<dependency>
+  <groupId>org.realityforge.webtack</groupId>
+  <artifactId>webtack-elemental3-complete</artifactId>
+  <version>0.02</version>
+</dependency>
+```
+
 ### The Future
 
 WebTack is an alpha project that is surprisingly useful as is. It is extremely useful to start using web APIs
