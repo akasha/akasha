@@ -167,6 +167,9 @@ define 'webtack' do
 
       name = 'main' == pipeline ? 'complete' : pipeline
 
+      # react4j is not yet ready for testing
+      next if 'react4j' == pipeline
+
       desc "Elemental3 #{name}"
       define name do
         project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/elemental3/#{name}"
