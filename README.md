@@ -72,6 +72,22 @@ the appropriate patch. A better solution is to import the browser specific WebID
 and merge the differences as desired. This should be relatively easy for chrome and gecko based browsers that already
 have publicly available WebIDL files.
 
+#### Missing/Incomplete Features
+
+WebTack is missing a handful of features.
+
+* Ths closure externs generator action has been removed as it was not being exercised as our test applications are
+  not using J2CL.
+* The `IterableMember` element in WebIDL does not yet result in any java code as no application has required that
+  feature yet.
+* Some of the type mappings from WebIDL to java are not mapped in a java-friendly manner. The most obvious example
+  is how sequences of non-double numeric values or nullable non-double primitives are mapped to java. The numeric
+  values are mapped to `java.lang.Double` as that will map to javascript `number` when compiled. It is unclear on
+  the best strategy to address this mismatch.
+* WebTack references several classes from `elemental2-promise` and `elemental2-core` libraries. These dependencies
+  can and should be removed but this would require additional work that has not been done.
+
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
