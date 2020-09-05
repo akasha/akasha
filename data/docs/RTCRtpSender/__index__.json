@@ -9,7 +9,15 @@
         "lastModifiedAt": 1596544691264
     },
     {
+        "name": "getCapabilities",
+        "lastModifiedAt": 1599278253891
+    },
+    {
         "name": "track",
         "lastModifiedAt": 1596544692703
+    },
+    {
+        "name": "transport",
+        "lastModifiedAt": 1599278253379
     }
 ]
