@@ -26,6 +26,14 @@ stages. Each stage will either transform a schema, combine multiple schemas or p
 This capability allows WebIDL or process the WebIDL schemas fetched from the specifications and combine them into
 a consistent document.
 
+WebTack also includes tools to fetch data from other locations and combine the data with the WebIDL in processing
+stages. The most significant other data source is the documentation that is scraped from the
+[MDN](https://developer.mozilla.org/en-US/) website and used to add basic documentation to the WebIDL elements. In the
+near future it is expected that the [browser compatibility data](https://github.com/mdn/browser-compat-data/tree/master/api)
+will be also be scraped so that browser compatibility data for WebIDL elements can be used in the processing pipeline
+to influence how artifacts are built. Other data from the web specifications could be combined to improve the outputs.
+At the very least, links to the specifications will be added to the WebIDL elements in the future.
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
