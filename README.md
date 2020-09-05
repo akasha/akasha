@@ -63,6 +63,15 @@ some manual labour. However, it is expected that this would not scale to larger 
 to automatically partition the files into different packages based on the originating specification or some other
 grouping heuristic.
 
+#### Browser Implementation Differences
+
+Some APIs that applications are browser-specific and thus not included in the specification. Some browsers do not
+implement the specification exactly. The fix is to apply processor stages to adjust the schema to match the way
+browsers implement the specification. This is somewhat error prone as it involves detecting the error and applying
+the appropriate patch. A better solution is to import the browser specific WebIDL source files, detect differences
+and merge the differences as desired. This should be relatively easy for chrome and gecko based browsers that already
+have publicly available WebIDL files.
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
