@@ -1,4 +1,4 @@
-# webtack: Generate jsinterop types from WebIDL
+# WebTack: Fetch and process WebIDL to generate Source Code
 
 [![Build Status](https://api.travis-ci.com/realityforge/webtack.svg?branch=master)](http://travis-ci.com/realityforge/webtack)
 

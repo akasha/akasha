@@ -23,7 +23,7 @@ REACT4J_DEPS = [
   :react4j_dom
 ] + GWT_DEPS
 
-desc 'webtack: Generate jsinterop types from WebIDL'
+desc 'WebTack: Fetch and process WebIDL to generate Source Code'
 define 'webtack' do
   project.group = 'org.realityforge.webtack'
   compile.options.source = '1.8'
