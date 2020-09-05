@@ -1,4 +1,4 @@
-package org.realityforge.webtack.jsinterop;
+package org.realityforge.webtack.model.tools.util;
 
 import java.util.HashMap;
 import java.util.Map;
