@@ -7,19 +7,6 @@
 
 This is an experimental tool that pulls in WebIDL files and generates java and closure types from the IDL.
 
-### Getting Started
-
-The tool is released to Maven Central and can be downloaded using normal dependency download mechanisms.
-The Maven dependency is:
-
-```xml
-<dependency>
-  <groupId>org.realityforge.webtack</groupId>
-  <artifactId>webtack</artifactId>
-  <version>0.00</version>
-</dependency>
-```
-
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
