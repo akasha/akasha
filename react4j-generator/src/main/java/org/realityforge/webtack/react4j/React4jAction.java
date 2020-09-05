@@ -237,7 +237,7 @@ final class React4jAction
 
     if ( isBaseType( definition ) )
     {
-      // TODO: Add Magic self() key() id() className()
+      // TODO: Add Magic key() id() className()
       type.addMethod( MethodSpec
                         .methodBuilder( "prop" )
                         .addAnnotation( Types.JS_OVERLAY )
