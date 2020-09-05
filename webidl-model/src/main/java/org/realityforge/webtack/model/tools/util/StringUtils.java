@@ -4,9 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Nonnull;
 
-/**
- * Replace any special characters using html entities.
- */
 public final class StringUtils
 {
   @Nonnull
@@ -278,6 +275,12 @@ public final class StringUtils
   {
   }
 
+  /**
+   * Replace any special characters with the equivalent html entities.
+   *
+   * @param source the input string.
+   * @return the output string with special characters replaced with entities.
+   */
   @Nonnull
   public static String encodeHtml( @Nonnull final String source )
   {
