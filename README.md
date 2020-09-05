@@ -128,7 +128,6 @@ WebTack is missing a handful of features.
 * WebTack references several classes from `elemental2-promise` and `elemental2-core` libraries. These dependencies
   can and should be removed but this would require additional work that has not been done.
 
-
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
