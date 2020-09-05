@@ -34,6 +34,11 @@ will be also be scraped so that browser compatibility data for WebIDL elements c
 to influence how artifacts are built. Other data from the web specifications could be combined to improve the outputs.
 At the very least, links to the specifications will be added to the WebIDL elements in the future.
 
+WebTack extends the WebIDL syntax to support additional data being added to the WebIDL. This includes syntax to
+explicitly declare events emitted by interfaces (i.e. there is a new member element that looks like
+`event ProgressEvent load;`). It also supports a [Javadoc-like](https://en.wikipedia.org/wiki/Javadoc) syntax for
+documenting the WebIDL elements.
+
 # Contributing
 
 The project was released as open source so others could benefit from the project. We are thankful for any
