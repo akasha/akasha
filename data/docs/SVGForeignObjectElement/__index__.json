@@ -1,11 +1,15 @@
 
 {
     "name": "SVGForeignObjectElement",
-    "lastModifiedAt": 1599430152941,
+    "lastModifiedAt": 1599430213560,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192388941
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 0
         }
     ]
 }
