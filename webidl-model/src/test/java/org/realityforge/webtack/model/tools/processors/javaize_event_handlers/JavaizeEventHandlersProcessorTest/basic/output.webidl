@@ -8,6 +8,20 @@
 callback EventHandler = void ( Event event );
 
 /**
+ * Handle events of type MouseEvent
+ *
+ * @param event the event
+ */
+callback MouseEventHandler = void ( MouseEvent event );
+
+/**
+ * Handle events of type SpeechSynthesisEvent
+ *
+ * @param event the event
+ */
+callback SpeechSynthesisEventHandler = void ( SpeechSynthesisEvent event );
+
+/**
  * Listener for events of type FocusEvent
  */
 callback interface FocusEventListener {
@@ -76,14 +90,14 @@ interface FocusEvent : Event {
 };
 
 interface HTMLElement : Element {
-  attribute NullableEventHandler onclick;
+  attribute MouseEventHandler? onclick;
 };
 
 interface MouseEvent : Event {
 };
 
 interface SVGElement : Element {
-  attribute NullableEventHandler onclick;
+  attribute MouseEventHandler? onclick;
 };
 
 interface SpeechSynthesisErrorEvent : SpeechSynthesisEvent {
@@ -94,13 +108,13 @@ interface SpeechSynthesisEvent : Event {
 
 interface SpeechSynthesisUtterance {
   attribute NullableEventHandler onend;
-  attribute NullableEventHandler onstart;
+  attribute SpeechSynthesisEventHandler? onstart;
   event SpeechSynthesisEvent end;
   event SpeechSynthesisEvent start;
 };
 
 partial interface SpeechSynthesisUtterance {
-  attribute NullableEventHandler onpause;
+  attribute SpeechSynthesisEventHandler? onpause;
   attribute NullableEventHandler onresume;
   event SpeechSynthesisEvent resume;
 };
