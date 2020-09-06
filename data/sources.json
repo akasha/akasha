@@ -516,6 +516,10 @@
         "url": "https://html.spec.whatwg.org/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "whatwg_html_patch"
+    },
+    {
         "lastModifiedTime": 1593439305000,
         "name": "whatwg_notifications",
         "url": "https://notifications.spec.whatwg.org/"
