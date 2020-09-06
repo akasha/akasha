@@ -1,14 +1,18 @@
-[
-  {
-    "name": "blur_event",
-    "lastModifiedAt": 0
-  },
-  {
-    "name": "cancel_event",
-    "lastModifiedAt": 0
-  },
-  {
-    "name": "click_event",
-    "lastModifiedAt": 0
-  }
-]
+{
+  "name": "Element",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "blur_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "cancel_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "click_event",
+      "lastModifiedAt": 0
+    }
+  ]
+}

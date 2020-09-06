@@ -1,10 +1,14 @@
-[
-  {
-    "name": "__type__",
-    "lastModifiedAt": 0
-  },
-  {
-    "name": "error",
-    "lastModifiedAt": 0
-  }
-]
+{
+  "name": "EventSource",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "__type__",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "error",
+      "lastModifiedAt": 0
+    }
+  ]
+}
