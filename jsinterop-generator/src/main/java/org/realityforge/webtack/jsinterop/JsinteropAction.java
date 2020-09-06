@@ -1453,6 +1453,7 @@ final class JsinteropAction
     {
       field.addAnnotation( Types.NONNULL );
     }
+    addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
   }
 
@@ -1778,6 +1779,20 @@ final class JsinteropAction
       if ( null != enumeration )
       {
         method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
+  }
+
+  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
+                                                   @Nonnull final FieldSpec.Builder field )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
+      if ( null != enumeration )
+      {
+        field.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
     }
   }

@@ -17,12 +17,18 @@ public class WaveShaperNode {
    * regular attribute is an enum.
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = OverSampleType.class
+  )
   public String oversample;
 
   /**
    * static attribute is an enum.
    */
   @Nonnull
+  @MagicConstant(
+      valuesFromClass = OverSampleType.class
+  )
   public String static_oversample;
 
   public WaveShaperNode(
