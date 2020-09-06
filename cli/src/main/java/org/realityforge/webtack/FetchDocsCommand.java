@@ -113,7 +113,8 @@ final class FetchDocsCommand
     for ( final String typeName : typeNames )
     {
       final DocIndex docIndex = context.docRuntime().getIndexForType( typeName );
-      if ( _sinceLastUpdatedAt > 0 && docIndex.getContent().getLastModifiedAt() < _sinceLastUpdatedAt )
+      final long lastModifiedAt = docIndex.getContent().getLastModifiedAt();
+      if ( _sinceLastUpdatedAt > 0 && lastModifiedAt > _sinceLastUpdatedAt )
       {
         if ( logger.isLoggable( Level.FINE ) )
         {
