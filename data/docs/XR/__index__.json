@@ -1,7 +1,7 @@
 
 {
     "name": "XR",
-    "lastModifiedAt": 1597359773429,
+    "lastModifiedAt": 1599391310179,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "devicechange_event",
-            "lastModifiedAt": 1597359773429
+            "lastModifiedAt": 1599391310179
         },
         {
             "name": "isSessionSupported",

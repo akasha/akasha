@@ -1,7 +1,7 @@
 
 {
     "name": "RTCIceTransport",
-    "lastModifiedAt": 1597359839224,
+    "lastModifiedAt": 1599391384858,
     "entries": [
         {
             "name": "__type__",
@@ -13,7 +13,7 @@
         },
         {
             "name": "gatheringState",
-            "lastModifiedAt": 1596544680172
+            "lastModifiedAt": 1599391374779
         },
         {
             "name": "gatheringstatechange_event",

@@ -1,11 +1,11 @@
 
 {
     "name": "WorkerGlobalScope",
-    "lastModifiedAt": 1597359954347,
+    "lastModifiedAt": 1599391497786,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1596581192888
+            "lastModifiedAt": 1599391496411
         },
         {
             "name": "languagechange_event",

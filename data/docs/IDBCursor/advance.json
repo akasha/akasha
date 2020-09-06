@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "IDBCursor.advance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/advance",
-    "description": "The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward."
+    "description": "The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward."
 }

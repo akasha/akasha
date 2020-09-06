@@ -162,6 +162,8 @@ public final class MdnDocScanner
     if ( null != result )
     {
       _listener.postEntryFetch( entryIndex, url );
+      index.getContent().setLastModifiedAt( System.currentTimeMillis() );
+      index.save();
       final Path tmpTarget = getTmpTarget( entryIndex );
       try
       {

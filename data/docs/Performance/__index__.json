@@ -1,7 +1,7 @@
 
 {
     "name": "Performance",
-    "lastModifiedAt": 1597359982810,
+    "lastModifiedAt": 1599391525569,
     "entries": [
         {
             "name": "__type__",
@@ -9,15 +9,15 @@
         },
         {
             "name": "clearMarks",
-            "lastModifiedAt": 1597192079976
+            "lastModifiedAt": 1599391517509
         },
         {
             "name": "clearMeasures",
-            "lastModifiedAt": 1597192080336
+            "lastModifiedAt": 1599391518502
         },
         {
             "name": "clearResourceTimings",
-            "lastModifiedAt": 1597192080633
+            "lastModifiedAt": 1599391519015
         },
         {
             "name": "getEntries",
@@ -45,7 +45,7 @@
         },
         {
             "name": "navigation",
-            "lastModifiedAt": 1597192078637
+            "lastModifiedAt": 1599391514797
         },
         {
             "name": "now",
@@ -61,7 +61,7 @@
         },
         {
             "name": "setResourceTimingBufferSize",
-            "lastModifiedAt": 1597192083306
+            "lastModifiedAt": 1599391523906
         },
         {
             "name": "timeOrigin",

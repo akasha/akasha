@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Location.assign",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/assign",
-    "description": "The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the \"back\" button."
+    "description": "The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the &quot;back&quot; button."
 }

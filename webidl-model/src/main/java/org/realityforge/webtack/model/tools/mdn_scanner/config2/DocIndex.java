@@ -178,10 +178,6 @@ public final class DocIndex
       final DocIndexContent content = index.getContent();
       final List<EntryIndex> entries = content.getEntries();
       entries.sort( Comparator.comparing( EntryIndex::getName ) );
-      content.setLastModifiedAt( entries.stream()
-                                   .map( EntryIndex::getLastModifiedAt )
-                                   .max( Long::compareTo )
-                                   .orElse( 0L ) );
       try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
       {
         jsonb.toJson( content, outputStream );

@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "WritableStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WritableStream",
-    "description": "The WritableStream interface of the the Streams API provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing."
+    "description": "The WritableStream interface of the the Streams API provides a standard abstraction for writing streaming data to a destination, known as a sink. This object comes with built-in backpressure and queuing."
 }

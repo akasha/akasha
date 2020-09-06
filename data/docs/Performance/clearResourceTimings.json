@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Performance.clearResourceTimings",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearResourceTimings",
-    "description": "The clearResourceTimings() method removes all performance entries with an entryType of \"resource\" from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the Performance.setResourceTimingBufferSize() method."
+    "description": "The clearResourceTimings() method removes all performance entries with an entryType of &quot;resource&quot; from the browser's performance data buffer and sets the size of the performance data buffer to zero. To set the size of the browser's performance data buffer, use the Performance.setResourceTimingBufferSize() method."
 }

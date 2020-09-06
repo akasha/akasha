@@ -1,11 +1,11 @@
 
 {
     "name": "BluetoothDevice",
-    "lastModifiedAt": 1597192614863,
+    "lastModifiedAt": 1599391389934,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192614863
+            "lastModifiedAt": 1599391385453
         },
         {
             "name": "advertisementreceived_event",
@@ -13,11 +13,11 @@
         },
         {
             "name": "connectGATT",
-            "lastModifiedAt": 1596712494805
+            "lastModifiedAt": 1599391389934
         },
         {
             "name": "gatt",
-            "lastModifiedAt": 1596712491404
+            "lastModifiedAt": 1599391387726
         },
         {
             "name": "gattserverdisconnected_event",
@@ -25,7 +25,7 @@
         },
         {
             "name": "id",
-            "lastModifiedAt": 1596712492008
+            "lastModifiedAt": 1599391386025
         },
         {
             "name": "name",
@@ -33,7 +33,7 @@
         },
         {
             "name": "uuids",
-            "lastModifiedAt": 1596712493979
+            "lastModifiedAt": 1599391388237
         }
     ]
 }

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "BluetoothDevice.gatt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/gatt",
-    "description": "The BluetoothDevice.gatt read-only property returns a reference to the device's BluetoothRemoteGATTServer."
+    "description": "The BluetoothDevice.gatt read-only property returns a reference to the device's BluetoothRemoteGATTServer."
 }

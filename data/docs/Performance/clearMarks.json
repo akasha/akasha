@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Performance.clearMarks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/clearMarks",
-    "description": "The clearMarks() method removes the named mark from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of \"mark\" will be removed from the performance entry buffer."
+    "description": "The clearMarks() method removes the named mark from the browser's performance entry buffer. If the method is called with no arguments, all performance entries with an entry type of &quot;mark&quot; will be removed from the performance entry buffer."
 }

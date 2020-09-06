@@ -1,7 +1,7 @@
 
 {
     "name": "SyncManager",
-    "lastModifiedAt": 1597190518276,
+    "lastModifiedAt": 1599391456438,
     "entries": [
         {
             "name": "__type__",
@@ -9,11 +9,11 @@
         },
         {
             "name": "getTags",
-            "lastModifiedAt": 1597190517875
+            "lastModifiedAt": 1599391456438
         },
         {
             "name": "register",
-            "lastModifiedAt": 1597190518276
+            "lastModifiedAt": 1599391455931
         }
     ]
 }

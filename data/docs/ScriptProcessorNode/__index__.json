@@ -1,7 +1,7 @@
 
 {
     "name": "ScriptProcessorNode",
-    "lastModifiedAt": 1597359948968,
+    "lastModifiedAt": 1599391488817,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "audioprocess_event",
-            "lastModifiedAt": 1597359948968
+            "lastModifiedAt": 1599391487726
         },
         {
             "name": "bufferSize",

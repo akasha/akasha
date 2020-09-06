@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLElement",
-    "lastModifiedAt": 1597363110248,
+    "lastModifiedAt": 1599391430926,
     "entries": [
         {
             "name": "__type__",
@@ -37,7 +37,7 @@
         },
         {
             "name": "click",
-            "lastModifiedAt": 1596581189269
+            "lastModifiedAt": 1599391410544
         },
         {
             "name": "contentEditable",
@@ -65,11 +65,11 @@
         },
         {
             "name": "inert",
-            "lastModifiedAt": 1596581180013
+            "lastModifiedAt": 1599391396438
         },
         {
             "name": "innerText",
-            "lastModifiedAt": 1596581180356
+            "lastModifiedAt": 1599391396975
         },
         {
             "name": "input_event",

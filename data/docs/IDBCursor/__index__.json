@@ -1,7 +1,7 @@
 
 {
     "name": "IDBCursor",
-    "lastModifiedAt": 1597192108578,
+    "lastModifiedAt": 1599391346592,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "advance",
-            "lastModifiedAt": 1597192107782
+            "lastModifiedAt": 1599391345545
         },
         {
             "name": "continuePrimaryKey",

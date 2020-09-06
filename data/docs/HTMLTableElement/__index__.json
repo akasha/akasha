@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLTableElement",
-    "lastModifiedAt": 1597193195321,
+    "lastModifiedAt": 1599391366826,
     "entries": [
         {
             "name": "__type__",
@@ -45,7 +45,7 @@
         },
         {
             "name": "rows",
-            "lastModifiedAt": 1596581159887
+            "lastModifiedAt": 1599391357743
         },
         {
             "name": "tBodies",

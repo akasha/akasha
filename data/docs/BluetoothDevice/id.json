@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "BluetoothDevice.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/id",
-    "description": "The BluetoothDevice.id read-only property returns a DOMString that uniquely identifies a device."
+    "description": "The BluetoothDevice.id read-only property returns a DOMString that uniquely identifies a device."
 }

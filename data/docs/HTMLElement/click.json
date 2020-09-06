@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "HTMLElement.click",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click",
-    "description": "The HTMLElement.click() method simulates a mouse click on an element."
+    "description": "The HTMLElement.click() method simulates a mouse click on an element."
 }

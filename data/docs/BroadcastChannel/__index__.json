@@ -1,7 +1,7 @@
 
 {
     "name": "BroadcastChannel",
-    "lastModifiedAt": 1597359763739,
+    "lastModifiedAt": 1599391301857,
     "entries": [
         {
             "name": "BroadcastChannel",
@@ -33,7 +33,7 @@
         },
         {
             "name": "onmessageerror",
-            "lastModifiedAt": 1596581566180
+            "lastModifiedAt": 1599391299384
         },
         {
             "name": "postMessage",

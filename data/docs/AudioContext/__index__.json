@@ -1,7 +1,7 @@
 
 {
     "name": "AudioContext",
-    "lastModifiedAt": 1597192576933,
+    "lastModifiedAt": 1599391288157,
     "entries": [
         {
             "name": "AudioContext",
@@ -13,7 +13,7 @@
         },
         {
             "name": "baseLatency",
-            "lastModifiedAt": 1597192573597
+            "lastModifiedAt": 1599391281939
         },
         {
             "name": "close",
@@ -25,7 +25,7 @@
         },
         {
             "name": "createMediaStreamDestination",
-            "lastModifiedAt": 1597192575736
+            "lastModifiedAt": 1599391285158
         },
         {
             "name": "createMediaStreamSource",
@@ -49,7 +49,7 @@
         },
         {
             "name": "suspend",
-            "lastModifiedAt": 1597192576933
+            "lastModifiedAt": 1599391288157
         }
     ]
 }
