@@ -14,6 +14,7 @@ public final class React4jActionFactory
   public String outputDirectory;
   public String packageName;
   public boolean generateGwtModule = true;
+  public boolean enableMagicConstants = true;
 
   @Nonnull
   @Override
@@ -27,6 +28,6 @@ public final class React4jActionFactory
     {
       throw new IllegalArgumentException( "React4j missing required packageName configuration value" );
     }
-    return new React4jAction( Paths.get( outputDirectory ), packageName, generateGwtModule );
+    return new React4jAction( Paths.get( outputDirectory ), packageName, generateGwtModule, enableMagicConstants );
   }
 }

@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.lang.model.element.Modifier;
 import org.realityforge.webtack.model.AttributeMember;
+import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.Type;
@@ -37,14 +38,17 @@ final class React4jAction
   @Nonnull
   private static final String HTML_ELEMENT = "HTMLElement";
   private final boolean _generateGwtModule;
+  private final boolean _enableMagicConstants;
   private WebIDLSchema _schema;
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
-                 final boolean generateGwtModule )
+                 final boolean generateGwtModule,
+                 final boolean enableMagicConstants )
   {
     super( outputDirectory, packageName );
     _generateGwtModule = generateGwtModule;
+    _enableMagicConstants = enableMagicConstants;
   }
 
   @Override
@@ -345,6 +349,7 @@ final class React4jAction
       {
         parameter.addAnnotation( _schema.isNullable( attribute.getType() ) ? Types.NULLABLE : Types.NONNULL );
       }
+      addMagicConstantAnnotationIfNeeded( attribute.getType(), parameter );
       type.addMethod( MethodSpec
                         .methodBuilder( attributeName )
                         .addAnnotation( Types.JS_OVERLAY )
@@ -444,6 +449,7 @@ final class React4jAction
       {
         parameter.addAnnotation( _schema.isNullable( attribute.getType() ) ? Types.NULLABLE : Types.NONNULL );
       }
+      addMagicConstantAnnotationIfNeeded( attribute.getType(), parameter );
       type.addMethod( MethodSpec
                         .methodBuilder( attributeName )
                         .addAnnotation( Types.JS_OVERLAY )
@@ -876,4 +882,42 @@ final class React4jAction
     }
   }
 
+  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
+                                                   @Nonnull final ParameterSpec.Builder parameter )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+      if ( null != enumeration )
+      {
+        parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
+  }
+
+  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
+                                                   @Nonnull final MethodSpec.Builder method )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
+      if ( null != enumeration )
+      {
+        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
+  }
+
+  @Nonnull
+  private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
+  {
+    final ClassName enumerationType =
+      ClassName.get( "elemental3", NamingUtil.uppercaseFirstCharacter( enumeration.getName() ) );
+    return AnnotationSpec
+      .builder( Types.MAGIC_CONSTANT )
+      .addMember( "valuesFromClass", "$T.class", enumerationType )
+      .build();
+  }
 }
