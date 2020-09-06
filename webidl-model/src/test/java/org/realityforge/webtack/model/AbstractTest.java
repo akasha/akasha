@@ -221,18 +221,18 @@ public abstract class AbstractTest
   protected final Path getOutputDirectory()
     throws Exception
   {
-    final Path idlDirectory = getWorkingDirectory().resolve( "output" );
-    Files.createDirectories( idlDirectory );
-    return idlDirectory;
+    final Path directory = getWorkingDirectory().resolve( "output" );
+    Files.createDirectories( directory );
+    return directory;
   }
 
   @Nonnull
   protected final Path getIdlDirectory()
     throws Exception
   {
-    final Path idlDirectory = getWorkingDirectory().resolve( "idl" );
-    Files.createDirectories( idlDirectory );
-    return idlDirectory;
+    final Path directory = getWorkingDirectory().resolve( "idl" );
+    Files.createDirectories( directory );
+    return directory;
   }
 
   @Nonnull
