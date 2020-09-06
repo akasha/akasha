@@ -1,11 +1,11 @@
 
 {
     "name": "CredentialsContainer",
-    "lastModifiedAt": 1597190565364,
+    "lastModifiedAt": 1599391970636,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190563234
+            "lastModifiedAt": 1599391967602
         },
         {
             "name": "create",
@@ -13,11 +13,11 @@
         },
         {
             "name": "get",
-            "lastModifiedAt": 1597190564228
+            "lastModifiedAt": 1599391968768
         },
         {
             "name": "preventSilentAccess",
-            "lastModifiedAt": 1597190565029
+            "lastModifiedAt": 1599391969435
         },
         {
             "name": "store",

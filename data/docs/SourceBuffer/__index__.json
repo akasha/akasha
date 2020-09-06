@@ -1,11 +1,11 @@
 
 {
     "name": "SourceBuffer",
-    "lastModifiedAt": 1597192153894,
+    "lastModifiedAt": 1599391777366,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192148980
+            "lastModifiedAt": 1599391765842
         },
         {
             "name": "abort",
@@ -37,7 +37,7 @@
         },
         {
             "name": "buffered",
-            "lastModifiedAt": 1597192150177
+            "lastModifiedAt": 1599391768469
         },
         {
             "name": "changeType",
@@ -45,7 +45,7 @@
         },
         {
             "name": "mode",
-            "lastModifiedAt": 1597192150434
+            "lastModifiedAt": 1599391768941
         },
         {
             "name": "remove",
@@ -69,7 +69,7 @@
         },
         {
             "name": "updating",
-            "lastModifiedAt": 1597192151538
+            "lastModifiedAt": 1599391771733
         },
         {
             "name": "videoTracks",

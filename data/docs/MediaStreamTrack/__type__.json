@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "MediaStreamTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack",
-    "description": "The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."
+    "description": "The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."
 }

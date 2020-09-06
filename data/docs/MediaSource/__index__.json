@@ -1,7 +1,7 @@
 
 {
     "name": "MediaSource",
-    "lastModifiedAt": 1597192147357,
+    "lastModifiedAt": 1599391982193,
     "entries": [
         {
             "name": "MediaSource",
@@ -13,7 +13,7 @@
         },
         {
             "name": "activeSourceBuffers",
-            "lastModifiedAt": 1597192143856
+            "lastModifiedAt": 1599391974720
         },
         {
             "name": "addSourceBuffer",

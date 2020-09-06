@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "HTMLCanvasElement.getContext",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
-    "description": "The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported."
+    "description": "The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported, or the canvas has already been set to a different context mode."
 }

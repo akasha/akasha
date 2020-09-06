@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "SourceBuffer.mode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode",
-    "description": "The mode property of the SourceBuffer interface controls whether media segments can be appended to the SourceBuffer in any order, or in a strict sequence."
+    "description": "The mode property of the SourceBuffer interface controls whether media segments can be appended to the SourceBuffer in any order, or in a strict sequence."
 }

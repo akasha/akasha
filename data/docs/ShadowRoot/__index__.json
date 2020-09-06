@@ -1,7 +1,7 @@
 
 {
     "name": "ShadowRoot",
-    "lastModifiedAt": 1597193090513,
+    "lastModifiedAt": 1599391850696,
     "entries": [
         {
             "name": "__type__",
@@ -13,7 +13,7 @@
         },
         {
             "name": "host",
-            "lastModifiedAt": 1597193089753
+            "lastModifiedAt": 1599391849718
         },
         {
             "name": "innerHTML",
@@ -21,7 +21,7 @@
         },
         {
             "name": "mode",
-            "lastModifiedAt": 1597193090513
+            "lastModifiedAt": 1599391850696
         }
     ]
 }

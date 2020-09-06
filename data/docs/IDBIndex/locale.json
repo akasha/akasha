@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "IDBIndex.locale",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/locale",
-    "description": "The locale read-only property of the IDBIndex interface returns the locale of the index (for example en-US, or pl) if it had a locale value specified upon its creation (see createIndex()'s optionalParameters.) Note that this property always returns the current locale being used in this index, in other words, it never returns \"auto\"."
+    "description": "The locale read-only property of the IDBIndex interface returns the locale of the index (for example en-US, or pl) if it had a locale value specified upon its creation (see createIndex()'s optionalParameters.) Note that this property always returns the current locale being used in this index, in other words, it never returns &quot;auto&quot;."
 }

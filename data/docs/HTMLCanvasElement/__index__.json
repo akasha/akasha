@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLCanvasElement",
-    "lastModifiedAt": 1597360434918,
+    "lastModifiedAt": 1599392008371,
     "entries": [
         {
             "name": "__type__",
@@ -13,7 +13,7 @@
         },
         {
             "name": "getContext",
-            "lastModifiedAt": 1596581573619
+            "lastModifiedAt": 1599392004535
         },
         {
             "name": "height",
@@ -29,7 +29,7 @@
         },
         {
             "name": "toDataURL",
-            "lastModifiedAt": 1596581574685
+            "lastModifiedAt": 1599392005148
         },
         {
             "name": "transferControlToOffscreen",

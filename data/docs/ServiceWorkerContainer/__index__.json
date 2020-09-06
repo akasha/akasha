@@ -1,19 +1,19 @@
 
 {
     "name": "ServiceWorkerContainer",
-    "lastModifiedAt": 1597360339374,
+    "lastModifiedAt": 1599391913378,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192328070
+            "lastModifiedAt": 1599391908388
         },
         {
             "name": "controller",
-            "lastModifiedAt": 1597192328351
+            "lastModifiedAt": 1599391909129
         },
         {
             "name": "getRegistration",
-            "lastModifiedAt": 1597192329413
+            "lastModifiedAt": 1599391911110
         },
         {
             "name": "getRegistrations",
@@ -25,7 +25,7 @@
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1597279542376
+            "lastModifiedAt": 1599391913378
         },
         {
             "name": "register",

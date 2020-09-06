@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "RTCPeerConnection.generateCertificate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate",
-    "description": "The generateCertificate() method of the RTCPeerConnection interface creates and stores an X.509 certificate and corresponding private key then returns an RTCCertificate, providing access to it."
+    "description": "The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated."
 }

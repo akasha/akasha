@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "RTCPeerConnection.onaddstream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onaddstream",
-    "description": "The RTCPeerConnection.onaddstream event handler is a property containing the code to execute when the addstream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is added to this connection by the remote peer. The event is sent immediately after the call setRemoteDescription() and doesn't wait for the result of the SDP negotiation."
+    "description": "The RTCPeerConnection.onaddstream event handler is a property containing the code to execute when the addstream event, of type MediaStreamEvent, is received by this RTCPeerConnection. Such an event is sent when a MediaStream is added to this connection by the remote peer. The event is sent immediately after the call setRemoteDescription() and doesn't wait for the result of the SDP negotiation."
 }

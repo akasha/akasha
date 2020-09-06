@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "CredentialsContainer.preventSilentAccess",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/preventSilentAccess",
-    "description": "The preventSilentAccess() method of the CredentialsContainer interface sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty Promise."
+    "description": "The preventSilentAccess() method of the CredentialsContainer interface sets a flag that specifies whether automatic log in is allowed for future visits to the current origin, then returns an empty Promise."
 }

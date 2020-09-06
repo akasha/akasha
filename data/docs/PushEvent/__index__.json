@@ -1,7 +1,7 @@
 
 {
     "name": "PushEvent",
-    "lastModifiedAt": 1597192281517,
+    "lastModifiedAt": 1599391787008,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "data",
-            "lastModifiedAt": 1597192281517
+            "lastModifiedAt": 1599391787008
         }
     ]
 }

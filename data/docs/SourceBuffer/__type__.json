@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "SourceBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer",
-    "description": "The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments."
+    "description": "The SourceBuffer interface represents a chunk of media to be passed into an HTMLMediaElement and played, via a MediaSource object. This can be made up of one or several media segments."
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLLinkElement",
-    "lastModifiedAt": 1597193419418,
+    "lastModifiedAt": 1599391783188,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "as",
-            "lastModifiedAt": 1596581418562
+            "lastModifiedAt": 1599391779414
         },
         {
             "name": "referrerPolicy",

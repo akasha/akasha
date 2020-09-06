@@ -1,7 +1,7 @@
 
 {
     "name": "PushMessageData",
-    "lastModifiedAt": 1597192284142,
+    "lastModifiedAt": 1599392000145,
     "entries": [
         {
             "name": "__type__",
@@ -17,7 +17,7 @@
         },
         {
             "name": "json",
-            "lastModifiedAt": 1597192283332
+            "lastModifiedAt": 1599391999135
         },
         {
             "name": "text",

@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "SyncEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncEvent",
-    "description": "The SyncEvent interface represents a sync action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker."
+    "description": "The SyncEvent interface represents a sync action that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker."
 }

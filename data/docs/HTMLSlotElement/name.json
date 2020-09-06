@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "HTMLSlotElement.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/name",
-    "description": "The name property of the HTMLSlotElement interface returns or sets the slot name. A slot is a placeholder inside a web component that users can fill with their own markup."
+    "description": "The name property of the HTMLSlotElement interface returns or sets the slot name. A slot is a placeholder inside a web component that users can fill with their own markup."
 }

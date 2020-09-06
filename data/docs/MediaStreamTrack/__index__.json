@@ -1,11 +1,11 @@
 
 {
     "name": "MediaStreamTrack",
-    "lastModifiedAt": 1597360194239,
+    "lastModifiedAt": 1599391753726,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192208344
+            "lastModifiedAt": 1599391736951
         },
         {
             "name": "applyConstraints",
@@ -13,7 +13,7 @@
         },
         {
             "name": "clone",
-            "lastModifiedAt": 1596544768945
+            "lastModifiedAt": 1599391743963
         },
         {
             "name": "enabled",
@@ -25,15 +25,15 @@
         },
         {
             "name": "getCapabilities",
-            "lastModifiedAt": 1596544769757
+            "lastModifiedAt": 1599391745035
         },
         {
             "name": "getConstraints",
-            "lastModifiedAt": 1596544770070
+            "lastModifiedAt": 1599391745657
         },
         {
             "name": "getSettings",
-            "lastModifiedAt": 1596544770378
+            "lastModifiedAt": 1599391746144
         },
         {
             "name": "id",
@@ -41,11 +41,11 @@
         },
         {
             "name": "kind",
-            "lastModifiedAt": 1596544763974
+            "lastModifiedAt": 1599391739591
         },
         {
             "name": "label",
-            "lastModifiedAt": 1596544764338
+            "lastModifiedAt": 1599391740067
         },
         {
             "name": "mute_event",
@@ -53,7 +53,7 @@
         },
         {
             "name": "muted",
-            "lastModifiedAt": 1596544765345
+            "lastModifiedAt": 1599391740518
         },
         {
             "name": "onended",

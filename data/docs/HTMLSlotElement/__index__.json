@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLSlotElement",
-    "lastModifiedAt": 1597360359663,
+    "lastModifiedAt": 1599391931772,
     "entries": [
         {
             "name": "__type__",
@@ -17,7 +17,7 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1596581525043
+            "lastModifiedAt": 1599391929649
         },
         {
             "name": "slotchange_event",
