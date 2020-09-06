@@ -50,6 +50,9 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
+  defining an extended attribute to change the name that java field is generated with.
+
 * Extract a separate module for building java-generating generators. Move `AbstractJavaAction` and other related
   infrastructure to this project.
 
