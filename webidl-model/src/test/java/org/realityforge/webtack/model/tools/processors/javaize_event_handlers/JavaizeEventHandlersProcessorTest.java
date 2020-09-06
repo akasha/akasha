@@ -1,6 +1,5 @@
 package org.realityforge.webtack.model.tools.processors.javaize_event_handlers;
 
-import java.nio.file.Path;
 import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorTest;
