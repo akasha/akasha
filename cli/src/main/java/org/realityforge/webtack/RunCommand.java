@@ -24,8 +24,8 @@ import org.realityforge.webtack.model.tools.pipeline.UnexpectedSourceException;
 import org.realityforge.webtack.model.tools.pipeline.UnknownStageConfigException;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
-import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.processors.validate.ValidationException;
+import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 
 final class RunCommand
@@ -81,7 +81,8 @@ final class RunCommand
     final Logger logger = context.environment().logger();
     try
     {
-      final Pipeline pipeline = loadPipeline( context );
+      assert null != _pipelineName;
+      final Pipeline pipeline = loadPipeline( context, _pipelineName );
       if ( null == pipeline )
       {
         return ExitCodes.ERROR_BAD_PIPELINE_CODE;
@@ -173,15 +174,15 @@ final class RunCommand
   }
 
   @Nullable
-  private Pipeline loadPipeline( @Nonnull final Context context )
+  private Pipeline loadPipeline( @Nonnull final Context context, @Nonnull final String pipelineName )
   {
     final Environment environment = context.environment();
     final Path pipelineFile =
-      environment.currentDirectory().resolve( "pipelines" ).resolve( _pipelineName + ".json" );
+      environment.currentDirectory().resolve( "pipelines" ).resolve( pipelineName + ".json" );
     if ( !Files.exists( pipelineFile ) )
     {
       final String message =
-        "Error: Error attempting to load pipeline named '" + _pipelineName +
+        "Error: Error attempting to load pipeline named '" + pipelineName +
         "' from " + pipelineFile + " but file does not exist";
       environment.logger().log( Level.SEVERE, message );
       return null;
@@ -190,7 +191,7 @@ final class RunCommand
     {
       try
       {
-        final PipelineConfig pipeline = PipelineConfig.load( pipelineFile );
+        final PipelineConfig pipeline = PipelineConfig.load( pipelineName, pipelineFile );
         return new Pipeline( context.config(),
                              pipeline,
                              new ExecutionContext( environment.webidlDirectory(),
@@ -200,7 +201,7 @@ final class RunCommand
       catch ( final Exception e )
       {
         final String message =
-          "Error: Error attempting to load pipeline named '" + _pipelineName +
+          "Error: Error attempting to load pipeline named '" + pipelineName +
           "' from " + pipelineFile + " Error: " + e;
         environment.logger().log( Level.SEVERE, message, e );
         return null;

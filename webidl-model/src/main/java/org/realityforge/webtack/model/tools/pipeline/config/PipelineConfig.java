@@ -49,17 +49,13 @@ public final class PipelineConfig
   }
 
   @Nonnull
-  public static PipelineConfig load( @Nonnull final Path path )
+  public static PipelineConfig load( @Nonnull final String name, @Nonnull final Path path )
     throws Exception
   {
     try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
     {
       final PipelineConfig pipeline = JsonbBuilder.create().fromJson( inputStream, PipelineConfig.class );
-      if ( null == pipeline.getName() )
-      {
-        final String name = path.getName( path.getNameCount() - 1 ).toString().replaceAll( "\\.json$", "" );
-        pipeline.setName( name );
-      }
+      pipeline.setName( name );
       pipeline.validate();
       return pipeline;
     }
