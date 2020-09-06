@@ -249,9 +249,16 @@ public abstract class AbstractTest
   @Nonnull
   protected PipelineContext newPipelineContext()
   {
+    return newPipelineContext( "ignored" );
+  }
+
+  @Nonnull
+  protected PipelineContext newPipelineContext( @Nonnull final String subDirectory )
+  {
     try
     {
-      return new PipelineContextImpl( new DocRepositoryRuntime( getOutputDirectory() ) );
+      final Path docsDirectory = getTestLocalFixtureDir().resolve( subDirectory ).resolve( "docs" );
+      return new PipelineContextImpl( new DocRepositoryRuntime( docsDirectory ) );
     }
     catch ( final Exception e )
     {
