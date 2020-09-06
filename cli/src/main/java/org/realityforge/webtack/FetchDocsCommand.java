@@ -84,7 +84,7 @@ final class FetchDocsCommand
     {
       if ( logger.isLoggable( Level.FINE ) )
       {
-        logger.log( Level.FINE, "Fetched documentation for element named '" + typeName + "'" );
+        logger.log( Level.FINE, "Fetching documentation for element named '" + typeName + "'" );
       }
 
       try
