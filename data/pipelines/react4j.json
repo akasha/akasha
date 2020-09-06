@@ -96,21 +96,21 @@
     },
     {
       "name": "RemoveMember",
-      "description": "We manually patch the method field to convert it to an enumeration so that the code we generate for it has improved typing",
+      "description": "We manually patch the method/enctype fields to convert it to an enumeration so that the code we generate for it has improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^HTMLFormElement$",
-        "memberNamePattern": "^method$",
+        "memberNamePattern": "^(method|enctype)$",
         "types": ["interface_type"]
       }
     },
     {
       "name": "RemoveMember",
-      "description": "We manually patch the formMethod field to convert it to an enumeration so that the code we generate for it has improved typing",
+      "description": "We manually patch the formMethod/formEnctype fields to convert it to an enumeration so that the code we generate for it has improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
-        "memberNamePattern": "^formMethod$",
+        "memberNamePattern": "^(formMethod|formEnctype)$",
         "types": ["interface_type"]
       }
     },
