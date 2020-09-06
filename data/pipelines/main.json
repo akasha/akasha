@@ -106,6 +106,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "We manually patch the formMethod field to convert it to an enumeration so that the code we generate for it has improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
+        "memberNamePattern": "^formMethod$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "the cssom spec 'overrides' the definitions to be of type double",
       "sourceSelector": "name=uievents",
       "config": {

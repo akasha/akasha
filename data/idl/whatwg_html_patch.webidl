@@ -49,3 +49,13 @@ partial interface HTMLFormElement {
   [CEReactions]
   attribute FormMethodType method;
 };
+
+partial interface HTMLInputElement {
+  [CEReactions]
+  attribute FormMethodType formMethod;
+};
+
+partial interface HTMLButtonElement {
+  [CEReactions]
+  attribute FormMethodType formMethod;
+};
