@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192401687
-    }
-]
+{
+    "name": "SVGUnitTypes",
+    "lastModifiedAt": 1597192401687,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192401687
+        }
+    ]
+}

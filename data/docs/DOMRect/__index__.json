@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "DOMRect",
-        "lastModifiedAt": 1597192051476
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192051236
-    }
-]
+{
+    "name": "DOMRect",
+    "lastModifiedAt": 1597192051476,
+    "entries": [
+        {
+            "name": "DOMRect",
+            "lastModifiedAt": 1597192051476
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192051236
+        }
+    ]
+}

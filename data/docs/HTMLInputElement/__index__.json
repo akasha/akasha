@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581143878
-    },
-    {
-        "name": "invalid_event",
-        "lastModifiedAt": 1597358676624
-    },
-    {
-        "name": "search_event",
-        "lastModifiedAt": 1599279942343
-    }
-]
+{
+    "name": "HTMLInputElement",
+    "lastModifiedAt": 1599279942343,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581143878
+        },
+        {
+            "name": "invalid_event",
+            "lastModifiedAt": 1597358676624
+        },
+        {
+            "name": "search_event",
+            "lastModifiedAt": 1599279942343
+        }
+    ]
+}

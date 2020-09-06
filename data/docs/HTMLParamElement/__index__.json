@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193366660
-    }
-]
+{
+    "name": "HTMLParamElement",
+    "lastModifiedAt": 1597193366660,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193366660
+        }
+    ]
+}

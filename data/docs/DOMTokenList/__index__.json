@@ -1,59 +1,63 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193028483
-    },
-    {
-        "name": "add",
-        "lastModifiedAt": 1597193030052
-    },
-    {
-        "name": "contains",
-        "lastModifiedAt": 1599278999957
-    },
-    {
-        "name": "entries",
-        "lastModifiedAt": 1597193031496
-    },
-    {
-        "name": "forEach",
-        "lastModifiedAt": 1597193031800
-    },
-    {
-        "name": "item",
-        "lastModifiedAt": 1597193029357
-    },
-    {
-        "name": "keys",
-        "lastModifiedAt": 1597193032040
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1597193028814
-    },
-    {
-        "name": "remove",
-        "lastModifiedAt": 1597193030311
-    },
-    {
-        "name": "replace",
-        "lastModifiedAt": 1599279001998
-    },
-    {
-        "name": "supports",
-        "lastModifiedAt": 1599279003056
-    },
-    {
-        "name": "toggle",
-        "lastModifiedAt": 1597193031238
-    },
-    {
-        "name": "value",
-        "lastModifiedAt": 1599278998824
-    },
-    {
-        "name": "values",
-        "lastModifiedAt": 1597193032465
-    }
-]
+{
+    "name": "DOMTokenList",
+    "lastModifiedAt": 1599279003056,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193028483
+        },
+        {
+            "name": "add",
+            "lastModifiedAt": 1597193030052
+        },
+        {
+            "name": "contains",
+            "lastModifiedAt": 1599278999957
+        },
+        {
+            "name": "entries",
+            "lastModifiedAt": 1597193031496
+        },
+        {
+            "name": "forEach",
+            "lastModifiedAt": 1597193031800
+        },
+        {
+            "name": "item",
+            "lastModifiedAt": 1597193029357
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1597193032040
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1597193028814
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1597193030311
+        },
+        {
+            "name": "replace",
+            "lastModifiedAt": 1599279001998
+        },
+        {
+            "name": "supports",
+            "lastModifiedAt": 1599279003056
+        },
+        {
+            "name": "toggle",
+            "lastModifiedAt": 1597193031238
+        },
+        {
+            "name": "value",
+            "lastModifiedAt": 1599278998824
+        },
+        {
+            "name": "values",
+            "lastModifiedAt": 1597193032465
+        }
+    ]
+}

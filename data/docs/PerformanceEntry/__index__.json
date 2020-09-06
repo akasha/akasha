@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192258544
-    },
-    {
-        "name": "duration",
-        "lastModifiedAt": 1597192259691
-    },
-    {
-        "name": "entryType",
-        "lastModifiedAt": 1599279347668
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1597192258856
-    },
-    {
-        "name": "startTime",
-        "lastModifiedAt": 1597192259373
-    },
-    {
-        "name": "toJSON",
-        "lastModifiedAt": 1597192259980
-    }
-]
+{
+    "name": "PerformanceEntry",
+    "lastModifiedAt": 1599279347668,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192258544
+        },
+        {
+            "name": "duration",
+            "lastModifiedAt": 1597192259691
+        },
+        {
+            "name": "entryType",
+            "lastModifiedAt": 1599279347668
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1597192258856
+        },
+        {
+            "name": "startTime",
+            "lastModifiedAt": 1597192259373
+        },
+        {
+            "name": "toJSON",
+            "lastModifiedAt": 1597192259980
+        }
+    ]
+}

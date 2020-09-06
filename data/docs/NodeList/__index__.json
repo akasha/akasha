@@ -1,31 +1,35 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193072653
-    },
-    {
-        "name": "entries",
-        "lastModifiedAt": 1597193073463
-    },
-    {
-        "name": "forEach",
-        "lastModifiedAt": 1597193073773
-    },
-    {
-        "name": "item",
-        "lastModifiedAt": 1597193073132
-    },
-    {
-        "name": "keys",
-        "lastModifiedAt": 1597193074080
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1597193072891
-    },
-    {
-        "name": "values",
-        "lastModifiedAt": 1597193074302
-    }
-]
+{
+    "name": "NodeList",
+    "lastModifiedAt": 1597193074302,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193072653
+        },
+        {
+            "name": "entries",
+            "lastModifiedAt": 1597193073463
+        },
+        {
+            "name": "forEach",
+            "lastModifiedAt": 1597193073773
+        },
+        {
+            "name": "item",
+            "lastModifiedAt": 1597193073132
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1597193074080
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1597193072891
+        },
+        {
+            "name": "values",
+            "lastModifiedAt": 1597193074302
+        }
+    ]
+}

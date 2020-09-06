@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "EventTarget",
-        "lastModifiedAt": 1597192250906
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192250078
-    },
-    {
-        "name": "addEventListener",
-        "lastModifiedAt": 1597192251747
-    },
-    {
-        "name": "dispatchEvent",
-        "lastModifiedAt": 1597192252505
-    },
-    {
-        "name": "removeEventListener",
-        "lastModifiedAt": 1599280969209
-    }
-]
+{
+    "name": "EventTarget",
+    "lastModifiedAt": 1599280969209,
+    "entries": [
+        {
+            "name": "EventTarget",
+            "lastModifiedAt": 1597192250906
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192250078
+        },
+        {
+            "name": "addEventListener",
+            "lastModifiedAt": 1597192251747
+        },
+        {
+            "name": "dispatchEvent",
+            "lastModifiedAt": 1597192252505
+        },
+        {
+            "name": "removeEventListener",
+            "lastModifiedAt": 1599280969209
+        }
+    ]
+}

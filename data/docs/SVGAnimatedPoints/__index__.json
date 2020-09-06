@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192387175
-    }
-]
+{
+    "name": "SVGAnimatedPoints",
+    "lastModifiedAt": 1597192387175,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192387175
+        }
+    ]
+}

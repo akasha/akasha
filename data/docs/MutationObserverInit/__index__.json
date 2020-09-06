@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193013187
-    },
-    {
-        "name": "attributeFilter",
-        "lastModifiedAt": 1597193014890
-    },
-    {
-        "name": "attributeOldValue",
-        "lastModifiedAt": 1597193015193
-    },
-    {
-        "name": "attributes",
-        "lastModifiedAt": 1597193014605
-    },
-    {
-        "name": "characterData",
-        "lastModifiedAt": 1597193015422
-    },
-    {
-        "name": "characterDataOldValue",
-        "lastModifiedAt": 1597193015807
-    },
-    {
-        "name": "childList",
-        "lastModifiedAt": 1597193014348
-    },
-    {
-        "name": "subtree",
-        "lastModifiedAt": 1597193013976
-    }
-]
+{
+    "name": "MutationObserverInit",
+    "lastModifiedAt": 1597193015807,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193013187
+        },
+        {
+            "name": "attributeFilter",
+            "lastModifiedAt": 1597193014890
+        },
+        {
+            "name": "attributeOldValue",
+            "lastModifiedAt": 1597193015193
+        },
+        {
+            "name": "attributes",
+            "lastModifiedAt": 1597193014605
+        },
+        {
+            "name": "characterData",
+            "lastModifiedAt": 1597193015422
+        },
+        {
+            "name": "characterDataOldValue",
+            "lastModifiedAt": 1597193015807
+        },
+        {
+            "name": "childList",
+            "lastModifiedAt": 1597193014348
+        },
+        {
+            "name": "subtree",
+            "lastModifiedAt": 1597193013976
+        }
+    ]
+}

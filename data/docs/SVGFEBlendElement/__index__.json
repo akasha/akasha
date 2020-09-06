@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191963991
-    }
-]
+{
+    "name": "SVGFEBlendElement",
+    "lastModifiedAt": 1597191963991,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191963991
+        }
+    ]
+}

@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192698275
-    },
-    {
-        "name": "getTranslatedShaderSource",
-        "lastModifiedAt": 1597192698596
-    }
-]
+{
+    "name": "WEBGL_debug_shaders",
+    "lastModifiedAt": 1597192698596,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192698275
+        },
+        {
+            "name": "getTranslatedShaderSource",
+            "lastModifiedAt": 1597192698596
+        }
+    ]
+}

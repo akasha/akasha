@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193022693
-    },
-    {
-        "name": "nextElementSibling",
-        "lastModifiedAt": 1597193023255
-    },
-    {
-        "name": "previousElementSibling",
-        "lastModifiedAt": 1597193023004
-    }
-]
+{
+    "name": "NonDocumentTypeChildNode",
+    "lastModifiedAt": 1597193023255,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193022693
+        },
+        {
+            "name": "nextElementSibling",
+            "lastModifiedAt": 1597193023255
+        },
+        {
+            "name": "previousElementSibling",
+            "lastModifiedAt": 1597193023004
+        }
+    ]
+}

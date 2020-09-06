@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "PromiseRejectionEvent",
-        "lastModifiedAt": 1597193397277
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193396982
-    },
-    {
-        "name": "promise",
-        "lastModifiedAt": 1596581400512
-    },
-    {
-        "name": "reason",
-        "lastModifiedAt": 1596581400796
-    }
-]
+{
+    "name": "PromiseRejectionEvent",
+    "lastModifiedAt": 1597193397277,
+    "entries": [
+        {
+            "name": "PromiseRejectionEvent",
+            "lastModifiedAt": 1597193397277
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193396982
+        },
+        {
+            "name": "promise",
+            "lastModifiedAt": 1596581400512
+        },
+        {
+            "name": "reason",
+            "lastModifiedAt": 1596581400796
+        }
+    ]
+}

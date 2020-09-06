@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192451761
-    }
-]
+{
+    "name": "SVGViewElement",
+    "lastModifiedAt": 1597192451761,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192451761
+        }
+    ]
+}

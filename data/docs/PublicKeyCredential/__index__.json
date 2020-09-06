@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279900653
-    },
-    {
-        "name": "getClientExtensionResults",
-        "lastModifiedAt": 1597192656178
-    },
-    {
-        "name": "id",
-        "lastModifiedAt": 1597192654833
-    },
-    {
-        "name": "isUserVerifyingPlatformAuthenticatorAvailable",
-        "lastModifiedAt": 1597192656592
-    },
-    {
-        "name": "rawId",
-        "lastModifiedAt": 1597192655086
-    },
-    {
-        "name": "response",
-        "lastModifiedAt": 1597192655874
-    }
-]
+{
+    "name": "PublicKeyCredential",
+    "lastModifiedAt": 1599279900653,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279900653
+        },
+        {
+            "name": "getClientExtensionResults",
+            "lastModifiedAt": 1597192656178
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1597192654833
+        },
+        {
+            "name": "isUserVerifyingPlatformAuthenticatorAvailable",
+            "lastModifiedAt": 1597192656592
+        },
+        {
+            "name": "rawId",
+            "lastModifiedAt": 1597192655086
+        },
+        {
+            "name": "response",
+            "lastModifiedAt": 1597192655874
+        }
+    ]
+}

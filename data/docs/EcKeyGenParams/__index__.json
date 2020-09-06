@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192661918
-    }
-]
+{
+    "name": "EcKeyGenParams",
+    "lastModifiedAt": 1597192661918,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192661918
+        }
+    ]
+}

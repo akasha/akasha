@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193464574
-    },
-    {
-        "name": "allowPaymentRequest",
-        "lastModifiedAt": 1599279162549
-    },
-    {
-        "name": "contentDocument",
-        "lastModifiedAt": 1599279163021
-    },
-    {
-        "name": "contentWindow",
-        "lastModifiedAt": 1596581492299
-    },
-    {
-        "name": "csp",
-        "lastModifiedAt": 1596581492695
-    },
-    {
-        "name": "featurePolicy",
-        "lastModifiedAt": 1596581493522
-    },
-    {
-        "name": "referrerPolicy",
-        "lastModifiedAt": 1596581495686
-    },
-    {
-        "name": "src",
-        "lastModifiedAt": 1596581496503
-    },
-    {
-        "name": "srcdoc",
-        "lastModifiedAt": 1596581496743
-    }
-]
+{
+    "name": "HTMLIFrameElement",
+    "lastModifiedAt": 1599279163021,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193464574
+        },
+        {
+            "name": "allowPaymentRequest",
+            "lastModifiedAt": 1599279162549
+        },
+        {
+            "name": "contentDocument",
+            "lastModifiedAt": 1599279163021
+        },
+        {
+            "name": "contentWindow",
+            "lastModifiedAt": 1596581492299
+        },
+        {
+            "name": "csp",
+            "lastModifiedAt": 1596581492695
+        },
+        {
+            "name": "featurePolicy",
+            "lastModifiedAt": 1596581493522
+        },
+        {
+            "name": "referrerPolicy",
+            "lastModifiedAt": 1596581495686
+        },
+        {
+            "name": "src",
+            "lastModifiedAt": 1596581496503
+        },
+        {
+            "name": "srcdoc",
+            "lastModifiedAt": 1596581496743
+        }
+    ]
+}

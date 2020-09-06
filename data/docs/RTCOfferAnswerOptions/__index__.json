@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192736514
-    },
-    {
-        "name": "voiceActivityDetection",
-        "lastModifiedAt": 1596544559766
-    }
-]
+{
+    "name": "RTCOfferAnswerOptions",
+    "lastModifiedAt": 1597192736514,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192736514
+        },
+        {
+            "name": "voiceActivityDetection",
+            "lastModifiedAt": 1596544559766
+        }
+    ]
+}

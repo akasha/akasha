@@ -1,167 +1,171 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190846630
-    },
-    {
-        "name": "accessKeyLabel",
-        "lastModifiedAt": 1596581176588
-    },
-    {
-        "name": "animationcancel_event",
-        "lastModifiedAt": 1597359876671
-    },
-    {
-        "name": "animationend_event",
-        "lastModifiedAt": 1597359877418
-    },
-    {
-        "name": "animationiteration_event",
-        "lastModifiedAt": 1597359878586
-    },
-    {
-        "name": "animationstart_event",
-        "lastModifiedAt": 1597359879185
-    },
-    {
-        "name": "beforeinput_event",
-        "lastModifiedAt": 1597359879864
-    },
-    {
-        "name": "change_event",
-        "lastModifiedAt": 1597363110248
-    },
-    {
-        "name": "click",
-        "lastModifiedAt": 1596581189269
-    },
-    {
-        "name": "contentEditable",
-        "lastModifiedAt": 1596581176957
-    },
-    {
-        "name": "contextMenu",
-        "lastModifiedAt": 1596581177370
-    },
-    {
-        "name": "dir",
-        "lastModifiedAt": 1596581177760
-    },
-    {
-        "name": "forceSpellCheck",
-        "lastModifiedAt": 1596581189551
-    },
-    {
-        "name": "gotpointercapture_event",
-        "lastModifiedAt": 1597359881259
-    },
-    {
-        "name": "hidden",
-        "lastModifiedAt": 1596581179768
-    },
-    {
-        "name": "inert",
-        "lastModifiedAt": 1596581180013
-    },
-    {
-        "name": "innerText",
-        "lastModifiedAt": 1596581180356
-    },
-    {
-        "name": "input_event",
-        "lastModifiedAt": 1597359880570
-    },
-    {
-        "name": "invalid_event",
-        "lastModifiedAt": 1597359876005
-    },
-    {
-        "name": "isContentEditable",
-        "lastModifiedAt": 1596581180878
-    },
-    {
-        "name": "lang",
-        "lastModifiedAt": 1596581183476
-    },
-    {
-        "name": "lostpointercapture_event",
-        "lastModifiedAt": 1597359881843
-    },
-    {
-        "name": "offsetHeight",
-        "lastModifiedAt": 1596581184163
-    },
-    {
-        "name": "offsetLeft",
-        "lastModifiedAt": 1596581184550
-    },
-    {
-        "name": "offsetParent",
-        "lastModifiedAt": 1596581184822
-    },
-    {
-        "name": "offsetTop",
-        "lastModifiedAt": 1596581185076
-    },
-    {
-        "name": "offsetWidth",
-        "lastModifiedAt": 1596581185443
-    },
-    {
-        "name": "pointercancel_event",
-        "lastModifiedAt": 1597359882458
-    },
-    {
-        "name": "pointerdown_event",
-        "lastModifiedAt": 1597359883778
-    },
-    {
-        "name": "pointerenter_event",
-        "lastModifiedAt": 1597359885043
-    },
-    {
-        "name": "pointerleave_event",
-        "lastModifiedAt": 1597359886551
-    },
-    {
-        "name": "pointermove_event",
-        "lastModifiedAt": 1597359887248
-    },
-    {
-        "name": "pointerout_event",
-        "lastModifiedAt": 1597359887956
-    },
-    {
-        "name": "pointerover_event",
-        "lastModifiedAt": 1597359889137
-    },
-    {
-        "name": "pointerup_event",
-        "lastModifiedAt": 1597359890371
-    },
-    {
-        "name": "style",
-        "lastModifiedAt": 1596581187017
-    },
-    {
-        "name": "title",
-        "lastModifiedAt": 1596581187362
-    },
-    {
-        "name": "transitioncancel_event",
-        "lastModifiedAt": 1597359890957
-    },
-    {
-        "name": "transitionend_event",
-        "lastModifiedAt": 1597359891626
-    },
-    {
-        "name": "transitionrun_event",
-        "lastModifiedAt": 1597359892257
-    },
-    {
-        "name": "transitionstart_event",
-        "lastModifiedAt": 1597359892904
-    }
-]
+{
+    "name": "HTMLElement",
+    "lastModifiedAt": 1597363110248,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190846630
+        },
+        {
+            "name": "accessKeyLabel",
+            "lastModifiedAt": 1596581176588
+        },
+        {
+            "name": "animationcancel_event",
+            "lastModifiedAt": 1597359876671
+        },
+        {
+            "name": "animationend_event",
+            "lastModifiedAt": 1597359877418
+        },
+        {
+            "name": "animationiteration_event",
+            "lastModifiedAt": 1597359878586
+        },
+        {
+            "name": "animationstart_event",
+            "lastModifiedAt": 1597359879185
+        },
+        {
+            "name": "beforeinput_event",
+            "lastModifiedAt": 1597359879864
+        },
+        {
+            "name": "change_event",
+            "lastModifiedAt": 1597363110248
+        },
+        {
+            "name": "click",
+            "lastModifiedAt": 1596581189269
+        },
+        {
+            "name": "contentEditable",
+            "lastModifiedAt": 1596581176957
+        },
+        {
+            "name": "contextMenu",
+            "lastModifiedAt": 1596581177370
+        },
+        {
+            "name": "dir",
+            "lastModifiedAt": 1596581177760
+        },
+        {
+            "name": "forceSpellCheck",
+            "lastModifiedAt": 1596581189551
+        },
+        {
+            "name": "gotpointercapture_event",
+            "lastModifiedAt": 1597359881259
+        },
+        {
+            "name": "hidden",
+            "lastModifiedAt": 1596581179768
+        },
+        {
+            "name": "inert",
+            "lastModifiedAt": 1596581180013
+        },
+        {
+            "name": "innerText",
+            "lastModifiedAt": 1596581180356
+        },
+        {
+            "name": "input_event",
+            "lastModifiedAt": 1597359880570
+        },
+        {
+            "name": "invalid_event",
+            "lastModifiedAt": 1597359876005
+        },
+        {
+            "name": "isContentEditable",
+            "lastModifiedAt": 1596581180878
+        },
+        {
+            "name": "lang",
+            "lastModifiedAt": 1596581183476
+        },
+        {
+            "name": "lostpointercapture_event",
+            "lastModifiedAt": 1597359881843
+        },
+        {
+            "name": "offsetHeight",
+            "lastModifiedAt": 1596581184163
+        },
+        {
+            "name": "offsetLeft",
+            "lastModifiedAt": 1596581184550
+        },
+        {
+            "name": "offsetParent",
+            "lastModifiedAt": 1596581184822
+        },
+        {
+            "name": "offsetTop",
+            "lastModifiedAt": 1596581185076
+        },
+        {
+            "name": "offsetWidth",
+            "lastModifiedAt": 1596581185443
+        },
+        {
+            "name": "pointercancel_event",
+            "lastModifiedAt": 1597359882458
+        },
+        {
+            "name": "pointerdown_event",
+            "lastModifiedAt": 1597359883778
+        },
+        {
+            "name": "pointerenter_event",
+            "lastModifiedAt": 1597359885043
+        },
+        {
+            "name": "pointerleave_event",
+            "lastModifiedAt": 1597359886551
+        },
+        {
+            "name": "pointermove_event",
+            "lastModifiedAt": 1597359887248
+        },
+        {
+            "name": "pointerout_event",
+            "lastModifiedAt": 1597359887956
+        },
+        {
+            "name": "pointerover_event",
+            "lastModifiedAt": 1597359889137
+        },
+        {
+            "name": "pointerup_event",
+            "lastModifiedAt": 1597359890371
+        },
+        {
+            "name": "style",
+            "lastModifiedAt": 1596581187017
+        },
+        {
+            "name": "title",
+            "lastModifiedAt": 1596581187362
+        },
+        {
+            "name": "transitioncancel_event",
+            "lastModifiedAt": 1597359890957
+        },
+        {
+            "name": "transitionend_event",
+            "lastModifiedAt": 1597359891626
+        },
+        {
+            "name": "transitionrun_event",
+            "lastModifiedAt": 1597359892257
+        },
+        {
+            "name": "transitionstart_event",
+            "lastModifiedAt": 1597359892904
+        }
+    ]
+}

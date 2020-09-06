@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193451996
-    },
-    {
-        "name": "getVideoPlaybackQuality",
-        "lastModifiedAt": 1596581484907
-    },
-    {
-        "name": "videoHeight",
-        "lastModifiedAt": 1596581484068
-    },
-    {
-        "name": "videoWidth",
-        "lastModifiedAt": 1596581484366
-    }
-]
+{
+    "name": "HTMLVideoElement",
+    "lastModifiedAt": 1597193451996,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193451996
+        },
+        {
+            "name": "getVideoPlaybackQuality",
+            "lastModifiedAt": 1596581484907
+        },
+        {
+            "name": "videoHeight",
+            "lastModifiedAt": 1596581484068
+        },
+        {
+            "name": "videoWidth",
+            "lastModifiedAt": 1596581484366
+        }
+    ]
+}

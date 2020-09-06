@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192265424
-    },
-    {
-        "name": "query",
-        "lastModifiedAt": 1599280535936
-    },
-    {
-        "name": "revoke",
-        "lastModifiedAt": 1597192267151
-    }
-]
+{
+    "name": "Permissions",
+    "lastModifiedAt": 1599280535936,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192265424
+        },
+        {
+            "name": "query",
+            "lastModifiedAt": 1599280535936
+        },
+        {
+            "name": "revoke",
+            "lastModifiedAt": 1597192267151
+        }
+    ]
+}

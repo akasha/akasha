@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "MessageChannel",
-        "lastModifiedAt": 1597193305619
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193305233
-    },
-    {
-        "name": "port1",
-        "lastModifiedAt": 1599278974702
-    },
-    {
-        "name": "port2",
-        "lastModifiedAt": 1599278975817
-    }
-]
+{
+    "name": "MessageChannel",
+    "lastModifiedAt": 1599278975817,
+    "entries": [
+        {
+            "name": "MessageChannel",
+            "lastModifiedAt": 1597193305619
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193305233
+        },
+        {
+            "name": "port1",
+            "lastModifiedAt": 1599278974702
+        },
+        {
+            "name": "port2",
+            "lastModifiedAt": 1599278975817
+        }
+    ]
+}

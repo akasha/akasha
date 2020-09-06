@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581570622
-    }
-]
+{
+    "name": "BeforeUnloadEvent",
+    "lastModifiedAt": 1596581570622,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581570622
+        }
+    ]
+}

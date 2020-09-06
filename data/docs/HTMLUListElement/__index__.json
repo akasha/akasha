@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193392872
-    }
-]
+{
+    "name": "HTMLUListElement",
+    "lastModifiedAt": 1597193392872,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193392872
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192383042
-    }
-]
+{
+    "name": "SVGURIReference",
+    "lastModifiedAt": 1597192383042,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192383042
+        }
+    ]
+}

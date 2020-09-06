@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "GainNode",
-        "lastModifiedAt": 1597192547826
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192547474
-    },
-    {
-        "name": "gain",
-        "lastModifiedAt": 1597192548645
-    }
-]
+{
+    "name": "GainNode",
+    "lastModifiedAt": 1597192548645,
+    "entries": [
+        {
+            "name": "GainNode",
+            "lastModifiedAt": 1597192547826
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192547474
+        },
+        {
+            "name": "gain",
+            "lastModifiedAt": 1597192548645
+        }
+    ]
+}

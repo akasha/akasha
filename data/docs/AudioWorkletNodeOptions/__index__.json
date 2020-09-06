@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192533548
-    }
-]
+{
+    "name": "AudioWorkletNodeOptions",
+    "lastModifiedAt": 1597192533548,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192533548
+        }
+    ]
+}

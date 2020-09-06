@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192703464
-    }
-]
+{
+    "name": "OES_standard_derivatives",
+    "lastModifiedAt": 1597192703464,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192703464
+        }
+    ]
+}

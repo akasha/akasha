@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190979316
-    },
-    {
-        "name": "absolute",
-        "lastModifiedAt": 1597190980189
-    },
-    {
-        "name": "alpha",
-        "lastModifiedAt": 1597190980997
-    },
-    {
-        "name": "beta",
-        "lastModifiedAt": 1599280553753
-    },
-    {
-        "name": "gamma",
-        "lastModifiedAt": 1599280554867
-    }
-]
+{
+    "name": "DeviceOrientationEvent",
+    "lastModifiedAt": 1599280554867,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190979316
+        },
+        {
+            "name": "absolute",
+            "lastModifiedAt": 1597190980189
+        },
+        {
+            "name": "alpha",
+            "lastModifiedAt": 1597190980997
+        },
+        {
+            "name": "beta",
+            "lastModifiedAt": 1599280553753
+        },
+        {
+            "name": "gamma",
+            "lastModifiedAt": 1599280554867
+        }
+    ]
+}

@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192328070
-    },
-    {
-        "name": "controller",
-        "lastModifiedAt": 1597192328351
-    },
-    {
-        "name": "getRegistration",
-        "lastModifiedAt": 1597192329413
-    },
-    {
-        "name": "getRegistrations",
-        "lastModifiedAt": 1597192329654
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597360339374
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1597279542376
-    },
-    {
-        "name": "register",
-        "lastModifiedAt": 1597192329147
-    },
-    {
-        "name": "startMessages",
-        "lastModifiedAt": 1597192329899
-    }
-]
+{
+    "name": "ServiceWorkerContainer",
+    "lastModifiedAt": 1597360339374,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192328070
+        },
+        {
+            "name": "controller",
+            "lastModifiedAt": 1597192328351
+        },
+        {
+            "name": "getRegistration",
+            "lastModifiedAt": 1597192329413
+        },
+        {
+            "name": "getRegistrations",
+            "lastModifiedAt": 1597192329654
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597360339374
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1597279542376
+        },
+        {
+            "name": "register",
+            "lastModifiedAt": 1597192329147
+        },
+        {
+            "name": "startMessages",
+            "lastModifiedAt": 1597192329899
+        }
+    ]
+}

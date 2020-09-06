@@ -1,83 +1,87 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280562928
-    },
-    {
-        "name": "add",
-        "lastModifiedAt": 1599280567375
-    },
-    {
-        "name": "autoIncrement",
-        "lastModifiedAt": 1597192089076
-    },
-    {
-        "name": "clear",
-        "lastModifiedAt": 1599280568065
-    },
-    {
-        "name": "count",
-        "lastModifiedAt": 1597192089930
-    },
-    {
-        "name": "createIndex",
-        "lastModifiedAt": 1599280570359
-    },
-    {
-        "name": "delete",
-        "lastModifiedAt": 1599280570994
-    },
-    {
-        "name": "deleteIndex",
-        "lastModifiedAt": 1599280571661
-    },
-    {
-        "name": "get",
-        "lastModifiedAt": 1597192092145
-    },
-    {
-        "name": "getAll",
-        "lastModifiedAt": 1597192092766
-    },
-    {
-        "name": "getAllKeys",
-        "lastModifiedAt": 1597192093083
-    },
-    {
-        "name": "getKey",
-        "lastModifiedAt": 1597192092458
-    },
-    {
-        "name": "index",
-        "lastModifiedAt": 1599280576292
-    },
-    {
-        "name": "indexNames",
-        "lastModifiedAt": 1597192087376
-    },
-    {
-        "name": "keyPath",
-        "lastModifiedAt": 1597192087640
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1597192087949
-    },
-    {
-        "name": "openCursor",
-        "lastModifiedAt": 1599280576808
-    },
-    {
-        "name": "openKeyCursor",
-        "lastModifiedAt": 1599280577405
-    },
-    {
-        "name": "put",
-        "lastModifiedAt": 1597192094197
-    },
-    {
-        "name": "transaction",
-        "lastModifiedAt": 1597192088763
-    }
-]
+{
+    "name": "IDBObjectStore",
+    "lastModifiedAt": 1599280577405,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280562928
+        },
+        {
+            "name": "add",
+            "lastModifiedAt": 1599280567375
+        },
+        {
+            "name": "autoIncrement",
+            "lastModifiedAt": 1597192089076
+        },
+        {
+            "name": "clear",
+            "lastModifiedAt": 1599280568065
+        },
+        {
+            "name": "count",
+            "lastModifiedAt": 1597192089930
+        },
+        {
+            "name": "createIndex",
+            "lastModifiedAt": 1599280570359
+        },
+        {
+            "name": "delete",
+            "lastModifiedAt": 1599280570994
+        },
+        {
+            "name": "deleteIndex",
+            "lastModifiedAt": 1599280571661
+        },
+        {
+            "name": "get",
+            "lastModifiedAt": 1597192092145
+        },
+        {
+            "name": "getAll",
+            "lastModifiedAt": 1597192092766
+        },
+        {
+            "name": "getAllKeys",
+            "lastModifiedAt": 1597192093083
+        },
+        {
+            "name": "getKey",
+            "lastModifiedAt": 1597192092458
+        },
+        {
+            "name": "index",
+            "lastModifiedAt": 1599280576292
+        },
+        {
+            "name": "indexNames",
+            "lastModifiedAt": 1597192087376
+        },
+        {
+            "name": "keyPath",
+            "lastModifiedAt": 1597192087640
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1597192087949
+        },
+        {
+            "name": "openCursor",
+            "lastModifiedAt": 1599280576808
+        },
+        {
+            "name": "openKeyCursor",
+            "lastModifiedAt": 1599280577405
+        },
+        {
+            "name": "put",
+            "lastModifiedAt": 1597192094197
+        },
+        {
+            "name": "transaction",
+            "lastModifiedAt": 1597192088763
+        }
+    ]
+}

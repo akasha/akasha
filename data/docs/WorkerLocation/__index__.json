@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193181425
-    }
-]
+{
+    "name": "WorkerLocation",
+    "lastModifiedAt": 1597193181425,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193181425
+        }
+    ]
+}

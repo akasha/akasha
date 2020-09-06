@@ -1,79 +1,83 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278008971
-    },
-    {
-        "name": "activate_event",
-        "lastModifiedAt": 1597358290982
-    },
-    {
-        "name": "caches",
-        "lastModifiedAt": 1597190528193
-    },
-    {
-        "name": "clients",
-        "lastModifiedAt": 1597190526582
-    },
-    {
-        "name": "contentdelete_event",
-        "lastModifiedAt": 1599278013963
-    },
-    {
-        "name": "install_event",
-        "lastModifiedAt": 1597358291642
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597358292256
-    },
-    {
-        "name": "notificationclick_event",
-        "lastModifiedAt": 1597358293270
-    },
-    {
-        "name": "onactivate",
-        "lastModifiedAt": 1599279459138
-    },
-    {
-        "name": "oncontentdelete",
-        "lastModifiedAt": 1599278018160
-    },
-    {
-        "name": "oninstall",
-        "lastModifiedAt": 1597190531459
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1599279461918
-    },
-    {
-        "name": "onnotificationclick",
-        "lastModifiedAt": 1597190532566
-    },
-    {
-        "name": "onpush",
-        "lastModifiedAt": 1597190532946
-    },
-    {
-        "name": "onpushsubscriptionchange",
-        "lastModifiedAt": 1597190533490
-    },
-    {
-        "name": "push_event",
-        "lastModifiedAt": 1597358294434
-    },
-    {
-        "name": "pushsubscriptionchange_event",
-        "lastModifiedAt": 1597358295084
-    },
-    {
-        "name": "registration",
-        "lastModifiedAt": 1599279451692
-    },
-    {
-        "name": "skipWaiting",
-        "lastModifiedAt": 1597190528568
-    }
-]
+{
+    "name": "ServiceWorkerGlobalScope",
+    "lastModifiedAt": 1599279461918,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278008971
+        },
+        {
+            "name": "activate_event",
+            "lastModifiedAt": 1597358290982
+        },
+        {
+            "name": "caches",
+            "lastModifiedAt": 1597190528193
+        },
+        {
+            "name": "clients",
+            "lastModifiedAt": 1597190526582
+        },
+        {
+            "name": "contentdelete_event",
+            "lastModifiedAt": 1599278013963
+        },
+        {
+            "name": "install_event",
+            "lastModifiedAt": 1597358291642
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597358292256
+        },
+        {
+            "name": "notificationclick_event",
+            "lastModifiedAt": 1597358293270
+        },
+        {
+            "name": "onactivate",
+            "lastModifiedAt": 1599279459138
+        },
+        {
+            "name": "oncontentdelete",
+            "lastModifiedAt": 1599278018160
+        },
+        {
+            "name": "oninstall",
+            "lastModifiedAt": 1597190531459
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1599279461918
+        },
+        {
+            "name": "onnotificationclick",
+            "lastModifiedAt": 1597190532566
+        },
+        {
+            "name": "onpush",
+            "lastModifiedAt": 1597190532946
+        },
+        {
+            "name": "onpushsubscriptionchange",
+            "lastModifiedAt": 1597190533490
+        },
+        {
+            "name": "push_event",
+            "lastModifiedAt": 1597358294434
+        },
+        {
+            "name": "pushsubscriptionchange_event",
+            "lastModifiedAt": 1597358295084
+        },
+        {
+            "name": "registration",
+            "lastModifiedAt": 1599279451692
+        },
+        {
+            "name": "skipWaiting",
+            "lastModifiedAt": 1597190528568
+        }
+    ]
+}

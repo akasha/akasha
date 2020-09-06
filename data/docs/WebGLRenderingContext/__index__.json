@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192683340
-    }
-]
+{
+    "name": "WebGLRenderingContext",
+    "lastModifiedAt": 1597192683340,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192683340
+        }
+    ]
+}

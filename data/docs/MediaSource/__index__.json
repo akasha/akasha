@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "MediaSource",
-        "lastModifiedAt": 1597192142727
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192142477
-    },
-    {
-        "name": "activeSourceBuffers",
-        "lastModifiedAt": 1597192143856
-    },
-    {
-        "name": "addSourceBuffer",
-        "lastModifiedAt": 1597192145802
-    },
-    {
-        "name": "clearLiveSeekableRange",
-        "lastModifiedAt": 1597192146063
-    },
-    {
-        "name": "duration",
-        "lastModifiedAt": 1597192144983
-    },
-    {
-        "name": "endOfStream",
-        "lastModifiedAt": 1597192146442
-    },
-    {
-        "name": "isTypeSupported",
-        "lastModifiedAt": 1597192147357
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1597192144133
-    },
-    {
-        "name": "removeSourceBuffer",
-        "lastModifiedAt": 1597192146706
-    },
-    {
-        "name": "setLiveSeekableRange",
-        "lastModifiedAt": 1597192146952
-    },
-    {
-        "name": "sourceBuffers",
-        "lastModifiedAt": 1597192143039
-    }
-]
+{
+    "name": "MediaSource",
+    "lastModifiedAt": 1597192147357,
+    "entries": [
+        {
+            "name": "MediaSource",
+            "lastModifiedAt": 1597192142727
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192142477
+        },
+        {
+            "name": "activeSourceBuffers",
+            "lastModifiedAt": 1597192143856
+        },
+        {
+            "name": "addSourceBuffer",
+            "lastModifiedAt": 1597192145802
+        },
+        {
+            "name": "clearLiveSeekableRange",
+            "lastModifiedAt": 1597192146063
+        },
+        {
+            "name": "duration",
+            "lastModifiedAt": 1597192144983
+        },
+        {
+            "name": "endOfStream",
+            "lastModifiedAt": 1597192146442
+        },
+        {
+            "name": "isTypeSupported",
+            "lastModifiedAt": 1597192147357
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1597192144133
+        },
+        {
+            "name": "removeSourceBuffer",
+            "lastModifiedAt": 1597192146706
+        },
+        {
+            "name": "setLiveSeekableRange",
+            "lastModifiedAt": 1597192146952
+        },
+        {
+            "name": "sourceBuffers",
+            "lastModifiedAt": 1597192143039
+        }
+    ]
+}

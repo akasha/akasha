@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "FormDataEvent",
-        "lastModifiedAt": 1597193500696
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193500383
-    },
-    {
-        "name": "formData",
-        "lastModifiedAt": 1596581523818
-    }
-]
+{
+    "name": "FormDataEvent",
+    "lastModifiedAt": 1597193500696,
+    "entries": [
+        {
+            "name": "FormDataEvent",
+            "lastModifiedAt": 1597193500696
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193500383
+        },
+        {
+            "name": "formData",
+            "lastModifiedAt": 1596581523818
+        }
+    ]
+}

@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192288623
-    },
-    {
-        "name": "toJSON",
-        "lastModifiedAt": 1599279354319
-    }
-]
+{
+    "name": "PerformanceResourceTiming",
+    "lastModifiedAt": 1599279354319,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192288623
+        },
+        {
+            "name": "toJSON",
+            "lastModifiedAt": 1599279354319
+        }
+    ]
+}

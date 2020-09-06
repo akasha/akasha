@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192310061
-    },
-    {
-        "name": "delete",
-        "lastModifiedAt": 1597192312527
-    },
-    {
-        "name": "has",
-        "lastModifiedAt": 1597192311287
-    },
-    {
-        "name": "keys",
-        "lastModifiedAt": 1599279666214
-    },
-    {
-        "name": "match",
-        "lastModifiedAt": 1599279662365
-    },
-    {
-        "name": "open",
-        "lastModifiedAt": 1597192312260
-    }
-]
+{
+    "name": "CacheStorage",
+    "lastModifiedAt": 1599279666214,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192310061
+        },
+        {
+            "name": "delete",
+            "lastModifiedAt": 1597192312527
+        },
+        {
+            "name": "has",
+            "lastModifiedAt": 1597192311287
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1599279666214
+        },
+        {
+            "name": "match",
+            "lastModifiedAt": 1599279662365
+        },
+        {
+            "name": "open",
+            "lastModifiedAt": 1597192312260
+        }
+    ]
+}

@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192726745
-    },
-    {
-        "name": "candidate",
-        "lastModifiedAt": 1596544550355
-    },
-    {
-        "name": "sdpMLineIndex",
-        "lastModifiedAt": 1596544551159
-    },
-    {
-        "name": "sdpMid",
-        "lastModifiedAt": 1596544551397
-    },
-    {
-        "name": "usernameFragment",
-        "lastModifiedAt": 1596544552194
-    }
-]
+{
+    "name": "RTCIceCandidateInit",
+    "lastModifiedAt": 1597192726745,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192726745
+        },
+        {
+            "name": "candidate",
+            "lastModifiedAt": 1596544550355
+        },
+        {
+            "name": "sdpMLineIndex",
+            "lastModifiedAt": 1596544551159
+        },
+        {
+            "name": "sdpMid",
+            "lastModifiedAt": 1596544551397
+        },
+        {
+            "name": "usernameFragment",
+            "lastModifiedAt": 1596544552194
+        }
+    ]
+}

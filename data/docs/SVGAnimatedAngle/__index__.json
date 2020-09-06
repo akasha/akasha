@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192459727
-    }
-]
+{
+    "name": "SVGAnimatedAngle",
+    "lastModifiedAt": 1597192459727,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192459727
+        }
+    ]
+}

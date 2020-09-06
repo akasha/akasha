@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193269591
-    }
-]
+{
+    "name": "HTMLDataListElement",
+    "lastModifiedAt": 1597193269591,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193269591
+        }
+    ]
+}

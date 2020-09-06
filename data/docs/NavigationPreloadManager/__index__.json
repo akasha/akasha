@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192319275
-    }
-]
+{
+    "name": "NavigationPreloadManager",
+    "lastModifiedAt": 1597192319275,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192319275
+        }
+    ]
+}

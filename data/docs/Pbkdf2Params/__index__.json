@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192666274
-    }
-]
+{
+    "name": "Pbkdf2Params",
+    "lastModifiedAt": 1597192666274,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192666274
+        }
+    ]
+}

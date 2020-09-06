@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192530883
-    }
-]
+{
+    "name": "AudioParamDescriptor",
+    "lastModifiedAt": 1597192530883,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192530883
+        }
+    ]
+}

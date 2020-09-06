@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192700896
-    }
-]
+{
+    "name": "EXT_shader_texture_lod",
+    "lastModifiedAt": 1597192700896,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192700896
+        }
+    ]
+}

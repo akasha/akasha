@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191986474
-    }
-]
+{
+    "name": "SVGFEDropShadowElement",
+    "lastModifiedAt": 1597191986474,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191986474
+        }
+    ]
+}

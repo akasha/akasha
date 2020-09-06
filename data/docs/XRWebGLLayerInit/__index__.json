@@ -1,31 +1,35 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192933710
-    },
-    {
-        "name": "alpha",
-        "lastModifiedAt": 1596711851998
-    },
-    {
-        "name": "antialias",
-        "lastModifiedAt": 1596711852619
-    },
-    {
-        "name": "depth",
-        "lastModifiedAt": 1599279624635
-    },
-    {
-        "name": "framebufferScaleFactor",
-        "lastModifiedAt": 1596711853905
-    },
-    {
-        "name": "ignoreDepthValues",
-        "lastModifiedAt": 1596711854371
-    },
-    {
-        "name": "stencil",
-        "lastModifiedAt": 1599279626703
-    }
-]
+{
+    "name": "XRWebGLLayerInit",
+    "lastModifiedAt": 1599279626703,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192933710
+        },
+        {
+            "name": "alpha",
+            "lastModifiedAt": 1596711851998
+        },
+        {
+            "name": "antialias",
+            "lastModifiedAt": 1596711852619
+        },
+        {
+            "name": "depth",
+            "lastModifiedAt": 1599279624635
+        },
+        {
+            "name": "framebufferScaleFactor",
+            "lastModifiedAt": 1596711853905
+        },
+        {
+            "name": "ignoreDepthValues",
+            "lastModifiedAt": 1596711854371
+        },
+        {
+            "name": "stencil",
+            "lastModifiedAt": 1599279626703
+        }
+    ]
+}

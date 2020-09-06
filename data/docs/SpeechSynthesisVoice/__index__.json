@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192347164
-    },
-    {
-        "name": "default",
-        "lastModifiedAt": 1596712530652
-    },
-    {
-        "name": "lang",
-        "lastModifiedAt": 1596712531155
-    },
-    {
-        "name": "localService",
-        "lastModifiedAt": 1596712532160
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1596712533310
-    },
-    {
-        "name": "voiceURI",
-        "lastModifiedAt": 1596712533966
-    }
-]
+{
+    "name": "SpeechSynthesisVoice",
+    "lastModifiedAt": 1597192347164,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192347164
+        },
+        {
+            "name": "default",
+            "lastModifiedAt": 1596712530652
+        },
+        {
+            "name": "lang",
+            "lastModifiedAt": 1596712531155
+        },
+        {
+            "name": "localService",
+            "lastModifiedAt": 1596712532160
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1596712533310
+        },
+        {
+            "name": "voiceURI",
+            "lastModifiedAt": 1596712533966
+        }
+    ]
+}

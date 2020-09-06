@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193238119
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596581208705
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1596581207662
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1596581207907
-    }
-]
+{
+    "name": "ImageBitmap",
+    "lastModifiedAt": 1597193238119,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193238119
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596581208705
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1596581207662
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1596581207907
+        }
+    ]
+}

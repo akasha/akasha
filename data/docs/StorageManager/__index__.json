@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193600364
-    },
-    {
-        "name": "estimate",
-        "lastModifiedAt": 1597193601285
-    },
-    {
-        "name": "persist",
-        "lastModifiedAt": 1597193602103
-    },
-    {
-        "name": "persisted",
-        "lastModifiedAt": 1597193602935
-    }
-]
+{
+    "name": "StorageManager",
+    "lastModifiedAt": 1597193602935,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193600364
+        },
+        {
+            "name": "estimate",
+            "lastModifiedAt": 1597193601285
+        },
+        {
+            "name": "persist",
+            "lastModifiedAt": 1597193602103
+        },
+        {
+            "name": "persisted",
+            "lastModifiedAt": 1597193602935
+        }
+    ]
+}

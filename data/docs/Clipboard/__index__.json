@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279577773
-    },
-    {
-        "name": "read",
-        "lastModifiedAt": 1597190552386
-    },
-    {
-        "name": "readText",
-        "lastModifiedAt": 1597190552755
-    },
-    {
-        "name": "write",
-        "lastModifiedAt": 1597190553219
-    },
-    {
-        "name": "writeText",
-        "lastModifiedAt": 1597190553553
-    }
-]
+{
+    "name": "Clipboard",
+    "lastModifiedAt": 1599279577773,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279577773
+        },
+        {
+            "name": "read",
+            "lastModifiedAt": 1597190552386
+        },
+        {
+            "name": "readText",
+            "lastModifiedAt": 1597190552755
+        },
+        {
+            "name": "write",
+            "lastModifiedAt": 1597190553219
+        },
+        {
+            "name": "writeText",
+            "lastModifiedAt": 1597190553553
+        }
+    ]
+}

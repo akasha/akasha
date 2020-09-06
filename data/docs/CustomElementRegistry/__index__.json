@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193317629
-    },
-    {
-        "name": "define",
-        "lastModifiedAt": 1596581339985
-    },
-    {
-        "name": "get",
-        "lastModifiedAt": 1596581340793
-    },
-    {
-        "name": "upgrade",
-        "lastModifiedAt": 1596581341609
-    },
-    {
-        "name": "whenDefined",
-        "lastModifiedAt": 1596581341921
-    }
-]
+{
+    "name": "CustomElementRegistry",
+    "lastModifiedAt": 1597193317629,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193317629
+        },
+        {
+            "name": "define",
+            "lastModifiedAt": 1596581339985
+        },
+        {
+            "name": "get",
+            "lastModifiedAt": 1596581340793
+        },
+        {
+            "name": "upgrade",
+            "lastModifiedAt": 1596581341609
+        },
+        {
+            "name": "whenDefined",
+            "lastModifiedAt": 1596581341921
+        }
+    ]
+}

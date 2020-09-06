@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596544562328
-    }
-]
+{
+    "name": "RTCRtpTransceiverInit",
+    "lastModifiedAt": 1596544562328,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596544562328
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192699113
-    }
-]
+{
+    "name": "WEBGL_depth_texture",
+    "lastModifiedAt": 1597192699113,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192699113
+        }
+    ]
+}

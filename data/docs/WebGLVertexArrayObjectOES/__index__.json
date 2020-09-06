@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192705166
-    }
-]
+{
+    "name": "WebGLVertexArrayObjectOES",
+    "lastModifiedAt": 1597192705166,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192705166
+        }
+    ]
+}

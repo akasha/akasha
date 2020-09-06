@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280408501
-    }
-]
+{
+    "name": "XRRenderStateInit",
+    "lastModifiedAt": 1599280408501,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280408501
+        }
+    ]
+}

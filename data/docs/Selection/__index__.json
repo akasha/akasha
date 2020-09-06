@@ -1,99 +1,103 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192295271
-    },
-    {
-        "name": "addRange",
-        "lastModifiedAt": 1597192299099
-    },
-    {
-        "name": "anchorNode",
-        "lastModifiedAt": 1597192296100
-    },
-    {
-        "name": "anchorOffset",
-        "lastModifiedAt": 1597192296897
-    },
-    {
-        "name": "collapse",
-        "lastModifiedAt": 1597192299424
-    },
-    {
-        "name": "collapseToEnd",
-        "lastModifiedAt": 1597192299715
-    },
-    {
-        "name": "collapseToStart",
-        "lastModifiedAt": 1597192300028
-    },
-    {
-        "name": "containsNode",
-        "lastModifiedAt": 1597192301023
-    },
-    {
-        "name": "deleteFromDocument",
-        "lastModifiedAt": 1597192301358
-    },
-    {
-        "name": "empty",
-        "lastModifiedAt": 1597192302493
-    },
-    {
-        "name": "extend",
-        "lastModifiedAt": 1597192302761
-    },
-    {
-        "name": "focusNode",
-        "lastModifiedAt": 1597192297129
-    },
-    {
-        "name": "focusOffset",
-        "lastModifiedAt": 1597192297382
-    },
-    {
-        "name": "getRangeAt",
-        "lastModifiedAt": 1597192303605
-    },
-    {
-        "name": "isCollapsed",
-        "lastModifiedAt": 1597192297645
-    },
-    {
-        "name": "modify",
-        "lastModifiedAt": 1597192303995
-    },
-    {
-        "name": "rangeCount",
-        "lastModifiedAt": 1597192298344
-    },
-    {
-        "name": "removeAllRanges",
-        "lastModifiedAt": 1597192304829
-    },
-    {
-        "name": "removeRange",
-        "lastModifiedAt": 1597192304788
-    },
-    {
-        "name": "selectAllChildren",
-        "lastModifiedAt": 1597192305086
-    },
-    {
-        "name": "setBaseAndExtent",
-        "lastModifiedAt": 1597192305492
-    },
-    {
-        "name": "setPosition",
-        "lastModifiedAt": 1597192305794
-    },
-    {
-        "name": "toString",
-        "lastModifiedAt": 1597192306057
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1597192298711
-    }
-]
+{
+    "name": "Selection",
+    "lastModifiedAt": 1597192306057,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192295271
+        },
+        {
+            "name": "addRange",
+            "lastModifiedAt": 1597192299099
+        },
+        {
+            "name": "anchorNode",
+            "lastModifiedAt": 1597192296100
+        },
+        {
+            "name": "anchorOffset",
+            "lastModifiedAt": 1597192296897
+        },
+        {
+            "name": "collapse",
+            "lastModifiedAt": 1597192299424
+        },
+        {
+            "name": "collapseToEnd",
+            "lastModifiedAt": 1597192299715
+        },
+        {
+            "name": "collapseToStart",
+            "lastModifiedAt": 1597192300028
+        },
+        {
+            "name": "containsNode",
+            "lastModifiedAt": 1597192301023
+        },
+        {
+            "name": "deleteFromDocument",
+            "lastModifiedAt": 1597192301358
+        },
+        {
+            "name": "empty",
+            "lastModifiedAt": 1597192302493
+        },
+        {
+            "name": "extend",
+            "lastModifiedAt": 1597192302761
+        },
+        {
+            "name": "focusNode",
+            "lastModifiedAt": 1597192297129
+        },
+        {
+            "name": "focusOffset",
+            "lastModifiedAt": 1597192297382
+        },
+        {
+            "name": "getRangeAt",
+            "lastModifiedAt": 1597192303605
+        },
+        {
+            "name": "isCollapsed",
+            "lastModifiedAt": 1597192297645
+        },
+        {
+            "name": "modify",
+            "lastModifiedAt": 1597192303995
+        },
+        {
+            "name": "rangeCount",
+            "lastModifiedAt": 1597192298344
+        },
+        {
+            "name": "removeAllRanges",
+            "lastModifiedAt": 1597192304829
+        },
+        {
+            "name": "removeRange",
+            "lastModifiedAt": 1597192304788
+        },
+        {
+            "name": "selectAllChildren",
+            "lastModifiedAt": 1597192305086
+        },
+        {
+            "name": "setBaseAndExtent",
+            "lastModifiedAt": 1597192305492
+        },
+        {
+            "name": "setPosition",
+            "lastModifiedAt": 1597192305794
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1597192306057
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1597192298711
+        }
+    ]
+}

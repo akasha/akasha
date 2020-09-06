@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192032975
-    }
-]
+{
+    "name": "DOMQuad",
+    "lastModifiedAt": 1597192032975,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192032975
+        }
+    ]
+}

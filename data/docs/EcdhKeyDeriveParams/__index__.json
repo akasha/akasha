@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279230103
-    }
-]
+{
+    "name": "EcdhKeyDeriveParams",
+    "lastModifiedAt": 1599279230103,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279230103
+        }
+    ]
+}

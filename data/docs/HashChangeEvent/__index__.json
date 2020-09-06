@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193394564
-    },
-    {
-        "name": "newURL",
-        "lastModifiedAt": 1596581398888
-    },
-    {
-        "name": "oldURL",
-        "lastModifiedAt": 1596581399231
-    }
-]
+{
+    "name": "HashChangeEvent",
+    "lastModifiedAt": 1597193394564,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193394564
+        },
+        {
+            "name": "newURL",
+            "lastModifiedAt": 1596581398888
+        },
+        {
+            "name": "oldURL",
+            "lastModifiedAt": 1596581399231
+        }
+    ]
+}

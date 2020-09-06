@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "ConvolverNode",
-        "lastModifiedAt": 1597192541077
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192540817
-    },
-    {
-        "name": "buffer",
-        "lastModifiedAt": 1597192541886
-    },
-    {
-        "name": "normalize",
-        "lastModifiedAt": 1597192542198
-    }
-]
+{
+    "name": "ConvolverNode",
+    "lastModifiedAt": 1597192542198,
+    "entries": [
+        {
+            "name": "ConvolverNode",
+            "lastModifiedAt": 1597192541077
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192540817
+        },
+        {
+            "name": "buffer",
+            "lastModifiedAt": 1597192541886
+        },
+        {
+            "name": "normalize",
+            "lastModifiedAt": 1597192542198
+        }
+    ]
+}

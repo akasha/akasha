@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192100959
-    },
-    {
-        "name": "cmp",
-        "lastModifiedAt": 1597192102526
-    },
-    {
-        "name": "databases",
-        "lastModifiedAt": 1599279819431
-    },
-    {
-        "name": "deleteDatabase",
-        "lastModifiedAt": 1597192102278
-    },
-    {
-        "name": "open",
-        "lastModifiedAt": 1597192101491
-    }
-]
+{
+    "name": "IDBFactory",
+    "lastModifiedAt": 1599279819431,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192100959
+        },
+        {
+            "name": "cmp",
+            "lastModifiedAt": 1597192102526
+        },
+        {
+            "name": "databases",
+            "lastModifiedAt": 1599279819431
+        },
+        {
+            "name": "deleteDatabase",
+            "lastModifiedAt": 1597192102278
+        },
+        {
+            "name": "open",
+            "lastModifiedAt": 1597192101491
+        }
+    ]
+}

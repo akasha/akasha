@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "DragEvent",
-        "lastModifiedAt": 1596581503935
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193480280
-    },
-    {
-        "name": "dataTransfer",
-        "lastModifiedAt": 1596581504192
-    }
-]
+{
+    "name": "DragEvent",
+    "lastModifiedAt": 1597193480280,
+    "entries": [
+        {
+            "name": "DragEvent",
+            "lastModifiedAt": 1596581503935
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193480280
+        },
+        {
+            "name": "dataTransfer",
+            "lastModifiedAt": 1596581504192
+        }
+    ]
+}

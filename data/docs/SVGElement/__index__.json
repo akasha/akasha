@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192438480
-    },
-    {
-        "name": "abort_event",
-        "lastModifiedAt": 1597358930616
-    },
-    {
-        "name": "dataset",
-        "lastModifiedAt": 1597192439129
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1597358931257
-    },
-    {
-        "name": "load_event",
-        "lastModifiedAt": 1597358932472
-    },
-    {
-        "name": "resize_event",
-        "lastModifiedAt": 1597358933260
-    },
-    {
-        "name": "scroll_event",
-        "lastModifiedAt": 1597358934440
-    },
-    {
-        "name": "unload_event",
-        "lastModifiedAt": 1597358935536
-    }
-]
+{
+    "name": "SVGElement",
+    "lastModifiedAt": 1597358935536,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192438480
+        },
+        {
+            "name": "abort_event",
+            "lastModifiedAt": 1597358930616
+        },
+        {
+            "name": "dataset",
+            "lastModifiedAt": 1597192439129
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1597358931257
+        },
+        {
+            "name": "load_event",
+            "lastModifiedAt": 1597358932472
+        },
+        {
+            "name": "resize_event",
+            "lastModifiedAt": 1597358933260
+        },
+        {
+            "name": "scroll_event",
+            "lastModifiedAt": 1597358934440
+        },
+        {
+            "name": "unload_event",
+            "lastModifiedAt": 1597358935536
+        }
+    ]
+}

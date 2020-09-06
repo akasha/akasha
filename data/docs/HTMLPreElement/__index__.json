@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193562365
-    }
-]
+{
+    "name": "HTMLPreElement",
+    "lastModifiedAt": 1597193562365,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193562365
+        }
+    ]
+}

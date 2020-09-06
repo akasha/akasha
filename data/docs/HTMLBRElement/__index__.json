@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193497311
-    }
-]
+{
+    "name": "HTMLBRElement",
+    "lastModifiedAt": 1597193497311,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193497311
+        }
+    ]
+}

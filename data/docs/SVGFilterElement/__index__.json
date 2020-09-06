@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191972906
-    }
-]
+{
+    "name": "SVGFilterElement",
+    "lastModifiedAt": 1597191972906,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191972906
+        }
+    ]
+}

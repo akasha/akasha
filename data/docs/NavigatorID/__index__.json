@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193162346
-    },
-    {
-        "name": "appCodeName",
-        "lastModifiedAt": 1599279118652
-    },
-    {
-        "name": "appName",
-        "lastModifiedAt": 1599279119195
-    },
-    {
-        "name": "appVersion",
-        "lastModifiedAt": 1599279120313
-    },
-    {
-        "name": "platform",
-        "lastModifiedAt": 1596581130226
-    },
-    {
-        "name": "product",
-        "lastModifiedAt": 1599279122736
-    },
-    {
-        "name": "taintEnabled",
-        "lastModifiedAt": 1596581131178
-    },
-    {
-        "name": "userAgent",
-        "lastModifiedAt": 1596581130869
-    }
-]
+{
+    "name": "NavigatorID",
+    "lastModifiedAt": 1599279122736,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193162346
+        },
+        {
+            "name": "appCodeName",
+            "lastModifiedAt": 1599279118652
+        },
+        {
+            "name": "appName",
+            "lastModifiedAt": 1599279119195
+        },
+        {
+            "name": "appVersion",
+            "lastModifiedAt": 1599279120313
+        },
+        {
+            "name": "platform",
+            "lastModifiedAt": 1596581130226
+        },
+        {
+            "name": "product",
+            "lastModifiedAt": 1599279122736
+        },
+        {
+            "name": "taintEnabled",
+            "lastModifiedAt": 1596581131178
+        },
+        {
+            "name": "userAgent",
+            "lastModifiedAt": 1596581130869
+        }
+    ]
+}

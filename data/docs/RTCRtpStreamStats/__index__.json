@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596544694539
-    }
-]
+{
+    "name": "RTCRtpStreamStats",
+    "lastModifiedAt": 1596544694539,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596544694539
+        }
+    ]
+}

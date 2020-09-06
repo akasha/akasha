@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "AbortController",
-        "lastModifiedAt": 1597193087569
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193087189
-    },
-    {
-        "name": "abort",
-        "lastModifiedAt": 1597193088673
-    },
-    {
-        "name": "signal",
-        "lastModifiedAt": 1597193087831
-    }
-]
+{
+    "name": "AbortController",
+    "lastModifiedAt": 1597193088673,
+    "entries": [
+        {
+            "name": "AbortController",
+            "lastModifiedAt": 1597193087569
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193087189
+        },
+        {
+            "name": "abort",
+            "lastModifiedAt": 1597193088673
+        },
+        {
+            "name": "signal",
+            "lastModifiedAt": 1597193087831
+        }
+    ]
+}

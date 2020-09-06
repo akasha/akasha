@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192001664
-    },
-    {
-        "name": "axes",
-        "lastModifiedAt": 1597192001934
-    },
-    {
-        "name": "buttons",
-        "lastModifiedAt": 1597192002351
-    },
-    {
-        "name": "connected",
-        "lastModifiedAt": 1597192002618
-    },
-    {
-        "name": "displayId",
-        "lastModifiedAt": 1599279192110
-    },
-    {
-        "name": "id",
-        "lastModifiedAt": 1597192003268
-    },
-    {
-        "name": "index",
-        "lastModifiedAt": 1597192003576
-    },
-    {
-        "name": "mapping",
-        "lastModifiedAt": 1597192004025
-    },
-    {
-        "name": "timestamp",
-        "lastModifiedAt": 1597192004290
-    }
-]
+{
+    "name": "Gamepad",
+    "lastModifiedAt": 1599279192110,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192001664
+        },
+        {
+            "name": "axes",
+            "lastModifiedAt": 1597192001934
+        },
+        {
+            "name": "buttons",
+            "lastModifiedAt": 1597192002351
+        },
+        {
+            "name": "connected",
+            "lastModifiedAt": 1597192002618
+        },
+        {
+            "name": "displayId",
+            "lastModifiedAt": 1599279192110
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1597192003268
+        },
+        {
+            "name": "index",
+            "lastModifiedAt": 1597192003576
+        },
+        {
+            "name": "mapping",
+            "lastModifiedAt": 1597192004025
+        },
+        {
+            "name": "timestamp",
+            "lastModifiedAt": 1597192004290
+        }
+    ]
+}

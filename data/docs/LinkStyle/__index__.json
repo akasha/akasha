@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190708811
-    }
-]
+{
+    "name": "LinkStyle",
+    "lastModifiedAt": 1597190708811,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190708811
+        }
+    ]
+}

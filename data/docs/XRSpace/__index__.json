@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596711964473
-    }
-]
+{
+    "name": "XRSpace",
+    "lastModifiedAt": 1596711964473,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596711964473
+        }
+    ]
+}

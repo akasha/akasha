@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190975010
-    },
-    {
-        "name": "alpha",
-        "lastModifiedAt": 1599279018242
-    },
-    {
-        "name": "beta",
-        "lastModifiedAt": 1597190976163
-    },
-    {
-        "name": "gamma",
-        "lastModifiedAt": 1597190976592
-    }
-]
+{
+    "name": "DeviceMotionEventRotationRate",
+    "lastModifiedAt": 1599279018242,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190975010
+        },
+        {
+            "name": "alpha",
+            "lastModifiedAt": 1599279018242
+        },
+        {
+            "name": "beta",
+            "lastModifiedAt": 1597190976163
+        },
+        {
+            "name": "gamma",
+            "lastModifiedAt": 1597190976592
+        }
+    ]
+}

@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279840757
-    },
-    {
-        "name": "collapsed",
-        "lastModifiedAt": 1599279841340
-    },
-    {
-        "name": "endContainer",
-        "lastModifiedAt": 1599279841910
-    },
-    {
-        "name": "endOffset",
-        "lastModifiedAt": 1597193057586
-    },
-    {
-        "name": "startContainer",
-        "lastModifiedAt": 1599279842846
-    },
-    {
-        "name": "startOffset",
-        "lastModifiedAt": 1597193058161
-    }
-]
+{
+    "name": "AbstractRange",
+    "lastModifiedAt": 1599279842846,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279840757
+        },
+        {
+            "name": "collapsed",
+            "lastModifiedAt": 1599279841340
+        },
+        {
+            "name": "endContainer",
+            "lastModifiedAt": 1599279841910
+        },
+        {
+            "name": "endOffset",
+            "lastModifiedAt": 1597193057586
+        },
+        {
+            "name": "startContainer",
+            "lastModifiedAt": 1599279842846
+        },
+        {
+            "name": "startOffset",
+            "lastModifiedAt": 1597193058161
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191935044
-    }
-]
+{
+    "name": "FileReaderSync",
+    "lastModifiedAt": 1597191935044,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191935044
+        }
+    ]
+}

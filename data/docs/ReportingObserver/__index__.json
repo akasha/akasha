@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "ReportingObserver",
-        "lastModifiedAt": 1597389390369
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597389389994
-    },
-    {
-        "name": "disconnect",
-        "lastModifiedAt": 1597389391223
-    },
-    {
-        "name": "observe",
-        "lastModifiedAt": 1597389391624
-    },
-    {
-        "name": "takeRecords",
-        "lastModifiedAt": 1597389392029
-    }
-]
+{
+    "name": "ReportingObserver",
+    "lastModifiedAt": 1597389392029,
+    "entries": [
+        {
+            "name": "ReportingObserver",
+            "lastModifiedAt": 1597389390369
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597389389994
+        },
+        {
+            "name": "disconnect",
+            "lastModifiedAt": 1597389391223
+        },
+        {
+            "name": "observe",
+            "lastModifiedAt": 1597389391624
+        },
+        {
+            "name": "takeRecords",
+            "lastModifiedAt": 1597389392029
+        }
+    ]
+}

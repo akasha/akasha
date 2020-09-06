@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192388941
-    }
-]
+{
+    "name": "SVGForeignObjectElement",
+    "lastModifiedAt": 1597192388941,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192388941
+        }
+    ]
+}

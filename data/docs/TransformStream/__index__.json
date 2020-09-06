@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279378026
-    }
-]
+{
+    "name": "TransformStream",
+    "lastModifiedAt": 1599279378026,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279378026
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596544753173
-    }
-]
+{
+    "name": "DoubleRange",
+    "lastModifiedAt": 1596544753173,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596544753173
+        }
+    ]
+}

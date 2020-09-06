@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193258429
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596581225283
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597358963527
-    },
-    {
-        "name": "messageerror_event",
-        "lastModifiedAt": 1597358964012
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1599280238299
-    },
-    {
-        "name": "onmessageerror",
-        "lastModifiedAt": 1599280239375
-    },
-    {
-        "name": "postMessage",
-        "lastModifiedAt": 1596581225582
-    },
-    {
-        "name": "start",
-        "lastModifiedAt": 1596581226108
-    }
-]
+{
+    "name": "MessagePort",
+    "lastModifiedAt": 1599280239375,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193258429
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596581225283
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597358963527
+        },
+        {
+            "name": "messageerror_event",
+            "lastModifiedAt": 1597358964012
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1599280238299
+        },
+        {
+            "name": "onmessageerror",
+            "lastModifiedAt": 1599280239375
+        },
+        {
+            "name": "postMessage",
+            "lastModifiedAt": 1596581225582
+        },
+        {
+            "name": "start",
+            "lastModifiedAt": 1596581226108
+        }
+    ]
+}

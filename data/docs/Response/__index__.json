@@ -1,55 +1,59 @@
 
-[
-    {
-        "name": "Response",
-        "lastModifiedAt": 1597193108966
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193108703
-    },
-    {
-        "name": "clone",
-        "lastModifiedAt": 1597193112321
-    },
-    {
-        "name": "error",
-        "lastModifiedAt": 1597193112617
-    },
-    {
-        "name": "headers",
-        "lastModifiedAt": 1597193109434
-    },
-    {
-        "name": "ok",
-        "lastModifiedAt": 1597193109971
-    },
-    {
-        "name": "redirect",
-        "lastModifiedAt": 1597193112856
-    },
-    {
-        "name": "redirected",
-        "lastModifiedAt": 1597193110342
-    },
-    {
-        "name": "status",
-        "lastModifiedAt": 1597193110582
-    },
-    {
-        "name": "statusText",
-        "lastModifiedAt": 1597193110823
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1597193111463
-    },
-    {
-        "name": "url",
-        "lastModifiedAt": 1597193111778
-    },
-    {
-        "name": "useFinalURL",
-        "lastModifiedAt": 1597193112080
-    }
-]
+{
+    "name": "Response",
+    "lastModifiedAt": 1597193112856,
+    "entries": [
+        {
+            "name": "Response",
+            "lastModifiedAt": 1597193108966
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193108703
+        },
+        {
+            "name": "clone",
+            "lastModifiedAt": 1597193112321
+        },
+        {
+            "name": "error",
+            "lastModifiedAt": 1597193112617
+        },
+        {
+            "name": "headers",
+            "lastModifiedAt": 1597193109434
+        },
+        {
+            "name": "ok",
+            "lastModifiedAt": 1597193109971
+        },
+        {
+            "name": "redirect",
+            "lastModifiedAt": 1597193112856
+        },
+        {
+            "name": "redirected",
+            "lastModifiedAt": 1597193110342
+        },
+        {
+            "name": "status",
+            "lastModifiedAt": 1597193110582
+        },
+        {
+            "name": "statusText",
+            "lastModifiedAt": 1597193110823
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1597193111463
+        },
+        {
+            "name": "url",
+            "lastModifiedAt": 1597193111778
+        },
+        {
+            "name": "useFinalURL",
+            "lastModifiedAt": 1597193112080
+        }
+    ]
+}

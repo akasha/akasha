@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280155920
-    }
-]
+{
+    "name": "RTCIdentityAssertion",
+    "lastModifiedAt": 1599280155920,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280155920
+        }
+    ]
+}

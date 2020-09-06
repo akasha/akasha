@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193095687
-    }
-]
+{
+    "name": "ProcessingInstruction",
+    "lastModifiedAt": 1597193095687,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193095687
+        }
+    ]
+}

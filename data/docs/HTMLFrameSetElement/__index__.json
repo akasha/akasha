@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193228962
-    }
-]
+{
+    "name": "HTMLFrameSetElement",
+    "lastModifiedAt": 1597193228962,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193228962
+        }
+    ]
+}

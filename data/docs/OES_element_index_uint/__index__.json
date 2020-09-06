@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192702661
-    }
-]
+{
+    "name": "OES_element_index_uint",
+    "lastModifiedAt": 1597192702661,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192702661
+        }
+    ]
+}

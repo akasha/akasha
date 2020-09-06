@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193156248
-    },
-    {
-        "name": "hardwareConcurrency",
-        "lastModifiedAt": 1596581119910
-    }
-]
+{
+    "name": "NavigatorConcurrentHardware",
+    "lastModifiedAt": 1597193156248,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193156248
+        },
+        {
+            "name": "hardwareConcurrency",
+            "lastModifiedAt": 1596581119910
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596544752881
-    }
-]
+{
+    "name": "MediaStreamConstraints",
+    "lastModifiedAt": 1596544752881,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596544752881
+        }
+    ]
+}

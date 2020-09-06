@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280524773
-    },
-    {
-        "name": "credential",
-        "lastModifiedAt": 1596544543966
-    },
-    {
-        "name": "credentialType",
-        "lastModifiedAt": 1596544544376
-    },
-    {
-        "name": "urls",
-        "lastModifiedAt": 1596544544684
-    },
-    {
-        "name": "username",
-        "lastModifiedAt": 1596544544928
-    }
-]
+{
+    "name": "RTCIceServer",
+    "lastModifiedAt": 1599280524773,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280524773
+        },
+        {
+            "name": "credential",
+            "lastModifiedAt": 1596544543966
+        },
+        {
+            "name": "credentialType",
+            "lastModifiedAt": 1596544544376
+        },
+        {
+            "name": "urls",
+            "lastModifiedAt": 1596544544684
+        },
+        {
+            "name": "username",
+            "lastModifiedAt": 1596544544928
+        }
+    ]
+}

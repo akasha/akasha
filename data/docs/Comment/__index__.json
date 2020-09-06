@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "Comment",
-        "lastModifiedAt": 1597193069863
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193069632
-    }
-]
+{
+    "name": "Comment",
+    "lastModifiedAt": 1597193069863,
+    "entries": [
+        {
+            "name": "Comment",
+            "lastModifiedAt": 1597193069863
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193069632
+        }
+    ]
+}

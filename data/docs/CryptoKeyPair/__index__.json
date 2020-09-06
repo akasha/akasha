@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192664980
-    }
-]
+{
+    "name": "CryptoKeyPair",
+    "lastModifiedAt": 1597192664980,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192664980
+        }
+    ]
+}

@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280418188
-    },
-    {
-        "name": "ended_event",
-        "lastModifiedAt": 1597359159812
-    },
-    {
-        "name": "onended",
-        "lastModifiedAt": 1597278425217
-    },
-    {
-        "name": "start",
-        "lastModifiedAt": 1597192583056
-    },
-    {
-        "name": "stop",
-        "lastModifiedAt": 1597192583315
-    }
-]
+{
+    "name": "AudioScheduledSourceNode",
+    "lastModifiedAt": 1599280418188,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280418188
+        },
+        {
+            "name": "ended_event",
+            "lastModifiedAt": 1597359159812
+        },
+        {
+            "name": "onended",
+            "lastModifiedAt": 1597278425217
+        },
+        {
+            "name": "start",
+            "lastModifiedAt": 1597192583056
+        },
+        {
+            "name": "stop",
+            "lastModifiedAt": 1597192583315
+        }
+    ]
+}

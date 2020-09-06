@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192410251
-    }
-]
+{
+    "name": "SVGAngle",
+    "lastModifiedAt": 1597192410251,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192410251
+        }
+    ]
+}

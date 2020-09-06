@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193275573
-    },
-    {
-        "name": "applicationCache",
-        "lastModifiedAt": 1596581306645
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596581307149
-    },
-    {
-        "name": "connect_event",
-        "lastModifiedAt": 1597357791261
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1599278926560
-    },
-    {
-        "name": "onconnect",
-        "lastModifiedAt": 1599278929509
-    }
-]
+{
+    "name": "SharedWorkerGlobalScope",
+    "lastModifiedAt": 1599278929509,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193275573
+        },
+        {
+            "name": "applicationCache",
+            "lastModifiedAt": 1596581306645
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596581307149
+        },
+        {
+            "name": "connect_event",
+            "lastModifiedAt": 1597357791261
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1599278926560
+        },
+        {
+            "name": "onconnect",
+            "lastModifiedAt": 1599278929509
+        }
+    ]
+}

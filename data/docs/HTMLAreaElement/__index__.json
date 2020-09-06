@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193483184
-    },
-    {
-        "name": "referrerPolicy",
-        "lastModifiedAt": 1596581513720
-    },
-    {
-        "name": "rel",
-        "lastModifiedAt": 1596581514095
-    },
-    {
-        "name": "relList",
-        "lastModifiedAt": 1596581514366
-    }
-]
+{
+    "name": "HTMLAreaElement",
+    "lastModifiedAt": 1597193483184,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193483184
+        },
+        {
+            "name": "referrerPolicy",
+            "lastModifiedAt": 1596581513720
+        },
+        {
+            "name": "rel",
+            "lastModifiedAt": 1596581514095
+        },
+        {
+            "name": "relList",
+            "lastModifiedAt": 1596581514366
+        }
+    ]
+}

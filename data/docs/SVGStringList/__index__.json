@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192404588
-    }
-]
+{
+    "name": "SVGStringList",
+    "lastModifiedAt": 1597192404588,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192404588
+        }
+    ]
+}

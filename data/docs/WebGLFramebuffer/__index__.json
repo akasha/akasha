@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192687917
-    }
-]
+{
+    "name": "WebGLFramebuffer",
+    "lastModifiedAt": 1597192687917,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192687917
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192464338
-    }
-]
+{
+    "name": "SVGRadialGradientElement",
+    "lastModifiedAt": 1597192464338,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192464338
+        }
+    ]
+}

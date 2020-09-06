@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "FocusEvent",
-        "lastModifiedAt": 1597192494406
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192493595
-    },
-    {
-        "name": "relatedTarget",
-        "lastModifiedAt": 1597192494682
-    }
-]
+{
+    "name": "FocusEvent",
+    "lastModifiedAt": 1597192494682,
+    "entries": [
+        {
+            "name": "FocusEvent",
+            "lastModifiedAt": 1597192494406
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192493595
+        },
+        {
+            "name": "relatedTarget",
+            "lastModifiedAt": 1597192494682
+        }
+    ]
+}

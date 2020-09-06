@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279753544
-    },
-    {
-        "name": "audioLevel",
-        "lastModifiedAt": 1596544564286
-    },
-    {
-        "name": "rtpTimestamp",
-        "lastModifiedAt": 1596544564661
-    },
-    {
-        "name": "source",
-        "lastModifiedAt": 1596544565461
-    },
-    {
-        "name": "timestamp",
-        "lastModifiedAt": 1596544565778
-    }
-]
+{
+    "name": "RTCRtpContributingSource",
+    "lastModifiedAt": 1599279753544,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279753544
+        },
+        {
+            "name": "audioLevel",
+            "lastModifiedAt": 1596544564286
+        },
+        {
+            "name": "rtpTimestamp",
+            "lastModifiedAt": 1596544564661
+        },
+        {
+            "name": "source",
+            "lastModifiedAt": 1596544565461
+        },
+        {
+            "name": "timestamp",
+            "lastModifiedAt": 1596544565778
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192497344
-    }
-]
+{
+    "name": "PerformanceMeasure",
+    "lastModifiedAt": 1597192497344,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192497344
+        }
+    ]
+}

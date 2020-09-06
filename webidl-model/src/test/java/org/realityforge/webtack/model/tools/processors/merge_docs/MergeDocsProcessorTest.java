@@ -30,12 +30,10 @@ public final class MergeDocsProcessorTest
   @Nonnull
   private Processor createProcessor( @Nonnull final String subDirectory )
   {
-    final Path docsDir = getTestLocalFixtureDir().resolve( subDirectory ).resolve( "docs" );
-    return Registry.createProcessor( newPipelineContext(),
+    return Registry.createProcessor( newPipelineContext( subDirectory ),
                                      "MergeDocs",
                                      Json
                                        .createObjectBuilder()
-                                       .add( "docsDirectory", docsDir.toString() )
                                        .add( "createEvents", true )
                                        .build() );
   }

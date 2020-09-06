@@ -1,75 +1,79 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192148980
-    },
-    {
-        "name": "abort",
-        "lastModifiedAt": 1597192152223
-    },
-    {
-        "name": "appendBuffer",
-        "lastModifiedAt": 1597192152561
-    },
-    {
-        "name": "appendBufferAsync",
-        "lastModifiedAt": 1597192152836
-    },
-    {
-        "name": "appendStream",
-        "lastModifiedAt": 1597192153100
-    },
-    {
-        "name": "appendWindowEnd",
-        "lastModifiedAt": 1597192149284
-    },
-    {
-        "name": "appendWindowStart",
-        "lastModifiedAt": 1597192149592
-    },
-    {
-        "name": "audioTracks",
-        "lastModifiedAt": 1597192149909
-    },
-    {
-        "name": "buffered",
-        "lastModifiedAt": 1597192150177
-    },
-    {
-        "name": "changeType",
-        "lastModifiedAt": 1597192153390
-    },
-    {
-        "name": "mode",
-        "lastModifiedAt": 1597192150434
-    },
-    {
-        "name": "remove",
-        "lastModifiedAt": 1597192153625
-    },
-    {
-        "name": "removeAsync",
-        "lastModifiedAt": 1597192153894
-    },
-    {
-        "name": "textTracks",
-        "lastModifiedAt": 1597192150728
-    },
-    {
-        "name": "timestampOffset",
-        "lastModifiedAt": 1597192150994
-    },
-    {
-        "name": "trackDefaults",
-        "lastModifiedAt": 1597192151258
-    },
-    {
-        "name": "updating",
-        "lastModifiedAt": 1597192151538
-    },
-    {
-        "name": "videoTracks",
-        "lastModifiedAt": 1597192151782
-    }
-]
+{
+    "name": "SourceBuffer",
+    "lastModifiedAt": 1597192153894,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192148980
+        },
+        {
+            "name": "abort",
+            "lastModifiedAt": 1597192152223
+        },
+        {
+            "name": "appendBuffer",
+            "lastModifiedAt": 1597192152561
+        },
+        {
+            "name": "appendBufferAsync",
+            "lastModifiedAt": 1597192152836
+        },
+        {
+            "name": "appendStream",
+            "lastModifiedAt": 1597192153100
+        },
+        {
+            "name": "appendWindowEnd",
+            "lastModifiedAt": 1597192149284
+        },
+        {
+            "name": "appendWindowStart",
+            "lastModifiedAt": 1597192149592
+        },
+        {
+            "name": "audioTracks",
+            "lastModifiedAt": 1597192149909
+        },
+        {
+            "name": "buffered",
+            "lastModifiedAt": 1597192150177
+        },
+        {
+            "name": "changeType",
+            "lastModifiedAt": 1597192153390
+        },
+        {
+            "name": "mode",
+            "lastModifiedAt": 1597192150434
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1597192153625
+        },
+        {
+            "name": "removeAsync",
+            "lastModifiedAt": 1597192153894
+        },
+        {
+            "name": "textTracks",
+            "lastModifiedAt": 1597192150728
+        },
+        {
+            "name": "timestampOffset",
+            "lastModifiedAt": 1597192150994
+        },
+        {
+            "name": "trackDefaults",
+            "lastModifiedAt": 1597192151258
+        },
+        {
+            "name": "updating",
+            "lastModifiedAt": 1597192151538
+        },
+        {
+            "name": "videoTracks",
+            "lastModifiedAt": 1597192151782
+        }
+    ]
+}

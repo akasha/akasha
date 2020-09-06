@@ -4,7 +4,6 @@ import gir.io.FileUtil;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
 import javax.json.bind.JsonbBuilder;
@@ -20,9 +19,17 @@ public final class DocIndexTest
     throws Exception
   {
     final Path directory = getWorkingDirectory();
-    FileUtil.write( directory.resolve( DocIndex.FILENAME ), "[]" );
+    final String name = directory.getFileName().toString();
+    FileUtil.write( directory.resolve( DocIndex.FILENAME ), "{\"name\": \"" + name + "\",\"entries\": []}" );
 
-    final DocIndex repository = load( directory, "\n[\n]\n" );
+    final DocIndex repository = load( directory,
+                                      "\n" +
+                                      "{\n" +
+                                      "    \"name\": \"" + name + "\",\n" +
+                                      "    \"lastModifiedAt\": 0,\n" +
+                                      "    \"entries\": [\n" +
+                                      "    ]\n" +
+                                      "}\n" );
 
     assertEquals( repository.getDirectory(), directory );
     assertTrue( repository.getEntries().isEmpty() );
@@ -34,11 +41,11 @@ public final class DocIndexTest
     throws Exception
   {
     final Path directory = getWorkingDirectory();
-    final Path path = directory.resolve( DocIndex.FILENAME );
-    FileUtil.write( path, "[{}]" );
+    final String name = directory.getFileName().toString();
+    FileUtil.write( directory.resolve( DocIndex.FILENAME ), "{\"name\": \"" + name + "\",\"entries\": [{}]}" );
 
     assertThrows( IndexFormatException.class,
-                  "DocIndex at " + path + " contains an entry missing the name value",
+                  "DocIndex at " + directory + " contains an entry missing the name value",
                   () -> DocIndex.open( JsonbBuilder.create(), directory ) );
   }
 
@@ -47,13 +54,18 @@ public final class DocIndexTest
     throws Exception
   {
     final Path directory = getWorkingDirectory();
+    final String name = directory.getFileName().toString();
     final String content = "\n" +
-                           "[\n" +
-                           "    {\n" +
-                           "        \"name\": \"__type__\",\n" +
-                           "        \"lastModifiedAt\": 1579594580000\n" +
-                           "    }\n" +
-                           "]\n";
+                           "{\n" +
+                           "    \"name\": \"" + name + "\",\n" +
+                           "    \"lastModifiedAt\": 1579594580000,\n" +
+                           "    \"entries\": [\n" +
+                           "        {\n" +
+                           "            \"name\": \"__type__\",\n" +
+                           "            \"lastModifiedAt\": 1579594580000\n" +
+                           "        }\n" +
+                           "    ]\n" +
+                           "}\n";
     FileUtil.write( directory.resolve( DocIndex.FILENAME ), content );
 
     final DocIndex repository = load( directory, content );
@@ -74,18 +86,23 @@ public final class DocIndexTest
     throws Exception
   {
     final Path directory = getWorkingDirectory();
+    final String name = directory.getFileName().toString();
     final String content =
       "\n" +
-      "[\n" +
-      "    {\n" +
-      "        \"name\": \"__type__\",\n" +
-      "        \"lastModifiedAt\": 1579594580000\n" +
-      "    },\n" +
-      "    {\n" +
-      "        \"name\": \"onfocus\",\n" +
-      "        \"lastModifiedAt\": 1579594580000\n" +
-      "    }\n" +
-      "]\n";
+      "{\n" +
+      "    \"name\": \"" + name + "\",\n" +
+      "    \"lastModifiedAt\": 1579594580000,\n" +
+      "    \"entries\": [\n" +
+      "        {\n" +
+      "            \"name\": \"__type__\",\n" +
+      "            \"lastModifiedAt\": 1579594580000\n" +
+      "        },\n" +
+      "        {\n" +
+      "            \"name\": \"onfocus\",\n" +
+      "            \"lastModifiedAt\": 1333333333333\n" +
+      "        }\n" +
+      "    ]\n" +
+      "}\n";
     FileUtil.write( directory.resolve( DocIndex.FILENAME ), content );
 
     final DocIndex repository = load( directory, content );
@@ -108,7 +125,7 @@ public final class DocIndexTest
     final Path outputDir = getWorkingDirectory().resolve( "output" );
     final DocIndex index = DocIndex.open( JsonbBuilder.create(), directory );
     final Path outputFile = outputDir.resolve( DocIndex.FILENAME );
-    DocIndex.save( new DocIndex( index.getName(), outputDir, new ArrayList<>( index.getEntries() ) ) );
+    DocIndex.save( new DocIndex( index.getName(), outputDir, index.getContent() ) );
     final String actualOutput = new String( Files.readAllBytes( outputFile ), StandardCharsets.UTF_8 );
     assertEquals( actualOutput, expectedOutput );
     return index;

@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193089206
-    },
-    {
-        "name": "delegatesFocus",
-        "lastModifiedAt": 1597193089452
-    },
-    {
-        "name": "host",
-        "lastModifiedAt": 1597193089753
-    },
-    {
-        "name": "innerHTML",
-        "lastModifiedAt": 1597193090265
-    },
-    {
-        "name": "mode",
-        "lastModifiedAt": 1597193090513
-    }
-]
+{
+    "name": "ShadowRoot",
+    "lastModifiedAt": 1597193090513,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193089206
+        },
+        {
+            "name": "delegatesFocus",
+            "lastModifiedAt": 1597193089452
+        },
+        {
+            "name": "host",
+            "lastModifiedAt": 1597193089753
+        },
+        {
+            "name": "innerHTML",
+            "lastModifiedAt": 1597193090265
+        },
+        {
+            "name": "mode",
+            "lastModifiedAt": 1597193090513
+        }
+    ]
+}

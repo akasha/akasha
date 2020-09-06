@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280944312
-    },
-    {
-        "name": "getCapabilities",
-        "lastModifiedAt": 1599280948674
-    },
-    {
-        "name": "getContributingSources",
-        "lastModifiedAt": 1596544674748
-    },
-    {
-        "name": "getParameters",
-        "lastModifiedAt": 1599280946096
-    },
-    {
-        "name": "getStats",
-        "lastModifiedAt": 1596544676084
-    },
-    {
-        "name": "getSynchronizationSources",
-        "lastModifiedAt": 1596544676583
-    },
-    {
-        "name": "track",
-        "lastModifiedAt": 1596544673105
-    },
-    {
-        "name": "transport",
-        "lastModifiedAt": 1599280945177
-    }
-]
+{
+    "name": "RTCRtpReceiver",
+    "lastModifiedAt": 1599280948674,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280944312
+        },
+        {
+            "name": "getCapabilities",
+            "lastModifiedAt": 1599280948674
+        },
+        {
+            "name": "getContributingSources",
+            "lastModifiedAt": 1596544674748
+        },
+        {
+            "name": "getParameters",
+            "lastModifiedAt": 1599280946096
+        },
+        {
+            "name": "getStats",
+            "lastModifiedAt": 1596544676084
+        },
+        {
+            "name": "getSynchronizationSources",
+            "lastModifiedAt": 1596544676583
+        },
+        {
+            "name": "track",
+            "lastModifiedAt": 1596544673105
+        },
+        {
+            "name": "transport",
+            "lastModifiedAt": 1599280945177
+        }
+    ]
+}

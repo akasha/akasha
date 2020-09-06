@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "DataTransferItem",
-        "lastModifiedAt": 1596581157077
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193189769
-    },
-    {
-        "name": "add",
-        "lastModifiedAt": 1596581157323
-    },
-    {
-        "name": "clear",
-        "lastModifiedAt": 1596581158113
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1596581156732
-    },
-    {
-        "name": "remove",
-        "lastModifiedAt": 1596581158354
-    }
-]
+{
+    "name": "DataTransferItemList",
+    "lastModifiedAt": 1597193189769,
+    "entries": [
+        {
+            "name": "DataTransferItem",
+            "lastModifiedAt": 1596581157077
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193189769
+        },
+        {
+            "name": "add",
+            "lastModifiedAt": 1596581157323
+        },
+        {
+            "name": "clear",
+            "lastModifiedAt": 1596581158113
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1596581156732
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1596581158354
+        }
+    ]
+}

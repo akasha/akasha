@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279440980
-    }
-]
+{
+    "name": "HTMLOptionsCollection",
+    "lastModifiedAt": 1599279440980,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279440980
+        }
+    ]
+}

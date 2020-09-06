@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "Worker",
-        "lastModifiedAt": 1596581230091
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193266003
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597358337061
-    },
-    {
-        "name": "messageerror_event",
-        "lastModifiedAt": 1597358338135
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1597241368439
-    },
-    {
-        "name": "onmessageerror",
-        "lastModifiedAt": 1599279509649
-    },
-    {
-        "name": "postMessage",
-        "lastModifiedAt": 1596581230413
-    },
-    {
-        "name": "terminate",
-        "lastModifiedAt": 1596581230710
-    }
-]
+{
+    "name": "Worker",
+    "lastModifiedAt": 1599279509649,
+    "entries": [
+        {
+            "name": "Worker",
+            "lastModifiedAt": 1596581230091
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193266003
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597358337061
+        },
+        {
+            "name": "messageerror_event",
+            "lastModifiedAt": 1597358338135
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1597241368439
+        },
+        {
+            "name": "onmessageerror",
+            "lastModifiedAt": 1599279509649
+        },
+        {
+            "name": "postMessage",
+            "lastModifiedAt": 1596581230413
+        },
+        {
+            "name": "terminate",
+            "lastModifiedAt": 1596581230710
+        }
+    ]
+}

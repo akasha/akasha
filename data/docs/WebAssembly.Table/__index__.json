@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "get",
-        "lastModifiedAt": 1599279923686
-    },
-    {
-        "name": "grow",
-        "lastModifiedAt": 1599279924081
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1599279922881
-    },
-    {
-        "name": "set",
-        "lastModifiedAt": 1599279924474
-    }
-]
+{
+    "name": "WebAssembly.Table",
+    "lastModifiedAt": 1599279924474,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "get",
+            "lastModifiedAt": 1599279923686
+        },
+        {
+            "name": "grow",
+            "lastModifiedAt": 1599279924081
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1599279922881
+        },
+        {
+            "name": "set",
+            "lastModifiedAt": 1599279924474
+        }
+    ]
+}

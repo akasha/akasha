@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193173044
-    }
-]
+{
+    "name": "HTMLQuoteElement",
+    "lastModifiedAt": 1597193173044,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193173044
+        }
+    ]
+}

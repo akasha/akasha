@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581153113
-    }
-]
+{
+    "name": "HTMLSpanElement",
+    "lastModifiedAt": 1596581153113,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581153113
+        }
+    ]
+}

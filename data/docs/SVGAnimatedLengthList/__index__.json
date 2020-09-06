@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192447576
-    }
-]
+{
+    "name": "SVGAnimatedLengthList",
+    "lastModifiedAt": 1597192447576,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192447576
+        }
+    ]
+}

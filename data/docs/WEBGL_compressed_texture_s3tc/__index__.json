@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192696509
-    }
-]
+{
+    "name": "WEBGL_compressed_texture_s3tc",
+    "lastModifiedAt": 1597192696509,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192696509
+        }
+    ]
+}

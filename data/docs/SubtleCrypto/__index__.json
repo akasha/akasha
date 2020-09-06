@@ -1,55 +1,59 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279324397
-    },
-    {
-        "name": "decrypt",
-        "lastModifiedAt": 1599279325758
-    },
-    {
-        "name": "deriveBits",
-        "lastModifiedAt": 1597192675238
-    },
-    {
-        "name": "deriveKey",
-        "lastModifiedAt": 1597192674991
-    },
-    {
-        "name": "digest",
-        "lastModifiedAt": 1597192674023
-    },
-    {
-        "name": "encrypt",
-        "lastModifiedAt": 1597192672559
-    },
-    {
-        "name": "exportKey",
-        "lastModifiedAt": 1599279331635
-    },
-    {
-        "name": "generateKey",
-        "lastModifiedAt": 1597192674317
-    },
-    {
-        "name": "importKey",
-        "lastModifiedAt": 1599279331023
-    },
-    {
-        "name": "sign",
-        "lastModifiedAt": 1597192673252
-    },
-    {
-        "name": "unwrapKey",
-        "lastModifiedAt": 1599279333422
-    },
-    {
-        "name": "verify",
-        "lastModifiedAt": 1597192673509
-    },
-    {
-        "name": "wrapKey",
-        "lastModifiedAt": 1599279332807
-    }
-]
+{
+    "name": "SubtleCrypto",
+    "lastModifiedAt": 1599279333422,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279324397
+        },
+        {
+            "name": "decrypt",
+            "lastModifiedAt": 1599279325758
+        },
+        {
+            "name": "deriveBits",
+            "lastModifiedAt": 1597192675238
+        },
+        {
+            "name": "deriveKey",
+            "lastModifiedAt": 1597192674991
+        },
+        {
+            "name": "digest",
+            "lastModifiedAt": 1597192674023
+        },
+        {
+            "name": "encrypt",
+            "lastModifiedAt": 1597192672559
+        },
+        {
+            "name": "exportKey",
+            "lastModifiedAt": 1599279331635
+        },
+        {
+            "name": "generateKey",
+            "lastModifiedAt": 1597192674317
+        },
+        {
+            "name": "importKey",
+            "lastModifiedAt": 1599279331023
+        },
+        {
+            "name": "sign",
+            "lastModifiedAt": 1597192673252
+        },
+        {
+            "name": "unwrapKey",
+            "lastModifiedAt": 1599279333422
+        },
+        {
+            "name": "verify",
+            "lastModifiedAt": 1597192673509
+        },
+        {
+            "name": "wrapKey",
+            "lastModifiedAt": 1599279332807
+        }
+    ]
+}

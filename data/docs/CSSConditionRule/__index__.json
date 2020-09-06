@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597756272254
-    }
-]
+{
+    "name": "CSSConditionRule",
+    "lastModifiedAt": 1597756272254,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597756272254
+        }
+    ]
+}

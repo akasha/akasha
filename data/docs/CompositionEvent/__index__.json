@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "CompositionEvent",
-        "lastModifiedAt": 1597192496273
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192496016
-    },
-    {
-        "name": "data",
-        "lastModifiedAt": 1597192496528
-    },
-    {
-        "name": "initCompositionEvent",
-        "lastModifiedAt": 1597192497011
-    },
-    {
-        "name": "locale",
-        "lastModifiedAt": 1597192496763
-    }
-]
+{
+    "name": "CompositionEvent",
+    "lastModifiedAt": 1597192497011,
+    "entries": [
+        {
+            "name": "CompositionEvent",
+            "lastModifiedAt": 1597192496273
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192496016
+        },
+        {
+            "name": "data",
+            "lastModifiedAt": 1597192496528
+        },
+        {
+            "name": "initCompositionEvent",
+            "lastModifiedAt": 1597192497011
+        },
+        {
+            "name": "locale",
+            "lastModifiedAt": 1597192496763
+        }
+    ]
+}

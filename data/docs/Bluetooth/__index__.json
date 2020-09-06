@@ -1,31 +1,35 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192603449
-    },
-    {
-        "name": "availabilitychanged_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "getAvailability",
-        "lastModifiedAt": 1596499310351
-    },
-    {
-        "name": "getDevices",
-        "lastModifiedAt": 1596499310402
-    },
-    {
-        "name": "onavailabilitychanged",
-        "lastModifiedAt": 1596499309287
-    },
-    {
-        "name": "referringDevice",
-        "lastModifiedAt": 1599280192916
-    },
-    {
-        "name": "requestDevice",
-        "lastModifiedAt": 1599280196142
-    }
-]
+{
+    "name": "Bluetooth",
+    "lastModifiedAt": 1599280196142,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192603449
+        },
+        {
+            "name": "availabilitychanged_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "getAvailability",
+            "lastModifiedAt": 1596499310351
+        },
+        {
+            "name": "getDevices",
+            "lastModifiedAt": 1596499310402
+        },
+        {
+            "name": "onavailabilitychanged",
+            "lastModifiedAt": 1596499309287
+        },
+        {
+            "name": "referringDevice",
+            "lastModifiedAt": 1599280192916
+        },
+        {
+            "name": "requestDevice",
+            "lastModifiedAt": 1599280196142
+        }
+    ]
+}

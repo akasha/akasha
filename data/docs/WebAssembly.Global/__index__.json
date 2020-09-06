@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 0
-    }
-]
+{
+    "name": "WebAssembly.Global",
+    "lastModifiedAt": 0,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192711645
-    },
-    {
-        "name": "maxBitrate",
-        "lastModifiedAt": 1596544539437
-    },
-    {
-        "name": "scaleResolutionDownBy",
-        "lastModifiedAt": 1596544541318
-    }
-]
+{
+    "name": "RTCRtpEncodingParameters",
+    "lastModifiedAt": 1597192711645,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192711645
+        },
+        {
+            "name": "maxBitrate",
+            "lastModifiedAt": 1596544539437
+        },
+        {
+            "name": "scaleResolutionDownBy",
+            "lastModifiedAt": 1596544541318
+        }
+    ]
+}

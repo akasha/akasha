@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "BroadcastChannel",
-        "lastModifiedAt": 1597193563663
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193563367
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596581566565
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597359763203
-    },
-    {
-        "name": "messageerror_event",
-        "lastModifiedAt": 1597359763739
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1596581565306
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1596581565709
-    },
-    {
-        "name": "onmessageerror",
-        "lastModifiedAt": 1596581566180
-    },
-    {
-        "name": "postMessage",
-        "lastModifiedAt": 1596581566834
-    }
-]
+{
+    "name": "BroadcastChannel",
+    "lastModifiedAt": 1597359763739,
+    "entries": [
+        {
+            "name": "BroadcastChannel",
+            "lastModifiedAt": 1597193563663
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193563367
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596581566565
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597359763203
+        },
+        {
+            "name": "messageerror_event",
+            "lastModifiedAt": 1597359763739
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1596581565306
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1596581565709
+        },
+        {
+            "name": "onmessageerror",
+            "lastModifiedAt": 1596581566180
+        },
+        {
+            "name": "postMessage",
+            "lastModifiedAt": 1596581566834
+        }
+    ]
+}

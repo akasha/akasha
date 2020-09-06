@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193053823
-    },
-    {
-        "name": "load",
-        "lastModifiedAt": 1599280104133
-    }
-]
+{
+    "name": "XMLDocument",
+    "lastModifiedAt": 1599280104133,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193053823
+        },
+        {
+            "name": "load",
+            "lastModifiedAt": 1599280104133
+        }
+    ]
+}

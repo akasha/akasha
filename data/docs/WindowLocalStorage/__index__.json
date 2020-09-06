@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581105424
-    }
-]
+{
+    "name": "WindowLocalStorage",
+    "lastModifiedAt": 1596581105424,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581105424
+        }
+    ]
+}

@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192964454
-    },
-    {
-        "name": "antialias",
-        "lastModifiedAt": 1596711380462
-    },
-    {
-        "name": "framebuffer",
-        "lastModifiedAt": 1596711383103
-    },
-    {
-        "name": "framebufferHeight",
-        "lastModifiedAt": 1597192966596
-    },
-    {
-        "name": "framebufferWidth",
-        "lastModifiedAt": 1597192966348
-    },
-    {
-        "name": "getNativeFramebufferScaleFactor",
-        "lastModifiedAt": 1596711384237
-    },
-    {
-        "name": "getViewport",
-        "lastModifiedAt": 1596711384947
-    },
-    {
-        "name": "ignoreDepthValues",
-        "lastModifiedAt": 1596711383778
-    }
-]
+{
+    "name": "XRWebGLLayer",
+    "lastModifiedAt": 1597192966596,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192964454
+        },
+        {
+            "name": "antialias",
+            "lastModifiedAt": 1596711380462
+        },
+        {
+            "name": "framebuffer",
+            "lastModifiedAt": 1596711383103
+        },
+        {
+            "name": "framebufferHeight",
+            "lastModifiedAt": 1597192966596
+        },
+        {
+            "name": "framebufferWidth",
+            "lastModifiedAt": 1597192966348
+        },
+        {
+            "name": "getNativeFramebufferScaleFactor",
+            "lastModifiedAt": 1596711384237
+        },
+        {
+            "name": "getViewport",
+            "lastModifiedAt": 1596711384947
+        },
+        {
+            "name": "ignoreDepthValues",
+            "lastModifiedAt": 1596711383778
+        }
+    ]
+}

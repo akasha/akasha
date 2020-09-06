@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191965525
-    }
-]
+{
+    "name": "SVGFEColorMatrixElement",
+    "lastModifiedAt": 1597191965525,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191965525
+        }
+    ]
+}

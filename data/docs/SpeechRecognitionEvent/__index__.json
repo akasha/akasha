@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192350353
-    },
-    {
-        "name": "emma",
-        "lastModifiedAt": 1599279410663
-    },
-    {
-        "name": "interpretation",
-        "lastModifiedAt": 1596711771977
-    },
-    {
-        "name": "resultIndex",
-        "lastModifiedAt": 1599279412384
-    },
-    {
-        "name": "results",
-        "lastModifiedAt": 1596711773094
-    }
-]
+{
+    "name": "SpeechRecognitionEvent",
+    "lastModifiedAt": 1599279412384,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192350353
+        },
+        {
+            "name": "emma",
+            "lastModifiedAt": 1599279410663
+        },
+        {
+            "name": "interpretation",
+            "lastModifiedAt": 1596711771977
+        },
+        {
+            "name": "resultIndex",
+            "lastModifiedAt": 1599279412384
+        },
+        {
+            "name": "results",
+            "lastModifiedAt": 1596711773094
+        }
+    ]
+}

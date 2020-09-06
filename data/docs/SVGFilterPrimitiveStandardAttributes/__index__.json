@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191953076
-    }
-]
+{
+    "name": "SVGFilterPrimitiveStandardAttributes",
+    "lastModifiedAt": 1597191953076,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191953076
+        }
+    ]
+}

@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192269124
-    },
-    {
-        "name": "connection",
-        "lastModifiedAt": 1596581502733
-    },
-    {
-        "name": "locks",
-        "lastModifiedAt": 1599279794111
-    },
-    {
-        "name": "permissions",
-        "lastModifiedAt": 1596581503418
-    }
-]
+{
+    "name": "WorkerNavigator",
+    "lastModifiedAt": 1599279794111,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192269124
+        },
+        {
+            "name": "connection",
+            "lastModifiedAt": 1596581502733
+        },
+        {
+            "name": "locks",
+            "lastModifiedAt": 1599279794111
+        },
+        {
+            "name": "permissions",
+            "lastModifiedAt": 1596581503418
+        }
+    ]
+}

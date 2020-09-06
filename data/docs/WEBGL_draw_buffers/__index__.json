@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192699601
-    }
-]
+{
+    "name": "WEBGL_draw_buffers",
+    "lastModifiedAt": 1597192699601,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192699601
+        }
+    ]
+}

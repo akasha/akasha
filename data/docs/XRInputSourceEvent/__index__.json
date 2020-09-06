@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "XRInputSourceEvent",
-        "lastModifiedAt": 1597192954028
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192953228
-    },
-    {
-        "name": "frame",
-        "lastModifiedAt": 1596712706044
-    },
-    {
-        "name": "inputSource",
-        "lastModifiedAt": 1596712706864
-    }
-]
+{
+    "name": "XRInputSourceEvent",
+    "lastModifiedAt": 1597192954028,
+    "entries": [
+        {
+            "name": "XRInputSourceEvent",
+            "lastModifiedAt": 1597192954028
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192953228
+        },
+        {
+            "name": "frame",
+            "lastModifiedAt": 1596712706044
+        },
+        {
+            "name": "inputSource",
+            "lastModifiedAt": 1596712706864
+        }
+    ]
+}

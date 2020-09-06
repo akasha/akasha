@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192116948
-    },
-    {
-        "name": "newVersion",
-        "lastModifiedAt": 1597192117577
-    },
-    {
-        "name": "oldVersion",
-        "lastModifiedAt": 1599280163864
-    }
-]
+{
+    "name": "IDBVersionChangeEvent",
+    "lastModifiedAt": 1599280163864,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192116948
+        },
+        {
+            "name": "newVersion",
+            "lastModifiedAt": 1597192117577
+        },
+        {
+            "name": "oldVersion",
+            "lastModifiedAt": 1599280163864
+        }
+    ]
+}

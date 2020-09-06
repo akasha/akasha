@@ -1,55 +1,59 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192914036
-    },
-    {
-        "name": "averageRtcpInterval",
-        "lastModifiedAt": 1596544730704
-    },
-    {
-        "name": "firCount",
-        "lastModifiedAt": 1596544730951
-    },
-    {
-        "name": "framesEncoded",
-        "lastModifiedAt": 1596544731259
-    },
-    {
-        "name": "lastPacketSentTimestamp",
-        "lastModifiedAt": 1596544731567
-    },
-    {
-        "name": "nackCount",
-        "lastModifiedAt": 1596544731874
-    },
-    {
-        "name": "perDscpPacketsSent",
-        "lastModifiedAt": 1596544732160
-    },
-    {
-        "name": "pliCount",
-        "lastModifiedAt": 1596544732489
-    },
-    {
-        "name": "qpSum",
-        "lastModifiedAt": 1596544733011
-    },
-    {
-        "name": "qualityLimitationReason",
-        "lastModifiedAt": 1596544734242
-    },
-    {
-        "name": "remoteId",
-        "lastModifiedAt": 1596544734536
-    },
-    {
-        "name": "sliCount",
-        "lastModifiedAt": 1596544736114
-    },
-    {
-        "name": "trackId",
-        "lastModifiedAt": 1596544737152
-    }
-]
+{
+    "name": "RTCOutboundRtpStreamStats",
+    "lastModifiedAt": 1597192914036,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192914036
+        },
+        {
+            "name": "averageRtcpInterval",
+            "lastModifiedAt": 1596544730704
+        },
+        {
+            "name": "firCount",
+            "lastModifiedAt": 1596544730951
+        },
+        {
+            "name": "framesEncoded",
+            "lastModifiedAt": 1596544731259
+        },
+        {
+            "name": "lastPacketSentTimestamp",
+            "lastModifiedAt": 1596544731567
+        },
+        {
+            "name": "nackCount",
+            "lastModifiedAt": 1596544731874
+        },
+        {
+            "name": "perDscpPacketsSent",
+            "lastModifiedAt": 1596544732160
+        },
+        {
+            "name": "pliCount",
+            "lastModifiedAt": 1596544732489
+        },
+        {
+            "name": "qpSum",
+            "lastModifiedAt": 1596544733011
+        },
+        {
+            "name": "qualityLimitationReason",
+            "lastModifiedAt": 1596544734242
+        },
+        {
+            "name": "remoteId",
+            "lastModifiedAt": 1596544734536
+        },
+        {
+            "name": "sliCount",
+            "lastModifiedAt": 1596544736114
+        },
+        {
+            "name": "trackId",
+            "lastModifiedAt": 1596544737152
+        }
+    ]
+}

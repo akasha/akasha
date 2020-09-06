@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "WheelEvent",
-        "lastModifiedAt": 1597192483401
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192483160
-    },
-    {
-        "name": "deltaMode",
-        "lastModifiedAt": 1597192484923
-    },
-    {
-        "name": "deltaX",
-        "lastModifiedAt": 1597192483640
-    },
-    {
-        "name": "deltaY",
-        "lastModifiedAt": 1597192483876
-    },
-    {
-        "name": "deltaZ",
-        "lastModifiedAt": 1597192484113
-    }
-]
+{
+    "name": "WheelEvent",
+    "lastModifiedAt": 1597192484923,
+    "entries": [
+        {
+            "name": "WheelEvent",
+            "lastModifiedAt": 1597192483401
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192483160
+        },
+        {
+            "name": "deltaMode",
+            "lastModifiedAt": 1597192484923
+        },
+        {
+            "name": "deltaX",
+            "lastModifiedAt": 1597192483640
+        },
+        {
+            "name": "deltaY",
+            "lastModifiedAt": 1597192483876
+        },
+        {
+            "name": "deltaZ",
+            "lastModifiedAt": 1597192484113
+        }
+    ]
+}

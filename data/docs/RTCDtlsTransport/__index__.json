@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280615002
-    },
-    {
-        "name": "iceTransport",
-        "lastModifiedAt": 1599280615474
-    },
-    {
-        "name": "state",
-        "lastModifiedAt": 1596544591334
-    }
-]
+{
+    "name": "RTCDtlsTransport",
+    "lastModifiedAt": 1599280615474,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280615002
+        },
+        {
+            "name": "iceTransport",
+            "lastModifiedAt": 1599280615474
+        },
+        {
+            "name": "state",
+            "lastModifiedAt": 1596544591334
+        }
+    ]
+}

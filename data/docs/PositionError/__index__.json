@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192013251
-    },
-    {
-        "name": "code",
-        "lastModifiedAt": 1597192014009
-    },
-    {
-        "name": "message",
-        "lastModifiedAt": 1597192014545
-    }
-]
+{
+    "name": "PositionError",
+    "lastModifiedAt": 1597192014545,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192013251
+        },
+        {
+            "name": "code",
+            "lastModifiedAt": 1597192014009
+        },
+        {
+            "name": "message",
+            "lastModifiedAt": 1597192014545
+        }
+    ]
+}

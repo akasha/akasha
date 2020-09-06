@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193153902
-    },
-    {
-        "name": "language",
-        "lastModifiedAt": 1596581118371
-    },
-    {
-        "name": "languages",
-        "lastModifiedAt": 1596581118756
-    }
-]
+{
+    "name": "NavigatorLanguage",
+    "lastModifiedAt": 1597193153902,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193153902
+        },
+        {
+            "name": "language",
+            "lastModifiedAt": 1596581118371
+        },
+        {
+            "name": "languages",
+            "lastModifiedAt": 1596581118756
+        }
+    ]
+}

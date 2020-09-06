@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193081824
-    }
-]
+{
+    "name": "CharacterData",
+    "lastModifiedAt": 1597193081824,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193081824
+        }
+    ]
+}

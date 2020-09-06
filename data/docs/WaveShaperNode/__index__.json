@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "WaveShaperNode",
-        "lastModifiedAt": 1597192538523
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192538228
-    },
-    {
-        "name": "curve",
-        "lastModifiedAt": 1597192538953
-    },
-    {
-        "name": "oversample",
-        "lastModifiedAt": 1597192539195
-    }
-]
+{
+    "name": "WaveShaperNode",
+    "lastModifiedAt": 1597192539195,
+    "entries": [
+        {
+            "name": "WaveShaperNode",
+            "lastModifiedAt": 1597192538523
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192538228
+        },
+        {
+            "name": "curve",
+            "lastModifiedAt": 1597192538953
+        },
+        {
+            "name": "oversample",
+            "lastModifiedAt": 1597192539195
+        }
+    ]
+}

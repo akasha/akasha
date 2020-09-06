@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279484775
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1597755219548
-    },
-    {
-        "name": "offsetLeft",
-        "lastModifiedAt": 1597755216359
-    },
-    {
-        "name": "offsetTop",
-        "lastModifiedAt": 1597755216889
-    },
-    {
-        "name": "onresize",
-        "lastModifiedAt": 1599279492350
-    },
-    {
-        "name": "onscroll",
-        "lastModifiedAt": 1599279493189
-    },
-    {
-        "name": "pageLeft",
-        "lastModifiedAt": 1597755217701
-    },
-    {
-        "name": "pageTop",
-        "lastModifiedAt": 1599279487459
-    },
-    {
-        "name": "resize_event",
-        "lastModifiedAt": 1597757127935
-    },
-    {
-        "name": "scale",
-        "lastModifiedAt": 1597755219910
-    },
-    {
-        "name": "scroll_event",
-        "lastModifiedAt": 1597757128850
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1597755218686
-    }
-]
+{
+    "name": "VisualViewport",
+    "lastModifiedAt": 1599279493189,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279484775
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1597755219548
+        },
+        {
+            "name": "offsetLeft",
+            "lastModifiedAt": 1597755216359
+        },
+        {
+            "name": "offsetTop",
+            "lastModifiedAt": 1597755216889
+        },
+        {
+            "name": "onresize",
+            "lastModifiedAt": 1599279492350
+        },
+        {
+            "name": "onscroll",
+            "lastModifiedAt": 1599279493189
+        },
+        {
+            "name": "pageLeft",
+            "lastModifiedAt": 1597755217701
+        },
+        {
+            "name": "pageTop",
+            "lastModifiedAt": 1599279487459
+        },
+        {
+            "name": "resize_event",
+            "lastModifiedAt": 1597757127935
+        },
+        {
+            "name": "scale",
+            "lastModifiedAt": 1597755219910
+        },
+        {
+            "name": "scroll_event",
+            "lastModifiedAt": 1597757128850
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1597755218686
+        }
+    ]
+}

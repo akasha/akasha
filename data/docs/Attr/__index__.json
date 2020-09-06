@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193050175
-    },
-    {
-        "name": "localName",
-        "lastModifiedAt": 1597193051040
-    },
-    {
-        "name": "namespaceURI",
-        "lastModifiedAt": 1597193050767
-    },
-    {
-        "name": "prefix",
-        "lastModifiedAt": 1597193051886
-    }
-]
+{
+    "name": "Attr",
+    "lastModifiedAt": 1597193051886,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193050175
+        },
+        {
+            "name": "localName",
+            "lastModifiedAt": 1597193051040
+        },
+        {
+            "name": "namespaceURI",
+            "lastModifiedAt": 1597193050767
+        },
+        {
+            "name": "prefix",
+            "lastModifiedAt": 1597193051886
+        }
+    ]
+}

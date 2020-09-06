@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280412450
-    }
-]
+{
+    "name": "AesGcmParams",
+    "lastModifiedAt": 1599280412450,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280412450
+        }
+    ]
+}

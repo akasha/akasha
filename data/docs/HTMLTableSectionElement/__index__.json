@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193493931
-    }
-]
+{
+    "name": "HTMLTableSectionElement",
+    "lastModifiedAt": 1597193493931,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193493931
+        }
+    ]
+}

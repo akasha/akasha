@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "SharedWorker",
-        "lastModifiedAt": 1596581201229
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193234179
-    },
-    {
-        "name": "port",
-        "lastModifiedAt": 1596581203173
-    }
-]
+{
+    "name": "SharedWorker",
+    "lastModifiedAt": 1597193234179,
+    "entries": [
+        {
+            "name": "SharedWorker",
+            "lastModifiedAt": 1596581201229
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193234179
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1596581203173
+        }
+    ]
+}

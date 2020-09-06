@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280493872
-    },
-    {
-        "name": "characteristicvaluechanged_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "getDescriptor",
-        "lastModifiedAt": 1599280497992
-    },
-    {
-        "name": "getDescriptors",
-        "lastModifiedAt": 1599280498558
-    },
-    {
-        "name": "properties",
-        "lastModifiedAt": 1599280496180
-    },
-    {
-        "name": "readValue",
-        "lastModifiedAt": 1599280499561
-    },
-    {
-        "name": "service",
-        "lastModifiedAt": 1599280494483
-    },
-    {
-        "name": "startNotifications",
-        "lastModifiedAt": 1599280501747
-    },
-    {
-        "name": "stopNotifications",
-        "lastModifiedAt": 1599280502217
-    },
-    {
-        "name": "uuid",
-        "lastModifiedAt": 1599280495092
-    },
-    {
-        "name": "value",
-        "lastModifiedAt": 1599280497241
-    },
-    {
-        "name": "writeValue",
-        "lastModifiedAt": 1599280500617
-    }
-]
+{
+    "name": "BluetoothRemoteGATTCharacteristic",
+    "lastModifiedAt": 1599280502217,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280493872
+        },
+        {
+            "name": "characteristicvaluechanged_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "getDescriptor",
+            "lastModifiedAt": 1599280497992
+        },
+        {
+            "name": "getDescriptors",
+            "lastModifiedAt": 1599280498558
+        },
+        {
+            "name": "properties",
+            "lastModifiedAt": 1599280496180
+        },
+        {
+            "name": "readValue",
+            "lastModifiedAt": 1599280499561
+        },
+        {
+            "name": "service",
+            "lastModifiedAt": 1599280494483
+        },
+        {
+            "name": "startNotifications",
+            "lastModifiedAt": 1599280501747
+        },
+        {
+            "name": "stopNotifications",
+            "lastModifiedAt": 1599280502217
+        },
+        {
+            "name": "uuid",
+            "lastModifiedAt": 1599280495092
+        },
+        {
+            "name": "value",
+            "lastModifiedAt": 1599280497241
+        },
+        {
+            "name": "writeValue",
+            "lastModifiedAt": 1599280500617
+        }
+    ]
+}

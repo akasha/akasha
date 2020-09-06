@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "Animation",
-        "lastModifiedAt": 1597192516288
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279570327
-    },
-    {
-        "name": "cancel",
-        "lastModifiedAt": 1597192517009
-    },
-    {
-        "name": "currentTime",
-        "lastModifiedAt": 1599279571517
-    }
-]
+{
+    "name": "Animation",
+    "lastModifiedAt": 1599279571517,
+    "entries": [
+        {
+            "name": "Animation",
+            "lastModifiedAt": 1597192516288
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279570327
+        },
+        {
+            "name": "cancel",
+            "lastModifiedAt": 1597192517009
+        },
+        {
+            "name": "currentTime",
+            "lastModifiedAt": 1599279571517
+        }
+    ]
+}

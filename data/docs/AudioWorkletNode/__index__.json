@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "AudioWorkletNode",
-        "lastModifiedAt": 1597192554179
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192553947
-    },
-    {
-        "name": "parameters",
-        "lastModifiedAt": 1599280121047
-    },
-    {
-        "name": "port",
-        "lastModifiedAt": 1597192554483
-    }
-]
+{
+    "name": "AudioWorkletNode",
+    "lastModifiedAt": 1599280121047,
+    "entries": [
+        {
+            "name": "AudioWorkletNode",
+            "lastModifiedAt": 1597192554179
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192553947
+        },
+        {
+            "name": "parameters",
+            "lastModifiedAt": 1599280121047
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1597192554483
+        }
+    ]
+}

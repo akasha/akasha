@@ -1,63 +1,67 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193576601
-    },
-    {
-        "name": "ancestorOrigins",
-        "lastModifiedAt": 1596581575700
-    },
-    {
-        "name": "assign",
-        "lastModifiedAt": 1596581580375
-    },
-    {
-        "name": "hash",
-        "lastModifiedAt": 1596581575963
-    },
-    {
-        "name": "host",
-        "lastModifiedAt": 1596581576306
-    },
-    {
-        "name": "hostname",
-        "lastModifiedAt": 1596581577263
-    },
-    {
-        "name": "href",
-        "lastModifiedAt": 1596581577641
-    },
-    {
-        "name": "origin",
-        "lastModifiedAt": 1596581577889
-    },
-    {
-        "name": "pathname",
-        "lastModifiedAt": 1596581578701
-    },
-    {
-        "name": "port",
-        "lastModifiedAt": 1596581578954
-    },
-    {
-        "name": "protocol",
-        "lastModifiedAt": 1596581579278
-    },
-    {
-        "name": "reload",
-        "lastModifiedAt": 1596581580755
-    },
-    {
-        "name": "replace",
-        "lastModifiedAt": 1596581581038
-    },
-    {
-        "name": "search",
-        "lastModifiedAt": 1596581580135
-    },
-    {
-        "name": "toString",
-        "lastModifiedAt": 1596581581349
-    }
-]
+{
+    "name": "Location",
+    "lastModifiedAt": 1597193576601,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193576601
+        },
+        {
+            "name": "ancestorOrigins",
+            "lastModifiedAt": 1596581575700
+        },
+        {
+            "name": "assign",
+            "lastModifiedAt": 1596581580375
+        },
+        {
+            "name": "hash",
+            "lastModifiedAt": 1596581575963
+        },
+        {
+            "name": "host",
+            "lastModifiedAt": 1596581576306
+        },
+        {
+            "name": "hostname",
+            "lastModifiedAt": 1596581577263
+        },
+        {
+            "name": "href",
+            "lastModifiedAt": 1596581577641
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1596581577889
+        },
+        {
+            "name": "pathname",
+            "lastModifiedAt": 1596581578701
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1596581578954
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1596581579278
+        },
+        {
+            "name": "reload",
+            "lastModifiedAt": 1596581580755
+        },
+        {
+            "name": "replace",
+            "lastModifiedAt": 1596581581038
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1596581580135
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1596581581349
+        }
+    ]
+}

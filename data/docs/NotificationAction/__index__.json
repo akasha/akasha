@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193593279
-    }
-]
+{
+    "name": "NotificationAction",
+    "lastModifiedAt": 1597193593279,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193593279
+        }
+    ]
+}

@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190992030
-    },
-    {
-        "name": "createMediaKeys",
-        "lastModifiedAt": 1597190992672
-    },
-    {
-        "name": "getConfiguration",
-        "lastModifiedAt": 1597190992918
-    },
-    {
-        "name": "keySystem",
-        "lastModifiedAt": 1597190992363
-    }
-]
+{
+    "name": "MediaKeySystemAccess",
+    "lastModifiedAt": 1597190992918,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190992030
+        },
+        {
+            "name": "createMediaKeys",
+            "lastModifiedAt": 1597190992672
+        },
+        {
+            "name": "getConfiguration",
+            "lastModifiedAt": 1597190992918
+        },
+        {
+            "name": "keySystem",
+            "lastModifiedAt": 1597190992363
+        }
+    ]
+}

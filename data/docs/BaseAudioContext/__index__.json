@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192543457
-    },
-    {
-        "name": "audioWorklet",
-        "lastModifiedAt": 1597192543741
-    },
-    {
-        "name": "createAnalyser",
-        "lastModifiedAt": 1597192546916
-    },
-    {
-        "name": "createBiquadFilter",
-        "lastModifiedAt": 1597192547217
-    },
-    {
-        "name": "currentTime",
-        "lastModifiedAt": 1597192544037
-    },
-    {
-        "name": "destination",
-        "lastModifiedAt": 1597192544446
-    },
-    {
-        "name": "listener",
-        "lastModifiedAt": 1597192545387
-    },
-    {
-        "name": "sampleRate",
-        "lastModifiedAt": 1597192546207
-    },
-    {
-        "name": "state",
-        "lastModifiedAt": 1597192546606
-    }
-]
+{
+    "name": "BaseAudioContext",
+    "lastModifiedAt": 1597192547217,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192543457
+        },
+        {
+            "name": "audioWorklet",
+            "lastModifiedAt": 1597192543741
+        },
+        {
+            "name": "createAnalyser",
+            "lastModifiedAt": 1597192546916
+        },
+        {
+            "name": "createBiquadFilter",
+            "lastModifiedAt": 1597192547217
+        },
+        {
+            "name": "currentTime",
+            "lastModifiedAt": 1597192544037
+        },
+        {
+            "name": "destination",
+            "lastModifiedAt": 1597192544446
+        },
+        {
+            "name": "listener",
+            "lastModifiedAt": 1597192545387
+        },
+        {
+            "name": "sampleRate",
+            "lastModifiedAt": 1597192546207
+        },
+        {
+            "name": "state",
+            "lastModifiedAt": 1597192546606
+        }
+    ]
+}

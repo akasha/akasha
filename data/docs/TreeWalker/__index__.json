@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193077506
-    },
-    {
-        "name": "currentNode",
-        "lastModifiedAt": 1597193080136
-    },
-    {
-        "name": "expandEntityReferences",
-        "lastModifiedAt": 1597193079766
-    },
-    {
-        "name": "filter",
-        "lastModifiedAt": 1597193078976
-    },
-    {
-        "name": "root",
-        "lastModifiedAt": 1597193078289
-    },
-    {
-        "name": "whatToShow",
-        "lastModifiedAt": 1597193078577
-    }
-]
+{
+    "name": "TreeWalker",
+    "lastModifiedAt": 1597193080136,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193077506
+        },
+        {
+            "name": "currentNode",
+            "lastModifiedAt": 1597193080136
+        },
+        {
+            "name": "expandEntityReferences",
+            "lastModifiedAt": 1597193079766
+        },
+        {
+            "name": "filter",
+            "lastModifiedAt": 1597193078976
+        },
+        {
+            "name": "root",
+            "lastModifiedAt": 1597193078289
+        },
+        {
+            "name": "whatToShow",
+            "lastModifiedAt": 1597193078577
+        }
+    ]
+}

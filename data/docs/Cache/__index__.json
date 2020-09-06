@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192331578
-    },
-    {
-        "name": "add",
-        "lastModifiedAt": 1597192332358
-    },
-    {
-        "name": "addAll",
-        "lastModifiedAt": 1597192332621
-    },
-    {
-        "name": "delete",
-        "lastModifiedAt": 1599279151264
-    },
-    {
-        "name": "keys",
-        "lastModifiedAt": 1597192333949
-    },
-    {
-        "name": "match",
-        "lastModifiedAt": 1597192331823
-    },
-    {
-        "name": "matchAll",
-        "lastModifiedAt": 1597192332072
-    },
-    {
-        "name": "put",
-        "lastModifiedAt": 1597192332885
-    }
-]
+{
+    "name": "Cache",
+    "lastModifiedAt": 1599279151264,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192331578
+        },
+        {
+            "name": "add",
+            "lastModifiedAt": 1597192332358
+        },
+        {
+            "name": "addAll",
+            "lastModifiedAt": 1597192332621
+        },
+        {
+            "name": "delete",
+            "lastModifiedAt": 1599279151264
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1597192333949
+        },
+        {
+            "name": "match",
+            "lastModifiedAt": 1597192331823
+        },
+        {
+            "name": "matchAll",
+            "lastModifiedAt": 1597192332072
+        },
+        {
+            "name": "put",
+            "lastModifiedAt": 1597192332885
+        }
+    ]
+}

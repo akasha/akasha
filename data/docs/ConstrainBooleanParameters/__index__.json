@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596544754958
-    }
-]
+{
+    "name": "ConstrainBooleanParameters",
+    "lastModifiedAt": 1596544754958,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596544754958
+        }
+    ]
+}

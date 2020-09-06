@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190723669
-    }
-]
+{
+    "name": "CSSGroupingRule",
+    "lastModifiedAt": 1597190723669,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190723669
+        }
+    ]
+}

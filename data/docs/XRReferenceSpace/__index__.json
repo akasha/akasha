@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280964537
-    },
-    {
-        "name": "getOffsetReferenceSpace",
-        "lastModifiedAt": 1599280965004
-    },
-    {
-        "name": "onreset",
-        "lastModifiedAt": 1599280965955
-    },
-    {
-        "name": "reset_event",
-        "lastModifiedAt": 1599280965513
-    }
-]
+{
+    "name": "XRReferenceSpace",
+    "lastModifiedAt": 1599280965955,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280964537
+        },
+        {
+            "name": "getOffsetReferenceSpace",
+            "lastModifiedAt": 1599280965004
+        },
+        {
+            "name": "onreset",
+            "lastModifiedAt": 1599280965955
+        },
+        {
+            "name": "reset_event",
+            "lastModifiedAt": 1599280965513
+        }
+    ]
+}

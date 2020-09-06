@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191983214
-    }
-]
+{
+    "name": "SVGFEOffsetElement",
+    "lastModifiedAt": 1597191983214,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191983214
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192540293
-    }
-]
+{
+    "name": "PeriodicWave",
+    "lastModifiedAt": 1597192540293,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192540293
+        }
+    ]
+}

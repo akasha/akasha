@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192521545
-    }
-]
+{
+    "name": "AnimationPlaybackEvent",
+    "lastModifiedAt": 1597192521545,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192521545
+        }
+    ]
+}

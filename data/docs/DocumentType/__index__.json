@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193075001
-    }
-]
+{
+    "name": "DocumentType",
+    "lastModifiedAt": 1597193075001,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193075001
+        }
+    ]
+}

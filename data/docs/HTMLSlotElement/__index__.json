@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193502449
-    },
-    {
-        "name": "assignedElements",
-        "lastModifiedAt": 1596581525850
-    },
-    {
-        "name": "assignedNodes",
-        "lastModifiedAt": 1596581526140
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1596581525043
-    },
-    {
-        "name": "slotchange_event",
-        "lastModifiedAt": 1597360359663
-    }
-]
+{
+    "name": "HTMLSlotElement",
+    "lastModifiedAt": 1597360359663,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193502449
+        },
+        {
+            "name": "assignedElements",
+            "lastModifiedAt": 1596581525850
+        },
+        {
+            "name": "assignedNodes",
+            "lastModifiedAt": 1596581526140
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1596581525043
+        },
+        {
+            "name": "slotchange_event",
+            "lastModifiedAt": 1597360359663
+        }
+    ]
+}

@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192317278
-    },
-    {
-        "name": "claim",
-        "lastModifiedAt": 1597192318865
-    },
-    {
-        "name": "get",
-        "lastModifiedAt": 1597192317559
-    },
-    {
-        "name": "matchAll",
-        "lastModifiedAt": 1597192317804
-    },
-    {
-        "name": "openWindow",
-        "lastModifiedAt": 1597192318070
-    }
-]
+{
+    "name": "Clients",
+    "lastModifiedAt": 1597192318865,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192317278
+        },
+        {
+            "name": "claim",
+            "lastModifiedAt": 1597192318865
+        },
+        {
+            "name": "get",
+            "lastModifiedAt": 1597192317559
+        },
+        {
+            "name": "matchAll",
+            "lastModifiedAt": 1597192317804
+        },
+        {
+            "name": "openWindow",
+            "lastModifiedAt": 1597192318070
+        }
+    ]
+}

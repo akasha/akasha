@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "Touch",
-        "lastModifiedAt": 1597192478476
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192478217
-    }
-]
+{
+    "name": "Touch",
+    "lastModifiedAt": 1597192478476,
+    "entries": [
+        {
+            "name": "Touch",
+            "lastModifiedAt": 1597192478476
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192478217
+        }
+    ]
+}

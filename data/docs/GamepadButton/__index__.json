@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192004612
-    },
-    {
-        "name": "pressed",
-        "lastModifiedAt": 1597192005316
-    },
-    {
-        "name": "value",
-        "lastModifiedAt": 1597192005007
-    }
-]
+{
+    "name": "GamepadButton",
+    "lastModifiedAt": 1597192005316,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192004612
+        },
+        {
+            "name": "pressed",
+            "lastModifiedAt": 1597192005316
+        },
+        {
+            "name": "value",
+            "lastModifiedAt": 1597192005007
+        }
+    ]
+}

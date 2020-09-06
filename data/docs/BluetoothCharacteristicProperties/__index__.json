@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280728219
-    },
-    {
-        "name": "authenticatedSignedWrites",
-        "lastModifiedAt": 1599280728831
-    },
-    {
-        "name": "broadcast",
-        "lastModifiedAt": 1596712330065
-    },
-    {
-        "name": "indicate",
-        "lastModifiedAt": 1596712331145
-    },
-    {
-        "name": "notify",
-        "lastModifiedAt": 1596712331966
-    },
-    {
-        "name": "read",
-        "lastModifiedAt": 1599280730813
-    },
-    {
-        "name": "reliableWrite",
-        "lastModifiedAt": 1596712333271
-    },
-    {
-        "name": "write",
-        "lastModifiedAt": 1596712334557
-    }
-]
+{
+    "name": "BluetoothCharacteristicProperties",
+    "lastModifiedAt": 1599280730813,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280728219
+        },
+        {
+            "name": "authenticatedSignedWrites",
+            "lastModifiedAt": 1599280728831
+        },
+        {
+            "name": "broadcast",
+            "lastModifiedAt": 1596712330065
+        },
+        {
+            "name": "indicate",
+            "lastModifiedAt": 1596712331145
+        },
+        {
+            "name": "notify",
+            "lastModifiedAt": 1596712331966
+        },
+        {
+            "name": "read",
+            "lastModifiedAt": 1599280730813
+        },
+        {
+            "name": "reliableWrite",
+            "lastModifiedAt": 1596712333271
+        },
+        {
+            "name": "write",
+            "lastModifiedAt": 1596712334557
+        }
+    ]
+}

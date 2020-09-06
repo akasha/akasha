@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192529126
-    }
-]
+{
+    "name": "AudioNodeOptions",
+    "lastModifiedAt": 1597192529126,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192529126
+        }
+    ]
+}

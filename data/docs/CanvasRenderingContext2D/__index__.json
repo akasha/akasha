@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581220550
-    }
-]
+{
+    "name": "CanvasRenderingContext2D",
+    "lastModifiedAt": 1596581220550,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581220550
+        }
+    ]
+}

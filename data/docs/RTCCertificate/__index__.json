@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192841682
-    }
-]
+{
+    "name": "RTCCertificate",
+    "lastModifiedAt": 1597192841682,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192841682
+        }
+    ]
+}

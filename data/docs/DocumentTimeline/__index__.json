@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "DocumentTimeline",
-        "lastModifiedAt": 1597192514258
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192514014
-    }
-]
+{
+    "name": "DocumentTimeline",
+    "lastModifiedAt": 1597192514258,
+    "entries": [
+        {
+            "name": "DocumentTimeline",
+            "lastModifiedAt": 1597192514258
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192514014
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190810565
-    }
-]
+{
+    "name": "CaretPosition",
+    "lastModifiedAt": 1597190810565,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190810565
+        }
+    ]
+}

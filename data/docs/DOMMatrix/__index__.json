@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "DOMMatrix",
-        "lastModifiedAt": 1597192052551
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279515013
-    }
-]
+{
+    "name": "DOMMatrix",
+    "lastModifiedAt": 1599279515013,
+    "entries": [
+        {
+            "name": "DOMMatrix",
+            "lastModifiedAt": 1597192052551
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279515013
+        }
+    ]
+}

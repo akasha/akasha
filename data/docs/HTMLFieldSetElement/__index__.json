@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193443594
-    }
-]
+{
+    "name": "HTMLFieldSetElement",
+    "lastModifiedAt": 1597193443594,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193443594
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279912746
-    }
-]
+{
+    "name": "VTTRegion",
+    "lastModifiedAt": 1599279912746,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279912746
+        }
+    ]
+}

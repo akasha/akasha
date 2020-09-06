@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279430328
-    },
-    {
-        "name": "localId",
-        "lastModifiedAt": 1599279430840
-    },
-    {
-        "name": "remoteTimestamp",
-        "lastModifiedAt": 1596544738164
-    },
-    {
-        "name": "reportsSent",
-        "lastModifiedAt": 1596544738529
-    }
-]
+{
+    "name": "RTCRemoteOutboundRtpStreamStats",
+    "lastModifiedAt": 1599279430840,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279430328
+        },
+        {
+            "name": "localId",
+            "lastModifiedAt": 1599279430840
+        },
+        {
+            "name": "remoteTimestamp",
+            "lastModifiedAt": 1596544738164
+        },
+        {
+            "name": "reportsSent",
+            "lastModifiedAt": 1596544738529
+        }
+    ]
+}

@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192567067
-    },
-    {
-        "name": "port",
-        "lastModifiedAt": 1597192567388
-    }
-]
+{
+    "name": "AudioWorkletProcessor",
+    "lastModifiedAt": 1597192567388,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192567067
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1597192567388
+        }
+    ]
+}

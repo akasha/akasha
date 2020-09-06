@@ -1,14 +1,19 @@
-[
-  {
-    "name": "__type__",
-    "lastModifiedAt": 0
-  },
-  {
-    "name": "acceptNode",
-    "lastModifiedAt": 0
-  },
-  {
-    "name": "FILTER_ACCEPT",
-    "lastModifiedAt": 0
-  }
-]
+
+{
+    "name": "NodeFilter",
+    "lastModifiedAt": 0,
+    "entries": [
+        {
+            "name": "FILTER_ACCEPT",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "acceptNode",
+            "lastModifiedAt": 0
+        }
+    ]
+}

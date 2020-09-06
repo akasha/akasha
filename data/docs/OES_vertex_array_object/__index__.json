@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192705422
-    }
-]
+{
+    "name": "OES_vertex_array_object",
+    "lastModifiedAt": 1597192705422,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192705422
+        }
+    ]
+}

@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "Text",
-        "lastModifiedAt": 1597193081446
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193080380
-    },
-    {
-        "name": "assignedSlot",
-        "lastModifiedAt": 1597193081178
-    },
-    {
-        "name": "isElementContentWhitespace",
-        "lastModifiedAt": 1597193080643
-    },
-    {
-        "name": "wholeText",
-        "lastModifiedAt": 1597193080936
-    }
-]
+{
+    "name": "Text",
+    "lastModifiedAt": 1597193081446,
+    "entries": [
+        {
+            "name": "Text",
+            "lastModifiedAt": 1597193081446
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193080380
+        },
+        {
+            "name": "assignedSlot",
+            "lastModifiedAt": 1597193081178
+        },
+        {
+            "name": "isElementContentWhitespace",
+            "lastModifiedAt": 1597193080643
+        },
+        {
+            "name": "wholeText",
+            "lastModifiedAt": 1597193080936
+        }
+    ]
+}

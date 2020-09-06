@@ -1,43 +1,47 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192117982
-    },
-    {
-        "name": "error",
-        "lastModifiedAt": 1599279729124
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1597358529416
-    },
-    {
-        "name": "onerror",
-        "lastModifiedAt": 1599279734342
-    },
-    {
-        "name": "onsuccess",
-        "lastModifiedAt": 1599279735518
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1597192119062
-    },
-    {
-        "name": "result",
-        "lastModifiedAt": 1597192118563
-    },
-    {
-        "name": "source",
-        "lastModifiedAt": 1597192118800
-    },
-    {
-        "name": "success_event",
-        "lastModifiedAt": 1597358529970
-    },
-    {
-        "name": "transaction",
-        "lastModifiedAt": 1597192119382
-    }
-]
+{
+    "name": "IDBRequest",
+    "lastModifiedAt": 1599279735518,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192117982
+        },
+        {
+            "name": "error",
+            "lastModifiedAt": 1599279729124
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1597358529416
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1599279734342
+        },
+        {
+            "name": "onsuccess",
+            "lastModifiedAt": 1599279735518
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1597192119062
+        },
+        {
+            "name": "result",
+            "lastModifiedAt": 1597192118563
+        },
+        {
+            "name": "source",
+            "lastModifiedAt": 1597192118800
+        },
+        {
+            "name": "success_event",
+            "lastModifiedAt": 1597358529970
+        },
+        {
+            "name": "transaction",
+            "lastModifiedAt": 1597192119382
+        }
+    ]
+}

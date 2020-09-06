@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192686279
-    }
-]
+{
+    "name": "WebGLBuffer",
+    "lastModifiedAt": 1597192686279,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192686279
+        }
+    ]
+}

@@ -7,11 +7,9 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.json.bind.Jsonb;
@@ -28,15 +26,19 @@ public final class DocIndex
   @Nonnull
   private final Path _directory;
   @Nonnull
-  private final List<EntryIndex> _entries;
+  private final DocIndexContent _content;
 
-  DocIndex( @Nonnull final String name, @Nonnull final Path directory, @Nonnull final List<EntryIndex> entries )
+  DocIndex( @Nonnull final String name, @Nonnull final Path directory, @Nonnull final DocIndexContent content )
   {
     _name = Objects.requireNonNull( name );
     _directory = Objects.requireNonNull( directory );
-    _entries = Objects.requireNonNull( entries );
-    for ( final EntryIndex entry : _entries )
+    _content = Objects.requireNonNull( content );
+    for ( final EntryIndex entry : _content.getEntries() )
     {
+      if ( null == entry.getName() )
+      {
+        throw new IndexFormatException( "DocIndex at " + _directory + " contains an entry missing the name value" );
+      }
       entry.setDocIndex( this );
     }
   }
@@ -54,16 +56,23 @@ public final class DocIndex
   }
 
   @Nonnull
+  public DocIndexContent getContent()
+  {
+    return _content;
+  }
+
+  @Nonnull
   public List<EntryIndex> getEntries()
   {
-    return _entries;
+    return getContent().getEntries();
   }
 
   public void removeEntry( @Nonnull final EntryIndex entry )
     throws IndexSaveException
   {
-    _entries.remove( entry );
-    if ( _entries.isEmpty() )
+    final List<EntryIndex> entries = getEntries();
+    entries.remove( entry );
+    if ( entries.isEmpty() )
     {
       remove();
     }
@@ -76,7 +85,7 @@ public final class DocIndex
   public void remove()
     throws IndexSaveException
   {
-    _entries.clear();
+    getEntries().clear();
     try
     {
       FilesUtil.deleteDirectory( _directory );
@@ -111,7 +120,7 @@ public final class DocIndex
       entry.setDocIndex( this );
       entry.setName( name );
       entry.setLastModifiedAt( 0 );
-      _entries.add( entry );
+      getEntries().add( entry );
       save();
     }
     return entry;
@@ -133,7 +142,11 @@ public final class DocIndex
   @Nonnull
   private static DocIndex create( @Nonnull final Path directory )
   {
-    return new DocIndex( directory.getFileName().toString(), directory, new ArrayList<>() );
+    final DocIndexContent content = new DocIndexContent();
+    final String name = directory.getFileName().toString();
+    content.setName( name );
+    content.setLastModifiedAt( 0 );
+    return new DocIndex( directory.getFileName().toString(), directory, content );
   }
 
   @Nonnull
@@ -143,18 +156,8 @@ public final class DocIndex
     final Path path = directory.resolve( FILENAME );
     try ( final InputStream inputStream = new FileInputStream( path.toFile() ) )
     {
-      final List<EntryIndex> entries =
-        jsonb.fromJson( inputStream, new ArrayList<EntryIndex>()
-        {
-        }.getClass().getGenericSuperclass() );
-      for ( final EntryIndex entry : entries )
-      {
-        if ( null == entry.getName() )
-        {
-          throw new IndexFormatException( "DocIndex at " + path + " contains an entry missing the name value" );
-        }
-      }
-      return new DocIndex( directory.getFileName().toString(), directory, entries );
+      final DocIndexContent content = jsonb.fromJson( inputStream, DocIndexContent.class );
+      return new DocIndex( content.getName(), directory, content );
     }
     catch ( final IOException ioe )
     {
@@ -172,14 +175,16 @@ public final class DocIndex
       final JsonbConfig jsonbConfig = new JsonbConfig().withFormatting( true );
       final Jsonb jsonb = JsonbBuilder.create( jsonbConfig );
       final Path path = directory.resolve( FILENAME );
+      final DocIndexContent content = index.getContent();
+      final List<EntryIndex> entries = content.getEntries();
+      entries.sort( Comparator.comparing( EntryIndex::getName ) );
+      content.setLastModifiedAt( entries.stream()
+                                   .map( EntryIndex::getLastModifiedAt )
+                                   .max( Long::compareTo )
+                                   .orElse( 0L ) );
       try ( final FileOutputStream outputStream = new FileOutputStream( path.toFile() ) )
       {
-        jsonb.toJson( index
-                        .getEntries()
-                        .stream()
-                        .sorted( Comparator.comparing( EntryIndex::getName ) )
-                        .collect( Collectors.toList() ),
-                      outputStream );
+        jsonb.toJson( content, outputStream );
       }
       jsonb.close();
       // Add newline as json output omits trailing new line

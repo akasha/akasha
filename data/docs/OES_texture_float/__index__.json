@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192703993
-    }
-]
+{
+    "name": "OES_texture_float",
+    "lastModifiedAt": 1597192703993,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192703993
+        }
+    ]
+}

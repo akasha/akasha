@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278969241
-    }
-]
+{
+    "name": "SVGTransform",
+    "lastModifiedAt": 1599278969241,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278969241
+        }
+    ]
+}

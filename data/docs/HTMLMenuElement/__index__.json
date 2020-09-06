@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581168755
-    }
-]
+{
+    "name": "HTMLMenuElement",
+    "lastModifiedAt": 1596581168755,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581168755
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "CloseEvent",
-        "lastModifiedAt": 1597189205080
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597189204158
-    },
-    {
-        "name": "initCloseEvent",
-        "lastModifiedAt": 1597189208121
-    }
-]
+{
+    "name": "CloseEvent",
+    "lastModifiedAt": 1597189208121,
+    "entries": [
+        {
+            "name": "CloseEvent",
+            "lastModifiedAt": 1597189205080
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597189204158
+        },
+        {
+            "name": "initCloseEvent",
+            "lastModifiedAt": 1597189208121
+        }
+    ]
+}

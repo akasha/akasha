@@ -1,63 +1,67 @@
 
-[
-    {
-        "name": "Request",
-        "lastModifiedAt": 1597193117924
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193117530
-    },
-    {
-        "name": "cache",
-        "lastModifiedAt": 1597193118439
-    },
-    {
-        "name": "clone",
-        "lastModifiedAt": 1597193122896
-    },
-    {
-        "name": "context",
-        "lastModifiedAt": 1597193118690
-    },
-    {
-        "name": "credentials",
-        "lastModifiedAt": 1597193119482
-    },
-    {
-        "name": "destination",
-        "lastModifiedAt": 1597193119751
-    },
-    {
-        "name": "headers",
-        "lastModifiedAt": 1597193120283
-    },
-    {
-        "name": "integrity",
-        "lastModifiedAt": 1597193120524
-    },
-    {
-        "name": "method",
-        "lastModifiedAt": 1597193120886
-    },
-    {
-        "name": "mode",
-        "lastModifiedAt": 1597193121268
-    },
-    {
-        "name": "redirect",
-        "lastModifiedAt": 1597193121595
-    },
-    {
-        "name": "referrer",
-        "lastModifiedAt": 1597193121860
-    },
-    {
-        "name": "referrerPolicy",
-        "lastModifiedAt": 1597193122179
-    },
-    {
-        "name": "url",
-        "lastModifiedAt": 1597193122527
-    }
-]
+{
+    "name": "Request",
+    "lastModifiedAt": 1597193122896,
+    "entries": [
+        {
+            "name": "Request",
+            "lastModifiedAt": 1597193117924
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193117530
+        },
+        {
+            "name": "cache",
+            "lastModifiedAt": 1597193118439
+        },
+        {
+            "name": "clone",
+            "lastModifiedAt": 1597193122896
+        },
+        {
+            "name": "context",
+            "lastModifiedAt": 1597193118690
+        },
+        {
+            "name": "credentials",
+            "lastModifiedAt": 1597193119482
+        },
+        {
+            "name": "destination",
+            "lastModifiedAt": 1597193119751
+        },
+        {
+            "name": "headers",
+            "lastModifiedAt": 1597193120283
+        },
+        {
+            "name": "integrity",
+            "lastModifiedAt": 1597193120524
+        },
+        {
+            "name": "method",
+            "lastModifiedAt": 1597193120886
+        },
+        {
+            "name": "mode",
+            "lastModifiedAt": 1597193121268
+        },
+        {
+            "name": "redirect",
+            "lastModifiedAt": 1597193121595
+        },
+        {
+            "name": "referrer",
+            "lastModifiedAt": 1597193121860
+        },
+        {
+            "name": "referrerPolicy",
+            "lastModifiedAt": 1597193122179
+        },
+        {
+            "name": "url",
+            "lastModifiedAt": 1597193122527
+        }
+    ]
+}

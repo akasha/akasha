@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596712555374
-    }
-]
+{
+    "name": "XRRigidTransform",
+    "lastModifiedAt": 1596712555374,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596712555374
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192512396
-    }
-]
+{
+    "name": "KeyframeEffectOptions",
+    "lastModifiedAt": 1597192512396,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192512396
+        }
+    ]
+}

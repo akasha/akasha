@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192364047
-    },
-    {
-        "name": "charIndex",
-        "lastModifiedAt": 1596712236735
-    },
-    {
-        "name": "elapsedTime",
-        "lastModifiedAt": 1599280522042
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1596712238092
-    },
-    {
-        "name": "utterance",
-        "lastModifiedAt": 1596712239184
-    }
-]
+{
+    "name": "SpeechSynthesisEvent",
+    "lastModifiedAt": 1599280522042,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192364047
+        },
+        {
+            "name": "charIndex",
+            "lastModifiedAt": 1596712236735
+        },
+        {
+            "name": "elapsedTime",
+            "lastModifiedAt": 1599280522042
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1596712238092
+        },
+        {
+            "name": "utterance",
+            "lastModifiedAt": 1596712239184
+        }
+    ]
+}

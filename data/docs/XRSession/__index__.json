@@ -1,43 +1,47 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192978201
-    },
-    {
-        "name": "cancelAnimationFrame",
-        "lastModifiedAt": 1599279359010
-    },
-    {
-        "name": "end",
-        "lastModifiedAt": 1599279359555
-    },
-    {
-        "name": "environmentBlendMode",
-        "lastModifiedAt": 1599279355692
-    },
-    {
-        "name": "inputSources",
-        "lastModifiedAt": 1599279356761
-    },
-    {
-        "name": "renderState",
-        "lastModifiedAt": 1599279357361
-    },
-    {
-        "name": "requestAnimationFrame",
-        "lastModifiedAt": 1599279360679
-    },
-    {
-        "name": "requestReferenceSpace",
-        "lastModifiedAt": 1599279361272
-    },
-    {
-        "name": "updateRenderState",
-        "lastModifiedAt": 1599279361949
-    },
-    {
-        "name": "visibilityState",
-        "lastModifiedAt": 1599279357895
-    }
-]
+{
+    "name": "XRSession",
+    "lastModifiedAt": 1599279361949,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192978201
+        },
+        {
+            "name": "cancelAnimationFrame",
+            "lastModifiedAt": 1599279359010
+        },
+        {
+            "name": "end",
+            "lastModifiedAt": 1599279359555
+        },
+        {
+            "name": "environmentBlendMode",
+            "lastModifiedAt": 1599279355692
+        },
+        {
+            "name": "inputSources",
+            "lastModifiedAt": 1599279356761
+        },
+        {
+            "name": "renderState",
+            "lastModifiedAt": 1599279357361
+        },
+        {
+            "name": "requestAnimationFrame",
+            "lastModifiedAt": 1599279360679
+        },
+        {
+            "name": "requestReferenceSpace",
+            "lastModifiedAt": 1599279361272
+        },
+        {
+            "name": "updateRenderState",
+            "lastModifiedAt": 1599279361949
+        },
+        {
+            "name": "visibilityState",
+            "lastModifiedAt": 1599279357895
+        }
+    ]
+}

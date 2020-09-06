@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192509022
-    },
-    {
-        "name": "delay",
-        "lastModifiedAt": 1599280584399
-    },
-    {
-        "name": "direction",
-        "lastModifiedAt": 1599280585457
-    },
-    {
-        "name": "duration",
-        "lastModifiedAt": 1599280586554
-    },
-    {
-        "name": "easing",
-        "lastModifiedAt": 1599280587211
-    },
-    {
-        "name": "endDelay",
-        "lastModifiedAt": 1599280587826
-    },
-    {
-        "name": "fill",
-        "lastModifiedAt": 1599280589022
-    },
-    {
-        "name": "iterationStart",
-        "lastModifiedAt": 1599280590088
-    },
-    {
-        "name": "iterations",
-        "lastModifiedAt": 1599280590644
-    }
-]
+{
+    "name": "EffectTiming",
+    "lastModifiedAt": 1599280590644,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192509022
+        },
+        {
+            "name": "delay",
+            "lastModifiedAt": 1599280584399
+        },
+        {
+            "name": "direction",
+            "lastModifiedAt": 1599280585457
+        },
+        {
+            "name": "duration",
+            "lastModifiedAt": 1599280586554
+        },
+        {
+            "name": "easing",
+            "lastModifiedAt": 1599280587211
+        },
+        {
+            "name": "endDelay",
+            "lastModifiedAt": 1599280587826
+        },
+        {
+            "name": "fill",
+            "lastModifiedAt": 1599280589022
+        },
+        {
+            "name": "iterationStart",
+            "lastModifiedAt": 1599280590088
+        },
+        {
+            "name": "iterations",
+            "lastModifiedAt": 1599280590644
+        }
+    ]
+}

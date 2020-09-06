@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191988851
-    }
-]
+{
+    "name": "SVGFESpotLightElement",
+    "lastModifiedAt": 1597191988851,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191988851
+        }
+    ]
+}

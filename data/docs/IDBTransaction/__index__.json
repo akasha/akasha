@@ -1,59 +1,63 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192109668
-    },
-    {
-        "name": "abort",
-        "lastModifiedAt": 1597192112424
-    },
-    {
-        "name": "abort_event",
-        "lastModifiedAt": 1597357665955
-    },
-    {
-        "name": "commit",
-        "lastModifiedAt": 1599278787878
-    },
-    {
-        "name": "complete_event",
-        "lastModifiedAt": 1597357666633
-    },
-    {
-        "name": "db",
-        "lastModifiedAt": 1597192110472
-    },
-    {
-        "name": "error",
-        "lastModifiedAt": 1599278784748
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1599278789422
-    },
-    {
-        "name": "mode",
-        "lastModifiedAt": 1597192111116
-    },
-    {
-        "name": "objectStore",
-        "lastModifiedAt": 1597192113368
-    },
-    {
-        "name": "objectStoreNames",
-        "lastModifiedAt": 1599278786032
-    },
-    {
-        "name": "onabort",
-        "lastModifiedAt": 1599278790071
-    },
-    {
-        "name": "oncomplete",
-        "lastModifiedAt": 1599278790536
-    },
-    {
-        "name": "onerror",
-        "lastModifiedAt": 1597192116528
-    }
-]
+{
+    "name": "IDBTransaction",
+    "lastModifiedAt": 1599278790536,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192109668
+        },
+        {
+            "name": "abort",
+            "lastModifiedAt": 1597192112424
+        },
+        {
+            "name": "abort_event",
+            "lastModifiedAt": 1597357665955
+        },
+        {
+            "name": "commit",
+            "lastModifiedAt": 1599278787878
+        },
+        {
+            "name": "complete_event",
+            "lastModifiedAt": 1597357666633
+        },
+        {
+            "name": "db",
+            "lastModifiedAt": 1597192110472
+        },
+        {
+            "name": "error",
+            "lastModifiedAt": 1599278784748
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1599278789422
+        },
+        {
+            "name": "mode",
+            "lastModifiedAt": 1597192111116
+        },
+        {
+            "name": "objectStore",
+            "lastModifiedAt": 1597192113368
+        },
+        {
+            "name": "objectStoreNames",
+            "lastModifiedAt": 1599278786032
+        },
+        {
+            "name": "onabort",
+            "lastModifiedAt": 1599278790071
+        },
+        {
+            "name": "oncomplete",
+            "lastModifiedAt": 1599278790536
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1597192116528
+        }
+    ]
+}

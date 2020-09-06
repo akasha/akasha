@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "ReadableStream",
-        "lastModifiedAt": 1597192136391
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279785082
-    },
-    {
-        "name": "cancel",
-        "lastModifiedAt": 1599279786897
-    },
-    {
-        "name": "locked",
-        "lastModifiedAt": 1599279786410
-    }
-]
+{
+    "name": "ReadableStream",
+    "lastModifiedAt": 1599279786897,
+    "entries": [
+        {
+            "name": "ReadableStream",
+            "lastModifiedAt": 1597192136391
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279785082
+        },
+        {
+            "name": "cancel",
+            "lastModifiedAt": 1599279786897
+        },
+        {
+            "name": "locked",
+            "lastModifiedAt": 1599279786410
+        }
+    ]
+}

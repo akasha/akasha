@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581192888
-    },
-    {
-        "name": "languagechange_event",
-        "lastModifiedAt": 1597359954347
-    },
-    {
-        "name": "onlanguagechange",
-        "lastModifiedAt": 1597279159656
-    }
-]
+{
+    "name": "WorkerGlobalScope",
+    "lastModifiedAt": 1597359954347,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581192888
+        },
+        {
+            "name": "languagechange_event",
+            "lastModifiedAt": 1597359954347
+        },
+        {
+            "name": "onlanguagechange",
+            "lastModifiedAt": 1597279159656
+        }
+    ]
+}

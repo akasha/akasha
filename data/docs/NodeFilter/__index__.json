@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278988461
-    },
-    {
-        "name": "acceptNode",
-        "lastModifiedAt": 1597193011726
-    }
-]
+{
+    "name": "NodeFilter",
+    "lastModifiedAt": 1599278988461,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278988461
+        },
+        {
+            "name": "acceptNode",
+            "lastModifiedAt": 1597193011726
+        }
+    ]
+}

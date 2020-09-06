@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "KeyframeEffect",
-        "lastModifiedAt": 1599280131936
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280130832
-    },
-    {
-        "name": "composite",
-        "lastModifiedAt": 1599280135024
-    },
-    {
-        "name": "getKeyframes",
-        "lastModifiedAt": 1599280135997
-    },
-    {
-        "name": "iterationComposite",
-        "lastModifiedAt": 1597192519606
-    },
-    {
-        "name": "target",
-        "lastModifiedAt": 1599280132595
-    }
-]
+{
+    "name": "KeyframeEffect",
+    "lastModifiedAt": 1599280135997,
+    "entries": [
+        {
+            "name": "KeyframeEffect",
+            "lastModifiedAt": 1599280131936
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280130832
+        },
+        {
+            "name": "composite",
+            "lastModifiedAt": 1599280135024
+        },
+        {
+            "name": "getKeyframes",
+            "lastModifiedAt": 1599280135997
+        },
+        {
+            "name": "iterationComposite",
+            "lastModifiedAt": 1597192519606
+        },
+        {
+            "name": "target",
+            "lastModifiedAt": 1599280132595
+        }
+    ]
+}

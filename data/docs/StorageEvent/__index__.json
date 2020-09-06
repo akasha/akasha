@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581190500
-    }
-]
+{
+    "name": "StorageEvent",
+    "lastModifiedAt": 1596581190500,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581190500
+        }
+    ]
+}

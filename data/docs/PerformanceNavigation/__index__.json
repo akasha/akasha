@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192254795
-    },
-    {
-        "name": "redirectCount",
-        "lastModifiedAt": 1597192256002
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1597192255185
-    }
-]
+{
+    "name": "PerformanceNavigation",
+    "lastModifiedAt": 1597192256002,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192254795
+        },
+        {
+            "name": "redirectCount",
+            "lastModifiedAt": 1597192256002
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1597192255185
+        }
+    ]
+}

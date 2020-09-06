@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "Path2D",
-        "lastModifiedAt": 1596581216285
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193250667
-    },
-    {
-        "name": "addPath",
-        "lastModifiedAt": 1596581216573
-    }
-]
+{
+    "name": "Path2D",
+    "lastModifiedAt": 1597193250667,
+    "entries": [
+        {
+            "name": "Path2D",
+            "lastModifiedAt": 1596581216285
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193250667
+        },
+        {
+            "name": "addPath",
+            "lastModifiedAt": 1596581216573
+        }
+    ]
+}

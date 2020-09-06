@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192701375
-    }
-]
+{
+    "name": "EXT_texture_filter_anisotropic",
+    "lastModifiedAt": 1597192701375,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192701375
+        }
+    ]
+}

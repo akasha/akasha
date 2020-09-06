@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192468958
-    }
-]
+{
+    "name": "SVGTSpanElement",
+    "lastModifiedAt": 1597192468958,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192468958
+        }
+    ]
+}

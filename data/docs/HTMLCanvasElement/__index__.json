@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193569866
-    },
-    {
-        "name": "captureStream",
-        "lastModifiedAt": 1596581573200
-    },
-    {
-        "name": "getContext",
-        "lastModifiedAt": 1596581573619
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1596581571293
-    },
-    {
-        "name": "mozOpaque",
-        "lastModifiedAt": 1596581571601
-    },
-    {
-        "name": "toBlob",
-        "lastModifiedAt": 1596581573881
-    },
-    {
-        "name": "toDataURL",
-        "lastModifiedAt": 1596581574685
-    },
-    {
-        "name": "transferControlToOffscreen",
-        "lastModifiedAt": 1596581574976
-    },
-    {
-        "name": "webglcontextcreationerror_event",
-        "lastModifiedAt": 1597360433724
-    },
-    {
-        "name": "webglcontextlost_event",
-        "lastModifiedAt": 1597360434463
-    },
-    {
-        "name": "webglcontextrestored_event",
-        "lastModifiedAt": 1597360434918
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1596581572814
-    }
-]
+{
+    "name": "HTMLCanvasElement",
+    "lastModifiedAt": 1597360434918,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193569866
+        },
+        {
+            "name": "captureStream",
+            "lastModifiedAt": 1596581573200
+        },
+        {
+            "name": "getContext",
+            "lastModifiedAt": 1596581573619
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1596581571293
+        },
+        {
+            "name": "mozOpaque",
+            "lastModifiedAt": 1596581571601
+        },
+        {
+            "name": "toBlob",
+            "lastModifiedAt": 1596581573881
+        },
+        {
+            "name": "toDataURL",
+            "lastModifiedAt": 1596581574685
+        },
+        {
+            "name": "transferControlToOffscreen",
+            "lastModifiedAt": 1596581574976
+        },
+        {
+            "name": "webglcontextcreationerror_event",
+            "lastModifiedAt": 1597360433724
+        },
+        {
+            "name": "webglcontextlost_event",
+            "lastModifiedAt": 1597360434463
+        },
+        {
+            "name": "webglcontextrestored_event",
+            "lastModifiedAt": 1597360434918
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1596581572814
+        }
+    ]
+}

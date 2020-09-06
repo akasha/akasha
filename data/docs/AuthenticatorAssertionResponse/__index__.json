@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279772365
-    },
-    {
-        "name": "authenticatorData",
-        "lastModifiedAt": 1597192653607
-    },
-    {
-        "name": "signature",
-        "lastModifiedAt": 1597192653846
-    },
-    {
-        "name": "userHandle",
-        "lastModifiedAt": 1597192654247
-    }
-]
+{
+    "name": "AuthenticatorAssertionResponse",
+    "lastModifiedAt": 1599279772365,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279772365
+        },
+        {
+            "name": "authenticatorData",
+            "lastModifiedAt": 1597192653607
+        },
+        {
+            "name": "signature",
+            "lastModifiedAt": 1597192653846
+        },
+        {
+            "name": "userHandle",
+            "lastModifiedAt": 1597192654247
+        }
+    ]
+}

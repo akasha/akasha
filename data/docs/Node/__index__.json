@@ -1,127 +1,131 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279944577
-    },
-    {
-        "name": "appendChild",
-        "lastModifiedAt": 1597193040457
-    },
-    {
-        "name": "baseURI",
-        "lastModifiedAt": 1597193035581
-    },
-    {
-        "name": "baseURIObject",
-        "lastModifiedAt": 1597193035833
-    },
-    {
-        "name": "childNodes",
-        "lastModifiedAt": 1597193036200
-    },
-    {
-        "name": "cloneNode",
-        "lastModifiedAt": 1597193040819
-    },
-    {
-        "name": "compareDocumentPosition",
-        "lastModifiedAt": 1599279958504
-    },
-    {
-        "name": "contains",
-        "lastModifiedAt": 1597193041877
-    },
-    {
-        "name": "firstChild",
-        "lastModifiedAt": 1597193036503
-    },
-    {
-        "name": "getRootNode",
-        "lastModifiedAt": 1597193042675
-    },
-    {
-        "name": "hasChildNodes",
-        "lastModifiedAt": 1597193043494
-    },
-    {
-        "name": "insertBefore",
-        "lastModifiedAt": 1597193043877
-    },
-    {
-        "name": "isConnected",
-        "lastModifiedAt": 1597193036810
-    },
-    {
-        "name": "isDefaultNamespace",
-        "lastModifiedAt": 1597193044174
-    },
-    {
-        "name": "isEqualNode",
-        "lastModifiedAt": 1599279963300
-    },
-    {
-        "name": "isSameNode",
-        "lastModifiedAt": 1597193044943
-    },
-    {
-        "name": "lastChild",
-        "lastModifiedAt": 1597193037192
-    },
-    {
-        "name": "lookupNamespaceURI",
-        "lastModifiedAt": 1597193045460
-    },
-    {
-        "name": "lookupPrefix",
-        "lastModifiedAt": 1597193045225
-    },
-    {
-        "name": "nextSibling",
-        "lastModifiedAt": 1597193037431
-    },
-    {
-        "name": "nodeName",
-        "lastModifiedAt": 1597193037681
-    },
-    {
-        "name": "nodeType",
-        "lastModifiedAt": 1597193037941
-    },
-    {
-        "name": "nodeValue",
-        "lastModifiedAt": 1597193038239
-    },
-    {
-        "name": "normalize",
-        "lastModifiedAt": 1599279965553
-    },
-    {
-        "name": "ownerDocument",
-        "lastModifiedAt": 1597193038506
-    },
-    {
-        "name": "parentElement",
-        "lastModifiedAt": 1597193039170
-    },
-    {
-        "name": "parentNode",
-        "lastModifiedAt": 1597193038852
-    },
-    {
-        "name": "previousSibling",
-        "lastModifiedAt": 1597193039956
-    },
-    {
-        "name": "removeChild",
-        "lastModifiedAt": 1597193046124
-    },
-    {
-        "name": "replaceChild",
-        "lastModifiedAt": 1597193046430
-    },
-    {
-        "name": "textContent",
-        "lastModifiedAt": 1597193040209
-    }
-]
+{
+    "name": "Node",
+    "lastModifiedAt": 1599279965553,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279944577
+        },
+        {
+            "name": "appendChild",
+            "lastModifiedAt": 1597193040457
+        },
+        {
+            "name": "baseURI",
+            "lastModifiedAt": 1597193035581
+        },
+        {
+            "name": "baseURIObject",
+            "lastModifiedAt": 1597193035833
+        },
+        {
+            "name": "childNodes",
+            "lastModifiedAt": 1597193036200
+        },
+        {
+            "name": "cloneNode",
+            "lastModifiedAt": 1597193040819
+        },
+        {
+            "name": "compareDocumentPosition",
+            "lastModifiedAt": 1599279958504
+        },
+        {
+            "name": "contains",
+            "lastModifiedAt": 1597193041877
+        },
+        {
+            "name": "firstChild",
+            "lastModifiedAt": 1597193036503
+        },
+        {
+            "name": "getRootNode",
+            "lastModifiedAt": 1597193042675
+        },
+        {
+            "name": "hasChildNodes",
+            "lastModifiedAt": 1597193043494
+        },
+        {
+            "name": "insertBefore",
+            "lastModifiedAt": 1597193043877
+        },
+        {
+            "name": "isConnected",
+            "lastModifiedAt": 1597193036810
+        },
+        {
+            "name": "isDefaultNamespace",
+            "lastModifiedAt": 1597193044174
+        },
+        {
+            "name": "isEqualNode",
+            "lastModifiedAt": 1599279963300
+        },
+        {
+            "name": "isSameNode",
+            "lastModifiedAt": 1597193044943
+        },
+        {
+            "name": "lastChild",
+            "lastModifiedAt": 1597193037192
+        },
+        {
+            "name": "lookupNamespaceURI",
+            "lastModifiedAt": 1597193045460
+        },
+        {
+            "name": "lookupPrefix",
+            "lastModifiedAt": 1597193045225
+        },
+        {
+            "name": "nextSibling",
+            "lastModifiedAt": 1597193037431
+        },
+        {
+            "name": "nodeName",
+            "lastModifiedAt": 1597193037681
+        },
+        {
+            "name": "nodeType",
+            "lastModifiedAt": 1597193037941
+        },
+        {
+            "name": "nodeValue",
+            "lastModifiedAt": 1597193038239
+        },
+        {
+            "name": "normalize",
+            "lastModifiedAt": 1599279965553
+        },
+        {
+            "name": "ownerDocument",
+            "lastModifiedAt": 1597193038506
+        },
+        {
+            "name": "parentElement",
+            "lastModifiedAt": 1597193039170
+        },
+        {
+            "name": "parentNode",
+            "lastModifiedAt": 1597193038852
+        },
+        {
+            "name": "previousSibling",
+            "lastModifiedAt": 1597193039956
+        },
+        {
+            "name": "removeChild",
+            "lastModifiedAt": 1597193046124
+        },
+        {
+            "name": "replaceChild",
+            "lastModifiedAt": 1597193046430
+        },
+        {
+            "name": "textContent",
+            "lastModifiedAt": 1597193040209
+        }
+    ]
+}

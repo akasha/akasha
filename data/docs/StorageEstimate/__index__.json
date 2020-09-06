@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193597756
-    },
-    {
-        "name": "quota",
-        "lastModifiedAt": 1599278957282
-    },
-    {
-        "name": "usage",
-        "lastModifiedAt": 1597193598511
-    }
-]
+{
+    "name": "StorageEstimate",
+    "lastModifiedAt": 1599278957282,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193597756
+        },
+        {
+            "name": "quota",
+            "lastModifiedAt": 1599278957282
+        },
+        {
+            "name": "usage",
+            "lastModifiedAt": 1597193598511
+        }
+    ]
+}

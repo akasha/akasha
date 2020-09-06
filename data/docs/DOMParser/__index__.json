@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581165742
-    }
-]
+{
+    "name": "DOMParser",
+    "lastModifiedAt": 1596581165742,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581165742
+        }
+    ]
+}

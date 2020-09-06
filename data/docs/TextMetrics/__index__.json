@@ -1,55 +1,59 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193526811
-    },
-    {
-        "name": "actualBoundingBoxAscent",
-        "lastModifiedAt": 1596581538520
-    },
-    {
-        "name": "actualBoundingBoxDescent",
-        "lastModifiedAt": 1596581538793
-    },
-    {
-        "name": "actualBoundingBoxLeft",
-        "lastModifiedAt": 1596581539034
-    },
-    {
-        "name": "actualBoundingBoxRight",
-        "lastModifiedAt": 1596581539282
-    },
-    {
-        "name": "alphabeticBaseline",
-        "lastModifiedAt": 1596581539517
-    },
-    {
-        "name": "emHeightAscent",
-        "lastModifiedAt": 1596581539773
-    },
-    {
-        "name": "emHeightDescent",
-        "lastModifiedAt": 1596581540032
-    },
-    {
-        "name": "fontBoundingBoxAscent",
-        "lastModifiedAt": 1596581540366
-    },
-    {
-        "name": "fontBoundingBoxDescent",
-        "lastModifiedAt": 1596581540670
-    },
-    {
-        "name": "hangingBaseline",
-        "lastModifiedAt": 1596581540978
-    },
-    {
-        "name": "ideographicBaseline",
-        "lastModifiedAt": 1596581541396
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1596581542205
-    }
-]
+{
+    "name": "TextMetrics",
+    "lastModifiedAt": 1597193526811,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193526811
+        },
+        {
+            "name": "actualBoundingBoxAscent",
+            "lastModifiedAt": 1596581538520
+        },
+        {
+            "name": "actualBoundingBoxDescent",
+            "lastModifiedAt": 1596581538793
+        },
+        {
+            "name": "actualBoundingBoxLeft",
+            "lastModifiedAt": 1596581539034
+        },
+        {
+            "name": "actualBoundingBoxRight",
+            "lastModifiedAt": 1596581539282
+        },
+        {
+            "name": "alphabeticBaseline",
+            "lastModifiedAt": 1596581539517
+        },
+        {
+            "name": "emHeightAscent",
+            "lastModifiedAt": 1596581539773
+        },
+        {
+            "name": "emHeightDescent",
+            "lastModifiedAt": 1596581540032
+        },
+        {
+            "name": "fontBoundingBoxAscent",
+            "lastModifiedAt": 1596581540366
+        },
+        {
+            "name": "fontBoundingBoxDescent",
+            "lastModifiedAt": 1596581540670
+        },
+        {
+            "name": "hangingBaseline",
+            "lastModifiedAt": 1596581540978
+        },
+        {
+            "name": "ideographicBaseline",
+            "lastModifiedAt": 1596581541396
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1596581542205
+        }
+    ]
+}

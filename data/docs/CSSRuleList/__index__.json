@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190727559
-    }
-]
+{
+    "name": "CSSRuleList",
+    "lastModifiedAt": 1597190727559,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190727559
+        }
+    ]
+}

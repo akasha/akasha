@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279584102
-    },
-    {
-        "name": "value",
-        "lastModifiedAt": 1597192119899
-    }
-]
+{
+    "name": "IDBCursorWithValue",
+    "lastModifiedAt": 1599279584102,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279584102
+        },
+        {
+            "name": "value",
+            "lastModifiedAt": 1597192119899
+        }
+    ]
+}

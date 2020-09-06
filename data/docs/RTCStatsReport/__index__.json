@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279727705
-    }
-]
+{
+    "name": "RTCStatsReport",
+    "lastModifiedAt": 1599279727705,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279727705
+        }
+    ]
+}

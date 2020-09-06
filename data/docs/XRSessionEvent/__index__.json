@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "XRSessionEvent",
-        "lastModifiedAt": 1597192986957
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192986711
-    },
-    {
-        "name": "session",
-        "lastModifiedAt": 1596711321538
-    }
-]
+{
+    "name": "XRSessionEvent",
+    "lastModifiedAt": 1597192986957,
+    "entries": [
+        {
+            "name": "XRSessionEvent",
+            "lastModifiedAt": 1597192986957
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192986711
+        },
+        {
+            "name": "session",
+            "lastModifiedAt": 1596711321538
+        }
+    ]
+}

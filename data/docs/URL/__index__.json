@@ -1,71 +1,75 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191946430
-    },
-    {
-        "name": "createObjectURL",
-        "lastModifiedAt": 1599279479815
-    },
-    {
-        "name": "hash",
-        "lastModifiedAt": 1597191946670
-    },
-    {
-        "name": "host",
-        "lastModifiedAt": 1597191947474
-    },
-    {
-        "name": "hostname",
-        "lastModifiedAt": 1597191948297
-    },
-    {
-        "name": "href",
-        "lastModifiedAt": 1597191948688
-    },
-    {
-        "name": "origin",
-        "lastModifiedAt": 1597191948939
-    },
-    {
-        "name": "password",
-        "lastModifiedAt": 1597191949220
-    },
-    {
-        "name": "pathname",
-        "lastModifiedAt": 1597191949482
-    },
-    {
-        "name": "port",
-        "lastModifiedAt": 1599279475453
-    },
-    {
-        "name": "protocol",
-        "lastModifiedAt": 1597191950101
-    },
-    {
-        "name": "revokeObjectURL",
-        "lastModifiedAt": 1597191952272
-    },
-    {
-        "name": "search",
-        "lastModifiedAt": 1597191950493
-    },
-    {
-        "name": "searchParams",
-        "lastModifiedAt": 1599279477091
-    },
-    {
-        "name": "toJSON",
-        "lastModifiedAt": 1599279479139
-    },
-    {
-        "name": "toString",
-        "lastModifiedAt": 1597191951309
-    },
-    {
-        "name": "username",
-        "lastModifiedAt": 1597191951060
-    }
-]
+{
+    "name": "URL",
+    "lastModifiedAt": 1599279479815,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191946430
+        },
+        {
+            "name": "createObjectURL",
+            "lastModifiedAt": 1599279479815
+        },
+        {
+            "name": "hash",
+            "lastModifiedAt": 1597191946670
+        },
+        {
+            "name": "host",
+            "lastModifiedAt": 1597191947474
+        },
+        {
+            "name": "hostname",
+            "lastModifiedAt": 1597191948297
+        },
+        {
+            "name": "href",
+            "lastModifiedAt": 1597191948688
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1597191948939
+        },
+        {
+            "name": "password",
+            "lastModifiedAt": 1597191949220
+        },
+        {
+            "name": "pathname",
+            "lastModifiedAt": 1597191949482
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1599279475453
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1597191950101
+        },
+        {
+            "name": "revokeObjectURL",
+            "lastModifiedAt": 1597191952272
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1597191950493
+        },
+        {
+            "name": "searchParams",
+            "lastModifiedAt": 1599279477091
+        },
+        {
+            "name": "toJSON",
+            "lastModifiedAt": 1599279479139
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1597191951309
+        },
+        {
+            "name": "username",
+            "lastModifiedAt": 1597191951060
+        }
+    ]
+}

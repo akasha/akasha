@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190982360
-    },
-    {
-        "name": "x",
-        "lastModifiedAt": 1597190982608
-    },
-    {
-        "name": "y",
-        "lastModifiedAt": 1597190982864
-    },
-    {
-        "name": "z",
-        "lastModifiedAt": 1597190983251
-    }
-]
+{
+    "name": "DeviceMotionEventAcceleration",
+    "lastModifiedAt": 1597190983251,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190982360
+        },
+        {
+            "name": "x",
+            "lastModifiedAt": 1597190982608
+        },
+        {
+            "name": "y",
+            "lastModifiedAt": 1597190982864
+        },
+        {
+            "name": "z",
+            "lastModifiedAt": 1597190983251
+        }
+    ]
+}

@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192722268
-    },
-    {
-        "name": "id",
-        "lastModifiedAt": 1596544545672
-    },
-    {
-        "name": "timestamp",
-        "lastModifiedAt": 1596544546481
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1596544546863
-    }
-]
+{
+    "name": "RTCStats",
+    "lastModifiedAt": 1597192722268,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192722268
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1596544545672
+        },
+        {
+            "name": "timestamp",
+            "lastModifiedAt": 1596544546481
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1596544546863
+        }
+    ]
+}

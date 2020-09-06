@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596544560403
-    }
-]
+{
+    "name": "RTCTrackEventInit",
+    "lastModifiedAt": 1596544560403,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596544560403
+        }
+    ]
+}

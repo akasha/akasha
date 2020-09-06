@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597754304919
-    },
-    {
-        "name": "creationTime",
-        "lastModifiedAt": 1597754305317
-    },
-    {
-        "name": "droppedVideoFrames",
-        "lastModifiedAt": 1597754306151
-    },
-    {
-        "name": "totalVideoFrames",
-        "lastModifiedAt": 1597754306398
-    }
-]
+{
+    "name": "VideoPlaybackQuality",
+    "lastModifiedAt": 1597754306398,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597754304919
+        },
+        {
+            "name": "creationTime",
+            "lastModifiedAt": 1597754305317
+        },
+        {
+            "name": "droppedVideoFrames",
+            "lastModifiedAt": 1597754306151
+        },
+        {
+            "name": "totalVideoFrames",
+            "lastModifiedAt": 1597754306398
+        }
+    ]
+}

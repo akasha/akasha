@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279288398
-    },
-    {
-        "name": "baseLayer",
-        "lastModifiedAt": 1599279288894
-    },
-    {
-        "name": "depthFar",
-        "lastModifiedAt": 1596711731906
-    },
-    {
-        "name": "depthNear",
-        "lastModifiedAt": 1596711733072
-    },
-    {
-        "name": "inlineVerticalFieldOfView",
-        "lastModifiedAt": 1599279291229
-    }
-]
+{
+    "name": "XRRenderState",
+    "lastModifiedAt": 1599279291229,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279288398
+        },
+        {
+            "name": "baseLayer",
+            "lastModifiedAt": 1599279288894
+        },
+        {
+            "name": "depthFar",
+            "lastModifiedAt": 1596711731906
+        },
+        {
+            "name": "depthNear",
+            "lastModifiedAt": 1596711733072
+        },
+        {
+            "name": "inlineVerticalFieldOfView",
+            "lastModifiedAt": 1599279291229
+        }
+    ]
+}

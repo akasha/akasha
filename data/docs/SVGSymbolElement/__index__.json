@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192449879
-    }
-]
+{
+    "name": "SVGSymbolElement",
+    "lastModifiedAt": 1597192449879,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192449879
+        }
+    ]
+}

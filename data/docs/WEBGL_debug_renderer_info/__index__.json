@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192697962
-    }
-]
+{
+    "name": "WEBGL_debug_renderer_info",
+    "lastModifiedAt": 1597192697962,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192697962
+        }
+    ]
+}

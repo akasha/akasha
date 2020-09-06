@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190650342
-    }
-]
+{
+    "name": "SVGMaskElement",
+    "lastModifiedAt": 1597190650342,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190650342
+        }
+    ]
+}

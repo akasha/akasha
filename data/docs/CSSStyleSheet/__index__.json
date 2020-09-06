@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190734696
-    },
-    {
-        "name": "cssRules",
-        "lastModifiedAt": 1597190735541
-    },
-    {
-        "name": "deleteRule",
-        "lastModifiedAt": 1597190736119
-    },
-    {
-        "name": "insertRule",
-        "lastModifiedAt": 1597190736376
-    },
-    {
-        "name": "ownerRule",
-        "lastModifiedAt": 1597190735805
-    }
-]
+{
+    "name": "CSSStyleSheet",
+    "lastModifiedAt": 1597190736376,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190734696
+        },
+        {
+            "name": "cssRules",
+            "lastModifiedAt": 1597190735541
+        },
+        {
+            "name": "deleteRule",
+            "lastModifiedAt": 1597190736119
+        },
+        {
+            "name": "insertRule",
+            "lastModifiedAt": 1597190736376
+        },
+        {
+            "name": "ownerRule",
+            "lastModifiedAt": 1597190735805
+        }
+    ]
+}

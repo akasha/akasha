@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193123231
-    },
-    {
-        "name": "navigationUI",
-        "lastModifiedAt": 1597193123478
-    }
-]
+{
+    "name": "FullscreenOptions",
+    "lastModifiedAt": 1597193123478,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193123231
+        },
+        {
+            "name": "navigationUI",
+            "lastModifiedAt": 1597193123478
+        }
+    ]
+}

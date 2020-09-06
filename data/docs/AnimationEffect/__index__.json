@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192517538
-    }
-]
+{
+    "name": "AnimationEffect",
+    "lastModifiedAt": 1597192517538,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192517538
+        }
+    ]
+}

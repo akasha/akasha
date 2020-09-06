@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193551463
-    },
-    {
-        "name": "download",
-        "lastModifiedAt": 1596581557769
-    },
-    {
-        "name": "referrerPolicy",
-        "lastModifiedAt": 1596581559334
-    },
-    {
-        "name": "rel",
-        "lastModifiedAt": 1596581559731
-    },
-    {
-        "name": "relList",
-        "lastModifiedAt": 1596581560003
-    }
-]
+{
+    "name": "HTMLAnchorElement",
+    "lastModifiedAt": 1597193551463,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193551463
+        },
+        {
+            "name": "download",
+            "lastModifiedAt": 1596581557769
+        },
+        {
+            "name": "referrerPolicy",
+            "lastModifiedAt": 1596581559334
+        },
+        {
+            "name": "rel",
+            "lastModifiedAt": 1596581559731
+        },
+        {
+            "name": "relList",
+            "lastModifiedAt": 1596581560003
+        }
+    ]
+}

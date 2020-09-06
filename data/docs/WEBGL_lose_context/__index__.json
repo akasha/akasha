@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192701636
-    },
-    {
-        "name": "loseContext",
-        "lastModifiedAt": 1597192702005
-    },
-    {
-        "name": "restoreContext",
-        "lastModifiedAt": 1597192702361
-    }
-]
+{
+    "name": "WEBGL_lose_context",
+    "lastModifiedAt": 1597192702361,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192701636
+        },
+        {
+            "name": "loseContext",
+            "lastModifiedAt": 1597192702005
+        },
+        {
+            "name": "restoreContext",
+            "lastModifiedAt": 1597192702361
+        }
+    ]
+}

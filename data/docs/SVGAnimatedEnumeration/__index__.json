@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192407621
-    }
-]
+{
+    "name": "SVGAnimatedEnumeration",
+    "lastModifiedAt": 1597192407621,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192407621
+        }
+    ]
+}

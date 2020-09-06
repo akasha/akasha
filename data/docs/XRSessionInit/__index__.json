@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279026519
-    }
-]
+{
+    "name": "XRSessionInit",
+    "lastModifiedAt": 1599279026519,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279026519
+        }
+    ]
+}

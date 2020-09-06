@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280972539
-    }
-]
+{
+    "name": "RsaHashedImportParams",
+    "lastModifiedAt": 1599280972539,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280972539
+        }
+    ]
+}

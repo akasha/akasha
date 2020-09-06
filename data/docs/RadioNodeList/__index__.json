@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193354322
-    },
-    {
-        "name": "value",
-        "lastModifiedAt": 1596581365825
-    }
-]
+{
+    "name": "RadioNodeList",
+    "lastModifiedAt": 1597193354322,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193354322
+        },
+        {
+            "name": "value",
+            "lastModifiedAt": 1596581365825
+        }
+    ]
+}

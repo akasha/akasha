@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191970636
-    }
-]
+{
+    "name": "SVGFEGaussianBlurElement",
+    "lastModifiedAt": 1597191970636,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191970636
+        }
+    ]
+}

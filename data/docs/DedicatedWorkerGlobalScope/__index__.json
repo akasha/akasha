@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193438805
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596581433700
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597357992778
-    },
-    {
-        "name": "messageerror_event",
-        "lastModifiedAt": 1597357993837
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1599279127330
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1599279131285
-    },
-    {
-        "name": "onmessageerror",
-        "lastModifiedAt": 1599279132389
-    },
-    {
-        "name": "postMessage",
-        "lastModifiedAt": 1596581434541
-    }
-]
+{
+    "name": "DedicatedWorkerGlobalScope",
+    "lastModifiedAt": 1599279132389,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193438805
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596581433700
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597357992778
+        },
+        {
+            "name": "messageerror_event",
+            "lastModifiedAt": 1597357993837
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1599279127330
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1599279131285
+        },
+        {
+            "name": "onmessageerror",
+            "lastModifiedAt": 1599279132389
+        },
+        {
+            "name": "postMessage",
+            "lastModifiedAt": 1596581434541
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192458916
-    }
-]
+{
+    "name": "SVGPolygonElement",
+    "lastModifiedAt": 1597192458916,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192458916
+        }
+    ]
+}

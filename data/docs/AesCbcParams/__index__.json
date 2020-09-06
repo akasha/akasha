@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280118775
-    }
-]
+{
+    "name": "AesCbcParams",
+    "lastModifiedAt": 1599280118775,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280118775
+        }
+    ]
+}

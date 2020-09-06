@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190546337
-    },
-    {
-        "name": "abort_event",
-        "lastModifiedAt": 1597357444390
-    },
-    {
-        "name": "aborted",
-        "lastModifiedAt": 1597190547138
-    },
-    {
-        "name": "onabort",
-        "lastModifiedAt": 1597279544361
-    }
-]
+{
+    "name": "AbortSignal",
+    "lastModifiedAt": 1597357444390,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190546337
+        },
+        {
+            "name": "abort_event",
+            "lastModifiedAt": 1597357444390
+        },
+        {
+            "name": "aborted",
+            "lastModifiedAt": 1597190547138
+        },
+        {
+            "name": "onabort",
+            "lastModifiedAt": 1597279544361
+        }
+    ]
+}

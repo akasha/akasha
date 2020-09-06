@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279600295
-    },
-    {
-        "name": "deviceId",
-        "lastModifiedAt": 1599279600953
-    },
-    {
-        "name": "groupId",
-        "lastModifiedAt": 1599279601543
-    },
-    {
-        "name": "kind",
-        "lastModifiedAt": 1599279602125
-    },
-    {
-        "name": "label",
-        "lastModifiedAt": 1599279602659
-    }
-]
+{
+    "name": "MediaDeviceInfo",
+    "lastModifiedAt": 1599279602659,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279600295
+        },
+        {
+            "name": "deviceId",
+            "lastModifiedAt": 1599279600953
+        },
+        {
+            "name": "groupId",
+            "lastModifiedAt": 1599279601543
+        },
+        {
+            "name": "kind",
+            "lastModifiedAt": 1599279602125
+        },
+        {
+            "name": "label",
+            "lastModifiedAt": 1599279602659
+        }
+    ]
+}

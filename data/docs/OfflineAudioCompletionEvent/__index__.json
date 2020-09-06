@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192579336
-    },
-    {
-        "name": "renderedBuffer",
-        "lastModifiedAt": 1597192579899
-    }
-]
+{
+    "name": "OfflineAudioCompletionEvent",
+    "lastModifiedAt": 1597192579899,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192579336
+        },
+        {
+            "name": "renderedBuffer",
+            "lastModifiedAt": 1597192579899
+        }
+    ]
+}

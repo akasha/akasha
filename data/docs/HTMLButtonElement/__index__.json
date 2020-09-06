@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193402587
-    },
-    {
-        "name": "disabled",
-        "lastModifiedAt": 1596581405295
-    },
-    {
-        "name": "labels",
-        "lastModifiedAt": 1596581408713
-    }
-]
+{
+    "name": "HTMLButtonElement",
+    "lastModifiedAt": 1597193402587,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193402587
+        },
+        {
+            "name": "disabled",
+            "lastModifiedAt": 1596581405295
+        },
+        {
+            "name": "labels",
+            "lastModifiedAt": 1596581408713
+        }
+    ]
+}

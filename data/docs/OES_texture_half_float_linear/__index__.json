@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192704864
-    }
-]
+{
+    "name": "OES_texture_half_float_linear",
+    "lastModifiedAt": 1597192704864,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192704864
+        }
+    ]
+}

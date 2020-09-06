@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192687091
-    },
-    {
-        "name": "statusMessage",
-        "lastModifiedAt": 1597192687331
-    }
-]
+{
+    "name": "WebGLContextEvent",
+    "lastModifiedAt": 1597192687331,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192687091
+        },
+        {
+            "name": "statusMessage",
+            "lastModifiedAt": 1597192687331
+        }
+    ]
+}

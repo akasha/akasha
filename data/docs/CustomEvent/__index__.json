@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "CustomEvent",
-        "lastModifiedAt": 1597193026972
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193026711
-    },
-    {
-        "name": "detail",
-        "lastModifiedAt": 1597193027301
-    },
-    {
-        "name": "initCustomEvent",
-        "lastModifiedAt": 1597193027542
-    }
-]
+{
+    "name": "CustomEvent",
+    "lastModifiedAt": 1597193027542,
+    "entries": [
+        {
+            "name": "CustomEvent",
+            "lastModifiedAt": 1597193026972
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193026711
+        },
+        {
+            "name": "detail",
+            "lastModifiedAt": 1597193027301
+        },
+        {
+            "name": "initCustomEvent",
+            "lastModifiedAt": 1597193027542
+        }
+    ]
+}

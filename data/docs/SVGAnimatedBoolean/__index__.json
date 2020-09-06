@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192401071
-    }
-]
+{
+    "name": "SVGAnimatedBoolean",
+    "lastModifiedAt": 1597192401071,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192401071
+        }
+    ]
+}

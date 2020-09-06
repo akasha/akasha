@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193150918
-    },
-    {
-        "name": "onLine",
-        "lastModifiedAt": 1596581117244
-    }
-]
+{
+    "name": "NavigatorOnLine",
+    "lastModifiedAt": 1597193150918,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193150918
+        },
+        {
+            "name": "onLine",
+            "lastModifiedAt": 1596581117244
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581519589
-    }
-]
+{
+    "name": "HTMLTextAreaElement",
+    "lastModifiedAt": 1596581519589,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581519589
+        }
+    ]
+}

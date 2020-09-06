@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "PasswordCredential",
-        "lastModifiedAt": 1597190567196
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278707643
-    },
-    {
-        "name": "additionalData",
-        "lastModifiedAt": 1599278707804
-    },
-    {
-        "name": "iconURL",
-        "lastModifiedAt": 1599278707865
-    },
-    {
-        "name": "idName",
-        "lastModifiedAt": 1599278707930
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1599278707996
-    },
-    {
-        "name": "password",
-        "lastModifiedAt": 1599278708065
-    },
-    {
-        "name": "passwordName",
-        "lastModifiedAt": 1599278708139
-    }
-]
+{
+    "name": "PasswordCredential",
+    "lastModifiedAt": 1599278708139,
+    "entries": [
+        {
+            "name": "PasswordCredential",
+            "lastModifiedAt": 1597190567196
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278707643
+        },
+        {
+            "name": "additionalData",
+            "lastModifiedAt": 1599278707804
+        },
+        {
+            "name": "iconURL",
+            "lastModifiedAt": 1599278707865
+        },
+        {
+            "name": "idName",
+            "lastModifiedAt": 1599278707930
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1599278707996
+        },
+        {
+            "name": "password",
+            "lastModifiedAt": 1599278708065
+        },
+        {
+            "name": "passwordName",
+            "lastModifiedAt": 1599278708139
+        }
+    ]
+}

@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192128022
-    },
-    {
-        "name": "disconnect",
-        "lastModifiedAt": 1597192130028
-    },
-    {
-        "name": "observe",
-        "lastModifiedAt": 1597192130284
-    },
-    {
-        "name": "root",
-        "lastModifiedAt": 1597192128538
-    },
-    {
-        "name": "rootMargin",
-        "lastModifiedAt": 1597192128840
-    },
-    {
-        "name": "takeRecords",
-        "lastModifiedAt": 1597192130652
-    },
-    {
-        "name": "thresholds",
-        "lastModifiedAt": 1597192129210
-    },
-    {
-        "name": "unobserve",
-        "lastModifiedAt": 1597192130903
-    }
-]
+{
+    "name": "IntersectionObserver",
+    "lastModifiedAt": 1597192130903,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192128022
+        },
+        {
+            "name": "disconnect",
+            "lastModifiedAt": 1597192130028
+        },
+        {
+            "name": "observe",
+            "lastModifiedAt": 1597192130284
+        },
+        {
+            "name": "root",
+            "lastModifiedAt": 1597192128538
+        },
+        {
+            "name": "rootMargin",
+            "lastModifiedAt": 1597192128840
+        },
+        {
+            "name": "takeRecords",
+            "lastModifiedAt": 1597192130652
+        },
+        {
+            "name": "thresholds",
+            "lastModifiedAt": 1597192129210
+        },
+        {
+            "name": "unobserve",
+            "lastModifiedAt": 1597192130903
+        }
+    ]
+}

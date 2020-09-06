@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192614863
-    },
-    {
-        "name": "advertisementreceived_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "connectGATT",
-        "lastModifiedAt": 1596712494805
-    },
-    {
-        "name": "gatt",
-        "lastModifiedAt": 1596712491404
-    },
-    {
-        "name": "gattserverdisconnected_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "id",
-        "lastModifiedAt": 1596712492008
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1596712492632
-    },
-    {
-        "name": "uuids",
-        "lastModifiedAt": 1596712493979
-    }
-]
+{
+    "name": "BluetoothDevice",
+    "lastModifiedAt": 1597192614863,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192614863
+        },
+        {
+            "name": "advertisementreceived_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "connectGATT",
+            "lastModifiedAt": 1596712494805
+        },
+        {
+            "name": "gatt",
+            "lastModifiedAt": 1596712491404
+        },
+        {
+            "name": "gattserverdisconnected_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1596712492008
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1596712492632
+        },
+        {
+            "name": "uuids",
+            "lastModifiedAt": 1596712493979
+        }
+    ]
+}

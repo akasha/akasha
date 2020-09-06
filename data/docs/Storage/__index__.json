@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193437191
-    },
-    {
-        "name": "key",
-        "lastModifiedAt": 1596581432845
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1596581432558
-    }
-]
+{
+    "name": "Storage",
+    "lastModifiedAt": 1597193437191,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193437191
+        },
+        {
+            "name": "key",
+            "lastModifiedAt": 1596581432845
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1596581432558
+        }
+    ]
+}

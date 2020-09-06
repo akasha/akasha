@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193425355
-    }
-]
+{
+    "name": "HTMLMarqueeElement",
+    "lastModifiedAt": 1597193425355,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193425355
+        }
+    ]
+}

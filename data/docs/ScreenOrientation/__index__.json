@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192293116
-    },
-    {
-        "name": "angle",
-        "lastModifiedAt": 1597192293772
-    },
-    {
-        "name": "lock",
-        "lastModifiedAt": 1597192294307
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1599279909525
-    },
-    {
-        "name": "unlock",
-        "lastModifiedAt": 1597192294548
-    }
-]
+{
+    "name": "ScreenOrientation",
+    "lastModifiedAt": 1599279909525,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192293116
+        },
+        {
+            "name": "angle",
+            "lastModifiedAt": 1597192293772
+        },
+        {
+            "name": "lock",
+            "lastModifiedAt": 1597192294307
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1599279909525
+        },
+        {
+            "name": "unlock",
+            "lastModifiedAt": 1597192294548
+        }
+    ]
+}

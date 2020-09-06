@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192481398
-    },
-    {
-        "name": "cancelBubble",
-        "lastModifiedAt": 1597192481688
-    },
-    {
-        "name": "initUIEvent",
-        "lastModifiedAt": 1597192482500
-    }
-]
+{
+    "name": "UIEvent",
+    "lastModifiedAt": 1597192482500,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192481398
+        },
+        {
+            "name": "cancelBubble",
+            "lastModifiedAt": 1597192481688
+        },
+        {
+            "name": "initUIEvent",
+            "lastModifiedAt": 1597192482500
+        }
+    ]
+}

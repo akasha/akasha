@@ -1,75 +1,79 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192872162
-    },
-    {
-        "name": "averageRtcpInterval",
-        "lastModifiedAt": 1596544704670
-    },
-    {
-        "name": "bytesReceived",
-        "lastModifiedAt": 1596544705526
-    },
-    {
-        "name": "fecPacketsDiscarded",
-        "lastModifiedAt": 1596544705889
-    },
-    {
-        "name": "fecPacketsReceived",
-        "lastModifiedAt": 1596544706791
-    },
-    {
-        "name": "firCount",
-        "lastModifiedAt": 1596544707092
-    },
-    {
-        "name": "framesDecoded",
-        "lastModifiedAt": 1596544707885
-    },
-    {
-        "name": "lastPacketReceivedTimestamp",
-        "lastModifiedAt": 1596544708199
-    },
-    {
-        "name": "nackCount",
-        "lastModifiedAt": 1596544708587
-    },
-    {
-        "name": "packetsDuplicated",
-        "lastModifiedAt": 1596544708838
-    },
-    {
-        "name": "packetsFailedDecryption",
-        "lastModifiedAt": 1596544709140
-    },
-    {
-        "name": "perDscpPacketsReceived",
-        "lastModifiedAt": 1596544709379
-    },
-    {
-        "name": "pliCount",
-        "lastModifiedAt": 1596544709769
-    },
-    {
-        "name": "qpSum",
-        "lastModifiedAt": 1596544710120
-    },
-    {
-        "name": "receiverId",
-        "lastModifiedAt": 1596544710472
-    },
-    {
-        "name": "remoteId",
-        "lastModifiedAt": 1596544710779
-    },
-    {
-        "name": "sliCount",
-        "lastModifiedAt": 1596544711026
-    },
-    {
-        "name": "trackId",
-        "lastModifiedAt": 1596544711413
-    }
-]
+{
+    "name": "RTCInboundRtpStreamStats",
+    "lastModifiedAt": 1597192872162,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192872162
+        },
+        {
+            "name": "averageRtcpInterval",
+            "lastModifiedAt": 1596544704670
+        },
+        {
+            "name": "bytesReceived",
+            "lastModifiedAt": 1596544705526
+        },
+        {
+            "name": "fecPacketsDiscarded",
+            "lastModifiedAt": 1596544705889
+        },
+        {
+            "name": "fecPacketsReceived",
+            "lastModifiedAt": 1596544706791
+        },
+        {
+            "name": "firCount",
+            "lastModifiedAt": 1596544707092
+        },
+        {
+            "name": "framesDecoded",
+            "lastModifiedAt": 1596544707885
+        },
+        {
+            "name": "lastPacketReceivedTimestamp",
+            "lastModifiedAt": 1596544708199
+        },
+        {
+            "name": "nackCount",
+            "lastModifiedAt": 1596544708587
+        },
+        {
+            "name": "packetsDuplicated",
+            "lastModifiedAt": 1596544708838
+        },
+        {
+            "name": "packetsFailedDecryption",
+            "lastModifiedAt": 1596544709140
+        },
+        {
+            "name": "perDscpPacketsReceived",
+            "lastModifiedAt": 1596544709379
+        },
+        {
+            "name": "pliCount",
+            "lastModifiedAt": 1596544709769
+        },
+        {
+            "name": "qpSum",
+            "lastModifiedAt": 1596544710120
+        },
+        {
+            "name": "receiverId",
+            "lastModifiedAt": 1596544710472
+        },
+        {
+            "name": "remoteId",
+            "lastModifiedAt": 1596544710779
+        },
+        {
+            "name": "sliCount",
+            "lastModifiedAt": 1596544711026
+        },
+        {
+            "name": "trackId",
+            "lastModifiedAt": 1596544711413
+        }
+    ]
+}

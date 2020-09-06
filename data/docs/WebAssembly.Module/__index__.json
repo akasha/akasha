@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 0
-    }
-]
+{
+    "name": "WebAssembly.Module",
+    "lastModifiedAt": 0,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        }
+    ]
+}

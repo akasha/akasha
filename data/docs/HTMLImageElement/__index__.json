@@ -1,87 +1,91 @@
 
-[
-    {
-        "name": "Image",
-        "lastModifiedAt": 1597190830636
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190830374
-    },
-    {
-        "name": "alt",
-        "lastModifiedAt": 1596581374230
-    },
-    {
-        "name": "complete",
-        "lastModifiedAt": 1599279630478
-    },
-    {
-        "name": "crossOrigin",
-        "lastModifiedAt": 1599279630956
-    },
-    {
-        "name": "currentSrc",
-        "lastModifiedAt": 1596581375319
-    },
-    {
-        "name": "decode",
-        "lastModifiedAt": 1596581381975
-    },
-    {
-        "name": "decoding",
-        "lastModifiedAt": 1596581376168
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1596581376578
-    },
-    {
-        "name": "isMap",
-        "lastModifiedAt": 1599279633154
-    },
-    {
-        "name": "loading",
-        "lastModifiedAt": 1599279634441
-    },
-    {
-        "name": "naturalHeight",
-        "lastModifiedAt": 1596581378068
-    },
-    {
-        "name": "naturalWidth",
-        "lastModifiedAt": 1596581378442
-    },
-    {
-        "name": "referrerPolicy",
-        "lastModifiedAt": 1596581378785
-    },
-    {
-        "name": "sizes",
-        "lastModifiedAt": 1599279638315
-    },
-    {
-        "name": "src",
-        "lastModifiedAt": 1596581380063
-    },
-    {
-        "name": "srcset",
-        "lastModifiedAt": 1596581380359
-    },
-    {
-        "name": "useMap",
-        "lastModifiedAt": 1599279639999
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1599279641192
-    },
-    {
-        "name": "x",
-        "lastModifiedAt": 1599279642399
-    },
-    {
-        "name": "y",
-        "lastModifiedAt": 1596581381658
-    }
-]
+{
+    "name": "HTMLImageElement",
+    "lastModifiedAt": 1599279642399,
+    "entries": [
+        {
+            "name": "Image",
+            "lastModifiedAt": 1597190830636
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190830374
+        },
+        {
+            "name": "alt",
+            "lastModifiedAt": 1596581374230
+        },
+        {
+            "name": "complete",
+            "lastModifiedAt": 1599279630478
+        },
+        {
+            "name": "crossOrigin",
+            "lastModifiedAt": 1599279630956
+        },
+        {
+            "name": "currentSrc",
+            "lastModifiedAt": 1596581375319
+        },
+        {
+            "name": "decode",
+            "lastModifiedAt": 1596581381975
+        },
+        {
+            "name": "decoding",
+            "lastModifiedAt": 1596581376168
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1596581376578
+        },
+        {
+            "name": "isMap",
+            "lastModifiedAt": 1599279633154
+        },
+        {
+            "name": "loading",
+            "lastModifiedAt": 1599279634441
+        },
+        {
+            "name": "naturalHeight",
+            "lastModifiedAt": 1596581378068
+        },
+        {
+            "name": "naturalWidth",
+            "lastModifiedAt": 1596581378442
+        },
+        {
+            "name": "referrerPolicy",
+            "lastModifiedAt": 1596581378785
+        },
+        {
+            "name": "sizes",
+            "lastModifiedAt": 1599279638315
+        },
+        {
+            "name": "src",
+            "lastModifiedAt": 1596581380063
+        },
+        {
+            "name": "srcset",
+            "lastModifiedAt": 1596581380359
+        },
+        {
+            "name": "useMap",
+            "lastModifiedAt": 1599279639999
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1599279641192
+        },
+        {
+            "name": "x",
+            "lastModifiedAt": 1599279642399
+        },
+        {
+            "name": "y",
+            "lastModifiedAt": 1596581381658
+        }
+    ]
+}

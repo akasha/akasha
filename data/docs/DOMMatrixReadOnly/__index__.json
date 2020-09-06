@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192035874
-    },
-    {
-        "name": "flipX",
-        "lastModifiedAt": 1597192043942
-    },
-    {
-        "name": "scale",
-        "lastModifiedAt": 1597192046519
-    },
-    {
-        "name": "translate",
-        "lastModifiedAt": 1597192050128
-    }
-]
+{
+    "name": "DOMMatrixReadOnly",
+    "lastModifiedAt": 1597192050128,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192035874
+        },
+        {
+            "name": "flipX",
+            "lastModifiedAt": 1597192043942
+        },
+        {
+            "name": "scale",
+            "lastModifiedAt": 1597192046519
+        },
+        {
+            "name": "translate",
+            "lastModifiedAt": 1597192050128
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193412749
-    },
-    {
-        "name": "code",
-        "lastModifiedAt": 1596581414176
-    },
-    {
-        "name": "message",
-        "lastModifiedAt": 1599279670539
-    }
-]
+{
+    "name": "MediaError",
+    "lastModifiedAt": 1599279670539,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193412749
+        },
+        {
+            "name": "code",
+            "lastModifiedAt": 1596581414176
+        },
+        {
+            "name": "message",
+            "lastModifiedAt": 1599279670539
+        }
+    ]
+}

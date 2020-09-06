@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192442395
-    },
-    {
-        "name": "decode",
-        "lastModifiedAt": 1597192444538
-    },
-    {
-        "name": "decoding",
-        "lastModifiedAt": 1597192442925
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1597192443180
-    },
-    {
-        "name": "preserveAspectRatio",
-        "lastModifiedAt": 1597192443422
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1597192443685
-    },
-    {
-        "name": "x",
-        "lastModifiedAt": 1597192443946
-    },
-    {
-        "name": "y",
-        "lastModifiedAt": 1597192444197
-    }
-]
+{
+    "name": "SVGImageElement",
+    "lastModifiedAt": 1597192444538,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192442395
+        },
+        {
+            "name": "decode",
+            "lastModifiedAt": 1597192444538
+        },
+        {
+            "name": "decoding",
+            "lastModifiedAt": 1597192442925
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1597192443180
+        },
+        {
+            "name": "preserveAspectRatio",
+            "lastModifiedAt": 1597192443422
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1597192443685
+        },
+        {
+            "name": "x",
+            "lastModifiedAt": 1597192443946
+        },
+        {
+            "name": "y",
+            "lastModifiedAt": 1597192444197
+        }
+    ]
+}

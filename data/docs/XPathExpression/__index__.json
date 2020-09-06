@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193027897
-    },
-    {
-        "name": "evaluate",
-        "lastModifiedAt": 1597193028220
-    }
-]
+{
+    "name": "XPathExpression",
+    "lastModifiedAt": 1597193028220,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193027897
+        },
+        {
+            "name": "evaluate",
+            "lastModifiedAt": 1597193028220
+        }
+    ]
+}

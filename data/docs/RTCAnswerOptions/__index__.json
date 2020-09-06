@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280467351
-    }
-]
+{
+    "name": "RTCAnswerOptions",
+    "lastModifiedAt": 1599280467351,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280467351
+        }
+    ]
+}

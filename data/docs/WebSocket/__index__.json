@@ -1,75 +1,79 @@
 
-[
-    {
-        "name": "WebSocket",
-        "lastModifiedAt": 1597193540250
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193539982
-    },
-    {
-        "name": "binaryType",
-        "lastModifiedAt": 1596581545534
-    },
-    {
-        "name": "bufferedAmount",
-        "lastModifiedAt": 1596581546390
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596790677948
-    },
-    {
-        "name": "close_event",
-        "lastModifiedAt": 1597358125035
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1597358125627
-    },
-    {
-        "name": "extensions",
-        "lastModifiedAt": 1596581546786
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597358126159
-    },
-    {
-        "name": "onclose",
-        "lastModifiedAt": 1599279280376
-    },
-    {
-        "name": "onerror",
-        "lastModifiedAt": 1599279281040
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1596581548148
-    },
-    {
-        "name": "onopen",
-        "lastModifiedAt": 1596711724923
-    },
-    {
-        "name": "open_event",
-        "lastModifiedAt": 1597358127269
-    },
-    {
-        "name": "protocol",
-        "lastModifiedAt": 1596581548727
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1596581549069
-    },
-    {
-        "name": "send",
-        "lastModifiedAt": 1596581549906
-    },
-    {
-        "name": "url",
-        "lastModifiedAt": 1596581549375
-    }
-]
+{
+    "name": "WebSocket",
+    "lastModifiedAt": 1599279281040,
+    "entries": [
+        {
+            "name": "WebSocket",
+            "lastModifiedAt": 1597193540250
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193539982
+        },
+        {
+            "name": "binaryType",
+            "lastModifiedAt": 1596581545534
+        },
+        {
+            "name": "bufferedAmount",
+            "lastModifiedAt": 1596581546390
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596790677948
+        },
+        {
+            "name": "close_event",
+            "lastModifiedAt": 1597358125035
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1597358125627
+        },
+        {
+            "name": "extensions",
+            "lastModifiedAt": 1596581546786
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597358126159
+        },
+        {
+            "name": "onclose",
+            "lastModifiedAt": 1599279280376
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1599279281040
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1596581548148
+        },
+        {
+            "name": "onopen",
+            "lastModifiedAt": 1596711724923
+        },
+        {
+            "name": "open_event",
+            "lastModifiedAt": 1597358127269
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1596581548727
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1596581549069
+        },
+        {
+            "name": "send",
+            "lastModifiedAt": 1596581549906
+        },
+        {
+            "name": "url",
+            "lastModifiedAt": 1596581549375
+        }
+    ]
+}

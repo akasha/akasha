@@ -1,115 +1,119 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192889299
-    },
-    {
-        "name": "availableIncomingBitrate",
-        "lastModifiedAt": 1596544715000
-    },
-    {
-        "name": "availableOutgoingBitrate",
-        "lastModifiedAt": 1596544715285
-    },
-    {
-        "name": "bytesReceieved",
-        "lastModifiedAt": 1599280382230
-    },
-    {
-        "name": "bytesSent",
-        "lastModifiedAt": 1599280382690
-    },
-    {
-        "name": "circuitBreakerTriggerCount",
-        "lastModifiedAt": 1596544716616
-    },
-    {
-        "name": "consentExpiredTimestamp",
-        "lastModifiedAt": 1596544716932
-    },
-    {
-        "name": "consentRequestsSent",
-        "lastModifiedAt": 1596544717230
-    },
-    {
-        "name": "currentRoundTripTime",
-        "lastModifiedAt": 1596544717539
-    },
-    {
-        "name": "firstRequestTimestamp",
-        "lastModifiedAt": 1596544718367
-    },
-    {
-        "name": "lastPacketReceivedTimestamp",
-        "lastModifiedAt": 1596544718665
-    },
-    {
-        "name": "lastPacketSentTimestamp",
-        "lastModifiedAt": 1596544718970
-    },
-    {
-        "name": "lastRequestTimestamp",
-        "lastModifiedAt": 1596544719751
-    },
-    {
-        "name": "lastResponseTimestamp",
-        "lastModifiedAt": 1596544720063
-    },
-    {
-        "name": "localCandidateId",
-        "lastModifiedAt": 1596544720863
-    },
-    {
-        "name": "nominated",
-        "lastModifiedAt": 1596544721122
-    },
-    {
-        "name": "packetsReceived",
-        "lastModifiedAt": 1596544721429
-    },
-    {
-        "name": "packetsSent",
-        "lastModifiedAt": 1596544722221
-    },
-    {
-        "name": "remoteCandidateId",
-        "lastModifiedAt": 1596544723049
-    },
-    {
-        "name": "requestsReceived",
-        "lastModifiedAt": 1596544723410
-    },
-    {
-        "name": "requestsSent",
-        "lastModifiedAt": 1596544724226
-    },
-    {
-        "name": "responsesReceived",
-        "lastModifiedAt": 1596544724623
-    },
-    {
-        "name": "responsesSent",
-        "lastModifiedAt": 1596544724911
-    },
-    {
-        "name": "retransmissionsReceived",
-        "lastModifiedAt": 1596544725713
-    },
-    {
-        "name": "retransmissionsSent",
-        "lastModifiedAt": 1596544725967
-    },
-    {
-        "name": "state",
-        "lastModifiedAt": 1596544726382
-    },
-    {
-        "name": "totalRoundTripTime",
-        "lastModifiedAt": 1596544726771
-    },
-    {
-        "name": "transportId",
-        "lastModifiedAt": 1596544727061
-    }
-]
+{
+    "name": "RTCIceCandidatePairStats",
+    "lastModifiedAt": 1599280382690,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192889299
+        },
+        {
+            "name": "availableIncomingBitrate",
+            "lastModifiedAt": 1596544715000
+        },
+        {
+            "name": "availableOutgoingBitrate",
+            "lastModifiedAt": 1596544715285
+        },
+        {
+            "name": "bytesReceieved",
+            "lastModifiedAt": 1599280382230
+        },
+        {
+            "name": "bytesSent",
+            "lastModifiedAt": 1599280382690
+        },
+        {
+            "name": "circuitBreakerTriggerCount",
+            "lastModifiedAt": 1596544716616
+        },
+        {
+            "name": "consentExpiredTimestamp",
+            "lastModifiedAt": 1596544716932
+        },
+        {
+            "name": "consentRequestsSent",
+            "lastModifiedAt": 1596544717230
+        },
+        {
+            "name": "currentRoundTripTime",
+            "lastModifiedAt": 1596544717539
+        },
+        {
+            "name": "firstRequestTimestamp",
+            "lastModifiedAt": 1596544718367
+        },
+        {
+            "name": "lastPacketReceivedTimestamp",
+            "lastModifiedAt": 1596544718665
+        },
+        {
+            "name": "lastPacketSentTimestamp",
+            "lastModifiedAt": 1596544718970
+        },
+        {
+            "name": "lastRequestTimestamp",
+            "lastModifiedAt": 1596544719751
+        },
+        {
+            "name": "lastResponseTimestamp",
+            "lastModifiedAt": 1596544720063
+        },
+        {
+            "name": "localCandidateId",
+            "lastModifiedAt": 1596544720863
+        },
+        {
+            "name": "nominated",
+            "lastModifiedAt": 1596544721122
+        },
+        {
+            "name": "packetsReceived",
+            "lastModifiedAt": 1596544721429
+        },
+        {
+            "name": "packetsSent",
+            "lastModifiedAt": 1596544722221
+        },
+        {
+            "name": "remoteCandidateId",
+            "lastModifiedAt": 1596544723049
+        },
+        {
+            "name": "requestsReceived",
+            "lastModifiedAt": 1596544723410
+        },
+        {
+            "name": "requestsSent",
+            "lastModifiedAt": 1596544724226
+        },
+        {
+            "name": "responsesReceived",
+            "lastModifiedAt": 1596544724623
+        },
+        {
+            "name": "responsesSent",
+            "lastModifiedAt": 1596544724911
+        },
+        {
+            "name": "retransmissionsReceived",
+            "lastModifiedAt": 1596544725713
+        },
+        {
+            "name": "retransmissionsSent",
+            "lastModifiedAt": 1596544725967
+        },
+        {
+            "name": "state",
+            "lastModifiedAt": 1596544726382
+        },
+        {
+            "name": "totalRoundTripTime",
+            "lastModifiedAt": 1596544726771
+        },
+        {
+            "name": "transportId",
+            "lastModifiedAt": 1596544727061
+        }
+    ]
+}

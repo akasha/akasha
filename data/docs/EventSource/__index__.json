@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "EventSource",
-        "lastModifiedAt": 1597193430955
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193430618
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596581431107
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1597359370652
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597359371326
-    },
-    {
-        "name": "onerror",
-        "lastModifiedAt": 1596581428446
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1596581428747
-    },
-    {
-        "name": "onopen",
-        "lastModifiedAt": 1596581429158
-    },
-    {
-        "name": "open_event",
-        "lastModifiedAt": 1597359372391
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1596581429549
-    },
-    {
-        "name": "url",
-        "lastModifiedAt": 1596581429872
-    },
-    {
-        "name": "withCredentials",
-        "lastModifiedAt": 1596581430240
-    }
-]
+{
+    "name": "EventSource",
+    "lastModifiedAt": 1597359372391,
+    "entries": [
+        {
+            "name": "EventSource",
+            "lastModifiedAt": 1597193430955
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193430618
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596581431107
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1597359370652
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597359371326
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1596581428446
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1596581428747
+        },
+        {
+            "name": "onopen",
+            "lastModifiedAt": 1596581429158
+        },
+        {
+            "name": "open_event",
+            "lastModifiedAt": 1597359372391
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1596581429549
+        },
+        {
+            "name": "url",
+            "lastModifiedAt": 1596581429872
+        },
+        {
+            "name": "withCredentials",
+            "lastModifiedAt": 1596581430240
+        }
+    ]
+}

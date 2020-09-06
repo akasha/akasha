@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "Blob",
-        "lastModifiedAt": 1597191934242
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191933902
-    }
-]
+{
+    "name": "Blob",
+    "lastModifiedAt": 1597191934242,
+    "entries": [
+        {
+            "name": "Blob",
+            "lastModifiedAt": 1597191934242
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191933902
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581212111
-    }
-]
+{
+    "name": "PopStateEvent",
+    "lastModifiedAt": 1596581212111,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581212111
+        }
+    ]
+}

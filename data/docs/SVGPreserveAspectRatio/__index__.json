@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192460916
-    }
-]
+{
+    "name": "SVGPreserveAspectRatio",
+    "lastModifiedAt": 1597192460916,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192460916
+        }
+    ]
+}

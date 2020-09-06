@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192724391
-    }
-]
+{
+    "name": "RTCRtpCodecParameters",
+    "lastModifiedAt": 1597192724391,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192724391
+        }
+    ]
+}

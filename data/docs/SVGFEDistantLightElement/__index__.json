@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191985177
-    }
-]
+{
+    "name": "SVGFEDistantLightElement",
+    "lastModifiedAt": 1597191985177,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191985177
+        }
+    ]
+}

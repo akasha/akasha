@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "buffer",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "grow",
-        "lastModifiedAt": 0
-    }
-]
+{
+    "name": "WebAssembly.Memory",
+    "lastModifiedAt": 0,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "buffer",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "grow",
+            "lastModifiedAt": 0
+        }
+    ]
+}

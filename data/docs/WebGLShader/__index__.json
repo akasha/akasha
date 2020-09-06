@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192680232
-    }
-]
+{
+    "name": "WebGLShader",
+    "lastModifiedAt": 1597192680232,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192680232
+        }
+    ]
+}

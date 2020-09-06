@@ -1,31 +1,35 @@
 
-[
-    {
-        "name": "MessageEvent",
-        "lastModifiedAt": 1597193245917
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193245613
-    },
-    {
-        "name": "data",
-        "lastModifiedAt": 1596581214336
-    },
-    {
-        "name": "lastEventId",
-        "lastModifiedAt": 1596581214610
-    },
-    {
-        "name": "origin",
-        "lastModifiedAt": 1596581214938
-    },
-    {
-        "name": "ports",
-        "lastModifiedAt": 1596581215195
-    },
-    {
-        "name": "source",
-        "lastModifiedAt": 1596581215456
-    }
-]
+{
+    "name": "MessageEvent",
+    "lastModifiedAt": 1597193245917,
+    "entries": [
+        {
+            "name": "MessageEvent",
+            "lastModifiedAt": 1597193245917
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193245613
+        },
+        {
+            "name": "data",
+            "lastModifiedAt": 1596581214336
+        },
+        {
+            "name": "lastEventId",
+            "lastModifiedAt": 1596581214610
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1596581214938
+        },
+        {
+            "name": "ports",
+            "lastModifiedAt": 1596581215195
+        },
+        {
+            "name": "source",
+            "lastModifiedAt": 1596581215456
+        }
+    ]
+}

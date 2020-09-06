@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193589989
-    }
-]
+{
+    "name": "Plugin",
+    "lastModifiedAt": 1597193589989,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193589989
+        }
+    ]
+}

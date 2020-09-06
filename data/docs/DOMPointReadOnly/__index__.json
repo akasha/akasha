@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "DOMPointReadOnly",
-        "lastModifiedAt": 1597192029711
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192029381
-    },
-    {
-        "name": "fromPoint",
-        "lastModifiedAt": 1597192031317
-    },
-    {
-        "name": "toJSON",
-        "lastModifiedAt": 1597192032370
-    },
-    {
-        "name": "w",
-        "lastModifiedAt": 1597192031011
-    },
-    {
-        "name": "x",
-        "lastModifiedAt": 1597192030176
-    },
-    {
-        "name": "y",
-        "lastModifiedAt": 1597192030437
-    },
-    {
-        "name": "z",
-        "lastModifiedAt": 1597192030708
-    }
-]
+{
+    "name": "DOMPointReadOnly",
+    "lastModifiedAt": 1597192032370,
+    "entries": [
+        {
+            "name": "DOMPointReadOnly",
+            "lastModifiedAt": 1597192029711
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192029381
+        },
+        {
+            "name": "fromPoint",
+            "lastModifiedAt": 1597192031317
+        },
+        {
+            "name": "toJSON",
+            "lastModifiedAt": 1597192032370
+        },
+        {
+            "name": "w",
+            "lastModifiedAt": 1597192031011
+        },
+        {
+            "name": "x",
+            "lastModifiedAt": 1597192030176
+        },
+        {
+            "name": "y",
+            "lastModifiedAt": 1597192030437
+        },
+        {
+            "name": "z",
+            "lastModifiedAt": 1597192030708
+        }
+    ]
+}

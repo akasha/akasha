@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192701142
-    }
-]
+{
+    "name": "EXT_sRGB",
+    "lastModifiedAt": 1597192701142,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192701142
+        }
+    ]
+}

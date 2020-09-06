@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192154528
-    },
-    {
-        "name": "cuechange_event",
-        "lastModifiedAt": 1597359792560
-    },
-    {
-        "name": "mode",
-        "lastModifiedAt": 1596581142481
-    }
-]
+{
+    "name": "TextTrack",
+    "lastModifiedAt": 1597359792560,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192154528
+        },
+        {
+            "name": "cuechange_event",
+            "lastModifiedAt": 1597359792560
+        },
+        {
+            "name": "mode",
+            "lastModifiedAt": 1596581142481
+        }
+    ]
+}

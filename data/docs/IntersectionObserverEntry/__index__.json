@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280175249
-    },
-    {
-        "name": "boundingClientRect",
-        "lastModifiedAt": 1597192132182
-    },
-    {
-        "name": "intersectionRatio",
-        "lastModifiedAt": 1597192132428
-    },
-    {
-        "name": "intersectionRect",
-        "lastModifiedAt": 1597192133271
-    },
-    {
-        "name": "isIntersecting",
-        "lastModifiedAt": 1597192134204
-    },
-    {
-        "name": "rootBounds",
-        "lastModifiedAt": 1597192135016
-    },
-    {
-        "name": "target",
-        "lastModifiedAt": 1597192135363
-    },
-    {
-        "name": "time",
-        "lastModifiedAt": 1597192135594
-    }
-]
+{
+    "name": "IntersectionObserverEntry",
+    "lastModifiedAt": 1599280175249,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280175249
+        },
+        {
+            "name": "boundingClientRect",
+            "lastModifiedAt": 1597192132182
+        },
+        {
+            "name": "intersectionRatio",
+            "lastModifiedAt": 1597192132428
+        },
+        {
+            "name": "intersectionRect",
+            "lastModifiedAt": 1597192133271
+        },
+        {
+            "name": "isIntersecting",
+            "lastModifiedAt": 1597192134204
+        },
+        {
+            "name": "rootBounds",
+            "lastModifiedAt": 1597192135016
+        },
+        {
+            "name": "target",
+            "lastModifiedAt": 1597192135363
+        },
+        {
+            "name": "time",
+            "lastModifiedAt": 1597192135594
+        }
+    ]
+}

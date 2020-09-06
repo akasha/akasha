@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192456862
-    }
-]
+{
+    "name": "SVGAnimatedPreserveAspectRatio",
+    "lastModifiedAt": 1597192456862,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192456862
+        }
+    ]
+}

@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "RTCSessionDescription",
-        "lastModifiedAt": 1597192764104
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278970428
-    },
-    {
-        "name": "toJSON",
-        "lastModifiedAt": 1596544593745
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1596544592611
-    }
-]
+{
+    "name": "RTCSessionDescription",
+    "lastModifiedAt": 1599278970428,
+    "entries": [
+        {
+            "name": "RTCSessionDescription",
+            "lastModifiedAt": 1597192764104
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278970428
+        },
+        {
+            "name": "toJSON",
+            "lastModifiedAt": 1596544593745
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1596544592611
+        }
+    ]
+}

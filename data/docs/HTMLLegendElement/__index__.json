@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193415457
-    }
-]
+{
+    "name": "HTMLLegendElement",
+    "lastModifiedAt": 1597193415457,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193415457
+        }
+    ]
+}

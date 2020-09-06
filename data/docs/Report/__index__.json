@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597389388345
-    },
-    {
-        "name": "body",
-        "lastModifiedAt": 1597389388624
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1597389389453
-    },
-    {
-        "name": "url",
-        "lastModifiedAt": 1597389389750
-    }
-]
+{
+    "name": "Report",
+    "lastModifiedAt": 1597389389750,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597389388345
+        },
+        {
+            "name": "body",
+            "lastModifiedAt": 1597389388624
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1597389389453
+        },
+        {
+            "name": "url",
+            "lastModifiedAt": 1597389389750
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192733403
-    },
-    {
-        "name": "password",
-        "lastModifiedAt": 1596544557733
-    },
-    {
-        "name": "usernameFragment",
-        "lastModifiedAt": 1599279388938
-    }
-]
+{
+    "name": "RTCIceParameters",
+    "lastModifiedAt": 1599279388938,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192733403
+        },
+        {
+            "name": "password",
+            "lastModifiedAt": 1596544557733
+        },
+        {
+            "name": "usernameFragment",
+            "lastModifiedAt": 1599279388938
+        }
+    ]
+}

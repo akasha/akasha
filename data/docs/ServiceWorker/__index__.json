@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279566022
-    },
-    {
-        "name": "scriptURL",
-        "lastModifiedAt": 1597192327479
-    },
-    {
-        "name": "state",
-        "lastModifiedAt": 1597192327776
-    }
-]
+{
+    "name": "ServiceWorker",
+    "lastModifiedAt": 1599279566022,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279566022
+        },
+        {
+            "name": "scriptURL",
+            "lastModifiedAt": 1597192327479
+        },
+        {
+            "name": "state",
+            "lastModifiedAt": 1597192327776
+        }
+    ]
+}

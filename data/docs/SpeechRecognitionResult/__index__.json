@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192353502
-    },
-    {
-        "name": "isFinal",
-        "lastModifiedAt": 1599280517768
-    },
-    {
-        "name": "item",
-        "lastModifiedAt": 1596712234580
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1599280518850
-    }
-]
+{
+    "name": "SpeechRecognitionResult",
+    "lastModifiedAt": 1599280518850,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192353502
+        },
+        {
+            "name": "isFinal",
+            "lastModifiedAt": 1599280517768
+        },
+        {
+            "name": "item",
+            "lastModifiedAt": 1596712234580
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1599280518850
+        }
+    ]
+}

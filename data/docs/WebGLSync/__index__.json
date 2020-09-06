@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192692641
-    }
-]
+{
+    "name": "WebGLSync",
+    "lastModifiedAt": 1597192692641,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192692641
+        }
+    ]
+}

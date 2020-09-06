@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190997482
-    },
-    {
-        "name": "entries",
-        "lastModifiedAt": 1597191886697
-    },
-    {
-        "name": "forEach",
-        "lastModifiedAt": 1597191887041
-    },
-    {
-        "name": "get",
-        "lastModifiedAt": 1597191887849
-    },
-    {
-        "name": "has",
-        "lastModifiedAt": 1597191888657
-    },
-    {
-        "name": "keys",
-        "lastModifiedAt": 1597191889003
-    },
-    {
-        "name": "size",
-        "lastModifiedAt": 1597190997729
-    },
-    {
-        "name": "values",
-        "lastModifiedAt": 1597191889289
-    }
-]
+{
+    "name": "MediaKeyStatusMap",
+    "lastModifiedAt": 1597191889289,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190997482
+        },
+        {
+            "name": "entries",
+            "lastModifiedAt": 1597191886697
+        },
+        {
+            "name": "forEach",
+            "lastModifiedAt": 1597191887041
+        },
+        {
+            "name": "get",
+            "lastModifiedAt": 1597191887849
+        },
+        {
+            "name": "has",
+            "lastModifiedAt": 1597191888657
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1597191889003
+        },
+        {
+            "name": "size",
+            "lastModifiedAt": 1597190997729
+        },
+        {
+            "name": "values",
+            "lastModifiedAt": 1597191889289
+        }
+    ]
+}

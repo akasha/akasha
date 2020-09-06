@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193335936
-    },
-    {
-        "name": "getAsFile",
-        "lastModifiedAt": 1596581352054
-    },
-    {
-        "name": "getAsString",
-        "lastModifiedAt": 1596581353006
-    },
-    {
-        "name": "kind",
-        "lastModifiedAt": 1596581351333
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1596581351638
-    },
-    {
-        "name": "webkitGetAsEntry",
-        "lastModifiedAt": 1596581353352
-    }
-]
+{
+    "name": "DataTransferItem",
+    "lastModifiedAt": 1597193335936,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193335936
+        },
+        {
+            "name": "getAsFile",
+            "lastModifiedAt": 1596581352054
+        },
+        {
+            "name": "getAsString",
+            "lastModifiedAt": 1596581353006
+        },
+        {
+            "name": "kind",
+            "lastModifiedAt": 1596581351333
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1596581351638
+        },
+        {
+            "name": "webkitGetAsEntry",
+            "lastModifiedAt": 1596581353352
+        }
+    ]
+}

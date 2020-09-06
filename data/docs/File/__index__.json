@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "File",
-        "lastModifiedAt": 1597191945199
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191944915
-    }
-]
+{
+    "name": "File",
+    "lastModifiedAt": 1597191945199,
+    "entries": [
+        {
+            "name": "File",
+            "lastModifiedAt": 1597191945199
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191944915
+        }
+    ]
+}

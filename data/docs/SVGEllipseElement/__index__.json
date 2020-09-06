@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192422519
-    }
-]
+{
+    "name": "SVGEllipseElement",
+    "lastModifiedAt": 1597192422519,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192422519
+        }
+    ]
+}

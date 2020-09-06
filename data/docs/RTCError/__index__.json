@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597756147671
-    }
-]
+{
+    "name": "RTCError",
+    "lastModifiedAt": 1597756147671,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597756147671
+        }
+    ]
+}

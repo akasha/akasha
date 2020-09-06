@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279392113
-    },
-    {
-        "name": "coords",
-        "lastModifiedAt": 1597192017797
-    },
-    {
-        "name": "timestamp",
-        "lastModifiedAt": 1597192018299
-    }
-]
+{
+    "name": "Position",
+    "lastModifiedAt": 1599279392113,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279392113
+        },
+        {
+            "name": "coords",
+            "lastModifiedAt": 1597192017797
+        },
+        {
+            "name": "timestamp",
+            "lastModifiedAt": 1597192018299
+        }
+    ]
+}

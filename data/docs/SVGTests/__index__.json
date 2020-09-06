@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192384631
-    }
-]
+{
+    "name": "SVGTests",
+    "lastModifiedAt": 1597192384631,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192384631
+        }
+    ]
+}

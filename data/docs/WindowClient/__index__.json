@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192321590
-    },
-    {
-        "name": "focus",
-        "lastModifiedAt": 1599278932923
-    },
-    {
-        "name": "focused",
-        "lastModifiedAt": 1597192321970
-    },
-    {
-        "name": "navigate",
-        "lastModifiedAt": 1599278933383
-    },
-    {
-        "name": "visibilityState",
-        "lastModifiedAt": 1599278932305
-    }
-]
+{
+    "name": "WindowClient",
+    "lastModifiedAt": 1599278933383,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192321590
+        },
+        {
+            "name": "focus",
+            "lastModifiedAt": 1599278932923
+        },
+        {
+            "name": "focused",
+            "lastModifiedAt": 1597192321970
+        },
+        {
+            "name": "navigate",
+            "lastModifiedAt": 1599278933383
+        },
+        {
+            "name": "visibilityState",
+            "lastModifiedAt": 1599278932305
+        }
+    ]
+}

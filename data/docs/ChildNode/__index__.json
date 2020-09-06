@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279215611
-    },
-    {
-        "name": "after",
-        "lastModifiedAt": 1597193025448
-    },
-    {
-        "name": "before",
-        "lastModifiedAt": 1597193025086
-    },
-    {
-        "name": "remove",
-        "lastModifiedAt": 1597193024839
-    },
-    {
-        "name": "replaceWith",
-        "lastModifiedAt": 1597193025748
-    }
-]
+{
+    "name": "ChildNode",
+    "lastModifiedAt": 1599279215611,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279215611
+        },
+        {
+            "name": "after",
+            "lastModifiedAt": 1597193025448
+        },
+        {
+            "name": "before",
+            "lastModifiedAt": 1597193025086
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1597193024839
+        },
+        {
+            "name": "replaceWith",
+            "lastModifiedAt": 1597193025748
+        }
+    ]
+}

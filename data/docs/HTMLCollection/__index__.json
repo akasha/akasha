@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193054417
-    },
-    {
-        "name": "item",
-        "lastModifiedAt": 1597193055038
-    }
-]
+{
+    "name": "HTMLCollection",
+    "lastModifiedAt": 1597193055038,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193054417
+        },
+        {
+            "name": "item",
+            "lastModifiedAt": 1597193055038
+        }
+    ]
+}

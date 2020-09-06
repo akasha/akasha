@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192402696
-    },
-    {
-        "name": "cx",
-        "lastModifiedAt": 1597192402956
-    },
-    {
-        "name": "cy",
-        "lastModifiedAt": 1597192403386
-    },
-    {
-        "name": "r",
-        "lastModifiedAt": 1597192403645
-    }
-]
+{
+    "name": "SVGCircleElement",
+    "lastModifiedAt": 1597192403645,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192402696
+        },
+        {
+            "name": "cx",
+            "lastModifiedAt": 1597192402956
+        },
+        {
+            "name": "cy",
+            "lastModifiedAt": 1597192403386
+        },
+        {
+            "name": "r",
+            "lastModifiedAt": 1597192403645
+        }
+    ]
+}

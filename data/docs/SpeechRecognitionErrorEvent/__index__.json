@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192377685
-    },
-    {
-        "name": "error",
-        "lastModifiedAt": 1596712120906
-    },
-    {
-        "name": "message",
-        "lastModifiedAt": 1596712121445
-    }
-]
+{
+    "name": "SpeechRecognitionErrorEvent",
+    "lastModifiedAt": 1597192377685,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192377685
+        },
+        {
+            "name": "error",
+            "lastModifiedAt": 1596712120906
+        },
+        {
+            "name": "message",
+            "lastModifiedAt": 1596712121445
+        }
+    ]
+}

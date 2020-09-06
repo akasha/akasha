@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192707178
-    },
-    {
-        "name": "local",
-        "lastModifiedAt": 1596544533200
-    },
-    {
-        "name": "remote",
-        "lastModifiedAt": 1596544533521
-    }
-]
+{
+    "name": "RTCIceCandidatePair",
+    "lastModifiedAt": 1597192707178,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192707178
+        },
+        {
+            "name": "local",
+            "lastModifiedAt": 1596544533200
+        },
+        {
+            "name": "remote",
+            "lastModifiedAt": 1596544533521
+        }
+    ]
+}

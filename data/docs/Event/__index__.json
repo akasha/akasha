@@ -1,83 +1,87 @@
 
-[
-    {
-        "name": "Event",
-        "lastModifiedAt": 1597192240359
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192240096
-    },
-    {
-        "name": "bubbles",
-        "lastModifiedAt": 1597192241153
-    },
-    {
-        "name": "cancelBubble",
-        "lastModifiedAt": 1597192242167
-    },
-    {
-        "name": "cancelable",
-        "lastModifiedAt": 1597192242549
-    },
-    {
-        "name": "composed",
-        "lastModifiedAt": 1599280425238
-    },
-    {
-        "name": "composedPath",
-        "lastModifiedAt": 1599280435312
-    },
-    {
-        "name": "createEvent",
-        "lastModifiedAt": 1597192249772
-    },
-    {
-        "name": "currentTarget",
-        "lastModifiedAt": 1597192244076
-    },
-    {
-        "name": "deepPath",
-        "lastModifiedAt": 1599280427136
-    },
-    {
-        "name": "defaultPrevented",
-        "lastModifiedAt": 1597192244948
-    },
-    {
-        "name": "eventPhase",
-        "lastModifiedAt": 1597192245334
-    },
-    {
-        "name": "explicitOriginalTarget",
-        "lastModifiedAt": 1597192245684
-    },
-    {
-        "name": "isTrusted",
-        "lastModifiedAt": 1597192248789
-    },
-    {
-        "name": "originalTarget",
-        "lastModifiedAt": 1597192245986
-    },
-    {
-        "name": "returnValue",
-        "lastModifiedAt": 1597192246283
-    },
-    {
-        "name": "srcElement",
-        "lastModifiedAt": 1599280431795
-    },
-    {
-        "name": "target",
-        "lastModifiedAt": 1597192247517
-    },
-    {
-        "name": "timeStamp",
-        "lastModifiedAt": 1597192248001
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1597192248368
-    }
-]
+{
+    "name": "Event",
+    "lastModifiedAt": 1599280435312,
+    "entries": [
+        {
+            "name": "Event",
+            "lastModifiedAt": 1597192240359
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192240096
+        },
+        {
+            "name": "bubbles",
+            "lastModifiedAt": 1597192241153
+        },
+        {
+            "name": "cancelBubble",
+            "lastModifiedAt": 1597192242167
+        },
+        {
+            "name": "cancelable",
+            "lastModifiedAt": 1597192242549
+        },
+        {
+            "name": "composed",
+            "lastModifiedAt": 1599280425238
+        },
+        {
+            "name": "composedPath",
+            "lastModifiedAt": 1599280435312
+        },
+        {
+            "name": "createEvent",
+            "lastModifiedAt": 1597192249772
+        },
+        {
+            "name": "currentTarget",
+            "lastModifiedAt": 1597192244076
+        },
+        {
+            "name": "deepPath",
+            "lastModifiedAt": 1599280427136
+        },
+        {
+            "name": "defaultPrevented",
+            "lastModifiedAt": 1597192244948
+        },
+        {
+            "name": "eventPhase",
+            "lastModifiedAt": 1597192245334
+        },
+        {
+            "name": "explicitOriginalTarget",
+            "lastModifiedAt": 1597192245684
+        },
+        {
+            "name": "isTrusted",
+            "lastModifiedAt": 1597192248789
+        },
+        {
+            "name": "originalTarget",
+            "lastModifiedAt": 1597192245986
+        },
+        {
+            "name": "returnValue",
+            "lastModifiedAt": 1597192246283
+        },
+        {
+            "name": "srcElement",
+            "lastModifiedAt": 1599280431795
+        },
+        {
+            "name": "target",
+            "lastModifiedAt": 1597192247517
+        },
+        {
+            "name": "timeStamp",
+            "lastModifiedAt": 1597192248001
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1597192248368
+        }
+    ]
+}

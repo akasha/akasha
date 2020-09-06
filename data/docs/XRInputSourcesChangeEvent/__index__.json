@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "XRInputSourcesChangeEvent",
-        "lastModifiedAt": 1597192949932
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192949107
-    },
-    {
-        "name": "added",
-        "lastModifiedAt": 1596711924505
-    },
-    {
-        "name": "removed",
-        "lastModifiedAt": 1596711925222
-    },
-    {
-        "name": "session",
-        "lastModifiedAt": 1596711926364
-    }
-]
+{
+    "name": "XRInputSourcesChangeEvent",
+    "lastModifiedAt": 1597192949932,
+    "entries": [
+        {
+            "name": "XRInputSourcesChangeEvent",
+            "lastModifiedAt": 1597192949932
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192949107
+        },
+        {
+            "name": "added",
+            "lastModifiedAt": 1596711924505
+        },
+        {
+            "name": "removed",
+            "lastModifiedAt": 1596711925222
+        },
+        {
+            "name": "session",
+            "lastModifiedAt": 1596711926364
+        }
+    ]
+}

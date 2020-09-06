@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193157821
-    },
-    {
-        "name": "javaEnabled",
-        "lastModifiedAt": 1596581121144
-    },
-    {
-        "name": "mimeTypes",
-        "lastModifiedAt": 1596581120525
-    },
-    {
-        "name": "plugins",
-        "lastModifiedAt": 1596581120850
-    }
-]
+{
+    "name": "NavigatorPlugins",
+    "lastModifiedAt": 1597193157821,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193157821
+        },
+        {
+            "name": "javaEnabled",
+            "lastModifiedAt": 1596581121144
+        },
+        {
+            "name": "mimeTypes",
+            "lastModifiedAt": 1596581120525
+        },
+        {
+            "name": "plugins",
+            "lastModifiedAt": 1596581120850
+        }
+    ]
+}

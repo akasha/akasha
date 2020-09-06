@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192361127
-    },
-    {
-        "name": "confidence",
-        "lastModifiedAt": 1596711776229
-    },
-    {
-        "name": "transcript",
-        "lastModifiedAt": 1596711776842
-    }
-]
+{
+    "name": "SpeechRecognitionAlternative",
+    "lastModifiedAt": 1597192361127,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192361127
+        },
+        {
+            "name": "confidence",
+            "lastModifiedAt": 1596711776229
+        },
+        {
+            "name": "transcript",
+            "lastModifiedAt": 1596711776842
+        }
+    ]
+}

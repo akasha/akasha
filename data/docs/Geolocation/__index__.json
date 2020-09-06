@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192015528
-    },
-    {
-        "name": "clearWatch",
-        "lastModifiedAt": 1597192016634
-    },
-    {
-        "name": "getCurrentPosition",
-        "lastModifiedAt": 1597192015889
-    },
-    {
-        "name": "watchPosition",
-        "lastModifiedAt": 1597192016380
-    }
-]
+{
+    "name": "Geolocation",
+    "lastModifiedAt": 1597192016634,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192015528
+        },
+        {
+            "name": "clearWatch",
+            "lastModifiedAt": 1597192016634
+        },
+        {
+            "name": "getCurrentPosition",
+            "lastModifiedAt": 1597192015889
+        },
+        {
+            "name": "watchPosition",
+            "lastModifiedAt": 1597192016380
+        }
+    ]
+}

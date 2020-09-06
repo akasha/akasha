@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192690085
-    }
-]
+{
+    "name": "WebGLQuery",
+    "lastModifiedAt": 1597192690085,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192690085
+        }
+    ]
+}

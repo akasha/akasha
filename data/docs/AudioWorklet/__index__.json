@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192579081
-    }
-]
+{
+    "name": "AudioWorklet",
+    "lastModifiedAt": 1597192579081,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192579081
+        }
+    ]
+}

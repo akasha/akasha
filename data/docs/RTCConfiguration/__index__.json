@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192730994
-    },
-    {
-        "name": "bundlePolicy",
-        "lastModifiedAt": 1599279093474
-    },
-    {
-        "name": "certificates",
-        "lastModifiedAt": 1599279094274
-    },
-    {
-        "name": "iceServers",
-        "lastModifiedAt": 1599279094840
-    },
-    {
-        "name": "iceTransportPolicy",
-        "lastModifiedAt": 1599279095076
-    }
-]
+{
+    "name": "RTCConfiguration",
+    "lastModifiedAt": 1599279095076,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192730994
+        },
+        {
+            "name": "bundlePolicy",
+            "lastModifiedAt": 1599279093474
+        },
+        {
+            "name": "certificates",
+            "lastModifiedAt": 1599279094274
+        },
+        {
+            "name": "iceServers",
+            "lastModifiedAt": 1599279094840
+        },
+        {
+            "name": "iceTransportPolicy",
+            "lastModifiedAt": 1599279095076
+        }
+    ]
+}

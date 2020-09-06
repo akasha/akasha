@@ -1,63 +1,67 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193280478
-    },
-    {
-        "name": "add",
-        "lastModifiedAt": 1596581318107
-    },
-    {
-        "name": "autofocus",
-        "lastModifiedAt": 1599278934972
-    },
-    {
-        "name": "checkValidity",
-        "lastModifiedAt": 1596581319250
-    },
-    {
-        "name": "disabled",
-        "lastModifiedAt": 1599278935495
-    },
-    {
-        "name": "form",
-        "lastModifiedAt": 1596581312139
-    },
-    {
-        "name": "item",
-        "lastModifiedAt": 1596581320178
-    },
-    {
-        "name": "labels",
-        "lastModifiedAt": 1596581312388
-    },
-    {
-        "name": "namedItem",
-        "lastModifiedAt": 1596581320513
-    },
-    {
-        "name": "options",
-        "lastModifiedAt": 1596581314020
-    },
-    {
-        "name": "remove",
-        "lastModifiedAt": 1596581320755
-    },
-    {
-        "name": "selectedIndex",
-        "lastModifiedAt": 1596581314584
-    },
-    {
-        "name": "selectedOptions",
-        "lastModifiedAt": 1596581315433
-    },
-    {
-        "name": "setCustomValidity",
-        "lastModifiedAt": 1596581321427
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1596581316120
-    }
-]
+{
+    "name": "HTMLSelectElement",
+    "lastModifiedAt": 1599278935495,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193280478
+        },
+        {
+            "name": "add",
+            "lastModifiedAt": 1596581318107
+        },
+        {
+            "name": "autofocus",
+            "lastModifiedAt": 1599278934972
+        },
+        {
+            "name": "checkValidity",
+            "lastModifiedAt": 1596581319250
+        },
+        {
+            "name": "disabled",
+            "lastModifiedAt": 1599278935495
+        },
+        {
+            "name": "form",
+            "lastModifiedAt": 1596581312139
+        },
+        {
+            "name": "item",
+            "lastModifiedAt": 1596581320178
+        },
+        {
+            "name": "labels",
+            "lastModifiedAt": 1596581312388
+        },
+        {
+            "name": "namedItem",
+            "lastModifiedAt": 1596581320513
+        },
+        {
+            "name": "options",
+            "lastModifiedAt": 1596581314020
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1596581320755
+        },
+        {
+            "name": "selectedIndex",
+            "lastModifiedAt": 1596581314584
+        },
+        {
+            "name": "selectedOptions",
+            "lastModifiedAt": 1596581315433
+        },
+        {
+            "name": "setCustomValidity",
+            "lastModifiedAt": 1596581321427
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1596581316120
+        }
+    ]
+}

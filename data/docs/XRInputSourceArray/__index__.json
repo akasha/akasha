@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278892023
-    },
-    {
-        "name": "entries",
-        "lastModifiedAt": 1599278894412
-    },
-    {
-        "name": "forEach",
-        "lastModifiedAt": 1599278894936
-    },
-    {
-        "name": "keys",
-        "lastModifiedAt": 1599278895962
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1599278893301
-    },
-    {
-        "name": "values",
-        "lastModifiedAt": 1599278896527
-    }
-]
+{
+    "name": "XRInputSourceArray",
+    "lastModifiedAt": 1599278896527,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278892023
+        },
+        {
+            "name": "entries",
+            "lastModifiedAt": 1599278894412
+        },
+        {
+            "name": "forEach",
+            "lastModifiedAt": 1599278894936
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1599278895962
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1599278893301
+        },
+        {
+            "name": "values",
+            "lastModifiedAt": 1599278896527
+        }
+    ]
+}

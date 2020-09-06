@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193148780
-    }
-]
+{
+    "name": "HTMLOrSVGElement",
+    "lastModifiedAt": 1597193148780,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193148780
+        }
+    ]
+}

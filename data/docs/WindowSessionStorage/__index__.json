@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581133119
-    }
-]
+{
+    "name": "WindowSessionStorage",
+    "lastModifiedAt": 1596581133119,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581133119
+        }
+    ]
+}

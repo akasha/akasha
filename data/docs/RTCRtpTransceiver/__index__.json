@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192834929
-    },
-    {
-        "name": "currentDirection",
-        "lastModifiedAt": 1596544661684
-    },
-    {
-        "name": "direction",
-        "lastModifiedAt": 1596544662374
-    },
-    {
-        "name": "mid",
-        "lastModifiedAt": 1596544663435
-    },
-    {
-        "name": "receiver",
-        "lastModifiedAt": 1599279062193
-    },
-    {
-        "name": "sender",
-        "lastModifiedAt": 1599279062908
-    },
-    {
-        "name": "setCodecPreferences",
-        "lastModifiedAt": 1596544667440
-    },
-    {
-        "name": "stop",
-        "lastModifiedAt": 1596544668597
-    },
-    {
-        "name": "stopped",
-        "lastModifiedAt": 1596544666713
-    }
-]
+{
+    "name": "RTCRtpTransceiver",
+    "lastModifiedAt": 1599279062908,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192834929
+        },
+        {
+            "name": "currentDirection",
+            "lastModifiedAt": 1596544661684
+        },
+        {
+            "name": "direction",
+            "lastModifiedAt": 1596544662374
+        },
+        {
+            "name": "mid",
+            "lastModifiedAt": 1596544663435
+        },
+        {
+            "name": "receiver",
+            "lastModifiedAt": 1599279062193
+        },
+        {
+            "name": "sender",
+            "lastModifiedAt": 1599279062908
+        },
+        {
+            "name": "setCodecPreferences",
+            "lastModifiedAt": 1596544667440
+        },
+        {
+            "name": "stop",
+            "lastModifiedAt": 1596544668597
+        },
+        {
+            "name": "stopped",
+            "lastModifiedAt": 1596544666713
+        }
+    ]
+}

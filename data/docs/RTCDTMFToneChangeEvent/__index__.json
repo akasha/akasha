@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "RTCDTMFToneChangeEvent",
-        "lastModifiedAt": 1596544570693
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192747455
-    },
-    {
-        "name": "tone",
-        "lastModifiedAt": 1599279175642
-    }
-]
+{
+    "name": "RTCDTMFToneChangeEvent",
+    "lastModifiedAt": 1599279175642,
+    "entries": [
+        {
+            "name": "RTCDTMFToneChangeEvent",
+            "lastModifiedAt": 1596544570693
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192747455
+        },
+        {
+            "name": "tone",
+            "lastModifiedAt": 1599279175642
+        }
+    ]
+}

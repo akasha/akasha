@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192693002
-    }
-]
+{
+    "name": "WebGLTransformFeedback",
+    "lastModifiedAt": 1597192693002,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192693002
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192679876
-    }
-]
+{
+    "name": "WebGLUniformLocation",
+    "lastModifiedAt": 1597192679876,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192679876
+        }
+    ]
+}

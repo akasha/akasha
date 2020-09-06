@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193342588
-    }
-]
+{
+    "name": "HTMLOptGroupElement",
+    "lastModifiedAt": 1597193342588,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193342588
+        }
+    ]
+}

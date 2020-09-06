@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191955421
-    }
-]
+{
+    "name": "SVGFEComponentTransferElement",
+    "lastModifiedAt": 1597191955421,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191955421
+        }
+    ]
+}

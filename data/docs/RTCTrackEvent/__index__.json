@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "RTCTrackEvent",
-        "lastModifiedAt": 1597192765738
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192765447
-    },
-    {
-        "name": "receiver",
-        "lastModifiedAt": 1596544595270
-    },
-    {
-        "name": "streams",
-        "lastModifiedAt": 1596544595885
-    },
-    {
-        "name": "track",
-        "lastModifiedAt": 1596544596340
-    },
-    {
-        "name": "transceiver",
-        "lastModifiedAt": 1596544596790
-    }
-]
+{
+    "name": "RTCTrackEvent",
+    "lastModifiedAt": 1597192765738,
+    "entries": [
+        {
+            "name": "RTCTrackEvent",
+            "lastModifiedAt": 1597192765738
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192765447
+        },
+        {
+            "name": "receiver",
+            "lastModifiedAt": 1596544595270
+        },
+        {
+            "name": "streams",
+            "lastModifiedAt": 1596544595885
+        },
+        {
+            "name": "track",
+            "lastModifiedAt": 1596544596340
+        },
+        {
+            "name": "transceiver",
+            "lastModifiedAt": 1596544596790
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190548921
-    },
-    {
-        "name": "getType",
-        "lastModifiedAt": 1599279155054
-    },
-    {
-        "name": "types",
-        "lastModifiedAt": 1597190550000
-    }
-]
+{
+    "name": "ClipboardItem",
+    "lastModifiedAt": 1599279155054,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190548921
+        },
+        {
+            "name": "getType",
+            "lastModifiedAt": 1599279155054
+        },
+        {
+            "name": "types",
+            "lastModifiedAt": 1597190550000
+        }
+    ]
+}

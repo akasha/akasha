@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192695623
-    }
-]
+{
+    "name": "WEBGL_color_buffer_float",
+    "lastModifiedAt": 1597192695623,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192695623
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192461966
-    }
-]
+{
+    "name": "SVGUseElement",
+    "lastModifiedAt": 1597192461966,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192461966
+        }
+    ]
+}

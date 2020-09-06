@@ -1,47 +1,51 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192597250
-    },
-    {
-        "name": "device",
-        "lastModifiedAt": 1599279656214
-    },
-    {
-        "name": "getCharacteristic",
-        "lastModifiedAt": 1599279658446
-    },
-    {
-        "name": "getCharacteristics",
-        "lastModifiedAt": 1599279658934
-    },
-    {
-        "name": "getIncludedService",
-        "lastModifiedAt": 1599279659968
-    },
-    {
-        "name": "getIncludedServices",
-        "lastModifiedAt": 1599279660984
-    },
-    {
-        "name": "isPrimary",
-        "lastModifiedAt": 1599279657358
-    },
-    {
-        "name": "serviceadded_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "servicechanged_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "serviceremoved_event",
-        "lastModifiedAt": 0
-    },
-    {
-        "name": "uuid",
-        "lastModifiedAt": 1599279657873
-    }
-]
+{
+    "name": "BluetoothRemoteGATTService",
+    "lastModifiedAt": 1599279660984,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192597250
+        },
+        {
+            "name": "device",
+            "lastModifiedAt": 1599279656214
+        },
+        {
+            "name": "getCharacteristic",
+            "lastModifiedAt": 1599279658446
+        },
+        {
+            "name": "getCharacteristics",
+            "lastModifiedAt": 1599279658934
+        },
+        {
+            "name": "getIncludedService",
+            "lastModifiedAt": 1599279659968
+        },
+        {
+            "name": "getIncludedServices",
+            "lastModifiedAt": 1599279660984
+        },
+        {
+            "name": "isPrimary",
+            "lastModifiedAt": 1599279657358
+        },
+        {
+            "name": "serviceadded_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "servicechanged_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "serviceremoved_event",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "uuid",
+            "lastModifiedAt": 1599279657873
+        }
+    ]
+}

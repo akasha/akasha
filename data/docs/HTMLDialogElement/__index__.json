@@ -1,31 +1,35 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193328370
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596790523265
-    },
-    {
-        "name": "close_event",
-        "lastModifiedAt": 1597357859812
-    },
-    {
-        "name": "open",
-        "lastModifiedAt": 1599278992728
-    },
-    {
-        "name": "returnValue",
-        "lastModifiedAt": 1596581347575
-    },
-    {
-        "name": "show",
-        "lastModifiedAt": 1596581348840
-    },
-    {
-        "name": "showModal",
-        "lastModifiedAt": 1596581349260
-    }
-]
+{
+    "name": "HTMLDialogElement",
+    "lastModifiedAt": 1599278992728,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193328370
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596790523265
+        },
+        {
+            "name": "close_event",
+            "lastModifiedAt": 1597357859812
+        },
+        {
+            "name": "open",
+            "lastModifiedAt": 1599278992728
+        },
+        {
+            "name": "returnValue",
+            "lastModifiedAt": 1596581347575
+        },
+        {
+            "name": "show",
+            "lastModifiedAt": 1596581348840
+        },
+        {
+            "name": "showModal",
+            "lastModifiedAt": 1596581349260
+        }
+    ]
+}

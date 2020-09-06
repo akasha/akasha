@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "AudioBufferSourceNode",
-        "lastModifiedAt": 1597192583947
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192583688
-    },
-    {
-        "name": "buffer",
-        "lastModifiedAt": 1597192584204
-    },
-    {
-        "name": "detune",
-        "lastModifiedAt": 1599280184235
-    },
-    {
-        "name": "loop",
-        "lastModifiedAt": 1597192585101
-    },
-    {
-        "name": "loopEnd",
-        "lastModifiedAt": 1597192585837
-    },
-    {
-        "name": "loopStart",
-        "lastModifiedAt": 1597192585484
-    },
-    {
-        "name": "playbackRate",
-        "lastModifiedAt": 1597192586125
-    },
-    {
-        "name": "start",
-        "lastModifiedAt": 1597192586365
-    }
-]
+{
+    "name": "AudioBufferSourceNode",
+    "lastModifiedAt": 1599280184235,
+    "entries": [
+        {
+            "name": "AudioBufferSourceNode",
+            "lastModifiedAt": 1597192583947
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192583688
+        },
+        {
+            "name": "buffer",
+            "lastModifiedAt": 1597192584204
+        },
+        {
+            "name": "detune",
+            "lastModifiedAt": 1599280184235
+        },
+        {
+            "name": "loop",
+            "lastModifiedAt": 1597192585101
+        },
+        {
+            "name": "loopEnd",
+            "lastModifiedAt": 1597192585837
+        },
+        {
+            "name": "loopStart",
+            "lastModifiedAt": 1597192585484
+        },
+        {
+            "name": "playbackRate",
+            "lastModifiedAt": 1597192586125
+        },
+        {
+            "name": "start",
+            "lastModifiedAt": 1597192586365
+        }
+    ]
+}

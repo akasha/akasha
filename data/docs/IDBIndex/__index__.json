@@ -1,63 +1,67 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192120311
-    },
-    {
-        "name": "count",
-        "lastModifiedAt": 1597192123751
-    },
-    {
-        "name": "get",
-        "lastModifiedAt": 1597192124062
-    },
-    {
-        "name": "getAll",
-        "lastModifiedAt": 1597192124623
-    },
-    {
-        "name": "getAllKeys",
-        "lastModifiedAt": 1597192124915
-    },
-    {
-        "name": "getKey",
-        "lastModifiedAt": 1597192124328
-    },
-    {
-        "name": "isAutoLocale",
-        "lastModifiedAt": 1597192120634
-    },
-    {
-        "name": "keyPath",
-        "lastModifiedAt": 1597192122269
-    },
-    {
-        "name": "locale",
-        "lastModifiedAt": 1597192120879
-    },
-    {
-        "name": "multiEntry",
-        "lastModifiedAt": 1597192122516
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1597192121686
-    },
-    {
-        "name": "objectStore",
-        "lastModifiedAt": 1597192121939
-    },
-    {
-        "name": "openCursor",
-        "lastModifiedAt": 1597192125270
-    },
-    {
-        "name": "openKeyCursor",
-        "lastModifiedAt": 1597192126080
-    },
-    {
-        "name": "unique",
-        "lastModifiedAt": 1597192122890
-    }
-]
+{
+    "name": "IDBIndex",
+    "lastModifiedAt": 1597192126080,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192120311
+        },
+        {
+            "name": "count",
+            "lastModifiedAt": 1597192123751
+        },
+        {
+            "name": "get",
+            "lastModifiedAt": 1597192124062
+        },
+        {
+            "name": "getAll",
+            "lastModifiedAt": 1597192124623
+        },
+        {
+            "name": "getAllKeys",
+            "lastModifiedAt": 1597192124915
+        },
+        {
+            "name": "getKey",
+            "lastModifiedAt": 1597192124328
+        },
+        {
+            "name": "isAutoLocale",
+            "lastModifiedAt": 1597192120634
+        },
+        {
+            "name": "keyPath",
+            "lastModifiedAt": 1597192122269
+        },
+        {
+            "name": "locale",
+            "lastModifiedAt": 1597192120879
+        },
+        {
+            "name": "multiEntry",
+            "lastModifiedAt": 1597192122516
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1597192121686
+        },
+        {
+            "name": "objectStore",
+            "lastModifiedAt": 1597192121939
+        },
+        {
+            "name": "openCursor",
+            "lastModifiedAt": 1597192125270
+        },
+        {
+            "name": "openKeyCursor",
+            "lastModifiedAt": 1597192126080
+        },
+        {
+            "name": "unique",
+            "lastModifiedAt": 1597192122890
+        }
+    ]
+}

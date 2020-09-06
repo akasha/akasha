@@ -1,99 +1,103 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192748338
-    },
-    {
-        "name": "binaryType",
-        "lastModifiedAt": 1599280214574
-    },
-    {
-        "name": "bufferedAmount",
-        "lastModifiedAt": 1596544574861
-    },
-    {
-        "name": "bufferedAmountLowThreshold",
-        "lastModifiedAt": 1599280215712
-    },
-    {
-        "name": "bufferedamountlow_event",
-        "lastModifiedAt": 1597358950153
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1596790663272
-    },
-    {
-        "name": "close_event",
-        "lastModifiedAt": 1597358950605
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1597358951366
-    },
-    {
-        "name": "id",
-        "lastModifiedAt": 1596544576423
-    },
-    {
-        "name": "label",
-        "lastModifiedAt": 1596544577027
-    },
-    {
-        "name": "maxPacketLifeTime",
-        "lastModifiedAt": 1596544577657
-    },
-    {
-        "name": "maxRetransmits",
-        "lastModifiedAt": 1596544578808
-    },
-    {
-        "name": "message_event",
-        "lastModifiedAt": 1597358952034
-    },
-    {
-        "name": "negotiated",
-        "lastModifiedAt": 1596544579899
-    },
-    {
-        "name": "onbufferedamountlow",
-        "lastModifiedAt": 1596544580306
-    },
-    {
-        "name": "onclose",
-        "lastModifiedAt": 1596544580628
-    },
-    {
-        "name": "onerror",
-        "lastModifiedAt": 1596544580936
-    },
-    {
-        "name": "onmessage",
-        "lastModifiedAt": 1596544581177
-    },
-    {
-        "name": "onopen",
-        "lastModifiedAt": 1599280230671
-    },
-    {
-        "name": "open_event",
-        "lastModifiedAt": 1597358952750
-    },
-    {
-        "name": "ordered",
-        "lastModifiedAt": 1596544582847
-    },
-    {
-        "name": "protocol",
-        "lastModifiedAt": 1599280221362
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1596544585172
-    },
-    {
-        "name": "send",
-        "lastModifiedAt": 1596544586888
-    }
-]
+{
+    "name": "RTCDataChannel",
+    "lastModifiedAt": 1599280230671,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192748338
+        },
+        {
+            "name": "binaryType",
+            "lastModifiedAt": 1599280214574
+        },
+        {
+            "name": "bufferedAmount",
+            "lastModifiedAt": 1596544574861
+        },
+        {
+            "name": "bufferedAmountLowThreshold",
+            "lastModifiedAt": 1599280215712
+        },
+        {
+            "name": "bufferedamountlow_event",
+            "lastModifiedAt": 1597358950153
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1596790663272
+        },
+        {
+            "name": "close_event",
+            "lastModifiedAt": 1597358950605
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1597358951366
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1596544576423
+        },
+        {
+            "name": "label",
+            "lastModifiedAt": 1596544577027
+        },
+        {
+            "name": "maxPacketLifeTime",
+            "lastModifiedAt": 1596544577657
+        },
+        {
+            "name": "maxRetransmits",
+            "lastModifiedAt": 1596544578808
+        },
+        {
+            "name": "message_event",
+            "lastModifiedAt": 1597358952034
+        },
+        {
+            "name": "negotiated",
+            "lastModifiedAt": 1596544579899
+        },
+        {
+            "name": "onbufferedamountlow",
+            "lastModifiedAt": 1596544580306
+        },
+        {
+            "name": "onclose",
+            "lastModifiedAt": 1596544580628
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1596544580936
+        },
+        {
+            "name": "onmessage",
+            "lastModifiedAt": 1596544581177
+        },
+        {
+            "name": "onopen",
+            "lastModifiedAt": 1599280230671
+        },
+        {
+            "name": "open_event",
+            "lastModifiedAt": 1597358952750
+        },
+        {
+            "name": "ordered",
+            "lastModifiedAt": 1596544582847
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1599280221362
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1596544585172
+        },
+        {
+            "name": "send",
+            "lastModifiedAt": 1596544586888
+        }
+    ]
+}

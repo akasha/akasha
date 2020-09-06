@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "ExtendableEvent",
-        "lastModifiedAt": 1597192316627
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192316261
-    },
-    {
-        "name": "waitUntil",
-        "lastModifiedAt": 1597192316884
-    }
-]
+{
+    "name": "ExtendableEvent",
+    "lastModifiedAt": 1597192316884,
+    "entries": [
+        {
+            "name": "ExtendableEvent",
+            "lastModifiedAt": 1597192316627
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192316261
+        },
+        {
+            "name": "waitUntil",
+            "lastModifiedAt": 1597192316884
+        }
+    ]
+}

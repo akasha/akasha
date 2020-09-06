@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192383554
-    }
-]
+{
+    "name": "SVGZoomAndPan",
+    "lastModifiedAt": 1597192383554,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192383554
+        }
+    ]
+}

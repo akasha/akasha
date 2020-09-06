@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "TrackEvent",
-        "lastModifiedAt": 1597193417542
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280593116
-    },
-    {
-        "name": "track",
-        "lastModifiedAt": 1596581417023
-    }
-]
+{
+    "name": "TrackEvent",
+    "lastModifiedAt": 1599280593116,
+    "entries": [
+        {
+            "name": "TrackEvent",
+            "lastModifiedAt": 1597193417542
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280593116
+        },
+        {
+            "name": "track",
+            "lastModifiedAt": 1596581417023
+        }
+    ]
+}

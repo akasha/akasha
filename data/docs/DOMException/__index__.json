@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "DOMException",
-        "lastModifiedAt": 1597190554712
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190553896
-    },
-    {
-        "name": "code",
-        "lastModifiedAt": 1597190555548
-    },
-    {
-        "name": "message",
-        "lastModifiedAt": 1597190556349
-    },
-    {
-        "name": "name",
-        "lastModifiedAt": 1597190556664
-    }
-]
+{
+    "name": "DOMException",
+    "lastModifiedAt": 1597190556664,
+    "entries": [
+        {
+            "name": "DOMException",
+            "lastModifiedAt": 1597190554712
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190553896
+        },
+        {
+            "name": "code",
+            "lastModifiedAt": 1597190555548
+        },
+        {
+            "name": "message",
+            "lastModifiedAt": 1597190556349
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1597190556664
+        }
+    ]
+}

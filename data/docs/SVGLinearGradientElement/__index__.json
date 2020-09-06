@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192469204
-    }
-]
+{
+    "name": "SVGLinearGradientElement",
+    "lastModifiedAt": 1597192469204,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192469204
+        }
+    ]
+}

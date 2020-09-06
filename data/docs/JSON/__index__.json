@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597619483446
-    },
-    {
-        "name": "parse",
-        "lastModifiedAt": 1597619483966
-    },
-    {
-        "name": "stringify",
-        "lastModifiedAt": 1597619484934
-    }
-]
+{
+    "name": "JSON",
+    "lastModifiedAt": 1597619484934,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597619483446
+        },
+        {
+            "name": "parse",
+            "lastModifiedAt": 1597619483966
+        },
+        {
+            "name": "stringify",
+            "lastModifiedAt": 1597619484934
+        }
+    ]
+}

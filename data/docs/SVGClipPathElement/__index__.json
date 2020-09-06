@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190649114
-    }
-]
+{
+    "name": "SVGClipPathElement",
+    "lastModifiedAt": 1597190649114,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190649114
+        }
+    ]
+}

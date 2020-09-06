@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191976954
-    }
-]
+{
+    "name": "SVGFEConvolveMatrixElement",
+    "lastModifiedAt": 1597191976954,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191976954
+        }
+    ]
+}

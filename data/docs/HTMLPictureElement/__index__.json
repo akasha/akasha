@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581370733
-    }
-]
+{
+    "name": "HTMLPictureElement",
+    "lastModifiedAt": 1596581370733,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581370733
+        }
+    ]
+}

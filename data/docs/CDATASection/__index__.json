@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279644725
-    }
-]
+{
+    "name": "CDATASection",
+    "lastModifiedAt": 1599279644725,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279644725
+        }
+    ]
+}

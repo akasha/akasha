@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "AnalyserNode",
-        "lastModifiedAt": 1597192551370
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192551133
-    },
-    {
-        "name": "fftSize",
-        "lastModifiedAt": 1597192551639
-    },
-    {
-        "name": "frequencyBinCount",
-        "lastModifiedAt": 1597192552030
-    },
-    {
-        "name": "getFloatFrequencyData",
-        "lastModifiedAt": 1597192553566
-    },
-    {
-        "name": "maxDecibels",
-        "lastModifiedAt": 1597192552711
-    },
-    {
-        "name": "minDecibels",
-        "lastModifiedAt": 1597192552333
-    },
-    {
-        "name": "smoothingTimeConstant",
-        "lastModifiedAt": 1597192553101
-    }
-]
+{
+    "name": "AnalyserNode",
+    "lastModifiedAt": 1597192553566,
+    "entries": [
+        {
+            "name": "AnalyserNode",
+            "lastModifiedAt": 1597192551370
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192551133
+        },
+        {
+            "name": "fftSize",
+            "lastModifiedAt": 1597192551639
+        },
+        {
+            "name": "frequencyBinCount",
+            "lastModifiedAt": 1597192552030
+        },
+        {
+            "name": "getFloatFrequencyData",
+            "lastModifiedAt": 1597192553566
+        },
+        {
+            "name": "maxDecibels",
+            "lastModifiedAt": 1597192552711
+        },
+        {
+            "name": "minDecibels",
+            "lastModifiedAt": 1597192552333
+        },
+        {
+            "name": "smoothingTimeConstant",
+            "lastModifiedAt": 1597192553101
+        }
+    ]
+}

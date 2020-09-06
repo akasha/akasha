@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597756273391
-    }
-]
+{
+    "name": "CSSMediaRule",
+    "lastModifiedAt": 1597756273391,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597756273391
+        }
+    ]
+}

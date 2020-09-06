@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "MediaQueryListEvent",
-        "lastModifiedAt": 1597190814441
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279573403
-    },
-    {
-        "name": "matches",
-        "lastModifiedAt": 1597190814947
-    },
-    {
-        "name": "media",
-        "lastModifiedAt": 1597190815755
-    }
-]
+{
+    "name": "MediaQueryListEvent",
+    "lastModifiedAt": 1599279573403,
+    "entries": [
+        {
+            "name": "MediaQueryListEvent",
+            "lastModifiedAt": 1597190814441
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279573403
+        },
+        {
+            "name": "matches",
+            "lastModifiedAt": 1597190814947
+        },
+        {
+            "name": "media",
+            "lastModifiedAt": 1597190815755
+        }
+    ]
+}

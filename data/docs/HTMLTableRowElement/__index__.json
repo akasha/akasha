@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193343783
-    },
-    {
-        "name": "insertCell",
-        "lastModifiedAt": 1599280481841
-    },
-    {
-        "name": "rowIndex",
-        "lastModifiedAt": 1596581360113
-    }
-]
+{
+    "name": "HTMLTableRowElement",
+    "lastModifiedAt": 1599280481841,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193343783
+        },
+        {
+            "name": "insertCell",
+            "lastModifiedAt": 1599280481841
+        },
+        {
+            "name": "rowIndex",
+            "lastModifiedAt": 1596581360113
+        }
+    ]
+}

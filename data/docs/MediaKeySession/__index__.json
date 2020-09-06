@@ -1,43 +1,47 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280641058
-    },
-    {
-        "name": "close",
-        "lastModifiedAt": 1599280644794
-    },
-    {
-        "name": "closed",
-        "lastModifiedAt": 1597190989450
-    },
-    {
-        "name": "expiration",
-        "lastModifiedAt": 1597190989686
-    },
-    {
-        "name": "generateRequest",
-        "lastModifiedAt": 1597190990837
-    },
-    {
-        "name": "keyStatuses",
-        "lastModifiedAt": 1599280643757
-    },
-    {
-        "name": "load",
-        "lastModifiedAt": 1597190991078
-    },
-    {
-        "name": "remove",
-        "lastModifiedAt": 1597190991345
-    },
-    {
-        "name": "sessionId",
-        "lastModifiedAt": 1599280644320
-    },
-    {
-        "name": "update",
-        "lastModifiedAt": 1597190991579
-    }
-]
+{
+    "name": "MediaKeySession",
+    "lastModifiedAt": 1599280644794,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280641058
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1599280644794
+        },
+        {
+            "name": "closed",
+            "lastModifiedAt": 1597190989450
+        },
+        {
+            "name": "expiration",
+            "lastModifiedAt": 1597190989686
+        },
+        {
+            "name": "generateRequest",
+            "lastModifiedAt": 1597190990837
+        },
+        {
+            "name": "keyStatuses",
+            "lastModifiedAt": 1599280643757
+        },
+        {
+            "name": "load",
+            "lastModifiedAt": 1597190991078
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1597190991345
+        },
+        {
+            "name": "sessionId",
+            "lastModifiedAt": 1599280644320
+        },
+        {
+            "name": "update",
+            "lastModifiedAt": 1597190991579
+        }
+    ]
+}

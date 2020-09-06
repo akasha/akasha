@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192556156
-    },
-    {
-        "name": "mediaStream",
-        "lastModifiedAt": 1597192556457
-    }
-]
+{
+    "name": "MediaStreamAudioSourceNode",
+    "lastModifiedAt": 1597192556457,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192556156
+        },
+        {
+            "name": "mediaStream",
+            "lastModifiedAt": 1597192556457
+        }
+    ]
+}

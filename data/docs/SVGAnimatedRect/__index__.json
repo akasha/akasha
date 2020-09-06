@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192440714
-    }
-]
+{
+    "name": "SVGAnimatedRect",
+    "lastModifiedAt": 1597192440714,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192440714
+        }
+    ]
+}

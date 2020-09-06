@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190984317
-    },
-    {
-        "name": "serializeToString",
-        "lastModifiedAt": 1597190985002
-    }
-]
+{
+    "name": "XMLSerializer",
+    "lastModifiedAt": 1597190985002,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190984317
+        },
+        {
+            "name": "serializeToString",
+            "lastModifiedAt": 1597190985002
+        }
+    ]
+}

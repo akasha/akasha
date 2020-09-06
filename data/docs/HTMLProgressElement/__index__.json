@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193325377
-    },
-    {
-        "name": "labels",
-        "lastModifiedAt": 1596581344982
-    }
-]
+{
+    "name": "HTMLProgressElement",
+    "lastModifiedAt": 1597193325377,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193325377
+        },
+        {
+            "name": "labels",
+            "lastModifiedAt": 1596581344982
+        }
+    ]
+}

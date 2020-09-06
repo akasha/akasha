@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192695886
-    }
-]
+{
+    "name": "WEBGL_compressed_texture_astc",
+    "lastModifiedAt": 1597192695886,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192695886
+        }
+    ]
+}

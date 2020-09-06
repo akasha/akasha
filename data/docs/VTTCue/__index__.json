@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "VTTCue",
-        "lastModifiedAt": 1597754917590
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597754917185
-    }
-]
+{
+    "name": "VTTCue",
+    "lastModifiedAt": 1597754917590,
+    "entries": [
+        {
+            "name": "VTTCue",
+            "lastModifiedAt": 1597754917590
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597754917185
+        }
+    ]
+}

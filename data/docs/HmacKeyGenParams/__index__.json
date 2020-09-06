@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192662826
-    }
-]
+{
+    "name": "HmacKeyGenParams",
+    "lastModifiedAt": 1597192662826,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192662826
+        }
+    ]
+}

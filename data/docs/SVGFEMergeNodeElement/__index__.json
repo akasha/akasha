@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191996616
-    }
-]
+{
+    "name": "SVGFEMergeNodeElement",
+    "lastModifiedAt": 1597191996616,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191996616
+        }
+    ]
+}

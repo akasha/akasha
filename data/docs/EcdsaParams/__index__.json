@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192666513
-    }
-]
+{
+    "name": "EcdsaParams",
+    "lastModifiedAt": 1597192666513,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192666513
+        }
+    ]
+}

@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192204043
-    },
-    {
-        "name": "enumerateDevices",
-        "lastModifiedAt": 1596544749597
-    },
-    {
-        "name": "getDisplayMedia",
-        "lastModifiedAt": 1596544749897
-    },
-    {
-        "name": "getSupportedConstraints",
-        "lastModifiedAt": 1596544750288
-    },
-    {
-        "name": "getUserMedia",
-        "lastModifiedAt": 1596544750721
-    }
-]
+{
+    "name": "MediaDevices",
+    "lastModifiedAt": 1597192204043,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192204043
+        },
+        {
+            "name": "enumerateDevices",
+            "lastModifiedAt": 1596544749597
+        },
+        {
+            "name": "getDisplayMedia",
+            "lastModifiedAt": 1596544749897
+        },
+        {
+            "name": "getSupportedConstraints",
+            "lastModifiedAt": 1596544750288
+        },
+        {
+            "name": "getUserMedia",
+            "lastModifiedAt": 1596544750721
+        }
+    ]
+}

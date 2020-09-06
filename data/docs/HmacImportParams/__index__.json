@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192664114
-    }
-]
+{
+    "name": "HmacImportParams",
+    "lastModifiedAt": 1597192664114,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192664114
+        }
+    ]
+}

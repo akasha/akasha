@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280601071
-    }
-]
+{
+    "name": "RsaHashedKeyGenParams",
+    "lastModifiedAt": 1599280601071,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280601071
+        }
+    ]
+}

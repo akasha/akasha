@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192662172
-    }
-]
+{
+    "name": "EcKeyImportParams",
+    "lastModifiedAt": 1597192662172,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192662172
+        }
+    ]
+}

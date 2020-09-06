@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192272956
-    },
-    {
-        "name": "getCoalescedEvents",
-        "lastModifiedAt": 1597192276311
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1597192273738
-    },
-    {
-        "name": "isPrimary",
-        "lastModifiedAt": 1597192275787
-    },
-    {
-        "name": "pointerId",
-        "lastModifiedAt": 1597192273237
-    },
-    {
-        "name": "pointerType",
-        "lastModifiedAt": 1597192275549
-    },
-    {
-        "name": "pressure",
-        "lastModifiedAt": 1597192273986
-    },
-    {
-        "name": "tangentialPressure",
-        "lastModifiedAt": 1597192274240
-    },
-    {
-        "name": "tiltX",
-        "lastModifiedAt": 1597192274626
-    },
-    {
-        "name": "tiltY",
-        "lastModifiedAt": 1597192274929
-    },
-    {
-        "name": "twist",
-        "lastModifiedAt": 1597192275240
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1597192273494
-    }
-]
+{
+    "name": "PointerEvent",
+    "lastModifiedAt": 1597192276311,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192272956
+        },
+        {
+            "name": "getCoalescedEvents",
+            "lastModifiedAt": 1597192276311
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1597192273738
+        },
+        {
+            "name": "isPrimary",
+            "lastModifiedAt": 1597192275787
+        },
+        {
+            "name": "pointerId",
+            "lastModifiedAt": 1597192273237
+        },
+        {
+            "name": "pointerType",
+            "lastModifiedAt": 1597192275549
+        },
+        {
+            "name": "pressure",
+            "lastModifiedAt": 1597192273986
+        },
+        {
+            "name": "tangentialPressure",
+            "lastModifiedAt": 1597192274240
+        },
+        {
+            "name": "tiltX",
+            "lastModifiedAt": 1597192274626
+        },
+        {
+            "name": "tiltY",
+            "lastModifiedAt": 1597192274929
+        },
+        {
+            "name": "twist",
+            "lastModifiedAt": 1597192275240
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1597192273494
+        }
+    ]
+}

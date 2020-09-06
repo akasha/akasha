@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192460653
-    }
-]
+{
+    "name": "SVGMetadataElement",
+    "lastModifiedAt": 1597192460653,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192460653
+        }
+    ]
+}

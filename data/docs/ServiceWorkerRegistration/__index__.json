@@ -1,55 +1,59 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190518732
-    },
-    {
-        "name": "active",
-        "lastModifiedAt": 1599279497293
-    },
-    {
-        "name": "getNotifications",
-        "lastModifiedAt": 1597190523897
-    },
-    {
-        "name": "index",
-        "lastModifiedAt": 1599278005676
-    },
-    {
-        "name": "installing",
-        "lastModifiedAt": 1599279496167
-    },
-    {
-        "name": "navigationPreload",
-        "lastModifiedAt": 1597190522106
-    },
-    {
-        "name": "pushManager",
-        "lastModifiedAt": 1599279499620
-    },
-    {
-        "name": "scope",
-        "lastModifiedAt": 1599279495638
-    },
-    {
-        "name": "showNotification",
-        "lastModifiedAt": 1597190524301
-    },
-    {
-        "name": "sync",
-        "lastModifiedAt": 1599279500731
-    },
-    {
-        "name": "unregister",
-        "lastModifiedAt": 1597190524569
-    },
-    {
-        "name": "update",
-        "lastModifiedAt": 1599279502821
-    },
-    {
-        "name": "waiting",
-        "lastModifiedAt": 1599279496835
-    }
-]
+{
+    "name": "ServiceWorkerRegistration",
+    "lastModifiedAt": 1599279502821,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190518732
+        },
+        {
+            "name": "active",
+            "lastModifiedAt": 1599279497293
+        },
+        {
+            "name": "getNotifications",
+            "lastModifiedAt": 1597190523897
+        },
+        {
+            "name": "index",
+            "lastModifiedAt": 1599278005676
+        },
+        {
+            "name": "installing",
+            "lastModifiedAt": 1599279496167
+        },
+        {
+            "name": "navigationPreload",
+            "lastModifiedAt": 1597190522106
+        },
+        {
+            "name": "pushManager",
+            "lastModifiedAt": 1599279499620
+        },
+        {
+            "name": "scope",
+            "lastModifiedAt": 1599279495638
+        },
+        {
+            "name": "showNotification",
+            "lastModifiedAt": 1597190524301
+        },
+        {
+            "name": "sync",
+            "lastModifiedAt": 1599279500731
+        },
+        {
+            "name": "unregister",
+            "lastModifiedAt": 1597190524569
+        },
+        {
+            "name": "update",
+            "lastModifiedAt": 1599279502821
+        },
+        {
+            "name": "waiting",
+            "lastModifiedAt": 1599279496835
+        }
+    ]
+}

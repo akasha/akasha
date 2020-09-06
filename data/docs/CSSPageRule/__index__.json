@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190717504
-    }
-]
+{
+    "name": "CSSPageRule",
+    "lastModifiedAt": 1597190717504,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190717504
+        }
+    ]
+}

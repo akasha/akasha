@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279503753
-    }
-]
+{
+    "name": "HTMLMetaElement",
+    "lastModifiedAt": 1599279503753,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279503753
+        }
+    ]
+}

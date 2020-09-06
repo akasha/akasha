@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193419418
-    },
-    {
-        "name": "as",
-        "lastModifiedAt": 1596581418562
-    },
-    {
-        "name": "referrerPolicy",
-        "lastModifiedAt": 1596581421002
-    },
-    {
-        "name": "rel",
-        "lastModifiedAt": 1596581421454
-    },
-    {
-        "name": "relList",
-        "lastModifiedAt": 1596581422253
-    }
-]
+{
+    "name": "HTMLLinkElement",
+    "lastModifiedAt": 1597193419418,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193419418
+        },
+        {
+            "name": "as",
+            "lastModifiedAt": 1596581418562
+        },
+        {
+            "name": "referrerPolicy",
+            "lastModifiedAt": 1596581421002
+        },
+        {
+            "name": "rel",
+            "lastModifiedAt": 1596581421454
+        },
+        {
+            "name": "relList",
+            "lastModifiedAt": 1596581422253
+        }
+    ]
+}

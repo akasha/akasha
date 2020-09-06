@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193273587
-    }
-]
+{
+    "name": "DOMStringList",
+    "lastModifiedAt": 1597193273587,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193273587
+        }
+    ]
+}

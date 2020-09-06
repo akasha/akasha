@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190816041
-    },
-    {
-        "name": "addListener",
-        "lastModifiedAt": 1597190816902
-    },
-    {
-        "name": "matches",
-        "lastModifiedAt": 1597190816288
-    },
-    {
-        "name": "media",
-        "lastModifiedAt": 1597190816659
-    },
-    {
-        "name": "onchange",
-        "lastModifiedAt": 1597190818089
-    },
-    {
-        "name": "removeListener",
-        "lastModifiedAt": 1597190817153
-    }
-]
+{
+    "name": "MediaQueryList",
+    "lastModifiedAt": 1597190818089,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190816041
+        },
+        {
+            "name": "addListener",
+            "lastModifiedAt": 1597190816902
+        },
+        {
+            "name": "matches",
+            "lastModifiedAt": 1597190816288
+        },
+        {
+            "name": "media",
+            "lastModifiedAt": 1597190816659
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1597190818089
+        },
+        {
+            "name": "removeListener",
+            "lastModifiedAt": 1597190817153
+        }
+    ]
+}

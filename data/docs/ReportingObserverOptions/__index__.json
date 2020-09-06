@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597389387527
-    }
-]
+{
+    "name": "ReportingObserverOptions",
+    "lastModifiedAt": 1597389387527,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597389387527
+        }
+    ]
+}

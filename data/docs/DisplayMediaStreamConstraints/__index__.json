@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192291216
-    },
-    {
-        "name": "audio",
-        "lastModifiedAt": 1596544739041
-    },
-    {
-        "name": "video",
-        "lastModifiedAt": 1596544739349
-    }
-]
+{
+    "name": "DisplayMediaStreamConstraints",
+    "lastModifiedAt": 1597192291216,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192291216
+        },
+        {
+            "name": "audio",
+            "lastModifiedAt": 1596544739041
+        },
+        {
+            "name": "video",
+            "lastModifiedAt": 1596544739349
+        }
+    ]
+}

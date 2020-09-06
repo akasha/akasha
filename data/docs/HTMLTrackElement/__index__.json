@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193235633
-    },
-    {
-        "name": "cuechange_event",
-        "lastModifiedAt": 1597359970332
-    },
-    {
-        "name": "src",
-        "lastModifiedAt": 1596581206023
-    }
-]
+{
+    "name": "HTMLTrackElement",
+    "lastModifiedAt": 1597359970332,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193235633
+        },
+        {
+            "name": "cuechange_event",
+            "lastModifiedAt": 1597359970332
+        },
+        {
+            "name": "src",
+            "lastModifiedAt": 1596581206023
+        }
+    ]
+}

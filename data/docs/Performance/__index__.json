@@ -1,75 +1,79 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192078385
-    },
-    {
-        "name": "clearMarks",
-        "lastModifiedAt": 1597192079976
-    },
-    {
-        "name": "clearMeasures",
-        "lastModifiedAt": 1597192080336
-    },
-    {
-        "name": "clearResourceTimings",
-        "lastModifiedAt": 1597192080633
-    },
-    {
-        "name": "getEntries",
-        "lastModifiedAt": 1597192080926
-    },
-    {
-        "name": "getEntriesByName",
-        "lastModifiedAt": 1597192081315
-    },
-    {
-        "name": "getEntriesByType",
-        "lastModifiedAt": 1597192081595
-    },
-    {
-        "name": "mark",
-        "lastModifiedAt": 1597192081924
-    },
-    {
-        "name": "measure",
-        "lastModifiedAt": 1597192082546
-    },
-    {
-        "name": "memory",
-        "lastModifiedAt": 1597192079261
-    },
-    {
-        "name": "navigation",
-        "lastModifiedAt": 1597192078637
-    },
-    {
-        "name": "now",
-        "lastModifiedAt": 1597192082860
-    },
-    {
-        "name": "onresourcetimingbufferfull",
-        "lastModifiedAt": 1597192084397
-    },
-    {
-        "name": "resourcetimingbufferfull_event",
-        "lastModifiedAt": 1597359982810
-    },
-    {
-        "name": "setResourceTimingBufferSize",
-        "lastModifiedAt": 1597192083306
-    },
-    {
-        "name": "timeOrigin",
-        "lastModifiedAt": 1597192079525
-    },
-    {
-        "name": "timing",
-        "lastModifiedAt": 1597192078955
-    },
-    {
-        "name": "toJSON",
-        "lastModifiedAt": 1597192083768
-    }
-]
+{
+    "name": "Performance",
+    "lastModifiedAt": 1597359982810,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192078385
+        },
+        {
+            "name": "clearMarks",
+            "lastModifiedAt": 1597192079976
+        },
+        {
+            "name": "clearMeasures",
+            "lastModifiedAt": 1597192080336
+        },
+        {
+            "name": "clearResourceTimings",
+            "lastModifiedAt": 1597192080633
+        },
+        {
+            "name": "getEntries",
+            "lastModifiedAt": 1597192080926
+        },
+        {
+            "name": "getEntriesByName",
+            "lastModifiedAt": 1597192081315
+        },
+        {
+            "name": "getEntriesByType",
+            "lastModifiedAt": 1597192081595
+        },
+        {
+            "name": "mark",
+            "lastModifiedAt": 1597192081924
+        },
+        {
+            "name": "measure",
+            "lastModifiedAt": 1597192082546
+        },
+        {
+            "name": "memory",
+            "lastModifiedAt": 1597192079261
+        },
+        {
+            "name": "navigation",
+            "lastModifiedAt": 1597192078637
+        },
+        {
+            "name": "now",
+            "lastModifiedAt": 1597192082860
+        },
+        {
+            "name": "onresourcetimingbufferfull",
+            "lastModifiedAt": 1597192084397
+        },
+        {
+            "name": "resourcetimingbufferfull_event",
+            "lastModifiedAt": 1597359982810
+        },
+        {
+            "name": "setResourceTimingBufferSize",
+            "lastModifiedAt": 1597192083306
+        },
+        {
+            "name": "timeOrigin",
+            "lastModifiedAt": 1597192079525
+        },
+        {
+            "name": "timing",
+            "lastModifiedAt": 1597192078955
+        },
+        {
+            "name": "toJSON",
+            "lastModifiedAt": 1597192083768
+        }
+    ]
+}

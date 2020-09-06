@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192540050
-    }
-]
+{
+    "name": "AudioProcessingEvent",
+    "lastModifiedAt": 1597192540050,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192540050
+        }
+    ]
+}

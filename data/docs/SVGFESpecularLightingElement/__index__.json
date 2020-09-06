@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191958675
-    }
-]
+{
+    "name": "SVGFESpecularLightingElement",
+    "lastModifiedAt": 1597191958675,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191958675
+        }
+    ]
+}

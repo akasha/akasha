@@ -1,31 +1,35 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279252772
-    },
-    {
-        "name": "connect",
-        "lastModifiedAt": 1596711704101
-    },
-    {
-        "name": "connected",
-        "lastModifiedAt": 1599279253319
-    },
-    {
-        "name": "device",
-        "lastModifiedAt": 1599279254054
-    },
-    {
-        "name": "disconnect",
-        "lastModifiedAt": 1599279255912
-    },
-    {
-        "name": "getPrimaryService",
-        "lastModifiedAt": 1599279256396
-    },
-    {
-        "name": "getPrimaryServices",
-        "lastModifiedAt": 1599279256883
-    }
-]
+{
+    "name": "BluetoothRemoteGATTServer",
+    "lastModifiedAt": 1599279256883,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279252772
+        },
+        {
+            "name": "connect",
+            "lastModifiedAt": 1596711704101
+        },
+        {
+            "name": "connected",
+            "lastModifiedAt": 1599279253319
+        },
+        {
+            "name": "device",
+            "lastModifiedAt": 1599279254054
+        },
+        {
+            "name": "disconnect",
+            "lastModifiedAt": 1599279255912
+        },
+        {
+            "name": "getPrimaryService",
+            "lastModifiedAt": 1599279256396
+        },
+        {
+            "name": "getPrimaryServices",
+            "lastModifiedAt": 1599279256883
+        }
+    ]
+}

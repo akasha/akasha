@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193364207
-    },
-    {
-        "name": "control",
-        "lastModifiedAt": 1596581371299
-    },
-    {
-        "name": "form",
-        "lastModifiedAt": 1596581371551
-    },
-    {
-        "name": "htmlFor",
-        "lastModifiedAt": 1596581371935
-    }
-]
+{
+    "name": "HTMLLabelElement",
+    "lastModifiedAt": 1597193364207,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193364207
+        },
+        {
+            "name": "control",
+            "lastModifiedAt": 1596581371299
+        },
+        {
+            "name": "form",
+            "lastModifiedAt": 1596581371551
+        },
+        {
+            "name": "htmlFor",
+            "lastModifiedAt": 1596581371935
+        }
+    ]
+}

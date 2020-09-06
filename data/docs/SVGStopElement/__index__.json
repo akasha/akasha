@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192450940
-    }
-]
+{
+    "name": "SVGStopElement",
+    "lastModifiedAt": 1597192450940,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192450940
+        }
+    ]
+}

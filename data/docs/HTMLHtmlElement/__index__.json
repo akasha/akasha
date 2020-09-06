@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193272561
-    },
-    {
-        "name": "version",
-        "lastModifiedAt": 1599280258168
-    }
-]
+{
+    "name": "HTMLHtmlElement",
+    "lastModifiedAt": 1599280258168,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193272561
+        },
+        {
+            "name": "version",
+            "lastModifiedAt": 1599280258168
+        }
+    ]
+}

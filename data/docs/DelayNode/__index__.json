@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "DelayNode",
-        "lastModifiedAt": 1597192590740
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192590480
-    },
-    {
-        "name": "delayTime",
-        "lastModifiedAt": 1597192591047
-    }
-]
+{
+    "name": "DelayNode",
+    "lastModifiedAt": 1597192591047,
+    "entries": [
+        {
+            "name": "DelayNode",
+            "lastModifiedAt": 1597192590740
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192590480
+        },
+        {
+            "name": "delayTime",
+            "lastModifiedAt": 1597192591047
+        }
+    ]
+}

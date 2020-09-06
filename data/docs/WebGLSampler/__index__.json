@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192691519
-    }
-]
+{
+    "name": "WebGLSampler",
+    "lastModifiedAt": 1597192691519,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192691519
+        }
+    ]
+}

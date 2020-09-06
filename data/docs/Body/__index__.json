@@ -1,35 +1,39 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193104913
-    },
-    {
-        "name": "arrayBuffer",
-        "lastModifiedAt": 1597193106299
-    },
-    {
-        "name": "blob",
-        "lastModifiedAt": 1597193106643
-    },
-    {
-        "name": "body",
-        "lastModifiedAt": 1597193105180
-    },
-    {
-        "name": "bodyUsed",
-        "lastModifiedAt": 1597193105966
-    },
-    {
-        "name": "formData",
-        "lastModifiedAt": 1597193107501
-    },
-    {
-        "name": "json",
-        "lastModifiedAt": 1597193107770
-    },
-    {
-        "name": "text",
-        "lastModifiedAt": 1599279851209
-    }
-]
+{
+    "name": "Body",
+    "lastModifiedAt": 1599279851209,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193104913
+        },
+        {
+            "name": "arrayBuffer",
+            "lastModifiedAt": 1597193106299
+        },
+        {
+            "name": "blob",
+            "lastModifiedAt": 1597193106643
+        },
+        {
+            "name": "body",
+            "lastModifiedAt": 1597193105180
+        },
+        {
+            "name": "bodyUsed",
+            "lastModifiedAt": 1597193105966
+        },
+        {
+            "name": "formData",
+            "lastModifiedAt": 1597193107501
+        },
+        {
+            "name": "json",
+            "lastModifiedAt": 1597193107770
+        },
+        {
+            "name": "text",
+            "lastModifiedAt": 1599279851209
+        }
+    ]
+}

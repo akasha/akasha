@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192858795
-    },
-    {
-        "name": "dtmf",
-        "lastModifiedAt": 1596544691264
-    },
-    {
-        "name": "getCapabilities",
-        "lastModifiedAt": 1599278831330
-    },
-    {
-        "name": "track",
-        "lastModifiedAt": 1596544692703
-    },
-    {
-        "name": "transport",
-        "lastModifiedAt": 1599278253379
-    }
-]
+{
+    "name": "RTCRtpSender",
+    "lastModifiedAt": 1599278831330,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192858795
+        },
+        {
+            "name": "dtmf",
+            "lastModifiedAt": 1596544691264
+        },
+        {
+            "name": "getCapabilities",
+            "lastModifiedAt": 1599278831330
+        },
+        {
+            "name": "track",
+            "lastModifiedAt": 1596544692703
+        },
+        {
+            "name": "transport",
+            "lastModifiedAt": 1599278253379
+        }
+    ]
+}

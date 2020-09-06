@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190732345
-    },
-    {
-        "name": "selectorText",
-        "lastModifiedAt": 1599279829383
-    },
-    {
-        "name": "style",
-        "lastModifiedAt": 1597190733502
-    },
-    {
-        "name": "styleMap",
-        "lastModifiedAt": 1597190734309
-    }
-]
+{
+    "name": "CSSStyleRule",
+    "lastModifiedAt": 1599279829383,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190732345
+        },
+        {
+            "name": "selectorText",
+            "lastModifiedAt": 1599279829383
+        },
+        {
+            "name": "style",
+            "lastModifiedAt": 1597190733502
+        },
+        {
+            "name": "styleMap",
+            "lastModifiedAt": 1597190734309
+        }
+    ]
+}

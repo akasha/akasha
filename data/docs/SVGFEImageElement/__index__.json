@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191998911
-    }
-]
+{
+    "name": "SVGFEImageElement",
+    "lastModifiedAt": 1597191998911,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191998911
+        }
+    ]
+}

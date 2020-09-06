@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192336118
-    },
-    {
-        "name": "src",
-        "lastModifiedAt": 1596712456488
-    },
-    {
-        "name": "weight",
-        "lastModifiedAt": 1596712457597
-    }
-]
+{
+    "name": "SpeechGrammar",
+    "lastModifiedAt": 1597192336118,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192336118
+        },
+        {
+            "name": "src",
+            "lastModifiedAt": 1596712456488
+        },
+        {
+            "name": "weight",
+            "lastModifiedAt": 1596712457597
+        }
+    ]
+}

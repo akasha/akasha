@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192539557
-    },
-    {
-        "name": "maxChannelCount",
-        "lastModifiedAt": 1597192539799
-    }
-]
+{
+    "name": "AudioDestinationNode",
+    "lastModifiedAt": 1597192539799,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192539557
+        },
+        {
+            "name": "maxChannelCount",
+            "lastModifiedAt": 1597192539799
+        }
+    ]
+}

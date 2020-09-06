@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "MediaStream",
-        "lastModifiedAt": 1597192194040
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192193797
-    },
-    {
-        "name": "active",
-        "lastModifiedAt": 1596544757270
-    },
-    {
-        "name": "addTrack",
-        "lastModifiedAt": 1596796837507
-    },
-    {
-        "name": "addtrack_event",
-        "lastModifiedAt": 1597359959353
-    },
-    {
-        "name": "ended",
-        "lastModifiedAt": 1596544757641
-    },
-    {
-        "name": "onaddtrack",
-        "lastModifiedAt": 1596544757874
-    },
-    {
-        "name": "onremovetrack",
-        "lastModifiedAt": 1596544758192
-    },
-    {
-        "name": "removetrack_event",
-        "lastModifiedAt": 1597359960345
-    }
-]
+{
+    "name": "MediaStream",
+    "lastModifiedAt": 1597359960345,
+    "entries": [
+        {
+            "name": "MediaStream",
+            "lastModifiedAt": 1597192194040
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192193797
+        },
+        {
+            "name": "active",
+            "lastModifiedAt": 1596544757270
+        },
+        {
+            "name": "addTrack",
+            "lastModifiedAt": 1596796837507
+        },
+        {
+            "name": "addtrack_event",
+            "lastModifiedAt": 1597359959353
+        },
+        {
+            "name": "ended",
+            "lastModifiedAt": 1596544757641
+        },
+        {
+            "name": "onaddtrack",
+            "lastModifiedAt": 1596544757874
+        },
+        {
+            "name": "onremovetrack",
+            "lastModifiedAt": 1596544758192
+        },
+        {
+            "name": "removetrack_event",
+            "lastModifiedAt": 1597359960345
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1596581364593
-    }
-]
+{
+    "name": "DOMStringMap",
+    "lastModifiedAt": 1596581364593,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1596581364593
+        }
+    ]
+}

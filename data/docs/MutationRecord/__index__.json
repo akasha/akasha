@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193074619
-    }
-]
+{
+    "name": "MutationRecord",
+    "lastModifiedAt": 1597193074619,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193074619
+        }
+    ]
+}

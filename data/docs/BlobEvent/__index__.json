@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "BlobEvent",
-        "lastModifiedAt": 1597192226783
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192226527
-    },
-    {
-        "name": "data",
-        "lastModifiedAt": 1596544792788
-    },
-    {
-        "name": "timecode",
-        "lastModifiedAt": 1596544793567
-    }
-]
+{
+    "name": "BlobEvent",
+    "lastModifiedAt": 1597192226783,
+    "entries": [
+        {
+            "name": "BlobEvent",
+            "lastModifiedAt": 1597192226783
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192226527
+        },
+        {
+            "name": "data",
+            "lastModifiedAt": 1596544792788
+        },
+        {
+            "name": "timecode",
+            "lastModifiedAt": 1596544793567
+        }
+    ]
+}

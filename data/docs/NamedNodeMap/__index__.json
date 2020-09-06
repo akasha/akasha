@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193070206
-    },
-    {
-        "name": "getNamedItem",
-        "lastModifiedAt": 1597193070749
-    }
-]
+{
+    "name": "NamedNodeMap",
+    "lastModifiedAt": 1597193070749,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193070206
+        },
+        {
+            "name": "getNamedItem",
+            "lastModifiedAt": 1597193070749
+        }
+    ]
+}

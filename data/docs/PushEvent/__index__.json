@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192280290
-    },
-    {
-        "name": "data",
-        "lastModifiedAt": 1597192281517
-    }
-]
+{
+    "name": "PushEvent",
+    "lastModifiedAt": 1597192281517,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192280290
+        },
+        {
+            "name": "data",
+            "lastModifiedAt": 1597192281517
+        }
+    ]
+}

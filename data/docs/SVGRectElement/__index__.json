@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192404918
-    }
-]
+{
+    "name": "SVGRectElement",
+    "lastModifiedAt": 1597192404918,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192404918
+        }
+    ]
+}

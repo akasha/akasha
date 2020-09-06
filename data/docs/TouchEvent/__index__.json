@@ -1,39 +1,43 @@
 
-[
-    {
-        "name": "TouchEvent",
-        "lastModifiedAt": 1597192473884
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192473607
-    },
-    {
-        "name": "altKey",
-        "lastModifiedAt": 1599279010340
-    },
-    {
-        "name": "changedTouches",
-        "lastModifiedAt": 1597192474370
-    },
-    {
-        "name": "ctrlKey",
-        "lastModifiedAt": 1599279011278
-    },
-    {
-        "name": "metaKey",
-        "lastModifiedAt": 1599279012423
-    },
-    {
-        "name": "shiftKey",
-        "lastModifiedAt": 1599279012900
-    },
-    {
-        "name": "targetTouches",
-        "lastModifiedAt": 1597192476732
-    },
-    {
-        "name": "touches",
-        "lastModifiedAt": 1597192477150
-    }
-]
+{
+    "name": "TouchEvent",
+    "lastModifiedAt": 1599279012900,
+    "entries": [
+        {
+            "name": "TouchEvent",
+            "lastModifiedAt": 1597192473884
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192473607
+        },
+        {
+            "name": "altKey",
+            "lastModifiedAt": 1599279010340
+        },
+        {
+            "name": "changedTouches",
+            "lastModifiedAt": 1597192474370
+        },
+        {
+            "name": "ctrlKey",
+            "lastModifiedAt": 1599279011278
+        },
+        {
+            "name": "metaKey",
+            "lastModifiedAt": 1599279012423
+        },
+        {
+            "name": "shiftKey",
+            "lastModifiedAt": 1599279012900
+        },
+        {
+            "name": "targetTouches",
+            "lastModifiedAt": 1597192476732
+        },
+        {
+            "name": "touches",
+            "lastModifiedAt": 1597192477150
+        }
+    ]
+}

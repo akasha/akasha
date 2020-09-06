@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193255746
-    }
-]
+{
+    "name": "MimeType",
+    "lastModifiedAt": 1597193255746,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193255746
+        }
+    ]
+}

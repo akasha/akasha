@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192373576
-    },
-    {
-        "name": "addFromString",
-        "lastModifiedAt": 1596711368518
-    },
-    {
-        "name": "addFromURI",
-        "lastModifiedAt": 1596711369189
-    },
-    {
-        "name": "item",
-        "lastModifiedAt": 1599278803082
-    },
-    {
-        "name": "length",
-        "lastModifiedAt": 1596711368001
-    }
-]
+{
+    "name": "SpeechGrammarList",
+    "lastModifiedAt": 1599278803082,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192373576
+        },
+        {
+            "name": "addFromString",
+            "lastModifiedAt": 1596711368518
+        },
+        {
+            "name": "addFromURI",
+            "lastModifiedAt": 1596711369189
+        },
+        {
+            "name": "item",
+            "lastModifiedAt": 1599278803082
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1596711368001
+        }
+    ]
+}

@@ -1,67 +1,71 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192177237
-    },
-    {
-        "name": "aspectRatio",
-        "lastModifiedAt": 1596544740979
-    },
-    {
-        "name": "autoGainControl",
-        "lastModifiedAt": 1596544741309
-    },
-    {
-        "name": "channelCount",
-        "lastModifiedAt": 1596544742151
-    },
-    {
-        "name": "deviceId",
-        "lastModifiedAt": 1596544742524
-    },
-    {
-        "name": "echoCancellation",
-        "lastModifiedAt": 1596544742758
-    },
-    {
-        "name": "facingMode",
-        "lastModifiedAt": 1596544743168
-    },
-    {
-        "name": "frameRate",
-        "lastModifiedAt": 1596544743989
-    },
-    {
-        "name": "groupId",
-        "lastModifiedAt": 1596544744851
-    },
-    {
-        "name": "height",
-        "lastModifiedAt": 1596544745289
-    },
-    {
-        "name": "latency",
-        "lastModifiedAt": 1596544745597
-    },
-    {
-        "name": "noiseSuppression",
-        "lastModifiedAt": 1596544745904
-    },
-    {
-        "name": "sampleRate",
-        "lastModifiedAt": 1596544746944
-    },
-    {
-        "name": "sampleSize",
-        "lastModifiedAt": 1596544747234
-    },
-    {
-        "name": "volume",
-        "lastModifiedAt": 1596544747467
-    },
-    {
-        "name": "width",
-        "lastModifiedAt": 1596544748270
-    }
-]
+{
+    "name": "MediaTrackSupportedConstraints",
+    "lastModifiedAt": 1597192177237,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192177237
+        },
+        {
+            "name": "aspectRatio",
+            "lastModifiedAt": 1596544740979
+        },
+        {
+            "name": "autoGainControl",
+            "lastModifiedAt": 1596544741309
+        },
+        {
+            "name": "channelCount",
+            "lastModifiedAt": 1596544742151
+        },
+        {
+            "name": "deviceId",
+            "lastModifiedAt": 1596544742524
+        },
+        {
+            "name": "echoCancellation",
+            "lastModifiedAt": 1596544742758
+        },
+        {
+            "name": "facingMode",
+            "lastModifiedAt": 1596544743168
+        },
+        {
+            "name": "frameRate",
+            "lastModifiedAt": 1596544743989
+        },
+        {
+            "name": "groupId",
+            "lastModifiedAt": 1596544744851
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1596544745289
+        },
+        {
+            "name": "latency",
+            "lastModifiedAt": 1596544745597
+        },
+        {
+            "name": "noiseSuppression",
+            "lastModifiedAt": 1596544745904
+        },
+        {
+            "name": "sampleRate",
+            "lastModifiedAt": 1596544746944
+        },
+        {
+            "name": "sampleSize",
+            "lastModifiedAt": 1596544747234
+        },
+        {
+            "name": "volume",
+            "lastModifiedAt": 1596544747467
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1596544748270
+        }
+    ]
+}

@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192709476
-    },
-    {
-        "name": "voiceActivityFlag",
-        "lastModifiedAt": 1596544535282
-    }
-]
+{
+    "name": "RTCRtpSynchronizationSource",
+    "lastModifiedAt": 1597192709476,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192709476
+        },
+        {
+            "name": "voiceActivityFlag",
+            "lastModifiedAt": 1596544535282
+        }
+    ]
+}

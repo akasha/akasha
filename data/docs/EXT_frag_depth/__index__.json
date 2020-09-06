@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192700650
-    }
-]
+{
+    "name": "EXT_frag_depth",
+    "lastModifiedAt": 1597192700650,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192700650
+        }
+    ]
+}

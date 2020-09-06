@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599279597461
-    }
-]
+{
+    "name": "PluginArray",
+    "lastModifiedAt": 1599279597461,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279597461
+        }
+    ]
+}

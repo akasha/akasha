@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193005849
-    },
-    {
-        "name": "emulatedPosition",
-        "lastModifiedAt": 1596711428670
-    },
-    {
-        "name": "transform",
-        "lastModifiedAt": 1596711429148
-    }
-]
+{
+    "name": "XRPose",
+    "lastModifiedAt": 1597193005849,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193005849
+        },
+        {
+            "name": "emulatedPosition",
+            "lastModifiedAt": 1596711428670
+        },
+        {
+            "name": "transform",
+            "lastModifiedAt": 1596711429148
+        }
+    ]
+}

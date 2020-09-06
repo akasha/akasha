@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193224345
-    },
-    {
-        "name": "media",
-        "lastModifiedAt": 1596581195763
-    },
-    {
-        "name": "scoped",
-        "lastModifiedAt": 1596581196036
-    },
-    {
-        "name": "type",
-        "lastModifiedAt": 1596581196295
-    }
-]
+{
+    "name": "HTMLStyleElement",
+    "lastModifiedAt": 1597193224345,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193224345
+        },
+        {
+            "name": "media",
+            "lastModifiedAt": 1596581195763
+        },
+        {
+            "name": "scoped",
+            "lastModifiedAt": 1596581196036
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1596581196295
+        }
+    ]
+}

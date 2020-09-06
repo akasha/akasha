@@ -1,79 +1,83 @@
 
-[
-    {
-        "name": "FileReader",
-        "lastModifiedAt": 1597191935593
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597191935335
-    },
-    {
-        "name": "abort",
-        "lastModifiedAt": 1597191937425
-    },
-    {
-        "name": "abort_event",
-        "lastModifiedAt": 1597359696599
-    },
-    {
-        "name": "error",
-        "lastModifiedAt": 1597191935992
-    },
-    {
-        "name": "error_event",
-        "lastModifiedAt": 1597359697706
-    },
-    {
-        "name": "load_event",
-        "lastModifiedAt": 1597359698236
-    },
-    {
-        "name": "loadend_event",
-        "lastModifiedAt": 1597359699362
-    },
-    {
-        "name": "loadstart_event",
-        "lastModifiedAt": 1597359700070
-    },
-    {
-        "name": "onabort",
-        "lastModifiedAt": 1597191942055
-    },
-    {
-        "name": "onerror",
-        "lastModifiedAt": 1597191942702
-    },
-    {
-        "name": "onload",
-        "lastModifiedAt": 1597191943089
-    },
-    {
-        "name": "progress_event",
-        "lastModifiedAt": 1597359700695
-    },
-    {
-        "name": "readAsArrayBuffer",
-        "lastModifiedAt": 1597191938243
-    },
-    {
-        "name": "readAsBinaryString",
-        "lastModifiedAt": 1597191938496
-    },
-    {
-        "name": "readAsDataURL",
-        "lastModifiedAt": 1597191938907
-    },
-    {
-        "name": "readAsText",
-        "lastModifiedAt": 1597191939186
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1597191936298
-    },
-    {
-        "name": "result",
-        "lastModifiedAt": 1597191936598
-    }
-]
+{
+    "name": "FileReader",
+    "lastModifiedAt": 1597359700695,
+    "entries": [
+        {
+            "name": "FileReader",
+            "lastModifiedAt": 1597191935593
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597191935335
+        },
+        {
+            "name": "abort",
+            "lastModifiedAt": 1597191937425
+        },
+        {
+            "name": "abort_event",
+            "lastModifiedAt": 1597359696599
+        },
+        {
+            "name": "error",
+            "lastModifiedAt": 1597191935992
+        },
+        {
+            "name": "error_event",
+            "lastModifiedAt": 1597359697706
+        },
+        {
+            "name": "load_event",
+            "lastModifiedAt": 1597359698236
+        },
+        {
+            "name": "loadend_event",
+            "lastModifiedAt": 1597359699362
+        },
+        {
+            "name": "loadstart_event",
+            "lastModifiedAt": 1597359700070
+        },
+        {
+            "name": "onabort",
+            "lastModifiedAt": 1597191942055
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1597191942702
+        },
+        {
+            "name": "onload",
+            "lastModifiedAt": 1597191943089
+        },
+        {
+            "name": "progress_event",
+            "lastModifiedAt": 1597359700695
+        },
+        {
+            "name": "readAsArrayBuffer",
+            "lastModifiedAt": 1597191938243
+        },
+        {
+            "name": "readAsBinaryString",
+            "lastModifiedAt": 1597191938496
+        },
+        {
+            "name": "readAsDataURL",
+            "lastModifiedAt": 1597191938907
+        },
+        {
+            "name": "readAsText",
+            "lastModifiedAt": 1597191939186
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1597191936298
+        },
+        {
+            "name": "result",
+            "lastModifiedAt": 1597191936598
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192408493
-    }
-]
+{
+    "name": "SVGDescElement",
+    "lastModifiedAt": 1597192408493,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192408493
+        }
+    ]
+}

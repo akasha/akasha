@@ -1,51 +1,55 @@
 
-[
-    {
-        "name": "KeyboardEvent",
-        "lastModifiedAt": 1597192485689
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192485302
-    },
-    {
-        "name": "altKey",
-        "lastModifiedAt": 1597192486088
-    },
-    {
-        "name": "code",
-        "lastModifiedAt": 1597192486356
-    },
-    {
-        "name": "ctrlKey",
-        "lastModifiedAt": 1597192486700
-    },
-    {
-        "name": "getModifierState",
-        "lastModifiedAt": 1599279976928
-    },
-    {
-        "name": "isComposing",
-        "lastModifiedAt": 1597192487001
-    },
-    {
-        "name": "key",
-        "lastModifiedAt": 1597192487427
-    },
-    {
-        "name": "location",
-        "lastModifiedAt": 1597192487968
-    },
-    {
-        "name": "metaKey",
-        "lastModifiedAt": 1597192488339
-    },
-    {
-        "name": "repeat",
-        "lastModifiedAt": 1597192488598
-    },
-    {
-        "name": "shiftKey",
-        "lastModifiedAt": 1597192488947
-    }
-]
+{
+    "name": "KeyboardEvent",
+    "lastModifiedAt": 1599279976928,
+    "entries": [
+        {
+            "name": "KeyboardEvent",
+            "lastModifiedAt": 1597192485689
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192485302
+        },
+        {
+            "name": "altKey",
+            "lastModifiedAt": 1597192486088
+        },
+        {
+            "name": "code",
+            "lastModifiedAt": 1597192486356
+        },
+        {
+            "name": "ctrlKey",
+            "lastModifiedAt": 1597192486700
+        },
+        {
+            "name": "getModifierState",
+            "lastModifiedAt": 1599279976928
+        },
+        {
+            "name": "isComposing",
+            "lastModifiedAt": 1597192487001
+        },
+        {
+            "name": "key",
+            "lastModifiedAt": 1597192487427
+        },
+        {
+            "name": "location",
+            "lastModifiedAt": 1597192487968
+        },
+        {
+            "name": "metaKey",
+            "lastModifiedAt": 1597192488339
+        },
+        {
+            "name": "repeat",
+            "lastModifiedAt": 1597192488598
+        },
+        {
+            "name": "shiftKey",
+            "lastModifiedAt": 1597192488947
+        }
+    ]
+}

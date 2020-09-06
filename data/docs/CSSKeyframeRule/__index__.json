@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190645634
-    }
-]
+{
+    "name": "CSSKeyframeRule",
+    "lastModifiedAt": 1597190645634,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190645634
+        }
+    ]
+}

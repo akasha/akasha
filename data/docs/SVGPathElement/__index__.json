@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192410715
-    },
-    {
-        "name": "getPointAtLength",
-        "lastModifiedAt": 1597192411536
-    },
-    {
-        "name": "getTotalLength",
-        "lastModifiedAt": 1597192411248
-    },
-    {
-        "name": "pathLength",
-        "lastModifiedAt": 1597192410961
-    }
-]
+{
+    "name": "SVGPathElement",
+    "lastModifiedAt": 1597192411536,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192410715
+        },
+        {
+            "name": "getPointAtLength",
+            "lastModifiedAt": 1597192411536
+        },
+        {
+            "name": "getTotalLength",
+            "lastModifiedAt": 1597192411248
+        },
+        {
+            "name": "pathLength",
+            "lastModifiedAt": 1597192410961
+        }
+    ]
+}

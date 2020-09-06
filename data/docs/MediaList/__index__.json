@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597190719282
-    },
-    {
-        "name": "mediaText",
-        "lastModifiedAt": 1597190719671
-    }
-]
+{
+    "name": "MediaList",
+    "lastModifiedAt": 1597190719671,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597190719282
+        },
+        {
+            "name": "mediaText",
+            "lastModifiedAt": 1597190719671
+        }
+    ]
+}

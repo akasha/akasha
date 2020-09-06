@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192693936
-    }
-]
+{
+    "name": "ANGLE_instanced_arrays",
+    "lastModifiedAt": 1597192693936,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192693936
+        }
+    ]
+}

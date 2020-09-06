@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "MediaElementAudioSourceNode",
-        "lastModifiedAt": 1597192561041
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192560745
-    },
-    {
-        "name": "mediaElement",
-        "lastModifiedAt": 1597192561343
-    }
-]
+{
+    "name": "MediaElementAudioSourceNode",
+    "lastModifiedAt": 1597192561343,
+    "entries": [
+        {
+            "name": "MediaElementAudioSourceNode",
+            "lastModifiedAt": 1597192561041
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192560745
+        },
+        {
+            "name": "mediaElement",
+            "lastModifiedAt": 1597192561343
+        }
+    ]
+}

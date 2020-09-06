@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193048780
-    },
-    {
-        "name": "createExpression",
-        "lastModifiedAt": 1597193049188
-    },
-    {
-        "name": "createNSResolver",
-        "lastModifiedAt": 1597193049557
-    },
-    {
-        "name": "evaluate",
-        "lastModifiedAt": 1597193049802
-    }
-]
+{
+    "name": "XPathEvaluator",
+    "lastModifiedAt": 1597193049802,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193048780
+        },
+        {
+            "name": "createExpression",
+            "lastModifiedAt": 1597193049188
+        },
+        {
+            "name": "createNSResolver",
+            "lastModifiedAt": 1597193049557
+        },
+        {
+            "name": "evaluate",
+            "lastModifiedAt": 1597193049802
+        }
+    ]
+}

@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192938273
-    },
-    {
-        "name": "referenceSpace",
-        "lastModifiedAt": 1596711318166
-    },
-    {
-        "name": "transform",
-        "lastModifiedAt": 1596711318611
-    }
-]
+{
+    "name": "XRReferenceSpaceEventInit",
+    "lastModifiedAt": 1597192938273,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192938273
+        },
+        {
+            "name": "referenceSpace",
+            "lastModifiedAt": 1596711318166
+        },
+        {
+            "name": "transform",
+            "lastModifiedAt": 1596711318611
+        }
+    ]
+}

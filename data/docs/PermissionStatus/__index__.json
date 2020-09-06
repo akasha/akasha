@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192267393
-    },
-    {
-        "name": "state",
-        "lastModifiedAt": 1597192268188
-    },
-    {
-        "name": "status",
-        "lastModifiedAt": 1597192268473
-    }
-]
+{
+    "name": "PermissionStatus",
+    "lastModifiedAt": 1597192268473,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192267393
+        },
+        {
+            "name": "state",
+            "lastModifiedAt": 1597192268188
+        },
+        {
+            "name": "status",
+            "lastModifiedAt": 1597192268473
+        }
+    ]
+}

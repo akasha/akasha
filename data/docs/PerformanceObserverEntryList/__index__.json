@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192263051
-    },
-    {
-        "name": "getEntries",
-        "lastModifiedAt": 1597192263358
-    },
-    {
-        "name": "getEntriesByName",
-        "lastModifiedAt": 1597192263939
-    },
-    {
-        "name": "getEntriesByType",
-        "lastModifiedAt": 1597192263681
-    }
-]
+{
+    "name": "PerformanceObserverEntryList",
+    "lastModifiedAt": 1597192263939,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192263051
+        },
+        {
+            "name": "getEntries",
+            "lastModifiedAt": 1597192263358
+        },
+        {
+            "name": "getEntriesByName",
+            "lastModifiedAt": 1597192263939
+        },
+        {
+            "name": "getEntriesByType",
+            "lastModifiedAt": 1597192263681
+        }
+    ]
+}

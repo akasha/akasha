@@ -1,27 +1,31 @@
 
-[
-    {
-        "name": "OscillatorNode",
-        "lastModifiedAt": 1597192534208
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599280715844
-    },
-    {
-        "name": "frequency",
-        "lastModifiedAt": 1597192534583
-    },
-    {
-        "name": "setPeriodicWave",
-        "lastModifiedAt": 1597192534852
-    },
-    {
-        "name": "start",
-        "lastModifiedAt": 1597192535644
-    },
-    {
-        "name": "stop",
-        "lastModifiedAt": 1597192536027
-    }
-]
+{
+    "name": "OscillatorNode",
+    "lastModifiedAt": 1599280715844,
+    "entries": [
+        {
+            "name": "OscillatorNode",
+            "lastModifiedAt": 1597192534208
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599280715844
+        },
+        {
+            "name": "frequency",
+            "lastModifiedAt": 1597192534583
+        },
+        {
+            "name": "setPeriodicWave",
+            "lastModifiedAt": 1597192534852
+        },
+        {
+            "name": "start",
+            "lastModifiedAt": 1597192535644
+        },
+        {
+            "name": "stop",
+            "lastModifiedAt": 1597192536027
+        }
+    ]
+}

@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "NotificationEvent",
-        "lastModifiedAt": 1597193595002
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193594618
-    },
-    {
-        "name": "action",
-        "lastModifiedAt": 1597193595701
-    },
-    {
-        "name": "notification",
-        "lastModifiedAt": 1597193595306
-    }
-]
+{
+    "name": "NotificationEvent",
+    "lastModifiedAt": 1597193595701,
+    "entries": [
+        {
+            "name": "NotificationEvent",
+            "lastModifiedAt": 1597193595002
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193594618
+        },
+        {
+            "name": "action",
+            "lastModifiedAt": 1597193595701
+        },
+        {
+            "name": "notification",
+            "lastModifiedAt": 1597193595306
+        }
+    ]
+}

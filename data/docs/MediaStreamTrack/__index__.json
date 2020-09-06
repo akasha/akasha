@@ -1,87 +1,91 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192208344
-    },
-    {
-        "name": "applyConstraints",
-        "lastModifiedAt": 1596544768642
-    },
-    {
-        "name": "clone",
-        "lastModifiedAt": 1596544768945
-    },
-    {
-        "name": "enabled",
-        "lastModifiedAt": 1596544762295
-    },
-    {
-        "name": "ended_event",
-        "lastModifiedAt": 1597360192645
-    },
-    {
-        "name": "getCapabilities",
-        "lastModifiedAt": 1596544769757
-    },
-    {
-        "name": "getConstraints",
-        "lastModifiedAt": 1596544770070
-    },
-    {
-        "name": "getSettings",
-        "lastModifiedAt": 1596544770378
-    },
-    {
-        "name": "id",
-        "lastModifiedAt": 1596544763172
-    },
-    {
-        "name": "kind",
-        "lastModifiedAt": 1596544763974
-    },
-    {
-        "name": "label",
-        "lastModifiedAt": 1596544764338
-    },
-    {
-        "name": "mute_event",
-        "lastModifiedAt": 1597360193150
-    },
-    {
-        "name": "muted",
-        "lastModifiedAt": 1596544765345
-    },
-    {
-        "name": "onended",
-        "lastModifiedAt": 1596544765839
-    },
-    {
-        "name": "onmute",
-        "lastModifiedAt": 1596544766609
-    },
-    {
-        "name": "onoverconstrained",
-        "lastModifiedAt": 1596544766842
-    },
-    {
-        "name": "onunmute",
-        "lastModifiedAt": 1596544767101
-    },
-    {
-        "name": "readyState",
-        "lastModifiedAt": 1596544768014
-    },
-    {
-        "name": "remote",
-        "lastModifiedAt": 1596544768402
-    },
-    {
-        "name": "stop",
-        "lastModifiedAt": 1596544770788
-    },
-    {
-        "name": "unmute_event",
-        "lastModifiedAt": 1597360194239
-    }
-]
+{
+    "name": "MediaStreamTrack",
+    "lastModifiedAt": 1597360194239,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192208344
+        },
+        {
+            "name": "applyConstraints",
+            "lastModifiedAt": 1596544768642
+        },
+        {
+            "name": "clone",
+            "lastModifiedAt": 1596544768945
+        },
+        {
+            "name": "enabled",
+            "lastModifiedAt": 1596544762295
+        },
+        {
+            "name": "ended_event",
+            "lastModifiedAt": 1597360192645
+        },
+        {
+            "name": "getCapabilities",
+            "lastModifiedAt": 1596544769757
+        },
+        {
+            "name": "getConstraints",
+            "lastModifiedAt": 1596544770070
+        },
+        {
+            "name": "getSettings",
+            "lastModifiedAt": 1596544770378
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1596544763172
+        },
+        {
+            "name": "kind",
+            "lastModifiedAt": 1596544763974
+        },
+        {
+            "name": "label",
+            "lastModifiedAt": 1596544764338
+        },
+        {
+            "name": "mute_event",
+            "lastModifiedAt": 1597360193150
+        },
+        {
+            "name": "muted",
+            "lastModifiedAt": 1596544765345
+        },
+        {
+            "name": "onended",
+            "lastModifiedAt": 1596544765839
+        },
+        {
+            "name": "onmute",
+            "lastModifiedAt": 1596544766609
+        },
+        {
+            "name": "onoverconstrained",
+            "lastModifiedAt": 1596544766842
+        },
+        {
+            "name": "onunmute",
+            "lastModifiedAt": 1596544767101
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1596544768014
+        },
+        {
+            "name": "remote",
+            "lastModifiedAt": 1596544768402
+        },
+        {
+            "name": "stop",
+            "lastModifiedAt": 1596544770788
+        },
+        {
+            "name": "unmute_event",
+            "lastModifiedAt": 1597360194239
+        }
+    ]
+}

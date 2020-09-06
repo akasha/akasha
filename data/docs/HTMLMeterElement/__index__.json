@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193359232
-    },
-    {
-        "name": "labels",
-        "lastModifiedAt": 1596581368300
-    }
-]
+{
+    "name": "HTMLMeterElement",
+    "lastModifiedAt": 1597193359232,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193359232
+        },
+        {
+            "name": "labels",
+            "lastModifiedAt": 1596581368300
+        }
+    ]
+}

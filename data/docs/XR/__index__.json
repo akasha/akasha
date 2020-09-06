@@ -1,23 +1,27 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192994523
-    },
-    {
-        "name": "devicechange_event",
-        "lastModifiedAt": 1597359773429
-    },
-    {
-        "name": "isSessionSupported",
-        "lastModifiedAt": 1596537801730
-    },
-    {
-        "name": "ondevicechange",
-        "lastModifiedAt": 1596543955616
-    },
-    {
-        "name": "requestSession",
-        "lastModifiedAt": 1596537801956
-    }
-]
+{
+    "name": "XR",
+    "lastModifiedAt": 1597359773429,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192994523
+        },
+        {
+            "name": "devicechange_event",
+            "lastModifiedAt": 1597359773429
+        },
+        {
+            "name": "isSessionSupported",
+            "lastModifiedAt": 1596537801730
+        },
+        {
+            "name": "ondevicechange",
+            "lastModifiedAt": 1596543955616
+        },
+        {
+            "name": "requestSession",
+            "lastModifiedAt": 1596537801956
+        }
+    ]
+}

@@ -1,7 +1,11 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192253580
-    }
-]
+{
+    "name": "PerformanceTiming",
+    "lastModifiedAt": 1597192253580,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192253580
+        }
+    ]
+}

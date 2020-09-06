@@ -1,11 +1,15 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597192418784
-    },
-    {
-        "name": "target",
-        "lastModifiedAt": 1597192421682
-    }
-]
+{
+    "name": "SVGAElement",
+    "lastModifiedAt": 1597192421682,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192418784
+        },
+        {
+            "name": "target",
+            "lastModifiedAt": 1597192421682
+        }
+    ]
+}

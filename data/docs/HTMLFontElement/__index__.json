@@ -1,19 +1,23 @@
 
-[
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1597193355848
-    },
-    {
-        "name": "color",
-        "lastModifiedAt": 1596581366497
-    },
-    {
-        "name": "face",
-        "lastModifiedAt": 1596581366903
-    },
-    {
-        "name": "size",
-        "lastModifiedAt": 1596581367267
-    }
-]
+{
+    "name": "HTMLFontElement",
+    "lastModifiedAt": 1597193355848,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597193355848
+        },
+        {
+            "name": "color",
+            "lastModifiedAt": 1596581366497
+        },
+        {
+            "name": "face",
+            "lastModifiedAt": 1596581366903
+        },
+        {
+            "name": "size",
+            "lastModifiedAt": 1596581367267
+        }
+    ]
+}

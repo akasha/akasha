@@ -1,15 +1,19 @@
 
-[
-    {
-        "name": "SubmitEvent",
-        "lastModifiedAt": 1599278955151
-    },
-    {
-        "name": "__type__",
-        "lastModifiedAt": 1599278954062
-    },
-    {
-        "name": "submitter",
-        "lastModifiedAt": 1599278955734
-    }
-]
+{
+    "name": "SubmitEvent",
+    "lastModifiedAt": 1599278955734,
+    "entries": [
+        {
+            "name": "SubmitEvent",
+            "lastModifiedAt": 1599278955151
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599278954062
+        },
+        {
+            "name": "submitter",
+            "lastModifiedAt": 1599278955734
+        }
+    ]
+}
