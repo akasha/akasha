@@ -11,4 +11,3 @@ partial interface mixin PartialMixinD {
   [Exposed=Worker]
   attribute DOMString v1;
 };
-
