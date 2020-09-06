@@ -3,5 +3,5 @@
     "kind": "Type",
     "name": "PositionError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PositionError",
-    "description": "The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device."
+    "description": "The GeolocationPositionError interface represents the reason of an error occurring when using the geolocating device."
 }
