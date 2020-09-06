@@ -17,6 +17,7 @@ import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.MdnDocScanner;
 import org.realityforge.webtack.model.tools.mdn_scanner.MdnScannerListener;
 import org.realityforge.webtack.model.tools.mdn_scanner.SourceFetchException;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException;
 
@@ -26,6 +27,7 @@ final class FetchDocsCommand
   @Nonnull
   static final String COMMAND = "fetch-docs";
   private static final int FORCE_OPT = 'f';
+  private static final int SINCE_OPT = 2;
   private static final int NO_REMOVE_SOURCE_OPT = 3;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
@@ -33,6 +35,10 @@ final class FetchDocsCommand
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               FORCE_OPT,
                               "Force the downloading of the documentation even if the last modified at time indicates it is up to date." ),
+      new CLOptionDescriptor( "since",
+                              CLOptionDescriptor.ARGUMENT_REQUIRED,
+                              SINCE_OPT,
+                              "Only update a type if the las." ),
       new CLOptionDescriptor( "no-remove-source",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_REMOVE_SOURCE_OPT,
@@ -42,6 +48,7 @@ final class FetchDocsCommand
   private final Set<String> _typeNames = new LinkedHashSet<>();
   private boolean _force;
   private boolean _noRemoveSource;
+  private long _sinceLastUpdatedAt;
 
   FetchDocsCommand()
   {
@@ -62,6 +69,24 @@ final class FetchDocsCommand
       {
         _noRemoveSource = true;
       }
+      else if ( SINCE_OPT == optionId )
+      {
+        final String argument = option.getArgument();
+        try
+        {
+          _sinceLastUpdatedAt = Long.parseLong( argument );
+        }
+        catch ( final NumberFormatException nfe )
+        {
+          final Logger logger = environment.logger();
+
+          if ( logger.isLoggable( Level.WARNING ) )
+          {
+            logger.log( Level.WARNING, "Failed to parse since argument '" + argument + "'" );
+            return false;
+          }
+        }
+      }
       else
       {
         assert CLOption.TEXT_ARGUMENT == optionId;
@@ -80,8 +105,23 @@ final class FetchDocsCommand
     final MdnDocScanner scanner = new MdnDocScanner( runtime, new Listener( logger ) );
 
     final Set<String> typeNames = _typeNames.isEmpty() ? context.docRuntime().findTypes() : _typeNames;
+    if ( logger.isLoggable( Level.INFO ) )
+    {
+      logger.log( Level.INFO, "Fetch of documentation of " + typeNames.size() +
+                              " type starting at " + System.currentTimeMillis() + "." );
+    }
     for ( final String typeName : typeNames )
     {
+      final DocIndex docIndex = context.docRuntime().getIndexForType( typeName );
+      if ( _sinceLastUpdatedAt > 0 && docIndex.getContent().getLastModifiedAt() < _sinceLastUpdatedAt )
+      {
+        if ( logger.isLoggable( Level.FINE ) )
+        {
+          logger.log( Level.FINE, "Fetch of documentation for element named '" + typeName + "' " +
+                                  "skipped as it has been checked after specified since time." );
+        }
+        continue;
+      }
       if ( logger.isLoggable( Level.FINE ) )
       {
         logger.log( Level.FINE, "Fetching documentation for element named '" + typeName + "'" );
