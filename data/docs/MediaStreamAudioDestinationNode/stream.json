@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MediaStreamAudioDestinationNode.stream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode/stream",
-    "description": "A MediaStream."
+    "description": "A MediaStream containing a single audio track. The audio track is a MediaStreamTrack whose kind is audio."
 }

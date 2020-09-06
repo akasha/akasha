@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "PushManager.permissionState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager/permissionState",
-    "description": "The permissionState() method of the PushManager interface returns a Promise that resolves to a DOMString indicating the permission state of the push manager. Possible values are  'prompt', 'denied', or 'granted'."
+    "description": "The permissionState() method of the PushManager interface returns a Promise that resolves to a DOMString indicating the permission state of the push manager. Possible values are  'prompt', 'denied', or 'granted'."
 }

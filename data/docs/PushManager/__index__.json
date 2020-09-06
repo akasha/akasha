@@ -1,7 +1,7 @@
 
 {
     "name": "PushManager",
-    "lastModifiedAt": 1597192279479,
+    "lastModifiedAt": 1599391565166,
     "entries": [
         {
             "name": "__type__",
@@ -9,11 +9,11 @@
         },
         {
             "name": "getSubscription",
-            "lastModifiedAt": 1597192278944
+            "lastModifiedAt": 1599391564205
         },
         {
             "name": "permissionState",
-            "lastModifiedAt": 1597192279201
+            "lastModifiedAt": 1599391564663
         },
         {
             "name": "subscribe",

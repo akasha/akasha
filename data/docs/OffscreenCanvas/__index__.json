@@ -1,7 +1,7 @@
 
 {
     "name": "OffscreenCanvas",
-    "lastModifiedAt": 1597193277967,
+    "lastModifiedAt": 1599391611542,
     "entries": [
         {
             "name": "OffscreenCanvas",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193277967
+            "lastModifiedAt": 1599391610081
         },
         {
             "name": "getContext",

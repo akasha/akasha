@@ -1,7 +1,7 @@
 
 {
     "name": "MediaStreamAudioDestinationNode",
-    "lastModifiedAt": 1597192578009,
+    "lastModifiedAt": 1599391612899,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "stream",
-            "lastModifiedAt": 1597192578009
+            "lastModifiedAt": 1599391612899
         }
     ]
 }

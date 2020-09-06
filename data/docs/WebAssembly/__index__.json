@@ -1,7 +1,7 @@
 
 {
     "name": "WebAssembly",
-    "lastModifiedAt": 1599279921545,
+    "lastModifiedAt": 1599391537951,
     "entries": [
         {
             "name": "CompileError",
@@ -25,7 +25,7 @@
         },
         {
             "name": "Module",
-            "lastModifiedAt": 1597621539615
+            "lastModifiedAt": 1599391566094
         },
         {
             "name": "RuntimeError",
@@ -45,7 +45,7 @@
         },
         {
             "name": "compileStreaming",
-            "lastModifiedAt": 1597621543916
+            "lastModifiedAt": 1599391536924
         },
         {
             "name": "instantiate",

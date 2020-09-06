@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "PushManager.getSubscription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager/getSubscription",
-    "description": "The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription."
+    "description": "The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription."
 }

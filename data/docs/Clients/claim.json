@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Clients.claim",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clients/claim",
-    "description": "The claim() method of the Clients interface allows an active service worker to set itself as the controller for all clients within its scope. This triggers a \"controllerchange\" event on navigator.serviceWorker in any clients that become controlled by this service worker."
+    "description": "The claim() method of the Clients interface allows an active service worker to set itself as the controller for all clients within its scope. This triggers a &quot;controllerchange&quot; event on navigator.serviceWorker in any clients that become controlled by this service worker."
 }

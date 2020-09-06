@@ -1,7 +1,7 @@
 
 {
     "name": "CSSStyleDeclaration",
-    "lastModifiedAt": 1597190727152,
+    "lastModifiedAt": 1599391606730,
     "entries": [
         {
             "name": "__type__",
@@ -25,11 +25,11 @@
         },
         {
             "name": "removeProperty",
-            "lastModifiedAt": 1597190726872
+            "lastModifiedAt": 1599391605443
         },
         {
             "name": "setProperty",
-            "lastModifiedAt": 1597190727152
+            "lastModifiedAt": 1599391605985
         }
     ]
 }

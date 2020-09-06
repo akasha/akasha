@@ -1,7 +1,7 @@
 
 {
     "name": "PublicKeyCredentialRequestOptions",
-    "lastModifiedAt": 1597192650694,
+    "lastModifiedAt": 1599391551067,
     "entries": [
         {
             "name": "__type__",
@@ -21,7 +21,7 @@
         },
         {
             "name": "rpId",
-            "lastModifiedAt": 1597192649635
+            "lastModifiedAt": 1599391549356
         },
         {
             "name": "timeout",
