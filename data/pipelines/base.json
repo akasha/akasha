@@ -86,7 +86,7 @@
     },
     {
       "name": "RemoveMember",
-      "description": "We manually patch the type field to convert it to an enumeration so that the code we generate for it has improved typing",
+      "description": "Change the type of the type attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^HTMLButtonElement$",
@@ -96,7 +96,7 @@
     },
     {
       "name": "RemoveMember",
-      "description": "We manually patch the method/enctype fields to convert it to an enumeration so that the code we generate for it has improved typing",
+      "description": "Change the type of the method/enctype attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^HTMLFormElement$",
@@ -106,7 +106,7 @@
     },
     {
       "name": "RemoveMember",
-      "description": "We manually patch the formMethod/formEnctype fields to convert it to an enumeration so that the code we generate for it has improved typing",
+      "description": "Change the type of the formMethod/formEnctype attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
@@ -116,7 +116,7 @@
     },
     {
       "name": "RemoveMember",
-      "description": "We manually patch the autocapitalize attribute to convert type to an enumeration for improved typing",
+      "description": "Change the type of the autocapitalize attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^HTMLElement$",
