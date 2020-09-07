@@ -1,3 +1,36 @@
+/**
+ * An enumeration describing the whether elements can have their values automatically completed by the browser.
+ */
+enum AutocompleteType {
+  /**
+   * The browser may not automatically complete entries.
+   */
+  "off",
+  /**
+   * The browser may automatically complete entries.
+   */
+  "on"
+};
+
+partial interface HTMLTextAreaElement {
+  [CEReactions]
+  attribute AutocompleteType autocomplete;
+};
+
+partial interface HTMLSelectElement {
+  [CEReactions]
+  attribute AutocompleteType autocomplete;
+};
+
+partial interface HTMLInputElement {
+  [CEReactions]
+  attribute AutocompleteType autocomplete;
+};
+
+partial interface HTMLFormElement {
+  [CEReactions]
+  attribute AutocompleteType autocomplete;
+};
 
 /**
  * An enumeration describing the behavior of the button.

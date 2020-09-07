@@ -116,6 +116,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the autocomplete attribute to an enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^(HTMLTextAreaElement|HTMLSelectElement|HTMLInputElement|HTMLFormElement)$",
+        "memberNamePattern": "^autocomplete$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the autocapitalize/dir attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
