@@ -177,8 +177,8 @@ final class RunCommand
   private Pipeline loadPipeline( @Nonnull final Context context, @Nonnull final String pipelineName )
   {
     final Environment environment = context.environment();
-    final Path pipelineFile =
-      environment.currentDirectory().resolve( "pipelines" ).resolve( pipelineName + ".json" );
+    final Path directory = environment.currentDirectory().resolve( "pipelines" );
+    final Path pipelineFile = directory.resolve( pipelineName + ".json" );
     if ( !Files.exists( pipelineFile ) )
     {
       final String message =
@@ -191,7 +191,7 @@ final class RunCommand
     {
       try
       {
-        final PipelineConfig pipeline = PipelineConfig.load( pipelineName, pipelineFile );
+        final PipelineConfig pipeline = PipelineConfig.load( pipelineName, directory );
         return new Pipeline( context.config(),
                              pipeline,
                              new ExecutionContext( environment.webidlDirectory(),

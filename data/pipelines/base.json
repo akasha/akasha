@@ -1,0 +1,296 @@
+{
+  "sourceSelector": "!name=minimal_event !name=secure_contexts !name=bluetooth_common",
+  "stages": [
+    {
+      "name": "MergeDocs",
+      "description": "Add documentation from doc repository. This needs to be done before Flatten and renames as some documentation applies to Mixins or to elements before they are renamed",
+      "config": {
+        "createEvents": true
+      }
+    },
+    {
+      "name": "RemoveExtendedAttribute",
+      "description": "Remove Constructor attribute as one of the arguments 'newTarget' is of type 'Animatable' which is a mixin which is seemingly invalid. We will re-add an equivalent with a union for impls of Animatable in next step",
+      "sourceSelector": "name=svg2",
+      "config": {
+        "namePattern": "^ShadowAnimation$",
+        "extendedAttribute": "Constructor( Animation source, Animatable newTarget )"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "See previous step for explanation",
+      "sourceSelector": "name=svg2",
+      "config": {
+        "namePattern": "^ShadowAnimation$",
+        "extendedAttribute": "Constructor( Animation source, (CSSPseudoElement or Element) newTarget )"
+      }
+    },
+    {
+      "name": "ConvertConstructorAttribute",
+      "description": "Convert from historic constructor attributes"
+    },
+    {
+      "name": "RenameType",
+      "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
+      "sourceSelector": "name=deviceorientation",
+      "config": {
+        "namePattern": "^PermissionState$",
+        "replacement": "DevicePermissionState"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add LegacyNoInterfaceObject as chrome is non-compliant wrt this. See https://bugs.chromium.org/p/chromium/issues/detail?id=674507",
+      "sourceSelector": "name=speech_api",
+      "config": {
+        "namePattern": "^(SpeechSynthesis|SpeechSynthesisVoice|SpeechRecognition|SpeechRecognitionError|SpeechRecognitionAlternative|SpeechRecognitionResult|SpeechRecognitionResultList|SpeechRecognitionEvent|SpeechGrammar|SpeechGrammarList)$",
+        "extendedAttribute": "LegacyNoInterfaceObject"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add LegacyNoInterfaceObject as chrome is non-compliant wrt this. See https://bugs.chromium.org/p/chromium/issues/detail?id=674507",
+      "sourceSelector": "name=web_animations_1",
+      "config": {
+        "namePattern": "^Animation$",
+        "extendedAttribute": "LegacyNoInterfaceObject"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add LegacyNoInterfaceObject as chrome is non-compliant wrt this. See https://bugs.chromium.org/p/chromium/issues/detail?id=674507",
+      "sourceSelector": "name=web_audio_api",
+      "config": {
+        "namePattern": "^(AudioContext|OfflineAudioContext)$",
+        "extendedAttribute": "LegacyNoInterfaceObject"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Add LegacyNoInterfaceObject as spec still uses the historic 'NoInterfaceObject' extended attribute",
+      "sourceSelector": "name=geolocation_api",
+      "config": {
+        "namePattern": "^(Coordinates|Geolocation|Position|PositionError)$",
+        "extendedAttribute": "LegacyNoInterfaceObject"
+      }
+    },
+    {
+      "name": "RemoveExtendedAttribute",
+      "description": "Remove NoInterfaceObject as spec still uses the historic 'NoInterfaceObject' extended attribute",
+      "sourceSelector": "name=geolocation_api",
+      "config": {
+        "namePattern": "^(Coordinates|Geolocation|Position|PositionError)$",
+        "extendedAttribute": "NoInterfaceObject"
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "We manually patch the type field to convert it to an enumeration so that the code we generate for it has improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^HTMLButtonElement$",
+        "memberNamePattern": "^type$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "We manually patch the method/enctype fields to convert it to an enumeration so that the code we generate for it has improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^HTMLFormElement$",
+        "memberNamePattern": "^(method|enctype)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "We manually patch the formMethod/formEnctype fields to convert it to an enumeration so that the code we generate for it has improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
+        "memberNamePattern": "^(formMethod|formEnctype)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "the cssom spec 'overrides' the definitions to be of type double",
+      "sourceSelector": "name=uievents",
+      "config": {
+        "elementNamePattern": "^(MouseEvent|MouseEventInit)$",
+        "memberNamePattern": "^(clientX|clientY|screenX|screenY)$",
+        "types": ["interface_type", "dictionary"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "this is a legacy API that was left for backwards compatibility but causes issues in GWT because the objects returned used prototypes from the top level page rather than the containing iframe",
+      "sourceSelector": "name=mediacapture_main",
+      "config": {
+        "elementNamePattern": "^Navigator$",
+        "memberNamePattern": "^getUserMedia$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "The HTMLFormControlsCollection overrides HTMLCollection with incompatible method so we patch it. This is not strictly consistent with js but not sure how else to handle it",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "namePattern": "^HTMLFormControlsCollection$",
+        "type": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "These are no longer needed once Navigator.getUserMedia is removed",
+      "sourceSelector": "name=mediacapture_main",
+      "config": {
+        "namePattern": "^(NavigatorUserMediaSuccessCallback|NavigatorUserMediaErrorCallback)$",
+        "type": ["callback"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "This defined in both webrtc_stats and webrtc so lets remove one",
+      "sourceSelector": "name=webrtc_stats",
+      "config": {
+        "namePattern": "^RTCStats$",
+        "type": ["dictionary"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "the spec defines these members in RTCAudioHandlerStats which is the parent dictionary of RTCAudioReceiverStats",
+      "sourceSelector": "name=webrtc_stats",
+      "config": {
+        "elementNamePattern": "^RTCAudioReceiverStats$",
+        "memberNamePattern": "^(audioLevel|totalAudioEnergy|totalSamplesDuration)$",
+        "types": ["dictionary"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "the fileapi spec 'overrides' a operation on URL with a union of blob and the type defined in the mediasource spec. We re-add the blob variant in the fileapi_patch variant",
+      "sourceSelector": "name=fileapi",
+      "config": {
+        "elementNamePattern": "^URL$",
+        "memberNamePattern": "^createObjectURL$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "Merge"
+    },
+    {
+      "name": "Validate"
+    },
+    {
+      "name": "RemoveIncludes",
+      "description": "Both SVGURIReference and HTMLHyperlinkElementUtils mixin define the href attribute and they are defined as different types. USVString in HTMLHyperlinkElementUtils and SVGAnimatedString in SVGURIReference. This stage effectively selects the HTMLHyperlinkElementUtils variant which seems more authoritative",
+      "config": {
+        "interfacePattern": "^SVGAElement$",
+        "mixinPattern": "^SVGURIReference$"
+      }
+    },
+    {
+      "name": "Validate"
+    },
+    {
+      "name": "Flatten"
+    },
+    {
+      "name": "ExtractExposureSet",
+      "config": {
+        "globalInterface": "Window"
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "The AudioWorkletProcessorConstructor is only used by elements exposed in the AudioWorklet exposure and references interfaces not available in Window exposure",
+      "config": {
+        "namePattern": "^AudioWorkletProcessorConstructor$",
+        "type": ["callback"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "The ExtendableMessageEventInit is only used by elements exposed in the ServiceWorker exposure and references interfaces not available in Window exposure",
+      "config": {
+        "namePattern": "^ExtendableMessageEventInit$",
+        "type": ["dictionary"]
+      }
+    },
+    {
+      "name": "Validate"
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^EventHandler$",
+        "replacement": "NullableEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^EventHandlerNonNull$",
+        "replacement": "EventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnBeforeUnloadEventHandler$",
+        "replacement": "NullableOnBeforeUnloadEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnBeforeUnloadEventHandlerNonNull$",
+        "replacement": "OnBeforeUnloadEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnErrorEventHandler$",
+        "replacement": "NullableOnErrorEventHandler"
+      }
+    },
+    {
+      "name": "RenameType",
+      "description": "Reworked naming convention of typedef so that the underlying type has a nicer name for the java interface",
+      "config": {
+        "namePattern": "^OnErrorEventHandlerNonNull$",
+        "replacement": "OnErrorEventHandler"
+      }
+    },
+    {
+      "name": "MergeDocs",
+      "description": "Add documentation from doc repository. We need to this here again as some documentation is defined on interfaces when it comes form a mixin",
+      "config": {
+        "createEvents": true
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "the invalid event is documented on HTMLInputElement and HTMLElement which causes a problem in codegen as HTMLInputElement extends HTMLElement and overlay methods are final",
+      "config": {
+        "elementNamePattern": "^HTMLInputElement$",
+        "memberNamePattern": "^invalid$"
+      }
+    },
+    {
+      "name": "JavaizeEventHandlers"
+    }
+  ]
+}

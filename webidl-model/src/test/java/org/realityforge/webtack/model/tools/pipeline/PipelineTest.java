@@ -270,9 +270,10 @@ public final class PipelineTest
   private PipelineConfig loadPipelineConfig( @Nonnull final String name, @Nonnull final String content )
     throws Exception
   {
-    final Path pipelineFile = getWorkingDirectory().resolve( name + ".json" );
+    final Path directory = getWorkingDirectory();
+    final Path pipelineFile = directory.resolve( name + ".json" );
     FileUtil.write( pipelineFile, content );
-    return PipelineConfig.load( pipelineFile );
+    return PipelineConfig.load( name, directory );
   }
 
   @Nonnull
