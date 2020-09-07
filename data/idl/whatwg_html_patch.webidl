@@ -28,6 +28,41 @@ partial interface HTMLButtonElement {
 };
 
 /**
+ * Controls whether and how text input is automatically capitalized as it is entered/edited by the user.
+ */
+enum AutocapitalizeType {
+  /**
+   * No autocapitalization is applied (all letters default to lowercase).
+   */
+  "off",
+  /**
+   * No autocapitalization is applied (all letters default to lowercase).
+   */
+  "none",
+  /**
+   * The first letter of each sentence defaults to a capital letter; all other letters default to lowercase.
+   */
+  "on",
+  /**
+   * The first letter of each sentence defaults to a capital letter; all other letters default to lowercase.
+   */
+  "sentences",
+  /**
+   * The first letter of each word defaults to a capital letter; all other letters default to lowercase.
+   */
+  "words",
+  /**
+   * All letters should default to uppercase.
+   */
+  "characters"
+};
+
+partial interface HTMLElement {
+  [CEReactions]
+  attribute AutocapitalizeType autocapitalize;
+};
+
+/**
  * An enumeration specifying the HTTP method to submit the form with.
  */
 enum FormMethodType {
