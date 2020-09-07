@@ -116,11 +116,11 @@
     },
     {
       "name": "RemoveMember",
-      "description": "Change the type of the autocapitalize attribute to an enumeration for improved typing",
+      "description": "Change the type of the autocapitalize/dir attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
         "elementNamePattern": "^HTMLElement$",
-        "memberNamePattern": "^autocapitalize$",
+        "memberNamePattern": "^(autocapitalize|dir)$",
         "types": ["interface_type"]
       }
     },

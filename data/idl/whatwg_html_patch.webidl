@@ -57,9 +57,29 @@ enum AutocapitalizeType {
   "characters"
 };
 
+/**
+ * An enumerated attribute indicating the directionality of the element's text.
+ */
+enum DirType {
+  /**
+   * Left to right direction which is to be used for languages that are written from the left to the right, such as English.
+   */
+  "ltr",
+  /**
+   * Right to left direction which is to be used for languages that are written from the right to the left, such as Arabic.
+   */
+  "rtl",
+  /**
+   * Auto direction which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then it applies that directionality to the whole element.
+   */
+  "auto"
+};
+
 partial interface HTMLElement {
   [CEReactions]
   attribute AutocapitalizeType autocapitalize;
+  [CEReactions]
+  attribute DirType dir;
 };
 
 /**
