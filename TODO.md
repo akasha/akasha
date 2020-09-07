@@ -87,6 +87,9 @@ Generate host element factories in the current style Generate one prop object pe
 
 * Add a `complete` method on `Action`, `Combiner` and `Processor` interfaces that will be invoked once the code will no longer have any schemas passed in. This allows the processor to perform cleanup and/or check that it is still needed. i.e. if a `RenameX` processor does not perform any renames we could alert in the complete to indicate that no match occurred. We could also add statistics (i.e. renamed 2 elements).
 
+* Add an `expectedChangeCount` to various processors that will generate an error if the expected number of
+  changes is not identical.
+
 * Start to download chrome webidl as they do not seem to align with specs exactly and thus generate some issues.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
