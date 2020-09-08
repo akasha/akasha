@@ -681,12 +681,12 @@ partial interface HTMLTableCellElement {
   attribute ScopeType scope;
 };
 
-
-
 /**
  * An enumerated value to indicates which referrer to send when fetching the resource.
+ *
+ * @see <a href="https://w3c.github.io/webappsec-referrer-policy/#referrer-policies">ReferrerPolicy - Specification</a>
  */
-enum ReferrerPolicyType {
+enum ReferrerPolicy {
   /**
    * The Referer header will not be sent.
    */
@@ -723,30 +723,30 @@ enum ReferrerPolicyType {
 
 partial interface HTMLAnchorElement {
   [CEReactions]
-  attribute ReferrerPolicyType referrerPolicy;
+  attribute ReferrerPolicy referrerPolicy;
 };
 
 partial interface HTMLAreaElement {
   [CEReactions]
-  attribute ReferrerPolicyType referrerPolicy;
+  attribute ReferrerPolicy referrerPolicy;
 };
 
 partial interface HTMLIFrameElement {
   [CEReactions]
-  attribute ReferrerPolicyType referrerPolicy;
+  attribute ReferrerPolicy referrerPolicy;
 };
 
 partial interface HTMLImageElement {
   [CEReactions]
-  attribute ReferrerPolicyType referrerPolicy;
+  attribute ReferrerPolicy referrerPolicy;
 };
 
 partial interface HTMLLinkElement {
   [CEReactions]
-  attribute ReferrerPolicyType referrerPolicy;
+  attribute ReferrerPolicy referrerPolicy;
 };
 
 partial interface HTMLScriptElement {
   [CEReactions]
-  attribute ReferrerPolicyType referrerPolicy;
+  attribute ReferrerPolicy referrerPolicy;
 };
