@@ -605,3 +605,47 @@ partial interface HTMLMediaElement {
   [CEReactions]
   attribute MediaPreloadType preload;
 };
+
+
+
+/**
+ * An enumerated value to indicate whether to use CORS to fetch resources.
+ */
+enum CrossOriginType {
+  /**
+   * Sends a cross-origin request without a credential. In other words, it sends
+   * the <code>Origin:</code> HTTP header without a cookie, X.509 certificate, or performing HTTP
+   * Basic authentication. If the server does not give credentials to the origin site (by not setting
+   * the <code>Access-Control-Allow-Origin:</code> HTTP header), the image will be tainted, and its
+   * usage restricted.
+   */
+  "anonymous",
+  /**
+   * Sends a cross-origin request with a credential. In other words, it sends the
+   * <code>Origin:</code> HTTP header with a cookie, a certificate, or performing
+   * HTTP Basic authentication. If the server does not give credentials to the origin
+   * site (through <code>Access-Control-Allow-Credentials:</code> HTTP header), the
+   * image will be tainted and its usage restricted.
+   */
+  "use-credentials"
+};
+
+partial interface HTMLMediaElement {
+  [CEReactions]
+  attribute CrossOriginType? crossOrigin;
+};
+
+partial interface HTMLLinkElement {
+  [CEReactions]
+  attribute CrossOriginType? crossOrigin;
+};
+
+partial interface HTMLImageElement {
+  [CEReactions]
+  attribute CrossOriginType? crossOrigin;
+};
+
+partial interface HTMLScriptElement {
+  [CEReactions]
+  attribute CrossOriginType? crossOrigin;
+};
