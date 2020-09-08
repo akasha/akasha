@@ -797,14 +797,13 @@ final class JsinteropAction
   private TypedValue asTypedValue( @Nonnull final Type type )
   {
     // This method is only called for arguments to callback interfaces a callbacks
+    final Type resolveType = _schema.resolveType( type );
     if ( Kind.Any == type.getKind() )
     {
-      final Type resolveType = _schema.resolveType( type );
       return new TypedValue( type, resolveType, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true );
     }
     else
     {
-      final Type resolveType = _schema.resolveType( type );
       final TypeName javaType = toTypeName( resolveType );
       final TypedValue.Nullability nullability =
         javaType.isPrimitive() ? TypedValue.Nullability.NA :
