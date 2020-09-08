@@ -283,7 +283,7 @@ partial interface HTMLFormElement {
 /**
  * An enumeration describing the behavior of the button.
  */
-enum HTMLButtonElementType {
+enum ButtonType {
   /**
    * The button submits the form. This is the default value if the attribute is not specified, or if it is dynamically changed to an empty or invalid value.
    */
@@ -305,7 +305,7 @@ enum HTMLButtonElementType {
 
 partial interface HTMLButtonElement {
   [CEReactions]
-  attribute HTMLButtonElementType type;
+  attribute ButtonType type;
 };
 
 /**
