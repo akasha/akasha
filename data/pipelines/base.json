@@ -146,6 +146,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the loading attribute to an enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^(HTMLIFrameElement|HTMLImageElement)$",
+        "memberNamePattern": "^loading$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the scope attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
