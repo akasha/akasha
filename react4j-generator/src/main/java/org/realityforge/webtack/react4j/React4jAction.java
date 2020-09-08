@@ -896,20 +896,6 @@ final class React4jAction
     }
   }
 
-  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
-                                                   @Nonnull final MethodSpec.Builder method )
-  {
-    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
-    {
-      final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
-      if ( null != enumeration )
-      {
-        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
-      }
-    }
-  }
-
   @Nonnull
   private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
   {
