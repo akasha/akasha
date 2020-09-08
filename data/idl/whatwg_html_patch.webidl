@@ -680,3 +680,73 @@ partial interface HTMLTableCellElement {
   [CEReactions]
   attribute ScopeType scope;
 };
+
+
+
+/**
+ * An enumerated value to indicates which referrer to send when fetching the resource.
+ */
+enum ReferrerPolicyType {
+  /**
+   * The Referer header will not be sent.
+   */
+  "no-referrer",
+  /**
+   * The Referer header will not be sent to origins without TLS. This is the default value.
+   */
+  "no-referrer-when-downgrade",
+  /**
+   * The sent referrer will be limited to the origin of the referring page: its scheme, host, and port.
+   */
+  "origin",
+  /**
+   * The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
+   */
+  "origin-when-cross-origin",
+  /**
+   * A referrer will be sent for same origin, but cross-origin requests will contain no referrer information.
+   */
+  "same-origin",
+  /**
+   * Only send the origin of the document as the referrer when the protocol security level stays the same (e.g. HTTPS &rightarrow; HTTPS), but don't send it to a less secure destination (e.g. HTTPS &rightarrow; HTTP).
+   */
+  "strict-origin",
+  /**
+   * Send a full URL when performing a same-origin request, but only send the origin when the protocol security level stays the same (e.g.HTTPS &rightarrow; HTTPS), and send no header to a less secure destination (e.g. HTTPS &rightarrow; HTTP).
+   */
+  "strict-origin-when-cross-origin",
+  /**
+   * The referrer will include the origin and the path (but not the fragment, password, or username). This value is unsafe, because it leaks origins and paths from TLS-protected resources to insecure origins.
+   */
+  "unsafe-url"
+};
+
+partial interface HTMLAnchorElement {
+  [CEReactions]
+  attribute ReferrerPolicyType referrerPolicy;
+};
+
+partial interface HTMLAreaElement {
+  [CEReactions]
+  attribute ReferrerPolicyType referrerPolicy;
+};
+
+partial interface HTMLIFrameElement {
+  [CEReactions]
+  attribute ReferrerPolicyType referrerPolicy;
+};
+
+partial interface HTMLImageElement {
+  [CEReactions]
+  attribute ReferrerPolicyType referrerPolicy;
+};
+
+partial interface HTMLLinkElement {
+  [CEReactions]
+  attribute ReferrerPolicyType referrerPolicy;
+};
+
+partial interface HTMLScriptElement {
+  [CEReactions]
+  attribute ReferrerPolicyType referrerPolicy;
+};
