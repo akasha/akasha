@@ -411,7 +411,7 @@ final class JsinteropAction
                                        @Nonnull final UnionType unionType,
                                        @Nonnull final TypeSpec.Builder type )
   {
-    final ClassName self = ClassName.bestGuess( name );
+    final TypeName self = lookupTypeByName( name );
     final List<Type> memberTypes = unionType.getMemberTypes();
     for ( final Type memberType : memberTypes )
     {
