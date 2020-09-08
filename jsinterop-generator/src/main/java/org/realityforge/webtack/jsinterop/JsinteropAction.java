@@ -173,7 +173,7 @@ final class JsinteropAction
       "core" :
       NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
     writeResourceFile( getMainResourcesDirectory(),
-                       name + ".properties",
+                       name + ".mapping",
                        typeMappingContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
