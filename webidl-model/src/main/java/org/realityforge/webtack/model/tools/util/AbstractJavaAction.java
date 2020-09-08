@@ -140,6 +140,12 @@ public abstract class AbstractJavaAction
     Files.write( path, content, StandardOpenOption.CREATE_NEW );
   }
 
+  @Nonnull
+  protected String getLeafPackageName()
+  {
+    return _packageName.replaceAll( ".*\\.([^.]+)$", "$1" );
+  }
+
   protected void writeTopLevelType( @Nullable final String idlName, @Nonnull final TypeSpec.Builder type )
     throws IOException
   {

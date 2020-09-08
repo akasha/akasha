@@ -167,11 +167,7 @@ final class JsinteropAction
         .map( e -> e.getKey() + "=" + e.getValue() )
         .sorted()
         .collect( Collectors.joining( "\n" ) ) + "\n";
-    final String packageName = getPackageName();
-    final String name =
-      packageName.isEmpty() ?
-      "core" :
-      NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
+    final String name = NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
     writeResourceFile( getMainResourcesDirectory(),
                        name + ".mapping",
                        typeMappingContent.getBytes( StandardCharsets.UTF_8 ) );
@@ -264,11 +260,7 @@ final class JsinteropAction
       "\n" +
       "  <source path=''/>\n" +
       "</module>\n";
-    final String packageName = getPackageName();
-    final String name =
-      packageName.isEmpty() ?
-      "core" :
-      NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
+    final String name = NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
