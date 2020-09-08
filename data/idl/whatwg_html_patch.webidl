@@ -390,7 +390,7 @@ enum FormEncodingType {
    */
   "application/x-www-form-urlencoded",
   /**
-   * Use this if the form contains <input> elements with type=file.
+   * Use this if the form contains <code>&lt;input&gt;</code> elements with type=file.
    */
   "multipart/form-data",
   /**
