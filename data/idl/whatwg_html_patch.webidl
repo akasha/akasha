@@ -757,7 +757,7 @@ partial interface HTMLScriptElement {
 enum LoadingType {
   /**
    * Load the resource immediately, regardless of whether or not the resource is currently within
-   the visible viewport (this is the default value).
+   * the visible viewport (this is the default value).
    */
   "eager",
   /**
