@@ -28,6 +28,10 @@ public final class React4jActionFactory
     {
       throw new IllegalArgumentException( "React4j missing required packageName configuration value" );
     }
-    return new React4jAction( Paths.get( outputDirectory ), packageName, generateGwtModule, enableMagicConstants );
+    return new React4jAction( Paths.get( outputDirectory ),
+                              packageName,
+                              context.docRepository(),
+                              generateGwtModule,
+                              enableMagicConstants );
   }
 }

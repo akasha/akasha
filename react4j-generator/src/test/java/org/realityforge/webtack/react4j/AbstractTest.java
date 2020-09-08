@@ -30,6 +30,7 @@ import javax.tools.ToolProvider;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.model.tools.validator.ValidatorRuleConfig;
 import org.realityforge.webtack.model.tools.validator.ValidatorTool;
@@ -174,7 +175,9 @@ public abstract class AbstractTest
     }
 
     final Path outputDirectory = getWorkingDir();
-    final React4jAction action = new React4jAction( outputDirectory, "com.example", true, true );
+    final Path docsDirectory = directory.resolve( "docs" );
+    final React4jAction action =
+      new React4jAction( outputDirectory, "com.example", new DocRepositoryRuntime( docsDirectory ), true, true );
     action.process( schema );
     final Path mainJavaDirectory = action.getMainJavaDirectory();
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -29,6 +30,7 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
@@ -37,16 +39,20 @@ final class React4jAction
 {
   @Nonnull
   private static final String HTML_ELEMENT = "HTMLElement";
+  @Nonnull
+  private final DocRepositoryRuntime _docRepository;
   private final boolean _generateGwtModule;
   private final boolean _enableMagicConstants;
   private WebIDLSchema _schema;
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
+                 @Nonnull final DocRepositoryRuntime docRepository,
                  final boolean generateGwtModule,
                  final boolean enableMagicConstants )
   {
     super( outputDirectory, packageName );
+    _docRepository = Objects.requireNonNull( docRepository );
     _generateGwtModule = generateGwtModule;
     _enableMagicConstants = enableMagicConstants;
   }
