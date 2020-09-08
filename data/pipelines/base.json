@@ -136,6 +136,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the scope attribute to an enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^HTMLTableCellElement$",
+        "memberNamePattern": "^scope$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the type attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {

@@ -647,3 +647,36 @@ partial interface HTMLScriptElement {
   [CEReactions]
   attribute CrossOriginType? crossOrigin;
 };
+
+/**
+ * An enumerated value to define the cells that the headerelement relates to.
+ */
+enum ScopeType {
+  /**
+   * The header relates to all cells of the row it belongs to.
+   */
+  "row",
+  /**
+   * The header relates to all cells of the column it belongs to.
+   */
+  "col",
+  /**
+   * The header belongs to a rowgroup and relates to all of its cells. These cells can be
+   * placed to the right or the left of the header, depending on the value of the <code>dir</code>
+   * attribute in the <code>&lt;table&gt;</code> element.
+   */
+  "rowgroup",
+  /**
+   * The header belongs to a colgroup and relates to all of its cells.
+   */
+  "colgroup",
+  /**
+   * The default value.
+   */
+  "auto"
+};
+
+partial interface HTMLTableCellElement {
+  [CEReactions]
+  attribute ScopeType scope;
+};
