@@ -42,6 +42,7 @@ import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
+import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
@@ -101,6 +102,19 @@ final class JsinteropAction
     _schema = Objects.requireNonNull( schema );
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
+
+    _schema.getTypedefs()
+      .stream()
+      .filter( definition -> Kind.Union == definition.getType().getKind() )
+      .forEach( this::registerIdlTypeToJavaType );
+    _schema.getCallbacks().forEach( this::registerIdlTypeToJavaType );
+    _schema.getCallbackInterfaces().forEach( this::registerIdlTypeToJavaType );
+    _schema.getDictionaries().forEach( this::registerIdlTypeToJavaType );
+    _schema.getEnumerations().forEach( this::registerIdlTypeToJavaType );
+    _schema.getInterfaces().forEach( this::registerIdlTypeToJavaType );
+    _schema.getPartialInterfaces().forEach( this::registerIdlTypeToJavaType );
+    _schema.getNamespaces().forEach( this::registerIdlTypeToJavaType );
+
     for ( final TypedefDefinition definition : _schema.getTypedefs() )
     {
       generateTypedef( definition );
@@ -246,7 +260,7 @@ final class JsinteropAction
                                    "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
                       .build() );
 
-    writeTopLevelType( null, type );
+    writeTopLevelType( type );
   }
 
   private void writeGwtModule()
@@ -1113,7 +1127,7 @@ final class JsinteropAction
       type.addMethod( method.build() );
     }
 
-    writeTopLevelType( name, type, definition.getNamespace() );
+    writeTopLevelType( name, type );
   }
 
   private void generateMapLikeOperations( @Nonnull final String definitionName,
@@ -1819,7 +1833,7 @@ final class JsinteropAction
   private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
   {
     final ClassName enumerationType =
-      ClassName.get( getPackageName(), NamingUtil.uppercaseFirstCharacter( enumeration.getName() ) );
+      ClassName.bestGuess( lookupIdlTypeToJavaType( enumeration.getName() ) );
     return AnnotationSpec
       .builder( Types.MAGIC_CONSTANT )
       .addMember( "valuesFromClass", "$T.class", enumerationType )
@@ -1967,25 +1981,7 @@ final class JsinteropAction
   private ClassName getClassName( @Nonnull final String name )
   {
     final EnumerationDefinition enumeration = _schema.findEnumerationByName( name );
-    if ( null != enumeration )
-    {
-      return Types.STRING;
-    }
-    // The type "console" starts with a lower case name due to legacy reasons.
-    // This next line just makes sure that an uppercase is used for the java type
-    final String typeName = NamingUtil.uppercaseFirstCharacter( name );
-
-    final TypedefDefinition typedef = _schema.findTypedefByName( name );
-    if ( null != typedef && Kind.Union == typedef.getType().getKind() )
-    {
-      return ClassName.get( getPackageName(), typeName );
-    }
-    final InterfaceDefinition interfaceDefinition = _schema.findInterfaceByName( name );
-    if ( null != interfaceDefinition )
-    {
-      return ClassName.get( derivePackage( interfaceDefinition.getNamespace() ), typeName );
-    }
-    return ClassName.get( getPackageName(), typeName );
+    return null != enumeration ? Types.STRING : ClassName.bestGuess( lookupIdlTypeToJavaType( name ) );
   }
 
   @Nonnull
@@ -2263,5 +2259,15 @@ final class JsinteropAction
     {
       throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
     }
+  }
+
+  private void registerIdlTypeToJavaType( @Nonnull final NamedDefinition definition )
+  {
+    final String namespace =
+      definition instanceof InterfaceDefinition ? ( (InterfaceDefinition) definition ).getNamespace() : null;
+    final String subPackage = null != namespace ? "." + NamingUtil.underscore( namespace ) : "";
+    final String javaType =
+      getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( definition.getName() );
+    registerIdlTypeToJavaType( definition.getName(), javaType );
   }
 }

@@ -24,4 +24,4 @@ StringOrLongLongUnion=com.example.StringOrLongLongUnion
 StringOrOctetUnion=com.example.StringOrOctetUnion
 StringOrStringArrayUnion=com.example.StringOrStringArrayUnion
 StringOrUnsignedLongUnion=com.example.StringOrUnsignedLongUnion
-TxCode=com.example.TxCode
+txCode=com.example.TxCode
