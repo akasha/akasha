@@ -103,17 +103,7 @@ final class JsinteropAction
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
 
-    _schema.getTypedefs()
-      .stream()
-      .filter( definition -> Kind.Union == definition.getType().getKind() )
-      .forEach( this::registerIdlTypeToJavaType );
-    _schema.getCallbacks().forEach( this::registerIdlTypeToJavaType );
-    _schema.getCallbackInterfaces().forEach( this::registerIdlTypeToJavaType );
-    _schema.getDictionaries().forEach( this::registerIdlTypeToJavaType );
-    _schema.getEnumerations().forEach( this::registerIdlTypeToJavaType );
-    _schema.getInterfaces().forEach( this::registerIdlTypeToJavaType );
-    _schema.getPartialInterfaces().forEach( this::registerIdlTypeToJavaType );
-    _schema.getNamespaces().forEach( this::registerIdlTypeToJavaType );
+    registerIdlTypeToJavaTypeMapping();
 
     for ( final TypedefDefinition definition : _schema.getTypedefs() )
     {
@@ -2259,6 +2249,21 @@ final class JsinteropAction
     {
       throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
     }
+  }
+
+  private void registerIdlTypeToJavaTypeMapping()
+  {
+    _schema.getTypedefs()
+      .stream()
+      .filter( definition -> Kind.Union == definition.getType().getKind() )
+      .forEach( this::registerIdlTypeToJavaType );
+    _schema.getCallbacks().forEach( this::registerIdlTypeToJavaType );
+    _schema.getCallbackInterfaces().forEach( this::registerIdlTypeToJavaType );
+    _schema.getDictionaries().forEach( this::registerIdlTypeToJavaType );
+    _schema.getEnumerations().forEach( this::registerIdlTypeToJavaType );
+    _schema.getInterfaces().forEach( this::registerIdlTypeToJavaType );
+    _schema.getPartialInterfaces().forEach( this::registerIdlTypeToJavaType );
+    _schema.getNamespaces().forEach( this::registerIdlTypeToJavaType );
   }
 
   private void registerIdlTypeToJavaType( @Nonnull final NamedDefinition definition )
