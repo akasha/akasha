@@ -43,6 +43,23 @@ public abstract class AbstractJavaAction
     _packageName = Objects.requireNonNull( packageName );
   }
 
+  protected void registerIdlTypeToJavaType( @Nonnull final String idlType, @Nonnull final String javaType )
+  {
+    final String existingJavaType = _typeToJavaMapping.get( idlType );
+    if ( null != existingJavaType )
+    {
+      throw new IllegalStateException( "IDL Type '" + idlType + "' already mapped to java type '" +
+                                       existingJavaType + "' unable to map to '" + javaType + "'" );
+    }
+    _typeToJavaMapping.put( idlType, javaType );
+  }
+
+  @Nonnull
+  protected String lookupIdlTypeToJavaType( @Nonnull final String idlType )
+  {
+    return _typeToJavaMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
+  }
+
   @Nonnull
   protected Map<String, String> getTypeToJavaMapping()
   {
@@ -146,31 +163,28 @@ public abstract class AbstractJavaAction
     return _packageName.replaceAll( ".*\\.([^.]+)$", "$1" );
   }
 
-  protected void writeTopLevelType( @Nullable final String idlName, @Nonnull final TypeSpec.Builder type )
+  protected void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
-    writeTopLevelType( idlName, type, null );
+    writeTopLevelType( null, type );
   }
 
-  protected void writeTopLevelType( @Nullable final String idlName,
-                                    @Nonnull final TypeSpec.Builder type,
-                                    @Nullable final String namespace )
+  protected void writeTopLevelType( @Nullable final String idlName, @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
     final Path outputDirectory = getMainJavaDirectory();
     final TypeSpec typeSpec = type.build();
-    final String packageName = derivePackage( namespace );
-    final String name = typeSpec.name;
-    final Path path = getPackageDirectory( getMainJavaDirectory(), packageName ).resolve( name + ".java" );
-    final String qualifiedName = packageName + "." + name;
-    assert !_generatedFiles.containsKey( qualifiedName );
-    _generatedFiles.put( qualifiedName, path );
-    if ( null != idlName )
+    final String qualifiedName =
+      null != idlName ? _typeToJavaMapping.get( idlName ) : _packageName + "." + typeSpec.name;
+    if ( null == qualifiedName )
     {
-      _typeToJavaMapping.put( idlName, qualifiedName );
+      throw new IllegalStateException( "Qualified java name missing for IDL type '" + idlName + "'" );
     }
+    assert !_generatedFiles.containsKey( qualifiedName );
+    _generatedFiles.put( qualifiedName,
+                         outputDirectory.resolve( qualifiedName.replaceAll( "\\.", File.separator ) + ".java" ) );
     JavaFile
-      .builder( packageName, typeSpec )
+      .builder( ClassName.bestGuess( qualifiedName ).packageName(), typeSpec )
       .skipJavaLangImports( true )
       .build()
       .writeTo( outputDirectory );
@@ -192,12 +206,6 @@ public abstract class AbstractJavaAction
                                .addMember( "value", "$S", generatorClassName )
                                .build() );
     }
-  }
-
-  @Nonnull
-  protected String derivePackage( @Nullable final String subPackage )
-  {
-    return _packageName + ( null == subPackage ? "" : "." + NamingUtil.underscore( subPackage ) );
   }
 
   @Nonnull
