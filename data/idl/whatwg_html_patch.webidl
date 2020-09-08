@@ -606,8 +606,6 @@ partial interface HTMLMediaElement {
   attribute MediaPreloadType preload;
 };
 
-
-
 /**
  * An enumerated value to indicate whether to use CORS to fetch resources.
  */
