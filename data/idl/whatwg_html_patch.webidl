@@ -582,3 +582,26 @@ partial interface HTMLInputElement {
   [CEReactions]
   attribute InputType type;
 };
+
+/**
+ * An enumerated value to provide a hint to the browser about what the author thinks will lead to the best user experience.
+ */
+enum MediaPreloadType {
+  /**
+   * Indicates that the audio should not be preloaded.
+   */
+  "none",
+  /**
+   * Indicates that only audio metadata (e.g. length) is fetched.
+   */
+  "metadata",
+  /**
+   * Indicates that the whole audio file can be downloaded, even if the user is not expected to use it.
+   */
+  "auto"
+};
+
+partial interface HTMLMediaElement {
+  [CEReactions]
+  attribute MediaPreloadType preload;
+};
