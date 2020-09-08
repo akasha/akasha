@@ -708,11 +708,11 @@ enum ReferrerPolicy {
    */
   "same-origin",
   /**
-   * Only send the origin of the document as the referrer when the protocol security level stays the same (e.g. HTTPS &rightarrow; HTTPS), but don't send it to a less secure destination (e.g. HTTPS &rightarrow; HTTP).
+   * Only send the origin of the document as the referrer when the protocol security level stays the same (e.g. HTTPS &#8594; HTTPS), but don't send it to a less secure destination (e.g. HTTPS &#8594; HTTP).
    */
   "strict-origin",
   /**
-   * Send a full URL when performing a same-origin request, but only send the origin when the protocol security level stays the same (e.g.HTTPS &rightarrow; HTTPS), and send no header to a less secure destination (e.g. HTTPS &rightarrow; HTTP).
+   * Send a full URL when performing a same-origin request, but only send the origin when the protocol security level stays the same (e.g.HTTPS &#8594; HTTPS), and send no header to a less secure destination (e.g. HTTPS &#8594; HTTP).
    */
   "strict-origin-when-cross-origin",
   /**
