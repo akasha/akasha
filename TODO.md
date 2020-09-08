@@ -17,9 +17,10 @@ complete as there is too much un-said.
 
 * Add special handling for `@return` javadoc.
 
-* Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
-  and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
-  browsers to support
+* Scan [MDN browser compat ability data](https://github.com/mdn/browser-compat-data/tree/master/api) to
+  build up compatibility table for elements, possibly adding
+  [browser](https://github.com/mdn/browser-compat-data/tree/master/browsers) compatibility to the mix.
+  Alternatively extract [caniuse](https://github.com/Fyrd/caniuse) data.
 
 # Apps to Stretch Implementation
 
