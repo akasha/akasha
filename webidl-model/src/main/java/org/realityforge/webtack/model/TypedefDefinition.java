@@ -6,10 +6,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class TypedefDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final Type _type;
 
@@ -19,15 +17,8 @@ public final class TypedefDefinition
                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
                             @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _type = Objects.requireNonNull( type );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -50,18 +41,18 @@ public final class TypedefDefinition
     else
     {
       final TypedefDefinition other = (TypedefDefinition) o;
-      return _name.equals( other._name ) && _type.equals( other._type );
+      return getName().equals( other.getName() ) && _type.equals( other._type );
     }
   }
 
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _type );
+    return Objects.hash( super.hashCode(), _type );
   }
 
   public boolean equiv( @Nonnull final TypedefDefinition other )
   {
-    return super.equiv( other ) && _name.equals( other._name ) && _type.equiv( other._type );
+    return super.equiv( other ) && _type.equiv( other._type );
   }
 }

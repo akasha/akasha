@@ -8,10 +8,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class CallbackInterfaceDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final OperationMember _operation;
   @Nonnull
@@ -24,16 +22,9 @@ public final class CallbackInterfaceDefinition
                                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                       @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _operation = Objects.requireNonNull( operation );
     _constants = Objects.requireNonNull( constants );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -62,7 +53,7 @@ public final class CallbackInterfaceDefinition
     else
     {
       final CallbackInterfaceDefinition other = (CallbackInterfaceDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              _operation.equals( other._operation ) &&
              _constants.equals( other._constants );
     }
@@ -71,13 +62,12 @@ public final class CallbackInterfaceDefinition
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _operation, _constants );
+    return Objects.hash( super.hashCode(), _operation, _constants );
   }
 
   public boolean equiv( @Nonnull final CallbackInterfaceDefinition other )
   {
     if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
          _constants.size() == other._constants.size() &&
          _operation.equiv( other._operation ) )
     {

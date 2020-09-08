@@ -6,10 +6,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class CallbackDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final Type _returnType;
   @Nonnull
@@ -22,16 +20,9 @@ public final class CallbackDefinition
                              @Nonnull final List<ExtendedAttribute> extendedAttributes,
                              @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _returnType = Objects.requireNonNull( returnType );
     _arguments = Objects.requireNonNull( arguments );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -60,7 +51,7 @@ public final class CallbackDefinition
     else
     {
       final CallbackDefinition other = (CallbackDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              _returnType.equals( other._returnType ) &&
              _arguments.equals( other._arguments );
     }
@@ -69,13 +60,12 @@ public final class CallbackDefinition
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _returnType, _arguments );
+    return Objects.hash( super.hashCode(), _returnType, _arguments );
   }
 
   public boolean equiv( @Nonnull final CallbackDefinition other )
   {
     return super.equiv( other ) &&
-           _name.equals( other._name ) &&
            _returnType.equiv( other._returnType ) &&
            Argument.argumentListEquiv( _arguments, other._arguments );
   }

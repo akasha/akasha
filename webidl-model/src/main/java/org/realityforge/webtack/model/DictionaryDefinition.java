@@ -8,10 +8,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class DictionaryDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nullable
   private final String _inherits;
   @Nonnull
@@ -24,16 +22,9 @@ public final class DictionaryDefinition
                                @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _inherits = inherits;
     _members = Objects.requireNonNull( members );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nullable
@@ -62,7 +53,7 @@ public final class DictionaryDefinition
     else
     {
       final DictionaryDefinition other = (DictionaryDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              Objects.equals( _inherits, other._inherits ) &&
              _members.equals( other._members );
     }
@@ -71,13 +62,12 @@ public final class DictionaryDefinition
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _inherits, _members );
+    return Objects.hash( super.hashCode(), _inherits, _members );
   }
 
   public boolean equiv( @Nonnull final DictionaryDefinition other )
   {
     if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
          Objects.equals( _inherits, other._inherits ) &&
          _members.size() == other._members.size() )
     {

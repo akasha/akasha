@@ -6,10 +6,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class EnumerationDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final List<EnumerationValue> _values;
 
@@ -19,15 +17,8 @@ public final class EnumerationDefinition
                                 @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                 @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _values = Objects.requireNonNull( values );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -50,26 +41,24 @@ public final class EnumerationDefinition
     else
     {
       final EnumerationDefinition other = (EnumerationDefinition) o;
-      return _name.equals( other._name ) && _values.equals( other._values );
+      return getName().equals( other.getName() ) && _values.equals( other._values );
     }
   }
 
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _values );
+    return Objects.hash( super.hashCode(), _values );
   }
 
   public boolean equiv( @Nonnull final EnumerationDefinition other )
   {
-    if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
-         _values.size() == other._values.size() )
+    if ( super.equiv( other ) && _values.size() == other._values.size() )
     {
       int index = 0;
       for ( final EnumerationValue value : _values )
       {
-        if( !value.equiv( other.getValues().get( index++ ) ))
+        if ( !value.equiv( other.getValues().get( index++ ) ) )
         {
           return false;
         }

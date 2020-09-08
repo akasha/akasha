@@ -8,10 +8,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class PartialMixinDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final List<ConstMember> _constants;
   @Nonnull
@@ -30,18 +28,11 @@ public final class PartialMixinDefinition
                                  @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                  @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _constants = Objects.requireNonNull( constants );
     _attributes = Objects.requireNonNull( attributes );
     _operations = Objects.requireNonNull( operations );
     _events = Objects.requireNonNull( events );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -82,7 +73,7 @@ public final class PartialMixinDefinition
     else
     {
       final PartialMixinDefinition other = (PartialMixinDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              _constants.equals( other._constants ) &&
              _attributes.equals( other._attributes ) &&
              _operations.equals( other._operations ) &&
@@ -93,13 +84,13 @@ public final class PartialMixinDefinition
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _constants, _attributes, _operations, _events );
+    return Objects.hash( super.hashCode(), _constants, _attributes, _operations, _events );
   }
 
   public boolean equiv( @Nonnull final PartialMixinDefinition other )
   {
     if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
+         getName().equals( other.getName() ) &&
          _constants.size() == other._constants.size() &&
          _attributes.size() == other._attributes.size() &&
          _operations.size() == other._operations.size() &&

@@ -9,10 +9,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class InterfaceDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nullable
   private final String _inherits;
   @Nonnull
@@ -51,8 +49,7 @@ public final class InterfaceDefinition
                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
                               @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _inherits = inherits;
     _constants = Objects.requireNonNull( constants );
     _attributes = Objects.requireNonNull( attributes );
@@ -62,12 +59,6 @@ public final class InterfaceDefinition
     _asyncIterable = asyncIterable;
     _mapLikeMember = mapLikeMember;
     _setLikeMember = setLikeMember;
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nullable
@@ -164,7 +155,7 @@ public final class InterfaceDefinition
     else
     {
       final InterfaceDefinition other = (InterfaceDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              Objects.equals( _inherits, other._inherits ) &&
              _constants.equals( other._constants ) &&
              _attributes.equals( other._attributes ) &&
@@ -180,7 +171,6 @@ public final class InterfaceDefinition
   public int hashCode()
   {
     return Objects.hash( super.hashCode(),
-                         _name,
                          _inherits,
                          _constants,
                          _attributes,
@@ -194,7 +184,6 @@ public final class InterfaceDefinition
   public boolean equiv( @Nonnull final InterfaceDefinition other )
   {
     if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
          Objects.equals( _inherits, other._inherits ) &&
          _constants.size() == other._constants.size() &&
          _attributes.size() == other._attributes.size() &&

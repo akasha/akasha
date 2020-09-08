@@ -8,10 +8,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class NamespaceDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final List<OperationMember> _operations;
   @Nonnull
@@ -24,16 +22,9 @@ public final class NamespaceDefinition
                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
                               @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _operations = Objects.requireNonNull( operations );
     _attributes = Objects.requireNonNull( attributes );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -62,7 +53,7 @@ public final class NamespaceDefinition
     else
     {
       final NamespaceDefinition other = (NamespaceDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              _operations.equals( other._operations ) &&
              _attributes.equals( other._attributes );
     }
@@ -71,13 +62,12 @@ public final class NamespaceDefinition
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _operations, _attributes );
+    return Objects.hash( super.hashCode(), _operations, _attributes );
   }
 
   public boolean equiv( @Nonnull final NamespaceDefinition other )
   {
     if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
          _operations.size() == other._operations.size() &&
          _attributes.size() == other._attributes.size() )
     {

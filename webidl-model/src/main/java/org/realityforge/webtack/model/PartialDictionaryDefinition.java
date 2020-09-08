@@ -8,10 +8,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 public final class PartialDictionaryDefinition
-  extends Definition
+  extends NamedDefinition
 {
-  @Nonnull
-  private final String _name;
   @Nonnull
   private final List<DictionaryMember> _members;
 
@@ -21,15 +19,8 @@ public final class PartialDictionaryDefinition
                                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                       @Nonnull final List<SourceInterval> sourceLocations )
   {
-    super( documentation, extendedAttributes, sourceLocations );
-    _name = Objects.requireNonNull( name );
+    super( name, documentation, extendedAttributes, sourceLocations );
     _members = Objects.requireNonNull( members );
-  }
-
-  @Nonnull
-  public String getName()
-  {
-    return _name;
   }
 
   @Nonnull
@@ -52,7 +43,7 @@ public final class PartialDictionaryDefinition
     else
     {
       final PartialDictionaryDefinition other = (PartialDictionaryDefinition) o;
-      return _name.equals( other._name ) &&
+      return getName().equals( other.getName() ) &&
              _members.equals( other._members );
     }
   }
@@ -60,13 +51,13 @@ public final class PartialDictionaryDefinition
   @Override
   public int hashCode()
   {
-    return Objects.hash( super.hashCode(), _name, _members );
+    return Objects.hash( super.hashCode(), _members );
   }
 
   public boolean equiv( @Nonnull final PartialDictionaryDefinition other )
   {
     if ( super.equiv( other ) &&
-         _name.equals( other._name ) &&
+         getName().equals( other.getName() ) &&
          _members.size() == other._members.size() )
     {
       final Set<DictionaryMember> otherMembers = new HashSet<>( other._members );
