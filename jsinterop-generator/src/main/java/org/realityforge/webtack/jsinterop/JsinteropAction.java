@@ -146,10 +146,9 @@ final class JsinteropAction
       writeGwtModule();
     }
 
-    final String globalInterface = _globalInterface;
-    if ( null != globalInterface )
+    if ( null != _globalInterface )
     {
-      generateGlobalThisInterface( globalInterface );
+      generateGlobalThisInterface( _globalInterface );
     }
 
     if ( _generateTypeCatalog )
