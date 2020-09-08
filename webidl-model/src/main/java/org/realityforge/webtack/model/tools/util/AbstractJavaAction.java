@@ -175,6 +175,7 @@ public abstract class AbstractJavaAction
     writeGeneratedAnnotation( builder, "org.realityforge.webtack" );
   }
 
+  @SuppressWarnings( "SameParameterValue" )
   private void writeGeneratedAnnotation( @Nonnull final TypeSpec.Builder builder,
                                          @Nonnull final String generatorClassName )
   {
