@@ -887,8 +887,8 @@ final class React4jAction
   {
     if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
     {
-      final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+      final TypeReference typeReference = (TypeReference) type;
+      final EnumerationDefinition enumeration = _schema.findEnumerationByName( typeReference.getName() );
       if ( null != enumeration )
       {
         parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
