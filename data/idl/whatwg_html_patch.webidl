@@ -808,10 +808,32 @@ enum TrackKind {
   /**
    * Tracks used by scripts. Not visible to the user.
    */
-  "metadata",
+  "metadata"
 };
 
 partial interface HTMLTrackElement {
   [CEReactions]
   attribute TrackKind kind;
+};
+
+/**
+ * An enumerated value to indicate how the control wraps text.
+ */
+enum WrapType {
+  /**
+   * The browser automatically inserts line breaks (CR+LF) so that each line has no more
+   * than the width of the control; the cols attribute must also be specified for this to
+   * take effect.
+   */
+  "hard",
+  /**
+   * The browser ensures that all line breaks in the value consist of a CR+LF pair, but does
+   * not insert any additional line breaks. This is the default value.
+   */
+  "soft"
+};
+
+partial interface HTMLTextAreaElement {
+  [CEReactions]
+  attribute DOMString wrap;
 };

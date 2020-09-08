@@ -166,6 +166,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the wrap attribute to an enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^HTMLTextAreaElement$",
+        "memberNamePattern": "^wrap$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the scope attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
