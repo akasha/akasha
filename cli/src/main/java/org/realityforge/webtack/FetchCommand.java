@@ -52,7 +52,7 @@ final class FetchCommand
   private static final int FORCE_OPT = 'f';
   private static final int NO_VERIFY_OPT = 2;
   private static final int NO_REMOVE_SOURCE_OPT = 3;
-  private static final int NO_ADD_DOCS_OPT = 3;
+  private static final int NO_ADD_DOCS_OPT = 4;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
     {
       new CLOptionDescriptor( "force",
