@@ -649,7 +649,7 @@ partial interface HTMLScriptElement {
 };
 
 /**
- * An enumerated value to define the cells that the headerelement relates to.
+ * An enumerated value to define the cells that the header element relates to.
  */
 enum ScopeType {
   /**
