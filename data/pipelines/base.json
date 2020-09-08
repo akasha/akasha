@@ -126,6 +126,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the type attribute to an enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^HTMLInputElement$",
+        "memberNamePattern": "^type$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the inputMode attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
