@@ -161,7 +161,7 @@ final class JsinteropAction
     throws IOException
   {
     final String typeMappingContent =
-      getGeneratedJavaArtifacts()
+      getTypeToJavaMapping()
         .entrySet()
         .stream()
         .map( e -> e.getKey() + "=" + e.getValue() )

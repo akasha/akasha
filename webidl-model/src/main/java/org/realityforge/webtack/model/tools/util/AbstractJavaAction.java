@@ -35,7 +35,7 @@ public abstract class AbstractJavaAction
   private final Map<String, Path> _generatedFiles = new HashMap<>();
   // Maps idlName -> Qualified Java Name of output
   @Nonnull
-  private final Map<String, String> _generatedJavaArtifacts = new HashMap<>();
+  private final Map<String, String> _typeToJavaMapping = new HashMap<>();
 
   protected AbstractJavaAction( @Nonnull final Path outputDirectory, @Nonnull final String packageName )
   {
@@ -44,9 +44,9 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected Map<String, String> getGeneratedJavaArtifacts()
+  protected Map<String, String> getTypeToJavaMapping()
   {
-    return _generatedJavaArtifacts;
+    return _typeToJavaMapping;
   }
 
   protected void processInit()
@@ -161,7 +161,7 @@ public abstract class AbstractJavaAction
     _generatedFiles.put( qualifiedName, path );
     if ( null != idlName )
     {
-      _generatedJavaArtifacts.put( idlName, qualifiedName );
+      _typeToJavaMapping.put( idlName, qualifiedName );
     }
     JavaFile
       .builder( packageName, typeSpec )
