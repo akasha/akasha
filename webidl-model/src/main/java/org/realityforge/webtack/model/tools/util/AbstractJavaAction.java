@@ -33,11 +33,20 @@ public abstract class AbstractJavaAction
   // Maps Classname -> Path of source file
   @Nonnull
   private final Map<String, Path> _generatedFiles = new HashMap<>();
+  // Maps idlName -> Qualified Java Name of output
+  @Nonnull
+  private final Map<String, String> _generatedJavaArtifacts = new HashMap<>();
 
   protected AbstractJavaAction( @Nonnull final Path outputDirectory, @Nonnull final String packageName )
   {
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+  }
+
+  @Nonnull
+  protected Map<String, String> getGeneratedJavaArtifacts()
+  {
+    return _generatedJavaArtifacts;
   }
 
   protected void processInit()
@@ -89,24 +98,36 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected Path getMainJavaDirectory()
+  protected Path getOutputDirectory()
   {
-    return _outputDirectory.resolve( "main" ).resolve( "java" );
+    return _outputDirectory;
   }
 
   @Nonnull
-  private Path getPackageDirectory( @Nonnull final String packageName )
+  protected Path getMainJavaDirectory()
   {
-    final Path baseDirectory = getMainJavaDirectory();
+    return getOutputDirectory().resolve( "main" ).resolve( "java" );
+  }
+
+  @Nonnull
+  protected Path getMainResourcesDirectory()
+  {
+    return getOutputDirectory().resolve( "main" ).resolve( "resources" );
+  }
+
+  private Path getPackageDirectory( @Nonnull final Path baseDirectory, @Nonnull final String packageName )
+  {
     return packageName.isEmpty() ?
            baseDirectory :
            baseDirectory.resolve( packageName.replaceAll( "\\.", File.separator ) );
   }
 
-  protected void writeResourceFile( @Nonnull final String name, @Nonnull final byte[] content )
+  protected void writeResourceFile( @Nonnull final Path baseDirectory,
+                                    @Nonnull final String name,
+                                    @Nonnull final byte[] content )
     throws IOException
   {
-    final Path path = getPackageDirectory( _packageName ).resolve( name );
+    final Path path = getPackageDirectory( baseDirectory, _packageName ).resolve( name );
     final String qualifiedName = _packageName + "." + name;
     assert !_generatedFiles.containsKey( qualifiedName );
     _generatedFiles.put( qualifiedName, path );
@@ -119,23 +140,29 @@ public abstract class AbstractJavaAction
     Files.write( path, content, StandardOpenOption.CREATE_NEW );
   }
 
-  protected void writeTopLevelType( @Nonnull final TypeSpec.Builder type )
+  protected void writeTopLevelType( @Nullable final String idlName, @Nonnull final TypeSpec.Builder type )
     throws IOException
   {
-    writeTopLevelType( type, null );
+    writeTopLevelType( idlName, type, null );
   }
 
-  protected void writeTopLevelType( @Nonnull final TypeSpec.Builder type, @Nullable final String namespace )
+  protected void writeTopLevelType( @Nullable final String idlName,
+                                    @Nonnull final TypeSpec.Builder type,
+                                    @Nullable final String namespace )
     throws IOException
   {
     final Path outputDirectory = getMainJavaDirectory();
     final TypeSpec typeSpec = type.build();
     final String packageName = derivePackage( namespace );
     final String name = typeSpec.name;
-    final Path path = getPackageDirectory( packageName ).resolve( name + ".java" );
+    final Path path = getPackageDirectory( getMainJavaDirectory(), packageName ).resolve( name + ".java" );
     final String qualifiedName = packageName + "." + name;
     assert !_generatedFiles.containsKey( qualifiedName );
     _generatedFiles.put( qualifiedName, path );
+    if ( null != idlName )
+    {
+      _generatedJavaArtifacts.put( idlName, qualifiedName );
+    }
     JavaFile
       .builder( packageName, typeSpec )
       .skipJavaLangImports( true )

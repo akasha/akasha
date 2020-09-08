@@ -15,6 +15,7 @@ public final class JsinteropActionFactory
   public String packageName;
   public String globalInterface;
   public boolean generateGwtModule = true;
+  public boolean generateTypeCatalog = true;
   public boolean enableMagicConstants = true;
 
   @Nonnull
@@ -33,6 +34,7 @@ public final class JsinteropActionFactory
                                 packageName,
                                 globalInterface,
                                 generateGwtModule,
+                                generateTypeCatalog,
                                 enableMagicConstants );
   }
 }

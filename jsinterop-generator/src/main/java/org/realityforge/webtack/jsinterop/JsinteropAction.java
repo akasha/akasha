@@ -63,6 +63,7 @@ final class JsinteropAction
   @Nullable
   private final String _globalInterface;
   private final boolean _generateGwtModule;
+  private final boolean _generateTypeCatalog;
   private final boolean _enableMagicConstants;
   @Nonnull
   private final Map<String, ClassName> _typeMapping = new HashMap<>();
@@ -74,11 +75,13 @@ final class JsinteropAction
                    @Nonnull final String packageName,
                    @Nullable final String globalInterface,
                    final boolean generateGwtModule,
+                   final boolean generateTypeCatalog,
                    final boolean enableMagicConstants )
   {
     super( outputDirectory, packageName );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
+    _generateTypeCatalog = generateTypeCatalog;
     _enableMagicConstants = enableMagicConstants;
   }
 
@@ -148,6 +151,31 @@ final class JsinteropAction
     {
       generateGlobalThisInterface( globalInterface );
     }
+
+    if ( _generateTypeCatalog )
+    {
+      writeTypeCatalog();
+    }
+  }
+
+  private void writeTypeCatalog()
+    throws IOException
+  {
+    final String typeMappingContent =
+      getGeneratedJavaArtifacts()
+        .entrySet()
+        .stream()
+        .map( e -> e.getKey() + "=" + e.getValue() )
+        .sorted()
+        .collect( Collectors.joining( "\n" ) ) + "\n";
+    final String packageName = getPackageName();
+    final String name =
+      packageName.isEmpty() ?
+      "core" :
+      NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
+    writeResourceFile( getMainResourcesDirectory(),
+                       name + ".properties",
+                       typeMappingContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
   private void generateGlobalThisInterface( @Nonnull final String globalInterface )
@@ -223,7 +251,7 @@ final class JsinteropAction
                                    "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
                       .build() );
 
-    writeTopLevelType( type );
+    writeTopLevelType( null, type );
   }
 
   private void writeGwtModule()
@@ -242,7 +270,7 @@ final class JsinteropAction
       packageName.isEmpty() ?
       "core" :
       NamingUtil.uppercaseFirstCharacter( packageName.replaceAll( ".*\\.([^.]+)$", "$1" ) );
-    writeResourceFile( name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
+    writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
   private void generateTypedef( @Nonnull final TypedefDefinition definition )
@@ -258,8 +286,7 @@ final class JsinteropAction
     }
   }
 
-  private void generateUnion( @Nonnull final String name,
-                              @Nonnull final UnionType unionType )
+  private void generateUnion( @Nonnull final String name, @Nonnull final UnionType unionType )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -275,7 +302,7 @@ final class JsinteropAction
 
     generateUnionOfMethods( name, unionType, type );
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   @Nonnull
@@ -437,9 +464,10 @@ final class JsinteropAction
   private void generateDictionary( @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
@@ -493,7 +521,7 @@ final class JsinteropAction
       superName = parent.getInherits();
     }
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition definition,
@@ -770,9 +798,10 @@ final class JsinteropAction
   private void generateCallback( @Nonnull final CallbackDefinition definition )
     throws IOException
   {
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type
@@ -790,7 +819,7 @@ final class JsinteropAction
     }
     type.addMethod( method.build() );
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   @Nonnull
@@ -817,15 +846,16 @@ final class JsinteropAction
     throws IOException
   {
     final boolean exposedOnGlobal = isExposedOnGlobal( definition );
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
-                          .addMember( "name", "$S", exposedOnGlobal ? definition.getName() : "?" )
+                          .addMember( "name", "$S", exposedOnGlobal ? name : "?" )
                           .build() )
       .addAnnotation( FunctionalInterface.class );
     maybeAddJavadoc( definition, type );
@@ -837,7 +867,7 @@ final class JsinteropAction
     final List<TypedValue> typedValues = asTypedValuesList( arguments );
     generateDefaultOperation( operation, true, arguments, typedValues, type );
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   @Nonnull
@@ -849,10 +879,10 @@ final class JsinteropAction
   private void generatePartialInterface( @Nonnull final PartialInterfaceDefinition definition )
     throws IOException
   {
-    final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( name )
+        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -864,7 +894,7 @@ final class JsinteropAction
                       .addAnnotation( Types.JS_OVERLAY )
                       .addAnnotation( Types.NONNULL )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .returns( lookupTypeByName( definition.getName() ) )
+                      .returns( lookupTypeByName( name ) )
                       .addParameter( ParameterSpec
                                        .builder( TypeName.OBJECT, "object", Modifier.FINAL )
                                        .addAnnotation( Types.NONNULL )
@@ -904,7 +934,7 @@ final class JsinteropAction
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( definition.getName(), definition.getOperations(), mapLike, type );
+      generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
     }
     if ( null != definition.getAsyncIterable() )
     {
@@ -919,10 +949,10 @@ final class JsinteropAction
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
-                          .addMember( "name", "$S", noPublicSymbol ? "Object" : definition.getName() )
+                          .addMember( "name", "$S", noPublicSymbol ? "Object" : name )
                           .build() );
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
@@ -936,11 +966,12 @@ final class JsinteropAction
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
         // The type "console" starts with a lower case name due to legacy reasons.
         // This next line just makes sure that an uppercase is used for the java type
-        .classBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
+        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -964,21 +995,21 @@ final class JsinteropAction
         .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
 
     type.addAnnotation( jsTypeAnnotation
-                          .addMember( "name", "$S", definition.getName() )
+                          .addMember( "name", "$S", name )
                           .build() );
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   private void generateInterface( @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
-    final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( name )
+        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1048,7 +1079,7 @@ final class JsinteropAction
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
-      generateMapLikeOperations( definition.getName(), definition.getOperations(), mapLike, type );
+      generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
     }
     if ( null != definition.getAsyncIterable() )
     {
@@ -1094,7 +1125,7 @@ final class JsinteropAction
       type.addMethod( method.build() );
     }
 
-    writeTopLevelType( type, definition.getNamespace() );
+    writeTopLevelType( name, type, definition.getNamespace() );
   }
 
   private void generateMapLikeOperations( @Nonnull final String definitionName,
@@ -1810,9 +1841,10 @@ final class JsinteropAction
   private void generateEnumeration( @Nonnull final EnumerationDefinition definition )
     throws IOException
   {
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( NamingUtil.uppercaseFirstCharacter( definition.getName() ) )
+        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1837,7 +1869,7 @@ final class JsinteropAction
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    writeTopLevelType( type );
+    writeTopLevelType( name, type );
   }
 
   @Nonnull
