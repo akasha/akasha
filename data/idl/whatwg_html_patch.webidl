@@ -419,3 +419,57 @@ partial interface HTMLButtonElement {
   [CEReactions]
   attribute FormEncodingType formEnctype;
 };
+
+/**
+ * The inputmode enumeration that hints at the type of data that might be entered by the user while editing the element or its contents.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/inputmode">inputmode - MDN</a>
+ */
+enum InputModeType {
+  /**
+   * No virtual keyboard. For when the page implements its own keyboard input control.
+   */
+  "none",
+  /**
+   * Standard input keyboard for the user's current locale.
+   * This is the default value.
+   */
+  "text",
+  /**
+   * Fractional numeric input keyboard containing the digits and decimal separator for the user's locale (typically <code>.</code> or <code>,</code>).
+   * Devices may or may not show a minus key (<code>-</code>).
+   */
+  "decimal",
+  /**
+   * Numeric input keyboard, but only requires the digits 0–9. Devices may or may not show a minus key.
+   */
+  "numeric",
+  /**
+   * A telephone keypad input, including the digits 0–9, the asterisk (<code>*</code>), and the pound (<code>#</code>) key.
+   * Inputs that require a telephone number should typically use <code>&lt;input type="tel"&gt;</code> instead.
+   */
+  "tel",
+  /**
+   * A virtual keyboard optimized for search input.
+   * For instance, the return/submit key may be labeled “Search”, along with possible other optimizations.
+   * Inputs that require a search query should typically use <code>&lt;input type="search"&gt;</code> instead.
+   */
+  "search",
+  /**
+   * A virtual keyboard optimized for entering email addresses.
+   * Typically includes the <code>@</code> character as well as other optimizations. Inputs that require email
+   * addresses should typically use <code>&lt;input type="email"&gt;</code> instead.
+   */
+  "email",
+  /**
+   * A keypad optimized for entering URLs.
+   * This may have the <code>/</code> key more prominent, for example. Enhanced features could include history
+   * access and so on. Inputs that require a URL should typically use <code>&lt;input type="url"&gt;</code> instead.
+   */
+  "url"
+};
+
+partial interface mixin ElementContentEditable {
+  [CEReactions]
+  attribute InputModeType inputMode;
+};

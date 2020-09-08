@@ -126,6 +126,16 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the inputMode attribute to an enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "elementNamePattern": "^ElementContentEditable$",
+        "memberNamePattern": "^inputMode$",
+        "types": ["mixin"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the autocapitalize/dir attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
