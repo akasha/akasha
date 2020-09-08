@@ -202,11 +202,6 @@
         "url": "https://www.w3.org/TR/push-api/"
     },
     {
-        "lastModifiedTime": 1485201104000,
-        "name": "referrer_policy",
-        "url": "https://www.w3.org/TR/referrer-policy/"
-    },
-    {
         "lastModifiedTime": 1594929870000,
         "name": "reporting",
         "url": "https://w3c.github.io/reporting/"
