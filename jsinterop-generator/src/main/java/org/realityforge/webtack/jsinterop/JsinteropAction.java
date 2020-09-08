@@ -268,12 +268,9 @@ final class JsinteropAction
     throws IOException
   {
     final Type type = definition.getType();
-    final Kind kind = type.getKind();
-    if ( Kind.Union == kind )
+    if ( Kind.Union == type.getKind() )
     {
-      final String name = NamingUtil.uppercaseFirstCharacter( definition.getName() );
-      final UnionType unionType = (UnionType) type;
-      generateUnion( name, unionType );
+      generateUnion( definition.getName(), (UnionType) type );
     }
   }
 
@@ -282,7 +279,7 @@ final class JsinteropAction
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( name )
+        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
