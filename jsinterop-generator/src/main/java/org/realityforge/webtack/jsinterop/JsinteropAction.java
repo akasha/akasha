@@ -1957,20 +1957,7 @@ final class JsinteropAction
   @Nonnull
   private TypeName lookupTypeByName( @Nonnull final String name )
   {
-    // The type "console" starts with a lower case name due to legacy reasons.
-    // This next line just makes sure that an uppercase is used for the java type
-    final String typeName = NamingUtil.uppercaseFirstCharacter( name );
-    final ClassName existing = _typeMapping.get( typeName );
-    if ( null != existing )
-    {
-      return existing;
-    }
-    else
-    {
-      final ClassName className = getClassName( typeName );
-      _typeMapping.put( typeName, className );
-      return className;
-    }
+    return _typeMapping.computeIfAbsent( name, this::getClassName );
   }
 
   @Nonnull
@@ -1995,17 +1982,21 @@ final class JsinteropAction
     {
       return Types.STRING;
     }
+    // The type "console" starts with a lower case name due to legacy reasons.
+    // This next line just makes sure that an uppercase is used for the java type
+    final String typeName = NamingUtil.uppercaseFirstCharacter( name );
+
     final TypedefDefinition typedef = _schema.findTypedefByName( name );
     if ( null != typedef && Kind.Union == typedef.getType().getKind() )
     {
-      return ClassName.get( getPackageName(), name );
+      return ClassName.get( getPackageName(), typeName );
     }
     final InterfaceDefinition interfaceDefinition = _schema.findInterfaceByName( name );
     if ( null != interfaceDefinition )
     {
-      return ClassName.get( derivePackage( interfaceDefinition.getNamespace() ), name );
+      return ClassName.get( derivePackage( interfaceDefinition.getNamespace() ), typeName );
     }
-    return ClassName.get( getPackageName(), name );
+    return ClassName.get( getPackageName(), typeName );
   }
 
   @Nonnull
