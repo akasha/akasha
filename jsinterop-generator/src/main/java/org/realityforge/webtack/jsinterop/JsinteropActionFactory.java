@@ -1,7 +1,9 @@
 package org.realityforge.webtack.jsinterop;
 
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 import javax.annotation.Nonnull;
+import javax.lang.model.SourceVersion;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
 import org.realityforge.webtack.model.tools.spi.Name;
@@ -29,6 +31,14 @@ public final class JsinteropActionFactory
     if ( null == packageName )
     {
       throw new IllegalArgumentException( "Jsinterop missing required packageName configuration value" );
+    }
+    if ( packageName.isEmpty() )
+    {
+      throw new IllegalArgumentException( "Jsinterop supplied an invalid empty packageName configuration value" );
+    }
+    if ( Stream.of( packageName.split( "\\." ) ).anyMatch( e -> !SourceVersion.isName( e ) ) )
+    {
+      throw new IllegalArgumentException( "Jsinterop supplied an invalid packageName configuration value" );
     }
     return new JsinteropAction( Paths.get( outputDirectory ),
                                 packageName,
