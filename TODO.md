@@ -17,14 +17,6 @@ complete as there is too much un-said.
 
 * Add special handling for `@return` javadoc.
 
-* The spec docs have a lot of documentation that can be scraped. Some of them have great cross-linking
-  so it should be possible with a little bit of heuristics to extract the documentation for different
-  members and definitions. Alternatively we could just cross link and add other @see tags
-
-  Spec Docs: https://heycam.github.io/webidl/
-
-  We could make the doc repository populate docs from multiple sources
-
 * Scan https://github.com/mdn/browser-compat-data/tree/master/api to build up compatibility information for types
   and possibly also add https://github.com/mdn/browser-compat-data/tree/master/browsers so we can decide which
   browsers to support
