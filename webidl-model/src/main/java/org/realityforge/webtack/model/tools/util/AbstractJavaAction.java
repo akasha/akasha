@@ -43,15 +43,42 @@ public abstract class AbstractJavaAction
     _packageName = Objects.requireNonNull( packageName );
   }
 
+  /**
+   * Register a mapping from the specified idl type to the specified java type.
+   * If a mapping already exists then generate an error.
+   *
+   * @param idlType  the idle type. This is the name of the definition or the name of one of the predefined types.
+   * @param javaType the java type to associated with the idl type.
+   * @throws IllegalStateException if a mapping already exists for idlName.
+   */
   protected void registerIdlTypeToJavaType( @Nonnull final String idlType, @Nonnull final String javaType )
+  {
+    if ( !tryRegisterIdlTypeToJavaType( idlType, javaType ) )
+    {
+      throw new IllegalStateException( "IDL Type '" + idlType + "' already mapped to java type '" +
+                                       _typeToJavaMapping.get( idlType ) + "' unable to map to '" + javaType + "'" );
+    }
+  }
+
+  /**
+   * Register a mapping from the specified idl type to the specified java type if no type mapping for the idl type exists.
+   *
+   * @param idlType  the idle type. This is the name of the definition or the name of one of the predefined types.
+   * @param javaType the java type to associated with the idl type.
+   * @return true if type mapping successfully registered, false if there was already a mapping.
+   */
+  protected boolean tryRegisterIdlTypeToJavaType( @Nonnull final String idlType, @Nonnull final String javaType )
   {
     final String existingJavaType = _typeToJavaMapping.get( idlType );
     if ( null != existingJavaType )
     {
-      throw new IllegalStateException( "IDL Type '" + idlType + "' already mapped to java type '" +
-                                       existingJavaType + "' unable to map to '" + javaType + "'" );
+      return false;
     }
-    _typeToJavaMapping.put( idlType, javaType );
+    else
+    {
+      _typeToJavaMapping.put( idlType, javaType );
+      return true;
+    }
   }
 
   @Nonnull
