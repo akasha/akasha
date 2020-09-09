@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WakeLockSentinel.release",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release",
+    "description": "The release() method of the WakeLockSentinel interface releases the WakeLockSentinel, returning a Promise that is resolved once the sentinel has been successfully released."
+}

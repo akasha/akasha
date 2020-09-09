@@ -222,6 +222,11 @@
         "url": "https://www.w3.org/TR/screen-orientation/"
     },
     {
+        "lastModifiedTime": 1598959126000,
+        "name": "screen_wake_lock",
+        "url": "https://w3c.github.io/screen-wake-lock"
+    },
+    {
         "lastModifiedTime": 1585575277000,
         "name": "secure_contexts",
         "url": "https://w3c.github.io/webappsec-secure-contexts/"

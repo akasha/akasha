@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WakeLockSentinel.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/type",
+    "description": "The read-only type property of the WakeLockSentinel interface returns a String representation of the currently acquired WakeLockSentinel type."
+}

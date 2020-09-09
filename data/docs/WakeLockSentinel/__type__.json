@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "WakeLockSentinel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel",
+    "description": "The WakeLockSentinel interface of the Screen Wake Lock API provides a handle to the underlying platform wake lock and can be manually released and reacquired. An Object representing the wake lock is returned via the navigator.wakelock.request() method."
+}
