@@ -36,6 +36,9 @@ public abstract class AbstractJavaAction
   // Maps idlName -> Qualified Java Name of output
   @Nonnull
   private final Map<String, String> _idlToJavaTypeMapping = new HashMap<>();
+  // Maps idlName -> JavaPoet TypeName
+  @Nonnull
+  private final Map<String, ClassName> _idlToClassNameMapping = new HashMap<>();
 
   protected AbstractJavaAction( @Nonnull final Path outputDirectory, @Nonnull final String packageName )
   {
@@ -96,6 +99,7 @@ public abstract class AbstractJavaAction
   protected void processInit()
   {
     _idlToJavaTypeMapping.clear();
+    _idlToClassNameMapping.clear();
     _generatedFiles.clear();
   }
 
@@ -246,5 +250,17 @@ public abstract class AbstractJavaAction
   protected Map<String, Path> getGeneratedFiles()
   {
     return Collections.unmodifiableMap( _generatedFiles );
+  }
+
+  @Nonnull
+  protected ClassName lookupClassName( @Nonnull final String idlName )
+  {
+    return _idlToClassNameMapping.computeIfAbsent( idlName, this::createClassName );
+  }
+
+  @Nonnull
+  protected ClassName createClassName( @Nonnull final String idlName )
+  {
+    return ClassName.bestGuess( lookupJavaType( idlName ) );
   }
 }

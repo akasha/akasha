@@ -67,8 +67,6 @@ final class JsinteropAction
   private final boolean _generateTypeCatalog;
   private final boolean _enableMagicConstants;
   @Nonnull
-  private final Map<String, ClassName> _typeMapping = new HashMap<>();
-  @Nonnull
   private final Map<String, UnionType> _unions = new HashMap<>();
   private WebIDLSchema _schema;
 
@@ -90,7 +88,6 @@ final class JsinteropAction
   protected void processInit()
   {
     super.processInit();
-    _typeMapping.clear();
     _unions.clear();
   }
 
@@ -189,7 +186,7 @@ final class JsinteropAction
       TypeSpec
         .classBuilder( "Global" )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-        .superclass( lookupTypeByName( definition.getName() ) );
+        .superclass( lookupClassName( definition.getName() ) );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
                           .addMember( "isNative", "true" )
@@ -225,7 +222,7 @@ final class JsinteropAction
       type.addMethod( MethodSpec
                         .methodBuilder( NamingUtil.camelCase( safeJsPropertyMethodName( name ) ) )
                         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                        .returns( lookupTypeByName( namespace.getName() ) )
+                        .returns( lookupClassName( namespace.getName() ) )
                         .addAnnotation( AnnotationSpec
                                           .builder( Types.JS_PROPERTY )
                                           .addMember( "name", "$S", name )
@@ -353,7 +350,7 @@ final class JsinteropAction
           final boolean nullable = _schema.isNullable( type );
           values.add( new TypedValue( declaredType,
                                       type,
-                                      lookupTypeByName( name ),
+                                      lookupClassName( name ),
                                       nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
                                       false ) );
         }
@@ -415,7 +412,7 @@ final class JsinteropAction
                                        @Nonnull final UnionType unionType,
                                        @Nonnull final TypeSpec.Builder type )
   {
-    final TypeName self = lookupTypeByName( name );
+    final TypeName self = lookupClassName( name );
     final List<Type> memberTypes = unionType.getMemberTypes();
     for ( final Type memberType : memberTypes )
     {
@@ -472,7 +469,7 @@ final class JsinteropAction
     final String inherits = definition.getInherits();
     if ( null != inherits )
     {
-      type.addSuperinterface( lookupTypeByName( inherits ) );
+      type.addSuperinterface( lookupClassName( inherits ) );
     }
 
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
@@ -521,7 +518,7 @@ final class JsinteropAction
                                                @Nonnull final List<TypedValue> types,
                                                @Nonnull final TypeSpec.Builder type )
   {
-    final TypeName self = lookupTypeByName( definition.getName() );
+    final TypeName self = lookupClassName( definition.getName() );
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
       .addAnnotation( Types.JS_OVERLAY )
@@ -723,7 +720,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( Types.JS_OVERLAY )
         .addAnnotation( Types.NONNULL )
-        .returns( lookupTypeByName( dictionary.getName() ) );
+        .returns( lookupClassName( dictionary.getName() ) );
     maybeAddJavadoc( member, method );
     if ( addOverride )
     {
@@ -886,7 +883,7 @@ final class JsinteropAction
                       .addAnnotation( Types.JS_OVERLAY )
                       .addAnnotation( Types.NONNULL )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .returns( lookupTypeByName( name ) )
+                      .returns( lookupClassName( name ) )
                       .addParameter( ParameterSpec
                                        .builder( TypeName.OBJECT, "object", Modifier.FINAL )
                                        .addAnnotation( Types.NONNULL )
@@ -1020,7 +1017,7 @@ final class JsinteropAction
           .filter( a -> !a.isOptional() && !a.isVariadic() )
           .count() ) )
         .orElse( null );
-      type.superclass( lookupTypeByName( inherits ) );
+      type.superclass( lookupClassName( inherits ) );
     }
     else
     {
@@ -1232,7 +1229,7 @@ final class JsinteropAction
                                   .addParameter( valueParam )
                                   .addParameter( keyParam )
                                   .addParameter( ParameterSpec
-                                                   .builder( lookupTypeByName( definitionName ), "map" )
+                                                   .builder( lookupClassName( definitionName ), "map" )
                                                    .addAnnotation( Types.NONNULL )
                                                    .build() )
                                   .build() )
@@ -1326,7 +1323,7 @@ final class JsinteropAction
                                          @Nonnull final TypeSpec.Builder type )
   {
     final String eventName = event.getName();
-    final TypeName listenerType = lookupTypeByName( event.getEventType().getName() + "Listener" );
+    final TypeName listenerType = lookupClassName( event.getEventType().getName() + "Listener" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
@@ -1340,7 +1337,7 @@ final class JsinteropAction
     {
       method
         .addParameter( ParameterSpec
-                         .builder( lookupTypeByName( "AddEventListenerOptions" ),
+                         .builder( lookupClassName( "AddEventListenerOptions" ),
                                    "options",
                                    Modifier.FINAL )
                          .addAnnotation( Types.NONNULL )
@@ -1369,7 +1366,7 @@ final class JsinteropAction
                                             @Nonnull final TypeSpec.Builder type )
   {
     final String eventName = event.getName();
-    final TypeName listenerType = lookupTypeByName( event.getEventType().getName() + "Listener" );
+    final TypeName listenerType = lookupClassName( event.getEventType().getName() + "Listener" );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
@@ -1383,7 +1380,7 @@ final class JsinteropAction
     {
       method
         .addParameter( ParameterSpec
-                         .builder( lookupTypeByName( "EventListenerOptions" ),
+                         .builder( lookupClassName( "EventListenerOptions" ),
                                    "options",
                                    Modifier.FINAL )
                          .addAnnotation( Types.NONNULL )
@@ -1948,12 +1945,6 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private ClassName lookupTypeByName( @Nonnull final String name )
-  {
-    return _typeMapping.computeIfAbsent( name, this::getClassName );
-  }
-
-  @Nonnull
   @Override
   protected Map<String, Path> getGeneratedFiles()
   {
@@ -1968,10 +1959,9 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private ClassName getClassName( @Nonnull final String name )
+  protected ClassName createClassName( @Nonnull final String idlName )
   {
-    final EnumerationDefinition enumeration = _schema.findEnumerationByName( name );
-    return null != enumeration ? Types.STRING : ClassName.bestGuess( lookupJavaType( name ) );
+    return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.createClassName( idlName );
   }
 
   @Nonnull
@@ -2078,7 +2068,7 @@ final class JsinteropAction
            null != _schema.findCallbackInterfaceByName( name ) ||
            null != _schema.findCallbackByName( name ) )
       {
-        return lookupTypeByName( name );
+        return lookupClassName( name );
       }
       else if ( null != _schema.findEnumerationByName( name ) )
       {
@@ -2089,7 +2079,7 @@ final class JsinteropAction
         final TypedefDefinition typedef = _schema.getTypedefByName( name );
         if ( Kind.Union == typedef.getType().getKind() )
         {
-          return lookupTypeByName( name );
+          return lookupClassName( name );
         }
         else
         {
@@ -2160,7 +2150,7 @@ final class JsinteropAction
     }
     else if ( Kind.Union == kind )
     {
-      return lookupTypeByName( generateUnionType( (UnionType) type ) );
+      return lookupClassName( generateUnionType( (UnionType) type ) );
     }
     else
     {
