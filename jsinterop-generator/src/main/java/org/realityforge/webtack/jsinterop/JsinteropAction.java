@@ -1948,7 +1948,7 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private TypeName lookupTypeByName( @Nonnull final String name )
+  private ClassName lookupTypeByName( @Nonnull final String name )
   {
     return _typeMapping.computeIfAbsent( name, this::getClassName );
   }
