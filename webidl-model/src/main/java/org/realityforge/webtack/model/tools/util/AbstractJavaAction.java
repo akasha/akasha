@@ -98,6 +98,12 @@ public abstract class AbstractJavaAction
     return _idlToJavaTypeMapping;
   }
 
+  @Nonnull
+  protected Map<String, ClassName> getIdlToClassNameMapping()
+  {
+    return _idlToClassNameMapping;
+  }
+
   protected void processInit()
   {
     _idlToJavaTypeMapping.clear();
