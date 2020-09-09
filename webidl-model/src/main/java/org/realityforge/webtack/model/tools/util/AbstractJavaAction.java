@@ -68,6 +68,7 @@ public abstract class AbstractJavaAction
 
   protected void processInit()
   {
+    _typeToJavaMapping.clear();
     _generatedFiles.clear();
   }
 
