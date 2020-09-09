@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
@@ -146,6 +147,7 @@ public final class DocIndex
     final String name = directory.getFileName().toString();
     content.setName( name );
     content.setLastModifiedAt( 0 );
+    content.setEntries( new ArrayList<>() );
     return new DocIndex( directory.getFileName().toString(), directory, content );
   }
 
