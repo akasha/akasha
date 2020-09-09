@@ -35,7 +35,7 @@ public abstract class AbstractJavaAction
   private final Map<String, Path> _generatedFiles = new HashMap<>();
   // Maps idlName -> Qualified Java Name of output
   @Nonnull
-  private final Map<String, String> _typeToJavaMapping = new HashMap<>();
+  private final Map<String, String> _idlToJavaTypeMapping = new HashMap<>();
 
   protected AbstractJavaAction( @Nonnull final Path outputDirectory, @Nonnull final String packageName )
   {
@@ -51,12 +51,12 @@ public abstract class AbstractJavaAction
    * @param javaType the java type to associated with the idl type.
    * @throws IllegalStateException if a mapping already exists for idlName.
    */
-  protected void registerIdlTypeToJavaType( @Nonnull final String idlType, @Nonnull final String javaType )
+  protected void registerIdlToJavaTypeMapping( @Nonnull final String idlType, @Nonnull final String javaType )
   {
-    if ( !tryRegisterIdlTypeToJavaType( idlType, javaType ) )
+    if ( !tryRegisterIdlToJavaTypeMapping( idlType, javaType ) )
     {
       throw new IllegalStateException( "IDL Type '" + idlType + "' already mapped to java type '" +
-                                       _typeToJavaMapping.get( idlType ) + "' unable to map to '" + javaType + "'" );
+                                       _idlToJavaTypeMapping.get( idlType ) + "' unable to map to '" + javaType + "'" );
     }
   }
 
@@ -67,35 +67,35 @@ public abstract class AbstractJavaAction
    * @param javaType the java type to associated with the idl type.
    * @return true if type mapping successfully registered, false if there was already a mapping.
    */
-  protected boolean tryRegisterIdlTypeToJavaType( @Nonnull final String idlType, @Nonnull final String javaType )
+  protected boolean tryRegisterIdlToJavaTypeMapping( @Nonnull final String idlType, @Nonnull final String javaType )
   {
-    final String existingJavaType = _typeToJavaMapping.get( idlType );
+    final String existingJavaType = _idlToJavaTypeMapping.get( idlType );
     if ( null != existingJavaType )
     {
       return false;
     }
     else
     {
-      _typeToJavaMapping.put( idlType, javaType );
+      _idlToJavaTypeMapping.put( idlType, javaType );
       return true;
     }
   }
 
   @Nonnull
-  protected String lookupIdlTypeToJavaType( @Nonnull final String idlType )
+  protected String lookupJavaType( @Nonnull final String idlType )
   {
-    return _typeToJavaMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
+    return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
   }
 
   @Nonnull
-  protected Map<String, String> getTypeToJavaMapping()
+  protected Map<String, String> getIdlToJavaTypeMapping()
   {
-    return _typeToJavaMapping;
+    return _idlToJavaTypeMapping;
   }
 
   protected void processInit()
   {
-    _typeToJavaMapping.clear();
+    _idlToJavaTypeMapping.clear();
     _generatedFiles.clear();
   }
 
@@ -203,7 +203,7 @@ public abstract class AbstractJavaAction
     final Path outputDirectory = getMainJavaDirectory();
     final TypeSpec typeSpec = type.build();
     final String qualifiedName =
-      null != idlName ? _typeToJavaMapping.get( idlName ) : _packageName + "." + typeSpec.name;
+      null != idlName ? _idlToJavaTypeMapping.get( idlName ) : _packageName + "." + typeSpec.name;
     if ( null == qualifiedName )
     {
       throw new IllegalStateException( "Qualified java name missing for IDL type '" + idlName + "'" );

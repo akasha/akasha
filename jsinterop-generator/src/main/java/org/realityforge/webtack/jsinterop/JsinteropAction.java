@@ -165,7 +165,7 @@ final class JsinteropAction
     throws IOException
   {
     final String typeMappingContent =
-      getTypeToJavaMapping()
+      getIdlToJavaTypeMapping()
         .entrySet()
         .stream()
         .map( e -> e.getKey() + "=" + e.getValue() )
@@ -1823,7 +1823,7 @@ final class JsinteropAction
   private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
   {
     final ClassName enumerationType =
-      ClassName.bestGuess( lookupIdlTypeToJavaType( enumeration.getName() ) );
+      ClassName.bestGuess( lookupJavaType( enumeration.getName() ) );
     return AnnotationSpec
       .builder( Types.MAGIC_CONSTANT )
       .addMember( "valuesFromClass", "$T.class", enumerationType )
@@ -1971,7 +1971,7 @@ final class JsinteropAction
   private ClassName getClassName( @Nonnull final String name )
   {
     final EnumerationDefinition enumeration = _schema.findEnumerationByName( name );
-    return null != enumeration ? Types.STRING : ClassName.bestGuess( lookupIdlTypeToJavaType( name ) );
+    return null != enumeration ? Types.STRING : ClassName.bestGuess( lookupJavaType( name ) );
   }
 
   @Nonnull
@@ -2273,6 +2273,6 @@ final class JsinteropAction
     final String subPackage = null != namespace ? "." + NamingUtil.underscore( namespace ) : "";
     final String javaType =
       getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( definition.getName() );
-    registerIdlTypeToJavaType( definition.getName(), javaType );
+    registerIdlToJavaTypeMapping( definition.getName(), javaType );
   }
 }
