@@ -101,6 +101,7 @@ final class JsinteropAction
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
 
     registerIdlTypeToJavaTypeMapping();
+    registerDefaultTypeMapping();
 
     for ( final TypedefDefinition definition : _schema.getTypedefs() )
     {
@@ -678,10 +679,12 @@ final class JsinteropAction
     }
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
-      method.addStatement( "$N( $T.asJsArray( $N ) )", mutatorName, Types.JS_ARRAY, paramName );
+      // TODO: It would be nice to use an JsArray.of() method here ... if it existed.
+      method.addStatement( "$N( $T.asJsArray( $N ) )", mutatorName, lookupClassName( Kind.Sequence.name() ), paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
     {
+      // TODO: It would be nice to use an Any.of() method here ... if it existed.
       method.addStatement( "$N( $T.asAny( $N ) )", mutatorName, Types.JS, paramName );
     }
     else
@@ -2051,14 +2054,6 @@ final class JsinteropAction
     {
       return Types.STRING;
     }
-    else if ( Kind.Object == kind )
-    {
-      return TypeName.OBJECT;
-    }
-    else if ( Kind.Symbol == kind )
-    {
-      return Types.SYMBOL;
-    }
     else if ( Kind.TypeReference == kind )
     {
       final TypeReference typeReference = (TypeReference) type;
@@ -2089,11 +2084,13 @@ final class JsinteropAction
     }
     else if ( Kind.Promise == kind )
     {
-      return ParameterizedTypeName.get( Types.PROMISE, getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
+      return ParameterizedTypeName.get( lookupClassName( Kind.Promise.name() ),
+                                        getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
     }
     else if ( Kind.Sequence == kind )
     {
-      return ParameterizedTypeName.get( Types.JS_ARRAY, getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
+      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                        getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
     }
     else if ( Kind.Record == kind )
     {
@@ -2102,55 +2099,28 @@ final class JsinteropAction
     }
     else if ( Kind.FrozenArray == kind )
     {
-      return ParameterizedTypeName.get( Types.JS_ARRAY, getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
-    }
-    else if ( Kind.ArrayBuffer == kind )
-    {
-      return Types.ARRAY_BUFFER;
-    }
-    else if ( Kind.DataView == kind )
-    {
-      return Types.DATA_VIEW;
-    }
-    else if ( Kind.Int8Array == kind )
-    {
-      return Types.INT8_ARRAY;
-    }
-    else if ( Kind.Int16Array == kind )
-    {
-      return Types.INT16_ARRAY;
-    }
-    else if ( Kind.Int32Array == kind )
-    {
-      return Types.INT32_ARRAY;
-    }
-    else if ( Kind.Uint8Array == kind )
-    {
-      return Types.UINT8_ARRAY;
-    }
-    else if ( Kind.Uint16Array == kind )
-    {
-      return Types.UINT16_ARRAY;
-    }
-    else if ( Kind.Uint32Array == kind )
-    {
-      return Types.UINT32_ARRAY;
-    }
-    else if ( Kind.Uint8ClampedArray == kind )
-    {
-      return Types.UINT8_CLAMPED_ARRAY;
-    }
-    else if ( Kind.Float32Array == kind )
-    {
-      return Types.FLOAT32_ARRAY;
-    }
-    else if ( Kind.Float64Array == kind )
-    {
-      return Types.FLOAT64_ARRAY;
+      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                        getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
     }
     else if ( Kind.Union == kind )
     {
       return lookupClassName( generateUnionType( (UnionType) type ) );
+    }
+    else if ( Kind.Object == kind ||
+              Kind.Symbol == kind ||
+              Kind.ArrayBuffer == kind ||
+              Kind.DataView == kind ||
+              Kind.Int8Array == kind ||
+              Kind.Int16Array == kind ||
+              Kind.Int32Array == kind ||
+              Kind.Uint8Array == kind ||
+              Kind.Uint16Array == kind ||
+              Kind.Uint32Array == kind ||
+              Kind.Uint8ClampedArray == kind ||
+              Kind.Float32Array == kind ||
+              Kind.Float64Array == kind )
+    {
+      return lookupClassName( kind.name() );
     }
     else
     {

@@ -24,35 +24,7 @@ final class Types
   @Nonnull
   static final ClassName JS_PROPERTY_MAP = ClassName.get( "jsinterop.base", "JsPropertyMap" );
   @Nonnull
-  static final ClassName JS_ARRAY = ClassName.get( "elemental2.core", "JsArray" );
-  @Nonnull
   static final ClassName JS_ITERATOR = ClassName.get( "elemental2.core", "JsIterator" );
-  @Nonnull
-  static final ClassName SYMBOL = ClassName.get( "elemental2.core", "Symbol" );
-  @Nonnull
-  static final ClassName PROMISE = ClassName.get( "elemental2.promise", "Promise" );
-  @Nonnull
-  static final ClassName ARRAY_BUFFER = ClassName.get( "elemental2.core", "ArrayBuffer" );
-  @Nonnull
-  static final ClassName DATA_VIEW = ClassName.get( "elemental2.core", "DataView" );
-  @Nonnull
-  static final ClassName INT8_ARRAY = ClassName.get( "elemental2.core", "Int8Array" );
-  @Nonnull
-  static final ClassName INT16_ARRAY = ClassName.get( "elemental2.core", "Int16Array" );
-  @Nonnull
-  static final ClassName INT32_ARRAY = ClassName.get( "elemental2.core", "Int32Array" );
-  @Nonnull
-  static final ClassName UINT8_ARRAY = ClassName.get( "elemental2.core", "Uint8Array" );
-  @Nonnull
-  static final ClassName UINT16_ARRAY = ClassName.get( "elemental2.core", "Uint16Array" );
-  @Nonnull
-  static final ClassName UINT32_ARRAY = ClassName.get( "elemental2.core", "Uint32Array" );
-  @Nonnull
-  static final ClassName UINT8_CLAMPED_ARRAY = ClassName.get( "elemental2.core", "Uint8ClampedArray" );
-  @Nonnull
-  static final ClassName FLOAT32_ARRAY = ClassName.get( "elemental2.core", "Float32Array" );
-  @Nonnull
-  static final ClassName FLOAT64_ARRAY = ClassName.get( "elemental2.core", "Float64Array" );
   @Nonnull
   static final ClassName STRING = ClassName.get( String.class );
   @Nonnull

@@ -3,6 +3,7 @@ package org.realityforge.webtack.model.tools.util;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
+import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
+import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.tools.spi.Action;
 
 public abstract class AbstractJavaAction
@@ -262,5 +264,26 @@ public abstract class AbstractJavaAction
   protected ClassName createClassName( @Nonnull final String idlName )
   {
     return ClassName.bestGuess( lookupJavaType( idlName ) );
+  }
+
+  protected void registerDefaultTypeMapping()
+  {
+    tryRegisterIdlToJavaTypeMapping( Kind.Any.name(), "jsinterop.base.Any" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Object.name(), "java.lang.Object" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Promise.name(), "elemental2.promise.Promise" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental2.core.JsArray" );
+    tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental2.core.JsIterator" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Symbol.name(), "elemental2.core.Symbol" );
+    tryRegisterIdlToJavaTypeMapping( Kind.ArrayBuffer.name(), "elemental2.core.ArrayBuffer" );
+    tryRegisterIdlToJavaTypeMapping( Kind.DataView.name(), "elemental2.core.DataView" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Int8Array.name(), "elemental2.core.Int8Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Int16Array.name(), "elemental2.core.Int16Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Int32Array.name(), "elemental2.core.Int32Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Uint8Array.name(), "elemental2.core.Uint8Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Uint16Array.name(), "elemental2.core.Uint16Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Uint32Array.name(), "elemental2.core.Uint32Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Uint8ClampedArray.name(), "elemental2.core.Uint8ClampedArray" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Float32Array.name(), "elemental2.core.Float32Array" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Float64Array.name(), "elemental2.core.Float64Array" );
   }
 }
