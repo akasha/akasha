@@ -3,7 +3,6 @@ package org.realityforge.webtack.model.tools.util;
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
-import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.File;
 import java.io.IOException;
@@ -220,6 +219,11 @@ public abstract class AbstractJavaAction
     {
       throw new IllegalStateException( "Qualified java name missing for IDL type '" + idlName + "'" );
     }
+    if ( null != idlName )
+    {
+      // Lookup java type so that it will be part of cache AND it will be emitted in mapping file
+      lookupClassName( idlName );
+    }
     assert !_generatedFiles.containsKey( qualifiedName );
     _generatedFiles.put( qualifiedName,
                          outputDirectory.resolve( qualifiedName.replaceAll( "\\.", File.separator ) + ".java" ) );
@@ -263,13 +267,7 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )
   {
-    return _idlToClassNameMapping.computeIfAbsent( idlName, this::createClassName );
-  }
-
-  @Nonnull
-  protected ClassName createClassName( @Nonnull final String idlName )
-  {
-    return ClassName.bestGuess( lookupJavaType( idlName ) );
+    return _idlToClassNameMapping.computeIfAbsent( idlName, n -> ClassName.bestGuess( lookupJavaType( n ) ) );
   }
 
   protected void registerDefaultTypeMapping()

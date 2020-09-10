@@ -163,7 +163,7 @@ final class JsinteropAction
     throws IOException
   {
     final String typeMappingContent =
-      getIdlToJavaTypeMapping()
+      getIdlToClassNameMapping()
         .entrySet()
         .stream()
         .map( e -> e.getKey() + "=" + e.getValue() )
@@ -680,7 +680,10 @@ final class JsinteropAction
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
       // TODO: It would be nice to use an JsArray.of() method here ... if it existed.
-      method.addStatement( "$N( $T.asJsArray( $N ) )", mutatorName, lookupClassName( Kind.Sequence.name() ), paramName );
+      method.addStatement( "$N( $T.asJsArray( $N ) )",
+                           mutatorName,
+                           lookupClassName( Kind.Sequence.name() ),
+                           paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
     {
@@ -1962,9 +1965,9 @@ final class JsinteropAction
   }
 
   @Nonnull
-  protected ClassName createClassName( @Nonnull final String idlName )
+  protected ClassName lookupClassName( @Nonnull final String idlName )
   {
-    return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.createClassName( idlName );
+    return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.lookupClassName( idlName );
   }
 
   @Nonnull
