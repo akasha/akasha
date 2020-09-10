@@ -681,9 +681,11 @@ final class JsinteropAction
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
       // TODO: It would be nice to use an JsArray.of() method here ... if it existed.
-      method.addStatement( "$N( $T.asJsArray( $N ) )",
+      final TypeName itemType = toTypeName( ( (SequenceType) resolvedType ).getItemType(), true );
+      method.addStatement( "$N( $T.<$T>uncheckedCast( $N ) )",
                            mutatorName,
-                           lookupClassName( Kind.Sequence.name() ),
+                           Types.JS,
+                           ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), itemType ),
                            paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )

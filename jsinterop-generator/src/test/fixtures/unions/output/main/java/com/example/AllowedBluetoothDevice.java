@@ -167,7 +167,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   default void setRequiredUuids(@Nonnull final StringOrLongLongUnion... requiredUuids) {
-    setRequiredUuids( JsArray.asJsArray( requiredUuids ) );
+    setRequiredUuids( Js.<JsArray<StringOrLongLongUnion>>uncheckedCast( requiredUuids ) );
   }
 
   @JsOverlay
@@ -195,7 +195,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   default void setUuids(@Nonnull final StringOrOctetUnion... uuids) {
-    setUuids( JsArray.asJsArray( uuids ) );
+    setUuids( Js.<JsArray<StringOrOctetUnion>>uncheckedCast( uuids ) );
   }
 
   @JsOverlay
