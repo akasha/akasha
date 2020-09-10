@@ -99,6 +99,7 @@ final class JsinteropAction
     _schema = Objects.requireNonNull( schema );
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
+    FilesUtil.deleteDirectory( getMainResourcesDirectory() );
 
     registerIdlTypeToJavaTypeMapping();
     registerDefaultTypeMapping();
