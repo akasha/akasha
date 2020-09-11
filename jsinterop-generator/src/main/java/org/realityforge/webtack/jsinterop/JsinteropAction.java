@@ -2242,6 +2242,7 @@ final class JsinteropAction
     for ( EnumerationDefinition definition : _schema.getEnumerations() )
     {
       registerDefinition( definition );
+      lookupClassName( definition.getName() );
     }
     _schema.getInterfaces().forEach( this::registerDefinition );
     _schema.getPartialInterfaces().forEach( this::registerDefinition );
