@@ -445,7 +445,7 @@ public final class WebIDLModelParser
             else
             {
               final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
-              if ( mixinMemberContext.readOnly().getChildCount() > 0 )
+              if ( mixinMemberContext.optionalReadOnly().getChildCount() > 0 )
               {
                 modifiers.add( AttributeMember.Modifier.READ_ONLY );
               }
@@ -814,7 +814,7 @@ public final class WebIDLModelParser
     if ( null != attributeRestContext )
     {
       final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
-      if ( stringifierRestContext.readOnly().getChildCount() > 0 )
+      if ( stringifierRestContext.optionalReadOnly().getChildCount() > 0 )
       {
         modifiers.add( AttributeMember.Modifier.READ_ONLY );
       }
@@ -857,7 +857,7 @@ public final class WebIDLModelParser
     if ( null != attributeRestContext )
     {
       final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
-      if ( staticMemberRestContext.readOnly().getChildCount() > 0 )
+      if ( staticMemberRestContext.optionalReadOnly().getChildCount() > 0 )
       {
         modifiers.add( AttributeMember.Modifier.READ_ONLY );
       }

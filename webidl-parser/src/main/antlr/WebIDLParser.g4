@@ -146,7 +146,7 @@ mixinMember
   | regularOperation
   | stringifier
   | event
-  | readOnly attributeRest
+  | optionalReadOnly attributeRest
 ;
 
 includesStatement
@@ -225,7 +225,7 @@ attributeNameKeyword
   | REQUIRED
 ;
 
-readOnly
+optionalReadOnly
   : READONLY
   | /* empty */
 ;
@@ -322,7 +322,7 @@ stringifier
 ;
 
 stringifierRest
-  : readOnly attributeRest
+  : optionalReadOnly attributeRest
   | regularOperation
   | SEMI_COLON
 ;
@@ -332,7 +332,7 @@ staticMember
 ;
 
 staticMemberRest
-  : readOnly attributeRest
+  : optionalReadOnly attributeRest
   | regularOperation
 ;
 
@@ -695,7 +695,7 @@ MixinMember ::
     Const
     RegularOperation
     Stringifier
-    ReadOnly AttributeRest
+    OptionalReadOnly AttributeRest
 
 IncludesStatement ::
     identifier includes identifier ;
@@ -757,7 +757,7 @@ AttributeNameKeyword ::
     async
     required
 
-ReadOnly ::
+OptionalReadOnly ::
     readonly
     ε
 
@@ -831,7 +831,7 @@ Stringifier ::
     stringifier StringifierRest
 
 StringifierRest ::
-    ReadOnly AttributeRest
+    OptionalReadOnly AttributeRest
     RegularOperation
     ;
 
@@ -839,7 +839,7 @@ StaticMember ::
     static StaticMemberRest
 
 StaticMemberRest ::
-    ReadOnly AttributeRest
+    OptionalReadOnly AttributeRest
     RegularOperation
 
 Iterable ::
