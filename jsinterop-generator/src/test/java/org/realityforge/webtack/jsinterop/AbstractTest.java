@@ -138,10 +138,7 @@ public abstract class AbstractTest
                                      @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
-    generateCode( directory,
-                  new String( Files.readAllBytes( directory.resolve( "schema.webidl" ) ), StandardCharsets.UTF_8 ),
-                  globalInterface,
-                  validator );
+    generateCode( directory, getFileContentsAsString( directory.resolve( "schema.webidl" ) ), globalInterface, validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
