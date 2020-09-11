@@ -8,6 +8,8 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
+* Add some apis at https://www.w3.org/wiki/DAS/Implementations
+
 # Docs Integration
 
 * Some doc entries include documentation for constants .. scan for that?.
