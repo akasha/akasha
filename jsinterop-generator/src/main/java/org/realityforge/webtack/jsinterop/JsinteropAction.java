@@ -2217,7 +2217,7 @@ final class JsinteropAction
     }
     else if ( Kind.TypeReference == kind )
     {
-      sb.append( ( (TypeReference) type ).getName() );
+      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
     }
     else if ( Kind.Sequence == kind )
     {
