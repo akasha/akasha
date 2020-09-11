@@ -1,6 +1,10 @@
 package org.realityforge.webtack.react4j;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.ActionFactory;
@@ -13,6 +17,7 @@ public final class React4jActionFactory
 {
   public String outputDirectory;
   public String packageName;
+  public List<String> typeCatalogs;
   public boolean generateGwtModule = true;
   public boolean enableMagicConstants = true;
 
@@ -28,8 +33,28 @@ public final class React4jActionFactory
     {
       throw new IllegalArgumentException( "React4j missing required packageName configuration value" );
     }
+    final List<Path> typeCatalogPaths = new ArrayList<>();
+    if ( null != typeCatalogs )
+    {
+      for ( final String typeCatalog : typeCatalogs )
+      {
+        final Path catalog = Paths.get( typeCatalog );
+        if ( !Files.exists( catalog ) )
+        {
+          throw new IllegalArgumentException( "Jsinterop action was supplied an invalid type " +
+                                              "catalog that does not exist: " + catalog );
+        }
+        else if ( !Files.isRegularFile( catalog ) )
+        {
+          throw new IllegalArgumentException( "Jsinterop action was supplied an invalid type " +
+                                              "catalog that is not a regular file: " + catalog );
+        }
+        typeCatalogPaths.add( catalog );
+      }
+    }
     return new React4jAction( Paths.get( outputDirectory ),
                               packageName,
+                              typeCatalogPaths,
                               context.docRepository(),
                               generateGwtModule,
                               enableMagicConstants );

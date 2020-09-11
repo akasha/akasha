@@ -5,6 +5,7 @@ import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -15,6 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Properties;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
@@ -31,6 +33,9 @@ public abstract class AbstractJavaAction
   private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
+  // Maps idlName -> Qualified Java Name supplied by input type catalogs
+  @Nonnull
+  private final Map<String, String> _inputIdlToJavaTypeMapping = new HashMap<>();
   // Maps Classname -> Path of source file
   @Nonnull
   private final Map<String, Path> _generatedFiles = new HashMap<>();
@@ -41,10 +46,28 @@ public abstract class AbstractJavaAction
   @Nonnull
   private final Map<String, ClassName> _idlToClassNameMapping = new HashMap<>();
 
-  protected AbstractJavaAction( @Nonnull final Path outputDirectory, @Nonnull final String packageName )
+  protected AbstractJavaAction( @Nonnull final Path outputDirectory,
+                                @Nonnull final String packageName,
+                                @Nonnull final List<Path> inputTypeCatalogs )
   {
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+    final Properties inputTypes = new Properties();
+    for ( final Path inputTypeCatalog : inputTypeCatalogs )
+    {
+      try
+      {
+        inputTypes.load( new FileReader( inputTypeCatalog.toFile() ) );
+      }
+      catch ( final IOException ioe )
+      {
+        throw new IllegalStateException( "Failed to read input type catalog " + inputTypeCatalog, ioe );
+      }
+    }
+    for ( final String name : inputTypes.stringPropertyNames() )
+    {
+      _inputIdlToJavaTypeMapping.put( name, inputTypes.getProperty( name ) );
+    }
   }
 
   /**
@@ -91,10 +114,15 @@ public abstract class AbstractJavaAction
     return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
   }
 
-  @Nonnull
-  protected Map<String, String> getIdlToJavaTypeMapping()
+  protected boolean isIdlTypePredefined( @Nonnull final String idlName )
   {
-    return _idlToJavaTypeMapping;
+    return getInputIdlToJavaTypeMapping().containsKey( idlName );
+  }
+
+  @Nonnull
+  protected Map<String, String> getInputIdlToJavaTypeMapping()
+  {
+    return _inputIdlToJavaTypeMapping;
   }
 
   @Nonnull
@@ -108,6 +136,7 @@ public abstract class AbstractJavaAction
     _idlToJavaTypeMapping.clear();
     _idlToClassNameMapping.clear();
     _generatedFiles.clear();
+    _idlToJavaTypeMapping.putAll( _inputIdlToJavaTypeMapping );
   }
 
   @Nonnull

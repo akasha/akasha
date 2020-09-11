@@ -47,11 +47,12 @@ final class React4jAction
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
+                 @Nonnull final List<Path> inputTypeCatalogs,
                  @Nonnull final DocRepositoryRuntime docRepository,
                  final boolean generateGwtModule,
                  final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName );
+    super( outputDirectory, packageName, inputTypeCatalogs );
     _docRepository = Objects.requireNonNull( docRepository );
     _generateGwtModule = generateGwtModule;
     _enableMagicConstants = enableMagicConstants;

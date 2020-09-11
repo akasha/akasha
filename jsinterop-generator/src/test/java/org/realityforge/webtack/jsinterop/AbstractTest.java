@@ -139,7 +139,7 @@ public abstract class AbstractTest
     {
       // Delete local fixtures if we plan to regenerate them to ensure that no
       // stray source files are left in fixtures directory
-      FileUtil.deleteDirIfExists( directory );
+      FileUtil.deleteDirIfExists( directory.resolve( "output" ) );
 
       // write out schema to ensure it is normalized
       Files.createDirectories( directory );
@@ -150,33 +150,58 @@ public abstract class AbstractTest
       }
     }
 
-    final Path outputDirectory = getWorkingDir();
+    final Path workingDirectory = getWorkingDir();
+    final Path inputDirectory = directory.resolve( "input" );
+    final Path inputJavaDirectory = inputDirectory.resolve( "main" ).resolve( "java" );
+    final Path outputDirectory = workingDirectory.resolve( "output" );
+    final List<Path> inputTypeCatalogs =
+      collectFilesWithExtension( ".mapping", inputDirectory.resolve( "main" ).resolve( "resources" ) );
     final JsinteropAction action =
-      new JsinteropAction( outputDirectory.resolve( "output" ), "com.example", globalInterface, true, true, true );
+      new JsinteropAction( outputDirectory,
+                           "com.example",
+                           globalInterface,
+                           inputTypeCatalogs,
+                           true,
+                           true,
+                           true );
     action.process( schema );
-    final Path mainJavaDirectory = action.getMainJavaDirectory();
-    final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
+    final Path mainJavaDirectory = outputDirectory.resolve( "main" ).resolve( "java" );
+    final List<Path> javaFiles = collectFilesWithExtension( ".java", mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
     final Map<String, Path> generatedSourceFiles = action.getGeneratedFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
       final Path file = e.getValue();
-      final Path relativePath = outputDirectory.relativize( file );
-      assertFileMatchesFixture( file, directory.resolve( relativePath ) );
+      // If it is not in the input path then it must be in output path
+      final Path javaPath =
+        outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );
+      if ( !Files.exists( inputJavaDirectory.resolve( javaPath ) ) )
+      {
+        final Path relativePath = workingDirectory.relativize( file );
+        assertFileMatchesFixture( file, directory.resolve( relativePath ) );
+      }
+    }
+    final List<Path> sourceDirectories = new ArrayList<>();
+    sourceDirectories.add( mainJavaDirectory );
+    final List<Path> sourceFiles = new ArrayList<>( javaFiles );
+    if ( Files.exists( inputJavaDirectory ) )
+    {
+      sourceFiles.addAll( collectFilesWithExtension( ".java", inputJavaDirectory ) );
+      sourceDirectories.add( inputJavaDirectory );
     }
 
-    ensureGeneratedCodeCompiles( mainJavaDirectory, javaFiles, classpathEntries );
+    ensureGeneratedCodeCompiles( sourceDirectories, sourceFiles, classpathEntries );
   }
 
   /**
    * Compile the supplied java files and make sure that they compile together.
    *
-   * @param mainJavaDirectory the directory in which java files are compiled.
+   * @param sourceDirectories the directories from which the java files are compiled.
    * @param javaFiles         the java files.
    * @throws Exception if there is an error
    */
-  private void ensureGeneratedCodeCompiles( @Nonnull final Path mainJavaDirectory,
+  private void ensureGeneratedCodeCompiles( @Nonnull final List<Path> sourceDirectories,
                                             @Nonnull final List<Path> javaFiles,
                                             @Nonnull final List<Path> classpathEntries )
     throws Exception
@@ -184,7 +209,7 @@ public abstract class AbstractTest
     if ( !javaFiles.isEmpty() )
     {
       final Path output = javac( javaFiles, classpathEntries );
-      javadoc( mainJavaDirectory, javaFiles, classpathEntries );
+      javadoc( sourceDirectories, javaFiles, classpathEntries );
       if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
       {
         gwtc( classpathEntries, output );
@@ -228,7 +253,7 @@ public abstract class AbstractTest
     return output;
   }
 
-  private void javadoc( @Nonnull final Path mainJavaDirectory,
+  private void javadoc( @Nonnull final List<Path> sourceDirectories,
                         @Nonnull final List<Path> javaFiles,
                         @Nonnull final List<Path> classpathEntries )
     throws Exception
@@ -250,7 +275,7 @@ public abstract class AbstractTest
     fileManager.setLocation( StandardLocation.CLASS_PATH,
                              classpathElements.stream().map( Path::toFile ).collect( Collectors.toList() ) );
     fileManager.setLocation( StandardLocation.SOURCE_PATH,
-                             Collections.singletonList( mainJavaDirectory.toFile() ) );
+                             sourceDirectories.stream().map( Path::toFile ).collect( Collectors.toList() ) );
 
     final DocumentationTool.DocumentationTask task =
       javadoc.getTask( null,
@@ -297,7 +322,7 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  private List<Path> collectJavaFiles( @Nonnull final Path... dirs )
+  private List<Path> collectFilesWithExtension( @Nonnull final String extension, @Nonnull final Path... dirs )
     throws IOException
   {
     final List<Path> javaFiles = new ArrayList<>();
@@ -307,7 +332,7 @@ public abstract class AbstractTest
       {
         Files
           .walk( dir )
-          .filter( p -> p.toString().endsWith( ".java" ) )
+          .filter( p -> p.toString().endsWith( extension ) )
           .forEach( javaFiles::add );
       }
     }

@@ -177,7 +177,12 @@ public abstract class AbstractTest
     final Path outputDirectory = getWorkingDir();
     final Path docsDirectory = directory.resolve( "docs" );
     final React4jAction action =
-      new React4jAction( outputDirectory, "com.example", new DocRepositoryRuntime( docsDirectory ), true, true );
+      new React4jAction( outputDirectory,
+                         "com.example",
+                         new ArrayList<>(),
+                         new DocRepositoryRuntime( docsDirectory ),
+                         true,
+                         true );
     action.process( schema );
     final Path mainJavaDirectory = action.getMainJavaDirectory();
     final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );

@@ -73,11 +73,12 @@ final class JsinteropAction
   JsinteropAction( @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
                    @Nullable final String globalInterface,
+                   @Nonnull final List<Path> inputTypeCatalogs,
                    final boolean generateGwtModule,
                    final boolean generateTypeCatalog,
                    final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName );
+    super( outputDirectory, packageName, inputTypeCatalogs );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
     _generateTypeCatalog = generateTypeCatalog;
@@ -106,42 +107,70 @@ final class JsinteropAction
 
     for ( final TypedefDefinition definition : _schema.getTypedefs() )
     {
-      generateTypedef( definition );
+      final String name = definition.getName();
+      final Type type = definition.getType();
+      if ( Kind.Union == type.getKind() && !isIdlTypePredefined( name ) )
+      {
+        generateUnion( name, (UnionType) type );
+      }
     }
     for ( final CallbackDefinition definition : _schema.getCallbacks() )
     {
-      generateCallback( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateCallback( definition );
+      }
     }
     for ( final CallbackInterfaceDefinition definition : _schema.getCallbackInterfaces() )
     {
-      generateCallbackInterface( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateCallbackInterface( definition );
+      }
     }
     for ( final DictionaryDefinition definition : _schema.getDictionaries() )
     {
-      generateDictionary( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateDictionary( definition );
+      }
     }
     for ( final EnumerationDefinition definition : _schema.getEnumerations() )
     {
-      generateEnumeration( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateEnumeration( definition );
+      }
     }
     for ( final InterfaceDefinition definition : _schema.getInterfaces() )
     {
-      generateInterface( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateInterface( definition );
+      }
     }
     for ( final PartialInterfaceDefinition definition : _schema.getPartialInterfaces() )
     {
-      generatePartialInterface( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generatePartialInterface( definition );
+      }
     }
     for ( final NamespaceDefinition definition : _schema.getNamespaces() )
     {
-      generateNamespace( definition );
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateNamespace( definition );
+      }
     }
 
     for ( final Map.Entry<String, UnionType> entry : getUnions().entrySet() )
     {
-      final String name = NamingUtil.uppercaseFirstCharacter( entry.getKey() );
-      final UnionType unionType = entry.getValue();
-      generateUnion( name, unionType );
+      final String name = entry.getKey();
+      if ( !isIdlTypePredefined( name ) )
+      {
+        generateUnion( name, entry.getValue() );
+      }
     }
 
     if ( _generateGwtModule )
@@ -167,6 +196,7 @@ final class JsinteropAction
       getIdlToClassNameMapping()
         .entrySet()
         .stream()
+        .filter( e -> !isIdlTypePredefined( e.getKey() ) )
         .map( e -> e.getKey() + "=" + e.getValue() )
         .sorted()
         .collect( Collectors.joining( "\n" ) ) + "\n";
@@ -265,16 +295,6 @@ final class JsinteropAction
       "</module>\n";
     final String name = NamingUtil.uppercaseFirstCharacter( getLeafPackageName() );
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
-  }
-
-  private void generateTypedef( @Nonnull final TypedefDefinition definition )
-    throws IOException
-  {
-    final Type type = definition.getType();
-    if ( Kind.Union == type.getKind() )
-    {
-      generateUnion( definition.getName(), (UnionType) type );
-    }
   }
 
   private void generateUnion( @Nonnull final String name, @Nonnull final UnionType unionType )
@@ -1961,13 +1981,6 @@ final class JsinteropAction
   }
 
   @Nonnull
-  @Override
-  protected Path getMainJavaDirectory()
-  {
-    return super.getMainJavaDirectory();
-  }
-
-  @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )
   {
     return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.lookupClassName( idlName );
@@ -2222,23 +2235,26 @@ final class JsinteropAction
     _schema.getTypedefs()
       .stream()
       .filter( definition -> Kind.Union == definition.getType().getKind() )
-      .forEach( this::registerIdlTypeToJavaType );
-    _schema.getCallbacks().forEach( this::registerIdlTypeToJavaType );
-    _schema.getCallbackInterfaces().forEach( this::registerIdlTypeToJavaType );
-    _schema.getDictionaries().forEach( this::registerIdlTypeToJavaType );
-    _schema.getEnumerations().forEach( this::registerIdlTypeToJavaType );
-    _schema.getInterfaces().forEach( this::registerIdlTypeToJavaType );
-    _schema.getPartialInterfaces().forEach( this::registerIdlTypeToJavaType );
-    _schema.getNamespaces().forEach( this::registerIdlTypeToJavaType );
+      .forEach( this::registerDefinition );
+    _schema.getCallbacks().forEach( this::registerDefinition );
+    _schema.getCallbackInterfaces().forEach( this::registerDefinition );
+    _schema.getDictionaries().forEach( this::registerDefinition );
+    for ( EnumerationDefinition definition : _schema.getEnumerations() )
+    {
+      registerDefinition( definition );
+    }
+    _schema.getInterfaces().forEach( this::registerDefinition );
+    _schema.getPartialInterfaces().forEach( this::registerDefinition );
+    _schema.getNamespaces().forEach( this::registerDefinition );
   }
 
-  private void registerIdlTypeToJavaType( @Nonnull final NamedDefinition definition )
+  private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
     final String namespace =
       definition instanceof InterfaceDefinition ? ( (InterfaceDefinition) definition ).getNamespace() : null;
     final String subPackage = null != namespace ? "." + NamingUtil.underscore( namespace ) : "";
     final String javaType =
       getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( definition.getName() );
-    registerIdlToJavaTypeMapping( definition.getName(), javaType );
+    tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
   }
 }

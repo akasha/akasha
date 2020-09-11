@@ -1,0 +1,20 @@
+# An "native" type mapping
+Sequence=com.biz.MyArray
+# A typedef'ed union
+SomeDataType=com.biz.MySomeDataType
+# A callback
+EventHandler1=com.biz.MyEventHandler1
+# A callback interface
+EventListener=com.biz.MyEventListener
+# An enumeration
+ActiveMode=com.biz.MyActiveMode
+# A dictionary
+IDBIndexParameters=com.biz.MyIDBIndexParameters
+# A namespace
+CSS=com.biz.MyCSS
+# An interface
+IDBIndex=com.biz.MyIDBIndex
+# An "anonymous" union
+StringOrLongLongUnion=com.biz.MyStringOrLongLongUnion
+# A partial interface
+Window=com.biz.MyWindow

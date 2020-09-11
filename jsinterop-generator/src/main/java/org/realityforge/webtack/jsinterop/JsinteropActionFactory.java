@@ -1,6 +1,10 @@
 package org.realityforge.webtack.jsinterop;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import javax.lang.model.SourceVersion;
@@ -16,6 +20,7 @@ public final class JsinteropActionFactory
   public String outputDirectory;
   public String packageName;
   public String globalInterface;
+  public List<String> typeCatalogs;
   public boolean generateGwtModule = true;
   public boolean generateTypeCatalog = true;
   public boolean enableMagicConstants = true;
@@ -40,9 +45,29 @@ public final class JsinteropActionFactory
     {
       throw new IllegalArgumentException( "Jsinterop supplied an invalid packageName configuration value" );
     }
+    final List<Path> typeCatalogPaths = new ArrayList<>();
+    if ( null != typeCatalogs )
+    {
+      for ( final String typeCatalog : typeCatalogs )
+      {
+        final Path catalog = Paths.get( typeCatalog );
+        if ( !Files.exists( catalog ) )
+        {
+          throw new IllegalArgumentException( "Jsinterop action was supplied an invalid type " +
+                                              "catalog that does not exist: " + catalog );
+        }
+        else if ( !Files.isRegularFile( catalog ) )
+        {
+          throw new IllegalArgumentException( "Jsinterop action was supplied an invalid type " +
+                                              "catalog that is not a regular file: " + catalog );
+        }
+        typeCatalogPaths.add( catalog );
+      }
+    }
     return new JsinteropAction( Paths.get( outputDirectory ),
                                 packageName,
                                 globalInterface,
+                                typeCatalogPaths,
                                 generateGwtModule,
                                 generateTypeCatalog,
                                 enableMagicConstants );
