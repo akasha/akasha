@@ -50,7 +50,7 @@ public interface Dictionary_requiredFloatSequenceValue {
 
   @JsOverlay
   default void setRequiredFloatSequenceValue(@Nonnull final Double... requiredFloatSequenceValue) {
-    setRequiredFloatSequenceValue( JsArray.asJsArray( requiredFloatSequenceValue ) );
+    setRequiredFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredFloatSequenceValue ) );
   }
 
   @JsOverlay

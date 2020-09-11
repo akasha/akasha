@@ -53,7 +53,7 @@ public interface Dictionary_requiredNullableShortSequenceValue {
   @JsOverlay
   default void setRequiredNullableShortSequenceValue(
       @Nullable final Double... requiredNullableShortSequenceValue) {
-    setRequiredNullableShortSequenceValue( JsArray.asJsArray( requiredNullableShortSequenceValue ) );
+    setRequiredNullableShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableShortSequenceValue ) );
   }
 
   @JsOverlay

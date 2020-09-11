@@ -51,7 +51,7 @@ public interface Dictionary_requiredDoubleSequenceValue {
   @JsOverlay
   default void setRequiredDoubleSequenceValue(
       @Nonnull final Double... requiredDoubleSequenceValue) {
-    setRequiredDoubleSequenceValue( JsArray.asJsArray( requiredDoubleSequenceValue ) );
+    setRequiredDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredDoubleSequenceValue ) );
   }
 
   @JsOverlay

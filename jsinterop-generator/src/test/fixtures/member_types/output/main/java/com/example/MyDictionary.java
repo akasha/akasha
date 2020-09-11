@@ -115,7 +115,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setBooleanSequenceValue(@Nonnull final Boolean... booleanSequenceValue) {
-    setBooleanSequenceValue( JsArray.asJsArray( booleanSequenceValue ) );
+    setBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( booleanSequenceValue ) );
   }
 
   @JsOverlay
@@ -280,7 +280,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setDoubleSequenceValue(@Nonnull final Double... doubleSequenceValue) {
-    setDoubleSequenceValue( JsArray.asJsArray( doubleSequenceValue ) );
+    setDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( doubleSequenceValue ) );
   }
 
   @JsOverlay
@@ -367,7 +367,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setFloatSequenceValue(@Nonnull final Double... floatSequenceValue) {
-    setFloatSequenceValue( JsArray.asJsArray( floatSequenceValue ) );
+    setFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( floatSequenceValue ) );
   }
 
   @JsOverlay
@@ -538,7 +538,7 @@ public interface MyDictionary {
   @JsOverlay
   default void setNullableBooleanSequenceValue(
       @Nullable final Boolean... nullableBooleanSequenceValue) {
-    setNullableBooleanSequenceValue( JsArray.asJsArray( nullableBooleanSequenceValue ) );
+    setNullableBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( nullableBooleanSequenceValue ) );
   }
 
   @JsOverlay
@@ -667,7 +667,7 @@ public interface MyDictionary {
   @JsOverlay
   default void setNullableDoubleSequenceValue(
       @Nullable final Double... nullableDoubleSequenceValue) {
-    setNullableDoubleSequenceValue( JsArray.asJsArray( nullableDoubleSequenceValue ) );
+    setNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableDoubleSequenceValue ) );
   }
 
   @JsOverlay
@@ -764,7 +764,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setNullableFloatSequenceValue(@Nullable final Double... nullableFloatSequenceValue) {
-    setNullableFloatSequenceValue( JsArray.asJsArray( nullableFloatSequenceValue ) );
+    setNullableFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableFloatSequenceValue ) );
   }
 
   @JsOverlay
@@ -955,7 +955,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setNullableShortSequenceValue(@Nullable final Double... nullableShortSequenceValue) {
-    setNullableShortSequenceValue( JsArray.asJsArray( nullableShortSequenceValue ) );
+    setNullableShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableShortSequenceValue ) );
   }
 
   @JsOverlay
@@ -1036,7 +1036,7 @@ public interface MyDictionary {
   @JsOverlay
   default void setNullableSomeTypeSequenceValue(
       @Nullable final SomeType... nullableSomeTypeSequenceValue) {
-    setNullableSomeTypeSequenceValue( JsArray.asJsArray( nullableSomeTypeSequenceValue ) );
+    setNullableSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( nullableSomeTypeSequenceValue ) );
   }
 
   @JsOverlay
@@ -1340,7 +1340,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setShortSequenceValue(@Nonnull final Double... shortSequenceValue) {
-    setShortSequenceValue( JsArray.asJsArray( shortSequenceValue ) );
+    setShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( shortSequenceValue ) );
   }
 
   @JsOverlay
@@ -1414,7 +1414,7 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setSomeTypeSequenceValue(@Nonnull final SomeType... someTypeSequenceValue) {
-    setSomeTypeSequenceValue( JsArray.asJsArray( someTypeSequenceValue ) );
+    setSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( someTypeSequenceValue ) );
   }
 
   @JsOverlay

@@ -53,7 +53,7 @@ public interface Dictionary_requiredNullableDoubleSequenceValue {
   @JsOverlay
   default void setRequiredNullableDoubleSequenceValue(
       @Nullable final Double... requiredNullableDoubleSequenceValue) {
-    setRequiredNullableDoubleSequenceValue( JsArray.asJsArray( requiredNullableDoubleSequenceValue ) );
+    setRequiredNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableDoubleSequenceValue ) );
   }
 
   @JsOverlay

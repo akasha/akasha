@@ -53,7 +53,7 @@ public interface Dictionary_requiredNullableFloatSequenceValue {
   @JsOverlay
   default void setRequiredNullableFloatSequenceValue(
       @Nullable final Double... requiredNullableFloatSequenceValue) {
-    setRequiredNullableFloatSequenceValue( JsArray.asJsArray( requiredNullableFloatSequenceValue ) );
+    setRequiredNullableFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableFloatSequenceValue ) );
   }
 
   @JsOverlay

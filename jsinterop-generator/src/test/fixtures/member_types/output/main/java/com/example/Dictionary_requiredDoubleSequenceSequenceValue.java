@@ -53,7 +53,7 @@ public interface Dictionary_requiredDoubleSequenceSequenceValue {
   @SuppressWarnings("unchecked")
   default void setRequiredDoubleSequenceSequenceValue(
       @Nonnull final JsArray<Double>... requiredDoubleSequenceSequenceValue) {
-    setRequiredDoubleSequenceSequenceValue( JsArray.asJsArray( requiredDoubleSequenceSequenceValue ) );
+    setRequiredDoubleSequenceSequenceValue( Js.<JsArray<JsArray<Double>>>uncheckedCast( requiredDoubleSequenceSequenceValue ) );
   }
 
   @JsOverlay

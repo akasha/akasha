@@ -51,7 +51,7 @@ public interface Dictionary_requiredSomeTypeSequenceValue {
   @JsOverlay
   default void setRequiredSomeTypeSequenceValue(
       @Nonnull final SomeType... requiredSomeTypeSequenceValue) {
-    setRequiredSomeTypeSequenceValue( JsArray.asJsArray( requiredSomeTypeSequenceValue ) );
+    setRequiredSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( requiredSomeTypeSequenceValue ) );
   }
 
   @JsOverlay

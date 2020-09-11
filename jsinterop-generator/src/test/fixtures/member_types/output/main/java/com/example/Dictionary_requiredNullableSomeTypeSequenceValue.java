@@ -53,7 +53,7 @@ public interface Dictionary_requiredNullableSomeTypeSequenceValue {
   @JsOverlay
   default void setRequiredNullableSomeTypeSequenceValue(
       @Nullable final SomeType... requiredNullableSomeTypeSequenceValue) {
-    setRequiredNullableSomeTypeSequenceValue( JsArray.asJsArray( requiredNullableSomeTypeSequenceValue ) );
+    setRequiredNullableSomeTypeSequenceValue( Js.<JsArray<SomeType>>uncheckedCast( requiredNullableSomeTypeSequenceValue ) );
   }
 
   @JsOverlay

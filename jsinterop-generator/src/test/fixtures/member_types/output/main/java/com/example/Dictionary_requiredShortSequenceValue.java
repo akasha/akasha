@@ -50,7 +50,7 @@ public interface Dictionary_requiredShortSequenceValue {
 
   @JsOverlay
   default void setRequiredShortSequenceValue(@Nonnull final Double... requiredShortSequenceValue) {
-    setRequiredShortSequenceValue( JsArray.asJsArray( requiredShortSequenceValue ) );
+    setRequiredShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredShortSequenceValue ) );
   }
 
   @JsOverlay

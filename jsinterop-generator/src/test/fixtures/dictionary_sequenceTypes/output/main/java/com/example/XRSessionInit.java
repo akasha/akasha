@@ -41,7 +41,7 @@ public interface XRSessionInit {
 
   @JsOverlay
   default void setOptionalFeatures(@Nonnull final Any... optionalFeatures) {
-    setOptionalFeatures( JsArray.asJsArray( optionalFeatures ) );
+    setOptionalFeatures( Js.<JsArray<Any>>uncheckedCast( optionalFeatures ) );
   }
 
   @JsOverlay
@@ -68,7 +68,7 @@ public interface XRSessionInit {
 
   @JsOverlay
   default void setRequiredFeatures(@Nonnull final Any... requiredFeatures) {
-    setRequiredFeatures( JsArray.asJsArray( requiredFeatures ) );
+    setRequiredFeatures( Js.<JsArray<Any>>uncheckedCast( requiredFeatures ) );
   }
 
   @JsOverlay

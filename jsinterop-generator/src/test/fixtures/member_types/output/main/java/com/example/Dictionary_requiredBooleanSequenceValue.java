@@ -51,7 +51,7 @@ public interface Dictionary_requiredBooleanSequenceValue {
   @JsOverlay
   default void setRequiredBooleanSequenceValue(
       @Nonnull final Boolean... requiredBooleanSequenceValue) {
-    setRequiredBooleanSequenceValue( JsArray.asJsArray( requiredBooleanSequenceValue ) );
+    setRequiredBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( requiredBooleanSequenceValue ) );
   }
 
   @JsOverlay

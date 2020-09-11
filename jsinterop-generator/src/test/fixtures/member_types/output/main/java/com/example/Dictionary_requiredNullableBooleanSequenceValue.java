@@ -53,7 +53,7 @@ public interface Dictionary_requiredNullableBooleanSequenceValue {
   @JsOverlay
   default void setRequiredNullableBooleanSequenceValue(
       @Nullable final Boolean... requiredNullableBooleanSequenceValue) {
-    setRequiredNullableBooleanSequenceValue( JsArray.asJsArray( requiredNullableBooleanSequenceValue ) );
+    setRequiredNullableBooleanSequenceValue( Js.<JsArray<Boolean>>uncheckedCast( requiredNullableBooleanSequenceValue ) );
   }
 
   @JsOverlay
