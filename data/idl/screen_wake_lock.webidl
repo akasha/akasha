@@ -12,7 +12,7 @@ interface WakeLockSentinel : EventTarget {
   readonly attribute boolean released;
   readonly attribute WakeLockType type;
   attribute EventHandler onrelease;
-  Promise<undefined> release();
+  Promise<void> release();
 };
 
 [SecureContext]
