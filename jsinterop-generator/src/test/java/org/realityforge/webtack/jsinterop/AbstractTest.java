@@ -76,22 +76,6 @@ public abstract class AbstractTest
     }
   }
 
-  @Nonnull
-  protected final WebIDLSchema loadSchema( @Nonnull final String content )
-    throws Exception
-  {
-    final Path directory = getWorkingDir();
-    final Path file = directory.resolve( "schema.webidl" );
-    writeContent( file, content );
-    return loadWebIDLSchema( file );
-  }
-
-  protected final void writeContent( @Nonnull final Path path, @Nonnull final String content )
-    throws IOException
-  {
-    Files.write( path, content.getBytes( StandardCharsets.UTF_8 ) );
-  }
-
   protected final void assertFileExists( @Nonnull final Path file )
   {
     assertTrue( Files.exists( file ), " File " + file + " should exist" );
@@ -138,16 +122,7 @@ public abstract class AbstractTest
                                      @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
-    generateCode( directory, getFileContentsAsString( directory.resolve( "schema.webidl" ) ), globalInterface, validator );
-  }
-
-  private void generateCode( @Nonnull final Path directory,
-                             @Nonnull final String content,
-                             @Nullable final String globalInterface,
-                             @Nonnull final ValidatorRuleConfig validator )
-    throws Exception
-  {
-    generateCode( directory, loadSchema( content ), globalInterface, validator );
+    generateCode( directory, loadWebIDLSchema( directory.resolve( "schema.webidl" ) ), globalInterface, validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
