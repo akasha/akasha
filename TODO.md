@@ -10,6 +10,15 @@ complete as there is too much un-said.
 
 * Add some apis at https://www.w3.org/wiki/DAS/Implementations
 
+* Consider making `Transferable` extended attribute into a "marker interface" and change
+  `interface MessagePort { void postMessage( any message, sequence<object> transfer ); }`
+  so that it can be marked as Transferable. See closure externs for how it is used
+  - https://developer.mozilla.org/en-US/docs/Web/API/Transferable
+  "The ArrayBuffer, MessagePort, ImageBitmap and OffscreenCanvas types implement this interface."
+  Probably what we need to do is create a synthetic marker interface and apply marker interface to
+  types and accept values of that type. Alternatively we could convert it to a union in an earlier
+  step which is functionally equivalent if a bit uglier in java code.
+
 # Docs Integration
 
 * Some doc entries include documentation for constants .. scan for that?.
