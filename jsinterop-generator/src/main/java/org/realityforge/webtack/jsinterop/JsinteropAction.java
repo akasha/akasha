@@ -443,6 +443,7 @@ final class JsinteropAction
         final ParameterSpec.Builder parameter =
           ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
 
+        addMagicConstantAnnotationIfNeeded( typedValue.getType(), parameter );
         final ClassName methodNullability;
         final TypedValue.Nullability nullability = typedValue.getNullability();
         if ( TypedValue.Nullability.NULLABLE == nullability )
