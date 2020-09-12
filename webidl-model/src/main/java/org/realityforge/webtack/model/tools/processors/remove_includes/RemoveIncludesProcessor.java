@@ -24,7 +24,7 @@ final class RemoveIncludesProcessor
   @Nonnull
   private final Pattern _mixinPattern;
   /**
-   * The number of elements the processor expected to remove. If less than 1 this is ignored.
+   * The number of includes the processor expected to remove. If less than 1 this is ignored.
    */
   private final int _expectedRemoveCount;
   private int _removeCount;
