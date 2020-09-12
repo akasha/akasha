@@ -91,6 +91,7 @@
       "description": "Change the type of the type attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLButtonElement$",
         "memberNamePattern": "^type$",
         "types": ["interface_type"]
@@ -101,6 +102,7 @@
       "description": "Change the type of the method/enctype attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 2,
         "elementNamePattern": "^HTMLFormElement$",
         "memberNamePattern": "^(method|enctype)$",
         "types": ["interface_type"]
@@ -111,6 +113,7 @@
       "description": "Change the type of the formMethod/formEnctype attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 4,
         "elementNamePattern": "^(HTMLButtonElement|HTMLInputElement)$",
         "memberNamePattern": "^(formMethod|formEnctype)$",
         "types": ["interface_type"]
@@ -121,6 +124,7 @@
       "description": "Change the type of the autocomplete attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 4,
         "elementNamePattern": "^(HTMLTextAreaElement|HTMLSelectElement|HTMLInputElement|HTMLFormElement)$",
         "memberNamePattern": "^autocomplete$",
         "types": ["interface_type"]
@@ -131,6 +135,7 @@
       "description": "Change the type of the crossOrigin attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 4,
         "elementNamePattern": "^(HTMLMediaElement|HTMLLinkElement|HTMLImageElement|HTMLScriptElement)$",
         "memberNamePattern": "^crossOrigin$",
         "types": ["interface_type"]
@@ -141,6 +146,7 @@
       "description": "Change the type of the referrerPolicy attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 6,
         "elementNamePattern": "^(HTMLAnchorElement|HTMLAreaElement|HTMLIFrameElement|HTMLImageElement|HTMLLinkElement|HTMLScriptElement)$",
         "memberNamePattern": "^referrerPolicy$",
         "types": ["interface_type"]
@@ -151,6 +157,7 @@
       "description": "Change the type of the loading attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 2,
         "elementNamePattern": "^(HTMLIFrameElement|HTMLImageElement)$",
         "memberNamePattern": "^loading$",
         "types": ["interface_type"]
@@ -161,6 +168,7 @@
       "description": "Change the type of the kind attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTrackElement$",
         "memberNamePattern": "^kind$",
         "types": ["interface_type"]
@@ -171,6 +179,7 @@
       "description": "Change the type of the wrap attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTextAreaElement$",
         "memberNamePattern": "^wrap$",
         "types": ["interface_type"]
@@ -181,6 +190,7 @@
       "description": "Change the type of the scope attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLTableCellElement$",
         "memberNamePattern": "^scope$",
         "types": ["interface_type"]
@@ -191,6 +201,7 @@
       "description": "Change the type of the type attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLInputElement$",
         "memberNamePattern": "^type$",
         "types": ["interface_type"]
@@ -201,6 +212,7 @@
       "description": "Change the type of the preload attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLMediaElement$",
         "memberNamePattern": "^preload$",
         "types": ["interface_type"]
@@ -211,6 +223,7 @@
       "description": "Change the type of the inputMode attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^ElementContentEditable$",
         "memberNamePattern": "^inputMode$",
         "types": ["mixin"]
@@ -221,6 +234,7 @@
       "description": "Change the type of the autocapitalize/dir attributes to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 2,
         "elementNamePattern": "^HTMLElement$",
         "memberNamePattern": "^(autocapitalize|dir)$",
         "types": ["interface_type"]
@@ -231,6 +245,7 @@
       "description": "the cssom spec 'overrides' the definitions to be of type double",
       "sourceSelector": "name=uievents",
       "config": {
+        "expectedRemoveCount": 8,
         "elementNamePattern": "^(MouseEvent|MouseEventInit)$",
         "memberNamePattern": "^(clientX|clientY|screenX|screenY)$",
         "types": ["interface_type", "dictionary"]
@@ -241,6 +256,7 @@
       "description": "this is a legacy API that was left for backwards compatibility but causes issues in GWT because the objects returned used prototypes from the top level page rather than the containing iframe",
       "sourceSelector": "name=mediacapture_main",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^Navigator$",
         "memberNamePattern": "^getUserMedia$",
         "types": ["interface_type"]
@@ -281,6 +297,7 @@
       "description": "the spec defines these members in RTCAudioHandlerStats which is the parent dictionary of RTCAudioReceiverStats",
       "sourceSelector": "name=webrtc_stats",
       "config": {
+        "expectedRemoveCount": 3,
         "elementNamePattern": "^RTCAudioReceiverStats$",
         "memberNamePattern": "^(audioLevel|totalAudioEnergy|totalSamplesDuration)$",
         "types": ["dictionary"]
@@ -291,6 +308,7 @@
       "description": "the fileapi spec 'overrides' a operation on URL with a union of blob and the type defined in the mediasource spec. We re-add the blob variant in the fileapi_patch variant",
       "sourceSelector": "name=fileapi",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^URL$",
         "memberNamePattern": "^createObjectURL$",
         "types": ["interface_type"]
@@ -403,6 +421,7 @@
       "name": "RemoveMember",
       "description": "the invalid event is documented on HTMLInputElement and HTMLElement which causes a problem in codegen as HTMLInputElement extends HTMLElement and overlay methods are final",
       "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^HTMLInputElement$",
         "memberNamePattern": "^invalid$"
       }

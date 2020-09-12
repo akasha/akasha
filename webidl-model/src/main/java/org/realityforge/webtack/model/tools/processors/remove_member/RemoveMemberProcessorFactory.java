@@ -14,13 +14,16 @@ public final class RemoveMemberProcessorFactory
   public String elementNamePattern;
   public String memberNamePattern;
   public List<ElementType> types;
+  public int expectedRemoveCount;
 
   @Nonnull
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new RemoveMemberProcessor( requirePattern( "elementNamePattern", elementNamePattern ),
+    return new RemoveMemberProcessor( context,
+                                      requirePattern( "elementNamePattern", elementNamePattern ),
                                       requirePattern( "memberNamePattern", memberNamePattern ),
-                                      types );
+                                      types,
+                                      expectedRemoveCount );
   }
 }

@@ -18,11 +18,17 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 final class RemoveMemberProcessor
   extends AbstractProcessor
+  implements Completable
 {
+  @Nonnull
+  private final PipelineContext _context;
   @Nonnull
   private final Pattern _elementNamePattern;
   @Nonnull
@@ -30,28 +36,77 @@ final class RemoveMemberProcessor
   @Nullable
   private final List<ElementType> _types;
   private boolean _lastElementMatched;
+  /**
+   * The number of members the processor expected to remove. If less than 1 this is ignored.
+   */
+  private final int _expectedRemoveCount;
+  private int _removeCount;
 
-  RemoveMemberProcessor( @Nonnull final Pattern elementNamePattern,
+  RemoveMemberProcessor( @Nonnull final PipelineContext context,
+                         @Nonnull final Pattern elementNamePattern,
                          @Nonnull final Pattern memberNamePattern,
-                         @Nullable final List<ElementType> types )
+                         @Nullable final List<ElementType> types, final int expectedRemoveCount )
   {
+    _context = context;
     _elementNamePattern = Objects.requireNonNull( elementNamePattern );
     _memberNamePattern = Objects.requireNonNull( memberNamePattern );
     _types = types;
+    _expectedRemoveCount = expectedRemoveCount;
+  }
+
+  @Nullable
+  @Override
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
+  {
+    _removeCount = 0;
+    return super.process( schema );
+  }
+
+  @Override
+  public void onComplete()
+  {
+    if ( _expectedRemoveCount > 0 )
+    {
+      if ( _removeCount != _expectedRemoveCount )
+      {
+        _context.error( "Removed " + _removeCount + " members but expected to " +
+                        "remove " + _expectedRemoveCount + " members." );
+      }
+    }
+    else
+    {
+      if ( 0 == _removeCount )
+      {
+        _context.info( "Removed " + _removeCount + " members." );
+      }
+      else
+      {
+        _context.debug( "Removed " + _removeCount + " elements." );
+      }
+    }
+  }
+
+  @Nullable
+  <T> T incRemoveCountAndReturnNull()
+  {
+    _removeCount++;
+    return null;
   }
 
   @Nullable
   @Override
   protected ConstMember transformConstant( @Nonnull final ConstMember input )
   {
-    return matchesMemberName( input.getName() ) ? null : super.transformConstant( input );
+    return matchesMemberName( input.getName() ) ? incRemoveCountAndReturnNull() : super.transformConstant( input );
   }
 
   @Nullable
   @Override
   protected AttributeMember transformAttributeMember( @Nonnull final AttributeMember input )
   {
-    return matchesMemberName( input.getName() ) ? null : super.transformAttributeMember( input );
+    return matchesMemberName( input.getName() ) ?
+           incRemoveCountAndReturnNull() :
+           super.transformAttributeMember( input );
   }
 
   @Nullable
@@ -59,21 +114,25 @@ final class RemoveMemberProcessor
   protected OperationMember transformOptionalOperationMember( @Nonnull final OperationMember input )
   {
     final String name = input.getName();
-    return null != name && matchesMemberName( name ) ? null : super.transformOptionalOperationMember( input );
+    return null != name && matchesMemberName( name ) ?
+           incRemoveCountAndReturnNull() :
+           super.transformOptionalOperationMember( input );
   }
 
   @Nullable
   @Override
   protected DictionaryMember transformDictionaryMember( @Nonnull final DictionaryMember input )
   {
-    return matchesMemberName( input.getName() ) ? null : super.transformDictionaryMember( input );
+    return matchesMemberName( input.getName() ) ?
+           incRemoveCountAndReturnNull() :
+           super.transformDictionaryMember( input );
   }
 
   @Nullable
   @Override
   protected EventMember transformEventMember( @Nonnull final EventMember input )
   {
-    return matchesMemberName( input.getName() ) ? null : super.transformEventMember( input );
+    return matchesMemberName( input.getName() ) ? incRemoveCountAndReturnNull() : super.transformEventMember( input );
   }
 
   @Nullable
