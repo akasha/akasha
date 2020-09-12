@@ -109,7 +109,7 @@ Generate host element factories: Events would need to be specially handled to ma
   a complete idl with all annotations takes 18sec but loading that complete idl takes 51sec)
 
 * It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
-  The Gecko WebIDL files actually have a `[Throws]`  extended attribute that we could look into to drive this?
+  The Gecko WebIDL files actually have a `[Throws]` extended attribute that we could look into to drive this?
 
 ### Validations
 
