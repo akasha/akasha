@@ -2240,7 +2240,7 @@ final class JsinteropAction
     _schema.getCallbacks().forEach( this::registerDefinition );
     _schema.getCallbackInterfaces().forEach( this::registerDefinition );
     _schema.getDictionaries().forEach( this::registerDefinition );
-    for ( EnumerationDefinition definition : _schema.getEnumerations() )
+    for ( final EnumerationDefinition definition : _schema.getEnumerations() )
     {
       registerDefinition( definition );
       lookupClassName( definition.getName() );
