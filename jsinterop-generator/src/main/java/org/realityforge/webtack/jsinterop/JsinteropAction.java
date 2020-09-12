@@ -2243,6 +2243,7 @@ final class JsinteropAction
     for ( final EnumerationDefinition definition : _schema.getEnumerations() )
     {
       registerDefinition( definition );
+      // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
       lookupClassName( definition.getName() );
     }
     _schema.getInterfaces().forEach( this::registerDefinition );
