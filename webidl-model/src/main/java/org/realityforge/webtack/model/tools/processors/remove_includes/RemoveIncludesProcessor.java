@@ -55,7 +55,7 @@ final class RemoveIncludesProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " elements but expected to " +
+        _context.error( "Removed " + _removeCount + " includes but expected to " +
                         "remove " + _expectedRemoveCount + " elements." );
       }
     }
