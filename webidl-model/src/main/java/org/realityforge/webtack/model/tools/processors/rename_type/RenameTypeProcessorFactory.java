@@ -12,12 +12,15 @@ public final class RenameTypeProcessorFactory
 {
   public String namePattern;
   public String replacement;
+  public int expectedRenameCount;
 
   @Nonnull
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new RenameTypeProcessor( requirePattern( "namePattern", namePattern ),
-                                    requireNonNull( "replacement", replacement ) );
+    return new RenameTypeProcessor( context,
+                                    requirePattern( "namePattern", namePattern ),
+                                    requireNonNull( "replacement", replacement ),
+                                    expectedRenameCount);
   }
 }

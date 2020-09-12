@@ -22,19 +22,55 @@ import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 final class RenameTypeProcessor
   extends AbstractProcessor
+  implements Completable
 {
+  @Nonnull
+  private final PipelineContext _context;
   @Nonnull
   private final Pattern _namePattern;
   @Nonnull
   private final String _replacement;
+  private final int _expectedRenameCount;
+  private int _renameCount;
 
-  RenameTypeProcessor( @Nonnull final Pattern namePattern, @Nonnull final String replacement )
+  RenameTypeProcessor( @Nonnull final PipelineContext context,
+                       @Nonnull final Pattern namePattern,
+                       @Nonnull final String replacement,
+                       final int expectedRenameCount )
   {
+    _context = Objects.requireNonNull( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _replacement = Objects.requireNonNull( replacement );
+    _expectedRenameCount = expectedRenameCount;
+  }
+
+  @Override
+  public void onComplete()
+  {
+    if ( _expectedRenameCount > 0 )
+    {
+      if ( _renameCount != _expectedRenameCount )
+      {
+        _context.error( "Renamed " + _renameCount + " types but expected to " +
+                        "rename " + _expectedRenameCount + " types." );
+      }
+    }
+    else
+    {
+      if ( 0 == _renameCount )
+      {
+        _context.info( "Renamed " + _renameCount + " types." );
+      }
+      else
+      {
+        _context.debug( "Renamed " + _renameCount + " types." );
+      }
+    }
   }
 
   @Nonnull
@@ -63,6 +99,7 @@ final class RenameTypeProcessor
     final Matcher matcher = _namePattern.matcher( input.getName() );
     if ( matcher.matches() )
     {
+      _renameCount++;
       return new EnumerationDefinition( matcher.replaceAll( _replacement ),
                                         transformEnumerationValues( input.getValues() ),
                                         transformDocumentation( input.getDocumentation() ),
@@ -82,6 +119,7 @@ final class RenameTypeProcessor
     final Matcher matcher = _namePattern.matcher( input.getName() );
     if ( matcher.matches() )
     {
+      _renameCount++;
       return new CallbackDefinition( matcher.replaceAll( _replacement ),
                                      transformType( input.getReturnType() ),
                                      transformArguments( input.getArguments() ),
@@ -102,6 +140,7 @@ final class RenameTypeProcessor
     final Matcher matcher = _namePattern.matcher( input.getName() );
     if ( matcher.matches() )
     {
+      _renameCount++;
       return new CallbackInterfaceDefinition( matcher.replaceAll( _replacement ),
                                               transformOperationMember( input.getOperation() ),
                                               transformConstants( input.getConstants() ),
@@ -122,6 +161,7 @@ final class RenameTypeProcessor
     final Matcher matcher = _namePattern.matcher( input.getName() );
     if ( matcher.matches() )
     {
+      _renameCount++;
       return new MixinDefinition( matcher.replaceAll( _replacement ),
                                   transformConstants( input.getConstants() ),
                                   transformAttributeMembers( input.getAttributes() ),
@@ -164,12 +204,18 @@ final class RenameTypeProcessor
   protected InterfaceDefinition transformInterface( @Nonnull final InterfaceDefinition input )
   {
     final Matcher matcher1 = _namePattern.matcher( input.getName() );
+    final boolean matcher1Matches = matcher1.matches();
+    if ( matcher1Matches )
+    {
+      _renameCount++;
+    }
     final String inherits = input.getInherits();
     final Matcher matcher2 = null != inherits ? _namePattern.matcher( inherits ) : null;
-    if ( matcher1.matches() || ( null != matcher2 && matcher2.matches() ) )
+    final boolean matcher2Matches = null != matcher2 && matcher2.matches();
+    if ( matcher1Matches || matcher2Matches )
     {
-      return new InterfaceDefinition( matcher1.matches() ? matcher1.replaceAll( _replacement ) : input.getName(),
-                                      ( null != matcher2 && matcher2.matches() ) ?
+      return new InterfaceDefinition( matcher1Matches ? matcher1.replaceAll( _replacement ) : input.getName(),
+                                      matcher2Matches ?
                                       matcher2.replaceAll( _replacement ) :
                                       input.getInherits(),
                                       transformConstants( input.getConstants() ),
@@ -223,6 +269,7 @@ final class RenameTypeProcessor
     final Matcher matcher = _namePattern.matcher( input.getName() );
     if ( matcher.matches() )
     {
+      _renameCount++;
       return new NamespaceDefinition( matcher.replaceAll( _replacement ),
                                       transformOperationMembers( input.getOperations() ),
                                       transformAttributeMembers( input.getAttributes() ),
@@ -263,10 +310,16 @@ final class RenameTypeProcessor
     final Matcher matcher1 = _namePattern.matcher( input.getName() );
     final String inherits = input.getInherits();
     final Matcher matcher2 = null != inherits ? _namePattern.matcher( inherits ) : null;
-    if ( matcher1.matches() || ( null != matcher2 && matcher2.matches() ) )
+    final boolean matcher1Matches = matcher1.matches();
+    if ( matcher1Matches )
     {
-      return new DictionaryDefinition( matcher1.matches() ? matcher1.replaceAll( _replacement ) : input.getName(),
-                                       ( null != matcher2 && matcher2.matches() ) ?
+      _renameCount++;
+    }
+    final boolean matcher2Matches = null != matcher2 && matcher2.matches();
+    if ( matcher1Matches || matcher2Matches )
+    {
+      return new DictionaryDefinition( matcher1Matches ? matcher1.replaceAll( _replacement ) : input.getName(),
+                                       matcher2Matches ?
                                        matcher2.replaceAll( _replacement ) :
                                        input.getInherits(),
                                        transformDictionaryMembers( input.getMembers() ),
@@ -306,6 +359,7 @@ final class RenameTypeProcessor
     final Matcher matcher1 = _namePattern.matcher( input.getInterfaceName() );
     if ( matcher1.matches() )
     {
+      _renameCount++;
       return new IncludesStatement( matcher1.replaceAll( _replacement ),
                                     input.getMixinName(),
                                     transformDocumentation( input.getDocumentation() ),
@@ -317,6 +371,7 @@ final class RenameTypeProcessor
       final Matcher matcher2 = _namePattern.matcher( input.getMixinName() );
       if ( matcher2.matches() )
       {
+        _renameCount++;
         return new IncludesStatement( input.getInterfaceName(),
                                       matcher2.replaceAll( _replacement ),
                                       transformDocumentation( input.getDocumentation() ),
@@ -337,6 +392,7 @@ final class RenameTypeProcessor
     final Matcher matcher = _namePattern.matcher( input.getName() );
     if ( matcher.matches() )
     {
+      _renameCount++;
       return new TypedefDefinition( matcher.replaceAll( _replacement ),
                                     transformType( input.getType() ),
                                     transformDocumentation( input.getDocumentation() ),
