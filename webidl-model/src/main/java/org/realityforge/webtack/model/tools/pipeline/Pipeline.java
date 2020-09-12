@@ -38,7 +38,7 @@ public final class Pipeline
   @Nonnull
   private final ExecutionContext _context;
   @Nonnull
-  private final PipelineContextImpl _pipelineContext;
+  private final PipelineContext _pipelineContext;
 
   public Pipeline( @Nonnull final RepositoryConfig repository,
                    @Nonnull final PipelineConfig pipeline,
