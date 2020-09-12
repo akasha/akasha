@@ -56,18 +56,18 @@ final class RemoveIncludesProcessor
       if ( _removeCount != _expectedRemoveCount )
       {
         _context.error( "Removed " + _removeCount + " includes but expected to " +
-                        "remove " + _expectedRemoveCount + " elements." );
+                        "remove " + _expectedRemoveCount + " includes." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " elements." );
+        _context.info( "Removed " + _removeCount + " includes." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " elements." );
+        _context.debug( "Removed " + _removeCount + " includes." );
       }
     }
   }
