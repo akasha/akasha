@@ -339,39 +339,7 @@ final class React4jAction
       type.superclass( ParameterizedTypeName.get( superclass, TypeVariableName.get( "T" ) ) );
     }
 
-    for ( final AttributeMember attribute : selectAttributes( definition ) )
-    {
-      // TODO: The attribute definitions should map event handlers to react equivalents
-      final String attributeName = safeMethodName( attribute.getName() );
-      if ( Kind.Boolean == attribute.getType().getKind() )
-      {
-        type.addMethod( MethodSpec
-                          .methodBuilder( attributeName )
-                          .addAnnotation( Types.JS_OVERLAY )
-                          .addAnnotation( Types.NONNULL )
-                          .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                          .returns( TypeVariableName.get( "T" ) )
-                          .addStatement( "return $N( true )", attributeName )
-                          .build() );
-      }
-      final TypeName paramType = toTypeName( attribute.getType() );
-      final ParameterSpec.Builder parameter = ParameterSpec.builder( paramType, attributeName, Modifier.FINAL );
-      if ( !paramType.isPrimitive() )
-      {
-        parameter.addAnnotation( _schema.isNullable( attribute.getType() ) ? Types.NULLABLE : Types.NONNULL );
-      }
-      addMagicConstantAnnotationIfNeeded( attribute.getType(), parameter );
-      type.addMethod( MethodSpec
-                        .methodBuilder( attributeName )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
-                        .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-                        .addParameter( parameter.build() )
-                        .returns( TypeVariableName.get( "T" ) )
-                        .addStatement( "prop( $S, $T.asAny( $N ) )", attributeName, Types.JS, attributeName )
-                        .addStatement( "return self()", Types.JS )
-                        .build() );
-    }
+    emitAttributes( definition, TypeVariableName.get( "T" ), type );
 
     writeTopLevelType( type );
   }
@@ -437,6 +405,15 @@ final class React4jAction
 
     type.addMethod( emitRefSetter( definition ) );
 
+    emitAttributes( definition, self, type );
+
+    writeTopLevelType( type );
+  }
+
+  private void emitAttributes( @Nonnull final InterfaceDefinition definition,
+                               @Nonnull final TypeName self,
+                               @Nonnull final TypeSpec.Builder type )
+  {
     for ( final AttributeMember attribute : selectAttributes( definition ) )
     {
       // TODO: The attribute definitions should map event handlers to react equivalents
@@ -470,8 +447,6 @@ final class React4jAction
                         .addStatement( "return self()", Types.JS )
                         .build() );
     }
-
-    writeTopLevelType( type );
   }
 
   @Nonnull
