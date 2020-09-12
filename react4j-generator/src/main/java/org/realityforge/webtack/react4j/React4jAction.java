@@ -23,11 +23,16 @@ import javax.annotation.Nonnull;
 import javax.lang.model.element.Modifier;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.PromiseType;
+import org.realityforge.webtack.model.RecordType;
+import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
+import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
@@ -403,8 +408,7 @@ final class React4jAction
       .addModifiers( Modifier.PUBLIC )
       .addParameter( ParameterSpec
                        .builder( ParameterizedTypeName.get( ClassName.get( getPackageName(), "RefCallback" ),
-                                                            ClassName.get( "elemental3",
-                                                                           definition.getName() ) ),
+                                                            lookupClassName( definition.getName() ) ),
                                  "callback",
                                  Modifier.FINAL )
                        .addAnnotation( Types.NULLABLE )
@@ -799,14 +803,6 @@ final class React4jAction
     {
       return Types.STRING;
     }
-    else if ( Kind.Object == kind )
-    {
-      return TypeName.OBJECT;
-    }
-    else if ( Kind.Symbol == kind )
-    {
-      return Types.SYMBOL;
-    }
     else if ( Kind.TypeReference == kind )
     {
       final TypeReference typeReference = (TypeReference) type;
@@ -816,7 +812,7 @@ final class React4jAction
            null != _schema.findCallbackInterfaceByName( name ) ||
            null != _schema.findCallbackByName( name ) )
       {
-        return ClassName.get( "elemental3", name );
+        return lookupClassName( name );
       }
       else if ( null != _schema.findEnumerationByName( name ) )
       {
@@ -831,7 +827,7 @@ final class React4jAction
           //  could live with including this unnecessary abstraction or copy the logic for
           //  expanding types from jsinterop generator and expand this to it's subtypes ala
           //  MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
-          return ClassName.get( "elemental3", name );
+          return lookupClassName( name );
         }
         else
         {
@@ -839,53 +835,121 @@ final class React4jAction
         }
       }
     }
-    else if ( Kind.ArrayBuffer == kind )
+    else if ( Kind.Promise == kind )
     {
-      return Types.ARRAY_BUFFER;
+      return ParameterizedTypeName.get( lookupClassName( Kind.Promise.name() ),
+                                        getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
     }
-    else if ( Kind.DataView == kind )
+    else if ( Kind.Sequence == kind )
     {
-      return Types.DATA_VIEW;
+      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                        getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
     }
-    else if ( Kind.Int8Array == kind )
+    else if ( Kind.Record == kind )
     {
-      return Types.INT8_ARRAY;
+      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
+                                        getUnexpandedType( ( (RecordType) type ).getValueType() ) );
     }
-    else if ( Kind.Int16Array == kind )
+    else if ( Kind.FrozenArray == kind )
     {
-      return Types.INT16_ARRAY;
+      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                        getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
     }
-    else if ( Kind.Int32Array == kind )
+    else if ( Kind.Union == kind )
     {
-      return Types.INT32_ARRAY;
+      return lookupClassName( generateUnionType( (UnionType) type ) );
     }
-    else if ( Kind.Uint8Array == kind )
+    else if ( Kind.Object == kind ||
+              Kind.Symbol == kind ||
+              Kind.ArrayBuffer == kind ||
+              Kind.DataView == kind ||
+              Kind.Int8Array == kind ||
+              Kind.Int16Array == kind ||
+              Kind.Int32Array == kind ||
+              Kind.Uint8Array == kind ||
+              Kind.Uint16Array == kind ||
+              Kind.Uint32Array == kind ||
+              Kind.Uint8ClampedArray == kind ||
+              Kind.Float32Array == kind ||
+              Kind.Float64Array == kind )
     {
-      return Types.UINT8_ARRAY;
-    }
-    else if ( Kind.Uint16Array == kind )
-    {
-      return Types.UINT16_ARRAY;
-    }
-    else if ( Kind.Uint32Array == kind )
-    {
-      return Types.UINT32_ARRAY;
-    }
-    else if ( Kind.Uint8ClampedArray == kind )
-    {
-      return Types.UINT8_CLAMPED_ARRAY;
-    }
-    else if ( Kind.Float32Array == kind )
-    {
-      return Types.FLOAT32_ARRAY;
-    }
-    else if ( Kind.Float64Array == kind )
-    {
-      return Types.FLOAT64_ARRAY;
+      return lookupClassName( kind.name() );
     }
     else
     {
       throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
+    }
+  }
+
+  @Nonnull
+  private String generateUnionType( @Nonnull final UnionType type )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( final Type memberType : type.getMemberTypes() )
+    {
+      if ( 0 != sb.length() )
+      {
+        sb.append( "Or" );
+      }
+      appendTypeToUnionName( sb, memberType );
+    }
+    sb.append( "Union" );
+    return sb.toString();
+  }
+
+  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isString() )
+    {
+      sb.append( "String" );
+    }
+    else if ( kind.isPrimitive() ||
+              kind.isBufferRelated() ||
+              Kind.FrozenArray == kind ||
+              Kind.Object == kind ||
+              Kind.Symbol == kind )
+    {
+      sb.append( kind.name() );
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
+      sb.append( "Array" );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
+    }
+  }
+
+  @Nonnull
+  private TypeName getUnexpandedType( @Nonnull final Type type )
+  {
+    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
+  }
+
+  @Nonnull
+  private Type toJsinteropCompatibleType( @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isPrimitive() &&
+         Kind.Boolean != kind &&
+         Kind.Double != kind &&
+         Kind.UnrestrictedDouble != kind )
+    {
+      return new Type( Kind.Double,
+                       type.getExtendedAttributes(),
+                       type.isNullable(),
+                       type.getSourceLocations() );
+    }
+    else
+    {
+      return type;
     }
   }
 
@@ -906,11 +970,15 @@ final class React4jAction
   @Nonnull
   private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
   {
-    final ClassName enumerationType =
-      ClassName.get( "elemental3", NamingUtil.uppercaseFirstCharacter( enumeration.getName() ) );
     return AnnotationSpec
       .builder( Types.MAGIC_CONSTANT )
-      .addMember( "valuesFromClass", "$T.class", enumerationType )
+      .addMember( "valuesFromClass", "$T.class", super.lookupClassName( enumeration.getName() ) )
       .build();
+  }
+
+  @Nonnull
+  protected ClassName lookupClassName( @Nonnull final String idlName )
+  {
+    return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.lookupClassName( idlName );
   }
 }
