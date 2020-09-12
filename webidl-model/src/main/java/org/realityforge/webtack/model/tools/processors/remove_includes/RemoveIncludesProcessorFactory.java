@@ -12,12 +12,15 @@ public final class RemoveIncludesProcessorFactory
 {
   public String interfacePattern;
   public String mixinPattern;
+  public int expectedRemoveCount;
 
   @Nonnull
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new RemoveIncludesProcessor( requirePattern( "interfacePattern", interfacePattern ),
-                                        requirePattern( "mixinPattern", mixinPattern ) );
+    return new RemoveIncludesProcessor( context,
+                                        requirePattern( "interfacePattern", interfacePattern ),
+                                        requirePattern( "mixinPattern", mixinPattern ),
+                                        expectedRemoveCount );
   }
 }

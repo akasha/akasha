@@ -5,30 +5,85 @@ import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.IncludesStatement;
+import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 /**
  * Remove includes that match a pattern.
  */
 final class RemoveIncludesProcessor
   extends AbstractProcessor
+  implements Completable
 {
+  @Nonnull
+  private final PipelineContext _context;
   @Nonnull
   private final Pattern _interfacePattern;
   @Nonnull
   private final Pattern _mixinPattern;
+  /**
+   * The number of elements the processor expected to remove. If less than 1 this is ignored.
+   */
+  private final int _expectedRemoveCount;
+  private int _removeCount;
 
-  RemoveIncludesProcessor( @Nonnull final Pattern interfacePattern, @Nonnull final Pattern mixinPattern )
+  RemoveIncludesProcessor( @Nonnull final PipelineContext context,
+                           @Nonnull final Pattern interfacePattern,
+                           @Nonnull final Pattern mixinPattern,
+                           final int expectedRemoveCount )
   {
+    _context = Objects.requireNonNull( context );
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
+    _expectedRemoveCount = expectedRemoveCount;
+  }
+
+  @Nullable
+  @Override
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
+  {
+    _removeCount = 0;
+    return super.process( schema );
+  }
+
+  @Override
+  public void onComplete()
+  {
+    if ( _expectedRemoveCount > 0 )
+    {
+      if ( _removeCount != _expectedRemoveCount )
+      {
+        _context.error( "Removed " + _removeCount + " elements but expected to " +
+                        "remove " + _expectedRemoveCount + " elements." );
+      }
+    }
+    else
+    {
+      if ( 0 == _removeCount )
+      {
+        _context.info( "Removed " + _removeCount + " elements." );
+      }
+      else
+      {
+        _context.debug( "Removed " + _removeCount + " elements." );
+      }
+    }
+  }
+
+  @Nullable
+  <T> T incRemoveCountAndReturnNull()
+  {
+    _removeCount++;
+    return null;
   }
 
   @Nullable
   @Override
   protected IncludesStatement transformIncludesStatement( @Nonnull final IncludesStatement input )
   {
-    return matches( input ) ? null : super.transformIncludesStatement( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformIncludesStatement( input );
   }
 
   private boolean matches( @Nonnull final IncludesStatement input )
