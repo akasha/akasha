@@ -88,9 +88,6 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
-* Add an `expectedChangeCount` to various processors that will generate an error if the expected number of
-  changes is not identical.
-
 * Start to download chrome webidl as they do not seem to align with specs exactly and thus generate some issues.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
