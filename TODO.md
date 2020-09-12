@@ -88,8 +88,6 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
-* Add a `complete` method on `Action`, `Combiner` and `Processor` interfaces that will be invoked once the code will no longer have any schemas passed in. This allows the processor to perform cleanup and/or check that it is still needed. i.e. if a `RenameX` processor does not perform any renames we could alert in the complete to indicate that no match occurred. We could also add statistics (i.e. renamed 2 elements).
-
 * Add an `expectedChangeCount` to various processors that will generate an error if the expected number of
   changes is not identical.
 

@@ -83,7 +83,7 @@ public final class Pipeline
 
       if ( Registry.isCombinerPresent( name ) )
       {
-        final Combiner processor = Registry.createCombiner( _pipelineContext, name, getStageConfig( stage ) );
+        final Combiner combiner = Registry.createCombiner( _pipelineContext, name, getStageConfig( stage ) );
         final List<WebIDLSchema> matchedSchema = new ArrayList<>();
         final List<WebIDLSchema> unmatchedSchema = new ArrayList<>();
         for ( final WebIDLSchema schema : current )
@@ -99,13 +99,14 @@ public final class Pipeline
         }
         try
         {
-          resultSchema.add( processor.combine( matchedSchema.toArray( new WebIDLSchema[ 0 ] ) ) );
+          resultSchema.add( combiner.combine( matchedSchema.toArray( new WebIDLSchema[ 0 ] ) ) );
         }
         catch ( final Exception e )
         {
           throw new StageProcessException( _pipeline, stage, e );
         }
         resultSchema.addAll( unmatchedSchema );
+        Completable.complete( combiner );
       }
       else if ( Registry.isProcessorPresent( name ) )
       {
@@ -132,6 +133,7 @@ public final class Pipeline
             resultSchema.add( schema );
           }
         }
+        Completable.complete( processor );
       }
       else if ( Registry.isActionPresent( name ) )
       {
@@ -151,6 +153,7 @@ public final class Pipeline
           }
           resultSchema.add( schema );
         }
+        Completable.complete( action );
       }
       else
       {
