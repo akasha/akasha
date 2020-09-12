@@ -81,6 +81,7 @@ final class RemoveElementProcessor
     }
   }
 
+  @Nullable
   <T> T incRemoveCountAndReturnNull()
   {
     _removeCount++;
