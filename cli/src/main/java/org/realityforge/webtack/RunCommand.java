@@ -262,7 +262,10 @@ final class RunCommand
     {
       if ( _logger.isLoggable( Level.FINE ) )
       {
-        _logger.log( Level.FINE, pipeline.getName() + ":" + stage.getName() + ": " + message );
+        _logger.log( Level.FINE,
+                     pipeline.getName() + ":" +
+                     stage.getName() + "(" + pipeline.getStages().indexOf( stage ) + "): " +
+                     message );
       }
     }
 
@@ -273,7 +276,10 @@ final class RunCommand
     {
       if ( _logger.isLoggable( Level.INFO ) )
       {
-        _logger.log( Level.INFO, pipeline.getName() + ":" + stage.getName() + ": " + message );
+        _logger.log( Level.INFO,
+                     pipeline.getName() + ":" +
+                     stage.getName() + "(" + pipeline.getStages().indexOf( stage ) + "): " +
+                     message );
       }
     }
 
@@ -282,7 +288,8 @@ final class RunCommand
                             @Nonnull final StageConfig stage,
                             @Nonnull final String message )
     {
-      final String msg = pipeline.getName() + ":" + stage.getName() + ": " + message;
+      final String msg =
+        pipeline.getName() + ":" + stage.getName() + "(" + pipeline.getStages().indexOf( stage ) + "): " + message;
       if ( _logger.isLoggable( Level.SEVERE ) )
       {
         _logger.log( Level.SEVERE, msg );
