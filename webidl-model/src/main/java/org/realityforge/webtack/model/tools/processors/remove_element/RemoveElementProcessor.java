@@ -17,104 +17,158 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 final class RemoveElementProcessor
   extends AbstractProcessor
+  implements Completable
 {
+  @Nonnull
+  private final PipelineContext _context;
   @Nonnull
   private final Pattern _namePattern;
   @Nullable
   private final List<ElementType> _types;
+  /**
+   * The number of elements the processor expected to remove. If less than 1 this is ignored.
+   */
+  private final int _expectedRemoveCount;
+  private int _removeCount;
 
-  RemoveElementProcessor( @Nonnull final Pattern namePattern, @Nullable final List<ElementType> types )
+  RemoveElementProcessor( @Nonnull final PipelineContext context,
+                          @Nonnull final Pattern namePattern,
+                          @Nullable final List<ElementType> types,
+                          final int expectedRemoveCount )
   {
+    _context = Objects.requireNonNull( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _types = types;
+    _expectedRemoveCount = expectedRemoveCount;
+  }
+
+  @Nullable
+  @Override
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
+  {
+    _removeCount = 0;
+    return super.process( schema );
+  }
+
+  @Override
+  public void onComplete()
+  {
+    if ( _expectedRemoveCount > 0 )
+    {
+      if ( _removeCount != _expectedRemoveCount )
+      {
+        _context.error( "Removed " + _removeCount + " elements but expected to " +
+                        "remove " + _expectedRemoveCount + " elements." );
+      }
+    }
+    else
+    {
+      if ( 0 == _removeCount )
+      {
+        _context.info( "Removed " + _removeCount + " elements." );
+      }
+      else
+      {
+        _context.debug( "Removed " + _removeCount + " elements." );
+      }
+    }
+  }
+
+  <T> T incRemoveCountAndReturnNull()
+  {
+    _removeCount++;
+    return null;
   }
 
   @Nullable
   @Override
   protected CallbackDefinition transformCallback( @Nonnull final CallbackDefinition input )
   {
-    return matches( input ) ? null : super.transformCallback( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformCallback( input );
   }
 
   @Nullable
   @Override
   protected CallbackInterfaceDefinition transformCallbackInterface( @Nonnull final CallbackInterfaceDefinition input )
   {
-    return matches( input ) ? null : super.transformCallbackInterface( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformCallbackInterface( input );
   }
 
   @Nullable
   @Override
   protected EnumerationDefinition transformEnumeration( @Nonnull final EnumerationDefinition input )
   {
-    return matches( input ) ? null : super.transformEnumeration( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformEnumeration( input );
   }
 
   @Nullable
   @Override
   protected MixinDefinition transformMixin( @Nonnull final MixinDefinition input )
   {
-    return matches( input ) ? null : super.transformMixin( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformMixin( input );
   }
 
   @Nullable
   @Override
   protected PartialMixinDefinition transformPartialMixin( @Nonnull final PartialMixinDefinition input )
   {
-    return matches( input ) ? null : super.transformPartialMixin( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformPartialMixin( input );
   }
 
   @Nullable
   @Override
   protected InterfaceDefinition transformInterface( @Nonnull final InterfaceDefinition input )
   {
-    return matches( input ) ? null : super.transformInterface( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformInterface( input );
   }
 
   @Nullable
   @Override
   protected PartialInterfaceDefinition transformPartialInterface( @Nonnull final PartialInterfaceDefinition input )
   {
-    return matches( input ) ? null : super.transformPartialInterface( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformPartialInterface( input );
   }
 
   @Nullable
   @Override
   protected NamespaceDefinition transformNamespace( @Nonnull final NamespaceDefinition input )
   {
-    return matches( input ) ? null : super.transformNamespace( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformNamespace( input );
   }
 
   @Nullable
   @Override
   protected PartialNamespaceDefinition transformPartialNamespace( @Nonnull final PartialNamespaceDefinition input )
   {
-    return matches( input ) ? null : super.transformPartialNamespace( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformPartialNamespace( input );
   }
 
   @Nullable
   @Override
   protected DictionaryDefinition transformDictionary( @Nonnull final DictionaryDefinition input )
   {
-    return matches( input ) ? null : super.transformDictionary( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformDictionary( input );
   }
 
   @Nullable
   @Override
   protected PartialDictionaryDefinition transformPartialDictionary( @Nonnull final PartialDictionaryDefinition input )
   {
-    return matches( input ) ? null : super.transformPartialDictionary( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformPartialDictionary( input );
   }
 
   @Nullable
   @Override
   protected IncludesStatement transformIncludesStatement( @Nonnull final IncludesStatement input )
   {
-    return matches( input ) ? null : super.transformIncludesStatement( input );
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformIncludesStatement( input );
   }
 
   private boolean matches( @Nonnull final CallbackDefinition input )

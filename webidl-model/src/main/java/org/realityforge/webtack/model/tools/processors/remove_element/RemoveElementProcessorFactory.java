@@ -13,11 +13,15 @@ public final class RemoveElementProcessorFactory
 {
   public String namePattern;
   public List<ElementType> types;
+  public int expectedRemoveCount;
 
   @Nonnull
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new RemoveElementProcessor( requirePattern( "namePattern", namePattern ), types );
+    return new RemoveElementProcessor( context,
+                                       requirePattern( "namePattern", namePattern ),
+                                       types,
+                                       expectedRemoveCount );
   }
 }

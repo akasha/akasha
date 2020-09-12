@@ -249,6 +249,7 @@
       "description": "The HTMLFormControlsCollection overrides HTMLCollection with incompatible method so we patch it. This is not strictly consistent with js but not sure how else to handle it",
       "sourceSelector": "name=whatwg_html",
       "config": {
+        "expectedRemoveCount": 1,
         "namePattern": "^HTMLFormControlsCollection$",
         "type": ["interface_type"]
       }
@@ -258,6 +259,7 @@
       "description": "These are no longer needed once Navigator.getUserMedia is removed",
       "sourceSelector": "name=mediacapture_main",
       "config": {
+        "expectedRemoveCount": 2,
         "namePattern": "^(NavigatorUserMediaSuccessCallback|NavigatorUserMediaErrorCallback)$",
         "type": ["callback"]
       }
@@ -267,6 +269,7 @@
       "description": "This defined in both webrtc_stats and webrtc so lets remove one",
       "sourceSelector": "name=webrtc_stats",
       "config": {
+        "expectedRemoveCount": 1,
         "namePattern": "^RTCStats$",
         "type": ["dictionary"]
       }
@@ -321,6 +324,7 @@
       "name": "RemoveElement",
       "description": "The AudioWorkletProcessorConstructor is only used by elements exposed in the AudioWorklet exposure and references interfaces not available in Window exposure",
       "config": {
+        "expectedRemoveCount": 1,
         "namePattern": "^AudioWorkletProcessorConstructor$",
         "type": ["callback"]
       }
@@ -329,6 +333,7 @@
       "name": "RemoveElement",
       "description": "The ExtendableMessageEventInit is only used by elements exposed in the ServiceWorker exposure and references interfaces not available in Window exposure",
       "config": {
+        "expectedRemoveCount": 1,
         "namePattern": "^ExtendableMessageEventInit$",
         "type": ["dictionary"]
       }
