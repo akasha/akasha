@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.IncludesStatement;
-import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 import org.realityforge.webtack.model.tools.spi.Completable;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
@@ -38,14 +37,6 @@ final class RemoveIncludesProcessor
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
     _expectedRemoveCount = expectedRemoveCount;
-  }
-
-  @Nullable
-  @Override
-  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
-  {
-    _removeCount = 0;
-    return super.process( schema );
   }
 
   @Override

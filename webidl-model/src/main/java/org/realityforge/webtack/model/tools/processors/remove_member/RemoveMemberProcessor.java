@@ -18,7 +18,6 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
-import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 import org.realityforge.webtack.model.tools.spi.Completable;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
@@ -52,14 +51,6 @@ final class RemoveMemberProcessor
     _memberNamePattern = Objects.requireNonNull( memberNamePattern );
     _types = types;
     _expectedRemoveCount = expectedRemoveCount;
-  }
-
-  @Nullable
-  @Override
-  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
-  {
-    _removeCount = 0;
-    return super.process( schema );
   }
 
   @Override
