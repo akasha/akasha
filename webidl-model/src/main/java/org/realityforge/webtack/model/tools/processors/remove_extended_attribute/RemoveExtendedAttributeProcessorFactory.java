@@ -14,13 +14,16 @@ public final class RemoveExtendedAttributeProcessorFactory
   public String namePattern;
   public String extendedAttribute;
   public List<ElementType> types;
+  public int expectedRemoveCount;
 
   @Nonnull
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new RemoveExtendedAttributeProcessor( requirePattern( "namePattern", namePattern ),
+    return new RemoveExtendedAttributeProcessor( context,
+                                                 requirePattern( "namePattern", namePattern ),
                                                  types,
-                                                 requireExtendedAttribute( "extendedAttribute", extendedAttribute ) );
+                                                 requireExtendedAttribute( "extendedAttribute", extendedAttribute ),
+                                                 expectedRemoveCount );
   }
 }

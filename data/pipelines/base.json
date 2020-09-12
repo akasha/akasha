@@ -13,6 +13,7 @@
       "description": "Remove Constructor attribute as one of the arguments 'newTarget' is of type 'Animatable' which is a mixin which is seemingly invalid. We will re-add an equivalent with a union for impls of Animatable in next step",
       "sourceSelector": "name=svg2",
       "config": {
+        "expectedRemoveCount": 1,
         "namePattern": "^ShadowAnimation$",
         "extendedAttribute": "Constructor( Animation source, Animatable newTarget )"
       }
@@ -80,6 +81,7 @@
       "description": "Remove NoInterfaceObject as spec still uses the historic 'NoInterfaceObject' extended attribute",
       "sourceSelector": "name=geolocation_api",
       "config": {
+        "expectedRemoveCount": 4,
         "namePattern": "^(Coordinates|Geolocation|Position|PositionError)$",
         "extendedAttribute": "NoInterfaceObject"
       }

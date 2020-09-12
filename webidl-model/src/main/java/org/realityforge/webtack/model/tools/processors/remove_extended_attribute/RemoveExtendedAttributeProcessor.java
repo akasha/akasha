@@ -18,25 +18,72 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 final class RemoveExtendedAttributeProcessor
   extends AbstractProcessor
+  implements Completable
 {
+  @Nonnull
+  private final PipelineContext _context;
   @Nonnull
   private final Pattern _namePattern;
   @Nullable
   private final List<ElementType> _types;
   @Nonnull
   private final ExtendedAttribute _extendedAttribute;
+  /**
+   * The number of attributes the processor expected to remove. If less than 1 this is ignored.
+   */
+  private final int _expectedRemoveCount;
+  private int _removeCount;
 
-  RemoveExtendedAttributeProcessor( @Nonnull final Pattern namePattern,
+  RemoveExtendedAttributeProcessor( @Nonnull final PipelineContext context,
+                                    @Nonnull final Pattern namePattern,
                                     @Nullable final List<ElementType> types,
-                                    @Nonnull final ExtendedAttribute extendedAttribute )
+                                    @Nonnull final ExtendedAttribute extendedAttribute,
+                                    final int expectedRemoveCount )
   {
+    _context = Objects.requireNonNull( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _types = types;
     _extendedAttribute = Objects.requireNonNull( extendedAttribute );
+    _expectedRemoveCount = expectedRemoveCount;
+  }
+
+  @Nullable
+  @Override
+  public WebIDLSchema process( @Nonnull final WebIDLSchema schema )
+  {
+    _removeCount = 0;
+    return super.process( schema );
+  }
+
+  @Override
+  public void onComplete()
+  {
+    if ( _expectedRemoveCount > 0 )
+    {
+      if ( _removeCount != _expectedRemoveCount )
+      {
+        _context.error( "Removed " + _removeCount + " includes but expected to " +
+                        "remove " + _expectedRemoveCount + " elements." );
+      }
+    }
+    else
+    {
+      if ( 0 == _removeCount )
+      {
+        _context.info( "Removed " + _removeCount + " elements." );
+      }
+      else
+      {
+        _context.debug( "Removed " + _removeCount + " elements." );
+      }
+    }
   }
 
   @Nonnull
@@ -276,6 +323,16 @@ final class RemoveExtendedAttributeProcessor
   @Nonnull
   private List<ExtendedAttribute> shrinkExtendedAttributes( @Nonnull final List<ExtendedAttribute> inputs )
   {
-    return inputs.stream().filter( a -> !a.equiv( _extendedAttribute ) ).collect( Collectors.toList() );
+    return inputs.stream().filter( a -> {
+      if ( a.equiv( _extendedAttribute ) )
+      {
+        _removeCount++;
+        return false;
+      }
+      else
+      {
+        return true;
+      }
+    } ).collect( Collectors.toList() );
   }
 }
