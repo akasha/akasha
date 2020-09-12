@@ -67,7 +67,6 @@ public final class EmitActionTest
 
   @Nonnull
   private Action createAction( @Nonnull final String filePattern )
-    throws Exception
   {
     return Registry.createAction( newPipelineContext(),
                                   "Emit",
