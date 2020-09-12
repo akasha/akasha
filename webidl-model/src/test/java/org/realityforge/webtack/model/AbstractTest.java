@@ -11,6 +11,7 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
@@ -20,7 +21,9 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.model.tools.PipelineContextImpl;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
+import org.realityforge.webtack.model.tools.pipeline.ExecutionContext;
+import org.realityforge.webtack.model.tools.pipeline.TestProgressListener;
+import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -257,8 +260,13 @@ public abstract class AbstractTest
   {
     try
     {
-      final Path docsDirectory = getTestLocalFixtureDir().resolve( subDirectory ).resolve( "docs" );
-      return new PipelineContextImpl( new DocRepositoryRuntime( docsDirectory ) );
+      final Path dir = getTestLocalFixtureDir().resolve( subDirectory );
+      final ExecutionContext executionContext =
+        new ExecutionContext( dir.resolve( "idl" ), dir.resolve( "docs" ), new TestProgressListener() );
+      final PipelineConfig pipelineConfig = new PipelineConfig();
+      pipelineConfig.setName( "MyPipeline" );
+      pipelineConfig.setStages( new ArrayList<>() );
+      return new PipelineContextImpl( executionContext, pipelineConfig );
     }
     catch ( final Exception e )
     {

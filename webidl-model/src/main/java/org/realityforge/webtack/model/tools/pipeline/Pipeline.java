@@ -18,13 +18,14 @@ import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.PipelineContextImpl;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.Combiner;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.Registry;
 
@@ -46,7 +47,7 @@ public final class Pipeline
     _repository = Objects.requireNonNull( repository );
     _pipeline = Objects.requireNonNull( pipeline );
     _context = Objects.requireNonNull( context );
-    _pipelineContext = new PipelineContextImpl( new DocRepositoryRuntime( context.getDocDirectory() ) );
+    _pipelineContext = new PipelineContextImpl( context, pipeline );
   }
 
   @Nonnull
@@ -76,7 +77,7 @@ public final class Pipeline
     for ( final StageConfig stage : stages )
     {
       final String name = stage.getName();
-      _context.getProgressListener().beforeStage( _pipeline, stage, current );
+      _pipelineContext.beforeStage( stage, current );
 
       final String selector = stage.getSourceSelector();
       final List<WebIDLSchema> resultSchema = new ArrayList<>();
@@ -161,7 +162,7 @@ public final class Pipeline
       }
       current.clear();
       current.addAll( resultSchema );
-      _context.getProgressListener().afterStage( _pipeline, stage, current );
+      _pipelineContext.afterStage( stage, current );
     }
   }
 

@@ -256,6 +256,41 @@ final class RunCommand
     }
 
     @Override
+    public void stageDebug( @Nonnull final PipelineConfig pipeline,
+                            @Nonnull final StageConfig stage,
+                            @Nonnull final String message )
+    {
+      if ( _logger.isLoggable( Level.FINE ) )
+      {
+        _logger.log( Level.FINE, pipeline.getName() + ":" + stage.getName() + ": " + message );
+      }
+    }
+
+    @Override
+    public void stageInfo( @Nonnull final PipelineConfig pipeline,
+                           @Nonnull final StageConfig stage,
+                           @Nonnull final String message )
+    {
+      if ( _logger.isLoggable( Level.INFO ) )
+      {
+        _logger.log( Level.INFO, pipeline.getName() + ":" + stage.getName() + ": " + message );
+      }
+    }
+
+    @Override
+    public void stageError( @Nonnull final PipelineConfig pipeline,
+                            @Nonnull final StageConfig stage,
+                            @Nonnull final String message )
+    {
+      final String msg = pipeline.getName() + ":" + stage.getName() + ": " + message;
+      if ( _logger.isLoggable( Level.SEVERE ) )
+      {
+        _logger.log( Level.SEVERE, msg );
+      }
+      throw new RuntimeException( msg );
+    }
+
+    @Override
     public void afterStage( @Nonnull final PipelineConfig pipeline,
                             @Nonnull final StageConfig stage,
                             @Nonnull final List<WebIDLSchema> schemas )

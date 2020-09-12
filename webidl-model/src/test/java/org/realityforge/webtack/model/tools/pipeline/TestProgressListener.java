@@ -10,7 +10,7 @@ import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
 import static org.testng.Assert.*;
 
-final class TestProgressListener
+public final class TestProgressListener
   implements ProgressListener
 {
   @Nonnull
@@ -38,6 +38,30 @@ final class TestProgressListener
                            @Nonnull final List<WebIDLSchema> schemas )
   {
     _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "), schemaCount=" + schemas.size() );
+  }
+
+  @Override
+  public void stageDebug( @Nonnull final PipelineConfig pipeline,
+                          @Nonnull final StageConfig stage,
+                          @Nonnull final String message )
+  {
+    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "): DEBUG: " + message );
+  }
+
+  @Override
+  public void stageInfo( @Nonnull final PipelineConfig pipeline,
+                         @Nonnull final StageConfig stage,
+                         @Nonnull final String message )
+  {
+    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "): INFO: " + message );
+  }
+
+  @Override
+  public void stageError( @Nonnull final PipelineConfig pipeline,
+                          @Nonnull final StageConfig stage,
+                          @Nonnull final String message )
+  {
+    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "): ERROR: " + message );
   }
 
   @Override

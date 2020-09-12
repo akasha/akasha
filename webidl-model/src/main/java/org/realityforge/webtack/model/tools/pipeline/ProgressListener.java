@@ -15,5 +15,11 @@ public interface ProgressListener
 
   void beforeStage( @Nonnull PipelineConfig pipeline, @Nonnull StageConfig stage, @Nonnull List<WebIDLSchema> schemas );
 
+  void stageDebug( @Nonnull PipelineConfig pipeline, @Nonnull StageConfig stage, @Nonnull String message );
+
+  void stageInfo( @Nonnull PipelineConfig pipeline, @Nonnull StageConfig stage, @Nonnull String message );
+
+  void stageError( @Nonnull PipelineConfig pipeline, @Nonnull StageConfig stage, @Nonnull String message );
+
   void afterStage( @Nonnull PipelineConfig pipeline, @Nonnull StageConfig stage, @Nonnull List<WebIDLSchema> schemas );
 }
