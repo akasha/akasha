@@ -69,19 +69,19 @@ final class RemoveExtendedAttributeProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " includes but expected to " +
-                        "remove " + _expectedRemoveCount + " elements." );
+        _context.error( "Removed " + _removeCount + " attributes but expected to " +
+                        "remove " + _expectedRemoveCount + " attributes." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " elements." );
+        _context.info( "Removed " + _removeCount + " attributes." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " elements." );
+        _context.debug( "Removed " + _removeCount + " attributes." );
       }
     }
   }
