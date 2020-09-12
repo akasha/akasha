@@ -1,4 +1,8 @@
+OverSampleType=com.example.OverSampleType
 SomeCallbackHandler=com.example.SomeCallbackHandler
+SpeechRecognitionErrorCode=com.example.SpeechRecognitionErrorCode
 SpeechRecognitionErrorEventInit=com.example.SpeechRecognitionErrorEventInit
 WaveShaperNode=com.example.WaveShaperNode
 WaveShaperOptions=com.example.WaveShaperOptions
+XMLHttpRequestResponseType=com.example.XMLHttpRequestResponseType
+txMode=com.example.TxMode

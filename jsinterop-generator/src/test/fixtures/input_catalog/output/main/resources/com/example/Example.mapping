@@ -6,3 +6,4 @@ IndexedKeyframeOffsetType=com.example.IndexedKeyframeOffsetType
 StringOrFloatUnion=com.example.StringOrFloatUnion
 WebAssembly=com.example.WebAssembly
 Worker=com.example.Worker
+txMode=com.example.TxMode

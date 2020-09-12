@@ -4,3 +4,4 @@ ClipboardItemDelayedCallback=com.example.ClipboardItemDelayedCallback
 LongOrTxModeUnion=com.example.LongOrTxModeUnion
 Promise=elemental2.promise.Promise
 SomeStore=com.example.SomeStore
+txMode=com.example.TxMode

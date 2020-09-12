@@ -5,4 +5,5 @@ Node=com.example.Node
 NodeFilter=com.example.NodeFilter
 OnActionHandler=com.example.OnActionHandler
 Sequence=elemental2.core.JsArray
+SpeechRecognitionErrorCode=com.example.SpeechRecognitionErrorCode
 Window=com.example.Window

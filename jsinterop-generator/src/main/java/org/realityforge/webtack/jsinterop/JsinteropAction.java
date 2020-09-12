@@ -2244,7 +2244,7 @@ final class JsinteropAction
     {
       registerDefinition( definition );
       // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
-      lookupClassName( definition.getName() );
+      super.lookupClassName( definition.getName() );
     }
     _schema.getInterfaces().forEach( this::registerDefinition );
     _schema.getPartialInterfaces().forEach( this::registerDefinition );
