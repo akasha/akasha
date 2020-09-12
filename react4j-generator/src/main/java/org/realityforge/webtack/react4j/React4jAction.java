@@ -440,8 +440,7 @@ final class React4jAction
 
     for ( final AttributeMember attribute : selectAttributes( definition ) )
     {
-      // TODO: The attribute definitions should map event handlers to react
-      //  equivalents and add @MagicConstant for enums
+      // TODO: The attribute definitions should map event handlers to react equivalents
       final String attributeName = safeMethodName( attribute.getName() );
       if ( Kind.Boolean == attribute.getType().getKind() )
       {
