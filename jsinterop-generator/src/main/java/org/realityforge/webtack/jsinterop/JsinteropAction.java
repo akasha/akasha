@@ -1181,13 +1181,13 @@ final class JsinteropAction
                       .methodBuilder( "keys" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                       .addAnnotation( BasicTypes.NONNULL )
-                      .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedKeyType ) )
+                      .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedKeyType ) )
                       .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( "values" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                       .addAnnotation( BasicTypes.NONNULL )
-                      .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedValueType ) )
+                      .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedValueType ) )
                       .build() );
     type.addType( TypeSpec
                     .interfaceBuilder( "Entry" )
@@ -1215,7 +1215,8 @@ final class JsinteropAction
                       .methodBuilder( "entries" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                       .addAnnotation( BasicTypes.NONNULL )
-                      .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, ClassName.bestGuess( "Entry" ) ) )
+                      .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ),
+                                                           ClassName.bestGuess( "Entry" ) ) )
                       .build() );
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback" )

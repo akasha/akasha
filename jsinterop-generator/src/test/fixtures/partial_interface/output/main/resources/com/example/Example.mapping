@@ -1,3 +1,4 @@
+Iterator=elemental2.core.JsIterator
 Object=java.lang.Object
 RTCStatsReport=com.example.RTCStatsReport
 SomeMapLikeDefiningOverrides=com.example.SomeMapLikeDefiningOverrides
