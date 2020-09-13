@@ -16,27 +16,18 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.lang.model.element.Modifier;
 import org.realityforge.webtack.model.AttributeMember;
-import org.realityforge.webtack.model.EnumerationDefinition;
-import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
-import org.realityforge.webtack.model.PromiseType;
-import org.realityforge.webtack.model.RecordType;
-import org.realityforge.webtack.model.SequenceType;
-import org.realityforge.webtack.model.Type;
-import org.realityforge.webtack.model.TypeReference;
-import org.realityforge.webtack.model.TypedefDefinition;
-import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
+import org.realityforge.webtack.model.tools.util.BasicTypes;
+import org.realityforge.webtack.model.tools.util.JsinteropTypes;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class React4jAction
@@ -44,32 +35,23 @@ final class React4jAction
 {
   @Nonnull
   private static final String HTML_ELEMENT = "HTMLElement";
-  @Nonnull
-  private final DocRepositoryRuntime _docRepository;
   private final boolean _generateGwtModule;
-  private final boolean _enableMagicConstants;
-  private WebIDLSchema _schema;
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
                  @Nonnull final List<Path> inputTypeCatalogs,
-                 @Nonnull final DocRepositoryRuntime docRepository,
                  final boolean generateGwtModule,
                  final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName, inputTypeCatalogs );
-    _docRepository = Objects.requireNonNull( docRepository );
+    super( outputDirectory, packageName, enableMagicConstants, inputTypeCatalogs );
     _generateGwtModule = generateGwtModule;
-    _enableMagicConstants = enableMagicConstants;
   }
 
   @Override
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    _schema = schema;
-    schema.link();
-    processInit();
+    processInit( schema );
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
 
@@ -136,7 +118,7 @@ final class React4jAction
     writeGeneratedAnnotation( type );
 
     type
-      .addAnnotation( Types.JS_FUNCTION )
+      .addAnnotation( JsinteropTypes.JS_FUNCTION )
       .addAnnotation( FunctionalInterface.class );
 
     type.addMethod( MethodSpec
@@ -144,7 +126,7 @@ final class React4jAction
                       .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
                       .addParameter( ParameterSpec
                                        .builder( typeVariable, "reference" )
-                                       .addAnnotation( Types.NULLABLE )
+                                       .addAnnotation( BasicTypes.NULLABLE )
                                        .build() )
                       .addJavadoc( "Passes the reference to the component instance or element.\n" +
                                    "The reference is nonnull when the element has been attached to the DOM and\n" +
@@ -250,9 +232,9 @@ final class React4jAction
       TypeSpec
         .classBuilder( "Abstract" + getInputsName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
-        .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+        .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "Object" )
                           .build() )
         .addTypeVariable( TypeVariableName.get( "T",
@@ -265,68 +247,68 @@ final class React4jAction
       // id is a real "dom" attribute inherited from "Element" WebIDL interface
       type.addMethod( MethodSpec
                         .methodBuilder( "id" )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                         .addParameter( ParameterSpec
-                                         .builder( Types.STRING, "id", Modifier.FINAL )
-                                         .addAnnotation( Types.NONNULL )
+                                         .builder( BasicTypes.STRING, "id", Modifier.FINAL )
+                                         .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
-                        .addStatement( "prop( $S, $T.asAny( id ) )", "id", Types.JS )
+                        .addStatement( "prop( $S, $T.asAny( id ) )", "id", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
-                        .addStatement( "return self()", Types.JS )
+                        .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
       // className is a real "className" attribute inherited from "Element" WebIDL interface
       type.addMethod( MethodSpec
                         .methodBuilder( "className" )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                         .addParameter( ParameterSpec
-                                         .builder( Types.STRING, "className", Modifier.FINAL )
-                                         .addAnnotation( Types.NONNULL )
+                                         .builder( BasicTypes.STRING, "className", Modifier.FINAL )
+                                         .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
-                        .addStatement( "prop( $S, $T.asAny( className ) )", "className", Types.JS )
+                        .addStatement( "prop( $S, $T.asAny( className ) )", "className", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
-                        .addStatement( "return self()", Types.JS )
+                        .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
       // key is a synthetic "react" attribute used for identifying vnodes
       type.addMethod( MethodSpec
                         .methodBuilder( "key" )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                         .addParameter( ParameterSpec
-                                         .builder( Types.STRING, "key", Modifier.FINAL )
-                                         .addAnnotation( Types.NONNULL )
+                                         .builder( BasicTypes.STRING, "key", Modifier.FINAL )
+                                         .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
-                        .addStatement( "prop( $S, $T.asAny( key ) )", "key", Types.JS )
+                        .addStatement( "prop( $S, $T.asAny( key ) )", "key", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
-                        .addStatement( "return self()", Types.JS )
+                        .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
       type.addMethod( MethodSpec
                         .methodBuilder( "prop" )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                         .addParameter( ParameterSpec
-                                         .builder( Types.STRING, "key", Modifier.FINAL )
-                                         .addAnnotation( Types.NONNULL )
+                                         .builder( BasicTypes.STRING, "key", Modifier.FINAL )
+                                         .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
                         .addParameter( ParameterSpec
-                                         .builder( Types.ANY, "value", Modifier.FINAL )
-                                         .addAnnotation( Types.NULLABLE )
+                                         .builder( JsinteropTypes.ANY, "value", Modifier.FINAL )
+                                         .addAnnotation( BasicTypes.NULLABLE )
                                          .build() )
                         .returns( TypeVariableName.get( "T" ) )
-                        .addStatement( "$T.asPropertyMap( this ).set( key, value )", Types.JS )
-                        .addStatement( "return self()", Types.JS )
+                        .addStatement( "$T.asPropertyMap( this ).set( key, value )", JsinteropTypes.JS )
+                        .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
       type.addMethod( MethodSpec
                         .methodBuilder( "self" )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PROTECTED, Modifier.FINAL )
-                        .addStatement( "return $T.uncheckedCast( this )", Types.JS )
+                        .addStatement( "return $T.uncheckedCast( this )", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
                         .build() );
     }
@@ -355,9 +337,9 @@ final class React4jAction
       TypeSpec
         .classBuilder( getInputsName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
-        .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+        .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "Object" )
                           .build() )
         .superclass( ParameterizedTypeName.get( superclass, self ) );
@@ -378,9 +360,9 @@ final class React4jAction
                                                             lookupClassName( definition.getName() ) ),
                                  "callback",
                                  Modifier.FINAL )
-                       .addAnnotation( Types.NULLABLE )
+                       .addAnnotation( BasicTypes.NULLABLE )
                        .build() )
-      .addStatement( "prop( $S, $T.asAny( callback ) )", "ref", Types.JS )
+      .addStatement( "prop( $S, $T.asAny( callback ) )", "ref", JsinteropTypes.JS )
       .build();
   }
 
@@ -396,9 +378,9 @@ final class React4jAction
       TypeSpec
         .classBuilder( getInputsName( name ) )
         .addModifiers( Modifier.PUBLIC )
-        .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+        .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "Object" )
                           .build() )
         .superclass( ParameterizedTypeName.get( superclass, self ) );
@@ -422,8 +404,8 @@ final class React4jAction
       {
         type.addMethod( MethodSpec
                           .methodBuilder( attributeName )
-                          .addAnnotation( Types.JS_OVERLAY )
-                          .addAnnotation( Types.NONNULL )
+                          .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                          .addAnnotation( BasicTypes.NONNULL )
                           .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                           .returns( self )
                           .addStatement( "return $N( true )", attributeName )
@@ -433,18 +415,18 @@ final class React4jAction
       final ParameterSpec.Builder parameter = ParameterSpec.builder( paramType, attributeName, Modifier.FINAL );
       if ( !paramType.isPrimitive() )
       {
-        parameter.addAnnotation( _schema.isNullable( attribute.getType() ) ? Types.NULLABLE : Types.NONNULL );
+        parameter.addAnnotation( getSchema().isNullable( attribute.getType() ) ? BasicTypes.NULLABLE : BasicTypes.NONNULL );
       }
       addMagicConstantAnnotationIfNeeded( attribute.getType(), parameter );
       type.addMethod( MethodSpec
                         .methodBuilder( attributeName )
-                        .addAnnotation( Types.JS_OVERLAY )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                         .addParameter( parameter.build() )
                         .returns( self )
-                        .addStatement( "prop( $S, $T.asAny( $N ) )", attributeName, Types.JS, attributeName )
-                        .addStatement( "return self()", Types.JS )
+                        .addStatement( "prop( $S, $T.asAny( $N ) )", attributeName, JsinteropTypes.JS, attributeName )
+                        .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
     }
   }
@@ -478,24 +460,24 @@ final class React4jAction
   {
     final ClassName inputsClassName = ClassName.get( getPackageName(), getInputsName( element.getDomInterface() ) );
     final ParameterSpec inputsParameter =
-      ParameterSpec.builder( inputsClassName, "inputs", Modifier.FINAL ).addAnnotation( Types.NULLABLE ).build();
+      ParameterSpec.builder( inputsClassName, "inputs", Modifier.FINAL ).addAnnotation( BasicTypes.NULLABLE ).build();
 
     type.addMethod( MethodSpec
                       .methodBuilder( element.getName() )
                       .returns( Types.REACT_NODE )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .addParameter( inputsParameter )
                       .addStatement( "return createElement( $S, $T.asPropertyMap( inputs ), ($T) null )",
                                      element.getName(),
-                                     Types.JS,
+                                     JsinteropTypes.JS,
                                      Types.REACT_NODE_ARRAY )
                       .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( element.getName() )
                       .returns( Types.REACT_NODE )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .addStatement( "return createElement( $S, null, ($T) null )",
                                      element.getName(),
                                      Types.REACT_NODE_ARRAY )
@@ -507,25 +489,25 @@ final class React4jAction
                         .methodBuilder( element.getName() )
                         .returns( Types.REACT_NODE )
                         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addParameter( inputsParameter )
                         .addParameter( ParameterSpec
                                          .builder( Types.REACT_NODE_ARRAY, "children", Modifier.FINAL )
-                                         .addAnnotation( Types.NULLABLE )
+                                         .addAnnotation( BasicTypes.NULLABLE )
                                          .build() )
                         .varargs()
                         .addStatement( "return createElement( $S, $T.asPropertyMap( inputs ), children )",
                                        element.getName(),
-                                       Types.JS )
+                                       JsinteropTypes.JS )
                         .build() );
       type.addMethod( MethodSpec
                         .methodBuilder( element.getName() )
                         .returns( Types.REACT_NODE )
                         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addParameter( ParameterSpec
                                          .builder( Types.REACT_NODE_ARRAY, "children", Modifier.FINAL )
-                                         .addAnnotation( Types.NULLABLE )
+                                         .addAnnotation( BasicTypes.NULLABLE )
                                          .build() )
                         .varargs()
                         .addStatement( "return createElement( $S, null, children )", element.getName() )
@@ -535,11 +517,11 @@ final class React4jAction
                         .methodBuilder( element.getName() )
                         .returns( Types.REACT_NODE )
                         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addParameter( inputsParameter )
                         .addParameter( ParameterSpec
                                          .builder( Types.STREAM_T_REACT_NODE, "children", Modifier.FINAL )
-                                         .addAnnotation( Types.NULLABLE )
+                                         .addAnnotation( BasicTypes.NULLABLE )
                                          .build() )
                         .addStatement( "return $N( inputs, toArray( children ) )", element.getName() )
                         .build() );
@@ -547,10 +529,10 @@ final class React4jAction
                         .methodBuilder( element.getName() )
                         .returns( Types.REACT_NODE )
                         .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                        .addAnnotation( Types.NONNULL )
+                        .addAnnotation( BasicTypes.NONNULL )
                         .addParameter( ParameterSpec
                                          .builder( Types.STREAM_T_REACT_NODE, "children", Modifier.FINAL )
-                                         .addAnnotation( Types.NULLABLE )
+                                         .addAnnotation( BasicTypes.NULLABLE )
                                          .build() )
                         .addStatement( "return $N( toArray( children ) )", element.getName() )
                         .build() );
@@ -562,8 +544,8 @@ final class React4jAction
            permittedContent.contains( "flow content" ) )
       {
         // TODO: Asses downstream apps but it seems like we could probably remove all of these except STRING
-        type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, Types.STRING ) );
-        type.addMethod( emitElementFactoryWithSimpleContent( element, Types.STRING ) );
+        type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, BasicTypes.STRING ) );
+        type.addMethod( emitElementFactoryWithSimpleContent( element, BasicTypes.STRING ) );
         type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, TypeName.BYTE ) );
         type.addMethod( emitElementFactoryWithSimpleContent( element, TypeName.BYTE ) );
         type.addMethod( emitElementFactoryWithSimpleContentAndInputs( element, inputsParameter, TypeName.SHORT ) );
@@ -588,14 +570,14 @@ final class React4jAction
     final ParameterSpec.Builder parameter = ParameterSpec.builder( paramType, "content", Modifier.FINAL );
     if ( !paramType.isPrimitive() )
     {
-      parameter.addAnnotation( Types.NULLABLE );
+      parameter.addAnnotation( BasicTypes.NULLABLE );
     }
 
     return MethodSpec
       .methodBuilder( element.getName() )
       .returns( Types.REACT_NODE )
       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-      .addAnnotation( Types.NONNULL )
+      .addAnnotation( BasicTypes.NONNULL )
       .addParameter( inputsParameter )
       .addParameter( parameter.build() )
       .addStatement( "return $N( inputs, $T.of( content ) )", element.getName(), Types.REACT_NODE )
@@ -609,14 +591,14 @@ final class React4jAction
     final ParameterSpec.Builder parameter = ParameterSpec.builder( paramType, "content", Modifier.FINAL );
     if ( !paramType.isPrimitive() )
     {
-      parameter.addAnnotation( Types.NULLABLE );
+      parameter.addAnnotation( BasicTypes.NULLABLE );
     }
 
     return MethodSpec
       .methodBuilder( element.getName() )
       .returns( Types.REACT_NODE )
       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-      .addAnnotation( Types.NONNULL )
+      .addAnnotation( BasicTypes.NONNULL )
       .addParameter( parameter.build() )
       .addStatement( "return $N( $T.of( content ) )", element.getName(), Types.REACT_NODE )
       .build();
@@ -629,9 +611,9 @@ final class React4jAction
       .methodBuilder( "toArray" )
       .returns( Types.REACT_NODE_ARRAY )
       .addModifiers( Modifier.PRIVATE, Modifier.STATIC )
-      .addAnnotation( Types.NONNULL )
+      .addAnnotation( BasicTypes.NONNULL )
       .addParameter( ParameterSpec.builder( Types.STREAM_T_REACT_NODE, "children", Modifier.FINAL )
-                       .addAnnotation( Types.NULLABLE )
+                       .addAnnotation( BasicTypes.NULLABLE )
                        .build() )
       .addStatement( "return children.toArray( $T::new )", Types.REACT_NODE_ARRAY )
       .build();
@@ -655,25 +637,25 @@ final class React4jAction
       .methodBuilder( "createElement" )
       .returns( Types.REACT_ELEMENT )
       .addModifiers( Modifier.PRIVATE, Modifier.STATIC )
-      .addAnnotation( Types.NONNULL )
+      .addAnnotation( BasicTypes.NONNULL )
       .addParameter( ParameterSpec.builder( String.class, "type", Modifier.FINAL )
-                       .addAnnotation( Types.NONNULL )
+                       .addAnnotation( BasicTypes.NONNULL )
                        .build() )
-      .addParameter( ParameterSpec.builder( Types.JS_PROPERTY_MAP_T_OBJECT, "props", Modifier.FINAL )
-                       .addAnnotation( Types.NULLABLE )
+      .addParameter( ParameterSpec.builder( JsinteropTypes.JS_PROPERTY_MAP_T_OBJECT, "props", Modifier.FINAL )
+                       .addAnnotation( BasicTypes.NULLABLE )
                        .build() )
       .addParameter( ParameterSpec.builder( Types.REACT_NODE_ARRAY, "children", Modifier.FINAL )
-                       .addAnnotation( Types.NULLABLE )
+                       .addAnnotation( BasicTypes.NULLABLE )
                        .build() )
       .varargs()
-      .addStatement( "final $T actual = $T.of()", Types.JS_PROPERTY_MAP_T_OBJECT, Types.JS_PROPERTY_MAP )
+      .addStatement( "final $T actual = $T.of()", JsinteropTypes.JS_PROPERTY_MAP_T_OBJECT, JsinteropTypes.JS_PROPERTY_MAP )
       .addStatement( "$T key = null", String.class )
       .addStatement( "$T ref = null", TypeName.OBJECT )
       .addCode( CodeBlock
                   .builder()
                   .beginControlFlow( "if ( null != props )" )
                   .addStatement( "key = props.has( \"key\" ) ? $T.asString( props.get( \"key\" ) ) : null",
-                                 Types.JS )
+                                 JsinteropTypes.JS )
                   .addStatement( "ref = props.has( \"ref\" ) ? props.get( \"ref\" ) : null" )
                   .addStatement(
                     "props.forEach( p -> { if ( !p.equals( \"key\" ) && !p.equals( \"ref\" ) ) { actual.set( p, props.get( p ) ); } } )" )
@@ -687,271 +669,5 @@ final class React4jAction
                   .build() )
       .addStatement( "return $T.createHostElement( type, key, ref, actual )", Types.REACT_ELEMENT )
       .build();
-  }
-
-  @Nonnull
-  private TypeName toTypeName( @Nonnull final Type type )
-  {
-    return toTypeName( type, type.isNullable() );
-  }
-
-  @Nonnull
-  private TypeName toTypeName( @Nonnull final Type type, final boolean boxed )
-  {
-    final Kind kind = type.getKind();
-    if ( boxed &&
-         ( Kind.Byte == kind ||
-           Kind.Octet == kind ||
-           Kind.Short == kind ||
-           Kind.UnsignedShort == kind ||
-           Kind.UnsignedLong == kind ||
-           Kind.Long == kind ||
-           Kind.LongLong == kind ||
-           Kind.UnsignedLongLong == kind ) )
-    {
-      // TODO: This is uncomfortable mapping. Not sure what the solutions is...
-      //  We should emit a warning a deal with it later
-      return TypeName.DOUBLE.box();
-    }
-    else if ( Kind.Any == kind )
-    {
-      return Types.ANY;
-    }
-    else if ( Kind.Void == kind )
-    {
-      return TypeName.VOID;
-    }
-    else if ( Kind.Boolean == kind )
-    {
-      return boxed ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
-    }
-    else if ( Kind.Byte == kind )
-    {
-      return TypeName.BYTE;
-    }
-    else if ( Kind.Octet == kind )
-    {
-      return TypeName.SHORT;
-    }
-    else if ( Kind.Short == kind )
-    {
-      return TypeName.SHORT;
-    }
-    else if ( Kind.UnsignedShort == kind )
-    {
-      return TypeName.INT;
-    }
-    else if ( Kind.Long == kind )
-    {
-      return TypeName.INT;
-    }
-    else if ( Kind.UnsignedLong == kind )
-    {
-      // UnsignedLong is not representable in a JVM but we may it using a signed integer when in jsinterop
-      // and just hope it produces the correct value.
-      return TypeName.INT;
-    }
-    else if ( Kind.LongLong == kind )
-    {
-      // LongLong is actually the same size as a java long in the jre but the way that
-      // it is transpiled by GWT/J2CL means we need to represent it as an integer but
-      // acknowledge that at runtime the value can exceed what the java type represents
-      return TypeName.INT;
-    }
-    else if ( Kind.UnsignedLongLong == kind )
-    {
-      // Not representable natively in java but in jsinterop it is best represented as an integer
-      // See comment on LongLong type
-      return TypeName.INT;
-    }
-    else if ( Kind.Float == kind || Kind.UnrestrictedFloat == kind )
-    {
-      return boxed ? TypeName.DOUBLE.box() : TypeName.FLOAT;
-    }
-    else if ( Kind.Double == kind || Kind.UnrestrictedDouble == kind )
-    {
-      return boxed ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
-    }
-    else if ( Kind.DOMString == kind || Kind.ByteString == kind || Kind.USVString == kind )
-    {
-      return Types.STRING;
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      final TypeReference typeReference = (TypeReference) type;
-      final String name = typeReference.getName();
-      if ( null != _schema.findInterfaceByName( name ) ||
-           null != _schema.findDictionaryByName( name ) ||
-           null != _schema.findCallbackInterfaceByName( name ) ||
-           null != _schema.findCallbackByName( name ) )
-      {
-        return lookupClassName( name );
-      }
-      else if ( null != _schema.findEnumerationByName( name ) )
-      {
-        return Types.STRING;
-      }
-      else
-      {
-        final TypedefDefinition typedef = _schema.getTypedefByName( name );
-        if ( Kind.Union == typedef.getType().getKind() )
-        {
-          // TODO: There is a single named union in the HTML API which is MediaProvider. We
-          //  could live with including this unnecessary abstraction or copy the logic for
-          //  expanding types from jsinterop generator and expand this to it's subtypes ala
-          //  MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
-          return lookupClassName( name );
-        }
-        else
-        {
-          return toTypeName( typedef.getType() );
-        }
-      }
-    }
-    else if ( Kind.Promise == kind )
-    {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Promise.name() ),
-                                        getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
-                                        getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
-    }
-    else if ( Kind.Record == kind )
-    {
-      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
-                                        getUnexpandedType( ( (RecordType) type ).getValueType() ) );
-    }
-    else if ( Kind.FrozenArray == kind )
-    {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
-                                        getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
-    }
-    else if ( Kind.Union == kind )
-    {
-      return lookupClassName( generateUnionType( (UnionType) type ) );
-    }
-    else if ( Kind.Object == kind ||
-              Kind.Symbol == kind ||
-              Kind.ArrayBuffer == kind ||
-              Kind.DataView == kind ||
-              Kind.Int8Array == kind ||
-              Kind.Int16Array == kind ||
-              Kind.Int32Array == kind ||
-              Kind.Uint8Array == kind ||
-              Kind.Uint16Array == kind ||
-              Kind.Uint32Array == kind ||
-              Kind.Uint8ClampedArray == kind ||
-              Kind.Float32Array == kind ||
-              Kind.Float64Array == kind )
-    {
-      return lookupClassName( kind.name() );
-    }
-    else
-    {
-      throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
-    }
-  }
-
-  @Nonnull
-  private String generateUnionType( @Nonnull final UnionType type )
-  {
-    final StringBuilder sb = new StringBuilder();
-    for ( final Type memberType : type.getMemberTypes() )
-    {
-      if ( 0 != sb.length() )
-      {
-        sb.append( "Or" );
-      }
-      appendTypeToUnionName( sb, memberType );
-    }
-    sb.append( "Union" );
-    return sb.toString();
-  }
-
-  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( kind.isString() )
-    {
-      sb.append( "String" );
-    }
-    else if ( kind.isPrimitive() ||
-              kind.isBufferRelated() ||
-              Kind.FrozenArray == kind ||
-              Kind.Object == kind ||
-              Kind.Symbol == kind )
-    {
-      sb.append( kind.name() );
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
-      sb.append( "Array" );
-    }
-    else
-    {
-      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
-    }
-  }
-
-  @Nonnull
-  private TypeName getUnexpandedType( @Nonnull final Type type )
-  {
-    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
-  }
-
-  @Nonnull
-  private Type toJsinteropCompatibleType( @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( kind.isPrimitive() &&
-         Kind.Boolean != kind &&
-         Kind.Double != kind &&
-         Kind.UnrestrictedDouble != kind )
-    {
-      return new Type( Kind.Double,
-                       type.getExtendedAttributes(),
-                       type.isNullable(),
-                       type.getSourceLocations() );
-    }
-    else
-    {
-      return type;
-    }
-  }
-
-  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
-                                                   @Nonnull final ParameterSpec.Builder parameter )
-  {
-    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
-    {
-      final TypeReference typeReference = (TypeReference) type;
-      final EnumerationDefinition enumeration = _schema.findEnumerationByName( typeReference.getName() );
-      if ( null != enumeration )
-      {
-        parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
-      }
-    }
-  }
-
-  @Nonnull
-  private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
-  {
-    return AnnotationSpec
-      .builder( Types.MAGIC_CONSTANT )
-      .addMember( "valuesFromClass", "$T.class", super.lookupClassName( enumeration.getName() ) )
-      .build();
-  }
-
-  @Nonnull
-  protected ClassName lookupClassName( @Nonnull final String idlName )
-  {
-    return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.lookupClassName( idlName );
   }
 }

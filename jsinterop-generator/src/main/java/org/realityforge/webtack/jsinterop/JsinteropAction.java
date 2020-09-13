@@ -14,7 +14,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -38,7 +37,6 @@ import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
-import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
@@ -46,8 +44,6 @@ import org.realityforge.webtack.model.NamedDefinition;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
-import org.realityforge.webtack.model.PromiseType;
-import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypeReference;
@@ -56,6 +52,8 @@ import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
+import org.realityforge.webtack.model.tools.util.BasicTypes;
+import org.realityforge.webtack.model.tools.util.JsinteropTypes;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 
 final class JsinteropAction
@@ -65,10 +63,6 @@ final class JsinteropAction
   private final String _globalInterface;
   private final boolean _generateGwtModule;
   private final boolean _generateTypeCatalog;
-  private final boolean _enableMagicConstants;
-  @Nonnull
-  private final Map<String, UnionType> _unions = new HashMap<>();
-  private WebIDLSchema _schema;
 
   JsinteropAction( @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
@@ -78,26 +72,17 @@ final class JsinteropAction
                    final boolean generateTypeCatalog,
                    final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName, inputTypeCatalogs );
+    super( outputDirectory, packageName, enableMagicConstants, inputTypeCatalogs );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
     _generateTypeCatalog = generateTypeCatalog;
-    _enableMagicConstants = enableMagicConstants;
-  }
-
-  @Override
-  protected void processInit()
-  {
-    super.processInit();
-    _unions.clear();
   }
 
   @Override
   public void process( @Nonnull final WebIDLSchema schema )
     throws Exception
   {
-    processInit();
-    _schema = Objects.requireNonNull( schema );
+    processInit( schema );
 
     FilesUtil.deleteDirectory( getMainJavaDirectory() );
     FilesUtil.deleteDirectory( getMainResourcesDirectory() );
@@ -105,7 +90,7 @@ final class JsinteropAction
     registerIdlTypeToJavaTypeMapping();
     registerDefaultTypeMapping();
 
-    for ( final TypedefDefinition definition : _schema.getTypedefs() )
+    for ( final TypedefDefinition definition : schema.getTypedefs() )
     {
       final String name = definition.getName();
       final Type type = definition.getType();
@@ -114,49 +99,49 @@ final class JsinteropAction
         generateUnion( name, (UnionType) type );
       }
     }
-    for ( final CallbackDefinition definition : _schema.getCallbacks() )
+    for ( final CallbackDefinition definition : schema.getCallbacks() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateCallback( definition );
       }
     }
-    for ( final CallbackInterfaceDefinition definition : _schema.getCallbackInterfaces() )
+    for ( final CallbackInterfaceDefinition definition : schema.getCallbackInterfaces() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateCallbackInterface( definition );
       }
     }
-    for ( final DictionaryDefinition definition : _schema.getDictionaries() )
+    for ( final DictionaryDefinition definition : schema.getDictionaries() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateDictionary( definition );
       }
     }
-    for ( final EnumerationDefinition definition : _schema.getEnumerations() )
+    for ( final EnumerationDefinition definition : schema.getEnumerations() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateEnumeration( definition );
       }
     }
-    for ( final InterfaceDefinition definition : _schema.getInterfaces() )
+    for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateInterface( definition );
       }
     }
-    for ( final PartialInterfaceDefinition definition : _schema.getPartialInterfaces() )
+    for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generatePartialInterface( definition );
       }
     }
-    for ( final NamespaceDefinition definition : _schema.getNamespaces() )
+    for ( final NamespaceDefinition definition : schema.getNamespaces() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
@@ -209,7 +194,8 @@ final class JsinteropAction
   private void generateGlobalThisInterface( @Nonnull final String globalInterface )
     throws IOException
   {
-    final InterfaceDefinition definition = _schema.findInterfaceByName( globalInterface );
+    final WebIDLSchema schema = getSchema();
+    final InterfaceDefinition definition = schema.findInterfaceByName( globalInterface );
     if ( null == definition )
     {
       throw new IllegalStateException( "Declared globalInterface '" + globalInterface + "' does not exist in schema" );
@@ -220,9 +206,9 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .superclass( lookupClassName( definition.getName() ) );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "goog.global" )
                           .build() );
 
@@ -230,7 +216,7 @@ final class JsinteropAction
                      "\n" +
                      "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" );
 
-    final OperationMember parentConstructor = _schema
+    final OperationMember parentConstructor = schema
       .getInterfaceByName( definition.getName() )
       .getOperations()
       .stream()
@@ -248,7 +234,7 @@ final class JsinteropAction
     }
     type.addMethod( method.build() );
 
-    for ( final NamespaceDefinition namespace : _schema.getNamespaces() )
+    for ( final NamespaceDefinition namespace : schema.getNamespaces() )
     {
       final String name = namespace.getName();
       type.addMethod( MethodSpec
@@ -256,10 +242,10 @@ final class JsinteropAction
                         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                         .returns( lookupClassName( namespace.getName() ) )
                         .addAnnotation( AnnotationSpec
-                                          .builder( Types.JS_PROPERTY )
+                                          .builder( JsinteropTypes.JS_PROPERTY )
                                           .addMember( "name", "$S", name )
                                           .build() )
-                        .addAnnotation( Types.NONNULL ).build() );
+                        .addAnnotation( BasicTypes.NONNULL ).build() );
     }
 
     final TypeName globalType = ClassName.bestGuess( "Global" );
@@ -268,8 +254,8 @@ final class JsinteropAction
 
     type.addMethod( MethodSpec.methodBuilder( "globalThis" )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .addAnnotation( Types.JS_OVERLAY )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .returns( globalType )
                       .addStatement( "return globalThis" )
                       .addJavadoc( "Accessor for the global <b>globalThis</b> property contains the global " +
@@ -305,9 +291,9 @@ final class JsinteropAction
         .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
                           .build() );
 
@@ -363,13 +349,14 @@ final class JsinteropAction
     if ( Kind.TypeReference == type.getKind() )
     {
       final String name = ( (TypeReference) type ).getName();
-      final TypedefDefinition typedef = _schema.findTypedefByName( name );
+      final WebIDLSchema schema = getSchema();
+      final TypedefDefinition typedef = schema.findTypedefByName( name );
       if ( null != typedef )
       {
         final Type resolvedType = typedef.getType();
         if ( Kind.Union == resolvedType.getKind() )
         {
-          final boolean nullable = _schema.isNullable( type );
+          final boolean nullable = schema.isNullable( type );
           values.add( new TypedValue( declaredType,
                                       type,
                                       lookupClassName( name ),
@@ -380,7 +367,7 @@ final class JsinteropAction
       }
       else
       {
-        final boolean nullable = _schema.isNullable( type );
+        final boolean nullable = getSchema().isNullable( type );
         values.add( new TypedValue( declaredType,
                                     type,
                                     toTypeName( type ),
@@ -390,7 +377,7 @@ final class JsinteropAction
     }
     else if ( Kind.Any == kind )
     {
-      values.add( new TypedValue( declaredType, type, Types.ANY, TypedValue.Nullability.NULLABLE, false ) );
+      values.add( new TypedValue( declaredType, type, JsinteropTypes.ANY, TypedValue.Nullability.NULLABLE, false ) );
       values.add( new TypedValue( declaredType, type, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true ) );
     }
     else if ( Kind.Union == kind )
@@ -405,7 +392,7 @@ final class JsinteropAction
     {
       final SequenceType sequenceType = (SequenceType) type;
       final Type itemType = sequenceType.getItemType();
-      final boolean nullable = _schema.isNullable( type );
+      final boolean nullable = getSchema().isNullable( type );
       final TypeName javaType = toTypeName( type );
 
       final TypeName arrayJavaType = ArrayTypeName.of( getUnexpandedType( itemType ) );
@@ -416,7 +403,7 @@ final class JsinteropAction
     }
     else
     {
-      final boolean nullable = _schema.isNullable( type );
+      final boolean nullable = getSchema().isNullable( type );
       TypeName javaType = toTypeName( type );
       if ( nullable )
       {
@@ -448,26 +435,26 @@ final class JsinteropAction
         final TypedValue.Nullability nullability = typedValue.getNullability();
         if ( TypedValue.Nullability.NULLABLE == nullability )
         {
-          parameter.addAnnotation( Types.NULLABLE );
-          methodNullability = Types.NULLABLE;
+          parameter.addAnnotation( BasicTypes.NULLABLE );
+          methodNullability = BasicTypes.NULLABLE;
         }
         else if ( TypedValue.Nullability.NONNULL == nullability )
         {
-          parameter.addAnnotation( Types.NONNULL );
-          methodNullability = Types.NONNULL;
+          parameter.addAnnotation( BasicTypes.NONNULL );
+          methodNullability = BasicTypes.NONNULL;
         }
         else
         {
-          methodNullability = Types.NONNULL;
+          methodNullability = BasicTypes.NONNULL;
         }
 
         type.addMethod( MethodSpec
                           .methodBuilder( "of" )
-                          .addAnnotation( Types.JS_OVERLAY )
+                          .addAnnotation( JsinteropTypes.JS_OVERLAY )
                           .addAnnotation( methodNullability )
                           .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                           .addParameter( parameter.build() )
-                          .addStatement( "return $T.cast( value )", Types.JS )
+                          .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
                           .returns( self ).build() );
       }
     }
@@ -482,9 +469,9 @@ final class JsinteropAction
         .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
                           .build() );
     maybeAddJavadoc( definition, type );
@@ -504,9 +491,10 @@ final class JsinteropAction
       generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type );
     }
 
+    final WebIDLSchema schema = getSchema();
     for ( final DictionaryMember member : definition.getMembers() )
     {
-      final Type actualType = _schema.resolveType( member.getType() );
+      final Type actualType = schema.resolveType( member.getType() );
       final TypeName javaType = toTypeName( actualType );
       generateDictionaryMemberGetter( member, actualType, javaType, type );
       generateDictionaryMemberSetter( member, actualType, javaType, type );
@@ -522,7 +510,7 @@ final class JsinteropAction
     String superName = definition.getInherits();
     while ( null != superName )
     {
-      final DictionaryDefinition parent = _schema.getDictionaryByName( superName );
+      final DictionaryDefinition parent = schema.getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
         for ( final TypedValue memberType : explodeType( member.getType() ) )
@@ -544,22 +532,22 @@ final class JsinteropAction
     final TypeName self = lookupClassName( definition.getName() );
     final MethodSpec.Builder method = MethodSpec
       .methodBuilder( "create" )
-      .addAnnotation( Types.JS_OVERLAY )
-      .addAnnotation( Types.NONNULL )
+      .addAnnotation( JsinteropTypes.JS_OVERLAY )
+      .addAnnotation( BasicTypes.NONNULL )
       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
       .returns( self );
     if ( requiredMembers.isEmpty() )
     {
-      method.addStatement( "return $T.uncheckedCast( $T.of() )", Types.JS, Types.JS_PROPERTY_MAP );
+      method.addStatement( "return $T.uncheckedCast( $T.of() )", JsinteropTypes.JS, JsinteropTypes.JS_PROPERTY_MAP );
     }
     else
     {
       final List<Object> params = new ArrayList<>();
       final StringBuilder sb = new StringBuilder();
       sb.append( "return $T.<$T>uncheckedCast( $T.of() )" );
-      params.add( Types.JS );
+      params.add( JsinteropTypes.JS );
       params.add( self );
-      params.add( Types.JS_PROPERTY_MAP );
+      params.add( JsinteropTypes.JS_PROPERTY_MAP );
 
       int index = 0;
       for ( final DictionaryMember member : requiredMembers )
@@ -596,7 +584,7 @@ final class JsinteropAction
     final String inherits = definition.getInherits();
     if ( null != inherits )
     {
-      collectRequiredDictionaryMembers( _schema.getDictionaryByName( inherits ), members );
+      collectRequiredDictionaryMembers( getSchema().getDictionaryByName( inherits ), members );
     }
 
     definition.getMembers().stream().filter( m -> !m.isOptional() ).forEach( members::add );
@@ -613,20 +601,20 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .returns( javaType );
     method.addAnnotation( AnnotationSpec
-                            .builder( Types.JS_PROPERTY )
+                            .builder( JsinteropTypes.JS_PROPERTY )
                             .addMember( "name", "$S", member.getName() )
                             .build() );
     maybeAddJavadoc( member, method );
     addMagicConstantAnnotationIfNeeded( member.getType(), method );
-    if ( _schema.isNullable( member.getType() ) )
+    if ( getSchema().isNullable( member.getType() ) )
     {
-      method.addAnnotation( Types.NULLABLE );
+      method.addAnnotation( BasicTypes.NULLABLE );
     }
     else
     {
       if ( !actualType.getKind().isPrimitive() && !member.isOptional() )
       {
-        method.addAnnotation( Types.NONNULL );
+        method.addAnnotation( BasicTypes.NONNULL );
       }
     }
     type.addMethod( method.build() );
@@ -641,19 +629,19 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( getMutatorName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
-        .addAnnotation( Types.JS_PROPERTY );
+        .addAnnotation( JsinteropTypes.JS_PROPERTY );
     maybeAddJavadoc( member, method );
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, safeName( member.getName() ) );
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
 
-    if ( _schema.isNullable( member.getType() ) )
+    if ( getSchema().isNullable( member.getType() ) )
     {
-      parameter.addAnnotation( Types.NULLABLE );
+      parameter.addAnnotation( BasicTypes.NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
-      parameter.addAnnotation( Types.NONNULL );
+      parameter.addAnnotation( BasicTypes.NONNULL );
     }
     method.addParameter( parameter.build() );
     type.addMethod( method.build() );
@@ -668,7 +656,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( mutatorName )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-        .addAnnotation( Types.JS_OVERLAY );
+        .addAnnotation( JsinteropTypes.JS_OVERLAY );
     maybeAddJavadoc( member, method );
     final String paramName = safeName( member.getName() );
     final TypeName javaType = typedValue.getJavaType();
@@ -693,8 +681,9 @@ final class JsinteropAction
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
     method.addParameter( parameter.build() );
-    final Type declaredType = _schema.resolveType( typedValue.getDeclaredType() );
-    final Type resolvedType = _schema.resolveType( typedValue.getType(), true );
+    final WebIDLSchema schema = getSchema();
+    final Type declaredType = schema.resolveType( typedValue.getDeclaredType() );
+    final Type resolvedType = schema.resolveType( typedValue.getType(), true );
     if ( Kind.Union == declaredType.getKind() || unwrapsToUnion( declaredType ) )
     {
       method.addStatement( "$N( $T.of( $N ) )", mutatorName, toTypeName( declaredType ), paramName );
@@ -705,14 +694,14 @@ final class JsinteropAction
       final TypeName itemType = toTypeName( ( (SequenceType) resolvedType ).getItemType(), true );
       method.addStatement( "$N( $T.<$T>uncheckedCast( $N ) )",
                            mutatorName,
-                           Types.JS,
+                           JsinteropTypes.JS,
                            ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), itemType ),
                            paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
     {
       // TODO: It would be nice to use an Any.of() method here ... if it existed.
-      method.addStatement( "$N( $T.asAny( $N ) )", mutatorName, Types.JS, paramName );
+      method.addStatement( "$N( $T.asAny( $N ) )", mutatorName, JsinteropTypes.JS, paramName );
     }
     else
     {
@@ -728,7 +717,7 @@ final class JsinteropAction
     if ( Kind.TypeReference == kind )
     {
       final String name = ( (TypeReference) type ).getName();
-      final TypedefDefinition typedef = _schema.findTypedefByName( name );
+      final TypedefDefinition typedef = getSchema().findTypedefByName( name );
       if ( null != typedef )
       {
         final Type otherType = typedef.getType();
@@ -748,8 +737,8 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( safeMethodName( member.getName() ) )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
-        .addAnnotation( Types.JS_OVERLAY )
-        .addAnnotation( Types.NONNULL )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
+        .addAnnotation( BasicTypes.NONNULL )
         .returns( lookupClassName( dictionary.getName() ) );
     maybeAddJavadoc( member, method );
     if ( addOverride )
@@ -791,11 +780,11 @@ final class JsinteropAction
     final TypedValue.Nullability nullability = typedValue.getNullability();
     if ( TypedValue.Nullability.NULLABLE == nullability )
     {
-      parameter.addAnnotation( Types.NULLABLE );
+      parameter.addAnnotation( BasicTypes.NULLABLE );
     }
     else if ( TypedValue.Nullability.NONNULL == nullability )
     {
-      parameter.addAnnotation( Types.NONNULL );
+      parameter.addAnnotation( BasicTypes.NONNULL );
     }
   }
 
@@ -804,7 +793,7 @@ final class JsinteropAction
   {
     if ( typedValue.doNotAutobox() )
     {
-      parameter.addAnnotation( Types.DO_NOT_AUTOBOX );
+      parameter.addAnnotation( JsinteropTypes.DO_NOT_AUTOBOX );
     }
   }
 
@@ -824,7 +813,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type
-      .addAnnotation( Types.JS_FUNCTION )
+      .addAnnotation( JsinteropTypes.JS_FUNCTION )
       .addAnnotation( FunctionalInterface.class );
     maybeAddJavadoc( definition, type );
     final MethodSpec.Builder method =
@@ -845,7 +834,8 @@ final class JsinteropAction
   private TypedValue asTypedValue( @Nonnull final Type type )
   {
     // This method is only called for arguments to callback interfaces a callbacks
-    final Type resolveType = _schema.resolveType( type );
+    final WebIDLSchema schema = getSchema();
+    final Type resolveType = schema.resolveType( type );
     if ( Kind.Any == type.getKind() )
     {
       return new TypedValue( type, resolveType, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true );
@@ -855,7 +845,7 @@ final class JsinteropAction
       final TypeName javaType = toTypeName( resolveType );
       final TypedValue.Nullability nullability =
         javaType.isPrimitive() ? TypedValue.Nullability.NA :
-        _schema.isNullable( type ) ? TypedValue.Nullability.NULLABLE :
+        schema.isNullable( type ) ? TypedValue.Nullability.NULLABLE :
         TypedValue.Nullability.NONNULL;
       return new TypedValue( type, resolveType, javaType, nullability, false );
     }
@@ -871,9 +861,9 @@ final class JsinteropAction
         .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", exposedOnGlobal ? name : "?" )
                           .build() )
       .addAnnotation( FunctionalInterface.class );
@@ -910,15 +900,15 @@ final class JsinteropAction
 
     type.addMethod( MethodSpec
                       .methodBuilder( "of" )
-                      .addAnnotation( Types.JS_OVERLAY )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                       .returns( lookupClassName( name ) )
                       .addParameter( ParameterSpec
                                        .builder( TypeName.OBJECT, "object", Modifier.FINAL )
-                                       .addAnnotation( Types.NONNULL )
+                                       .addAnnotation( BasicTypes.NONNULL )
                                        .build() )
-                      .addStatement( "return $T.cast( object )", Types.JS )
+                      .addStatement( "return $T.cast( object )", JsinteropTypes.JS )
                       .build() );
 
     type.addMethod( MethodSpec
@@ -965,9 +955,9 @@ final class JsinteropAction
     }
     final boolean noPublicSymbol = shouldExpectNoGlobalSymbol( definition );
 
-    type.addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", noPublicSymbol ? "Object" : name )
                           .build() );
 
@@ -1009,9 +999,9 @@ final class JsinteropAction
 
     final AnnotationSpec.Builder jsTypeAnnotation =
       AnnotationSpec
-        .builder( Types.JS_TYPE )
+        .builder( JsinteropTypes.JS_TYPE )
         .addMember( "isNative", "true" )
-        .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
+        .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE );
 
     type.addAnnotation( jsTypeAnnotation
                           .addMember( "name", "$S", name )
@@ -1035,9 +1025,10 @@ final class JsinteropAction
 
     final String inherits = definition.getInherits();
     final OperationMember parentConstructor;
+    final WebIDLSchema schema = getSchema();
     if ( null != inherits )
     {
-      parentConstructor = _schema
+      parentConstructor = schema
         .getInterfaceByName( inherits )
         .getOperations()
         .stream()
@@ -1112,7 +1103,7 @@ final class JsinteropAction
     for ( final EventMember event : definition.getEvents() )
     {
       final CallbackInterfaceDefinition callbackInterface =
-        _schema.findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
+        schema.findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
       if ( null != callbackInterface )
       {
         generateAddEventListener( event, 0, type );
@@ -1126,9 +1117,9 @@ final class JsinteropAction
 
     final AnnotationSpec.Builder jsTypeAnnotation =
       AnnotationSpec
-        .builder( Types.JS_TYPE )
+        .builder( JsinteropTypes.JS_TYPE )
         .addMember( "isNative", "true" )
-        .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE );
+        .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE );
 
     type.addAnnotation( jsTypeAnnotation
                           .addMember( "name", "$S", deriveJavascriptName( definition ) )
@@ -1155,7 +1146,7 @@ final class JsinteropAction
     type.addMethod( MethodSpec
                       .methodBuilder( "size" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY )
+                      .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
                                         .addMember( "name", "$S", "size" )
                                         .build() )
                       .returns( TypeName.INT )
@@ -1182,53 +1173,53 @@ final class JsinteropAction
     type.addMethod( MethodSpec
                       .methodBuilder( "get" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( Types.NULLABLE )
+                      .addAnnotation( BasicTypes.NULLABLE )
                       .addParameter( keyParam )
                       .returns( boxedValueType )
                       .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( "keys" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedKeyType ) )
                       .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( "values" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, boxedValueType ) )
                       .build() );
     type.addType( TypeSpec
                     .interfaceBuilder( "Entry" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                    .addAnnotation( AnnotationSpec.builder( Types.JS_TYPE )
+                    .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                                       .addMember( "isNative", "true" )
                                       .addMember( "name", "$S", "?" )
-                                      .addMember( "namespace", "$T.GLOBAL", Types.JS_PACKAGE )
+                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                                       .build() )
                     .addMethod( MethodSpec.methodBuilder( "key" )
-                                  .addAnnotation( Types.JS_OVERLAY )
+                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
                                   .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
                                   .returns( keyType )
-                                  .addStatement( "return $T.asArray( this )[ 0 ].cast()", Types.JS )
+                                  .addStatement( "return $T.asArray( this )[ 0 ].cast()", JsinteropTypes.JS )
                                   .build() )
                     .addMethod( MethodSpec.methodBuilder( "value" )
-                                  .addAnnotation( Types.JS_OVERLAY )
+                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
                                   .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
                                   .returns( valueType )
-                                  .addStatement( "return $T.asArray( this )[ 1 ].cast()", Types.JS )
+                                  .addStatement( "return $T.asArray( this )[ 1 ].cast()", JsinteropTypes.JS )
                                   .build() )
                     .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( "entries" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( Types.NONNULL )
+                      .addAnnotation( BasicTypes.NONNULL )
                       .returns( ParameterizedTypeName.get( Types.JS_ITERATOR, ClassName.bestGuess( "Entry" ) ) )
                       .build() );
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                    .addAnnotation( Types.JS_FUNCTION )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
                     .addAnnotation( FunctionalInterface.class )
                     .addMethod( MethodSpec
                                   .methodBuilder( "item" )
@@ -1239,7 +1230,7 @@ final class JsinteropAction
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback2" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                    .addAnnotation( Types.JS_FUNCTION )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
                     .addAnnotation( FunctionalInterface.class )
                     .addMethod( MethodSpec
                                   .methodBuilder( "item" )
@@ -1251,7 +1242,7 @@ final class JsinteropAction
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback3" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                    .addAnnotation( Types.JS_FUNCTION )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
                     .addAnnotation( FunctionalInterface.class )
                     .addMethod( MethodSpec
                                   .methodBuilder( "item" )
@@ -1260,7 +1251,7 @@ final class JsinteropAction
                                   .addParameter( keyParam )
                                   .addParameter( ParameterSpec
                                                    .builder( lookupClassName( definitionName ), "map" )
-                                                   .addAnnotation( Types.NONNULL )
+                                                   .addAnnotation( BasicTypes.NONNULL )
                                                    .build() )
                                   .build() )
                     .build() );
@@ -1268,21 +1259,21 @@ final class JsinteropAction
                       .methodBuilder( "forEach" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                       .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
-                                       .addAnnotation( Types.NONNULL )
+                                       .addAnnotation( BasicTypes.NONNULL )
                                        .build() )
                       .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( "forEach" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                       .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
-                                       .addAnnotation( Types.NONNULL )
+                                       .addAnnotation( BasicTypes.NONNULL )
                                        .build() )
                       .build() );
     type.addMethod( MethodSpec
                       .methodBuilder( "forEach" )
                       .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
                       .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
-                                       .addAnnotation( Types.NONNULL )
+                                       .addAnnotation( BasicTypes.NONNULL )
                                        .build() )
                       .build() );
     if ( !mapLike.isReadOnly() )
@@ -1338,13 +1329,14 @@ final class JsinteropAction
   private void addNullabilityAnnotationIfRequired( @Nonnull final Type type,
                                                    @Nonnull final ParameterSpec.Builder builder )
   {
-    if ( _schema.isNullable( type ) )
+    final WebIDLSchema schema = getSchema();
+    if ( schema.isNullable( type ) )
     {
-      builder.addAnnotation( Types.NULLABLE );
+      builder.addAnnotation( BasicTypes.NULLABLE );
     }
-    else if ( !_schema.resolveType( type ).getKind().isPrimitive() )
+    else if ( !schema.resolveType( type ).getKind().isPrimitive() )
     {
-      builder.addAnnotation( Types.NONNULL );
+      builder.addAnnotation( BasicTypes.NONNULL );
     }
   }
 
@@ -1358,10 +1350,10 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-        .addAnnotation( Types.JS_OVERLAY )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
         .addParameter( ParameterSpec
                          .builder( listenerType, "callback", Modifier.FINAL )
-                         .addAnnotation( Types.NONNULL )
+                         .addAnnotation( BasicTypes.NONNULL )
                          .build() );
     if ( 0 == variant )
     {
@@ -1370,9 +1362,9 @@ final class JsinteropAction
                          .builder( lookupClassName( "AddEventListenerOptions" ),
                                    "options",
                                    Modifier.FINAL )
-                         .addAnnotation( Types.NONNULL )
+                         .addAnnotation( BasicTypes.NONNULL )
                          .build() )
-        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, JsinteropTypes.JS );
     }
     else if ( 1 == variant )
     {
@@ -1380,12 +1372,12 @@ final class JsinteropAction
         .addParameter( ParameterSpec
                          .builder( TypeName.BOOLEAN, "options", Modifier.FINAL )
                          .build() )
-        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, JsinteropTypes.JS );
     }
     else
     {
       assert 2 == variant;
-      method.addStatement( "addEventListener( $S, $T.cast( callback ) )", eventName, Types.JS );
+      method.addStatement( "addEventListener( $S, $T.cast( callback ) )", eventName, JsinteropTypes.JS );
     }
 
     type.addMethod( method.build() );
@@ -1401,10 +1393,10 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener" )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
-        .addAnnotation( Types.JS_OVERLAY )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY )
         .addParameter( ParameterSpec
                          .builder( listenerType, "callback", Modifier.FINAL )
-                         .addAnnotation( Types.NONNULL )
+                         .addAnnotation( BasicTypes.NONNULL )
                          .build() );
     if ( 0 == variant )
     {
@@ -1413,9 +1405,9 @@ final class JsinteropAction
                          .builder( lookupClassName( "EventListenerOptions" ),
                                    "options",
                                    Modifier.FINAL )
-                         .addAnnotation( Types.NONNULL )
+                         .addAnnotation( BasicTypes.NONNULL )
                          .build() )
-        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, JsinteropTypes.JS );
     }
     else if ( 1 == variant )
     {
@@ -1423,12 +1415,12 @@ final class JsinteropAction
         .addParameter( ParameterSpec
                          .builder( TypeName.BOOLEAN, "options", Modifier.FINAL )
                          .build() )
-        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, Types.JS );
+        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, JsinteropTypes.JS );
     }
     else
     {
       assert 2 == variant;
-      method.addStatement( "removeEventListener( $S, $T.cast( callback ) )", eventName, Types.JS );
+      method.addStatement( "removeEventListener( $S, $T.cast( callback ) )", eventName, JsinteropTypes.JS );
     }
 
     type.addMethod( method.build() );
@@ -1459,22 +1451,23 @@ final class JsinteropAction
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
-    final Type actualType = _schema.resolveType( attributeType );
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( safeJsPropertyMethodName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( toTypeName( actualType ) )
-        .addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
+        .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     maybeAddJavadoc( attribute, method );
-    if ( _schema.isNullable( attributeType ) )
+    if ( schema.isNullable( attributeType ) )
     {
-      method.addAnnotation( Types.NULLABLE );
+      method.addAnnotation( BasicTypes.NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
-      method.addAnnotation( Types.NONNULL );
+      method.addAnnotation( BasicTypes.NONNULL );
     }
     type.addMethod( method.build() );
   }
@@ -1484,7 +1477,8 @@ final class JsinteropAction
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
-    final Type actualType = _schema.resolveType( attributeType );
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
     final String fieldName = safeName( name );
     final FieldSpec.Builder field =
@@ -1492,15 +1486,17 @@ final class JsinteropAction
     maybeAddJavadoc( attribute, field );
     if ( !fieldName.equals( name ) )
     {
-      field.addAnnotation( AnnotationSpec.builder( Types.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
+      field.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
+                             .addMember( "name", "$S", name )
+                             .build() );
     }
-    if ( _schema.isNullable( attributeType ) )
+    if ( schema.isNullable( attributeType ) )
     {
-      field.addAnnotation( Types.NULLABLE );
+      field.addAnnotation( BasicTypes.NULLABLE );
     }
     else if ( !actualType.getKind().isPrimitive() )
     {
-      field.addAnnotation( Types.NONNULL );
+      field.addAnnotation( BasicTypes.NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, field );
     type.addField( field.build() );
@@ -1519,7 +1515,7 @@ final class JsinteropAction
                                  @Nonnull final TypeSpec.Builder type )
   {
     final Type constantType = constant.getType();
-    final Type actualType = _schema.resolveType( constantType );
+    final Type actualType = getSchema().resolveType( constantType );
     final FieldSpec.Builder field =
       FieldSpec
         .builder( toTypeName( actualType ),
@@ -1527,7 +1523,7 @@ final class JsinteropAction
                   Modifier.PUBLIC,
                   Modifier.STATIC,
                   Modifier.FINAL )
-        .addAnnotation( Types.JS_OVERLAY );
+        .addAnnotation( JsinteropTypes.JS_OVERLAY );
 
     maybeAddJavadoc( constant, field );
 
@@ -1619,7 +1615,9 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     if ( !methodName.equals( name ) )
     {
-      method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
+      method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
+                              .addMember( "name", "$S", name )
+                              .build() );
     }
     final Type returnType = operation.getReturnType();
     emitReturnType( returnType, method );
@@ -1666,7 +1664,9 @@ final class JsinteropAction
     maybeAddJavadoc( operation, method );
     if ( !methodName.equals( name ) )
     {
-      method.addAnnotation( AnnotationSpec.builder( Types.JS_METHOD ).addMember( "name", "$S", name ).build() );
+      method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_METHOD )
+                              .addMember( "name", "$S", name )
+                              .build() );
     }
     final Type returnType = operation.getReturnType();
     emitReturnType( returnType, method );
@@ -1683,14 +1683,14 @@ final class JsinteropAction
     if ( Kind.Void != returnType.getKind() )
     {
       addMagicConstantAnnotationIfNeeded( returnType, method );
-      final Type actualType = _schema.resolveType( returnType );
-      if ( _schema.isNullable( returnType ) )
+      final Type actualType = getSchema().resolveType( returnType );
+      if ( getSchema().isNullable( returnType ) )
       {
-        method.addAnnotation( Types.NULLABLE );
+        method.addAnnotation( BasicTypes.NULLABLE );
       }
       else if ( !actualType.getKind().isPrimitive() )
       {
-        method.addAnnotation( Types.NONNULL );
+        method.addAnnotation( BasicTypes.NONNULL );
       }
       method.returns( toTypeName( returnType ) );
     }
@@ -1759,7 +1759,7 @@ final class JsinteropAction
   @Nonnull
   private String defaultValue( @Nonnull final Argument argument, @Nonnull final List<Object> params )
   {
-    final Type type = _schema.resolveType( argument.getType() );
+    final Type type = getSchema().resolveType( argument.getType() );
     final Kind kind = type.getKind();
     if ( kind.isInteger() )
     {
@@ -1785,7 +1785,7 @@ final class JsinteropAction
                                  final boolean isFinal,
                                  @Nonnull final MethodSpec.Builder method )
   {
-    final Type actualType = _schema.resolveType( argument.getType() );
+    final Type actualType = getSchema().resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, safeName( argument.getName() ) );
@@ -1802,59 +1802,6 @@ final class JsinteropAction
       method.varargs();
     }
     method.addParameter( parameter.build() );
-  }
-
-  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
-                                                   @Nonnull final ParameterSpec.Builder parameter )
-  {
-    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
-    {
-      final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
-      if ( null != enumeration )
-      {
-        parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
-      }
-    }
-  }
-
-  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
-                                                   @Nonnull final MethodSpec.Builder method )
-  {
-    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
-    {
-      final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
-      if ( null != enumeration )
-      {
-        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
-      }
-    }
-  }
-
-  private void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
-                                                   @Nonnull final FieldSpec.Builder field )
-  {
-    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
-    {
-      final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
-      if ( null != enumeration )
-      {
-        field.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
-      }
-    }
-  }
-
-  @Nonnull
-  private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
-  {
-    final ClassName enumerationType =
-      ClassName.bestGuess( lookupJavaType( enumeration.getName() ) );
-    return AnnotationSpec
-      .builder( Types.MAGIC_CONSTANT )
-      .addMember( "valuesFromClass", "$T.class", enumerationType )
-      .build();
   }
 
   private void generateEnumeration( @Nonnull final EnumerationDefinition definition )
@@ -1874,12 +1821,12 @@ final class JsinteropAction
       if ( !value.isEmpty() )
       {
         final FieldSpec.Builder field = FieldSpec
-          .builder( Types.STRING,
+          .builder( BasicTypes.STRING,
                     safeName( enumerationValueToName( value ) ),
                     Modifier.PUBLIC,
                     Modifier.STATIC,
                     Modifier.FINAL )
-          .addAnnotation( Types.NONNULL )
+          .addAnnotation( BasicTypes.NONNULL )
           .initializer( "$S", value );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
         type.addField( field.build() );
@@ -1981,274 +1928,25 @@ final class JsinteropAction
     return super.getGeneratedFiles();
   }
 
-  @Nonnull
-  protected ClassName lookupClassName( @Nonnull final String idlName )
-  {
-    return null != _schema.findEnumerationByName( idlName ) ? Types.STRING : super.lookupClassName( idlName );
-  }
-
-  @Nonnull
-  private TypeName toTypeName( @Nonnull final Type type )
-  {
-    return toTypeName( type, type.isNullable() );
-  }
-
-  @Nonnull
-  private TypeName toTypeName( @Nonnull final Type type, final boolean boxed )
-  {
-    final Kind kind = type.getKind();
-    if ( boxed &&
-         ( Kind.Byte == kind ||
-           Kind.Octet == kind ||
-           Kind.Short == kind ||
-           Kind.UnsignedShort == kind ||
-           Kind.UnsignedLong == kind ||
-           Kind.Long == kind ||
-           Kind.LongLong == kind ||
-           Kind.UnsignedLongLong == kind ) )
-    {
-      // TODO: This is uncomfortable mapping. Not sure what the solutions is...
-      //  We should emit a warning a deal with it later
-      return TypeName.DOUBLE.box();
-    }
-    else if ( Kind.Any == kind )
-    {
-      return Types.ANY;
-    }
-    else if ( Kind.Void == kind )
-    {
-      return TypeName.VOID;
-    }
-    else if ( Kind.Boolean == kind )
-    {
-      return boxed ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
-    }
-    else if ( Kind.Byte == kind )
-    {
-      return TypeName.BYTE;
-    }
-    else if ( Kind.Octet == kind )
-    {
-      return TypeName.SHORT;
-    }
-    else if ( Kind.Short == kind )
-    {
-      return TypeName.SHORT;
-    }
-    else if ( Kind.UnsignedShort == kind )
-    {
-      return TypeName.INT;
-    }
-    else if ( Kind.Long == kind )
-    {
-      return TypeName.INT;
-    }
-    else if ( Kind.UnsignedLong == kind )
-    {
-      // UnsignedLong is not representable in a JVM but we may it using a signed integer when in jsinterop
-      // and just hope it produces the correct value.
-      return TypeName.INT;
-    }
-    else if ( Kind.LongLong == kind )
-    {
-      // LongLong is actually the same size as a java long in the jre but the way that
-      // it is transpiled by GWT/J2CL means we need to represent it as an integer but
-      // acknowledge that at runtime the value can exceed what the java type represents
-      return TypeName.INT;
-    }
-    else if ( Kind.UnsignedLongLong == kind )
-    {
-      // Not representable natively in java but in jsinterop it is best represented as an integer
-      // See comment on LongLong type
-      return TypeName.INT;
-    }
-    else if ( Kind.Float == kind || Kind.UnrestrictedFloat == kind )
-    {
-      return boxed ? TypeName.DOUBLE.box() : TypeName.FLOAT;
-    }
-    else if ( Kind.Double == kind || Kind.UnrestrictedDouble == kind )
-    {
-      return boxed ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
-    }
-    else if ( Kind.DOMString == kind || Kind.ByteString == kind || Kind.USVString == kind )
-    {
-      return Types.STRING;
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      final TypeReference typeReference = (TypeReference) type;
-      final String name = typeReference.getName();
-      if ( null != _schema.findInterfaceByName( name ) ||
-           null != _schema.findDictionaryByName( name ) ||
-           null != _schema.findCallbackInterfaceByName( name ) ||
-           null != _schema.findCallbackByName( name ) )
-      {
-        return lookupClassName( name );
-      }
-      else if ( null != _schema.findEnumerationByName( name ) )
-      {
-        return Types.STRING;
-      }
-      else
-      {
-        final TypedefDefinition typedef = _schema.getTypedefByName( name );
-        if ( Kind.Union == typedef.getType().getKind() )
-        {
-          return lookupClassName( name );
-        }
-        else
-        {
-          return toTypeName( typedef.getType() );
-        }
-      }
-    }
-    else if ( Kind.Promise == kind )
-    {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Promise.name() ),
-                                        getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
-                                        getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
-    }
-    else if ( Kind.Record == kind )
-    {
-      return ParameterizedTypeName.get( Types.JS_PROPERTY_MAP,
-                                        getUnexpandedType( ( (RecordType) type ).getValueType() ) );
-    }
-    else if ( Kind.FrozenArray == kind )
-    {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
-                                        getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
-    }
-    else if ( Kind.Union == kind )
-    {
-      return lookupClassName( generateUnionType( (UnionType) type ) );
-    }
-    else if ( Kind.Object == kind ||
-              Kind.Symbol == kind ||
-              Kind.ArrayBuffer == kind ||
-              Kind.DataView == kind ||
-              Kind.Int8Array == kind ||
-              Kind.Int16Array == kind ||
-              Kind.Int32Array == kind ||
-              Kind.Uint8Array == kind ||
-              Kind.Uint16Array == kind ||
-              Kind.Uint32Array == kind ||
-              Kind.Uint8ClampedArray == kind ||
-              Kind.Float32Array == kind ||
-              Kind.Float64Array == kind )
-    {
-      return lookupClassName( kind.name() );
-    }
-    else
-    {
-      throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
-    }
-  }
-
-  @Nonnull
-  private TypeName getUnexpandedType( @Nonnull final Type type )
-  {
-    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
-  }
-
-  @Nonnull
-  private Type toJsinteropCompatibleType( @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( kind.isPrimitive() &&
-         Kind.Boolean != kind &&
-         Kind.Double != kind &&
-         Kind.UnrestrictedDouble != kind )
-    {
-      return new Type( Kind.Double,
-                       type.getExtendedAttributes(),
-                       type.isNullable(),
-                       type.getSourceLocations() );
-    }
-    else
-    {
-      return type;
-    }
-  }
-
-  @Nonnull
-  private Map<String, UnionType> getUnions()
-  {
-    return _unions;
-  }
-
-  @Nonnull
-  private String generateUnionType( @Nonnull final UnionType type )
-  {
-    final StringBuilder sb = new StringBuilder();
-    for ( final Type memberType : type.getMemberTypes() )
-    {
-      if ( 0 != sb.length() )
-      {
-        sb.append( "Or" );
-      }
-      appendTypeToUnionName( sb, memberType );
-    }
-    sb.append( "Union" );
-    final String name = sb.toString();
-    if ( !_unions.containsKey( name ) )
-    {
-      _unions.put( name, type );
-    }
-    return name;
-  }
-
-  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
-  {
-    final Kind kind = type.getKind();
-    if ( kind.isString() )
-    {
-      sb.append( "String" );
-    }
-    else if ( kind.isPrimitive() ||
-              kind.isBufferRelated() ||
-              Kind.FrozenArray == kind ||
-              Kind.Object == kind ||
-              Kind.Symbol == kind )
-    {
-      sb.append( kind.name() );
-    }
-    else if ( Kind.TypeReference == kind )
-    {
-      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
-    }
-    else if ( Kind.Sequence == kind )
-    {
-      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
-      sb.append( "Array" );
-    }
-    else
-    {
-      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
-    }
-  }
-
   private void registerIdlTypeToJavaTypeMapping()
   {
-    _schema.getTypedefs()
+    final WebIDLSchema schema = getSchema();
+    schema.getTypedefs()
       .stream()
       .filter( definition -> Kind.Union == definition.getType().getKind() )
       .forEach( this::registerDefinition );
-    _schema.getCallbacks().forEach( this::registerDefinition );
-    _schema.getCallbackInterfaces().forEach( this::registerDefinition );
-    _schema.getDictionaries().forEach( this::registerDefinition );
-    for ( final EnumerationDefinition definition : _schema.getEnumerations() )
+    schema.getCallbacks().forEach( this::registerDefinition );
+    schema.getCallbackInterfaces().forEach( this::registerDefinition );
+    schema.getDictionaries().forEach( this::registerDefinition );
+    for ( final EnumerationDefinition definition : schema.getEnumerations() )
     {
       registerDefinition( definition );
       // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
       super.lookupClassName( definition.getName() );
     }
-    _schema.getInterfaces().forEach( this::registerDefinition );
-    _schema.getPartialInterfaces().forEach( this::registerDefinition );
-    _schema.getNamespaces().forEach( this::registerDefinition );
+    schema.getInterfaces().forEach( this::registerDefinition );
+    schema.getPartialInterfaces().forEach( this::registerDefinition );
+    schema.getNamespaces().forEach( this::registerDefinition );
   }
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )

@@ -2,7 +2,12 @@ package org.realityforge.webtack.model.tools.util;
 
 import com.squareup.javapoet.AnnotationSpec;
 import com.squareup.javapoet.ClassName;
+import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
+import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.ParameterSpec;
+import com.squareup.javapoet.ParameterizedTypeName;
+import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.File;
 import java.io.FileReader;
@@ -20,7 +25,17 @@ import java.util.Properties;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
+import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.PromiseType;
+import org.realityforge.webtack.model.RecordType;
+import org.realityforge.webtack.model.SequenceType;
+import org.realityforge.webtack.model.Type;
+import org.realityforge.webtack.model.TypeReference;
+import org.realityforge.webtack.model.TypedefDefinition;
+import org.realityforge.webtack.model.UnionType;
+import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Action;
 
 public abstract class AbstractJavaAction
@@ -33,6 +48,7 @@ public abstract class AbstractJavaAction
   private final Path _outputDirectory;
   @Nonnull
   private final String _packageName;
+  private final boolean _enableMagicConstants;
   // Maps idlName -> Qualified Java Name supplied by input type catalogs
   @Nonnull
   private final Map<String, String> _inputIdlToJavaTypeMapping = new HashMap<>();
@@ -45,13 +61,21 @@ public abstract class AbstractJavaAction
   // Maps idlName -> JavaPoet TypeName
   @Nonnull
   private final Map<String, ClassName> _idlToClassNameMapping = new HashMap<>();
+  @Nonnull
+  private final Map<String, UnionType> _unions = new HashMap<>();
+  /**
+   * Value cached during processing
+   */
+  private WebIDLSchema _schema;
 
   protected AbstractJavaAction( @Nonnull final Path outputDirectory,
                                 @Nonnull final String packageName,
+                                final boolean enableMagicConstants,
                                 @Nonnull final List<Path> inputTypeCatalogs )
   {
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
+    _enableMagicConstants = enableMagicConstants;
     final Properties inputTypes = new Properties();
     for ( final Path inputTypeCatalog : inputTypeCatalogs )
     {
@@ -70,30 +94,27 @@ public abstract class AbstractJavaAction
     }
   }
 
-  /**
-   * Register a mapping from the specified idl type to the specified java type.
-   * If a mapping already exists then generate an error.
-   *
-   * @param idlType  the idle type. This is the name of the definition or the name of one of the predefined types.
-   * @param javaType the java type to associated with the idl type.
-   * @throws IllegalStateException if a mapping already exists for idlName.
-   */
-  protected void registerIdlToJavaTypeMapping( @Nonnull final String idlType, @Nonnull final String javaType )
+  @Nonnull
+  protected final WebIDLSchema getSchema()
   {
-    if ( !tryRegisterIdlToJavaTypeMapping( idlType, javaType ) )
-    {
-      throw new IllegalStateException( "IDL Type '" + idlType + "' already mapped to java type '" +
-                                       _idlToJavaTypeMapping.get( idlType ) + "' unable to map to '" + javaType + "'" );
-    }
+    assert null != _schema;
+    return _schema;
+  }
+
+  @Nonnull
+  protected final Map<String, UnionType> getUnions()
+  {
+    return _unions;
   }
 
   /**
    * Register a mapping from the specified idl type to the specified java type if no type mapping for the idl type exists.
    *
-   * @param idlType  the idle type. This is the name of the definition or the name of one of the predefined types.
+   * @param idlType  the idle type. This is the name of the definition or the name of one of the predefined BasicTypes.
    * @param javaType the java type to associated with the idl type.
    * @return true if type mapping successfully registered, false if there was already a mapping.
    */
+  @SuppressWarnings( "UnusedReturnValue" )
   protected boolean tryRegisterIdlToJavaTypeMapping( @Nonnull final String idlType, @Nonnull final String javaType )
   {
     final String existingJavaType = _idlToJavaTypeMapping.get( idlType );
@@ -114,6 +135,7 @@ public abstract class AbstractJavaAction
     return _idlToJavaTypeMapping.computeIfAbsent( idlType, t -> _packageName + "." + idlType );
   }
 
+  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
   protected boolean isIdlTypePredefined( @Nonnull final String idlName )
   {
     return getInputIdlToJavaTypeMapping().containsKey( idlName );
@@ -131,12 +153,15 @@ public abstract class AbstractJavaAction
     return _idlToClassNameMapping;
   }
 
-  protected void processInit()
+  protected void processInit( @Nonnull final WebIDLSchema schema )
   {
     _idlToJavaTypeMapping.clear();
     _idlToClassNameMapping.clear();
     _generatedFiles.clear();
+    _unions.clear();
     _idlToJavaTypeMapping.putAll( _inputIdlToJavaTypeMapping );
+    _schema = Objects.requireNonNull( schema );
+    schema.link();
   }
 
   @Nonnull
@@ -251,7 +276,7 @@ public abstract class AbstractJavaAction
     if ( null != idlName )
     {
       // Lookup java type so that it will be part of cache AND it will be emitted in mapping file
-      lookupClassName( idlName );
+      rawLookupClassName( idlName );
     }
     assert !_generatedFiles.containsKey( qualifiedName );
     _generatedFiles.put( qualifiedName,
@@ -296,6 +321,12 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )
   {
+    return null != _schema.findEnumerationByName( idlName ) ? BasicTypes.STRING : rawLookupClassName( idlName );
+  }
+
+  @Nonnull
+  private ClassName rawLookupClassName( @Nonnull final String idlName )
+  {
     return _idlToClassNameMapping.computeIfAbsent( idlName, n -> ClassName.bestGuess( lookupJavaType( n ) ) );
   }
 
@@ -318,5 +349,298 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Uint8ClampedArray.name(), "elemental2.core.Uint8ClampedArray" );
     tryRegisterIdlToJavaTypeMapping( Kind.Float32Array.name(), "elemental2.core.Float32Array" );
     tryRegisterIdlToJavaTypeMapping( Kind.Float64Array.name(), "elemental2.core.Float64Array" );
+  }
+
+  @Nonnull
+  protected final TypeName toTypeName( @Nonnull final Type type )
+  {
+    return toTypeName( type, type.isNullable() );
+  }
+
+  @Nonnull
+  protected final TypeName toTypeName( @Nonnull final Type type, final boolean boxed )
+  {
+    final Kind kind = type.getKind();
+    if ( boxed &&
+         ( Kind.Byte == kind ||
+           Kind.Octet == kind ||
+           Kind.Short == kind ||
+           Kind.UnsignedShort == kind ||
+           Kind.UnsignedLong == kind ||
+           Kind.Long == kind ||
+           Kind.LongLong == kind ||
+           Kind.UnsignedLongLong == kind ) )
+    {
+      // TODO: This is uncomfortable mapping. Not sure what the solutions is...
+      //  We should emit a warning a deal with it later
+      return TypeName.DOUBLE.box();
+    }
+    else if ( Kind.Any == kind )
+    {
+      return JsinteropTypes.ANY;
+    }
+    else if ( Kind.Void == kind )
+    {
+      return TypeName.VOID;
+    }
+    else if ( Kind.Boolean == kind )
+    {
+      return boxed ? TypeName.BOOLEAN.box() : TypeName.BOOLEAN;
+    }
+    else if ( Kind.Byte == kind )
+    {
+      return TypeName.BYTE;
+    }
+    else if ( Kind.Octet == kind )
+    {
+      return TypeName.SHORT;
+    }
+    else if ( Kind.Short == kind )
+    {
+      return TypeName.SHORT;
+    }
+    else if ( Kind.UnsignedShort == kind )
+    {
+      return TypeName.INT;
+    }
+    else if ( Kind.Long == kind )
+    {
+      return TypeName.INT;
+    }
+    else if ( Kind.UnsignedLong == kind )
+    {
+      // UnsignedLong is not representable in a JVM but we may it using a signed integer when in jsinterop
+      // and just hope it produces the correct value.
+      return TypeName.INT;
+    }
+    else if ( Kind.LongLong == kind )
+    {
+      // LongLong is actually the same size as a java long in the jre but the way that
+      // it is transpiled by GWT/J2CL means we need to represent it as an integer but
+      // acknowledge that at runtime the value can exceed what the java type represents
+      return TypeName.INT;
+    }
+    else if ( Kind.UnsignedLongLong == kind )
+    {
+      // Not representable natively in java but in jsinterop it is best represented as an integer
+      // See comment on LongLong type
+      return TypeName.INT;
+    }
+    else if ( Kind.Float == kind || Kind.UnrestrictedFloat == kind )
+    {
+      return boxed ? TypeName.DOUBLE.box() : TypeName.FLOAT;
+    }
+    else if ( Kind.Double == kind || Kind.UnrestrictedDouble == kind )
+    {
+      return boxed ? TypeName.DOUBLE.box() : TypeName.DOUBLE;
+    }
+    else if ( Kind.DOMString == kind || Kind.ByteString == kind || Kind.USVString == kind )
+    {
+      return BasicTypes.STRING;
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      final TypeReference typeReference = (TypeReference) type;
+      final String name = typeReference.getName();
+      if ( null != _schema.findInterfaceByName( name ) ||
+           null != _schema.findDictionaryByName( name ) ||
+           null != _schema.findCallbackInterfaceByName( name ) ||
+           null != _schema.findCallbackByName( name ) )
+      {
+        return lookupClassName( name );
+      }
+      else if ( null != _schema.findEnumerationByName( name ) )
+      {
+        return BasicTypes.STRING;
+      }
+      else
+      {
+        final TypedefDefinition typedef = _schema.getTypedefByName( name );
+        if ( Kind.Union == typedef.getType().getKind() )
+        {
+          // TODO: There is a single named union in the HTML API which is MediaProvider. We
+          //  could live with including this unnecessary abstraction or copy the logic for
+          //  expanding types from jsinterop generator and expand this to it's subtypes ala
+          //  MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
+          return lookupClassName( name );
+        }
+        else
+        {
+          return toTypeName( typedef.getType() );
+        }
+      }
+    }
+    else if ( Kind.Promise == kind )
+    {
+      return ParameterizedTypeName.get( lookupClassName( Kind.Promise.name() ),
+                                        getUnexpandedType( ( (PromiseType) type ).getResolveType() ) );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                        getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
+    }
+    else if ( Kind.Record == kind )
+    {
+      return ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
+                                        getUnexpandedType( ( (RecordType) type ).getValueType() ) );
+    }
+    else if ( Kind.FrozenArray == kind )
+    {
+      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                        getUnexpandedType( ( (FrozenArrayType) type ).getItemType() ) );
+    }
+    else if ( Kind.Union == kind )
+    {
+      return lookupClassName( generateUnionType( (UnionType) type ) );
+    }
+    else if ( Kind.Object == kind ||
+              Kind.Symbol == kind ||
+              Kind.ArrayBuffer == kind ||
+              Kind.DataView == kind ||
+              Kind.Int8Array == kind ||
+              Kind.Int16Array == kind ||
+              Kind.Int32Array == kind ||
+              Kind.Uint8Array == kind ||
+              Kind.Uint16Array == kind ||
+              Kind.Uint32Array == kind ||
+              Kind.Uint8ClampedArray == kind ||
+              Kind.Float32Array == kind ||
+              Kind.Float64Array == kind )
+    {
+      return lookupClassName( kind.name() );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( kind + " type not currently supported by generator: " + type );
+    }
+  }
+
+  @Nonnull
+  private String generateUnionType( @Nonnull final UnionType type )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( final Type memberType : type.getMemberTypes() )
+    {
+      if ( 0 != sb.length() )
+      {
+        sb.append( "Or" );
+      }
+      appendTypeToUnionName( sb, memberType );
+    }
+    sb.append( "Union" );
+    final String name = sb.toString();
+    if ( !_unions.containsKey( name ) )
+    {
+      _unions.put( name, type );
+    }
+    return name;
+  }
+
+  private void appendTypeToUnionName( @Nonnull final StringBuilder sb, @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isString() )
+    {
+      sb.append( "String" );
+    }
+    else if ( kind.isPrimitive() ||
+              kind.isBufferRelated() ||
+              Kind.FrozenArray == kind ||
+              Kind.Object == kind ||
+              Kind.Symbol == kind )
+    {
+      sb.append( kind.name() );
+    }
+    else if ( Kind.TypeReference == kind )
+    {
+      sb.append( NamingUtil.uppercaseFirstCharacter( ( (TypeReference) type ).getName() ) );
+    }
+    else if ( Kind.Sequence == kind )
+    {
+      appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
+      sb.append( "Array" );
+    }
+    else
+    {
+      throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
+    }
+  }
+
+  @Nonnull
+  protected final TypeName getUnexpandedType( @Nonnull final Type type )
+  {
+    return toTypeName( toJsinteropCompatibleType( _schema.resolveType( type ) ) ).box();
+  }
+
+  @Nonnull
+  private Type toJsinteropCompatibleType( @Nonnull final Type type )
+  {
+    final Kind kind = type.getKind();
+    if ( kind.isPrimitive() &&
+         Kind.Boolean != kind &&
+         Kind.Double != kind &&
+         Kind.UnrestrictedDouble != kind )
+    {
+      return new Type( Kind.Double,
+                       type.getExtendedAttributes(),
+                       type.isNullable(),
+                       type.getSourceLocations() );
+    }
+    else
+    {
+      return type;
+    }
+  }
+
+  @Nonnull
+  private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
+  {
+    return AnnotationSpec
+      .builder( BasicTypes.MAGIC_CONSTANT )
+      .addMember( "valuesFromClass", "$T.class", rawLookupClassName( enumeration.getName() ) )
+      .build();
+  }
+
+  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
+                                                           @Nonnull final ParameterSpec.Builder parameter )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+      if ( null != enumeration )
+      {
+        parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
+  }
+
+  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
+                                                           @Nonnull final MethodSpec.Builder method )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
+      if ( null != enumeration )
+      {
+        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
+  }
+
+  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
+                                                           @Nonnull final FieldSpec.Builder field )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
+      if ( null != enumeration )
+      {
+        field.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+    }
   }
 }

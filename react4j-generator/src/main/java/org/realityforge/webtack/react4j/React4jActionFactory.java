@@ -55,7 +55,6 @@ public final class React4jActionFactory
     return new React4jAction( Paths.get( outputDirectory ),
                               packageName,
                               typeCatalogPaths,
-                              context.docRepository(),
                               generateGwtModule,
                               enableMagicConstants );
   }
