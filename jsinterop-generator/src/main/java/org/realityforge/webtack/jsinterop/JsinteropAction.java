@@ -1192,7 +1192,8 @@ final class JsinteropAction
     type.addType( TypeSpec
                     .interfaceBuilder( "Entry" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                    .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+                    .addAnnotation( AnnotationSpec
+                                      .builder( JsinteropTypes.JS_TYPE )
                                       .addMember( "isNative", "true" )
                                       .addMember( "name", "$S", "?" )
                                       .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
