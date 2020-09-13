@@ -254,7 +254,7 @@ final class React4jAction
                                          .builder( BasicTypes.STRING, "id", Modifier.FINAL )
                                          .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
-                        .addStatement( "prop( $S, $T.asAny( id ) )", "id", JsinteropTypes.JS )
+                        .addStatement( "input( $S, $T.asAny( id ) )", "id", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
                         .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
@@ -268,7 +268,7 @@ final class React4jAction
                                          .builder( BasicTypes.STRING, "className", Modifier.FINAL )
                                          .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
-                        .addStatement( "prop( $S, $T.asAny( className ) )", "className", JsinteropTypes.JS )
+                        .addStatement( "input( $S, $T.asAny( className ) )", "className", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
                         .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
@@ -282,12 +282,12 @@ final class React4jAction
                                          .builder( BasicTypes.STRING, "key", Modifier.FINAL )
                                          .addAnnotation( BasicTypes.NONNULL )
                                          .build() )
-                        .addStatement( "prop( $S, $T.asAny( key ) )", "key", JsinteropTypes.JS )
+                        .addStatement( "input( $S, $T.asAny( key ) )", "key", JsinteropTypes.JS )
                         .returns( TypeVariableName.get( "T" ) )
                         .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
       type.addMethod( MethodSpec
-                        .methodBuilder( "prop" )
+                        .methodBuilder( "input" )
                         .addAnnotation( JsinteropTypes.JS_OVERLAY )
                         .addAnnotation( BasicTypes.NONNULL )
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
@@ -362,7 +362,7 @@ final class React4jAction
                                  Modifier.FINAL )
                        .addAnnotation( BasicTypes.NULLABLE )
                        .build() )
-      .addStatement( "prop( $S, $T.asAny( callback ) )", "ref", JsinteropTypes.JS )
+      .addStatement( "input( $S, $T.asAny( callback ) )", "ref", JsinteropTypes.JS )
       .build();
   }
 
@@ -425,7 +425,7 @@ final class React4jAction
                         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
                         .addParameter( parameter.build() )
                         .returns( self )
-                        .addStatement( "prop( $S, $T.asAny( $N ) )", attributeName, JsinteropTypes.JS, attributeName )
+                        .addStatement( "input( $S, $T.asAny( $N ) )", attributeName, JsinteropTypes.JS, attributeName )
                         .addStatement( "return self()", JsinteropTypes.JS )
                         .build() );
     }
@@ -624,7 +624,7 @@ final class React4jAction
   {
     // This factory approach is reasonably inefficient. It emulates existing react architecture and
     // in the future we should probably change it so that we do not need so much ceremony. We can
-    // set key and ref directly without creating a new map for the props.
+    // set key and ref directly without creating a new map for the inputs.
 
     // We could also add runtime validation here to check that elements are only contained by elements
     // as allowed by the spec or view components
