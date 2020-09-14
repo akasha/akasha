@@ -67,8 +67,6 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Perform sorting before emitting java members so that there is always a constant ordering.
-
 * Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
   defining an extended attribute to change the name that java field is generated with.
 

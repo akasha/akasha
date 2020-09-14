@@ -41,6 +41,7 @@ import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.NamedDefinition;
+import org.realityforge.webtack.model.NamedElement;
 import org.realityforge.webtack.model.NamespaceDefinition;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
@@ -916,30 +917,9 @@ final class JsinteropAction
                       .addModifiers( Modifier.PRIVATE )
                       .build() );
 
-    for ( final AttributeMember attribute : definition.getAttributes() )
-    {
-      if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
-      {
-        generateReadOnlyAttribute( attribute, type );
-      }
-      else
-      {
-        generateAttribute( attribute, type );
-      }
-    }
+    generateAttributes( definition.getAttributes(), type );
+    generateOperations( definition.getOperations(), type );
 
-    for ( final OperationMember operation : definition.getOperations() )
-    {
-      final OperationMember.Kind operationKind = operation.getKind();
-      if ( OperationMember.Kind.DEFAULT == operationKind )
-      {
-        generateDefaultOperation( operation, type );
-      }
-      else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
-      {
-        generateDefaultOperation( operation, type );
-      }
-    }
     final MapLikeMember mapLike = definition.getMapLikeMember();
     if ( null != mapLike )
     {
@@ -964,6 +944,28 @@ final class JsinteropAction
     writeTopLevelType( name, type );
   }
 
+  private void generateOperations( @Nonnull final List<OperationMember> operations,
+                                   @Nonnull final TypeSpec.Builder type )
+  {
+    operations
+      .stream()
+      .sorted()
+      .forEach( operation -> generateOperation( operation, type ) );
+  }
+
+  private void generateOperation( @Nonnull final OperationMember operation, @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    if ( OperationMember.Kind.DEFAULT == operationKind )
+    {
+      generateDefaultOperation( operation, type );
+    }
+    else if ( OperationMember.Kind.STRINGIFIER == operationKind && null != operation.getName() )
+    {
+      generateDefaultOperation( operation, type );
+    }
+  }
+
   private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
   {
     return definition.getExtendedAttributes()
@@ -985,25 +987,13 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
-    for ( final AttributeMember attribute : definition.getAttributes() )
-    {
-      assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
-      generateReadOnlyAttribute( attribute, type );
-    }
+    generateAttributes( definition.getAttributes(), type );
+    generateOperations( definition.getOperations(), type );
 
-    for ( final OperationMember operation : definition.getOperations() )
-    {
-      assert OperationMember.Kind.DEFAULT == operation.getKind();
-      generateDefaultOperation( operation, type );
-    }
-
-    final AnnotationSpec.Builder jsTypeAnnotation =
-      AnnotationSpec
-        .builder( JsinteropTypes.JS_TYPE )
-        .addMember( "isNative", "true" )
-        .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE );
-
-    type.addAnnotation( jsTypeAnnotation
+    type.addAnnotation( AnnotationSpec
+                          .builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", name )
                           .build() );
 
@@ -1046,18 +1036,7 @@ final class JsinteropAction
     }
 
     generateConstants( definition.getConstants(), type );
-
-    for ( final AttributeMember attribute : definition.getAttributes() )
-    {
-      if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
-      {
-        generateReadOnlyAttribute( attribute, type );
-      }
-      else
-      {
-        generateAttribute( attribute, type );
-      }
-    }
+    generateAttributes( definition.getAttributes(), type );
 
     boolean constructorPresent = false;
     for ( final OperationMember operation : definition.getOperations() )
@@ -1136,6 +1115,27 @@ final class JsinteropAction
     }
 
     writeTopLevelType( name, type );
+  }
+
+  private void generateAttributes( @Nonnull final List<AttributeMember> attributes,
+                                   @Nonnull final TypeSpec.Builder type )
+  {
+    attributes
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .forEach( attribute -> generateAttribute( attribute, type ) );
+  }
+
+  private void generateAttribute( @Nonnull final AttributeMember attribute, @Nonnull final TypeSpec.Builder type )
+  {
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
+    {
+      generateReadOnlyAttribute( attribute, type );
+    }
+    else
+    {
+      generateReadWriteAttribute( attribute, type );
+    }
   }
 
   private void generateMapLikeOperations( @Nonnull final String definitionName,
@@ -1474,8 +1474,8 @@ final class JsinteropAction
     type.addMethod( method.build() );
   }
 
-  private void generateAttribute( @Nonnull final AttributeMember attribute,
-                                  @Nonnull final TypeSpec.Builder type )
+  private void generateReadWriteAttribute( @Nonnull final AttributeMember attribute,
+                                           @Nonnull final TypeSpec.Builder type )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -1504,13 +1504,13 @@ final class JsinteropAction
     type.addField( field.build() );
   }
 
-  private void generateConstants( @Nonnull final Iterable<ConstMember> constants,
+  private void generateConstants( @Nonnull final List<ConstMember> constants,
                                   @Nonnull final TypeSpec.Builder type )
   {
-    for ( final ConstMember constant : constants )
-    {
-      generateConstant( constant, type );
-    }
+    constants
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .forEach( constant -> generateConstant( constant, type ) );
   }
 
   private void generateConstant( @Nonnull final ConstMember constant,

@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 public final class OperationMember
   extends Element
-  implements Member
+  implements Member, Comparable<OperationMember>
 {
   @Nonnull
   private final Kind _kind;
@@ -91,6 +91,33 @@ public final class OperationMember
            Objects.equals( _name, other._name ) &&
            Argument.argumentListEquiv( _arguments, other._arguments ) &&
            _returnType.equiv( other._returnType );
+  }
+
+  @Override
+  public int compareTo( @Nonnull final OperationMember other )
+  {
+    String name = _name;
+    if ( null == name )
+    {
+      name = "";
+    }
+    String otherName = other.getName();
+    if ( null == otherName )
+    {
+      otherName = "";
+    }
+
+    int result = name.compareTo( otherName );
+    if ( 0 != result )
+    {
+      return result;
+    }
+    result = _arguments.size() - other.getArguments().size();
+    if ( 0 != result )
+    {
+      return result;
+    }
+    return hashCode() - other.hashCode();
   }
 
   public enum Kind
