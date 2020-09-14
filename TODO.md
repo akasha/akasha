@@ -21,6 +21,8 @@ complete as there is too much un-said.
 
 # Docs Integration
 
+* Add some way to alias lookups. i.e. Should use docs for `WebGLRenderingContext` when looking for docs for `WebGL2RenderingContext` and no docs present.
+
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
