@@ -243,6 +243,17 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Remove the member to change the type of the getContext operation for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLCanvasElement$",
+        "memberNamePattern": "^getContext$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "the cssom spec 'overrides' the definitions to be of type double",
       "sourceSelector": "name=uievents",
       "config": {

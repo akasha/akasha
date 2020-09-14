@@ -837,3 +837,33 @@ partial interface HTMLTextAreaElement {
   [CEReactions]
   attribute DOMString wrap;
 };
+
+/**
+ * An enumerated value to indicate how the control wraps text.
+ */
+enum RenderContextType {
+  /**
+   * The context type designates a {@link CanvasRenderingContext2D}, a two-dimensional rendering context.
+   */
+  "2d",
+  /**
+   * The context type designates a {@link WebGLRenderingContext}, a three-dimensional rendering context.
+   * This context is only available on browsers that implement WebGL version 1 (OpenGL ES 2.0).
+   */
+  "webgl",
+  /**
+   * The context type designates a {@link WebGL2RenderingContext}, a three-dimensional rendering context.
+   * This context is only available on browsers that implement WebGL version 2 (OpenGL ES 3.0).
+   */
+  "webgl2",
+
+  /**
+   * The context type designates a {@link ImageBitmapRenderingContext}.
+   * The context provides functionality to replace the content of the canvas with a given ImageBitmap.
+   */
+  "bitmaprenderer"
+};
+
+partial interface HTMLCanvasElement {
+  RenderingContext? getContext( RenderContextType contextId, optional any options = null );
+};

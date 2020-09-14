@@ -92,9 +92,7 @@ complete as there is too much un-said.
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
-* It would be nice to add some java-only constants in some classes. i.e. `WebGL2RenderingContext.NAME` which would
-  be `"webgl2"` so that could do something like `(WebGL2RenderingContext) canvas.getContext( WebGL2RenderingContext.NAME )`.
-  Alternatively we could type `getContext` so that the type is an enumeration and the options are defined dictionaries
+* Improve typing of second argument to `HTMLCanvasElement.getContext` as a union of valid dictionaries.
   See  https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
 
 * It would be nice to add constraints so that `(WebGL2RenderingContext)` can be omitted from the call
