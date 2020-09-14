@@ -80,6 +80,22 @@ interface Node {
   event Event eventnoexisto;
 };
 
+interface WebGL2RenderingContext {
+  void finish();
+  void flush();
+};
+
+interface WebGL3RenderingContext {
+  void commit();
+  void finish();
+  void flush();
+};
+
+interface WebGLRenderingContext {
+  void finish();
+  void flush();
+};
+
 interface Window {
   event Event focus;
 };

@@ -1,0 +1,15 @@
+
+{
+    "name": "WebGL2RenderingContext",
+    "lastModifiedAt": 1599389617786,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1597192683340
+        },
+        {
+            "name": "flush",
+            "lastModifiedAt": 1597192683340
+        }
+    ]
+}

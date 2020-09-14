@@ -242,6 +242,67 @@ interface Node {
 };
 
 /**
+ * The WebGL2RenderingContext interface provides an interface to the OpenGL ES 3.0 graphics rendering context for the drawing surface of an HTML canvas element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2RenderingContext - MDN</a>
+ */
+interface WebGL2RenderingContext {
+  /**
+   * Docs for WebGLRenderingContext.finish
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   */
+  void finish();
+  /**
+   * Docs for WebGL2RenderingContext.flush
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/flush">WebGL2RenderingContext.flush - MDN</a>
+   */
+  void flush();
+};
+
+/**
+ * The WebGL2RenderingContext interface provides an interface to the OpenGL ES 3.0 graphics rendering context for the drawing surface of an HTML canvas element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2RenderingContext - MDN</a>
+ */
+interface WebGL3RenderingContext {
+  void commit();
+  /**
+   * Docs for WebGLRenderingContext.finish
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   */
+  void finish();
+  /**
+   * Docs for WebGL2RenderingContext.flush
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/flush">WebGL2RenderingContext.flush - MDN</a>
+   */
+  void flush();
+};
+
+/**
+ * The WebGLRenderingContext interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML canvas element.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext">WebGLRenderingContext - MDN</a>
+ */
+interface WebGLRenderingContext {
+  /**
+   * Docs for WebGLRenderingContext.finish
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   */
+  void finish();
+  /**
+   * Docs for WebGLRenderingContext.flush
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush">WebGLRenderingContext.flush - MDN</a>
+   */
+  void flush();
+};
+
+/**
  * Documentation for Window partial.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window - MDN</a>

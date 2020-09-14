@@ -3,6 +3,7 @@ package org.realityforge.webtack.model.tools.processors.merge_docs;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -42,14 +43,19 @@ final class MergeDocsProcessor
   @Nonnull
   private final DocRepositoryRuntime _runtime;
   private final boolean _createEvents;
+  @Nonnull
+  private final Map<String, ArrayList<String>> _aliases;
   private String _type;
   private boolean _typeIsMixin;
   private WebIDLSchema _schema;
 
-  MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime, final boolean createEvents )
+  MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime,
+                      final boolean createEvents,
+                      @Nonnull final Map<String, ArrayList<String>> aliases )
   {
     _runtime = Objects.requireNonNull( runtime );
     _createEvents = createEvents;
+    _aliases = Objects.requireNonNull( aliases );
   }
 
   @Nullable
@@ -73,7 +79,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final CallbackInterfaceDefinition definition =
       new CallbackInterfaceDefinition( input.getName(),
                                        transformOperationMember( input.getOperation() ),
@@ -94,7 +100,7 @@ final class MergeDocsProcessor
     final String namespace = input.getNamespace();
     _type = ( null == namespace ? "" : namespace + "." ) + input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final InterfaceDefinition definition =
       new InterfaceDefinition( input.getName(),
                                input.getInherits(),
@@ -204,7 +210,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final PartialInterfaceDefinition definition =
       new PartialInterfaceDefinition( input.getName(),
                                       transformConstants( input.getConstants() ),
@@ -234,7 +240,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = true;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final MixinDefinition definition =
       new MixinDefinition( input.getName(),
                            transformConstants( input.getConstants() ),
@@ -256,7 +262,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = true;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final PartialMixinDefinition definition =
       new PartialMixinDefinition( input.getName(),
                                   transformConstants( input.getConstants() ),
@@ -278,7 +284,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final DictionaryDefinition definition =
       new DictionaryDefinition( input.getName(),
                                 input.getInherits(),
@@ -298,7 +304,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final PartialDictionaryDefinition definition =
       new PartialDictionaryDefinition( input.getName(),
                                        transformDictionaryMembers( input.getMembers() ),
@@ -317,7 +323,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final NamespaceDefinition definition =
       new NamespaceDefinition( input.getName(),
                                transformOperationMembers( input.getOperations() ),
@@ -337,7 +343,7 @@ final class MergeDocsProcessor
   {
     _type = input.getName();
     _typeIsMixin = false;
-    final DocEntry docEntry = _runtime.findDocEntry( _type, null );
+    final DocEntry docEntry = findTypeDocEntry();
     final PartialNamespaceDefinition definition =
       new PartialNamespaceDefinition( input.getName(),
                                       transformOperationMembers( input.getOperations() ),
@@ -355,7 +361,7 @@ final class MergeDocsProcessor
   @Override
   protected ConstMember transformConstant( @Nonnull final ConstMember input )
   {
-    final DocEntry docEntry = null != _type ? _runtime.findDocEntry( _type, input.getName() ) : null;
+    final DocEntry docEntry = findMemberDocEntry( input.getName() );
     return new ConstMember( input.getName(),
                             transformType( input.getType() ),
                             transformConstValue( input.getValue() ),
@@ -370,7 +376,7 @@ final class MergeDocsProcessor
   @Override
   protected EventMember transformEventMember( @Nonnull final EventMember input )
   {
-    final DocEntry docEntry = null != _type ? _runtime.findDocEntry( _type, input.getName() + "_event" ) : null;
+    final DocEntry docEntry = findMemberDocEntry( input.getName() + "_event" );
     return new EventMember( input.getName(),
                             input.getEventType(),
                             null == docEntry ?
@@ -384,7 +390,7 @@ final class MergeDocsProcessor
   @Override
   protected DictionaryMember transformDictionaryMember( @Nonnull final DictionaryMember input )
   {
-    final DocEntry docEntry = null != _type ? _runtime.findDocEntry( _type, input.getName() ) : null;
+    final DocEntry docEntry = findMemberDocEntry( input.getName() );
     return new DictionaryMember( input.getName(),
                                  transformType( input.getType() ),
                                  input.isOptional(),
@@ -400,7 +406,7 @@ final class MergeDocsProcessor
   @Override
   protected AttributeMember transformAttributeMember( @Nonnull final AttributeMember input )
   {
-    final DocEntry docEntry = null != _type ? _runtime.findDocEntry( _type, input.getName() ) : null;
+    final DocEntry docEntry = findMemberDocEntry( input.getName() );
     return new AttributeMember( input.getName(),
                                 transformType( input.getType() ),
                                 input.getModifiers(),
@@ -415,10 +421,8 @@ final class MergeDocsProcessor
   @Override
   protected OperationMember transformOperationMember( @Nonnull final OperationMember input )
   {
-    final DocEntry docEntry =
-      null != _type ?
-      _runtime.findDocEntry( _type, OperationMember.Kind.CONSTRUCTOR == input.getKind() ? _type : input.getName() ) :
-      null;
+    final String member = OperationMember.Kind.CONSTRUCTOR == input.getKind() ? _type : input.getName();
+    final DocEntry docEntry = findMemberDocEntry( member );
     return new OperationMember( input.getKind(),
                                 input.getName(),
                                 transformArguments( input.getArguments() ),
@@ -428,6 +432,51 @@ final class MergeDocsProcessor
                                 createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nullable
+  private DocEntry findTypeDocEntry()
+  {
+    return findDocEntry( _type, null );
+  }
+
+  @Nullable
+  private DocEntry findMemberDocEntry( @Nullable final String member )
+  {
+    return findDocEntry( _type, member );
+  }
+
+  @Nullable
+  private DocEntry findDocEntry( @Nullable final String type, @Nullable final String member )
+  {
+    if ( null != type )
+    {
+      final DocEntry entry = _runtime.findDocEntry( type, member );
+      if ( null != entry )
+      {
+        return entry;
+      }
+      else
+      {
+        final List<String> aliases = _aliases.get( type );
+        if ( null != aliases )
+        {
+          for ( final String alias : aliases )
+          {
+            final DocEntry aliasEntry = _runtime.findDocEntry( alias, member );
+            if ( null != aliasEntry )
+            {
+              return aliasEntry;
+            }
+          }
+        }
+        return null;
+      }
+    }
+    else
+    {
+      return null;
+    }
   }
 
   @Nonnull

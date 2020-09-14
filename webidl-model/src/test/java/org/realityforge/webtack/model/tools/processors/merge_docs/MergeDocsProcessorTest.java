@@ -1,6 +1,5 @@
 package org.realityforge.webtack.model.tools.processors.merge_docs;
 
-import java.nio.file.Path;
 import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorTest;
@@ -35,6 +34,22 @@ public final class MergeDocsProcessorTest
                                      Json
                                        .createObjectBuilder()
                                        .add( "createEvents", true )
+                                       .add( "aliases",
+                                             Json.createObjectBuilder()
+                                               .add( "WebGL2RenderingContext",
+                                                     Json
+                                                       .createArrayBuilder()
+                                                       .add( "WebGLRenderingContext" )
+                                                       .build()
+                                               )
+                                               .add( "WebGL3RenderingContext",
+                                                     Json
+                                                       .createArrayBuilder()
+                                                       .add( "WebGL2RenderingContext" )
+                                                       .add( "WebGLRenderingContext" )
+                                                       .build()
+                                               )
+                                               .build() )
                                        .build() );
   }
 }
