@@ -97,6 +97,10 @@ complete as there is too much un-said.
   Alternatively we could type `getContext` so that the type is an enumeration and the options are defined dictionaries
   See  https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
 
+* It would be nice to add constraints so that `(WebGL2RenderingContext)` can be omitted from the call
+  `canvas.getContext( WebGL2RenderingContext.NAME )`. This may only be possibly by creating an overlay type such as
+  `canvas.getWebGL2Context()`
+
 * It would be nice to restrict the optional argument to be of type that correlates with the key.
   i.e. `WebGL2RenderingContext.NAME` implies `WebGL2RenderingContextAttributes` as second option.
 
