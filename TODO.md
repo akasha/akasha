@@ -96,7 +96,7 @@ complete as there is too much un-said.
 * Improve typing of second argument to `HTMLCanvasElement.getContext` as a union of valid dictionaries.
   See  https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
 
-* It would be nice to add constraints so that `(WebGL2RenderingContext)` can be omitted from the call
+* It would be nice to add constraints so that `(WebGL2RenderingContext)` cast can be omitted from the call
   `canvas.getContext( WebGL2RenderingContext.NAME )`. This may only be possibly by creating an overlay type such as
   `canvas.getWebGL2Context()`
 
