@@ -97,6 +97,9 @@ complete as there is too much un-said.
   Alternatively we could type `getContext` so that the type is an enumeration and the options are defined dictionaries
   See  https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
 
+* It would be nice to restrict the optional argument to be of type that correlates with the key.
+  i.e. `WebGL2RenderingContext.NAME` implies `WebGL2RenderingContextAttributes` as second option.
+
 * Make `AbstractProcessor` cache instance of `PipelineContext`
 
 * Add some way to represent numeric enumerations so that we can restrict certain values to the values of particular
