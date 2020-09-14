@@ -31,6 +31,9 @@ complete as there is too much un-said.
 
 # Docs Integration
 
+* Improve MDN scanning for pages like `WebGLRenderingContext` either matching the body or perhaps
+  matching side-bar for link extraction.
+
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
