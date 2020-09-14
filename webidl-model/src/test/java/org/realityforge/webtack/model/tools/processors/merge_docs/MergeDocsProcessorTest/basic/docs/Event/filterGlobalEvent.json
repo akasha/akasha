@@ -1,4 +1,5 @@
 {
+  "kind": "Method",
   "name": "Event.filterGlobalEvent",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/filterGlobalEvent",
   "description": "Documentation for Event.filterGlobalEvent static operation."

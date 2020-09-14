@@ -1,4 +1,5 @@
 {
+  "kind": "Property",
   "name": "Event.bubbles",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/bubbles",
   "description": "Documentation for Event.bubbles readonly attribute."

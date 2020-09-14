@@ -1,4 +1,5 @@
 {
+  "kind": "Property",
   "name": "Event.cancelBubble",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/cancelBubble",
   "description": "Documentation for Event.cancelBubble attribute."

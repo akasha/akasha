@@ -1,4 +1,5 @@
 {
+  "kind": "Method",
   "name": "Event.composedPath",
   "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/composedPath",
   "description": "Documentation for Event.composedPath operation."
