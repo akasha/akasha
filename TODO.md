@@ -97,6 +97,8 @@ complete as there is too much un-said.
   Alternatively we could type `getContext` so that the type is an enumeration and the options are defined dictionaries
   See  https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
 
+* Make `AbstractProcessor` cache instance of `PipelineContext`
+
 * Add some way to represent numeric enumerations so that we can restrict certain values to the values of particular
   constants. i.e. See how target is restricted at https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer
 
