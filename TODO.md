@@ -91,9 +91,6 @@ complete as there is too much un-said.
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
-* Improve typing of second argument to `HTMLCanvasElement.getContext` as a union of valid dictionaries.
-  See  https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext
-
 * It would be nice to add constraints so that `(WebGL2RenderingContext)` cast can be omitted from the call
   `canvas.getContext( WebGL2RenderingContext.NAME )`. This may only be possibly by creating an overlay type such as
   `canvas.getWebGL2Context()`. In an ideal world we could also remove the nullability annotation so that the user

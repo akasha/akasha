@@ -865,5 +865,5 @@ enum RenderContextType {
 };
 
 partial interface HTMLCanvasElement {
-  RenderingContext? getContext( RenderContextType contextId, optional any options = null );
+  RenderingContext? getContext( RenderContextType contextId, optional (CanvasRenderingContext2DSettings or ImageBitmapRenderingContextSettings or WebGLContextAttributes) options = null );
 };
