@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2DSettings.alpha",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+    "description": "A flag that indicates whether the canvas contains an alpha channel. If set to false, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images."
+}

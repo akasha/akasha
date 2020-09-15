@@ -1,0 +1,5 @@
+{
+  "kind": "Type",
+  "name": "WebGLPowerPreference",
+  "description": "A hint to the user agent indicating what configuration of GPU is suitable for the WebGL context."
+}

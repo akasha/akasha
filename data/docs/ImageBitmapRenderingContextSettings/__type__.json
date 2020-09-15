@@ -1,0 +1,6 @@
+{
+  "kind": "Type",
+  "name": "ImageBitmapRenderingContextSettings",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+  "description": "Attributes that control the characteristics of the {@link ImageBitmapRenderingContext} created."
+}

@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "WebGLContextAttributes.preserveDrawingBuffer",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+  "description": "A flag that controls whether the buffers will not be cleared and will preserve their values until cleared or overwritten by the author."
+}

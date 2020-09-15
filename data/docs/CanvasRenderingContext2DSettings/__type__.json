@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CanvasRenderingContext2DSettings",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+    "description": "Attributes that control the characteristics of the {@link WebGLRenderingContext} created. This should only be supplied when creating a {@link WebGLRenderingContext} context."
+}

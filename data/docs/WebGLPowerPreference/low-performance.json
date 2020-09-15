@@ -1,0 +1,5 @@
+{
+  "kind": "Property",
+  "name": "WebGLPowerPreference.low-performance",
+  "description": "Prioritizes power saving over rendering performance."
+}

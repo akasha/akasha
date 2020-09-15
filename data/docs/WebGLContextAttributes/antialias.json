@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "WebGLContextAttributes.antialias",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+  "description": "A flag that indicates whether or not to perform anti-aliasing."
+}

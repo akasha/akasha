@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "WebGLContextAttributes.powerPreference",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+  "description": "A hint to the user agent indicating what configuration of GPU is suitable for the WebGL context."
+}

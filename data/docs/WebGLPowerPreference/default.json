@@ -1,0 +1,5 @@
+{
+  "kind": "Property",
+  "name": "WebGLPowerPreference.default",
+  "description": "Let the user agent decide which GPU configuration is most suitable."
+}

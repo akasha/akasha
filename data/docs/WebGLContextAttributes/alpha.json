@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "WebGLContextAttributes.desynchronized",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+  "description": "A flag that that hints that the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop."
+}

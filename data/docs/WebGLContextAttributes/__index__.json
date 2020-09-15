@@ -1,0 +1,46 @@
+{
+  "name": "WebGLContextAttributes",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "__type__",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "alpha",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "antialias",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "depth",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "desynchronized",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "failIfMajorPerformanceCaveat",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "powerPreference",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "premultipliedAlpha",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "preserveDrawingBuffer",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "stencil",
+      "lastModifiedAt": 0
+    }
+  ]
+}

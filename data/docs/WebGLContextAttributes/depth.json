@@ -1,0 +1,6 @@
+{
+  "kind": "Property",
+  "name": "WebGLContextAttributes.depth",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext",
+  "description": "A flag that indicates that the drawing buffer has a depth buffer of at least 16 bits."
+}
