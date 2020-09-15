@@ -151,7 +151,7 @@ public final class MdnDocScanner
     final String url = deriveUrl( kind, type, entryIndex );
 
     final DocEntry entry = _runtime.findDocEntry( entryIndex );
-    if ( null != entry && null != entry.getHref() && !entry.getHref().equals( url ) )
+    if ( null != entry && !url.equals( entry.getHref() ) )
     {
       _listener.entrySkipped( entry );
       return;
