@@ -70,6 +70,29 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Add an extended attribute ala `[values=[Value1,Value2]]` that indicates either the value returned by an
+  operation, the value of an attribute, the value passed as an argument must comply with the values in set.
+  This will result in a `@MagicConstant` being generated for the element. The first implementation will just
+  support enumeration types and the values in the `values` list will be the strings that are part of enumeration
+  set. The second phase will be for numeric values and it is expected the values within `values` list are
+  constants of the same type in the declaring element.
+  - add a processor that makes adding `values` extended attribute to appropriate elements. Maybe adapt
+    `AddExtendedAttribute` to cover this capability?
+  - Consider adding `valuesSource=SomeType` that names an interface/enumeration from which to source values.
+  - Add validation that verifies the values extended attribute appears in the correct locations in WebIDL, references
+    values that exist, contains at least 1 value, references constants of the correct type and appears on members
+    of the correct type (i.e. Can not annotate a reference to an interface)
+
+* Apply `values=...` to restrict numeric values for GL method arguments such as in `WebGLRenderingContext.bindBuffer()`
+
+* Apply `values=...` to restrict numeric values for readyState etc.
+
+* Add `[alias=SomeAlias]` extended attribute that will create an alias method via a `@JsOverlay` that calls base
+  method. The alias method will also omit any arguments that have a `values=` extended attribute with a single value
+
+* Define operation alias `canvas.getContext()` that passed `WebGL2RenderingContextAttributes` and returns
+  `WebGL2RenderingContext` and whos first  parameter is `values=` restricted to the appropriate value.
+
 * Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
   defining an extended attribute to change the name that java field is generated with.
 
@@ -101,13 +124,7 @@ complete as there is too much un-said.
   the only way to implement this is to add a constraint language on type that makes claims such as if arg1 is constant
   value X then arg2 must be of type Y.
 
-* It would be nice to restrict the optional argument to be of type that correlates with the key.
-  i.e. `WebGL2RenderingContext.NAME` implies `WebGL2RenderingContextAttributes` as second option.
-
 * Make `AbstractProcessor` cache instance of `PipelineContext`
-
-* Add some way to represent numeric enumerations so that we can restrict certain values to the values of particular
-  constants. i.e. See how target is restricted at https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer
 
 # React4j Host Element Factories
 
