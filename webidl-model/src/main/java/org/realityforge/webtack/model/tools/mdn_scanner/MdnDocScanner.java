@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Deque;
@@ -342,6 +343,16 @@ public final class MdnDocScanner
     final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
     final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
+    final List<String> methodsNames = new ArrayList<>();
+    for ( final Element element : document.select( ".quick-links > div > ol > li > details > summary" ) )
+    {
+      final String sectionType = element.text();
+      if ( sectionType.equalsIgnoreCase( "Methods" ) )
+      {
+        element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( methodsNames::add );
+      }
+    }
+
     document
       .select( "#Constructors + p + dl > dt > a > code, " +
                "#Constructors + dl > dt > a > code" +
@@ -379,17 +390,21 @@ public final class MdnDocScanner
       .filter( SourceVersion::isName )
       .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
 
-    final List<String> methods =
-      document
-        .select( "#Methods + p + dl > dt > a > code, " +
-                 "#Methods + dl > dt > a code, " +
-                 "#Static_methods + p + dl > dt > a > code, " +
-                 "#Static_methods + dl > dt > a > code, " +
+    methodsNames.addAll( document
+                           .select( "#Methods + p + dl > dt > a > code, " +
+                                    "#Methods + dl > dt > a code, " +
+                                    "#Static_methods + p + dl > dt > a > code, " +
+                                    "#Static_methods + dl > dt > a > code, " +
 
-                 // Some regular js methods such as those for WebAssembly
-                 "#Instance_methods + dl > dt > a > code" )
+                                    // Some regular js methods such as those for WebAssembly
+                                    "#Instance_methods + dl > dt > a > code" )
+                           .stream()
+                           .map( Element::text )
+                           .collect( Collectors.toList() ) );
+
+    final List<String> methods =
+      methodsNames
         .stream()
-        .map( Element::text )
         // Strip the brackets at end of methods
         .map( text -> text.replaceAll( "\\(.*", "" ) )
         // Strip out the type name that sometimes appears in the documentation
@@ -398,6 +413,8 @@ public final class MdnDocScanner
         .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
         .filter( SourceVersion::isName )
+        .sorted()
+        .distinct()
         .collect( Collectors.toList() );
     if ( !methods.isEmpty() )
     {
