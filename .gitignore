@@ -12,3 +12,4 @@
 /reports
 /target
 /data/html/*.html
+/data/docs/*/*.tmp.html
