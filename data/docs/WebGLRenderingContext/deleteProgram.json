@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.deleteProgram",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram",
+    "description": "The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted."
+}

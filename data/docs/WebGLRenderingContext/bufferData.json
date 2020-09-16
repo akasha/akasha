@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.bufferData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData",
+    "description": "The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store."
+}

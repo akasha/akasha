@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getContextAttributes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getContextAttributes",
+    "description": "The WebGLRenderingContext.getContextAttributes() method returns a WebGLContextAttributes object that contains the actual context parameters. Might return null, if the context is lost."
+}

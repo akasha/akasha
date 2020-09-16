@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.vertexAttribPointer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer",
+    "description": "The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.deleteBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteBuffer",
+    "description": "The WebGLRenderingContext.deleteBuffer() method of the WebGL API deletes a given WebGLBuffer. This method has no effect if the buffer has already been deleted."
+}

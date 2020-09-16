@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.lineWidth",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/lineWidth",
+    "description": "The WebGLRenderingContext.lineWidth() method of the WebGL API sets the line width of rasterized lines."
+}

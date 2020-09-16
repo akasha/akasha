@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.sampleCoverage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/sampleCoverage",
+    "description": "The WebGLRenderingContext.sampleCoverage() method of the WebGL API specifies multi-sample coverage parameters for anti-aliasing effects."
+}

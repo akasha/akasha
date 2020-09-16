@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.stencilOp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOp",
+    "description": "The WebGLRenderingContext.stencilOp() method of the WebGL API sets both the front and back-facing stencil test actions."
+}

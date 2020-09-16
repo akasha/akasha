@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.useProgram",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram",
+    "description": "The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state."
+}

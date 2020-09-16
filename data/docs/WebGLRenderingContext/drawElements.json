@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.drawElements",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawElements",
+    "description": "The WebGLRenderingContext.drawElements() method of the WebGL API renders primitives from array data."
+}

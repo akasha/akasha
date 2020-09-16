@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getAttribLocation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttribLocation",
+    "description": "The WebGLRenderingContext.getAttribLocation() method of the WebGL API returns the location of an attribute variable in a given WebGLProgram."
+}

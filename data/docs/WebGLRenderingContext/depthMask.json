@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.depthMask",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthMask",
+    "description": "The WebGLRenderingContext.depthMask() method of the WebGL API sets whether writing into the depth buffer is enabled or disabled."
+}

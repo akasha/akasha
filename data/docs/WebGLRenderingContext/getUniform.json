@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getUniform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniform",
+    "description": "The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location."
+}

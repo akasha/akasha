@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.isContextLost",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isContextLost",
+    "description": "The WebGLRenderingContext.isContextLost() method returns a Boolean indicating whether or not the WebGL context has been lost and must be re-established before rendering can resume."
+}

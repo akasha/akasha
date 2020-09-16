@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.clearColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor",
+    "description": "The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers."
+}

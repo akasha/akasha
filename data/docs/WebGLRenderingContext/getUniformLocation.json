@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getUniformLocation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation",
+    "description": "Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram."
+}

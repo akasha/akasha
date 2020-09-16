@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getShaderInfoLog",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderInfoLog",
+    "description": "The WebGLRenderingContext.getShaderInfoLog returns the information log for the specified WebGLShader object. It contains warnings, debugging and compile information."
+}

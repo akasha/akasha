@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.depthFunc",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthFunc",
+    "description": "The WebGLRenderingContext.depthFunc() method of the WebGL API specifies a function that compares incoming pixel depth to the current depth buffer value."
+}

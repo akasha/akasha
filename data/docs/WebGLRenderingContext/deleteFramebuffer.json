@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.deleteFramebuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteFramebuffer",
+    "description": "The WebGLRenderingContext.deleteFramebuffer() method of the WebGL API deletes a given WebGLFramebuffer object. This method has no effect if the frame buffer has already been deleted."
+}

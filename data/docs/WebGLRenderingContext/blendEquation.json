@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.blendEquation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquation",
+    "description": "The WebGLRenderingContext.blendEquation() method of the WebGL API is used to set both the RGB blend equation and alpha blend equation to a single equation."
+}

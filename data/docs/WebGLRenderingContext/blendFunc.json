@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.blendFunc",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFunc",
+    "description": "The WebGLRenderingContext.blendFunc() method of the WebGL API defines which function is used for blending pixel arithmetic."
+}

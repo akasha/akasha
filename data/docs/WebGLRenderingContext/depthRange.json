@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.depthRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/depthRange",
+    "description": "The WebGLRenderingContext.depthRange() method of the WebGL API specifies the depth range mapping from normalized device coordinates to window or viewport coordinates."
+}

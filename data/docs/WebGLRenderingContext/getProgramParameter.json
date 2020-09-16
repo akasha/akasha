@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getProgramParameter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramParameter",
+    "description": "The WebGLRenderingContext.getProgramParameter() method of the WebGL API returns information about the given program."
+}

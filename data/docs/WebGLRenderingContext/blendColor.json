@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.blendColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor",
+    "description": "The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors."
+}

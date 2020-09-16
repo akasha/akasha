@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.shaderSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/shaderSource",
+    "description": "The WebGLRenderingContext.shaderSource() method of the WebGL API sets the source code of a WebGLShader."
+}

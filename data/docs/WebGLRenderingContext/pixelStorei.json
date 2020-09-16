@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.pixelStorei",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei",
+    "description": "The WebGLRenderingContext.pixelStorei() method of the WebGL API specifies the pixel storage modes."
+}

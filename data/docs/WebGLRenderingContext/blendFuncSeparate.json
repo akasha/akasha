@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.blendFuncSeparate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendFuncSeparate",
+    "description": "The WebGLRenderingContext.blendFuncSeparate() method of the WebGL API defines which function is used for blending pixel arithmetic for RGB and alpha components separately."
+}

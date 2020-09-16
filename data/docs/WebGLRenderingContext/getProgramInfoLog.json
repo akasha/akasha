@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getProgramInfoLog",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog",
+    "description": "The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects."
+}

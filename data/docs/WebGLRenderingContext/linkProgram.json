@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.linkProgram",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/linkProgram",
+    "description": "The WebGLRenderingContext interface's linkProgram() method links a given WebGLProgram, completing the process of preparing the GPU code for the program's fragment and vertex shaders."
+}

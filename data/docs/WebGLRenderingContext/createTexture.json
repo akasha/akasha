@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.createTexture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture",
+    "description": "The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getSupportedExtensions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions",
+    "description": "The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions."
+}

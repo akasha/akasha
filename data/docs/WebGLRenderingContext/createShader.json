@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.createShader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader",
+    "description": "The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()."
+}

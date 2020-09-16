@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getError",
+    "description": "The WebGLRenderingContext.getError() method of the WebGL API returns error information."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.validateProgram",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/validateProgram",
+    "description": "The WebGLRenderingContext.validateProgram() method of the WebGL API validates a WebGLProgram. It checks if it is successfully linked and if it can be used in the current WebGL state."
+}

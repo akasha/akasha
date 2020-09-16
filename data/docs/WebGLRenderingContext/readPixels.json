@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.readPixels",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/readPixels",
+    "description": "The WebGLRenderingContext.readPixels() method of the WebGL API reads a block of pixels from a specified rectangle of the current color framebuffer into an ArrayBufferView object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.bindBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindBuffer",
+    "description": "The WebGLRenderingContext.bindBuffer() method of the WebGL API binds a given WebGLBuffer to a target."
+}

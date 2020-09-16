@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.bindAttribLocation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindAttribLocation",
+    "description": "The WebGLRenderingContext.bindAttribLocation() method of the WebGL API binds a generic vertex index to an attribute variable."
+}

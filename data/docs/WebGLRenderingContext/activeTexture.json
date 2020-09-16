@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.activeTexture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture",
+    "description": "The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active."
+}

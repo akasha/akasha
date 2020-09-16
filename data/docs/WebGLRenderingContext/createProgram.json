@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.createProgram",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createProgram",
+    "description": "The WebGLRenderingContext.createProgram() method of the WebGL API creates and initializes a WebGLProgram object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getParameter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter",
+    "description": "The WebGLRenderingContext.getParameter() method of the WebGL API returns a value for the passed parameter name."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.copyTexImage2D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D",
+    "description": "The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.isRenderbuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isRenderbuffer",
+    "description": "The WebGLRenderingContext.isRenderbuffer() method of the WebGL API returns true if the passed WebGLRenderbuffer is valid and false otherwise."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.renderbufferStorage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/renderbufferStorage",
+    "description": "The WebGLRenderingContext.renderbufferStorage() method of the WebGL API creates and initializes a renderbuffer object's data store."
+}

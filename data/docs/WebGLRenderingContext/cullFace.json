@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.cullFace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/cullFace",
+    "description": "The WebGLRenderingContext.cullFace() method of the WebGL API specifies whether or not front- and/or back-facing polygons can be culled."
+}

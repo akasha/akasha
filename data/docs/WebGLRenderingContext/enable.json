@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.enable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable",
+    "description": "The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context."
+}

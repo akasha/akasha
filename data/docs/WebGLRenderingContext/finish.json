@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.finish",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish",
+    "description": "The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished."
+}

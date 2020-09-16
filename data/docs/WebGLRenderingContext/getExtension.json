@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getExtension",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getExtension",
+    "description": "The WebGLRenderingContext.getExtension() method enables a WebGL extension."
+}

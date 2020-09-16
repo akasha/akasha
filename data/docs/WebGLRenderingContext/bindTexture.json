@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.bindTexture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindTexture",
+    "description": "The WebGLRenderingContext.bindTexture() method of the WebGL API binds a given WebGLTexture to a target (binding point)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.clearStencil",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearStencil",
+    "description": "The WebGLRenderingContext.clearStencil() method of the WebGL API specifies the clear value for the stencil buffer."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getShaderParameter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderParameter",
+    "description": "The WebGLRenderingContext.getShaderParameter() method of the WebGL API returns information about the given shader."
+}

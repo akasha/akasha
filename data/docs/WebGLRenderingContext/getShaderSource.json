@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getShaderSource",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource",
+    "description": "The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString."
+}

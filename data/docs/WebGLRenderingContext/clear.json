@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.clear",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear",
+    "description": "The WebGLRenderingContext.clear() method of the WebGL API clears buffers to preset values."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.colorMask",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/colorMask",
+    "description": "The WebGLRenderingContext.colorMask() method of the WebGL API sets which color components to enable or to disable when drawing or rendering to a WebGLFramebuffer."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.texImage2D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D",
+    "description": "The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image."
+}

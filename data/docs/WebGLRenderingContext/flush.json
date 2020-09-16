@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.flush",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush",
+    "description": "The WebGLRenderingContext.flush() method of the WebGL API empties different buffer commands, causing all commands to be executed as quickly as possible."
+}

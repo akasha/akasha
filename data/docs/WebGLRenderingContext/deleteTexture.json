@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.deleteTexture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture",
+    "description": "The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted."
+}

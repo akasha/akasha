@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.bufferSubData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferSubData",
+    "description": "The WebGLRenderingContext.bufferSubData() method of the WebGL API updates a subset of a buffer object's data store."
+}

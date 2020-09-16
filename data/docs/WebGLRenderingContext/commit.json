@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.commit",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/commit",
+    "description": "The WebGLRenderingContext.commit() method pushes frames back to the original HTMLCanvasElement, if the context is not directly fixed to a specific canvas."
+}

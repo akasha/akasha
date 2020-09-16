@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.blendEquationSeparate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendEquationSeparate",
+    "description": "The WebGLRenderingContext.blendEquationSeparate() method of the WebGL API is used to set the RGB blend equation and alpha blend equation separately."
+}

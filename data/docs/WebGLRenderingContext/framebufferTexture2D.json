@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.framebufferTexture2D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D",
+    "description": "The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer."
+}

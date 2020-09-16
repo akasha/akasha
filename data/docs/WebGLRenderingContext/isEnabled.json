@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.isEnabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isEnabled",
+    "description": "The WebGLRenderingContext.isEnabled() method of the WebGL API tests whether a specific WebGL capability is enabled or not for this context."
+}

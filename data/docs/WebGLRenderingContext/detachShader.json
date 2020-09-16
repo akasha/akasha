@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.detachShader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/detachShader",
+    "description": "The WebGLRenderingContext.detachShader() method of the WebGL API detaches a previously attached WebGLShader from a WebGLProgram."
+}

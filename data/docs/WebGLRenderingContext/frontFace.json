@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.frontFace",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace",
+    "description": "The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation."
+}

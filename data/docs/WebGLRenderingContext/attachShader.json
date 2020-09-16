@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.attachShader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader",
+    "description": "The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram."
+}

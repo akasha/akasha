@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.disable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable",
+    "description": "The WebGLRenderingContext.disable() method of the WebGL API disables specific WebGL capabilities for this context."
+}

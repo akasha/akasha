@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.generateMipmap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/generateMipmap",
+    "description": "The WebGLRenderingContext.generateMipmap() method of the WebGL API generates a set of mipmaps for a WebGLTexture object."
+}

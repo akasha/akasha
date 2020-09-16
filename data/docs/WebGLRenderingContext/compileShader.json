@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.compileShader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compileShader",
+    "description": "The WebGLRenderingContext.compileShader() method of the WebGL API compiles a GLSL shader into binary data so that it can be used by a WebGLProgram."
+}

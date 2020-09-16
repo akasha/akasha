@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getAttachedShaders",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders",
+    "description": "The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram."
+}

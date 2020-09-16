@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.viewport",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport",
+    "description": "The WebGLRenderingContext.viewport() method of the WebGL API sets the viewport, which specifies the affine transformation of x and y from normalized device coordinates to window coordinates."
+}

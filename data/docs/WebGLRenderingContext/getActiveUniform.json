@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getActiveUniform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform",
+    "description": "The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation."
+}

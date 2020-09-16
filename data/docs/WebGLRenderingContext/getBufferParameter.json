@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.getBufferParameter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getBufferParameter",
+    "description": "The WebGLRenderingContext.getBufferParameter() method of the WebGL API returns information about the buffer."
+}
