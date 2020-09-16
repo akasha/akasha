@@ -267,148 +267,17 @@ public final class MdnDocScanner
       final Element element = document.selectFirst( "meta[name=\"description\"]" );
       final String description = null != element ? element.attr( "content" ) : "";
 
-      // We use the localName as some APIs have been updated in spec but MDN still uses "old"
-      // name and redirects at http level when you request the new name. i.e. XR type was called XRSystem
-      final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
-      final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
-
-      final String typeName = entryIndex.getDocIndex().getName();
       // Replace any non-breaking-space characters with a space as that is the best way for downstream consumers
       // Then replace any other special characters with their equivalent html entities as the description is
       // expected to be HTML "phrasing content" soo that it can easily be added to javadoc like tools
       entry.setDescription( StringUtils.encodeHtml( description.replace( '\u00A0', ' ' ) ) );
       if ( DocKind.Type == kind )
       {
-        document
-          .select( "#Constructors + p + dl > dt > a > code, " +
-                   "#Constructors + dl > dt > a > code" +
-                   "#Constructor + p + dl > dt > a > code, " +
-                   "#Constructor + dl > dt > a > code" )
-          .stream()
-          .map( Element::text )
-          // Strip the brackets at end of constructors
-          .map( text -> text.replaceAll( "\\(.*", "" ) )
-          .filter( SourceVersion::isName )
-          .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
-        document
-          .select( "#Properties + p + dl > dt > a > code, " +
-                   "#Properties + dl > dt > a > code, " +
-
-                   // GlobalEventHandlers has event handler properties here
-                   "#Properties > dl > dt > a > code, " +
-
-                   // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
-                   "#Properties + p + dl > dt > code, " +
-
-                   // Sometimes events section actually lists event handler properties
-                   "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
-                   "#Events + dl > dt > a:not([href$=\"_event\"]) > code, " +
-
-                   // Some regular js methods such as those for WebAssembly
-                   "#Instance_properties + dl > dt > a > code" )
-          .stream()
-          .map( Element::text )
-          // Strip out the type name that sometimes appears in the documentation
-          .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-          .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
-          .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
-          .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
-          .filter( SourceVersion::isName )
-          .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
-
-        final List<String> methods =
-          document
-            .select( "#Methods + p + dl > dt > a > code, " +
-                     "#Methods + dl > dt > a code, " +
-                     "#Static_methods + p + dl > dt > a > code, " +
-                     "#Static_methods + dl > dt > a > code, " +
-
-                     // Some regular js methods such as those for WebAssembly
-                     "#Instance_methods + dl > dt > a > code" )
-            .stream()
-            .map( Element::text )
-            // Strip the brackets at end of methods
-            .map( text -> text.replaceAll( "\\(.*", "" ) )
-            // Strip out the type name that sometimes appears in the documentation
-            .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-            .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
-            .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
-            .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
-            .filter( SourceVersion::isName )
-            .collect( Collectors.toList() );
-        if ( !methods.isEmpty() )
-        {
-          // Sometimes constructors are documented as methods so instead register them as constructors
-          methods
-            .stream()
-            .filter( m -> m.equals( localName ) || m.equals( typeName ) )
-            .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
-
-          methods
-            .stream()
-            .filter( m -> !m.equals( localName ) && !m.equals( typeName ) )
-            .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
-        }
-        final List<String> events =
-          document
-            .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
-                     "#Events + dl > dt > a[href$=\"_event\"] > code, " +
-
-                     // SpeechSynthesisUtterance among others nests <a/> in code
-                     "#Events + p + dl > dt > code > a[href$=\"_event\"], " +
-                     "#Events + dl > dt > code > a[href$=\"_event\"], " +
-
-                     "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
-                     // This pattern added for Window docs
-                     "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
-            .stream()
-            .map( Element::text )
-            // Strip out the type name that sometimes appears in the documentation
-            .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
-            .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
-            .filter( SourceVersion::isName )
-            .collect( Collectors.toList() );
-        if ( !events.isEmpty() )
-        {
-          events.forEach( event -> queueRequest( DocKind.Event, typeName, event ) );
-
-          // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
-          // to try and find them
-          events
-            .stream()
-            .map( e -> "on" + e )
-            .filter( e -> !document.select( "a[href$=\"/" + localName + "/" + e + "\"]" ).isEmpty() )
-            .filter( e -> !document.select( "a[href$=\"/" + typeName + "/" + e + "\"]" ).isEmpty() )
-            .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
-        }
+        scanTypePage( document, entryIndex );
       }
       else if ( DocKind.Event == kind )
       {
-        entry.setEventName( entryIndex.getName().replaceAll( "_event$", "" ) );
-        final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th" );
-        for ( final Element th : headers )
-        {
-          final Element td = th.nextElementSibling();
-          assert "td".equals( td.tagName() );
-
-          final String text = th.text();
-          if ( "Interface".equals( text ) )
-          {
-            entry.setEventType( td.text() );
-          }
-          else if ( "Bubbles".equals( text ) )
-          {
-            entry.setEventBubbles( td.text().equalsIgnoreCase( "no" ) );
-          }
-          else if ( "Cancelable".equals( text ) )
-          {
-            entry.setEventCancelable( td.text().equalsIgnoreCase( "no" ) );
-          }
-          else if ( "Event handler".equals( text ) || "Event handler property".equals( text ) )
-          {
-            entry.setEventHandlerProperty( td.text().replaceAll( "^.*\\.", "" ) );
-          }
-        }
+        scanEventPage( document, entryIndex, entry );
       }
       if ( !entry.valid() )
       {
@@ -430,6 +299,150 @@ public final class MdnDocScanner
     catch ( final Exception e )
     {
       throw new IndexIOException( "Failed to read local file for " + entryIndex.getQualifiedName(), e );
+    }
+  }
+
+  private void scanEventPage( @Nonnull final Document document,
+                              @Nonnull final EntryIndex entryIndex,
+                              @Nonnull final DocEntry entry )
+  {
+    entry.setEventName( entryIndex.getName().replaceAll( "_event$", "" ) );
+    final Elements headers = document.select( "#wikiArticle > table.properties > tbody > tr > th" );
+    for ( final Element th : headers )
+    {
+      final Element td = th.nextElementSibling();
+      assert "td".equals( td.tagName() );
+
+      final String text = th.text();
+      if ( "Interface".equals( text ) )
+      {
+        entry.setEventType( td.text() );
+      }
+      else if ( "Bubbles".equals( text ) )
+      {
+        entry.setEventBubbles( td.text().equalsIgnoreCase( "no" ) );
+      }
+      else if ( "Cancelable".equals( text ) )
+      {
+        entry.setEventCancelable( td.text().equalsIgnoreCase( "no" ) );
+      }
+      else if ( "Event handler".equals( text ) || "Event handler property".equals( text ) )
+      {
+        entry.setEventHandlerProperty( td.text().replaceAll( "^.*\\.", "" ) );
+      }
+    }
+  }
+
+  private void scanTypePage( @Nonnull final Document document, @Nonnull final EntryIndex entryIndex )
+  {
+    final String typeName = entryIndex.getDocIndex().getName();
+
+    // We use the localName as some APIs have been updated in spec but MDN still uses "old"
+    // name and redirects at http level when you request the new name. i.e. XR type was called XRSystem
+    final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
+    final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
+
+    document
+      .select( "#Constructors + p + dl > dt > a > code, " +
+               "#Constructors + dl > dt > a > code" +
+               "#Constructor + p + dl > dt > a > code, " +
+               "#Constructor + dl > dt > a > code" )
+      .stream()
+      .map( Element::text )
+      // Strip the brackets at end of constructors
+      .map( text -> text.replaceAll( "\\(.*", "" ) )
+      .filter( SourceVersion::isName )
+      .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
+    document
+      .select( "#Properties + p + dl > dt > a > code, " +
+               "#Properties + dl > dt > a > code, " +
+
+               // GlobalEventHandlers has event handler properties here
+               "#Properties > dl > dt > a > code, " +
+
+               // XRSessionInit has dictionary members that are not cross-linked as does other dictionaries here
+               "#Properties + p + dl > dt > code, " +
+
+               // Sometimes events section actually lists event handler properties
+               "#Events + p + dl > dt > a:not([href$=\"_event\"]) > code, " +
+               "#Events + dl > dt > a:not([href$=\"_event\"]) > code, " +
+
+               // Some regular js methods such as those for WebAssembly
+               "#Instance_properties + dl > dt > a > code" )
+      .stream()
+      .map( Element::text )
+      // Strip out the type name that sometimes appears in the documentation
+      .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+      .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
+      .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
+      .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
+      .filter( SourceVersion::isName )
+      .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
+
+    final List<String> methods =
+      document
+        .select( "#Methods + p + dl > dt > a > code, " +
+                 "#Methods + dl > dt > a code, " +
+                 "#Static_methods + p + dl > dt > a > code, " +
+                 "#Static_methods + dl > dt > a > code, " +
+
+                 // Some regular js methods such as those for WebAssembly
+                 "#Instance_methods + dl > dt > a > code" )
+        .stream()
+        .map( Element::text )
+        // Strip the brackets at end of methods
+        .map( text -> text.replaceAll( "\\(.*", "" ) )
+        // Strip out the type name that sometimes appears in the documentation
+        .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+        .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
+        .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
+        .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
+        .filter( SourceVersion::isName )
+        .collect( Collectors.toList() );
+    if ( !methods.isEmpty() )
+    {
+      // Sometimes constructors are documented as methods so instead register them as constructors
+      methods
+        .stream()
+        .filter( m -> m.equals( localName ) || m.equals( typeName ) )
+        .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
+
+      methods
+        .stream()
+        .filter( m -> !m.equals( localName ) && !m.equals( typeName ) )
+        .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
+    }
+    final List<String> events =
+      document
+        .select( "#Events + p + dl > dt > a[href$=\"_event\"] > code, " +
+                 "#Events + dl > dt > a[href$=\"_event\"] > code, " +
+
+                 // SpeechSynthesisUtterance among others nests <a/> in code
+                 "#Events + p + dl > dt > code > a[href$=\"_event\"], " +
+                 "#Events + dl > dt > code > a[href$=\"_event\"], " +
+
+                 "[id*='_events'] + p + dl > dt > a[href$=\"_event\"] > code, " +
+                 // This pattern added for Window docs
+                 "[id*='_events'] + dl > dt > a[href$=\"_event\"] > code" )
+        .stream()
+        .map( Element::text )
+        // Strip out the type name that sometimes appears in the documentation
+        .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
+        .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
+        .filter( SourceVersion::isName )
+        .collect( Collectors.toList() );
+    if ( !events.isEmpty() )
+    {
+      events.forEach( event -> queueRequest( DocKind.Event, typeName, event ) );
+
+      // Not all doc pages explicitly list onx event handlers as properties so we try and scrape the page
+      // to try and find them
+      events
+        .stream()
+        .map( e -> "on" + e )
+        .filter( e -> !document.select( "a[href$=\"/" + localName + "/" + e + "\"]" ).isEmpty() )
+        .filter( e -> !document.select( "a[href$=\"/" + typeName + "/" + e + "\"]" ).isEmpty() )
+        .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
     }
   }
 
