@@ -343,6 +343,7 @@ public final class MdnDocScanner
     final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
     final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
+    final List<String> constructorNames = new ArrayList<>();
     final List<String> propertyNames = new ArrayList<>();
     final List<String> methodsNames = new ArrayList<>();
     for ( final Element element : document.select( ".quick-links > div > ol > li > details > summary" ) )
@@ -356,6 +357,11 @@ public final class MdnDocScanner
       {
         element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( propertyNames::add );
       }
+      else if ( sectionType.equalsIgnoreCase( "Constructor" ) || sectionType.equalsIgnoreCase( "Constructors" ) )
+      {
+        element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( constructorNames::add );
+      }
+
     }
 
     document
@@ -365,6 +371,10 @@ public final class MdnDocScanner
                "#Constructor + dl > dt > a > code" )
       .stream()
       .map( Element::text )
+      .forEach( constructorNames::add );
+
+    constructorNames
+      .stream()
       // Strip the brackets at end of constructors
       .map( text -> text.replaceAll( "\\(.*", "" ) )
       .filter( SourceVersion::isName )
