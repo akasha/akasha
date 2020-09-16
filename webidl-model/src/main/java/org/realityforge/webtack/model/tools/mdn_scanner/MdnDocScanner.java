@@ -343,6 +343,7 @@ public final class MdnDocScanner
     final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
     final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
+    final List<String> propertyNames = new ArrayList<>();
     final List<String> methodsNames = new ArrayList<>();
     for ( final Element element : document.select( ".quick-links > div > ol > li > details > summary" ) )
     {
@@ -350,6 +351,10 @@ public final class MdnDocScanner
       if ( sectionType.equalsIgnoreCase( "Methods" ) )
       {
         element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( methodsNames::add );
+      }
+      else if ( sectionType.equalsIgnoreCase( "Properties" ) )
+      {
+        element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( propertyNames::add );
       }
     }
 
@@ -364,6 +369,7 @@ public final class MdnDocScanner
       .map( text -> text.replaceAll( "\\(.*", "" ) )
       .filter( SourceVersion::isName )
       .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
+
     document
       .select( "#Properties + p + dl > dt > a > code, " +
                "#Properties + dl > dt > a > code, " +
@@ -382,6 +388,10 @@ public final class MdnDocScanner
                "#Instance_properties + dl > dt > a > code" )
       .stream()
       .map( Element::text )
+      .forEach( propertyNames::add );
+
+    propertyNames
+      .stream()
       // Strip out the type name that sometimes appears in the documentation
       .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
       .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )

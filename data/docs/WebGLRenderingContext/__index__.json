@@ -1,7 +1,7 @@
 
 {
     "name": "WebGLRenderingContext",
-    "lastModifiedAt": 1600296702335,
+    "lastModifiedAt": 1600298470925,
     "entries": [
         {
             "name": "__type__",
@@ -62,6 +62,10 @@
         {
             "name": "bufferSubData",
             "lastModifiedAt": 1600296673195
+        },
+        {
+            "name": "canvas",
+            "lastModifiedAt": 1600298399243
         },
         {
             "name": "checkFramebufferStatus",
@@ -190,6 +194,14 @@
         {
             "name": "drawElements",
             "lastModifiedAt": 1600296682482
+        },
+        {
+            "name": "drawingBufferHeight",
+            "lastModifiedAt": 1600298399585
+        },
+        {
+            "name": "drawingBufferWidth",
+            "lastModifiedAt": 1600298399887
         },
         {
             "name": "enable",
