@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
@@ -185,7 +186,8 @@ final class FetchDocsCommand
       }
     }
 
-    final Set<String> typeNames = _typeNames.isEmpty() ? context.docRuntime().findTypes() : _typeNames;
+    final List<String> typeNames =
+      _typeNames.isEmpty() ? context.docRuntime().findTypes() : new ArrayList<>( _typeNames );
     if ( logger.isLoggable( Level.INFO ) )
     {
       logger.log( Level.INFO, "Fetch of documentation of " + typeNames.size() +

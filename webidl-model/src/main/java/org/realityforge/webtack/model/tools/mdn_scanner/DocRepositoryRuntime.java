@@ -7,6 +7,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -39,7 +40,7 @@ public final class DocRepositoryRuntime
   }
 
   @Nonnull
-  public Set<String> findTypes()
+  public List<String> findTypes()
   {
     try
     {
@@ -49,11 +50,13 @@ public final class DocRepositoryRuntime
         .filter( p -> Files.exists( p.resolve( DocIndex.FILENAME ) ) )
         .map( Path::getFileName )
         .map( Path::toString )
-        .collect( Collectors.toSet() );
+        .sorted()
+        .distinct()
+        .collect( Collectors.toList() );
     }
     catch ( final IOException ignored )
     {
-      return Collections.emptySet();
+      return Collections.emptyList();
     }
   }
 
