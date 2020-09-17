@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Touch.pageX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/pageX",
+    "description": "The Touch.pageX read-only property returns the X coordinate of the touch point relative to the viewport, including any scroll offset."
+}

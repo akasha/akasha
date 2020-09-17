@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerGlobalScope.performance",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/performance",
+    "description": "The  performance read-only property of the WorkerGlobalScope interface returns a Performance object to be used on the worker."
+}

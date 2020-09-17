@@ -1,7 +1,7 @@
 
 {
     "name": "MediaStream",
-    "lastModifiedAt": 1599391503191,
+    "lastModifiedAt": 1600308609568,
     "entries": [
         {
             "name": "MediaStream",
@@ -24,8 +24,32 @@
             "lastModifiedAt": 1597359959353
         },
         {
+            "name": "clone",
+            "lastModifiedAt": 1600308606756
+        },
+        {
             "name": "ended",
             "lastModifiedAt": 1599391500459
+        },
+        {
+            "name": "getAudioTracks",
+            "lastModifiedAt": 1600308607077
+        },
+        {
+            "name": "getTrackById",
+            "lastModifiedAt": 1600308607611
+        },
+        {
+            "name": "getTracks",
+            "lastModifiedAt": 1600308607984
+        },
+        {
+            "name": "getVideoTracks",
+            "lastModifiedAt": 1600308608270
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1600308602697
         },
         {
             "name": "onaddtrack",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WorkerGlobalScope.dump",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/dump",
+    "description": "The dump() method of the WorkerGlobalScope interface allows you to write a message to stdout &mdash; i.e. in your terminal, in Firefox only. This is the same as Firefox's window.dump, but for workers."
+}

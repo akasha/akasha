@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Blob.size",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/size",
+    "description": "The Blob interface's size property returns the size of the Blob or File in bytes."
+}

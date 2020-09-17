@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XRRigidTransform.inverse",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/inverse",
+    "description": "The read-only inverse property of the XRRigidTransform interface returns another XRRigidTransform object which is the inverse of its owning transform."
+}

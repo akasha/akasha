@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "PushEvent.PushEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushEvent/PushEvent",
+    "description": "The PushEvent() constructor creates a new PushEvent object. Note that the this constructor is exposed only to a service worker context."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BiquadFilterNode.frequency",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/frequency",
+    "description": "An AudioParam."
+}

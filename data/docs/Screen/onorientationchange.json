@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.onorientationchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/onorientationchange",
+    "description": "An event handler for the orientationchange events sent to the screen object."
+}

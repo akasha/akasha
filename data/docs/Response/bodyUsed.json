@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Response.bodyUsed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/bodyUsed",
+    "description": "The bodyUsed read-only property of the Body mixin contains a Boolean that indicates whether the body has been read yet."
+}

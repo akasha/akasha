@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.rules",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rules",
+    "description": "The HTMLTableElement.rules property indicates which cell borders to render in the table."
+}

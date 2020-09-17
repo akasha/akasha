@@ -1,19 +1,99 @@
 
 {
     "name": "WorkerGlobalScope",
-    "lastModifiedAt": 1599391497786,
+    "lastModifiedAt": 1600309082687,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1599391496411
         },
         {
+            "name": "atob",
+            "lastModifiedAt": 1600309074032
+        },
+        {
+            "name": "btoa",
+            "lastModifiedAt": 1600309075556
+        },
+        {
+            "name": "caches",
+            "lastModifiedAt": 1600309067808
+        },
+        {
+            "name": "clearInterval",
+            "lastModifiedAt": 1600309076403
+        },
+        {
+            "name": "clearTimeout",
+            "lastModifiedAt": 1600309077637
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1600309077883
+        },
+        {
+            "name": "console",
+            "lastModifiedAt": 1600309068083
+        },
+        {
+            "name": "dump",
+            "lastModifiedAt": 1600309078602
+        },
+        {
+            "name": "fetch",
+            "lastModifiedAt": 1600309079672
+        },
+        {
+            "name": "importScripts",
+            "lastModifiedAt": 1600309080028
+        },
+        {
+            "name": "indexedDB",
+            "lastModifiedAt": 1600309069267
+        },
+        {
             "name": "languagechange_event",
             "lastModifiedAt": 1597359954347
         },
         {
+            "name": "location",
+            "lastModifiedAt": 1600309070248
+        },
+        {
+            "name": "navigator",
+            "lastModifiedAt": 1600309070510
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1600309070750
+        },
+        {
             "name": "onlanguagechange",
             "lastModifiedAt": 1597279159656
+        },
+        {
+            "name": "onoffline",
+            "lastModifiedAt": 1600309072065
+        },
+        {
+            "name": "ononline",
+            "lastModifiedAt": 1600309072347
+        },
+        {
+            "name": "performance",
+            "lastModifiedAt": 1600309072938
+        },
+        {
+            "name": "self",
+            "lastModifiedAt": 1600309073197
+        },
+        {
+            "name": "setInterval",
+            "lastModifiedAt": 1600309081201
+        },
+        {
+            "name": "setTimeout",
+            "lastModifiedAt": 1600309082053
         }
     ]
 }

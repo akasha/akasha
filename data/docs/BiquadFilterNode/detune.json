@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BiquadFilterNode.detune",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/detune",
+    "description": "An a-rate AudioParam."
+}

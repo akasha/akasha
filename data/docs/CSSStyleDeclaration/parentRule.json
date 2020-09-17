@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSStyleDeclaration.parentRule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/parentRule",
+    "description": "The CSSStyleDeclaration.parentRule read-only property returns a CSSRule that is the parent of this style block"
+}

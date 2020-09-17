@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerGlobalScope.navigator",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/navigator",
+    "description": "The navigator read-only property of the WorkerGlobalScope interface returns the WorkerNavigator associated with the worker. It is a specific navigator object, mostly a subset of the Navigator for browsing scopes, but adapted to workers."
+}

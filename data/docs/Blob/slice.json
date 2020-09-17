@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Blob.slice",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/slice",
+    "description": "The Blob interface's slice() method creates and returns a new Blob object which contains data from a subset of the blob on which it's called."
+}

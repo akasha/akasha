@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBCursor.source",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/source",
+    "description": "The IDBObjectStore or IDBIndex that the cursor is iterating over."
+}

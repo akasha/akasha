@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.onpaste",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/onpaste",
+    "description": "The HTMLElement.onpaste property of the HTMLElement interface is an EventHandler that processes paste events."
+}

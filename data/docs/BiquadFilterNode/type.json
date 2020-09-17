@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BiquadFilterNode.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/type",
+    "description": "A string (enum) representing a BiquadFilterType."
+}

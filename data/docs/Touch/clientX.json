@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Touch.clientX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/clientX",
+    "description": "The Touch.clientX read-only property returns the X coordinate of the touch point relative to the viewport, not including any scroll offset."
+}

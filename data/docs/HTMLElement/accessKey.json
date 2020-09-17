@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.accessKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKey",
+    "description": "The HTMLElement.accessKey property sets the keystroke which a user can press to jump to a given element."
+}

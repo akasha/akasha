@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DeviceMotionEvent.DeviceMotionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/DeviceMotionEvent",
+    "description": "The DeviceMotionEvent constructor creates a new DeviceMotionEvent."
+}

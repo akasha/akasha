@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/width",
+    "description": "The HTMLTableElement.width property represents the desired width of the table."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerLocation.host",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/host",
+    "description": "The URLUtilsReadOnly.host read-only property returns a DOMString containing the host, that is the hostname, a ':', and the port of the URL."
+}

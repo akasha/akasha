@@ -1,8 +1,12 @@
 
 {
     "name": "PointerEvent",
-    "lastModifiedAt": 1599391940560,
+    "lastModifiedAt": 1600308676254,
     "entries": [
+        {
+            "name": "PointerEvent",
+            "lastModifiedAt": 1600308668793
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192272956

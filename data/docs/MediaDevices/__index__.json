@@ -1,7 +1,7 @@
 
 {
     "name": "MediaDevices",
-    "lastModifiedAt": 1599391699666,
+    "lastModifiedAt": 1600308581458,
     "entries": [
         {
             "name": "__type__",
@@ -22,6 +22,10 @@
         {
             "name": "getUserMedia",
             "lastModifiedAt": 1596544750721
+        },
+        {
+            "name": "ondevicechange",
+            "lastModifiedAt": 1600308579264
         }
     ]
 }

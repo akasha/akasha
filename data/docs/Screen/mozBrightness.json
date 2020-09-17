@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.mozBrightness",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/mozBrightness",
+    "description": "Indicates how bright the screen's backlight is, on a scale from 0 (very dim) to 1 (full brightness); this value is a double-precision float."
+}

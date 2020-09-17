@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerLocation.href",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/href",
+    "description": "The URLUtilsReadOnly.href read-only property is a stringifier that returns a DOMString containing the whole URL."
+}

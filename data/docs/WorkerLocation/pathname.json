@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerLocation.pathname",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/pathname",
+    "description": "The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL."
+}

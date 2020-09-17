@@ -1,8 +1,12 @@
 
 {
     "name": "SyncEvent",
-    "lastModifiedAt": 1599391943268,
+    "lastModifiedAt": 1600308871351,
     "entries": [
+        {
+            "name": "SyncEvent",
+            "lastModifiedAt": 1600308869283
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1599391941513
@@ -10,6 +14,10 @@
         {
             "name": "lastChance",
             "lastModifiedAt": 1599391943268
+        },
+        {
+            "name": "registration",
+            "lastModifiedAt": 1600308870711
         },
         {
             "name": "tag",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAreaElement.hostname",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hostname",
+    "description": "The HTMLHyperlinkElementUtils.hostname property is a USVString containing the domain of the URL."
+}

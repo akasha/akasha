@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCTrackEventInit.streams",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/streams",
+    "description": "The RTCTrackEventInit dictionary's optional streams property provides an array containing a MediaStream object for each of the streams associated with the event's track."
+}

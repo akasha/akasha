@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerGlobalScope.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onerror",
+    "description": "The onerror property of the WorkerGlobalScope interface represents an EventHandler to be called when the error event occurs and bubbles through the Worker."
+}

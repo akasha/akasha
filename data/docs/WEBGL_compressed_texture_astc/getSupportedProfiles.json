@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WEBGL_compressed_texture_astc.getSupportedProfiles",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles",
+    "description": "The WEBGL_compressed_texture_astc.getSupportedProfiles() method returns an array of strings containing the names of the ASTC profiles supported by the implementation."
+}

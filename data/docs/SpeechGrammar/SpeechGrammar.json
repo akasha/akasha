@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "SpeechGrammar.SpeechGrammar",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/SpeechGrammar",
+    "description": "The SpeechGrammar constructor of the SpeechGrammar interface creates a new SpeechGrammar object instance."
+}

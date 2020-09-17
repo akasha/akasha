@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.frame",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/frame",
+    "description": "The HTMLTableElement interface's frame property is a string that indicates which of the table's exterior borders should be drawn."
+}

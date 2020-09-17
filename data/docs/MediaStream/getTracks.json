@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaStream.getTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTracks",
+    "description": "The getTracks() method of the MediaStream interface returns a sequence that represents all the MediaStreamTrack objects in this stream's track set, regardless of MediaStreamTrack.kind."
+}

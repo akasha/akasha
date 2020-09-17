@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Blob.text",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/text",
+    "description": "The text() method in the Blob interface returns a Promise that resolves with a string containing the contents of the blob, interpreted as UTF-8."
+}

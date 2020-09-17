@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "BiquadFilterNode.gain",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/gain",
+    "description": "An AudioParam."
+}

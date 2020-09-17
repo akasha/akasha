@@ -1,11 +1,15 @@
 
 {
     "name": "HTMLElement",
-    "lastModifiedAt": 1599391430926,
+    "lastModifiedAt": 1600308507938,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597190846630
+        },
+        {
+            "name": "accessKey",
+            "lastModifiedAt": 1600308482279
         },
         {
             "name": "accessKeyLabel",
@@ -110,6 +114,110 @@
         {
             "name": "offsetWidth",
             "lastModifiedAt": 1596581185443
+        },
+        {
+            "name": "onabort",
+            "lastModifiedAt": 1600308453441
+        },
+        {
+            "name": "onblur",
+            "lastModifiedAt": 1600308455699
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1600308457163
+        },
+        {
+            "name": "onclick",
+            "lastModifiedAt": 1600308457775
+        },
+        {
+            "name": "oncontextmenu",
+            "lastModifiedAt": 1600308458651
+        },
+        {
+            "name": "oncopy",
+            "lastModifiedAt": 1600308458917
+        },
+        {
+            "name": "oncut",
+            "lastModifiedAt": 1600308459647
+        },
+        {
+            "name": "ondblclick",
+            "lastModifiedAt": 1600308460234
+        },
+        {
+            "name": "onfocus",
+            "lastModifiedAt": 1600308462071
+        },
+        {
+            "name": "oninput",
+            "lastModifiedAt": 1600308463243
+        },
+        {
+            "name": "onkeydown",
+            "lastModifiedAt": 1600308464139
+        },
+        {
+            "name": "onkeypress",
+            "lastModifiedAt": 1600308464805
+        },
+        {
+            "name": "onkeyup",
+            "lastModifiedAt": 1600308465411
+        },
+        {
+            "name": "onload",
+            "lastModifiedAt": 1600308466016
+        },
+        {
+            "name": "onmousedown",
+            "lastModifiedAt": 1600308468108
+        },
+        {
+            "name": "onmousemove",
+            "lastModifiedAt": 1600308469355
+        },
+        {
+            "name": "onmouseout",
+            "lastModifiedAt": 1600308469921
+        },
+        {
+            "name": "onmouseover",
+            "lastModifiedAt": 1600308470688
+        },
+        {
+            "name": "onmouseup",
+            "lastModifiedAt": 1600308471276
+        },
+        {
+            "name": "onpaste",
+            "lastModifiedAt": 1600308471536
+        },
+        {
+            "name": "onreset",
+            "lastModifiedAt": 1600308475503
+        },
+        {
+            "name": "onresize",
+            "lastModifiedAt": 1600308475885
+        },
+        {
+            "name": "onscroll",
+            "lastModifiedAt": 1600308477119
+        },
+        {
+            "name": "onselect",
+            "lastModifiedAt": 1600308477738
+        },
+        {
+            "name": "onsubmit",
+            "lastModifiedAt": 1600308478918
+        },
+        {
+            "name": "outerText",
+            "lastModifiedAt": 1600308481229
         },
         {
             "name": "pointercancel_event",

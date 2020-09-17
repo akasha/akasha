@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SyncEvent.registration",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncEvent/registration",
+    "description": "The registration read-only property of the SyncEvent interface returns a reference to a SyncRegistration object."
+}

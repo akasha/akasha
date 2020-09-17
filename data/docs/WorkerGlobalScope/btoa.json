@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WorkerGlobalScope.btoa",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/btoa",
+    "description": "The WindowOrWorkerGlobalScope.btoa() method creates a Base64-encoded ASCII string from a binary string (i.e., a String object in which each character in the string is treated as a byte of binary data)."
+}

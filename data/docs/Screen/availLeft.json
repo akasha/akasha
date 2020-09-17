@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.availLeft",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/availLeft",
+    "description": "Returns the first available pixel available from the left side of the screen."
+}

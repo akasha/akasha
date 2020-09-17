@@ -1,8 +1,12 @@
 
 {
     "name": "DOMMatrixReadOnly",
-    "lastModifiedAt": 1599391484026,
+    "lastModifiedAt": 1600308363305,
     "entries": [
+        {
+            "name": "DOMMatrixReadOnly",
+            "lastModifiedAt": 1600308347283
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1599391468446

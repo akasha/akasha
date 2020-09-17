@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DOMMatrixReadOnly.DOMMatrixReadOnly",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly",
+    "description": "The DOMMatrixReadOnly constructor creates a new DOMMatrixReadOnly object which represents 4x4 matrices, suitable for 2D and 3D operations."
+}

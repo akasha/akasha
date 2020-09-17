@@ -1,19 +1,35 @@
 
 {
     "name": "FetchEvent",
-    "lastModifiedAt": 1599391656768,
+    "lastModifiedAt": 1600308398471,
     "entries": [
         {
             "name": "FetchEvent",
             "lastModifiedAt": 1597192313635
         },
         {
+            "name": "PreloadRequest",
+            "lastModifiedAt": 1600308394558
+        },
+        {
             "name": "__type__",
             "lastModifiedAt": 1599391651282
         },
         {
+            "name": "client",
+            "lastModifiedAt": 1600308392627
+        },
+        {
             "name": "clientId",
             "lastModifiedAt": 1597192313869
+        },
+        {
+            "name": "isReload",
+            "lastModifiedAt": 1600308393499
+        },
+        {
+            "name": "navigationPreload",
+            "lastModifiedAt": 1600308394312
         },
         {
             "name": "preloadResponse",

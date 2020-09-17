@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerGlobalScope.onoffline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onoffline",
+    "description": "The onoffline property of the WorkerGlobalScope interface represents an EventHandler to be called when the offline event occurs and bubbles through the Worker."
+}

@@ -1,15 +1,31 @@
 
 {
     "name": "HTMLTableElement",
-    "lastModifiedAt": 1599391366826,
+    "lastModifiedAt": 1600308541087,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597193195321
         },
         {
+            "name": "align",
+            "lastModifiedAt": 1600308529991
+        },
+        {
+            "name": "bgColor",
+            "lastModifiedAt": 1600308530332
+        },
+        {
+            "name": "border",
+            "lastModifiedAt": 1600308530861
+        },
+        {
             "name": "caption",
             "lastModifiedAt": 1596581159610
+        },
+        {
+            "name": "cellPadding",
+            "lastModifiedAt": 1600308532212
         },
         {
             "name": "createCaption",
@@ -40,12 +56,24 @@
             "lastModifiedAt": 1596581164402
         },
         {
+            "name": "frame",
+            "lastModifiedAt": 1600308532442
+        },
+        {
             "name": "insertRow",
             "lastModifiedAt": 1596581164819
         },
         {
             "name": "rows",
             "lastModifiedAt": 1599391357743
+        },
+        {
+            "name": "rules",
+            "lastModifiedAt": 1600308533163
+        },
+        {
+            "name": "summary",
+            "lastModifiedAt": 1600308533415
         },
         {
             "name": "tBodies",
@@ -58,6 +86,10 @@
         {
             "name": "tHead",
             "lastModifiedAt": 1596581161480
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1600308535609
         }
     ]
 }

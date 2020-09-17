@@ -1,7 +1,7 @@
 
 {
     "name": "PushManager",
-    "lastModifiedAt": 1599391565166,
+    "lastModifiedAt": 1600308694232,
     "entries": [
         {
             "name": "__type__",
@@ -12,8 +12,20 @@
             "lastModifiedAt": 1599391564205
         },
         {
+            "name": "hasPermission",
+            "lastModifiedAt": 1600308692001
+        },
+        {
             "name": "permissionState",
             "lastModifiedAt": 1599391564663
+        },
+        {
+            "name": "register",
+            "lastModifiedAt": 1600308693005
+        },
+        {
+            "name": "registrations",
+            "lastModifiedAt": 1600308693424
         },
         {
             "name": "subscribe",
@@ -22,6 +34,10 @@
         {
             "name": "supportedContentEncodings",
             "lastModifiedAt": 1597192278664
+        },
+        {
+            "name": "unregister",
+            "lastModifiedAt": 1600308694232
         }
     ]
 }

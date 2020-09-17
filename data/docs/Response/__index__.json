@@ -1,7 +1,7 @@
 
 {
     "name": "Response",
-    "lastModifiedAt": 1599391966305,
+    "lastModifiedAt": 1600308785696,
     "entries": [
         {
             "name": "Response",
@@ -10,6 +10,18 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597193108703
+        },
+        {
+            "name": "arrayBuffer",
+            "lastModifiedAt": 1600308781489
+        },
+        {
+            "name": "blob",
+            "lastModifiedAt": 1600308782050
+        },
+        {
+            "name": "bodyUsed",
+            "lastModifiedAt": 1600308775330
         },
         {
             "name": "clone",
@@ -22,6 +34,10 @@
         {
             "name": "headers",
             "lastModifiedAt": 1597193109434
+        },
+        {
+            "name": "json",
+            "lastModifiedAt": 1600308784258
         },
         {
             "name": "ok",
@@ -42,6 +58,10 @@
         {
             "name": "statusText",
             "lastModifiedAt": 1597193110823
+        },
+        {
+            "name": "text",
+            "lastModifiedAt": 1600308785696
         },
         {
             "name": "type",

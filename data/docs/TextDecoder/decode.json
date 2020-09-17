@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TextDecoder.decode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder/decode",
+    "description": "The TextDecoder.prototype.decode() method returns a DOMString containing the text, given in parameters, decoded with the specific method for that TextDecoder object."
+}

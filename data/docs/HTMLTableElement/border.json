@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.border",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/border",
+    "description": "The HTMLTableElement.border property represents the border width of the table element."
+}

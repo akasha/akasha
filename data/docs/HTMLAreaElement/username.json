@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAreaElement.username",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/username",
+    "description": "The HTMLHyperlinkElementUtils.username property is a USVString containing the username specified before the domain name."
+}

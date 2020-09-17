@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAreaElement.search",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/search",
+    "description": "The HTMLHyperlinkElementUtils.search property is a search string, also called a query string, that is USVString containing a '?' followed by the parameters of the URL."
+}

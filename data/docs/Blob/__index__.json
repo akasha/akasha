@@ -1,7 +1,7 @@
 
 {
     "name": "Blob",
-    "lastModifiedAt": 1599391715423,
+    "lastModifiedAt": 1600308279221,
     "entries": [
         {
             "name": "Blob",
@@ -10,6 +10,30 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597191933902
+        },
+        {
+            "name": "arrayBuffer",
+            "lastModifiedAt": 1600308276893
+        },
+        {
+            "name": "size",
+            "lastModifiedAt": 1600308275794
+        },
+        {
+            "name": "slice",
+            "lastModifiedAt": 1600308278570
+        },
+        {
+            "name": "stream",
+            "lastModifiedAt": 1600308278940
+        },
+        {
+            "name": "text",
+            "lastModifiedAt": 1600308279221
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1600308276030
         }
     ]
 }

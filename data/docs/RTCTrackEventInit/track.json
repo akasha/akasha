@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCTrackEventInit.track",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/track",
+    "description": "The RTCTrackEventInit dictionary's track property specifies the MediaStreamTrack associated with the track event."
+}

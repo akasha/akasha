@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSStyleDeclaration.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/length",
+    "description": "The read-only property returns an integer that represents the number of style declarations in this CSS declaration block."
+}

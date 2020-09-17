@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Touch.pageY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/pageY",
+    "description": "The Touch.pageY read-only property returns the Y coordinate of the touch point relative to the viewport, including any scroll offset."
+}

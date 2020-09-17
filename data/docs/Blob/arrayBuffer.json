@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Blob.arrayBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/arrayBuffer",
+    "description": "The arrayBuffer() method in the Blob interface returns a Promise that resolves with the contents of the blob as binary data contained in an ArrayBuffer."
+}

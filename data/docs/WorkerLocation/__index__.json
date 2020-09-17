@@ -1,11 +1,51 @@
 
 {
     "name": "WorkerLocation",
-    "lastModifiedAt": 1599391337396,
+    "lastModifiedAt": 1600309092105,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597193181425
+        },
+        {
+            "name": "hash",
+            "lastModifiedAt": 1600309083763
+        },
+        {
+            "name": "host",
+            "lastModifiedAt": 1600309084294
+        },
+        {
+            "name": "hostname",
+            "lastModifiedAt": 1600309084827
+        },
+        {
+            "name": "href",
+            "lastModifiedAt": 1600309085369
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1600309086455
+        },
+        {
+            "name": "pathname",
+            "lastModifiedAt": 1600309087000
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1600309087532
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1600309088070
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1600309088617
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1600309092105
         }
     ]
 }

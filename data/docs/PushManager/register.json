@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PushManager.register",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager/register",
+    "description": "The register method is used to ask the system to request a new endpoint for notifications. This method has been superceded by PushManager.subscribe()."
+}

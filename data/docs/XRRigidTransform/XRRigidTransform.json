@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "XRRigidTransform.XRRigidTransform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/XRRigidTransform",
+    "description": "The XRRigidTransform() constructor creates and returns a new XRRigidTransform object, representing the position and orientation of a point or object."
+}

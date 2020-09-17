@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.oncut",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncut",
+    "description": "The HTMLElement.oncut property of the HTMLElement interface is an EventHandler that processes cut events."
+}

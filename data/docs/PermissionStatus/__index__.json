@@ -1,11 +1,15 @@
 
 {
     "name": "PermissionStatus",
-    "lastModifiedAt": 1599391926786,
+    "lastModifiedAt": 1600308667997,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192267393
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1600308666495
         },
         {
             "name": "state",

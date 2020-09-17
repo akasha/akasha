@@ -1,7 +1,7 @@
 
 {
     "name": "CSSStyleDeclaration",
-    "lastModifiedAt": 1599391606730,
+    "lastModifiedAt": 1600308301985,
     "entries": [
         {
             "name": "__type__",
@@ -22,6 +22,14 @@
         {
             "name": "item",
             "lastModifiedAt": 1597190726489
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1600308298605
+        },
+        {
+            "name": "parentRule",
+            "lastModifiedAt": 1600308298884
         },
         {
             "name": "removeProperty",

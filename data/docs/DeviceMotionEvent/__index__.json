@@ -1,8 +1,12 @@
 
 {
     "name": "DeviceMotionEvent",
-    "lastModifiedAt": 1599391529006,
+    "lastModifiedAt": 1600308381243,
     "entries": [
+        {
+            "name": "DeviceMotionEvent",
+            "lastModifiedAt": 1600308378213
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597190976986

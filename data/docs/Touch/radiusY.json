@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Touch.radiusY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/radiusY",
+    "description": "Returns the Y radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as Touch.screenX."
+}

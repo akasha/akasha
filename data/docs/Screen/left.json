@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.left",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/left",
+    "description": "Returns the distance in pixels from the left side of the main screen to the left side of the current screen."
+}

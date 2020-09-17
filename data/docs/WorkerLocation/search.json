@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerLocation.search",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/search",
+    "description": "The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL."
+}

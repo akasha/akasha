@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "OffscreenCanvas.convertToBlob",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/convertToBlob",
+    "description": "The OffscreenCanvas.convertToBlob()method creates a Blob object representing the image contained in the canvas."
+}

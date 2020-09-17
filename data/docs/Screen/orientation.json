@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.orientation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation",
+    "description": "The orientation read-only property of the Screen interface returns the current orientation of the screen."
+}

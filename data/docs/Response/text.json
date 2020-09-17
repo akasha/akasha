@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Response.text",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/text",
+    "description": "The text() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a USVString object (text). The response is always decoded using UTF-8."
+}

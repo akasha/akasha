@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "OffscreenCanvas.transferToImageBitmap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap",
+    "description": "The OffscreenCanvas.transferToImageBitmap() method creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas."
+}

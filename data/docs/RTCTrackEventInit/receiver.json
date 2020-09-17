@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCTrackEventInit.receiver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEventInit/receiver",
+    "description": "The RTCTrackEventInit dictionary's receiver property specifies the RTCRtpReceiver associated with the event."
+}

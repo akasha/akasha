@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.pixelDepth",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/pixelDepth",
+    "description": "Returns the bit depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't."
+}

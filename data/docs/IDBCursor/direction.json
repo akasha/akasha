@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBCursor.direction",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/direction",
+    "description": "A string (defined by the IDBCursorDirection enum) indicating the direction in which the cursor is traversing the data. Possible values are:"
+}

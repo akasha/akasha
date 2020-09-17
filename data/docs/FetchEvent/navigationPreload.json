@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "FetchEvent.navigationPreload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/navigationPreload",
+    "description": "The navigationPreload read-only property of the FetchEvent interface returns a Promise that resolves to the instance of NavigationPreloadManager associated with the current service worker registration."
+}

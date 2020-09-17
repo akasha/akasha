@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBCursor.primaryKey",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/primaryKey",
+    "description": "A value of any data type."
+}

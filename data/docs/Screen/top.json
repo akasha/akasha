@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.top",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/top",
+    "description": "Returns the distance in pixels from the top side of the current screen."
+}

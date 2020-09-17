@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WorkerGlobalScope.importScripts",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts",
+    "description": "The importScripts() method of the WorkerGlobalScope interface synchronously imports one or more scripts into the worker's scope."
+}

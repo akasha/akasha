@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "SyncEvent.SyncEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncEvent/SyncEvent",
+    "description": "The SyncEvent() constructor creates a new SyncEvent object."
+}

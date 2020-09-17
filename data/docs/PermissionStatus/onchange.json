@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PermissionStatus.onchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/onchange",
+    "description": "The onchange event handler of the PermissionStatus interface is called whenever the PermissionStatus.state property changes."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Touch.clientY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/clientY",
+    "description": "The Touch.clientY read-only property returns the Y coordinate of the touch point relative to the browser's viewport, not including any scroll offset."
+}

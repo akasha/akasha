@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.cellPadding",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/cellPadding",
+    "description": "The HTMLTableElement.cellPadding property represents the padding around the individual cells of the table."
+}

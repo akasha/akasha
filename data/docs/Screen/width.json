@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/width",
+    "description": "Returns the width of the screen."
+}

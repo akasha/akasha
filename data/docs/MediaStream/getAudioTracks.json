@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "MediaStream.getAudioTracks",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getAudioTracks",
+    "description": "The getAudioTracks() method of the MediaStream interface returns a sequence that represents all the MediaStreamTrack objects in this stream's track set where MediaStreamTrack.kind is audio."
+}

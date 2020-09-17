@@ -1,7 +1,7 @@
 
 {
     "name": "TextDecoder",
-    "lastModifiedAt": 1599391647352,
+    "lastModifiedAt": 1600308876011,
     "entries": [
         {
             "name": "TextDecoder",
@@ -10,6 +10,14 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597193101675
+        },
+        {
+            "name": "decode",
+            "lastModifiedAt": 1600308876011
+        },
+        {
+            "name": "encoding",
+            "lastModifiedAt": 1600308874808
         }
     ]
 }

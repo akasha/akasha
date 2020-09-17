@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerContainer.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/onerror",
+    "description": "The onerror property of the ServiceWorkerContainer interface is an event handler fired whenever an error event occurs in the associated service workers."
+}

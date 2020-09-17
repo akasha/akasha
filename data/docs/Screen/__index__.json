@@ -1,19 +1,75 @@
 
 {
     "name": "Screen",
-    "lastModifiedAt": 1599391880703,
+    "lastModifiedAt": 1600308831907,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597190812561
         },
         {
+            "name": "availHeight",
+            "lastModifiedAt": 1600308826455
+        },
+        {
+            "name": "availLeft",
+            "lastModifiedAt": 1600308826786
+        },
+        {
+            "name": "availTop",
+            "lastModifiedAt": 1600308827033
+        },
+        {
+            "name": "availWidth",
+            "lastModifiedAt": 1600308827299
+        },
+        {
+            "name": "colorDepth",
+            "lastModifiedAt": 1600308827606
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1600308827913
+        },
+        {
+            "name": "left",
+            "lastModifiedAt": 1600308828157
+        },
+        {
             "name": "lockOrientation",
             "lastModifiedAt": 1599391879653
         },
         {
+            "name": "mozBrightness",
+            "lastModifiedAt": 1600308828953
+        },
+        {
+            "name": "mozEnabled",
+            "lastModifiedAt": 1600308829198
+        },
+        {
+            "name": "onorientationchange",
+            "lastModifiedAt": 1600308829588
+        },
+        {
+            "name": "orientation",
+            "lastModifiedAt": 1600308829961
+        },
+        {
+            "name": "pixelDepth",
+            "lastModifiedAt": 1600308830268
+        },
+        {
+            "name": "top",
+            "lastModifiedAt": 1600308830574
+        },
+        {
             "name": "unlockOrientation",
             "lastModifiedAt": 1599391880703
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1600308830813
         }
     ]
 }

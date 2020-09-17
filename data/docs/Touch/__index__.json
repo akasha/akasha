@@ -1,7 +1,7 @@
 
 {
     "name": "Touch",
-    "lastModifiedAt": 1599391885410,
+    "lastModifiedAt": 1600308888932,
     "entries": [
         {
             "name": "Touch",
@@ -10,6 +10,54 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597192478217
+        },
+        {
+            "name": "clientX",
+            "lastModifiedAt": 1600308885041
+        },
+        {
+            "name": "clientY",
+            "lastModifiedAt": 1600308885277
+        },
+        {
+            "name": "force",
+            "lastModifiedAt": 1600308885519
+        },
+        {
+            "name": "identifier",
+            "lastModifiedAt": 1600308885772
+        },
+        {
+            "name": "pageX",
+            "lastModifiedAt": 1600308886010
+        },
+        {
+            "name": "pageY",
+            "lastModifiedAt": 1600308886249
+        },
+        {
+            "name": "radiusX",
+            "lastModifiedAt": 1600308886590
+        },
+        {
+            "name": "radiusY",
+            "lastModifiedAt": 1600308886822
+        },
+        {
+            "name": "rotationAngle",
+            "lastModifiedAt": 1600308887061
+        },
+        {
+            "name": "screenX",
+            "lastModifiedAt": 1600308887872
+        },
+        {
+            "name": "screenY",
+            "lastModifiedAt": 1600308888118
+        },
+        {
+            "name": "target",
+            "lastModifiedAt": 1600308888932
         }
     ]
 }

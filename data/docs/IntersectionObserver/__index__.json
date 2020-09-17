@@ -1,8 +1,12 @@
 
 {
     "name": "IntersectionObserver",
-    "lastModifiedAt": 1599391876904,
+    "lastModifiedAt": 1600308569123,
     "entries": [
+        {
+            "name": "IntersectionObserver",
+            "lastModifiedAt": 1600308564226
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192128022

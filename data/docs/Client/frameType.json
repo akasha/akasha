@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Client.frameType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Client/frameType",
+    "description": "The frameType read-only property of the Client interface indicates the type of browsing context of the current Client. This value can be one of &quot;auxiliary&quot;, &quot;top-level&quot;, &quot;nested&quot;, or &quot;none&quot;."
+}

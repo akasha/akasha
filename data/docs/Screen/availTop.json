@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.availTop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/availTop",
+    "description": "Specifies the y-coordinate of the first pixel that is not allocated to permanent or semipermanent user interface features."
+}

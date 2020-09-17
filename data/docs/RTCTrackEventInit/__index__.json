@@ -1,11 +1,23 @@
 
 {
     "name": "RTCTrackEventInit",
-    "lastModifiedAt": 1599391292838,
+    "lastModifiedAt": 1600308769440,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596544560403
+        },
+        {
+            "name": "receiver",
+            "lastModifiedAt": 1600308768890
+        },
+        {
+            "name": "streams",
+            "lastModifiedAt": 1600308769119
+        },
+        {
+            "name": "track",
+            "lastModifiedAt": 1600308769440
         }
     ]
 }

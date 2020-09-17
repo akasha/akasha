@@ -1,11 +1,31 @@
 
 {
     "name": "XRRigidTransform",
-    "lastModifiedAt": 1599391533853,
+    "lastModifiedAt": 1600309118941,
     "entries": [
+        {
+            "name": "XRRigidTransform",
+            "lastModifiedAt": 1600309117795
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1599391533853
+        },
+        {
+            "name": "inverse",
+            "lastModifiedAt": 1600309118121
+        },
+        {
+            "name": "matrix",
+            "lastModifiedAt": 1600309118431
+        },
+        {
+            "name": "orientation",
+            "lastModifiedAt": 1600309118668
+        },
+        {
+            "name": "position",
+            "lastModifiedAt": 1600309118941
         }
     ]
 }

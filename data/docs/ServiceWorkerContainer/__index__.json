@@ -1,7 +1,7 @@
 
 {
     "name": "ServiceWorkerContainer",
-    "lastModifiedAt": 1599391913378,
+    "lastModifiedAt": 1600308842841,
     "entries": [
         {
             "name": "__type__",
@@ -24,8 +24,20 @@
             "lastModifiedAt": 1597360339374
         },
         {
+            "name": "oncontrollerchange",
+            "lastModifiedAt": 1600308837633
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1600308837875
+        },
+        {
             "name": "onmessage",
             "lastModifiedAt": 1599391913378
+        },
+        {
+            "name": "ready",
+            "lastModifiedAt": 1600308839927
         },
         {
             "name": "register",

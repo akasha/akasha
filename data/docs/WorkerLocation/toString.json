@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WorkerLocation.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/toString",
+    "description": "The URLUtilsReadOnly.toString() stringifier method returns a DOMString containing the whole URL. It is a synonym for URLUtilsReadOnly.href."
+}

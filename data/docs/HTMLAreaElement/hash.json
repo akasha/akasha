@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAreaElement.hash",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hash",
+    "description": "The HTMLHyperlinkElementUtils.hash property returns a USVString containing a '#' followed by the fragment identifier of the URL."
+}

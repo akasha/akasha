@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/height",
+    "description": "The Screen.height read-only property returns the height of the screen in pixels."
+}

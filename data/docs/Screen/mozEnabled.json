@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Screen.mozEnabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/mozEnabled",
+    "description": "This Boolean attribute controls the device's screen. Setting it to false will turn off the screen."
+}

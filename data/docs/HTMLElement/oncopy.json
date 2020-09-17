@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLElement.oncopy",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/oncopy",
+    "description": "The oncopy property of the HTMLElement interface is an EventHandler that processes copy events."
+}

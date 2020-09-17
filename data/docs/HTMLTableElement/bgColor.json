@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTableElement.bgColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/bgColor",
+    "description": "The HTMLTableElement.bgcolor property represents the background color of the table."
+}
