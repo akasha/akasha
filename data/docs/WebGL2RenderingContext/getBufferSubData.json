@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.getBufferSubData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getBufferSubData",
+    "description": "The WebGL2RenderingContext.getBufferSubData() method of the WebGL 2 API reads data from a buffer binding point and writes them to an ArrayBuffer or SharedArrayBuffer."
+}

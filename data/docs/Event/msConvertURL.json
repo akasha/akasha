@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Event.msConvertURL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/msConvertURL",
+    "description": "The msConvertURL method instructs the HTML paste operation on how to modify the src attribute that corresponds to each file in the clipboardData.files collection, allowing otherwise inaccessible files to be converted to blob or data URIs."
+}

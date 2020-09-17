@@ -1,7 +1,7 @@
 
 {
     "name": "TextEncoder",
-    "lastModifiedAt": 1599390772878,
+    "lastModifiedAt": 1600307115943,
     "entries": [
         {
             "name": "TextEncoder",
@@ -10,6 +10,18 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597193099100
+        },
+        {
+            "name": "encode",
+            "lastModifiedAt": 1600307115378
+        },
+        {
+            "name": "encodeInto",
+            "lastModifiedAt": 1600307115943
+        },
+        {
+            "name": "encoding",
+            "lastModifiedAt": 1600307114276
         }
     ]
 }

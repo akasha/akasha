@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.createVertexArray",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createVertexArray",
+    "description": "The WebGL2RenderingContext.createVertexArray() method of the WebGL 2 API creates and initializes a WebGLVertexArrayObject object that represents a vertex array object (VAO) pointing to vertex array data and which provides names for different sets of vertex data."
+}

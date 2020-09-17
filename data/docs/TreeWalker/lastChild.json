@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TreeWalker.lastChild",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/lastChild",
+    "description": "The TreeWalker.lastChild() method moves the current Node to the last visible child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns null and the current node is not changed."
+}

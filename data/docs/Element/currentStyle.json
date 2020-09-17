@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.currentStyle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/currentStyle",
+    "description": "Element.currentStyle is a proprietary property which is similar to the standardized window.getComputedStyle() method."
+}

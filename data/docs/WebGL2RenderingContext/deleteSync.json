@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.deleteSync",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteSync",
+    "description": "The WebGL2RenderingContext.deleteSync() method of the WebGL 2 API deletes a given WebGLSync object."
+}

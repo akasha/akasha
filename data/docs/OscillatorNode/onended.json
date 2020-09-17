@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OscillatorNode.onended",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/onended",
+    "description": "The onended property of the OscillatorNode interface is used to set the event handler for the ended event, which fires when the tone has stopped playing."
+}

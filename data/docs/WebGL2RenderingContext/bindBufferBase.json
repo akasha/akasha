@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.bindBufferBase",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferBase",
+    "description": "The WebGL2RenderingContext.bindBufferBase() method of the WebGL 2 API binds a given WebGLBuffer to a given binding point (target) at a given index."
+}

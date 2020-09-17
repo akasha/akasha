@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLMediaElement",
-    "lastModifiedAt": 1599390989835,
+    "lastModifiedAt": 1600307316994,
     "entries": [
         {
             "name": "__type__",
@@ -130,6 +130,10 @@
         {
             "name": "mediaGroup",
             "lastModifiedAt": 1596581449250
+        },
+        {
+            "name": "msInsertAudioEffect",
+            "lastModifiedAt": 1600307299904
         },
         {
             "name": "muted",

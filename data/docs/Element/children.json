@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.children",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children",
+    "description": "The ParentNode property children is a read-only property that returns a live HTMLCollection which contains all of the child elements of the node upon which it was called."
+}

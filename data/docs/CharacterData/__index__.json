@@ -1,11 +1,23 @@
 
 {
     "name": "CharacterData",
-    "lastModifiedAt": 1599390919053,
+    "lastModifiedAt": 1600307260966,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597193081824
+        },
+        {
+            "name": "nextElementSibling",
+            "lastModifiedAt": 1600307255899
+        },
+        {
+            "name": "previousElementSibling",
+            "lastModifiedAt": 1600307256734
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1600307260966
         }
     ]
 }

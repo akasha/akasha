@@ -1,7 +1,7 @@
 
 {
     "name": "TextTrackList",
-    "lastModifiedAt": 1599391007193,
+    "lastModifiedAt": 1600307330416,
     "entries": [
         {
             "name": "__type__",
@@ -30,6 +30,10 @@
         {
             "name": "onchange",
             "lastModifiedAt": 1597278713245
+        },
+        {
+            "name": "onremovetrack",
+            "lastModifiedAt": 1600307328782
         }
     ]
 }

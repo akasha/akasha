@@ -1,7 +1,7 @@
 
 {
     "name": "Event",
-    "lastModifiedAt": 1599390724334,
+    "lastModifiedAt": 1600307071077,
     "entries": [
         {
             "name": "Event",
@@ -56,12 +56,24 @@
             "lastModifiedAt": 1597192245684
         },
         {
+            "name": "initEvent",
+            "lastModifiedAt": 1600307069899
+        },
+        {
             "name": "isTrusted",
             "lastModifiedAt": 1597192248789
         },
         {
+            "name": "msConvertURL",
+            "lastModifiedAt": 1600307070143
+        },
+        {
             "name": "originalTarget",
             "lastModifiedAt": 1597192245986
+        },
+        {
+            "name": "preventDefault",
+            "lastModifiedAt": 1600307070437
         },
         {
             "name": "returnValue",
@@ -70,6 +82,14 @@
         {
             "name": "srcElement",
             "lastModifiedAt": 1599280431795
+        },
+        {
+            "name": "stopImmediatePropagation",
+            "lastModifiedAt": 1600307070732
+        },
+        {
+            "name": "stopPropagation",
+            "lastModifiedAt": 1600307071077
         },
         {
             "name": "target",

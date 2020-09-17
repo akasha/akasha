@@ -1,7 +1,7 @@
 
 {
     "name": "BaseAudioContext",
-    "lastModifiedAt": 1599390798549,
+    "lastModifiedAt": 1600307144366,
     "entries": [
         {
             "name": "__type__",
@@ -20,8 +20,76 @@
             "lastModifiedAt": 1597192547217
         },
         {
+            "name": "createBuffer",
+            "lastModifiedAt": 1600307138457
+        },
+        {
+            "name": "createBufferSource",
+            "lastModifiedAt": 1600307139252
+        },
+        {
+            "name": "createChannelMerger",
+            "lastModifiedAt": 1600307139516
+        },
+        {
+            "name": "createChannelSplitter",
+            "lastModifiedAt": 1600307139762
+        },
+        {
+            "name": "createConstantSource",
+            "lastModifiedAt": 1600307140015
+        },
+        {
+            "name": "createConvolver",
+            "lastModifiedAt": 1600307140425
+        },
+        {
+            "name": "createDelay",
+            "lastModifiedAt": 1600307140680
+        },
+        {
+            "name": "createDynamicsCompressor",
+            "lastModifiedAt": 1600307141057
+        },
+        {
+            "name": "createGain",
+            "lastModifiedAt": 1600307141346
+        },
+        {
+            "name": "createIIRFilter",
+            "lastModifiedAt": 1600307142141
+        },
+        {
+            "name": "createOscillator",
+            "lastModifiedAt": 1600307142475
+        },
+        {
+            "name": "createPanner",
+            "lastModifiedAt": 1600307142981
+        },
+        {
+            "name": "createPeriodicWave",
+            "lastModifiedAt": 1600307143239
+        },
+        {
+            "name": "createScriptProcessor",
+            "lastModifiedAt": 1600307143530
+        },
+        {
+            "name": "createStereoPanner",
+            "lastModifiedAt": 1600307143786
+        },
+        {
+            "name": "createWaveShaper",
+            "lastModifiedAt": 1600307144111
+        },
+        {
             "name": "currentTime",
             "lastModifiedAt": 1597192544037
+        },
+        {
+            "name": "decodeAudioData",
+            "lastModifiedAt": 1600307144366
         },
         {
             "name": "destination",

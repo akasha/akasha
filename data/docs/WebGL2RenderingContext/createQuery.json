@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.createQuery",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createQuery",
+    "description": "The WebGL2RenderingContext.createQuery() method of the WebGL 2 API creates and initializes WebGLQuery objects, which provide ways to asynchronously query for information."
+}

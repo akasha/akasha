@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.createSampler",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createSampler",
+    "description": "The WebGL2RenderingContext.createSampler() method of the WebGL 2 API creates and initializes WebGLSampler objects."
+}

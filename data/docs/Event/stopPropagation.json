@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Event.stopPropagation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation",
+    "description": "The stopPropagation() method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases. It does not, however, prevent any default behaviors from occurring; for instance, clicks on links are still processed. If you want to stop those behaviors, see the preventDefault() method."
+}

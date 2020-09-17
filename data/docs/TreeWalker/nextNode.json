@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TreeWalker.nextNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextNode",
+    "description": "The TreeWalker.nextNode() method moves the current Node to the next visible node in the document order, and returns the found node. It also moves the current node to this one. If no such node exists, returns null and the current node is not changed."
+}

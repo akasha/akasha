@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "PannerNode.PannerNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/PannerNode",
+    "description": "The PannerNode() constructor of the Web Audio API creates a new PannerNode object instance."
+}

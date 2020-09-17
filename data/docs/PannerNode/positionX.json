@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PannerNode.positionX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/positionX",
+    "description": "An AudioParam whose value is the X coordinate of the audio source's position, in 3D Cartesian coordinates. The default value is 0."
+}

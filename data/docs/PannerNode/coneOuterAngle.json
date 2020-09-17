@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PannerNode.coneOuterAngle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/coneOuterAngle",
+    "description": "A double."
+}

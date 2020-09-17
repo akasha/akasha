@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.runtimeStyle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/runtimeStyle",
+    "description": "Element.runtimeStyle is a proprietary property similar to HTMLElement.style, except its styles, that have higher precedence and modification."
+}

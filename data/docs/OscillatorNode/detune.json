@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OscillatorNode.detune",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/detune",
+    "description": "An a-rate AudioParam."
+}

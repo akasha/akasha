@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "TextTrackList.onremovetrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onremovetrack",
+    "description": "The TextTrackList onremovetrack event handler is called when the removetrack event occurs, indicating that a text track has been removed from the media element, and therefore also from the TextTrackList."
+}

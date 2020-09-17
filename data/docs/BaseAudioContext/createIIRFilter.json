@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "BaseAudioContext.createIIRFilter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createIIRFilter",
+    "description": "The createIIRFilter() method of the BaseAudioContext interface creates an IIRFilterNode, which represents a general infinite impulse response (IIR) filter which can be configured to serve as various types of filter."
+}

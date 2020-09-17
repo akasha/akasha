@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "BaseAudioContext.createChannelMerger",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createChannelMerger",
+    "description": "A ChannelMergerNode."
+}

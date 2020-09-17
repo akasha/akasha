@@ -1,8 +1,12 @@
 
 {
     "name": "OfflineAudioContext",
-    "lastModifiedAt": 1599390761408,
+    "lastModifiedAt": 1600307104035,
     "entries": [
+        {
+            "name": "OfflineAudioContext",
+            "lastModifiedAt": 1600307100596
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192536370
@@ -18,6 +22,10 @@
         {
             "name": "oncomplete",
             "lastModifiedAt": 1597278474987
+        },
+        {
+            "name": "resume",
+            "lastModifiedAt": 1600307102276
         },
         {
             "name": "startRendering",

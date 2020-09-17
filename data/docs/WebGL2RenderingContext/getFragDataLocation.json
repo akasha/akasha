@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.getFragDataLocation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getFragDataLocation",
+    "description": "The WebGL2RenderingContext.getFragDataLocation() method of the WebGL 2 API returns the binding of color numbers to user-defined varying out variables."
+}

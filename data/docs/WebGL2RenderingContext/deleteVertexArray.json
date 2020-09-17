@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.deleteVertexArray",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteVertexArray",
+    "description": "The WebGL2RenderingContext.deleteVertexArray() method of the WebGL 2 API deletes a given WebGLVertexArrayObject object."
+}

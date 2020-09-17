@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpStreamStats.firCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/firCount",
+    "description": "The firCount property of the RTCRtpStreamStats dictionary indicates the number of Full Intra Request (FIR) packets have been sent by the receiver to the sender."
+}

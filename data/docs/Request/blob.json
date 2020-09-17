@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Request.blob",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/blob",
+    "description": "The blob() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a Blob."
+}

@@ -1,11 +1,263 @@
 
 {
     "name": "WebGL2RenderingContext",
-    "lastModifiedAt": 1599391257976,
+    "lastModifiedAt": 1600307555584,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192690726
+        },
+        {
+            "name": "beginQuery",
+            "lastModifiedAt": 1600307534470
+        },
+        {
+            "name": "beginTransformFeedback",
+            "lastModifiedAt": 1600307534759
+        },
+        {
+            "name": "bindBufferBase",
+            "lastModifiedAt": 1600307535001
+        },
+        {
+            "name": "bindBufferRange",
+            "lastModifiedAt": 1600307535280
+        },
+        {
+            "name": "bindSampler",
+            "lastModifiedAt": 1600307535601
+        },
+        {
+            "name": "bindTransformFeedback",
+            "lastModifiedAt": 1600307535889
+        },
+        {
+            "name": "bindVertexArray",
+            "lastModifiedAt": 1600307536214
+        },
+        {
+            "name": "blitFramebuffer",
+            "lastModifiedAt": 1600307536519
+        },
+        {
+            "name": "clientWaitSync",
+            "lastModifiedAt": 1600307536781
+        },
+        {
+            "name": "compressedTexSubImage3D",
+            "lastModifiedAt": 1600307537222
+        },
+        {
+            "name": "copyBufferSubData",
+            "lastModifiedAt": 1600307537610
+        },
+        {
+            "name": "copyTexSubImage3D",
+            "lastModifiedAt": 1600307538615
+        },
+        {
+            "name": "createQuery",
+            "lastModifiedAt": 1600307539120
+        },
+        {
+            "name": "createSampler",
+            "lastModifiedAt": 1600307539438
+        },
+        {
+            "name": "createTransformFeedback",
+            "lastModifiedAt": 1600307539974
+        },
+        {
+            "name": "createVertexArray",
+            "lastModifiedAt": 1600307540233
+        },
+        {
+            "name": "deleteQuery",
+            "lastModifiedAt": 1600307540504
+        },
+        {
+            "name": "deleteSampler",
+            "lastModifiedAt": 1600307540793
+        },
+        {
+            "name": "deleteSync",
+            "lastModifiedAt": 1600307541062
+        },
+        {
+            "name": "deleteTransformFeedback",
+            "lastModifiedAt": 1600307541323
+        },
+        {
+            "name": "deleteVertexArray",
+            "lastModifiedAt": 1600307541582
+        },
+        {
+            "name": "drawArraysInstanced",
+            "lastModifiedAt": 1600307541865
+        },
+        {
+            "name": "drawBuffers",
+            "lastModifiedAt": 1600307542131
+        },
+        {
+            "name": "drawElementsInstanced",
+            "lastModifiedAt": 1600307542458
+        },
+        {
+            "name": "drawRangeElements",
+            "lastModifiedAt": 1600307542816
+        },
+        {
+            "name": "endQuery",
+            "lastModifiedAt": 1600307543089
+        },
+        {
+            "name": "endTransformFeedback",
+            "lastModifiedAt": 1600307543393
+        },
+        {
+            "name": "fenceSync",
+            "lastModifiedAt": 1600307543651
+        },
+        {
+            "name": "framebufferTextureLayer",
+            "lastModifiedAt": 1600307543935
+        },
+        {
+            "name": "getActiveUniformBlockName",
+            "lastModifiedAt": 1600307544236
+        },
+        {
+            "name": "getActiveUniformBlockParameter",
+            "lastModifiedAt": 1600307544551
+        },
+        {
+            "name": "getActiveUniforms",
+            "lastModifiedAt": 1600307544826
+        },
+        {
+            "name": "getBufferSubData",
+            "lastModifiedAt": 1600307545207
+        },
+        {
+            "name": "getFragDataLocation",
+            "lastModifiedAt": 1600307545490
+        },
+        {
+            "name": "getIndexedParameter",
+            "lastModifiedAt": 1600307545739
+        },
+        {
+            "name": "getInternalformatParameter",
+            "lastModifiedAt": 1600307546020
+        },
+        {
+            "name": "getQuery",
+            "lastModifiedAt": 1600307546301
+        },
+        {
+            "name": "getQueryParameter",
+            "lastModifiedAt": 1600307546621
+        },
+        {
+            "name": "getSamplerParameter",
+            "lastModifiedAt": 1600307546880
+        },
+        {
+            "name": "getSyncParameter",
+            "lastModifiedAt": 1600307547149
+        },
+        {
+            "name": "getTransformFeedbackVarying",
+            "lastModifiedAt": 1600307547404
+        },
+        {
+            "name": "getUniformBlockIndex",
+            "lastModifiedAt": 1600307547675
+        },
+        {
+            "name": "getUniformIndices",
+            "lastModifiedAt": 1600307547944
+        },
+        {
+            "name": "invalidateFramebuffer",
+            "lastModifiedAt": 1600307548311
+        },
+        {
+            "name": "invalidateSubFramebuffer",
+            "lastModifiedAt": 1600307548579
+        },
+        {
+            "name": "isQuery",
+            "lastModifiedAt": 1600307548828
+        },
+        {
+            "name": "isSampler",
+            "lastModifiedAt": 1600307549234
+        },
+        {
+            "name": "isSync",
+            "lastModifiedAt": 1600307549491
+        },
+        {
+            "name": "isTransformFeedback",
+            "lastModifiedAt": 1600307549777
+        },
+        {
+            "name": "isVertexArray",
+            "lastModifiedAt": 1600307550721
+        },
+        {
+            "name": "pauseTransformFeedback",
+            "lastModifiedAt": 1600307550998
+        },
+        {
+            "name": "readBuffer",
+            "lastModifiedAt": 1600307551264
+        },
+        {
+            "name": "renderbufferStorageMultisample",
+            "lastModifiedAt": 1600307551532
+        },
+        {
+            "name": "resumeTransformFeedback",
+            "lastModifiedAt": 1600307552491
+        },
+        {
+            "name": "texImage3D",
+            "lastModifiedAt": 1600307552752
+        },
+        {
+            "name": "texStorage2D",
+            "lastModifiedAt": 1600307553152
+        },
+        {
+            "name": "texStorage3D",
+            "lastModifiedAt": 1600307553428
+        },
+        {
+            "name": "texSubImage3D",
+            "lastModifiedAt": 1600307553722
+        },
+        {
+            "name": "transformFeedbackVaryings",
+            "lastModifiedAt": 1600307553980
+        },
+        {
+            "name": "uniformBlockBinding",
+            "lastModifiedAt": 1600307554335
+        },
+        {
+            "name": "vertexAttribDivisor",
+            "lastModifiedAt": 1600307554588
+        },
+        {
+            "name": "vertexAttribIPointer",
+            "lastModifiedAt": 1600307555305
+        },
+        {
+            "name": "waitSync",
+            "lastModifiedAt": 1600307555584
         }
     ]
 }

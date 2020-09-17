@@ -1,7 +1,7 @@
 
 {
     "name": "TreeWalker",
-    "lastModifiedAt": 1599390882871,
+    "lastModifiedAt": 1600307222151,
     "entries": [
         {
             "name": "__type__",
@@ -18,6 +18,34 @@
         {
             "name": "filter",
             "lastModifiedAt": 1597193078976
+        },
+        {
+            "name": "firstChild",
+            "lastModifiedAt": 1600307219098
+        },
+        {
+            "name": "lastChild",
+            "lastModifiedAt": 1600307219674
+        },
+        {
+            "name": "nextNode",
+            "lastModifiedAt": 1600307220484
+        },
+        {
+            "name": "nextSibling",
+            "lastModifiedAt": 1600307220728
+        },
+        {
+            "name": "parentNode",
+            "lastModifiedAt": 1600307220978
+        },
+        {
+            "name": "previousNode",
+            "lastModifiedAt": 1600307221350
+        },
+        {
+            "name": "previousSibling",
+            "lastModifiedAt": 1600307222151
         },
         {
             "name": "root",

@@ -1,7 +1,7 @@
 
 {
     "name": "Request",
-    "lastModifiedAt": 1599391274001,
+    "lastModifiedAt": 1600307571691,
     "entries": [
         {
             "name": "Request",
@@ -10,6 +10,18 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597193117530
+        },
+        {
+            "name": "arrayBuffer",
+            "lastModifiedAt": 1600307569210
+        },
+        {
+            "name": "blob",
+            "lastModifiedAt": 1600307569765
+        },
+        {
+            "name": "bodyUsed",
+            "lastModifiedAt": 1600307560296
         },
         {
             "name": "cache",
@@ -40,6 +52,10 @@
             "lastModifiedAt": 1599391268263
         },
         {
+            "name": "json",
+            "lastModifiedAt": 1600307571150
+        },
+        {
             "name": "method",
             "lastModifiedAt": 1597193120886
         },
@@ -58,6 +74,10 @@
         {
             "name": "referrerPolicy",
             "lastModifiedAt": 1597193122179
+        },
+        {
+            "name": "text",
+            "lastModifiedAt": 1600307571691
         },
         {
             "name": "url",

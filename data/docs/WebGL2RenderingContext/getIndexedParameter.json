@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.getIndexedParameter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getIndexedParameter",
+    "description": "The WebGL2RenderingContext.getIndexedParameter() method of the WebGL 2 API returns indexed information about a given target."
+}

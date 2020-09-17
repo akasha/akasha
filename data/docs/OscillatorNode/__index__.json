@@ -1,7 +1,7 @@
 
 {
     "name": "OscillatorNode",
-    "lastModifiedAt": 1599390999444,
+    "lastModifiedAt": 1600307324902,
     "entries": [
         {
             "name": "OscillatorNode",
@@ -12,8 +12,16 @@
             "lastModifiedAt": 1599280715844
         },
         {
+            "name": "detune",
+            "lastModifiedAt": 1600307322200
+        },
+        {
             "name": "frequency",
             "lastModifiedAt": 1597192534583
+        },
+        {
+            "name": "onended",
+            "lastModifiedAt": 1600307323041
         },
         {
             "name": "setPeriodicWave",
@@ -26,6 +34,10 @@
         {
             "name": "stop",
             "lastModifiedAt": 1597192536027
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1600307323298
         }
     ]
 }

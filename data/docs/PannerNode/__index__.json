@@ -1,15 +1,83 @@
 
 {
     "name": "PannerNode",
-    "lastModifiedAt": 1599390704406,
+    "lastModifiedAt": 1600307054505,
     "entries": [
+        {
+            "name": "PannerNode",
+            "lastModifiedAt": 1600307048569
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192581024
         },
         {
+            "name": "coneInnerAngle",
+            "lastModifiedAt": 1600307049158
+        },
+        {
+            "name": "coneOuterAngle",
+            "lastModifiedAt": 1600307049412
+        },
+        {
+            "name": "coneOuterGain",
+            "lastModifiedAt": 1600307049801
+        },
+        {
+            "name": "distanceModel",
+            "lastModifiedAt": 1600307050067
+        },
+        {
+            "name": "maxDistance",
+            "lastModifiedAt": 1600307050333
+        },
+        {
+            "name": "orientationX",
+            "lastModifiedAt": 1600307050586
+        },
+        {
+            "name": "orientationY",
+            "lastModifiedAt": 1600307050836
+        },
+        {
+            "name": "orientationZ",
+            "lastModifiedAt": 1600307051098
+        },
+        {
+            "name": "panningModel",
+            "lastModifiedAt": 1600307051896
+        },
+        {
+            "name": "positionX",
+            "lastModifiedAt": 1600307052142
+        },
+        {
+            "name": "positionY",
+            "lastModifiedAt": 1600307052483
+        },
+        {
+            "name": "positionZ",
+            "lastModifiedAt": 1600307052741
+        },
+        {
+            "name": "refDistance",
+            "lastModifiedAt": 1600307053003
+        },
+        {
+            "name": "rolloffFactor",
+            "lastModifiedAt": 1600307053331
+        },
+        {
+            "name": "setOrientation",
+            "lastModifiedAt": 1600307053601
+        },
+        {
             "name": "setPosition",
             "lastModifiedAt": 1597192581574
+        },
+        {
+            "name": "setVelocity",
+            "lastModifiedAt": 1600307054505
         }
     ]
 }

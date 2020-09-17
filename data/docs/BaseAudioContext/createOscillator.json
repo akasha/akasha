@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "BaseAudioContext.createOscillator",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createOscillator",
+    "description": "The createOscillator() method of the BaseAudioContext interface creates an OscillatorNode, a source representing a periodic waveform. It basically generates a constant tone."
+}

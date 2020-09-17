@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "BaseAudioContext.createGain",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createGain",
+    "description": "A GainNode which takes as input one or more audio sources and outputs audio whose volume has been adjusted in gain (volume) to a level specified by the node's GainNode.gain a-rate parameter."
+}

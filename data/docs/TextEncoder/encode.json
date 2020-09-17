@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TextEncoder.encode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encode",
+    "description": "The TextEncoder.prototype.encode() method takes a USVString as input, and returns a Uint8Array containing the text given in parameters encoded with the specific method for that TextEncoder object."
+}

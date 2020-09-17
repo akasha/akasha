@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "OfflineAudioContext.OfflineAudioContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/OfflineAudioContext",
+    "description": "The OfflineAudioContext() constructor&mdash;part of the Web Audio API&mdash;creates and returns a new OfflineAudioContext object instance, which can then be used to render audio to an AudioBuffer rather than to an audio output device."
+}

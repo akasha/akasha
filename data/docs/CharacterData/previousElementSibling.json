@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CharacterData.previousElementSibling",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/previousElementSibling",
+    "description": "The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list."
+}

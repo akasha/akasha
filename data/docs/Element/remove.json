@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.remove",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/remove",
+    "description": "The ChildNode.remove() method removes the object from the tree it belongs to."
+}

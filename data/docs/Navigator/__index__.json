@@ -1,11 +1,31 @@
 
 {
     "name": "Navigator",
-    "lastModifiedAt": 1599693994075,
+    "lastModifiedAt": 1600307007937,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597190534194
+        },
+        {
+            "name": "activeVRDisplays",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "appCodeName",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "appName",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "appVersion",
+            "lastModifiedAt": 0
+        },
+        {
+            "name": "battery",
+            "lastModifiedAt": 0
         },
         {
             "name": "buildID",
@@ -14,6 +34,18 @@
         {
             "name": "canShare",
             "lastModifiedAt": 1599280375074
+        },
+        {
+            "name": "clipboard",
+            "lastModifiedAt": 1600307007115
+        },
+        {
+            "name": "connection",
+            "lastModifiedAt": 1600307007937
+        },
+        {
+            "name": "cookieEnabled",
+            "lastModifiedAt": 0
         },
         {
             "name": "credentials",

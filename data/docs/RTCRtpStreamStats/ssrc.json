@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpStreamStats.ssrc",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc",
+    "description": "The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary."
+}

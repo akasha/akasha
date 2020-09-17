@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PannerNode.rolloffFactor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/rolloffFactor",
+    "description": "A number whose range depends on the distanceModel of the panner as follows (negative values are not allowed):"
+}

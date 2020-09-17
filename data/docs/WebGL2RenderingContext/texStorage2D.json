@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.texStorage2D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage2D",
+    "description": "The WebGL2RenderingContext.texStorage2D() method of the WebGL API specifies all levels of two-dimensional texture storage."
+}

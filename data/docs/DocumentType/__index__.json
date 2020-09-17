@@ -1,11 +1,15 @@
 
 {
     "name": "DocumentType",
-    "lastModifiedAt": 1599391274482,
+    "lastModifiedAt": 1600307575543,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597193075001
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1600307575543
         }
     ]
 }

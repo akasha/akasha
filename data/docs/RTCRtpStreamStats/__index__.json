@@ -1,11 +1,51 @@
 
 {
     "name": "RTCRtpStreamStats",
-    "lastModifiedAt": 1599391015313,
+    "lastModifiedAt": 1600307342173,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596544694539
+        },
+        {
+            "name": "codecId",
+            "lastModifiedAt": 1600307339391
+        },
+        {
+            "name": "firCount",
+            "lastModifiedAt": 1600307339652
+        },
+        {
+            "name": "kind",
+            "lastModifiedAt": 1600307339895
+        },
+        {
+            "name": "nackCount",
+            "lastModifiedAt": 1600307340199
+        },
+        {
+            "name": "pliCount",
+            "lastModifiedAt": 1600307340444
+        },
+        {
+            "name": "qpSum",
+            "lastModifiedAt": 1600307340710
+        },
+        {
+            "name": "sliCount",
+            "lastModifiedAt": 1600307340960
+        },
+        {
+            "name": "ssrc",
+            "lastModifiedAt": 1600307341337
+        },
+        {
+            "name": "trackId",
+            "lastModifiedAt": 1600307341644
+        },
+        {
+            "name": "transportId",
+            "lastModifiedAt": 1600307342173
         }
     ]
 }

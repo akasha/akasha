@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PannerNode.panningModel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/panningModel",
+    "description": "A enum &mdash; see PanningModelType."
+}

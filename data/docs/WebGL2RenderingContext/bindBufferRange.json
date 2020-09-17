@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.bindBufferRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferRange",
+    "description": "The WebGL2RenderingContext.bindBufferRange() method of the WebGL 2 API binds a range of a given WebGLBuffer to a given binding point (target) at a given index."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "OscillatorNode.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type",
+    "description": "A DOMString specifying the shape of oscillator wave. The different available values are:"
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.texImage3D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D",
+    "description": "The WebGLRenderingContext.texImage3D() method of the WebGL API specifies a three-dimensional texture image."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Element.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/name",
+    "description": "name gets or sets the name property of an element in the DOM. It only applies to the following elements: a, applet, button, form, frame, iframe, img, input, map, meta, object, param, select, and textarea."
+}

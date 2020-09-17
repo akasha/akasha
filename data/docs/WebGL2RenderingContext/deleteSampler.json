@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.deleteSampler",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteSampler",
+    "description": "The WebGL2RenderingContext.deleteSampler() method of the WebGL 2 API deletes a given WebGLSampler object."
+}

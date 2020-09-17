@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Event.stopImmediatePropagation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation",
+    "description": "The stopImmediatePropagation() method of the Event interface prevents other listeners of the same event from being called."
+}

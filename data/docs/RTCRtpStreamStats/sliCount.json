@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpStreamStats.sliCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/sliCount",
+    "description": "The sliCount property of the RTCRtpStreamStats dictionary indicates how many Slice Loss Indication (SLI) packets were received by the sender."
+}

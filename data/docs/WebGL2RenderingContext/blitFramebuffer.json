@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.blitFramebuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/blitFramebuffer",
+    "description": "The WebGL2RenderingContext.blitFramebuffer() method of the WebGL 2 API transfers a block of pixels from the read framebuffer to the draw framebuffer."
+}

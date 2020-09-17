@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.isTransformFeedback",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isTransformFeedback",
+    "description": "The WebGL2RenderingContext.isTransformFeedback() method of the WebGL 2 API returns true if the passed object is a valid WebGLTransformFeedback object."
+}

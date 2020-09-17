@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TreeWalker.nextSibling",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/TreeWalker/nextSibling",
+    "description": "The TreeWalker.nextSibling() method moves the current Node to its next sibling, if any, and returns the found sibling. If there is no such node, return null and the current node is not changed."
+}

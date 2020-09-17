@@ -1,7 +1,7 @@
 
 {
     "name": "Element",
-    "lastModifiedAt": 1599391129687,
+    "lastModifiedAt": 1600307439409,
     "entries": [
         {
             "name": "DOMActivate_event",
@@ -10,6 +10,10 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597190656329
+        },
+        {
+            "name": "accessKey",
+            "lastModifiedAt": 1600307353158
         },
         {
             "name": "animate",
@@ -34,6 +38,14 @@
         {
             "name": "cancel_event",
             "lastModifiedAt": 1599280814125
+        },
+        {
+            "name": "childElementCount",
+            "lastModifiedAt": 1600307354371
+        },
+        {
+            "name": "children",
+            "lastModifiedAt": 1600307354996
         },
         {
             "name": "classList",
@@ -96,6 +108,10 @@
             "lastModifiedAt": 1599280779006
         },
         {
+            "name": "currentStyle",
+            "lastModifiedAt": 1600307359358
+        },
+        {
             "name": "cut_event",
             "lastModifiedAt": 1599280822502
         },
@@ -106,6 +122,10 @@
         {
             "name": "error_event",
             "lastModifiedAt": 1597359559024
+        },
+        {
+            "name": "firstElementChild",
+            "lastModifiedAt": 1600307359934
         },
         {
             "name": "focus_event",
@@ -208,6 +228,10 @@
             "lastModifiedAt": 1597190681430
         },
         {
+            "name": "lastElementChild",
+            "lastModifiedAt": 1600307361572
+        },
+        {
             "name": "localName",
             "lastModifiedAt": 1597190661107
         },
@@ -244,8 +268,20 @@
             "lastModifiedAt": 1597359585496
         },
         {
+            "name": "msZoomTo",
+            "lastModifiedAt": 1600307400919
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1600307362469
+        },
+        {
             "name": "namespaceURI",
             "lastModifiedAt": 1597190662070
+        },
+        {
+            "name": "nextElementSibling",
+            "lastModifiedAt": 1600307363416
         },
         {
             "name": "onfullscreenchange",
@@ -276,6 +312,10 @@
             "lastModifiedAt": 1597190663903
         },
         {
+            "name": "previousElementSibling",
+            "lastModifiedAt": 1600307367119
+        },
+        {
             "name": "querySelector",
             "lastModifiedAt": 1597190683145
         },
@@ -286,6 +326,10 @@
         {
             "name": "releasePointerCapture",
             "lastModifiedAt": 1597190683803
+        },
+        {
+            "name": "remove",
+            "lastModifiedAt": 1600307403776
         },
         {
             "name": "removeAttribute",
@@ -308,6 +352,10 @@
             "lastModifiedAt": 1597190686919
         },
         {
+            "name": "runtimeStyle",
+            "lastModifiedAt": 1600307367407
+        },
+        {
             "name": "scroll",
             "lastModifiedAt": 1597190687351
         },
@@ -322,6 +370,10 @@
         {
             "name": "scrollIntoView",
             "lastModifiedAt": 1597190687940
+        },
+        {
+            "name": "scrollIntoViewIfNeeded",
+            "lastModifiedAt": 1600307409631
         },
         {
             "name": "scrollLeft",

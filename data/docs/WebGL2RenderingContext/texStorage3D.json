@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.texStorage3D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage3D",
+    "description": "The WebGL2RenderingContext.texStorage3D() method of the WebGL API specifies all levels of a three-dimensional texture or two-dimensional array texture."
+}

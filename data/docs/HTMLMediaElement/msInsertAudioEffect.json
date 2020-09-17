@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLMediaElement.msInsertAudioEffect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/msInsertAudioEffect",
+    "description": "The HTMLMediaElement.msInsertAudioEffect() method inserts the specified audio effect into the media pipeline."
+}

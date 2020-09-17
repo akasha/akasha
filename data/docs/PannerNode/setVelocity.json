@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "PannerNode.setVelocity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/setVelocity",
+    "description": "The setVelocity() method of the PannerNode Interface defines the velocity vector of the audio source &mdash; how fast it is moving and in what direction."
+}

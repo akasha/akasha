@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.fenceSync",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/fenceSync",
+    "description": "The WebGL2RenderingContext.fenceSync() method of the WebGL 2 API creates a new WebGLSync object and inserts it into the GL command stream."
+}

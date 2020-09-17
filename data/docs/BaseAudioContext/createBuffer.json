@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "BaseAudioContext.createBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBuffer",
+    "description": "An AudioBuffer configured based on the specified options."
+}

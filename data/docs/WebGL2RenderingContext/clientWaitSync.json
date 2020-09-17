@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.clientWaitSync",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/clientWaitSync",
+    "description": "The WebGL2RenderingContext.clientWaitSync() method of the WebGL 2 API blocks and waits for a WebGLSync object to become signaled or a given timeout to be passed."
+}

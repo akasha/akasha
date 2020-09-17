@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Event.initEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/initEvent",
+    "description": "The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent()."
+}

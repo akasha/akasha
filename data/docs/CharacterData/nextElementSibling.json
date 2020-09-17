@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CharacterData.nextElementSibling",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CharacterData/nextElementSibling",
+    "description": "The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list."
+}

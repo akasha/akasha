@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCRtpStreamStats.kind",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/kind",
+    "description": "The kind property of the RTCRtpStreamStats dictionary is a string indicating whether the described RTP stream contains audio or video media."
+}

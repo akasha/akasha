@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PannerNode.positionY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/positionY",
+    "description": "An AudioParam whose value is the Y coordinate of the audio source's position, in 3D Cartesian coordinates."
+}

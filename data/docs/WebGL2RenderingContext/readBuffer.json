@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.readBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/readBuffer",
+    "description": "The WebGL2RenderingContext.readBuffer() method of the WebGL 2 API selects a color buffer as the source for pixels for subsequent calls to copyTexImage2D, copyTexSubImage2D, copyTexSubImage3D or readPixels."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Element.msZoomTo",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/msZoomTo",
+    "description": "The msZoomTo method scrolls and/or zooms an element to its specified coordinate with animation."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.beginQuery",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/beginQuery",
+    "description": "The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query. The target parameter indicates which kind of query to begin."
+}

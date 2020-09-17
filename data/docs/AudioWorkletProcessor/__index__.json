@@ -1,8 +1,12 @@
 
 {
     "name": "AudioWorkletProcessor",
-    "lastModifiedAt": 1599390866534,
+    "lastModifiedAt": 1600307203662,
     "entries": [
+        {
+            "name": "AudioWorkletProcessor",
+            "lastModifiedAt": 1600307202746
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192567067
@@ -10,6 +14,10 @@
         {
             "name": "port",
             "lastModifiedAt": 1597192567388
+        },
+        {
+            "name": "process",
+            "lastModifiedAt": 1600307203662
         }
     ]
 }

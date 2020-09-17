@@ -1,7 +1,7 @@
 
 {
     "name": "RTCIceCandidatePairStats",
-    "lastModifiedAt": 1599390688262,
+    "lastModifiedAt": 1600307035811,
     "entries": [
         {
             "name": "__type__",
@@ -18,6 +18,10 @@
         {
             "name": "bytesReceieved",
             "lastModifiedAt": 1599280382230
+        },
+        {
+            "name": "bytesReceived",
+            "lastModifiedAt": 1600307018133
         },
         {
             "name": "bytesSent",
