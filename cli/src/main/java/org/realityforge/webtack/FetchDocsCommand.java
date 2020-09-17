@@ -78,13 +78,8 @@ final class FetchDocsCommand
         }
         catch ( final NumberFormatException nfe )
         {
-          final Logger logger = environment.logger();
-
-          if ( logger.isLoggable( Level.WARNING ) )
-          {
-            logger.log( Level.WARNING, "Failed to parse since argument '" + argument + "'" );
-            return false;
-          }
+          environment.logger().log( Level.WARNING, () -> "Failed to parse since argument '" + argument + "'" );
+          return false;
         }
       }
       else
