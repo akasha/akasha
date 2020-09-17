@@ -163,6 +163,8 @@ public final class MdnDocScanner
     if ( null != result )
     {
       _listener.postEntryFetch( entryIndex, url );
+      index.getContent().setLastModifiedAt( System.currentTimeMillis() );
+      index.save();
       final Path tmpTarget = getTmpTarget( entryIndex );
       try
       {
@@ -180,8 +182,6 @@ public final class MdnDocScanner
         removeTempFile( entryIndex );
       }
     }
-    index.getContent().setLastModifiedAt( System.currentTimeMillis() );
-    index.save();
   }
 
   @Nonnull
