@@ -34,6 +34,8 @@ complete as there is too much un-said.
 
 # Docs Integration
 
+* Link with OpenGL docs ala https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBindBuffer.xml
+
 * Improve MDN scanning for pages like `WebGLRenderingContext` either matching the body or perhaps
   matching side-bar for link extraction.
 
