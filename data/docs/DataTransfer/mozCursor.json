@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.mozCursor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozCursor",
+    "description": "The DataTransfer.mozCursor property returns or sets the drag cursor's state. This is primarily used to control the cursor during tab drags."
+}

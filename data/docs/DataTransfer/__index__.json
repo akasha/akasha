@@ -1,7 +1,7 @@
 
 {
     "name": "DataTransfer",
-    "lastModifiedAt": 1599389302484,
+    "lastModifiedAt": 1600304988315,
     "entries": [
         {
             "name": "DataTransfer",
@@ -10,6 +10,78 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1596581383082
+        },
+        {
+            "name": "addElement",
+            "lastModifiedAt": 1600304984864
+        },
+        {
+            "name": "clearData",
+            "lastModifiedAt": 1600304985161
+        },
+        {
+            "name": "dropEffect",
+            "lastModifiedAt": 1600304981442
+        },
+        {
+            "name": "effectAllowed",
+            "lastModifiedAt": 1600304982257
+        },
+        {
+            "name": "files",
+            "lastModifiedAt": 1600304982524
+        },
+        {
+            "name": "getData",
+            "lastModifiedAt": 1600304985427
+        },
+        {
+            "name": "items",
+            "lastModifiedAt": 1600304982768
+        },
+        {
+            "name": "mozClearDataAt",
+            "lastModifiedAt": 1600304986224
+        },
+        {
+            "name": "mozCursor",
+            "lastModifiedAt": 1600304983584
+        },
+        {
+            "name": "mozGetDataAt",
+            "lastModifiedAt": 1600304987035
+        },
+        {
+            "name": "mozItemCount",
+            "lastModifiedAt": 1600304983827
+        },
+        {
+            "name": "mozSetDataAt",
+            "lastModifiedAt": 1600304987435
+        },
+        {
+            "name": "mozSourceNode",
+            "lastModifiedAt": 1600304984105
+        },
+        {
+            "name": "mozTypesAt",
+            "lastModifiedAt": 1600304987679
+        },
+        {
+            "name": "mozUserCancelled",
+            "lastModifiedAt": 1600304984366
+        },
+        {
+            "name": "setData",
+            "lastModifiedAt": 1600304988060
+        },
+        {
+            "name": "setDragImage",
+            "lastModifiedAt": 1600304988315
+        },
+        {
+            "name": "types",
+            "lastModifiedAt": 1600304984614
         }
     ]
 }

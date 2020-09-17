@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "MediaStreamAudioSourceNode.MediaStreamAudioSourceNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode",
+    "description": "The Web Audio API's MediaStreamAudioSourceNode() constructor creates and returns a new MediaStreamAudioSourceNode object which uses the first audio track of a given MediaStream as its source."
+}

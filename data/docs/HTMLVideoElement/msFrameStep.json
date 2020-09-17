@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLVideoElement.msFrameStep",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/msFrameStep",
+    "description": "The HTMLVideoElement.msFrameStep() method steps the video by one frame forward or one frame backward."
+}

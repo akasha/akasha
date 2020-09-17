@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "OfflineAudioCompletionEvent.OfflineAudioCompletionEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent",
+    "description": "The OfflineAudioCompletionEvent() constructor of the Web Audio API creates a new OfflineAudioCompletionEvent object instance."
+}

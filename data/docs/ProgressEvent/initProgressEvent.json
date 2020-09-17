@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ProgressEvent.initProgressEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/initProgressEvent",
+    "description": "The ProgressEvent.initProgressEvent() method Initializes an animation event created using the deprecated Document.createEvent(&quot;ProgressEvent&quot;) method."
+}

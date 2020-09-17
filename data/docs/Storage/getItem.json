@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Storage.getItem",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem",
+    "description": "The getItem() method of the Storage interface, when passed a key name, will return that key's value, or null if the key does not exist, in the given Storage object."
+}

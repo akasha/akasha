@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.mozUserCancelled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozUserCancelled",
+    "description": "The DataTransfer.mozUserCancelled property is used in the dragend event handler to determine if the user canceled the drag or not. If the user canceled the event, the property returns true and returns false otherwise. This property only applies to the dragend event."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransfer.mozTypesAt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozTypesAt",
+    "description": "The DataTransfer.mozTypesAt() method returns a list of the format types that are stored for an item at the specified index. If the index is not in the range from 0 to the number of items minus one, an empty string list is returned."
+}

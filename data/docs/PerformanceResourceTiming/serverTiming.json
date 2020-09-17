@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.serverTiming",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/serverTiming",
+    "description": "The serverTiming read-only property returns an array of PerformanceServerTiming entries containing server timing metrics."
+}

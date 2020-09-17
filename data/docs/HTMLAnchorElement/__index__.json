@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLAnchorElement",
-    "lastModifiedAt": 1599389582850,
+    "lastModifiedAt": 1600305288550,
     "entries": [
         {
             "name": "__type__",
@@ -10,6 +10,42 @@
         {
             "name": "download",
             "lastModifiedAt": 1596581557769
+        },
+        {
+            "name": "hash",
+            "lastModifiedAt": 1600305266522
+        },
+        {
+            "name": "host",
+            "lastModifiedAt": 1600305267379
+        },
+        {
+            "name": "hostname",
+            "lastModifiedAt": 1600305268254
+        },
+        {
+            "name": "href",
+            "lastModifiedAt": 1600305269069
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1600305269889
+        },
+        {
+            "name": "password",
+            "lastModifiedAt": 1600305271248
+        },
+        {
+            "name": "pathname",
+            "lastModifiedAt": 1600305272620
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1600305273524
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1600305274351
         },
         {
             "name": "referrerPolicy",
@@ -22,6 +58,18 @@
         {
             "name": "relList",
             "lastModifiedAt": 1596581560003
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1600305278031
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1600305288550
+        },
+        {
+            "name": "username",
+            "lastModifiedAt": 1600305279155
         }
     ]
 }

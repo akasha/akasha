@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.items",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/items",
+    "description": "The read-only DataTransfer property items property is a list of the data transfer items in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty."
+}

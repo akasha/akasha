@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceNavigationTiming.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type",
+    "description": "The type read-only property returns a string representing the type of navigation. The value must be one of the following:"
+}

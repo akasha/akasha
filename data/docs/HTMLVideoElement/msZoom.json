@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.msZoom",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/msZoom",
+    "description": "msZoom is a read/write property which gets or sets whether the video frame is trimmed, on the top and bottom or left and right, to fit the video display."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceNavigationTiming.domContentLoadedEventEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd",
+    "description": "The domContentLoadedEventEnd read-only property returns a timestamp representing the time value equal to the time immediately after the current document's DOMContentLoaded event completes."
+}

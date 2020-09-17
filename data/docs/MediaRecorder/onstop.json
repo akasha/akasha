@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.onstop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstop",
+    "description": "The MediaRecorder.onstop event handler (part of the MediaRecorder API) handles the stop event, allowing you to run code in response to media recording via a MediaRecorder being stopped."
+}

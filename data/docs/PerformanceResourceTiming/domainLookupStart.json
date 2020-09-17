@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.domainLookupStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupStart",
+    "description": "The domainLookupStart read-only property returns the timestamp immediately before the browser starts the domain name lookup for the resource."
+}

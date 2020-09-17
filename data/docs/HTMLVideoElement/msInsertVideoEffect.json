@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLVideoElement.msInsertVideoEffect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/msInsertVideoEffect",
+    "description": "The HTMLMediaElement.msInsertVideoEffect() method inserts the specified video effect into the media pipeline."
+}

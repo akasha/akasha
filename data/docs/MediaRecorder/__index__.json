@@ -1,7 +1,7 @@
 
 {
     "name": "MediaRecorder",
-    "lastModifiedAt": 1599389422375,
+    "lastModifiedAt": 1600305100340,
     "entries": [
         {
             "name": "MediaRecorder",
@@ -32,8 +32,32 @@
             "lastModifiedAt": 1599279136416
         },
         {
+            "name": "ondataavailable",
+            "lastModifiedAt": 1600305090639
+        },
+        {
             "name": "onerror",
             "lastModifiedAt": 1597241023577
+        },
+        {
+            "name": "onpause",
+            "lastModifiedAt": 1600305091557
+        },
+        {
+            "name": "onresume",
+            "lastModifiedAt": 1600305091795
+        },
+        {
+            "name": "onstart",
+            "lastModifiedAt": 1600305092028
+        },
+        {
+            "name": "onstop",
+            "lastModifiedAt": 1600305092284
+        },
+        {
+            "name": "onwarning",
+            "lastModifiedAt": 1600305092815
         },
         {
             "name": "pause",

@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLVideoElement",
-    "lastModifiedAt": 1599389438314,
+    "lastModifiedAt": 1600305119786,
     "entries": [
         {
             "name": "__type__",
@@ -10,6 +10,30 @@
         {
             "name": "getVideoPlaybackQuality",
             "lastModifiedAt": 1596581484907
+        },
+        {
+            "name": "msFrameStep",
+            "lastModifiedAt": 1600305118951
+        },
+        {
+            "name": "msHorizontalMirror",
+            "lastModifiedAt": 1600305113698
+        },
+        {
+            "name": "msInsertVideoEffect",
+            "lastModifiedAt": 1600305119786
+        },
+        {
+            "name": "msIsLayoutOptimalForPlayback",
+            "lastModifiedAt": 1600305114083
+        },
+        {
+            "name": "msIsStereo3D",
+            "lastModifiedAt": 1600305114311
+        },
+        {
+            "name": "msZoom",
+            "lastModifiedAt": 1600305114536
         },
         {
             "name": "videoHeight",

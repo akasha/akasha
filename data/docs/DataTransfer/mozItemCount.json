@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.mozItemCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozItemCount",
+    "description": "The DataTransfer.mozItemCount property returns the number of items being dragged. This can be used, for example, to get the number of files being dragged."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransfer.clearData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData",
+    "description": "The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "AnimationPlaybackEvent.AnimationPlaybackEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent",
+    "description": "The AnimationPlaybackEvent() constructor of the Web Animations API returns a new AnimationPlaybackEvent object instance."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.redirectStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/redirectStart",
+    "description": "The redirectStart read-only property returns a timestamp representing the start time of the fetch which that initiates the redirect."
+}

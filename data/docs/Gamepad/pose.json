@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.pose",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/pose",
+    "description": "The pose read-only property of the Gamepad interface returns a GamepadPose object representing the pose information associated with a WebVR controller (e.g. its position and orientation in 3D space)."
+}

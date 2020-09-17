@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLHyperlinkElementUtils.port",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/port",
+    "description": "The HTMLHyperlinkElementUtils.port property is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''."
+}

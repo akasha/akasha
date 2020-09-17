@@ -1,7 +1,7 @@
 
 {
     "name": "ProgressEvent",
-    "lastModifiedAt": 1599389294893,
+    "lastModifiedAt": 1600304974483,
     "entries": [
         {
             "name": "ProgressEvent",
@@ -10,6 +10,10 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597193625515
+        },
+        {
+            "name": "initProgressEvent",
+            "lastModifiedAt": 1600304974483
         },
         {
             "name": "lengthComputable",
@@ -21,7 +25,7 @@
         },
         {
             "name": "total",
-            "lastModifiedAt": 1597193627032
+            "lastModifiedAt": 1600304973930
         }
     ]
 }

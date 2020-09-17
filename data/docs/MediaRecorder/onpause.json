@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.onpause",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onpause",
+    "description": "The MediaRecorder.onpause event handler (part of the MediaRecorder API) handles the pause event, allowing you to run code in response to the media recording being paused."
+}

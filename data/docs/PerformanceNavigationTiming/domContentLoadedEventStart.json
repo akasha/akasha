@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceNavigationTiming.domContentLoadedEventStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart",
+    "description": "The domContentLoadedEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent fires the DOMContentLoaded event at the current document."
+}

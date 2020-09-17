@@ -1,11 +1,19 @@
 
 {
     "name": "Storage",
-    "lastModifiedAt": 1599389395617,
+    "lastModifiedAt": 1600305072902,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597193437191
+        },
+        {
+            "name": "clear",
+            "lastModifiedAt": 1600305070862
+        },
+        {
+            "name": "getItem",
+            "lastModifiedAt": 1600305071658
         },
         {
             "name": "key",
@@ -14,6 +22,14 @@
         {
             "name": "length",
             "lastModifiedAt": 1596581432558
+        },
+        {
+            "name": "removeItem",
+            "lastModifiedAt": 1600305072511
+        },
+        {
+            "name": "setItem",
+            "lastModifiedAt": 1600305072902
         }
     ]
 }

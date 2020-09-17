@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.mozSourceNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozSourceNode",
+    "description": "The DataTransfer.mozSourceNode property is used to determine the Node over which the mouse cursor was located when the the drag operation was initiated (for example, when a button was clicked). For external drags or if the calling function cannot reach the node, null is returned."
+}

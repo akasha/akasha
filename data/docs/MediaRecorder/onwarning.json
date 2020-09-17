@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.onwarning",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onwarning",
+    "description": "The MediaRecorder.onwarning event handler (part of the MediaRecorder API) handles the recordingwarning event, allowing you to run code in response to non-fatal errors being thrown during media recording via a MediaRecorder, which don't halt recording."
+}

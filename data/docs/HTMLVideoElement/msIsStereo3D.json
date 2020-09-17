@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.msIsStereo3D",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/msIsStereo3D",
+    "description": "msIsStereo3D is a read-only property which determines whether the system considers the loaded video source to be stereo 3-D or not."
+}

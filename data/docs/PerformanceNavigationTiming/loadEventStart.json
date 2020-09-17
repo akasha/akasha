@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceNavigationTiming.loadEventStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventStart",
+    "description": "The loadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the load event of the current document is fired."
+}

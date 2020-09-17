@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLAnchorElement.protocol",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/protocol",
+    "description": "The HTMLHyperlinkElementUtils.protocol property is a USVString representing the protocol scheme of the URL, including the final ':'."
+}

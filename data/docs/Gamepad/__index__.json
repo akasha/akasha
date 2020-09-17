@@ -1,7 +1,7 @@
 
 {
     "name": "Gamepad",
-    "lastModifiedAt": 1599389472596,
+    "lastModifiedAt": 1600305154618,
     "entries": [
         {
             "name": "__type__",
@@ -24,6 +24,14 @@
             "lastModifiedAt": 1599279192110
         },
         {
+            "name": "hand",
+            "lastModifiedAt": 1600305151329
+        },
+        {
+            "name": "hapticActuators",
+            "lastModifiedAt": 1600305151671
+        },
+        {
             "name": "id",
             "lastModifiedAt": 1597192003268
         },
@@ -34,6 +42,10 @@
         {
             "name": "mapping",
             "lastModifiedAt": 1597192004025
+        },
+        {
+            "name": "pose",
+            "lastModifiedAt": 1600305153489
         },
         {
             "name": "timestamp",

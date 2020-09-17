@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLIFrameElement",
-    "lastModifiedAt": 1599389452539,
+    "lastModifiedAt": 1600305133420,
     "entries": [
         {
             "name": "__type__",
@@ -30,6 +30,10 @@
         {
             "name": "referrerPolicy",
             "lastModifiedAt": 1596581495686
+        },
+        {
+            "name": "setNfcFocus",
+            "lastModifiedAt": 1600305133420
         },
         {
             "name": "src",

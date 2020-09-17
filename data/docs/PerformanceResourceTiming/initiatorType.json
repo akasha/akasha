@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.initiatorType",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/initiatorType",
+    "description": "The initiatorType read-only property is a string that represents the type of resource that initiated the performance event."
+}

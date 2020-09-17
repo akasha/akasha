@@ -1,15 +1,55 @@
 
 {
     "name": "PerformanceNavigationTiming",
-    "lastModifiedAt": 1599389554514,
+    "lastModifiedAt": 1600305244080,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192256545
         },
         {
+            "name": "domComplete",
+            "lastModifiedAt": 1600305236601
+        },
+        {
+            "name": "domContentLoadedEventEnd",
+            "lastModifiedAt": 1600305237408
+        },
+        {
+            "name": "domContentLoadedEventStart",
+            "lastModifiedAt": 1600305237668
+        },
+        {
+            "name": "domInteractive",
+            "lastModifiedAt": 1600305237918
+        },
+        {
+            "name": "loadEventEnd",
+            "lastModifiedAt": 1600305238724
+        },
+        {
+            "name": "loadEventStart",
+            "lastModifiedAt": 1600305239108
+        },
+        {
+            "name": "redirectCount",
+            "lastModifiedAt": 1600305239949
+        },
+        {
             "name": "toJSON",
             "lastModifiedAt": 1597192258029
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1600305240373
+        },
+        {
+            "name": "unloadEventEnd",
+            "lastModifiedAt": 1600305240740
+        },
+        {
+            "name": "unloadEventStart",
+            "lastModifiedAt": 1600305241536
         }
     ]
 }

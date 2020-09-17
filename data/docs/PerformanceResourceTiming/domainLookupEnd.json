@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.domainLookupEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd",
+    "description": "The domainLookupEnd read-only property returns the timestamp immediately after the browser finishes the domain name lookup for the resource."
+}

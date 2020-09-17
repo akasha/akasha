@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Gamepad.hand",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/hand",
+    "description": "The hand read-only property of the Gamepad interface returns an enum defining what hand the controller is being held in, or is most likely to be held in."
+}

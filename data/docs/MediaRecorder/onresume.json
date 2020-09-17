@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.onresume",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onresume",
+    "description": "The MediaRecorder.onresume event handler (part of the MediaRecorder API) handles the resume event, allowing you to run code in response to the media recording being resumed after pausing."
+}

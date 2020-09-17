@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.ondataavailable",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ondataavailable",
+    "description": "The MediaRecorder.ondataavailable event handler (part of the MediaStream Recording API) handles the dataavailable event, letting you run code in response to Blob data being made available for use."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransfer.mozSetDataAt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozSetDataAt",
+    "description": "The DataTransfer.mozSetDataAt() method is used to add data to a specific index in the drag event's data transfer object."
+}

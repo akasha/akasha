@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.msHorizontalMirror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/msHorizontalMirror",
+    "description": "msHorizontalMirror is a read/write property which gets or sets whether a video element is flipped horizontally in the display."
+}

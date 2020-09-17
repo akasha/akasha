@@ -1,8 +1,12 @@
 
 {
     "name": "MediaRecorderErrorEvent",
-    "lastModifiedAt": 1599389454728,
+    "lastModifiedAt": 1600305136316,
     "entries": [
+        {
+            "name": "MediaRecorderErrorEvent",
+            "lastModifiedAt": 1600305135240
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192224671

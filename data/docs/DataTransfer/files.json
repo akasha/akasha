@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.files",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files",
+    "description": "The DataTransfer.files property is a list of the files in the drag operation. If the operation includes no files, the list is empty."
+}

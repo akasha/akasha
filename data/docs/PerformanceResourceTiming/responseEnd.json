@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.responseEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd",
+    "description": "The responseEnd read-only property returns a timestamp immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first."
+}

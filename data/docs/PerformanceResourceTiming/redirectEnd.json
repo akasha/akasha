@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.redirectEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/redirectEnd",
+    "description": "The redirectEnd read-only property returns a timestamp immediately after receiving the last byte of the response of the last redirect."
+}

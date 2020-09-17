@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.msIsLayoutOptimalForPlayback",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/msIsLayoutOptimalForPlayback",
+    "description": "msIsLayoutOptimalForPlayback is a read-only property which indicates whether the video can be rendered more efficiently."
+}

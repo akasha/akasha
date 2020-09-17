@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransfer.mozClearDataAt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/mozClearDataAt",
+    "description": "The DataTransfer.mozClearDataAt() method removes the data associated with the given format for an item at the specified index. The index must be in the range from zero to the number of items minus one."
+}

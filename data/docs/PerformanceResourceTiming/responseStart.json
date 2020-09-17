@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.responseStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseStart",
+    "description": "The responseStart read-only property returns a timestamp immediately after the browser receives the first byte of the response from the server, cache, or local resource."
+}

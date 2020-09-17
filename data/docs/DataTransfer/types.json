@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DataTransfer.types",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types",
+    "description": "The DataTransfer.types read-only property returns an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation."
+}

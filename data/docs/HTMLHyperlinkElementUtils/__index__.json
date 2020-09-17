@@ -1,11 +1,59 @@
 
 {
     "name": "HTMLHyperlinkElementUtils",
-    "lastModifiedAt": 1599389646510,
+    "lastModifiedAt": 1600305440048,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596581101236
+        },
+        {
+            "name": "hash",
+            "lastModifiedAt": 1600305439167
+        },
+        {
+            "name": "host",
+            "lastModifiedAt": 1600305439261
+        },
+        {
+            "name": "hostname",
+            "lastModifiedAt": 1600305439322
+        },
+        {
+            "name": "href",
+            "lastModifiedAt": 1600305439377
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1600305439440
+        },
+        {
+            "name": "password",
+            "lastModifiedAt": 1600305439519
+        },
+        {
+            "name": "pathname",
+            "lastModifiedAt": 1600305439585
+        },
+        {
+            "name": "port",
+            "lastModifiedAt": 1600305439640
+        },
+        {
+            "name": "protocol",
+            "lastModifiedAt": 1600305439794
+        },
+        {
+            "name": "search",
+            "lastModifiedAt": 1600305439840
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1600305440048
+        },
+        {
+            "name": "username",
+            "lastModifiedAt": 1600305439929
         }
     ]
 }

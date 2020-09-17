@@ -1,15 +1,87 @@
 
 {
     "name": "PerformanceResourceTiming",
-    "lastModifiedAt": 1599389633574,
+    "lastModifiedAt": 1600305423302,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192288623
         },
         {
+            "name": "connectEnd",
+            "lastModifiedAt": 1600305413141
+        },
+        {
+            "name": "connectStart",
+            "lastModifiedAt": 1600305413403
+        },
+        {
+            "name": "decodedBodySize",
+            "lastModifiedAt": 1600305414207
+        },
+        {
+            "name": "domainLookupEnd",
+            "lastModifiedAt": 1600305414491
+        },
+        {
+            "name": "domainLookupStart",
+            "lastModifiedAt": 1600305415316
+        },
+        {
+            "name": "encodedBodySize",
+            "lastModifiedAt": 1600305415845
+        },
+        {
+            "name": "fetchStart",
+            "lastModifiedAt": 1600305416138
+        },
+        {
+            "name": "initiatorType",
+            "lastModifiedAt": 1600305416521
+        },
+        {
+            "name": "nextHopProtocol",
+            "lastModifiedAt": 1600305416906
+        },
+        {
+            "name": "redirectEnd",
+            "lastModifiedAt": 1600305417191
+        },
+        {
+            "name": "redirectStart",
+            "lastModifiedAt": 1600305417464
+        },
+        {
+            "name": "requestStart",
+            "lastModifiedAt": 1600305418283
+        },
+        {
+            "name": "responseEnd",
+            "lastModifiedAt": 1600305418574
+        },
+        {
+            "name": "responseStart",
+            "lastModifiedAt": 1600305418875
+        },
+        {
+            "name": "secureConnectionStart",
+            "lastModifiedAt": 1600305419679
+        },
+        {
+            "name": "serverTiming",
+            "lastModifiedAt": 1600305419942
+        },
+        {
             "name": "toJSON",
             "lastModifiedAt": 1599279354319
+        },
+        {
+            "name": "transferSize",
+            "lastModifiedAt": 1600305420371
+        },
+        {
+            "name": "workerStart",
+            "lastModifiedAt": 1600305421205
         }
     ]
 }

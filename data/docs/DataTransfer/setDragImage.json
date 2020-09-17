@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransfer.setDragImage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/setDragImage",
+    "description": "When a drag occurs, a translucent image is generated from the drag target (the element the dragstart event is fired at), and follows the mouse pointer during the drag. This image is created automatically, so you do not need to create it yourself. However, if a custom image is desired, the DataTransfer.setDragImage() method can be used to set the custom image to be used. The image will typically be an image element but it can also be a canvas or any other visible element."
+}

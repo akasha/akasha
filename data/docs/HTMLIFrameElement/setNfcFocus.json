@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLIFrameElement.setNfcFocus",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/setNfcFocus",
+    "description": "The setNfcFocus() method of the HTMLIFrameElement interface sets whether an iframe can receive an NFC event."
+}

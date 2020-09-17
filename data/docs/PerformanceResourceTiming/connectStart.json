@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceResourceTiming.connectStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/connectStart",
+    "description": "The connectStart read-only property returns the timestamp immediately before the user agent starts establishing the connection to the server to retrieve the resource."
+}

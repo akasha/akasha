@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DataTransfer.getData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/getData",
+    "description": "The DataTransfer.getData() method retrieves drag data (as a DOMString) for the specified type. If the drag operation does not include data, this method returns an empty string."
+}

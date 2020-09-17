@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaRecorder.onstart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/onstart",
+    "description": "The MediaRecorder.onstartevent handler (part of the MediaRecorder API) handles the start event, allowing you to run code in response to media recording being started by a MediaRecorder."
+}
