@@ -73,11 +73,7 @@ public final class DocIndex
   {
     final List<EntryIndex> entries = getEntries();
     entries.remove( entry );
-    if ( entries.isEmpty() )
-    {
-      remove();
-    }
-    else
+    if ( entries.remove( entry ) )
     {
       save();
     }
