@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.vibrate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/vibrate",
+    "description": "The vibrate read-only property of the Notification interface specifies a a vibration pattern for the device's vibration hardware to emit when the notification fires. This is specified in the vibrate option of the Notification() constructor."
+}

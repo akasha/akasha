@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.silent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/silent",
+    "description": "The silent read-only property of the Notification interface specifies whether the notification should be silent, i.e., no sounds or vibrations should be issued, regardless of the device settings. This is specified in the silent option of the Notification() constructor."
+}

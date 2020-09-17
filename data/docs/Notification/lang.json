@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.lang",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/lang",
+    "description": "The lang read-only property of the Notification interface indicates the language used in the notification, as specified in the lang option of the Notification() constructor."
+}

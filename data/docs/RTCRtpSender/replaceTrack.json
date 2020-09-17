@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "RTCRtpSender.replaceTrack",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/replaceTrack",
+    "description": "The RTCRtpSender method replaceTrack() replaces the track currently being used as the sender's source with a new MediaStreamTrack."
+}

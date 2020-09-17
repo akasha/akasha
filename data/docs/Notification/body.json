@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.body",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/body",
+    "description": "The body read-only property of the Notification interface indicates the body string of the notification, as specified in the body option of the Notification() constructor."
+}

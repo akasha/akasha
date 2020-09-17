@@ -1,7 +1,7 @@
 
 {
     "name": "RTCRtpSender",
-    "lastModifiedAt": 1599389108686,
+    "lastModifiedAt": 1600303775277,
     "entries": [
         {
             "name": "__type__",
@@ -14,6 +14,26 @@
         {
             "name": "getCapabilities",
             "lastModifiedAt": 1599278831330
+        },
+        {
+            "name": "getParameters",
+            "lastModifiedAt": 1600303774077
+        },
+        {
+            "name": "getStats",
+            "lastModifiedAt": 1600303774327
+        },
+        {
+            "name": "replaceTrack",
+            "lastModifiedAt": 1600303774705
+        },
+        {
+            "name": "setParameters",
+            "lastModifiedAt": 1600303774949
+        },
+        {
+            "name": "setStreams",
+            "lastModifiedAt": 1600303775277
         },
         {
             "name": "track",

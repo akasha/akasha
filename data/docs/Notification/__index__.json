@@ -1,7 +1,7 @@
 
 {
     "name": "Notification",
-    "lastModifiedAt": 1599389136320,
+    "lastModifiedAt": 1600303811064,
     "entries": [
         {
             "name": "Notification",
@@ -12,8 +12,96 @@
             "lastModifiedAt": 1597193596671
         },
         {
+            "name": "actions",
+            "lastModifiedAt": 1600303802136
+        },
+        {
+            "name": "badge",
+            "lastModifiedAt": 1600303802384
+        },
+        {
+            "name": "body",
+            "lastModifiedAt": 1600303802627
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1600303810607
+        },
+        {
+            "name": "data",
+            "lastModifiedAt": 1600303802873
+        },
+        {
+            "name": "dir",
+            "lastModifiedAt": 1600303803249
+        },
+        {
+            "name": "icon",
+            "lastModifiedAt": 1600303803497
+        },
+        {
+            "name": "image",
+            "lastModifiedAt": 1600303804309
+        },
+        {
+            "name": "lang",
+            "lastModifiedAt": 1600303804539
+        },
+        {
+            "name": "maxActions",
+            "lastModifiedAt": 1600303805337
+        },
+        {
+            "name": "onclick",
+            "lastModifiedAt": 1600303805585
+        },
+        {
+            "name": "onclose",
+            "lastModifiedAt": 1600303806382
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1600303806618
+        },
+        {
+            "name": "onshow",
+            "lastModifiedAt": 1600303806922
+        },
+        {
+            "name": "permission",
+            "lastModifiedAt": 1600303807172
+        },
+        {
+            "name": "renotify",
+            "lastModifiedAt": 1600303807427
+        },
+        {
             "name": "requestPermission",
             "lastModifiedAt": 1597193597507
+        },
+        {
+            "name": "requireInteraction",
+            "lastModifiedAt": 1600303808226
+        },
+        {
+            "name": "silent",
+            "lastModifiedAt": 1600303809023
+        },
+        {
+            "name": "tag",
+            "lastModifiedAt": 1600303809406
+        },
+        {
+            "name": "timestamp",
+            "lastModifiedAt": 1600303809797
+        },
+        {
+            "name": "title",
+            "lastModifiedAt": 1600303810052
+        },
+        {
+            "name": "vibrate",
+            "lastModifiedAt": 1600303810318
         }
     ]
 }

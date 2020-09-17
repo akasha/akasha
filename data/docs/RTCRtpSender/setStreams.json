@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "RTCRtpSender.setStreams",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setStreams",
+    "description": "The RTCRtpSender method setStreams() associates the sender's track with the specified MediaStream or array of MediaStream objects."
+}

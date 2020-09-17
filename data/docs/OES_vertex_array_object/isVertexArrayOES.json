@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "OES_vertex_array_object.isVertexArrayOES",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/isVertexArrayOES",
+    "description": "The OES_vertex_array_object.isVertexArrayOES() method of the WebGL API returns true if the passed object is a WebGLVertexArrayObject object."
+}

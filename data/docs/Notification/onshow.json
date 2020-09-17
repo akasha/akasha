@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.onshow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/onshow",
+    "description": "The onshow property of the Notification interface specifies an event listener to receive show events. These events occur when a Notification is displayed."
+}

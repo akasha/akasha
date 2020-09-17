@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.maxActions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/maxActions",
+    "description": "The maxActions attribute of the Notification interface returns the maximum number of actions supported by the device and the User Agent. Effectively, this is the maximum number of elements in Notification.actions array which will be respected by the User Agent."
+}

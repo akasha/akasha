@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.timestamp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp",
+    "description": "The timestamp read-only property of the Notification interface returns a DOMTimeStamp, as specified in the timestamp option of the Notification() constructor."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.image",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/image",
+    "description": "The image read-only property of the Notification interface contains the URL of an image to be displayed as part of the notification"
+}

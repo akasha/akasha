@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "RTCRtpSender.setParameters",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters",
+    "description": "The setParameters() method of the RTCRtpSender interface applies changes the configuration of sender's track, which is the MediaStreamTrack for which the RTCRtpSender is responsible."
+}

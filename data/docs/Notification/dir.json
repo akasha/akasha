@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.dir",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/dir",
+    "description": "The dir read-only property of the Notification interface indicates the text direction of the notification, as specified in the dir option of the Notification() constructor."
+}

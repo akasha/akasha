@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.permission",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/permission",
+    "description": "The permission read-only property of the Notification interface indicates the current permission granted by the user for the current origin to display web notifications."
+}

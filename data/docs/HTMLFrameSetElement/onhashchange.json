@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLFrameSetElement.onhashchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onhashchange",
+    "description": "The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events."
+}

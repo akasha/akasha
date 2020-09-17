@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.tag",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/tag",
+    "description": "The tag read-only property of the Notification interface signifies an identifying tag for the notification, as specified in the tag option of the Notification() constructor."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Notification.icon",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/icon",
+    "description": "The icon read-only property of the Notification interface contains the URL of an icon to be displayed as part of the notification, as specified in the icon option of the Notification() constructor."
+}
