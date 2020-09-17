@@ -7,9 +7,9 @@ enum ActiveMode {
 };
 
 enum txMode {
+  "not-allowed",
   "requires",
-  "requires_new",
-  "not-allowed"
+  "requires_new"
 };
 
 typedef ( double? or sequence<double?> ) IndexedKeyframeOffsetType;

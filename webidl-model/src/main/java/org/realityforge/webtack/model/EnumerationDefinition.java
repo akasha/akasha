@@ -1,7 +1,9 @@
 package org.realityforge.webtack.model;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
@@ -18,7 +20,10 @@ public final class EnumerationDefinition
                                 @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( name, documentation, extendedAttributes, sourceLocations );
-    _values = Objects.requireNonNull( values );
+    _values = Objects.requireNonNull( values
+                                        .stream()
+                                        .sorted( Comparator.comparing( EnumerationValue::getValue ) )
+                                        .collect( Collectors.toList() ) );
   }
 
   @Nonnull

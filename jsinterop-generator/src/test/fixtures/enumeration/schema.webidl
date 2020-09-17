@@ -40,9 +40,9 @@ enum XMLHttpRequestResponseType {
  * This tests that lowercase name converted to uppercase when converted into java.
  */
 enum txMode {
+  "not-allowed",
   "requires",
-  "requires_new",
-  "not-allowed"
+  "requires_new"
 };
 
 /**

@@ -19,8 +19,8 @@ public final class EnumerationDefinitionTest
   {
     final String webIDL =
       "enum XRSessionMode {\n" +
-      "  \"inline\",\n" +
-      "  \"immersive-vr\"\n" +
+      "  \"immersive-vr\",\n" +
+      "  \"inline\"\n" +
       "};";
     final EnumerationDefinition enumerationDefinition = parse( webIDL );
     assertEquals( enumerationDefinition.getName(), "XRSessionMode" );
@@ -28,7 +28,7 @@ public final class EnumerationDefinitionTest
     assertEquals( values.size(), 2 );
     // This is to ensure that we order by insertion order
     assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),
-                  "inline|immersive-vr" );
+                  "immersive-vr|inline" );
   }
 
   @Test
@@ -41,7 +41,7 @@ public final class EnumerationDefinitionTest
     final List<EnumerationValue> values = enumerationDefinition.getValues();
     assertEquals( values.size(), 3 );
     // This is to ensure that we order by insertion order
-    assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),"unspecified|inline|attachment" );
+    assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),"attachment|inline|unspecified" );
   }
 
   @Nonnull
@@ -65,7 +65,7 @@ public final class EnumerationDefinitionTest
     assertEquals( element, element );
     assertEquals( element.hashCode(), element.hashCode() );
 
-    assertTrue( element.equiv( actual ) );
+    assertTrue( element.equiv( actual ), "" );
     assertNotSame( element, actual );
 
     return actual;
