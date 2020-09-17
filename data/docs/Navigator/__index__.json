@@ -1,7 +1,7 @@
 
 {
     "name": "Navigator",
-    "lastModifiedAt": 1600307007937,
+    "lastModifiedAt": 1600312361199,
     "entries": [
         {
             "name": "__type__",
@@ -45,7 +45,7 @@
         },
         {
             "name": "cookieEnabled",
-            "lastModifiedAt": 0
+            "lastModifiedAt": 1600312361188
         },
         {
             "name": "credentials",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.cookieEnabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/cookieEnabled",
+    "description": "navigator.cookieEnabled returns a Boolean value that indicates whether cookies are enabled or not."
+}
