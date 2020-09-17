@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.rotate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rotate",
+    "description": "The CanvasRenderingContext2D.rotate() method of the Canvas 2D API adds a rotation to the transformation matrix."
+}

@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "MouseEvent.clientY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY",
-    "description": "The clientY read-only property of the MouseEvent interface provides the vertical coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page)."
+    "description": "The clientY read-only property of the MouseEvent interface provides the vertical coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page)."
 }

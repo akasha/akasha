@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.createPattern",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createPattern",
+    "description": "The CanvasRenderingContext2D.createPattern() method of the Canvas 2D API creates a pattern using the specified image and repetition. This method returns a CanvasPattern."
+}

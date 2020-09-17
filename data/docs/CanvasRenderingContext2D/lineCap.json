@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.lineCap",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap",
+    "description": "The CanvasRenderingContext2D.lineCap property of the Canvas 2D API determines the shape used to draw the end points of lines."
+}

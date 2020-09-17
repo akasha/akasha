@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioNode.channelCountMode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCountMode",
+    "description": "The channelCountMode property of the AudioNode interface represents an enumerated value describing the way channels must be matched between the node's inputs and outputs."
+}

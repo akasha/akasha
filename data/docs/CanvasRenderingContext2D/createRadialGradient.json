@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.createRadialGradient",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createRadialGradient",
+    "description": "The CanvasRenderingContext2D.createRadialGradient() method of the Canvas 2D API creates a radial gradient using the size and coordinates of two circles."
+}

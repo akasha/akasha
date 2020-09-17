@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.getLineDash",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getLineDash",
+    "description": "The getLineDash() method of the Canvas 2D API's CanvasRenderingContext2D interface gets the current line dash pattern."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.drawWidgetAsOnScreen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawWidgetAsOnScreen",
+    "description": "The non-standard and internal only CanvasRenderingContext2D.drawWidgetAsOnScreen() method of the Canvas 2D API renders the root widget of a window into the canvas. Unlike drawWindow(), this API uses the operating system to snapshot the widget on-screen, rather than reading from Gecko's own compositor."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.fill",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fill",
+    "description": "The CanvasRenderingContext2D.fill() method of the Canvas 2D API fills the current or given path with the current fillStyle."
+}

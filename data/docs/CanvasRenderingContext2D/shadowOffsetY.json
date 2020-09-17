@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.shadowOffsetY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowOffsetY",
+    "description": "The CanvasRenderingContext2D.shadowOffsetY property of the Canvas 2D API specifies the distance that shadows will be offset vertically."
+}

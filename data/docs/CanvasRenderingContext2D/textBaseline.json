@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.textBaseline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline",
+    "description": "The CanvasRenderingContext2D.textBaseline property of the Canvas 2D API specifies the current text baseline used when drawing text."
+}

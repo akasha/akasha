@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "XRWebGLLayer.XRWebGLLayer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/XRWebGLLayer",
+    "description": "The WebXR Device API XRWebGLLayer() constructor creates and returns a new XRWebGLLayer object, providing the linkage between the WebXR device and the WebGL graphics layer used to render the 3D scene."
+}

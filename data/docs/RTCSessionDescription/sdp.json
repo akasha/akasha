@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCSessionDescription.sdp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSessionDescription/sdp",
+    "description": "The property RTCSessionDescription.sdp is a read-only DOMString containing the SDP which describes the session."
+}

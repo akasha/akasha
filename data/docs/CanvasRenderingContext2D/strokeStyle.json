@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.strokeStyle",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle",
+    "description": "The CanvasRenderingContext2D.strokeStyle property of the Canvas 2D API specifies the color, gradient, or pattern to use for the strokes (outlines) around shapes. The default is #000 (black)."
+}

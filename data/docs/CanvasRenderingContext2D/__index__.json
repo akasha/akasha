@@ -1,11 +1,283 @@
 
 {
     "name": "CanvasRenderingContext2D",
-    "lastModifiedAt": 1599389137303,
+    "lastModifiedAt": 1600303841477,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596581220550
+        },
+        {
+            "name": "addHitRegion",
+            "lastModifiedAt": 1600303822552
+        },
+        {
+            "name": "arc",
+            "lastModifiedAt": 1600303822805
+        },
+        {
+            "name": "arcTo",
+            "lastModifiedAt": 1600303823744
+        },
+        {
+            "name": "beginPath",
+            "lastModifiedAt": 1600303824030
+        },
+        {
+            "name": "bezierCurveTo",
+            "lastModifiedAt": 1600303824267
+        },
+        {
+            "name": "canvas",
+            "lastModifiedAt": 1600303813743
+        },
+        {
+            "name": "clearHitRegions",
+            "lastModifiedAt": 1600303825204
+        },
+        {
+            "name": "clearRect",
+            "lastModifiedAt": 1600303826147
+        },
+        {
+            "name": "clip",
+            "lastModifiedAt": 1600303826560
+        },
+        {
+            "name": "closePath",
+            "lastModifiedAt": 1600303827500
+        },
+        {
+            "name": "createImageData",
+            "lastModifiedAt": 1600303828175
+        },
+        {
+            "name": "createLinearGradient",
+            "lastModifiedAt": 1600303828431
+        },
+        {
+            "name": "createPattern",
+            "lastModifiedAt": 1600303828693
+        },
+        {
+            "name": "createRadialGradient",
+            "lastModifiedAt": 1600303828943
+        },
+        {
+            "name": "currentTransform",
+            "lastModifiedAt": 1600303814124
+        },
+        {
+            "name": "direction",
+            "lastModifiedAt": 1600303814389
+        },
+        {
+            "name": "drawFocusIfNeeded",
+            "lastModifiedAt": 1600303829196
+        },
+        {
+            "name": "drawImage",
+            "lastModifiedAt": 1600303830159
+        },
+        {
+            "name": "drawWidgetAsOnScreen",
+            "lastModifiedAt": 1600303830474
+        },
+        {
+            "name": "drawWindow",
+            "lastModifiedAt": 1600303830746
+        },
+        {
+            "name": "ellipse",
+            "lastModifiedAt": 1600303831088
+        },
+        {
+            "name": "fill",
+            "lastModifiedAt": 1600303831369
+        },
+        {
+            "name": "fillRect",
+            "lastModifiedAt": 1600303831642
+        },
+        {
+            "name": "fillStyle",
+            "lastModifiedAt": 1600303815340
+        },
+        {
+            "name": "fillText",
+            "lastModifiedAt": 1600303832301
+        },
+        {
+            "name": "filter",
+            "lastModifiedAt": 1600303815626
+        },
+        {
+            "name": "font",
+            "lastModifiedAt": 1600303815869
+        },
+        {
+            "name": "getImageData",
+            "lastModifiedAt": 1600303832692
+        },
+        {
+            "name": "getLineDash",
+            "lastModifiedAt": 1600303832942
+        },
+        {
+            "name": "getTransform",
+            "lastModifiedAt": 1600303833209
+        },
+        {
+            "name": "globalAlpha",
+            "lastModifiedAt": 1600303816125
+        },
+        {
+            "name": "globalCompositeOperation",
+            "lastModifiedAt": 1600303817060
+        },
+        {
+            "name": "imageSmoothingEnabled",
+            "lastModifiedAt": 1600303817359
+        },
+        {
+            "name": "imageSmoothingQuality",
+            "lastModifiedAt": 1600303817669
+        },
+        {
+            "name": "isPointInPath",
+            "lastModifiedAt": 1600303833545
+        },
+        {
+            "name": "isPointInStroke",
+            "lastModifiedAt": 1600303833792
+        },
+        {
+            "name": "lineCap",
+            "lastModifiedAt": 1600303817910
+        },
+        {
+            "name": "lineDashOffset",
+            "lastModifiedAt": 1600303818165
+        },
+        {
+            "name": "lineJoin",
+            "lastModifiedAt": 1600303818429
+        },
+        {
+            "name": "lineTo",
+            "lastModifiedAt": 1600303834043
+        },
+        {
+            "name": "lineWidth",
+            "lastModifiedAt": 1600303818699
+        },
+        {
+            "name": "measureText",
+            "lastModifiedAt": 1600303834290
+        },
+        {
+            "name": "miterLimit",
+            "lastModifiedAt": 1600303818948
+        },
+        {
+            "name": "moveTo",
+            "lastModifiedAt": 1600303834570
+        },
+        {
+            "name": "putImageData",
+            "lastModifiedAt": 1600303834817
+        },
+        {
+            "name": "quadraticCurveTo",
+            "lastModifiedAt": 1600303835184
+        },
+        {
+            "name": "rect",
+            "lastModifiedAt": 1600303835438
+        },
+        {
+            "name": "removeHitRegion",
+            "lastModifiedAt": 1600303835691
+        },
+        {
+            "name": "resetTransform",
+            "lastModifiedAt": 1600303835963
+        },
+        {
+            "name": "restore",
+            "lastModifiedAt": 1600303836201
+        },
+        {
+            "name": "rotate",
+            "lastModifiedAt": 1600303836493
+        },
+        {
+            "name": "save",
+            "lastModifiedAt": 1600303836757
+        },
+        {
+            "name": "scale",
+            "lastModifiedAt": 1600303837013
+        },
+        {
+            "name": "scrollPathIntoView",
+            "lastModifiedAt": 1600303837334
+        },
+        {
+            "name": "setLineDash",
+            "lastModifiedAt": 1600303838279
+        },
+        {
+            "name": "setTransform",
+            "lastModifiedAt": 1600303839217
+        },
+        {
+            "name": "shadowBlur",
+            "lastModifiedAt": 1600303819198
+        },
+        {
+            "name": "shadowColor",
+            "lastModifiedAt": 1600303820147
+        },
+        {
+            "name": "shadowOffsetX",
+            "lastModifiedAt": 1600303820527
+        },
+        {
+            "name": "shadowOffsetY",
+            "lastModifiedAt": 1600303820801
+        },
+        {
+            "name": "stroke",
+            "lastModifiedAt": 1600303839464
+        },
+        {
+            "name": "strokeRect",
+            "lastModifiedAt": 1600303839833
+        },
+        {
+            "name": "strokeStyle",
+            "lastModifiedAt": 1600303821052
+        },
+        {
+            "name": "strokeText",
+            "lastModifiedAt": 1600303840940
+        },
+        {
+            "name": "textAlign",
+            "lastModifiedAt": 1600303821304
+        },
+        {
+            "name": "textBaseline",
+            "lastModifiedAt": 1600303821601
+        },
+        {
+            "name": "transform",
+            "lastModifiedAt": 1600303841199
+        },
+        {
+            "name": "translate",
+            "lastModifiedAt": 1600303841477
         }
     ]
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.shadowBlur",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur",
+    "description": "The CanvasRenderingContext2D.shadowBlur property of the Canvas 2D API specifies the amount of blur applied to shadows. The default is 0 (no blur)."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.resetTransform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/resetTransform",
+    "description": "The CanvasRenderingContext2D.resetTransform() method of the Canvas 2D API resets the current transform to the identity matrix."
+}

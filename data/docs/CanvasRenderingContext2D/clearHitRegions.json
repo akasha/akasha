@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.clearHitRegions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearHitRegions",
+    "description": "The CanvasRenderingContext2D method clearHitRegions() removes all hit regions from the canvas."
+}

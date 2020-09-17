@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioNode.channelInterpretation",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelInterpretation",
+    "description": "When the number of channels doesn't match between an input and an output, up- or down-mixing happens according the following rules. This can be somewhat controlled by setting the AudioNode.channelInterpretation property to speakers or discrete:"
+}

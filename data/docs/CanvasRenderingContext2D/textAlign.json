@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.textAlign",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/textAlign",
+    "description": "The CanvasRenderingContext2D.textAlign property of the Canvas 2D API specifies the current text alignment used when drawing text."
+}

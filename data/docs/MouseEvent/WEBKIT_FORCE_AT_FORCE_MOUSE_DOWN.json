@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
+    "description": "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN is a proprietary, WebKit-specific, static numeric property whose value is the minimum force necessary for a force click."
+}

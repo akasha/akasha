@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioNode.numberOfInputs",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfInputs",
+    "description": "The numberOfInputs property of the AudioNode interface returns the number of inputs feeding the node."
+}

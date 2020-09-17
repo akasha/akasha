@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.drawWindow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawWindow",
+    "description": "The deprecated, non-standard and internal only CanvasRenderingContext2D.drawWindow() method of the Canvas 2D API renders a region of a window into the canvas. The contents of the window's viewport are rendered, ignoring viewport clipping and scrolling."
+}

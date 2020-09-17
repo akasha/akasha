@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.addHitRegion",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/addHitRegion",
+    "description": "The CanvasRenderingContext2D method addHitRegion() adds a hit region to the bitmap."
+}

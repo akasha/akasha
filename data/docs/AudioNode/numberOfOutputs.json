@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioNode.numberOfOutputs",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfOutputs",
+    "description": "The numberOfOutputs property of the AudioNode interface returns the number of outputs coming out of the node."
+}

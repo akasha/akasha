@@ -1,7 +1,7 @@
 
 {
     "name": "WakeLockSentinel",
-    "lastModifiedAt": 1599693987843,
+    "lastModifiedAt": 1600303927752,
     "entries": [
         {
             "name": "__type__",
@@ -10,6 +10,10 @@
         {
             "name": "release",
             "lastModifiedAt": 1599693987843
+        },
+        {
+            "name": "released",
+            "lastModifiedAt": 1600303926644
         },
         {
             "name": "type",

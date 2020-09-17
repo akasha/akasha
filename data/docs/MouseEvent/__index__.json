@@ -1,11 +1,19 @@
 
 {
     "name": "MouseEvent",
-    "lastModifiedAt": 1599389195133,
+    "lastModifiedAt": 1600303887466,
     "entries": [
         {
             "name": "MouseEvent",
             "lastModifiedAt": 1597190819570
+        },
+        {
+            "name": "WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
+            "lastModifiedAt": 1600303880920
+        },
+        {
+            "name": "WEBKIT_FORCE_AT_MOUSE_DOWN",
+            "lastModifiedAt": 1600303881162
         },
         {
             "name": "__type__",
@@ -25,11 +33,11 @@
         },
         {
             "name": "clientX",
-            "lastModifiedAt": 1597190820992
+            "lastModifiedAt": 1600303873204
         },
         {
             "name": "clientY",
-            "lastModifiedAt": 1597190821237
+            "lastModifiedAt": 1600303873718
         },
         {
             "name": "ctrlKey",

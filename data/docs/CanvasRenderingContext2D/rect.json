@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.rect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect",
+    "description": "The CanvasRenderingContext2D.rect() method of the Canvas 2D API adds a rectangle to the current path."
+}

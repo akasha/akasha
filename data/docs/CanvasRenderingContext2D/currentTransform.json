@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CanvasRenderingContext2D.currentTransform",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/currentTransform",
+    "description": "The CanvasRenderingContext2D.currentTransform property of the Canvas 2D API returns or sets a DOMMatrix (current specification) or SVGMatrix (old specification) object for the current transformation matrix."
+}

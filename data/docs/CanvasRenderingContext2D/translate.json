@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.translate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/translate",
+    "description": "The CanvasRenderingContext2D.translate() method of the Canvas 2D API adds a translation transformation to the current matrix."
+}

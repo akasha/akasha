@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.removeHitRegion",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/removeHitRegion",
+    "description": "The CanvasRenderingContext2D method removeHitRegion() removes a given hit region from the canvas."
+}

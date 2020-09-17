@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CanvasRenderingContext2D.strokeText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeText",
+    "description": "The CanvasRenderingContext2D method strokeText(), part of the Canvas 2D API, strokes &mdash; that is, draws the outlines of &mdash; the characters of a text string at the specified coordinates. An optional parameter allows specifying a maximum width for the rendered text, which the user agent will achieve by condensing the text or by using a lower font size."
+}
