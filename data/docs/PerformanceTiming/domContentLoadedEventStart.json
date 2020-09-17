@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.domContentLoadedEventStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart",
+    "description": "The legacy PerformanceTiming.domContentLoadedEventStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, right before the parser sent the DOMContentLoaded event, that is right after all the scripts that need to be executed right after parsing has been executed."
+}

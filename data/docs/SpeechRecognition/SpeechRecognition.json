@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "SpeechRecognition.SpeechRecognition",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/SpeechRecognition",
+    "description": "The SpeechRecognition() constructor creates a new SpeechRecognition object instance."
+}

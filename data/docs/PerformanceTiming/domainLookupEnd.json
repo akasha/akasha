@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.domainLookupEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd",
+    "description": "The legacy PerformanceTiming.domainLookupEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, where the domain lookup is finished. If a persistent connection is used, or the information is stored in a cache or a local resource, the value will be the same as PerformanceTiming.fetchStart."
+}

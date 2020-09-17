@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.facingMode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/facingMode",
+    "description": "The MediaTrackSettings dictionary's facingMode property is a DOMString indicating the direction in which the camera producing the video track represented by the MediaStreamTrack is currently facing. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.facingMode property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}

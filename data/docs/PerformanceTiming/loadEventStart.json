@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.loadEventStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventStart",
+    "description": "The legacy PerformanceTiming.loadEventStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the load event was sent for the current document. If this event has not yet been sent, it returns 0."
+}

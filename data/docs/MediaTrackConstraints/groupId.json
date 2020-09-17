@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.groupId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/groupId",
+    "description": "The MediaTrackConstraints dictionary's groupId property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the groupId constrainable property."
+}

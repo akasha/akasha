@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.autoGainControl",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/autoGainControl",
+    "description": "The MediaTrackConstraints dictionary's autoGainControl property is a ConstrainBoolean describing the requested or mandatory constraints placed upon the value of the autoGainControl constrainable property."
+}

@@ -1,11 +1,95 @@
 
 {
     "name": "PerformanceTiming",
-    "lastModifiedAt": 1599430212536,
+    "lastModifiedAt": 1600303409755,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192253580
+        },
+        {
+            "name": "connectEnd",
+            "lastModifiedAt": 1600303402839
+        },
+        {
+            "name": "connectStart",
+            "lastModifiedAt": 1600303403104
+        },
+        {
+            "name": "domComplete",
+            "lastModifiedAt": 1600303404829
+        },
+        {
+            "name": "domContentLoadedEventEnd",
+            "lastModifiedAt": 1600303405086
+        },
+        {
+            "name": "domContentLoadedEventStart",
+            "lastModifiedAt": 1600303405325
+        },
+        {
+            "name": "domInteractive",
+            "lastModifiedAt": 1600303406147
+        },
+        {
+            "name": "domLoading",
+            "lastModifiedAt": 1600303406405
+        },
+        {
+            "name": "domainLookupEnd",
+            "lastModifiedAt": 1600303403633
+        },
+        {
+            "name": "domainLookupStart",
+            "lastModifiedAt": 1600303404439
+        },
+        {
+            "name": "fetchStart",
+            "lastModifiedAt": 1600303406659
+        },
+        {
+            "name": "loadEventEnd",
+            "lastModifiedAt": 1600303406898
+        },
+        {
+            "name": "loadEventStart",
+            "lastModifiedAt": 1600303407163
+        },
+        {
+            "name": "navigationStart",
+            "lastModifiedAt": 1600303407547
+        },
+        {
+            "name": "redirectEnd",
+            "lastModifiedAt": 1600303407783
+        },
+        {
+            "name": "redirectStart",
+            "lastModifiedAt": 1600303408064
+        },
+        {
+            "name": "requestStart",
+            "lastModifiedAt": 1600303408312
+        },
+        {
+            "name": "responseEnd",
+            "lastModifiedAt": 1600303408695
+        },
+        {
+            "name": "responseStart",
+            "lastModifiedAt": 1600303408943
+        },
+        {
+            "name": "secureConnectionStart",
+            "lastModifiedAt": 1600303409205
+        },
+        {
+            "name": "unloadEventEnd",
+            "lastModifiedAt": 1600303409498
+        },
+        {
+            "name": "unloadEventStart",
+            "lastModifiedAt": 1600303409755
         }
     ]
 }

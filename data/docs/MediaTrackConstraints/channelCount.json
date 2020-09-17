@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.channelCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/channelCount",
+    "description": "The MediaTrackConstraints dictionary's channelCount property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the channelCount constrainable property."
+}

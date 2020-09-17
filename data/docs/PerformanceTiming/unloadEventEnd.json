@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.unloadEventEnd",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd",
+    "description": "The legacy PerformanceTiming.unloadEventEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, the unload event handler finishes. If there is no previous document, or if the previous document, or one of the needed redirects, is not of the same origin, the value returned is 0."
+}

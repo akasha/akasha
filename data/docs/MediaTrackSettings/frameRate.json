@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.frameRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/frameRate",
+    "description": "The MediaTrackSettings dictionary's frameRate property is a double-precision floating-point number indicating the frame rate, in frames per second, of the MediaStreamTrack as currently configured. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.frameRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}

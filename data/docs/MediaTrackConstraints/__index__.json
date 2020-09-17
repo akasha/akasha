@@ -1,11 +1,83 @@
 
 {
     "name": "MediaTrackConstraints",
-    "lastModifiedAt": 1599430157855,
+    "lastModifiedAt": 1600303421024,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596544751570
+        },
+        {
+            "name": "aspectRatio",
+            "lastModifiedAt": 1600303415820
+        },
+        {
+            "name": "autoGainControl",
+            "lastModifiedAt": 1600303416217
+        },
+        {
+            "name": "channelCount",
+            "lastModifiedAt": 1600303416470
+        },
+        {
+            "name": "cursor",
+            "lastModifiedAt": 1600303416720
+        },
+        {
+            "name": "deviceId",
+            "lastModifiedAt": 1600303416971
+        },
+        {
+            "name": "displaySurface",
+            "lastModifiedAt": 1600303417208
+        },
+        {
+            "name": "echoCancellation",
+            "lastModifiedAt": 1600303417637
+        },
+        {
+            "name": "facingMode",
+            "lastModifiedAt": 1600303417865
+        },
+        {
+            "name": "frameRate",
+            "lastModifiedAt": 1600303418119
+        },
+        {
+            "name": "groupId",
+            "lastModifiedAt": 1600303418372
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1600303418615
+        },
+        {
+            "name": "latency",
+            "lastModifiedAt": 1600303418853
+        },
+        {
+            "name": "logicalSurface",
+            "lastModifiedAt": 1600303419688
+        },
+        {
+            "name": "noiseSuppression",
+            "lastModifiedAt": 1600303419920
+        },
+        {
+            "name": "sampleRate",
+            "lastModifiedAt": 1600303420168
+        },
+        {
+            "name": "sampleSize",
+            "lastModifiedAt": 1600303420418
+        },
+        {
+            "name": "volume",
+            "lastModifiedAt": 1600303420760
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1600303421024
         }
     ]
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.cursor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/cursor",
+    "description": "The MediaTrackSettings dictionary's cursor property indicates whether or not the cursor should be captured as part of the video track included in the MediaStream returned by getDisplayMedia()."
+}

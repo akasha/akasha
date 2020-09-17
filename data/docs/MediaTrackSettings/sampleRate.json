@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.sampleRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleRate",
+    "description": "The MediaTrackSettings dictionary's sampleRate property is an integer indicating how many audio samples per second the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleRate property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}

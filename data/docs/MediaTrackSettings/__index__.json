@@ -1,11 +1,79 @@
 
 {
     "name": "MediaTrackSettings",
-    "lastModifiedAt": 1599389023750,
+    "lastModifiedAt": 1600303698050,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596544739749
+        },
+        {
+            "name": "aspectRatio",
+            "lastModifiedAt": 1600303690032
+        },
+        {
+            "name": "autoGainControl",
+            "lastModifiedAt": 1600303690293
+        },
+        {
+            "name": "channelCount",
+            "lastModifiedAt": 1600303690592
+        },
+        {
+            "name": "cursor",
+            "lastModifiedAt": 1600303690840
+        },
+        {
+            "name": "deviceId",
+            "lastModifiedAt": 1600303691640
+        },
+        {
+            "name": "displaySurface",
+            "lastModifiedAt": 1600303692024
+        },
+        {
+            "name": "echoCancellation",
+            "lastModifiedAt": 1600303692982
+        },
+        {
+            "name": "facingMode",
+            "lastModifiedAt": 1600303693776
+        },
+        {
+            "name": "frameRate",
+            "lastModifiedAt": 1600303694026
+        },
+        {
+            "name": "groupId",
+            "lastModifiedAt": 1600303694272
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1600303694517
+        },
+        {
+            "name": "latency",
+            "lastModifiedAt": 1600303695308
+        },
+        {
+            "name": "noiseSuppression",
+            "lastModifiedAt": 1600303696113
+        },
+        {
+            "name": "sampleRate",
+            "lastModifiedAt": 1600303696354
+        },
+        {
+            "name": "sampleSize",
+            "lastModifiedAt": 1600303696742
+        },
+        {
+            "name": "volume",
+            "lastModifiedAt": 1600303697525
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1600303698050
         }
     ]
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.autoGainControl",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/autoGainControl",
+    "description": "The MediaTrackSettings dictionary's autoGainControl property is a Boolean value whose value indicates whether or not automatic gain control (AGC) is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.autoGainControl property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}

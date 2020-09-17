@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.frameRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/frameRate",
+    "description": "The MediaTrackConstraints dictionary's frameRate property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the frameRate constrainable property."
+}

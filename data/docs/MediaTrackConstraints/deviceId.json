@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.deviceId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/deviceId",
+    "description": "The MediaTrackConstraints dictionary's deviceId property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the deviceId constrainable property."
+}

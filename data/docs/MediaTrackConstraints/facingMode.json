@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.facingMode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode",
+    "description": "The MediaTrackConstraints dictionary's facingMode property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the facingMode constrainable property."
+}

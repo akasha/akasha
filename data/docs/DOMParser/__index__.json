@@ -1,8 +1,12 @@
 
 {
     "name": "DOMParser",
-    "lastModifiedAt": 1599388996711,
+    "lastModifiedAt": 1600303661541,
     "entries": [
+        {
+            "name": "DOMParser",
+            "lastModifiedAt": 1600303661541
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1596581165742

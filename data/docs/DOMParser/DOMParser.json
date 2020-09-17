@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DOMParser.DOMParser",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMParser/DOMParser",
+    "description": "The DOMParser() constructor creates a new DOMParser object."
+}

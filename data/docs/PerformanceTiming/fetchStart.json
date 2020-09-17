@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.fetchStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/fetchStart",
+    "description": "The legacy PerformanceTiming.fetchStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, the browser is ready to fetch the document using an HTTP request. This moment is before the check to any application cache."
+}

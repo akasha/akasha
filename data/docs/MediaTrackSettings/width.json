@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/width",
+    "description": "The MediaTrackSettings dictionary's width property is an integer indicating the number of pixels wide MediaStreamTrack is currently configured to be. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.width property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}

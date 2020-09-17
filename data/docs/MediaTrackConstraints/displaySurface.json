@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.displaySurface",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/displaySurface",
+    "description": "The MediaTrackConstraints dictionary's displaySurface property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the displaySurface constrainable property."
+}

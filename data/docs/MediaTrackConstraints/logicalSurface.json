@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.logicalSurface",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/logicalSurface",
+    "description": "The MediaTrackConstraints dictionary's logicalSurface property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the logicalSurface constrainable property."
+}

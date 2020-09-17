@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.deviceId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/deviceId",
+    "description": "The MediaTrackSettings dictionary's deviceId property is a DOMString which uniquely identifies the source for the corresponding MediaStreamTrack for the origin corresponding to the browsing session. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.deviceId property you provided when calling either getUserMedia()."
+}

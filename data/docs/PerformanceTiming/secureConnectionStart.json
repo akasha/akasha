@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.secureConnectionStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart",
+    "description": "The legacy PerformanceTiming.secureConnectionStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, where the secure connection handshake starts. If no such connection is requested, it returns 0."
+}

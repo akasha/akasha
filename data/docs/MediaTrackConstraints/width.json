@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackConstraints.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/width",
+    "description": "The MediaTrackConstraints dictionary's width property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the width constrainable property."
+}

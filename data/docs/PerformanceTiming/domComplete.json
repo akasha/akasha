@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.domComplete",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domComplete",
+    "description": "The legacy PerformanceTiming.domComplete read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the parser finished its work on the main document, that is when its Document.readyState changes to 'complete' and the corresponding readystatechange event is thrown."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.displaySurface",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/displaySurface",
+    "description": "The MediaTrackSettings dictionary's displaySurface property indicates the type of display surface being captured."
+}

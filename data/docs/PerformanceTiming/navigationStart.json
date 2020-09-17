@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PerformanceTiming.navigationStart",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/navigationStart",
+    "description": "The legacy PerformanceTiming.navigationStart read-only property returns an unsigned long long representing the moment, in milliseconds since the UNIX epoch, right after the prompt for unload terminates on the previous document in the same browsing context. If there is no previous document, this value will be the same as PerformanceTiming.fetchStart."
+}

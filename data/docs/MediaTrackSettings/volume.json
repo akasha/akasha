@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.volume",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/volume",
+    "description": "The MediaTrackSettings dictionary's volume property is a double-precision floating-point number indicating the volume of the MediaStreamTrack as currently configured, as a value from 0.0 (silence) to 1.0 (maximum supported volume for the device). This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.volume property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}

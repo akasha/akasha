@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSettings.sampleSize",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/sampleSize",
+    "description": "The MediaTrackSettings dictionary's sampleSize property is an integer indicating the linear sample size (in bits per sample) the MediaStreamTrack is currently configured for. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.sampleSize property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+}
