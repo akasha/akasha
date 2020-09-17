@@ -1,0 +1,23 @@
+
+{
+    "name": "CSS",
+    "lastModifiedAt": 1600324151971,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1600324150529
+        },
+        {
+            "name": "escape",
+            "lastModifiedAt": 1600324151048
+        },
+        {
+            "name": "registerProperty",
+            "lastModifiedAt": 1600324151436
+        },
+        {
+            "name": "supports",
+            "lastModifiedAt": 1600324151961
+        }
+    ]
+}

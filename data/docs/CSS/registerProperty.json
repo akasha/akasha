@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSS.registerProperty",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSS/registerProperty",
+    "description": "The CSS.registerProperty() method registers custom properties, allowing for property type checking, default values, and properties that do or do not inherit their value."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "CSS.escape",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape",
+    "description": "The CSS.escape() static method returns a CSSOMString containing the escaped string passed as parameter, mostly for use as part of a CSS selector."
+}

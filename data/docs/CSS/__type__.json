@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CSS",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSS",
+    "description": "The CSS interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface."
+}
