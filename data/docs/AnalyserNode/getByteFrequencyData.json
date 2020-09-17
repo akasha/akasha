@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AnalyserNode.getByteFrequencyData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData",
+    "description": "The getByteFrequencyData() method of the AnalyserNode interface copies the current frequency data into a Uint8Array (unsigned byte array) passed into it."
+}

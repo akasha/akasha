@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AbstractWorker.onerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractWorker/onerror",
+    "description": "The AbstractWorker.onerror property of the AbstractWorker interface represents an EventHandler, that is a function to be called when the error event occurs and bubbles through the Worker."
+}

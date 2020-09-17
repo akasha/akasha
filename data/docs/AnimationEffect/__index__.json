@@ -1,11 +1,23 @@
 
 {
     "name": "AnimationEffect",
-    "lastModifiedAt": 1599391592414,
+    "lastModifiedAt": 1600308038533,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1599391592414
+        },
+        {
+            "name": "getComputedTiming",
+            "lastModifiedAt": 1600308037981
+        },
+        {
+            "name": "getTiming",
+            "lastModifiedAt": 1600308038288
+        },
+        {
+            "name": "updateTiming",
+            "lastModifiedAt": 1600308038533
         }
     ]
 }

@@ -1,11 +1,23 @@
 
 {
     "name": "ANGLE_instanced_arrays",
-    "lastModifiedAt": 1599391302475,
+    "lastModifiedAt": 1600308028390,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192693936
+        },
+        {
+            "name": "drawArraysInstancedANGLE",
+            "lastModifiedAt": 1600308025825
+        },
+        {
+            "name": "drawElementsInstancedANGLE",
+            "lastModifiedAt": 1600308026663
+        },
+        {
+            "name": "vertexAttribDivisorANGLE",
+            "lastModifiedAt": 1600308028390
         }
     ]
 }

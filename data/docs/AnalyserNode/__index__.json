@@ -1,7 +1,7 @@
 
 {
     "name": "AnalyserNode",
-    "lastModifiedAt": 1599391688581,
+    "lastModifiedAt": 1600308037107,
     "entries": [
         {
             "name": "AnalyserNode",
@@ -20,8 +20,20 @@
             "lastModifiedAt": 1597192552030
         },
         {
+            "name": "getByteFrequencyData",
+            "lastModifiedAt": 1600308036129
+        },
+        {
+            "name": "getByteTimeDomainData",
+            "lastModifiedAt": 1600308036378
+        },
+        {
             "name": "getFloatFrequencyData",
             "lastModifiedAt": 1597192553566
+        },
+        {
+            "name": "getFloatTimeDomainData",
+            "lastModifiedAt": 1600308037107
         },
         {
             "name": "maxDecibels",

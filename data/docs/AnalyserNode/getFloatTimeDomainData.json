@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AnalyserNode.getFloatTimeDomainData",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getFloatTimeDomainData",
+    "description": "The getFloatTimeDomainData() method of the AnalyserNode Interface copies the current waveform, or time-domain, data into a Float32Array array passed into it."
+}

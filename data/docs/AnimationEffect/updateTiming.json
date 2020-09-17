@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "AnimationEffect.updateTiming",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/updateTiming",
+    "description": "The updateTiming() method of the AnimationEffect interface updates the specified timing properties for an animation effect."
+}
