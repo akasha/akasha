@@ -1,11 +1,35 @@
 
 {
     "name": "HTMLBodyElement",
-    "lastModifiedAt": 1599390214904,
+    "lastModifiedAt": 1600306208781,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597193008231
+        },
+        {
+            "name": "onafterprint",
+            "lastModifiedAt": 1600306204059
+        },
+        {
+            "name": "onbeforeunload",
+            "lastModifiedAt": 1600306204914
+        },
+        {
+            "name": "onhashchange",
+            "lastModifiedAt": 1600306205490
+        },
+        {
+            "name": "onlanguagechange",
+            "lastModifiedAt": 1600306206020
+        },
+        {
+            "name": "onpopstate",
+            "lastModifiedAt": 1600306207143
+        },
+        {
+            "name": "onunload",
+            "lastModifiedAt": 1600306208781
         }
     ]
 }

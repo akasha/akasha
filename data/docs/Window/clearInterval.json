@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Window.clearInterval",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval",
+    "description": "The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval()."
+}

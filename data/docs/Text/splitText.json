@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Text.splitText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Text/splitText",
+    "description": "The Text.splitText() method breaks the Text node into two nodes at the specified offset, keeping both nodes in the tree as siblings."
+}

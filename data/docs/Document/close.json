@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.close",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/close",
+    "description": "The Document.close() method finishes writing to a document, opened with Document.open()."
+}

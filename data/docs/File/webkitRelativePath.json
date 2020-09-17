@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "File.webkitRelativePath",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/webkitRelativePath",
+    "description": "The File.webkitRelativePath is a read-only property that contains a USVString which specifies the file's path relative to the directory selected by the user in an input element with its webkitdirectory attribute set."
+}

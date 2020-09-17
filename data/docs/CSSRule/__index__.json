@@ -1,11 +1,19 @@
 
 {
     "name": "CSSRule",
-    "lastModifiedAt": 1599390187745,
+    "lastModifiedAt": 1600306179984,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597190648432
+        },
+        {
+            "name": "cssText",
+            "lastModifiedAt": 1600306179738
+        },
+        {
+            "name": "parentStyleSheet",
+            "lastModifiedAt": 1600306179984
         }
     ]
 }

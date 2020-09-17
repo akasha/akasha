@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Animation.play",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/play",
+    "description": "The play() method of the Web Animations API's Animation Interface starts or resumes playing of an animation. If the animation is finished, calling play() restarts the animation, playing it from the beginning."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.innerHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight",
+    "description": "The read-only innerHeight property of the Window interface returns the interior height of the window in pixels, including the height of the horizontal scroll bar, if present."
+}

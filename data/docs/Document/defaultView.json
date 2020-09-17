@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.defaultView",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView",
+    "description": "In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
+}

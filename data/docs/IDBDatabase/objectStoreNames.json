@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBDatabase.objectStoreNames",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames",
+    "description": "A DOMStringList containing a list of the names of the object stores currently in the connected database."
+}

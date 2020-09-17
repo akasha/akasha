@@ -1,7 +1,7 @@
 
 {
     "name": "Animation",
-    "lastModifiedAt": 1599389851498,
+    "lastModifiedAt": 1600305893045,
     "entries": [
         {
             "name": "Animation",
@@ -16,8 +16,88 @@
             "lastModifiedAt": 1597192517009
         },
         {
+            "name": "commitStyles",
+            "lastModifiedAt": 1600305890674
+        },
+        {
             "name": "currentTime",
             "lastModifiedAt": 1599279571517
+        },
+        {
+            "name": "effect",
+            "lastModifiedAt": 1600305884293
+        },
+        {
+            "name": "finish",
+            "lastModifiedAt": 1600305890917
+        },
+        {
+            "name": "finished",
+            "lastModifiedAt": 1600305884552
+        },
+        {
+            "name": "id",
+            "lastModifiedAt": 1600305885100
+        },
+        {
+            "name": "oncancel",
+            "lastModifiedAt": 1600305885342
+        },
+        {
+            "name": "onfinish",
+            "lastModifiedAt": 1600305885592
+        },
+        {
+            "name": "onremove",
+            "lastModifiedAt": 1600305885987
+        },
+        {
+            "name": "pause",
+            "lastModifiedAt": 1600305891163
+        },
+        {
+            "name": "pending",
+            "lastModifiedAt": 1600305886787
+        },
+        {
+            "name": "persist",
+            "lastModifiedAt": 1600305891553
+        },
+        {
+            "name": "play",
+            "lastModifiedAt": 1600305892496
+        },
+        {
+            "name": "playState",
+            "lastModifiedAt": 1600305887973
+        },
+        {
+            "name": "playbackRate",
+            "lastModifiedAt": 1600305887596
+        },
+        {
+            "name": "ready",
+            "lastModifiedAt": 1600305888235
+        },
+        {
+            "name": "replaceState",
+            "lastModifiedAt": 1600305888480
+        },
+        {
+            "name": "reverse",
+            "lastModifiedAt": 1600305892793
+        },
+        {
+            "name": "startTime",
+            "lastModifiedAt": 1600305888726
+        },
+        {
+            "name": "timeline",
+            "lastModifiedAt": 1600305888987
+        },
+        {
+            "name": "updatePlaybackRate",
+            "lastModifiedAt": 1600305893045
         }
     ]
 }

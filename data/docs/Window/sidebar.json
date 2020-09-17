@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.sidebar",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/sidebar",
+    "description": "Returns a sidebar object which contains several methods for registering add-ons with the browser."
+}

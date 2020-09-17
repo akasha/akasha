@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Window.releaseEvents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/releaseEvents",
+    "description": "Releases the window from trapping events of a specific type."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "DocumentOrShadowRoot.msElementsFromRect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect",
+    "description": "The msElementsFromRect method returns the node list of elements that are under a rectangle defined by left, top, width, and height."
+}

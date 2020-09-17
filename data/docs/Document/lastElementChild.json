@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.lastElementChild",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/lastElementChild",
+    "description": "The ParentNode.lastElementChild read-only property returns the object's last child Element or null if there are no child elements."
+}

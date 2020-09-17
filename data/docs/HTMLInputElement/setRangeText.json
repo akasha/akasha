@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.setRangeText",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText",
+    "description": "The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string."
+}

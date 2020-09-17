@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "WorkerNavigator.appVersion",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appVersion",
+    "description": "Returns either &quot;4.0&quot; or a string representing version information about the browser."
+}

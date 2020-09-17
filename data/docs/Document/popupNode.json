@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.popupNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/popupNode",
+    "description": "When a popup attached via the popup or context attributes is opened, the XUL document's popupNode property is set to the node that was clicked on. This will be the target of the mouse event that activated the popup. If the popup was opened via the keyboard, the popup node may be set to null. Typically, this property will be checked during a popupshowing event handler for a context menu to initialize the menu based on the context."
+}

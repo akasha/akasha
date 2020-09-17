@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.caches",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/caches",
+    "description": "The caches read-only property of the WindowOrWorkerGlobalScope interface returns the CacheStorage object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "SVGElement.oncontextmenu",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/oncontextmenu",
+    "description": "The oncontextmenu property of the GlobalEventHandlers mixin is an EventHandler that processes contextmenu events."
+}

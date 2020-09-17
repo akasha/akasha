@@ -1,7 +1,7 @@
 
 {
     "name": "IDBVersionChangeEvent",
-    "lastModifiedAt": 1599390453796,
+    "lastModifiedAt": 1600306467032,
     "entries": [
         {
             "name": "__type__",
@@ -14,6 +14,10 @@
         {
             "name": "oldVersion",
             "lastModifiedAt": 1599280163864
+        },
+        {
+            "name": "version",
+            "lastModifiedAt": 1600306466884
         }
     ]
 }

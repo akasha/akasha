@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.playState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/playState",
+    "description": "The Animation.playState property of the Web Animations API returns and sets an enumerated value describing the playback state of an animation."
+}

@@ -1,7 +1,7 @@
 
 {
     "name": "KeyframeEffect",
-    "lastModifiedAt": 1599390425290,
+    "lastModifiedAt": 1600306436589,
     "entries": [
         {
             "name": "KeyframeEffect",
@@ -22,6 +22,10 @@
         {
             "name": "iterationComposite",
             "lastModifiedAt": 1597192519606
+        },
+        {
+            "name": "setKeyframes",
+            "lastModifiedAt": 1600306436589
         },
         {
             "name": "target",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.screenX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/screenX",
+    "description": "The Window.screenX read-only property returns the horizontal distance, in CSS pixels, of the left border of the user's browser viewport to the left side of the screen."
+}

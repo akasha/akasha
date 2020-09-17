@@ -1,11 +1,15 @@
 
 {
     "name": "HTMLTextAreaElement",
-    "lastModifiedAt": 1599390130236,
+    "lastModifiedAt": 1600306126696,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1596581519589
+        },
+        {
+            "name": "labels",
+            "lastModifiedAt": 1600306126696
         }
     ]
 }

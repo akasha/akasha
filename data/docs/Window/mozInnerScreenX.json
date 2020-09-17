@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.mozInnerScreenX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/mozInnerScreenX",
+    "description": "Gets the X coordinate of the top-left corner of the window's viewport, in screen coordinates."
+}

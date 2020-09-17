@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorker.onstatechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/onstatechange",
+    "description": "An EventListener property called whenever an event of type statechange is fired; it is basically fired anytime the ServiceWorker.state changes."
+}

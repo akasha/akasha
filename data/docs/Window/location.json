@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.location",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/location",
+    "description": "The Window.location read-only property returns a Location object with information about the current location of the document."
+}

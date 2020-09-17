@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.URL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/URL",
+    "description": "The URL read-only property of the Document interface returns the document location as a string."
+}

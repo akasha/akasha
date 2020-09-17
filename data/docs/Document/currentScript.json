@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.currentScript",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript",
+    "description": "The Document.currentScript property returns the script element whose script is currently being processed and isn't a JavaScript module. (For modules use import.meta instead.)"
+}

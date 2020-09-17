@@ -1,7 +1,7 @@
 
 {
     "name": "RTCDataChannel",
-    "lastModifiedAt": 1599390527136,
+    "lastModifiedAt": 1600306547824,
     "entries": [
         {
             "name": "__type__",
@@ -66,6 +66,10 @@
         {
             "name": "onclose",
             "lastModifiedAt": 1596544580628
+        },
+        {
+            "name": "onclosing",
+            "lastModifiedAt": 1600306538970
         },
         {
             "name": "onerror",

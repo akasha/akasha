@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "KeyframeEffect.setKeyframes",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/setKeyframes",
+    "description": "The setKeyframes() method of the KeyframeEffect interface replaces the keyframes that make up the affected KeyframeEffect with a new set of keyframes."
+}

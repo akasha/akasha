@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.charCode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/charCode",
+    "description": "The charCode read-only property of the KeyboardEvent interface returns the Unicode value of a character key pressed during a keypress event."
+}

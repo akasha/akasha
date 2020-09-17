@@ -1,11 +1,15 @@
 
 {
     "name": "VideoPlaybackQuality",
-    "lastModifiedAt": 1599390005366,
+    "lastModifiedAt": 1600306014776,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597754304919
+        },
+        {
+            "name": "corruptedVideoFrames",
+            "lastModifiedAt": 1600306012875
         },
         {
             "name": "creationTime",

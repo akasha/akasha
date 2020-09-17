@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.title",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/title",
+    "description": "The document.title property gets or sets the current title of the document."
+}

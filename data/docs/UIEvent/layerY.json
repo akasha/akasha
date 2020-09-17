@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "UIEvent.layerY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/layerY",
+    "description": "The UIEvent.layerY read-only property returns the vertical coordinate of the event relative to the current layer."
+}

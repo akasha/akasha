@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBDatabase.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/name",
+    "description": "A DOMString containing the name of the connected database."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.oncancel",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/oncancel",
+    "description": "The oncancel property of the Web Animations API's Animation interface is the event handler for the cancel event."
+}

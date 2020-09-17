@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLInputElement.webkitEntries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitEntries",
+    "description": "The read-only webkitEntries property of the HTMLInputElement interface contains an array of file system entries (as objects based on FileSystemEntry) representing files and/or directories selected by the user using an input element of type file, but only if that selection was made using drag-and-drop: selecting a file in the dialog will leave the property empty (bug"
+}

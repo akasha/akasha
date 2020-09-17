@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLBodyElement.onbeforeunload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onbeforeunload",
+    "description": "The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable."
+}

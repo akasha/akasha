@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.navigator",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator",
+    "description": "The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script."
+}

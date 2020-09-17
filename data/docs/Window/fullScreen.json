@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.fullScreen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/fullScreen",
+    "description": "The fullScreen property of the Window interface indicates whether the window is displayed in full screen mode or not."
+}

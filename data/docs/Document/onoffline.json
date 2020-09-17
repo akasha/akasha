@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onoffline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onoffline",
+    "description": "The Document.onoffline event handler is called when an offline is fired on the body element and bubbles up, when navigator.onLine property changes and becomes false."
+}

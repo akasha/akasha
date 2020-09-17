@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.applicationCache",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/applicationCache",
+    "description": "Returns a reference to the application cache object for the window."
+}

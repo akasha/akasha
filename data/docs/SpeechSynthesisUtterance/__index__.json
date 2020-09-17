@@ -1,8 +1,12 @@
 
 {
     "name": "SpeechSynthesisUtterance",
-    "lastModifiedAt": 1599390095416,
+    "lastModifiedAt": 1600306099760,
     "entries": [
+        {
+            "name": "SpeechSynthesisUtterance",
+            "lastModifiedAt": 1600306086382
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192356566

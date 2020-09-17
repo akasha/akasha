@@ -1,11 +1,15 @@
 
 {
     "name": "RTCDTMFSender",
-    "lastModifiedAt": 1599389933608,
+    "lastModifiedAt": 1600305959148,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192840659
+        },
+        {
+            "name": "insertDTMF",
+            "lastModifiedAt": 1600305958605
         },
         {
             "name": "ontonechange",

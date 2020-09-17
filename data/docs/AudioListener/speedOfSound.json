@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioListener.speedOfSound",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/speedOfSound",
+    "description": "The speedOfSound property of the AudioListener interface is a double value representing the speed of sound, in meters per second."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Window.clearTimeout",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearTimeout",
+    "description": "The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout()."
+}

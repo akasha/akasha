@@ -1,7 +1,7 @@
 
 {
     "name": "Node",
-    "lastModifiedAt": 1599390254519,
+    "lastModifiedAt": 1600306244719,
     "entries": [
         {
             "name": "__type__",
@@ -98,6 +98,10 @@
         {
             "name": "normalize",
             "lastModifiedAt": 1599279965553
+        },
+        {
+            "name": "outerText",
+            "lastModifiedAt": 1600306231032
         },
         {
             "name": "ownerDocument",

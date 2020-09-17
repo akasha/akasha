@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.document",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/document",
+    "description": "window.document returns a reference to the document contained in the window."
+}

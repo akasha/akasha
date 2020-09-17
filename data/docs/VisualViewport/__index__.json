@@ -1,7 +1,7 @@
 
 {
     "name": "VisualViewport",
-    "lastModifiedAt": 1599389772033,
+    "lastModifiedAt": 1600305803756,
     "entries": [
         {
             "name": "__type__",
@@ -18,6 +18,10 @@
         {
             "name": "offsetTop",
             "lastModifiedAt": 1597755216889
+        },
+        {
+            "name": "offsetleft",
+            "lastModifiedAt": 0
         },
         {
             "name": "onresize",

@@ -1,7 +1,7 @@
 
 {
     "name": "ServiceWorkerRegistration",
-    "lastModifiedAt": 1599389782293,
+    "lastModifiedAt": 1600305814745,
     "entries": [
         {
             "name": "__type__",
@@ -26,6 +26,14 @@
         {
             "name": "navigationPreload",
             "lastModifiedAt": 1597190522106
+        },
+        {
+            "name": "onupdatefound",
+            "lastModifiedAt": 1600305808626
+        },
+        {
+            "name": "periodicSync",
+            "lastModifiedAt": 1600305808876
         },
         {
             "name": "pushManager",

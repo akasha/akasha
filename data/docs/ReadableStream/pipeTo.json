@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReadableStream.pipeTo",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeTo",
+    "description": "The pipeTo() method of the ReadableStream interface pipes the current ReadableStream to a given WritableStream and returns a promise that fulfills when the piping process completes successfully, or rejects if any errors were encountered."
+}

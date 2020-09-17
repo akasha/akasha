@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.length",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/length",
+    "description": "Returns the number of frames (either frame or iframe elements) in the window."
+}

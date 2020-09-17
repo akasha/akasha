@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.battery",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/battery",
+    "description": "The battery read-only property returns a BatteryManager which provides information about the system's battery charge level and whether the device is charging and exposes events that fire when these parameters change. This interface was introduced in early drafts of the Battery Status API and but has been replaced with Promise-based Navigator.getBattery()."
+}

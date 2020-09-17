@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.toolbar",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar",
+    "description": "The Window.toolbar property returns the toolbar object, whose visibility can be toggled in the window."
+}

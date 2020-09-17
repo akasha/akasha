@@ -1,7 +1,7 @@
 
 {
     "name": "ServiceWorkerGlobalScope",
-    "lastModifiedAt": 1599389741255,
+    "lastModifiedAt": 1600305776678,
     "entries": [
         {
             "name": "__type__",
@@ -44,6 +44,10 @@
             "lastModifiedAt": 1599278018160
         },
         {
+            "name": "onfetch",
+            "lastModifiedAt": 1600305765457
+        },
+        {
             "name": "oninstall",
             "lastModifiedAt": 1597190531459
         },
@@ -54,6 +58,10 @@
         {
             "name": "onnotificationclick",
             "lastModifiedAt": 1597190532566
+        },
+        {
+            "name": "onnotificationclose",
+            "lastModifiedAt": 1600305767310
         },
         {
             "name": "onpush",

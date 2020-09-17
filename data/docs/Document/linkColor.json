@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.linkColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/linkColor",
+    "description": "The Document.linkColor property gets/sets the color of links within the document."
+}

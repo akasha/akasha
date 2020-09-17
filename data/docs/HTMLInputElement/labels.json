@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLInputElement.labels",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/labels",
+    "description": "The HTMLInputElement.labels read-only property returns a NodeList of the label elements associated with the input element."
+}

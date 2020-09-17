@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.vlinkColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/vlinkColor",
+    "description": "The Document.vlinkColor property gets/sets the color of links that the user has visited in the document."
+}

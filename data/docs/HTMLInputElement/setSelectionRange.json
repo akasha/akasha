@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.setSelectionRange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange",
+    "description": "The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element."
+}

@@ -1,7 +1,7 @@
 
 {
     "name": "KeyboardEvent",
-    "lastModifiedAt": 1599390263613,
+    "lastModifiedAt": 1600306256223,
     "entries": [
         {
             "name": "KeyboardEvent",
@@ -16,6 +16,10 @@
             "lastModifiedAt": 1597192486088
         },
         {
+            "name": "charCode",
+            "lastModifiedAt": 1600306247330
+        },
+        {
             "name": "code",
             "lastModifiedAt": 1597192486356
         },
@@ -28,12 +32,28 @@
             "lastModifiedAt": 1599279976928
         },
         {
+            "name": "initKeyEvent",
+            "lastModifiedAt": 1600306255438
+        },
+        {
+            "name": "initKeyboardEvent",
+            "lastModifiedAt": 1600306256223
+        },
+        {
             "name": "isComposing",
             "lastModifiedAt": 1597192487001
         },
         {
             "name": "key",
             "lastModifiedAt": 1597192487427
+        },
+        {
+            "name": "keyCode",
+            "lastModifiedAt": 1600306249929
+        },
+        {
+            "name": "keyIdentifier",
+            "lastModifiedAt": 1600306250195
         },
         {
             "name": "location",
@@ -50,6 +70,10 @@
         {
             "name": "shiftKey",
             "lastModifiedAt": 1597192488947
+        },
+        {
+            "name": "which",
+            "lastModifiedAt": 1600306252747
         }
     ]
 }

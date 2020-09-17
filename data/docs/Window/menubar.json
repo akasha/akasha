@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.menubar",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/menubar",
+    "description": "The Window.menubar property returns the menubar object, whose visibility can be checked."
+}

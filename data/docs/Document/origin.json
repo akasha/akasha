@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.origin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/origin",
+    "description": "The Document.origin read-only property returns the document's origin. In most cases, this property is equivalent to document.defaultView.location.origin."
+}

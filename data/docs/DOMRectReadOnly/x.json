@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMRectReadOnly.x",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/x",
+    "description": "The x read-only property of the DOMRectReadOnly interface represents the x coordinate of the DOMRect's origin."
+}

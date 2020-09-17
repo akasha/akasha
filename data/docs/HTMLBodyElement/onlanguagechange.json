@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLBodyElement.onlanguagechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onlanguagechange",
+    "description": "The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events."
+}

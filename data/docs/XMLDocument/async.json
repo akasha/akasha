@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XMLDocument.async",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLDocument/async",
+    "description": "document.async can be set to indicate whether a XMLDocument.load() call should be an asynchronous or synchronous request. true is the default value, indicating that documents should be loaded asynchronously."
+}

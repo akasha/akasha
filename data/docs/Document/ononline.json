@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.ononline",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/ononline",
+    "description": "The Document.online event is fired on the body of each page when the browser switches between online and offline mode. Additionally, the events bubble up from document.body, to document, ending at window. Both events are non-cancellable (you can't prevent the user from coming online, or going offline)."
+}

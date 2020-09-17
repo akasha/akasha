@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onclick",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onclick",
+    "description": "The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element."
+}

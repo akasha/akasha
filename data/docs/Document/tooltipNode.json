@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.tooltipNode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/tooltipNode",
+    "description": "The Document.tooltipNode property returns the node which is the target of the current xul:tooltip."
+}

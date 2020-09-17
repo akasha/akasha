@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.isSecureContext",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/isSecureContext",
+    "description": "The window.isSecureContext read-only property indicates whether a context is capable of using features that require secure contexts."
+}

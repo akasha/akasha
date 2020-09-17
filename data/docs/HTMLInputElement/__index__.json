@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLInputElement",
-    "lastModifiedAt": 1599390229044,
+    "lastModifiedAt": 1600306224425,
     "entries": [
         {
             "name": "__type__",
@@ -12,8 +12,52 @@
             "lastModifiedAt": 1597358676624
         },
         {
+            "name": "labels",
+            "lastModifiedAt": 1600306220516
+        },
+        {
+            "name": "mozGetFileNameArray",
+            "lastModifiedAt": 1600306221538
+        },
+        {
+            "name": "mozSetFileNameArray",
+            "lastModifiedAt": 1600306221772
+        },
+        {
+            "name": "multiple",
+            "lastModifiedAt": 1600306220779
+        },
+        {
             "name": "search_event",
             "lastModifiedAt": 1599279942343
+        },
+        {
+            "name": "select",
+            "lastModifiedAt": 1600306222042
+        },
+        {
+            "name": "setRangeText",
+            "lastModifiedAt": 1600306222290
+        },
+        {
+            "name": "setSelectionRange",
+            "lastModifiedAt": 1600306222533
+        },
+        {
+            "name": "stepDown",
+            "lastModifiedAt": 1600306222785
+        },
+        {
+            "name": "stepUp",
+            "lastModifiedAt": 1600306223042
+        },
+        {
+            "name": "webkitEntries",
+            "lastModifiedAt": 1600306221290
+        },
+        {
+            "name": "webkitdirectory",
+            "lastModifiedAt": 1600306221043
         }
     ]
 }

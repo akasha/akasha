@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Window.captureEvents",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/captureEvents",
+    "description": "The Window.captureEvents() method registers the window to capture all events of the specified type."
+}

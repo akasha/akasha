@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "MediaTrackSupportedConstraints.cursor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/cursor",
+    "description": "The MediaTrackSupportedConstraints dictionary's cursor property indicates whether or not the cursor constraint is supported by the user agent and the device on which the content is being used."
+}

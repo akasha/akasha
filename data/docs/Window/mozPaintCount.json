@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.mozPaintCount",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/mozPaintCount",
+    "description": "Returns the number of times the current document has been painted to the screen in this window."
+}

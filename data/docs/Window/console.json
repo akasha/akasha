@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.console",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/console",
+    "description": "The Window.console property returns a reference to the Console object, which provides methods for logging information to the browser's console. These methods are intended for debugging purposes only and should not be relied on for presenting information to end users."
+}

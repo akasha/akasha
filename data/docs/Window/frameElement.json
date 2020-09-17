@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.frameElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement",
+    "description": "The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded."
+}

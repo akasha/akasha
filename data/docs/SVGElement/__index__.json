@@ -1,7 +1,7 @@
 
 {
     "name": "SVGElement",
-    "lastModifiedAt": 1599390504722,
+    "lastModifiedAt": 1600306528383,
     "entries": [
         {
             "name": "__type__",
@@ -22,6 +22,94 @@
         {
             "name": "load_event",
             "lastModifiedAt": 1597358932472
+        },
+        {
+            "name": "onabort",
+            "lastModifiedAt": 1600306498967
+        },
+        {
+            "name": "onblur",
+            "lastModifiedAt": 1600306500681
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1600306502329
+        },
+        {
+            "name": "onclick",
+            "lastModifiedAt": 1600306502684
+        },
+        {
+            "name": "oncontextmenu",
+            "lastModifiedAt": 1600306503333
+        },
+        {
+            "name": "ondblclick",
+            "lastModifiedAt": 1600306503993
+        },
+        {
+            "name": "onfocus",
+            "lastModifiedAt": 1600306505293
+        },
+        {
+            "name": "oninput",
+            "lastModifiedAt": 1600306506671
+        },
+        {
+            "name": "onkeydown",
+            "lastModifiedAt": 1600306507693
+        },
+        {
+            "name": "onkeypress",
+            "lastModifiedAt": 1600306508362
+        },
+        {
+            "name": "onkeyup",
+            "lastModifiedAt": 1600306508727
+        },
+        {
+            "name": "onload",
+            "lastModifiedAt": 1600306509099
+        },
+        {
+            "name": "onmousedown",
+            "lastModifiedAt": 1600306511411
+        },
+        {
+            "name": "onmousemove",
+            "lastModifiedAt": 1600306513016
+        },
+        {
+            "name": "onmouseout",
+            "lastModifiedAt": 1600306513934
+        },
+        {
+            "name": "onmouseover",
+            "lastModifiedAt": 1600306514751
+        },
+        {
+            "name": "onmouseup",
+            "lastModifiedAt": 1600306515123
+        },
+        {
+            "name": "onreset",
+            "lastModifiedAt": 1600306519834
+        },
+        {
+            "name": "onresize",
+            "lastModifiedAt": 1600306520203
+        },
+        {
+            "name": "onscroll",
+            "lastModifiedAt": 1600306520571
+        },
+        {
+            "name": "onselect",
+            "lastModifiedAt": 1600306520932
+        },
+        {
+            "name": "onsubmit",
+            "lastModifiedAt": 1600306521874
         },
         {
             "name": "resize_event",

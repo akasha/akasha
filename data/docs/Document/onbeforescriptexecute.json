@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onbeforescriptexecute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onbeforescriptexecute",
+    "description": "Fired when the code in a script element declared in an HTML document is about to start executing. Does not fire if the element is added dynamically, eg with appendChild()."
+}

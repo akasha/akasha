@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "File.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/name",
+    "description": "Returns the name of the file represented by a File object. For security reasons, the path is excluded from this property."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.all",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/all",
+    "description": "The Document interface's read-only all property returns an HTMLAllCollection rooted at the document node. In other words, it returns all of the document's elements, accessible by order (like an array) and by ID (like a regular object)."
+}

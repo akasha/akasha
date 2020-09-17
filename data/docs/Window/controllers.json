@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.controllers",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/controllers",
+    "description": "The controllers property of the Window interface returns the XUL controllers of the chrome window."
+}

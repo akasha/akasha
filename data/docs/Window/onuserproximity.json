@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onuserproximity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onuserproximity",
+    "description": "The Window.onuserproxymity property represents an EventHandler, that is a function to be called when the userproximity event occurs. These events are of type UserProximityEvent and occur when the the device sensor detects that an object becomes nearby."
+}

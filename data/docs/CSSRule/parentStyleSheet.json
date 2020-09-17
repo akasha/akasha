@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "CSSRule.parentStyleSheet",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/parentStyleSheet",
+    "description": "The parentStyleSheet property of the CSSRule interface returns the StyleSheet object in which the current rule is defined."
+}

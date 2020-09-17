@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "UIEvent.detail",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail",
+    "description": "The UIEvent.detail read-only property, when non-zero, provides the current (or next, depending on the event) click count."
+}

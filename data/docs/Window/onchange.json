@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onchange",
+    "description": "The onchange property of the GlobalEventHandlers mixin is an EventHandler for processing change events."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.referrer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/referrer",
+    "description": "The Document.referrer property returns the URI of the page that linked to this page."
+}

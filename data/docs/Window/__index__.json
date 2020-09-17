@@ -1,7 +1,7 @@
 
 {
     "name": "Window",
-    "lastModifiedAt": 1599390654979,
+    "lastModifiedAt": 1600306722132,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -44,6 +44,14 @@
             "lastModifiedAt": 1597359055151
         },
         {
+            "name": "applicationCache",
+            "lastModifiedAt": 1600306577054
+        },
+        {
+            "name": "atob",
+            "lastModifiedAt": 1600306650316
+        },
+        {
             "name": "beforeprint_event",
             "lastModifiedAt": 1597359060262
         },
@@ -60,6 +68,14 @@
             "lastModifiedAt": 1597359043921
         },
         {
+            "name": "btoa",
+            "lastModifiedAt": 1600306651748
+        },
+        {
+            "name": "caches",
+            "lastModifiedAt": 1600306577666
+        },
+        {
             "name": "cancelAnimationFrame",
             "lastModifiedAt": 1596581245740
         },
@@ -68,8 +84,20 @@
             "lastModifiedAt": 1596581246685
         },
         {
+            "name": "captureEvents",
+            "lastModifiedAt": 1600306653404
+        },
+        {
             "name": "clearImmediate",
             "lastModifiedAt": 1596581248080
+        },
+        {
+            "name": "clearInterval",
+            "lastModifiedAt": 1600306655102
+        },
+        {
+            "name": "clearTimeout",
+            "lastModifiedAt": 1600306655970
         },
         {
             "name": "clipboardchange_event",
@@ -80,16 +108,48 @@
             "lastModifiedAt": 1596581249921
         },
         {
+            "name": "closed",
+            "lastModifiedAt": 1600306578071
+        },
+        {
             "name": "confirm",
             "lastModifiedAt": 1596581251254
+        },
+        {
+            "name": "console",
+            "lastModifiedAt": 1600306579035
+        },
+        {
+            "name": "controllers",
+            "lastModifiedAt": 1600306579338
+        },
+        {
+            "name": "convertPointFromNodeToPage",
+            "lastModifiedAt": 1600306657909
+        },
+        {
+            "name": "convertPointFromPageToNode",
+            "lastModifiedAt": 1600306658234
         },
         {
             "name": "copy_event",
             "lastModifiedAt": 1597359038743
         },
         {
+            "name": "crypto",
+            "lastModifiedAt": 1600306579999
+        },
+        {
+            "name": "customElements",
+            "lastModifiedAt": 1600306580298
+        },
+        {
             "name": "cut_event",
             "lastModifiedAt": 1599280318515
+        },
+        {
+            "name": "devicePixelRatio",
+            "lastModifiedAt": 1600306580597
         },
         {
             "name": "devicemotion_event",
@@ -100,12 +160,28 @@
             "lastModifiedAt": 1597359031592
         },
         {
+            "name": "dialogArguments",
+            "lastModifiedAt": 1600306580872
+        },
+        {
+            "name": "document",
+            "lastModifiedAt": 1600306581277
+        },
+        {
             "name": "dump",
             "lastModifiedAt": 1596581251984
         },
         {
             "name": "error_event",
             "lastModifiedAt": 1599280306146
+        },
+        {
+            "name": "event",
+            "lastModifiedAt": 1600306581594
+        },
+        {
+            "name": "fetch",
+            "lastModifiedAt": 1600306660249
         },
         {
             "name": "find",
@@ -120,12 +196,28 @@
             "lastModifiedAt": 1597359044656
         },
         {
+            "name": "frameElement",
+            "lastModifiedAt": 1600306581929
+        },
+        {
+            "name": "frames",
+            "lastModifiedAt": 1600306582209
+        },
+        {
+            "name": "fullScreen",
+            "lastModifiedAt": 1600306582529
+        },
+        {
             "name": "gamepadconnected_event",
             "lastModifiedAt": 1597359046010
         },
         {
             "name": "gamepaddisconnected_event",
             "lastModifiedAt": 1597359046705
+        },
+        {
+            "name": "getAttention",
+            "lastModifiedAt": 1600306662450
         },
         {
             "name": "getComputedStyle",
@@ -144,16 +236,56 @@
             "lastModifiedAt": 1597359047465
         },
         {
+            "name": "history",
+            "lastModifiedAt": 1600306582853
+        },
+        {
+            "name": "indexedDB",
+            "lastModifiedAt": 1600306583714
+        },
+        {
+            "name": "innerHeight",
+            "lastModifiedAt": 1600306584040
+        },
+        {
+            "name": "innerWidth",
+            "lastModifiedAt": 1600306584384
+        },
+        {
+            "name": "isSecureContext",
+            "lastModifiedAt": 1600306584822
+        },
+        {
             "name": "languagechange_event",
             "lastModifiedAt": 1597359028305
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1600306585193
         },
         {
             "name": "load_event",
             "lastModifiedAt": 1597359053120
         },
         {
+            "name": "localStorage",
+            "lastModifiedAt": 1600306585492
+        },
+        {
+            "name": "location",
+            "lastModifiedAt": 1600306585798
+        },
+        {
+            "name": "locationbar",
+            "lastModifiedAt": 1600306586084
+        },
+        {
             "name": "matchMedia",
             "lastModifiedAt": 1599280283502
+        },
+        {
+            "name": "menubar",
+            "lastModifiedAt": 1600306586370
         },
         {
             "name": "message_event",
@@ -176,8 +308,36 @@
             "lastModifiedAt": 1596581262247
         },
         {
+            "name": "mozInnerScreenX",
+            "lastModifiedAt": 1600306586844
+        },
+        {
+            "name": "mozInnerScreenY",
+            "lastModifiedAt": 1600306587305
+        },
+        {
+            "name": "mozPaintCount",
+            "lastModifiedAt": 1600306587659
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1600306587977
+        },
+        {
+            "name": "navigator",
+            "lastModifiedAt": 1600306588285
+        },
+        {
             "name": "offline_event",
             "lastModifiedAt": 1597359042110
+        },
+        {
+            "name": "onabort",
+            "lastModifiedAt": 1600306588687
+        },
+        {
+            "name": "onafterprint",
+            "lastModifiedAt": 1600306589410
         },
         {
             "name": "onappinstalled",
@@ -188,12 +348,56 @@
             "lastModifiedAt": 1599280358784
         },
         {
+            "name": "onbeforeprint",
+            "lastModifiedAt": 1600306592742
+        },
+        {
+            "name": "onbeforeunload",
+            "lastModifiedAt": 1600306593347
+        },
+        {
+            "name": "onblur",
+            "lastModifiedAt": 1600306594065
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1600306595621
+        },
+        {
+            "name": "onclick",
+            "lastModifiedAt": 1600306596219
+        },
+        {
+            "name": "oncontextmenu",
+            "lastModifiedAt": 1600306597716
+        },
+        {
+            "name": "ondblclick",
+            "lastModifiedAt": 1600306598901
+        },
+        {
+            "name": "ondevicelight",
+            "lastModifiedAt": 1600306599488
+        },
+        {
             "name": "ondevicemotion",
             "lastModifiedAt": 1596581241256
         },
         {
             "name": "ondeviceorientation",
             "lastModifiedAt": 1596581242356
+        },
+        {
+            "name": "ondeviceorientationabsolute",
+            "lastModifiedAt": 1600306601194
+        },
+        {
+            "name": "ondeviceproximity",
+            "lastModifiedAt": 1600306601548
+        },
+        {
+            "name": "onfocus",
+            "lastModifiedAt": 1600306602989
         },
         {
             "name": "ongamepadconnected",
@@ -204,12 +408,104 @@
             "lastModifiedAt": 1596797803558
         },
         {
+            "name": "onhashchange",
+            "lastModifiedAt": 1600306605239
+        },
+        {
+            "name": "oninput",
+            "lastModifiedAt": 1600306605824
+        },
+        {
+            "name": "onkeydown",
+            "lastModifiedAt": 1600306606916
+        },
+        {
+            "name": "onkeypress",
+            "lastModifiedAt": 1600306607507
+        },
+        {
+            "name": "onkeyup",
+            "lastModifiedAt": 1600306608218
+        },
+        {
+            "name": "onlanguagechange",
+            "lastModifiedAt": 1600306608839
+        },
+        {
             "name": "online_event",
             "lastModifiedAt": 1597359043144
         },
         {
+            "name": "onload",
+            "lastModifiedAt": 1600306609431
+        },
+        {
+            "name": "onmousedown",
+            "lastModifiedAt": 1600306612988
+        },
+        {
+            "name": "onmousemove",
+            "lastModifiedAt": 1600306614171
+        },
+        {
+            "name": "onmouseout",
+            "lastModifiedAt": 1600306614824
+        },
+        {
+            "name": "onmouseover",
+            "lastModifiedAt": 1600306615459
+        },
+        {
+            "name": "onmouseup",
+            "lastModifiedAt": 1600306616057
+        },
+        {
+            "name": "onpaint",
+            "lastModifiedAt": 1600306616474
+        },
+        {
+            "name": "onpopstate",
+            "lastModifiedAt": 1600306621121
+        },
+        {
             "name": "onrejectionhandled",
             "lastModifiedAt": 1599280360448
+        },
+        {
+            "name": "onreset",
+            "lastModifiedAt": 1600306622837
+        },
+        {
+            "name": "onresize",
+            "lastModifiedAt": 1600306623427
+        },
+        {
+            "name": "onscroll",
+            "lastModifiedAt": 1600306624021
+        },
+        {
+            "name": "onselect",
+            "lastModifiedAt": 1600306624612
+        },
+        {
+            "name": "onstorage",
+            "lastModifiedAt": 1600306625798
+        },
+        {
+            "name": "onsubmit",
+            "lastModifiedAt": 1600306626385
+        },
+        {
+            "name": "onunhandledrejection",
+            "lastModifiedAt": 1600306628704
+        },
+        {
+            "name": "onunload",
+            "lastModifiedAt": 1600306629263
+        },
+        {
+            "name": "onuserproximity",
+            "lastModifiedAt": 1600306629548
         },
         {
             "name": "onvrdisplayactivate",
@@ -252,8 +548,32 @@
             "lastModifiedAt": 1596581263625
         },
         {
+            "name": "openDialog",
+            "lastModifiedAt": 1600306669804
+        },
+        {
+            "name": "opener",
+            "lastModifiedAt": 1600306636095
+        },
+        {
             "name": "orientationchange_event",
             "lastModifiedAt": 1597359029328
+        },
+        {
+            "name": "outerHeight",
+            "lastModifiedAt": 1600306637408
+        },
+        {
+            "name": "outerWidth",
+            "lastModifiedAt": 1600306637760
+        },
+        {
+            "name": "pageXOffset",
+            "lastModifiedAt": 1600306638047
+        },
+        {
+            "name": "pageYOffset",
+            "lastModifiedAt": 1600306638355
         },
         {
             "name": "pagehide_event",
@@ -264,8 +584,20 @@
             "lastModifiedAt": 1597359049507
         },
         {
+            "name": "parent",
+            "lastModifiedAt": 1600306638776
+        },
+        {
             "name": "paste_event",
             "lastModifiedAt": 1599280319218
+        },
+        {
+            "name": "performance",
+            "lastModifiedAt": 1600306639828
+        },
+        {
+            "name": "personalbar",
+            "lastModifiedAt": 1600306640220
         },
         {
             "name": "postMessage",
@@ -284,8 +616,16 @@
             "lastModifiedAt": 1597359061717
         },
         {
+            "name": "releaseEvents",
+            "lastModifiedAt": 1600306672397
+        },
+        {
             "name": "requestAnimationFrame",
             "lastModifiedAt": 1596581267962
+        },
+        {
+            "name": "requestFileSystem",
+            "lastModifiedAt": 1600306673375
         },
         {
             "name": "requestIdleCallback",
@@ -304,6 +644,30 @@
             "lastModifiedAt": 1597359032319
         },
         {
+            "name": "restore",
+            "lastModifiedAt": 1600306675843
+        },
+        {
+            "name": "screen",
+            "lastModifiedAt": 1600306640532
+        },
+        {
+            "name": "screenLeft",
+            "lastModifiedAt": 1600306641014
+        },
+        {
+            "name": "screenTop",
+            "lastModifiedAt": 1600306641359
+        },
+        {
+            "name": "screenX",
+            "lastModifiedAt": 1600306641748
+        },
+        {
+            "name": "screenY",
+            "lastModifiedAt": 1600306642068
+        },
+        {
             "name": "scroll",
             "lastModifiedAt": 1596581272468
         },
@@ -320,8 +684,36 @@
             "lastModifiedAt": 1596581276662
         },
         {
+            "name": "scrollMaxX",
+            "lastModifiedAt": 1600306643449
+        },
+        {
+            "name": "scrollMaxY",
+            "lastModifiedAt": 1600306643758
+        },
+        {
             "name": "scrollTo",
             "lastModifiedAt": 1596581278099
+        },
+        {
+            "name": "scrollX",
+            "lastModifiedAt": 1600306644112
+        },
+        {
+            "name": "scrollY",
+            "lastModifiedAt": 1600306644519
+        },
+        {
+            "name": "scrollbars",
+            "lastModifiedAt": 1600306642466
+        },
+        {
+            "name": "self",
+            "lastModifiedAt": 1600306644931
+        },
+        {
+            "name": "sessionStorage",
+            "lastModifiedAt": 1600306645273
         },
         {
             "name": "setCursor",
@@ -332,8 +724,36 @@
             "lastModifiedAt": 1596581279973
         },
         {
+            "name": "setInterval",
+            "lastModifiedAt": 1600306682321
+        },
+        {
+            "name": "setTimeout",
+            "lastModifiedAt": 1600306683637
+        },
+        {
+            "name": "showModalDialog",
+            "lastModifiedAt": 1600306683935
+        },
+        {
+            "name": "sidebar",
+            "lastModifiedAt": 1600306645607
+        },
+        {
             "name": "sizeToContent",
             "lastModifiedAt": 1599280304153
+        },
+        {
+            "name": "speechSynthesis",
+            "lastModifiedAt": 1600306645956
+        },
+        {
+            "name": "status",
+            "lastModifiedAt": 1600306646330
+        },
+        {
+            "name": "statusbar",
+            "lastModifiedAt": 1600306646763
         },
         {
             "name": "stop",
@@ -342,6 +762,14 @@
         {
             "name": "storage_event",
             "lastModifiedAt": 1597359033037
+        },
+        {
+            "name": "toolbar",
+            "lastModifiedAt": 1600306647755
+        },
+        {
+            "name": "top",
+            "lastModifiedAt": 1600306648065
         },
         {
             "name": "transitioncancel_event",
@@ -370,6 +798,10 @@
         {
             "name": "updateCommands",
             "lastModifiedAt": 1596581284502
+        },
+        {
+            "name": "visualViewport",
+            "lastModifiedAt": 1600306648422
         },
         {
             "name": "vrdisplayactivate_event",
@@ -406,6 +838,10 @@
         {
             "name": "vrdisplaypresentchange_event",
             "lastModifiedAt": 1597359078364
+        },
+        {
+            "name": "window",
+            "lastModifiedAt": 1600306648757
         }
     ]
 }

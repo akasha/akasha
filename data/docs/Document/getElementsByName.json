@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.getElementsByName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName",
+    "description": "The getElementsByName() method of the Document object returns a NodeList Collection of elements with a given name in the document."
+}

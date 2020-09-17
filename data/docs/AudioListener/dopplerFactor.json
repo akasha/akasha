@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioListener.dopplerFactor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/dopplerFactor",
+    "description": "The deprecated dopplerFactor property of the AudioListener interface is a double value representing the amount of pitch shift to use when rendering a doppler effect."
+}

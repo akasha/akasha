@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLInputElement.multiple",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/multiple",
+    "description": "The HTMLInputElement.multiple property indicates if an input can have more than one value. Firefox currently only supports multiple for input type=&quot;file&quot;."
+}

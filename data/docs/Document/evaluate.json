@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.evaluate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate",
+    "description": "Returns an XPathResult based on an XPath expression and other given parameters."
+}

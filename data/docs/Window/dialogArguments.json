@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.dialogArguments",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/dialogArguments",
+    "description": "The dialogArguments property returns the parameters that were passed into the window.showModalDialog() method."
+}

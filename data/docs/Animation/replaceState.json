@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.replaceState",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/replaceState",
+    "description": "The read-only Animation.replaceState property of the Web Animations API returns the replace state of the animation. This will be active if the animation has been removed, or persisted if Animation.persist() has been invoked on it."
+}

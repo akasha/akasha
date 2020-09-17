@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.scrollY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY",
+    "description": "The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically."
+}

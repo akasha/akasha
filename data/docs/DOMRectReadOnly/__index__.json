@@ -1,7 +1,7 @@
 
 {
     "name": "DOMRectReadOnly",
-    "lastModifiedAt": 1599389817170,
+    "lastModifiedAt": 1600305851785,
     "entries": [
         {
             "name": "DOMRectReadOnly",
@@ -12,8 +12,40 @@
             "lastModifiedAt": 1597192034593
         },
         {
+            "name": "bottom",
+            "lastModifiedAt": 1600305848779
+        },
+        {
             "name": "fromRect",
             "lastModifiedAt": 1597192035413
+        },
+        {
+            "name": "height",
+            "lastModifiedAt": 1600305849097
+        },
+        {
+            "name": "left",
+            "lastModifiedAt": 1600305849636
+        },
+        {
+            "name": "right",
+            "lastModifiedAt": 1600305849954
+        },
+        {
+            "name": "top",
+            "lastModifiedAt": 1600305850314
+        },
+        {
+            "name": "width",
+            "lastModifiedAt": 1600305850678
+        },
+        {
+            "name": "x",
+            "lastModifiedAt": 1600305851063
+        },
+        {
+            "name": "y",
+            "lastModifiedAt": 1600305851297
         }
     ]
 }

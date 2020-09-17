@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioListener.upZ",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upZ",
+    "description": "The upZ read-only property of the AudioListener interface is an AudioParam representing the z value of the direction vector defining the up direction the listener is pointing in."
+}

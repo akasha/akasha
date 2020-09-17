@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createNSResolver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createNSResolver",
+    "description": "Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node."
+}

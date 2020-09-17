@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.scrollMaxY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollMaxY",
+    "description": "The Window.scrollMaxY read-only property returns the maximum number of pixels that the document can be scrolled vertically."
+}

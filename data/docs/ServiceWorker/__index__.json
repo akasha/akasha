@@ -1,11 +1,19 @@
 
 {
     "name": "ServiceWorker",
-    "lastModifiedAt": 1599389845926,
+    "lastModifiedAt": 1600305879797,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1599279566022
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1600305878393
+        },
+        {
+            "name": "onstatechange",
+            "lastModifiedAt": 1600305878642
         },
         {
             "name": "scriptURL",

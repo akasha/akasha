@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onafterscriptexecute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onafterscriptexecute",
+    "description": "The Document.onafterscriptexecute property references a function that fires when a static script element finishes executing its script. It does not fire if the element is added dynamically, such as with appendChild()."
+}

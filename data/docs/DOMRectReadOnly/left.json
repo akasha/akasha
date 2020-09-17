@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMRectReadOnly.left",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/left",
+    "description": "The left read-only property of the DOMRectReadOnly interface returns the left coordinate value of the DOMRect. (Has the same value as x, or x + width if width is negative.)"
+}

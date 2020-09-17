@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.stepDown",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown",
+    "description": "The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter."
+}

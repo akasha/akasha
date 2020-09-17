@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.screenTop",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/screenTop",
+    "description": "The Window.screenTop read-only property returns the vertical distance, in CSS pixels, from the top border of the user's browser viewport to the top side of the screen."
+}

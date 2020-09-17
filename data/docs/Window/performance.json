@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.performance",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/performance",
+    "description": "The Window interface's performance property returns a Performance object, which can be used to gather performance information about the current document. It serves as the point of exposure for the Performance Timeline API, the High Resolution Time API, the Navigation Timing API, the User Timing API, and the Resource Timing API."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.keyIdentifier",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyIdentifier",
+    "description": "The deprecated KeyboardEvent.keyIdentifier read-only property returns a &quot;key identifier&quot; string that can be used to determine what key was pressed. Its non-deprecated replacement is KeyboardEvent.key."
+}

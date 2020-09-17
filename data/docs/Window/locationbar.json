@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.locationbar",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/locationbar",
+    "description": "Returns the locationbar object, whose visibility can be checked."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.window",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/window",
+    "description": "The window property of a Window object points to the window object itself."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.customElements",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements",
+    "description": "The customElements read-only property of the Window interface returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and get information about previously registered custom elements."
+}

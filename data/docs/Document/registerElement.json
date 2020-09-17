@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.registerElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/registerElement",
+    "description": "The document.registerElement() method registers a new custom element in the browser and returns a constructor for the new element."
+}

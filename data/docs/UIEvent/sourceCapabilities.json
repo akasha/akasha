@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "UIEvent.sourceCapabilities",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/sourceCapabilities",
+    "description": "The UIEvent.sourceCapabilities read-only property returns an instance of the InputDeviceCapabilities interface which provides information about the physical device responsible for generating a touch event. If no input device was responsible for the event, it returns null."
+}

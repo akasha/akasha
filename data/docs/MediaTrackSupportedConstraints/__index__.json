@@ -1,7 +1,7 @@
 
 {
     "name": "MediaTrackSupportedConstraints",
-    "lastModifiedAt": 1599389844021,
+    "lastModifiedAt": 1600305877572,
     "entries": [
         {
             "name": "__type__",
@@ -20,8 +20,16 @@
             "lastModifiedAt": 1596544742151
         },
         {
+            "name": "cursor",
+            "lastModifiedAt": 1600305869509
+        },
+        {
             "name": "deviceId",
             "lastModifiedAt": 1596544742524
+        },
+        {
+            "name": "displaySurface",
+            "lastModifiedAt": 1600305870285
         },
         {
             "name": "echoCancellation",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.statusbar",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/statusbar",
+    "description": "The Window.statusbar property returns the statusbar object, whose visibility can be toggled in the window."
+}

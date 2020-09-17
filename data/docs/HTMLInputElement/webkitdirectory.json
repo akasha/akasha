@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLInputElement.webkitdirectory",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory",
+    "description": "The HTMLInputElement.webkitdirectory is a property that reflects the webkitdirectory HTML attribute and indicates that the input element should let the user select directories instead of files. When a directory is selected, the directory and its entire hierarchy of contents are included in the set of selected items. The selected file system entries can be obtained using the webkitEntries property."
+}

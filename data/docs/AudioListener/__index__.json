@@ -1,11 +1,39 @@
 
 {
     "name": "AudioListener",
-    "lastModifiedAt": 1599390439397,
+    "lastModifiedAt": 1600306455351,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192570658
+        },
+        {
+            "name": "dopplerFactor",
+            "lastModifiedAt": 1600306449722
+        },
+        {
+            "name": "forwardX",
+            "lastModifiedAt": 1600306449962
+        },
+        {
+            "name": "forwardY",
+            "lastModifiedAt": 1600306450771
+        },
+        {
+            "name": "forwardZ",
+            "lastModifiedAt": 1600306451039
+        },
+        {
+            "name": "positionX",
+            "lastModifiedAt": 1600306451339
+        },
+        {
+            "name": "positionY",
+            "lastModifiedAt": 1600306451762
+        },
+        {
+            "name": "positionZ",
+            "lastModifiedAt": 1600306452243
         },
         {
             "name": "setOrientation",
@@ -14,6 +42,22 @@
         {
             "name": "setPosition",
             "lastModifiedAt": 1597192571179
+        },
+        {
+            "name": "speedOfSound",
+            "lastModifiedAt": 1600306453190
+        },
+        {
+            "name": "upX",
+            "lastModifiedAt": 1600306453514
+        },
+        {
+            "name": "upY",
+            "lastModifiedAt": 1600306454048
+        },
+        {
+            "name": "upZ",
+            "lastModifiedAt": 1600306454366
         }
     ]
 }

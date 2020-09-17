@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onpaint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onpaint",
+    "description": "Window.onpaint is an event handler for the paint event on the window."
+}

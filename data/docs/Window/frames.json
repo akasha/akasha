@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.frames",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/frames",
+    "description": "Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window."
+}

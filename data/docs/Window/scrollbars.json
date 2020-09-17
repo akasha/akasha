@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.scrollbars",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars",
+    "description": "The Window.scrollbars property returns the scrollbars object, whose visibility can be checked."
+}

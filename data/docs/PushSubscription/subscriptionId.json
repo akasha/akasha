@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "PushSubscription.subscriptionId",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/subscriptionId",
+    "description": "The\nendpoint\nread-only property of the PushSubscription interface returns a DOMString containing the subscription ID associated with the push subscription."
+}

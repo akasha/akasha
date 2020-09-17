@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMRectReadOnly.height",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/height",
+    "description": "The height read-only property of the DOMRectReadOnly interface represents the height of the DOMRect."
+}

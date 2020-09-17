@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.playbackRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/playbackRate",
+    "description": "The Animation.playbackRate property of the Web Animations API returns or sets the playback rate of the animation."
+}

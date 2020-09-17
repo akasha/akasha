@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBVersionChangeEvent.version",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/version",
+    "description": "The version property of the IDBVersionChangeEvent interface returns The new version of the database in a versionchange transaction."
+}

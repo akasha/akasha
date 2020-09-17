@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.effect",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/effect",
+    "description": "The Animation.effect property of the Web Animations API gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on AnimationEffectReadOnly, such as KeyframeEffect, or null."
+}

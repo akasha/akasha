@@ -1,7 +1,7 @@
 
 {
     "name": "File",
-    "lastModifiedAt": 1599390024918,
+    "lastModifiedAt": 1600306030320,
     "entries": [
         {
             "name": "File",
@@ -10,6 +10,30 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597191944915
+        },
+        {
+            "name": "lastModified",
+            "lastModifiedAt": 1600306028746
+        },
+        {
+            "name": "lastModifiedDate",
+            "lastModifiedAt": 1600306029125
+        },
+        {
+            "name": "mozFullPath",
+            "lastModifiedAt": 1600306029409
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1600306029694
+        },
+        {
+            "name": "type",
+            "lastModifiedAt": 1600306030019
+        },
+        {
+            "name": "webkitRelativePath",
+            "lastModifiedAt": 1600306030319
         }
     ]
 }

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/event",
+    "description": "The read-only Window property event returns the Event which is currently being handled by the site's code. Outside the context of an event handler, the value is always undefined."
+}

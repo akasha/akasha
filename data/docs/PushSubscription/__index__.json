@@ -1,7 +1,7 @@
 
 {
     "name": "PushSubscription",
-    "lastModifiedAt": 1599389993854,
+    "lastModifiedAt": 1600306004636,
     "entries": [
         {
             "name": "__type__",
@@ -22,6 +22,10 @@
         {
             "name": "options",
             "lastModifiedAt": 1597192286248
+        },
+        {
+            "name": "subscriptionId",
+            "lastModifiedAt": 1600306002656
         },
         {
             "name": "toJSON",

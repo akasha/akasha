@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onresize",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onresize",
+    "description": "The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events."
+}

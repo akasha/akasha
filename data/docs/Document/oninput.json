@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.oninput",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/oninput",
+    "description": "The oninput property of the GlobalEventHandlers mixin is an EventHandler that processes input events on the input, select, and textarea elements. It also handles these events on elements where contenteditable or designMode are turned on."
+}

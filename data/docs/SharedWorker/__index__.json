@@ -1,7 +1,7 @@
 
 {
     "name": "SharedWorker",
-    "lastModifiedAt": 1599390486940,
+    "lastModifiedAt": 1600306490168,
     "entries": [
         {
             "name": "SharedWorker",
@@ -10,6 +10,10 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1597193234179
+        },
+        {
+            "name": "onerror",
+            "lastModifiedAt": 1600306489205
         },
         {
             "name": "port",

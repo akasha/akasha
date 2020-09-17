@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLImageElement.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/name",
+    "description": "The HTMLImageElement interface's deprecated name property specifies a name for the element. This has been replaced by the id property available on all elements."
+}

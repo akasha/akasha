@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.visualViewport",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/visualViewport",
+    "description": "The visualViewport read-only property of the Window interface returns a VisualViewport object representing the visual viewport for a given window."
+}

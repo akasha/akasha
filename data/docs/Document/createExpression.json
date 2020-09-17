@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.createExpression",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createExpression",
+    "description": "This method compiles an XPathExpression which can then be used for (repeated) evaluations."
+}

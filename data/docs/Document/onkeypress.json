@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onkeypress",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onkeypress",
+    "description": "The onkeypress property of the GlobalEventHandlers mixin is an EventHandler that processes keypress events."
+}

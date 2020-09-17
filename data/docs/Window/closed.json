@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.closed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/closed",
+    "description": "The Window.closed read-only property indicates whether the referenced window is closed or not."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "File.type",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/type",
+    "description": "Returns the media type (MIME) of the file represented by a File object."
+}

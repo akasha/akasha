@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.querySelectorAll",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll",
+    "description": "The Document method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors."
+}

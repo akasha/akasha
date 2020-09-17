@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.ondevicelight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ondevicelight",
+    "description": "Specifies an event listener to receive devicelight events. These events occur when the device's light level sensor detects a change in the intensity of the ambient light level."
+}

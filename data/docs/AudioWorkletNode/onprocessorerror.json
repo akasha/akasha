@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "AudioWorkletNode.onprocessorerror",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletNode/onprocessorerror",
+    "description": "The onprocessorerror property of the AudioWorkletNode interface defines an event handler function to be called when the processorerror event fires. This occurs when the underlying AudioWorkletProcessor behind the node throws an exception in its constructor, the process method, or any user-defined class method."
+}

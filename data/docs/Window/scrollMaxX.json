@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.scrollMaxX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollMaxX",
+    "description": "The Window.scrollMaxX read-only property returns the maximum number of pixels that the document can be scrolled horizontally."
+}

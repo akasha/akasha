@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ScreenOrientation.onchange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/onchange",
+    "description": "The onchange property of the ScreenOrientation is an event handler fired whenever is the EventHandler called when the screen changes orientation."
+}

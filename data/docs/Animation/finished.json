@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.finished",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/finished",
+    "description": "The Animation.finished read-only property of the Web Animations API returns a Promise which resolves once the animation has finished playing."
+}

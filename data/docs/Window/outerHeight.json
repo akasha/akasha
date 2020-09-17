@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.outerHeight",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/outerHeight",
+    "description": "The Window.outerHeight read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles."
+}

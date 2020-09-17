@@ -1,7 +1,7 @@
 
 {
     "name": "ReadableStream",
-    "lastModifiedAt": 1599390071044,
+    "lastModifiedAt": 1600306071959,
     "entries": [
         {
             "name": "ReadableStream",
@@ -16,8 +16,24 @@
             "lastModifiedAt": 1599279786897
         },
         {
+            "name": "getReader",
+            "lastModifiedAt": 1600306071131
+        },
+        {
             "name": "locked",
             "lastModifiedAt": 1599279786410
+        },
+        {
+            "name": "pipeThrough",
+            "lastModifiedAt": 1600306071377
+        },
+        {
+            "name": "pipeTo",
+            "lastModifiedAt": 1600306071651
+        },
+        {
+            "name": "tee",
+            "lastModifiedAt": 1600306071959
         }
     ]
 }

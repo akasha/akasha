@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "URL.URL",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/URL",
+    "description": "The URL() constructor returns a newly created URL object representing the URL defined by the parameters."
+}

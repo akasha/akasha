@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "KeyboardEvent.keyCode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode",
+    "description": "The deprecated KeyboardEvent.keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key."
+}

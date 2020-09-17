@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Window.convertPointFromNodeToPage",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/convertPointFromNodeToPage",
+    "description": "Given a Point specified in a particular DOM Node's coordinate system, the Window method convertPointFromNodeToPage() returns a Point which specifies the same position in the page's coordinate system. This method is non-standard and should not be used."
+}

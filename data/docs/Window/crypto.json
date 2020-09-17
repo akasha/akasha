@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.crypto",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/crypto",
+    "description": "The read-only Window.crypto property returns the Crypto object associated to the global object. This object allows web pages access to certain cryptographic related services."
+}

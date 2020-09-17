@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.pageXOffset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pageXOffset",
+    "description": "The read-only Window property pageXOffset is an alias for scrollX."
+}

@@ -1,23 +1,63 @@
 
 {
     "name": "WorkerNavigator",
-    "lastModifiedAt": 1599390078206,
+    "lastModifiedAt": 1600306085165,
     "entries": [
         {
             "name": "__type__",
             "lastModifiedAt": 1597192269124
         },
         {
+            "name": "appCodeName",
+            "lastModifiedAt": 1600306077305
+        },
+        {
+            "name": "appName",
+            "lastModifiedAt": 1600306078435
+        },
+        {
+            "name": "appVersion",
+            "lastModifiedAt": 1600306078981
+        },
+        {
             "name": "connection",
             "lastModifiedAt": 1596581502733
+        },
+        {
+            "name": "language",
+            "lastModifiedAt": 1600306080063
+        },
+        {
+            "name": "languages",
+            "lastModifiedAt": 1600306080619
         },
         {
             "name": "locks",
             "lastModifiedAt": 1599279794111
         },
         {
+            "name": "onLine",
+            "lastModifiedAt": 1600306081715
+        },
+        {
             "name": "permissions",
             "lastModifiedAt": 1596581503418
+        },
+        {
+            "name": "platform",
+            "lastModifiedAt": 1600306082760
+        },
+        {
+            "name": "product",
+            "lastModifiedAt": 1600306083299
+        },
+        {
+            "name": "taintEnabled",
+            "lastModifiedAt": 1600306085165
+        },
+        {
+            "name": "userAgent",
+            "lastModifiedAt": 1600306083825
         }
     ]
 }

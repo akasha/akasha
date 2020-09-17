@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Document.write",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/write",
+    "description": "The Document.write() method writes a string of text to a document stream opened by document.open()."
+}

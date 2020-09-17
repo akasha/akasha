@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.appCodeName",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/appCodeName",
+    "description": "The value of the NavigatorID.appCodeName property is always &quot;Mozilla&quot;, in any browser. This property is kept only for compatibility purposes."
+}

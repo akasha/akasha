@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "UIEvent.UIEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/UIEvent",
+    "description": "The UIEvent() constructor creates a new UIEvent."
+}

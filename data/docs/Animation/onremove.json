@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Animation.onremove",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/onremove",
+    "description": "The Animation interface's onremove property (from the Web Animations API) is the event handler for the remove event. This event is sent when the animation is removed (i.e., put into an active replace state)."
+}

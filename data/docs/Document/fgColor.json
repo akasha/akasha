@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.fgColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/fgColor",
+    "description": "fgColor gets/sets the foreground color, or text color, of the current document."
+}

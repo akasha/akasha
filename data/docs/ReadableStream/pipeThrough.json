@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReadableStream.pipeThrough",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough",
+    "description": "The pipeThrough() method of the ReadableStream interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair."
+}

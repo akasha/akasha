@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.bgColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/bgColor",
+    "description": "The deprecated  bgColor property gets or sets the background color of the current document."
+}

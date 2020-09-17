@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "UIEvent.layerX",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/layerX",
+    "description": "The UIEvent.layerX read-only property returns the horizontal coordinate of the event relative to the current layer."
+}

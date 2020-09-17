@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "UIEvent.view",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/view",
+    "description": "The UIEvent.view read-only property returns the WindowProxy object from which the event was generated. In browsers, this is the Window object the event happened in."
+}

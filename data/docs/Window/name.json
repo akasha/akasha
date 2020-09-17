@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/name",
+    "description": "Gets/sets the name of the window's browsing context."
+}

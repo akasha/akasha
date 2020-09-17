@@ -1,7 +1,7 @@
 
 {
     "name": "Text",
-    "lastModifiedAt": 1599389828055,
+    "lastModifiedAt": 1600305862156,
     "entries": [
         {
             "name": "Text",
@@ -18,6 +18,10 @@
         {
             "name": "isElementContentWhitespace",
             "lastModifiedAt": 1597193080643
+        },
+        {
+            "name": "splitText",
+            "lastModifiedAt": 1600305862156
         },
         {
             "name": "wholeText",

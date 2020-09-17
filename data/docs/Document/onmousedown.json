@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.onmousedown",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onmousedown",
+    "description": "The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events."
+}

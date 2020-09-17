@@ -1,8 +1,12 @@
 
 {
     "name": "UIEvent",
-    "lastModifiedAt": 1599389814394,
+    "lastModifiedAt": 1600305846059,
     "entries": [
+        {
+            "name": "UIEvent",
+            "lastModifiedAt": 1600305842477
+        },
         {
             "name": "__type__",
             "lastModifiedAt": 1597192481398
@@ -12,8 +16,32 @@
             "lastModifiedAt": 1597192481688
         },
         {
+            "name": "detail",
+            "lastModifiedAt": 1600305843664
+        },
+        {
             "name": "initUIEvent",
             "lastModifiedAt": 1597192482500
+        },
+        {
+            "name": "layerX",
+            "lastModifiedAt": 1600305843920
+        },
+        {
+            "name": "layerY",
+            "lastModifiedAt": 1600305844163
+        },
+        {
+            "name": "pageY",
+            "lastModifiedAt": 1600305844972
+        },
+        {
+            "name": "sourceCapabilities",
+            "lastModifiedAt": 1600305845232
+        },
+        {
+            "name": "view",
+            "lastModifiedAt": 1600305845483
         }
     ]
 }

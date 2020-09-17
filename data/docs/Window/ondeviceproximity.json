@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.ondeviceproximity",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceproximity",
+    "description": "The ondeviceproximity property of the Window interface specifies an EventHandler to receive deviceproximity events. These events occur when the device sensor detects that an object becomes closer to or farther from the device."
+}

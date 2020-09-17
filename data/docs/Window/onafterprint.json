@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onafterprint",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onafterprint",
+    "description": "The onafterprint property of the WindowEventHandlers mixin is the EventHandler for processing afterprint events for the current window. These events are raised after the user prints, or if they abort the print dialog."
+}

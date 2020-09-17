@@ -1,7 +1,7 @@
 
 {
     "name": "ScreenOrientation",
-    "lastModifiedAt": 1599390199626,
+    "lastModifiedAt": 1600306190511,
     "entries": [
         {
             "name": "__type__",
@@ -14,6 +14,10 @@
         {
             "name": "lock",
             "lastModifiedAt": 1597192294307
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1600306188106
         },
         {
             "name": "type",

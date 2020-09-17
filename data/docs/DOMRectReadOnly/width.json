@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DOMRectReadOnly.width",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/width",
+    "description": "The width read-only property of the DOMRectReadOnly interface represents the width of the DOMRect."
+}

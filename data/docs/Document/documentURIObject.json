@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.documentURIObject",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/documentURIObject",
+    "description": "The Document.documentURIObject read-only property returns an nsIURI object representing the URI of the document."
+}

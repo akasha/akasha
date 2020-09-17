@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "IDBDatabase.version",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/version",
+    "description": "An integer containing the version of the connected database."
+}

@@ -1,7 +1,7 @@
 
 {
     "name": "IDBDatabase",
-    "lastModifiedAt": 1599390054103,
+    "lastModifiedAt": 1600306056698,
     "entries": [
         {
             "name": "__type__",
@@ -32,6 +32,14 @@
             "lastModifiedAt": 1597358553333
         },
         {
+            "name": "name",
+            "lastModifiedAt": 1600306049117
+        },
+        {
+            "name": "objectStoreNames",
+            "lastModifiedAt": 1600306049518
+        },
+        {
             "name": "onabort",
             "lastModifiedAt": 1597192099235
         },
@@ -50,6 +58,10 @@
         {
             "name": "transaction",
             "lastModifiedAt": 1597192096512
+        },
+        {
+            "name": "version",
+            "lastModifiedAt": 1600306051848
         },
         {
             "name": "versionchange_event",

@@ -1,7 +1,7 @@
 
 {
     "name": "Document",
-    "lastModifiedAt": 1599390375139,
+    "lastModifiedAt": 1600306398481,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -12,12 +12,24 @@
             "lastModifiedAt": 1597190898956
         },
         {
+            "name": "URL",
+            "lastModifiedAt": 1600306326596
+        },
+        {
             "name": "__type__",
             "lastModifiedAt": 1597190898289
         },
         {
             "name": "adoptNode",
             "lastModifiedAt": 1596581602343
+        },
+        {
+            "name": "alinkColor",
+            "lastModifiedAt": 1600306268590
+        },
+        {
+            "name": "all",
+            "lastModifiedAt": 1600306268980
         },
         {
             "name": "anchors",
@@ -40,6 +52,14 @@
             "lastModifiedAt": 1597358778977
         },
         {
+            "name": "applets",
+            "lastModifiedAt": 1600306269834
+        },
+        {
+            "name": "bgColor",
+            "lastModifiedAt": 1600306270113
+        },
+        {
             "name": "body",
             "lastModifiedAt": 1596581586594
         },
@@ -50,6 +70,22 @@
         {
             "name": "characterSet",
             "lastModifiedAt": 1596581587700
+        },
+        {
+            "name": "childElementCount",
+            "lastModifiedAt": 1600306272393
+        },
+        {
+            "name": "children",
+            "lastModifiedAt": 1600306273139
+        },
+        {
+            "name": "clear",
+            "lastModifiedAt": 1600306336555
+        },
+        {
+            "name": "close",
+            "lastModifiedAt": 1600306337576
         },
         {
             "name": "compatMode",
@@ -96,6 +132,14 @@
             "lastModifiedAt": 1596581608751
         },
         {
+            "name": "createExpression",
+            "lastModifiedAt": 1600306343582
+        },
+        {
+            "name": "createNSResolver",
+            "lastModifiedAt": 1600306343902
+        },
+        {
             "name": "createNodeIterator",
             "lastModifiedAt": 1596581609217
         },
@@ -124,8 +168,24 @@
             "lastModifiedAt": 1596581612773
         },
         {
+            "name": "currentScript",
+            "lastModifiedAt": 1600306274737
+        },
+        {
             "name": "cut_event",
             "lastModifiedAt": 1599280051845
+        },
+        {
+            "name": "defaultView",
+            "lastModifiedAt": 1600306275043
+        },
+        {
+            "name": "designMode",
+            "lastModifiedAt": 1600306275351
+        },
+        {
+            "name": "dir",
+            "lastModifiedAt": 1600306275886
         },
         {
             "name": "doctype",
@@ -138,6 +198,18 @@
         {
             "name": "documentURI",
             "lastModifiedAt": 1596581590357
+        },
+        {
+            "name": "documentURIObject",
+            "lastModifiedAt": 1600306277989
+        },
+        {
+            "name": "domConfig",
+            "lastModifiedAt": 1600306278713
+        },
+        {
+            "name": "domain",
+            "lastModifiedAt": 1600306278426
         },
         {
             "name": "drag_event",
@@ -180,12 +252,32 @@
             "lastModifiedAt": 1596581613079
         },
         {
+            "name": "evaluate",
+            "lastModifiedAt": 1600306350935
+        },
+        {
+            "name": "execCommand",
+            "lastModifiedAt": 1600306351376
+        },
+        {
+            "name": "exitFullscreen",
+            "lastModifiedAt": 1600306351692
+        },
+        {
             "name": "exitPointerLock",
             "lastModifiedAt": 1596581613587
         },
         {
             "name": "featurePolicy",
             "lastModifiedAt": 1596581591790
+        },
+        {
+            "name": "fgColor",
+            "lastModifiedAt": 1600306279568
+        },
+        {
+            "name": "firstElementChild",
+            "lastModifiedAt": 1600306279943
         },
         {
             "name": "fonts",
@@ -196,6 +288,14 @@
             "lastModifiedAt": 1599279999777
         },
         {
+            "name": "fullscreen",
+            "lastModifiedAt": 1600306280933
+        },
+        {
+            "name": "fullscreenEnabled",
+            "lastModifiedAt": 1600306281907
+        },
+        {
             "name": "fullscreenchange_event",
             "lastModifiedAt": 1597358788380
         },
@@ -204,8 +304,16 @@
             "lastModifiedAt": 1596581614704
         },
         {
+            "name": "getElementById",
+            "lastModifiedAt": 1600306353225
+        },
+        {
             "name": "getElementsByClassName",
             "lastModifiedAt": 1596581615022
+        },
+        {
+            "name": "getElementsByName",
+            "lastModifiedAt": 1600306354719
         },
         {
             "name": "getElementsByTagName",
@@ -218,6 +326,10 @@
         {
             "name": "gotpointercapture_event",
             "lastModifiedAt": 1597358793707
+        },
+        {
+            "name": "hasFocus",
+            "lastModifiedAt": 1600306356272
         },
         {
             "name": "hasStorageAccess",
@@ -256,12 +368,28 @@
             "lastModifiedAt": 1597358790860
         },
         {
+            "name": "lastElementChild",
+            "lastModifiedAt": 1600306285041
+        },
+        {
+            "name": "lastModified",
+            "lastModifiedAt": 1600306285401
+        },
+        {
             "name": "lastStyleSheetSet",
             "lastModifiedAt": 1596581595666
         },
         {
+            "name": "linkColor",
+            "lastModifiedAt": 1600306286999
+        },
+        {
             "name": "links",
             "lastModifiedAt": 1596581596645
+        },
+        {
+            "name": "location",
+            "lastModifiedAt": 1600306287961
         },
         {
             "name": "lostpointercapture_event",
@@ -276,16 +404,132 @@
             "lastModifiedAt": 1596581596940
         },
         {
+            "name": "onabort",
+            "lastModifiedAt": 1600306289913
+        },
+        {
+            "name": "onafterscriptexecute",
+            "lastModifiedAt": 1600306290284
+        },
+        {
+            "name": "onbeforescriptexecute",
+            "lastModifiedAt": 1600306291813
+        },
+        {
+            "name": "onblur",
+            "lastModifiedAt": 1600306292441
+        },
+        {
+            "name": "onchange",
+            "lastModifiedAt": 1600306294573
+        },
+        {
+            "name": "onclick",
+            "lastModifiedAt": 1600306295155
+        },
+        {
+            "name": "oncontextmenu",
+            "lastModifiedAt": 1600306296083
+        },
+        {
+            "name": "ondblclick",
+            "lastModifiedAt": 1600306297024
+        },
+        {
+            "name": "onfocus",
+            "lastModifiedAt": 1600306298928
+        },
+        {
             "name": "onfullscreenchange",
             "lastModifiedAt": 1597190970755
+        },
+        {
+            "name": "onfullscreenerror",
+            "lastModifiedAt": 1600306300115
+        },
+        {
+            "name": "oninput",
+            "lastModifiedAt": 1600306301233
+        },
+        {
+            "name": "onkeydown",
+            "lastModifiedAt": 1600306302161
+        },
+        {
+            "name": "onkeypress",
+            "lastModifiedAt": 1600306302781
+        },
+        {
+            "name": "onkeyup",
+            "lastModifiedAt": 1600306303371
+        },
+        {
+            "name": "onload",
+            "lastModifiedAt": 1600306303969
+        },
+        {
+            "name": "onmousedown",
+            "lastModifiedAt": 1600306306116
+        },
+        {
+            "name": "onmousemove",
+            "lastModifiedAt": 1600306307286
+        },
+        {
+            "name": "onmouseout",
+            "lastModifiedAt": 1600306308283
+        },
+        {
+            "name": "onmouseover",
+            "lastModifiedAt": 1600306308851
+        },
+        {
+            "name": "onmouseup",
+            "lastModifiedAt": 1600306309461
+        },
+        {
+            "name": "onoffline",
+            "lastModifiedAt": 1600306309789
+        },
+        {
+            "name": "ononline",
+            "lastModifiedAt": 1600306310148
+        },
+        {
+            "name": "onreset",
+            "lastModifiedAt": 1600306313995
+        },
+        {
+            "name": "onresize",
+            "lastModifiedAt": 1600306314637
+        },
+        {
+            "name": "onscroll",
+            "lastModifiedAt": 1600306315355
+        },
+        {
+            "name": "onselect",
+            "lastModifiedAt": 1600306315818
         },
         {
             "name": "onselectionchange",
             "lastModifiedAt": 1597190972675
         },
         {
+            "name": "onsubmit",
+            "lastModifiedAt": 1600306317880
+        },
+        {
             "name": "onvisibilitychange",
             "lastModifiedAt": 1596581597306
+        },
+        {
+            "name": "open",
+            "lastModifiedAt": 1600306358814
+        },
+        {
+            "name": "origin",
+            "lastModifiedAt": 1600306320368
         },
         {
             "name": "paste_event",
@@ -336,12 +580,44 @@
             "lastModifiedAt": 1597358803915
         },
         {
+            "name": "popupNode",
+            "lastModifiedAt": 1600306321321
+        },
+        {
             "name": "preferredStyleSheetSet",
             "lastModifiedAt": 1596581598142
         },
         {
+            "name": "queryCommandEnabled",
+            "lastModifiedAt": 1600306360110
+        },
+        {
+            "name": "queryCommandSupported",
+            "lastModifiedAt": 1600306360390
+        },
+        {
+            "name": "querySelector",
+            "lastModifiedAt": 1600306360876
+        },
+        {
+            "name": "querySelectorAll",
+            "lastModifiedAt": 1600306361234
+        },
+        {
+            "name": "readyState",
+            "lastModifiedAt": 1600306322213
+        },
+        {
             "name": "readystatechange_event",
             "lastModifiedAt": 1597358792960
+        },
+        {
+            "name": "referrer",
+            "lastModifiedAt": 1600306322587
+        },
+        {
+            "name": "registerElement",
+            "lastModifiedAt": 1600306361554
         },
         {
             "name": "releaseCapture",
@@ -384,6 +660,14 @@
             "lastModifiedAt": 1599280014250
         },
         {
+            "name": "title",
+            "lastModifiedAt": 1600306326027
+        },
+        {
+            "name": "tooltipNode",
+            "lastModifiedAt": 1600306326295
+        },
+        {
             "name": "touchcancel_event",
             "lastModifiedAt": 1597358807093
         },
@@ -424,8 +708,20 @@
             "lastModifiedAt": 1597358775780
         },
         {
+            "name": "vlinkColor",
+            "lastModifiedAt": 1600306327580
+        },
+        {
             "name": "wheel_event",
             "lastModifiedAt": 1597358776417
+        },
+        {
+            "name": "write",
+            "lastModifiedAt": 1600306364282
+        },
+        {
+            "name": "writeln",
+            "lastModifiedAt": 1600306364834
         }
     ]
 }

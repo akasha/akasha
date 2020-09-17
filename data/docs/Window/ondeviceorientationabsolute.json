@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.ondeviceorientationabsolute",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/ondeviceorientationabsolute",
+    "description": "An event handler for the deviceorientationabsolute event containing information about an absolute device orientation change."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReadableStream.getReader",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/getReader",
+    "description": "The getReader() method of the ReadableStream interface creates a reader and locks the stream to it. While the stream is locked, no other reader can be acquired until this one is released."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.onunload",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onunload",
+    "description": "The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs."
+}

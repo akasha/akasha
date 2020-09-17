@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.activeVRDisplays",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/activeVRDisplays",
+    "description": "The activeVRDisplays read-only property of the Navigator interface returns an array containing every VRDisplay object that is currently presenting (VRDisplay.ispresenting is true)."
+}

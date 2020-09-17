@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.domConfig",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/domConfig",
+    "description": "This should return the DOMConfiguration for the document."
+}

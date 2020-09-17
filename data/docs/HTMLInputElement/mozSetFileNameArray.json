@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.mozSetFileNameArray",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/mozSetFileNameArray",
+    "description": "The HTMLInputElement.mozSetFileNameArray() method sets the names of the files that selected on an HTML input element."
+}

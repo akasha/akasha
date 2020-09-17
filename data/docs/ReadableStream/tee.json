@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ReadableStream.tee",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/tee",
+    "description": "The tee() method of the ReadableStream interface tees the current readable stream, returning a two-element array containing the two resulting branches as new ReadableStream instances."
+}

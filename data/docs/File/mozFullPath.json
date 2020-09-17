@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "File.mozFullPath",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/mozFullPath",
+    "description": "A privileged exension to the File interface, the mozFullPath property contains the full pathname of the represented file."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Animation.updatePlaybackRate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/updatePlaybackRate",
+    "description": "The updatePlaybackRate() method of the Web Animations API's Animation Interface sets the speed of an animation after first synchronizing its playback position."
+}

@@ -1,7 +1,7 @@
 
 {
     "name": "DocumentOrShadowRoot",
-    "lastModifiedAt": 1599389961419,
+    "lastModifiedAt": 1600305981537,
     "entries": [
         {
             "name": "__type__",
@@ -30,6 +30,10 @@
         {
             "name": "getSelection",
             "lastModifiedAt": 1596581138441
+        },
+        {
+            "name": "msElementsFromRect",
+            "lastModifiedAt": 1600305980481
         },
         {
             "name": "nodeFromPoint",

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.stepUp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp",
+    "description": "The HTMLInputElement.stepUp() method increments the value of a numeric type of  input element by the value of the step attribute, or the default step value if the step attribute is not explicitly set. The method, when invoked, increments the value by (step * n), where n defaults to 1 if not specified, and step defaults to the default value for step if not specified."
+}

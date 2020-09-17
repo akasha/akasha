@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.fullscreen",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/fullscreen",
+    "description": "The obsolete Document interface's fullscreen read-only property reports whether or not the document is currently displaying content in full-screen mode."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.select",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select",
+    "description": "The HTMLInputElement.select() method selects all the text in a textarea element or in an input element that includes a text field."
+}

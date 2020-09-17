@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.alinkColor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/alinkColor",
+    "description": "Returns or sets the color of an active link in the document body. A link is active during the time between mousedown and mouseup events."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "ServiceWorkerRegistration.periodicSync",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/periodicSync",
+    "description": "The periodicSync read-only property of the ServiceWorkerRegistration interface returns a reference to the PeriodicSyncManager interface, which allows for registering of tasks to run at specific intervals."
+}

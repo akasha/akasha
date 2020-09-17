@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.lastModified",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified",
+    "description": "The lastModified property of the Document interface returns a string containing the date and time on which the current document was last modified."
+}

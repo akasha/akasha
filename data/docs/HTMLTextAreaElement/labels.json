@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLTextAreaElement.labels",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTextAreaElement/labels",
+    "description": "The HTMLTextAreaElement.labels read-only property returns a NodeList of the label elements associated with the textarea element."
+}

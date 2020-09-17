@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "HTMLInputElement.mozGetFileNameArray",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/mozGetFileNameArray",
+    "description": "The HTMLInputElement.mozGetFileNameArray() method returns an array of the names of the files that were selected by the user on an HTML input element."
+}

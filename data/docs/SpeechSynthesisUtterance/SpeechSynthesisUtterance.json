@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "SpeechSynthesisUtterance.SpeechSynthesisUtterance",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance",
+    "description": "The SpeechSynthesisUtterance() constructor of the SpeechSynthesisUtterance interface returns a new SpeechSynthesisUtterance object instance."
+}

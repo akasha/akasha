@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "File.lastModifiedDate",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/lastModifiedDate",
+    "description": "The File.lastModifiedDate read-only property returns the last modified date of the file. Files without a known last modified date returns the current date."
+}

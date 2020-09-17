@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Window.parent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/parent",
+    "description": "The Window.parent property is a reference to the parent of the current window or subframe."
+}
