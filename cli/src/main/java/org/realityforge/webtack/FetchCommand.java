@@ -340,11 +340,11 @@ final class FetchCommand
         {
           final AddDocsCommand command = new AddDocsCommand();
           command.processOptions( context.environment(), "--idl-source-name", sourceName );
-          return command.run( context );
-        }
-        else
-        {
-          return ExitCodes.SUCCESS_EXIT_CODE;
+          final int addResult = command.run( context );
+          if ( ExitCodes.SUCCESS_EXIT_CODE != addResult )
+          {
+            return addResult;
+          }
         }
       }
     }
