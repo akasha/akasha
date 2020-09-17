@@ -7,6 +7,12 @@ enum OverSampleType {
   "none"
 };
 
+enum PermissionState {
+  "denied",
+  "granted",
+  "prompt"
+};
+
 enum SpeechRecognitionErrorCode {
   "aborted",
   "audio-capture",
@@ -56,6 +62,10 @@ dictionary SpeechRecognitionErrorEventInit {
  */
 dictionary WaveShaperOptions {
   OverSampleType oversample = "none";
+};
+
+interface PermissionStatus {
+  readonly attribute PermissionState state;
 };
 
 interface WaveShaperNode {

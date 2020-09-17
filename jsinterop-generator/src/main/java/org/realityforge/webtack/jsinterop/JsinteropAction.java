@@ -1471,6 +1471,7 @@ final class JsinteropAction
     {
       method.addAnnotation( BasicTypes.NONNULL );
     }
+    addMagicConstantAnnotationIfNeeded( actualType, method );
     type.addMethod( method.build() );
   }
 
