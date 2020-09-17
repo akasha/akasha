@@ -36,9 +36,6 @@ complete as there is too much un-said.
 
 * Link with OpenGL docs ala https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBindBuffer.xml
 
-* Improve MDN scanning for pages like `WebGLRenderingContext` either matching the body or perhaps
-  matching side-bar for link extraction.
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
