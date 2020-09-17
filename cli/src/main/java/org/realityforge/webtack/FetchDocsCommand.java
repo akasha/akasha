@@ -191,7 +191,7 @@ final class FetchDocsCommand
     if ( logger.isLoggable( Level.INFO ) )
     {
       logger.log( Level.INFO, "Fetch of documentation of " + typeNames.size() +
-                              " type starting at " + System.currentTimeMillis() + "." );
+                              " type(s) starting at " + System.currentTimeMillis() + "." );
     }
     for ( final String typeName : typeNames )
     {
