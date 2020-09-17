@@ -31,6 +31,8 @@ complete as there is too much un-said.
 
 # Docs Integration
 
+* Add `a:not([class="new"])` when MDN scanning so that we never collect unrealized links.
+
 * Link with OpenGL docs ala https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBindBuffer.xml
 
 * Some doc entries include documentation for constants .. scan for that?.
