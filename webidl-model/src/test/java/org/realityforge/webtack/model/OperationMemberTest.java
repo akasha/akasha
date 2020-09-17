@@ -44,6 +44,56 @@ public final class OperationMemberTest
   }
 
   @Test
+  public void parse_voidReturnType()
+    throws Exception
+  {
+    final WebIDLParser.OperationContext ctx = createParser( "void doStuff();" ).operation();
+    final OperationMember operation =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
+    assertEquals( operation.getName(), "doStuff" );
+    assertEquals( operation.getReturnType().getKind(), Kind.Void );
+    assertEquals( operation.getKind(), OperationMember.Kind.DEFAULT );
+    assertEquals( operation.getArguments().size(), 0 );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeOperationMember( writer, operation );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.OperationContext ctx2 = createParser( emittedIDL ).operation();
+    final OperationMember element =
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, operation );
+    assertEquals( element.hashCode(), operation.hashCode() );
+    assertTrue( element.equiv( operation ) );
+    assertNotSame( element, operation );
+  }
+
+  @Test
+  public void parse_undefinedReturnType()
+    throws Exception
+  {
+    final WebIDLParser.OperationContext ctx = createParser( "undefined doStuff();" ).operation();
+    final OperationMember operation =
+      WebIDLModelParser.parse( ctx, null, Collections.emptyList(), parseStartPosition( ctx ) );
+    assertEquals( operation.getName(), "doStuff" );
+    assertEquals( operation.getReturnType().getKind(), Kind.Void );
+    assertEquals( operation.getKind(), OperationMember.Kind.DEFAULT );
+    assertEquals( operation.getArguments().size(), 0 );
+
+    final StringWriter writer = new StringWriter();
+    WebIDLWriter.writeOperationMember( writer, operation );
+    writer.close();
+    final String emittedIDL = writer.toString();
+    final WebIDLParser.OperationContext ctx2 = createParser( emittedIDL ).operation();
+    final OperationMember element =
+      WebIDLModelParser.parse( ctx2, null, Collections.emptyList(), parseStartPosition( ctx2 ) );
+    assertEquals( element, operation );
+    assertEquals( element.hashCode(), operation.hashCode() );
+    assertTrue( element.equiv( operation ) );
+    assertNotSame( element, operation );
+  }
+
+  @Test
   public void parse_getter()
     throws Exception
   {

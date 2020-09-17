@@ -1,4 +1,6 @@
-// This grammar is based on grammar in Web IDL Editor’s Draft, 13 March 2020.
+// This grammar was initially based on the grammar in the Web IDL Editor’s Draft, 13 March 2020.
+// The grammar has been expanded to include elements from the Web IDL Editor’s Draft, 3 September 2020
+// while still maintaining compatibility with the vast majority of IDL in the wild.
 
 // changes from the spec:
 // - Added `webIDL` wrapper type to simplify parsing a single unit.
@@ -13,6 +15,8 @@
 // - We have also added a JAVADOC comment parsing in a separate lexer island that contains documentation for the webidl
 //   element in a javadoc-esque format. This is only allowed in specific places in the grammar which is NOT spec compliant
 //   but as we are not using this as a general parser, this should not be an issue.
+// - Retained the `void` return type to maintain compatibility with the majority of WebIDL that have not followed
+//   the crazyness associated with chasing crazy spec changes to remove void.
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
@@ -476,6 +480,7 @@ distinguishableType
 primitiveType
   : unsignedIntegerType
   | unrestrictedFloatType
+  | UNDEFINED
   | BOOLEAN
   | BYTE
   | OCTET
@@ -679,6 +684,7 @@ PartialInterfaceMember ::
     ReadWriteAttribute
     ReadWriteMaplike
     ReadWriteSetlike
+    InheritAttribute
 
 Inheritance ::
     : identifier
@@ -743,8 +749,10 @@ ReadOnlyMemberRest ::
     SetlikeRest
 
 ReadWriteAttribute ::
-    inherit AttributeRest
     AttributeRest
+
+InheritAttribute ::
+    inherit AttributeRest
 
 AttributeRest ::
     attribute TypeWithExtendedAttributes AttributeName ;
@@ -850,7 +858,11 @@ OptionalType ::
     ε
 
 AsyncIterable ::
-    async iterable < TypeWithExtendedAttributes , TypeWithExtendedAttributes > ;
+    async iterable < TypeWithExtendedAttributes OptionalType > OptionalArgumentList ;
+
+OptionalArgumentList ::
+    ( ArgumentList )
+    ε
 
 ReadWriteMaplike ::
     MaplikeRest
@@ -948,11 +960,13 @@ DistinguishableType ::
     symbol Null
     BufferRelatedType Null
     FrozenArray < TypeWithExtendedAttributes > Null
+    ObservableArray < TypeWithExtendedAttributes > Null
     RecordType Null
 
 PrimitiveType ::
     UnsignedIntegerType
     UnrestrictedFloatType
+    undefined
     boolean
     byte
     octet
@@ -1051,6 +1065,7 @@ Other ::
     FrozenArray
     Infinity
     NaN
+    ObservableArray
     Promise
     USVString
     any
@@ -1071,6 +1086,7 @@ Other ::
     symbol
     true
     unsigned
+    undefined
     void
     ArgumentNameKeyword
     BufferRelatedType

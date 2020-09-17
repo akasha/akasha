@@ -29,6 +29,7 @@ TYPEDEF : 'typedef';
 UNRESTRICTED : 'unrestricted';
 OPTIONAL : 'optional';
 VOID : 'void';
+UNDEFINED : 'undefined';
 
 ANY : 'any';
 SEQUENCE : 'sequence';

@@ -1687,7 +1687,11 @@ public final class WebIDLModelParser
 
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
-    if ( "boolean".equals( literalName ) )
+    if ( "undefined".equals( literalName ) )
+    {
+      return new Type( Kind.Void, extendedAttributes, nullable, sourceLocations );
+    }
+    else if ( "boolean".equals( literalName ) )
     {
       return new Type( Kind.Boolean, extendedAttributes, nullable, sourceLocations );
     }
