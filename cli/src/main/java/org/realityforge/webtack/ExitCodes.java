@@ -24,6 +24,8 @@ final class ExitCodes
   static final int ERROR_DOC_SOURCE_FETCH_FAILED_CODE = 20;
   static final int ERROR_DOC_SOURCE_IO_ERROR_CODE = 21;
   static final int ERROR_DOC_SOURCE_UNEXPECTED_ERROR_CODE = 22;
+  static final int ERROR_BAD_TIMESTAMP_READ_ERROR_CODE = 23;
+  static final int ERROR_BAD_TIMESTAMP_WRITE_ERROR_CODE = 24;
 
   private ExitCodes()
   {

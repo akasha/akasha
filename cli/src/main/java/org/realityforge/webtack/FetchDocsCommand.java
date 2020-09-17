@@ -1,5 +1,9 @@
 package org.realityforge.webtack;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Objects;
@@ -27,6 +31,8 @@ final class FetchDocsCommand
   @Nonnull
   static final String COMMAND = "fetch-docs";
   private static final int FORCE_OPT = 'f';
+  private static final int STAMP_OPT = 1;
+  private static final int SINCE_STAMP_OPT = 4;
   private static final int SINCE_OPT = 2;
   private static final int NO_REMOVE_SOURCE_OPT = 3;
   private static final CLOptionDescriptor[] OPTIONS = new CLOptionDescriptor[]
@@ -35,10 +41,20 @@ final class FetchDocsCommand
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               FORCE_OPT,
                               "Force the downloading of the documentation even if the last modified at time indicates it is up to date." ),
+      new CLOptionDescriptor( "stamp",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              STAMP_OPT,
+                              "Write the current time in the global time stamp file.",
+                              new int[]{ SINCE_OPT, SINCE_STAMP_OPT } ),
+      new CLOptionDescriptor( "since-stamp",
+                              CLOptionDescriptor.ARGUMENT_DISALLOWED,
+                              SINCE_STAMP_OPT,
+                              "Only update documentation if they have not been updated since the timestamp in the global time stamp file.",
+                              new int[]{ SINCE_OPT } ),
       new CLOptionDescriptor( "since",
                               CLOptionDescriptor.ARGUMENT_REQUIRED,
                               SINCE_OPT,
-                              "Only update a type if the las." ),
+                              "Only update documentation if they have not been updated since the specified timestamp." ),
       new CLOptionDescriptor( "no-remove-source",
                               CLOptionDescriptor.ARGUMENT_DISALLOWED,
                               NO_REMOVE_SOURCE_OPT,
@@ -49,6 +65,8 @@ final class FetchDocsCommand
   private boolean _force;
   private boolean _noRemoveSource;
   private long _sinceLastUpdatedAt;
+  private boolean _loadTimestamp;
+  private boolean _stamp;
 
   FetchDocsCommand()
   {
@@ -82,6 +100,15 @@ final class FetchDocsCommand
           return false;
         }
       }
+      else if ( SINCE_STAMP_OPT == optionId )
+      {
+        _loadTimestamp = true;
+      }
+      else if ( STAMP_OPT == optionId )
+      {
+        _sinceLastUpdatedAt = System.currentTimeMillis();
+        _stamp = true;
+      }
       else
       {
         assert CLOption.TEXT_ARGUMENT == optionId;
@@ -89,7 +116,25 @@ final class FetchDocsCommand
       }
     }
 
+    if ( _loadTimestamp )
+    {
+      final Path file = globalTimestampFile( environment );
+      if ( !Files.exists( file ) )
+      {
+        environment.logger().log( Level.WARNING,
+                                  () -> "--since-stamp specified but global " +
+                                        "timestamp file " + file + " does not exist" );
+        return false;
+      }
+    }
+
     return true;
+  }
+
+  @Nonnull
+  private Path globalTimestampFile( @Nonnull final Environment environment )
+  {
+    return environment.docDirectory().resolve( "lastUpdated.timestamp" );
   }
 
   @Override
@@ -98,6 +143,47 @@ final class FetchDocsCommand
     final Logger logger = context.environment().logger();
     final DocRepositoryRuntime runtime = context.docRuntime();
     final MdnDocScanner scanner = new MdnDocScanner( runtime, new Listener( logger ) );
+
+    // This value signifies that we should load the timestamp from the global timestamp
+    if ( _loadTimestamp )
+    {
+      final Path file = globalTimestampFile( context.environment() );
+      try
+      {
+        final String text =
+          new String( Files.readAllBytes( file ), StandardCharsets.UTF_8 );
+        _sinceLastUpdatedAt = Long.parseLong( text );
+      }
+      catch ( final Exception e )
+      {
+        context
+          .environment()
+          .logger()
+          .log( Level.WARNING, "Failed to load timestamp from global timestamp file " + file, e );
+        return ExitCodes.ERROR_BAD_TIMESTAMP_READ_ERROR_CODE;
+      }
+    }
+    else if ( _stamp )
+    {
+      final Path file = globalTimestampFile( context.environment() );
+      final Path docsDirectory = file.getParent();
+      try
+      {
+        if ( !Files.exists( docsDirectory ) )
+        {
+          Files.createDirectories( docsDirectory );
+        }
+        Files.write( file, Long.toString( _sinceLastUpdatedAt ).getBytes( StandardCharsets.UTF_8 ) );
+      }
+      catch ( final IOException e )
+      {
+        context
+          .environment()
+          .logger()
+          .log( Level.WARNING, "Failed to load timestamp from global timestamp file " + file, e );
+        return ExitCodes.ERROR_BAD_TIMESTAMP_WRITE_ERROR_CODE;
+      }
+    }
 
     final Set<String> typeNames = _typeNames.isEmpty() ? context.docRuntime().findTypes() : _typeNames;
     if ( logger.isLoggable( Level.INFO ) )

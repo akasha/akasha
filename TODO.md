@@ -29,9 +29,6 @@ complete as there is too much un-said.
   types and accept values of that type. Alternatively we could convert it to a union in an earlier
   step which is functionally equivalent if a bit uglier in java code.
 
-* Add way to save a timestamp when downloading docs with a particular parameter. The `--since` argument
-  will pick this up if no argument is supplied.
-
 # Docs Integration
 
 * Link with OpenGL docs ala https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBindBuffer.xml
