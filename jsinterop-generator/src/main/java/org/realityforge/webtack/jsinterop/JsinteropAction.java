@@ -741,7 +741,6 @@ final class JsinteropAction
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
     {
-      // TODO: It would be nice to use an Any.of() method here ... if it existed.
       method.addStatement( "$N( $T.asAny( $N ) )", mutatorName, JsinteropTypes.JS, paramName );
     }
     else
