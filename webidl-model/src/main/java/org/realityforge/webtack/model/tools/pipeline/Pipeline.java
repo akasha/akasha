@@ -279,7 +279,7 @@ public final class Pipeline
     {
       if ( element.startsWith( "!" ) )
       {
-        final Pattern pattern = Pattern.compile( element.substring( 1 ) );
+        final Pattern pattern = Pattern.compile( "^" + element.substring( 1 ) + "$" );
         if ( tags.stream().anyMatch( t -> pattern.matcher( t ).matches() ) )
         {
           return false;
@@ -292,7 +292,8 @@ public final class Pipeline
       if ( !element.startsWith( "!" ) )
       {
         defaultMatch = false;
-        final Pattern pattern = Pattern.compile( element );
+
+        final Pattern pattern = Pattern.compile( "^" + element + "$" );
         if ( tags.stream().anyMatch( t -> pattern.matcher( t ).matches() ) )
         {
           return true;
