@@ -126,6 +126,10 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
+* Consider a reorganization of pipelines so that each independent pipeline can define a local idl to
+  include so each transform could be relatively isolated with the processing stages combined with custom
+  idl in one place
+
 * Start to download chrome webidl as they do not seem to align with specs exactly and thus generate some issues.
   - https://www.chromium.org/Home
   - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
