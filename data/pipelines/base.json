@@ -35,6 +35,15 @@
       "description": "Convert from historic constructor attributes"
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the webgl specific specs into a separate package",
+      "sourceSelector": "/name=webgl.*/",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=gl"
+      }
+    },
+    {
       "name": "RenameType",
       "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
       "sourceSelector": "name=deviceorientation",
