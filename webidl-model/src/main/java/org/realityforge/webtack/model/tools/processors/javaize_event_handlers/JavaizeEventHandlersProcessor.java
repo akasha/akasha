@@ -14,12 +14,14 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.Argument;
 import org.realityforge.webtack.model.AttributeMember;
+import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EventMember;
+import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.IncludesStatement;
 import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
@@ -39,6 +41,7 @@ import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 final class JavaizeEventHandlersProcessor
   extends AbstractProcessor
@@ -141,13 +144,27 @@ final class JavaizeEventHandlersProcessor
                                   new DocumentationElement( "Handle events of type " + name,
                                                             Collections.emptyList(),
                                                             Collections.emptyList() ),
-                                  Collections.emptyList(),
+                                  createSyntheticExtendedAttributes( definition ),
                                   Collections.emptyList() );
         definitions.put( handlerName, callback );
       }
     }
 
     return definitions;
+  }
+
+  @Nonnull
+  private List<ExtendedAttribute> createSyntheticExtendedAttributes( @Nonnull final AttributedNode definition )
+  {
+    final List<ExtendedAttribute> extendedAttributes = new ArrayList<>();
+    final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
+    if ( null != declaredSubPackage )
+    {
+      extendedAttributes.add( ExtendedAttribute.createExtendedAttributeIdent( ExtendedAttributes.JAVA_SUB_PACKAGE,
+                                                                              declaredSubPackage,
+                                                                              Collections.emptyList() ) );
+    }
+    return extendedAttributes;
   }
 
   @Nonnull
@@ -199,7 +216,7 @@ final class JavaizeEventHandlersProcessor
                                            new DocumentationElement( "Listener for events of type " + name,
                                                                      Collections.emptyList(),
                                                                      Collections.emptyList() ),
-                                           Collections.emptyList(),
+                                           createSyntheticExtendedAttributes( definition ),
                                            Collections.emptyList() );
         definitions.put( listenerName, callbackInterface );
       }

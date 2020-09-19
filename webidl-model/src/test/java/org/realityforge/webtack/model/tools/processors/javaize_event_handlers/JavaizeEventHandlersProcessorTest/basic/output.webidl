@@ -12,6 +12,7 @@ callback EventHandler = void ( Event event );
  *
  * @param event the event
  */
+[JavaSubPackage=mouse]
 callback MouseEventHandler = void ( MouseEvent event );
 
 /**
@@ -36,6 +37,7 @@ callback interface FocusEventListener {
 /**
  * Listener for events of type MouseEvent
  */
+[JavaSubPackage=mouse]
 callback interface MouseEventListener {
   /**
    * Handle event of type MouseEvent
@@ -93,6 +95,10 @@ interface HTMLElement : Element {
   attribute MouseEventHandler? onclick;
 };
 
+/**
+ * This event and thus the generated event handlers and event listeners should be in a "mouse" subpackage.
+ */
+[JavaSubPackage=mouse]
 interface MouseEvent : Event {
 };
 

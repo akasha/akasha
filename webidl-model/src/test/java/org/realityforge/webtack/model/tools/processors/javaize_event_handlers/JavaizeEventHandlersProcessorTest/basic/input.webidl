@@ -43,6 +43,10 @@ interface HTMLElement : Element {
   attribute NullableEventHandler onclick;
 };
 
+/**
+ * This event and thus the generated event handlers and event listeners should be in a "mouse" subpackage.
+ */
+[JavaSubPackage=mouse]
 interface MouseEvent : Event {
 };
 
