@@ -45,6 +45,15 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the webrtc specific specs into a separate package",
+      "sourceSelector": "name=webrtc.*",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=rtc"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the bluetooth specific specs into a separate package",
       "sourceSelector": "name=web_bluetooth",
       "config": {
@@ -54,11 +63,29 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the svg specific specs into a separate package",
+      "sourceSelector": "name=svg2",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=svg"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the speech specific specs into a separate package",
       "sourceSelector": "name=speech_api",
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=speech"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the wasm specific specs into a separate package",
+      "sourceSelector": "name=wasm.*",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=wasm"
       }
     },
     {
