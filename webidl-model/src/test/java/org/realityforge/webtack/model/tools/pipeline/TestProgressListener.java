@@ -45,7 +45,7 @@ public final class TestProgressListener
                           @Nonnull final StageConfig stage,
                           @Nonnull final String message )
   {
-    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "): DEBUG: " + message );
+    _trace.add( "stageDebug(" + pipeline.getName() + "," + stage.getName() + "): DEBUG: " + message );
   }
 
   @Override
@@ -53,7 +53,7 @@ public final class TestProgressListener
                          @Nonnull final StageConfig stage,
                          @Nonnull final String message )
   {
-    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "): INFO: " + message );
+    _trace.add( "stageInfo(" + pipeline.getName() + "," + stage.getName() + "): INFO: " + message );
   }
 
   @Override
@@ -61,7 +61,7 @@ public final class TestProgressListener
                           @Nonnull final StageConfig stage,
                           @Nonnull final String message )
   {
-    _trace.add( "beforeStage(" + pipeline.getName() + "," + stage.getName() + "): ERROR: " + message );
+    _trace.add( "stageError(" + pipeline.getName() + "," + stage.getName() + "): ERROR: " + message );
   }
 
   @Override
