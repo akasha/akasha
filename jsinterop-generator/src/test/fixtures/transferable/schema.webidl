@@ -1,3 +1,8 @@
+dictionary PostMessageOptions {
+  [Transferable]
+  sequence<object> transfer = [];
+};
+
 [Exposed=(Window,Worker), Serializable, Transferable]
 interface ImageBitmap {
   readonly attribute unsigned long height;

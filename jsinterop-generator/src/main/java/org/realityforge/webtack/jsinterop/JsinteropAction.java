@@ -537,7 +537,19 @@ final class JsinteropAction
     for ( final DictionaryMember member : definition.getMembers() )
     {
       final Type actualType = schema.resolveType( member.getType() );
-      final TypeName javaType = toTypeName( actualType );
+      final TypeName javaType;
+      if ( Kind.Sequence == actualType.getKind() &&
+           Kind.Object == ( (SequenceType) actualType ).getItemType().getKind() &&
+           member.isNoArgsExtendedAttributePresent( "Transferable" ) )
+      {
+        final ClassName transferableTypeName = lookupClassName( "Transferable" );
+        javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
+      }
+      else
+      {
+        javaType = toTypeName( actualType );
+      }
+
       generateDictionaryMemberGetter( member, actualType, javaType, type );
       generateDictionaryMemberSetter( member, actualType, javaType, type );
       for ( final TypedValue typedValue : explodeType( member, member.getType() ) )
@@ -732,11 +744,20 @@ final class JsinteropAction
     }
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
-      final TypeName itemType = toTypeName( ( (SequenceType) resolvedType ).getItemType(), true );
+      final Type itemType = ( (SequenceType) resolvedType ).getItemType();
+      final TypeName itemJavaType;
+      if ( Kind.Object == itemType.getKind() && member.isNoArgsExtendedAttributePresent( "Transferable" ) )
+      {
+        itemJavaType = lookupClassName( "Transferable" );
+      }
+      else
+      {
+        itemJavaType = toTypeName( itemType, true );
+      }
       method.addStatement( "$N( $T.<$T>uncheckedCast( $N ) )",
                            mutatorName,
                            JsinteropTypes.JS,
-                           ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), itemType ),
+                           ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), itemJavaType ),
                            paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
