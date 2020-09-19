@@ -427,7 +427,7 @@ final class JsinteropAction
       final TypeName arrayJavaType;
       if ( Kind.Object == itemType.getKind() &&
            null != node &&
-           node.isNoArgsExtendedAttributePresent( "Transferable" ) )
+           node.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
       {
         final ClassName transferableTypeName = lookupClassName( "Transferable" );
         javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
@@ -540,7 +540,7 @@ final class JsinteropAction
       final TypeName javaType;
       if ( Kind.Sequence == actualType.getKind() &&
            Kind.Object == ( (SequenceType) actualType ).getItemType().getKind() &&
-           member.isNoArgsExtendedAttributePresent( "Transferable" ) )
+           member.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
       {
         final ClassName transferableTypeName = lookupClassName( "Transferable" );
         javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
@@ -746,7 +746,8 @@ final class JsinteropAction
     {
       final Type itemType = ( (SequenceType) resolvedType ).getItemType();
       final TypeName itemJavaType;
-      if ( Kind.Object == itemType.getKind() && member.isNoArgsExtendedAttributePresent( "Transferable" ) )
+      if ( Kind.Object == itemType.getKind() &&
+           member.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
       {
         itemJavaType = lookupClassName( "Transferable" );
       }
@@ -1026,11 +1027,6 @@ final class JsinteropAction
     }
   }
 
-  private boolean isTransferable( @Nonnull final AttributedNode definition )
-  {
-    return definition.isNoArgsExtendedAttributePresent( "Transferable" );
-  }
-
   private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
   {
     return definition.getExtendedAttributes()
@@ -1078,7 +1074,7 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
-    if ( isTransferable( definition ) )
+    if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
     {
       type.addSuperinterface( lookupClassName( "Transferable" ) );
       _transferablePresent = true;
