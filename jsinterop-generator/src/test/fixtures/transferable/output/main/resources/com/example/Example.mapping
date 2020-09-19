@@ -1,0 +1,4 @@
+ImageBitmap=com.example.ImageBitmap
+MessagePort=com.example.MessagePort
+Sequence=elemental2.core.JsArray
+Transferable=com.example.Transferable

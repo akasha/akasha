@@ -91,6 +91,18 @@
       }
     },
     {
+      "name": "AddExtendedAttributeToArgument",
+      "description": "Annotate postMessage methods to indicate that they can take Transferables",
+      "sourceSelector": "name=whatwg_html or name=serviceworker",
+      "config": {
+        "expectedRemoveCount": 6,
+        "elementNamePattern": "^.*$",
+        "operationNamePattern": "^postMessage$",
+        "argumentNamePattern": "^transfer$",
+        "extendedAttribute": "Transferable"
+      }
+    },
+    {
       "name": "RemoveMember",
       "description": "Change the type of the type attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
