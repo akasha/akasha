@@ -270,7 +270,7 @@ public abstract class AbstractTest
       final PipelineContextImpl pipelineContext = new PipelineContextImpl( executionContext, pipelineConfig );
       final StageConfig stage = new StageConfig();
       stage.setName( "MyStage" );
-      pipelineContext.beforeStage( stage, Collections.emptyList());
+      pipelineContext.beforeStage( stage, Collections.emptyList() );
       return pipelineContext;
     }
     catch ( final Exception e )
