@@ -37,7 +37,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Package up the webgl specific specs into a separate package",
-      "sourceSelector": "/name=webgl.*/",
+      "sourceSelector": "name=webgl.*",
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=gl"
