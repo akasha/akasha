@@ -44,6 +44,15 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the speech specific specs into a separate package",
+      "sourceSelector": "name=speech_api",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=speech"
+      }
+    },
+    {
       "name": "RenameType",
       "description": "Both permissions.webdidl and deviceorientation.webidl define PermissionState and they have different shapes",
       "sourceSelector": "name=deviceorientation",
