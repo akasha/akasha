@@ -2007,7 +2007,7 @@ final class JsinteropAction
     {
       registerDefinition( definition );
       // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
-      super.lookupClassName( definition.getName() );
+      rawLookupClassName( definition.getName() );
     }
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
