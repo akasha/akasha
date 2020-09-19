@@ -24,6 +24,7 @@ import org.realityforge.webtack.model.tools.PipelineContextImpl;
 import org.realityforge.webtack.model.tools.pipeline.ExecutionContext;
 import org.realityforge.webtack.model.tools.pipeline.TestProgressListener;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
+import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;
@@ -266,7 +267,11 @@ public abstract class AbstractTest
       final PipelineConfig pipelineConfig = new PipelineConfig();
       pipelineConfig.setName( "MyPipeline" );
       pipelineConfig.setStages( new ArrayList<>() );
-      return new PipelineContextImpl( executionContext, pipelineConfig );
+      final PipelineContextImpl pipelineContext = new PipelineContextImpl( executionContext, pipelineConfig );
+      final StageConfig stage = new StageConfig();
+      stage.setName( "MyStage" );
+      pipelineContext.beforeStage( stage, Collections.emptyList());
+      return pipelineContext;
     }
     catch ( final Exception e )
     {
