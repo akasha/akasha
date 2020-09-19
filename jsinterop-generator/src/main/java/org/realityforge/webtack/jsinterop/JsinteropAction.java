@@ -427,7 +427,7 @@ final class JsinteropAction
       final TypeName arrayJavaType;
       if ( Kind.Object == itemType.getKind() &&
            null != node &&
-           isNoArgsExtendedAttributePresent( node, "Transferable" ) )
+           node.isNoArgsExtendedAttributePresent( "Transferable" ) )
       {
         final ClassName transferableTypeName = lookupClassName( "Transferable" );
         javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
@@ -1009,7 +1009,7 @@ final class JsinteropAction
 
   private boolean isTransferable( @Nonnull final AttributedNode definition )
   {
-    return isNoArgsExtendedAttributePresent( definition, "Transferable" );
+    return definition.isNoArgsExtendedAttributePresent( "Transferable" );
   }
 
   private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
@@ -1483,7 +1483,7 @@ final class JsinteropAction
   @Nonnull
   private String deriveJavascriptName( @Nonnull final InterfaceDefinition definition )
   {
-    if ( isNoArgsExtendedAttributePresent( definition, "LegacyNoInterfaceObject" ) )
+    if ( definition.isNoArgsExtendedAttributePresent( "LegacyNoInterfaceObject" ) )
     {
       return "Object";
     }
@@ -1971,14 +1971,6 @@ final class JsinteropAction
       .stream()
       .filter( a -> a.getKind() == ExtendedAttribute.Kind.IDENT || a.getKind() == ExtendedAttribute.Kind.IDENT_LIST )
       .anyMatch( a -> a.getName().equals( "Exposed" ) );
-  }
-
-  private boolean isNoArgsExtendedAttributePresent( @Nonnull final AttributedNode node, @Nonnull final String name )
-  {
-    return node.getExtendedAttributes()
-      .stream()
-      .filter( a -> ExtendedAttribute.Kind.NO_ARGS == a.getKind() )
-      .anyMatch( a -> name.equals( a.getName() ) );
   }
 
   @Nonnull

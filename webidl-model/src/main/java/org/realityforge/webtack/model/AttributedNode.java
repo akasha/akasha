@@ -25,6 +25,14 @@ public abstract class AttributedNode
     return _extendedAttributes;
   }
 
+  public final boolean isNoArgsExtendedAttributePresent( @Nonnull final String name )
+  {
+    return _extendedAttributes
+      .stream()
+      .filter( a -> ExtendedAttribute.Kind.NO_ARGS == a.getKind() )
+      .anyMatch( a -> name.equals( a.getName() ) );
+  }
+
   @Override
   public boolean equals( final Object o )
   {
