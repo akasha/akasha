@@ -78,7 +78,7 @@ public final class TestProgressListener
     return _trace;
   }
 
-  void assertContains( @Nonnull final String line )
+  public void assertContains( @Nonnull final String line )
   {
     assertTrue( _trace.contains( line ),
                 "Expected trace to contain line:\n\n" + line +
