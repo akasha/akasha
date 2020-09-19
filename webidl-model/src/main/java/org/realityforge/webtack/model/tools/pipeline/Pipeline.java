@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -274,23 +275,25 @@ public final class Pipeline
   private boolean matchSelector( @Nonnull final String selector, @Nonnull final Set<String> tags )
   {
     boolean defaultMatch = true;
-    for ( final String tag : selector.split( " +" ) )
+    for ( final String element : selector.split( " +" ) )
     {
-      if ( tag.startsWith( "!" ) )
+      if ( element.startsWith( "!" ) )
       {
-        if ( tags.contains( tag.substring( 1 ) ) )
+        final Pattern pattern = Pattern.compile( element.substring( 1 ) );
+        if ( tags.stream().anyMatch( t -> pattern.matcher( t ).matches() ) )
         {
           return false;
         }
       }
     }
 
-    for ( final String tag : selector.split( " +" ) )
+    for ( final String element : selector.split( " +" ) )
     {
-      if ( !tag.startsWith( "!" ) )
+      if ( !element.startsWith( "!" ) )
       {
         defaultMatch = false;
-        if ( tags.contains( tag ) )
+        final Pattern pattern = Pattern.compile( element );
+        if ( tags.stream().anyMatch( t -> pattern.matcher( t ).matches() ) )
         {
           return true;
         }
