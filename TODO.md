@@ -68,6 +68,9 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Do we ever need `Any` as a parameter value? Why not always use `@DoNotAutobox @Nullable Object`. It would mean
+  that we could pass null without having to type cast to `Object` or `Any` when trying to invoke these APIs.
+
 * Add an extended attribute ala `[values=[Value1,Value2]]` that indicates either the value returned by an
   operation, the value of an attribute, the value passed as an argument must comply with the values in set.
   This will result in a `@MagicConstant` being generated for the element. The first implementation will just
