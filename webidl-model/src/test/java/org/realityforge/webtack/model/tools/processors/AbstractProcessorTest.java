@@ -36,7 +36,8 @@ public abstract class AbstractProcessorTest
     final Path inputFile = dir.resolve( inputFilename + WebIDLSchema.EXTENSION );
     final WebIDLSchema input = loadWebIDLSchema( inputFile, testDescription );
     maybeWriteSchemaFixture( inputFile, input );
-    final WebIDLSchema output = supplier.get().process( input );
+    final Processor processor = supplier.get();
+    final WebIDLSchema output = processor.process( input );
     assertNotNull( output );
 
     final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
