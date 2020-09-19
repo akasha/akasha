@@ -22,6 +22,7 @@ import javax.annotation.Nullable;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.realityforge.webtack.model.tools.PipelineContextImpl;
 import org.realityforge.webtack.model.tools.pipeline.ExecutionContext;
+import org.realityforge.webtack.model.tools.pipeline.ProgressListener;
 import org.realityforge.webtack.model.tools.pipeline.TestProgressListener;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
@@ -259,11 +260,24 @@ public abstract class AbstractTest
   @Nonnull
   protected PipelineContext newPipelineContext( @Nonnull final String subDirectory )
   {
+    return newPipelineContext( subDirectory, new TestProgressListener() );
+  }
+
+  @Nonnull
+  protected PipelineContext newPipelineContext( @Nonnull final ProgressListener progressListener )
+  {
+    return newPipelineContext( "ignored", progressListener );
+  }
+
+  @Nonnull
+  protected PipelineContext newPipelineContext( @Nonnull final String subDirectory,
+                                                @Nonnull final ProgressListener progressListener )
+  {
     try
     {
       final Path dir = getTestLocalFixtureDir().resolve( subDirectory );
       final ExecutionContext executionContext =
-        new ExecutionContext( dir.resolve( "idl" ), dir.resolve( "docs" ), new TestProgressListener() );
+        new ExecutionContext( dir.resolve( "idl" ), dir.resolve( "docs" ), progressListener );
       final PipelineConfig pipelineConfig = new PipelineConfig();
       pipelineConfig.setName( "MyPipeline" );
       pipelineConfig.setStages( new ArrayList<>() );
