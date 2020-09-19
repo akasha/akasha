@@ -54,6 +54,7 @@ import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
 import org.realityforge.webtack.model.tools.util.BasicTypes;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 import org.realityforge.webtack.model.tools.util.JsinteropTypes;
 import org.realityforge.webtack.model.tools.util.NamingUtil;
 

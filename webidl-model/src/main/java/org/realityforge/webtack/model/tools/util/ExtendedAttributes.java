@@ -1,8 +1,8 @@
-package org.realityforge.webtack.jsinterop;
+package org.realityforge.webtack.model.tools.util;
 
 import javax.annotation.Nonnull;
 
-final class ExtendedAttributes
+public final class ExtendedAttributes
 {
   /**
    * The Transferable extended attribute is defined by the standard as appearing on interfaces that can
@@ -13,19 +13,18 @@ final class ExtendedAttributes
    * @see <a href="https://html.spec.whatwg.org/multipage/structured-data.html#transferable-objects">Transferable - HTML Specification</a>
    */
   @Nonnull
-  static final String TRANSFERABLE = "Transferable";
+  public static final String TRANSFERABLE = "Transferable";
   /**
    * The LegacyNoInterfaceObject extended attribute indicates that an interface object will not exist
    * for the interface in the ECMAScript binding.
    *
    * @see <a href="https://heycam.github.io/webidl/#LegacyNoInterfaceObject">LegacyNoInterfaceObject - WebIDL Specification</a>
    */
-  static final String LEGACY_NO_INTERFACE_OBJECT = "LegacyNoInterfaceObject";
-
+  public static final String LEGACY_NO_INTERFACE_OBJECT = "LegacyNoInterfaceObject";
   /**
    * A custom extended property that specifies the sub-package in which to generate element relative to the root element.
    */
-  static final String JAVA_SUB_PACKAGE = "JavaSubPackage";
+  public static final String JAVA_SUB_PACKAGE = "JavaSubPackage";
 
   private ExtendedAttributes()
   {
