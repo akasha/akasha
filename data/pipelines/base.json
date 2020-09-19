@@ -45,6 +45,15 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the bluetooth specific specs into a separate package",
+      "sourceSelector": "name=web_bluetooth",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=bluetooth"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the speech specific specs into a separate package",
       "sourceSelector": "name=speech_api",
       "config": {

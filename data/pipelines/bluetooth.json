@@ -13,6 +13,15 @@
       "description": "Convert from historic constructor attributes"
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the bluetooth specific specs into a separate package",
+      "sourceSelector": "name=web_bluetooth",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=bluetooth"
+      }
+    },
+    {
       "name": "Merge"
     },
     {
