@@ -1037,7 +1037,7 @@ final class JsinteropAction
     return definition.getExtendedAttributes()
       .stream()
       .anyMatch( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
-                      "LegacyNoInterfaceObject".equals( a.getName() ) );
+                      ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT.equals( a.getName() ) );
   }
 
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
@@ -1503,7 +1503,7 @@ final class JsinteropAction
   @Nonnull
   private String deriveJavascriptName( @Nonnull final InterfaceDefinition definition )
   {
-    if ( definition.isNoArgsExtendedAttributePresent( "LegacyNoInterfaceObject" ) )
+    if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT ) )
     {
       return "Object";
     }

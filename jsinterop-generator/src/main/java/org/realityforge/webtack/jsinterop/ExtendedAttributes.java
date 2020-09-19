@@ -14,6 +14,13 @@ final class ExtendedAttributes
    */
   @Nonnull
   static final String TRANSFERABLE = "Transferable";
+  /**
+   * The LegacyNoInterfaceObject extended attribute indicates that an interface object will not exist
+   * for the interface in the ECMAScript binding.
+   *
+   * @see <a href="https://heycam.github.io/webidl/#LegacyNoInterfaceObject">LegacyNoInterfaceObject - WebIDL Specification</a>
+   */
+  static final String LEGACY_NO_INTERFACE_OBJECT = "LegacyNoInterfaceObject";
 
   private ExtendedAttributes()
   {
