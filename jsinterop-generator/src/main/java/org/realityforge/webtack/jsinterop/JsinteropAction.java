@@ -28,7 +28,6 @@ import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
-import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
@@ -999,8 +998,8 @@ final class JsinteropAction
     {
       throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
     }
-    final boolean noPublicSymbol = shouldExpectNoGlobalSymbol( definition );
-
+    final boolean noPublicSymbol =
+      definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
                           .addMember( "isNative", "true" )
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
@@ -1030,14 +1029,6 @@ final class JsinteropAction
     {
       generateDefaultOperation( operation, type );
     }
-  }
-
-  private boolean shouldExpectNoGlobalSymbol( @Nonnull final Definition definition )
-  {
-    return definition.getExtendedAttributes()
-      .stream()
-      .anyMatch( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
-                      ExtendedAttributes.LEGACY_NO_INTERFACE_OBJECT.equals( a.getName() ) );
   }
 
   private void generateNamespace( @Nonnull final NamespaceDefinition definition )
