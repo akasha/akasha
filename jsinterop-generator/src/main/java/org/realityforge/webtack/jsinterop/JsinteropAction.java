@@ -166,7 +166,7 @@ final class JsinteropAction
       }
     }
 
-    if ( _transferablePresent )
+    if ( _transferablePresent && !isIdlTypePredefined( TRANSFERABLE_IDL_NAME ) )
     {
       writeTransferableInterface();
     }
