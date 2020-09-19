@@ -2,18 +2,19 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class PermissionState {
+@MagicConstant(
+    valuesFromClass = PermissionState.class
+)
+public @interface PermissionState {
   @Nonnull
-  public static final String denied = "denied";
+  String denied = "denied";
 
   @Nonnull
-  public static final String granted = "granted";
+  String granted = "granted";
 
   @Nonnull
-  public static final String prompt = "prompt";
-
-  private PermissionState() {
-  }
+  String prompt = "prompt";
 }

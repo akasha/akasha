@@ -325,7 +325,7 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  private ClassName rawLookupClassName( @Nonnull final String idlName )
+  protected ClassName rawLookupClassName( @Nonnull final String idlName )
   {
     return _idlToClassNameMapping.computeIfAbsent( idlName, n -> ClassName.bestGuess( lookupJavaType( n ) ) );
   }
@@ -596,10 +596,7 @@ public abstract class AbstractJavaAction
   @Nonnull
   private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
   {
-    return AnnotationSpec
-      .builder( BasicTypes.MAGIC_CONSTANT )
-      .addMember( "valuesFromClass", "$T.class", rawLookupClassName( enumeration.getName() ) )
-      .build();
+    return AnnotationSpec.builder( rawLookupClassName( enumeration.getName() ) ).build();
   }
 
   protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,

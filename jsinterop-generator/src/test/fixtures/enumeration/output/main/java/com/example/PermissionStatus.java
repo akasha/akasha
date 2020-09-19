@@ -5,7 +5,6 @@ import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,8 +20,6 @@ public class PermissionStatus {
       name = "state"
   )
   @Nonnull
-  @MagicConstant(
-      valuesFromClass = PermissionState.class
-  )
+  @PermissionState
   public native String state();
 }

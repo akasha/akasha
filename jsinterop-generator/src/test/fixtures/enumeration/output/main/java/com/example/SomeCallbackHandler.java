@@ -3,7 +3,6 @@ package com.example;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * Callback has both return type and argument as enums.
@@ -12,9 +11,7 @@ import org.intellij.lang.annotations.MagicConstant;
 @JsFunction
 @FunctionalInterface
 public interface SomeCallbackHandler {
-  @MagicConstant(
-      valuesFromClass = SpeechRecognitionErrorCode.class
-  )
+  @SpeechRecognitionErrorCode
   @Nonnull
-  String onInvoke(@MagicConstant(valuesFromClass = TxMode.class) @Nonnull String blah);
+  String onInvoke(@TxMode @Nonnull String blah);
 }

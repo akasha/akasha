@@ -2,18 +2,19 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class KeyType {
+@MagicConstant(
+    valuesFromClass = KeyType.class
+)
+public @interface KeyType {
   @Nonnull
-  public static final String private_ = "private";
+  String private_ = "private";
 
   @Nonnull
-  public static final String public_ = "public";
+  String public_ = "public";
 
   @Nonnull
-  public static final String secret = "secret";
-
-  private KeyType() {
-  }
+  String secret = "secret";
 }

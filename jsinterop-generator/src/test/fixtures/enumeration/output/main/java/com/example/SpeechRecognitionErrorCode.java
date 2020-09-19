@@ -2,33 +2,34 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
-public final class SpeechRecognitionErrorCode {
+@MagicConstant(
+    valuesFromClass = SpeechRecognitionErrorCode.class
+)
+public @interface SpeechRecognitionErrorCode {
   @Nonnull
-  public static final String aborted = "aborted";
+  String aborted = "aborted";
 
   @Nonnull
-  public static final String audio_capture = "audio-capture";
+  String audio_capture = "audio-capture";
 
   @Nonnull
-  public static final String bad_grammar = "bad-grammar";
+  String bad_grammar = "bad-grammar";
 
   @Nonnull
-  public static final String language_not_supported = "language-not-supported";
+  String language_not_supported = "language-not-supported";
 
   @Nonnull
-  public static final String network = "network";
+  String network = "network";
 
   @Nonnull
-  public static final String no_speech = "no-speech";
+  String no_speech = "no-speech";
 
   @Nonnull
-  public static final String not_allowed = "not-allowed";
+  String not_allowed = "not-allowed";
 
   @Nonnull
-  public static final String service_not_allowed = "service-not-allowed";
-
-  private SpeechRecognitionErrorCode() {
-  }
+  String service_not_allowed = "service-not-allowed";
 }

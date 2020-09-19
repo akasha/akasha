@@ -2,17 +2,16 @@ package com.biz;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * This is a predefined type.
  */
-public final class MyActiveMode {
+@MagicConstant( valuesFromClass = MyActiveMode.class )
+public @interface MyActiveMode {
   @Nonnull
-  public static final String active = "active";
+  String active = "active";
 
   @Nonnull
-  public static final String passive = "passive";
-
-  private MyActiveMode() {
-  }
+  String passive = "passive";
 }

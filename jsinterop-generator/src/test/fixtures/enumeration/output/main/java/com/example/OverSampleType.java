@@ -2,21 +2,22 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * This tests scenario where enum values start with number.
  */
 @Generated("org.realityforge.webtack")
-public final class OverSampleType {
+@MagicConstant(
+    valuesFromClass = OverSampleType.class
+)
+public @interface OverSampleType {
   @Nonnull
-  public static final String _2x = "2x";
+  String _2x = "2x";
 
   @Nonnull
-  public static final String _4x = "4x";
+  String _4x = "4x";
 
   @Nonnull
-  public static final String none = "none";
-
-  private OverSampleType() {
-  }
+  String none = "none";
 }

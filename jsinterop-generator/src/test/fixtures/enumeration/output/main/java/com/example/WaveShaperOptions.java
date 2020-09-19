@@ -8,7 +8,6 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
-import org.intellij.lang.annotations.MagicConstant;
 
 /**
  * Optional attribute is an enum
@@ -29,19 +28,15 @@ public interface WaveShaperOptions {
   @JsProperty(
       name = "oversample"
   )
-  @MagicConstant(
-      valuesFromClass = OverSampleType.class
-  )
+  @OverSampleType
   String oversample();
 
   @JsProperty
-  void setOversample(
-      @MagicConstant(valuesFromClass = OverSampleType.class) @Nonnull String oversample);
+  void setOversample(@OverSampleType @Nonnull String oversample);
 
   @JsOverlay
   @Nonnull
-  default WaveShaperOptions oversample(
-      @MagicConstant(valuesFromClass = OverSampleType.class) @Nonnull final String oversample) {
+  default WaveShaperOptions oversample(@OverSampleType @Nonnull final String oversample) {
     setOversample( oversample );
     return this;
   }

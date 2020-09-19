@@ -6,7 +6,6 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -23,8 +22,7 @@ public interface LongOrTxModeUnion {
 
   @JsOverlay
   @Nonnull
-  static LongOrTxModeUnion of(
-      @MagicConstant(valuesFromClass = TxMode.class) @Nonnull final String value) {
+  static LongOrTxModeUnion of(@TxMode @Nonnull final String value) {
     return Js.cast( value );
   }
 }

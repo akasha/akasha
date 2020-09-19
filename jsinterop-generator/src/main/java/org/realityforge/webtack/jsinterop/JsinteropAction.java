@@ -1882,10 +1882,14 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
-        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+        .annotationBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
+    type.addAnnotation( AnnotationSpec
+                          .builder( BasicTypes.MAGIC_CONSTANT )
+                          .addMember( "valuesFromClass", "$T.class", rawLookupClassName( definition.getName() ) )
+                          .build() );
 
     for ( final EnumerationValue enumerationValue : definition.getValues() )
     {
@@ -1904,8 +1908,6 @@ final class JsinteropAction
         type.addField( field.build() );
       }
     }
-
-    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
     writeTopLevelType( name, type );
   }
