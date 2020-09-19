@@ -22,6 +22,11 @@ final class ExtendedAttributes
    */
   static final String LEGACY_NO_INTERFACE_OBJECT = "LegacyNoInterfaceObject";
 
+  /**
+   * A custom extended property that specifies the sub-package in which to generate element relative to the root element.
+   */
+  static final String JAVA_SUB_PACKAGE = "JavaSubPackage";
+
   private ExtendedAttributes()
   {
   }

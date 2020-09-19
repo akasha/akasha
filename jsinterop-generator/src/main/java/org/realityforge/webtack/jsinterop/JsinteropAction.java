@@ -2016,11 +2016,32 @@ final class JsinteropAction
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
-    final String namespace =
-      definition instanceof InterfaceDefinition ? ( (InterfaceDefinition) definition ).getNamespace() : null;
-    final String subPackage = null != namespace ? "." + NamingUtil.underscore( namespace ) : "";
+    final String declaredSubPackage =
+      definition
+        .getExtendedAttributes()
+        .stream()
+        .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
+                      ExtendedAttributes.JAVA_SUB_PACKAGE.equals( a.getName() ) )
+        .map( ExtendedAttribute::getIdent )
+        .map( this::asSubPackage )
+        .findAny()
+        .orElse( null );
+    final String subPackage =
+      null != declaredSubPackage ? declaredSubPackage : asSubPackage( getNamespace( definition ) );
     final String javaType =
       getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( definition.getName() );
     tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
+  }
+
+  @Nullable
+  private String getNamespace( @Nonnull final NamedDefinition definition )
+  {
+    return definition instanceof InterfaceDefinition ? ( (InterfaceDefinition) definition ).getNamespace() : null;
+  }
+
+  @Nonnull
+  private String asSubPackage( @Nullable final String value )
+  {
+    return null != value && !value.isEmpty() ? "." + NamingUtil.underscore( value ) : "";
   }
 }

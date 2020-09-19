@@ -92,9 +92,6 @@ complete as there is too much un-said.
 * Extract a separate module for testing java-generating generators. Move `AbstractTest`, `BailErrorListener` and
   `JavaProcess` from `jsinterop-generator` and `react4j-generator` projects to this module.
 
-* Add the ability for an extended attribute such as `javaSubPackage=mySubPkg` to control which subpackage the
-  type is created in.
-
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
   more meaningful subgraphs.
