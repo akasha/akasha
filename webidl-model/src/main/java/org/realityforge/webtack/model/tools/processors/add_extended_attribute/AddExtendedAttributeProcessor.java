@@ -18,6 +18,7 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 
 final class AddExtendedAttributeProcessor
@@ -78,6 +79,19 @@ final class AddExtendedAttributeProcessor
                                       expandExtendedAttributes( input.getExtendedAttributes() ) :
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  @Override
+  protected TypedefDefinition transformTypedef( @Nonnull final TypedefDefinition input )
+  {
+    return new TypedefDefinition( input.getName(),
+                                  transformType( input.getType() ),
+                                  transformDocumentation( input.getDocumentation() ),
+                                  matches( input ) ?
+                                  expandExtendedAttributes( input.getExtendedAttributes() ) :
+                                  transformExtendedAttributes( input.getExtendedAttributes() ),
+                                  transformSourceLocations( input.getSourceLocations() ) );
   }
 
   @Nonnull
@@ -241,6 +255,11 @@ final class AddExtendedAttributeProcessor
   private boolean matches( @Nonnull final EnumerationDefinition input )
   {
     return matchesType( ElementType.enumeration ) && matchesName( input.getName() );
+  }
+
+  private boolean matches( @Nonnull final TypedefDefinition input )
+  {
+    return matchesType( ElementType.typedef ) && matchesName( input.getName() );
   }
 
   private boolean matches( @Nonnull final InterfaceDefinition input )

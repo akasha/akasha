@@ -7,6 +7,7 @@ public enum ElementType
   dictionary,
   enumeration,
   interface_type,
+  typedef,
   mixin,
   namespace
 }

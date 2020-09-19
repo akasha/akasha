@@ -20,6 +20,14 @@ public final class AddExtendedAttributeProcessorTest
   }
 
   @Test
+  public void basic()
+    throws Exception
+  {
+    performStandardFixtureTest( "basic",
+                                () -> createProcessor( "^.*$", "JavaSubPackage=bluetooth" ) );
+  }
+
+  @Test
   public void update_geolocation_api()
     throws Exception
   {
