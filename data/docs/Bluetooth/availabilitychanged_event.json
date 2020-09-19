@@ -2,7 +2,7 @@
   "kind": "Event",
   "name": "Bluetooth.availabilitychanged_event",
   "href": "https://webbluetoothcg.github.io/web-bluetooth/#eventdef-bluetoothremotegattservice-availabilitychanged",
-  "description": "Fired on navigator.bluetooth when the Bluetooth system as a whole becomes available or unavailable to the UA.\ncharacteristicvalu",
+  "description": "Fired on navigator.bluetooth when the Bluetooth system as a whole becomes available or unavailable to the UA.",
   "eventName": "availabilitychanged",
   "eventType": "Event",
   "eventHandlerProperty": "onavailabilitychanged"
