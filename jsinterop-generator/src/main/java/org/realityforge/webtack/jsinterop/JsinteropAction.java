@@ -61,6 +61,11 @@ import org.realityforge.webtack.model.tools.util.NamingUtil;
 final class JsinteropAction
   extends AbstractJavaAction
 {
+  /**
+   * Logical/idl name used to refer to the transferrable marker interface.
+   */
+  @Nonnull
+  private static final String TRANSFERABLE_IDL_NAME = "Transferable";
   @Nullable
   private final String _globalInterface;
   private final boolean _generateGwtModule;
@@ -187,7 +192,7 @@ final class JsinteropAction
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( lookupClassName( "Transferable" ).simpleName() )
+        .interfaceBuilder( lookupClassName( TRANSFERABLE_IDL_NAME ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec
@@ -429,7 +434,7 @@ final class JsinteropAction
            null != node &&
            node.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
       {
-        final ClassName transferableTypeName = lookupClassName( "Transferable" );
+        final ClassName transferableTypeName = lookupClassName( TRANSFERABLE_IDL_NAME );
         javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
         arrayJavaType = ArrayTypeName.of( transferableTypeName );
       }
@@ -542,7 +547,7 @@ final class JsinteropAction
            Kind.Object == ( (SequenceType) actualType ).getItemType().getKind() &&
            member.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
       {
-        final ClassName transferableTypeName = lookupClassName( "Transferable" );
+        final ClassName transferableTypeName = lookupClassName( TRANSFERABLE_IDL_NAME );
         javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
       }
       else
@@ -749,7 +754,7 @@ final class JsinteropAction
       if ( Kind.Object == itemType.getKind() &&
            member.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
       {
-        itemJavaType = lookupClassName( "Transferable" );
+        itemJavaType = lookupClassName( TRANSFERABLE_IDL_NAME );
       }
       else
       {
@@ -1076,7 +1081,7 @@ final class JsinteropAction
 
     if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
     {
-      type.addSuperinterface( lookupClassName( "Transferable" ) );
+      type.addSuperinterface( lookupClassName( TRANSFERABLE_IDL_NAME ) );
       _transferablePresent = true;
     }
 
