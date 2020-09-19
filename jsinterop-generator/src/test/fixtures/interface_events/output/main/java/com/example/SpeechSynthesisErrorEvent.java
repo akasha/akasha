@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "SpeechSynthesisErrorEvent"
 )
 public class SpeechSynthesisErrorEvent extends SpeechSynthesisEvent {
-  SpeechSynthesisErrorEvent() {
+  protected SpeechSynthesisErrorEvent() {
   }
 }

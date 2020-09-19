@@ -22,7 +22,7 @@ import jsinterop.base.Js;
     name = "SomeOtherType"
 )
 public class SomeOtherType {
-  SomeOtherType() {
+  protected SomeOtherType() {
   }
 
   @JsProperty(

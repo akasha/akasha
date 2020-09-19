@@ -15,7 +15,7 @@ import jsinterop.base.Any;
     name = "JSON"
 )
 public class JSON {
-  JSON() {
+  protected JSON() {
   }
 
   @Nonnull

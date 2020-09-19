@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "DOMTokenList"
 )
 public class DOMTokenList {
-  DOMTokenList() {
+  protected DOMTokenList() {
   }
 
   public native void add(@Nonnull String... tokens);

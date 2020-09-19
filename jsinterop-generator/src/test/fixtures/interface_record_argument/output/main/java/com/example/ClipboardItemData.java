@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "ClipboardItemData"
 )
 public class ClipboardItemData {
-  ClipboardItemData() {
+  protected ClipboardItemData() {
   }
 
   @JsProperty(

@@ -24,7 +24,7 @@ public class IDBObjectStore {
   @Nonnull
   public EventHandler2 handler2;
 
-  IDBObjectStore() {
+  protected IDBObjectStore() {
   }
 
   @Nonnull

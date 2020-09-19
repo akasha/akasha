@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "IDBObjectStore"
 )
 public class IDBObjectStore {
-  IDBObjectStore() {
+  protected IDBObjectStore() {
   }
 
   @JsProperty(

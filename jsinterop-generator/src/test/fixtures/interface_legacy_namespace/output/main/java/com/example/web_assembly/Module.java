@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "WebAssembly.Module"
 )
 public class Module {
-  Module() {
+  protected Module() {
   }
 }

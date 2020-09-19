@@ -1170,7 +1170,8 @@ final class JsinteropAction
 
     if ( !constructorPresent )
     {
-      final MethodSpec.Builder method = MethodSpec.constructorBuilder();
+      // Need protected annotation otherwise subclasses can not be created in different packages
+      final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PROTECTED );
       if ( null != parentConstructor )
       {
         generateSuperCall( parentConstructor, method );

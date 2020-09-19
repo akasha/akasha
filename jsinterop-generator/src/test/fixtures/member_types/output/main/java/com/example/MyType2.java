@@ -295,6 +295,6 @@ public class MyType2 {
   @Nonnull
   public Promise<Void> voidPromiseValue;
 
-  MyType2() {
+  protected MyType2() {
   }
 }

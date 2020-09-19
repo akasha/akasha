@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "MyType1"
 )
 public class MyType1 {
-  MyType1() {
+  protected MyType1() {
   }
 
   @JsProperty(

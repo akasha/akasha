@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "EventTarget"
 )
 public class EventTarget {
-  EventTarget() {
+  protected EventTarget() {
   }
 
   public native void removeEventListener(@Nonnull String type,

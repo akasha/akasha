@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "IDBIndex"
 )
 public class IDBIndex {
-  IDBIndex() {
+  protected IDBIndex() {
   }
 }

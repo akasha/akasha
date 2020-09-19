@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "Blob"
 )
 public class Blob {
-  Blob() {
+  protected Blob() {
   }
 
   @JsProperty(

@@ -27,7 +27,7 @@ public class SpeechSynthesisUtterance extends EventTarget {
   @Nullable
   public SpeechSynthesisEventHandler onstart;
 
-  SpeechSynthesisUtterance() {
+  protected SpeechSynthesisUtterance() {
   }
 
   @JsOverlay

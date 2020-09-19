@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "Window"
 )
 public class Window {
-  Window() {
+  protected Window() {
   }
 
   @JsProperty(

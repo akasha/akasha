@@ -15,7 +15,7 @@ import jsinterop.annotations.JsType;
     name = "txStorage"
 )
 public class TxStorage {
-  TxStorage() {
+  protected TxStorage() {
   }
 
   @JsProperty(

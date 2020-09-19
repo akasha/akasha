@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "BluetoothRemoteGATTService"
 )
 public class BluetoothRemoteGATTService extends EventTarget {
-  BluetoothRemoteGATTService() {
+  protected BluetoothRemoteGATTService() {
   }
 
   @Nonnull

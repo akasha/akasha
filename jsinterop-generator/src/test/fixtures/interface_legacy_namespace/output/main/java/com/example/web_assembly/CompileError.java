@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "WebAssembly.CompileError"
 )
 public class CompileError {
-  CompileError() {
+  protected CompileError() {
   }
 }

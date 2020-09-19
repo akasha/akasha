@@ -14,7 +14,7 @@ import jsinterop.annotations.JsType;
     name = "BluetoothRemoteGATTServer"
 )
 public class BluetoothRemoteGATTServer {
-  BluetoothRemoteGATTServer() {
+  protected BluetoothRemoteGATTServer() {
   }
 
   @Nonnull

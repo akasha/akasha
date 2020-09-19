@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "Node"
 )
 public class Node {
-  Node() {
+  protected Node() {
   }
 }

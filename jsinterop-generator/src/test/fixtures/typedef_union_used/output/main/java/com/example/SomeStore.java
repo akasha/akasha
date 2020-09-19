@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "SomeStore"
 )
 public class SomeStore {
-  SomeStore() {
+  protected SomeStore() {
   }
 
   /**

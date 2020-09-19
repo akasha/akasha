@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "SpeechSynthesis"
 )
 public class SpeechSynthesis {
-  SpeechSynthesis() {
+  protected SpeechSynthesis() {
   }
 
   @JsProperty(

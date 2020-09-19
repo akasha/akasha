@@ -30,7 +30,7 @@ import jsinterop.base.JsPropertyMap;
     name = "MyType4"
 )
 public class MyType4 {
-  MyType4() {
+  protected MyType4() {
   }
 
   @Nullable

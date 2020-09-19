@@ -16,7 +16,7 @@ import jsinterop.base.Any;
     name = "MessagePort"
 )
 public class MessagePort implements Transferable {
-  MessagePort() {
+  protected MessagePort() {
   }
 
   public native void close();

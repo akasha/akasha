@@ -21,7 +21,7 @@ import jsinterop.base.Js;
     name = "RTCStatsReport"
 )
 public class RTCStatsReport {
-  RTCStatsReport() {
+  protected RTCStatsReport() {
   }
 
   @JsProperty(

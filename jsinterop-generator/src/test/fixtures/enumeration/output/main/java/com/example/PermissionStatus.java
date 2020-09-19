@@ -13,7 +13,7 @@ import jsinterop.annotations.JsType;
     name = "PermissionStatus"
 )
 public class PermissionStatus {
-  PermissionStatus() {
+  protected PermissionStatus() {
   }
 
   @JsProperty(

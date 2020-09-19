@@ -67,6 +67,6 @@ public class MyType2 {
   @Nonnull
   public Object wait;
 
-  MyType2() {
+  protected MyType2() {
   }
 }

@@ -11,6 +11,6 @@ import jsinterop.annotations.JsType;
     name = "Event"
 )
 public class Event {
-  Event() {
+  protected Event() {
   }
 }

@@ -22,7 +22,7 @@ import jsinterop.base.Js;
     name = "SomeMapLikeDefiningOverrides"
 )
 public class SomeMapLikeDefiningOverrides {
-  SomeMapLikeDefiningOverrides() {
+  protected SomeMapLikeDefiningOverrides() {
   }
 
   public native void clear();
