@@ -96,6 +96,10 @@ complete as there is too much un-said.
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
   more meaningful subgraphs.
 
+* Partition the generated code into "sensible" subpackages. This is probably done by using `AddExtensionAttribute`
+  stages that add attributes to all elements based on schema names. We may need to to enhance the selector dsl
+  so we can partition like `name=webgl*`
+
 * Add codegen for `IterableMember`
 
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
