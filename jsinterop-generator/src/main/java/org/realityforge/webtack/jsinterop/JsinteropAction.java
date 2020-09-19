@@ -2019,7 +2019,7 @@ final class JsinteropAction
   {
     final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     final String subPackage =
-      null != declaredSubPackage ? declaredSubPackage : asSubPackage( getNamespace( definition ) );
+      null != declaredSubPackage ? asSubPackage( declaredSubPackage ) : asSubPackage( getNamespace( definition ) );
     final String javaType =
       getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( definition.getName() );
     tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
