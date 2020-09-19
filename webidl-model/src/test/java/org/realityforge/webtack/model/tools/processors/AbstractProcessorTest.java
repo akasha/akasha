@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.Completable;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import static org.testng.Assert.*;
 
@@ -39,6 +40,7 @@ public abstract class AbstractProcessorTest
     final Processor processor = supplier.get();
     final WebIDLSchema output = processor.process( input );
     assertNotNull( output );
+    Completable.complete( processor );
 
     final Path outputFile = dir.resolve( outputFilename + WebIDLSchema.EXTENSION );
     maybeWriteSchemaFixture( outputFile, output );
