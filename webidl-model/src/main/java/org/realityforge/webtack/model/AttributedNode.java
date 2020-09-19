@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public abstract class AttributedNode
   extends Node
@@ -23,6 +24,17 @@ public abstract class AttributedNode
   public final List<ExtendedAttribute> getExtendedAttributes()
   {
     return _extendedAttributes;
+  }
+
+  @Nullable
+  public final String getIdentValue( @Nonnull final String name )
+  {
+    return _extendedAttributes
+      .stream()
+      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && name.equals( a.getName() ) )
+      .map( ExtendedAttribute::getIdent )
+      .findAny()
+      .orElse( null );
   }
 
   public final boolean isNoArgsExtendedAttributePresent( @Nonnull final String name )

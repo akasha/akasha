@@ -2017,16 +2017,7 @@ final class JsinteropAction
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
-    final String declaredSubPackage =
-      definition
-        .getExtendedAttributes()
-        .stream()
-        .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() &&
-                      ExtendedAttributes.JAVA_SUB_PACKAGE.equals( a.getName() ) )
-        .map( ExtendedAttribute::getIdent )
-        .map( this::asSubPackage )
-        .findAny()
-        .orElse( null );
+    final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     final String subPackage =
       null != declaredSubPackage ? declaredSubPackage : asSubPackage( getNamespace( definition ) );
     final String javaType =
