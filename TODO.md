@@ -20,9 +20,6 @@ complete as there is too much un-said.
 
 * Add some apis at https://www.w3.org/wiki/DAS/Implementations
 
-* Complete implementation of `Transferable` by adding `Transferable` extended attribute to
-  the dictionary member `PostMessageOptions.transfer`
-
 # Docs Integration
 
 * Add `a:not([class="new"])` when MDN scanning so that we never collect unrealized links.
