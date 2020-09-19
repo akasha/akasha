@@ -54,8 +54,7 @@ public abstract class AbstractProcessorTest
                                           @Nonnull final String errorMessage,
                                           @Nonnull final Supplier<Processor> processorSupplier )
   {
-    final String testDescription = ( getClass().getSimpleName() + " " + subDirectory ) + " fixture test. Input=" +
-                                   "input";
+    final String testDescription =  getClass().getSimpleName() + " " + subDirectory + " fixture test";
 
     final Path path = getTestLocalFixtureDir().resolve( subDirectory );
     final WebIDLSchema input = loadWebIDLSchema( path.resolve( "input" + WebIDLSchema.EXTENSION ), testDescription );
