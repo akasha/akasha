@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.xr",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/xr",
+    "description": "The read-only xr property provided by the Navigator or WorkerNavigator interface returns an XR object which can be used to access the WebXR Device API."
+}

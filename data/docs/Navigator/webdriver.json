@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.webdriver",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/webdriver",
+    "description": "The webdriver read-only property of the navigator interface indicates whether the user agent is controlled by automation."
+}

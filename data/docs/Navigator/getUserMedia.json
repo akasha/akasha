@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Navigator.getUserMedia",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getUserMedia",
+    "description": "The deprecated Navigator.getUserMedia() method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a MediaStream."
+}

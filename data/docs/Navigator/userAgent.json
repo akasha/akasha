@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.userAgent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent",
+    "description": "The NavigatorID.userAgent read-only property returns the user agent string for the current browser."
+}

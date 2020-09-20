@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.maxTouchPoints",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/maxTouchPoints",
+    "description": "The maxTouchPoints read-only property of the Navigator interface returns the maximum number of simultaneous touch contact points are supported by the current device."
+}

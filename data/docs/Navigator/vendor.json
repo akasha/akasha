@@ -1,7 +1,7 @@
 
 {
-    "kind": "Method",
+    "kind": "Property",
     "name": "Navigator.vendor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendor",
-    "description": "The value of the Navigator vendor property is always either \"Google Inc.\", \"Apple Computer, Inc.\", or (in Firefox) the empty string."
+    "description": "The value of the Navigator vendor property is always either &quot;Google Inc.&quot;, &quot;Apple Computer, Inc.&quot;, or (in Firefox) the empty string."
 }

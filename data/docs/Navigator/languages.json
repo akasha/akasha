@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.languages",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/languages",
+    "description": "The NavigatorLanguage.languages read-only property returns an array of DOMStrings representing the user's preferred languages. The language is described using BCP 47 language tags. In the returned array they are ordered by preference with the most preferred language first."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Navigator.taintEnabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/taintEnabled",
+    "description": "The NavigatorID.taintEnabled() method always returns false."
+}

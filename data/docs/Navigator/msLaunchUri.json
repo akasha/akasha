@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Navigator.msLaunchUri",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/msLaunchUri",
+    "description": "The msLaunchUri() method is a Microsoft extension to the Navigator interface, which starts a service or app, such as an email client, that handles a given protocol. The Uniform Resource Identifier (URI) contains the protocol for the default service or app, such as mailto://test@contoso.com."
+}

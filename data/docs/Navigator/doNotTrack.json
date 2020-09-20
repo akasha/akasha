@@ -1,6 +1,6 @@
 
 {
-    "kind": "Method",
+    "kind": "Property",
     "name": "Navigator.doNotTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack",
     "description": "The Navigator.doNotTrack property returns the user's Do Not Track setting, which indicates whether the user is requesting web sites and advertisers to not track them."

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.product",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/product",
+    "description": "The value of the NavigatorID.product property is always &quot;Gecko&quot;, in any browser. This property is kept only for compatibility purposes."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.keyboard",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/keyboard",
+    "description": "The keyboard read-only property of the Navigator interface returns a Keyboard object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard."
+}

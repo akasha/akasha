@@ -1,7 +1,7 @@
 
 {
     "name": "Navigator",
-    "lastModifiedAt": 1600312361199,
+    "lastModifiedAt": 1600598094226,
     "entries": [
         {
             "name": "__type__",
@@ -60,6 +60,46 @@
             "lastModifiedAt": 1596544776678
         },
         {
+            "name": "geolocation",
+            "lastModifiedAt": 1600597728843
+        },
+        {
+            "name": "getBattery",
+            "lastModifiedAt": 1600598086638
+        },
+        {
+            "name": "getGamepads",
+            "lastModifiedAt": 1600598086968
+        },
+        {
+            "name": "getUserMedia",
+            "lastModifiedAt": 1600598088358
+        },
+        {
+            "name": "getVRDisplays",
+            "lastModifiedAt": 1600598089178
+        },
+        {
+            "name": "keyboard",
+            "lastModifiedAt": 1600597729715
+        },
+        {
+            "name": "language",
+            "lastModifiedAt": 1600597730796
+        },
+        {
+            "name": "languages",
+            "lastModifiedAt": 1600597731684
+        },
+        {
+            "name": "locks",
+            "lastModifiedAt": 1600597731972
+        },
+        {
+            "name": "maxTouchPoints",
+            "lastModifiedAt": 1600597733105
+        },
+        {
             "name": "mediaDevices",
             "lastModifiedAt": 1596544777992
         },
@@ -76,12 +116,32 @@
             "lastModifiedAt": 1596544781559
         },
         {
+            "name": "msLaunchUri",
+            "lastModifiedAt": 1600598089985
+        },
+        {
+            "name": "onLine",
+            "lastModifiedAt": 1600597941661
+        },
+        {
             "name": "oscpu",
             "lastModifiedAt": 1596544782803
         },
         {
+            "name": "permissions",
+            "lastModifiedAt": 1600598078488
+        },
+        {
+            "name": "platform",
+            "lastModifiedAt": 1600598079329
+        },
+        {
             "name": "presentation",
             "lastModifiedAt": 1596544783458
+        },
+        {
+            "name": "product",
+            "lastModifiedAt": 1600598080417
         },
         {
             "name": "productSub",
@@ -100,12 +160,24 @@
             "lastModifiedAt": 1599280377340
         },
         {
+            "name": "serviceWorker",
+            "lastModifiedAt": 1600598082336
+        },
+        {
             "name": "share",
             "lastModifiedAt": 1599280378268
         },
         {
+            "name": "taintEnabled",
+            "lastModifiedAt": 1600598093547
+        },
+        {
+            "name": "userAgent",
+            "lastModifiedAt": 1600598083325
+        },
+        {
             "name": "vendor",
-            "lastModifiedAt": 1596544786360
+            "lastModifiedAt": 1600598084436
         },
         {
             "name": "vendorSub",
@@ -118,6 +190,14 @@
         {
             "name": "wakeLock",
             "lastModifiedAt": 1596544788089
+        },
+        {
+            "name": "webdriver",
+            "lastModifiedAt": 1600598085369
+        },
+        {
+            "name": "xr",
+            "lastModifiedAt": 1600598085615
         }
     ]
 }

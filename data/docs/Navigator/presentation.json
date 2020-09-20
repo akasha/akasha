@@ -1,6 +1,6 @@
 
 {
-    "kind": "Method",
+    "kind": "Property",
     "name": "Navigator.presentation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/presentation",
     "description": "The presentation property of Navigator serves as the entry point for the Presentation API and returns a reference to Presentation object."

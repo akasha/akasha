@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.permissions",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions",
+    "description": "The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API."
+}
