@@ -97,6 +97,15 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the xr specific specs into a separate package",
+      "sourceSelector": "name=webxr",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=xr"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the speech specific specs into a separate package",
       "sourceSelector": "name=speech_api",
       "config": {
