@@ -15,7 +15,7 @@ import org.intellij.lang.annotations.MagicConstant;
 )
 public @interface SpeechRecognitionErrorCode {
   /**
-   * Documentation for SpeechRecognitionErrorCode.aborted.
+   * Documentation for SpeechRecognitionErrorCode.aborted with a link ala {@link com.example.SpeechRecognitionErrorCode}.
    *
    * @see <a href="http://example.com/API/SpeechRecognitionErrorCode/aborted">SpeechRecognitionErrorCode.aborted - MDN</a>
    */

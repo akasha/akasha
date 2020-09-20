@@ -6,6 +6,7 @@ import jsinterop.annotations.JsFunction;
 
 /**
  * Documentation for OnActionHandler.
+ * Arbitrary link to {@link com.example.SpeechRecognitionErrorCode} and {@link com.example.NodeFilter filter}.
  *
  * @see <a href="http://example.com/API/OnActionHandler">OnActionHandler - MDN</a>
  */

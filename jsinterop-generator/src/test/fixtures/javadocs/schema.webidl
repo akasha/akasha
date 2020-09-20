@@ -5,7 +5,7 @@
  */
 enum SpeechRecognitionErrorCode {
   /**
-   * Documentation for SpeechRecognitionErrorCode.aborted.
+   * Documentation for SpeechRecognitionErrorCode.aborted with a link ala {@link SpeechRecognitionErrorCode}.
    *
    * @see <a href="http://example.com/API/SpeechRecognitionErrorCode/aborted">SpeechRecognitionErrorCode.aborted - MDN</a>
    */
@@ -14,6 +14,7 @@ enum SpeechRecognitionErrorCode {
 
 /**
  * Documentation for OnActionHandler.
+ * Arbitrary link to {@link SpeechRecognitionErrorCode} and {@link NodeFilter filter}.
  *
  * @see <a href="http://example.com/API/OnActionHandler">OnActionHandler - MDN</a>
  */

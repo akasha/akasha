@@ -17,6 +17,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -66,6 +68,10 @@ final class JsinteropAction
    */
   @Nonnull
   private static final String TRANSFERABLE_IDL_NAME = "Transferable";
+  /**
+   * Pattern matcher used to process link annotations.
+   */
+  private final Pattern _linkMatcher = Pattern.compile( "\\{@link ([^ }]*)" );
   @Nullable
   private final String _globalInterface;
   private final boolean _generateGwtModule;
@@ -1957,7 +1963,17 @@ final class JsinteropAction
     final String text = documentation.getDocumentation();
     if ( null != text )
     {
-      docs.append( text );
+      final StringBuffer sb = new StringBuffer();
+      final Matcher matcher = _linkMatcher.matcher( text );
+      if ( matcher.find() )
+      {
+        do
+        {
+          matcher.appendReplacement( sb, "{@link " + lookupJavaType( matcher.group( 1 ) ) );
+        } while ( matcher.find() );
+      }
+      matcher.appendTail( sb );
+      docs.append( sb );
       docs.append( "\n" );
     }
     final List<DocumentationBlockTag> blockTags = documentation.getBlockTags();
