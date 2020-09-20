@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -15,14 +16,52 @@ import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.Completable;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 final class ConvertFactoryFunctionAttributeProcessor
   extends AbstractProcessor
+  implements Completable
 {
   @Nonnull
   private final Map<String, InterfaceDefinition> _interfaces = new HashMap<>();
+  @Nonnull
+  private final PipelineContext _context;
+  private final int _expectedConvertCount;
+  private int _convertCount;
   private boolean _legacyFactoryFunctionPresent;
+
+  ConvertFactoryFunctionAttributeProcessor( @Nonnull final PipelineContext context,
+                                            final int expectedConvertCount )
+  {
+    _context = Objects.requireNonNull( context );
+    _expectedConvertCount = expectedConvertCount;
+  }
+
+  @Override
+  public void onComplete()
+  {
+    if ( _expectedConvertCount > 0 )
+    {
+      if ( _convertCount != _expectedConvertCount )
+      {
+        _context.error( "Converted " + _convertCount + " elements but expected to " +
+                        "convert " + _expectedConvertCount + " elements." );
+      }
+    }
+    else
+    {
+      if ( 0 == _convertCount )
+      {
+        _context.info( "Converted " + _convertCount + " elements." );
+      }
+      else
+      {
+        _context.debug( "Converted " + _convertCount + " elements." );
+      }
+    }
+  }
 
   @Nullable
   @Override
@@ -66,36 +105,31 @@ final class ConvertFactoryFunctionAttributeProcessor
   private void createFactoryType( @Nonnull final InterfaceDefinition input,
                                   final ExtendedAttribute extendedAttribute )
   {
-    final InterfaceDefinition definition = createFactoryType( extendedAttribute, input );
+    _convertCount++;
+    final InterfaceDefinition definition =
+      new InterfaceDefinition( extendedAttribute.getArgListName(),
+                               input.getName(),
+                               Collections.emptyList(),
+                               Collections.emptyList(),
+                               Collections.singletonList( new OperationMember( OperationMember.Kind.CONSTRUCTOR,
+                                                                               null,
+                                                                               extendedAttribute.getArgList(),
+                                                                               new Type( Kind.Void,
+                                                                                         Collections.emptyList(),
+                                                                                         false,
+                                                                                         Collections.emptyList() ),
+                                                                               null,
+                                                                               Collections.emptyList(),
+                                                                               Collections.emptyList() ) ),
+                               Collections.emptyList(),
+                               null,
+                               null,
+                               null,
+                               null,
+                               null,
+                               Collections.emptyList(),
+                               Collections.emptyList() );
     _interfaces.put( definition.getName(), definition );
-  }
-
-  @Nonnull
-  private InterfaceDefinition createFactoryType( final ExtendedAttribute extendedAttribute,
-                                                 @Nonnull final InterfaceDefinition input )
-  {
-    return new InterfaceDefinition( extendedAttribute.getArgListName(),
-                                    input.getName(),
-                                    Collections.emptyList(),
-                                    Collections.emptyList(),
-                                    Collections.singletonList( new OperationMember( OperationMember.Kind.CONSTRUCTOR,
-                                                                                    null,
-                                                                                    extendedAttribute.getArgList(),
-                                                                                    new Type( Kind.Void,
-                                                                                              Collections.emptyList(),
-                                                                                              false,
-                                                                                              Collections.emptyList() ),
-                                                                                    null,
-                                                                                    Collections.emptyList(),
-                                                                                    Collections.emptyList() ) ),
-                                    Collections.emptyList(),
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    Collections.emptyList(),
-                                    Collections.emptyList() );
   }
 
   @Nonnull

@@ -15,10 +15,12 @@ import org.realityforge.webtack.model.tools.spi.Processor;
 public final class ConvertFactoryFunctionAttributeProcessorFactory
   extends AbstractProcessorFactory
 {
+  public int expectedConvertCount;
+
   @Nonnull
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new ConvertFactoryFunctionAttributeProcessor();
+    return new ConvertFactoryFunctionAttributeProcessor( context, expectedConvertCount );
   }
 }

@@ -37,7 +37,10 @@
     {
       "name": "ConvertFactoryFunctionAttribute",
       "description": "Convert legacy factory functions into a form that is compatible with Closure/Java mapping",
-      "sourceSelector": "name=whatwg_html"
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedConvertCount": 3
+      }
     },
     {
       "name": "AddExtendedAttribute",
