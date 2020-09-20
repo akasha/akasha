@@ -79,6 +79,15 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the indexeddb specific specs into a separate package",
+      "sourceSelector": "name=indexeddb",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=indexeddb"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the svg specific specs into a separate package",
       "sourceSelector": "name=svg2",
       "config": {

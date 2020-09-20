@@ -64,7 +64,7 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Consider a partition for "indexdb" and "media" to roughly align with what exists in elemental2
+* Consider a package "media" to roughly align with what exists in elemental2
 
 * Do we ever need `Any` as a parameter value? Why not always use `@DoNotAutobox @Nullable Object`. It would mean
   that we could pass null without having to type cast to `Object` or `Any` when trying to invoke these APIs.

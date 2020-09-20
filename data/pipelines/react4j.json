@@ -11,7 +11,7 @@
       "name": "React4j",
       "config": {
         "outputDirectory": "data/output/react4j",
-        "typeCatalogs": [
+        "predefinedTypeMapping": [
           "data/output/main/main/resources/elemental3/Elemental3.mapping"
         ],
         "packageName": "react4j.dom2"
