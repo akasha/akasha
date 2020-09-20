@@ -60,6 +60,8 @@ complete as there is too much un-said.
  - WebXR Layers Spec: https://github.com/immersive-web/layers
  - WebXR Layers Sample: https://cabanier.github.io/WebXRLayers-samples/index.html
 
+* Figure out an example for indexdb.
+
 # Java Generation
 
 * Consider a partition for "indexdb" and "media" to roughly align with what exists in elemental2
