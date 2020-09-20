@@ -22,6 +22,11 @@ complete as there is too much un-said.
 
 # Docs Integration
 
+* Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
+
+* Process docs and convert {@link Foo} {@link Foo foo} to use FQN ala {@link com.biz.Foo} {@link com.biz.Foo foo}
+  so that artifacts can be in separate packages.
+
 * Link with OpenGL docs ala https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBindBuffer.xml
 
 * Some doc entries include documentation for constants .. scan for that?.
