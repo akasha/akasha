@@ -161,6 +161,7 @@ public abstract class AbstractTest
                            "com.example",
                            globalInterface,
                            inputTypeCatalogs,
+                           new ArrayList<>(),
                            true,
                            true,
                            true );

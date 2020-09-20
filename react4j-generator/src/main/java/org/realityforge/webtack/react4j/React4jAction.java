@@ -39,11 +39,12 @@ final class React4jAction
 
   React4jAction( @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
-                 @Nonnull final List<Path> inputTypeCatalogs,
+                 @Nonnull final List<Path> predefinedTypeMappingPaths,
+                 @Nonnull final List<Path> externalTypeMappingPaths,
                  final boolean generateGwtModule,
                  final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName, enableMagicConstants, inputTypeCatalogs );
+    super( outputDirectory, packageName, enableMagicConstants, predefinedTypeMappingPaths, externalTypeMappingPaths );
     _generateGwtModule = generateGwtModule;
   }
 
@@ -415,7 +416,9 @@ final class React4jAction
       final ParameterSpec.Builder parameter = ParameterSpec.builder( paramType, attributeName, Modifier.FINAL );
       if ( !paramType.isPrimitive() )
       {
-        parameter.addAnnotation( getSchema().isNullable( attribute.getType() ) ? BasicTypes.NULLABLE : BasicTypes.NONNULL );
+        parameter.addAnnotation( getSchema().isNullable( attribute.getType() ) ?
+                                 BasicTypes.NULLABLE :
+                                 BasicTypes.NONNULL );
       }
       addMagicConstantAnnotationIfNeeded( attribute.getType(), parameter );
       type.addMethod( MethodSpec
@@ -648,7 +651,9 @@ final class React4jAction
                        .addAnnotation( BasicTypes.NULLABLE )
                        .build() )
       .varargs()
-      .addStatement( "final $T actual = $T.of()", JsinteropTypes.JS_PROPERTY_MAP_T_OBJECT, JsinteropTypes.JS_PROPERTY_MAP )
+      .addStatement( "final $T actual = $T.of()",
+                     JsinteropTypes.JS_PROPERTY_MAP_T_OBJECT,
+                     JsinteropTypes.JS_PROPERTY_MAP )
       .addStatement( "$T key = null", String.class )
       .addStatement( "$T ref = null", TypeName.OBJECT )
       .addCode( CodeBlock

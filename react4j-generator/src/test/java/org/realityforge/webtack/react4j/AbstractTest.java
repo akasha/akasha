@@ -178,6 +178,7 @@ public abstract class AbstractTest
       new React4jAction( outputDirectory,
                          "com.example",
                          new ArrayList<>(),
+                         new ArrayList<>(),
                          true,
                          true );
     action.process( schema );

@@ -20,7 +20,8 @@ public final class JsinteropActionFactory
   public String outputDirectory;
   public String packageName;
   public String globalInterface;
-  public List<String> typeCatalogs;
+  public List<String> predefinedTypeMapping;
+  public List<String> externalTypeMapping;
   public boolean generateGwtModule = true;
   public boolean generateTypeCatalog = true;
   public boolean enableMagicConstants = true;
@@ -45,29 +46,51 @@ public final class JsinteropActionFactory
     {
       throw new IllegalArgumentException( "Jsinterop supplied an invalid packageName configuration value" );
     }
-    final List<Path> typeCatalogPaths = new ArrayList<>();
-    if ( null != typeCatalogs )
+
+    final List<Path> predefinedTypeMappingPaths = new ArrayList<>();
+    if ( null != predefinedTypeMapping )
     {
-      for ( final String typeCatalog : typeCatalogs )
+      for ( final String typeCatalog : predefinedTypeMapping )
       {
         final Path catalog = Paths.get( typeCatalog );
         if ( !Files.exists( catalog ) )
         {
-          throw new IllegalArgumentException( "Jsinterop action was supplied an invalid type " +
-                                              "catalog that does not exist: " + catalog );
+          throw new IllegalArgumentException( "React4j action configuration specified a file that does not exist " +
+                                              "in the predefinedTypeMapping parameter: " + catalog );
         }
         else if ( !Files.isRegularFile( catalog ) )
         {
-          throw new IllegalArgumentException( "Jsinterop action was supplied an invalid type " +
-                                              "catalog that is not a regular file: " + catalog );
+          throw new IllegalArgumentException( "React4j action configuration specified a file that is not a regular " +
+                                              "file in the predefinedTypeMapping parameter: " + catalog );
         }
-        typeCatalogPaths.add( catalog );
+        predefinedTypeMappingPaths.add( catalog );
+      }
+    }
+
+    final List<Path> externalTypeMappingPaths = new ArrayList<>();
+    if ( null != externalTypeMapping )
+    {
+      for ( final String typeCatalog : externalTypeMapping )
+      {
+        final Path catalog = Paths.get( typeCatalog );
+        if ( !Files.exists( catalog ) )
+        {
+          throw new IllegalArgumentException( "React4j action configuration specified a file that does not exist " +
+                                              "in the externalTypeMapping parameter: " + catalog );
+        }
+        else if ( !Files.isRegularFile( catalog ) )
+        {
+          throw new IllegalArgumentException( "React4j action configuration specified a file that is not a regular " +
+                                              "file in the externalTypeMapping parameter: " + catalog );
+        }
+        externalTypeMappingPaths.add( catalog );
       }
     }
     return new JsinteropAction( Paths.get( outputDirectory ),
                                 packageName,
                                 globalInterface,
-                                typeCatalogPaths,
+                                predefinedTypeMappingPaths,
+                                externalTypeMappingPaths,
                                 generateGwtModule,
                                 generateTypeCatalog,
                                 enableMagicConstants );

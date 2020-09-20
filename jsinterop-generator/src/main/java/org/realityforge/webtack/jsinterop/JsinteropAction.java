@@ -75,12 +75,13 @@ final class JsinteropAction
   JsinteropAction( @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
                    @Nullable final String globalInterface,
-                   @Nonnull final List<Path> inputTypeCatalogs,
+                   @Nonnull final List<Path> predefinedTypeMappingPaths,
+                   @Nonnull final List<Path> externalTypeMappingPaths,
                    final boolean generateGwtModule,
                    final boolean generateTypeCatalog,
                    final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName, enableMagicConstants, inputTypeCatalogs );
+    super( outputDirectory, packageName, enableMagicConstants, predefinedTypeMappingPaths, externalTypeMappingPaths );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
     _generateTypeCatalog = generateTypeCatalog;

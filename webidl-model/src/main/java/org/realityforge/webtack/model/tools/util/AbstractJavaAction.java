@@ -49,9 +49,12 @@ public abstract class AbstractJavaAction
   @Nonnull
   private final String _packageName;
   private final boolean _enableMagicConstants;
-  // Maps idlName -> Qualified Java Name supplied by input type catalogs
+  // Maps idlName -> Qualified Java Name for types that are provided by external libraries
   @Nonnull
-  private final Map<String, String> _inputIdlToJavaTypeMapping = new HashMap<>();
+  private final Map<String, String> _predefinedIdlToJavaTypeMapping = new HashMap<>();
+  // Maps idlName -> Qualified Java Name that specified explicitly but types are still generate by action
+  @Nonnull
+  private final Map<String, String> _externalIdlToJavaTypeMapping = new HashMap<>();
   // Maps Classname -> Path of source file
   @Nonnull
   private final Map<String, Path> _generatedFiles = new HashMap<>();
@@ -71,26 +74,45 @@ public abstract class AbstractJavaAction
   protected AbstractJavaAction( @Nonnull final Path outputDirectory,
                                 @Nonnull final String packageName,
                                 final boolean enableMagicConstants,
-                                @Nonnull final List<Path> inputTypeCatalogs )
+                                @Nonnull final List<Path> predefinedTypeMappingPaths,
+                                @Nonnull final List<Path> externalTypeMappingPaths )
   {
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
     _enableMagicConstants = enableMagicConstants;
-    final Properties inputTypes = new Properties();
-    for ( final Path inputTypeCatalog : inputTypeCatalogs )
+    final Properties predefinedTypes = new Properties();
+    for ( final Path predefinedTypeMapping : predefinedTypeMappingPaths )
     {
       try
       {
-        inputTypes.load( new FileReader( inputTypeCatalog.toFile() ) );
+        predefinedTypes.load( new FileReader( predefinedTypeMapping.toFile() ) );
       }
       catch ( final IOException ioe )
       {
-        throw new IllegalStateException( "Failed to read input type catalog " + inputTypeCatalog, ioe );
+        throw new IllegalStateException( "Failed to read predefined type mapping catalog " + predefinedTypeMapping,
+                                         ioe );
       }
     }
-    for ( final String name : inputTypes.stringPropertyNames() )
+    for ( final String name : predefinedTypes.stringPropertyNames() )
     {
-      _inputIdlToJavaTypeMapping.put( name, inputTypes.getProperty( name ) );
+      _predefinedIdlToJavaTypeMapping.put( name, predefinedTypes.getProperty( name ) );
+    }
+    final Properties externalMapping = new Properties();
+    for ( final Path typeMapping : externalTypeMappingPaths )
+    {
+      try
+      {
+        externalMapping.load( new FileReader( typeMapping.toFile() ) );
+      }
+      catch ( final IOException ioe )
+      {
+        throw new IllegalStateException( "Failed to read external type mapping " + typeMapping, ioe );
+      }
+    }
+    for ( final String name : externalMapping.stringPropertyNames() )
+    {
+      final String pkgName = externalMapping.getProperty( name );
+      _externalIdlToJavaTypeMapping.put( name, ( pkgName.startsWith( "." ) ? getPackageName() : "" ) + pkgName );
     }
   }
 
@@ -138,13 +160,7 @@ public abstract class AbstractJavaAction
   @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
   protected boolean isIdlTypePredefined( @Nonnull final String idlName )
   {
-    return getInputIdlToJavaTypeMapping().containsKey( idlName );
-  }
-
-  @Nonnull
-  protected Map<String, String> getInputIdlToJavaTypeMapping()
-  {
-    return _inputIdlToJavaTypeMapping;
+    return _predefinedIdlToJavaTypeMapping.containsKey( idlName );
   }
 
   @Nonnull
@@ -159,7 +175,8 @@ public abstract class AbstractJavaAction
     _idlToClassNameMapping.clear();
     _generatedFiles.clear();
     _unions.clear();
-    _idlToJavaTypeMapping.putAll( _inputIdlToJavaTypeMapping );
+    _idlToJavaTypeMapping.putAll( _predefinedIdlToJavaTypeMapping );
+    _idlToJavaTypeMapping.putAll( _externalIdlToJavaTypeMapping );
     _schema = Objects.requireNonNull( schema );
     schema.link();
   }
