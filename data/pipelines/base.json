@@ -89,7 +89,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Package up the svg specific specs into a separate package",
-      "sourceSelector": "name=svg2",
+      "sourceSelector": "name=svg2 name=css_masking_1 name=filter_effects_1",
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=svg"
