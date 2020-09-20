@@ -15,6 +15,13 @@ public final class ExtendedAttributes
   @Nonnull
   public static final String TRANSFERABLE = "Transferable";
   /**
+   * A attribute applied to no arg constructors that implies special handling by the environment.
+   *
+   * @see <a href="https://html.spec.whatwg.org/#htmlconstructor">[HTMLConstructor] - HTML Specification</a>
+   */
+  @Nonnull
+  public static final String HTML_CONSTRUCTOR = "HTMLConstructor";
+  /**
    * The LegacyNoInterfaceObject extended attribute indicates that an interface object will not exist
    * for the interface in the ECMAScript binding.
    *

@@ -43,6 +43,14 @@
       }
     },
     {
+      "name": "RemoveHTMLConstructor",
+      "description": "Remove constructors that are not invokable directly in Javascript binding",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedConvertCount": 3
+      }
+    },
+    {
       "name": "AddExtendedAttribute",
       "description": "Package up the webgl specific specs into a separate package",
       "sourceSelector": "name=webgl.*",
