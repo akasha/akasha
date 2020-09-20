@@ -22,6 +22,14 @@ public final class ExtendedAttributes
    */
   public static final String LEGACY_NO_INTERFACE_OBJECT = "LegacyNoInterfaceObject";
   /**
+   * The LegacyFactoryFunction extended attribute indicates that the ECMAScript global object will
+   * have a property with the specified name whose value is a function that can create objects that
+   * implement the interface.
+   *
+   * @see <a href="https://heycam.github.io/webidl/#LegacyFactoryFunction">LegacyFactoryFunction - WebIDL Specification</a>
+   */
+  public static final String LEGACY_FACTORY_FUNCTION = "LegacyFactoryFunction";
+  /**
    * A custom extended property that specifies the sub-package in which to generate element relative to the root element.
    */
   public static final String JAVA_SUB_PACKAGE = "JavaSubPackage";
