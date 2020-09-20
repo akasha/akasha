@@ -172,7 +172,7 @@
     {
       "name": "AddExtendedAttributeToArgument",
       "description": "Annotate postMessage methods to indicate that they can take Transferables",
-      "sourceSelector": "name=whatwg_html or name=serviceworker",
+      "sourceSelector": "name=whatwg_html name=serviceworker",
       "config": {
         "expectedRemoveCount": 6,
         "elementNamePattern": "^.*$",
