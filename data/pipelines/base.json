@@ -97,6 +97,24 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the audio specific specs into a separate package",
+      "sourceSelector": "name=web_audio_api",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=audio"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the media specific specs into a separate package",
+      "sourceSelector": "name=media_source name=mediacapture_main name=mediacapture_record name=screen_capture",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=media"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the xr specific specs into a separate package",
       "sourceSelector": "name=webxr",
       "config": {
