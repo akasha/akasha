@@ -115,6 +115,15 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the notifications specific specs into a separate package",
+      "sourceSelector": "name=whatwg_notifications",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=notifications"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the xr specific specs into a separate package",
       "sourceSelector": "name=webxr",
       "config": {
