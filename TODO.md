@@ -20,8 +20,6 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
-* Package webidl source as part of output jars.
-
 * Java: Add an extended attribute ala `[values=[Value1,Value2]]` that indicates either the value returned by an
   operation, the value of an attribute, the value passed as an argument must comply with the values in set.
   This will result in a `@MagicConstant` being generated for the element. The first implementation will just
