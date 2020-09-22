@@ -34,20 +34,8 @@ public class MyType4 {
   }
 
   @Nullable
-  public static native Any anyMethod(@Nullable Any v1, @Nullable Any v2);
-
-  @Nullable
-  public static native Any anyMethod(@DoNotAutobox @Nullable Object v1, @Nullable Any v2);
-
-  @Nullable
-  public static native Any anyMethod(@Nullable Any v1, @DoNotAutobox @Nullable Object v2);
-
-  @Nullable
   public static native Any anyMethod(@DoNotAutobox @Nullable Object v1,
       @DoNotAutobox @Nullable Object v2);
-
-  @Nullable
-  public static native Any anyMethod(@Nullable Any v1);
 
   @Nullable
   public static native Any anyMethod(@DoNotAutobox @Nullable Object v1);

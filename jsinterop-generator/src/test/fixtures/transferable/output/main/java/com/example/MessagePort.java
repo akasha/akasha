@@ -7,7 +7,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -21,12 +20,8 @@ public class MessagePort implements Transferable {
 
   public native void close();
 
-  public native void postMessage(@Nullable Any message, @Nonnull JsArray<Transferable> transfer);
-
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull JsArray<Transferable> transfer);
-
-  public native void postMessage(@Nullable Any message, @Nonnull Transferable[] transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
       @Nonnull Transferable[] transfer);

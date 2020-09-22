@@ -18,12 +18,17 @@ interface Event {
   readonly attribute unsigned short eventPhase;
   [LegacyUnforgeable]
   readonly attribute boolean isTrusted;
+  readonly attribute any readonlyAny;
   readonly attribute EventTarget? srcElement;
   readonly attribute EventTarget? target;
   readonly attribute DOMString type;
   attribute boolean cancelBubble;
+  attribute any mutableAny;
   attribute boolean returnValue;
   constructor( DOMString type, optional EventInit eventInitDict = {} );
+  Promise<any> anyInReturnedPromise();
+  void anyParameter( any value );
+  any anyReturning();
   sequence<EventTarget> composedPath();
   void initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
   void preventDefault();

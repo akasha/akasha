@@ -18,41 +18,26 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface GlobalDescriptor {
+public interface RequiredAnyDict {
   @JsOverlay
   @Nonnull
-  static GlobalDescriptor create(@DoNotAutobox @Nullable final Object value) {
-    return Js.<GlobalDescriptor>uncheckedCast( JsPropertyMap.of() ).value( value );
+  static RequiredAnyDict create(@DoNotAutobox @Nullable final Object someValue) {
+    return Js.<RequiredAnyDict>uncheckedCast( JsPropertyMap.of() ).someValue( someValue );
   }
 
   @JsProperty(
-      name = "mutable"
-  )
-  boolean mutable();
-
-  @JsProperty
-  void setMutable(boolean mutable);
-
-  @JsOverlay
-  @Nonnull
-  default GlobalDescriptor mutable(final boolean mutable) {
-    setMutable( mutable );
-    return this;
-  }
-
-  @JsProperty(
-      name = "value"
+      name = "someValue"
   )
   @Nullable
-  Any value();
+  Any someValue();
 
   @JsProperty
-  void setValue(@DoNotAutobox @Nullable Object value);
+  void setSomeValue(@DoNotAutobox @Nullable Object someValue);
 
   @JsOverlay
   @Nonnull
-  default GlobalDescriptor value(@DoNotAutobox @Nullable final Object value) {
-    setValue( value );
+  default RequiredAnyDict someValue(@DoNotAutobox @Nullable final Object someValue) {
+    setSomeValue( someValue );
     return this;
   }
 }

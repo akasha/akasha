@@ -46,19 +46,7 @@ public interface MyDictionary {
   Any anyValue();
 
   @JsProperty
-  void setAnyValue(@Nullable Any anyValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary anyValue(@Nullable final Any anyValue) {
-    setAnyValue( anyValue );
-    return this;
-  }
-
-  @JsOverlay
-  default void setAnyValue(@DoNotAutobox @Nullable final Object anyValue) {
-    setAnyValue( Js.asAny( anyValue ) );
-  }
+  void setAnyValue(@DoNotAutobox @Nullable Object anyValue);
 
   @JsOverlay
   @Nonnull

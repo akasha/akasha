@@ -419,7 +419,6 @@ final class JsinteropAction
     }
     else if ( Kind.Any == kind )
     {
-      values.add( new TypedValue( declaredType, type, JsinteropTypes.ANY, TypedValue.Nullability.NULLABLE, false ) );
       values.add( new TypedValue( declaredType, type, TypeName.OBJECT, TypedValue.Nullability.NULLABLE, true ) );
     }
     else if ( Kind.Union == kind )
@@ -566,7 +565,7 @@ final class JsinteropAction
       generateDictionaryMemberSetter( member, actualType, javaType, type );
       for ( final TypedValue typedValue : explodeType( member, member.getType() ) )
       {
-        if ( !javaType.equals( typedValue.getJavaType() ) )
+        if ( Kind.Any != actualType.getKind() && !javaType.equals( typedValue.getJavaType() ) )
         {
           generateDictionaryMemberOverlaySetter( member, typedValue, type );
         }
@@ -697,8 +696,13 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
         .addAnnotation( JsinteropTypes.JS_PROPERTY );
     maybeAddJavadoc( member, method );
+    final boolean isAny = Kind.Any == actualType.getKind();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( javaType, safeName( member.getName() ) );
+      ParameterSpec.builder( isAny ? TypeName.OBJECT : javaType, safeName( member.getName() ) );
+    if ( isAny )
+    {
+      parameter.addAnnotation( JsinteropTypes.DO_NOT_AUTOBOX );
+    }
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
 
     if ( getSchema().isNullable( member.getType() ) )

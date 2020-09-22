@@ -1,6 +1,8 @@
 EventInit=com.example.EventInit
+OptionalAnyDict=com.example.OptionalAnyDict
 Promise=elemental2.promise.Promise
 PromiseRejectionEventInit=com.example.PromiseRejectionEventInit
+RequiredAnyDict=com.example.RequiredAnyDict
 Storage=com.example.Storage
 StorageEventInit=com.example.StorageEventInit
 TransitionEventInit=com.example.TransitionEventInit

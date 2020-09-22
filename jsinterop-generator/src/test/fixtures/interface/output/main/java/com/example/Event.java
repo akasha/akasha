@@ -1,6 +1,8 @@
 package com.example;
 
 import elemental2.core.JsArray;
+import elemental2.promise.Promise;
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -8,6 +10,7 @@ import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Any;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -29,6 +32,9 @@ public class Event {
   public static final int NONE = 0;
 
   public boolean cancelBubble;
+
+  @Nullable
+  public Any mutableAny;
 
   public boolean returnValue;
 
@@ -75,6 +81,12 @@ public class Event {
   public native boolean isTrusted();
 
   @JsProperty(
+      name = "readonlyAny"
+  )
+  @Nullable
+  public native Any readonlyAny();
+
+  @JsProperty(
       name = "srcElement"
   )
   @Nullable
@@ -106,4 +118,12 @@ public class Event {
   public native void stopImmediatePropagation();
 
   public native void stopPropagation();
+
+  @Nullable
+  public native Any anyReturning();
+
+  @Nonnull
+  public native Promise<Any> anyInReturnedPromise();
+
+  public native void anyParameter(@DoNotAutobox @Nullable Object value);
 }

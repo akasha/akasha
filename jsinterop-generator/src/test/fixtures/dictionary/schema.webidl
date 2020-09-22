@@ -4,9 +4,17 @@ dictionary EventInit {
   boolean composed = false;
 };
 
+dictionary OptionalAnyDict : RequiredAnyDict {
+  any anotherValue = null;
+};
+
 dictionary PromiseRejectionEventInit : EventInit {
   required Promise<any> promise;
   any reason;
+};
+
+dictionary RequiredAnyDict {
+  required any someValue;
 };
 
 dictionary StorageEventInit : EventInit {

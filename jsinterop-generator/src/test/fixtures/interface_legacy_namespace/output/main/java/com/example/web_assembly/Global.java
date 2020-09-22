@@ -19,9 +19,6 @@ public class Global {
   @Nullable
   public Any value;
 
-  public Global(@Nonnull final GlobalDescriptor descriptor, @Nullable final Any v) {
-  }
-
   public Global(@Nonnull final GlobalDescriptor descriptor,
       @DoNotAutobox @Nullable final Object v) {
   }
