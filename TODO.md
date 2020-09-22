@@ -4,6 +4,8 @@ This document is essentially a list of shorthand notes describing work yet to be
 Unfortunately it is not complete enough for other people to pick work off the list and
 complete as there is too much un-said.
 
+# MVP Release
+
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical
@@ -20,9 +22,28 @@ complete as there is too much un-said.
 
 * Package webidl source as part of output jars.
 
-* Add some additional apis at https://github.com/w3c/browser-specs maybe even extracting using some automated
-  mechanisms from https://github.com/w3c/browser-specs/blob/master/index.json and added appropriate tags (i.e.
-  beta, nightly)
+* Java: Do we ever need `Any` as a parameter value? Why not always use `@DoNotAutobox @Nullable Object`. It would mean
+  that we could pass null without having to type cast to `Object` or `Any` when trying to invoke these APIs.
+
+* Java: Add an extended attribute ala `[values=[Value1,Value2]]` that indicates either the value returned by an
+  operation, the value of an attribute, the value passed as an argument must comply with the values in set.
+  This will result in a `@MagicConstant` being generated for the element. The first implementation will just
+  support enumeration types and the values in the `values` list will be the strings that are part of enumeration
+  set. The second phase will be for numeric values and it is expected the values within `values` list are
+  constants of the same type in the declaring element.
+  - add a processor that makes adding `values` extended attribute to appropriate elements. Maybe adapt
+    `AddExtendedAttribute` to cover this capability?
+  - Consider adding `valuesSource=SomeType` that names an interface/enumeration from which to source values.
+  - Add validation that verifies the values extended attribute appears in the correct locations in WebIDL, references
+    values that exist, contains at least 1 value, references constants of the correct type and appears on members
+    of the correct type (i.e. Can not annotate a reference to an interface)
+
+* Java: Apply `values=...` to restrict numeric values for GL method arguments such as in `WebGLRenderingContext.bindBuffer()`
+
+* Java: Apply `values=...` to restrict numeric values for readyState etc.
+
+* Java: Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
+  defining an extended attribute to change the name that java field is generated with.
 
 # Docs Integration
 
@@ -65,34 +86,11 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Do we ever need `Any` as a parameter value? Why not always use `@DoNotAutobox @Nullable Object`. It would mean
-  that we could pass null without having to type cast to `Object` or `Any` when trying to invoke these APIs.
-
-* Add an extended attribute ala `[values=[Value1,Value2]]` that indicates either the value returned by an
-  operation, the value of an attribute, the value passed as an argument must comply with the values in set.
-  This will result in a `@MagicConstant` being generated for the element. The first implementation will just
-  support enumeration types and the values in the `values` list will be the strings that are part of enumeration
-  set. The second phase will be for numeric values and it is expected the values within `values` list are
-  constants of the same type in the declaring element.
-  - add a processor that makes adding `values` extended attribute to appropriate elements. Maybe adapt
-    `AddExtendedAttribute` to cover this capability?
-  - Consider adding `valuesSource=SomeType` that names an interface/enumeration from which to source values.
-  - Add validation that verifies the values extended attribute appears in the correct locations in WebIDL, references
-    values that exist, contains at least 1 value, references constants of the correct type and appears on members
-    of the correct type (i.e. Can not annotate a reference to an interface)
-
-* Apply `values=...` to restrict numeric values for GL method arguments such as in `WebGLRenderingContext.bindBuffer()`
-
-* Apply `values=...` to restrict numeric values for readyState etc.
-
 * Add `[alias=SomeAlias]` extended attribute that will create an alias method via a `@JsOverlay` that calls base
   method. The alias method will also omit any arguments that have a `values=` extended attribute with a single value
 
 * Define operation alias `canvas.getContext()` that passed `WebGL2RenderingContextAttributes` and returns
   `WebGL2RenderingContext` and whos first  parameter is `values=` restricted to the appropriate value.
-
-* Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
-  defining an extended attribute to change the name that java field is generated with.
 
 * Extract a separate module for building java-generating generators. Move `AbstractJavaAction` and other related
   infrastructure to this project.
