@@ -17,7 +17,6 @@ import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.StandardLocation;
 import javax.tools.ToolProvider;
-import static org.testng.Assert.*;
 
 /**
  * Helper class used to execute java processes.
@@ -91,9 +90,9 @@ public final class JavaProcess
   }
 
   public static void javadoc( @Nonnull final List<Path> sourceDirectories,
-                               @Nonnull final List<Path> javaFiles,
-                               @Nonnull final List<Path> classpathElements,
-                               @Nonnull final Path output )
+                              @Nonnull final List<Path> javaFiles,
+                              @Nonnull final List<Path> classpathElements,
+                              @Nonnull final Path output )
     throws IOException
   {
     final DocumentationTool javadoc = ToolProvider.getSystemDocumentationTool();
@@ -121,8 +120,11 @@ public final class JavaProcess
                        compilationUnits );
     if ( !task.call() )
     {
-      Assert.fail( "Failed to javadoc files:\n" +
-                   listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
+      throw new AssertionError( "Failed to javadoc files:\n" +
+                                listener.getDiagnostics()
+                                  .stream()
+                                  .map( Object::toString )
+                                  .collect( Collectors.joining( "\n" ) ) );
     }
   }
 }
