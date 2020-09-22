@@ -26,6 +26,7 @@ import org.realityforge.webtack.model.tools.pipeline.ProgressListener;
 import org.realityforge.webtack.model.tools.pipeline.TestProgressListener;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
+import org.realityforge.webtack.model.tools.qa.BailErrorListener;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.webidl.parser.WebIDLParser;

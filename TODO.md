@@ -87,7 +87,7 @@ complete as there is too much un-said.
 * Define operation alias `canvas.getContext()` that passed `WebGL2RenderingContextAttributes` and returns
   `WebGL2RenderingContext` and whos first  parameter is `values=` restricted to the appropriate value.
 
-* Extract a separate module for testing java-generating generators. Move `AbstractTest`, `BailErrorListener` and
+* Extract a separate module for testing java-generating generators. Move `AbstractTest` and
   `JavaProcess` from `jsinterop-generator` and `react4j-generator` projects to this module.
 
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove

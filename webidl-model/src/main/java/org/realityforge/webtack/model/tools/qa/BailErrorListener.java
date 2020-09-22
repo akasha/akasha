@@ -1,13 +1,15 @@
-package org.realityforge.webtack.react4j;
+package org.realityforge.webtack.model.tools.qa;
 
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import org.antlr.v4.runtime.BaseErrorListener;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
-import static org.testng.Assert.*;
 
-final class BailErrorListener
+/**
+ * An error listener that can be used within tests that will fail with an assertion error if there is a parsing error.
+ */
+public final class BailErrorListener
   extends BaseErrorListener
 {
   /**
@@ -16,7 +18,7 @@ final class BailErrorListener
   @Nonnull
   private final String _sourceName;
 
-  BailErrorListener( @Nonnull final String sourceName )
+  public BailErrorListener( @Nonnull final String sourceName )
   {
     _sourceName = Objects.requireNonNull( sourceName );
   }
@@ -31,6 +33,6 @@ final class BailErrorListener
   {
     final String message = "syntax error: " + _sourceName + ":" + line + ":" + charPositionInLine + " " + msg;
     System.err.println( message );
-    fail( message );
+    throw new AssertionError( message );
   }
 }
