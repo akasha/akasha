@@ -18,6 +18,8 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
+* Package webidl source as part of output jars.
+
 * Add some additional apis at https://github.com/w3c/browser-specs maybe even extracting using some automated
   mechanisms from https://github.com/w3c/browser-specs/blob/master/index.json and added appropriate tags (i.e.
   beta, nightly)
