@@ -87,9 +87,6 @@ complete as there is too much un-said.
 * Define operation alias `canvas.getContext()` that passed `WebGL2RenderingContextAttributes` and returns
   `WebGL2RenderingContext` and whos first  parameter is `values=` restricted to the appropriate value.
 
-* Extract a separate module for building java-generating generators. Move `AbstractJavaAction` and other related
-  infrastructure to this project.
-
 * Extract a separate module for testing java-generating generators. Move `AbstractTest`, `BailErrorListener` and
   `JavaProcess` from `jsinterop-generator` and `react4j-generator` projects to this module.
 
