@@ -1,4 +1,4 @@
-package org.realityforge.webtack.react4j;
+package org.realityforge.webtack.model.tools.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -6,17 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nonnull;
 
-final class JavaProcess
+/**
+ * Helper class used to execute java processes.
+ */
+public final class JavaProcess
 {
   private JavaProcess()
   {
   }
 
   @SuppressWarnings( "SameParameterValue" )
-  static int exec( @Nonnull final String className,
-                   @Nonnull final List<String> jvmArgs,
-                   @Nonnull final List<String> args,
-                   @Nonnull final List<String> classpath )
+  public static int exec( @Nonnull final String className,
+                          @Nonnull final List<String> jvmArgs,
+                          @Nonnull final List<String> args,
+                          @Nonnull final List<String> classpath )
     throws IOException, InterruptedException
   {
     final String javaHome = System.getProperty( "java.home" );
