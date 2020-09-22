@@ -215,7 +215,7 @@ public abstract class AbstractTest
                            javaFiles,
                            classpathElements,
                            getWorkingDir().resolve( "target" ).resolve( "javadoc" ) );
-      if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
+      if ( "true".equals( SystemProperty.get( "webtack.react4j-generator.gwtc" ) ) )
       {
         gwtc( classpathEntries, output );
       }
