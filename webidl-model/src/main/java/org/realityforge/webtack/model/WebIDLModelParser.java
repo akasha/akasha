@@ -1015,7 +1015,11 @@ public final class WebIDLModelParser
   {
     final List<EnumerationValue> values = new ArrayList<>();
     final String value = extractString( enumValueListContext.STRING() );
-    values.add( new EnumerationValue( value, parseDocumentation( enumValueListContext.documentation() ) ) );
+    values.add( new EnumerationValue( value,
+                                      parseDocumentation( enumValueListContext.documentation() ),
+                                      parse( enumValueListContext.extendedAttributeList() ),
+                                      parseSourceIntervals( parseSourcePosition( enumValueListContext.getStart() ),
+                                                            enumValueListContext ) ) );
 
     WebIDLParser.EnumValueListStringContext enumValueListStringContext =
       enumValueListContext.enumValueListComma().enumValueListString();
@@ -1025,7 +1029,10 @@ public final class WebIDLModelParser
       if ( null != string )
       {
         values.add( new EnumerationValue( extractString( string ),
-                                          parseDocumentation( enumValueListStringContext.documentation() ) ) );
+                                          parseDocumentation( enumValueListStringContext.documentation() ),
+                                          parse( enumValueListStringContext.extendedAttributeList() ),
+                                          parseSourceIntervals( parseSourcePosition( enumValueListStringContext.getStart() ),
+                                                                enumValueListStringContext ) ) );
       }
       final WebIDLParser.EnumValueListCommaContext enumValueListCommaContext =
         enumValueListStringContext.enumValueListComma();

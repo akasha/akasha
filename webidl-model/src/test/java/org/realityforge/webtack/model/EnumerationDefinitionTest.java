@@ -41,7 +41,31 @@ public final class EnumerationDefinitionTest
     final List<EnumerationValue> values = enumerationDefinition.getValues();
     assertEquals( values.size(), 3 );
     // This is to ensure that we order by insertion order
-    assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),"attachment|inline|unspecified" );
+    assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),
+                  "attachment|inline|unspecified" );
+  }
+
+  @Test
+  public void extendedAttributesOnValue()
+    throws IOException
+  {
+    final String webIDL =
+      "enum XRSessionMode {\n" +
+      " [JavaName=VR] \"immersive-vr\",\n" +
+      " \"inline\"\n" +
+      "};";
+    final EnumerationDefinition enumerationDefinition = parse( webIDL );
+    assertEquals( enumerationDefinition.getName(), "XRSessionMode" );
+    final List<EnumerationValue> values = enumerationDefinition.getValues();
+    assertEquals( values.size(), 2 );
+    // This is to ensure that we order by insertion order
+    assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),
+                  "immersive-vr|inline" );
+    final List<ExtendedAttribute> extendedAttributes = values.get( 0 ).getExtendedAttributes();
+    assertEquals( extendedAttributes.size(), 1 );
+    assertEquals( extendedAttributes.get( 0 ).getName(), "JavaName" );
+
+    assertEquals( values.get( 1 ).getExtendedAttributes().size(), 0 );
   }
 
   @Nonnull

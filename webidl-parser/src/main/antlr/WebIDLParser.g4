@@ -12,6 +12,7 @@
 //   are defined by ExtendedAttributeNoArgs, ExtendedAttributeArgList, ExtendedAttributeIdent,
 //   ExtendedAttributeIdentList, ExtendedAttributeNamedArgList in the original spec. This change also meant that
 //   unused rules such as "other", "extendedAttributeRest", "extendedAttributeInner" and "otherOrComma" could be removed
+// - Supported extended attribute on enumeration values
 // - We have also added a JAVADOC comment parsing in a separate lexer island that contains documentation for the webidl
 //   element in a javadoc-esque format. This is only allowed in specific places in the grammar which is NOT spec compliant
 //   but as we are not using this as a general parser, this should not be an issue.
@@ -415,7 +416,7 @@ enumDefinition
 ;
 
 enumValueList
-  : documentation STRING enumValueListComma
+  : documentation extendedAttributeList STRING enumValueListComma
 ;
 
 enumValueListComma
@@ -424,7 +425,7 @@ enumValueListComma
 ;
 
 enumValueListString
-  : documentation STRING enumValueListComma
+  : documentation extendedAttributeList STRING enumValueListComma
   | /* empty */
 ;
 
