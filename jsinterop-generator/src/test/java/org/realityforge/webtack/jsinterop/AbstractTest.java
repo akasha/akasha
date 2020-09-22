@@ -20,13 +20,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.tools.DiagnosticCollector;
-import javax.tools.DocumentationTool;
-import javax.tools.JavaCompiler;
-import javax.tools.JavaFileObject;
-import javax.tools.StandardJavaFileManager;
-import javax.tools.StandardLocation;
-import javax.tools.ToolProvider;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
@@ -211,86 +204,19 @@ public abstract class AbstractTest
   {
     if ( !javaFiles.isEmpty() )
     {
-      final Path output = javac( javaFiles, classpathEntries );
-      javadoc( sourceDirectories, javaFiles, classpathEntries );
+      final Path output =
+        JavaProcess.javac( javaFiles, classpathEntries, getWorkingDir().resolve( "target" ).resolve( "classes" ) );
+      final List<Path> classpathElements = new ArrayList<>( classpathEntries );
+      classpathElements.addAll( gwtDevLibs() );
+
+      JavaProcess.javadoc( sourceDirectories,
+                           javaFiles,
+                           classpathElements,
+                           getWorkingDir().resolve( "target" ).resolve( "javadoc" ) );
       if ( "true".equals( SystemProperty.get( "webtack.jsinterop-generator.gwtc" ) ) )
       {
         gwtc( classpathEntries, output );
       }
-    }
-  }
-
-  @Nonnull
-  private Path javac( @Nonnull final List<Path> javaFiles, @Nonnull final List<Path> classpathEntries )
-    throws Exception
-  {
-    final JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-    final StandardJavaFileManager fileManager = compiler.getStandardFileManager( null, null, null );
-    final Path output = getWorkingDir().resolve( "target" ).resolve( "classes" );
-    Files.createDirectories( output );
-    final Iterable<? extends JavaFileObject> compilationUnits =
-      fileManager.getJavaFileObjectsFromFiles( javaFiles
-                                                 .stream()
-                                                 .map( Path::toFile )
-                                                 .collect( Collectors.toList() ) );
-    final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
-    fileManager.setLocation( StandardLocation.CLASS_OUTPUT,
-                             Collections.singletonList( output.toFile() ) );
-    fileManager.setLocation( StandardLocation.SOURCE_OUTPUT,
-                             Collections.singletonList( output.toFile() ) );
-    fileManager.setLocation( StandardLocation.CLASS_PATH,
-                             classpathEntries.stream().map( Path::toFile ).collect( Collectors.toList() ) );
-
-    final JavaCompiler.CompilationTask task =
-      compiler.getTask( null,
-                        fileManager,
-                        listener,
-                        Arrays.asList( "-Xlint:all,-processing,-serial", "-Werror" ),
-                        null,
-                        compilationUnits );
-    if ( !task.call() || !listener.getDiagnostics().isEmpty() )
-    {
-      fail( "Failed to compile files:\n" +
-            listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
-    }
-    return output;
-  }
-
-  private void javadoc( @Nonnull final List<Path> sourceDirectories,
-                        @Nonnull final List<Path> javaFiles,
-                        @Nonnull final List<Path> classpathEntries )
-    throws Exception
-  {
-    final DocumentationTool javadoc = ToolProvider.getSystemDocumentationTool();
-    final StandardJavaFileManager fileManager = javadoc.getStandardFileManager( null, null, null );
-    final Path output = getWorkingDir().resolve( "target" ).resolve( "javadoc" );
-    Files.createDirectories( output );
-    final Iterable<? extends JavaFileObject> compilationUnits =
-      fileManager.getJavaFileObjectsFromFiles( javaFiles
-                                                 .stream()
-                                                 .map( Path::toFile )
-                                                 .collect( Collectors.toList() ) );
-    final DiagnosticCollector<JavaFileObject> listener = new DiagnosticCollector<>();
-    final List<Path> classpathElements = new ArrayList<>( classpathEntries );
-    classpathElements.addAll( gwtDevLibs() );
-    fileManager.setLocation( DocumentationTool.Location.DOCUMENTATION_OUTPUT,
-                             Collections.singletonList( output.toFile() ) );
-    fileManager.setLocation( StandardLocation.CLASS_PATH,
-                             classpathElements.stream().map( Path::toFile ).collect( Collectors.toList() ) );
-    fileManager.setLocation( StandardLocation.SOURCE_PATH,
-                             sourceDirectories.stream().map( Path::toFile ).collect( Collectors.toList() ) );
-
-    final DocumentationTool.DocumentationTask task =
-      javadoc.getTask( null,
-                       fileManager,
-                       listener,
-                       null,
-                       Collections.singletonList( "-Xdoclint:all" ),
-                       compilationUnits );
-    if ( !task.call() )
-    {
-      fail( "Failed to javadoc files:\n" +
-            listener.getDiagnostics().stream().map( Object::toString ).collect( Collectors.joining( "\n" ) ) );
     }
   }
 
