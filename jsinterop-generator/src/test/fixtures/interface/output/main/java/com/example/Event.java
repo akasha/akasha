@@ -105,6 +105,14 @@ public class Event {
   public native String type();
 
   @Nonnull
+  public native Promise<Any> anyInReturnedPromise();
+
+  public native void anyParameter(@DoNotAutobox @Nullable Object value);
+
+  @Nullable
+  public native Any anyReturning();
+
+  @Nonnull
   public native JsArray<EventTarget> composedPath();
 
   public native void initEvent(@Nonnull String type, boolean bubbles, boolean cancelable);
@@ -118,12 +126,4 @@ public class Event {
   public native void stopImmediatePropagation();
 
   public native void stopPropagation();
-
-  @Nullable
-  public native Any anyReturning();
-
-  @Nonnull
-  public native Promise<Any> anyInReturnedPromise();
-
-  public native void anyParameter(@DoNotAutobox @Nullable Object value);
 }
