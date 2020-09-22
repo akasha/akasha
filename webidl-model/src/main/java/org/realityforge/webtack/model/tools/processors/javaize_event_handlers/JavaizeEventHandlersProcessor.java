@@ -90,7 +90,8 @@ final class JavaizeEventHandlersProcessor
   protected CallbackDefinition transformCallback( @Nonnull final CallbackDefinition input )
   {
     // We assume that EventHandlerNonNull callback has been renamed to EventHandler by this stage
-    if ( "EventHandler".equals( input.getName() ) )
+    // We assume that OnErrorEventHandlerNonNull callback has been renamed to OnErrorEventHandler by this stage
+    if ( "EventHandler".equals( input.getName() ) || "OnErrorEventHandler".equals( input.getName() ) )
     {
       return new CallbackDefinition( input.getName(),
                                      newVoidType(),

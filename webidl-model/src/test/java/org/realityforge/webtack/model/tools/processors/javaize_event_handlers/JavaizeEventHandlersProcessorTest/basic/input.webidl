@@ -7,6 +7,9 @@
 [LegacyTreatNonObjectAsNull]
 callback EventHandler = any ( Event event );
 
+[LegacyTreatNonObjectAsNull]
+callback OnErrorEventHandler = any ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
+
 /**
  * This interface defines events which subtypes define event handlers for.
  */

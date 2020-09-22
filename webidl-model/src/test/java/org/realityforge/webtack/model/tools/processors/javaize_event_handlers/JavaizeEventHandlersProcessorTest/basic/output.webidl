@@ -15,6 +15,9 @@ callback EventHandler = void ( Event event );
 [JavaSubPackage=mouse]
 callback MouseEventHandler = void ( MouseEvent event );
 
+[LegacyTreatNonObjectAsNull]
+callback OnErrorEventHandler = void ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
+
 /**
  * Handle events of type SpeechSynthesisEvent
  *
