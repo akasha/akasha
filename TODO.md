@@ -31,12 +31,12 @@ complete as there is too much un-said.
   - Consider adding `valuesSource=SomeType` that names an interface/enumeration from which to source values.
   - Add validation that verifies the values extended attribute appears in the correct locations in WebIDL, references
     values that exist, contains at least 1 value, references constants of the correct type and appears on members
-    of the correct type (i.e. Can not annotate a reference to an interface)
+    of the correct type (i.e. Cannot annotate a reference to an interface)
+  - Group all the `const` values specified in spec into numeric enumerations and make sure all the places they are
+    referenced use the enums. This includes GL method arguments such as in `WebGLRenderingContext.bindBuffer()` as
+    `XMLHttpRequest.readyState` etc.
 
 * Ensure empty string enumeration value has a JavaName extended attribute specified otherwise generate an error
-* Java: Apply `values=...` to restrict numeric values for GL method arguments such as in `WebGLRenderingContext.bindBuffer()`
-
-* Java: Apply `values=...` to restrict numeric values for readyState etc.
 
 * Add the ability to add arbitrary annotations to attributes, operations and arguments. This would allow the addition of the `@GLSL` annotation where appropriate.
 
