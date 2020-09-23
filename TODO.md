@@ -35,6 +35,8 @@ complete as there is too much un-said.
 
 * Java: Apply `values=...` to restrict numeric values for GL method arguments such as in `WebGLRenderingContext.bindBuffer()`
 
+* Ensure empty string is emptted in enumeration constants so it is not a type error to omit it
+
 * Java: Apply `values=...` to restrict numeric values for readyState etc.
 
 * Java: Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
