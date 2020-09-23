@@ -118,6 +118,8 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
+* Create a ruby or java DSL that builds up the pipeline configuration.
+
 * Add some additional apis at https://github.com/w3c/browser-specs maybe even extracting using some automated
   mechanisms from https://github.com/w3c/browser-specs/blob/master/index.json and added appropriate tags (i.e.
   beta, nightly)
