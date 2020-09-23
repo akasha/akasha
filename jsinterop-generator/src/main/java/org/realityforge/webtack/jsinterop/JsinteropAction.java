@@ -10,6 +10,7 @@ import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import java.io.IOException;
+import java.lang.annotation.Documented;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -1891,6 +1892,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
+    type.addAnnotation( Documented.class );
     type.addAnnotation( AnnotationSpec
                           .builder( BasicTypes.MAGIC_CONSTANT )
                           .addMember( "valuesFromClass", "$T.class", rawLookupClassName( definition.getName() ) )

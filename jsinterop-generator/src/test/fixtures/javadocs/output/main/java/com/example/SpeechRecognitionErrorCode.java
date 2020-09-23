@@ -1,5 +1,6 @@
 package com.example;
 
+import java.lang.annotation.Documented;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
@@ -10,6 +11,7 @@ import org.intellij.lang.annotations.MagicConstant;
  * @see <a href="http://example.com/API/SpeechRecognitionErrorCode">SpeechRecognitionErrorCode - MDN</a>
  */
 @Generated("org.realityforge.webtack")
+@Documented
 @MagicConstant(
     valuesFromClass = SpeechRecognitionErrorCode.class
 )
