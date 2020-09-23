@@ -110,7 +110,9 @@ final class JsinteropAction
       final Type type = definition.getType();
       if ( Kind.Union == type.getKind() && !isIdlTypePredefined( definition.getName() ) )
       {
-        generateUnion( definition.getName(), javaName( definition ), (UnionType) type );
+        generateUnion( definition.getName(),
+                       rawLookupClassName( definition.getName() ).simpleName(),
+                       (UnionType) type );
       }
     }
     for ( final CallbackDefinition definition : schema.getCallbacks() )
@@ -2029,7 +2031,8 @@ final class JsinteropAction
     final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     final String subPackage =
       null != declaredSubPackage ? asSubPackage( declaredSubPackage ) : asSubPackage( getNamespace( definition ) );
-    final String javaType = getPackageName() + subPackage + "." + javaName( definition );
+    final String javaType =
+      getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( javaName( definition ) );
     tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
   }
 
