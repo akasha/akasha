@@ -40,6 +40,10 @@ public final class ExtendedAttributes
    * A custom extended property that specifies the sub-package in which to generate element relative to the root element.
    */
   public static final String JAVA_SUB_PACKAGE = "JavaSubPackage";
+  /**
+   * A custom extended property that specifies the name of the java class, method or field when generating for the specified element.
+   */
+  public static final String JAVA_NAME = "JavaName";
 
   private ExtendedAttributes()
   {

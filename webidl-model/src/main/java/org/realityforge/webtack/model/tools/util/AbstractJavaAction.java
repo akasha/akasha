@@ -25,9 +25,12 @@ import java.util.Properties;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
+import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.FrozenArrayType;
 import org.realityforge.webtack.model.Kind;
+import org.realityforge.webtack.model.Named;
 import org.realityforge.webtack.model.PromiseType;
 import org.realityforge.webtack.model.RecordType;
 import org.realityforge.webtack.model.SequenceType;
@@ -182,13 +185,57 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  protected String safeName( @Nonnull final String name )
+  protected String javaName( @Nonnull final EnumerationValue value )
+  {
+    return javaName( enumerationValueToName( value.getValue() ), value );
+  }
+
+  @Nonnull
+  protected <T extends Named & Attributed> String javaName( @Nonnull final T element )
+  {
+    return javaName( element.getName(), element );
+  }
+
+  @Nonnull
+  private String javaName( @Nonnull final String defaultName, @Nonnull final Attributed node )
+  {
+    final String specifiedName = node.getIdentValue( ExtendedAttributes.JAVA_NAME );
+    return null != specifiedName ? specifiedName : safeName( defaultName );
+  }
+
+  @Nonnull
+  private String enumerationValueToName( @Nonnull final String value )
+  {
+    final StringBuilder sb = new StringBuilder();
+    for ( int i = 0; i < value.length(); i++ )
+    {
+      final char ch = value.charAt( i );
+      sb.append( Character.isUnicodeIdentifierPart( ch ) ? ch : "_" );
+    }
+    return sb.toString();
+  }
+
+  @Nonnull
+  private String safeName( @Nonnull final String name )
   {
     return isNameJavaSafe( name ) ? name : mangleName( name );
   }
 
   @Nonnull
-  protected String safeMethodName( @Nonnull final String name )
+  protected <T extends Named & Attributed> String javaMethodName( @Nonnull final T element )
+  {
+    return javaMethodName( element.getName(), element );
+  }
+
+  @Nonnull
+  protected String javaMethodName( @Nonnull final String defaultName, @Nonnull final Attributed node )
+  {
+    final String specifiedName = node.getIdentValue( ExtendedAttributes.JAVA_NAME );
+    return null != specifiedName ? specifiedName : safeMethodName( defaultName );
+  }
+
+  @Nonnull
+  private String safeMethodName( @Nonnull final String name )
   {
     return isMethodNameJavaSafe( name ) ? name : mangleName( name );
   }
@@ -208,7 +255,7 @@ public abstract class AbstractJavaAction
     }
   }
 
-  protected boolean isMethodNameJavaSafe( @Nonnull final String name )
+  private boolean isMethodNameJavaSafe( @Nonnull final String name )
   {
     return isNameJavaSafe( name ) && !OBJECT_METHODS.contains( name );
   }

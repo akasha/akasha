@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 public final class EventMember
   extends Element
-  implements Member
+  implements Member, Named
 {
   @Nonnull
   private final TypeReference _eventType;
@@ -32,6 +32,7 @@ public final class EventMember
   }
 
   @Nonnull
+  @Override
   public String getName()
   {
     return _name;

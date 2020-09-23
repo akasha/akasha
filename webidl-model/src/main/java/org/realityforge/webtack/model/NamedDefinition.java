@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 
 public abstract class NamedDefinition
   extends Definition
+  implements Named
 {
   @Nonnull
   private final String _name;
@@ -21,6 +22,7 @@ public abstract class NamedDefinition
   }
 
   @Nonnull
+  @Override
   public final String getName()
   {
     return _name;

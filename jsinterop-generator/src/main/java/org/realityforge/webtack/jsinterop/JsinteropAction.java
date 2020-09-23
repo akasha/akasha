@@ -107,11 +107,10 @@ final class JsinteropAction
 
     for ( final TypedefDefinition definition : schema.getTypedefs() )
     {
-      final String name = definition.getName();
       final Type type = definition.getType();
-      if ( Kind.Union == type.getKind() && !isIdlTypePredefined( name ) )
+      if ( Kind.Union == type.getKind() && !isIdlTypePredefined( definition.getName() ) )
       {
-        generateUnion( name, (UnionType) type );
+        generateUnion( definition.getName(), javaName( definition ), (UnionType) type );
       }
     }
     for ( final CallbackDefinition definition : schema.getCallbacks() )
@@ -169,7 +168,7 @@ final class JsinteropAction
       final String name = entry.getKey();
       if ( !isIdlTypePredefined( name ) )
       {
-        generateUnion( name, entry.getValue() );
+        generateUnion( name, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue() );
       }
     }
 
@@ -320,12 +319,14 @@ final class JsinteropAction
     writeResourceFile( getMainJavaDirectory(), name + ".gwt.xml", gwtModuleContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
-  private void generateUnion( @Nonnull final String name, @Nonnull final UnionType unionType )
+  private void generateUnion( @Nonnull final String idlName,
+                              @Nonnull final String javaName,
+                              @Nonnull final UnionType unionType )
     throws IOException
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .interfaceBuilder( javaName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -334,9 +335,9 @@ final class JsinteropAction
                           .addMember( "name", "$S", "?" )
                           .build() );
 
-    generateUnionOfMethods( name, unionType, type );
+    generateUnionOfMethods( idlName, unionType, type );
 
-    writeTopLevelType( name, type );
+    writeTopLevelType( idlName, type );
   }
 
   @Nonnull
@@ -470,11 +471,11 @@ final class JsinteropAction
     }
   }
 
-  private void generateUnionOfMethods( @Nonnull final String name,
+  private void generateUnionOfMethods( @Nonnull final String idlName,
                                        @Nonnull final UnionType unionType,
                                        @Nonnull final TypeSpec.Builder type )
   {
-    final TypeName self = lookupClassName( name );
+    final TypeName self = lookupClassName( idlName );
     final List<Type> memberTypes = unionType.getMemberTypes();
     for ( final Type memberType : memberTypes )
     {
@@ -516,10 +517,9 @@ final class JsinteropAction
   private void generateDictionary( @Nonnull final DictionaryDefinition definition )
     throws IOException
   {
-    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .interfaceBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -586,7 +586,7 @@ final class JsinteropAction
       superName = parent.getInherits();
     }
 
-    writeTopLevelType( name, type );
+    writeTopLevelType( definition.getName(), type );
   }
 
   private void generateDictionaryCreateMethod( @Nonnull final DictionaryDefinition definition,
@@ -617,9 +617,9 @@ final class JsinteropAction
       int index = 0;
       for ( final DictionaryMember member : requiredMembers )
       {
-        final String paramName = safeName( member.getName() );
+        final String paramName = javaName( member );
         sb.append( ".$N( $N )" );
-        params.add( safeMethodName( member.getName() ) );
+        params.add( javaMethodName( member ) );
         params.add( paramName );
 
         final TypedValue memberType = types.get( index++ );
@@ -698,7 +698,7 @@ final class JsinteropAction
     maybeAddJavadoc( member, method );
     final boolean isAny = Kind.Any == actualType.getKind();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( isAny ? TypeName.OBJECT : javaType, safeName( member.getName() ) );
+      ParameterSpec.builder( isAny ? TypeName.OBJECT : javaType, javaName( member ) );
     if ( isAny )
     {
       parameter.addAnnotation( JsinteropTypes.DO_NOT_AUTOBOX );
@@ -728,7 +728,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( JsinteropTypes.JS_OVERLAY );
     maybeAddJavadoc( member, method );
-    final String paramName = safeName( member.getName() );
+    final String paramName = javaName( member );
     final TypeName javaType = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
@@ -813,7 +813,7 @@ final class JsinteropAction
   {
     final MethodSpec.Builder method =
       MethodSpec
-        .methodBuilder( safeMethodName( member.getName() ) )
+        .methodBuilder( javaMethodName( member ) )
         .addModifiers( Modifier.PUBLIC, Modifier.DEFAULT )
         .addAnnotation( JsinteropTypes.JS_OVERLAY )
         .addAnnotation( BasicTypes.NONNULL )
@@ -824,7 +824,7 @@ final class JsinteropAction
       method.addAnnotation( Override.class );
     }
     final TypeName javaType = typedValue.getJavaType();
-    final String paramName = safeName( member.getName() );
+    final String paramName = javaName( member );
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
@@ -884,10 +884,9 @@ final class JsinteropAction
   private void generateCallback( @Nonnull final CallbackDefinition definition )
     throws IOException
   {
-    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .interfaceBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type
@@ -905,7 +904,7 @@ final class JsinteropAction
     }
     type.addMethod( method.build() );
 
-    writeTopLevelType( name, type );
+    writeTopLevelType( definition.getName(), type );
   }
 
   @Nonnull
@@ -936,7 +935,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .interfaceBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -969,7 +968,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1051,7 +1050,7 @@ final class JsinteropAction
       TypeSpec
         // The type "console" starts with a lower case name due to legacy reasons.
         // This next line just makes sure that an uppercase is used for the java type
-        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1077,7 +1076,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1553,7 +1552,7 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
-    final String fieldName = safeName( name );
+    final String fieldName = javaName( attribute );
     final FieldSpec.Builder field =
       FieldSpec.builder( toTypeName( actualType ), fieldName, Modifier.PUBLIC );
     maybeAddJavadoc( attribute, field );
@@ -1681,7 +1680,7 @@ final class JsinteropAction
     assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
     final String name = operation.getName();
     assert null != name;
-    final String methodName = safeMethodName( name );
+    final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
@@ -1731,7 +1730,7 @@ final class JsinteropAction
     assert OperationMember.Kind.STATIC == operation.getKind();
     final String name = operation.getName();
     assert null != name;
-    final String methodName = safeMethodName( name );
+    final String methodName = javaMethodName( name, operation );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( methodName )
@@ -1864,7 +1863,7 @@ final class JsinteropAction
     final Type actualType = getSchema().resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, safeName( argument.getName() ) );
+      ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, javaName( argument ) );
     if ( isFinal )
     {
       parameter.addModifiers( Modifier.FINAL );
@@ -1886,7 +1885,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .annotationBuilder( NamingUtil.uppercaseFirstCharacter( name ) )
+        .annotationBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
@@ -1902,7 +1901,7 @@ final class JsinteropAction
       {
         final FieldSpec.Builder field = FieldSpec
           .builder( BasicTypes.STRING,
-                    safeName( enumerationValueToName( value ) ),
+                    javaName( enumerationValue ),
                     Modifier.PUBLIC,
                     Modifier.STATIC,
                     Modifier.FINAL )
@@ -1914,18 +1913,6 @@ final class JsinteropAction
     }
 
     writeTopLevelType( name, type );
-  }
-
-  @Nonnull
-  private String enumerationValueToName( @Nonnull final String value )
-  {
-    final StringBuilder sb = new StringBuilder();
-    for ( int i = 0; i < value.length(); i++ )
-    {
-      final char ch = value.charAt( i );
-      sb.append( Character.isUnicodeIdentifierPart( ch ) ? ch : "_" );
-    }
-    return sb.toString();
   }
 
   private void maybeAddJavadoc( @Nonnull final Element constant, @Nonnull final FieldSpec.Builder field )
@@ -2042,8 +2029,7 @@ final class JsinteropAction
     final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     final String subPackage =
       null != declaredSubPackage ? asSubPackage( declaredSubPackage ) : asSubPackage( getNamespace( definition ) );
-    final String javaType =
-      getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( definition.getName() );
+    final String javaType = getPackageName() + subPackage + "." + javaName( definition );
     tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
   }
 

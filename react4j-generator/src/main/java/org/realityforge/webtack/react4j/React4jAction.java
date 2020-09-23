@@ -400,7 +400,7 @@ final class React4jAction
     for ( final AttributeMember attribute : selectAttributes( definition ) )
     {
       // TODO: The attribute definitions should map event handlers to react equivalents
-      final String attributeName = safeMethodName( attribute.getName() );
+      final String attributeName = javaMethodName( attribute );
       if ( Kind.Boolean == attribute.getType().getKind() )
       {
         type.addMethod( MethodSpec

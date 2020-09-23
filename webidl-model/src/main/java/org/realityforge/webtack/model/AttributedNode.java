@@ -1,14 +1,12 @@
 package org.realityforge.webtack.model;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public abstract class AttributedNode
   extends Node
+  implements Attributed
 {
   @Nonnull
   private final List<ExtendedAttribute> _extendedAttributes;
@@ -21,28 +19,10 @@ public abstract class AttributedNode
   }
 
   @Nonnull
+  @Override
   public final List<ExtendedAttribute> getExtendedAttributes()
   {
     return _extendedAttributes;
-  }
-
-  @Nullable
-  public final String getIdentValue( @Nonnull final String name )
-  {
-    return _extendedAttributes
-      .stream()
-      .filter( a -> ExtendedAttribute.Kind.IDENT == a.getKind() && name.equals( a.getName() ) )
-      .map( ExtendedAttribute::getIdent )
-      .findAny()
-      .orElse( null );
-  }
-
-  public final boolean isNoArgsExtendedAttributePresent( @Nonnull final String name )
-  {
-    return _extendedAttributes
-      .stream()
-      .filter( a -> ExtendedAttribute.Kind.NO_ARGS == a.getKind() )
-      .anyMatch( a -> name.equals( a.getName() ) );
   }
 
   @Override
@@ -67,27 +47,5 @@ public abstract class AttributedNode
   public int hashCode()
   {
     return Objects.hash( _extendedAttributes );
-  }
-
-  @SuppressWarnings( "BooleanMethodIsAlwaysInverted" )
-  boolean equiv( @Nonnull final AttributedNode other )
-  {
-    final List<ExtendedAttribute> otherAttributes = other.getExtendedAttributes();
-    if ( otherAttributes.size() != _extendedAttributes.size() )
-    {
-      return false;
-    }
-    else
-    {
-      final Set<ExtendedAttribute> otherAttr = new HashSet<>( otherAttributes );
-      for ( final ExtendedAttribute extendedAttribute : _extendedAttributes )
-      {
-        if ( !otherAttr.removeIf( extendedAttribute::equiv ) )
-        {
-          return false;
-        }
-      }
-      return true;
-    }
   }
 }
