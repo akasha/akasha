@@ -39,6 +39,8 @@ complete as there is too much un-said.
 
 * Java: Apply `values=...` to restrict numeric values for readyState etc.
 
+* Add the ability to add arbitrary annotations to attributes, operations and arguments. This would allow the addition of the `@GLSL` annotation where appropriate.
+
 * Java: Change the way `FormEncodingType` is encoded by supporting extended attributes on enumeration values AND
   defining an extended attribute to change the name that java field is generated with.
 
