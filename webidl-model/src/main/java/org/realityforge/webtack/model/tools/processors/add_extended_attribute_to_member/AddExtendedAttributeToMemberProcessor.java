@@ -91,7 +91,6 @@ final class AddExtendedAttributeToMemberProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -107,7 +106,6 @@ final class AddExtendedAttributeToMemberProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -123,7 +121,6 @@ final class AddExtendedAttributeToMemberProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -139,7 +136,6 @@ final class AddExtendedAttributeToMemberProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -155,7 +151,6 @@ final class AddExtendedAttributeToMemberProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
@@ -171,7 +166,6 @@ final class AddExtendedAttributeToMemberProcessor
     {
       _lastElementMatched = false;
     }
-
   }
 
   @Nullable
