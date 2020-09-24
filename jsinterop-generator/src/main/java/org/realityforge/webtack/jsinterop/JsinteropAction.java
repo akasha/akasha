@@ -1900,7 +1900,15 @@ final class JsinteropAction
 
     for ( final EnumerationValue enumerationValue : definition.getValues() )
     {
-      final String value = enumerationValue.getValue();
+      if ( enumerationValue.getValue().isEmpty() &&
+           null == enumerationValue.getIdentValue( ExtendedAttributes.JAVA_NAME ) )
+      {
+        throw new IllegalStateException( "Enumeration named '" + definition.getName() + "' " +
+                                         "has an empty enumeration value without specifying " +
+                                         "the [JavaName=...] extended attribute so the Jsinterop " +
+                                         "action can not determine a valid name for the value" );
+      }
+      final String value = javaName( enumerationValue );
       if ( !value.isEmpty() )
       {
         final FieldSpec.Builder field = FieldSpec
@@ -1910,7 +1918,7 @@ final class JsinteropAction
                     Modifier.STATIC,
                     Modifier.FINAL )
           .addAnnotation( BasicTypes.NONNULL )
-          .initializer( "$S", value );
+          .initializer( "$S", enumerationValue.getValue() );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
         type.addField( field.build() );
       }

@@ -394,6 +394,83 @@
       }
     },
     {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=whatwg_xhr",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^XMLHttpRequestResponseType$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=default_text"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^CanPlayTypeResult$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=negative"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=whatwg_fetch",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^RequestDestination$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=other"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=gamepad",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^GamepadMappingType$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=unknown"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=gamepad_extensions",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^GamepadHand$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=other"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=webvtt1",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^DirectionSetting$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=horizontal"
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Ensure empty enumeration value has a valid name when mapped to Java",
+      "sourceSelector": "name=webvtt1",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^ScrollSetting$",
+        "memberNamePattern": "^$",
+        "extendedAttribute": "JavaName=none"
+      }
+    },
+    {
       "name": "RemoveMember",
       "description": "the cssom spec 'overrides' the definitions to be of type double",
       "sourceSelector": "name=uievents",

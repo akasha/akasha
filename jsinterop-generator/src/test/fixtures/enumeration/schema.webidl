@@ -28,7 +28,7 @@ enum SpeechRecognitionErrorCode {
  * This tests scenario where there is an empty enum value.
  */
 enum XMLHttpRequestResponseType {
-  "",
+  [JavaName=default_text] "",
   "arraybuffer",
   "blob",
   "document",
