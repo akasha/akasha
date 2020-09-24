@@ -36,8 +36,6 @@ complete as there is too much un-said.
     referenced use the enums. This includes GL method arguments such as in `WebGLRenderingContext.bindBuffer()` as
     `XMLHttpRequest.readyState` etc.
 
-* Ensure empty string enumeration value has a JavaName extended attribute specified otherwise generate an error
-
 * Add the ability to add arbitrary annotations to attributes, operations and arguments. This would allow the addition of the `@GLSL` annotation where appropriate.
 
 * Remove dependency on `elemental2-core`  and `elemental2-promise`
