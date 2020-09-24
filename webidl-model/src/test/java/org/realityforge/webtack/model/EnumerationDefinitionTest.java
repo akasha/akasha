@@ -19,7 +19,7 @@ public final class EnumerationDefinitionTest
   {
     final String webIDL =
       "enum XRSessionMode {\n" +
-      "  \"immersive-vr\",\n" +
+      "  [SomeAttribute] \"immersive-vr\",\n" +
       "  \"inline\"\n" +
       "};";
     final EnumerationDefinition enumerationDefinition = parse( webIDL );
@@ -29,6 +29,9 @@ public final class EnumerationDefinitionTest
     // This is to ensure that we order by insertion order
     assertEquals( values.stream().map( EnumerationValue::getValue ).collect( Collectors.joining( "|" ) ),
                   "immersive-vr|inline" );
+    final EnumerationValue enumerationValue = values.get( 0 );
+    assertEquals( enumerationValue.getExtendedAttributes().size(), 1 );
+    assertTrue( enumerationValue.isNoArgsExtendedAttributePresent( "SomeAttribute" ) );
   }
 
   @Test
