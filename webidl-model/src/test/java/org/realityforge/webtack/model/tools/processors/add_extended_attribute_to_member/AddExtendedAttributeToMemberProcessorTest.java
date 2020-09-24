@@ -32,6 +32,18 @@ public final class AddExtendedAttributeToMemberProcessorTest
   }
 
   @Test
+  public void enumeration_value()
+    throws Exception
+  {
+    performStandardFixtureTest( "enumeration_value",
+                                () -> createProcessor( new TestProgressListener(),
+                                                       "^XMLHttpRequestResponseType$",
+                                                       "^$",
+                                                       "JavaName=default_text",
+                                                       1 ) );
+  }
+
+  @Test
   public void basicBad_expectedAddCount()
     throws Exception
   {

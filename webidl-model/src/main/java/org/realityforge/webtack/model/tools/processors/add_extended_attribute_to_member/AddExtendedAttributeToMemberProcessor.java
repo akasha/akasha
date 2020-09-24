@@ -10,6 +10,8 @@ import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
+import org.realityforge.webtack.model.EnumerationDefinition;
+import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
@@ -75,6 +77,21 @@ final class AddExtendedAttributeToMemberProcessor
       {
         _context.debug( "Added " + _addCount + " extended attributes." );
       }
+    }
+  }
+
+  @Nullable
+  @Override
+  protected EnumerationDefinition transformEnumeration( @Nonnull final EnumerationDefinition input )
+  {
+    _lastElementMatched = matches( input );
+    try
+    {
+      return super.transformEnumeration( input );
+    }
+    finally
+    {
+      _lastElementMatched = false;
     }
   }
 
@@ -189,6 +206,18 @@ final class AddExtendedAttributeToMemberProcessor
   {
     _lastElementMatched = matches( input );
     return super.transformPartialDictionary( input );
+  }
+
+  @Nonnull
+  @Override
+  protected EnumerationValue transformEnumerationValue( @Nonnull final EnumerationValue input )
+  {
+    return new EnumerationValue( input.getValue(),
+                                 transformDocumentation( input.getDocumentation() ),
+                                 matchesMemberName( input.getValue() ) ?
+                                 expandExtendedAttributes( input.getExtendedAttributes() ) :
+                                 transformExtendedAttributes( input.getExtendedAttributes() ),
+                                 transformSourceLocations( input.getSourceLocations() ) );
   }
 
   @Nonnull
