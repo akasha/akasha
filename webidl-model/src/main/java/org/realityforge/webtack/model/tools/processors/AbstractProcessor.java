@@ -273,7 +273,7 @@ public abstract class AbstractProcessor
   }
 
   @Nullable
-  protected EnumerationValue transformEnumerationValue( @Nullable final EnumerationValue input )
+  protected EnumerationValue transformEnumerationValue( @Nonnull final EnumerationValue input )
   {
     return input;
   }
