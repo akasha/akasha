@@ -40,6 +40,8 @@ complete as there is too much un-said.
 
 * Add the ability to add arbitrary annotations to attributes, operations and arguments. This would allow the addition of the `@GLSL` annotation where appropriate.
 
+* Remove dependency on `elemental2-core`  and `elemental2-promise`
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
