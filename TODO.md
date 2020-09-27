@@ -124,6 +124,9 @@ Generate host element factories: Events would need to be specially handled to ma
   mechanisms from https://github.com/w3c/browser-specs/blob/master/index.json and added appropriate tags (i.e.
   beta, nightly)
 
+* Add 
+  - https://drafts.csswg.org/resize-observer-1/
+
 * Consider a reorganization of pipelines so that each independent pipeline can define a local idl to
   include so each transform could be relatively isolated with the processing stages combined with custom
   idl in one place
