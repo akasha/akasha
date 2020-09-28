@@ -7,6 +7,7 @@ callback ParseReviverFn = any ( DOMString key, any value );
 /**
  * The JSON object contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.
  *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON">MDN - JSON</a>
  * @see <a href="https://tc39.es/ecma262/#sec-json-object">Atomics - ECMA</a>
  */
 interface JSON {
