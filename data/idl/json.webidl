@@ -6,6 +6,8 @@ callback ParseReviverFn = any ( DOMString key, any value );
 
 /**
  * The JSON object contains methods for parsing JavaScript Object Notation (JSON) and converting values to JSON.
+ *
+ * @see <a href="https://tc39.es/ecma262/#sec-json-object">Atomics - ECMA</a>
  */
 interface JSON {
   /**
@@ -17,6 +19,7 @@ interface JSON {
    * @return A JSON string representing the given value.
    * @throw TypeError if a circular reference is found or an attempt is made to stringify a BigInt.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-json.stringify">JSON.stringify() - ECMA</a>
    */
   static DOMString stringify( any value, optional (StringifyReplacerFn or sequence<(DOMString or long long)>)? replacer = null, optional StringifySpaceUnionType? space = null );
 
@@ -28,6 +31,7 @@ interface JSON {
    * @return The Object, Array, string, number, boolean, or null value corresponding to the given JSON text.
    * @throw SyntaxError if the string to parse is not valid JSON.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-json.parse">JSON.parse() - ECMA</a>
    */
   static any parse( DOMString text, optional ParseReviverFn? reviver = null);
 };
