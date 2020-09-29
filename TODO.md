@@ -108,6 +108,10 @@ complete as there is too much un-said.
 
 * Make `AbstractProcessor` cache instance of `PipelineContext`
 
+* Consider allowing some unions to be have extended attributes that indicate that they should be converted into
+  marker interfaces for all the contained types. `IntegerTypedArray` could be converted into such an abstraction
+  as could `Transfer`
+
 # React4j Host Element Factories
 
 Generate host element factories: Events would need to be specially handled to map to reacts event system but we could control whether we generate a capture handler using the `[NoBubble]` attribute on events.
