@@ -15,7 +15,6 @@ enum AtomicWaitResult {
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics">Atomics - MDN</a>
  * @see <a href="https://tc39.es/ecma262/#sec-atomics-object">Atomics - ECMA</a>
  */
-[Exposed=Window]
 namespace Atomics {
 
   // We could tighten up the types of these operations so that a Int16Array returns a short
