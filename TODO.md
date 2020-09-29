@@ -128,7 +128,10 @@ Generate host element factories: Events would need to be specially handled to ma
 
 * Add some additional apis at https://github.com/w3c/browser-specs maybe even extracting using some automated
   mechanisms from https://github.com/w3c/browser-specs/blob/master/index.json and added appropriate tags (i.e.
-  beta, nightly)
+  beta, nightly). Actually a vastly better place is to grab specs from:
+  - https://github.com/w3c/webref/tree/master/ed/idl
+  - https://github.com/w3c/webref/tree/master/tr/idl
+  Documentation and other links could be scraped from https://github.com/w3c/webref 
 
 * Add 
   - https://drafts.csswg.org/resize-observer-1/
