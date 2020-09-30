@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RTCRtcpParameters",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtcpParameters",
+    "description": "The RTCRtcpParameters dictionary provides parameters of an RTCP connection. It's used as the value of the rtcp property of the parameters of an RTCRtpSender or RTCRtpReceiver."
+}

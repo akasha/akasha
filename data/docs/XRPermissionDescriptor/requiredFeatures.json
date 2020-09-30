@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XRPermissionDescriptor.requiredFeatures",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures",
+    "description": "The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work."
+}

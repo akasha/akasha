@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XRPermissionStatus.granted",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionStatus/granted",
+    "description": "The WebXR Device API's XRPermissionStatus interface's granted property is an array of strings, each identifying one of the WebXR features for which permission has been granted as of the time at which the Permission API's navigator.permissions.query() method was called."
+}

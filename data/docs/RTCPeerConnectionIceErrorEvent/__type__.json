@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RTCPeerConnectionIceErrorEvent",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent",
+    "description": "The RTCPeerConnectionIceErrorEvent interface&mdash;based upon the Event interface&mdash;provides details pertaining to an ICE error announced by sending an icecandidateerror event to the RTCPeerConnection object."
+}

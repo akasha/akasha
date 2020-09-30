@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondragexit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragexit",
-    "description": "The GlobalEventHandler.ondragexit property is an event handler for the dragexit event."
+    "description": "A global event handler for the dragleave event."
 }

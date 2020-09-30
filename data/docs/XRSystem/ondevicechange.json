@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XRSystem.ondevicechange",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/ondevicechange",
+    "description": "The ondevicechange property of the XRSystem interface is passed a devicechange event whenever availability of an immersive device changes. The event that is fired is a &quot;simple event&quot; that implements the Event interface."
+}

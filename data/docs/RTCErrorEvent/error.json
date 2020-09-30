@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCErrorEvent.error",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCErrorEvent/error",
+    "description": "The read-only RTCErrorEvent property error contains an RTCError object describing the details of the error which the event is announcing."
+}

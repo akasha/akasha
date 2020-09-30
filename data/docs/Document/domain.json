@@ -3,5 +3,5 @@
     "kind": "Property",
     "name": "Document.domain",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/domain",
-    "description": "The domain property of the Document interface gets/sets the domain portion of the origin of the current document, as used by the same origin policy."
+    "description": "The domain property of the Document interface gets/sets the domain portion of the origin of the current document, as used by the same-origin policy."
 }

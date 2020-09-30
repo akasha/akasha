@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "RTCPeerConnectionIceErrorEvent.address",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent/address",
+    "description": "The RTCPeerConnectionIceErrorEvent property address is a string which indicates the local IP address being used to communicate with the STUN or TURN server during negotiations. The error which occurred involved this address."
+}

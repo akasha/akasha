@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "XRPermissionDescriptor.mode",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/mode",
+    "description": "The mode property of the XRPermissionDescriptor dictionary is a string taken from the XRSessionMode enumerated type, specifying which Web XR session mode (inline, immersive-vr, or immersive-ar) the described permissions will be used for."
+}

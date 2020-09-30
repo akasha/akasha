@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XRSystem.isSessionSupported",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/isSessionSupported",
+    "description": "The XRSystem method isSessionSupported() returns a promise which resolves to true if the specified WebXR session mode is supported by the user's WebXR device. Otherwise, the promise resolves with false."
+}

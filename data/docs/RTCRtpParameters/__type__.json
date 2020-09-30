@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RTCRtpParameters",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters",
+    "description": "The RTCRtpParameters dictionary is the basic object describing the parameters of an RTP transport. It is extended separately for senders and receivers in the form of the RTCRtpSendParameters and RTCRtpReceiveParameters dictionaries."
+}

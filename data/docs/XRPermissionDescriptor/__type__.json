@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "XRPermissionDescriptor",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor",
+    "description": "User permissions in the WebXR Device API are managed using the Permissions API. To that end, the XRPermissionDescriptor dictionary is used to describe the WebXR features the app needs to use, as well as those features it would like ot use if permision is granted."
+}

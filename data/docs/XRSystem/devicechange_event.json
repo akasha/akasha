@@ -1,0 +1,12 @@
+
+{
+    "kind": "Event",
+    "name": "XRSystem.devicechange_event",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSystem/devicechange_event",
+    "description": "A devicechange event is fired on an XRSystem object whenever the whenever the availability of immersive XR devices has changed; for example, a VR headset or AR goggles have been connected or disconnected.",
+    "eventName": "devicechange",
+    "eventType": "Event",
+    "eventHandlerProperty": "ondevicechange",
+    "eventBubbles": true,
+    "eventCancelable": true
+}

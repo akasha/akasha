@@ -1,0 +1,27 @@
+
+{
+    "name": "XRSystem",
+    "lastModifiedAt": 1601467506601,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1601467505070
+        },
+        {
+            "name": "devicechange_event",
+            "lastModifiedAt": 1601467506335
+        },
+        {
+            "name": "isSessionSupported",
+            "lastModifiedAt": 1601467505301
+        },
+        {
+            "name": "ondevicechange",
+            "lastModifiedAt": 1601467506601
+        },
+        {
+            "name": "requestSession",
+            "lastModifiedAt": 1601467506098
+        }
+    ]
+}

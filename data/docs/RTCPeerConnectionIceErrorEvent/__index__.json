@@ -1,0 +1,15 @@
+
+{
+    "name": "RTCPeerConnectionIceErrorEvent",
+    "lastModifiedAt": 1601467149031,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1601467148096
+        },
+        {
+            "name": "address",
+            "lastModifiedAt": 1601467149031
+        }
+    ]
+}

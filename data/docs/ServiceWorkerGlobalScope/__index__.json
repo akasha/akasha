@@ -1,7 +1,7 @@
 
 {
     "name": "ServiceWorkerGlobalScope",
-    "lastModifiedAt": 1600313420599,
+    "lastModifiedAt": 1601466304685,
     "entries": [
         {
             "name": "__type__",
@@ -62,6 +62,10 @@
         {
             "name": "onnotificationclose",
             "lastModifiedAt": 1600305767310
+        },
+        {
+            "name": "onperiodicsync",
+            "lastModifiedAt": 1601466293963
         },
         {
             "name": "onpush",
