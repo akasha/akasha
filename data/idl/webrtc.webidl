@@ -1,54 +1,54 @@
 enum RTCBundlePolicy {
   "balanced",
-  "max-compat",
-  "max-bundle"
+  "max-bundle",
+  "max-compat"
 };
 
 enum RTCDataChannelState {
-  "connecting",
-  "open",
+  "closed",
   "closing",
-  "closed"
+  "connecting",
+  "open"
 };
 
 enum RTCDtlsTransportState {
-  "new",
-  "connecting",
-  "connected",
   "closed",
-  "failed"
+  "connected",
+  "connecting",
+  "failed",
+  "new"
 };
 
 enum RTCErrorDetailType {
   "data-channel-failure",
   "dtls-failure",
   "fingerprint-failure",
-  "sctp-failure",
-  "sdp-syntax-error",
+  "hardware-encoder-error",
   "hardware-encoder-not-available",
-  "hardware-encoder-error"
+  "sctp-failure",
+  "sdp-syntax-error"
 };
 
 enum RTCIceCandidateType {
   "host",
-  "srflx",
   "prflx",
-  "relay"
+  "relay",
+  "srflx"
 };
 
 enum RTCIceComponent {
-  "rtp",
-  "rtcp"
+  "rtcp",
+  "rtp"
 };
 
 enum RTCIceConnectionState {
-  "closed",
-  "failed",
-  "disconnected",
-  "new",
   "checking",
+  "closed",
   "completed",
-  "connected"
+  "connected",
+  "disconnected",
+  "failed",
+  "new"
 };
 
 enum RTCIceCredentialType {
@@ -56,26 +56,26 @@ enum RTCIceCredentialType {
 };
 
 enum RTCIceGathererState {
-  "new",
+  "complete",
   "gathering",
-  "complete"
+  "new"
 };
 
 enum RTCIceGatheringState {
-  "new",
+  "complete",
   "gathering",
-  "complete"
+  "new"
 };
 
 enum RTCIceProtocol {
-  "udp",
-  "tcp"
+  "tcp",
+  "udp"
 };
 
 enum RTCIceRole {
-  "unknown",
+  "controlled",
   "controlling",
-  "controlled"
+  "unknown"
 };
 
 enum RTCIceTcpCandidateType {
@@ -85,27 +85,27 @@ enum RTCIceTcpCandidateType {
 };
 
 enum RTCIceTransportPolicy {
-  "relay",
-  "all"
+  "all",
+  "relay"
 };
 
 enum RTCIceTransportState {
-  "new",
   "checking",
-  "connected",
+  "closed",
   "completed",
+  "connected",
   "disconnected",
   "failed",
-  "closed"
+  "new"
 };
 
 enum RTCPeerConnectionState {
   "closed",
-  "failed",
-  "disconnected",
-  "new",
+  "connected",
   "connecting",
-  "connected"
+  "disconnected",
+  "failed",
+  "new"
 };
 
 enum RTCRtcpMuxPolicy {
@@ -113,33 +113,33 @@ enum RTCRtcpMuxPolicy {
 };
 
 enum RTCRtpTransceiverDirection {
-  "sendrecv",
-  "sendonly",
-  "recvonly",
   "inactive",
+  "recvonly",
+  "sendonly",
+  "sendrecv",
   "stopped"
 };
 
 enum RTCSctpTransportState {
-  "connecting",
+  "closed",
   "connected",
-  "closed"
+  "connecting"
 };
 
 enum RTCSdpType {
+  "answer",
   "offer",
   "pranswer",
-  "answer",
   "rollback"
 };
 
 enum RTCSignalingState {
-  "stable",
+  "closed",
   "have-local-offer",
-  "have-remote-offer",
   "have-local-pranswer",
+  "have-remote-offer",
   "have-remote-pranswer",
-  "closed"
+  "stable"
 };
 
 callback RTCPeerConnectionErrorCallback = void ( DOMException error );

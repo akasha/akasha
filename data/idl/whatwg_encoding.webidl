@@ -12,11 +12,6 @@ dictionary TextEncoderEncodeIntoResult {
   unsigned long long written;
 };
 
-interface mixin GenericTransformStream {
-  readonly attribute ReadableStream readable;
-  readonly attribute WritableStream writable;
-};
-
 interface mixin TextDecoderCommon {
   readonly attribute DOMString encoding;
   readonly attribute boolean fatal;

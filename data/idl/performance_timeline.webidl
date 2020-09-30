@@ -1,6 +1,6 @@
 typedef sequence<PerformanceEntry> PerformanceEntryList;
 
-callback PerformanceObserverCallback = void ( PerformanceObserverEntryList entries, PerformanceObserver observer );
+callback PerformanceObserverCallback = void ( PerformanceObserverEntryList entries, PerformanceObserver observer, optional boolean hasDroppedEntry = false );
 
 dictionary PerformanceObserverInit {
   boolean buffered;

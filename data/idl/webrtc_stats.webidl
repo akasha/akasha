@@ -1,45 +1,45 @@
 enum RTCCodecType {
-  "encode",
-  "decode"
+  "decode",
+  "encode"
 };
 
 enum RTCQualityLimitationReason {
-  "none",
-  "cpu",
   "bandwidth",
+  "cpu",
+  "none",
   "other"
 };
 
 enum RTCStatsIceCandidatePairState {
-  "frozen",
-  "waiting",
-  "in-progress",
   "failed",
-  "succeeded"
+  "frozen",
+  "in-progress",
+  "succeeded",
+  "waiting"
 };
 
 enum RTCStatsType {
+  "candidate-pair",
+  "certificate",
   "codec",
+  "csrc",
+  "data-channel",
+  "ice-server",
   "inbound-rtp",
+  "local-candidate",
+  "media-source",
   "outbound-rtp",
+  "peer-connection",
+  "receiver",
+  "remote-candidate",
   "remote-inbound-rtp",
   "remote-outbound-rtp",
-  "media-source",
-  "csrc",
-  "peer-connection",
-  "data-channel",
+  "sctp-transport",
+  "sender",
   "stream",
   "track",
   "transceiver",
-  "sender",
-  "receiver",
-  "transport",
-  "sctp-transport",
-  "candidate-pair",
-  "local-candidate",
-  "remote-candidate",
-  "certificate",
-  "ice-server"
+  "transport"
 };
 
 dictionary RTCAudioHandlerStats : RTCMediaHandlerStats {
@@ -86,7 +86,6 @@ dictionary RTCDataChannelStats : RTCStats {
   unsigned long messagesSent;
   DOMString protocol;
   required RTCDataChannelState state;
-  required DOMString transportId;
 };
 
 dictionary RTCIceCandidatePairStats : RTCStats {
@@ -183,6 +182,8 @@ dictionary RTCInboundRtpStreamStats : RTCReceivedRtpStreamStats {
   double totalAudioEnergy;
   double totalDecodeTime;
   double totalInterFrameDelay;
+  double totalProcessingDelay;
+  unsigned long long totalSamplesDecoded;
   double totalSamplesDuration;
   unsigned long long totalSamplesReceived;
   double totalSquaredInterFrameDelay;
@@ -321,6 +322,7 @@ dictionary RTCSctpTransportStats : RTCStats {
   unsigned long mtu;
   unsigned long receiverWindow;
   double smoothedRoundTripTime;
+  DOMString transportId;
   unsigned long unackData;
 };
 

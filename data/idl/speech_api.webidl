@@ -1,27 +1,27 @@
 enum SpeechRecognitionErrorCode {
-  "no-speech",
   "aborted",
   "audio-capture",
-  "network",
-  "not-allowed",
-  "service-not-allowed",
   "bad-grammar",
-  "language-not-supported"
+  "language-not-supported",
+  "network",
+  "no-speech",
+  "not-allowed",
+  "service-not-allowed"
 };
 
 enum SpeechSynthesisErrorCode {
-  "canceled",
-  "interrupted",
   "audio-busy",
   "audio-hardware",
-  "network",
-  "synthesis-unavailable",
-  "synthesis-failed",
-  "language-unavailable",
-  "voice-unavailable",
-  "text-too-long",
+  "canceled",
+  "interrupted",
   "invalid-argument",
-  "not-allowed"
+  "language-unavailable",
+  "network",
+  "not-allowed",
+  "synthesis-failed",
+  "synthesis-unavailable",
+  "text-too-long",
+  "voice-unavailable"
 };
 
 dictionary SpeechRecognitionErrorEventInit : EventInit {

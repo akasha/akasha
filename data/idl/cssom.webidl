@@ -150,6 +150,8 @@ partial interface Window {
 
 HTMLElement includes ElementCSSInlineStyle;
 
+MathMLElement includes ElementCSSInlineStyle;
+
 ProcessingInstruction includes LinkStyle;
 
 SVGElement includes ElementCSSInlineStyle;
