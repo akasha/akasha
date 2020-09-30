@@ -11,7 +11,7 @@ interface HTMLElement {
   readonly attribute DOMString accessKeyLabel;
   [HTMLConstructor]
   constructor();
-  void click();
+  undefined click();
 };
 
 [Exposed=Window]

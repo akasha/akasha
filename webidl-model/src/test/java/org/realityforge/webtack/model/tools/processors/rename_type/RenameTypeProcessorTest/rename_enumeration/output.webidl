@@ -13,5 +13,5 @@ dictionary DeviceMotionEventAccelerationInit {
 interface DeviceMotionEvent : Event {
   static Promise<DevicePermissionState> requestPermission();
   constructor( DOMString type, optional DevicePermissionState eventInitDict = {} );
-  void someMethod( sequence<DevicePermissionState> perms );
+  undefined someMethod( sequence<DevicePermissionState> perms );
 };

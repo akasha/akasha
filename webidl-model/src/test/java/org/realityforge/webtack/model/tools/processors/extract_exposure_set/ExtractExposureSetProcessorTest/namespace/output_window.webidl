@@ -3,20 +3,20 @@ namespace NamespaceA {
   readonly attribute DOMString sharedVar;
   [Exposed=Window]
   readonly attribute DOMString windowVar;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Window]
-  void windowMethod();
+  undefined windowMethod();
 };
 
 [Exposed=Window]
 namespace NamespaceB {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 namespace NamespaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 namespace NamespaceD {
@@ -27,24 +27,24 @@ partial namespace PartialNamespaceA {
   readonly attribute DOMString sharedVar;
   [Exposed=Window]
   readonly attribute DOMString windowVar;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Window]
-  void windowMethod();
+  undefined windowMethod();
 };
 
 [Exposed=Window]
 partial namespace PartialNamespaceB {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial namespace PartialNamespaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial namespace PartialNamespaceD {
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Window]
-  void windowMethod();
+  undefined windowMethod();
 };

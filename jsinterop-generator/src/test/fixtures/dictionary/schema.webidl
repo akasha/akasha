@@ -41,9 +41,9 @@ dictionary txAuthGenericArg {
 [Exposed=Window]
 interface Storage {
   readonly attribute unsigned long length;
-  void clear();
+  undefined clear();
   DOMString? key( unsigned long index );
   getter DOMString? getItem( DOMString key );
-  setter void setItem( DOMString key, DOMString value );
-  deleter void removeItem( DOMString key );
+  setter undefined setItem( DOMString key, DOMString value );
+  deleter undefined removeItem( DOMString key );
 };

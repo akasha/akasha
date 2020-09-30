@@ -10,7 +10,7 @@ interface HTMLAudioElement : HTMLElement {
 [Exposed=Window]
 interface HTMLElement : Element {
   readonly attribute DOMString accessKeyLabel;
-  void click();
+  undefined click();
 };
 
 [Exposed=Window, LegacyFactoryFunction=Image( optional unsigned long width, optional unsigned long height )]

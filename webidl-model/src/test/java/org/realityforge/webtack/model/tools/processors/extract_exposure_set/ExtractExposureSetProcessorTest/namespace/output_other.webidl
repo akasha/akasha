@@ -1,6 +1,6 @@
 namespace NamespaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 namespace NamespaceD {
@@ -8,9 +8,9 @@ namespace NamespaceD {
 
 partial namespace PartialNamespaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial namespace PartialNamespaceD {
-  void sharedMethod();
+  undefined sharedMethod();
 };

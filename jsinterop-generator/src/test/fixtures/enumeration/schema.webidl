@@ -85,5 +85,5 @@ interface WaveShaperNode {
   /**
    * attribute argument is an enum.
    */
-  void setSample( OverSampleType sample );
+  undefined setSample( OverSampleType sample );
 };

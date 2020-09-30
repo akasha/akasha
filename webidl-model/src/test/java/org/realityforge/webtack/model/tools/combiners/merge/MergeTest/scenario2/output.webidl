@@ -26,13 +26,13 @@ namespace NamespaceA {
 };
 
 namespace NamespaceB {
-  void methodP( BufferSource? data );
-  void methodQ( boolean flag );
+  undefined methodP( BufferSource? data );
+  undefined methodQ( boolean flag );
 };
 
 namespace NamespaceC {
-  void methodR( BufferSource? data );
-  void methodS( boolean flag );
+  undefined methodR( BufferSource? data );
+  undefined methodS( boolean flag );
 };
 
 [Exposed=(Window,Worker,Worklet)]
@@ -42,13 +42,13 @@ partial namespace PartialNamespaceA {
 };
 
 partial namespace PartialNamespaceB {
-  void methodP( BufferSource? data );
-  void methodQ( boolean flag );
+  undefined methodP( BufferSource? data );
+  undefined methodQ( boolean flag );
 };
 
 partial namespace PartialNamespaceC {
-  void methodR( BufferSource? data );
-  void methodS( boolean flag );
+  undefined methodR( BufferSource? data );
+  undefined methodS( boolean flag );
 };
 
 callback CallbackA = HTMLElement ();
@@ -60,19 +60,19 @@ callback CallbackC = DOMString ();
 callback interface MyEventListenerA {
   const unsigned short MYCONST_A = 7;
   const unsigned short MYCONST_B = 8;
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 callback interface MyEventListenerB {
   const unsigned short MYCONST_P = 7;
   const unsigned short MYCONST_Q = 8;
-  void doStuff( Event event );
+  undefined doStuff( Event event );
 };
 
 callback interface MyEventListenerC {
   const unsigned short MYCONST_R = 7;
   const unsigned short MYCONST_S = 8;
-  void handleIt( Event event );
+  undefined handleIt( Event event );
 };
 
 dictionary MyDictionaryA : EventInit {

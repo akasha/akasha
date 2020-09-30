@@ -32,7 +32,7 @@ typedef EventHandlerNonNull? EventHandler;
 callback EventHandlerNonNull = any ( Event event );
 
 callback interface EventListener {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 dictionary AddEventListenerOptions : EventListenerOptions {
@@ -94,18 +94,18 @@ interface Event {
   attribute boolean returnValue;
   constructor( DOMString type, optional EventInit eventInitDict = {} );
   sequence<EventTarget> composedPath();
-  void initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
-  void preventDefault();
-  void stopImmediatePropagation();
-  void stopPropagation();
+  undefined initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
+  undefined preventDefault();
+  undefined stopImmediatePropagation();
+  undefined stopPropagation();
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]
 interface EventTarget {
   constructor();
-  void addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );
+  undefined addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );
   boolean dispatchEvent( Event event );
-  void removeEventListener( DOMString type, EventListener? callback, optional ( EventListenerOptions or boolean ) options = {} );
+  undefined removeEventListener( DOMString type, EventListener? callback, optional ( EventListenerOptions or boolean ) options = {} );
 };
 
 [Exposed=Window]
@@ -118,8 +118,8 @@ interface SpeechGrammar {
 interface SpeechGrammarList {
   readonly attribute unsigned long length;
   constructor();
-  void addFromString( DOMString string, optional float weight = 1.0 );
-  void addFromURI( DOMString src, optional float weight = 1.0 );
+  undefined addFromString( DOMString string, optional float weight = 1.0 );
+  undefined addFromURI( DOMString src, optional float weight = 1.0 );
   getter SpeechGrammar item( unsigned long index );
 };
 
@@ -129,11 +129,11 @@ interface SpeechSynthesis : EventTarget {
   readonly attribute boolean pending;
   readonly attribute boolean speaking;
   attribute EventHandler onvoiceschanged;
-  void cancel();
+  undefined cancel();
   sequence<SpeechSynthesisVoice> getVoices();
-  void pause();
-  void resume();
-  void speak( SpeechSynthesisUtterance utterance );
+  undefined pause();
+  undefined resume();
+  undefined speak( SpeechSynthesisUtterance utterance );
 };
 
 [Exposed=Window]

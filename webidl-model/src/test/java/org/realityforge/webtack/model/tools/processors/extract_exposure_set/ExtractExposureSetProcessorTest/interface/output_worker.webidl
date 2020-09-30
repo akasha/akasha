@@ -6,14 +6,14 @@ interface InterfaceA {
   readonly attribute DOMString sharedVar;
   [Exposed=Worker]
   readonly attribute DOMString workerVar;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Worker]
-  void workerMethod();
+  undefined workerMethod();
 };
 
 interface InterfaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 interface InterfaceD {
@@ -29,20 +29,20 @@ partial interface PartialInterfaceA {
   readonly attribute DOMString sharedVar;
   [Exposed=Worker]
   readonly attribute DOMString workerVar;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Worker]
-  void workerMethod();
+  undefined workerMethod();
 };
 
 partial interface PartialInterfaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial interface PartialInterfaceD {
   [Exposed=Worker]
   readonly attribute DOMString v1;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Worker]
-  void workerMethod();
+  undefined workerMethod();
 };

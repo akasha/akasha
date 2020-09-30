@@ -1,6 +1,6 @@
 interface InterfaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 interface InterfaceD {
@@ -8,9 +8,9 @@ interface InterfaceD {
 
 partial interface PartialInterfaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial interface PartialInterfaceD {
-  void sharedMethod();
+  undefined sharedMethod();
 };

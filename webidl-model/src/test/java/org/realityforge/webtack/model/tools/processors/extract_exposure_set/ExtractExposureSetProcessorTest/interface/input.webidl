@@ -10,22 +10,22 @@ interface InterfaceA {
   readonly attribute DOMString windowVar;
   [Exposed=Worker]
   readonly attribute DOMString workerVar;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Window]
-  void windowMethod();
+  undefined windowMethod();
   [Exposed=Worker]
-  void workerMethod();
+  undefined workerMethod();
 };
 
 [Exposed=Window]
 interface InterfaceB {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 interface InterfaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 interface InterfaceD {
@@ -45,30 +45,30 @@ partial interface PartialInterfaceA {
   readonly attribute DOMString windowVar;
   [Exposed=Worker]
   readonly attribute DOMString workerVar;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Window]
-  void windowMethod();
+  undefined windowMethod();
   [Exposed=Worker]
-  void workerMethod();
+  undefined workerMethod();
 };
 
 [Exposed=Window]
 partial interface PartialInterfaceB {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial interface PartialInterfaceC {
   readonly attribute DOMString v1;
-  void myMethod();
+  undefined myMethod();
 };
 
 partial interface PartialInterfaceD {
   [Exposed=Worker]
   readonly attribute DOMString v1;
-  void sharedMethod();
+  undefined sharedMethod();
   [Exposed=Window]
-  void windowMethod();
+  undefined windowMethod();
   [Exposed=Worker]
-  void workerMethod();
+  undefined workerMethod();
 };

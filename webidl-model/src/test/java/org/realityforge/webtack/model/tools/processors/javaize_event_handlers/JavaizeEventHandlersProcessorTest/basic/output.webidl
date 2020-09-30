@@ -5,7 +5,7 @@
  * @version 1.2.3
  */
 [LegacyTreatNonObjectAsNull]
-callback EventHandler = void ( Event event );
+callback EventHandler = undefined ( Event event );
 
 /**
  * Handle events of type MouseEvent
@@ -13,17 +13,17 @@ callback EventHandler = void ( Event event );
  * @param event the event
  */
 [JavaSubPackage=mouse]
-callback MouseEventHandler = void ( MouseEvent event );
+callback MouseEventHandler = undefined ( MouseEvent event );
 
 [LegacyTreatNonObjectAsNull]
-callback OnErrorEventHandler = void ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
+callback OnErrorEventHandler = undefined ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
 
 /**
  * Handle events of type SpeechSynthesisEvent
  *
  * @param event the event
  */
-callback SpeechSynthesisEventHandler = void ( SpeechSynthesisEvent event );
+callback SpeechSynthesisEventHandler = undefined ( SpeechSynthesisEvent event );
 
 /**
  * Listener for events of type FocusEvent
@@ -34,7 +34,7 @@ callback interface FocusEventListener {
    *
    * @param event the event
    */
-  void handleEvent( FocusEvent event );
+  undefined handleEvent( FocusEvent event );
 };
 
 /**
@@ -47,7 +47,7 @@ callback interface MouseEventListener {
    *
    * @param event the event
    */
-  void handleEvent( MouseEvent event );
+  undefined handleEvent( MouseEvent event );
 };
 
 /**
@@ -59,7 +59,7 @@ callback interface SpeechSynthesisEventListener {
    *
    * @param event the event
    */
-  void handleEvent( SpeechSynthesisEvent event );
+  undefined handleEvent( SpeechSynthesisEvent event );
 };
 
 /**

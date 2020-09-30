@@ -18,7 +18,7 @@ enum SpeechRecognitionErrorCode {
  *
  * @see <a href="http://example.com/API/OnActionHandler">OnActionHandler - MDN</a>
  */
-callback OnActionHandler = void ( optional DOMString type );
+callback OnActionHandler = undefined ( optional DOMString type );
 
 /**
  * Documentation for NodeFilter.

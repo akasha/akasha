@@ -28,7 +28,7 @@ dictionary ExtendableMessageEventInit : ExtendableEventInit {
 
 dictionary FetchEventInit : ExtendableEventInit {
   DOMString clientId = "";
-  Promise<void> handled;
+  Promise<undefined> handled;
   Promise<any> preloadResponse;
   DOMString replacesClientId = "";
   required Request request;

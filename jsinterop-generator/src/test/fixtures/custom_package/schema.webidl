@@ -14,11 +14,11 @@ namespace CSS {
 };
 
 [JavaSubPackage=mycallbacks]
-callback MyEventHandler = void ( Event event );
+callback MyEventHandler = undefined ( Event event );
 
 [JavaSubPackage=mycallbackinterfaces]
 callback interface EventListener {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 [JavaSubPackage=mydictionaries]

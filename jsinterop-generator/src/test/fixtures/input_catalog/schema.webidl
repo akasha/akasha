@@ -33,19 +33,19 @@ namespace WebAssembly {
 /**
  * This is a predefined type.
  */
-callback EventHandler1 = void ();
+callback EventHandler1 = undefined ();
 
-callback EventHandler2 = void ();
+callback EventHandler2 = undefined ();
 
 callback interface CompletionCallback {
-  void onDone();
+  undefined onDone();
 };
 
 /**
  * This is a predefined type.
  */
 callback interface EventListener {
-  void onEvent();
+  undefined onEvent();
 };
 
 /**
@@ -74,7 +74,7 @@ interface IDBObjectStore {
   attribute EventHandler2 handler2;
   IDBIndex createIndex( DOMString name, ( DOMString or sequence<DOMString> ) keyPath, optional IDBIndexParameters options = {} );
   IDBIndex createIndex2( DOMString name, optional IDBIndexParameters2 options = {} );
-  void registerListeners( EventListener eventListener, CompletionCallback completionCallback );
+  undefined registerListeners( EventListener eventListener, CompletionCallback completionCallback );
   ( DOMString or float ) returnSomeUnionThatIsNotPredefined();
   ( DOMString or long long ) returnSomeUnionThatIsPredefined();
 };

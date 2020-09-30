@@ -68,7 +68,7 @@ partial namespace WebAssembly {
  * @version 1.2.3
  */
 [LegacyTreatNonObjectAsNull]
-callback EventHandler = void ( Event event );
+callback EventHandler = undefined ( Event event );
 
 /**
  * Documentation for FullscreenNavigationUI.

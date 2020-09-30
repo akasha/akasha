@@ -27,13 +27,13 @@ interface Event {
   attribute boolean returnValue;
   constructor( DOMString type, optional EventInit eventInitDict = {} );
   Promise<any> anyInReturnedPromise();
-  void anyParameter( any value );
+  undefined anyParameter( any value );
   any anyReturning();
   sequence<EventTarget> composedPath();
-  void initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
-  void preventDefault();
-  void stopImmediatePropagation();
-  void stopPropagation();
+  undefined initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
+  undefined preventDefault();
+  undefined stopImmediatePropagation();
+  undefined stopPropagation();
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]
@@ -57,9 +57,9 @@ interface RTCStatsReport {
 [Exposed=Window]
 interface SomeMapLikeDefiningOverrides {
   maplike<DOMString, long>;
-  void clear();
+  undefined clear();
   boolean delete( DOMString key );
-  void set( DOMString key, long value );
+  undefined set( DOMString key, long value );
 };
 
 /**
@@ -81,11 +81,11 @@ interface SpeechRecognitionErrorEvent : Event {
 [Exposed=Window]
 interface Storage {
   readonly attribute unsigned long length;
-  void clear();
+  undefined clear();
   DOMString? key( unsigned long index );
   getter DOMString? getItem( DOMString key );
-  setter void setItem( DOMString key, DOMString value );
-  deleter void removeItem( DOMString key );
+  setter undefined setItem( DOMString key, DOMString value );
+  deleter undefined removeItem( DOMString key );
 };
 
 /**

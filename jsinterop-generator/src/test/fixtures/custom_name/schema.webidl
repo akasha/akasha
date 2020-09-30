@@ -14,11 +14,11 @@ namespace CSS {
 };
 
 [JavaName=IncomingEvent]
-callback MyEventHandler = void ( Event event );
+callback MyEventHandler = undefined ( Event event );
 
 [JavaName=EventEar]
 callback interface EventListener {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 [JavaName=EventOptions]

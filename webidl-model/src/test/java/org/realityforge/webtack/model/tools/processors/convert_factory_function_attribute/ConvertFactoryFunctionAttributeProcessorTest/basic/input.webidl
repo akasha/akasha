@@ -9,7 +9,7 @@ interface HTMLElement {
   readonly attribute DOMString accessKeyLabel;
   [HTMLConstructor]
   constructor();
-  void click();
+  undefined click();
 };
 
 [Exposed=Window, LegacyFactoryFunction=Image( optional unsigned long width, optional unsigned long height )]

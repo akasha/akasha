@@ -419,7 +419,7 @@ dictionary MyDictionary {
   unsigned short unsignedShortValue;
   record<USVString, USVString> usvStringRecordValue;
   USVString usvStringValue;
-  Promise<void> voidPromiseValue;
+  Promise<undefined> voidPromiseValue;
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -509,7 +509,7 @@ interface MyType1 {
   readonly attribute unsigned long long readonlyUnsignedLongLongValue;
   readonly attribute unsigned long readonlyUnsignedLongValue;
   readonly attribute unsigned short readonlyUnsignedShortValue;
-  readonly attribute Promise<void> readonlyVoidPromiseValue;
+  readonly attribute Promise<undefined> readonlyVoidPromiseValue;
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -606,7 +606,7 @@ interface MyType2 {
   attribute unsigned short unsignedShortValue;
   attribute record<USVString, USVString> usvStringRecordValue;
   attribute USVString usvStringValue;
-  attribute Promise<void> voidPromiseValue;
+  attribute Promise<undefined> voidPromiseValue;
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -703,7 +703,7 @@ interface MyType3 {
   unsigned short unsignedShortMethod( unsigned short v1, optional unsigned short v2 );
   USVString usvStringMethod( USVString v1, optional USVString v2 );
   record<USVString, USVString> usvStringRecordMethod( record<USVString, USVString> v1, optional record<USVString, USVString> v2 );
-  Promise<void> voidPromiseMethod( Promise<void> v1, optional Promise<void> v2 );
+  Promise<undefined> voidPromiseMethod( Promise<undefined> v1, optional Promise<undefined> v2 );
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -800,7 +800,7 @@ interface MyType4 {
   static unsigned short unsignedShortMethod( unsigned short v1, optional unsigned short v2 );
   static USVString usvStringMethod( USVString v1, optional USVString v2 );
   static record<USVString, USVString> usvStringRecordMethod( record<USVString, USVString> v1, optional record<USVString, USVString> v2 );
-  static Promise<void> voidPromiseMethod( Promise<void> v1, optional Promise<void> v2 );
+  static Promise<undefined> voidPromiseMethod( Promise<undefined> v1, optional Promise<undefined> v2 );
 };
 
 [SecureContext, Exposed=(Window,Worker)]

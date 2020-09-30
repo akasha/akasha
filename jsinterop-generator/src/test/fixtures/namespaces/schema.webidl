@@ -28,19 +28,19 @@ namespace WebAssembly {
  */
 [Exposed=(Window,Worker,Worklet)]
 namespace console {
-  void assert( optional boolean condition = false, any... data );
+  undefined assert( optional boolean condition = false, any... data );
   /**
    * The console.clear() method clears the console if the environment allows it.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/clear">console.clear - MDN</a>
    */
-  void clear();
+  undefined clear();
   /**
    * Outputs a warning message to the Web Console.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/console/warn">console.warn - MDN</a>
    */
-  void warn( any... data );
+  undefined warn( any... data );
 };
 
 /**

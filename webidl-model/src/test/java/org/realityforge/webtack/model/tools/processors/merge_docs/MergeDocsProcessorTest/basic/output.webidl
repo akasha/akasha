@@ -252,13 +252,13 @@ interface WebGL2RenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
    */
-  void finish();
+  undefined finish();
   /**
    * Docs for WebGL2RenderingContext.flush
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/flush">WebGL2RenderingContext.flush - MDN</a>
    */
-  void flush();
+  undefined flush();
 };
 
 /**
@@ -267,19 +267,19 @@ interface WebGL2RenderingContext {
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext">WebGL2RenderingContext - MDN</a>
  */
 interface WebGL3RenderingContext {
-  void commit();
+  undefined commit();
   /**
    * Docs for WebGLRenderingContext.finish
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
    */
-  void finish();
+  undefined finish();
   /**
    * Docs for WebGL2RenderingContext.flush
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/flush">WebGL2RenderingContext.flush - MDN</a>
    */
-  void flush();
+  undefined flush();
 };
 
 /**
@@ -293,13 +293,13 @@ interface WebGLRenderingContext {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
    */
-  void finish();
+  undefined finish();
   /**
    * Docs for WebGLRenderingContext.flush
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush">WebGLRenderingContext.flush - MDN</a>
    */
-  void flush();
+  undefined flush();
 };
 
 /**

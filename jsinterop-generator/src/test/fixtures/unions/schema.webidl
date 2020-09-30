@@ -15,17 +15,17 @@ typedef BufferSource MyNamedBufferSource;
  */
 typedef ( DOMString or unsigned long ) txCode;
 
-callback OnBufferSourceHandler = void ( optional BufferSource buffer );
+callback OnBufferSourceHandler = undefined ( optional BufferSource buffer );
 
 [LegacyTreatNonObjectAsNull]
 callback OnErrorEventHandler = any ( ( Event or DOMString ) event, optional DOMString source, optional unsigned long lineno, optional unsigned long colno, optional any error );
 
 callback interface EventListener2 {
-  void handleUuid( ( DOMString or unsigned long ) event );
+  undefined handleUuid( ( DOMString or unsigned long ) event );
 };
 
 callback interface EventListener3 {
-  void handleServiceUuid( BluetoothServiceUUID event );
+  undefined handleServiceUuid( BluetoothServiceUUID event );
 };
 
 dictionary AllowedBluetoothDevice {
@@ -51,9 +51,9 @@ dictionary EventListenerOptions {
 
 [Exposed=Window, SecureContext]
 interface BluetoothRemoteGATTCharacteristic : EventTarget {
-  Promise<void> writeValue( BufferSource value );
-  Promise<void> writeValueWithResponse( BufferSource value );
-  Promise<void> writeValueWithoutResponse( BufferSource value );
+  Promise<undefined> writeValue( BufferSource value );
+  Promise<undefined> writeValueWithResponse( BufferSource value );
+  Promise<undefined> writeValueWithoutResponse( BufferSource value );
 };
 
 [Exposed=Window, SecureContext]
@@ -72,24 +72,24 @@ interface Event {
 };
 
 interface EventTarget {
-  void removeEventListener( DOMString type, optional ( EventListenerOptions or boolean ) options = {} );
+  undefined removeEventListener( DOMString type, optional ( EventListenerOptions or boolean ) options = {} );
 };
 
 interface SomeDataContainer {
-  static void myStaticMethodWithUnionArg( BluetoothDescriptorUUID name );
+  static undefined myStaticMethodWithUnionArg( BluetoothDescriptorUUID name );
   static BluetoothDescriptorUUID myStaticMethodWithUnionReturn();
   constructor( BufferSource data );
 };
 
 interface SomeInterface {
-  static void myStaticMethodWithUnionArg( ( DOMString or unsigned long ) serviceUuid );
+  static undefined myStaticMethodWithUnionArg( ( DOMString or unsigned long ) serviceUuid );
   static ( DOMString or unsigned long ) myStaticMethodWithUnionReturn();
   constructor( ( DOMString or unsigned long ) serviceUuid );
   ( DOMString or unsigned long ) getUuid();
 };
 
 interface SomeServiceContainer {
-  static void myStaticMethodWithUnionArg( optional BluetoothDescriptorUUID name );
+  static undefined myStaticMethodWithUnionArg( optional BluetoothDescriptorUUID name );
   static BluetoothDescriptorUUID? myStaticMethodWithUnionReturn();
   constructor( optional BluetoothServiceUUID service );
 };

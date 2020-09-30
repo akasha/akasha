@@ -3,9 +3,9 @@ enum PanningModelType {
   "equalpower"
 };
 
-callback DecodeErrorCallback = void ( DOMException error );
+callback DecodeErrorCallback = undefined ( DOMException error );
 
-callback DecodeSuccessCallback = void ( AudioBuffer decodedData );
+callback DecodeSuccessCallback = undefined ( AudioBuffer decodedData );
 
 dictionary AnalyserOptions : AudioNodeOptions {
   unsigned long fftSize = 2048;

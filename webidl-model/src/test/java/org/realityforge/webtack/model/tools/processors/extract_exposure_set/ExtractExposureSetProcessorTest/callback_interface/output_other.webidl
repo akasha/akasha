@@ -1,3 +1,3 @@
 callback interface EventListenerC {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };

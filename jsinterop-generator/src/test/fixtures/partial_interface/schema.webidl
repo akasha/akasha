@@ -3,7 +3,7 @@ interface SpeechSynthesis {
   readonly attribute boolean paused;
   readonly attribute boolean pending;
   readonly attribute boolean speaking;
-  stringifier void customToString();
+  stringifier undefined customToString();
 };
 
 /**
@@ -21,9 +21,9 @@ partial interface RTCStatsReport {
 [Exposed=Window]
 partial interface SomeMapLikeDefiningOverrides {
   maplike<DOMString, long>;
-  void clear();
+  undefined clear();
   boolean delete( DOMString key );
-  void set( DOMString key, long value );
+  undefined set( DOMString key, long value );
 };
 
 /**

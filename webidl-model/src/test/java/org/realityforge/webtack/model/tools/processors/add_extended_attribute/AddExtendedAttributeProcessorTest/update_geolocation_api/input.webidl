@@ -1,6 +1,6 @@
-callback PositionCallback = void ( Position position );
+callback PositionCallback = undefined ( Position position );
 
-callback PositionErrorCallback = void ( PositionError positionError );
+callback PositionErrorCallback = undefined ( PositionError positionError );
 
 dictionary PositionOptions {
   boolean enableHighAccuracy = false;
@@ -21,8 +21,8 @@ interface Coordinates {
 };
 
 interface Geolocation {
-  void clearWatch( long watchId );
-  void getCurrentPosition( PositionCallback successCallback, optional PositionErrorCallback errorCallback, optional PositionOptions options );
+  undefined clearWatch( long watchId );
+  undefined getCurrentPosition( PositionCallback successCallback, optional PositionErrorCallback errorCallback, optional PositionOptions options );
   long watchPosition( PositionCallback successCallback, optional PositionErrorCallback errorCallback, optional PositionOptions options );
 };
 

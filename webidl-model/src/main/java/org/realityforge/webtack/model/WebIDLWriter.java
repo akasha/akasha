@@ -987,7 +987,7 @@ public final class WebIDLWriter
         writer.write( "symbol" );
         break;
       case Void:
-        writer.write( "void" );
+        writer.write( "undefined" );
         break;
       case Byte:
         writer.write( "byte" );

@@ -1,5 +1,5 @@
 callback interface MyElementB {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 dictionary EventInit {

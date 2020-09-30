@@ -81,19 +81,19 @@ interface Node {
 };
 
 interface WebGL2RenderingContext {
-  void finish();
-  void flush();
+  undefined finish();
+  undefined flush();
 };
 
 interface WebGL3RenderingContext {
-  void commit();
-  void finish();
-  void flush();
+  undefined commit();
+  undefined finish();
+  undefined flush();
 };
 
 interface WebGLRenderingContext {
-  void finish();
-  void flush();
+  undefined finish();
+  undefined flush();
 };
 
 interface Window {
