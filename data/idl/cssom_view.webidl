@@ -75,8 +75,8 @@ interface MediaQueryList : EventTarget {
   readonly attribute boolean matches;
   readonly attribute CSSOMString media;
   attribute EventHandler onchange;
-  void addListener( EventListener? callback );
-  void removeListener( EventListener? callback );
+  undefined addListener( EventListener? callback );
+  undefined removeListener( EventListener? callback );
 };
 
 [Exposed=Window]
@@ -115,13 +115,13 @@ partial interface Element {
   [NewObject]
   DOMRect getBoundingClientRect();
   DOMRectList getClientRects();
-  void scroll( optional ScrollToOptions options = {} );
-  void scroll( unrestricted double x, unrestricted double y );
-  void scrollBy( optional ScrollToOptions options = {} );
-  void scrollBy( unrestricted double x, unrestricted double y );
-  void scrollIntoView( optional ( boolean or ScrollIntoViewOptions ) arg = {} );
-  void scrollTo( optional ScrollToOptions options = {} );
-  void scrollTo( unrestricted double x, unrestricted double y );
+  undefined scroll( optional ScrollToOptions options = {} );
+  undefined scroll( unrestricted double x, unrestricted double y );
+  undefined scrollBy( optional ScrollToOptions options = {} );
+  undefined scrollBy( unrestricted double x, unrestricted double y );
+  undefined scrollIntoView( optional ( boolean or ScrollIntoViewOptions ) arg = {} );
+  undefined scrollTo( optional ScrollToOptions options = {} );
+  undefined scrollTo( unrestricted double x, unrestricted double y );
 };
 
 partial interface HTMLElement {
@@ -187,16 +187,16 @@ partial interface Window {
   readonly attribute double scrollY;
   [NewObject]
   MediaQueryList matchMedia( CSSOMString query );
-  void moveBy( long x, long y );
-  void moveTo( long x, long y );
-  void resizeBy( long x, long y );
-  void resizeTo( long width, long height );
-  void scroll( optional ScrollToOptions options = {} );
-  void scroll( unrestricted double x, unrestricted double y );
-  void scrollBy( optional ScrollToOptions options = {} );
-  void scrollBy( unrestricted double x, unrestricted double y );
-  void scrollTo( optional ScrollToOptions options = {} );
-  void scrollTo( unrestricted double x, unrestricted double y );
+  undefined moveBy( long x, long y );
+  undefined moveTo( long x, long y );
+  undefined resizeBy( long x, long y );
+  undefined resizeTo( long width, long height );
+  undefined scroll( optional ScrollToOptions options = {} );
+  undefined scroll( unrestricted double x, unrestricted double y );
+  undefined scrollBy( optional ScrollToOptions options = {} );
+  undefined scrollBy( unrestricted double x, unrestricted double y );
+  undefined scrollTo( optional ScrollToOptions options = {} );
+  undefined scrollTo( unrestricted double x, unrestricted double y );
 };
 
 CSSPseudoElement includes GeometryUtils;

@@ -21,7 +21,7 @@ partial interface mixin DocumentOrShadowRoot {
 interface CSSGroupingRule : CSSRule {
   [SameObject]
   readonly attribute CSSRuleList cssRules;
-  void deleteRule( unsigned long index );
+  undefined deleteRule( unsigned long index );
   unsigned long insertRule( CSSOMString rule, optional unsigned long index = 0 );
 };
 
@@ -89,7 +89,7 @@ interface CSSStyleDeclaration {
   [CEReactions]
   CSSOMString removeProperty( CSSOMString property );
   [CEReactions]
-  void setProperty( CSSOMString property, [LegacyNullToEmptyString] CSSOMString value, optional [LegacyNullToEmptyString] CSSOMString priority = "" );
+  undefined setProperty( CSSOMString property, [LegacyNullToEmptyString] CSSOMString value, optional [LegacyNullToEmptyString] CSSOMString priority = "" );
   getter CSSOMString item( unsigned long index );
 };
 
@@ -105,7 +105,7 @@ interface CSSStyleSheet : StyleSheet {
   [SameObject]
   readonly attribute CSSRuleList cssRules;
   readonly attribute CSSRule? ownerRule;
-  void deleteRule( unsigned long index );
+  undefined deleteRule( unsigned long index );
   unsigned long insertRule( CSSOMString rule, optional unsigned long index = 0 );
 };
 
@@ -113,8 +113,8 @@ interface CSSStyleSheet : StyleSheet {
 interface MediaList {
   readonly attribute unsigned long length;
   stringifier attribute [LegacyNullToEmptyString] CSSOMString mediaText;
-  void appendMedium( CSSOMString medium );
-  void deleteMedium( CSSOMString medium );
+  undefined appendMedium( CSSOMString medium );
+  undefined deleteMedium( CSSOMString medium );
   getter CSSOMString? item( unsigned long index );
 };
 
@@ -140,7 +140,7 @@ partial interface CSSStyleSheet {
   [SameObject]
   readonly attribute CSSRuleList rules;
   long addRule( optional DOMString selector = "undefined", optional DOMString style = "undefined", optional unsigned long index );
-  void removeRule( optional unsigned long index = 0 );
+  undefined removeRule( optional unsigned long index = 0 );
 };
 
 partial interface Window {
