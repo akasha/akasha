@@ -154,16 +154,16 @@ typedef ( CanvasRenderingContext2D or ImageBitmapRenderingContext or WebGLRender
 
 typedef ( DOMString or Function ) TimerHandler;
 
-callback BlobCallback = void ( Blob? blob );
+callback BlobCallback = undefined ( Blob? blob );
 
 callback CustomElementConstructor = HTMLElement ();
 
 [LegacyTreatNonObjectAsNull]
 callback EventHandlerNonNull = any ( Event event );
 
-callback FrameRequestCallback = void ( DOMHighResTimeStamp time );
+callback FrameRequestCallback = undefined ( DOMHighResTimeStamp time );
 
-callback FunctionStringCallback = void ( DOMString data );
+callback FunctionStringCallback = undefined ( DOMString data );
 
 [LegacyTreatNonObjectAsNull]
 callback OnBeforeUnloadEventHandlerNonNull = DOMString? ( Event event );
@@ -308,7 +308,7 @@ interface mixin AbstractWorker {
 };
 
 interface mixin AnimationFrameProvider {
-  void cancelAnimationFrame( unsigned long handle );
+  undefined cancelAnimationFrame( unsigned long handle );
   unsigned long requestAnimationFrame( FrameRequestCallback callback );
 };
 
@@ -318,23 +318,23 @@ interface mixin CanvasCompositing {
 };
 
 interface mixin CanvasDrawImage {
-  void drawImage( CanvasImageSource image, unrestricted double dx, unrestricted double dy );
-  void drawImage( CanvasImageSource image, unrestricted double dx, unrestricted double dy, unrestricted double dw, unrestricted double dh );
-  void drawImage( CanvasImageSource image, unrestricted double sx, unrestricted double sy, unrestricted double sw, unrestricted double sh, unrestricted double dx, unrestricted double dy, unrestricted double dw, unrestricted double dh );
+  undefined drawImage( CanvasImageSource image, unrestricted double dx, unrestricted double dy );
+  undefined drawImage( CanvasImageSource image, unrestricted double dx, unrestricted double dy, unrestricted double dw, unrestricted double dh );
+  undefined drawImage( CanvasImageSource image, unrestricted double sx, unrestricted double sy, unrestricted double sw, unrestricted double sh, unrestricted double dx, unrestricted double dy, unrestricted double dw, unrestricted double dh );
 };
 
 interface mixin CanvasDrawPath {
-  void beginPath();
-  void clip( optional CanvasFillRule fillRule = "nonzero" );
-  void clip( Path2D path, optional CanvasFillRule fillRule = "nonzero" );
-  void fill( optional CanvasFillRule fillRule = "nonzero" );
-  void fill( Path2D path, optional CanvasFillRule fillRule = "nonzero" );
+  undefined beginPath();
+  undefined clip( optional CanvasFillRule fillRule = "nonzero" );
+  undefined clip( Path2D path, optional CanvasFillRule fillRule = "nonzero" );
+  undefined fill( optional CanvasFillRule fillRule = "nonzero" );
+  undefined fill( Path2D path, optional CanvasFillRule fillRule = "nonzero" );
   boolean isPointInPath( unrestricted double x, unrestricted double y, optional CanvasFillRule fillRule = "nonzero" );
   boolean isPointInPath( Path2D path, unrestricted double x, unrestricted double y, optional CanvasFillRule fillRule = "nonzero" );
   boolean isPointInStroke( unrestricted double x, unrestricted double y );
   boolean isPointInStroke( Path2D path, unrestricted double x, unrestricted double y );
-  void stroke();
-  void stroke( Path2D path );
+  undefined stroke();
+  undefined stroke( Path2D path );
 };
 
 interface mixin CanvasFillStrokeStyles {
@@ -353,8 +353,8 @@ interface mixin CanvasImageData {
   ImageData createImageData( long sw, long sh );
   ImageData createImageData( ImageData imagedata );
   ImageData getImageData( long sx, long sy, long sw, long sh );
-  void putImageData( ImageData imagedata, long dx, long dy );
-  void putImageData( ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight );
+  undefined putImageData( ImageData imagedata, long dx, long dy );
+  undefined putImageData( ImageData imagedata, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight );
 };
 
 interface mixin CanvasImageSmoothing {
@@ -363,15 +363,15 @@ interface mixin CanvasImageSmoothing {
 };
 
 interface mixin CanvasPath {
-  void arc( unrestricted double x, unrestricted double y, unrestricted double radius, unrestricted double startAngle, unrestricted double endAngle, optional boolean anticlockwise = false );
-  void arcTo( unrestricted double x1, unrestricted double y1, unrestricted double x2, unrestricted double y2, unrestricted double radius );
-  void bezierCurveTo( unrestricted double cp1x, unrestricted double cp1y, unrestricted double cp2x, unrestricted double cp2y, unrestricted double x, unrestricted double y );
-  void closePath();
-  void ellipse( unrestricted double x, unrestricted double y, unrestricted double radiusX, unrestricted double radiusY, unrestricted double rotation, unrestricted double startAngle, unrestricted double endAngle, optional boolean anticlockwise = false );
-  void lineTo( unrestricted double x, unrestricted double y );
-  void moveTo( unrestricted double x, unrestricted double y );
-  void quadraticCurveTo( unrestricted double cpx, unrestricted double cpy, unrestricted double x, unrestricted double y );
-  void rect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
+  undefined arc( unrestricted double x, unrestricted double y, unrestricted double radius, unrestricted double startAngle, unrestricted double endAngle, optional boolean anticlockwise = false );
+  undefined arcTo( unrestricted double x1, unrestricted double y1, unrestricted double x2, unrestricted double y2, unrestricted double radius );
+  undefined bezierCurveTo( unrestricted double cp1x, unrestricted double cp1y, unrestricted double cp2x, unrestricted double cp2y, unrestricted double x, unrestricted double y );
+  undefined closePath();
+  undefined ellipse( unrestricted double x, unrestricted double y, unrestricted double radiusX, unrestricted double radiusY, unrestricted double rotation, unrestricted double startAngle, unrestricted double endAngle, optional boolean anticlockwise = false );
+  undefined lineTo( unrestricted double x, unrestricted double y );
+  undefined moveTo( unrestricted double x, unrestricted double y );
+  undefined quadraticCurveTo( unrestricted double cpx, unrestricted double cpy, unrestricted double x, unrestricted double y );
+  undefined rect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
 };
 
 interface mixin CanvasPathDrawingStyles {
@@ -381,13 +381,13 @@ interface mixin CanvasPathDrawingStyles {
   attribute unrestricted double lineWidth;
   attribute unrestricted double miterLimit;
   sequence<unrestricted double> getLineDash();
-  void setLineDash( sequence<unrestricted double> segments );
+  undefined setLineDash( sequence<unrestricted double> segments );
 };
 
 interface mixin CanvasRect {
-  void clearRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
-  void fillRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
-  void strokeRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
+  undefined clearRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
+  undefined fillRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
+  undefined strokeRect( unrestricted double x, unrestricted double y, unrestricted double w, unrestricted double h );
 };
 
 interface mixin CanvasShadowStyles {
@@ -398,14 +398,14 @@ interface mixin CanvasShadowStyles {
 };
 
 interface mixin CanvasState {
-  void restore();
-  void save();
+  undefined restore();
+  undefined save();
 };
 
 interface mixin CanvasText {
-  void fillText( DOMString text, unrestricted double x, unrestricted double y, optional unrestricted double maxWidth );
+  undefined fillText( DOMString text, unrestricted double x, unrestricted double y, optional unrestricted double maxWidth );
   TextMetrics measureText( DOMString text );
-  void strokeText( DOMString text, unrestricted double x, unrestricted double y, optional unrestricted double maxWidth );
+  undefined strokeText( DOMString text, unrestricted double x, unrestricted double y, optional unrestricted double maxWidth );
 };
 
 interface mixin CanvasTextDrawingStyles {
@@ -418,20 +418,20 @@ interface mixin CanvasTextDrawingStyles {
 interface mixin CanvasTransform {
   [NewObject]
   DOMMatrix getTransform();
-  void resetTransform();
-  void rotate( unrestricted double angle );
-  void scale( unrestricted double x, unrestricted double y );
-  void setTransform( unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f );
-  void setTransform( optional DOMMatrix2DInit transform = {} );
-  void transform( unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f );
-  void translate( unrestricted double x, unrestricted double y );
+  undefined resetTransform();
+  undefined rotate( unrestricted double angle );
+  undefined scale( unrestricted double x, unrestricted double y );
+  undefined setTransform( unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f );
+  undefined setTransform( optional DOMMatrix2DInit transform = {} );
+  undefined transform( unrestricted double a, unrestricted double b, unrestricted double c, unrestricted double d, unrestricted double e, unrestricted double f );
+  undefined translate( unrestricted double x, unrestricted double y );
 };
 
 interface mixin CanvasUserInterface {
-  void drawFocusIfNeeded( Element element );
-  void drawFocusIfNeeded( Path2D path, Element element );
-  void scrollPathIntoView();
-  void scrollPathIntoView( Path2D path );
+  undefined drawFocusIfNeeded( Element element );
+  undefined drawFocusIfNeeded( Path2D path, Element element );
+  undefined scrollPathIntoView();
+  undefined scrollPathIntoView( Path2D path );
 };
 
 interface mixin DocumentAndElementEventHandlers {
@@ -466,7 +466,6 @@ interface mixin GlobalEventHandlers {
   attribute EventHandler ondrag;
   attribute EventHandler ondragend;
   attribute EventHandler ondragenter;
-  attribute EventHandler ondragexit;
   attribute EventHandler ondragleave;
   attribute EventHandler ondragover;
   attribute EventHandler ondragstart;
@@ -554,8 +553,8 @@ interface mixin HTMLOrSVGElement {
   attribute DOMString nonce;
   [CEReactions]
   attribute long tabIndex;
-  void blur();
-  void focus( optional FocusOptions options = {} );
+  undefined blur();
+  undefined focus( optional FocusOptions options = {} );
 };
 
 interface mixin NavigatorConcurrentHardware {
@@ -564,9 +563,9 @@ interface mixin NavigatorConcurrentHardware {
 
 interface mixin NavigatorContentUtils {
   [SecureContext]
-  void registerProtocolHandler( DOMString scheme, USVString url );
+  undefined registerProtocolHandler( DOMString scheme, USVString url );
   [SecureContext]
-  void unregisterProtocolHandler( DOMString scheme, USVString url );
+  undefined unregisterProtocolHandler( DOMString scheme, USVString url );
 };
 
 interface mixin NavigatorCookies {
@@ -635,11 +634,11 @@ interface mixin WindowOrWorkerGlobalScope {
   readonly attribute USVString origin;
   ByteString atob( DOMString data );
   DOMString btoa( DOMString data );
-  void clearInterval( optional long handle = 0 );
-  void clearTimeout( optional long handle = 0 );
+  undefined clearInterval( optional long handle = 0 );
+  undefined clearTimeout( optional long handle = 0 );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, optional ImageBitmapOptions options = {} );
   Promise<ImageBitmap> createImageBitmap( ImageBitmapSource image, long sx, long sy, long sw, long sh, optional ImageBitmapOptions options = {} );
-  void queueMicrotask( VoidFunction callback );
+  undefined queueMicrotask( VoidFunction callback );
   long setInterval( TimerHandler handler, optional long timeout = 0, any... arguments );
   long setTimeout( TimerHandler handler, optional long timeout = 0, any... arguments );
 };
@@ -676,9 +675,9 @@ interface ApplicationCache : EventTarget {
   attribute EventHandler onobsolete;
   attribute EventHandler onprogress;
   attribute EventHandler onupdateready;
-  void abort();
-  void swapCache();
-  void update();
+  undefined abort();
+  undefined swapCache();
+  undefined update();
 };
 
 [Exposed=Window]
@@ -716,18 +715,18 @@ interface BroadcastChannel : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
   constructor( DOMString name );
-  void close();
-  void postMessage( any message );
+  undefined close();
+  undefined postMessage( any message );
 };
 
 [Exposed=(Window,Worker)]
 interface CanvasGradient {
-  void addColorStop( double offset, DOMString color );
+  undefined addColorStop( double offset, DOMString color );
 };
 
 [Exposed=(Window,Worker)]
 interface CanvasPattern {
-  void setTransform( optional DOMMatrix2DInit transform = {} );
+  undefined setTransform( optional DOMMatrix2DInit transform = {} );
 };
 
 [Exposed=Window]
@@ -747,11 +746,11 @@ interface CloseEvent : Event {
 [Exposed=Window]
 interface CustomElementRegistry {
   [CEReactions]
-  void define( DOMString name, CustomElementConstructor constructor, optional ElementDefinitionOptions options = {} );
-  any get( DOMString name );
+  undefined define( DOMString name, CustomElementConstructor constructor, optional ElementDefinitionOptions options = {} );
+  ( CustomElementConstructor or undefined ) get( DOMString name );
   [CEReactions]
-  void upgrade( Node root );
-  Promise<void> whenDefined( DOMString name );
+  undefined upgrade( Node root );
+  Promise<CustomElementConstructor> whenDefined( DOMString name );
 };
 
 [Exposed=Window]
@@ -772,9 +771,9 @@ interface DOMStringList {
 interface DOMStringMap {
   getter DOMString ( DOMString name );
   [CEReactions]
-  setter void ( DOMString name, DOMString value );
+  setter undefined ( DOMString name, DOMString value );
   [CEReactions]
-  deleter void ( DOMString name );
+  deleter undefined ( DOMString name );
 };
 
 [Exposed=Window]
@@ -787,10 +786,10 @@ interface DataTransfer {
   attribute DOMString dropEffect;
   attribute DOMString effectAllowed;
   constructor();
-  void clearData( optional DOMString format );
+  undefined clearData( optional DOMString format );
   DOMString getData( DOMString format );
-  void setData( DOMString format, DOMString data );
-  void setDragImage( Element image, long x, long y );
+  undefined setData( DOMString format, DOMString data );
+  undefined setDragImage( Element image, long x, long y );
 };
 
 [Exposed=Window]
@@ -798,7 +797,7 @@ interface DataTransferItem {
   readonly attribute DOMString kind;
   readonly attribute DOMString type;
   File? getAsFile();
-  void getAsString( FunctionStringCallback? _callback );
+  undefined getAsString( FunctionStringCallback? _callback );
 };
 
 [Exposed=Window]
@@ -806,8 +805,8 @@ interface DataTransferItemList {
   readonly attribute unsigned long length;
   DataTransferItem? add( DOMString data, DOMString type );
   DataTransferItem? add( File data );
-  void clear();
-  void remove( unsigned long index );
+  undefined clear();
+  undefined remove( unsigned long index );
   getter DataTransferItem ( unsigned long index );
 };
 
@@ -817,9 +816,9 @@ interface DedicatedWorkerGlobalScope : WorkerGlobalScope {
   readonly attribute DOMString name;
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
-  void close();
-  void postMessage( any message, sequence<object> transfer );
-  void postMessage( any message, optional PostMessageOptions options = {} );
+  undefined close();
+  undefined postMessage( any message, sequence<object> transfer );
+  undefined postMessage( any message, optional PostMessageOptions options = {} );
 };
 
 [Exposed=Window]
@@ -837,8 +836,8 @@ interface ElementInternals {
   readonly attribute boolean willValidate;
   boolean checkValidity();
   boolean reportValidity();
-  void setFormValue( ( File or USVString or FormData )? value, optional ( File or USVString or FormData )? state );
-  void setValidity( optional ValidityStateFlags flags = {}, optional DOMString message, optional HTMLElement anchor );
+  undefined setFormValue( ( File or USVString or FormData )? value, optional ( File or USVString or FormData )? state );
+  undefined setValidity( optional ValidityStateFlags flags = {}, optional DOMString message, optional HTMLElement anchor );
 };
 
 [Exposed=(Window,Worker)]
@@ -863,13 +862,13 @@ interface EventSource : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onopen;
   constructor( USVString url, optional EventSourceInit eventSourceInitDict = {} );
-  void close();
+  undefined close();
 };
 
 [Exposed=Window]
 interface External {
-  void AddSearchProvider();
-  void IsSearchProviderInstalled();
+  undefined AddSearchProvider();
+  undefined IsSearchProviderInstalled();
 };
 
 [Exposed=Window]
@@ -991,7 +990,7 @@ interface HTMLButtonElement : HTMLElement {
   constructor();
   boolean checkValidity();
   boolean reportValidity();
-  void setCustomValidity( DOMString error );
+  undefined setCustomValidity( DOMString error );
 };
 
 [Exposed=Window]
@@ -1003,7 +1002,7 @@ interface HTMLCanvasElement : HTMLElement {
   [HTMLConstructor]
   constructor();
   RenderingContext? getContext( DOMString contextId, optional any options = null );
-  void toBlob( BlobCallback _callback, optional DOMString type = "image/png", optional any quality );
+  undefined toBlob( BlobCallback _callback, optional DOMString type = "image/png", optional any quality );
   USVString toDataURL( optional DOMString type = "image/png", optional any quality );
   OffscreenCanvas transferControlToOffscreen();
 };
@@ -1046,11 +1045,11 @@ interface HTMLDialogElement : HTMLElement {
   [HTMLConstructor]
   constructor();
   [CEReactions]
-  void close( optional DOMString returnValue );
+  undefined close( optional DOMString returnValue );
   [CEReactions]
-  void show();
+  undefined show();
   [CEReactions]
-  void showModal();
+  undefined showModal();
 };
 
 [Exposed=Window]
@@ -1093,7 +1092,7 @@ interface HTMLElement : Element {
   [HTMLConstructor]
   constructor();
   ElementInternals attachInternals();
-  void click();
+  undefined click();
 };
 
 [Exposed=Window]
@@ -1129,7 +1128,7 @@ interface HTMLFieldSetElement : HTMLElement {
   constructor();
   boolean checkValidity();
   boolean reportValidity();
-  void setCustomValidity( DOMString error );
+  undefined setCustomValidity( DOMString error );
 };
 
 [Exposed=Window]
@@ -1180,10 +1179,10 @@ interface HTMLFormElement : HTMLElement {
   constructor();
   boolean checkValidity();
   boolean reportValidity();
-  void requestSubmit( optional HTMLElement? submitter = null );
+  undefined requestSubmit( optional HTMLElement? submitter = null );
   [CEReactions]
-  void reset();
-  void submit();
+  undefined reset();
+  undefined submit();
   getter Element ( unsigned long index );
   getter ( RadioNodeList or Element ) ( DOMString name );
 };
@@ -1257,8 +1256,6 @@ interface HTMLIFrameElement : HTMLElement {
   [CEReactions]
   attribute boolean allowFullscreen;
   [CEReactions]
-  attribute boolean allowPaymentRequest;
-  [CEReactions]
   attribute DOMString height;
   [CEReactions]
   attribute DOMString loading;
@@ -1309,7 +1306,7 @@ interface HTMLImageElement : HTMLElement {
   attribute unsigned long width;
   [HTMLConstructor]
   constructor();
-  Promise<void> decode();
+  Promise<undefined> decode();
 };
 
 [Exposed=Window]
@@ -1390,13 +1387,13 @@ interface HTMLInputElement : HTMLElement {
   constructor();
   boolean checkValidity();
   boolean reportValidity();
-  void select();
-  void setCustomValidity( DOMString error );
-  void setRangeText( DOMString replacement );
-  void setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
-  void setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
-  void stepDown( optional long n = 1 );
-  void stepUp( optional long n = 1 );
+  undefined select();
+  undefined setCustomValidity( DOMString error );
+  undefined setRangeText( DOMString replacement );
+  undefined setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
+  undefined setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
+  undefined stepDown( optional long n = 1 );
+  undefined stepUp( optional long n = 1 );
 };
 
 [Exposed=Window]
@@ -1497,8 +1494,8 @@ interface HTMLMarqueeElement : HTMLElement {
   attribute DOMString width;
   [HTMLConstructor]
   constructor();
-  void start();
-  void stop();
+  undefined start();
+  undefined stop();
 };
 
 [Exposed=Window]
@@ -1545,17 +1542,18 @@ interface HTMLMediaElement : HTMLElement {
   attribute double playbackRate;
   [CEReactions]
   attribute DOMString preload;
+  attribute boolean preservesPitch;
   [CEReactions]
   attribute USVString src;
   attribute MediaProvider? srcObject;
   attribute double volume;
   TextTrack addTextTrack( TextTrackKind kind, optional DOMString label = "", optional DOMString language = "" );
   CanPlayTypeResult canPlayType( DOMString type );
-  void fastSeek( double time );
+  undefined fastSeek( double time );
   object getStartDate();
-  void load();
-  void pause();
-  Promise<void> play();
+  undefined load();
+  undefined pause();
+  Promise<undefined> play();
 };
 
 [Exposed=Window]
@@ -1642,7 +1640,7 @@ interface HTMLObjectElement : HTMLElement {
   boolean checkValidity();
   Document? getSVGDocument();
   boolean reportValidity();
-  void setCustomValidity( DOMString error );
+  undefined setCustomValidity( DOMString error );
 };
 
 [Exposed=Window]
@@ -1680,11 +1678,11 @@ interface HTMLOptionsCollection : HTMLCollection {
   attribute unsigned long length;
   attribute long selectedIndex;
   [CEReactions]
-  void add( ( HTMLOptionElement or HTMLOptGroupElement ) element, optional ( HTMLElement or long )? before = null );
+  undefined add( ( HTMLOptionElement or HTMLOptGroupElement ) element, optional ( HTMLElement or long )? before = null );
   [CEReactions]
-  void remove( long index );
+  undefined remove( long index );
   [CEReactions]
-  setter void ( unsigned long index, HTMLOptionElement? option );
+  setter undefined ( unsigned long index, HTMLOptionElement? option );
 };
 
 [Exposed=Window]
@@ -1707,7 +1705,7 @@ interface HTMLOutputElement : HTMLElement {
   constructor();
   boolean checkValidity();
   boolean reportValidity();
-  void setCustomValidity( DOMString error );
+  undefined setCustomValidity( DOMString error );
 };
 
 [Exposed=Window]
@@ -1813,18 +1811,18 @@ interface HTMLSelectElement : HTMLElement {
   [HTMLConstructor]
   constructor();
   [CEReactions]
-  void add( ( HTMLOptionElement or HTMLOptGroupElement ) element, optional ( HTMLElement or long )? before = null );
+  undefined add( ( HTMLOptionElement or HTMLOptGroupElement ) element, optional ( HTMLElement or long )? before = null );
   boolean checkValidity();
   HTMLOptionElement? namedItem( DOMString name );
   [CEReactions]
-  void remove();
+  undefined remove();
   [CEReactions]
-  void remove( long index );
+  undefined remove( long index );
   boolean reportValidity();
-  void setCustomValidity( DOMString error );
+  undefined setCustomValidity( DOMString error );
   getter Element? item( unsigned long index );
   [CEReactions]
-  setter void ( unsigned long index, HTMLOptionElement? option );
+  setter undefined ( unsigned long index, HTMLOptionElement? option );
 };
 
 [Exposed=Window]
@@ -1917,13 +1915,13 @@ interface HTMLTableElement : HTMLElement {
   HTMLTableSectionElement createTFoot();
   HTMLTableSectionElement createTHead();
   [CEReactions]
-  void deleteCaption();
+  undefined deleteCaption();
   [CEReactions]
-  void deleteRow( long index );
+  undefined deleteRow( long index );
   [CEReactions]
-  void deleteTFoot();
+  undefined deleteTFoot();
   [CEReactions]
-  void deleteTHead();
+  undefined deleteTHead();
   HTMLTableRowElement insertRow( optional long index = -1 );
 };
 
@@ -1936,7 +1934,7 @@ interface HTMLTableRowElement : HTMLElement {
   [HTMLConstructor]
   constructor();
   [CEReactions]
-  void deleteCell( long index );
+  undefined deleteCell( long index );
   HTMLTableCellElement insertCell( optional long index = -1 );
 };
 
@@ -1947,7 +1945,7 @@ interface HTMLTableSectionElement : HTMLElement {
   [HTMLConstructor]
   constructor();
   [CEReactions]
-  void deleteRow( long index );
+  undefined deleteRow( long index );
   HTMLTableRowElement insertRow( optional long index = -1 );
 };
 
@@ -2001,11 +1999,11 @@ interface HTMLTextAreaElement : HTMLElement {
   constructor();
   boolean checkValidity();
   boolean reportValidity();
-  void select();
-  void setCustomValidity( DOMString error );
-  void setRangeText( DOMString replacement );
-  void setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
-  void setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
+  undefined select();
+  undefined setCustomValidity( DOMString error );
+  undefined setRangeText( DOMString replacement );
+  undefined setRangeText( DOMString replacement, unsigned long start, unsigned long end, optional SelectionMode selectionMode = "preserve" );
+  undefined setSelectionRange( unsigned long start, unsigned long end, optional DOMString direction );
 };
 
 [Exposed=Window]
@@ -2084,24 +2082,24 @@ interface History {
   readonly attribute unsigned long length;
   readonly attribute any state;
   attribute ScrollRestoration scrollRestoration;
-  void back();
-  void forward();
-  void go( optional long delta = 0 );
-  void pushState( any data, DOMString title, optional USVString? url = null );
-  void replaceState( any data, DOMString title, optional USVString? url = null );
+  undefined back();
+  undefined forward();
+  undefined go( optional long delta = 0 );
+  undefined pushState( any data, DOMString title, optional USVString? url = null );
+  undefined replaceState( any data, DOMString title, optional USVString? url = null );
 };
 
 [Exposed=(Window,Worker), Serializable, Transferable]
 interface ImageBitmap {
   readonly attribute unsigned long height;
   readonly attribute unsigned long width;
-  void close();
+  undefined close();
 };
 
 [Exposed=(Window,Worker)]
 interface ImageBitmapRenderingContext {
   readonly attribute ( HTMLCanvasElement or OffscreenCanvas ) canvas;
-  void transferFromImageBitmap( ImageBitmap? bitmap );
+  undefined transferFromImageBitmap( ImageBitmap? bitmap );
 };
 
 [Exposed=(Window,Worker), Serializable]
@@ -2136,11 +2134,11 @@ interface Location {
   [LegacyUnforgeable]
   stringifier attribute USVString href;
   [LegacyUnforgeable]
-  void assign( USVString url );
+  undefined assign( USVString url );
   [LegacyUnforgeable]
-  void reload();
+  undefined reload();
   [LegacyUnforgeable]
-  void replace( USVString url );
+  undefined replace( USVString url );
 };
 
 [Exposed=Window]
@@ -2168,17 +2166,17 @@ interface MessageEvent : Event {
   readonly attribute FrozenArray<MessagePort> ports;
   readonly attribute MessageEventSource? source;
   constructor( DOMString type, optional MessageEventInit eventInitDict = {} );
-  void initMessageEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any data = null, optional USVString origin = "", optional DOMString lastEventId = "", optional MessageEventSource? source = null, optional sequence<MessagePort> ports = [] );
+  undefined initMessageEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any data = null, optional USVString origin = "", optional DOMString lastEventId = "", optional MessageEventSource? source = null, optional sequence<MessagePort> ports = [] );
 };
 
 [Exposed=(Window,Worker,AudioWorklet), Transferable]
 interface MessagePort : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
-  void close();
-  void postMessage( any message, sequence<object> transfer );
-  void postMessage( any message, optional PostMessageOptions options = {} );
-  void start();
+  undefined close();
+  undefined postMessage( any message, sequence<object> transfer );
+  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined start();
 };
 
 [Exposed=Window]
@@ -2213,7 +2211,7 @@ interface OffscreenCanvas : EventTarget {
 [Exposed=(Window,Worker)]
 interface OffscreenCanvasRenderingContext2D {
   readonly attribute OffscreenCanvas canvas;
-  void commit();
+  undefined commit();
 };
 
 [Exposed=Window]
@@ -2225,7 +2223,7 @@ interface PageTransitionEvent : Event {
 [Exposed=(Window,Worker)]
 interface Path2D {
   constructor( optional ( Path2D or DOMString ) path );
-  void addPath( Path2D path, optional DOMMatrix2DInit transform = {} );
+  undefined addPath( Path2D path, optional DOMMatrix2DInit transform = {} );
 };
 
 [Exposed=Window, LegacyUnenumerableNamedProperties]
@@ -2241,7 +2239,7 @@ interface Plugin {
 [Exposed=Window, LegacyUnenumerableNamedProperties]
 interface PluginArray {
   readonly attribute unsigned long length;
-  void refresh( optional boolean reload = false );
+  undefined refresh( optional boolean reload = false );
   getter Plugin? item( unsigned long index );
   getter Plugin? namedItem( DOMString name );
 };
@@ -2275,17 +2273,17 @@ interface SharedWorkerGlobalScope : WorkerGlobalScope {
   [Replaceable]
   readonly attribute DOMString name;
   attribute EventHandler onconnect;
-  void close();
+  undefined close();
 };
 
 [Exposed=Window]
 interface Storage {
   readonly attribute unsigned long length;
-  void clear();
+  undefined clear();
   DOMString? key( unsigned long index );
   getter DOMString? getItem( DOMString key );
-  setter void setItem( DOMString key, DOMString value );
-  deleter void removeItem( DOMString key );
+  setter undefined setItem( DOMString key, DOMString value );
+  deleter undefined removeItem( DOMString key );
 };
 
 [Exposed=Window]
@@ -2296,7 +2294,7 @@ interface StorageEvent : Event {
   readonly attribute Storage? storageArea;
   readonly attribute USVString url;
   constructor( DOMString type, optional StorageEventInit eventInitDict = {} );
-  void initStorageEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional DOMString? key = null, optional DOMString? oldValue = null, optional DOMString? newValue = null, optional USVString url = "", optional Storage? storageArea = null );
+  undefined initStorageEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional DOMString? key = null, optional DOMString? oldValue = null, optional DOMString? newValue = null, optional USVString url = "", optional Storage? storageArea = null );
 };
 
 [Exposed=Window]
@@ -2332,8 +2330,8 @@ interface TextTrack : EventTarget {
   readonly attribute DOMString language;
   attribute TextTrackMode mode;
   attribute EventHandler oncuechange;
-  void addCue( TextTrackCue cue );
-  void removeCue( TextTrackCue cue );
+  undefined addCue( TextTrackCue cue );
+  undefined removeCue( TextTrackCue cue );
 };
 
 [Exposed=Window]
@@ -2429,11 +2427,11 @@ interface WebSocket : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onopen;
   constructor( USVString url, optional ( DOMString or sequence<DOMString> ) protocols = [] );
-  void close( optional [Clamp] unsigned short code, optional USVString reason );
-  void send( USVString data );
-  void send( Blob data );
-  void send( ArrayBuffer data );
-  void send( ArrayBufferView data );
+  undefined close( optional [Clamp] unsigned short code, optional USVString reason );
+  undefined send( USVString data );
+  undefined send( Blob data );
+  undefined send( ArrayBuffer data );
+  undefined send( ArrayBufferView data );
 };
 
 [Global=Window, Exposed=Window, LegacyUnenumerableNamedProperties]
@@ -2457,6 +2455,7 @@ interface Window : EventTarget {
   [Replaceable]
   readonly attribute BarProp menubar;
   readonly attribute Navigator navigator;
+  readonly attribute boolean originIsolated;
   [Replaceable]
   readonly attribute WindowProxy? parent;
   [Replaceable]
@@ -2476,18 +2475,18 @@ interface Window : EventTarget {
   attribute DOMString name;
   attribute any opener;
   attribute DOMString status;
-  void alert();
-  void alert( DOMString message );
-  void blur();
-  void close();
+  undefined alert();
+  undefined alert( DOMString message );
+  undefined blur();
+  undefined close();
   boolean confirm( optional DOMString message = "" );
-  void focus();
+  undefined focus();
   WindowProxy? open( optional USVString url = "", optional DOMString target = "_blank", optional [LegacyNullToEmptyString] DOMString features = "" );
-  void postMessage( any message, USVString targetOrigin, optional sequence<object> transfer = [] );
-  void postMessage( any message, optional WindowPostMessageOptions options = {} );
-  void print();
+  undefined postMessage( any message, USVString targetOrigin, optional sequence<object> transfer = [] );
+  undefined postMessage( any message, optional WindowPostMessageOptions options = {} );
+  undefined print();
   DOMString? prompt( optional DOMString message = "", optional DOMString default = "" );
-  void stop();
+  undefined stop();
   getter object ( DOMString name );
 };
 
@@ -2496,9 +2495,9 @@ interface Worker : EventTarget {
   attribute EventHandler onmessage;
   attribute EventHandler onmessageerror;
   constructor( USVString scriptURL, optional WorkerOptions options = {} );
-  void postMessage( any message, sequence<object> transfer );
-  void postMessage( any message, optional PostMessageOptions options = {} );
-  void terminate();
+  undefined postMessage( any message, sequence<object> transfer );
+  undefined postMessage( any message, optional PostMessageOptions options = {} );
+  undefined terminate();
 };
 
 [Exposed=Worker]
@@ -2512,7 +2511,7 @@ interface WorkerGlobalScope : EventTarget {
   attribute EventHandler ononline;
   attribute EventHandler onrejectionhandled;
   attribute EventHandler onunhandledrejection;
-  void importScripts( USVString... urls );
+  undefined importScripts( USVString... urls );
 };
 
 [Exposed=Worker]
@@ -2567,7 +2566,7 @@ partial interface Document {
   [CEReactions]
   attribute DOMString title;
   [CEReactions]
-  void close();
+  undefined close();
   [CEReactions]
   boolean execCommand( DOMString commandId, optional boolean showUI = false, optional DOMString value = "" );
   NodeList getElementsByName( DOMString elementName );
@@ -2581,9 +2580,9 @@ partial interface Document {
   boolean queryCommandSupported( DOMString commandId );
   DOMString queryCommandValue( DOMString commandId );
   [CEReactions]
-  void write( DOMString... text );
+  undefined write( DOMString... text );
   [CEReactions]
-  void writeln( DOMString... text );
+  undefined writeln( DOMString... text );
   getter object ( DOMString name );
 };
 
@@ -2604,9 +2603,9 @@ partial interface Document {
   attribute [LegacyNullToEmptyString] DOMString linkColor;
   [CEReactions]
   attribute [LegacyNullToEmptyString] DOMString vlinkColor;
-  void captureEvents();
-  void clear();
-  void releaseEvents();
+  undefined captureEvents();
+  undefined clear();
+  undefined releaseEvents();
 };
 
 partial interface HTMLAnchorElement {
@@ -2908,8 +2907,8 @@ partial interface HTMLUListElement {
 partial interface Window {
   [Replaceable, SameObject]
   readonly attribute External external;
-  void captureEvents();
-  void releaseEvents();
+  undefined captureEvents();
+  undefined releaseEvents();
 };
 
 CanvasRenderingContext2D includes CanvasCompositing;
@@ -2949,6 +2948,8 @@ DedicatedWorkerGlobalScope includes AnimationFrameProvider;
 Document includes DocumentAndElementEventHandlers;
 
 Document includes GlobalEventHandlers;
+
+ElementInternals includes ARIAMixin;
 
 HTMLAnchorElement includes HTMLHyperlinkElementUtils;
 

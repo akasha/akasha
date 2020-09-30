@@ -5,7 +5,7 @@ dictionary WorkletOptions {
 [Exposed=Window]
 interface Worklet {
   [NewObject]
-  Promise<void> addModule( USVString moduleURL, optional WorkletOptions options = {} );
+  Promise<undefined> addModule( USVString moduleURL, optional WorkletOptions options = {} );
 };
 
 [Exposed=Worklet]

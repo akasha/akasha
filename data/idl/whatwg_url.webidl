@@ -21,12 +21,12 @@ interface URL {
 interface URLSearchParams {
   iterable<USVString, USVString>;
   constructor( optional ( sequence<sequence<USVString>> or record<USVString, USVString> or USVString ) init = "" );
-  void append( USVString name, USVString value );
-  void delete( USVString name );
+  undefined append( USVString name, USVString value );
+  undefined delete( USVString name );
   USVString? get( USVString name );
   sequence<USVString> getAll( USVString name );
   boolean has( USVString name );
-  void set( USVString name, USVString value );
-  void sort();
+  undefined set( USVString name, USVString value );
+  undefined sort();
   stringifier;
 };

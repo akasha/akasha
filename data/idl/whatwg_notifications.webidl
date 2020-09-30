@@ -10,7 +10,7 @@ enum NotificationPermission {
   "granted"
 };
 
-callback NotificationPermissionCallback = void ( NotificationPermission permission );
+callback NotificationPermissionCallback = undefined ( NotificationPermission permission );
 
 dictionary GetNotificationOptions {
   DOMString tag = "";
@@ -73,7 +73,7 @@ interface Notification : EventTarget {
   [Exposed=Window]
   static Promise<NotificationPermission> requestPermission( optional NotificationPermissionCallback deprecatedCallback );
   constructor( DOMString title, optional NotificationOptions options = {} );
-  void close();
+  undefined close();
 };
 
 [Exposed=ServiceWorker]
@@ -90,5 +90,5 @@ partial interface ServiceWorkerGlobalScope {
 
 partial interface ServiceWorkerRegistration {
   Promise<sequence<Notification>> getNotifications( optional GetNotificationOptions filter = {} );
-  Promise<void> showNotification( DOMString title, optional NotificationOptions options = {} );
+  Promise<undefined> showNotification( DOMString title, optional NotificationOptions options = {} );
 };

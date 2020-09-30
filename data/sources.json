@@ -40,7 +40,7 @@
         "url": "https://www.w3.org/TR/css-animations-1/"
     },
     {
-        "lastModifiedTime": 1601502030000,
+        "lastModifiedTime": 1601504741000,
         "name": "css_conditional_3",
         "url": "https://drafts.csswg.org/css-conditional-3/"
     },
@@ -50,27 +50,27 @@
         "url": "https://www.w3.org/TR/css-fonts-3/"
     },
     {
-        "lastModifiedTime": 1601496679000,
+        "lastModifiedTime": 1601507027000,
         "name": "css_masking_1",
         "url": "https://drafts.fxtf.org/css-masking-1/"
     },
     {
-        "lastModifiedTime": 1601502183000,
+        "lastModifiedTime": 1601504874000,
         "name": "css_pseudo_4",
         "url": "https://drafts.csswg.org/css-pseudo-4"
     },
     {
-        "lastModifiedTime": 1601502265000,
+        "lastModifiedTime": 1601504948000,
         "name": "css_transitions",
         "url": "https://drafts.csswg.org/css-transitions/"
     },
     {
-        "lastModifiedTime": 1601502321000,
+        "lastModifiedTime": 1601505004000,
         "name": "cssom",
         "url": "https://drafts.csswg.org/cssom/"
     },
     {
-        "lastModifiedTime": 1601504360000,
+        "lastModifiedTime": 1601505011000,
         "name": "cssom_view",
         "url": "https://drafts.csswg.org/cssom-view/"
     },
@@ -226,7 +226,7 @@
         "url": "https://www.w3.org/TR/screen-orientation/"
     },
     {
-        "lastModifiedTime": 1601334267000,
+        "lastModifiedTime": 1601485180000,
         "name": "screen_wake_lock",
         "url": "https://w3c.github.io/screen-wake-lock"
     },
@@ -515,7 +515,7 @@
         "url": "https://fullscreen.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1594663157000,
+        "lastModifiedTime": 1601310638000,
         "name": "whatwg_html",
         "url": "https://html.spec.whatwg.org/"
     },
@@ -524,27 +524,27 @@
         "name": "whatwg_html_patch"
     },
     {
-        "lastModifiedTime": 1593439305000,
+        "lastModifiedTime": 1601391816000,
         "name": "whatwg_notifications",
         "url": "https://notifications.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1594393667000,
+        "lastModifiedTime": 1597677681000,
         "name": "whatwg_storage",
         "url": "https://storage.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1593439337000,
+        "lastModifiedTime": 1601471218000,
         "name": "whatwg_url",
         "url": "https://url.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1593439336000,
+        "lastModifiedTime": 1601457341000,
         "name": "whatwg_xhr",
         "url": "https://xhr.spec.whatwg.org/"
     },
     {
-        "lastModifiedTime": 1594701428000,
+        "lastModifiedTime": 1601507096000,
         "name": "worklets",
         "url": "https://drafts.css-houdini.org/worklets/"
     }

@@ -19,14 +19,14 @@ dictionary ProgressEventInit : EventInit {
 interface FormData {
   iterable<USVString, FormDataEntryValue>;
   constructor( optional HTMLFormElement form );
-  void append( USVString name, USVString value );
-  void append( USVString name, Blob blobValue, optional USVString filename );
-  void delete( USVString name );
+  undefined append( USVString name, USVString value );
+  undefined append( USVString name, Blob blobValue, optional USVString filename );
+  undefined delete( USVString name );
   FormDataEntryValue? get( USVString name );
   sequence<FormDataEntryValue> getAll( USVString name );
   boolean has( USVString name );
-  void set( USVString name, USVString value );
-  void set( USVString name, Blob blobValue, optional USVString filename );
+  undefined set( USVString name, USVString value );
+  undefined set( USVString name, Blob blobValue, optional USVString filename );
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]
@@ -59,14 +59,14 @@ interface XMLHttpRequest : XMLHttpRequestEventTarget {
   attribute unsigned long timeout;
   attribute boolean withCredentials;
   constructor();
-  void abort();
+  undefined abort();
   ByteString getAllResponseHeaders();
   ByteString? getResponseHeader( ByteString name );
-  void open( ByteString method, USVString url );
-  void open( ByteString method, USVString url, boolean async, optional USVString? username = null, optional USVString? password = null );
-  void overrideMimeType( DOMString mime );
-  void send( optional ( Document or XMLHttpRequestBodyInit )? body = null );
-  void setRequestHeader( ByteString name, ByteString value );
+  undefined open( ByteString method, USVString url );
+  undefined open( ByteString method, USVString url, boolean async, optional USVString? username = null, optional USVString? password = null );
+  undefined overrideMimeType( DOMString mime );
+  undefined send( optional ( Document or XMLHttpRequestBodyInit )? body = null );
+  undefined setRequestHeader( ByteString name, ByteString value );
 };
 
 [Exposed=(Window,DedicatedWorker,SharedWorker)]
