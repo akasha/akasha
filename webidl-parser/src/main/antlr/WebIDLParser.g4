@@ -479,6 +479,7 @@ primitiveType
   : unsignedIntegerType
   | unrestrictedFloatType
   | UNDEFINED
+  | VOID
   | BOOLEAN
   | BYTE
   | OCTET
@@ -961,6 +962,7 @@ PrimitiveType ::
     UnsignedIntegerType
     UnrestrictedFloatType
     undefined
+    void
     boolean
     byte
     octet
