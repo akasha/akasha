@@ -348,7 +348,7 @@ optionalType
 ;
 
 asyncIterable
-  : ASYNC ITERABLE OPEN_ANGLE_BRACKET typeWithExtendedAttributes COMMA typeWithExtendedAttributes CLOSE_ANGLE_BRACKET SEMI_COLON
+  : ASYNC ITERABLE OPEN_ANGLE_BRACKET typeWithExtendedAttributes optionalType CLOSE_ANGLE_BRACKET SEMI_COLON
 ;
 
 readWriteMaplike

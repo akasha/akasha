@@ -202,7 +202,7 @@ public abstract class AbstractValidator
   protected void validateAsyncIterableMember( @Nonnull final AsyncIterableMember input,
                                               @Nonnull final Collection<ValidationError> errors )
   {
-    validateType( input.getKeyType(), errors );
+    validateOptionalType( input.getKeyType(), errors );
     validateType( input.getValueType(), errors );
     validateExtendedAttributes( input.getExtendedAttributes(), errors );
     validateSourceLocations( input.getSourceLocations(), errors );

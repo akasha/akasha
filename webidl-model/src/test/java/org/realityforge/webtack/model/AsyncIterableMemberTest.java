@@ -16,7 +16,18 @@ public final class AsyncIterableMemberTest
     throws IOException
   {
     final AsyncIterableMember asyncIterableMember = parse( "async iterable<DOMString, object>;" );
-    assertEquals( asyncIterableMember.getKeyType().getKind(), Kind.DOMString );
+    final Type keyType = asyncIterableMember.getKeyType();
+    assertNotNull( keyType );
+    assertEquals( keyType.getKind(), Kind.DOMString );
+    assertEquals( asyncIterableMember.getValueType().getKind(), Kind.Object );
+  }
+
+  @Test
+  public void parse_NoKeyType()
+    throws IOException
+  {
+    final AsyncIterableMember asyncIterableMember = parse( "async iterable<object>;" );
+    assertNull( asyncIterableMember.getKeyType() );
     assertEquals( asyncIterableMember.getValueType().getKind(), Kind.Object );
   }
 

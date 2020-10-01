@@ -745,10 +745,12 @@ public final class WebIDLModelParser
                                     @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                     @Nonnull final SourcePosition startPosition )
   {
-    final Type keyType = parse( ctx.typeWithExtendedAttributes( 0 ) );
-    final Type valueType = parse( ctx.typeWithExtendedAttributes( 1 ) );
-    return new AsyncIterableMember( keyType,
-                                    valueType,
+    final Type type1 = parse( ctx.typeWithExtendedAttributes() );
+    final WebIDLParser.TypeWithExtendedAttributesContext optional =
+      ctx.optionalType().typeWithExtendedAttributes();
+    final Type type2 = null == optional ? null : parse( optional );
+    return new AsyncIterableMember( null == type2 ? null : type1,
+                                    null == type2 ? type1 : type2,
                                     documentation,
                                     extendedAttributes,
                                     parseSourceIntervals( startPosition, ctx ) );

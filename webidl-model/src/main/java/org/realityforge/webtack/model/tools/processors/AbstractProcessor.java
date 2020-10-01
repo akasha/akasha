@@ -397,7 +397,7 @@ public abstract class AbstractProcessor
   {
     return null == input ?
            null :
-           new AsyncIterableMember( transformType( input.getKeyType() ),
+           new AsyncIterableMember( transformOptionalType( input.getKeyType() ),
                                     transformType( input.getValueType() ),
                                     transformDocumentation( input.getDocumentation() ),
                                     transformExtendedAttributes( input.getExtendedAttributes() ),

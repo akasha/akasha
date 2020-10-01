@@ -176,7 +176,9 @@ public final class PartialInterfaceDefinitionTest
                                         0 );
     final AsyncIterableMember iterable = definition.getAsyncIterable();
     assertNotNull( iterable );
-    assertEquals( iterable.getKeyType().getKind(), Kind.DOMString );
+    final Type keyType = iterable.getKeyType();
+    assertNotNull( keyType );
+    assertEquals( keyType.getKind(), Kind.DOMString );
     assertEquals( iterable.getValueType().getKind(), Kind.Any );
   }
 

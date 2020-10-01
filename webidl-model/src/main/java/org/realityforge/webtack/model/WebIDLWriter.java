@@ -811,8 +811,12 @@ public final class WebIDLWriter
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
     writer.write( "async iterable<" );
-    writeType( writer, member.getKeyType() );
-    writer.write( ", " );
+    final Type keyType = member.getKeyType();
+    if ( null != keyType )
+    {
+      writeType( writer, keyType );
+      writer.write( ", " );
+    }
     writeType( writer, member.getValueType() );
     writer.write( ">;\n" );
   }

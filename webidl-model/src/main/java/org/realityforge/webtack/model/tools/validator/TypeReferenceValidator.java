@@ -227,10 +227,13 @@ final class TypeReferenceValidator
     if ( null != member )
     {
       final Type keyType = member.getKeyType();
-      final Supplier<String> keyMessage =
-        () -> "AsyncIterable contained by " + containerType + " named '" + containerName + "' has a key type " +
-              "that contains or is a type reference but it does not reference a known value";
-      validateType( schema, errors, keyType, member, keyMessage );
+      if ( null != keyType )
+      {
+        final Supplier<String> keyMessage =
+          () -> "AsyncIterable contained by " + containerType + " named '" + containerName + "' has a key type " +
+                "that contains or is a type reference but it does not reference a known value";
+        validateType( schema, errors, keyType, member, keyMessage );
+      }
 
       final Supplier<String> valueMessage =
         () -> "AsyncIterable contained by " + containerType + " named '" + containerName + "' has a value type " +

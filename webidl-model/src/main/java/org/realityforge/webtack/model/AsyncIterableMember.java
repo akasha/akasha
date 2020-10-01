@@ -9,23 +9,23 @@ public final class AsyncIterableMember
   extends Element
   implements Member
 {
-  @Nonnull
+  @Nullable
   private final Type _keyType;
   @Nonnull
   private final Type _valueType;
 
-  public AsyncIterableMember( @Nonnull final Type keyType,
+  public AsyncIterableMember( @Nullable final Type keyType,
                               @Nonnull final Type valueType,
                               @Nullable final DocumentationElement documentation,
                               @Nonnull final List<ExtendedAttribute> extendedAttributes,
                               @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( documentation, extendedAttributes, sourceLocations );
-    _keyType = Objects.requireNonNull( keyType );
+    _keyType =  keyType;
     _valueType = Objects.requireNonNull( valueType );
   }
 
-  @Nonnull
+  @Nullable
   public Type getKeyType()
   {
     return _keyType;
@@ -51,7 +51,7 @@ public final class AsyncIterableMember
     else
     {
       final AsyncIterableMember other = (AsyncIterableMember) o;
-      return _keyType.equals( other._keyType ) &&
+      return Objects.equals( _keyType, other._keyType ) &&
              _valueType.equals( other._valueType );
     }
   }
@@ -65,7 +65,10 @@ public final class AsyncIterableMember
   public boolean equiv( @Nonnull final AsyncIterableMember other )
   {
     return super.equiv( other ) &&
-           _keyType.equiv( other._keyType ) &&
+           (
+             ( null == _keyType && null == other._keyType ) ||
+             ( null != _keyType && null != other._keyType && _keyType.equiv( other._keyType ) )
+           ) &&
            _valueType.equiv( other._valueType );
   }
 }
