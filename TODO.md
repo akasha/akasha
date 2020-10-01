@@ -6,6 +6,8 @@ complete as there is too much un-said.
 
 # MVP Release
 
+* Copy `elemental2.promise` to here from `course-webgl`
+
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical
