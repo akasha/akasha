@@ -1,5 +1,5 @@
 // This grammar was initially based on the grammar in the Web IDL Editor’s Draft, 13 March 2020.
-// The grammar has been expanded to include some elements from the Web IDL Editor’s Draft, 3 September 2020
+// The grammar has been expanded to include some elements from the Web IDL Editor’s Draft, 24 September 2020
 // while still maintaining compatibility with the vast majority of IDL in the wild.
 
 // changes from the spec:
