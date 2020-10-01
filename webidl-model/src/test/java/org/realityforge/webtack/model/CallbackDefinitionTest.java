@@ -19,6 +19,19 @@ public final class CallbackDefinitionTest
     // Single arg
     {
       final CallbackDefinition definition =
+        ensureCallbackDefinition( "callback PositionCallback = undefined (Position position);",
+                                  "PositionCallback",
+                                  Kind.Void,
+                                  1 );
+      final Argument argument1 = definition.getArguments().get( 0 );
+      assertEquals( argument1.getName(), "position" );
+      final Type argument1Type = argument1.getType();
+      assertEquals( argument1Type.getKind(), Kind.TypeReference );
+      assertEquals( ( (TypeReference) argument1Type ).getName(), "Position" );
+    }
+    // Single arg, void return
+    {
+      final CallbackDefinition definition =
         ensureCallbackDefinition( "callback PositionCallback = void (Position position);",
                                   "PositionCallback",
                                   Kind.Void,
@@ -33,7 +46,7 @@ public final class CallbackDefinitionTest
     // Multiple args
     {
       final CallbackDefinition definition =
-        ensureCallbackDefinition( "callback XRFrameRequestCallback = void (DOMHighResTimeStamp time, XRFrame frame);",
+        ensureCallbackDefinition( "callback XRFrameRequestCallback = undefined (DOMHighResTimeStamp time, XRFrame frame);",
                                   "XRFrameRequestCallback",
                                   Kind.Void,
                                   2 );
