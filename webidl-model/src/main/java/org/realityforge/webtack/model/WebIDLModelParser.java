@@ -213,7 +213,7 @@ public final class WebIDLModelParser
         if ( null != callbackRestContext )
         {
           final String name = callbackRestContext.IDENTIFIER().getText();
-          final Type returnType = parse( callbackRestContext.returnType() );
+          final Type returnType = parse( callbackRestContext.type() );
           final List<Argument> arguments = parse( callbackRestContext.argumentList(), documentation );
 
           DocumentationElement callbackDocumentation = null;
@@ -610,7 +610,7 @@ public final class WebIDLModelParser
                                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                         @Nonnull final SourcePosition startPosition )
   {
-    final Type returnType = parse( ctx.returnType() );
+    final Type returnType = parse( ctx.type() );
     final WebIDLParser.OperationNameContext operationNameContext =
       ctx.operationRest().optionalOperationName().operationName();
     final String name;
@@ -1532,19 +1532,7 @@ public final class WebIDLModelParser
                              @Nonnull final SourcePosition startPosition )
   {
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
-    return new PromiseType( parse( ctx.returnType() ), extendedAttributes, sourceIntervals );
-  }
-
-  @Nonnull
-  static Type parse( @Nonnull final WebIDLParser.ReturnTypeContext ctx )
-  {
-    final WebIDLParser.TypeContext type = ctx.type();
-    return null != type ?
-           parse( type ) :
-           new Type( Kind.Void,
-                     Collections.emptyList(),
-                     false,
-                     parseSourceIntervals( parseSourcePosition( ctx.getStart() ), ctx ) );
+    return new PromiseType( parse( ctx.type() ), extendedAttributes, sourceIntervals );
   }
 
   @Nonnull
@@ -1694,7 +1682,7 @@ public final class WebIDLModelParser
 
     final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
     final String literalName = child.getText();
-    if ( "undefined".equals( literalName ) )
+    if ( "undefined".equals( literalName ) || "void".equals( literalName ) )
     {
       return new Type( Kind.Void, extendedAttributes, nullable, sourceLocations );
     }

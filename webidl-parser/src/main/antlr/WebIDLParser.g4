@@ -250,7 +250,7 @@ operation
 ;
 
 regularOperation
-  : returnType operationRest
+  : type operationRest
 ;
 
 specialOperation
@@ -309,11 +309,6 @@ argumentName
 ellipsis
   : ELLIPSIS
   | /* empty */
-;
-
-returnType
-  : type
-  | VOID
 ;
 
 constructor
@@ -432,7 +427,7 @@ enumValueListString
 ;
 
 callbackRest
-  : IDENTIFIER EQUALS returnType OPEN_BRACKET argumentList CLOSE_BRACKET SEMI_COLON
+  : IDENTIFIER EQUALS type OPEN_BRACKET argumentList CLOSE_BRACKET SEMI_COLON
 ;
 
 typedef
@@ -521,7 +516,7 @@ stringType
 ;
 
 promiseType
-  : PROMISE OPEN_ANGLE_BRACKET returnType CLOSE_ANGLE_BRACKET
+  : PROMISE OPEN_ANGLE_BRACKET type CLOSE_ANGLE_BRACKET
 ;
 
 recordType
@@ -784,7 +779,7 @@ Operation ::
     SpecialOperation
 
 RegularOperation ::
-    ReturnType OperationRest
+    Type OperationRest
 
 SpecialOperation ::
     Special RegularOperation
@@ -830,10 +825,6 @@ ArgumentName ::
 Ellipsis ::
     ...
     ε
-
-ReturnType ::
-    Type
-    void
 
 Constructor ::
     constructor ( ArgumentList ) ;
@@ -926,7 +917,7 @@ EnumValueListString ::
     ε
 
 CallbackRest ::
-    identifier = ReturnType ( ArgumentList ) ;
+    identifier = Type ( ArgumentList ) ;
 
 Typedef ::
     typedef TypeWithExtendedAttributes identifier ;
@@ -1000,7 +991,7 @@ StringType ::
     USVString
 
 PromiseType ::
-    Promise < ReturnType >
+    Promise < Type >
 
 RecordType ::
     record < StringType , TypeWithExtendedAttributes >
