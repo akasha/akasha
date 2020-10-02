@@ -624,6 +624,10 @@ public abstract class AbstractJavaAction
       appendTypeToUnionName( sb, ( (SequenceType) type ).getItemType() );
       sb.append( "Array" );
     }
+    else if ( Kind.Void == kind )
+    {
+      sb.append( "Undefined" );
+    }
     else
     {
       throw new UnsupportedOperationException( "Contains kind " + kind + " in union which has not been implemented" );
