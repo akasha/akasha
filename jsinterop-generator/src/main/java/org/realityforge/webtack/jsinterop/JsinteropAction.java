@@ -482,37 +482,51 @@ final class JsinteropAction
     final List<Type> memberTypes = unionType.getMemberTypes();
     for ( final Type memberType : memberTypes )
     {
-      for ( final TypedValue typedValue : explodeType( null, memberType ) )
+      if ( Kind.Void == memberType.getKind() )
       {
-        final ParameterSpec.Builder parameter =
-          ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
-
-        addMagicConstantAnnotationIfNeeded( typedValue.getType(), parameter );
-        final ClassName methodNullability;
-        final TypedValue.Nullability nullability = typedValue.getNullability();
-        if ( TypedValue.Nullability.NULLABLE == nullability )
-        {
-          parameter.addAnnotation( BasicTypes.NULLABLE );
-          methodNullability = BasicTypes.NULLABLE;
-        }
-        else if ( TypedValue.Nullability.NONNULL == nullability )
-        {
-          parameter.addAnnotation( BasicTypes.NONNULL );
-          methodNullability = BasicTypes.NONNULL;
-        }
-        else
-        {
-          methodNullability = BasicTypes.NONNULL;
-        }
-
         type.addMethod( MethodSpec
                           .methodBuilder( "of" )
                           .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                          .addAnnotation( methodNullability )
                           .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                          .addParameter( parameter.build() )
-                          .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
-                          .returns( self ).build() );
+                          .addStatement( "return $T.cast( $T.undefined() )", JsinteropTypes.JS, JsinteropTypes.JS )
+                          .returns( self )
+                          .build() );
+      }
+      else
+      {
+        for ( final TypedValue typedValue : explodeType( null, memberType ) )
+        {
+          final ParameterSpec.Builder parameter =
+            ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
+
+          addMagicConstantAnnotationIfNeeded( typedValue.getType(), parameter );
+          final ClassName methodNullability;
+          final TypedValue.Nullability nullability = typedValue.getNullability();
+          if ( TypedValue.Nullability.NULLABLE == nullability )
+          {
+            parameter.addAnnotation( BasicTypes.NULLABLE );
+            methodNullability = BasicTypes.NULLABLE;
+          }
+          else if ( TypedValue.Nullability.NONNULL == nullability )
+          {
+            parameter.addAnnotation( BasicTypes.NONNULL );
+            methodNullability = BasicTypes.NONNULL;
+          }
+          else
+          {
+            methodNullability = BasicTypes.NONNULL;
+          }
+
+          type.addMethod( MethodSpec
+                            .methodBuilder( "of" )
+                            .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                            .addAnnotation( methodNullability )
+                            .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                            .addParameter( parameter.build() )
+                            .addStatement( "return $T.cast( value )", JsinteropTypes.JS )
+                            .returns( self )
+                            .build() );
+        }
       }
     }
   }
