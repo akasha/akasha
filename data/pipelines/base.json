@@ -12,6 +12,16 @@
       }
     },
     {
+      "name": "RemoveIncludes",
+      "description": "Remove include into MathMLElement as we are not importing MathML spec at this stage",
+      "sourceSelector": "name=cssom",
+      "config": {
+        "expectedRemoveCount": 1,
+        "interfacePattern": "^MathMLElement$",
+        "mixinPattern": "^ElementCSSInlineStyle$"
+      }
+    },
+    {
       "name": "RemoveExtendedAttribute",
       "description": "Remove Constructor attribute as one of the arguments 'newTarget' is of type 'Animatable' which is a mixin which is seemingly invalid. We will re-add an equivalent with a union for impls of Animatable in next step",
       "sourceSelector": "name=svg2",
