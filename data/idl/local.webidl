@@ -5,6 +5,5 @@
 // See https://html.spec.whatwg.org/multipage/window-object.html#windowproxy
 typedef Window WindowProxy;
 
-
 // CSSOMString can be either DOMString or USVString it seems.
 typedef DOMString CSSOMString;
