@@ -1147,10 +1147,6 @@ final class JsinteropAction
     {
       generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
     }
-    if ( null != definition.getAsyncIterable() )
-    {
-      throw new UnsupportedOperationException( "async iterable not yet supported in code generator" );
-    }
     if ( null != definition.getSetLikeMember() )
     {
       throw new UnsupportedOperationException( "setlike not yet supported in code generator" );

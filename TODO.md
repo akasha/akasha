@@ -93,7 +93,7 @@ complete as there is too much un-said.
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
   more meaningful subgraphs.
 
-* Add codegen for `IterableMember`
+* Add codegen for `IterableMember` and `AsyncIterableMember`
 
 * Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
   would use raw inspection of objects to see if they line up with what is in WebIDL
