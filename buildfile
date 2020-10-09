@@ -192,8 +192,11 @@ define 'webtack' do
         package(:jar)
         package(:sources)
         package(:javadoc)
+
+        project.no_iml
       end
     end
+    project.no_iml
   end
 
   iml.excluded_directories << project._('tmp')
