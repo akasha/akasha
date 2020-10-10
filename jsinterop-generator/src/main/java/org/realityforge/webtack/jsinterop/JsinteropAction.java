@@ -65,7 +65,7 @@ final class JsinteropAction
   extends AbstractJavaAction
 {
   /**
-   * Logical/idl name used to refer to the transferrable marker interface.
+   * Logical/idl name used to refer to the transferable marker interface.
    */
   @Nonnull
   private static final String TRANSFERABLE_IDL_NAME = "Transferable";
