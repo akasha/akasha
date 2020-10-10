@@ -310,7 +310,7 @@ public final class ExtendedAttribute
     }
     else
     {
-      throw new IllegalStateException( "Invoked " + methodName + " on unnamed extended attribute attribute " +
+      throw new IllegalStateException( "Invoked " + methodName + " on unnamed extended attribute but attribute " +
                                        "is of kind " + _kind );
     }
   }

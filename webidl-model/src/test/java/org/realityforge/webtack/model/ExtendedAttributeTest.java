@@ -174,13 +174,16 @@ public final class ExtendedAttributeTest
     assertEquals( extendedAttribute.getArgListName(), argListName );
     assertEquals( extendedAttribute.getArgList(), argList );
     assertThrows( IllegalStateException.class,
-                  "Invoked getName() on unnamed extended attribute attribute is of kind ARG_LIST",
+                  "Invoked getValue() on unnamed extended attribute but attribute is of kind ARG_LIST",
+                  extendedAttribute::getValue );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getName() on unnamed extended attribute but attribute is of kind ARG_LIST",
                   extendedAttribute::getName );
     assertThrows( IllegalStateException.class,
-                  "Invoked getIdentList() on unnamed extended attribute attribute is of kind ARG_LIST",
+                  "Invoked getIdentList() on unnamed extended attribute but attribute is of kind ARG_LIST",
                   extendedAttribute::getIdentList );
     assertThrows( IllegalStateException.class,
-                  "Invoked getIdent() on unnamed extended attribute attribute is of kind ARG_LIST",
+                  "Invoked getIdent() on unnamed extended attribute but attribute is of kind ARG_LIST",
                   extendedAttribute::getIdent );
   }
 
