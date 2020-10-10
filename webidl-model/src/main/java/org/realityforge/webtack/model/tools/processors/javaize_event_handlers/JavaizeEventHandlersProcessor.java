@@ -135,7 +135,7 @@ final class JavaizeEventHandlersProcessor
                         false,
                         false,
                         null,
-                        new DocumentationElement( "the event", Collections.emptyList(), Collections.emptyList() ),
+                        new DocumentationElement( "the event", Collections.emptyList(), Collections.emptyList(), true ),
                         Collections.emptyList(),
                         Collections.emptyList() );
         final CallbackDefinition callback =
@@ -144,7 +144,8 @@ final class JavaizeEventHandlersProcessor
                                   Collections.singletonList( argument ),
                                   new DocumentationElement( "Handle events of type " + name,
                                                             Collections.emptyList(),
-                                                            Collections.emptyList() ),
+                                                            Collections.emptyList(),
+                                                            true ),
                                   createSyntheticExtendedAttributes( definition ),
                                   Collections.emptyList() );
         definitions.put( handlerName, callback );
@@ -197,7 +198,7 @@ final class JavaizeEventHandlersProcessor
                         false,
                         false,
                         null,
-                        new DocumentationElement( "the event", Collections.emptyList(), Collections.emptyList() ),
+                        new DocumentationElement( "the event", Collections.emptyList(), Collections.emptyList(), true ),
                         Collections.emptyList(),
                         Collections.emptyList() );
         final OperationMember operation =
@@ -207,7 +208,8 @@ final class JavaizeEventHandlersProcessor
                                newVoidType(),
                                new DocumentationElement( "Handle event of type " + name,
                                                          Collections.emptyList(),
-                                                         Collections.emptyList() ),
+                                                         Collections.emptyList(),
+                                                         true ),
                                Collections.emptyList(),
                                Collections.emptyList() );
         final CallbackInterfaceDefinition callbackInterface =
@@ -216,7 +218,8 @@ final class JavaizeEventHandlersProcessor
                                            Collections.emptyList(),
                                            new DocumentationElement( "Listener for events of type " + name,
                                                                      Collections.emptyList(),
-                                                                     Collections.emptyList() ),
+                                                                     Collections.emptyList(),
+                                                                     true ),
                                            createSyntheticExtendedAttributes( definition ),
                                            Collections.emptyList() );
         definitions.put( listenerName, callbackInterface );

@@ -225,7 +225,8 @@ public final class WebIDLModelParser
                                                                 .stream()
                                                                 .filter( t -> !"param".equals( t.getName() ) )
                                                                 .collect( Collectors.toList() ),
-                                                              documentation.getSourceLocations() );
+                                                              documentation.getSourceLocations(),
+                                                              false );
           }
 
           return new CallbackDefinition( name,
@@ -524,7 +525,8 @@ public final class WebIDLModelParser
           argumentDocumentation =
             new DocumentationElement( tag.getDocumentation().substring( name.length() + 1 ).trim(),
                                       Collections.emptyList(),
-                                      documentation.getSourceLocations() );
+                                      documentation.getSourceLocations(),
+                                      false );
         }
       }
     }
@@ -641,7 +643,8 @@ public final class WebIDLModelParser
                                                            .stream()
                                                            .filter( t -> !"param".equals( t.getName() ) )
                                                            .collect( Collectors.toList() ),
-                                                         documentation.getSourceLocations() );
+                                                         documentation.getSourceLocations(),
+                                                         false );
     }
     return new OperationMember( kind,
                                 name,
@@ -789,8 +792,10 @@ public final class WebIDLModelParser
           .collect( Collectors.toList() );
       if ( !blockTags.isEmpty() )
       {
-        operationDocumentation =
-          new DocumentationElement( documentation.getDocumentation(), blockTags, documentation.getSourceLocations() );
+        operationDocumentation = new DocumentationElement( documentation.getDocumentation(),
+                                                           blockTags,
+                                                           documentation.getSourceLocations(),
+                                                           false );
       }
     }
     return new OperationMember( OperationMember.Kind.CONSTRUCTOR,
@@ -1911,7 +1916,7 @@ public final class WebIDLModelParser
     }
 
     final List<SourceInterval> sourceLocations = parseSourceIntervals( parseSourcePosition( ctx.getStart() ), ctx );
-    return new DocumentationElement( description, blockTags, sourceLocations );
+    return new DocumentationElement( description, blockTags, sourceLocations, false );
   }
 
   @Nonnull

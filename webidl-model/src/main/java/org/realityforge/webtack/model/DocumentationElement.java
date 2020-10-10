@@ -17,14 +17,22 @@ public final class DocumentationElement
   private final String _documentation;
   @Nonnull
   private final List<DocumentationBlockTag> _blockTags;
+  private final boolean _synthetic;
 
   public DocumentationElement( @Nullable final String documentation,
                                @Nonnull final List<DocumentationBlockTag> blockTags,
-                               @Nonnull final List<SourceInterval> sourceLocations )
+                               @Nonnull final List<SourceInterval> sourceLocations,
+                               final boolean synthetic )
   {
     super( sourceLocations );
     _documentation = documentation;
     _blockTags = Objects.requireNonNull( blockTags );
+    _synthetic = synthetic;
+  }
+
+  public boolean isSynthetic()
+  {
+    return _synthetic;
   }
 
   @Nullable

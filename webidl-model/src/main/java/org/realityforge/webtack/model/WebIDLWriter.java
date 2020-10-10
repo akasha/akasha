@@ -970,7 +970,8 @@ public final class WebIDLWriter
       final DocumentationElement operationDocumentation =
         new DocumentationElement( null == documentation ? null : documentation.getDocumentation(),
                                   blockTags,
-                                  Collections.emptyList() );
+                                  Collections.emptyList(),
+                                  false );
       writeDocumentationIfRequired( writer, operationDocumentation, prefix );
     }
   }

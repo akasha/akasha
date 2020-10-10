@@ -15,6 +15,7 @@ import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
 import org.realityforge.webtack.model.DocumentationBlockTag;
 import org.realityforge.webtack.model.DocumentationElement;
+import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
@@ -84,7 +85,7 @@ final class MergeDocsProcessor
       new CallbackInterfaceDefinition( input.getName(),
                                        transformOperationMember( input.getOperation() ),
                                        transformConstants( input.getConstants() ),
-                                       null == docEntry || null != input.getDocumentation() ?
+                                       shouldUseInputDocs( input, docEntry ) ?
                                        transformDocumentation( input.getDocumentation() ) :
                                        createDocumentationElement( docEntry ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -112,7 +113,7 @@ final class MergeDocsProcessor
                                transformAsyncIterableMember( input.getAsyncIterable() ),
                                transformMapLikeMember( input.getMapLikeMember() ),
                                transformSetLikeMember( input.getSetLikeMember() ),
-                               null == docEntry || null != input.getDocumentation() ?
+                               shouldUseInputDocs( input, docEntry ) ?
                                transformDocumentation( input.getDocumentation() ) :
                                createDocumentationElement( docEntry ),
                                transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -225,7 +226,7 @@ final class MergeDocsProcessor
                                       transformAsyncIterableMember( input.getAsyncIterable() ),
                                       transformMapLikeMember( input.getMapLikeMember() ),
                                       transformSetLikeMember( input.getSetLikeMember() ),
-                                      null == docEntry || null != input.getDocumentation() ?
+                                      shouldUseInputDocs( input, docEntry ) ?
                                       transformDocumentation( input.getDocumentation() ) :
                                       createDocumentationElement( docEntry ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -247,7 +248,7 @@ final class MergeDocsProcessor
                            transformAttributeMembers( input.getAttributes() ),
                            transformOperationMembers( input.getOperations() ),
                            transformEventMembers( input.getEvents() ),
-                           null == docEntry || null != input.getDocumentation() ?
+                           shouldUseInputDocs( input, docEntry ) ?
                            transformDocumentation( input.getDocumentation() ) :
                            createDocumentationElement( docEntry ),
                            transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -269,7 +270,7 @@ final class MergeDocsProcessor
                                   transformAttributeMembers( input.getAttributes() ),
                                   transformOperationMembers( input.getOperations() ),
                                   transformEventMembers( input.getEvents() ),
-                                  null == docEntry || null != input.getDocumentation() ?
+                                  shouldUseInputDocs( input, docEntry ) ?
                                   transformDocumentation( input.getDocumentation() ) :
                                   createDocumentationElement( docEntry ),
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -289,7 +290,7 @@ final class MergeDocsProcessor
       new DictionaryDefinition( input.getName(),
                                 input.getInherits(),
                                 transformDictionaryMembers( input.getMembers() ),
-                                null == docEntry || null != input.getDocumentation() ?
+                                shouldUseInputDocs( input, docEntry ) ?
                                 transformDocumentation( input.getDocumentation() ) :
                                 createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -308,7 +309,7 @@ final class MergeDocsProcessor
     final PartialDictionaryDefinition definition =
       new PartialDictionaryDefinition( input.getName(),
                                        transformDictionaryMembers( input.getMembers() ),
-                                       null == docEntry || null != input.getDocumentation() ?
+                                       shouldUseInputDocs( input, docEntry ) ?
                                        transformDocumentation( input.getDocumentation() ) :
                                        createDocumentationElement( docEntry ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -328,7 +329,7 @@ final class MergeDocsProcessor
       new NamespaceDefinition( input.getName(),
                                transformOperationMembers( input.getOperations() ),
                                transformAttributeMembers( input.getAttributes() ),
-                               null == docEntry || null != input.getDocumentation() ?
+                               shouldUseInputDocs( input, docEntry ) ?
                                transformDocumentation( input.getDocumentation() ) :
                                createDocumentationElement( docEntry ),
                                transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -348,7 +349,7 @@ final class MergeDocsProcessor
       new PartialNamespaceDefinition( input.getName(),
                                       transformOperationMembers( input.getOperations() ),
                                       transformAttributeMembers( input.getAttributes() ),
-                                      null == docEntry || null != input.getDocumentation() ?
+                                      shouldUseInputDocs( input, docEntry ) ?
                                       transformDocumentation( input.getDocumentation() ) :
                                       createDocumentationElement( docEntry ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -365,7 +366,7 @@ final class MergeDocsProcessor
     return new ConstMember( input.getName(),
                             transformType( input.getType() ),
                             transformConstValue( input.getValue() ),
-                            null == docEntry || null != input.getDocumentation() ?
+                            shouldUseInputDocs( input, docEntry ) ?
                             transformDocumentation( input.getDocumentation() ) :
                             createDocumentationElement( docEntry ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -379,7 +380,7 @@ final class MergeDocsProcessor
     final DocEntry docEntry = findMemberDocEntry( input.getName() + "_event" );
     return new EventMember( input.getName(),
                             input.getEventType(),
-                            null == docEntry || null != input.getDocumentation() ?
+                            shouldUseInputDocs( input, docEntry ) ?
                             transformDocumentation( input.getDocumentation() ) :
                             createDocumentationElement( docEntry ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -395,7 +396,7 @@ final class MergeDocsProcessor
                                  transformType( input.getType() ),
                                  input.isOptional(),
                                  input.getDefaultValue(),
-                                 null == docEntry || null != input.getDocumentation() ?
+                                 shouldUseInputDocs( input, docEntry ) ?
                                  transformDocumentation( input.getDocumentation() ) :
                                  createDocumentationElement( docEntry ),
                                  transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -410,7 +411,7 @@ final class MergeDocsProcessor
     return new AttributeMember( input.getName(),
                                 transformType( input.getType() ),
                                 input.getModifiers(),
-                                null == docEntry || null != input.getDocumentation() ?
+                                shouldUseInputDocs( input, docEntry ) ?
                                 transformDocumentation( input.getDocumentation() ) :
                                 createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -427,7 +428,7 @@ final class MergeDocsProcessor
                                 input.getName(),
                                 transformArguments( input.getArguments() ),
                                 transformType( input.getReturnType() ),
-                                null == docEntry || null != input.getDocumentation() ?
+                                shouldUseInputDocs( input, docEntry ) ?
                                 transformDocumentation( input.getDocumentation() ) :
                                 createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
@@ -491,7 +492,8 @@ final class MergeDocsProcessor
   {
     return new DocumentationElement( docEntry.getDescription(),
                                      Collections.singletonList( seeTag( docEntry ) ),
-                                     Collections.emptyList() );
+                                     Collections.emptyList(),
+                                     true );
   }
 
   @Nonnull
@@ -500,5 +502,18 @@ final class MergeDocsProcessor
     final String label = docEntry.getKind() == DocKind.Event ? docEntry.getEventName() + " event" : docEntry.getName();
     final String seeLink = "<a href=\"" + docEntry.getHref() + "\">" + label + " - MDN</a>";
     return new DocumentationBlockTag( "see", seeLink );
+  }
+
+  private boolean shouldUseInputDocs( @Nonnull final Element input, @Nullable final DocEntry docEntry )
+  {
+    if ( null == docEntry )
+    {
+      return true;
+    }
+    else
+    {
+      final DocumentationElement documentation = input.getDocumentation();
+      return null != documentation && !documentation.isSynthetic();
+    }
   }
 }
