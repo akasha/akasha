@@ -10,6 +10,10 @@
         "name": "atomics"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "errors"
+    },
+    {
         "lastModifiedTime": 1597831120000,
         "name": "background_sync",
         "url": "https://wicg.github.io/background-sync/spec/"

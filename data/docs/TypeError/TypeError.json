@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "TypeError.TypeError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError/TypeError",
+    "description": "The TypeError() constructor creates a new error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type."
+}

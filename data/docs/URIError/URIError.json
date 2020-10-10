@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "URIError.URIError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError/URIError",
+    "description": "The URIError() constructor creates an error when a global URI handling function was used in a wrong way."
+}

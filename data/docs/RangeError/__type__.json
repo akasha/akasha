@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "RangeError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "description": "The RangeError object indicates an error when a value is not in the set or range of allowed values."
+}

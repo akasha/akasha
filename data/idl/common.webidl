@@ -9,7 +9,7 @@ callback Function = any ( any... arguments );
 callback VoidFunction = void ();
 
 [Exposed=(Window,Worker), Serializable]
-interface DOMException {
+interface DOMException : Error {
   const unsigned short ABORT_ERR = 20;
   const unsigned short DATA_CLONE_ERR = 25;
   const unsigned short DOMSTRING_SIZE_ERR = 2;
@@ -36,7 +36,5 @@ interface DOMException {
   const unsigned short VALIDATION_ERR = 16;
   const unsigned short WRONG_DOCUMENT_ERR = 4;
   readonly attribute unsigned short code;
-  readonly attribute DOMString message;
-  readonly attribute DOMString name;
   constructor( optional DOMString message = "", optional DOMString name = "Error" );
 };

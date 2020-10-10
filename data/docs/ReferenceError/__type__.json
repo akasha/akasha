@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "ReferenceError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "description": "The ReferenceError object represents an error when a non-existent variable is referenced."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "EvalError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "description": "The EvalError object indicates an error regarding the global eval() function. This exception is not thrown by JavaScript anymore, however the EvalError object remains for compatibility."
+}
