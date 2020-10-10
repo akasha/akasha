@@ -191,7 +191,7 @@ define 'webtack' do
         compile.using :javac
         project.compile.sources << src_dir
 
-        deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
+        deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS) + [project('elemental3:promise').package(:jar)]
         compile.with deps
 
         gwt_enhance(project, :extra_deps => [src_dir])
