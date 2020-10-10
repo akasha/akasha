@@ -129,7 +129,7 @@ Generate host element factories: Events would need to be specially handled to ma
 * Add some additional apis from:
   - https://github.com/w3c/webref/tree/master/ed/idl
   - https://github.com/w3c/webref/tree/master/tr/idl
-  Documentation and other links could be scraped from https://github.com/w3c/webref 
+  Documentation and other links could be scraped from https://github.com/w3c/webref
 
 * Consider a reorganization of pipelines so that each independent pipeline can define a local idl to
   include so each transform could be relatively isolated with the processing stages combined with custom
