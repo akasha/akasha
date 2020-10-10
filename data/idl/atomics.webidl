@@ -154,4 +154,3 @@ namespace Atomics {
    */
   long long xor( IntegerTypedArray typedArray, long index, long long value );
 };
-
