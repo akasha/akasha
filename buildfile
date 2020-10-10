@@ -203,7 +203,7 @@ define 'webtack' do
         package(:sources)
         package(:javadoc)
 
-        project.no_iml
+        project.no_iml unless name = 'main' == pipeline
       end
     end
     project.no_iml
