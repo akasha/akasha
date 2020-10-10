@@ -166,6 +166,8 @@ define 'webtack' do
     define 'promise' do
       compile.with GWT_DEPS
 
+      gwt_enhance(project)
+
       package(:jar)
       package(:sources)
       package(:javadoc)
