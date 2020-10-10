@@ -6,8 +6,6 @@ complete as there is too much un-said.
 
 # MVP Release
 
-* Copy `elemental2.promise` to here from `course-webgl`
-
 * Rename output to avoid naming clash with elemental2
   - Atomix
   - Atomical
@@ -40,7 +38,7 @@ complete as there is too much un-said.
 
 * Add the ability to add arbitrary annotations to attributes, operations and arguments. This would allow the addition of the `@GLSL` annotation where appropriate.
 
-* Remove dependency on `elemental2-core`  and `elemental2-promise`
+* Remove dependency on `elemental2-core`
 
 # Docs Integration
 
