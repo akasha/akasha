@@ -305,6 +305,12 @@ public final class WebIDLWriter
       writer.write( extendedAttribute.getArgListName() );
       writeArgumentList( writer, extendedAttribute.getArgList() );
     }
+    else if ( ExtendedAttribute.Kind.NAMED_STRING == kind )
+    {
+      writer.write( extendedAttribute.getName() );
+      writer.write( "=" );
+      writeString( writer, extendedAttribute.getValue() );
+    }
     else if ( ExtendedAttribute.Kind.IDENT == kind )
     {
       writer.write( extendedAttribute.getName() );

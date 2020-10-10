@@ -23,6 +23,7 @@ public final class ExtendedAttribute
     // ARG_LIST has no specs other implement it
     ARG_LIST,
     NAMED_ARG_LIST,
+    NAMED_STRING,
     IDENT,
     IDENT_LIST
   }
@@ -31,6 +32,8 @@ public final class ExtendedAttribute
   private final String _name;
   @Nonnull
   private final Kind _kind;
+  @Nullable
+  private final String _value;
   @Nullable
   private final String _ident;
   @Nullable
@@ -62,6 +65,7 @@ public final class ExtendedAttribute
                                   null,
                                   null,
                                   null,
+                                  null,
                                   sourceLocations );
   }
 
@@ -72,7 +76,23 @@ public final class ExtendedAttribute
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.IDENT,
+                                  null,
                                   Objects.requireNonNull( ident ),
+                                  null,
+                                  null,
+                                  null,
+                                  sourceLocations );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createExtendedAttributeNamedString( @Nonnull final String name,
+                                                                      @Nonnull final String ident,
+                                                                      @Nonnull final List<SourceInterval> sourceLocations )
+  {
+    return new ExtendedAttribute( Objects.requireNonNull( name ),
+                                  Kind.NAMED_STRING,
+                                  Objects.requireNonNull( ident ),
+                                  null,
                                   null,
                                   null,
                                   null,
@@ -86,6 +106,7 @@ public final class ExtendedAttribute
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.IDENT_LIST,
+                                  null,
                                   null,
                                   Objects.requireNonNull( identList ),
                                   null,
@@ -103,6 +124,7 @@ public final class ExtendedAttribute
                                   Kind.NAMED_ARG_LIST,
                                   null,
                                   null,
+                                  null,
                                   Objects.requireNonNull( argListName ),
                                   Objects.requireNonNull( argList ),
                                   sourceLocations );
@@ -117,6 +139,7 @@ public final class ExtendedAttribute
                                   Kind.ARG_LIST,
                                   null,
                                   null,
+                                  null,
                                   Objects.requireNonNull( argListName ),
                                   Objects.requireNonNull( argList ),
                                   sourceLocations );
@@ -124,6 +147,7 @@ public final class ExtendedAttribute
 
   private ExtendedAttribute( @Nullable final String name,
                              @Nonnull final Kind kind,
+                             @Nullable final String value,
                              @Nullable final String ident,
                              @Nullable final List<String> identList,
                              @Nullable final String argListName,
@@ -133,6 +157,7 @@ public final class ExtendedAttribute
     super( sourceLocations );
     _name = name;
     _kind = Objects.requireNonNull( kind );
+    _value = value;
     _ident = ident;
     _identList = identList;
     _argListName = argListName;
@@ -142,7 +167,7 @@ public final class ExtendedAttribute
   @Nonnull
   public String getName()
   {
-    verifyKind( "getName()", Kind.NO_ARGS, Kind.NAMED_ARG_LIST, Kind.IDENT, Kind.IDENT_LIST );
+    verifyKind( "getName()", Kind.NO_ARGS, Kind.NAMED_ARG_LIST, Kind.IDENT, Kind.IDENT_LIST, Kind.NAMED_STRING );
     assert null != _name;
     return _name;
   }
@@ -151,6 +176,14 @@ public final class ExtendedAttribute
   public Kind getKind()
   {
     return _kind;
+  }
+
+  @Nonnull
+  public String getValue()
+  {
+    verifyKind( "getValue()", Kind.NAMED_STRING );
+    assert null != _value;
+    return _value;
   }
 
   @Nonnull
@@ -201,6 +234,7 @@ public final class ExtendedAttribute
       final ExtendedAttribute other = (ExtendedAttribute) o;
       return Objects.equals( _name, other._name ) &&
              _kind == other._kind &&
+             Objects.equals( _value, other._value ) &&
              Objects.equals( _ident, other._ident ) &&
              Objects.equals( _identList, other._identList ) &&
              Objects.equals( _argListName, other._argListName ) &&
@@ -218,6 +252,7 @@ public final class ExtendedAttribute
   {
     if ( Objects.equals( _name, other._name ) &&
          _kind == other._kind &&
+         Objects.equals( _value, other._value ) &&
          Objects.equals( _ident, other._ident ) &&
          (
            ( null == _identList && null == other._identList ) ||

@@ -141,7 +141,7 @@ public final class WebIDLSchemaTest
              "[SecureContext, Exposed=Window]\n" +
              "interface XRRigidTransform {\n" +
              "  constructor(optional DOMPointInit position = {}, optional DOMPointInit orientation = {});\n" +
-             "  [SameObject] readonly attribute DOMPointReadOnly position;\n" +
+             "  [SameObject, JavaAnnotation=\"com.example.MyAnnotation\"] readonly attribute DOMPointReadOnly position;\n" +
              "  [SameObject] readonly attribute DOMPointReadOnly orientation;\n" +
              "  readonly attribute Float32Array matrix;\n" +
              "  [SameObject] readonly attribute XRRigidTransform inverse;\n" +

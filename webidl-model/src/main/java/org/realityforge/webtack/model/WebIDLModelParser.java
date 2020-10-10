@@ -1087,6 +1087,13 @@ public final class WebIDLModelParser
     {
       return ExtendedAttribute.createExtendedAttributeNoArgs( noArgsContext.IDENTIFIER().getText(), sourceIntervals );
     }
+    final WebIDLParser.ExtendedAttributeNamedStringContext namedStringContext = ctx.extendedAttributeNamedString();
+    if ( null != namedStringContext )
+    {
+      return ExtendedAttribute.createExtendedAttributeNamedString( namedStringContext.IDENTIFIER().getText(),
+                                                                   extractString( namedStringContext.STRING() ),
+                                                                   sourceIntervals );
+    }
     final WebIDLParser.ExtendedAttributeIdentContext identContext = ctx.extendedAttributeIdent();
     if ( null != identContext )
     {

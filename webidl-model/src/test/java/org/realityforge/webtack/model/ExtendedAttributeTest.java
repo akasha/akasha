@@ -46,6 +46,43 @@ public final class ExtendedAttributeTest
   }
 
   @Test
+  public void NAMED_STRING()
+  {
+    final String name = randomString();
+    final String value = randomString() + "." + randomString();
+    final ExtendedAttribute extendedAttribute =
+      ExtendedAttribute.createExtendedAttributeNamedString( name, value, Collections.emptyList() );
+    assertEquals( extendedAttribute.getName(), name );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_STRING );
+    assertEquals( extendedAttribute.getValue(), value );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdent() on extended attribute named '" + name + "' but attribute is of kind NAMED_STRING",
+                  extendedAttribute::getIdent );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentList() on extended attribute named '" + name + "' but attribute " +
+                  "is of kind NAMED_STRING",
+                  extendedAttribute::getIdentList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getArgListName() on extended attribute named '" + name + "' but attribute " +
+                  "is of kind NAMED_STRING",
+                  extendedAttribute::getArgListName );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getArgList() on extended attribute named '" + name + "' but attribute " +
+                  "is of kind NAMED_STRING",
+                  extendedAttribute::getArgList );
+  }
+
+  @Test
+  public void NAMED_STRING_parse()
+    throws Exception
+  {
+    final ExtendedAttribute extendedAttribute = parse( "JavaAnnotation=\"com.biz.Example\"" );
+    assertEquals( extendedAttribute.getName(), "JavaAnnotation" );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_STRING );
+    assertEquals( extendedAttribute.getValue(), "com.biz.Example" );
+  }
+
+  @Test
   public void IDENT()
   {
     final String name = randomString();
@@ -55,6 +92,9 @@ public final class ExtendedAttributeTest
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT );
     assertEquals( extendedAttribute.getIdent(), ident );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getValue() on extended attribute named '" + name + "' but attribute is of kind IDENT",
+                  extendedAttribute::getValue );
     assertThrows( IllegalStateException.class,
                   "Invoked getIdentList() on extended attribute named '" + name + "' but attribute is of kind IDENT",
                   extendedAttribute::getIdentList );
@@ -86,6 +126,9 @@ public final class ExtendedAttributeTest
     assertEquals( extendedAttribute.getName(), name );
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.IDENT_LIST );
     assertEquals( extendedAttribute.getIdentList(), identList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getValue() on extended attribute named '" + name + "' but attribute is of kind IDENT_LIST",
+                  extendedAttribute::getValue );
     assertThrows( IllegalStateException.class,
                   "Invoked getIdent() on extended attribute named '" + name + "' but attribute is of kind IDENT_LIST",
                   extendedAttribute::getIdent );
@@ -182,6 +225,10 @@ public final class ExtendedAttributeTest
     assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_ARG_LIST );
     assertEquals( extendedAttribute.getArgListName(), argListName );
     assertEquals( extendedAttribute.getArgList(), argList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getValue() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind NAMED_ARG_LIST",
+                  extendedAttribute::getValue );
     assertThrows( IllegalStateException.class,
                   "Invoked getIdent() on extended attribute named '" + name + "' but " +
                   "attribute is of kind NAMED_ARG_LIST",
