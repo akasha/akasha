@@ -135,6 +135,10 @@ partial interface mixin GlobalEventHandlers {
    */
   event Event abort;
   /**
+   * Existing documentation, with doc entry.
+   */
+  event BlurEvent blee;
+  /**
    * The blur event...
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/blur_event">blur event - MDN</a>
@@ -147,7 +151,7 @@ partial interface mixin GlobalEventHandlers {
    */
   event FocusEvent focus;
   /**
-   * Existing documentation...
+   * Existing documentation, no doc entry.
    */
   event Event other;
   event Event undocumented;

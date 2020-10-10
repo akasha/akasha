@@ -37,9 +37,13 @@ interface mixin GlobalEventHandlers {
 
 partial interface mixin GlobalEventHandlers {
   attribute EventHandler onblur;
+  /**
+   * Existing documentation, with doc entry.
+   */
+  event BlurEvent blee;
   event BlurEvent blur;
   /**
-   * Existing documentation...
+   * Existing documentation, no doc entry.
    */
   event Event other;
   event Event undocumented;
