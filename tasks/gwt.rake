@@ -78,7 +78,7 @@ CONTENT
     assets.each do |path|
       j.include("#{path}/*")
     end
-    (project.compile.sources + project.iml.main_generated_resource_directories + project.iml.main_generated_source_directories).flatten.compact do |dep|
+    (project.compile.sources + project.iml.main_generated_resource_directories + project.iml.main_generated_source_directories).flatten.collect{|d|d.to_s}.compact.each do |dep|
       j.include("#{dep}/*")
     end
   end if package_jars
