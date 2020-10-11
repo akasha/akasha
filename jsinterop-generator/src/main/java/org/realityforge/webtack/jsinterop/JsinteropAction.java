@@ -1938,7 +1938,7 @@ final class JsinteropAction
       if ( enumerationValue.getValue().isEmpty() &&
            null == enumerationValue.getIdentValue( ExtendedAttributes.JAVA_NAME ) )
       {
-        throw new IllegalStateException( "Enumeration named '" + definition.getName() + "' " +
+        throw new IllegalStateException( "Enumeration named '" + name + "' " +
                                          "has an empty enumeration value without specifying " +
                                          "the [JavaName=...] extended attribute so the Jsinterop " +
                                          "action can not determine a valid name for the value" );
