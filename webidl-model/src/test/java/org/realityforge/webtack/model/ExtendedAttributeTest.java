@@ -28,6 +28,10 @@ public final class ExtendedAttributeTest
                   "Invoked getIdentList() on extended attribute named '" + name + "' but attribute is of kind NO_ARGS",
                   extendedAttribute::getIdentList );
     assertThrows( IllegalStateException.class,
+                  "Invoked getIdentListName() on extended attribute named '" + name + "' but attribute" +
+                  " is of kind NO_ARGS",
+                  extendedAttribute::getIdentListName );
+    assertThrows( IllegalStateException.class,
                   "Invoked getArgListName() on extended attribute named '" + name + "' but attribute" +
                   " is of kind NO_ARGS",
                   extendedAttribute::getArgListName );
@@ -62,6 +66,10 @@ public final class ExtendedAttributeTest
                   "Invoked getIdentList() on extended attribute named '" + name + "' but attribute " +
                   "is of kind NAMED_STRING",
                   extendedAttribute::getIdentList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentListName() on extended attribute named '" + name + "' but attribute " +
+                  "is of kind NAMED_STRING",
+                  extendedAttribute::getIdentListName );
     assertThrows( IllegalStateException.class,
                   "Invoked getArgListName() on extended attribute named '" + name + "' but attribute " +
                   "is of kind NAMED_STRING",
@@ -98,6 +106,10 @@ public final class ExtendedAttributeTest
     assertThrows( IllegalStateException.class,
                   "Invoked getIdentList() on extended attribute named '" + name + "' but attribute is of kind IDENT",
                   extendedAttribute::getIdentList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentListName() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind IDENT",
+                  extendedAttribute::getIdentListName );
     assertThrows( IllegalStateException.class,
                   "Invoked getArgListName() on extended attribute named '" + name + "' but attribute is of kind IDENT",
                   extendedAttribute::getArgListName );
@@ -153,6 +165,52 @@ public final class ExtendedAttributeTest
   }
 
   @Test
+  public void NAMED_IDENT_LIST()
+  {
+    final String name = randomString();
+    final List<String> identList = Arrays.asList( randomString(), randomString() );
+    final String identListName = randomString();
+    final ExtendedAttribute extendedAttribute =
+      ExtendedAttribute.createExtendedAttributeNamedIdentList( name,
+                                                               identListName,
+                                                               identList,
+                                                               Collections.emptyList() );
+    assertEquals( extendedAttribute.getName(), name );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_IDENT_LIST );
+    assertEquals( extendedAttribute.getIdentListName(), identListName );
+    assertEquals( extendedAttribute.getIdentList(), identList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getValue() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind NAMED_IDENT_LIST",
+                  extendedAttribute::getValue );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdent() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind NAMED_IDENT_LIST",
+                  extendedAttribute::getIdent );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getArgListName() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind NAMED_IDENT_LIST",
+                  extendedAttribute::getArgListName );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getArgList() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind NAMED_IDENT_LIST",
+                  extendedAttribute::getArgList );
+  }
+
+  @Test
+  public void NAMED_IDENT_LIST_parse()
+    throws Exception
+  {
+    final ExtendedAttribute extendedAttribute =
+      parse( "ConstEnumeration=ReadyStateType(UNSENT,OPENED,HEADERS_RECEIVED,LOADING,DONE)" );
+    assertEquals( extendedAttribute.getName(), "ConstEnumeration" );
+    assertEquals( extendedAttribute.getKind(), ExtendedAttribute.Kind.NAMED_IDENT_LIST );
+    assertEquals( extendedAttribute.getIdentListName(), "ReadyStateType" );
+    assertEquals( extendedAttribute.getIdentList(),
+                  Arrays.asList( "UNSENT", "OPENED", "HEADERS_RECEIVED", "LOADING", "DONE" ) );
+  }
+
+  @Test
   public void ARG_LIST()
   {
     final String argListName = randomString();
@@ -182,6 +240,9 @@ public final class ExtendedAttributeTest
     assertThrows( IllegalStateException.class,
                   "Invoked getIdentList() on unnamed extended attribute but attribute is of kind ARG_LIST",
                   extendedAttribute::getIdentList );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentListName() on unnamed extended attribute but attribute is of kind ARG_LIST",
+                  extendedAttribute::getIdentListName );
     assertThrows( IllegalStateException.class,
                   "Invoked getIdent() on unnamed extended attribute but attribute is of kind ARG_LIST",
                   extendedAttribute::getIdent );
@@ -236,6 +297,10 @@ public final class ExtendedAttributeTest
                   "Invoked getIdent() on extended attribute named '" + name + "' but " +
                   "attribute is of kind NAMED_ARG_LIST",
                   extendedAttribute::getIdent );
+    assertThrows( IllegalStateException.class,
+                  "Invoked getIdentListName() on extended attribute named '" + name + "' but " +
+                  "attribute is of kind NAMED_ARG_LIST",
+                  extendedAttribute::getIdentListName );
     assertThrows( IllegalStateException.class,
                   "Invoked getIdentList() on extended attribute named '" + name + "' but " +
                   "attribute is of kind NAMED_ARG_LIST",

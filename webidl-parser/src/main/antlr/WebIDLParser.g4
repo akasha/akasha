@@ -12,7 +12,7 @@
 //   are defined by ExtendedAttributeNoArgs, ExtendedAttributeArgList, ExtendedAttributeIdent,
 //   ExtendedAttributeIdentList, ExtendedAttributeNamedArgList in the original spec. This change also meant that
 //   unused rules such as "other", "extendedAttributeRest", "extendedAttributeInner" and "otherOrComma" could be removed
-//   Also added support for extended attribtues that have a name and a string value
+//   Also added support for extended attribtues that have a name and a string value and a named ident list
 // - Supported extended attribute on enumeration values
 // - We have also added a JAVADOC comment parsing in a separate lexer island that contains documentation for the webidl
 //   element in a javadoc-esque format. This is only allowed in specific places in the grammar which is NOT spec compliant
@@ -560,6 +560,7 @@ extendedAttribute
   | extendedAttributeNamedString
   | extendedAttributeIdent
   | extendedAttributeIdentList
+  | extendedAttributeNamedIdentList
   | extendedAttributeNamedArgList
 ;
 
@@ -590,6 +591,10 @@ extendedAttributeIdent
 
 extendedAttributeIdentList
   : IDENTIFIER EQUALS OPEN_BRACKET identifierList CLOSE_BRACKET
+;
+
+extendedAttributeNamedIdentList
+  : IDENTIFIER EQUALS IDENTIFIER  OPEN_BRACKET identifierList CLOSE_BRACKET
 ;
 
 extendedAttributeNamedArgList

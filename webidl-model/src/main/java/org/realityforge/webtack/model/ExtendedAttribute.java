@@ -25,7 +25,8 @@ public final class ExtendedAttribute
     NAMED_ARG_LIST,
     NAMED_STRING,
     IDENT,
-    IDENT_LIST
+    IDENT_LIST,
+    NAMED_IDENT_LIST
   }
 
   @Nullable
@@ -36,6 +37,8 @@ public final class ExtendedAttribute
   private final String _value;
   @Nullable
   private final String _ident;
+  @Nullable
+  private final String _identListName;
   @Nullable
   private final List<String> _identList;
   /**
@@ -66,6 +69,7 @@ public final class ExtendedAttribute
                                   null,
                                   null,
                                   null,
+                                  null,
                                   sourceLocations );
   }
 
@@ -78,6 +82,7 @@ public final class ExtendedAttribute
                                   Kind.IDENT,
                                   null,
                                   Objects.requireNonNull( ident ),
+                                  null,
                                   null,
                                   null,
                                   null,
@@ -96,6 +101,7 @@ public final class ExtendedAttribute
                                   null,
                                   null,
                                   null,
+                                  null,
                                   sourceLocations );
   }
 
@@ -108,6 +114,24 @@ public final class ExtendedAttribute
                                   Kind.IDENT_LIST,
                                   null,
                                   null,
+                                  null,
+                                  Objects.requireNonNull( identList ),
+                                  null,
+                                  null,
+                                  sourceLocations );
+  }
+
+  @Nonnull
+  public static ExtendedAttribute createExtendedAttributeNamedIdentList( @Nonnull final String name,
+                                                                         @Nonnull final String identListName,
+                                                                         @Nonnull final List<String> identList,
+                                                                         @Nonnull final List<SourceInterval> sourceLocations )
+  {
+    return new ExtendedAttribute( Objects.requireNonNull( name ),
+                                  Kind.NAMED_IDENT_LIST,
+                                  null,
+                                  null,
+                                  Objects.requireNonNull( identListName ),
                                   Objects.requireNonNull( identList ),
                                   null,
                                   null,
@@ -122,6 +146,7 @@ public final class ExtendedAttribute
   {
     return new ExtendedAttribute( Objects.requireNonNull( name ),
                                   Kind.NAMED_ARG_LIST,
+                                  null,
                                   null,
                                   null,
                                   null,
@@ -140,6 +165,7 @@ public final class ExtendedAttribute
                                   null,
                                   null,
                                   null,
+                                  null,
                                   Objects.requireNonNull( argListName ),
                                   Objects.requireNonNull( argList ),
                                   sourceLocations );
@@ -149,6 +175,7 @@ public final class ExtendedAttribute
                              @Nonnull final Kind kind,
                              @Nullable final String value,
                              @Nullable final String ident,
+                             @Nullable final String identListName,
                              @Nullable final List<String> identList,
                              @Nullable final String argListName,
                              @Nullable final List<Argument> argList,
@@ -159,6 +186,7 @@ public final class ExtendedAttribute
     _kind = Objects.requireNonNull( kind );
     _value = value;
     _ident = ident;
+    _identListName = identListName;
     _identList = identList;
     _argListName = argListName;
     _argList = argList;
@@ -167,7 +195,13 @@ public final class ExtendedAttribute
   @Nonnull
   public String getName()
   {
-    verifyKind( "getName()", Kind.NO_ARGS, Kind.NAMED_ARG_LIST, Kind.IDENT, Kind.IDENT_LIST, Kind.NAMED_STRING );
+    verifyKind( "getName()",
+                Kind.NO_ARGS,
+                Kind.NAMED_ARG_LIST,
+                Kind.IDENT,
+                Kind.IDENT_LIST,
+                Kind.NAMED_IDENT_LIST,
+                Kind.NAMED_STRING );
     assert null != _name;
     return _name;
   }
@@ -195,9 +229,17 @@ public final class ExtendedAttribute
   }
 
   @Nonnull
+  public String getIdentListName()
+  {
+    verifyKind( "getIdentListName()", Kind.NAMED_IDENT_LIST );
+    assert null != _identListName;
+    return _identListName;
+  }
+
+  @Nonnull
   public List<String> getIdentList()
   {
-    verifyKind( "getIdentList()", Kind.IDENT_LIST );
+    verifyKind( "getIdentList()", Kind.IDENT_LIST, Kind.NAMED_IDENT_LIST );
     assert null != _identList;
     return _identList;
   }
@@ -236,6 +278,7 @@ public final class ExtendedAttribute
              _kind == other._kind &&
              Objects.equals( _value, other._value ) &&
              Objects.equals( _ident, other._ident ) &&
+             Objects.equals( _identListName, other._identListName ) &&
              Objects.equals( _identList, other._identList ) &&
              Objects.equals( _argListName, other._argListName ) &&
              Objects.equals( _argList, other._argList );
@@ -254,6 +297,7 @@ public final class ExtendedAttribute
          _kind == other._kind &&
          Objects.equals( _value, other._value ) &&
          Objects.equals( _ident, other._ident ) &&
+         Objects.equals( _identListName, other._identListName ) &&
          (
            ( null == _identList && null == other._identList ) ||
            ( null != _identList && null != other._identList && _identList.size() == other._identList.size() )

@@ -317,6 +317,16 @@ public final class WebIDLWriter
       writer.write( "=" );
       writer.write( extendedAttribute.getIdent() );
     }
+    else if ( ExtendedAttribute.Kind.NAMED_IDENT_LIST == kind )
+    {
+      writer.write( extendedAttribute.getName() );
+      writer.write( "=" );
+      writer.write( extendedAttribute.getIdentListName() );
+      writer.write( "(" );
+      final List<String> identList = extendedAttribute.getIdentList();
+      writer.write( String.join( ",", identList ) );
+      writer.write( ")" );
+    }
     else if ( ExtendedAttribute.Kind.IDENT_LIST == kind )
     {
       writer.write( extendedAttribute.getName() );

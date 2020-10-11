@@ -1101,6 +1101,17 @@ public final class WebIDLModelParser
                                                              identContext.IDENTIFIER( 1 ).getText(),
                                                              sourceIntervals );
     }
+    final WebIDLParser.ExtendedAttributeNamedIdentListContext namedIdentListContext =
+      ctx.extendedAttributeNamedIdentList();
+    if ( null != namedIdentListContext )
+    {
+      final List<String> identifiers = new ArrayList<>();
+      collectIdentifiers( identifiers, namedIdentListContext.identifierList() );
+      return ExtendedAttribute.createExtendedAttributeNamedIdentList( namedIdentListContext.IDENTIFIER( 0 ).getText(),
+                                                                      namedIdentListContext.IDENTIFIER( 1 ).getText(),
+                                                                      Collections.unmodifiableList( identifiers ),
+                                                                      sourceIntervals );
+    }
     final WebIDLParser.ExtendedAttributeIdentListContext identListContext = ctx.extendedAttributeIdentList();
     if ( null != identListContext )
     {
