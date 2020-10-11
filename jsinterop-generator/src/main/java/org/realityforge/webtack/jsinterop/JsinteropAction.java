@@ -853,8 +853,7 @@ final class JsinteropAction
     }
     final TypeName javaType = typedValue.getJavaType();
     final String paramName = javaName( member );
-    final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
+    final ParameterSpec.Builder parameter = ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
     maybeAddCustomAnnotations( member, parameter );
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
