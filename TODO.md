@@ -40,6 +40,8 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
+* Generate error if bad data passed for config in stages
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
