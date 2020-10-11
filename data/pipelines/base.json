@@ -220,7 +220,7 @@
       "description": "Annotate postMessage methods to indicate that they can take Transferables",
       "sourceSelector": "name=whatwg_html name=serviceworker",
       "config": {
-        "expectedRemoveCount": 6,
+        "expectedAddCount": 6,
         "elementNamePattern": "^.*$",
         "operationNamePattern": "^postMessage$",
         "argumentNamePattern": "^transfer$",
@@ -232,7 +232,7 @@
       "description": "Annotate postMessage option object to indicate that they can take Transferables",
       "sourceSelector": "name=whatwg_html",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^PostMessageOptions$",
         "memberNamePattern": "^transfer$",
         "extendedAttribute": "Transferable"
@@ -408,7 +408,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=whatwg_xhr",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^XMLHttpRequestResponseType$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=default_text"
@@ -419,7 +419,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=whatwg_html",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^CanPlayTypeResult$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=negative"
@@ -430,7 +430,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=whatwg_fetch",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^RequestDestination$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=other"
@@ -441,7 +441,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=gamepad",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^GamepadMappingType$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=unknown"
@@ -452,7 +452,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=gamepad_extensions",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^GamepadHand$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=other"
@@ -463,7 +463,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=webvtt1",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^DirectionSetting$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=horizontal"
@@ -474,7 +474,7 @@
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=webvtt1",
       "config": {
-        "expectedRemoveCount": 1,
+        "expectedAddCount": 1,
         "elementNamePattern": "^ScrollSetting$",
         "memberNamePattern": "^$",
         "extendedAttribute": "JavaName=none"
