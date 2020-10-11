@@ -1919,9 +1919,10 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
+    final ClassName self = rawLookupClassName( name );
     final TypeSpec.Builder type =
       TypeSpec
-        .annotationBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .annotationBuilder( self.simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
@@ -1929,7 +1930,7 @@ final class JsinteropAction
     type.addAnnotation( Documented.class );
     type.addAnnotation( AnnotationSpec
                           .builder( BasicTypes.MAGIC_CONSTANT )
-                          .addMember( "valuesFromClass", "$T.class", rawLookupClassName( definition.getName() ) )
+                          .addMember( "valuesFromClass", "$T.class", self )
                           .build() );
 
     for ( final EnumerationValue enumerationValue : definition.getValues() )
