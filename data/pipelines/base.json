@@ -404,6 +404,15 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Define ConstEnumeration to improve typing",
+      "sourceSelector": "name=whatwg_xhr",
+      "config": {
+        "namePattern": "^XMLHttpRequest$",
+        "extendedAttribute": "ConstEnumeration=ReadyStateType(UNSENT,OPENED,HEADERS_RECEIVED,LOADING,DONE)"
+      }
+    },
+    {
       "name": "AddExtendedAttributeToMember",
       "description": "Ensure empty enumeration value has a valid name when mapped to Java",
       "sourceSelector": "name=whatwg_xhr",
