@@ -154,6 +154,14 @@ final class JsinteropAction
       {
         generateInterface( definition );
       }
+      for ( final ExtendedAttribute constEnumeration : getConstEnumerations( definition ) )
+      {
+        final String name = constEnumeration.getIdentListName();
+        if ( !isIdlTypePredefined( name ) )
+        {
+          generateConstEnumeration( definition, name, constEnumeration.getIdentList() );
+        }
+      }
     }
     for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
     {
@@ -198,6 +206,48 @@ final class JsinteropAction
     {
       writeTypeCatalog();
     }
+  }
+
+  @Nonnull
+  private List<ExtendedAttribute> getConstEnumerations( @Nonnull final InterfaceDefinition definition )
+  {
+    return definition
+      .getExtendedAttributes()
+      .stream()
+      .filter( a -> a.getKind() == ExtendedAttribute.Kind.NAMED_IDENT_LIST &&
+                    a.getName().equals( ExtendedAttributes.CONST_ENUMERATION ) ).collect( Collectors.toList() );
+  }
+
+  private void generateConstEnumeration( @Nonnull final InterfaceDefinition definition,
+                                         @Nonnull final String name,
+                                         @Nonnull final List<String> constantNames )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .annotationBuilder( lookupClassName( name ).simpleName() )
+        .addModifiers( Modifier.PUBLIC );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( Documented.class );
+    final ClassName container = lookupClassName( definition.getName() );
+    final AnnotationSpec.Builder annotation = AnnotationSpec
+      .builder( BasicTypes.MAGIC_CONSTANT );
+
+    final String paramName =
+      definition
+        .getConstants()
+        .stream()
+        .filter( c -> c.getName().equals( constantNames.get( 0 ) ) )
+        .map( c -> c.getType().getKind().isInteger() ? "intValues" : "stringValues" )
+        .findFirst()
+        .orElse( "intValues" );
+    for ( final String constantName : constantNames )
+    {
+      annotation.addMember( paramName, "$T.$N", container, constantName );
+    }
+    type.addAnnotation( annotation.build() );
+
+    writeTopLevelType( name, type );
   }
 
   private void writeTransferableInterface()
@@ -2103,7 +2153,16 @@ final class JsinteropAction
       // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
       rawLookupClassName( definition.getName() );
     }
-    schema.getInterfaces().forEach( this::registerDefinition );
+    schema.getInterfaces().forEach( definition -> {
+      registerDefinition( definition );
+      for ( final ExtendedAttribute constEnumeration : getConstEnumerations( definition ) )
+      {
+        final String name = constEnumeration.getIdentListName();
+        final String javaType =
+          derivePackagePrefix( definition ) + NamingUtil.uppercaseFirstCharacter( safeName( name ) );
+        tryRegisterIdlToJavaTypeMapping( name, javaType );
+      }
+    } );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
     schema.getNamespaces().forEach( this::registerDefinition );
   }
