@@ -676,6 +676,29 @@
       }
     },
     {
+      "name": "AddExtendedAttributeToMember",
+      "description": "Annotate a couple of methods that are expected to contain GLSL fragments",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^(WebGL2RenderingContext|WebGLRenderingContext)$",
+        "memberNamePattern": "^getShaderSource$",
+        "extendedAttribute": "JavaAnnotation=\"elemental3.gl.GLSL\""
+      }
+    },
+    {
+      "name": "AddExtendedAttributeToArgument",
+      "description": "Annotate a couple of method arguments that are expected to contain GLSL fragments",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^(WebGL2RenderingContext|WebGLRenderingContext)$",
+        "operationNamePattern": "^shaderSource$",
+        "argumentNamePattern": "^source$",
+        "extendedAttribute": "JavaAnnotation=\"elemental3.gl.GLSL\""
+      }
+    },
+    {
       "name": "JavaizeEventHandlers"
     }
   ]
