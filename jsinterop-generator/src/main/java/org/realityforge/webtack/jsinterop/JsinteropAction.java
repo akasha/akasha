@@ -14,6 +14,8 @@ import java.lang.annotation.Documented;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +23,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.element.Modifier;
@@ -113,7 +116,8 @@ final class JsinteropAction
       {
         generateUnion( definition.getName(),
                        rawLookupClassName( definition.getName() ).simpleName(),
-                       (UnionType) type );
+                       (UnionType) type,
+                       getAnnotationStream( definition ).collect( Collectors.toList() ) );
       }
     }
     for ( final CallbackDefinition definition : schema.getCallbacks() )
@@ -171,7 +175,7 @@ final class JsinteropAction
       final String name = entry.getKey();
       if ( !isIdlTypePredefined( name ) )
       {
-        generateUnion( name, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue() );
+        generateUnion( name, NamingUtil.uppercaseFirstCharacter( name ), entry.getValue(), Collections.emptyList() );
       }
     }
 
@@ -324,7 +328,8 @@ final class JsinteropAction
 
   private void generateUnion( @Nonnull final String idlName,
                               @Nonnull final String javaName,
-                              @Nonnull final UnionType unionType )
+                              @Nonnull final UnionType unionType,
+                              @Nonnull final Collection<ClassName> additionalAnnotations )
     throws IOException
   {
     final TypeSpec.Builder type =
@@ -337,6 +342,8 @@ final class JsinteropAction
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
                           .build() );
+
+    additionalAnnotations.forEach( type::addAnnotation );
 
     generateUnionOfMethods( idlName, unionType, type );
 
@@ -544,6 +551,7 @@ final class JsinteropAction
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
                           .build() );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     final String inherits = definition.getInherits();
@@ -686,6 +694,7 @@ final class JsinteropAction
                             .builder( JsinteropTypes.JS_PROPERTY )
                             .addMember( "name", "$S", member.getName() )
                             .build() );
+    maybeAddCustomAnnotations( member, method );
     maybeAddJavadoc( member, method );
     addMagicConstantAnnotationIfNeeded( member.getType(), method );
     if ( getSchema().isNullable( member.getType() ) )
@@ -720,6 +729,7 @@ final class JsinteropAction
     {
       parameter.addAnnotation( JsinteropTypes.DO_NOT_AUTOBOX );
     }
+    maybeAddCustomAnnotations( member, parameter );
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
 
     if ( getSchema().isNullable( member.getType() ) )
@@ -764,6 +774,7 @@ final class JsinteropAction
       }
     }
 
+    maybeAddCustomAnnotations( member, parameter );
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
@@ -845,6 +856,7 @@ final class JsinteropAction
     final ParameterSpec.Builder parameter =
       ParameterSpec.builder( javaType, paramName, Modifier.FINAL );
 
+    maybeAddCustomAnnotations( member, parameter );
     addMagicConstantAnnotationIfNeeded( member.getType(), parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
@@ -914,6 +926,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( "onInvoke" )
         .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT );
+    maybeAddCustomAnnotations( definition, method );
     emitReturnType( definition.getReturnType(), method );
     for ( final Argument argument : definition.getArguments() )
     {
@@ -961,6 +974,7 @@ final class JsinteropAction
                           .addMember( "name", "$S", exposedOnGlobal ? name : "?" )
                           .build() )
       .addAnnotation( FunctionalInterface.class );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     generateConstants( definition.getConstants(), type );
@@ -988,6 +1002,7 @@ final class JsinteropAction
         .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     generateConstants( definition.getConstants(), type );
@@ -1070,6 +1085,7 @@ final class JsinteropAction
         .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     generateAttributes( definition.getAttributes(), type );
@@ -1096,6 +1112,7 @@ final class JsinteropAction
         .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
     if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
@@ -1544,6 +1561,7 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( toTypeName( actualType ) )
         .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
+    maybeAddCustomAnnotations( attribute, method );
     maybeAddJavadoc( attribute, method );
     if ( schema.isNullable( attributeType ) )
     {
@@ -1568,6 +1586,7 @@ final class JsinteropAction
     final String fieldName = javaName( attribute );
     final FieldSpec.Builder field =
       FieldSpec.builder( toTypeName( actualType ), fieldName, Modifier.PUBLIC );
+    maybeAddCustomAnnotations( attribute, field );
     maybeAddJavadoc( attribute, field );
     if ( !fieldName.equals( name ) )
     {
@@ -1610,6 +1629,7 @@ final class JsinteropAction
                   Modifier.FINAL )
         .addAnnotation( JsinteropTypes.JS_OVERLAY );
 
+    maybeAddCustomAnnotations( constant, field );
     maybeAddJavadoc( constant, field );
 
     final ConstValue value = constant.getValue();
@@ -1698,6 +1718,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( methodName )
         .addModifiers( Modifier.PUBLIC, javaInterface ? Modifier.ABSTRACT : Modifier.NATIVE );
+    maybeAddCustomAnnotations( operation, method );
     maybeAddJavadoc( operation, method );
     if ( !methodName.equals( name ) )
     {
@@ -1748,6 +1769,7 @@ final class JsinteropAction
       MethodSpec
         .methodBuilder( methodName )
         .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.NATIVE );
+    maybeAddCustomAnnotations( operation, method );
     maybeAddJavadoc( operation, method );
     if ( !methodName.equals( name ) )
     {
@@ -1810,6 +1832,7 @@ final class JsinteropAction
                                              @Nonnull final TypeSpec.Builder type )
   {
     final MethodSpec.Builder method = MethodSpec.constructorBuilder().addModifiers( Modifier.PUBLIC );
+    maybeAddCustomAnnotations( operation, method );
     maybeAddJavadoc( operation, method );
     int index = 0;
     for ( final Argument argument : argumentList )
@@ -1881,6 +1904,7 @@ final class JsinteropAction
     {
       parameter.addModifiers( Modifier.FINAL );
     }
+    maybeAddCustomAnnotations( argument, parameter );
     addMagicConstantAnnotationIfNeeded( actualType, parameter );
     addDoNotAutoboxAnnotation( typedValue, parameter );
     addNullabilityAnnotation( typedValue, parameter );
@@ -1901,6 +1925,7 @@ final class JsinteropAction
         .annotationBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
+    maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
     type.addAnnotation( Documented.class );
     type.addAnnotation( AnnotationSpec
@@ -1929,12 +1954,49 @@ final class JsinteropAction
                     Modifier.FINAL )
           .addAnnotation( BasicTypes.NONNULL )
           .initializer( "$S", enumerationValue.getValue() );
+        maybeAddCustomAnnotations( enumerationValue, field );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
         type.addField( field.build() );
       }
     }
 
     writeTopLevelType( name, type );
+  }
+
+  private void maybeAddCustomAnnotations( @Nonnull final AttributedNode node,
+                                          @Nonnull final TypeSpec.Builder element )
+  {
+    getAnnotationStream( node ).forEach( element::addAnnotation );
+  }
+
+  private void maybeAddCustomAnnotations( @Nonnull final AttributedNode node,
+                                          @Nonnull final FieldSpec.Builder element )
+  {
+    getAnnotationStream( node ).forEach( element::addAnnotation );
+  }
+
+  private void maybeAddCustomAnnotations( @Nonnull final AttributedNode node,
+                                          @Nonnull final MethodSpec.Builder element )
+  {
+    getAnnotationStream( node ).forEach( element::addAnnotation );
+  }
+
+  private void maybeAddCustomAnnotations( @Nonnull final AttributedNode node,
+                                          @Nonnull final ParameterSpec.Builder element )
+  {
+    getAnnotationStream( node ).forEach( element::addAnnotation );
+  }
+
+  @Nonnull
+  private Stream<ClassName> getAnnotationStream( @Nonnull final AttributedNode element )
+  {
+    return element
+      .getExtendedAttributes()
+      .stream()
+      .filter( a -> ExtendedAttribute.Kind.NAMED_STRING == a.getKind() &&
+                    a.getName().equals( ExtendedAttributes.JAVA_ANNOTATION ) )
+      .map( ExtendedAttribute::getValue )
+      .map( ClassName::bestGuess );
   }
 
   private void maybeAddJavadoc( @Nonnull final Element constant, @Nonnull final FieldSpec.Builder field )

@@ -44,6 +44,10 @@ public final class ExtendedAttributes
    * A custom extended property that specifies the name of the java class, method or field when generating for the specified element.
    */
   public static final String JAVA_NAME = "JavaName";
+  /**
+   * A custom extended property that specifies the name of a java annotation that is added to the the specified element.
+   */
+  public static final String JAVA_ANNOTATION = "JavaAnnotation";
 
   private ExtendedAttributes()
   {
