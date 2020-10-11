@@ -215,7 +215,7 @@ public abstract class AbstractJavaAction
   }
 
   @Nonnull
-  private String safeName( @Nonnull final String name )
+  protected String safeName( @Nonnull final String name )
   {
     return isNameJavaSafe( name ) ? name : mangleName( name );
   }
