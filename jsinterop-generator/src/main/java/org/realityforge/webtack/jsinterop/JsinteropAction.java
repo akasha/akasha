@@ -2110,12 +2110,18 @@ final class JsinteropAction
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
+    final String javaType =
+      derivePackagePrefix( definition ) + NamingUtil.uppercaseFirstCharacter( javaName( definition ) );
+    tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
+  }
+
+  @Nonnull
+  private String derivePackagePrefix( final @Nonnull NamedDefinition definition )
+  {
     final String declaredSubPackage = definition.getIdentValue( ExtendedAttributes.JAVA_SUB_PACKAGE );
     final String subPackage =
       null != declaredSubPackage ? asSubPackage( declaredSubPackage ) : asSubPackage( getNamespace( definition ) );
-    final String javaType =
-      getPackageName() + subPackage + "." + NamingUtil.uppercaseFirstCharacter( javaName( definition ) );
-    tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
+    return getPackageName() + subPackage + ".";
   }
 
   @Nullable
