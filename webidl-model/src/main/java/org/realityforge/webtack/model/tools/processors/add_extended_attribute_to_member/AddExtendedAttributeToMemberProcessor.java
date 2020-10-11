@@ -250,6 +250,22 @@ final class AddExtendedAttributeToMemberProcessor
 
   @Nonnull
   @Override
+  protected OperationMember transformOperationMember( @Nonnull final OperationMember input )
+  {
+    final String name = input.getName();
+    return new OperationMember( input.getKind(),
+                                input.getName(),
+                                transformArguments( input.getArguments() ),
+                                transformType( input.getReturnType() ),
+                                transformDocumentation( input.getDocumentation() ),
+                                null != name && matchesMemberName( name ) ?
+                                expandExtendedAttributes( input.getExtendedAttributes() ) :
+                                transformExtendedAttributes( input.getExtendedAttributes() ),
+                                transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  @Override
   protected OperationMember transformOptionalOperationMember( @Nonnull final OperationMember input )
   {
     final String name = input.getName();

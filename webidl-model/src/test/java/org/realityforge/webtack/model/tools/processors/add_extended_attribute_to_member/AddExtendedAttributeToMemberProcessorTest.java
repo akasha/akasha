@@ -44,6 +44,18 @@ public final class AddExtendedAttributeToMemberProcessorTest
   }
 
   @Test
+  public void operation()
+    throws Exception
+  {
+    performStandardFixtureTest( "operation",
+                                () -> createProcessor( new TestProgressListener(),
+                                                       "^(WebGL2RenderingContext|WebGLRenderingContext)$",
+                                                       "^getShaderSource$",
+                                                       "JavaAnnotation=\"elemental3.gl.GLSL\"",
+                                                       1 ) );
+  }
+
+  @Test
   public void basicBad_expectedAddCount()
     throws Exception
   {
