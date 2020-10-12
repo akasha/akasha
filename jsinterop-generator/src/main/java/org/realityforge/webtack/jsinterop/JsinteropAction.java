@@ -228,7 +228,7 @@ final class JsinteropAction
         .getInterfaceByName( firstValue.getInterfaceName() )
         .getConstants()
         .stream()
-        .filter( c -> c.getName().equals( firstValue.getConstName( ) ) )
+        .filter( c -> c.getName().equals( firstValue.getConstName() ) )
         .map( c -> c.getType().getKind().isInteger() ? "intValues" : "stringValues" )
         .findFirst()
         .orElse( "intValues" );
