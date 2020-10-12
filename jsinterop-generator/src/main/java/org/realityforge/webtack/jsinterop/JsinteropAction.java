@@ -219,9 +219,8 @@ final class JsinteropAction
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( Documented.class );
-    final AnnotationSpec.Builder annotation = AnnotationSpec
-      .builder( BasicTypes.MAGIC_CONSTANT );
 
+    final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
     final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
     final String paramName =
       getSchema()
