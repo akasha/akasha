@@ -88,6 +88,18 @@ public final class InterfaceDefinition
     return _constants;
   }
 
+  @Nullable
+  public ConstMember findConstantByName( @Nonnull final String name )
+  {
+    return getConstants().stream().filter( c -> c.getName().equals( name ) ).findFirst().orElse( null );
+  }
+
+  @Nonnull
+  public ConstMember getConstantByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findConstantByName( name ), "Missing expected constant with name " + name );
+  }
+
   @Nonnull
   public List<AttributeMember> getAttributes()
   {
