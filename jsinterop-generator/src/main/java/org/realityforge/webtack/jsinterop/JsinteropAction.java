@@ -329,7 +329,8 @@ final class JsinteropAction
                                           .builder( JsinteropTypes.JS_PROPERTY )
                                           .addMember( "name", "$S", name )
                                           .build() )
-                        .addAnnotation( BasicTypes.NONNULL ).build() );
+                        .addAnnotation( BasicTypes.NONNULL )
+                        .build() );
     }
 
     final TypeName globalType = ClassName.bestGuess( "Global" );
