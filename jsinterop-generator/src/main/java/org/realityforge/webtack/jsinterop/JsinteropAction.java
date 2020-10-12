@@ -1594,11 +1594,12 @@ final class JsinteropAction
     final WebIDLSchema schema = getSchema();
     final Type actualType = schema.resolveType( attributeType );
     final String name = attribute.getName();
+    final TypeName actualJavaType = toTypeName( actualType );
     final MethodSpec.Builder method =
       MethodSpec
         .methodBuilder( safeJsPropertyMethodName( name ) )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( toTypeName( actualType ) )
+        .returns( actualJavaType )
         .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     maybeAddCustomAnnotations( attribute, method );
     maybeAddJavadoc( attribute, method );
