@@ -384,7 +384,15 @@ public abstract class AbstractJavaAction
   @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )
   {
-    return null != _schema.findEnumerationByName( idlName ) ? BasicTypes.STRING : rawLookupClassName( idlName );
+    if ( null != _schema.findEnumerationByName( idlName ) )
+    {
+      // Enumerations are always strings so just return it.
+      return BasicTypes.STRING;
+    }
+    else
+    {
+      return rawLookupClassName( idlName );
+    }
   }
 
   @Nonnull
