@@ -117,7 +117,7 @@ final class JsinteropAction
       if ( Kind.Union == type.getKind() && !isIdlTypePredefined( definition.getName() ) )
       {
         generateUnion( definition.getName(),
-                       rawLookupClassName( definition.getName() ).simpleName(),
+                       lookupClassName( definition.getName() ).simpleName(),
                        (UnionType) type,
                        getAnnotationStream( definition ).collect( Collectors.toList() ) );
       }
@@ -584,7 +584,7 @@ final class JsinteropAction
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -955,7 +955,7 @@ final class JsinteropAction
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type
@@ -1005,7 +1005,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .interfaceBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -1039,7 +1039,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .classBuilder( lookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
@@ -1120,7 +1120,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .classBuilder( lookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
@@ -1147,7 +1147,7 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
+        .classBuilder( lookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
