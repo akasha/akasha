@@ -339,7 +339,7 @@ public abstract class AbstractJavaAction
     if ( null != idlName )
     {
       // Lookup java type so that it will be part of cache AND it will be emitted in mapping file
-      rawLookupClassName( idlName );
+      lookupClassName( idlName );
     }
     assert !_generatedFiles.containsKey( qualifiedName );
     _generatedFiles.put( qualifiedName,
@@ -383,20 +383,6 @@ public abstract class AbstractJavaAction
 
   @Nonnull
   protected ClassName lookupClassName( @Nonnull final String idlName )
-  {
-    if ( null != _schema.findEnumerationByName( idlName ) )
-    {
-      // Enumerations are always strings so just return it.
-      return BasicTypes.STRING;
-    }
-    else
-    {
-      return rawLookupClassName( idlName );
-    }
-  }
-
-  @Nonnull
-  protected ClassName rawLookupClassName( @Nonnull final String idlName )
   {
     return _idlToClassNameMapping.computeIfAbsent( idlName, n -> ClassName.bestGuess( lookupJavaType( n ) ) );
   }
@@ -671,7 +657,7 @@ public abstract class AbstractJavaAction
   @Nonnull
   private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final EnumerationDefinition enumeration )
   {
-    return AnnotationSpec.builder( rawLookupClassName( enumeration.getName() ) ).build();
+    return AnnotationSpec.builder( lookupClassName( enumeration.getName() ) ).build();
   }
 
   protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,

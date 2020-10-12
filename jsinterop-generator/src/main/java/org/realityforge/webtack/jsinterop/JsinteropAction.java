@@ -1958,7 +1958,7 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
-    final ClassName self = rawLookupClassName( name );
+    final ClassName self = lookupClassName( name );
     final TypeSpec.Builder type =
       TypeSpec
         .annotationBuilder( self.simpleName() )
