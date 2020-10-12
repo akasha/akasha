@@ -167,4 +167,4 @@ This section lists some validations that should be implemented to at least confi
 * Exploded union type lists should not contain:
   * multiple values represented by javascript numbers (otherwise how to determine which variant is intended)
   * multiple dictionary values (otherwise would need to inspect data to switch between them?)
-  * multiple union types represented by javascript strings (DONString, USVString, ByteString, enumeratin reference)
+  * multiple union types represented by javascript strings (DONString, USVString, ByteString, enumeration reference)
