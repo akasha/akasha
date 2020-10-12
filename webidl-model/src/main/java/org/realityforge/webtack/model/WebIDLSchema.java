@@ -27,6 +27,8 @@ public final class WebIDLSchema
   @Nonnull
   private final Map<String, EnumerationDefinition> _enumerations;
   @Nonnull
+  private final Map<String, ConstEnumerationDefinition> _constEnumerations;
+  @Nonnull
   private final Map<String, InterfaceDefinition> _interfaces;
   @Nonnull
   private final Map<String, MixinDefinition> _mixins;
@@ -49,6 +51,7 @@ public final class WebIDLSchema
                        @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
                        @Nonnull final Map<String, DictionaryDefinition> dictionaries,
                        @Nonnull final Map<String, EnumerationDefinition> enumerations,
+                       @Nonnull final Map<String, ConstEnumerationDefinition> constEnumerations,
                        @Nonnull final Map<String, InterfaceDefinition> interfaces,
                        @Nonnull final Map<String, MixinDefinition> mixins,
                        @Nonnull final List<IncludesStatement> includes,
@@ -67,6 +70,7 @@ public final class WebIDLSchema
     _callbackInterfaces = Objects.requireNonNull( callbackInterfaces );
     _dictionaries = Objects.requireNonNull( dictionaries );
     _enumerations = Objects.requireNonNull( enumerations );
+    _constEnumerations = Objects.requireNonNull( constEnumerations );
     _interfaces = Objects.requireNonNull( interfaces );
     _mixins = Objects.requireNonNull( mixins );
     _includes = Objects.requireNonNull( includes );
@@ -90,6 +94,7 @@ public final class WebIDLSchema
            _callbackInterfaces.isEmpty() &&
            _dictionaries.isEmpty() &&
            _enumerations.isEmpty() &&
+           _constEnumerations.isEmpty() &&
            _interfaces.isEmpty() &&
            _mixins.isEmpty() &&
            _includes.isEmpty() &&
@@ -172,6 +177,25 @@ public final class WebIDLSchema
   public EnumerationDefinition getEnumerationByName( @Nonnull final String name )
   {
     return Objects.requireNonNull( findEnumerationByName( name ), "Missing expected enumeration with name " + name );
+  }
+
+  @Nonnull
+  public Collection<ConstEnumerationDefinition> getConstEnumerations()
+  {
+    return _constEnumerations.values();
+  }
+
+  @Nullable
+  public ConstEnumerationDefinition findConstEnumerationByName( @Nonnull final String name )
+  {
+    return _constEnumerations.get( name );
+  }
+
+  @Nonnull
+  public ConstEnumerationDefinition getConstEnumerationByName( @Nonnull final String name )
+  {
+    return Objects.requireNonNull( findConstEnumerationByName( name ),
+                                   "Missing expected const enumeration with name " + name );
   }
 
   @Nonnull
@@ -328,6 +352,7 @@ public final class WebIDLSchema
              _callbackInterfaces.equals( other._callbackInterfaces ) &&
              _dictionaries.equals( other._dictionaries ) &&
              _enumerations.equals( other._enumerations ) &&
+             _constEnumerations.equals( other._constEnumerations ) &&
              _interfaces.equals( other._interfaces ) &&
              _mixins.equals( other._mixins ) &&
              _includes.equals( other._includes ) &&
@@ -348,6 +373,7 @@ public final class WebIDLSchema
                          _callbackInterfaces,
                          _dictionaries,
                          _enumerations,
+                         _constEnumerations,
                          _interfaces,
                          _mixins,
                          _includes,
@@ -365,6 +391,7 @@ public final class WebIDLSchema
          _callbackInterfaces.size() == other._callbackInterfaces.size() &&
          _dictionaries.size() == other._dictionaries.size() &&
          _enumerations.size() == other._enumerations.size() &&
+         _constEnumerations.size() == other._constEnumerations.size() &&
          _interfaces.size() == other._interfaces.size() &&
          _mixins.size() == other._mixins.size() &&
          _includes.size() == other._includes.size() &&
@@ -403,6 +430,14 @@ public final class WebIDLSchema
       for ( final EnumerationDefinition definition : _enumerations.values() )
       {
         if ( !otherEnumerations.removeIf( definition::equiv ) )
+        {
+          return false;
+        }
+      }
+      final Set<ConstEnumerationDefinition> otherConstEnumerations = new HashSet<>( _constEnumerations.values() );
+      for ( final ConstEnumerationDefinition definition : _constEnumerations.values() )
+      {
+        if ( !otherConstEnumerations.removeIf( definition::equiv ) )
         {
           return false;
         }

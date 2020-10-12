@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.Definition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.EnumerationDefinition;
@@ -50,6 +51,7 @@ final class MergeCombiner
     final Map<String, CallbackInterfaceDefinition> callbackInterfaces = new HashMap<>();
     final Map<String, DictionaryDefinition> dictionaries = new HashMap<>();
     final Map<String, EnumerationDefinition> enumerations = new HashMap<>();
+    final Map<String, ConstEnumerationDefinition> constEnumerations = new HashMap<>();
     final Map<String, InterfaceDefinition> interfaces = new HashMap<>();
     final Map<String, MixinDefinition> mixins = new HashMap<>();
     final Map<String, IncludesStatement> includes = new HashMap<>();
@@ -79,6 +81,10 @@ final class MergeCombiner
       for ( final EnumerationDefinition enumeration : schema.getEnumerations() )
       {
         addToCollection( "enumerations", enumerations, enumeration.getName(), enumeration );
+      }
+      for ( final ConstEnumerationDefinition enumeration : schema.getConstEnumerations() )
+      {
+        addToCollection( "const enumerations", constEnumerations, enumeration.getName(), enumeration );
       }
       for ( final InterfaceDefinition definition : schema.getInterfaces() )
       {
@@ -126,6 +132,7 @@ final class MergeCombiner
                              Collections.unmodifiableMap( callbackInterfaces ),
                              Collections.unmodifiableMap( dictionaries ),
                              Collections.unmodifiableMap( enumerations ),
+                             Collections.unmodifiableMap( constEnumerations ),
                              Collections.unmodifiableMap( interfaces ),
                              Collections.unmodifiableMap( mixins ),
                              Collections.unmodifiableList( new ArrayList<>( includes.values() ) ),

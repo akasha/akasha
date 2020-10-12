@@ -16,6 +16,7 @@ import org.realityforge.webtack.model.AsyncIterableMember;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
@@ -117,6 +118,9 @@ final class FlattenProcessor
                              schema.getEnumerations()
                                .stream()
                                .collect( Collectors.toMap( EnumerationDefinition::getName, Function.identity() ) ),
+                             schema.getConstEnumerations()
+                               .stream()
+                               .collect( Collectors.toMap( ConstEnumerationDefinition::getName, Function.identity() ) ),
                              interfaces,
                              Collections.emptyMap(),
                              Collections.emptyList(),

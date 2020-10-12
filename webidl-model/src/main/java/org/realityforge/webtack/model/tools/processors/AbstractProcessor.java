@@ -14,6 +14,8 @@ import org.realityforge.webtack.model.AsyncIterableMember;
 import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
+import org.realityforge.webtack.model.ConstEnumerationValue;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
 import org.realityforge.webtack.model.DefaultValue;
@@ -67,6 +69,8 @@ public abstract class AbstractProcessor
     final Map<String, CallbackInterfaceDefinition> callbackInterfaces =
       transformCallbackInterfaces( schema.getCallbackInterfaces() );
     final Map<String, EnumerationDefinition> enumerations = transformEnumerations( schema.getEnumerations() );
+    final Map<String, ConstEnumerationDefinition> constEnumerations =
+      transformConstEnumerations( schema.getConstEnumerations() );
     final Map<String, DictionaryDefinition> dictionaries = transformDictionaries( schema.getDictionaries() );
     final Map<String, List<PartialDictionaryDefinition>> partialDictionaries =
       transformPartialDictionaries( schema.getPartialDictionaries() );
@@ -85,6 +89,7 @@ public abstract class AbstractProcessor
                          callbacks,
                          callbackInterfaces,
                          enumerations,
+                         constEnumerations,
                          dictionaries,
                          partialDictionaries,
                          namespaces,
@@ -102,6 +107,7 @@ public abstract class AbstractProcessor
                                        @Nonnull final Map<String, CallbackDefinition> callbacks,
                                        @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
                                        @Nonnull final Map<String, EnumerationDefinition> enumerations,
+                                       @Nonnull final Map<String, ConstEnumerationDefinition> constEnumerations,
                                        @Nonnull final Map<String, DictionaryDefinition> dictionaries,
                                        @Nonnull final Map<String, List<PartialDictionaryDefinition>> partialDictionaries,
                                        @Nonnull final Map<String, NamespaceDefinition> namespaces,
@@ -117,6 +123,7 @@ public abstract class AbstractProcessor
                              callbackInterfaces,
                              dictionaries,
                              enumerations,
+                             constEnumerations,
                              interfaces,
                              mixins,
                              includes,
@@ -274,6 +281,52 @@ public abstract class AbstractProcessor
 
   @Nullable
   protected EnumerationValue transformEnumerationValue( @Nonnull final EnumerationValue input )
+  {
+    return input;
+  }
+
+  @Nonnull
+  protected Map<String, ConstEnumerationDefinition> transformConstEnumerations( @Nonnull final Collection<ConstEnumerationDefinition> inputs )
+  {
+    final Map<String, ConstEnumerationDefinition> definitions = new HashMap<>();
+    for ( final ConstEnumerationDefinition input : inputs )
+    {
+      final ConstEnumerationDefinition output = transformConstEnumeration( input );
+      if ( null != output )
+      {
+        definitions.put( output.getName(), output );
+      }
+    }
+    return definitions;
+  }
+
+  @Nullable
+  protected ConstEnumerationDefinition transformConstEnumeration( @Nonnull final ConstEnumerationDefinition input )
+  {
+    return new ConstEnumerationDefinition( input.getName(),
+                                           transformConstEnumerationValues( input.getValues() ),
+                                           transformDocumentation( input.getDocumentation() ),
+                                           transformExtendedAttributes( input.getExtendedAttributes() ),
+                                           transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  protected List<ConstEnumerationValue> transformConstEnumerationValues( @Nonnull final List<ConstEnumerationValue> inputs )
+  {
+    final List<ConstEnumerationValue> outputs = new ArrayList<>();
+    for ( final ConstEnumerationValue input : inputs )
+    {
+      final ConstEnumerationValue value = transformConstEnumerationValue( input );
+      if ( null != value )
+      {
+        outputs.add( value );
+      }
+    }
+    return outputs;
+  }
+
+  @Nullable
+  protected ConstEnumerationValue transformConstEnumerationValue( @Nonnull final ConstEnumerationValue input )
   {
     return input;
   }

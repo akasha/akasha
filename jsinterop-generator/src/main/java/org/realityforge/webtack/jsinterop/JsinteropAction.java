@@ -32,6 +32,8 @@ import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
+import org.realityforge.webtack.model.ConstEnumerationValue;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.ConstValue;
 import org.realityforge.webtack.model.DictionaryDefinition;
@@ -148,19 +150,18 @@ final class JsinteropAction
         generateEnumeration( definition );
       }
     }
+    for ( final ConstEnumerationDefinition definition : schema.getConstEnumerations() )
+    {
+      if ( !isIdlTypePredefined( definition.getName() ) )
+      {
+        generateConstEnumeration( definition );
+      }
+    }
     for ( final InterfaceDefinition definition : schema.getInterfaces() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateInterface( definition );
-      }
-      for ( final ExtendedAttribute constEnumeration : getConstEnumerations( definition ) )
-      {
-        final String name = constEnumeration.getIdentListName();
-        if ( !isIdlTypePredefined( name ) )
-        {
-          generateConstEnumeration( definition, name, constEnumeration.getIdentList() );
-        }
       }
     }
     for ( final PartialInterfaceDefinition definition : schema.getPartialInterfaces() )
@@ -208,42 +209,32 @@ final class JsinteropAction
     }
   }
 
-  @Nonnull
-  private List<ExtendedAttribute> getConstEnumerations( @Nonnull final InterfaceDefinition definition )
-  {
-    return definition
-      .getExtendedAttributes()
-      .stream()
-      .filter( a -> a.getKind() == ExtendedAttribute.Kind.NAMED_IDENT_LIST &&
-                    a.getName().equals( ExtendedAttributes.CONST_ENUMERATION ) ).collect( Collectors.toList() );
-  }
-
-  private void generateConstEnumeration( @Nonnull final InterfaceDefinition definition,
-                                         @Nonnull final String name,
-                                         @Nonnull final List<String> constantNames )
+  private void generateConstEnumeration( @Nonnull final ConstEnumerationDefinition definition )
     throws IOException
   {
+    final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
         .annotationBuilder( lookupClassName( name ).simpleName() )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( Documented.class );
-    final ClassName container = lookupClassName( definition.getName() );
     final AnnotationSpec.Builder annotation = AnnotationSpec
       .builder( BasicTypes.MAGIC_CONSTANT );
 
+    final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
     final String paramName =
-      definition
+      getSchema()
+        .getInterfaceByName( firstValue.getInterfaceName() )
         .getConstants()
         .stream()
-        .filter( c -> c.getName().equals( constantNames.get( 0 ) ) )
+        .filter( c -> c.getName().equals( firstValue.getConstName( ) ) )
         .map( c -> c.getType().getKind().isInteger() ? "intValues" : "stringValues" )
         .findFirst()
         .orElse( "intValues" );
-    for ( final String constantName : constantNames )
+    for ( final ConstEnumerationValue value : definition.getValues() )
     {
-      annotation.addMember( paramName, "$T.$N", container, constantName );
+      annotation.addMember( paramName, "$T.$N", lookupClassName( value.getInterfaceName() ), value.getConstName() );
     }
     type.addAnnotation( annotation.build() );
 
@@ -2153,16 +2144,8 @@ final class JsinteropAction
       // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
       rawLookupClassName( definition.getName() );
     }
-    schema.getInterfaces().forEach( definition -> {
-      registerDefinition( definition );
-      for ( final ExtendedAttribute constEnumeration : getConstEnumerations( definition ) )
-      {
-        final String name = constEnumeration.getIdentListName();
-        final String javaType =
-          derivePackagePrefix( definition ) + NamingUtil.uppercaseFirstCharacter( safeName( name ) );
-        tryRegisterIdlToJavaTypeMapping( name, javaType );
-      }
-    } );
+    schema.getConstEnumerations().forEach( this::registerDefinition );
+    schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
     schema.getNamespaces().forEach( this::registerDefinition );
   }

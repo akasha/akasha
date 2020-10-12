@@ -562,6 +562,10 @@
         "url": "https://xhr.spec.whatwg.org/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "whatwg_xhr_patch"
+    },
+    {
         "lastModifiedTime": 1601507096000,
         "name": "worklets",
         "url": "https://drafts.css-houdini.org/worklets/"

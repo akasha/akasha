@@ -40,18 +40,6 @@ complete as there is too much un-said.
   exist and be of the same types and the type must be integer or string types, there must be no duplicate constant
   names. Any reference to the constant must have a matching type.
 
-* Represent const enumerations as:
-
-```
-const enum ReadyStateType {
-  XMLHttpRequest.UNSENT,
-  XMLHttpRequest.OPENED,
-  XMLHttpRequest.HEADERS_RECEIVED,
-  XMLHttpRequest.LOADING,
-  XMLHttpRequest.DONE
-};
-```
-
 * Remove dependency on `elemental2-core`
 
 * Generate error if bad data passed for config in stages

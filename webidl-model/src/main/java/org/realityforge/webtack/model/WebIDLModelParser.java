@@ -64,6 +64,7 @@ public final class WebIDLModelParser
     final Map<String, CallbackInterfaceDefinition> callbackInterfaces = new HashMap<>();
     final Map<String, DictionaryDefinition> dictionaries = new HashMap<>();
     final Map<String, EnumerationDefinition> enumerations = new HashMap<>();
+    final Map<String, ConstEnumerationDefinition> constEnumerations = new HashMap<>();
     final Map<String, InterfaceDefinition> interfaces = new HashMap<>();
     final Map<String, MixinDefinition> mixins = new HashMap<>();
     final Map<String, IncludesStatement> includes = new HashMap<>();
@@ -95,6 +96,11 @@ public final class WebIDLModelParser
       {
         final EnumerationDefinition value = (EnumerationDefinition) definition;
         addToCollection( "enumerations", enumerations, value.getName(), value );
+      }
+      else if ( definition instanceof ConstEnumerationDefinition )
+      {
+        final ConstEnumerationDefinition value = (ConstEnumerationDefinition) definition;
+        addToCollection( "const enumerations", constEnumerations, value.getName(), value );
       }
       else if ( definition instanceof InterfaceDefinition )
       {
@@ -147,6 +153,7 @@ public final class WebIDLModelParser
                              Collections.unmodifiableMap( callbackInterfaces ),
                              Collections.unmodifiableMap( dictionaries ),
                              Collections.unmodifiableMap( enumerations ),
+                             Collections.unmodifiableMap( constEnumerations ),
                              Collections.unmodifiableMap( interfaces ),
                              Collections.unmodifiableMap( mixins ),
                              Collections.unmodifiableList( new ArrayList<>( includes.values() ) ),
@@ -310,6 +317,11 @@ public final class WebIDLModelParser
     if ( null != enumDefinitionContext )
     {
       return parse( enumDefinitionContext, documentation, extendedAttributes, startPosition );
+    }
+    final WebIDLParser.ConstEnumDefinitionContext constEnumContext = ctx.constEnumDefinition();
+    if ( null != constEnumContext )
+    {
+      return parse( constEnumContext, documentation, extendedAttributes, startPosition );
     }
     final WebIDLParser.TypedefContext typedefContext = ctx.typedef();
     if ( null != typedefContext )
@@ -1045,6 +1057,51 @@ public final class WebIDLModelParser
         enumValueListStringContext.enumValueListComma();
       enumValueListStringContext =
         null != enumValueListCommaContext ? enumValueListCommaContext.enumValueListString() : null;
+    }
+
+    return Collections.unmodifiableList( values );
+  }
+
+  @Nonnull
+  static ConstEnumerationDefinition parse( @Nonnull final WebIDLParser.ConstEnumDefinitionContext ctx,
+                                           @Nullable final DocumentationElement documentation,
+                                           @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                                           @Nonnull final SourcePosition startPosition )
+  {
+    final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
+    final String name = ctx.IDENTIFIER().getText();
+    final List<ConstEnumerationValue> values = parse( ctx.constEnumValueList() );
+    return new ConstEnumerationDefinition( name, values, documentation, extendedAttributes, sourceIntervals );
+  }
+
+  @Nonnull
+  private static List<ConstEnumerationValue> parse( @Nonnull final WebIDLParser.ConstEnumValueListContext constEnumValueListContext )
+  {
+    final List<ConstEnumerationValue> values = new ArrayList<>();
+    values.add( new ConstEnumerationValue( constEnumValueListContext.IDENTIFIER( 0 ).getText(),
+                                           constEnumValueListContext.IDENTIFIER( 1 ).getText(),
+                                           parseDocumentation( constEnumValueListContext.documentation() ),
+                                           parse( constEnumValueListContext.extendedAttributeList() ),
+                                           parseSourceIntervals( parseSourcePosition( constEnumValueListContext.getStart() ),
+                                                                 constEnumValueListContext ) ) );
+
+    WebIDLParser.ConstEnumValueListContext enumValueListStringContext =
+      constEnumValueListContext.constEnumValueListComma().constEnumValueList();
+    while ( null != enumValueListStringContext )
+    {
+      if ( !enumValueListStringContext.IDENTIFIER().isEmpty() )
+      {
+        values.add( new ConstEnumerationValue( enumValueListStringContext.IDENTIFIER( 0 ).getText(),
+                                               enumValueListStringContext.IDENTIFIER( 1 ).getText(),
+                                               parseDocumentation( enumValueListStringContext.documentation() ),
+                                               parse( enumValueListStringContext.extendedAttributeList() ),
+                                               parseSourceIntervals( parseSourcePosition( enumValueListStringContext.getStart() ),
+                                                                     enumValueListStringContext ) ) );
+      }
+      final WebIDLParser.ConstEnumValueListCommaContext enumValueListCommaContext =
+        enumValueListStringContext.constEnumValueListComma();
+      enumValueListStringContext =
+        null != enumValueListCommaContext ? enumValueListCommaContext.constEnumValueList() : null;
     }
 
     return Collections.unmodifiableList( values );

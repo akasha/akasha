@@ -78,6 +78,7 @@ CLOSE_SQUARE_BRACKET : ']';
 SEMI_COLON : ';';
 COLON : ':';
 EQUALS : '=';
+DOT : '.';
 COMMA : ',';
 ELLIPSIS : '...';
 NULL : 'null';

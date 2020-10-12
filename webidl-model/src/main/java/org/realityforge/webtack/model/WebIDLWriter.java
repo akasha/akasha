@@ -32,6 +32,16 @@ public final class WebIDLWriter
       maybeNewLine( writer, definitionCount++ );
       writeEnumerationDefinition( writer, definition );
     }
+    final List<ConstEnumerationDefinition> constEnumerations =
+      schema
+        .getConstEnumerations()
+        .stream()
+        .collect( Collectors.toList() );
+    for ( final ConstEnumerationDefinition definition : constEnumerations )
+    {
+      maybeNewLine( writer, definitionCount++ );
+      writeConstEnumerationDefinition( writer, definition );
+    }
     final List<TypedefDefinition> typedefs =
       schema
         .getTypedefs()
@@ -500,6 +510,34 @@ public final class WebIDLWriter
       writeIndent( writer );
       writeAttributesIfRequired( writer, value.getExtendedAttributes(), " " );
       writeString( writer, value.getValue() );
+      if ( size != index++ )
+      {
+        writer.write( "," );
+      }
+      writer.write( "\n" );
+    }
+    writer.write( "};\n" );
+  }
+
+  static void writeConstEnumerationDefinition( @Nonnull final Writer writer,
+                                               @Nonnull final ConstEnumerationDefinition definition )
+    throws IOException
+  {
+    writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
+    writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
+    writer.write( "const enum " );
+    writer.write( definition.getName() );
+    writer.write( " {\n" );
+    final int size = definition.getValues().size();
+    int index = 1;
+    for ( final ConstEnumerationValue value : definition.getValues() )
+    {
+      writeDocumentationIfRequired( writer, value.getDocumentation(), "  " );
+      writeIndent( writer );
+      writeAttributesIfRequired( writer, value.getExtendedAttributes(), " " );
+      writer.write( value.getInterfaceName() );
+      writer.write( "." );
+      writer.write( value.getConstName() );
       if ( size != index++ )
       {
         writer.write( "," );

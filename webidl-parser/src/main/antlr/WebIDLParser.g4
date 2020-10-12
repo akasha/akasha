@@ -39,6 +39,7 @@ definition
 	| partial
 	| dictionary
 	| enumDefinition
+	| constEnumDefinition
 	| typedef
 	| includesStatement
 ;
@@ -424,6 +425,19 @@ enumValueListComma
 
 enumValueListString
   : documentation extendedAttributeList STRING enumValueListComma
+  | /* empty */
+;
+
+constEnumDefinition
+  : CONST ENUM IDENTIFIER OPEN_BRACE constEnumValueList CLOSE_BRACE SEMI_COLON
+;
+
+constEnumValueList
+  : documentation extendedAttributeList IDENTIFIER DOT IDENTIFIER constEnumValueListComma
+;
+
+constEnumValueListComma
+  : COMMA constEnumValueList
   | /* empty */
 ;
 

@@ -17,6 +17,7 @@ import org.realityforge.webtack.model.AttributeMember;
 import org.realityforge.webtack.model.AttributedNode;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
@@ -373,6 +374,7 @@ final class JavaizeEventHandlersProcessor
                                        @Nonnull final Map<String, CallbackDefinition> callbacks,
                                        @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
                                        @Nonnull final Map<String, EnumerationDefinition> enumerations,
+                                       @Nonnull final Map<String, ConstEnumerationDefinition> constEnumerations,
                                        @Nonnull final Map<String, DictionaryDefinition> dictionaries,
                                        @Nonnull final Map<String, List<PartialDictionaryDefinition>> partialDictionaries,
                                        @Nonnull final Map<String, NamespaceDefinition> namespaces,
@@ -404,6 +406,7 @@ final class JavaizeEventHandlersProcessor
                                callbacks,
                                callbackInterfaces,
                                enumerations,
+                               constEnumerations,
                                dictionaries,
                                partialDictionaries,
                                namespaces,

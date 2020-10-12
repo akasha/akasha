@@ -48,13 +48,6 @@ public final class ExtendedAttributes
    * A custom extended property that specifies the name of a java annotation that is added to the the specified element.
    */
   public static final String JAVA_ANNOTATION = "JavaAnnotation";
-  /**
-   * A custom extended property that can be applied to interfaces that defines a "logical enumeration" consisting of
-   * several constants within the interface. i.e.
-   *
-   * ConstEnumeration=ReadyStateType(UNSENT,OPENED,HEADERS_RECEIVED,LOADING,DONE)
-   */
-  public static final String CONST_ENUMERATION = "ConstEnumeration";
 
   private ExtendedAttributes()
   {

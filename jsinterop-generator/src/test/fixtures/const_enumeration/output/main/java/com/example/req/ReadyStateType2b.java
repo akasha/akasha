@@ -15,5 +15,5 @@ import org.intellij.lang.annotations.MagicConstant;
         XMLHR2.DONE
     }
 )
-public @interface ReadyStateType2 {
+public @interface ReadyStateType2b {
 }
