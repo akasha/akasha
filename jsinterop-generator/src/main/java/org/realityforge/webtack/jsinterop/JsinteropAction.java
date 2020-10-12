@@ -1120,8 +1120,6 @@ final class JsinteropAction
     final String name = definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        // The type "console" starts with a lower case name due to legacy reasons.
-        // This next line just makes sure that an uppercase is used for the java type
         .classBuilder( rawLookupClassName( definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
