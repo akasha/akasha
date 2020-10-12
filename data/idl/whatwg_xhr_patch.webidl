@@ -1,4 +1,4 @@
-const enum ReadyStateType {
+const enum XMLHttpRequestReadyStateType {
   XMLHttpRequest.UNSENT,
   XMLHttpRequest.OPENED,
   XMLHttpRequest.HEADERS_RECEIVED,
