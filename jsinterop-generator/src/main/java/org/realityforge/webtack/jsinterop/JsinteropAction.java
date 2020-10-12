@@ -2136,12 +2136,7 @@ final class JsinteropAction
     schema.getCallbacks().forEach( this::registerDefinition );
     schema.getCallbackInterfaces().forEach( this::registerDefinition );
     schema.getDictionaries().forEach( this::registerDefinition );
-    for ( final EnumerationDefinition definition : schema.getEnumerations() )
-    {
-      registerDefinition( definition );
-      // Force the lookup of the underlying Enumeration to guarantee it is part of output type catalog
-      rawLookupClassName( definition.getName() );
-    }
+    schema.getEnumerations().forEach( this::registerDefinition );
     schema.getConstEnumerations().forEach( this::registerDefinition );
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
