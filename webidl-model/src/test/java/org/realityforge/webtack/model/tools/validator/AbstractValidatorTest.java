@@ -18,4 +18,9 @@ public abstract class AbstractValidatorTest
     assertErrorCount( errors, errorCount );
     return errors;
   }
+
+  protected final void assertSingleError( @Nonnull final String filename, @Nonnull final String message )
+  {
+    assertErrorPresent( validate( loadTestLocalSchema( filename ), 1 ), message );
+  }
 }

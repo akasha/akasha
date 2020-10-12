@@ -1,6 +1,5 @@
 package org.realityforge.webtack.model.tools.validator;
 
-import java.util.Collection;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.testng.annotations.Test;
@@ -184,9 +183,7 @@ public final class TypeReferenceValidatorTest
 
   private void assertError( @Nonnull final String filename, @Nonnull final String message )
   {
-    final WebIDLSchema schema = loadTestLocalSchema( filename );
-    final Collection<ValidationError> errors = validate( schema, 1 );
-    assertErrorPresent( errors, message );
+    assertSingleError( filename, message );
   }
 
   @Nonnull
