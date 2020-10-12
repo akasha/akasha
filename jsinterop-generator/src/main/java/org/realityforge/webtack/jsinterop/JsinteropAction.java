@@ -463,11 +463,16 @@ final class JsinteropAction
       else
       {
         final boolean nullable = getSchema().isNullable( type );
-        values.add( new TypedValue( declaredType,
-                                    type,
-                                    toTypeName( type ),
-                                    nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
-                                    false ) );
+        TypeName javaType = toTypeName( type );
+        if ( nullable )
+        {
+          javaType = javaType.box();
+        }
+        final TypedValue.Nullability nullability =
+          javaType.isPrimitive() ? TypedValue.Nullability.NA :
+          nullable ? TypedValue.Nullability.NULLABLE :
+          TypedValue.Nullability.NONNULL;
+        values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
       }
     }
     else if ( Kind.Any == kind )
