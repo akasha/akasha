@@ -34,6 +34,7 @@ public final class ValidatorTool
       validators.add( new PartialNamespaceValidator() );
     }
     validators.add( new TypeReferenceValidator() );
+    validators.add( new ConstEnumerationValidator() );
     return new AggregateValidator( validators );
   }
 }

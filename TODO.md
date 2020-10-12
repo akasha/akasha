@@ -36,9 +36,7 @@ complete as there is too much un-said.
     referenced use the enums. This includes GL method arguments such as in `WebGLRenderingContext.bindBuffer()` as
     `XMLHttpRequest.readyState` etc.
 
-* Add validation for `ConstEnumeration` - the identListName must be unique over idl namespace, the constants must
-  exist and be of the same types and the type must be integer or string types, there must be no duplicate constant
-  names. Any reference to the constant must have a matching type.
+* Add validation for `ConstEnumeration`. Any reference to the constant must have a matching type.
 
 * Remove dependency on `elemental2-core`
 
