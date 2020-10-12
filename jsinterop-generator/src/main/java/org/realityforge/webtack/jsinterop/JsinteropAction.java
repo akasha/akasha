@@ -221,19 +221,9 @@ final class JsinteropAction
     type.addAnnotation( Documented.class );
 
     final AnnotationSpec.Builder annotation = AnnotationSpec.builder( BasicTypes.MAGIC_CONSTANT );
-    final ConstEnumerationValue firstValue = definition.getValues().get( 0 );
-    final String paramName =
-      getSchema()
-        .getInterfaceByName( firstValue.getInterfaceName() )
-        .getConstants()
-        .stream()
-        .filter( c -> c.getName().equals( firstValue.getConstName() ) )
-        .map( c -> c.getType().getKind().isInteger() ? "intValues" : "stringValues" )
-        .findFirst()
-        .orElse( "intValues" );
     for ( final ConstEnumerationValue value : definition.getValues() )
     {
-      annotation.addMember( paramName, "$T.$N", lookupClassName( value.getInterfaceName() ), value.getConstName() );
+      annotation.addMember( "intValues", "$T.$N", lookupClassName( value.getInterfaceName() ), value.getConstName() );
     }
     type.addAnnotation( annotation.build() );
 
