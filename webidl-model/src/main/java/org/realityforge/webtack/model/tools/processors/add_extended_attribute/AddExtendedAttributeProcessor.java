@@ -8,6 +8,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.ExtendedAttribute;
@@ -66,6 +67,19 @@ final class AddExtendedAttributeProcessor
                                             expandExtendedAttributes( input.getExtendedAttributes() ) :
                                             transformExtendedAttributes( input.getExtendedAttributes() ),
                                             transformSourceLocations( input.getSourceLocations() ) );
+  }
+
+  @Nonnull
+  @Override
+  protected ConstEnumerationDefinition transformConstEnumeration( @Nonnull final ConstEnumerationDefinition input )
+  {
+    return new ConstEnumerationDefinition( input.getName(),
+                                           transformConstEnumerationValues( input.getValues() ),
+                                           transformDocumentation( input.getDocumentation() ),
+                                           matches( input ) ?
+                                           expandExtendedAttributes( input.getExtendedAttributes() ) :
+                                           transformExtendedAttributes( input.getExtendedAttributes() ),
+                                           transformSourceLocations( input.getSourceLocations() ) );
   }
 
   @Nonnull
@@ -250,6 +264,11 @@ final class AddExtendedAttributeProcessor
   private boolean matches( @Nonnull final PartialMixinDefinition input )
   {
     return matchesType( ElementType.mixin ) && matchesName( input.getName() );
+  }
+
+  private boolean matches( @Nonnull final ConstEnumerationDefinition input )
+  {
+    return matchesType( ElementType.const_enumeration ) && matchesName( input.getName() );
   }
 
   private boolean matches( @Nonnull final EnumerationDefinition input )
