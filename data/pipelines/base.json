@@ -299,6 +299,17 @@
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
+        "elementNamePattern": "^HTMLTrackElement$",
+        "memberNamePattern": "^readyState$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^WebSocket$",
         "memberNamePattern": "^readyState$",
         "types": ["interface_type"]

@@ -901,3 +901,14 @@ const enum WebSocketReadyStateType {
 partial interface WebSocket {
   readonly attribute WebSocketReadyStateType readyState;
 };
+
+const enum HTMLTrackElementReadyStateType {
+  HTMLTrackElement.NONE,
+  HTMLTrackElement.LOADING,
+  HTMLTrackElement.LOADED,
+  HTMLTrackElement.ERROR
+};
+
+partial interface HTMLTrackElement {
+  readonly attribute HTMLTrackElementReadyStateType readyState;
+};
