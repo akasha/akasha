@@ -404,12 +404,14 @@
       }
     },
     {
-      "name": "AddExtendedAttribute",
-      "description": "Define ConstEnumeration to improve typing",
+      "name": "RemoveMember",
+      "description": "Change the type of the type attribute to a const enumeration for improved typing",
       "sourceSelector": "name=whatwg_xhr",
       "config": {
-        "namePattern": "^XMLHttpRequest$",
-        "extendedAttribute": "ConstEnumeration=ReadyStateType(UNSENT,OPENED,HEADERS_RECEIVED,LOADING,DONE)"
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^XMLHttpRequest$",
+        "memberNamePattern": "^readyState$",
+        "types": ["interface_type"]
       }
     },
     {

@@ -5,3 +5,7 @@ const enum XMLHttpRequestReadyStateType {
   XMLHttpRequest.LOADING,
   XMLHttpRequest.DONE
 };
+
+partial interface XMLHttpRequest {
+  readonly attribute XMLHttpRequestReadyStateType readyState;
+};
