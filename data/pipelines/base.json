@@ -310,6 +310,28 @@
       "sourceSelector": "name=whatwg_html",
       "config": {
         "expectedRemoveCount": 1,
+        "elementNamePattern": "^MediaError$",
+        "memberNamePattern": "^code$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 2,
+        "elementNamePattern": "^HTMLMediaElement$",
+        "memberNamePattern": "^(readyState|networkState)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^WebSocket$",
         "memberNamePattern": "^readyState$",
         "types": ["interface_type"]

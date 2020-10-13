@@ -912,3 +912,34 @@ const enum HTMLTrackElementReadyStateType {
 partial interface HTMLTrackElement {
   readonly attribute HTMLTrackElementReadyStateType readyState;
 };
+
+const enum MediaErrorCodeType {
+  MediaError.MEDIA_ERR_ABORTED,
+  MediaError.MEDIA_ERR_NETWORK,
+  MediaError.MEDIA_ERR_DECODE,
+  MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED
+};
+
+partial interface MediaError {
+  readonly attribute MediaErrorCodeType code;
+};
+
+const enum HTMLMediaElementReadyStateType {
+  HTMLMediaElement.HAVE_NOTHING,
+  HTMLMediaElement.HAVE_CURRENT_DATA,
+  HTMLMediaElement.HAVE_METADATA,
+  HTMLMediaElement.HAVE_FUTURE_DATA,
+  HTMLMediaElement.HAVE_ENOUGH_DATA
+};
+
+const enum HTMLMediaElementNetworkStateType {
+  HTMLMediaElement.NETWORK_EMPTY,
+  HTMLMediaElement.NETWORK_IDLE,
+  HTMLMediaElement.NETWORK_LOADING,
+  HTMLMediaElement.NETWORK_NO_SOURCE
+};
+
+partial interface HTMLMediaElement {
+  readonly attribute HTMLMediaElementNetworkStateType networkState;
+  readonly attribute HTMLMediaElementReadyStateType readyState;
+};
