@@ -10,10 +10,6 @@
         "name": "atomics"
     },
     {
-        "lastModifiedTime": 0,
-        "name": "errors"
-    },
-    {
         "lastModifiedTime": 1597831120000,
         "name": "background_sync",
         "url": "https://wicg.github.io/background-sync/spec/"
@@ -107,6 +103,10 @@
         "lastModifiedTime": 1576730851000,
         "name": "encrypted_media",
         "url": "https://www.w3.org/TR/encrypted-media/"
+    },
+    {
+        "lastModifiedTime": 0,
+        "name": "errors"
     },
     {
         "lastModifiedTime": 1597769018000,
