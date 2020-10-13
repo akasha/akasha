@@ -8,6 +8,34 @@ callback Function = any ( any... arguments );
 
 callback VoidFunction = void ();
 
+const enum DOMExceptionCode {
+  DOMException.INDEX_SIZE_ERR,
+  DOMException.DOMSTRING_SIZE_ERR,
+  DOMException.HIERARCHY_REQUEST_ERR,
+  DOMException.WRONG_DOCUMENT_ERR,
+  DOMException.INVALID_CHARACTER_ERR,
+  DOMException.NO_DATA_ALLOWED_ERR,
+  DOMException.NO_MODIFICATION_ALLOWED_ERR,
+  DOMException.NOT_FOUND_ERR,
+  DOMException.NOT_SUPPORTED_ERR,
+  DOMException.INUSE_ATTRIBUTE_ERR,
+  DOMException.INVALID_STATE_ERR,
+  DOMException.SYNTAX_ERR,
+  DOMException.INVALID_MODIFICATION_ERR,
+  DOMException.NAMESPACE_ERR,
+  DOMException.INVALID_ACCESS_ERR,
+  DOMException.VALIDATION_ERR,
+  DOMException.TYPE_MISMATCH_ERR,
+  DOMException.SECURITY_ERR,
+  DOMException.NETWORK_ERR,
+  DOMException.ABORT_ERR,
+  DOMException.URL_MISMATCH_ERR,
+  DOMException.QUOTA_EXCEEDED_ERR,
+  DOMException.TIMEOUT_ERR,
+  DOMException.INVALID_NODE_TYPE_ERR,
+  DOMException.DATA_CLONE_ERR
+};
+
 [Exposed=(Window,Worker), Serializable]
 interface DOMException : Error {
   const unsigned short ABORT_ERR = 20;
@@ -35,6 +63,6 @@ interface DOMException : Error {
   const unsigned short URL_MISMATCH_ERR = 21;
   const unsigned short VALIDATION_ERR = 16;
   const unsigned short WRONG_DOCUMENT_ERR = 4;
-  readonly attribute unsigned short code;
+  readonly attribute DOMException code;
   constructor( optional DOMString message = "", optional DOMString name = "Error" );
 };
