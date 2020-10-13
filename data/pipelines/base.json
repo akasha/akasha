@@ -227,6 +227,17 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=navigation_timing",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^PerformanceNavigation$",
+        "memberNamePattern": "^type$",
+        "types": ["interface_type"]
+      }
+    },
+    {
       "name": "AddExtendedAttributeToArgument",
       "description": "Annotate postMessage methods to indicate that they can take Transferables",
       "sourceSelector": "name=whatwg_html name=serviceworker",

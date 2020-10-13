@@ -194,6 +194,10 @@
         "url": "https://w3c.github.io/navigation-timing/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "navigation_timing_patch"
+    },
+    {
         "lastModifiedTime": 1600183756000,
         "name": "page_visibility",
         "url": "https://w3c.github.io/page-visibility/"
