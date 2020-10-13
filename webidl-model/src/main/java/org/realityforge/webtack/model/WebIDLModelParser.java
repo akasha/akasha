@@ -668,11 +668,11 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static AttributeMember parse( @Nonnull final WebIDLParser.ReadWriteAttributeContext ctx,
-                                @Nonnull final Set<AttributeMember.Modifier> modifiers,
-                                @Nullable final DocumentationElement documentation,
-                                @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                                @Nonnull final SourcePosition startPosition )
+  public static AttributeMember parse( @Nonnull final WebIDLParser.ReadWriteAttributeContext ctx,
+                                       @Nonnull final Set<AttributeMember.Modifier> modifiers,
+                                       @Nullable final DocumentationElement documentation,
+                                       @Nonnull final List<ExtendedAttribute> extendedAttributes,
+                                       @Nonnull final SourcePosition startPosition )
   {
     if ( ctx.getChildCount() > 1 )
     {
@@ -2015,7 +2015,7 @@ public final class WebIDLModelParser
   }
 
   @Nonnull
-  static SourcePosition parseSourcePosition( @Nonnull final Token token )
+  public static SourcePosition parseSourcePosition( @Nonnull final Token token )
   {
     return new SourcePosition( token.getTokenSource().getSourceName(), token.getLine(), token.getCharPositionInLine() );
   }
