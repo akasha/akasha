@@ -85,6 +85,7 @@ public final class AddExtendedAttributeToMemberProcessorTest
                                        .add( "expectedAddCount", expectedAddCount )
                                        .add( "elementNamePattern", elementNamePattern )
                                        .add( "memberNamePattern", memberNamePattern )
-                                       .add( "extendedAttribute", extendedAttribute ).build() );
+                                       .add( "extendedAttribute", extendedAttribute )
+                                       .build() );
   }
 }
