@@ -880,3 +880,13 @@ const enum ApplicationCacheStatusType {
 partial interface ApplicationCache {
   readonly attribute ApplicationCacheStatusType status;
 };
+
+const enum EventSourceReadyStateType {
+  EventSource.CONNECTING,
+  EventSource.OPEN,
+  EventSource.CLOSED
+};
+
+partial interface EventSource {
+  readonly attribute EventSourceReadyStateType readyState;
+};
