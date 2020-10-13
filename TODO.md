@@ -110,6 +110,9 @@ Generate host element factories: Events would need to be specially handled to ma
 
 # Other
 
+* Add a processor that changes the type of a operation, attribute, dictionary member etc to specific type.
+  Change the way we enhance schemas for adding `enum` and `const enum` support to libraries.
+
 * Convert several other ECMA namespaces/types from https://tc39.es/ecma262/ to WebIDL
 
 * Create a ruby or java DSL that builds up the pipeline configuration.
