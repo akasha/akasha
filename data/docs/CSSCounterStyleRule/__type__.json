@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "CSSCounterStyleRule",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSCounterStyleRule",
+    "description": "The CSSCounterStyleRule interface represents an @counter-style at-rule."
+}

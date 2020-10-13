@@ -59,6 +59,11 @@
         "url": "https://drafts.csswg.org/css-conditional-3/"
     },
     {
+        "lastModifiedTime": 1602625057000,
+        "name": "css_counter_styles_3",
+        "url": "https://drafts.csswg.org/css-counter-styles-3/"
+    },
+    {
         "lastModifiedTime": 1550757539000,
         "name": "css_fonts_3",
         "url": "https://www.w3.org/TR/css-fonts-3/"
