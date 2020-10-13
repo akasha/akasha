@@ -64,6 +64,7 @@ public final class AddExtendedAttributeToArgumentProcessorTest
                                        .add( "elementNamePattern", elementNamePattern )
                                        .add( "operationNamePattern", operationNamePattern )
                                        .add( "argumentNamePattern", argumentNamePattern )
-                                       .add( "extendedAttribute", extendedAttribute ).build() );
+                                       .add( "extendedAttribute", extendedAttribute )
+                                       .build() );
   }
 }
