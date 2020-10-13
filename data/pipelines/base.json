@@ -681,6 +681,18 @@
       }
     },
     {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^createShader$",
+        "argumentNamePattern": "^type$",
+        "type": "ShaderType"
+      }
+    },
+    {
       "name": "AddExtendedAttributeToMember",
       "description": "Annotate a couple of methods that are expected to contain GLSL fragments",
       "sourceSelector": "name=webgl.*",

@@ -359,6 +359,10 @@
         "url": "https://www.khronos.org/registry/webgl/specs/latest/2.0/webgl2.idl"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "webgl2_patch"
+    },
+    {
         "lastModifiedTime": 1599610523000,
         "name": "webgl_angle_instanced_arrays",
         "url": "https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/"
