@@ -216,6 +216,17 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=geolocation_api",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^PositionError$",
+        "memberNamePattern": "^code$",
+        "types": ["interface_type"]
+      }
+    },
+    {
       "name": "AddExtendedAttributeToArgument",
       "description": "Annotate postMessage methods to indicate that they can take Transferables",
       "sourceSelector": "name=whatwg_html name=serviceworker",
