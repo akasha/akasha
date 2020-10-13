@@ -1601,7 +1601,7 @@ final class JsinteropAction
     {
       method.addAnnotation( BasicTypes.NULLABLE );
     }
-    else if ( !actualType.getKind().isPrimitive() )
+    else if ( !actualJavaType.isPrimitive() )
     {
       method.addAnnotation( BasicTypes.NONNULL );
     }

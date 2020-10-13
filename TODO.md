@@ -20,23 +20,9 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
-* Java: Add an extended attribute ala `[values=[Value1,Value2]]` that indicates either the value returned by an
-  operation, the value of an attribute, the value passed as an argument must comply with the values in set.
-  This will result in a `@MagicConstant` being generated for the element. The first implementation will just
-  support enumeration types and the values in the `values` list will be the strings that are part of enumeration
-  set. The second phase will be for numeric values and it is expected the values within `values` list are
-  constants of the same type in the declaring element.
-  - add a processor that makes adding `values` extended attribute to appropriate elements. Maybe adapt
-    `AddExtendedAttribute` to cover this capability?
-  - Consider adding `valuesSource=SomeType` that names an interface/enumeration from which to source values.
-  - Add validation that verifies the values extended attribute appears in the correct locations in WebIDL, references
-    values that exist, contains at least 1 value, references constants of the correct type and appears on members
-    of the correct type (i.e. Cannot annotate a reference to an interface)
-  - Group all the `const` values specified in spec into numeric enumerations and make sure all the places they are
-    referenced use the enums. This includes GL method arguments such as in `WebGLRenderingContext.bindBuffer()` as
-    `XMLHttpRequest.readyState` etc.
-
-* Add validation for `ConstEnumeration`. Any reference to the constant must have a matching type.
+* Expand `const enum` support to cover of all APIs. Group all the `const` values specified in spec IDL
+  and make sure all the places they are referenced use the enums. This includes GL method arguments such
+  as in `WebGLRenderingContext.bindBuffer()` as `XMLHttpRequest.readyState` etc.
 
 * Remove dependency on `elemental2-core`
 

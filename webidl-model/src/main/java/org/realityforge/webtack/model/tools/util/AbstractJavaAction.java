@@ -26,6 +26,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.lang.model.SourceVersion;
 import org.realityforge.webtack.model.Attributed;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
+import org.realityforge.webtack.model.ConstEnumerationValue;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.FrozenArrayType;
@@ -512,18 +514,30 @@ public abstract class AbstractJavaAction
       }
       else
       {
-        final TypedefDefinition typedef = _schema.getTypedefByName( name );
-        if ( Kind.Union == typedef.getType().getKind() )
+        final ConstEnumerationDefinition definition = _schema.findConstEnumerationByName( name );
+        if ( null != definition )
         {
-          // TODO: There is a single named union in the HTML API which is MediaProvider. We
-          //  could live with including this unnecessary abstraction or copy the logic for
-          //  expanding types from jsinterop generator and expand this to it's subtypes ala
-          //  MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
-          return lookupClassName( name );
+          final ConstEnumerationValue value = definition.getValues().get( 0 );
+          return toTypeName( _schema
+                               .getInterfaceByName( value.getInterfaceName() )
+                               .getConstantByName( value.getConstName() )
+                               .getType() );
         }
         else
         {
-          return toTypeName( typedef.getType() );
+          final TypedefDefinition typedef = _schema.getTypedefByName( name );
+          if ( Kind.Union == typedef.getType().getKind() )
+          {
+            // TODO: There is a single named union in the HTML API which is MediaProvider. We
+            //  could live with including this unnecessary abstraction or copy the logic for
+            //  expanding types from jsinterop generator and expand this to it's subtypes ala
+            //  MediaStream, MediaSource or Blob. At the moment the extra complexity is unjustified
+            return lookupClassName( name );
+          }
+          else
+          {
+            return toTypeName( typedef.getType() );
+          }
         }
       }
     }
@@ -660,6 +674,12 @@ public abstract class AbstractJavaAction
     return AnnotationSpec.builder( lookupClassName( enumeration.getName() ) ).build();
   }
 
+  @Nonnull
+  private AnnotationSpec emitMagicConstantAnnotation( @Nonnull final ConstEnumerationDefinition enumeration )
+  {
+    return AnnotationSpec.builder( lookupClassName( enumeration.getName() ) ).build();
+  }
+
   protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
                                                            @Nonnull final ParameterSpec.Builder parameter )
   {
@@ -671,33 +691,51 @@ public abstract class AbstractJavaAction
       {
         parameter.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
       }
-    }
-  }
-
-  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
-                                                           @Nonnull final MethodSpec.Builder method )
-  {
-    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
-    {
-      final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
-      if ( null != enumeration )
+      final ConstEnumerationDefinition constEnumeration =
+        _schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
+      if ( null != constEnumeration )
       {
-        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+        parameter.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
       }
     }
   }
 
-  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type returnType,
-                                                           @Nonnull final FieldSpec.Builder field )
+  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
+                                                           @Nonnull final MethodSpec.Builder method )
   {
-    if ( _enableMagicConstants && Kind.TypeReference == returnType.getKind() )
+    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
     {
       final EnumerationDefinition enumeration =
-        _schema.findEnumerationByName( ( (TypeReference) returnType ).getName() );
+        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
+      if ( null != enumeration )
+      {
+        method.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+      final ConstEnumerationDefinition constEnumeration =
+        _schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
+      if ( null != constEnumeration )
+      {
+        method.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
+      }
+    }
+  }
+
+  protected final void addMagicConstantAnnotationIfNeeded( @Nonnull final Type type,
+                                                           @Nonnull final FieldSpec.Builder field )
+  {
+    if ( _enableMagicConstants && Kind.TypeReference == type.getKind() )
+    {
+      final EnumerationDefinition enumeration =
+        _schema.findEnumerationByName( ( (TypeReference) type ).getName() );
       if ( null != enumeration )
       {
         field.addAnnotation( emitMagicConstantAnnotation( enumeration ) );
+      }
+      final ConstEnumerationDefinition constEnumeration =
+        _schema.findConstEnumerationByName( ( (TypeReference) type ).getName() );
+      if ( null != constEnumeration )
+      {
+        field.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
       }
     }
   }

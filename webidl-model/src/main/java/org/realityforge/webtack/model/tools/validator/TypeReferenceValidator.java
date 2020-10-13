@@ -356,6 +356,7 @@ final class TypeReferenceValidator
       if ( null == schema.findInterfaceByName( name ) &&
            null == schema.findDictionaryByName( name ) &&
            null == schema.findEnumerationByName( name ) &&
+           null == schema.findConstEnumerationByName( name ) &&
            null == schema.findCallbackByName( name ) &&
            null == schema.findCallbackInterfaceByName( name ) &&
            null == schema.findTypedefByName( name ) )

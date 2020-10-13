@@ -22,9 +22,28 @@ interface XMLHttpRequest {
   const unsigned short LOADING = 3;
   const unsigned short OPENED = 1;
   const unsigned short UNSENT = 0;
-  readonly attribute unsigned short readyState;
+  /**
+   * readonly attribute is a const enum.
+   */
+  readonly attribute ReadyStateType readyState;
+  /**
+   * regular attribute is a const enum.
+   */
+  attribute ReadyStateType otherReadyState;
+  constructor( ReadyStateType value );
+  /**
+   * operation return value is a const enum.
+   */
+  ReadyStateType getSample();
+  /**
+   * operation argument is an enum.
+   */
+  undefined setSample( ReadyStateType sample );
 };
 
+/**
+ * Type and associated const enum is in a separate package.
+ */
 [Exposed=(Window,DedicatedWorker,SharedWorker), JavaSubPackage=req, JavaName=XMLHR2]
 interface XMLHttpRequest2 {
   const unsigned short DONE = 4;
@@ -32,5 +51,5 @@ interface XMLHttpRequest2 {
   const unsigned short LOADING = 3;
   const unsigned short OPENED = 1;
   const unsigned short UNSENT = 0;
-  readonly attribute unsigned short readyState;
+  readonly attribute ReadyStateType2 readyState;
 };

@@ -6,6 +6,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * Type and associated const enum is in a separate package.
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -34,5 +37,6 @@ public class XMLHR2 {
   @JsProperty(
       name = "readyState"
   )
+  @ReadyStateType2b
   public native int readyState();
 }

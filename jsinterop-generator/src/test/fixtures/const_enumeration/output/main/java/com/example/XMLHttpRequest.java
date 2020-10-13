@@ -1,6 +1,7 @@
 package com.example;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
@@ -28,11 +29,34 @@ public class XMLHttpRequest {
   @JsOverlay
   public static final int UNSENT = 0;
 
-  protected XMLHttpRequest() {
+  /**
+   * regular attribute is a const enum.
+   */
+  @Nonnull
+  @ReadyStateType
+  public int otherReadyState;
+
+  public XMLHttpRequest(@ReadyStateType final int value) {
   }
 
+  /**
+   * readonly attribute is a const enum.
+   */
   @JsProperty(
       name = "readyState"
   )
+  @ReadyStateType
   public native int readyState();
+
+  /**
+   * operation return value is a const enum.
+   */
+  @ReadyStateType
+  @Nonnull
+  public native int getSample();
+
+  /**
+   * operation argument is an enum.
+   */
+  public native void setSample(@ReadyStateType int sample);
 }
