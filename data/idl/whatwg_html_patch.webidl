@@ -890,3 +890,14 @@ const enum EventSourceReadyStateType {
 partial interface EventSource {
   readonly attribute EventSourceReadyStateType readyState;
 };
+
+const enum WebSocketReadyStateType {
+  WebSocket.CONNECTING,
+  WebSocket.OPEN,
+  WebSocket.CLOSING,
+  WebSocket.CLOSED
+};
+
+partial interface WebSocket {
+  readonly attribute WebSocketReadyStateType readyState;
+};
