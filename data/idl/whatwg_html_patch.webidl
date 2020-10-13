@@ -867,3 +867,16 @@ enum RenderContextType {
 partial interface HTMLCanvasElement {
   RenderingContext? getContext( RenderContextType contextId, optional (CanvasRenderingContext2DSettings or ImageBitmapRenderingContextSettings or WebGLContextAttributes) options = null );
 };
+
+const enum ApplicationCacheStatusType {
+  ApplicationCache.UNCACHED,
+  ApplicationCache.IDLE,
+  ApplicationCache.CHECKING,
+  ApplicationCache.DOWNLOADING,
+  ApplicationCache.UPDATEREADY,
+  ApplicationCache.OBSOLETE
+};
+
+partial interface ApplicationCache {
+  readonly attribute ApplicationCacheStatusType status;
+};

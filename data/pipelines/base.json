@@ -273,6 +273,17 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_html",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^ApplicationCache$",
+        "memberNamePattern": "^status$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "Change the type of the autocomplete attribute to an enumeration for improved typing",
       "sourceSelector": "name=whatwg_html",
       "config": {
