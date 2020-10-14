@@ -238,6 +238,17 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=cssom",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^CSSRule$",
+        "memberNamePattern": "^type$",
+        "types": ["interface_type"]
+      }
+    },
+    {
       "name": "AddExtendedAttributeToArgument",
       "description": "Annotate postMessage methods to indicate that they can take Transferables",
       "sourceSelector": "name=whatwg_html name=serviceworker",
