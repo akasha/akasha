@@ -20,10 +20,6 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
-* Expand `const enum` support to cover of all APIs. Group all the `const` values specified in spec IDL
-  and make sure all the places they are referenced use the enums. This includes GL method arguments such
-  as in `WebGLRenderingContext.bindBuffer()` as `XMLHttpRequest.readyState` etc.
-
 * Remove dependency on `elemental2-core`
 
 * Generate error if bad data passed for config in stages
@@ -148,6 +144,8 @@ Generate host element factories: Events would need to be specially handled to ma
 
 * It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
   The Gecko WebIDL files actually have a `[Throws]` extended attribute that we could look into to drive this?
+
+* Expand `const enum` support to cover off all remaining APIs such as `svg` and `gl`.
 
 ### Validations
 
