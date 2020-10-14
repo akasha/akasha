@@ -7,6 +7,7 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.IncludesStatement;
@@ -98,6 +99,13 @@ final class RemoveElementProcessor
   protected EnumerationDefinition transformEnumeration( @Nonnull final EnumerationDefinition input )
   {
     return matches( input ) ? incRemoveCountAndReturnNull() : super.transformEnumeration( input );
+  }
+
+  @Nullable
+  @Override
+  protected ConstEnumerationDefinition transformConstEnumeration( @Nonnull final ConstEnumerationDefinition input )
+  {
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformConstEnumeration( input );
   }
 
   @Nullable
@@ -194,6 +202,11 @@ final class RemoveElementProcessor
   }
 
   private boolean matches( @Nonnull final EnumerationDefinition input )
+  {
+    return matchesType( ElementType.enumeration ) && matchesName( input.getName() );
+  }
+
+  private boolean matches( @Nonnull final ConstEnumerationDefinition input )
   {
     return matchesType( ElementType.enumeration ) && matchesName( input.getName() );
   }

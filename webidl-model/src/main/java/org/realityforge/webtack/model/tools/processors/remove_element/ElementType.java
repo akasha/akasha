@@ -6,6 +6,7 @@ public enum ElementType
   callback_interface,
   dictionary,
   enumeration,
+  const_enumeration,
   interface_type,
   mixin,
   namespace

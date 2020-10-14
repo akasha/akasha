@@ -35,6 +35,13 @@ public final class RemoveElementProcessorTest
   }
 
   @Test
+  public void remove_const_enum()
+    throws Exception
+  {
+    performStandardFixtureTest( "remove_const_enum", () -> createProcessor( "^DOMExceptionCode$" ) );
+  }
+
+  @Test
   public void remove_dictionary()
     throws Exception
   {
