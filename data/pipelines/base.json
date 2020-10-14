@@ -665,6 +665,17 @@
       }
     },
     {
+      "name": "RemoveMember",
+      "description": "Change the type to convert to a const enumeration for improved typing",
+      "sourceSelector": "name=fileapi",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^FileReader$",
+        "memberNamePattern": "^readyState$",
+        "types": ["interface_type"]
+      }
+    },
+    {
       "name": "Merge"
     },
     {
