@@ -603,6 +603,28 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "sourceSelector": "name=uievents",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^KeyboardEvent$",
+        "memberNamePattern": "^location$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "sourceSelector": "name=uievents",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^WheelEvent$",
+        "memberNamePattern": "^deltaMode$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "this is a legacy API that was left for backwards compatibility but causes issues in GWT because the objects returned used prototypes from the top level page rather than the containing iframe",
       "sourceSelector": "name=mediacapture_main",
       "config": {
