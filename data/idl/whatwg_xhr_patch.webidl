@@ -1,4 +1,4 @@
-const enum XMLHttpRequestReadyStateType {
+const enum XMLHttpRequestReadyState {
   XMLHttpRequest.UNSENT,
   XMLHttpRequest.OPENED,
   XMLHttpRequest.HEADERS_RECEIVED,
@@ -7,5 +7,5 @@ const enum XMLHttpRequestReadyStateType {
 };
 
 partial interface XMLHttpRequest {
-  readonly attribute XMLHttpRequestReadyStateType readyState;
+  readonly attribute XMLHttpRequestReadyState readyState;
 };

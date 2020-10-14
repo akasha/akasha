@@ -868,7 +868,7 @@ partial interface HTMLCanvasElement {
   RenderingContext? getContext( RenderContextType contextId, optional (CanvasRenderingContext2DSettings or ImageBitmapRenderingContextSettings or WebGLContextAttributes) options = null );
 };
 
-const enum ApplicationCacheStatusType {
+const enum ApplicationCacheStatus {
   ApplicationCache.UNCACHED,
   ApplicationCache.IDLE,
   ApplicationCache.CHECKING,
@@ -878,20 +878,20 @@ const enum ApplicationCacheStatusType {
 };
 
 partial interface ApplicationCache {
-  readonly attribute ApplicationCacheStatusType status;
+  readonly attribute ApplicationCacheStatus status;
 };
 
-const enum EventSourceReadyStateType {
+const enum EventSourceReadyState {
   EventSource.CONNECTING,
   EventSource.OPEN,
   EventSource.CLOSED
 };
 
 partial interface EventSource {
-  readonly attribute EventSourceReadyStateType readyState;
+  readonly attribute EventSourceReadyState readyState;
 };
 
-const enum WebSocketReadyStateType {
+const enum WebSocketReadyState {
   WebSocket.CONNECTING,
   WebSocket.OPEN,
   WebSocket.CLOSING,
@@ -899,10 +899,10 @@ const enum WebSocketReadyStateType {
 };
 
 partial interface WebSocket {
-  readonly attribute WebSocketReadyStateType readyState;
+  readonly attribute WebSocketReadyState readyState;
 };
 
-const enum HTMLTrackElementReadyStateType {
+const enum HTMLTrackElementReadyState {
   HTMLTrackElement.NONE,
   HTMLTrackElement.LOADING,
   HTMLTrackElement.LOADED,
@@ -910,10 +910,10 @@ const enum HTMLTrackElementReadyStateType {
 };
 
 partial interface HTMLTrackElement {
-  readonly attribute HTMLTrackElementReadyStateType readyState;
+  readonly attribute HTMLTrackElementReadyState readyState;
 };
 
-const enum MediaErrorCodeType {
+const enum MediaErrorCode {
   MediaError.MEDIA_ERR_ABORTED,
   MediaError.MEDIA_ERR_NETWORK,
   MediaError.MEDIA_ERR_DECODE,
@@ -921,10 +921,10 @@ const enum MediaErrorCodeType {
 };
 
 partial interface MediaError {
-  readonly attribute MediaErrorCodeType code;
+  readonly attribute MediaErrorCode code;
 };
 
-const enum HTMLMediaElementReadyStateType {
+const enum HTMLMediaElementReadyState {
   HTMLMediaElement.HAVE_NOTHING,
   HTMLMediaElement.HAVE_CURRENT_DATA,
   HTMLMediaElement.HAVE_METADATA,
@@ -932,7 +932,7 @@ const enum HTMLMediaElementReadyStateType {
   HTMLMediaElement.HAVE_ENOUGH_DATA
 };
 
-const enum HTMLMediaElementNetworkStateType {
+const enum HTMLMediaElementNetworkState {
   HTMLMediaElement.NETWORK_EMPTY,
   HTMLMediaElement.NETWORK_IDLE,
   HTMLMediaElement.NETWORK_LOADING,
@@ -940,6 +940,6 @@ const enum HTMLMediaElementNetworkStateType {
 };
 
 partial interface HTMLMediaElement {
-  readonly attribute HTMLMediaElementNetworkStateType networkState;
-  readonly attribute HTMLMediaElementReadyStateType readyState;
+  readonly attribute HTMLMediaElementNetworkState networkState;
+  readonly attribute HTMLMediaElementReadyState readyState;
 };
