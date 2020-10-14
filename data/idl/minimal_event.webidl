@@ -23,6 +23,13 @@ dictionary EventInit {
   boolean composed = false;
 };
 
+const enum EventPhase {
+  Event.NONE,
+  Event.CAPTURING_PHASE,
+  Event.AT_TARGET,
+  Event.BUBBLING_PHASE
+};
+
 [Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   const unsigned short AT_TARGET = 2;
@@ -34,7 +41,7 @@ interface Event {
   readonly attribute boolean composed;
   readonly attribute EventTarget? currentTarget;
   readonly attribute boolean defaultPrevented;
-  readonly attribute unsigned short eventPhase;
+  readonly attribute EventPhase eventPhase;
   [LegacyUnforgeable]
   readonly attribute boolean isTrusted;
   readonly attribute EventTarget? srcElement;
