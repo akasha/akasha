@@ -625,6 +625,51 @@
     },
     {
       "name": "RemoveMember",
+      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_dom",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^Event$",
+        "memberNamePattern": "^eventPhase$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_dom",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^XPathResult$",
+        "memberNamePattern": "^resultType$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Change the type of the type attribute to a const enumeration for improved typing",
+      "sourceSelector": "name=whatwg_dom",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^Node$",
+        "memberNamePattern": "^nodeType$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=whatwg_dom",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^Range$",
+        "operationNamePattern": "^compareBoundaryPoints$",
+        "argumentNamePattern": "^how$",
+        "type": "RangeCompareType"
+      }
+    },
+    {
+      "name": "RemoveMember",
       "description": "this is a legacy API that was left for backwards compatibility but causes issues in GWT because the objects returned used prototypes from the top level page rather than the containing iframe",
       "sourceSelector": "name=mediacapture_main",
       "config": {

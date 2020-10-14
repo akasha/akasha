@@ -539,6 +539,10 @@
         "url": "https://dom.spec.whatwg.org/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "whatwg_dom_patch"
+    },
+    {
         "lastModifiedTime": 1601391536000,
         "name": "whatwg_encoding",
         "url": "https://encoding.spec.whatwg.org/"
