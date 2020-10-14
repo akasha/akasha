@@ -11,11 +11,12 @@ partial interface mixin GlobalEventHandlers {
   attribute EventHandler onanimationstart;
 };
 
-[Exposed=Window, Constructor( CSSOMString type, optional AnimationEventInit animationEventInitDict )]
+[Exposed=Window]
 interface AnimationEvent : Event {
   readonly attribute CSSOMString animationName;
   readonly attribute double elapsedTime;
   readonly attribute CSSOMString pseudoElement;
+  constructor( CSSOMString type, optional AnimationEventInit animationEventInitDict = {} );
 };
 
 [Exposed=Window]
@@ -29,8 +30,8 @@ interface CSSKeyframeRule : CSSRule {
 interface CSSKeyframesRule : CSSRule {
   readonly attribute CSSRuleList cssRules;
   attribute CSSOMString name;
-  void appendRule( CSSOMString rule );
-  void deleteRule( CSSOMString select );
+  undefined appendRule( CSSOMString rule );
+  undefined deleteRule( CSSOMString select );
   CSSKeyframeRule? findRule( CSSOMString select );
 };
 
