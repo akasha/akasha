@@ -25,3 +25,12 @@ const enum BufferTargetType {
   WebGL2RenderingContext.PIXEL_PACK_BUFFER,
   WebGL2RenderingContext.PIXEL_UNPACK_BUFFER
 };
+
+const enum DataType {
+  WebGL2RenderingContext.BYTE,
+  WebGL2RenderingContext.UNSIGNED_BYTE,
+  WebGL2RenderingContext.SHORT,
+  WebGL2RenderingContext.UNSIGNED_SHORT,
+  WebGL2RenderingContext.FLOAT,
+  WebGL2RenderingContext.HALF_FLOAT
+};
