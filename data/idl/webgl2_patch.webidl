@@ -44,3 +44,13 @@ const enum TextureTargetType {
   WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Z,
   WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Z
 };
+
+const enum DrawPrimitiveType {
+  WebGL2RenderingContext.POINTS,
+  WebGL2RenderingContext.LINE_STRIP,
+  WebGL2RenderingContext.LINE_LOOP,
+  WebGL2RenderingContext.LINES,
+  WebGL2RenderingContext.TRIANGLE_STRIP,
+  WebGL2RenderingContext.TRIANGLE_FAN,
+  WebGL2RenderingContext.TRIANGLES
+};
