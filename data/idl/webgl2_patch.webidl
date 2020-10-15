@@ -54,3 +54,9 @@ const enum DrawPrimitiveType {
   WebGL2RenderingContext.TRIANGLE_FAN,
   WebGL2RenderingContext.TRIANGLES
 };
+
+const enum DrawElementDataType {
+  WebGL2RenderingContext.UNSIGNED_BYTE,
+  WebGL2RenderingContext.UNSIGNED_SHORT,
+  WebGL2RenderingContext.UNSIGNED_INT
+};

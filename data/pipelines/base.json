@@ -922,6 +922,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 3,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(drawElements|drawElementsInstanced|drawRangeElements)$",
+        "argumentNamePattern": "^type$",
+        "type": "DrawElementDataType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 1,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^vertexAttribPointer$",
