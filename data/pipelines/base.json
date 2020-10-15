@@ -954,6 +954,19 @@
     },
     {
       "name": "AddExtendedAttributeToArgument",
+      "description": "Specify vertex dimensions",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedAddCount": 2,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(vertexAttribPointer|vertexAttribIPointer)$",
+        "argumentNamePattern": "^size$",
+        "extendedAttribute": "JavaAnnotation=\"elemental3.gl.VertexDimensions\""
+      }
+    },
+    ,
+    {
+      "name": "AddExtendedAttributeToArgument",
       "description": "Annotate a couple of method arguments that are expected to contain GLSL fragments",
       "sourceSelector": "name=webgl.*",
       "config": {
