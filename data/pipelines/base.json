@@ -912,7 +912,7 @@
       "config": {
         "expectedChangeCount": 8,
         "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^(bindBuffer$|bufferData|bufferSubData|getBufferParameter|getBufferSubData)$",
+        "operationNamePattern": "^(bindBuffer|bufferData|bufferSubData|getBufferParameter|getBufferSubData)$",
         "argumentNamePattern": "^target$",
         "type": "BufferTargetType"
       }
