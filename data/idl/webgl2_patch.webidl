@@ -54,3 +54,14 @@ const enum DrawPrimitiveType {
   WebGL2RenderingContext.TRIANGLE_FAN,
   WebGL2RenderingContext.TRIANGLES
 };
+
+const enum BufferType {
+  WebGL2RenderingContext.ARRAY_BUFFER,
+  WebGL2RenderingContext.ELEMENT_ARRAY_BUFFER,
+  WebGL2RenderingContext.COPY_READ_BUFFER,
+  WebGL2RenderingContext.COPY_WRITE_BUFFER,
+  WebGL2RenderingContext.TRANSFORM_FEEDBACK_BUFFER,
+  WebGL2RenderingContext.UNIFORM_BUFFER,
+  WebGL2RenderingContext.PIXEL_PACK_BUFFER,
+  WebGL2RenderingContext.PIXEL_UNPACK_BUFFER
+};

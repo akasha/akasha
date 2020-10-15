@@ -910,6 +910,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^bindBuffer$",
+        "argumentNamePattern": "^target$",
+        "type": "BufferType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 7,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(bufferData|bufferSubData|getBufferParameter|getBufferSubData)$",
