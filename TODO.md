@@ -63,6 +63,8 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
+
 * Add `[alias=SomeAlias]` extended attribute that will create an alias method via a `@JsOverlay` that calls base
   method. The alias method will also omit any arguments that have a `values=` extended attribute with a single value
 
