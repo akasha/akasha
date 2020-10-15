@@ -910,21 +910,9 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
-        "expectedChangeCount": 1,
+        "expectedChangeCount": 8,
         "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^bindBuffer$",
-        "argumentNamePattern": "^target$",
-        "type": "BufferType"
-      }
-    },
-    {
-      "name": "ChangeArgumentType",
-      "description": "Tighten up the parameter types",
-      "sourceSelector": "name=webgl.*",
-      "config": {
-        "expectedChangeCount": 7,
-        "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^(bufferData|bufferSubData|getBufferParameter|getBufferSubData)$",
+        "operationNamePattern": "^(bindBuffer$|bufferData|bufferSubData|getBufferParameter|getBufferSubData)$",
         "argumentNamePattern": "^target$",
         "type": "BufferTargetType"
       }
@@ -964,7 +952,6 @@
         "extendedAttribute": "JavaAnnotation=\"elemental3.gl.VertexDimensions\""
       }
     },
-    ,
     {
       "name": "AddExtendedAttributeToArgument",
       "description": "Annotate a couple of method arguments that are expected to contain GLSL fragments",
