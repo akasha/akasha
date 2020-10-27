@@ -22,6 +22,8 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
+* Change ArrayBufferView so it is interface implemented by TypeArrays
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
