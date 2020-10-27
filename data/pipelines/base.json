@@ -910,6 +910,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 5,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(bindTexture|generateMipmap|getTexParameter|texParameterf|texParameteri)$",
+        "argumentNamePattern": "^target$",
+        "type": "TextureTargetType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 3,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^bufferData$",
