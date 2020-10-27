@@ -35,7 +35,7 @@ const enum DataType {
   WebGL2RenderingContext.HALF_FLOAT
 };
 
-const enum TextureTargetType {
+const enum Texture2DSurfaceTargetType {
   WebGL2RenderingContext.TEXTURE_2D,
   WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X,
   WebGL2RenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_X,

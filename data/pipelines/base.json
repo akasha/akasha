@@ -878,7 +878,7 @@
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(texImage2D|texSubImage2D)$",
         "argumentNamePattern": "^target$",
-        "type": "TextureTargetType"
+        "type": "Texture2DSurfaceTargetType"
       }
     },
     {
