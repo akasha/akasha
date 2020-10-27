@@ -886,6 +886,30 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(texStorage2D)$",
+        "argumentNamePattern": "^target$",
+        "type": "Texture2DTargetType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 13,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(texImage3D|texSubImage3D|compressedTexImage3D|compressedTexSubImage3D|copyTexImage3D|copyTexSubImage3D|texStorage3D)$",
+        "argumentNamePattern": "^target$",
+        "type": "Texture3DTargetType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 3,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^bufferData$",
