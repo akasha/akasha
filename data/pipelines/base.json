@@ -874,9 +874,9 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
-        "expectedChangeCount": 10,
+        "expectedChangeCount": 16,
         "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^(texImage2D|texSubImage2D)$",
+        "operationNamePattern": "^(texImage2D|texSubImage2D|compressedTexImage2D|compressedTexSubImage2D|copyTexImage2D|copyTexSubImage2D)$",
         "argumentNamePattern": "^target$",
         "type": "Texture2DSurfaceTargetType"
       }
