@@ -946,6 +946,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 10,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(texImage2D|texSubImage2D)$",
+        "argumentNamePattern": "^type$",
+        "type": "TexelDataType"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 3,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^bufferData$",
