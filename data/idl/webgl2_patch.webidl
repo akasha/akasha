@@ -62,6 +62,21 @@ const enum TextureTargetType {
   WebGL2RenderingContext.TEXTURE_2D_ARRAY
 };
 
+const enum TextureParameter {
+  WebGL2RenderingContext.TEXTURE_MAG_FILTER,
+  WebGL2RenderingContext.TEXTURE_MIN_FILTER,
+  WebGL2RenderingContext.TEXTURE_WRAP_S,
+  WebGL2RenderingContext.TEXTURE_WRAP_T,
+  EXT_texture_filter_anisotropic.TEXTURE_MAX_ANISOTROPY_EXT,
+  WebGL2RenderingContext.TEXTURE_BASE_LEVEL,
+  WebGL2RenderingContext.TEXTURE_COMPARE_FUNC,
+  WebGL2RenderingContext.TEXTURE_COMPARE_MODE,
+  WebGL2RenderingContext.TEXTURE_MAX_LEVEL,
+  WebGL2RenderingContext.TEXTURE_MAX_LOD,
+  WebGL2RenderingContext.TEXTURE_MIN_LOD,
+  WebGL2RenderingContext.TEXTURE_WRAP_R
+};
+
 const enum DrawPrimitiveType {
   WebGL2RenderingContext.POINTS,
   WebGL2RenderingContext.LINE_STRIP,

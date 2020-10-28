@@ -922,6 +922,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 2,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(texParameterf|texParameteri)$",
+        "argumentNamePattern": "^pname$",
+        "type": "TextureParameter"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 3,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^bufferData$",
