@@ -1801,10 +1801,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( itemType, method );
     final Argument argument = arguments.get( 0 );
-    final Type argumentType = argument.getType();
-    final TypedValue typedValue =
-      new TypedValue( argumentType, argumentType, toTypeName( argumentType ), TypedValue.Nullability.NA, false );
-    generateArgument( argument, typedValue, true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     method.addStatement( "return $T.<$T>cast( this ).getAt( $N )",
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE, toTypeName( itemType ) ),
@@ -1830,10 +1827,7 @@ final class JsinteropAction
     final Type itemType = operation.getReturnType();
     emitReturnType( itemType, method );
     final Argument argument = arguments.get( 0 );
-    final Type argumentType = argument.getType();
-    final TypedValue typedValue =
-      new TypedValue( argumentType, argumentType, toTypeName( argumentType ), TypedValue.Nullability.NONNULL, false );
-    generateArgument( argument, typedValue, true, method );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
     final TypeName javaItemType = toTypeName( itemType );
     method.addStatement( "return $T.<$T>cast( this ).get( $N )",
                          JsinteropTypes.JS,
