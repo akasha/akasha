@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "DocumentOrShadowRoot.nodesFromPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint",
-    "description": "The nodesFromPoint() property of the DocumentOrShadowRoot interface returns an array of all nodes at the specified coordinates (relative to the viewport)."
+    "description": "The DocumentOrShadowRoot mixin of the Shadow DOM API provides APIs that are shared between documents and shadow roots. The following features are included in both Document and ShadowRoot."
 }

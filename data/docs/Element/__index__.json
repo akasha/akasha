@@ -1,7 +1,7 @@
 
 {
     "name": "Element",
-    "lastModifiedAt": 1601504886549,
+    "lastModifiedAt": 1604008806472,
     "entries": [
         {
             "name": "DOMActivate_event",
@@ -314,6 +314,10 @@
         {
             "name": "previousElementSibling",
             "lastModifiedAt": 1600307367119
+        },
+        {
+            "name": "pseudo",
+            "lastModifiedAt": 0
         },
         {
             "name": "querySelector",

@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "DocumentOrShadowRoot.nodeFromPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint",
-    "description": "The nodeFromPoint() property of the DocumentOrShadowRoot interface returns the topmost node at the specified coordinates (relative to the viewport)."
+    "description": "The DocumentOrShadowRoot mixin of the Shadow DOM API provides APIs that are shared between documents and shadow roots. The following features are included in both Document and ShadowRoot."
 }

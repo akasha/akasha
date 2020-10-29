@@ -1,7 +1,7 @@
 
 {
     "name": "DocumentOrShadowRoot",
-    "lastModifiedAt": 1601504280206,
+    "lastModifiedAt": 1604008715166,
     "entries": [
         {
             "name": "__type__",
@@ -37,11 +37,15 @@
         },
         {
             "name": "nodeFromPoint",
-            "lastModifiedAt": 1596581138746
+            "lastModifiedAt": 1604008714585
         },
         {
             "name": "nodesFromPoint",
-            "lastModifiedAt": 1596581139021
+            "lastModifiedAt": 1604008715166
+        },
+        {
+            "name": "pictureInPictureElement",
+            "lastModifiedAt": 1604008709127
         },
         {
             "name": "pointerLockElement",

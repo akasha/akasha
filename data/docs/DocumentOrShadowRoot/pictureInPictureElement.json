@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "DocumentOrShadowRoot.pictureInPictureElement",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/pictureInPictureElement",
+    "description": "The DocumentOrShadowRoot.pictureInPictureElement read-only property returns the HTMLVideoElement that is currently being presented in picture-in-picture mode in this document, or null if picture-in-picture mode is not currently in use."
+}
