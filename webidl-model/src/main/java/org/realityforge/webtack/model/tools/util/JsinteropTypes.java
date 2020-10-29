@@ -22,6 +22,8 @@ public final class JsinteropTypes
   @Nonnull
   public static final ClassName JS_PROPERTY_MAP = ClassName.get( "jsinterop.base", "JsPropertyMap" );
   @Nonnull
+  public static final ClassName JS_ARRAY_LIKE = ClassName.get( "jsinterop.base", "JsArrayLike" );
+  @Nonnull
   public static final ParameterizedTypeName JS_PROPERTY_MAP_T_OBJECT =
     ParameterizedTypeName.get( JS_PROPERTY_MAP, TypeName.OBJECT );
   @Nonnull
