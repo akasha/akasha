@@ -9,6 +9,7 @@ import com.squareup.javapoet.ParameterSpec;
 import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
+import com.squareup.javapoet.WildcardTypeName;
 import java.io.IOException;
 import java.lang.annotation.Documented;
 import java.nio.charset.StandardCharsets;
@@ -1219,6 +1220,12 @@ final class JsinteropAction
       {
         generateAnonymousNamedSetter( operation, type );
       }
+      else if ( OperationMember.Kind.DELETER == operationKind &&
+                null == operation.getName() &&
+                Kind.DOMString == operation.getArguments().get( 0 ).getType().getKind() )
+      {
+        generateAnonymousNamedDeleter( operation, type );
+      }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
         generateConstructorOperation( operation, parentConstructor, type );
@@ -1905,6 +1912,31 @@ final class JsinteropAction
                                                     toTypeName( valueArgument.getType() ) ),
                          indexArgument.getName(),
                          valueArgument.getName() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateAnonymousNamedDeleter( @Nonnull final OperationMember operation,
+                                              @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.DELETER == operationKind;
+    assert null == operation.getName();
+    final List<Argument> arguments = operation.getArguments();
+    assert 1 == arguments.size();
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( javaMethodName( "delete", operation ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
+    final Argument argument = arguments.get( 0 );
+    generateArgument( argument, asTypedValue( argument.getType() ), true, method );
+    method.addStatement( "$T.<$T>cast( this ).delete( $N )",
+                         JsinteropTypes.JS,
+                         ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
+                                                    WildcardTypeName.subtypeOf( TypeName.OBJECT ) ),
+                         argument.getName() );
     type.addMethod( method.build() );
   }
 

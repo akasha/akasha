@@ -31,4 +31,9 @@ public class DOMStringMap {
   public final void set(@Nonnull final String name, @Nonnull final String value) {
     Js.<JsPropertyMap<String>>cast( this ).set( name, value );
   }
+
+  @JsOverlay
+  public final void delete(@Nonnull final String name) {
+    Js.<JsPropertyMap<?>>cast( this ).delete( name );
+  }
 }
