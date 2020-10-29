@@ -160,6 +160,19 @@ partial interface mixin GlobalEventHandlers {
 interface BlurEvent : Event {
 };
 
+/**
+ * Documentation for DOMStringMap type
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMStringMap">DOMStringMap - MDN</a>
+ */
+interface DOMStringMap {
+  getter DOMString ( DOMString name );
+  [CEReactions]
+  setter undefined ( DOMString name, DOMString value );
+  [CEReactions]
+  deleter undefined ( DOMString name );
+};
+
 interface DeviceMotionEvent : Event {
 };
 

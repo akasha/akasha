@@ -423,7 +423,7 @@ final class MergeDocsProcessor
   protected OperationMember transformOperationMember( @Nonnull final OperationMember input )
   {
     final String member = OperationMember.Kind.CONSTRUCTOR == input.getKind() ? _type : input.getName();
-    final DocEntry docEntry = findMemberDocEntry( member );
+    final DocEntry docEntry = null != member ? findMemberDocEntry( member ) : null;
     return new OperationMember( input.getKind(),
                                 input.getName(),
                                 transformArguments( input.getArguments() ),

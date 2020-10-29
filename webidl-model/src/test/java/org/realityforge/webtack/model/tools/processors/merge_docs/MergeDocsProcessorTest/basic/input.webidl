@@ -52,6 +52,14 @@ partial interface mixin GlobalEventHandlers {
 interface BlurEvent : Event {
 };
 
+interface DOMStringMap {
+  getter DOMString ( DOMString name );
+  [CEReactions]
+  setter undefined ( DOMString name, DOMString value );
+  [CEReactions]
+  deleter undefined ( DOMString name );
+};
+
 interface DeviceMotionEvent : Event {
 };
 
