@@ -3,10 +3,10 @@ enum ShadowRootMode {
   "open"
 };
 
-callback MutationCallback = void ( sequence<MutationRecord> mutations, MutationObserver observer );
+callback MutationCallback = undefined ( sequence<MutationRecord> mutations, MutationObserver observer );
 
 callback interface EventListener {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 [Exposed=Window]
@@ -85,13 +85,13 @@ dictionary StaticRangeInit {
 
 interface mixin ChildNode {
   [CEReactions, Unscopable]
-  void after( ( Node or DOMString )... nodes );
+  undefined after( ( Node or DOMString )... nodes );
   [CEReactions, Unscopable]
-  void before( ( Node or DOMString )... nodes );
+  undefined before( ( Node or DOMString )... nodes );
   [CEReactions, Unscopable]
-  void remove();
+  undefined remove();
   [CEReactions, Unscopable]
-  void replaceWith( ( Node or DOMString )... nodes );
+  undefined replaceWith( ( Node or DOMString )... nodes );
 };
 
 interface mixin DocumentOrShadowRoot {
@@ -113,14 +113,14 @@ interface mixin ParentNode {
   readonly attribute Element? firstElementChild;
   readonly attribute Element? lastElementChild;
   [CEReactions, Unscopable]
-  void append( ( Node or DOMString )... nodes );
+  undefined append( ( Node or DOMString )... nodes );
   [CEReactions, Unscopable]
-  void prepend( ( Node or DOMString )... nodes );
+  undefined prepend( ( Node or DOMString )... nodes );
   Element? querySelector( DOMString selectors );
   [NewObject]
   NodeList querySelectorAll( DOMString selectors );
   [CEReactions, Unscopable]
-  void replaceChildren( ( Node or DOMString )... nodes );
+  undefined replaceChildren( ( Node or DOMString )... nodes );
 };
 
 interface mixin Slottable {
@@ -139,7 +139,7 @@ interface AbortController {
   [SameObject]
   readonly attribute AbortSignal signal;
   constructor();
-  void abort();
+  undefined abort();
 };
 
 [Exposed=(Window,Worker)]
@@ -177,10 +177,10 @@ interface CDATASection : Text {
 interface CharacterData : Node {
   readonly attribute unsigned long length;
   attribute [LegacyNullToEmptyString] DOMString data;
-  void appendData( DOMString data );
-  void deleteData( unsigned long offset, unsigned long count );
-  void insertData( unsigned long offset, DOMString data );
-  void replaceData( unsigned long offset, unsigned long count, DOMString data );
+  undefined appendData( DOMString data );
+  undefined deleteData( unsigned long offset, unsigned long count );
+  undefined insertData( unsigned long offset, DOMString data );
+  undefined replaceData( unsigned long offset, unsigned long count, DOMString data );
   DOMString substringData( unsigned long offset, unsigned long count );
 };
 
@@ -193,7 +193,7 @@ interface Comment : CharacterData {
 interface CustomEvent : Event {
   readonly attribute any detail;
   constructor( DOMString type, optional CustomEventInit eventInitDict = {} );
-  void initCustomEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any detail = null );
+  undefined initCustomEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false, optional any detail = null );
 };
 
 [Exposed=Window]
@@ -214,10 +214,10 @@ interface DOMTokenList {
   [CEReactions]
   stringifier attribute DOMString value;
   [CEReactions]
-  void add( DOMString... tokens );
+  undefined add( DOMString... tokens );
   boolean contains( DOMString token );
   [CEReactions]
-  void remove( DOMString... tokens );
+  undefined remove( DOMString... tokens );
   [CEReactions]
   boolean replace( DOMString token, DOMString newToken );
   boolean supports( DOMString token );
@@ -319,18 +319,18 @@ interface Element : Node {
   boolean hasAttributes();
   [CEReactions]
   Element? insertAdjacentElement( DOMString where, Element element );
-  void insertAdjacentText( DOMString where, DOMString data );
+  undefined insertAdjacentText( DOMString where, DOMString data );
   boolean matches( DOMString selectors );
   [CEReactions]
-  void removeAttribute( DOMString qualifiedName );
+  undefined removeAttribute( DOMString qualifiedName );
   [CEReactions]
-  void removeAttributeNS( DOMString? namespace, DOMString localName );
+  undefined removeAttributeNS( DOMString? namespace, DOMString localName );
   [CEReactions]
   Attr removeAttributeNode( Attr attr );
   [CEReactions]
-  void setAttribute( DOMString qualifiedName, DOMString value );
+  undefined setAttribute( DOMString qualifiedName, DOMString value );
   [CEReactions]
-  void setAttributeNS( DOMString? namespace, DOMString qualifiedName, DOMString value );
+  undefined setAttributeNS( DOMString? namespace, DOMString qualifiedName, DOMString value );
   [CEReactions]
   Attr? setAttributeNode( Attr attr );
   [CEReactions]
@@ -362,18 +362,18 @@ interface Event {
   attribute boolean returnValue;
   constructor( DOMString type, optional EventInit eventInitDict = {} );
   sequence<EventTarget> composedPath();
-  void initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
-  void preventDefault();
-  void stopImmediatePropagation();
-  void stopPropagation();
+  undefined initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
+  undefined preventDefault();
+  undefined stopImmediatePropagation();
+  undefined stopPropagation();
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]
 interface EventTarget {
   constructor();
-  void addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );
+  undefined addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );
   boolean dispatchEvent( Event event );
-  void removeEventListener( DOMString type, EventListener? callback, optional ( EventListenerOptions or boolean ) options = {} );
+  undefined removeEventListener( DOMString type, EventListener? callback, optional ( EventListenerOptions or boolean ) options = {} );
 };
 
 [Exposed=Window, LegacyUnenumerableNamedProperties]
@@ -386,8 +386,8 @@ interface HTMLCollection {
 [Exposed=Window]
 interface MutationObserver {
   constructor( MutationCallback callback );
-  void disconnect();
-  void observe( Node target, optional MutationObserverInit options = {} );
+  undefined disconnect();
+  undefined observe( Node target, optional MutationObserverInit options = {} );
   sequence<MutationRecord> takeRecords();
 };
 
@@ -476,7 +476,7 @@ interface Node : EventTarget {
   DOMString? lookupNamespaceURI( DOMString? prefix );
   DOMString? lookupPrefix( DOMString? namespace );
   [CEReactions]
-  void normalize();
+  undefined normalize();
   [CEReactions]
   Node removeChild( Node child );
   [CEReactions]
@@ -491,7 +491,7 @@ interface NodeIterator {
   [SameObject]
   readonly attribute Node root;
   readonly attribute unsigned long whatToShow;
-  void detach();
+  undefined detach();
   Node? nextNode();
   Node? previousNode();
 };
@@ -520,28 +520,28 @@ interface Range : AbstractRange {
   DocumentFragment cloneContents();
   [NewObject]
   Range cloneRange();
-  void collapse( optional boolean toStart = false );
+  undefined collapse( optional boolean toStart = false );
   short compareBoundaryPoints( unsigned short how, Range sourceRange );
   short comparePoint( Node node, unsigned long offset );
   [CEReactions]
-  void deleteContents();
-  void detach();
+  undefined deleteContents();
+  undefined detach();
   [CEReactions, NewObject]
   DocumentFragment extractContents();
   [CEReactions]
-  void insertNode( Node node );
+  undefined insertNode( Node node );
   boolean intersectsNode( Node node );
   boolean isPointInRange( Node node, unsigned long offset );
-  void selectNode( Node node );
-  void selectNodeContents( Node node );
-  void setEnd( Node node, unsigned long offset );
-  void setEndAfter( Node node );
-  void setEndBefore( Node node );
-  void setStart( Node node, unsigned long offset );
-  void setStartAfter( Node node );
-  void setStartBefore( Node node );
+  undefined selectNode( Node node );
+  undefined selectNodeContents( Node node );
+  undefined setEnd( Node node, unsigned long offset );
+  undefined setEndAfter( Node node );
+  undefined setEndBefore( Node node );
+  undefined setStart( Node node, unsigned long offset );
+  undefined setStartAfter( Node node );
+  undefined setStartBefore( Node node );
   [CEReactions]
-  void surroundContents( Node newParent );
+  undefined surroundContents( Node newParent );
   stringifier;
 };
 
