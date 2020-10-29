@@ -26,4 +26,9 @@ public class DOMStringMap {
   public final String get(@Nonnull final String name) {
     return Js.<JsPropertyMap<String>>cast( this ).get( name );
   }
+
+  @JsOverlay
+  public final void set(@Nonnull final String name, @Nonnull final String value) {
+    Js.<JsPropertyMap<String>>cast( this ).set( name, value );
+  }
 }

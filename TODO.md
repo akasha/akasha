@@ -63,8 +63,6 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Add support for anonymous named setter.
-
 * Add support for anonymous named deleter.
 
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.

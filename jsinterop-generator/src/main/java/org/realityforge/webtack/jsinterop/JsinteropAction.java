@@ -1213,6 +1213,12 @@ final class JsinteropAction
       {
         generateAnonymousNamedGetter( operation, type );
       }
+      else if ( OperationMember.Kind.SETTER == operationKind &&
+                null == operation.getName() &&
+                Kind.DOMString == operation.getArguments().get( 0 ).getType().getKind() )
+      {
+        generateAnonymousNamedSetter( operation, type );
+      }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
         generateConstructorOperation( operation, parentConstructor, type );
@@ -1869,6 +1875,36 @@ final class JsinteropAction
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP, javaItemType ),
                          argument.getName() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateAnonymousNamedSetter( @Nonnull final OperationMember operation,
+                                             @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.SETTER == operationKind;
+    assert null == operation.getName();
+    final List<Argument> arguments = operation.getArguments();
+    assert 2 == arguments.size();
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( javaMethodName( "set", operation ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
+    final Argument indexArgument = arguments.get( 0 );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
+
+    final Argument valueArgument = arguments.get( 1 );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
+
+    method.addStatement( "$T.<$T>cast( this ).set( $N, $N )",
+                         JsinteropTypes.JS,
+                         ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP,
+                                                    toTypeName( valueArgument.getType() ) ),
+                         indexArgument.getName(),
+                         valueArgument.getName() );
     type.addMethod( method.build() );
   }
 
