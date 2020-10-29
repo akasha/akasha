@@ -1201,6 +1201,12 @@ final class JsinteropAction
       {
         generateAnonymousIndexedGetter( operation, type );
       }
+      else if ( OperationMember.Kind.SETTER == operationKind &&
+                null == operation.getName() &&
+                Kind.UnsignedLong == operation.getArguments().get( 0 ).getType().getKind() )
+      {
+        generateAnonymousIndexedSetter( operation, type );
+      }
       else if ( OperationMember.Kind.GETTER == operationKind &&
                 null == operation.getName() &&
                 Kind.DOMString == operation.getArguments().get( 0 ).getType().getKind() )
@@ -1806,6 +1812,36 @@ final class JsinteropAction
                          JsinteropTypes.JS,
                          ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE, toTypeName( itemType ) ),
                          argument.getName() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateAnonymousIndexedSetter( @Nonnull final OperationMember operation,
+                                               @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.SETTER == operationKind;
+    assert null == operation.getName();
+    final List<Argument> arguments = operation.getArguments();
+    assert 2 == arguments.size();
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( javaMethodName( "setAt", operation ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
+    final Argument indexArgument = arguments.get( 0 );
+    generateArgument( indexArgument, asTypedValue( indexArgument.getType() ), true, method );
+
+    final Argument valueArgument = arguments.get( 1 );
+    generateArgument( valueArgument, asTypedValue( valueArgument.getType() ), true, method );
+
+    method.addStatement( "$T.<$T>cast( this ).setAt( $N, $N )",
+                         JsinteropTypes.JS,
+                         ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE,
+                                                    toTypeName( valueArgument.getType() ) ),
+                         indexArgument.getName(),
+                         valueArgument.getName() );
     type.addMethod( method.build() );
   }
 

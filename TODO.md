@@ -67,8 +67,6 @@ complete as there is too much un-said.
 
 * Add support for anonymous named deleter.
 
-* Add support for anonymous indexed setter.
-
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
 
 * Add `[alias=SomeAlias]` extended attribute that will create an alias method via a `@JsOverlay` that calls base

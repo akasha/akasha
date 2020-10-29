@@ -26,4 +26,9 @@ public class MyThingCollection {
   public final MyThing getAt(final int index) {
     return Js.<JsArrayLike<MyThing>>cast( this ).getAt( index );
   }
+
+  @JsOverlay
+  public final void setAt(final int index, @Nullable final MyThing option) {
+    Js.<JsArrayLike<MyThing>>cast( this ).setAt( index, option );
+  }
 }
