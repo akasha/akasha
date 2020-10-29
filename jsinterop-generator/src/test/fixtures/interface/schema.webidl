@@ -4,6 +4,17 @@ dictionary EventInit {
   boolean composed = false;
 };
 
+/**
+ * This type contains anonymous named property operations.
+ */
+interface DOMStringMap {
+  getter DOMString ( DOMString name );
+  [CEReactions]
+  setter undefined ( DOMString name, DOMString value );
+  [CEReactions]
+  deleter undefined ( DOMString name );
+};
+
 [Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   const unsigned short AT_TARGET = 2;
@@ -40,6 +51,17 @@ interface Event {
 interface EventTarget {
   constructor();
   boolean dispatchEvent( Event event );
+};
+
+interface MyThing {
+};
+
+/**
+ * This type contains anonymous indexed property operations.
+ */
+interface MyThingCollection {
+  getter MyThing? ( unsigned long index );
+  setter undefined ( unsigned long index, MyThing? option );
 };
 
 /**

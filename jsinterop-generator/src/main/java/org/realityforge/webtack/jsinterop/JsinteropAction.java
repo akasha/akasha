@@ -1195,6 +1195,18 @@ final class JsinteropAction
       {
         generateDefaultOperation( operation, type );
       }
+      else if ( OperationMember.Kind.GETTER == operationKind &&
+                null == operation.getName() &&
+                Kind.UnsignedLong == operation.getArguments().get( 0 ).getType().getKind() )
+      {
+        generateAnonymousIndexedGetter( operation, type );
+      }
+      else if ( OperationMember.Kind.GETTER == operationKind &&
+                null == operation.getName() &&
+                Kind.DOMString == operation.getArguments().get( 0 ).getType().getKind() )
+      {
+        generateAnonymousNamedGetter( operation, type );
+      }
       else if ( OperationMember.Kind.CONSTRUCTOR == operationKind )
       {
         generateConstructorOperation( operation, parentConstructor, type );
@@ -1768,6 +1780,65 @@ final class JsinteropAction
       final TypedValue typedValue = typeList.get( index++ );
       generateArgument( argument, typedValue, false, method );
     }
+    type.addMethod( method.build() );
+  }
+
+  private void generateAnonymousIndexedGetter( @Nonnull final OperationMember operation,
+                                               @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.GETTER == operationKind;
+    assert null == operation.getName();
+    final List<Argument> arguments = operation.getArguments();
+    assert 1 == arguments.size();
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( javaMethodName( "getAt", operation ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
+    final Type itemType = operation.getReturnType();
+    emitReturnType( itemType, method );
+    final Argument argument = arguments.get( 0 );
+    final Type argumentType = argument.getType();
+    final TypedValue typedValue =
+      new TypedValue( argumentType, argumentType, toTypeName( argumentType ), TypedValue.Nullability.NA, false );
+    generateArgument( argument, typedValue, true, method );
+    method.addStatement( "return $T.<$T>cast( this ).getAt( $N )",
+                         JsinteropTypes.JS,
+                         ParameterizedTypeName.get( JsinteropTypes.JS_ARRAY_LIKE, toTypeName( itemType ) ),
+                         argument.getName() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateAnonymousNamedGetter( @Nonnull final OperationMember operation,
+                                             @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.GETTER == operationKind;
+    assert null == operation.getName();
+    final List<Argument> arguments = operation.getArguments();
+    assert 1 == arguments.size();
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( javaMethodName( "get", operation ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    method.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_OVERLAY ).build() );
+    final Type itemType = operation.getReturnType();
+    emitReturnType( itemType, method );
+    final Argument argument = arguments.get( 0 );
+    final Type argumentType = argument.getType();
+    final TypedValue typedValue =
+      new TypedValue( argumentType, argumentType, toTypeName( argumentType ), TypedValue.Nullability.NONNULL, false );
+    generateArgument( argument, typedValue, true, method );
+    final TypeName javaItemType = toTypeName( itemType );
+    method.addStatement( "return $T.<$T>cast( this ).get( $N )",
+                         JsinteropTypes.JS,
+                         ParameterizedTypeName.get( JsinteropTypes.JS_PROPERTY_MAP, javaItemType ),
+                         argument.getName() );
     type.addMethod( method.build() );
   }
 

@@ -63,7 +63,11 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Handle null operation name and  `OperationMember.Kind.GETTER == operationKind || OperationMember.Kind.SETTER == operationKind || OperationMember.Kind.DELETER == operationKind` 
+* Add support for anonymous named setter.
+
+* Add support for anonymous named deleter.
+
+* Add support for anonymous indexed setter.
 
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
 
