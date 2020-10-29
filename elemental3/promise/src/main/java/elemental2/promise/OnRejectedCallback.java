@@ -9,7 +9,7 @@ import jsinterop.annotations.JsFunction;
  * @param <V> the component type of the promise returned from the callback.
  */
 @JsFunction
-interface OnRejectedCallback<V>
+public interface OnRejectedCallback<V>
 {
   /**
    * The callback function.
