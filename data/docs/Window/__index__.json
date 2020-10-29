@@ -1,7 +1,7 @@
 
 {
     "name": "Window",
-    "lastModifiedAt": 1601504641147,
+    "lastModifiedAt": 1604009515764,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -321,7 +321,7 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1600306587977
+            "lastModifiedAt": 1604009291098
         },
         {
             "name": "navigator",
@@ -645,7 +645,7 @@
         },
         {
             "name": "restore",
-            "lastModifiedAt": 1600306675843
+            "lastModifiedAt": 1604009448005
         },
         {
             "name": "screen",

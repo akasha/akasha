@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Document.pictureInPictureEnabled",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/pictureInPictureEnabled",
+    "description": "The read-only pictureInPictureEnabled property of the Document interface indicates whether or not picture-in-picture mode is available."
+}

@@ -1,7 +1,7 @@
 
 {
     "name": "Document",
-    "lastModifiedAt": 1601505117101,
+    "lastModifiedAt": 1604009101629,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -262,6 +262,10 @@
         {
             "name": "exitFullscreen",
             "lastModifiedAt": 1600306351692
+        },
+        {
+            "name": "exitPictureInPicture",
+            "lastModifiedAt": 1604009033311
         },
         {
             "name": "exitPointerLock",
@@ -534,6 +538,10 @@
         {
             "name": "paste_event",
             "lastModifiedAt": 1599280052470
+        },
+        {
+            "name": "pictureInPictureEnabled",
+            "lastModifiedAt": 1604008989467
         },
         {
             "name": "plugins",

@@ -3,5 +3,5 @@
     "kind": "Method",
     "name": "Window.restore",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/restore",
-    "description": "This method is currently not working, but you can use:"
+    "description": "The moveTo() method of the Window interface moves the current window to the specified coordinates."
 }
