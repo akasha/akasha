@@ -98,7 +98,7 @@ complete as there is too much un-said.
 
 * Consider allowing some unions to be have extended attributes that indicate that they should be converted into
   marker interfaces for all the contained types. `IntegerTypedArray` could be converted into such an abstraction
-  as could `Transfer`
+  as could `Transfer` and `TexImageSource`
 
 # React4j Host Element Factories
 
