@@ -35,6 +35,12 @@ const enum DataType {
   WebGL2RenderingContext.HALF_FLOAT
 };
 
+const enum FramebufferTargetType {
+  WebGL2RenderingContext.FRAMEBUFFER,
+  WebGL2RenderingContext.DRAW_FRAMEBUFFER,
+  WebGL2RenderingContext.READ_FRAMEBUFFER
+};
+
 const enum Texture2DSurfaceTargetType {
   WebGL2RenderingContext.TEXTURE_2D,
   WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X,
