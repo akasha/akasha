@@ -888,6 +888,18 @@
       "config": {
         "expectedChangeCount": 1,
         "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^framebufferTexture2D$",
+        "argumentNamePattern": "^attachment$",
+        "type": "FramebufferAttachment"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(texStorage2D)$",
         "argumentNamePattern": "^target$",
         "type": "Texture2DTargetType"
