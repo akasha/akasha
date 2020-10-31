@@ -898,9 +898,9 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
-        "expectedChangeCount": 1,
+        "expectedChangeCount": 2,
         "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^framebufferTexture2D$",
+        "operationNamePattern": "^(framebufferTexture2D|framebufferRenderbuffer)$",
         "argumentNamePattern": "^attachment$",
         "type": "FramebufferAttachment"
       }
@@ -1005,9 +1005,9 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
-        "expectedChangeCount": 2,
+        "expectedChangeCount": 3,
         "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^(bindFramebuffer|framebufferTexture2D)$",
+        "operationNamePattern": "^(bindFramebuffer|framebufferTexture2D|framebufferRenderbuffer)$",
         "argumentNamePattern": "^target$",
         "type": "FramebufferTargetType"
       }
