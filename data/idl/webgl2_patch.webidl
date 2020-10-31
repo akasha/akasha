@@ -263,3 +263,17 @@ const enum TextureInternalFormat {
   EXT_sRGB.SRGB_EXT,
   EXT_sRGB.SRGB_ALPHA_EXT
 };
+
+const enum TextureFormat {
+  WebGL2RenderingContext.RGB,
+  WebGL2RenderingContext.RGBA,
+  WebGL2RenderingContext.LUMINANCE_ALPHA,
+  WebGL2RenderingContext.LUMINANCE,
+  WebGL2RenderingContext.ALPHA,
+  WebGL2RenderingContext.RED,
+  WebGL2RenderingContext.RED_INTEGER,
+  WebGL2RenderingContext.RG,
+  WebGL2RenderingContext.RG_INTEGER,
+  WebGL2RenderingContext.RGB_INTEGER,
+  WebGL2RenderingContext.RGBA_INTEGER
+};

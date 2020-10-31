@@ -1055,6 +1055,18 @@
       "config": {
         "expectedChangeCount": 5,
         "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^texImage2D$",
+        "argumentNamePattern": "^format$",
+        "type": "TextureFormat"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 5,
+        "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(drawArrays|drawArraysInstanced|drawElements|drawElementsInstanced|drawRangeElements)$",
         "argumentNamePattern": "^mode$",
         "type": "DrawPrimitiveType"
