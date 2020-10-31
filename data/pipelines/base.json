@@ -970,9 +970,9 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
-        "expectedChangeCount": 1,
+        "expectedChangeCount": 2,
         "elementNamePattern": "^WebGL2RenderingContext$",
-        "operationNamePattern": "^bindFramebuffer$",
+        "operationNamePattern": "^(bindFramebuffer|framebufferTexture2D)$",
         "argumentNamePattern": "^target$",
         "type": "FramebufferTargetType"
       }
