@@ -906,6 +906,17 @@
       }
     },
     {
+      "name": "AddExtendedAttributeToArgument",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedAddCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^framebufferTexture2D$",
+        "argumentNamePattern": "^level$",
+        "extendedAttribute": "JavaAnnotation=\"elemental3.gl.FramebufferMipmapLevel\""
+      }
+    },
+    {
       "name": "ChangeArgumentType",
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
