@@ -41,6 +41,10 @@ const enum FramebufferTargetType {
   WebGL2RenderingContext.READ_FRAMEBUFFER
 };
 
+const enum RenderbufferTargetType {
+  WebGL2RenderingContext.RENDERBUFFER
+};
+
 const enum Texture2DSurfaceTargetType {
   WebGL2RenderingContext.TEXTURE_2D,
   WebGL2RenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X,
