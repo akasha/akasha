@@ -1019,6 +1019,18 @@
       "config": {
         "expectedChangeCount": 1,
         "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^frontFace$",
+        "argumentNamePattern": "^mode$",
+        "type": "Winding"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^pixelStorei$",
         "argumentNamePattern": "^pname$",
         "type": "PixelStorageParameter"

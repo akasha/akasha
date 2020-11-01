@@ -319,3 +319,8 @@ const enum BlendFactor {
   WebGL2RenderingContext.ONE_MINUS_CONSTANT_ALPHA,
   WebGL2RenderingContext.SRC_ALPHA_SATURATE
 };
+
+const enum Winding {
+  WebGL2RenderingContext.CW,
+  WebGL2RenderingContext.CCW
+};
