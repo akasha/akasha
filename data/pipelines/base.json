@@ -1005,6 +1005,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 2,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^blendFunc$",
+        "argumentNamePattern": "^(sfactor|dfactor)$",
+        "type": "BlendFactor"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 1,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^pixelStorei$",
