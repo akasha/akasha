@@ -993,6 +993,18 @@
       "description": "Tighten up the parameter types",
       "sourceSelector": "name=webgl.*",
       "config": {
+        "expectedChangeCount": 3,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^(enable|disable|isEnabled)$",
+        "argumentNamePattern": "^cap$",
+        "type": "Capability"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
         "expectedChangeCount": 1,
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^pixelStorei$",
