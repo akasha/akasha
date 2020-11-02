@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.blendColor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/blendColor",
-    "description": "The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors."
+    "description": "The WebGLRenderingContext.blendColor() method of the WebGL API is used to set the source and destination blending factors.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'blendColor' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBlendColor.xml",
+            "description": "The definition of 'glBlendColor' in OpenGL ES 2.0."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getUniformLocation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniformLocation",
-    "description": "Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram."
+    "description": "Part of the WebGL API, the WebGLRenderingContext method getUniformLocation() returns the location of a specific uniform variable which is part of a given WebGLProgram.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'getUniformLocation' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniformLocation.xml",
+            "description": "The definition of 'glGetUniformLocation' in OpenGL ES 2.0."
+        }
+    ]
 }

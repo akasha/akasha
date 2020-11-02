@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getProgramInfoLog",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getProgramInfoLog",
-    "description": "The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects."
+    "description": "The WebGLRenderingContext.getProgramInfoLog returns the information log for the specified WebGLProgram object. It contains errors that occurred during failed linking or validation of WebGLProgram objects.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'getProgramInfoLog' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetProgramInfoLog.xml",
+            "description": "The definition of 'glGetProgramInfoLog' in OpenGL ES 2.0."
+        }
+    ]
 }

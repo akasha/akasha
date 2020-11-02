@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getVertexAttrib",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getVertexAttrib",
-    "description": "The WebGLRenderingContext.getVertexAttrib() method of the WebGL API returns information about a vertex attribute at a given position."
+    "description": "The WebGLRenderingContext.getVertexAttrib() method of the WebGL API returns information about a vertex attribute at a given position.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'getVertexAttrib' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml",
+            "description": "The definition of 'glGetVertexAttrib' in OpenGL ES 2.0."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8",
+            "description": "The definition of 'getVertexAttrib' in WebGL 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml",
+            "description": "The definition of 'glGetVertexAttrib' in OpenGL ES 3.0."
+        }
+    ]
 }

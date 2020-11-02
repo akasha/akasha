@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.texImage2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D",
-    "description": "The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image."
+    "description": "The WebGLRenderingContext.texImage2D() method of the WebGL API specifies a two-dimensional texture image.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
+            "description": "The definition of 'texImage2D' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glTexImage2D.xml",
+            "description": "The definition of 'glTexImage2D' in OpenGL ES 2.0."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6",
+            "description": "The definition of 'texImage2D' in WebGL 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glTexImage2D.xhtml",
+            "description": "The definition of 'glTexImage2D' in OpenGL ES 3.0."
+        }
+    ]
 }

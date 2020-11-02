@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.createRenderbuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createRenderbuffer",
-    "description": "The WebGLRenderingContext.createRenderbuffer() method of the WebGL API creates and initializes a WebGLRenderbuffer object."
+    "description": "The WebGLRenderingContext.createRenderbuffer() method of the WebGL API creates and initializes a WebGLRenderbuffer object.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7",
+            "description": "The definition of 'createRenderbuffer' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenRenderbuffers.xml",
+            "description": "The definition of 'glGenRenderbuffers' in OpenGL ES 2.0."
+        }
+    ]
 }

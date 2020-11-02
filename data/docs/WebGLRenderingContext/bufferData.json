@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.bufferData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bufferData",
-    "description": "The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store."
+    "description": "The WebGLRenderingContext.bufferData() method of the WebGL API initializes and creates the buffer object's data store.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5",
+            "description": "The definition of 'bufferData' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferData.xml",
+            "description": "The definition of 'glBufferData' in OpenGL ES 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferData.xhtml",
+            "description": "The definition of 'glBufferData' in OpenGL ES 3.0."
+        }
+    ]
 }

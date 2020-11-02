@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.disableVertexAttribArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disableVertexAttribArray",
-    "description": "The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position."
+    "description": "The WebGLRenderingContext.disableVertexAttribArray() method of the WebGL API turns the generic vertex attribute array off at a given index position.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'disableVertexAttribArray' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml",
+            "description": "The definition of 'glDisableVertexAttribArray' in OpenGL ES 2.0."
+        }
+    ]
 }

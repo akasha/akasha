@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.copyTexImage2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/copyTexImage2D",
-    "description": "The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image."
+    "description": "The WebGLRenderingContext.copyTexImage2D() method of the WebGL API copies pixels from the current WebGLFramebuffer into a 2D texture image.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
+            "description": "The definition of 'copyTexImage2D' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCopyTexImage2D.xml",
+            "description": "The definition of 'glCopyTexImage2D' in OpenGL ES 2.0."
+        }
+    ]
 }

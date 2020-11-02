@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getAttachedShaders",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getAttachedShaders",
-    "description": "The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram."
+    "description": "The WebGLRenderingContext.getAttachedShaders() method of the WebGL API returns a list of WebGLShader objects attached to a WebGLProgram.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'getAttachedShaders' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetAttachedShaders.xml",
+            "description": "The definition of 'glGetAttachedShaders' in OpenGL ES 2.0."
+        }
+    ]
 }

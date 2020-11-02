@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebGLRenderingContext.drawingBufferWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferWidth",
-    "description": "The read-only WebGLRenderingContext.drawingBufferWidth property represents the actual width of the current drawing buffer. It should match the width attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested width."
+    "description": "The read-only WebGLRenderingContext.drawingBufferWidth property represents the actual width of the current drawing buffer. It should match the width attribute of the canvas element associated with this context, but might differ if the implementation is not able to provide the requested width.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-drawingBufferWidth",
+            "description": "The definition of 'WebGLRenderingContext.drawingBufferWidth' in WebGL 1.0."
+        }
+    ]
 }

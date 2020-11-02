@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.framebufferRenderbuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferRenderbuffer",
-    "description": "The WebGLRenderingContext.framebufferRenderbuffer() method of the WebGL API attaches a WebGLRenderbuffer object to a WebGLFramebuffer object."
+    "description": "The WebGLRenderingContext.framebufferRenderbuffer() method of the WebGL API attaches a WebGLRenderbuffer object to a WebGLFramebuffer object.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6",
+            "description": "The definition of 'framebufferRenderbuffer' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferRenderbuffer.xml",
+            "description": "The definition of 'glFramebufferRenderbuffer' in OpenGL ES 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferRenderbuffer.xhtml",
+            "description": "The definition of 'glFramebufferRenderbuffer' in OpenGL ES 3.0."
+        }
+    ]
 }

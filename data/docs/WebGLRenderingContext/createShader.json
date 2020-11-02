@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.createShader",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createShader",
-    "description": "The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader()."
+    "description": "The WebGLRenderingContext method createShader() of the WebGL API creates a WebGLShader that can then be configured further using WebGLRenderingContext.shaderSource() and WebGLRenderingContext.compileShader().",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'createShader' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCreateShader.xml",
+            "description": "The definition of 'glCreateShader' in OpenGL ES 2.0."
+        }
+    ]
 }

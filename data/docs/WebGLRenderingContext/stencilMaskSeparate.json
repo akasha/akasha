@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.stencilMaskSeparate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilMaskSeparate",
-    "description": "The WebGLRenderingContext.stencilMaskSeparate() method of the WebGL API controls enabling and disabling of front and/or back writing of individual bits in the stencil planes."
+    "description": "The WebGLRenderingContext.stencilMaskSeparate() method of the WebGL API controls enabling and disabling of front and/or back writing of individual bits in the stencil planes.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'stencilMaskSeparate' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilMaskSeparate.xml",
+            "description": "The definition of 'glStencilMaskSeparate' in OpenGL ES 2.0."
+        }
+    ]
 }

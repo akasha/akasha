@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.vertexAttribPointer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttribPointer",
-    "description": "The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout."
+    "description": "The WebGLRenderingContext.vertexAttribPointer() method of the WebGL API binds the buffer currently bound to gl.ARRAY_BUFFER to a generic vertex attribute of the current vertex buffer object and specifies its layout.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'vertexAttribPointer' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttribPointer.xml",
+            "description": "The definition of 'glVertexAttribPointer' in OpenGL ES 2.0."
+        }
+    ]
 }

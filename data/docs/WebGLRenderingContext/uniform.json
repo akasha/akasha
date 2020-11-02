@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.uniform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform",
-    "description": "The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0."
+    "description": "The WebGLRenderingContext.uniform[1234][fi][v]() methods of the WebGL API specify values of uniform variables. All active uniform variables defined in a program object are initialized to 0 when the program object is linked successfully. They retain the values assigned to them by a call to this method until the next successful link operation occurs on the program object, when they are once again initialized to 0.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'uniform' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUniform.xml",
+            "description": "The definition of 'glUniform' in OpenGL ES 2.0."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebGLRenderingContext.canvas",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/canvas",
-    "description": "The WebGLRenderingContext.canvas property is a read-only reference to the HTMLCanvasElement or OffscreenCanvas object that is associated with the context. It might be null if it is not associated with a canvas element or an OffscreenCanvas object."
+    "description": "The WebGLRenderingContext.canvas property is a read-only reference to the HTMLCanvasElement or OffscreenCanvas object that is associated with the context. It might be null if it is not associated with a canvas element or an OffscreenCanvas object.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLRenderingContext-canvas",
+            "description": "The definition of 'WebGLRenderingContext.canvas' in WebGL 1.0."
+        }
+    ]
 }

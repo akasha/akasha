@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.frontFace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/frontFace",
-    "description": "The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation."
+    "description": "The WebGLRenderingContext.frontFace() method of the WebGL API specifies whether polygons are front- or back-facing by setting a winding orientation.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'frontFace' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFrontFace.xml",
+            "description": "The definition of 'glFrontFace' in OpenGL ES 2.0."
+        }
+    ]
 }

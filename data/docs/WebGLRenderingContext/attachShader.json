@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.attachShader",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/attachShader",
-    "description": "The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram."
+    "description": "The WebGLRenderingContext.attachShader() method of the WebGL API attaches either a fragment or vertex WebGLShader to a WebGLProgram.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'attachShader' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glAttachShader.xml",
+            "description": "The definition of 'glAttachShader' in OpenGL ES 2.0."
+        }
+    ]
 }

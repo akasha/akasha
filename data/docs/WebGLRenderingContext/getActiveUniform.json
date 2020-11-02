@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getActiveUniform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getActiveUniform",
-    "description": "The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation."
+    "description": "The WebGLRenderingContext.getActiveUniform() method of the WebGL API returns a WebGLActiveInfo object containing size, type, and name of a uniform attribute. It is generally used when querying unknown uniforms either for debugging or generic library creation.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'getActiveUniform' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetActiveUniform.xml",
+            "description": "The definition of 'glGetActiveUniform' in OpenGL ES 2.0."
+        }
+    ]
 }

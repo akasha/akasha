@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.stencilFuncSeparate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilFuncSeparate",
-    "description": "The WebGLRenderingContext.stencilFuncSeparate() method of the WebGL API sets the front and/or back function and reference value for stencil testing."
+    "description": "The WebGLRenderingContext.stencilFuncSeparate() method of the WebGL API sets the front and/or back function and reference value for stencil testing.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'stencilFuncSeparate' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilFuncSeparate.xml",
+            "description": "The definition of 'glStencilFuncSeparate' in OpenGL ES 2.0."
+        }
+    ]
 }

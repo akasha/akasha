@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.scissor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/scissor",
-    "description": "The WebGLRenderingContext.scissor() method of the WebGL API sets a scissor box, which limits the drawing to a specified rectangle."
+    "description": "The WebGLRenderingContext.scissor() method of the WebGL API sets a scissor box, which limits the drawing to a specified rectangle.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4",
+            "description": "The definition of 'scissor' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glScissor.xml",
+            "description": "The definition of 'glScissor' in OpenGL ES 2.0."
+        }
+    ]
 }

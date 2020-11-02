@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.finish",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish",
-    "description": "The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished."
+    "description": "The WebGLRenderingContext.finish() method of the WebGL API blocks execution until all previously called commands are finished.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11",
+            "description": "The definition of 'finish' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml",
+            "description": "The definition of 'glFinish' in OpenGL ES 2.0."
+        }
+    ]
 }

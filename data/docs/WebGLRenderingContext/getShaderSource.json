@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getShaderSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getShaderSource",
-    "description": "The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString."
+    "description": "The WebGLRenderingContext.getShaderSource() method of the WebGL API returns the source code of a WebGLShader as a DOMString.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'getShaderSource' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetShaderSource.xml",
+            "description": "The definition of 'glGetShaderSource' in OpenGL ES 2.0."
+        }
+    ]
 }

@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.compressedTexSubImage2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/compressedTexSubImage2D",
-    "description": "The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format."
+    "description": "The WebGLRenderingContext.compressedTexSubImage2D() method of the WebGL API specifies a two-dimensional sub-rectangle for a texture image in a compressed format.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#COMPRESSEDTEXSUBIMAGE2D",
+            "description": "The definition of 'compressedTexSubImage2D' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCompressedTexSubImage2D.xml",
+            "description": "The definition of 'glCompressedTexSubImage2D' in OpenGL ES 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glCompressedTexSubImage2D.xhtml",
+            "description": "The definition of 'glCompressedTexSubImage2D' in OpenGL ES 3.0."
+        }
+    ]
 }

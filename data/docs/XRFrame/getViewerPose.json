@@ -1,7 +1,0 @@
-
-{
-    "kind": "Method",
-    "name": "XRFrame.getViewerPose",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose",
-    "description": "The getViewerPose() method, a member of the XRFrame interface, returns a XRViewerPose object which describes the viewer's pose (position and orientation) relative to the specified reference space."
-}

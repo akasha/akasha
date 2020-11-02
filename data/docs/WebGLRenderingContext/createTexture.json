@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.createTexture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createTexture",
-    "description": "The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object."
+    "description": "The WebGLRenderingContext.createTexture() method of the WebGL API creates and initializes a WebGLTexture object.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
+            "description": "The definition of 'createTexture' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenTextures.xml",
+            "description": "The definition of 'glGenTextures' in OpenGL ES 2.0."
+        }
+    ]
 }

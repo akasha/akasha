@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.vertexAttrib",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib",
-    "description": "The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes."
+    "description": "The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'vertexAttrib' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glVertexAttrib.xml",
+            "description": "The definition of 'glVertexAttrib' in OpenGL ES 2.0."
+        }
+    ]
 }

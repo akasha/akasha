@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.deleteTexture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteTexture",
-    "description": "The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted."
+    "description": "The WebGLRenderingContext.deleteTexture() method of the WebGL API deletes a given WebGLTexture object. This method has no effect if the texture has already been deleted.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
+            "description": "The definition of 'deleteTexture' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteTextures.xml",
+            "description": "The definition of 'glDeleteTextures' in OpenGL ES 2.0."
+        }
+    ]
 }

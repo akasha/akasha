@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.bindRenderbuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/bindRenderbuffer",
-    "description": "The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER."
+    "description": "The WebGLRenderingContext.bindRenderbuffer() method of the WebGL API binds a given WebGLRenderbuffer to a target, which must be gl.RENDERBUFFER.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.7",
+            "description": "The definition of 'bindRenderbuffer' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindRenderbuffer.xml",
+            "description": "The definition of 'glBindRenderbuffer' in OpenGL ES 2.0."
+        }
+    ]
 }

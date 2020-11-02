@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.checkFramebufferStatus",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus",
-    "description": "The WebGLRenderingContext.checkFramebufferStatus() method of the WebGL API returns the completeness status of the WebGLFramebuffer object."
+    "description": "The WebGLRenderingContext.checkFramebufferStatus() method of the WebGL API returns the completeness status of the WebGLFramebuffer object.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6",
+            "description": "The definition of 'checkFramebufferStatus' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glCheckFramebufferStatus.xml",
+            "description": "The definition of 'glCheckFramebufferStatus' in OpenGL ES 2.0."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4",
+            "description": "The definition of 'checkFramebufferStatus' in WebGL 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glCheckFramebufferStatus.xhtml",
+            "description": "The definition of 'glCheckFramebufferStatus' in OpenGL ES 3.0."
+        }
+    ]
 }

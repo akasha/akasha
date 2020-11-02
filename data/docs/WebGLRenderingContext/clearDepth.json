@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.clearDepth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearDepth",
-    "description": "The WebGLRenderingContext.clearDepth() method of the WebGL API specifies the clear value for the depth buffer."
+    "description": "The WebGLRenderingContext.clearDepth() method of the WebGL API specifies the clear value for the depth buffer.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'clearDepth' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearDepthf.xml",
+            "description": "The definition of 'glClearDepthf' in OpenGL ES 2.0."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.enableVertexAttribArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enableVertexAttribArray",
-    "description": "The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays."
+    "description": "The WebGLRenderingContext method enableVertexAttribArray(), part of the WebGL API, turns on the generic vertex attribute array at the specified index into the list of attribute arrays.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'enableVertexAttribArray' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnableVertexAttribArray.xml",
+            "description": "The definition of 'glEnableVertexAttribArray' in OpenGL ES 2.0."
+        }
+    ]
 }

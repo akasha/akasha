@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.clearColor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clearColor",
-    "description": "The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers."
+    "description": "The WebGLRenderingContext.clearColor() method of the WebGL API specifies the color values used when clearing color buffers.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'clearColor' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glClearColor.xml",
+            "description": "The definition of 'glClearColor' in OpenGL ES 2.0."
+        }
+    ]
 }

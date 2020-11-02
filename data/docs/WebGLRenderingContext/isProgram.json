@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.isProgram",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isProgram",
-    "description": "The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise."
+    "description": "The WebGLRenderingContext.isProgram() method of the WebGL API returns true if the passed WebGLProgram is valid, false otherwise.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'isProgram' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsProgram.xml",
+            "description": "The definition of 'glIsProgram' in OpenGL ES 2.0."
+        }
+    ]
 }

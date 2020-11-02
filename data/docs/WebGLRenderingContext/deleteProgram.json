@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.deleteProgram",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/deleteProgram",
-    "description": "The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted."
+    "description": "The WebGLRenderingContext.deleteProgram() method of the WebGL API deletes a given WebGLProgram object. This method has no effect if the program has already been deleted.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'deleteProgram' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDeleteProgram.xml",
+            "description": "The definition of 'glDeleteProgram' in OpenGL ES 2.0."
+        }
+    ]
 }

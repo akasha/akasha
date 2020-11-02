@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.activeTexture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/activeTexture",
-    "description": "The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active."
+    "description": "The WebGLRenderingContext.activeTexture() method of the WebGL API specifies which texture unit to make active.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'activeTexture' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glActiveTexture.xml",
+            "description": "The definition of 'glActiveTexture' in OpenGL ES 2.0."
+        }
+    ]
 }

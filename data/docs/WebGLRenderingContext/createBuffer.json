@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.createBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/createBuffer",
-    "description": "The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors."
+    "description": "The WebGLRenderingContext.createBuffer() method of the WebGL API creates and initializes a WebGLBuffer storing data such as vertices or colors.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5",
+            "description": "The definition of 'createBuffer' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGenBuffers.xml",
+            "description": "The definition of 'glGenBuffers' in OpenGL ES 2.0."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.useProgram",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/useProgram",
-    "description": "The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state."
+    "description": "The WebGLRenderingContext.useProgram() method of the WebGL API sets the specified WebGLProgram as part of the current rendering state.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.9",
+            "description": "The definition of 'useProgram' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glUseProgram.xml",
+            "description": "The definition of 'glUseProgram' in OpenGL ES 2.0."
+        }
+    ]
 }

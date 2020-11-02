@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getSupportedExtensions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getSupportedExtensions",
-    "description": "The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions."
+    "description": "The WebGLRenderingContext.getSupportedExtensions() method returns a list of all the supported WebGL extensions.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.14",
+            "description": "The definition of 'WebGLRenderingContext.getSupportedExtensions' in WebGL 1.0."
+        }
+    ]
 }

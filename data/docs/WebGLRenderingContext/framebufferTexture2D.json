@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.framebufferTexture2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/framebufferTexture2D",
-    "description": "The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer."
+    "description": "The WebGLRenderingContext.framebufferTexture2D() method of the WebGL API attaches a texture to a WebGLFramebuffer.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6",
+            "description": "The definition of 'framebufferTexture2D' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml",
+            "description": "The definition of 'glFramebufferTexture2D' in OpenGL ES 2.0."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml",
+            "description": "The definition of 'glFramebufferTexture2D' in OpenGL ES 3.0."
+        }
+    ]
 }

@@ -1,7 +1,0 @@
-
-{
-    "kind": "Type",
-    "name": "XRFrame",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame",
-    "description": "A WebXR Device API XRFrame object is passed into the requestAnimationFrame() callback function and provides access to the information needed in order to render a single frame of animation for an XRSession describing a VR or AR sccene."
-}

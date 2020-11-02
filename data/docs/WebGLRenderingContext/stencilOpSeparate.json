@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.stencilOpSeparate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/stencilOpSeparate",
-    "description": "The WebGLRenderingContext.stencilOpSeparate() method of the WebGL API sets the front and/or back-facing stencil test actions."
+    "description": "The WebGLRenderingContext.stencilOpSeparate() method of the WebGL API sets the front and/or back-facing stencil test actions.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'stencilOpSeparate' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glStencilOpSeparate.xml",
+            "description": "The definition of 'glStencilOpSeparate' in OpenGL ES 2.0."
+        }
+    ]
 }

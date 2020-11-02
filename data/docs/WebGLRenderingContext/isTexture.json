@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.isTexture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/isTexture",
-    "description": "The WebGLRenderingContext.isTexture() method of the WebGL API returns true if the passed WebGLTexture is valid and false otherwise."
+    "description": "The WebGLRenderingContext.isTexture() method of the WebGL API returns true if the passed WebGLTexture is valid and false otherwise.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
+            "description": "The definition of 'isTexture' in WebGL 1.0."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glIsTexture.xml",
+            "description": "The definition of 'glIsTexture' in OpenGL ES 2.0."
+        }
+    ]
 }
