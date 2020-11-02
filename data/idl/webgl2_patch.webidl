@@ -324,3 +324,9 @@ const enum Winding {
   WebGL2RenderingContext.CW,
   WebGL2RenderingContext.CCW
 };
+
+const enum TextureWrapMode {
+  WebGL2RenderingContext.REPEAT,
+  WebGL2RenderingContext.CLAMP_TO_EDGE,
+  WebGL2RenderingContext.MIRRORED_REPEAT
+};
