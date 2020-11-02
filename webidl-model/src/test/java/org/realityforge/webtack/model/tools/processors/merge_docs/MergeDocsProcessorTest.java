@@ -50,6 +50,15 @@ public final class MergeDocsProcessorTest
                                                        .build()
                                                )
                                                .build() )
+                                       .add( "memberAliases",
+                                             Json.createObjectBuilder()
+                                               .add( "WebGL2RenderingContext.uniform1f",
+                                                     Json
+                                                       .createArrayBuilder()
+                                                       .add( "WebGLRenderingContext.uniform" )
+                                                       .build()
+                                               )
+                                               .build() )
                                        .build() );
   }
 }

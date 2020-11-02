@@ -2,7 +2,6 @@ package org.realityforge.webtack.model.tools.processors.merge_docs;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorFactory;
@@ -16,6 +15,7 @@ public final class MergeDocsProcessorFactory
 {
   public boolean createEvents;
   public Map<String, ArrayList<String>> aliases;
+  public Map<String, ArrayList<String>> memberAliases;
 
   @Nonnull
   @Override
@@ -23,6 +23,7 @@ public final class MergeDocsProcessorFactory
   {
     return new MergeDocsProcessor( context.docRepository(),
                                    createEvents,
-                                   null == aliases ? Collections.emptyMap() : aliases );
+                                   null == aliases ? Collections.emptyMap() : aliases,
+                                   null == memberAliases ? Collections.emptyMap() : memberAliases );
   }
 }

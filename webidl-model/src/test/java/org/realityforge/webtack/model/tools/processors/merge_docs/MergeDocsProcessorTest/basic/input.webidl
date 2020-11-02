@@ -95,6 +95,8 @@ interface Node {
 interface WebGL2RenderingContext {
   undefined finish();
   undefined flush();
+  undefined uniform1f();
+  undefined uniform1ui();
 };
 
 interface WebGL3RenderingContext {

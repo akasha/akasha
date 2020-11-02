@@ -46,17 +46,21 @@ final class MergeDocsProcessor
   private final boolean _createEvents;
   @Nonnull
   private final Map<String, ArrayList<String>> _aliases;
+  @Nonnull
+  private final Map<String, ArrayList<String>> _memberAliases;
   private String _type;
   private boolean _typeIsMixin;
   private WebIDLSchema _schema;
 
   MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime,
                       final boolean createEvents,
-                      @Nonnull final Map<String, ArrayList<String>> aliases )
+                      @Nonnull final Map<String, ArrayList<String>> aliases,
+                      @Nonnull final Map<String, ArrayList<String>> memberAliases )
   {
     _runtime = Objects.requireNonNull( runtime );
     _createEvents = createEvents;
     _aliases = Objects.requireNonNull( aliases );
+    _memberAliases = memberAliases;
   }
 
   @Nullable
@@ -468,6 +472,22 @@ final class MergeDocsProcessor
             if ( null != aliasEntry )
             {
               return aliasEntry;
+            }
+            if ( null != member )
+            {
+              final List<String> memberAliases = _memberAliases.get( type + "." + member );
+              if ( null != memberAliases )
+              {
+                for ( final String memberAlias : memberAliases )
+                {
+                  final String[] parts = memberAlias.split( "\\." );
+                  final DocEntry memberAliasEntry = _runtime.findDocEntry( parts[ 0 ], parts[ 1 ] );
+                  if ( null != memberAliasEntry )
+                  {
+                    return memberAliasEntry;
+                  }
+                }
+              }
             }
           }
         }

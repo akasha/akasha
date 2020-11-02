@@ -276,6 +276,13 @@ interface WebGL2RenderingContext {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/flush">WebGL2RenderingContext.flush - MDN</a>
    */
   undefined flush();
+  /**
+   * Docs for WebGLRenderingContext.uniform
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniform">WebGLRenderingContext.uniform - MDN</a>
+   */
+  undefined uniform1f();
+  undefined uniform1ui();
 };
 
 /**
