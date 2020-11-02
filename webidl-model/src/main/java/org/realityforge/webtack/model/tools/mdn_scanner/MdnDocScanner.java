@@ -21,6 +21,7 @@ import javax.lang.model.SourceVersion;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
 import org.realityforge.webtack.model.tools.fetch.FetchException;
 import org.realityforge.webtack.model.tools.fetch.FetchResult;
@@ -272,6 +273,39 @@ public final class MdnDocScanner
       // Then replace any other special characters with their equivalent html entities as the description is
       // expected to be HTML "phrasing content" soo that it can easily be added to javadoc like tools
       entry.setDescription( StringUtils.encodeHtml( description.replace( '\u00A0', ' ' ) ) );
+
+      entry.setRefs( null );
+      final Element standardsElement = document.selectFirst( "table.standard-table" );
+      if ( null != standardsElement )
+      {
+        final List<ExternalRef> refs = new ArrayList<>();
+        for ( final Element row : standardsElement.select( "tr" ) )
+        {
+          final Elements nodes = row.children();
+          if ( 3 == nodes.size() && nodes.get( 0 ).tagName().equals( "td" ) )
+          {
+            final Element td = nodes.get( 0 );
+            final Element a = td.selectFirst( "a" );
+            if ( null != a )
+            {
+              final List<TextNode> textNodes = a.textNodes();
+              final String name = textNodes.get( 0 ).text();
+              final String href = a.attr( "href" );
+              final String refDescription = a.text().substring( name.length() ).trim();
+              final ExternalRef ref = new ExternalRef();
+              ref.setName( name );
+              ref.setHref( href );
+              ref.setDescription( refDescription.replace( "that specification", name ) );
+              refs.add( ref );
+            }
+          }
+        }
+        if ( !refs.isEmpty() )
+        {
+          entry.setRefs( refs.toArray( new ExternalRef[ 0 ] ) );
+        }
+      }
+
       if ( DocKind.Type == kind )
       {
         scanTypePage( document, entryIndex );

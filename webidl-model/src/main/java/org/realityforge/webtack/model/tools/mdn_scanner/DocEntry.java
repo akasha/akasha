@@ -17,6 +17,7 @@ import javax.json.bind.annotation.JsonbPropertyOrder;
                        "name",
                        "href",
                        "description",
+                       "refs",
                        "eventName",
                        "eventType",
                        "eventHandlerProperty",
@@ -28,6 +29,8 @@ public class DocEntry
   private String name;
   private String href;
   private String description;
+  @Nullable
+  private ExternalRef[] refs;
   // field is only present when kind == Event
   @Nullable
   private String eventName;
@@ -82,6 +85,16 @@ public class DocEntry
   public void setDescription( final String description )
   {
     this.description = description;
+  }
+
+  public ExternalRef[] getRefs()
+  {
+    return refs;
+  }
+
+  public void setRefs( @Nullable final ExternalRef[] refs )
+  {
+    this.refs = refs;
   }
 
   @Nullable
