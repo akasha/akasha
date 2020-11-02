@@ -1,7 +1,7 @@
 
 {
     "name": "WebGLRenderingContext",
-    "lastModifiedAt": 1600313954195,
+    "lastModifiedAt": 1604298309302,
     "entries": [
         {
             "name": "__type__",
@@ -428,8 +428,20 @@
             "lastModifiedAt": 1600296700747
         },
         {
+            "name": "texParameter",
+            "lastModifiedAt": 1604298304900
+        },
+        {
             "name": "texSubImage2D",
             "lastModifiedAt": 1600296701123
+        },
+        {
+            "name": "uniform",
+            "lastModifiedAt": 1604298305821
+        },
+        {
+            "name": "uniformMatrix",
+            "lastModifiedAt": 1604298306130
         },
         {
             "name": "useProgram",
@@ -438,6 +450,10 @@
         {
             "name": "validateProgram",
             "lastModifiedAt": 1600296701678
+        },
+        {
+            "name": "vertexAttrib",
+            "lastModifiedAt": 1604298307664
         },
         {
             "name": "vertexAttribPointer",

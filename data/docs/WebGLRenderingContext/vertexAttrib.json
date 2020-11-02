@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.vertexAttrib",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/vertexAttrib",
+    "description": "The WebGLRenderingContext.vertexAttrib[1234]f[v]() methods of the WebGL API specify constant values for generic vertex attributes."
+}

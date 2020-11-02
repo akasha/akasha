@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGLRenderingContext.uniformMatrix",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/uniformMatrix",
+    "description": "The WebGLRenderingContext.uniformMatrix[234]fv() methods of the WebGL API specify matrix values for uniform variables."
+}

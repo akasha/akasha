@@ -432,6 +432,11 @@ public final class MdnDocScanner
         .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
+
+
+        // Many of the WebGL elements have one page to describe multiple methods with different type
+        // decorations ala "uniform[1234][fi][v]()" which this tries to address
+        .map( text -> text.replaceAll( "\\[.*", "" ) )
         .filter( SourceVersion::isName )
         .sorted()
         .distinct()
