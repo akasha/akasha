@@ -48,7 +48,7 @@ the browser API easier for java developers. A few differences from Elemental2 in
 * Constants in WebIDL are represented as constants in java. This typically results in smaller code size and may open
   up additional optimization opportunities.
 * Fields, methods and parameters are annotated with `@Nonnull` or `@Nullable` if the type is a non-primitive, non-void type.
-* Read-only attributes in WebIDL are implemented as methods rather than mutable fields of properties with setters.
+* Read-only attributes in WebIDL are implemented as methods rather than mutable fields or properties with setters.
 * Dictionaries in WebIDL use a "builder" pattern to make construction of these types much easier.
 * No parameterized types exist in WebTack as WebIDL does not define such constructs.
 * Event handlers and event listeners are typed according to type of event expected to be delivered and have a void
