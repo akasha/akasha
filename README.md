@@ -43,7 +43,8 @@ The WebTack jsinterop action generates source code with a more java-esque feel t
 [elemental2](https://github.com/google/elemental2). It also aims to offer affordances that make working with
 the browser API easier for java developers. A few differences from Elemental2 include:
 
-* Javadocs are added for most fields, methods and types if the element is documented on MDN.
+* Javadocs are added for most fields, methods and types if the element is documented on MDN. This often includes
+  references to the specification in which the element is defined.
 * Constants in WebIDL are represented as constants in java. This typically results in smaller code size and may open
   up additional optimization opportunities.
 * Fields, methods and parameters are annotated with `@Nonnull` or `@Nullable` if the type is a non-primitive, non-void type.
