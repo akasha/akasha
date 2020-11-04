@@ -298,7 +298,7 @@ public final class MdnDocScanner
               ref.setHref( href );
               if ( !refDescription.isEmpty() )
               {
-                ref.setDescription( refDescription );
+                ref.setDescription( StringUtils.encodeHtml( refDescription ) );
               }
               refs.add( ref );
             }
