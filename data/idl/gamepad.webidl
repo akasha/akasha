@@ -7,7 +7,7 @@ dictionary GamepadEventInit : EventInit {
   required Gamepad gamepad;
 };
 
-[Exposed=Window]
+[Exposed=Window, SecureContext]
 interface Gamepad {
   readonly attribute FrozenArray<double> axes;
   readonly attribute FrozenArray<GamepadButton> buttons;
@@ -18,14 +18,14 @@ interface Gamepad {
   readonly attribute DOMHighResTimeStamp timestamp;
 };
 
-[Exposed=Window]
+[Exposed=Window, SecureContext]
 interface GamepadButton {
   readonly attribute boolean pressed;
   readonly attribute boolean touched;
   readonly attribute double value;
 };
 
-[Exposed=Window]
+[Exposed=Window, SecureContext]
 interface GamepadEvent : Event {
   [SameObject]
   readonly attribute Gamepad gamepad;

@@ -34,5 +34,5 @@ interface WEBGL_draw_buffers {
   const GLenum DRAW_BUFFER9_WEBGL = 0x882E;
   const GLenum MAX_COLOR_ATTACHMENTS_WEBGL = 0x8CDF;
   const GLenum MAX_DRAW_BUFFERS_WEBGL = 0x8824;
-  void drawBuffersWEBGL( sequence<GLenum> buffers );
+  undefined drawBuffersWEBGL( sequence<GLenum> buffers );
 };

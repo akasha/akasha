@@ -20,11 +20,11 @@ partial interface Document {
   readonly attribute boolean fullscreenEnabled;
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
-  Promise<void> exitFullscreen();
+  Promise<undefined> exitFullscreen();
 };
 
 partial interface Element {
   attribute EventHandler onfullscreenchange;
   attribute EventHandler onfullscreenerror;
-  Promise<void> requestFullscreen( optional FullscreenOptions options = {} );
+  Promise<undefined> requestFullscreen( optional FullscreenOptions options = {} );
 };

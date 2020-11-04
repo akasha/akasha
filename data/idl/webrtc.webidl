@@ -142,9 +142,9 @@ enum RTCSignalingState {
   "stable"
 };
 
-callback RTCPeerConnectionErrorCallback = void ( DOMException error );
+callback RTCPeerConnectionErrorCallback = undefined ( DOMException error );
 
-callback RTCSessionDescriptionCallback = void ( RTCSessionDescriptionInit description );
+callback RTCSessionDescriptionCallback = undefined ( RTCSessionDescriptionInit description );
 
 dictionary RTCAnswerOptions : RTCOfferAnswerOptions {
 };
@@ -363,7 +363,7 @@ interface RTCDTMFSender : EventTarget {
   readonly attribute boolean canInsertDTMF;
   readonly attribute DOMString toneBuffer;
   attribute EventHandler ontonechange;
-  void insertDTMF( DOMString tones, optional unsigned long duration = 100, optional unsigned long interToneGap = 70 );
+  undefined insertDTMF( DOMString tones, optional unsigned long duration = 100, optional unsigned long interToneGap = 70 );
 };
 
 [Exposed=Window]
@@ -383,7 +383,7 @@ interface RTCDataChannel : EventTarget {
   readonly attribute boolean ordered;
   readonly attribute USVString protocol;
   readonly attribute RTCDataChannelState readyState;
-  attribute DOMString binaryType;
+  attribute BinaryType binaryType;
   [EnforceRange]
   attribute unsigned long bufferedAmountLowThreshold;
   attribute EventHandler onbufferedamountlow;
@@ -392,11 +392,11 @@ interface RTCDataChannel : EventTarget {
   attribute EventHandler onerror;
   attribute EventHandler onmessage;
   attribute EventHandler onopen;
-  void close();
-  void send( USVString data );
-  void send( Blob data );
-  void send( ArrayBuffer data );
-  void send( ArrayBufferView data );
+  undefined close();
+  undefined send( USVString data );
+  undefined send( Blob data );
+  undefined send( ArrayBuffer data );
+  undefined send( ArrayBufferView data );
 };
 
 [Exposed=Window]
@@ -489,20 +489,20 @@ interface RTCPeerConnection : EventTarget {
   attribute EventHandler onnegotiationneeded;
   attribute EventHandler onsignalingstatechange;
   constructor( optional RTCConfiguration configuration = {} );
-  Promise<void> addIceCandidate( optional RTCIceCandidateInit candidate = {} );
-  Promise<void> addIceCandidate( RTCIceCandidateInit candidate, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
-  void close();
+  Promise<undefined> addIceCandidate( optional RTCIceCandidateInit candidate = {} );
+  Promise<undefined> addIceCandidate( RTCIceCandidateInit candidate, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
+  undefined close();
   Promise<RTCSessionDescriptionInit> createAnswer( optional RTCAnswerOptions options = {} );
-  Promise<void> createAnswer( RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback );
+  Promise<undefined> createAnswer( RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback );
   Promise<RTCSessionDescriptionInit> createOffer( optional RTCOfferOptions options = {} );
-  Promise<void> createOffer( RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, optional RTCOfferOptions options = {} );
+  Promise<undefined> createOffer( RTCSessionDescriptionCallback successCallback, RTCPeerConnectionErrorCallback failureCallback, optional RTCOfferOptions options = {} );
   RTCConfiguration getConfiguration();
-  void restartIce();
-  void setConfiguration( optional RTCConfiguration configuration = {} );
-  Promise<void> setLocalDescription( optional RTCLocalSessionDescriptionInit description = {} );
-  Promise<void> setLocalDescription( optional RTCLocalSessionDescriptionInit description = {}, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
-  Promise<void> setRemoteDescription( RTCSessionDescriptionInit description );
-  Promise<void> setRemoteDescription( RTCSessionDescriptionInit description, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
+  undefined restartIce();
+  undefined setConfiguration( optional RTCConfiguration configuration = {} );
+  Promise<undefined> setLocalDescription( optional RTCLocalSessionDescriptionInit description = {} );
+  Promise<undefined> setLocalDescription( optional RTCLocalSessionDescriptionInit description = {}, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
+  Promise<undefined> setRemoteDescription( RTCSessionDescriptionInit description );
+  Promise<undefined> setRemoteDescription( RTCSessionDescriptionInit description, VoidFunction successCallback, RTCPeerConnectionErrorCallback failureCallback );
 };
 
 [Exposed=Window]
@@ -540,9 +540,9 @@ interface RTCRtpSender {
   static RTCRtpCapabilities? getCapabilities( DOMString kind );
   RTCRtpSendParameters getParameters();
   Promise<RTCStatsReport> getStats();
-  Promise<void> replaceTrack( MediaStreamTrack? withTrack );
-  Promise<void> setParameters( RTCRtpSendParameters parameters );
-  void setStreams( MediaStream... streams );
+  Promise<undefined> replaceTrack( MediaStreamTrack? withTrack );
+  Promise<undefined> setParameters( RTCRtpSendParameters parameters );
+  undefined setStreams( MediaStream... streams );
 };
 
 [Exposed=Window]
@@ -554,8 +554,8 @@ interface RTCRtpTransceiver {
   [SameObject]
   readonly attribute RTCRtpSender sender;
   attribute RTCRtpTransceiverDirection direction;
-  void setCodecPreferences( sequence<RTCRtpCodecCapability> codecs );
-  void stop();
+  undefined setCodecPreferences( sequence<RTCRtpCodecCapability> codecs );
+  undefined stop();
 };
 
 [Exposed=Window]
@@ -602,7 +602,7 @@ partial interface RTCPeerConnection {
   sequence<RTCRtpReceiver> getReceivers();
   sequence<RTCRtpSender> getSenders();
   sequence<RTCRtpTransceiver> getTransceivers();
-  void removeTrack( RTCRtpSender sender );
+  undefined removeTrack( RTCRtpSender sender );
 };
 
 partial interface RTCPeerConnection {

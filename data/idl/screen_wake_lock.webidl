@@ -4,7 +4,7 @@ enum WakeLockType {
 
 [SecureContext, Exposed=(Window)]
 interface WakeLock {
-  Promise<WakeLockSentinel> request( WakeLockType type );
+  Promise<WakeLockSentinel> request( optional WakeLockType type = "screen" );
 };
 
 [SecureContext, Exposed=(Window)]

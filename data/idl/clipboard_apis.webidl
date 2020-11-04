@@ -28,8 +28,8 @@ dictionary ClipboardPermissionDescriptor : PermissionDescriptor {
 interface Clipboard : EventTarget {
   Promise<ClipboardItems> read();
   Promise<DOMString> readText();
-  Promise<void> write( ClipboardItems data );
-  Promise<void> writeText( DOMString data );
+  Promise<undefined> write( ClipboardItems data );
+  Promise<undefined> writeText( DOMString data );
 };
 
 [Exposed=Window]

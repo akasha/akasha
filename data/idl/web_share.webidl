@@ -7,5 +7,5 @@ dictionary ShareData {
 
 partial interface Navigator {
   [SecureContext]
-  Promise<void> share( optional ShareData data = {} );
+  Promise<undefined> share( optional ShareData data = {} );
 };

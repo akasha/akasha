@@ -303,6 +303,10 @@ dictionary WorkerOptions {
   WorkerType type = "classic";
 };
 
+dictionary WorkletOptions {
+  RequestCredentials credentials = "same-origin";
+};
+
 interface mixin AbstractWorker {
   attribute EventHandler onerror;
 };
@@ -831,6 +835,7 @@ interface DragEvent : MouseEvent {
 interface ElementInternals {
   readonly attribute HTMLFormElement? form;
   readonly attribute NodeList labels;
+  readonly attribute ShadowRoot? shadowRoot;
   readonly attribute DOMString validationMessage;
   readonly attribute ValidityState validity;
   readonly attribute boolean willValidate;
@@ -2529,6 +2534,16 @@ interface WorkerLocation {
 
 [Exposed=Worker]
 interface WorkerNavigator {
+};
+
+[Exposed=Window, SecureContext]
+interface Worklet {
+  [NewObject]
+  Promise<undefined> addModule( USVString moduleURL, optional WorkletOptions options = {} );
+};
+
+[Exposed=Worklet, SecureContext]
+interface WorkletGlobalScope {
 };
 
 [LegacyOverrideBuiltIns]

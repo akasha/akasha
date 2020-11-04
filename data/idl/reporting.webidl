@@ -1,6 +1,6 @@
 typedef sequence<Report> ReportList;
 
-callback ReportingObserverCallback = void ( sequence<Report> reports, ReportingObserver observer );
+callback ReportingObserverCallback = undefined ( sequence<Report> reports, ReportingObserver observer );
 
 dictionary GenerateTestReportParameters {
   DOMString group = "default";
@@ -30,7 +30,7 @@ interface ReportBody {
 [Exposed=(Window,Worker)]
 interface ReportingObserver {
   constructor( ReportingObserverCallback callback, optional ReportingObserverOptions options = {} );
-  void disconnect();
-  void observe();
+  undefined disconnect();
+  undefined observe();
   ReportList takeRecords();
 };

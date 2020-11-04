@@ -112,11 +112,11 @@ partial interface mixin WindowOrWorkerGlobalScope {
 interface Headers {
   iterable<ByteString, ByteString>;
   constructor( optional HeadersInit init );
-  void append( ByteString name, ByteString value );
-  void delete( ByteString name );
+  undefined append( ByteString name, ByteString value );
+  undefined delete( ByteString name );
   ByteString? get( ByteString name );
   boolean has( ByteString name );
-  void set( ByteString name, ByteString value );
+  undefined set( ByteString name, ByteString value );
 };
 
 [Exposed=(Window,Worker)]

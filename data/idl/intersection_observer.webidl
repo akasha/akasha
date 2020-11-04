@@ -1,4 +1,4 @@
-callback IntersectionObserverCallback = void ( sequence<IntersectionObserverEntry> entries, IntersectionObserver observer );
+callback IntersectionObserverCallback = undefined ( sequence<IntersectionObserverEntry> entries, IntersectionObserver observer );
 
 dictionary IntersectionObserverEntryInit {
   required DOMRectInit boundingClientRect;
@@ -11,23 +11,24 @@ dictionary IntersectionObserverEntryInit {
 };
 
 dictionary IntersectionObserverInit {
-  Element? root = null;
+  ( Element or Document )? root = null;
   DOMString rootMargin = "0px";
   ( double or sequence<double> ) threshold = 0;
 };
 
-[Constructor( IntersectionObserverCallback callback, optional IntersectionObserverInit options ), Exposed=Window]
+[Exposed=Window]
 interface IntersectionObserver {
-  readonly attribute Element? root;
+  readonly attribute ( Element or Document )? root;
   readonly attribute DOMString rootMargin;
   readonly attribute FrozenArray<double> thresholds;
-  void disconnect();
-  void observe( Element target );
+  constructor( IntersectionObserverCallback callback, optional IntersectionObserverInit options = {} );
+  undefined disconnect();
+  undefined observe( Element target );
   sequence<IntersectionObserverEntry> takeRecords();
-  void unobserve( Element target );
+  undefined unobserve( Element target );
 };
 
-[Constructor( IntersectionObserverEntryInit intersectionObserverEntryInit )]
+[Exposed=Window]
 interface IntersectionObserverEntry {
   readonly attribute DOMRectReadOnly boundingClientRect;
   readonly attribute double intersectionRatio;
@@ -36,4 +37,5 @@ interface IntersectionObserverEntry {
   readonly attribute DOMRectReadOnly? rootBounds;
   readonly attribute Element target;
   readonly attribute DOMHighResTimeStamp time;
+  constructor( IntersectionObserverEntryInit intersectionObserverEntryInit );
 };

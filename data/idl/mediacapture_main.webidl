@@ -31,9 +31,9 @@ typedef ( [Clamp] unsigned long or ConstrainULongRange ) ConstrainULong;
 
 typedef object MediaStreamError;
 
-callback NavigatorUserMediaErrorCallback = void ( MediaStreamError error );
+callback NavigatorUserMediaErrorCallback = undefined ( MediaStreamError error );
 
-callback NavigatorUserMediaSuccessCallback = void ( MediaStream stream );
+callback NavigatorUserMediaSuccessCallback = undefined ( MediaStream stream );
 
 dictionary Capabilities {
 };
@@ -197,13 +197,13 @@ interface MediaStream : EventTarget {
   constructor();
   constructor( MediaStream stream );
   constructor( sequence<MediaStreamTrack> tracks );
-  void addTrack( MediaStreamTrack track );
+  undefined addTrack( MediaStreamTrack track );
   MediaStream clone();
   sequence<MediaStreamTrack> getAudioTracks();
   MediaStreamTrack? getTrackById( DOMString trackId );
   sequence<MediaStreamTrack> getTracks();
   sequence<MediaStreamTrack> getVideoTracks();
-  void removeTrack( MediaStreamTrack track );
+  undefined removeTrack( MediaStreamTrack track );
 };
 
 [Exposed=Window]
@@ -217,12 +217,12 @@ interface MediaStreamTrack : EventTarget {
   attribute EventHandler onended;
   attribute EventHandler onmute;
   attribute EventHandler onunmute;
-  Promise<void> applyConstraints( optional MediaTrackConstraints constraints = {} );
+  Promise<undefined> applyConstraints( optional MediaTrackConstraints constraints = {} );
   MediaStreamTrack clone();
   MediaTrackCapabilities getCapabilities();
   MediaTrackConstraints getConstraints();
   MediaTrackSettings getSettings();
-  void stop();
+  undefined stop();
 };
 
 [Exposed=Window]
@@ -244,5 +244,5 @@ partial interface Navigator {
 
 partial interface Navigator {
   [SecureContext]
-  void getUserMedia( MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback );
+  undefined getUserMedia( MediaStreamConstraints constraints, NavigatorUserMediaSuccessCallback successCallback, NavigatorUserMediaErrorCallback errorCallback );
 };
