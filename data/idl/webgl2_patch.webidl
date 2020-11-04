@@ -330,3 +330,33 @@ const enum TextureWrapMode {
   WebGL2RenderingContext.CLAMP_TO_EDGE,
   WebGL2RenderingContext.MIRRORED_REPEAT
 };
+
+const enum TextureMagnificationFilter {
+  WebGL2RenderingContext.LINEAR,
+  WebGL2RenderingContext.NEAREST
+};
+
+const enum TextureMinificationFilter {
+  WebGL2RenderingContext.LINEAR,
+  WebGL2RenderingContext.NEAREST,
+  WebGL2RenderingContext.NEAREST_MIPMAP_NEAREST,
+  WebGL2RenderingContext.LINEAR_MIPMAP_NEAREST,
+  WebGL2RenderingContext.NEAREST_MIPMAP_LINEAR,
+  WebGL2RenderingContext.LINEAR_MIPMAP_LINEAR
+};
+
+const enum TextureComparisonFunction {
+  WebGL2RenderingContext.LEQUAL,
+  WebGL2RenderingContext.GEQUAL,
+  WebGL2RenderingContext.LESS,
+  WebGL2RenderingContext.GREATER,
+  WebGL2RenderingContext.EQUAL,
+  WebGL2RenderingContext.NOTEQUAL,
+  WebGL2RenderingContext.ALWAYS,
+  WebGL2RenderingContext.NEVER
+};
+
+const enum TextureComparisonMode {
+  WebGL2RenderingContext.NONE,
+  WebGL2RenderingContext.COMPARE_REF_TO_TEXTURE
+};
