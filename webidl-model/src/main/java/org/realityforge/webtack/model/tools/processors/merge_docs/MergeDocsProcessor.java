@@ -31,6 +31,7 @@ import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
+import org.realityforge.webtack.model.tools.mdn_scanner.ExternalRef;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
@@ -510,8 +511,19 @@ final class MergeDocsProcessor
   @Nonnull
   private DocumentationElement createDocumentationElement( @Nonnull final DocEntry docEntry )
   {
+    final List<DocumentationBlockTag> blockTags = new ArrayList<>();
+    blockTags.add( seeTag( docEntry ) );
+    final ExternalRef[] refs = docEntry.getRefs();
+    if ( null != refs )
+    {
+      for ( final ExternalRef ref : refs )
+      {
+        final String description = ref.getDescription();
+        blockTags.add( seeTag( null == description ? ref.getName() : description, ref.getHref() ) );
+      }
+    }
     return new DocumentationElement( docEntry.getDescription(),
-                                     Collections.singletonList( seeTag( docEntry ) ),
+                                     blockTags,
                                      Collections.emptyList(),
                                      true );
   }
@@ -520,8 +532,13 @@ final class MergeDocsProcessor
   private DocumentationBlockTag seeTag( @Nonnull final DocEntry docEntry )
   {
     final String label = docEntry.getKind() == DocKind.Event ? docEntry.getEventName() + " event" : docEntry.getName();
-    final String seeLink = "<a href=\"" + docEntry.getHref() + "\">" + label + " - MDN</a>";
-    return new DocumentationBlockTag( "see", seeLink );
+    return seeTag( label + " - MDN", docEntry.getHref() );
+  }
+
+  @Nonnull
+  private DocumentationBlockTag seeTag( @Nonnull final String label, @Nonnull final String href )
+  {
+    return new DocumentationBlockTag( "see", "<a href=\"" + href + "\">" + label + "</a>" );
   }
 
   private boolean shouldUseInputDocs( @Nonnull final Element input, @Nullable final DocEntry docEntry )

@@ -9,6 +9,7 @@ namespace WebAssembly {
    * The WebAssembly.compile() function compiles WebAssembly binary code into a WebAssembly.Module object. This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiate() function should be used).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile">WebAssembly.compile - MDN</a>
+   * @see <a href="https://example.com/wasm">wasm 1.0</a>
    */
   Promise<Module> compile( BufferSource bytes );
   /**
@@ -268,6 +269,8 @@ interface WebGL2RenderingContext {
    * Docs for WebGLRenderingContext.finish
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'finish' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">The definition of 'glFinish' in OpenGL ES 2.0.</a>
    */
   undefined finish();
   /**
@@ -296,6 +299,8 @@ interface WebGL3RenderingContext {
    * Docs for WebGLRenderingContext.finish
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'finish' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">The definition of 'glFinish' in OpenGL ES 2.0.</a>
    */
   undefined finish();
   /**
@@ -316,6 +321,8 @@ interface WebGLRenderingContext {
    * Docs for WebGLRenderingContext.finish
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/finish">WebGLRenderingContext.finish - MDN</a>
+   * @see <a href="https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.11">The definition of 'finish' in WebGL 1.0.</a>
+   * @see <a href="https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFinish.xml">The definition of 'glFinish' in OpenGL ES 2.0.</a>
    */
   undefined finish();
   /**

@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "WebAssembly.compile",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/compile",
-    "description": "The WebAssembly.compile() function compiles WebAssembly binary code into a WebAssembly.Module object. This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiate() function should be used)."
+    "description": "The WebAssembly.compile() function compiles WebAssembly binary code into a WebAssembly.Module object. This function is useful if it is necessary to a compile a module before it can be instantiated (otherwise, the WebAssembly.instantiate() function should be used).",
+    "refs": [
+        {
+            "name": "wasm 1.0",
+            "href": "https://example.com/wasm"
+        }
+    ]
 }
