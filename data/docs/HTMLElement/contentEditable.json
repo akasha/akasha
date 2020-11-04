@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLElement.contentEditable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/contentEditable",
-    "description": "The contentEditable property of the HTMLElement interface specifies whether or not the element is editable."
+    "description": "The contentEditable property of the HTMLElement interface specifies whether or not the element is editable.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#contenteditable",
+            "description": "The definition of 'contenteditable' in HTML Living Standard."
+        }
+    ]
 }

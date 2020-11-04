@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioBufferSourceNode.buffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/buffer",
-    "description": "The buffer property of the AudioBufferSourceNode interface provides the ability to play back audio using an AudioBuffer as the source of the sound data."
+    "description": "The buffer property of the AudioBufferSourceNode interface provides the ability to play back audio using an AudioBuffer as the source of the sound data.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffersourcenode-buffer",
+            "description": "The definition of 'buffer' in Web Audio API."
+        }
+    ]
 }

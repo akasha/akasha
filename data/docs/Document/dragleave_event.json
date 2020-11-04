@@ -4,6 +4,13 @@
     "name": "Document.dragleave_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragleave_event",
     "description": "The dragleave event is fired when a dragged element or text selection leaves a valid drop target.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dndevents",
+            "description": "The definition of 'dragleave' in HTML Living Standard."
+        }
+    ],
     "eventName": "dragleave",
     "eventType": "DragEvent",
     "eventHandlerProperty": "ondragleave",

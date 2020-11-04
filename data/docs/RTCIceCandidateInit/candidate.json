@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateInit.candidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/candidate",
-    "description": "The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property."
+    "description": "The optional property candidate in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's candidate property.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-candidate",
+            "description": "The definition of 'RTCIceCandidateInit.candidate' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

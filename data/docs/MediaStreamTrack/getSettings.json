@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStreamTrack.getSettings",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getSettings",
-    "description": "The getSettings() method of the MediaStreamTrack interface returns a MediaTrackSettings object containing the current values of each of the constrainable properties for the current MediaStreamTrack."
+    "description": "The getSettings() method of the MediaStreamTrack interface returns a MediaTrackSettings object containing the current values of each of the constrainable properties for the current MediaStreamTrack.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getsettings",
+            "description": "The definition of 'getSettings()' in Media Capture and Streams."
+        }
+    ]
 }

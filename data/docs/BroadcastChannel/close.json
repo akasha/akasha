@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BroadcastChannel.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/close",
-    "description": "The BroadcastChannel.close() terminates the connection to the underlying channel, allowing the object to be garbage collected. This is a necessary step to perform as there is no other way for a browser to know that this channel is not needed anymore."
+    "description": "The BroadcastChannel.close() terminates the connection to the underlying channel, allowing the object to be garbage collected. This is a necessary step to perform as there is no other way for a browser to know that this channel is not needed anymore.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-close",
+            "description": "The definition of 'BroadcastChannel.close()' in HTML Living Standard."
+        }
+    ]
 }

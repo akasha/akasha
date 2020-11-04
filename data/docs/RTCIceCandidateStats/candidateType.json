@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.candidateType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/candidateType",
-    "description": "The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents."
+    "description": "The RTCIceCandidateStats interface's candidateType property is a string which indicates the type of ICE candidate the object represents.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats",
+            "description": "The definition of 'RTCIceCandidateStats.candidateType' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.scrollBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollBy",
-    "description": "The scrollBy() method of the Element interface scrolls an element by the given amount."
+    "description": "The scrollBy() method of the Element interface scrolls an element by the given amount.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-scrollby-options-options",
+            "description": "The definition of 'element.scrollBy()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

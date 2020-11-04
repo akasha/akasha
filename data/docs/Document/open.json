@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.open",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/open",
-    "description": "The Document.open() method opens a document for writing."
+    "description": "The Document.open() method opens a document for writing.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-open",
+            "description": "The definition of 'document.open()' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-72161170",
+            "description": "The definition of 'document.open()' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

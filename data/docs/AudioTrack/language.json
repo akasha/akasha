@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrack.language",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/language",
-    "description": "The read-only AudioTrack property language returns a string identifying the language used in the audio track."
+    "description": "The read-only AudioTrack property language returns a string identifying the language used in the audio track.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-language",
+            "description": "The definition of 'AudioTrack.language' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotrack-language",
+            "description": "The definition of 'AudioTrack.language' in HTML5."
+        }
+    ]
 }

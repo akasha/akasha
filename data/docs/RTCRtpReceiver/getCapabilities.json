@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpReceiver.getCapabilities",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getCapabilities",
-    "description": "The static function RTCRtpReceiver.getCapabilities() returns an RTCRtpCapabilities object describing the codecs and capabilities supported by RTCRtpReceivers on the current device."
+    "description": "The static function RTCRtpReceiver.getCapabilities() returns an RTCRtpCapabilities object describing the codecs and capabilities supported by RTCRtpReceivers on the current device.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getcapabilities",
+            "description": "The definition of 'RTCRtpReceiver.getCapabilities()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

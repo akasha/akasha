@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.firstRequestTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/firstRequestTimestamp",
-    "description": "The RTCIceCandidatePairStats property firstRequestTimestamp specifies the time at which the first STUN request was sent on the described candidate pair."
+    "description": "The RTCIceCandidatePairStats property firstRequestTimestamp specifies the time at which the first STUN request was sent on the described candidate pair.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-firstrequesttimestamp",
+            "description": "The definition of 'RTCIceCandidatePairStats.firstRequestTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

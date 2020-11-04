@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Headers.delete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Headers/delete",
-    "description": "The delete() method of the Headers interface deletes a header from the current Headers object."
+    "description": "The delete() method of the Headers interface deletes a header from the current Headers object.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-headers-delete",
+            "description": "The definition of 'delete()' in Fetch."
+        }
+    ]
 }

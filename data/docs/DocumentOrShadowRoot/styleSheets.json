@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DocumentOrShadowRoot.styleSheets",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/styleSheets",
-    "description": "The styleSheets read-only property of the DocumentOrShadowRoot interface returns a StyleSheetList of CSSStyleSheet objects, for stylesheets explicitly linked into or embedded in a document."
+    "description": "The styleSheets read-only property of the DocumentOrShadowRoot interface returns a StyleSheetList of CSSStyleSheet objects, for stylesheets explicitly linked into or embedded in a document.",
+    "refs": [
+        {
+            "name": "Shadow DOM",
+            "href": "https://w3c.github.io/webcomponents/spec/shadow/#extensions-to-the-documentorshadowroot-mixin",
+            "description": "The definition of 'DocumentOrShadowRoot' in Shadow DOM."
+        }
+    ]
 }

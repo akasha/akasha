@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PopStateEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PopStateEvent",
-    "description": "PopStateEvent is an event handler for the popstate event on the window."
+    "description": "PopStateEvent is an event handler for the popstate event on the window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#popstateevent",
+            "description": "The definition of 'PopStateEvent' in HTML Living Standard."
+        }
+    ]
 }

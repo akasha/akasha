@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/state",
-    "description": "The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member."
+    "description": "The state property in an RTCIceCandidatePairStats object indicates the state of the check list of which the candidate pair is a member.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-state",
+            "description": "The definition of 'RTCIceCandidatePairStats.state' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

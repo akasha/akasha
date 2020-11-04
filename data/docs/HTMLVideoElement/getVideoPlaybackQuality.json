@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLVideoElement.getVideoPlaybackQuality",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/getVideoPlaybackQuality",
-    "description": "The HTMLVideoElement method getVideoPlaybackQuality() creates and returns a VideoPlaybackQuality object containing metrics including how many frames have been lost."
+    "description": "The HTMLVideoElement method getVideoPlaybackQuality() creates and returns a VideoPlaybackQuality object containing metrics including how many frames have been lost.",
+    "refs": [
+        {
+            "name": "Media Playback Quality",
+            "href": "https://w3c.github.io/media-playback-quality/#dom-htmlvideoelement-getvideoplaybackquality",
+            "description": "The definition of 'HTMLVideoElement.getVideoPlaybackQuality()' in Media Playback Quality."
+        }
+    ]
 }

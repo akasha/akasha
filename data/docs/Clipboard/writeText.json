@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Clipboard.writeText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText",
-    "description": "The Clipboard interface's writeText() property writes the specified text string to the system clipboard. Text may be read back using either read() or readText()."
+    "description": "The Clipboard interface's writeText() property writes the specified text string to the system clipboard. Text may be read back using either read() or readText().",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#dom-clipboard-writetext",
+            "description": "The definition of 'writeText()' in Clipboard API and events."
+        }
+    ]
 }

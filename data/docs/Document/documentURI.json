@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.documentURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/documentURI",
-    "description": "The documentURI read-only property of the Document interface returns the document location as a string."
+    "description": "The documentURI read-only property of the Document interface returns the document location as a string.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-documenturi",
+            "description": "The definition of 'documentURI' in DOM."
+        }
+    ]
 }

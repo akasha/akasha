@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.hasPointerCapture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/hasPointerCapture",
-    "description": "The hasPointerCapture() method of the Element interface sets whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID."
+    "description": "The hasPointerCapture() method of the Element interface sets whether the element on which it is invoked has pointer capture for the pointer identified by the given pointer ID.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-element-haspointercapture",
+            "description": "The definition of 'hasPointerCapture()' in Pointer Events – Level 2."
+        }
+    ]
 }

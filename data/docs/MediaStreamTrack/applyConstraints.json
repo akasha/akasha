@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "MediaStreamTrack.applyConstraints",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/applyConstraints",
-    "description": "The applyConstraints() method of the MediaStreamTrack interface applies a set of constraints to the track; these constraints let the Web site or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancelation, and so forth."
+    "description": "The applyConstraints() method of the MediaStreamTrack interface applies a set of constraints to the track; these constraints let the Web site or app establish ideal values and acceptable ranges of values for the constrainable properties of the track, such as frame rate, dimensions, echo cancelation, and so forth.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints",
+            "description": "The definition of 'applyConstraints()' in Media Capture and Streams."
+        },
+        {
+            "name": "MediaStream Image Capture",
+            "href": "https://w3c.github.io/mediacapture-image/#mediatrackconstraintset-section",
+            "description": "The definition of 'applyConstraints()' in MediaStream Image Capture."
+        }
+    ]
 }

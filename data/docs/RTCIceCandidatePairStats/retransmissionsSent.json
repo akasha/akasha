@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.retransmissionsSent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/retransmissionsSent",
-    "description": "The RTCIceCandidatePairStats dictionary's retransmissionsSent property indicates the total number of STUN connectivity check request retransmissions that have been sent so far on the pair of candidates."
+    "description": "The RTCIceCandidatePairStats dictionary's retransmissionsSent property indicates the total number of STUN connectivity check request retransmissions that have been sent so far on the pair of candidates.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-retransmissionssent",
+            "description": "The definition of 'RTCIceCandidatePairStats.retransmissionsSent' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

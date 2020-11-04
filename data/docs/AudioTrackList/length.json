@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrackList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/length",
-    "description": "The read-only AudioTrackList property length returns the number of entries in the AudioTrackList, each of which is an AudioTrack representing one audio track in the media element."
+    "description": "The read-only AudioTrackList property length returns the number of entries in the AudioTrackList, each of which is an AudioTrack representing one audio track in the media element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotracklist-length",
+            "description": "The definition of 'AudioTrackList.length' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-length",
+            "description": "The definition of 'AudioTrackList.length' in HTML5."
+        }
+    ]
 }

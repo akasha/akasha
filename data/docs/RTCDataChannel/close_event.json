@@ -4,6 +4,13 @@
     "name": "RTCDataChannel.close_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/close_event",
     "description": "The close event is sent to the onclose event handler on an RTCDataChannel instance when the data transport being used for the data channel has closed.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-close",
+            "description": "The definition of 'close' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "close",
     "eventType": "Event",
     "eventHandlerProperty": "onclose",

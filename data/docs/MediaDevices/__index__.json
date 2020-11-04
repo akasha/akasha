@@ -1,31 +1,31 @@
 
 {
     "name": "MediaDevices",
-    "lastModifiedAt": 1601465250477,
+    "lastModifiedAt": 1604448296843,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192204043
+            "lastModifiedAt": 1604448292234
         },
         {
             "name": "enumerateDevices",
-            "lastModifiedAt": 1596544749597
+            "lastModifiedAt": 1604448293385
         },
         {
             "name": "getDisplayMedia",
-            "lastModifiedAt": 1596544749897
+            "lastModifiedAt": 1604448294694
         },
         {
             "name": "getSupportedConstraints",
-            "lastModifiedAt": 1596544750288
+            "lastModifiedAt": 1604448295579
         },
         {
             "name": "getUserMedia",
-            "lastModifiedAt": 1596544750721
+            "lastModifiedAt": 1604448296843
         },
         {
             "name": "ondevicechange",
-            "lastModifiedAt": 1600308579264
+            "lastModifiedAt": 1604448292888
         }
     ]
 }

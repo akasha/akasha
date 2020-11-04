@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "MediaStreamTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack",
-    "description": "The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well."
+    "description": "The MediaStreamTrack interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.",
+    "refs": [
+        {
+            "name": "Identity for WebRTC",
+            "href": "https://w3c.github.io/webrtc-identity/#isolated-track",
+            "description": "The definition of 'Isolated tracks' in Identity for WebRTC."
+        },
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#mediastreamtrack",
+            "description": "The definition of 'MediaStreamTrack' in Media Capture and Streams."
+        }
+    ]
 }

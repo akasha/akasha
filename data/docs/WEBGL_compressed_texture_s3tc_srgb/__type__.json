@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WEBGL_compressed_texture_s3tc_srgb",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_s3tc_srgb",
-    "description": "The WEBGL_compressed_texture_s3tc_srgb extension is part of the WebGL API and exposes four S3TC compressed texture formats for the sRGB colorspace."
+    "description": "The WEBGL_compressed_texture_s3tc_srgb extension is part of the WebGL API and exposes four S3TC compressed texture formats for the sRGB colorspace.",
+    "refs": [
+        {
+            "name": "WEBGL_compressed_texture_s3tc_srgb",
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc_srgb/",
+            "description": "The definition of 'WEBGL_compressed_texture_s3tc_srgb' in WEBGL_compressed_texture_s3tc_srgb."
+        }
+    ]
 }

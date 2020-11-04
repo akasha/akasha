@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.scrollY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY",
-    "description": "The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically."
+    "description": "The read-only scrollY property of the Window interface returns the number of pixels that the document is currently scrolled vertically.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-scrolly",
+            "description": "The definition of 'window.scrollY' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

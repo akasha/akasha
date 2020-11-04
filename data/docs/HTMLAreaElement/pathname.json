@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLAreaElement.pathname",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/pathname",
-    "description": "The HTMLHyperlinkElementUtils.pathname property is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path)."
+    "description": "The HTMLHyperlinkElementUtils.pathname property is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-pathname",
+            "description": "The definition of 'HTMLHyperlinkElementUtils.pathname' in HTML Living Standard."
+        }
+    ]
 }

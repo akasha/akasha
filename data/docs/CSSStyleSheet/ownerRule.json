@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CSSStyleSheet.ownerRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/ownerRule",
-    "description": "The read-only CSSStyleSheet property ownerRule returns the CSSImportRule corresponding to the @import at-rule which imported the stylesheet into the document."
+    "description": "The read-only CSSStyleSheet property ownerRule returns the CSSImportRule corresponding to the @import at-rule which imported the stylesheet into the document.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-ownerrule",
+            "description": "The definition of 'CSSStyleSheet.ownerRule' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLParagraphElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLParagraphElement",
-    "description": "The HTMLParagraphElement interface provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating p elements."
+    "description": "The HTMLParagraphElement interface provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating p elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlparagraphelement",
+            "description": "The definition of 'HTMLParagraphElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/grouping-content.html#the-p-element",
+            "description": "The definition of 'HTMLParagraphElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-84675076",
+            "description": "The definition of 'HTMLParagraphElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-84675076",
+            "description": "The definition of 'HTMLParagraphElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

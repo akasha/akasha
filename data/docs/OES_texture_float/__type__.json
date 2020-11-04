@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "OES_texture_float",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_float",
-    "description": "The OES_texture_float extension is part of the WebGL API and exposes floating-point pixel types for textures."
+    "description": "The OES_texture_float extension is part of the WebGL API and exposes floating-point pixel types for textures.",
+    "refs": [
+        {
+            "name": "OES_texture_float",
+            "href": "https://www.khronos.org/registry/webgl/extensions/OES_texture_float/",
+            "description": "The definition of 'OES_texture_float' in OES_texture_float."
+        }
+    ]
 }

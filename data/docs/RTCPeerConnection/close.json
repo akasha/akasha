@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/close",
-    "description": "The RTCPeerConnection.close() method closes the current peer connection."
+    "description": "The RTCPeerConnection.close() method closes the current peer connection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-close",
+            "description": "The definition of 'RTCPeerConnection.close()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLDialogElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement",
-    "description": "The HTMLDialogElement interface provides methods to manipulate dialog elements. It inherits properties and methods from the HTMLElement interface."
+    "description": "The HTMLDialogElement interface provides methods to manipulate dialog elements. It inherits properties and methods from the HTMLElement interface.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmldialogelement",
+            "description": "The definition of 'HTMLDialogElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.2",
+            "href": "https://www.w3.org/TR/html52/interactive-elements.html#the-dialog-element",
+            "description": "The definition of '<dialog>' in HTML 5.2."
+        }
+    ]
 }

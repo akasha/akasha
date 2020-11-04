@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onvrdisplaypresentchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaypresentchange",
-    "description": "The onvrdisplaypresentchange property of the Window interface represents an event handler that will run when the presenting state of a VR display changes &mdash; i.e. goes from presenting to not presenting, or vice versa (when the vrdisplaypresentchange event fires)."
+    "description": "The onvrdisplaypresentchange property of the Window interface represents an event handler that will run when the presenting state of a VR display changes &mdash; i.e. goes from presenting to not presenting, or vice versa (when the vrdisplaypresentchange event fires).",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaypresentchange",
+            "description": "The definition of 'onvrdisplaypresentchange' in WebVR 1.1."
+        }
+    ]
 }

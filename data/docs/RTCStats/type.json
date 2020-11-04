@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCStats.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/type",
-    "description": "The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType."
+    "description": "The RTCStats dictionary's property type is a string which specifies the type of statistic represented by the object, where the permitted values are drawn from the enum type RTCStatsType.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcstats-type",
+            "description": "The definition of 'RTCStats.type' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

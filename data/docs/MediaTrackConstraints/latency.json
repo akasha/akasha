@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.latency",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/latency",
-    "description": "The MediaTrackConstraints dictionary's latency property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the latency constrainable property."
+    "description": "The MediaTrackConstraints dictionary's latency property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the latency constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-latency",
+            "description": "The definition of 'latency' in Media Capture and Streams."
+        }
+    ]
 }

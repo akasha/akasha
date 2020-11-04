@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.srcset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/srcset",
-    "description": "The HTMLImageElement property srcset is a string which identifies one or more image candidate strings, separated using commas (,) each specifying image resources to use under given circumstances."
+    "description": "The HTMLImageElement property srcset is a string which identifies one or more image candidate strings, separated using commas (,) each specifying image resources to use under given circumstances.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-srcset",
+            "description": "The definition of 'HTMLImageElement.srcset' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.scrollingElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scrollingElement",
-    "description": "The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement."
+    "description": "The scrollingElement read-only property of the Document interface returns a reference to the Element that scrolls the document. In standards mode, this is the root element of the document, document.documentElement.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-document-scrollingelement",
+            "description": "The definition of 'scrollingElement' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

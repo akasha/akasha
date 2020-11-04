@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createChannelSplitter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter",
-    "description": "A ChannelSplitterNode."
+    "description": "A ChannelSplitterNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createchannelsplitter",
+            "description": "The definition of 'createChannelSplitter()' in Web Audio API."
+        }
+    ]
 }

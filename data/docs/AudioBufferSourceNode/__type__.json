@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioBufferSourceNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode",
-    "description": "The AudioBufferSourceNode interface is an AudioScheduledSourceNode which represents an audio source consisting of in-memory audio data, stored in an AudioBuffer. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network."
+    "description": "The AudioBufferSourceNode interface is an AudioScheduledSourceNode which represents an audio source consisting of in-memory audio data, stored in an AudioBuffer. It's especially useful for playing back audio which has particularly stringent timing accuracy requirements, such as for sounds that must match a specific rhythm and can be kept in memory rather than being played from disk or the network.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode",
+            "description": "The definition of 'AudioBufferSourceNode' in Web Audio API."
+        }
+    ]
 }

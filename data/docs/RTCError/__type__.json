@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCError",
-    "description": "The RTCError interface describes an error which has occurred while handling WebRTC operations. It's based upon the standard DOMException interface that describes general DOM errors."
+    "description": "The RTCError interface describes an error which has occurred while handling WebRTC operations. It's based upon the standard DOMException interface that describes general DOM errors.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcerror",
+            "description": "The definition of 'RTCError' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

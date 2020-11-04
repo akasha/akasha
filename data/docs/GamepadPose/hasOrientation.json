@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GamepadPose.hasOrientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/hasOrientation",
-    "description": "The hasOrientation read-only property of the GamepadPose interface returns a Boolean stating whether the Gamepad can track and return orientation information."
+    "description": "The hasOrientation read-only property of the GamepadPose interface returns a Boolean stating whether the Gamepad can track and return orientation information.",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasorientation",
+            "description": "The definition of 'hasOrientation' in Gamepad Extensions."
+        }
+    ]
 }

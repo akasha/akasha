@@ -1,19 +1,19 @@
 
 {
     "name": "TransitionEvent",
-    "lastModifiedAt": 1601504263895,
+    "lastModifiedAt": 1604447289717,
     "entries": [
         {
             "name": "TransitionEvent",
-            "lastModifiedAt": 1597190706668
+            "lastModifiedAt": 1604447285490
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190706300
+            "lastModifiedAt": 1604447284470
         },
         {
             "name": "elapsedTime",
-            "lastModifiedAt": 1597190707191
+            "lastModifiedAt": 1604447286605
         },
         {
             "name": "initTransitionEvent",
@@ -21,7 +21,7 @@
         },
         {
             "name": "pseudoElement",
-            "lastModifiedAt": 1597190707494
+            "lastModifiedAt": 1604447287706
         }
     ]
 }

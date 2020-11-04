@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLAnchorElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement",
-    "description": "The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to a element; not to be confused with link, which is represented by HTMLLinkElement)"
+    "description": "The HTMLAnchorElement interface represents hyperlink elements and provides special properties and methods (beyond those of the regular HTMLElement object interface that they inherit from) for manipulating the layout and presentation of such elements. This interface corresponds to a element; not to be confused with link, which is represented by HTMLLinkElement)",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlanchorelement",
+            "description": "The definition of 'HTMLAnchorElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#the-a-element",
+            "description": "The definition of 'HTMLAnchorElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-48250443",
+            "description": "The definition of 'HTMLAnchorElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-48250443",
+            "description": "The definition of 'HTMLAnchorElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

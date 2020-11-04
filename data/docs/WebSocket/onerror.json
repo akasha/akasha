@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebSocket.onerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onerror",
-    "description": "The WebSocket interface's onerror event handler property is a function which gets called when an error occurs on the WebSocket."
+    "description": "The WebSocket interface's onerror event handler property is a function which gets called when an error occurs on the WebSocket.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-websocket-onerror",
+            "description": "The definition of 'WebSocket: onerror' in HTML Living Standard."
+        }
+    ]
 }

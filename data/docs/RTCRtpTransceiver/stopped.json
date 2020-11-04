@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.stopped",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stopped",
-    "description": "The read-only stopped property on the RTCRtpTransceiver interface indicates whether or not the transceiver's associated sender and receiver have both been stopped."
+    "description": "The read-only stopped property on the RTCRtpTransceiver interface indicates whether or not the transceiver's associated sender and receiver have both been stopped.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-stopped",
+            "description": "The definition of 'RTCRtpTransceiver.stopped' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

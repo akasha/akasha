@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLFormElement.reset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset",
-    "description": "The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button."
+    "description": "The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-form-reset",
+            "description": "The definition of 'HTMLFormElement: reset' in HTML Living Standard."
+        }
+    ]
 }

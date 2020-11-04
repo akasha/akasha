@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WindowOrWorkerGlobalScope.setInterval",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval",
-    "description": "The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call."
+    "description": "The setInterval() method, offered on the Window and Worker interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval",
+            "description": "The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval",
+            "description": "The definition of 'WindowTimers.setInterval()' in HTML Living Standard."
+        }
+    ]
 }

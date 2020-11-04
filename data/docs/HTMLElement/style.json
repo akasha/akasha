@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLElement.style",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style",
-    "description": "The style property is used to get as well as set the inline style of an element. When getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute."
+    "description": "The style property is used to get as well as set the inline style of an element. When getting, it returns a CSSStyleDeclaration object that contains a list of all styles properties for that element with values assigned for the attributes that are defined in the element's inline style attribute.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-elementcssinlinestyle-style",
+            "description": "The definition of 'the ElementCSSInlineStyle.style property' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

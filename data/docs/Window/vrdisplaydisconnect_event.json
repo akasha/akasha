@@ -4,6 +4,13 @@
     "name": "Window.vrdisplaydisconnect_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaydisconnect_event",
     "description": "You can use the vrdisplaydisconnect event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaydisconnect",
+            "description": "The definition of 'vrdisplaydisconnect' in WebVR 1.1."
+        }
+    ],
     "eventName": "vrdisplaydisconnect",
     "eventType": "VRDisplayEvent",
     "eventHandlerProperty": "onvrdisplaydisconnect",

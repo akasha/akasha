@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/height",
-    "description": "The MediaTrackConstraints dictionary's height property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the height constrainable property."
+    "description": "The MediaTrackConstraints dictionary's height property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the height constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-height",
+            "description": "The definition of 'height' in Media Capture and Streams."
+        }
+    ]
 }

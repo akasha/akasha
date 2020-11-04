@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLElement.offsetTop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop",
-    "description": "The HTMLElement.offsetTop read-only property returns the distance of the current element relative to the top of the offsetParent node."
+    "description": "The HTMLElement.offsetTop read-only property returns the distance of the current element relative to the top of the offsetParent node.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsettop",
+            "description": "The definition of 'offsetTop' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

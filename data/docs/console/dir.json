@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.dir",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/dir",
-    "description": "The Console method dir() displays an interactive list of the properties of the specified JavaScript object."
+    "description": "The Console method dir() displays an interactive list of the properties of the specified JavaScript object.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#dir",
+            "description": "The definition of 'console.dir()' in Console API."
+        }
+    ]
 }

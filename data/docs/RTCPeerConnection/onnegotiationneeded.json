@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.onnegotiationneeded",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onnegotiationneeded",
-    "description": "The RTCPeerConnection interface's onnegotiationneeded property is an EventListener which specifies a function which is called to handle the negotiationneeded event when it occurs on an RTCPeerConnection instance. This event is fired when a change has occurred which requires session negotiation. This negotiation should be carried out as the offerer, because some session changes cannot be negotiated as the answerer."
+    "description": "The RTCPeerConnection interface's onnegotiationneeded property is an EventListener which specifies a function which is called to handle the negotiationneeded event when it occurs on an RTCPeerConnection instance. This event is fired when a change has occurred which requires session negotiation. This negotiation should be carried out as the offerer, because some session changes cannot be negotiated as the answerer.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onnegotiationneeded",
+            "description": "The definition of 'RTCPeerConnection.onnegotiationneeded' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

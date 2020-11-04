@@ -1,7 +1,7 @@
 
 {
     "name": "MouseEvent",
-    "lastModifiedAt": 1601504666219,
+    "lastModifiedAt": 1604447713312,
     "entries": [
         {
             "name": "MouseEvent",
@@ -17,51 +17,51 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190819241
+            "lastModifiedAt": 1604447689432
         },
         {
             "name": "altKey",
-            "lastModifiedAt": 1597190820083
+            "lastModifiedAt": 1604447691086
         },
         {
             "name": "button",
-            "lastModifiedAt": 1597190820337
+            "lastModifiedAt": 1604447691857
         },
         {
             "name": "buttons",
-            "lastModifiedAt": 1597190820602
+            "lastModifiedAt": 1604447692418
         },
         {
             "name": "clientX",
-            "lastModifiedAt": 1600303873204
+            "lastModifiedAt": 1604447692954
         },
         {
             "name": "clientY",
-            "lastModifiedAt": 1600303873718
+            "lastModifiedAt": 1604447693562
         },
         {
             "name": "ctrlKey",
-            "lastModifiedAt": 1597190821632
+            "lastModifiedAt": 1604447694207
         },
         {
             "name": "getModifierState",
-            "lastModifiedAt": 1597190829466
+            "lastModifiedAt": 1604447712259
         },
         {
             "name": "initMouseEvent",
-            "lastModifiedAt": 1597190829777
+            "lastModifiedAt": 1604447713311
         },
         {
             "name": "metaKey",
-            "lastModifiedAt": 1597190821972
+            "lastModifiedAt": 1604447694818
         },
         {
             "name": "movementX",
-            "lastModifiedAt": 1597190822792
+            "lastModifiedAt": 1604447695389
         },
         {
             "name": "movementY",
-            "lastModifiedAt": 1597190823055
+            "lastModifiedAt": 1604447695901
         },
         {
             "name": "mozInputSource",
@@ -69,19 +69,19 @@
         },
         {
             "name": "offsetX",
-            "lastModifiedAt": 1597190823321
+            "lastModifiedAt": 1604447697539
         },
         {
             "name": "offsetY",
-            "lastModifiedAt": 1597190823723
+            "lastModifiedAt": 1604447698153
         },
         {
             "name": "pageX",
-            "lastModifiedAt": 1599278912034
+            "lastModifiedAt": 1604447698769
         },
         {
             "name": "pageY",
-            "lastModifiedAt": 1597190824436
+            "lastModifiedAt": 1604447699699
         },
         {
             "name": "region",
@@ -89,19 +89,19 @@
         },
         {
             "name": "relatedTarget",
-            "lastModifiedAt": 1597190825488
+            "lastModifiedAt": 1604447701619
         },
         {
             "name": "screenX",
-            "lastModifiedAt": 1597190825787
+            "lastModifiedAt": 1604447702758
         },
         {
             "name": "screenY",
-            "lastModifiedAt": 1597190826065
+            "lastModifiedAt": 1604447703352
         },
         {
             "name": "shiftKey",
-            "lastModifiedAt": 1597190826376
+            "lastModifiedAt": 1604447703888
         },
         {
             "name": "webkitForce",
@@ -113,11 +113,11 @@
         },
         {
             "name": "x",
-            "lastModifiedAt": 1597190828857
+            "lastModifiedAt": 1604447707528
         },
         {
             "name": "y",
-            "lastModifiedAt": 1597190829163
+            "lastModifiedAt": 1604447708587
         }
     ]
 }

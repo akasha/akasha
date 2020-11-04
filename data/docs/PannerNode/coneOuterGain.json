@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.coneOuterGain",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/coneOuterGain",
-    "description": "The coneOuterGain property of the PannerNode interface is a double value, describing the amount of volume reduction outside the cone, defined by the coneOuterAngle attribute."
+    "description": "The coneOuterGain property of the PannerNode interface is a double value, describing the amount of volume reduction outside the cone, defined by the coneOuterAngle attribute.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-coneoutergain",
+            "description": "The definition of 'coneOuterGain' in Web Audio API."
+        }
+    ]
 }

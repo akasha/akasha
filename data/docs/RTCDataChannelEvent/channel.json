@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannelEvent.channel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/channel",
-    "description": "The read-only property RTCDataChannelEvent.channel returns the RTCDataChannel associated with the event."
+    "description": "The read-only property RTCDataChannelEvent.channel returns the RTCDataChannel associated with the event.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-datachannelevent-channel",
+            "description": "The definition of 'RTCDataChannelEvent.channel' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

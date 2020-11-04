@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLDialogElement.open",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/open",
-    "description": "A Boolean representing the state of the open HTML attribute. true means it is set, and therefore the dialog is shown. false means it not set, and therefore the dialog is not shown."
+    "description": "A Boolean representing the state of the open HTML attribute. true means it is set, and therefore the dialog is shown. false means it not set, and therefore the dialog is not shown.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-dialog-open",
+            "description": "The definition of 'open' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/interactive-elements.html#dom-htmldialogelement-open",
+            "description": "The definition of 'open' in HTML 5.1."
+        }
+    ]
 }

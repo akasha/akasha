@@ -4,6 +4,13 @@
     "name": "Document.selectstart_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/selectstart_event",
     "description": "",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#selectstart-event",
+            "description": "The definition of 'selectstart' in Selection API."
+        }
+    ],
     "eventName": "selectstart",
     "eventType": "Event",
     "eventHandlerProperty": "onselectstart",

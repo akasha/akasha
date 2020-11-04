@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "HTMLMediaElement.seekable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/seekable",
-    "description": "The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any."
+    "description": "The seekable read-only property of the HTMLMediaElement returns a TimeRanges object that contains the time ranges that the user is able to seek to, if any.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/the-video-element.html#dom-media-seekable",
+            "description": "The definition of 'HTMLMediaElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-seekable",
+            "description": "The definition of 'HTMLMediaElement' in HTML5."
+        },
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#htmlmediaelement-extensions",
+            "description": "The definition of 'HTMLMediaElement extensions, like for seekable' in Media Source Extensions."
+        }
+    ]
 }

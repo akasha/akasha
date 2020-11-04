@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.lastResponseTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastResponseTimestamp",
-    "description": "The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair."
+    "description": "The RTCIceCandidatePairStats property lastResponseTimestamp indicates the time at which the last STUN response was received on the described candidate pair.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastresponsetimestamp",
+            "description": "The definition of 'RTCIceCandidatePairStats.lastResponseTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

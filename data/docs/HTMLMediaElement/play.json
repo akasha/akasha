@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLMediaElement.play",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play",
-    "description": "The HTMLMediaElement play() method attempts to begin playback of the media. It returns a Promise which is resolved when playback has been successfully started."
+    "description": "The HTMLMediaElement play() method attempts to begin playback of the media. It returns a Promise which is resolved when playback has been successfully started.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-play",
+            "description": "The definition of 'play()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-play",
+            "description": "The definition of 'play()' in HTML5."
+        }
+    ]
 }

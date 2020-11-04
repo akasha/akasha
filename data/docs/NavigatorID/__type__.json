@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "NavigatorID",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID",
-    "description": "The NavigatorID interface contains methods and properties related to the identity of the browser."
+    "description": "The NavigatorID interface contains methods and properties related to the identity of the browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#navigatorid",
+            "description": "The definition of 'NavigatorID' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/#navigatorid",
+            "description": "The definition of 'NavigatorID' in HTML5."
+        }
+    ]
 }

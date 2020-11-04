@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.plugins",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/plugins",
-    "description": "The plugins read-only property of the Document interface returns an HTMLCollection object containing one or more HTMLEmbedElements representing the embed elements in the current document."
+    "description": "The plugins read-only property of the Document interface returns an HTMLCollection object containing one or more HTMLEmbedElements representing the embed elements in the current document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-plugins",
+            "description": "The definition of 'Document.plugins' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CSSPseudoElement.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement/type",
-    "description": "The type read-only property of the CSSPseudoElement interface returns the type of the pseudo-element as a string, represented in the form of a CSS selector."
+    "description": "The type read-only property of the CSSPseudoElement interface returns the type of the pseudo-element as a string, represented in the form of a CSS selector.",
+    "refs": [
+        {
+            "name": "CSS Pseudo-Elements Level 4",
+            "href": "https://drafts.csswg.org/css-pseudo-4/#dom-csspseudoelement-type",
+            "description": "The definition of 'type' in CSS Pseudo-Elements Level 4."
+        }
+    ]
 }

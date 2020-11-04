@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Element.classList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/classList",
-    "description": "The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list."
+    "description": "The Element.classList is a read-only property that returns a live DOMTokenList collection of the class attributes of the element. This can then be used to manipulate the class list.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-classlist",
+            "description": "The definition of 'Element.classList' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-element-classlist",
+            "description": "The definition of 'Element.classList' in DOM4."
+        }
+    ]
 }

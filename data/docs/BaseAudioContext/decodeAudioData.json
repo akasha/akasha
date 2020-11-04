@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.decodeAudioData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/decodeAudioData",
-    "description": "The decodeAudioData() method of the BaseAudioContext Interface is used to asynchronously decode audio file data contained in an ArrayBuffer. In this case the ArrayBuffer is loaded from XMLHttpRequest and FileReader. The decoded AudioBuffer is resampled to the AudioContext's sampling rate, then passed to a callback or promise."
+    "description": "The decodeAudioData() method of the BaseAudioContext Interface is used to asynchronously decode audio file data contained in an ArrayBuffer. In this case the ArrayBuffer is loaded from XMLHttpRequest and FileReader. The decoded AudioBuffer is resampled to the AudioContext's sampling rate, then passed to a callback or promise.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-decodeaudiodata",
+            "description": "The definition of 'decodeAudioData()' in Web Audio API."
+        }
+    ]
 }

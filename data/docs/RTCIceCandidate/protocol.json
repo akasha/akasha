@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/protocol",
-    "description": "The RTCIceCandidate interface's read-only protocol property is a string which indicates whether the candidate uses UDP or TCP as its transport protocol."
+    "description": "The RTCIceCandidate interface's read-only protocol property is a string which indicates whether the candidate uses UDP or TCP as its transport protocol.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-protocol",
+            "description": "The definition of 'RTCIceCandidate.protocol' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

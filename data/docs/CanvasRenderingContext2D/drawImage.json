@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CanvasRenderingContext2D.drawImage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage",
-    "description": "The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas."
+    "description": "The CanvasRenderingContext2D.drawImage() method of the Canvas 2D API provides different ways to draw an image onto the canvas.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-context-2d-drawimage",
+            "description": "The definition of 'CanvasRenderingContext2D: drawImage' in HTML Living Standard."
+        }
+    ]
 }

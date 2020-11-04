@@ -3,5 +3,15 @@
     "kind": "Method",
     "name": "HTMLElement.click",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/click",
-    "description": "The HTMLElement.click() method simulates a mouse click on an element."
+    "description": "The HTMLElement.click() method simulates a mouse click on an element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-click"
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-2651361"
+        }
+    ]
 }

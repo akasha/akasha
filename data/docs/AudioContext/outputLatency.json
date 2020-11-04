@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioContext.outputLatency",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/outputLatency",
-    "description": "The outputLatency read-only property of the AudioContext Interface provides an estimation of the output latency of the current audio context."
+    "description": "The outputLatency read-only property of the AudioContext Interface provides an estimation of the output latency of the current audio context.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-outputlatency",
+            "description": "The definition of 'outputLatency' in Web Audio API."
+        }
+    ]
 }

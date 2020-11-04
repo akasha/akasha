@@ -1,123 +1,123 @@
 
 {
     "name": "RTCIceCandidatePairStats",
-    "lastModifiedAt": 1601467430130,
+    "lastModifiedAt": 1604448924445,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192889299
+            "lastModifiedAt": 1604448900454
         },
         {
             "name": "availableIncomingBitrate",
-            "lastModifiedAt": 1596544715000
+            "lastModifiedAt": 1604448919448
         },
         {
             "name": "availableOutgoingBitrate",
-            "lastModifiedAt": 1596544715285
+            "lastModifiedAt": 1604448901136
         },
         {
             "name": "bytesReceieved",
-            "lastModifiedAt": 1599280382230
+            "lastModifiedAt": 1604448920341
         },
         {
             "name": "bytesReceived",
-            "lastModifiedAt": 1600307018133
+            "lastModifiedAt": 1604448901618
         },
         {
             "name": "bytesSent",
-            "lastModifiedAt": 1599280382690
+            "lastModifiedAt": 1604448920819
         },
         {
             "name": "circuitBreakerTriggerCount",
-            "lastModifiedAt": 1596544716616
+            "lastModifiedAt": 1604448902089
         },
         {
             "name": "consentExpiredTimestamp",
-            "lastModifiedAt": 1596544716932
+            "lastModifiedAt": 1604448902578
         },
         {
             "name": "consentRequestsSent",
-            "lastModifiedAt": 1596544717230
+            "lastModifiedAt": 1604448921549
         },
         {
             "name": "currentRoundTripTime",
-            "lastModifiedAt": 1596544717539
+            "lastModifiedAt": 1604448922624
         },
         {
             "name": "firstRequestTimestamp",
-            "lastModifiedAt": 1596544718367
+            "lastModifiedAt": 1604448903590
         },
         {
             "name": "lastPacketReceivedTimestamp",
-            "lastModifiedAt": 1596544718665
+            "lastModifiedAt": 1604448904190
         },
         {
             "name": "lastPacketSentTimestamp",
-            "lastModifiedAt": 1596544718970
+            "lastModifiedAt": 1604448905280
         },
         {
             "name": "lastRequestTimestamp",
-            "lastModifiedAt": 1596544719751
+            "lastModifiedAt": 1604448905946
         },
         {
             "name": "lastResponseTimestamp",
-            "lastModifiedAt": 1596544720063
+            "lastModifiedAt": 1604448906991
         },
         {
             "name": "localCandidateId",
-            "lastModifiedAt": 1596544720863
+            "lastModifiedAt": 1604448907771
         },
         {
             "name": "nominated",
-            "lastModifiedAt": 1596544721122
+            "lastModifiedAt": 1604448908786
         },
         {
             "name": "packetsReceived",
-            "lastModifiedAt": 1596544721429
+            "lastModifiedAt": 1604448910073
         },
         {
             "name": "packetsSent",
-            "lastModifiedAt": 1596544722221
+            "lastModifiedAt": 1604448910805
         },
         {
             "name": "remoteCandidateId",
-            "lastModifiedAt": 1596544723049
+            "lastModifiedAt": 1604448911357
         },
         {
             "name": "requestsReceived",
-            "lastModifiedAt": 1596544723410
+            "lastModifiedAt": 1604448912404
         },
         {
             "name": "requestsSent",
-            "lastModifiedAt": 1596544724226
+            "lastModifiedAt": 1604448913465
         },
         {
             "name": "responsesReceived",
-            "lastModifiedAt": 1596544724623
+            "lastModifiedAt": 1604448914069
         },
         {
             "name": "responsesSent",
-            "lastModifiedAt": 1596544724911
+            "lastModifiedAt": 1604448915120
         },
         {
             "name": "retransmissionsReceived",
-            "lastModifiedAt": 1596544725713
+            "lastModifiedAt": 1604448915629
         },
         {
             "name": "retransmissionsSent",
-            "lastModifiedAt": 1596544725967
+            "lastModifiedAt": 1604448924314
         },
         {
             "name": "state",
-            "lastModifiedAt": 1596544726382
+            "lastModifiedAt": 1604448916815
         },
         {
             "name": "totalRoundTripTime",
-            "lastModifiedAt": 1596544726771
+            "lastModifiedAt": 1604448917934
         },
         {
             "name": "transportId",
-            "lastModifiedAt": 1596544727061
+            "lastModifiedAt": 1604448918966
         }
     ]
 }

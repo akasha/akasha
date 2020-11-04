@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpReceiver.getParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getParameters",
-    "description": "The getParameters() method of the RTCRtpReceiver interface returns an RTCRtpReceiveParameters object describing the current configuration for the encoding and transmission of media on the receiver's track."
+    "description": "The getParameters() method of the RTCRtpReceiver interface returns an RTCRtpReceiveParameters object describing the current configuration for the encoding and transmission of media on the receiver's track.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getparameters",
+            "description": "The definition of 'RTCRtpReceiver.getParameters()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

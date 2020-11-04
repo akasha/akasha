@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Navigator.getVRDisplays",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getVRDisplays",
-    "description": "The getVRDisplays() method of the Navigator interface returns a promise that resolves to an array of VRDisplay objects representing any available VR displays connected to the computer."
+    "description": "The getVRDisplays() method of the Navigator interface returns a promise that resolves to an array of VRDisplay objects representing any available VR displays connected to the computer.",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#navigator-getvrdisplays-attribute",
+            "description": "The definition of 'getVRDisplays()' in WebVR 1.1."
+        }
+    ]
 }

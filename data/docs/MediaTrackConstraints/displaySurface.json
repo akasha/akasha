@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.displaySurface",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/displaySurface",
-    "description": "The MediaTrackConstraints dictionary's displaySurface property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the displaySurface constrainable property."
+    "description": "The MediaTrackConstraints dictionary's displaySurface property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the displaySurface constrainable property.",
+    "refs": [
+        {
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatrackconstraintset-displaysurface",
+            "description": "The definition of 'MediaTrackConstraints.displaySurface' in Screen Capture."
+        }
+    ]
 }

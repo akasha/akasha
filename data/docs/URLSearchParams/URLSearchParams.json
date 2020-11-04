@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "URLSearchParams.URLSearchParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams",
-    "description": "The URLSearchParams() constructor creates and returns a new URLSearchParams object."
+    "description": "The URLSearchParams() constructor creates and returns a new URLSearchParams object.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-urlsearchparams",
+            "description": "The definition of 'URLSearchParams()' in URL."
+        }
+    ]
 }

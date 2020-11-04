@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "NavigatorPlugins.plugins",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/plugins",
-    "description": "Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application."
+    "description": "Returns a PluginArray object, listing the Plugin objects describing the plugins installed in the application.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-plugins",
+            "description": "The definition of 'NavigatorPlugins.plugins' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ImageBitmapRenderingContext.transferFromImageBitmap",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap",
-    "description": "The ImageBitmapRenderingContext.transferFromImageBitmap() method displays the given ImageBitmap in the canvas associated with this rendering context. The ownership of the ImageBitmap is transferred to the canvas as well."
+    "description": "The ImageBitmapRenderingContext.transferFromImageBitmap() method displays the given ImageBitmap in the canvas associated with this rendering context. The ownership of the ImageBitmap is transferred to the canvas as well.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-imagebitmaprenderingcontext-transferfromimagebitmap",
+            "description": "The definition of 'transferFromImageBitmap()' in HTML Living Standard."
+        }
+    ]
 }

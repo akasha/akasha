@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoTrackList.selectedIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/selectedIndex",
-    "description": "The read-only VideoTrackList property selectedIndex returns the index of the currently selected track, if any, or -1 otherwise."
+    "description": "The read-only VideoTrackList property selectedIndex returns the index of the currently selected track, if any, or -1 otherwise.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-videotracklist-selectedindex",
+            "description": "The definition of 'VideoTrackList: selectedIndex' in HTML Living Standard."
+        }
+    ]
 }

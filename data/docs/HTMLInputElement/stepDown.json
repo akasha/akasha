@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "HTMLInputElement.stepDown",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepDown",
-    "description": "The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter."
+    "description": "The HTMLInputElement.stepDown([n]) method decrements the value of a numeric type of  input element by the value of the step attribute or up to n multiples of the step attribute if a number is passed as the parameter.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/input.html#dom-input-stepdown",
+            "description": "The definition of 'stepDown()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepdown",
+            "description": "The definition of 'stepDown()' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepdown",
+            "description": "The definition of 'stepDown()' in HTML5."
+        }
+    ]
 }

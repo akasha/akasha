@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamAudioSourceOptions.mediaStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceOptions/mediaStream",
-    "description": "The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor."
+    "description": "The MediaStreamAudioSourceOptions dictionary's mediaStream property must specify the MediaStream from which to retrieve audio data when instantiating a MediaStreamAudioSourceNode using the MediaStreamAudioSourceNode() constructor.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourceoptions-mediastream",
+            "description": "The definition of 'MediaStreamAudioSourceOptions.mediaStream' in Web Audio API."
+        }
+    ]
 }

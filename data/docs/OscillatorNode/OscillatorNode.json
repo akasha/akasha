@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "OscillatorNode.OscillatorNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/OscillatorNode",
-    "description": "The OscillatorNode() constructor of the Web Audio API creates a new OscillatorNode object which is an AudioNode that represents a periodic waveform, like a sine wave, optionally setting the node's properties' values to match values in a specified object."
+    "description": "The OscillatorNode() constructor of the Web Audio API creates a new OscillatorNode object which is an AudioNode that represents a periodic waveform, like a sine wave, optionally setting the node's properties' values to match values in a specified object.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-oscillatornode-oscillatornode",
+            "description": "The definition of 'OscillatorNode()' in Web Audio API."
+        }
+    ]
 }

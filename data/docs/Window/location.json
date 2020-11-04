@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Window.location",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/location",
-    "description": "The Window.location read-only property returns a Location object with information about the current location of the document."
+    "description": "The Window.location read-only property returns a Location object with information about the current location of the document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#the-location-interface",
+            "description": "The definition of 'Window.location' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#the-location-interface",
+            "description": "The definition of 'Window.location' in HTML5."
+        }
+    ]
 }

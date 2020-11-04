@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createPeriodicWave",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPeriodicWave",
-    "description": "The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode."
+    "description": "The createPeriodicWave() method of the BaseAudioContext Interface is used to create a PeriodicWave, which is used to define a periodic waveform that can be used to shape the output of an OscillatorNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createperiodicwave",
+            "description": "The definition of 'createPeriodicWave' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.oncuechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncuechange",
-    "description": "The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events."
+    "description": "The oncuechange property of the GlobalEventHandlers mixin is the EventHandler for processing cuechange events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-oncuechange",
+            "description": "The definition of 'oncuechange' in HTML Living Standard."
+        }
+    ]
 }

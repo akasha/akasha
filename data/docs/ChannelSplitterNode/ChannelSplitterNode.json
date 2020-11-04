@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "ChannelSplitterNode.ChannelSplitterNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ChannelSplitterNode/ChannelSplitterNode",
-    "description": "The ChannelSplitterNode() constructor of the Web Audio API creates a new ChannelSplitterNode object instance, representing a node that splits the input into a separate output for each of the source node's audio channels."
+    "description": "The ChannelSplitterNode() constructor of the Web Audio API creates a new ChannelSplitterNode object instance, representing a node that splits the input into a separate output for each of the source node's audio channels.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#channelsplitternode",
+            "description": "The definition of 'ChannelSplitterNode' in Web Audio API."
+        }
+    ]
 }

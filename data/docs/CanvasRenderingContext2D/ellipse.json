@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CanvasRenderingContext2D.ellipse",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/ellipse",
-    "description": "The CanvasRenderingContext2D.ellipse() method of the Canvas 2D API adds an elliptical arc to the current sub-path."
+    "description": "The CanvasRenderingContext2D.ellipse() method of the Canvas 2D API adds an elliptical arc to the current sub-path.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ellipse",
+            "description": "The definition of 'CanvasRenderingContext2D.ellipse' in HTML Living Standard."
+        }
+    ]
 }

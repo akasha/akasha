@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Navigator.sendBeacon",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon",
-    "description": "The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server."
+    "description": "The navigator.sendBeacon() method asynchronously sends a small amount of data over HTTP to a web server.",
+    "refs": [
+        {
+            "name": "Beacon",
+            "href": "https://w3c.github.io/beacon/#sendbeacon-method",
+            "description": "The definition of 'sendBeacon()' in Beacon."
+        }
+    ]
 }

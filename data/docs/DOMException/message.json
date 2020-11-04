@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMException.message",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException/message",
-    "description": "The message read-only property of the DOMException interface returns a DOMString representing a message or description associated with the given error name."
+    "description": "The message read-only property of the DOMException interface returns a DOMString representing a message or description associated with the given error name.",
+    "refs": [
+        {
+            "name": "Web IDL",
+            "href": "https://heycam.github.io/webidl/#dom-domexception-message",
+            "description": "The definition of 'message' in Web IDL."
+        }
+    ]
 }

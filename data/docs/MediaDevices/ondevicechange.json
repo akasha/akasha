@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaDevices.ondevicechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/ondevicechange",
-    "description": "The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app has changed. You can at any time use enumerateDevices() to get the updated list of available devices."
+    "description": "The MediaDevices.ondevicechange property is an EventHandler which specifies a function to be called when the devicechange event occurs on a MediaDevices instance. This happens whenever the set of media devices available to the user agent and, by extension, to the web site or app has changed. You can at any time use enumerateDevices() to get the updated list of available devices.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediadevices-ondevicechange",
+            "description": "The definition of 'ondevicechange' in Media Capture and Streams."
+        }
+    ]
 }

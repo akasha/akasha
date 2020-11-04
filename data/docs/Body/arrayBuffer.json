@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Body.arrayBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Body/arrayBuffer",
-    "description": "The arrayBuffer() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with an ArrayBuffer."
+    "description": "The arrayBuffer() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with an ArrayBuffer.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-body-arraybuffer",
+            "description": "The definition of 'arrayBuffer()' in Fetch."
+        }
+    ]
 }

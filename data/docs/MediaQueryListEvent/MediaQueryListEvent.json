@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "MediaQueryListEvent.MediaQueryListEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent/MediaQueryListEvent",
-    "description": "The MediaQueryListEvent constructor creates a new MediaQueryListEvent instance."
+    "description": "The MediaQueryListEvent constructor creates a new MediaQueryListEvent instance.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mediaquerylistevent-mediaquerylistevent",
+            "description": "The definition of 'MediaQueryListEvent()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

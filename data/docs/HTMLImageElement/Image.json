@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "HTMLImageElement.Image",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/Image",
-    "description": "The Image() constructor creates a new HTMLImageElement instance. It is functionally equivalent to document.createElement('img')."
+    "description": "The Image() constructor creates a new HTMLImageElement instance. It is functionally equivalent to document.createElement('img').",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-image",
+            "description": "The definition of 'Image()' in HTML Living Standard."
+        }
+    ]
 }

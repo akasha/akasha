@@ -4,6 +4,13 @@
     "name": "HTMLSlotElement.slotchange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/slotchange_event",
     "description": "The slotchange event is fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#mutation-observers",
+            "description": "The definition of '\"Mutation observers\" and slotchange event' in DOM."
+        }
+    ],
     "eventName": "slotchange",
     "eventType": "Event",
     "eventHandlerProperty": "None",

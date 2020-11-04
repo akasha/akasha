@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "VideoTrackList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList",
-    "description": "The VideoTrackList interface is used to represent a list of the video tracks contained within a video element, with each track represented by a separate VideoTrack object in the list."
+    "description": "The VideoTrackList interface is used to represent a list of the video tracks contained within a video element, with each track represented by a separate VideoTrack object in the list.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#videotracklist",
+            "description": "The definition of 'VideoTrackList' in HTML Living Standard."
+        }
+    ]
 }

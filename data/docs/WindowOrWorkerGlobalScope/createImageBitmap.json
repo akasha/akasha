@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WindowOrWorkerGlobalScope.createImageBitmap",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap",
-    "description": "The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap."
+    "description": "The createImageBitmap() method creates a bitmap from a given source, optionally cropped to contain only a portion of that source. The method exists on the global scope in both windows and workers. It accepts a variety of different image sources, and returns a Promise which resolves to an ImageBitmap.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-createimagebitmap",
+            "description": "The definition of 'createImageBitmap' in HTML Living Standard."
+        }
+    ]
 }

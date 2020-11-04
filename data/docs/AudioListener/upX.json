@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioListener.upX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upX",
-    "description": "The upX read-only property of the AudioListener interface is an AudioParam representing the x value of the direction vector defining the up direction the listener is pointing in."
+    "description": "The upX read-only property of the AudioListener interface is an AudioParam representing the x value of the direction vector defining the up direction the listener is pointing in.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-upx",
+            "description": "The definition of 'upX' in Web Audio API."
+        }
+    ]
 }

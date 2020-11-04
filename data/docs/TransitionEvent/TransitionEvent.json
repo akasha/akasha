@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "TransitionEvent.TransitionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/TransitionEvent",
-    "description": "The TransitionEvent() constructor returns a newly created TransitionEvent, representing an event in relation with an transition."
+    "description": "The TransitionEvent() constructor returns a newly created TransitionEvent, representing an event in relation with an transition.",
+    "refs": [
+        {
+            "name": "CSS Transitions",
+            "href": "https://drafts.csswg.org/css-transitions/#dom-transitionevent-transitionevent",
+            "description": "The definition of 'TransitionEvent()' in CSS Transitions."
+        }
+    ]
 }

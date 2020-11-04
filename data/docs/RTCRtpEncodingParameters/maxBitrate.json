@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpEncodingParameters.maxBitrate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/maxBitrate",
-    "description": "The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use."
+    "description": "The RTCRtpEncodingParameters dictionary's maxBitrate property specifies the maximum number of bits per second to allow a track encoded with this encoding to use.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-maxbitrate",
+            "description": "The definition of 'RTCRtpEncodingParameters.maxBitrate' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

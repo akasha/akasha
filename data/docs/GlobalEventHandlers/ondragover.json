@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondragover",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragover",
-    "description": "A global event handler for the dragover event."
+    "description": "A global event handler for the dragover event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragover",
+            "description": "The definition of 'ondragover' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragover",
+            "description": "The definition of 'ondragover' in HTML 5.1."
+        }
+    ]
 }

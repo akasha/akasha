@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondrag",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondrag",
-    "description": "A global event handler for the drag event."
+    "description": "A global event handler for the drag event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondrag",
+            "description": "The definition of 'ondrag' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondrag",
+            "description": "The definition of 'ondrag' in HTML 5.1."
+        }
+    ]
 }

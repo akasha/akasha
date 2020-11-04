@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onanimationstart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationstart",
-    "description": "An event handler for the animationstart event. This event is sent when a CSS Animation starts to play."
+    "description": "An event handler for the animationstart event. This event is sent when a CSS Animation starts to play.",
+    "refs": [
+        {
+            "name": "CSS Animations",
+            "href": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart",
+            "description": "The definition of 'onanimationstart' in CSS Animations."
+        }
+    ]
 }

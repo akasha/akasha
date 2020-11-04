@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Screen.availHeight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/availHeight",
-    "description": "The read-only Screen interface's availHeight property returns the height, in CSS pixels, of the space available for Web content on the screen. Since Screen is exposed on the Window interface's window.screen property, you access availHeight using window.screen.availHeight."
+    "description": "The read-only Screen interface's availHeight property returns the height, in CSS pixels, of the space available for Web content on the screen. Since Screen is exposed on the Window interface's window.screen property, you access availHeight using window.screen.availHeight.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-screen-availheight",
+            "description": "The definition of 'Screen.availHeight' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

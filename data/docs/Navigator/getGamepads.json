@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Navigator.getGamepads",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getGamepads",
-    "description": "The Navigator.getGamepads() method returns an array of Gamepad objects, one for each gamepad connected to the device."
+    "description": "The Navigator.getGamepads() method returns an array of Gamepad objects, one for each gamepad connected to the device.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/",
+            "description": "The definition of 'The Gamepad API specification' in Gamepad."
+        }
+    ]
 }

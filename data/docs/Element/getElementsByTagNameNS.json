@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "Element.getElementsByTagNameNS",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByTagNameNS",
-    "description": "The Element.getElementsByTagNameNS() method returns a live HTMLCollection of elements with the given tag name belonging to the given namespace. It is similar to Document.getElementsByTagNameNS, except that its search is restricted to descendants of the specified element."
+    "description": "The Element.getElementsByTagNameNS() method returns a live HTMLCollection of elements with the given tag name belonging to the given namespace. It is similar to Document.getElementsByTagNameNS, except that its search is restricted to descendants of the specified element.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-getelementsbytagnamens",
+            "description": "The definition of 'Element.getElementsByTagNameNS()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-A6C90942",
+            "description": "The definition of 'Element.getElementsByTagNameNS()' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C90942",
+            "description": "The definition of 'Element.getElementsByTagNameNS()' in Document Object Model (DOM) Level 2 Core Specification."
+        }
+    ]
 }

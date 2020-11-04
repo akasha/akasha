@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Location.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/port",
-    "description": "The port property of the Location interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''."
+    "description": "The port property of the Location interface is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-location-port",
+            "description": "The definition of 'Location.port' in HTML Living Standard."
+        }
+    ]
 }

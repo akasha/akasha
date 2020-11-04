@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLOptGroupElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptGroupElement",
-    "description": "The HTMLOptGroupElement interface provides special properties and methods (beyond the regular HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of optgroup elements."
+    "description": "The HTMLOptGroupElement interface provides special properties and methods (beyond the regular HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of optgroup elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmloptgroupelement",
+            "description": "The definition of 'HTMLOptgroupElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#the-optgroup-element",
+            "description": "The definition of 'HTMLOptGroupElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-38450247",
+            "description": "The definition of 'HTMLOptGroupElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-38450247",
+            "description": "The definition of 'HTMLOptGroupElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

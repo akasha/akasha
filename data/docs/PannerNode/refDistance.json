@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.refDistance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/refDistance",
-    "description": "A non-negative number. If the value is set to less than 0, a RangeError is thrown."
+    "description": "A non-negative number. If the value is set to less than 0, a RangeError is thrown.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-refdistance",
+            "description": "The definition of 'refDistance' in Web Audio API."
+        }
+    ]
 }

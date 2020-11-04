@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioWorkletGlobalScope",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope",
-    "description": "The AudioWorkletGlobalScope interface of the Web Audio API represents a global execution context for user-supplied code, which defines custom AudioWorkletProcessor-derived classes."
+    "description": "The AudioWorkletGlobalScope interface of the Web Audio API represents a global execution context for user-supplied code, which defines custom AudioWorkletProcessor-derived classes.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#audioworkletglobalscope",
+            "description": "The definition of 'AudioWorkletGlobalScope' in Web Audio API."
+        }
+    ]
 }

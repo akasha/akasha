@@ -1,23 +1,23 @@
 
 {
     "name": "AnimationEvent",
-    "lastModifiedAt": 1602634412783,
+    "lastModifiedAt": 1604447106486,
     "entries": [
         {
             "name": "AnimationEvent",
-            "lastModifiedAt": 1597190643041
+            "lastModifiedAt": 1604447099100
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190642768
+            "lastModifiedAt": 1604447098516
         },
         {
             "name": "animationName",
-            "lastModifiedAt": 1597190643299
+            "lastModifiedAt": 1604447099930
         },
         {
             "name": "elapsedTime",
-            "lastModifiedAt": 1597190644100
+            "lastModifiedAt": 1604447100986
         },
         {
             "name": "initAnimationEvent",
@@ -25,7 +25,7 @@
         },
         {
             "name": "pseudoElement",
-            "lastModifiedAt": 1597190644929
+            "lastModifiedAt": 1604447105874
         }
     ]
 }

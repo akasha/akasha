@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.embeds",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/embeds",
-    "description": "The embeds read-only property of the Document interface returns a list of the embedded object elements within the current document."
+    "description": "The embeds read-only property of the Document interface returns a list of the embedded object elements within the current document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-embeds",
+            "description": "The definition of 'Document.embeds' in HTML Living Standard."
+        }
+    ]
 }

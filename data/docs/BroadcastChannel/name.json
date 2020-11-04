@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BroadcastChannel.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/name",
-    "description": "The read-only BroadcastChannel.name property returns a DOMString, which uniquely identifies the given channel with its name. This name is passed to the BroadcastChannel() constructor at creation time and is therefore read-only."
+    "description": "The read-only BroadcastChannel.name property returns a DOMString, which uniquely identifies the given channel with its name. This name is passed to the BroadcastChannel() constructor at creation time and is therefore read-only.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-name",
+            "description": "The definition of 'BroadcastChannel.name' in HTML Living Standard."
+        }
+    ]
 }

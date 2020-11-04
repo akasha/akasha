@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.getAll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/getAll",
-    "description": "The getAll() method of the URLSearchParams interface returns all the values associated with a given search parameter as an array."
+    "description": "The getAll() method of the URLSearchParams interface returns all the values associated with a given search parameter as an array.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-getall",
+            "description": "The definition of 'getAll()' in URL."
+        }
+    ]
 }

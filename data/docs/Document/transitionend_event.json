@@ -4,6 +4,13 @@
     "name": "Document.transitionend_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/transitionend_event",
     "description": "The transitionend event is fired when a CSS transition has completed. In the case where a transition is removed before completion, such as if the transition-property is removed or display is set to none, then the event will not be generated.",
+    "refs": [
+        {
+            "name": "CSS Transitions",
+            "href": "https://drafts.csswg.org/css-transitions/#transitionend",
+            "description": "The definition of 'transitionend' in CSS Transitions."
+        }
+    ],
     "eventName": "transitionend",
     "eventType": "TransitionEvent",
     "eventHandlerProperty": "ontransitionend",

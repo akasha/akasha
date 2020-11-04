@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceTransport.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/state",
-    "description": "The read-only RTCIceTransport property state returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating."
+    "description": "The read-only RTCIceTransport property state returns the current state of the ICE transport, so you can determine the state of ICE gathering in which the ICE agent currently is operating.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcicetransportstate",
+            "description": "The definition of 'RTCIceTransportState' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

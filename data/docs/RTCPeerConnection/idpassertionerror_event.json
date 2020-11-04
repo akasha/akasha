@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.idpassertionerror_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/idpassertionerror_event",
     "description": "An idpassertionerror event informs the target, a RTCPeerConnection object, that the identity provider (IdP) encountered an error when trying to generate an identity assertion.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-mediastream-idpassertionerror",
+            "description": "The definition of 'idpassertionerror' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "idpassertionerror",
     "eventType": "RTCIdentityErrorEvent",
     "eventHandlerProperty": "onidpassertionerror",

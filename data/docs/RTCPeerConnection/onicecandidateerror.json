@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.onicecandidateerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicecandidateerror",
-    "description": "The RTCPeerConnection.onicecandidateerror property is an EventHandler which specifies a function which is called to handle the icecandidateerror event when it occurs on an RTCPeerConnection instance. This event is fired when an error occurs during the ICE candidate gathering process."
+    "description": "The RTCPeerConnection.onicecandidateerror property is an EventHandler which specifies a function which is called to handle the icecandidateerror event when it occurs on an RTCPeerConnection instance. This event is fired when an error occurs during the ICE candidate gathering process.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicecandidateerror",
+            "description": "The definition of 'RTCPeerConnection.onicecandidateerror' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

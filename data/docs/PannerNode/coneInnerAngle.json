@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.coneInnerAngle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/coneInnerAngle",
-    "description": "A double."
+    "description": "A double.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-coneinnerangle",
+            "description": "The definition of 'coneInnerAngle' in Web Audio API."
+        }
+    ]
 }

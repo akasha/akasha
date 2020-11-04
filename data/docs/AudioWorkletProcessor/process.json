@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioWorkletProcessor.process",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/process",
-    "description": "The process() method of an AudioWorkletProcessor-derived class implements the audio processing algorithm for the audio processor worklet."
+    "description": "The process() method of an AudioWorkletProcessor-derived class implements the audio processing algorithm for the audio processor worklet.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioworkletprocessor-process",
+            "description": "The definition of 'process()' in Web Audio API."
+        }
+    ]
 }

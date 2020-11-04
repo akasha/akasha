@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.bufferedAmount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmount",
-    "description": "The read-only RTCDataChannel property bufferedAmount returns the number of bytes of data currently queued to be sent over the data channel."
+    "description": "The read-only RTCDataChannel property bufferedAmount returns the number of bytes of data currently queued to be sent over the data channel.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-bufferedamount",
+            "description": "The definition of 'RTCDataChannel.bufferedAmount' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

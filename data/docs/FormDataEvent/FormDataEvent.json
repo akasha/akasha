@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "FormDataEvent.FormDataEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent",
-    "description": "The FormDataEvent() constructor creates a new FormDataEvent object instance."
+    "description": "The FormDataEvent() constructor creates a new FormDataEvent object instance.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-formdataevent-interface",
+            "description": "The definition of 'FormDataEvent' in HTML Living Standard."
+        }
+    ]
 }

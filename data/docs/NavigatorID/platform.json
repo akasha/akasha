@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "NavigatorID.platform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/platform",
-    "description": "Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer."
+    "description": "Returns a string representing the platform of the browser. The specification allows browsers to always return the empty string, so don't rely on this property to get a reliable answer.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-platform",
+            "description": "The definition of 'NavigatorID.platform' in HTML Living Standard."
+        }
+    ]
 }

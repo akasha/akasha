@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLMediaElement.pause",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/pause",
-    "description": "The HTMLMediaElement.pause() method will pause playback of the media, if the media is already in a paused state this method will have no effect."
+    "description": "The HTMLMediaElement.pause() method will pause playback of the media, if the media is already in a paused state this method will have no effect.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-pause",
+            "description": "The definition of 'pause()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-pause",
+            "description": "The definition of 'pause()' in HTML5."
+        }
+    ]
 }

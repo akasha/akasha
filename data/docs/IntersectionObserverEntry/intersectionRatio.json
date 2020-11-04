@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "IntersectionObserverEntry.intersectionRatio",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/intersectionRatio",
-    "description": "The IntersectionObserverEntry interface's read-only intersectionRatio property tells you how much of the target element is currently visible within the root's intersection ratio, as a value between 0.0 and 1.0."
+    "description": "The IntersectionObserverEntry interface's read-only intersectionRatio property tells you how much of the target element is currently visible within the root's intersection ratio, as a value between 0.0 and 1.0.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionratio",
+            "description": "The definition of 'IntersectionObserverEntry.intersectionratio' in Intersection Observer."
+        }
+    ]
 }

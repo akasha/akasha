@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "EventSource.onopen",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onopen",
-    "description": "The onopen property of the EventSource interface is an EventHandler called when an open event is received, that is when the connection was just opened."
+    "description": "The onopen property of the EventSource interface is an EventHandler called when an open event is received, that is when the connection was just opened.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onopen",
+            "description": "The definition of 'onopen' in HTML Living Standard."
+        }
+    ]
 }

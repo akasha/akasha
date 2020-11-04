@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "CSSMediaRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSMediaRule",
-    "description": "The CSSMediaRule interface represents a single CSS @media rule. It implements the CSSConditionRule interface, and therefore the CSSGroupingRule and the CSSRule interface with a type value of 4 (CSSRule.MEDIA_RULE)."
+    "description": "The CSSMediaRule interface represents a single CSS @media rule. It implements the CSSConditionRule interface, and therefore the CSSGroupingRule and the CSSRule interface with a type value of 4 (CSSRule.MEDIA_RULE).",
+    "refs": [
+        {
+            "name": "CSS Conditional Rules Module Level 3",
+            "href": "https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface",
+            "description": "The definition of 'CSSMediaRule' in CSS Conditional Rules Module Level 3."
+        },
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#the-cssmediarule-interface",
+            "description": "The definition of 'CSSMediaRule' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule",
+            "description": "The definition of 'CSSMediaRule' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

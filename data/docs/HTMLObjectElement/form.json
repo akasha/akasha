@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.form",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/form",
-    "description": "The form read-only property of the HTMLObjectElement interface Retuns a HTMLFormElement representing the object element's form owner, or null if there isn't one."
+    "description": "The form read-only property of the HTMLObjectElement interface Retuns a HTMLFormElement representing the object element's form owner, or null if there isn't one.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-fae-form",
+            "description": "The definition of 'form' in HTML Living Standard."
+        }
+    ]
 }

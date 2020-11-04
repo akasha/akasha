@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLDataElement.value",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataElement/value",
-    "description": "The value property of the HTMLDataElement interface returns a DOMString reflecting the value HTML attribute."
+    "description": "The value property of the HTMLDataElement interface returns a DOMString reflecting the value HTML attribute.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-data-value",
+            "description": "The definition of 'HTMLDataElement.value' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#dom-data-value",
+            "description": "The definition of 'value' in HTML5."
+        }
+    ]
 }

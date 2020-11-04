@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "HTMLSelectElement.remove",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/remove",
-    "description": "The HTMLSelectElement.remove() method removes the element at the specified index from the options collection for this select element."
+    "description": "The HTMLSelectElement.remove() method removes the element at the specified index from the options collection for this select element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-select-remove",
+            "description": "The definition of 'HTMLSelectElement.remove()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-select-remove",
+            "description": "The definition of 'HTMLSelectElement.remove()' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-33404570",
+            "description": "The definition of 'HTMLSelectElement.remove()' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-33404570",
+            "description": "The definition of 'HTMLSelectElement.remove()' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

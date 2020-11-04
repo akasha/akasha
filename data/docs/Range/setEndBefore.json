@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Range.setEndBefore",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/setEndBefore",
-    "description": "The Range.setEndBefore() method sets the end position of a Range relative to another Node. The parent Node of end of the Range will be the same as that for the referenceNode."
+    "description": "The Range.setEndBefore() method sets the end position of a Range relative to another Node. The parent Node of end of the Range will be the same as that for the referenceNode.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-setendbefore",
+            "description": "The definition of 'Range.setEndBefore()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setEndBefore",
+            "description": "The definition of 'Range.setEndBefore()' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

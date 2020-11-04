@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.signalingstatechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/signalingstatechange_event",
     "description": "An signalingstatechange event is sent to an RTCPeerConnection to notify it that its signaling state, as indicated by the signalingState property, has changed.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-signalingstatechange",
+            "description": "The definition of 'signalingstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "signalingstatechange",
     "eventType": "Event",
     "eventHandlerProperty": "onsignalingstatechange",

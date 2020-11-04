@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.ended",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/ended",
-    "description": "The HTMLMediaElement.ended indicates whether the media element has ended playback."
+    "description": "The HTMLMediaElement.ended indicates whether the media element has ended playback.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-ended",
+            "description": "The definition of 'HTMLMediaElement.ended' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.ended' in HTML5."
+        }
+    ]
 }

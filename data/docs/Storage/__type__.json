@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Storage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Storage",
-    "description": "The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items."
+    "description": "The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It allows, for example, the addition, modification, or deletion of stored data items.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#storage",
+            "description": "The definition of 'Storage' in HTML Living Standard."
+        }
+    ]
 }

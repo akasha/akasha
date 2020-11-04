@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnectionIceEvent.candidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/candidate",
-    "description": "The read-only candidate property of the RTCPeerConnectionIceEvent interface returns the RTCIceCandidate associated with the event."
+    "description": "The read-only candidate property of the RTCPeerConnectionIceEvent interface returns the RTCIceCandidate associated with the event.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-candidate",
+            "description": "The definition of 'RTCPeerConnectionIceEvent.candidate' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

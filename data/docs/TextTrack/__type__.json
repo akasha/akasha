@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "TextTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrack",
-    "description": "This interface also inherits properties from EventTarget."
+    "description": "This interface also inherits properties from EventTarget.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#texttrack",
+            "description": "The definition of 'TextTrack' in HTML Living Standard."
+        }
+    ]
 }

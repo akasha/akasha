@@ -3,5 +3,86 @@
     "kind": "Type",
     "name": "Element",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
-    "description": "Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element."
+    "description": "Element is the most general base class from which all element objects (i.e. objects that represent elements) in a Document inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from Element.",
+    "refs": [
+        {
+            "name": "CSS Pseudo-Elements Level 4",
+            "href": "https://drafts.csswg.org/css-pseudo-4/#window-interface",
+            "description": "The definition of 'Element' in CSS Pseudo-Elements Level 4."
+        },
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/"
+        },
+        {
+            "name": "UndoManager and DOMTransaction",
+            "href": "https://dvcs.w3.org/hg/undomanager/raw-file/tip/undomanager.html",
+            "description": "The definition of 'Element' in UndoManager and DOMTransaction."
+        },
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#extensions-to-the-element-interface",
+            "description": "The definition of 'Element' in Pointer Events – Level 2."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#extensions-to-the-element-interface",
+            "description": "The definition of 'Element' in Pointer Events."
+        },
+        {
+            "name": "Selectors API Level 1",
+            "href": "https://www.w3.org/TR/selectors-api/#interface-definitions",
+            "description": "The definition of 'Element' in Selectors API Level 1."
+        },
+        {
+            "name": "Pointer Lock",
+            "href": "https://w3c.github.io/pointerlock/#extensions-to-the-element-interface",
+            "description": "The definition of 'Element' in Pointer Lock."
+        },
+        {
+            "name": "Fullscreen API",
+            "href": "https://fullscreen.spec.whatwg.org/#api",
+            "description": "The definition of 'Element' in Fullscreen API."
+        },
+        {
+            "name": "DOM Parsing and Serialization",
+            "href": "https://w3c.github.io/DOM-Parsing/#extensions-to-the-element-interface",
+            "description": "The definition of 'Element' in DOM Parsing and Serialization."
+        },
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#extension-to-the-element-interface",
+            "description": "The definition of 'Element' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Element Traversal Specification",
+            "href": "https://www.w3.org/TR/ElementTraversal/#ecmascript-bindings",
+            "description": "The definition of 'Element' in Element Traversal Specification."
+        },
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-element",
+            "description": "The definition of 'Element' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#interface-element",
+            "description": "The definition of 'Element' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-745549614",
+            "description": "The definition of 'Element' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-745549614",
+            "description": "The definition of 'Element' in Document Object Model (DOM) Level 2 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-745549614",
+            "description": "The definition of 'Element' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

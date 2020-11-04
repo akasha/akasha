@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLTrackElement.src",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTrackElement/src",
-    "description": "The HTMLTrackElement.src property reflects the value of the track element's src attribute, which indicates the URL of the text track's data."
+    "description": "The HTMLTrackElement.src property reflects the value of the track element's src attribute, which indicates the URL of the text track's data.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-track-src",
+            "description": "The definition of 'HTMLTrackElement.src' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-track-src",
+            "description": "The definition of 'HTMLTrackElement.src' in HTML5."
+        }
+    ]
 }

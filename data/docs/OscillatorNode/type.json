@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "OscillatorNode.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/type",
-    "description": "A DOMString specifying the shape of oscillator wave. The different available values are:"
+    "description": "A DOMString specifying the shape of oscillator wave. The different available values are:",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-oscillatornode-type",
+            "description": "The definition of 'type' in Web Audio API."
+        }
+    ]
 }

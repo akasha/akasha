@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Window.frames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/frames",
-    "description": "Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window."
+    "description": "Returns the window itself, which is an array-like object, listing the direct sub-frames of the current window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-frames",
+            "description": "The definition of 'Window.frames' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-frames",
+            "description": "The definition of 'Window.frames' in HTML5."
+        }
+    ]
 }

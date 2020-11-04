@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCDataChannel.send",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/send",
-    "description": "The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer."
+    "description": "The send() method of the RTCDataChannel interface sends data across the data channel to the remote peer.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-send",
+            "description": "The definition of 'RTCDataChannel.send()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

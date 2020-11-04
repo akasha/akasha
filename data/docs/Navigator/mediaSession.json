@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.mediaSession",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaSession",
-    "description": "The read-only Navigator property mediaSession returns a MediaSession object that can be used to share with the browser metadata and other information about the current playback state of media being handled by a document."
+    "description": "The read-only Navigator property mediaSession returns a MediaSession object that can be used to share with the browser metadata and other information about the current playback state of media being handled by a document.",
+    "refs": [
+        {
+            "name": "Media Session Standard",
+            "href": "https://w3c.github.io/mediasession/#dom-navigator-mediasession",
+            "description": "The definition of 'navigator.mediaSession' in Media Session Standard."
+        }
+    ]
 }

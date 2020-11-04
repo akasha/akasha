@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "MouseEvent.clientX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX",
-    "description": "The clientX read-only property of the MouseEvent interface provides the horizontal coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page)."
+    "description": "The clientX read-only property of the MouseEvent interface provides the horizontal coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page).",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-clientx",
+            "description": "The definition of 'clientX' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-clientX",
+            "description": "The definition of 'MouseEvent.clientX' in Document Object Model (DOM) Level 3 Events Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
+            "description": "The definition of 'MouseEvent.clientX' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

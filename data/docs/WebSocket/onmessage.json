@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebSocket.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/onmessage",
-    "description": "The WebSocket.onmessage property is an EventHandler that is called when a message is received from the server. It is called with a MessageEvent."
+    "description": "The WebSocket.onmessage property is an EventHandler that is called when a message is received from the server. It is called with a MessageEvent.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-websocket-onmessage",
+            "description": "The definition of 'WebSocket: onmessage' in HTML Living Standard."
+        }
+    ]
 }

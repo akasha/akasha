@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Response.redirected",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/redirected",
-    "description": "The read-only redirected property of the Response interface indicates whether or not the response is the result of a request you made which was redirected."
+    "description": "The read-only redirected property of the Response interface indicates whether or not the response is the result of a request you made which was redirected.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-response-redirected",
+            "description": "The definition of 'redirected' in Fetch."
+        }
+    ]
 }

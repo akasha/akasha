@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ImageData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageData",
-    "description": "The ImageData interface represents the underlying pixel data of an area of a canvas element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData()."
+    "description": "The ImageData interface represents the underlying pixel data of an area of a canvas element. It is created using the ImageData() constructor or creator methods on the CanvasRenderingContext2D object associated with a canvas: createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData().",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#imagedata",
+            "description": "The definition of 'ImageData' in HTML Living Standard."
+        }
+    ]
 }

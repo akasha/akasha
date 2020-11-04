@@ -1,11 +1,11 @@
 
 {
     "name": "EventSource",
-    "lastModifiedAt": 1600311377897,
+    "lastModifiedAt": 1604450393826,
     "entries": [
         {
             "name": "EventSource",
-            "lastModifiedAt": 1597193430955
+            "lastModifiedAt": 1604450388142
         },
         {
             "name": "__type__",
@@ -13,7 +13,7 @@
         },
         {
             "name": "close",
-            "lastModifiedAt": 1596581431107
+            "lastModifiedAt": 1604450392055
         },
         {
             "name": "error_event",
@@ -25,15 +25,15 @@
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1596581428446
+            "lastModifiedAt": 1604450388674
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1596581428747
+            "lastModifiedAt": 1604450389127
         },
         {
             "name": "onopen",
-            "lastModifiedAt": 1596581429158
+            "lastModifiedAt": 1604450389877
         },
         {
             "name": "open_event",
@@ -41,15 +41,15 @@
         },
         {
             "name": "readyState",
-            "lastModifiedAt": 1596581429549
+            "lastModifiedAt": 1604450390344
         },
         {
             "name": "url",
-            "lastModifiedAt": 1596581429872
+            "lastModifiedAt": 1604450390984
         },
         {
             "name": "withCredentials",
-            "lastModifiedAt": 1596581430240
+            "lastModifiedAt": 1604450391455
         }
     ]
 }

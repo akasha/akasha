@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.forEach",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/forEach",
-    "description": "The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function."
+    "description": "The forEach() method of the URLSearchParams interface allows iteration through all values contained in this object via a callback function.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#interface-urlsearchparams",
+            "description": "The definition of 'forEach() (see \"iterable\")' in URL."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OscillatorNode.setPeriodicWave",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/setPeriodicWave",
-    "description": "The setPeriodicWave() method of the OscillatorNode interface is used to point to a PeriodicWave defining a periodic waveform that can be used to shape the oscillator's output, when type is custom."
+    "description": "The setPeriodicWave() method of the OscillatorNode interface is used to point to a PeriodicWave defining a periodic waveform that can be used to shape the oscillator's output, when type is custom.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-oscillatornode-setperiodicwave",
+            "description": "The definition of 'setPeriodicWave' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLObjectElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement",
-    "description": "The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of object element, representing external resources."
+    "description": "The HTMLObjectElement interface provides special properties and methods (beyond those on the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of object element, representing external resources.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlobjectelement",
+            "description": "The definition of 'HTMLObjectElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-object-element",
+            "description": "The definition of 'HTMLObjectElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9893177",
+            "description": "The definition of 'HTMLObjectElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-9893177",
+            "description": "The definition of 'HTMLObjectElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

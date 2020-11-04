@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OES_vertex_array_object.deleteVertexArrayOES",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OES_vertex_array_object/deleteVertexArrayOES",
-    "description": "The OES_vertex_array_object.deleteVertexArrayOES() method of the WebGL API deletes a given WebGLVertexArrayObject object."
+    "description": "The OES_vertex_array_object.deleteVertexArrayOES() method of the WebGL API deletes a given WebGLVertexArrayObject object.",
+    "refs": [
+        {
+            "name": "OES_vertex_array_object",
+            "href": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/",
+            "description": "The definition of 'OES_vertex_array_object' in OES_vertex_array_object."
+        }
+    ]
 }

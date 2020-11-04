@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.usernameFragment",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/usernameFragment",
-    "description": "The read-only usernameFragment property on the RTCIceCandidate interface is a string indicating the username fragment (&quot;ufrag&quot;) that uniquely identifies a single ICE interaction session."
+    "description": "The read-only usernameFragment property on the RTCIceCandidate interface is a string indicating the username fragment (&quot;ufrag&quot;) that uniquely identifies a single ICE interaction session.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-usernamefragment",
+            "description": "The definition of 'RTCIceCandidate.usernameFragment' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebSocket.bufferedAmount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/bufferedAmount",
-    "description": "The WebSocket.bufferedAmount read-only property returns the number of bytes of data that have been queued using calls to send() but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling send(), this will continue to climb."
+    "description": "The WebSocket.bufferedAmount read-only property returns the number of bytes of data that have been queued using calls to send() but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling send(), this will continue to climb.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-bufferedamount",
+            "description": "The definition of 'WebSocket: bufferedAmount' in HTML Living Standard."
+        }
+    ]
 }

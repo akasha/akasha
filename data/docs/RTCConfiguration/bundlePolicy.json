@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCConfiguration.bundlePolicy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/bundlePolicy",
-    "description": "The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection."
+    "description": "The RTCConfiguration dictionary's bundlePolicy property is a string value indicating which SDP bundling policy, if any, to use for the underlying RTP streams used by an RTCPeerConnection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-bundlepolicy",
+            "description": "The definition of 'RTCConfiguration.bundlePolicy' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

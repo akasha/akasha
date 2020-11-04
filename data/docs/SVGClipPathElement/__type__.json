@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGClipPathElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGClipPathElement",
-    "description": "The SVGClipPathElement interface provides access to the properties of clipPath elements, as well as methods to manipulate them."
+    "description": "The SVGClipPathElement interface provides access to the properties of clipPath elements, as well as methods to manipulate them.",
+    "refs": [
+        {
+            "name": "CSS Masking Module Level 1",
+            "href": "https://drafts.fxtf.org/css-masking-1/#InterfaceSVGClipPathElement",
+            "description": "The definition of 'SVGClipPathElement' in CSS Masking Module Level 1."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/masking.html#InterfaceSVGClipPathElement",
+            "description": "The definition of 'SVGClipPathElement' in Scalable Vector Graphics (SVG) 1.1 (Second Edition)."
+        }
+    ]
 }

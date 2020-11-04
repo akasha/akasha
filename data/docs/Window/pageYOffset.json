@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.pageYOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pageYOffset",
-    "description": "The read-only Window property pageYOffset is an alias for scrollY; as such, it returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down) with a value of 0.0, indicating that the top edge of the Document is currently aligned with the top edge of the window's content area."
+    "description": "The read-only Window property pageYOffset is an alias for scrollY; as such, it returns the number of pixels the document is currently scrolled along the vertical axis (that is, up or down) with a value of 0.0, indicating that the top edge of the Document is currently aligned with the top edge of the window's content area.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-pageyoffset",
+            "description": "The definition of 'window.pageYOffset' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

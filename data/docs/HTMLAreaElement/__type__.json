@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLAreaElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement",
-    "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements."
+    "description": "The HTMLAreaElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of area elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlareaelement",
+            "description": "The definition of 'HTMLAreaElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-area-element",
+            "description": "The definition of 'HTMLAreaElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26019118",
+            "description": "The definition of 'HTMLAreaElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-26019118",
+            "description": "The definition of 'HTMLAreaElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "GamepadButton",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton",
-    "description": "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device."
+    "description": "The GamepadButton interface defines an individual button of a gamepad or other controller, allowing access to the current state of different types of buttons available on the control device.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/#gamepadbutton-interface",
+            "description": "The definition of 'GamepadButton' in Gamepad."
+        }
+    ]
 }

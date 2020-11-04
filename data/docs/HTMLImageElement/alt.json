@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.alt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt",
-    "description": "The HTMLImageElement property alt provides fallback (alternate) text to display when the image specified by the img element is not loaded."
+    "description": "The HTMLImageElement property alt provides fallback (alternate) text to display when the image specified by the img element is not loaded.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-alt",
+            "description": "The definition of 'HTMLImageElement.alt' in HTML Living Standard."
+        }
+    ]
 }

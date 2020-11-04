@@ -1,15 +1,15 @@
 
 {
     "name": "ElementCSSInlineStyle",
-    "lastModifiedAt": 1601504268763,
+    "lastModifiedAt": 1604447309620,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190708203
+            "lastModifiedAt": 1604447309037
         },
         {
             "name": "style",
-            "lastModifiedAt": 1597190708556
+            "lastModifiedAt": 1604447309577
         }
     ]
 }

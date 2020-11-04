@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "History.forward",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/forward",
-    "description": "The History.forward() method causes the browser to move forward one page in the session history. It has the same effect as calling history.go(1)."
+    "description": "The History.forward() method causes the browser to move forward one page in the session history. It has the same effect as calling history.go(1).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#history",
+            "description": "The definition of 'History' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#history",
+            "description": "The definition of 'History' in HTML5."
+        }
+    ]
 }

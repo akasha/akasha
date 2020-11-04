@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioWorkletProcessor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor",
-    "description": "The AudioWorkletProcessor interface of the Web Audio API represents an audio processing code behind a custom AudioWorkletNode. It lives in the AudioWorkletGlobalScope and runs on the Web Audio rendering thread. In turn, an AudioWorkletNode based on it runs on the main thread."
+    "description": "The AudioWorkletProcessor interface of the Web Audio API represents an audio processing code behind a custom AudioWorkletNode. It lives in the AudioWorkletGlobalScope and runs on the Web Audio rendering thread. In turn, an AudioWorkletNode based on it runs on the main thread.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#audioworkletprocessor",
+            "description": "The definition of 'AudioWorkletProcessor' in Web Audio API."
+        }
+    ]
 }

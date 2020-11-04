@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ImageBitmapRenderingContext",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmapRenderingContext",
-    "description": "The ImageBitmapRenderingContext interface is a canvas rendering context that provides the functionality to replace the canvas's contents with the given ImageBitmap. Its context id (the first argument to HTMLCanvasElement.getContext() or OffscreenCanvas.getContext()) is &quot;bitmaprenderer&quot;."
+    "description": "The ImageBitmapRenderingContext interface is a canvas rendering context that provides the functionality to replace the canvas's contents with the given ImageBitmap. Its context id (the first argument to HTMLCanvasElement.getContext() or OffscreenCanvas.getContext()) is &quot;bitmaprenderer&quot;.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#the-imagebitmaprenderingcontext-interface",
+            "description": "The definition of 'ImageBitmapRenderingContext' in HTML Living Standard."
+        }
+    ]
 }

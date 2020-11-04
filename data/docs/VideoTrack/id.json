@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoTrack.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/id",
-    "description": "The id property contains a string which uniquely identifies the track represented by the VideoTrack."
+    "description": "The id property contains a string which uniquely identifies the track represented by the VideoTrack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-videotrack-id",
+            "description": "The definition of 'VideoTrack: id' in HTML Living Standard."
+        }
+    ]
 }

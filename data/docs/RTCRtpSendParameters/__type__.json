@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpSendParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSendParameters",
-    "description": "The WebRTC API's RTCRtpSendParameters dictionary is used to specify the parameters for an RTCRtpSender when calling its setParameters() method."
+    "description": "The WebRTC API's RTCRtpSendParameters dictionary is used to specify the parameters for an RTCRtpSender when calling its setParameters() method.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsendparameters",
+            "description": "The definition of 'RTCRtpSendParameters' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

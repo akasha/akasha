@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLFormElement.method",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/method",
-    "description": "The HTMLFormElement.method property represents the HTTP method used to submit the form."
+    "description": "The HTMLFormElement.method property represents the HTTP method used to submit the form.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-fs-method",
+            "description": "The definition of 'HTMLFormElement: method' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.packetsDuplicated",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsDuplicated",
-    "description": "The packetsDuplicated property of the RTCInboundRtpStreamStats dictionary indicates the total number of packets discarded because they were duplicates of previously-received packets."
+    "description": "The packetsDuplicated property of the RTCInboundRtpStreamStats dictionary indicates the total number of packets discarded because they were duplicates of previously-received packets.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-packetsduplicated",
+            "description": "The definition of 'RTCInboundRtpStreamStats.packetsDuplicated' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

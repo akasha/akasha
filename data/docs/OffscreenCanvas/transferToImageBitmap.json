@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OffscreenCanvas.transferToImageBitmap",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/transferToImageBitmap",
-    "description": "The OffscreenCanvas.transferToImageBitmap() method creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas."
+    "description": "The OffscreenCanvas.transferToImageBitmap() method creates an ImageBitmap object from the most recently rendered image of the OffscreenCanvas.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-transfertoimagebitmap",
+            "description": "The definition of 'OffscreenCanvas.transferToImageBitmap()' in HTML Living Standard."
+        }
+    ]
 }

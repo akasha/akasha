@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.cursor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/cursor",
-    "description": "The MediaTrackConstraints dictionary's cursor property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the cursor constrainable property, which is used to specify whether or not the cursor should be included in the captured video."
+    "description": "The MediaTrackConstraints dictionary's cursor property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the cursor constrainable property, which is used to specify whether or not the cursor should be included in the captured video.",
+    "refs": [
+        {
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatrackconstraintset-cursor",
+            "description": "The definition of 'MediaTrackConstraints.cursor' in Screen Capture."
+        }
+    ]
 }

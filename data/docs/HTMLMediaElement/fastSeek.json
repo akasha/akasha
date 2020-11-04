@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLMediaElement.fastSeek",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/fastSeek",
-    "description": "The HTMLMediaElement.fastSeek() method quickly seeks the media to the new time with precision tradeoff."
+    "description": "The HTMLMediaElement.fastSeek() method quickly seeks the media to the new time with precision tradeoff.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-fastseek",
+            "description": "The definition of 'fastSeek()' in HTML Living Standard."
+        }
+    ]
 }

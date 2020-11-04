@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.logicalSurface",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/logicalSurface",
-    "description": "The MediaTrackConstraints dictionary's logicalSurface property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the logicalSurface constrainable property."
+    "description": "The MediaTrackConstraints dictionary's logicalSurface property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the logicalSurface constrainable property.",
+    "refs": [
+        {
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatrackconstraintset-logicalsurface",
+            "description": "The definition of 'MediaTrackConstraints.logicalSurface' in Screen Capture."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioNode.channelCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelCount",
-    "description": "The channelCount property of the AudioNode interface represents an integer used to determine how many channels are used when up-mixing and down-mixing connections to any inputs to the node."
+    "description": "The channelCount property of the AudioNode interface represents an integer used to determine how many channels are used when up-mixing and down-mixing connections to any inputs to the node.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-channelcount",
+            "description": "The definition of 'channelCount' in Web Audio API."
+        }
+    ]
 }

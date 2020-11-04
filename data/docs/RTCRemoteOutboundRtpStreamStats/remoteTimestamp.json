@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRemoteOutboundRtpStreamStats.remoteTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/remoteTimestamp",
-    "description": "The RTCRemoteOutboundRtpStreamStats property remoteTimestamp indicates the timestamp on the remote peer at which these statistics were sent. This differs from timestamp, which indicates the time at which the statistics were generated or received locally."
+    "description": "The RTCRemoteOutboundRtpStreamStats property remoteTimestamp indicates the timestamp on the remote peer at which these statistics were sent. This differs from timestamp, which indicates the time at which the statistics were generated or received locally.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcremoteoutboundrtpstreamstats-remotetimestamp",
+            "description": "The definition of 'RTCRemoteOutboundRtpStreamStats.remoteTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

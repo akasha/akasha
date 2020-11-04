@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GamepadButton.value",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadButton/value",
-    "description": "The GamepadButton.value property of the GamepadButton interface returns a double value used to represent the current state of analog buttons on many modern gamepads, such as the triggers."
+    "description": "The GamepadButton.value property of the GamepadButton interface returns a double value used to represent the current state of analog buttons on many modern gamepads, such as the triggers.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/#dom-gamepadbutton-value",
+            "description": "The definition of 'GamepadButton.value' in Gamepad."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.setIdentityProvider",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setIdentityProvider",
-    "description": "The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed."
+    "description": "The RTCPeerConnection.setIdentityProvider() method sets the Identity Provider (IdP) to the triplet given in parameter: its name, the protocol used to communicate with it (optional) and an optional username. The IdP will be used only when an assertion is needed.",
+    "refs": [
+        {
+            "name": "Identity for WebRTC",
+            "href": "https://w3c.github.io/webrtc-identity/#dfn-setidentityprovider",
+            "description": "The definition of 'RTCPeerConnection.setIdentityProvider()' in Identity for WebRTC."
+        }
+    ]
 }

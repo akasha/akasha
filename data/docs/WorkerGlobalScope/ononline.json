@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerGlobalScope.ononline",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/ononline",
-    "description": "The ononline property of the WorkerGlobalScope interface represents an EventHandler to be called when the online event occurs and bubbles through the Worker."
+    "description": "The ononline property of the WorkerGlobalScope interface represents an EventHandler to be called when the online event occurs and bubbles through the Worker.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-workerglobalscope-ononline",
+            "description": "The definition of 'WorkerGlobalScope.ononline' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PeriodicWave",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave",
-    "description": "PeriodicWave has no inputs or outputs; it is used to define custom oscillators when calling OscillatorNode.setPeriodicWave(). The PeriodicWave itself is created/returned by AudioContext.createPeriodicWave()."
+    "description": "PeriodicWave has no inputs or outputs; it is used to define custom oscillators when calling OscillatorNode.setPeriodicWave(). The PeriodicWave itself is created/returned by AudioContext.createPeriodicWave().",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#periodicwave",
+            "description": "The definition of 'PeriodicWave' in Web Audio API."
+        }
+    ]
 }

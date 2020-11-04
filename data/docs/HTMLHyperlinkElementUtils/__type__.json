@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "HTMLHyperlinkElementUtils",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils",
-    "description": "The HTMLHyperlinkElementUtils mixin defines utility methods and properties to work with HTMLAnchorElement and HTMLAreaElement. These utilities allow to deal with common features like URLs."
+    "description": "The HTMLHyperlinkElementUtils mixin defines utility methods and properties to work with HTMLAnchorElement and HTMLAreaElement. These utilities allow to deal with common features like URLs.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlhyperlinkelementutils",
+            "description": "The definition of 'HTMLHyperlinkElementUtils' in HTML Living Standard."
+        }
+    ]
 }

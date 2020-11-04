@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpSender.setParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setParameters",
-    "description": "The setParameters() method of the RTCRtpSender interface applies changes the configuration of sender's track, which is the MediaStreamTrack for which the RTCRtpSender is responsible."
+    "description": "The setParameters() method of the RTCRtpSender interface applies changes the configuration of sender's track, which is the MediaStreamTrack for which the RTCRtpSender is responsible.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-setparameters",
+            "description": "The definition of 'RTCRtpSender.setParameters()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

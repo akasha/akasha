@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCConfiguration.certificates",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCConfiguration/certificates",
-    "description": "The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process."
+    "description": "The RTCConfiguration dictionary's optional certificates property is an array of RTCCertificate objects providing the security certificates available for use when authenticating duing the connection process.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcconfiguration-certificates",
+            "description": "The definition of 'RTCConfiguration.certificates' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

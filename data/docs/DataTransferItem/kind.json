@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransferItem.kind",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/kind",
-    "description": "The read-only DataTransferItem.kind property returns a DataTransferItem representing the drag data item kind: some text or some file."
+    "description": "The read-only DataTransferItem.kind property returns a DataTransferItem representing the drag data item kind: some text or some file.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitem-kind",
+            "description": "The definition of 'kind' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitem-kind",
+            "description": "The definition of 'kind' in HTML 5.1."
+        }
+    ]
 }

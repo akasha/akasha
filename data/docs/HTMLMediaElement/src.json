@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.src",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/src",
-    "description": "The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element."
+    "description": "The HTMLMediaElement.src property reflects the value of the HTML media element's src attribute, which indicates the URL of a media resource to use in the element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-src",
+            "description": "The definition of 'HTMLMediaElement.src' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-src",
+            "description": "The definition of 'HTMLMediaElement.src' in HTML5."
+        }
+    ]
 }

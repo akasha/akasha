@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WindowOrWorkerGlobalScope.crossOriginIsolated",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated",
-    "description": "The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call."
+    "description": "The crossOriginIsolated read-only property of the WindowOrWorkerGlobalScope interface returns a boolean value that indicates whether a SharedArrayBuffer can be sent via a Window.postMessage() call.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-crossoriginisolated",
+            "description": "The definition of 'crossOriginIsolated' in HTML Living Standard."
+        }
+    ]
 }

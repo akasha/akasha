@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCOutboundRtpStreamStats.lastPacketSentTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/lastPacketSentTimestamp",
-    "description": "The lastPacketSentTimestamp property of the RTCOutboundRtpStreamStats dictionary indicates the time at which the RTCRtpSender described by this RTCOutboundRtpStreamStats object last transmitted a packet to the remote receiver."
+    "description": "The lastPacketSentTimestamp property of the RTCOutboundRtpStreamStats dictionary indicates the time at which the RTCRtpSender described by this RTCOutboundRtpStreamStats object last transmitted a packet to the remote receiver.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-lastpacketsenttimestamp",
+            "description": "The definition of 'RTCOutboundRtpStreamStats.lastPacketSentTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

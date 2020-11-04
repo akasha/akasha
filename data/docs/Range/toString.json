@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Range.toString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/toString",
-    "description": "The Range.toString() method is a stringifier returning the text of the Range."
+    "description": "The Range.toString() method is a stringifier returning the text of the Range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-stringifier",
+            "description": "The definition of 'Range.toString()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-toString",
+            "description": "The definition of 'Range.toString()' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

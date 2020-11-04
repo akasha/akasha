@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "Element.hasAttributes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttributes",
-    "description": "The hasAttributes() method of the Element interface returns a Boolean indicating whether the current element has any attributes or not."
+    "description": "The hasAttributes() method of the Element interface returns a Boolean indicating whether the current element has any attributes or not.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-hasattributes",
+            "description": "The definition of 'Element.hasAttributes()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/#ID-NodeHasAttrs",
+            "description": "The definition of 'hasAttributes()' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/#ID-NodeHasAttrs",
+            "description": "The definition of 'hasAttributes()' in Document Object Model (DOM) Level 2 Core Specification."
+        }
+    ]
 }

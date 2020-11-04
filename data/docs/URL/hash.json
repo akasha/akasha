@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "URL.hash",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/hash",
-    "description": "The hash property of the URL interface is a USVString containing a '#' followed by the fragment identifier of the URL."
+    "description": "The hash property of the URL interface is a USVString containing a '#' followed by the fragment identifier of the URL.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-hash",
+            "description": "The definition of 'URL.hash' in URL."
+        }
+    ]
 }

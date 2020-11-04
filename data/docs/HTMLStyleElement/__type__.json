@@ -3,5 +3,32 @@
     "kind": "Type",
     "name": "HTMLStyleElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLStyleElement",
-    "description": "The HTMLStyleElement interface represents a style element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle."
+    "description": "The HTMLStyleElement interface represents a style element. It inherits properties and methods from its parent, HTMLElement, and from LinkStyle.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlstyleelement",
+            "description": "The definition of 'HTMLStyleElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/document-metadata.html#the-style-element",
+            "description": "The definition of 'HTMLStyleElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/document-metadata.html#the-style-element",
+            "description": "The definition of 'HTMLStyleElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-16428977",
+            "description": "The definition of 'HTMLStyleElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-16428977",
+            "description": "The definition of 'HTMLStyleElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Response.json",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/json",
-    "description": "The json() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON."
+    "description": "The json() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with the result of parsing the body text as JSON.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-body-json",
+            "description": "The definition of 'Body.json()' in Fetch."
+        }
+    ]
 }

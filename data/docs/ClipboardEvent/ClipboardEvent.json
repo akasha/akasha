@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "ClipboardEvent.ClipboardEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/ClipboardEvent",
-    "description": "The ClipboardEvent() constructor returns a newly created ClipboardEvent, representing an event providing information related to modification of the clipboard, that is cut, copy, and paste events."
+    "description": "The ClipboardEvent() constructor returns a newly created ClipboardEvent, representing an event providing information related to modification of the clipboard, that is cut, copy, and paste events.",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#dom-clipboardevent-clipboardevent",
+            "description": "The definition of 'ClipboardEvent()' in Clipboard API and events."
+        }
+    ]
 }

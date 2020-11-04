@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondragend",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragend",
-    "description": "A global event handler for the dragend event."
+    "description": "A global event handler for the dragend event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragend",
+            "description": "The definition of 'ondragend' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragend",
+            "description": "The definition of 'ondragend' in HTML 5.1."
+        }
+    ]
 }

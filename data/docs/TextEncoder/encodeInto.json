@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "TextEncoder.encodeInto",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encodeInto",
-    "description": "The TextEncoder.prototype.encodeInto() method takes a USVString to encode and a destination Uint8Array to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older encode() method especially when the target buffer is a view into a Wasm heap."
+    "description": "The TextEncoder.prototype.encodeInto() method takes a USVString to encode and a destination Uint8Array to put resulting UTF-8 encoded text into, and returns a dictionary object indicating the progress of the encoding. This is potentially more performant than the older encode() method especially when the target buffer is a view into a Wasm heap.",
+    "refs": [
+        {
+            "name": "Encoding",
+            "href": "https://encoding.spec.whatwg.org/#dom-textencoder-encodeinto",
+            "description": "The definition of 'TextEncoder.encode()' in Encoding."
+        }
+    ]
 }

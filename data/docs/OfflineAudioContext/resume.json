@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OfflineAudioContext.resume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/resume",
-    "description": "The resume() method of the OfflineAudioContext interface resumes the progression of time in an audio context that has been suspended. The promise resolves immediately because the OfflineAudioContext does not require the audio hardware. If the context is not currently suspended or the rendering has not started, the promise is rejected with InvalidStateError."
+    "description": "The resume() method of the OfflineAudioContext interface resumes the progression of time in an audio context that has been suspended. The promise resolves immediately because the OfflineAudioContext does not require the audio hardware. If the context is not currently suspended or the rendering has not started, the promise is rejected with InvalidStateError.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-resume",
+            "description": "The definition of 'resume()' in Web Audio API."
+        }
+    ]
 }

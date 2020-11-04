@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "NavigatorPlugins.javaEnabled",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/javaEnabled",
-    "description": "This method indicates whether the current browser is Java-enabled or not."
+    "description": "This method indicates whether the current browser is Java-enabled or not.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-javaenabled",
+            "description": "The definition of 'NavigatorPlugins.javaEnabled' in HTML Living Standard."
+        }
+    ]
 }

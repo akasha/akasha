@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ClipboardEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent",
-    "description": "The ClipboardEvent interface represents events providing information related to modification of the clipboard, that is cut, copy, and paste events."
+    "description": "The ClipboardEvent interface represents events providing information related to modification of the clipboard, that is cut, copy, and paste events.",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#clipboard-event-interfaces",
+            "description": "The definition of 'ClipboardEvent' in Clipboard API and events."
+        }
+    ]
 }

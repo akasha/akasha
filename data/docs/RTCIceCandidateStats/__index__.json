@@ -1,23 +1,23 @@
 
 {
     "name": "RTCIceCandidateStats",
-    "lastModifiedAt": 1601467385361,
+    "lastModifiedAt": 1604448880851,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192864519
+            "lastModifiedAt": 1604448874786
         },
         {
             "name": "address",
-            "lastModifiedAt": 1596544698477
+            "lastModifiedAt": 1604448875257
         },
         {
             "name": "candidateType",
-            "lastModifiedAt": 1596544699270
+            "lastModifiedAt": 1604448879977
         },
         {
             "name": "deleted",
-            "lastModifiedAt": 1596544699514
+            "lastModifiedAt": 1604448875787
         },
         {
             "name": "networkType",
@@ -25,27 +25,27 @@
         },
         {
             "name": "port",
-            "lastModifiedAt": 1596544700232
+            "lastModifiedAt": 1604448877268
         },
         {
             "name": "priority",
-            "lastModifiedAt": 1596544700538
+            "lastModifiedAt": 1604448880647
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1599280245245
+            "lastModifiedAt": 1604448877763
         },
         {
             "name": "relayProtocol",
-            "lastModifiedAt": 1596544701655
+            "lastModifiedAt": 1604448878384
         },
         {
             "name": "transportId",
-            "lastModifiedAt": 1596544702075
+            "lastModifiedAt": 1604448878869
         },
         {
             "name": "url",
-            "lastModifiedAt": 1596544702880
+            "lastModifiedAt": 1604448879396
         }
     ]
 }

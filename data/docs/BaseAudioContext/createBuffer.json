@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBuffer",
-    "description": "An AudioBuffer configured based on the specified options."
+    "description": "An AudioBuffer configured based on the specified options.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbuffer",
+            "description": "The definition of 'createBuffer()' in Web Audio API."
+        }
+    ]
 }

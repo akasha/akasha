@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "OffscreenCanvas.OffscreenCanvas",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/OffscreenCanvas",
-    "description": "The OffscreenCanvas() constructor returns a newly instantiated OffscreenCanvas object."
+    "description": "The OffscreenCanvas() constructor returns a newly instantiated OffscreenCanvas object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-offscreencanvas",
+            "description": "The definition of 'OffscreenCanvas()' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioScheduledSourceNode.onended",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/onended",
-    "description": "The onended event handler for the AudioScheduledSourceNode interface specifies an EventHandler to be executed when the ended event occurs on the node. This event is sent to the node when the concrete interface (such as AudioBufferSourceNode, OscillatorNode, or ConstantSourceNode) determines that it has stopped playing."
+    "description": "The onended event handler for the AudioScheduledSourceNode interface specifies an EventHandler to be executed when the ended event occurs on the node. This event is sent to the node when the concrete interface (such as AudioBufferSourceNode, OscillatorNode, or ConstantSourceNode) determines that it has stopped playing.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended",
+            "description": "The definition of 'onended' in Web Audio API."
+        }
+    ]
 }

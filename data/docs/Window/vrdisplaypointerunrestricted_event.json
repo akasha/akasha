@@ -4,6 +4,13 @@
     "name": "Window.vrdisplaypointerunrestricted_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaypointerunrestricted_event",
     "description": "You can use the vrdisplaypointerunrestricted event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaypointerunrestricted",
+            "description": "The definition of 'vrdisplaypointerunrestricted' in WebVR 1.1."
+        }
+    ],
     "eventName": "vrdisplaypointerunrestricted",
     "eventType": "VRDisplayEvent",
     "eventHandlerProperty": "onvrdisplaypointerunrestricted",

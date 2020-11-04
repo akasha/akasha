@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Screen.availWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/availWidth",
-    "description": "The Screen.availWidth property returns the amount of horizontal space (in pixels) available to the window."
+    "description": "The Screen.availWidth property returns the amount of horizontal space (in pixels) available to the window.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-screen-availwidth",
+            "description": "The definition of 'Screen.availWidth' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

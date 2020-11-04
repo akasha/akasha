@@ -1,19 +1,19 @@
 
 {
     "name": "BroadcastChannel",
-    "lastModifiedAt": 1600310770903,
+    "lastModifiedAt": 1604450642628,
     "entries": [
         {
             "name": "BroadcastChannel",
-            "lastModifiedAt": 1597193563663
+            "lastModifiedAt": 1604450638820
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193563367
+            "lastModifiedAt": 1604450638221
         },
         {
             "name": "close",
-            "lastModifiedAt": 1596581566565
+            "lastModifiedAt": 1604450641159
         },
         {
             "name": "message_event",
@@ -25,19 +25,19 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1596581565306
+            "lastModifiedAt": 1604450639462
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1596581565709
+            "lastModifiedAt": 1604450640084
         },
         {
             "name": "onmessageerror",
-            "lastModifiedAt": 1599391299384
+            "lastModifiedAt": 1604450640578
         },
         {
             "name": "postMessage",
-            "lastModifiedAt": 1596581566834
+            "lastModifiedAt": 1604450641638
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "IntersectionObserver.rootMargin",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin",
-    "description": "The IntersectionObserver interface's read-only rootMargin property is a string with syntax similar to that of the CSS margin property. Each side of the rectangle represented by rootMargin is added to the corresponding side in the root element's bounding box before the intersection test is performed. This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root's bounding box."
+    "description": "The IntersectionObserver interface's read-only rootMargin property is a string with syntax similar to that of the CSS margin property. Each side of the rectangle represented by rootMargin is added to the corresponding side in the root element's bounding box before the intersection test is performed. This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root's bounding box.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverinit-rootmargin",
+            "description": "The definition of 'IntersectionObserver.rootMargin' in Intersection Observer."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Worker.postMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/postMessage",
-    "description": "The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references."
+    "description": "The postMessage() method of the Worker interface sends a message to the worker's inner scope. This accepts a single parameter, which is the data to send to the worker. The data may be any value or JavaScript object handled by the structured clone algorithm, which includes cyclical references.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-worker-postmessage",
+            "description": "The definition of 'Worker.postMessage()' in HTML Living Standard."
+        }
+    ]
 }

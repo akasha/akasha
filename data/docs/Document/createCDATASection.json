@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createCDATASection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createCDATASection",
-    "description": "createCDATASection() creates a new CDATA section node, and returns it."
+    "description": "createCDATASection() creates a new CDATA section node, and returns it.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-createcdatasection",
+            "description": "The definition of 'document.createCDATASection' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MessageEvent.source",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/source",
-    "description": "The source read-only property of the MessageEvent interface is a MessageEventSource (which can be a WindowProxy, MessagePort, or ServiceWorker object) representing the message emitter."
+    "description": "The source read-only property of the MessageEvent interface is a MessageEventSource (which can be a WindowProxy, MessagePort, or ServiceWorker object) representing the message emitter.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-messageevent-source",
+            "description": "The definition of ' MessageEvent: source' in HTML Living Standard."
+        }
+    ]
 }

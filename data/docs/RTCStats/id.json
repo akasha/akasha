@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCStats.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCStats/id",
-    "description": "The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics."
+    "description": "The id property of the RTCStats dictionary is a string which uniquely identifies the object for which this RTCStats object provides statistics.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcstats-id",
+            "description": "The definition of 'RTCStats.id' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

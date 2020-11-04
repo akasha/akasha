@@ -4,6 +4,13 @@
     "name": "Document.selectionchange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/selectionchange_event",
     "description": "",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#selectionchange-event",
+            "description": "The definition of 'selectionchange' in Selection API."
+        }
+    ],
     "eventName": "selectionchange",
     "eventType": "Event",
     "eventHandlerProperty": "onselectionchange",

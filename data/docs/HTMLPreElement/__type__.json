@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLPreElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLPreElement",
-    "description": "The HTMLPreElement interface exposes specific properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating a block of preformatted text (pre)."
+    "description": "The HTMLPreElement interface exposes specific properties and methods (beyond those of the HTMLElement interface it also has available to it by inheritance) for manipulating a block of preformatted text (pre).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlpreelement",
+            "description": "The definition of 'HTMLPreElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/grouping-content.html#the-pre-element",
+            "description": "The definition of 'HTMLLIElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-11383425",
+            "description": "The definition of 'HTMLPreElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-11383425",
+            "description": "The definition of 'HTMLPreElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

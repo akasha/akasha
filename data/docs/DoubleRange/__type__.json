@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DoubleRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DoubleRange",
-    "description": "The DoubleRange dictionary is used to define a range of permitted double-precision floating-point values for a property, with either or both a maximum and minimum value specified. The ConstrainDouble dictionary is based on this, augmenting it to support exact and ideal values as well."
+    "description": "The DoubleRange dictionary is used to define a range of permitted double-precision floating-point values for a property, with either or both a maximum and minimum value specified. The ConstrainDouble dictionary is based on this, augmenting it to support exact and ideal values as well.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-doublerange",
+            "description": "The definition of 'DoubleRange' in Media Capture and Streams."
+        }
+    ]
 }

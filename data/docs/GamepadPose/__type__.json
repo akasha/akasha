@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "GamepadPose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose",
-    "description": "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)"
+    "description": "The GamepadPose interface of the Gamepad API represents the pose of a WebVR controller at a given timestamp (which includes orientation, position, velocity, and acceleration information.)",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#gamepadpose-interface",
+            "description": "The definition of 'GamepadPose' in Gamepad Extensions."
+        }
+    ]
 }

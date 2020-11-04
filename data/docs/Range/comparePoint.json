@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Range.comparePoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/comparePoint",
-    "description": "The Range.comparePoint() method returns -1, 0, or 1 depending on whether the referenceNode is before, the same as, or after the Range."
+    "description": "The Range.comparePoint() method returns -1, 0, or 1 depending on whether the referenceNode is before, the same as, or after the Range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-comparepoint",
+            "description": "The definition of 'Range.comparePoint()' in DOM."
+        }
+    ]
 }

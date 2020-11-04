@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ConvolverNode.buffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode/buffer",
-    "description": "An AudioBuffer."
+    "description": "An AudioBuffer.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-convolvernode-buffer",
+            "description": "The definition of 'buffer' in Web Audio API."
+        }
+    ]
 }

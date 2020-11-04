@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "HTMLOptionElement.Option",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOptionElement/Option",
-    "description": "The Option() constructor creates a new HTMLOptionElement."
+    "description": "The Option() constructor creates a new HTMLOptionElement.",
+    "refs": [
+        {
+            "name": "HTML5",
+            "href": "http://www.w3.org/TR/2012/WD-html5-20121025/the-option-element.html#dom-option",
+            "description": "The definition of 'Option' in HTML5."
+        }
+    ]
 }

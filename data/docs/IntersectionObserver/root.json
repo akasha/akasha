@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "IntersectionObserver.root",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/root",
-    "description": "The IntersectionObserver interface's read-only root property identifies the Element or Document whose bounds are treated as the bounding box of the viewport for the element which is the observer's target."
+    "description": "The IntersectionObserver interface's read-only root property identifies the Element or Document whose bounds are treated as the bounding box of the viewport for the element which is the observer's target.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-root",
+            "description": "The definition of 'IntersectionObserver' in Intersection Observer."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.sampleSize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/sampleSize",
-    "description": "The MediaTrackConstraints dictionary's sampleSize property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the sampleSize constrainable property."
+    "description": "The MediaTrackConstraints dictionary's sampleSize property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the sampleSize constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-samplesize",
+            "description": "The definition of 'sampleSize' in Media Capture and Streams."
+        }
+    ]
 }

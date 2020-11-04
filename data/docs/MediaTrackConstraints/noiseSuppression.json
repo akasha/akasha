@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.noiseSuppression",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/noiseSuppression",
-    "description": "The MediaTrackConstraints dictionary's noiseSuppression property is a ConstrainBoolean describing the requested or mandatory constraints placed upon the value of the noiseSuppression constrainable property."
+    "description": "The MediaTrackConstraints dictionary's noiseSuppression property is a ConstrainBoolean describing the requested or mandatory constraints placed upon the value of the noiseSuppression constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-noisesuppression",
+            "description": "The definition of 'noiseSuppression' in Media Capture and Streams."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "MouseEvent.pageX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageX",
-    "description": "The pageX read-only property of the MouseEvent interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document."
+    "description": "The pageX read-only property of the MouseEvent interface returns the X (horizontal) coordinate (in pixels) at which the mouse was clicked, relative to the left edge of the entire document.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-pagex",
+            "description": "The definition of 'pageX' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-Touch-pageX",
+            "description": "The definition of 'pageX' in Touch Events."
+        }
+    ]
 }

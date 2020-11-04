@@ -4,6 +4,13 @@
     "name": "RTCDTMFSender.tonechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/tonechange_event",
     "description": "The tonechange event is sent to an RTCDTMFSender by the WebRTC API to indicate when DTMF tones previously queued for sending (by calling RTCDTMFSender.insertDTMF()) begin and end.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-RTCDTMFSender-tonechange",
+            "description": "The definition of 'tonechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "tonechange",
     "eventType": "RTCDTMFToneChangeEvent",
     "eventHandlerProperty": "ontonechange",

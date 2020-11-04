@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.negotiationneeded_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event",
     "description": "A negotiationneeded event is sent to the RTCPeerConnection when negotiation of the connection through the signaling channel is required.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-negotiation",
+            "description": "The definition of 'negotiationneeded' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "negotiationneeded",
     "eventType": "Event",
     "eventHandlerProperty": "onnegotiationneeded",

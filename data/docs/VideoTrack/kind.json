@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoTrack.kind",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/kind",
-    "description": "The kind property contains a string indicating the category of video contained in the VideoTrack."
+    "description": "The kind property contains a string indicating the category of video contained in the VideoTrack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-videotrack-kind",
+            "description": "The definition of 'VideoTrack: kind' in HTML Living Standard."
+        }
+    ]
 }

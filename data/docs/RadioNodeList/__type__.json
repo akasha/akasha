@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RadioNodeList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RadioNodeList",
-    "description": "The RadioNodeList interface represents a collection of radio elements in a form or a fieldset element."
+    "description": "The RadioNodeList interface represents a collection of radio elements in a form or a fieldset element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#radionodelist",
+            "description": "The definition of 'RadioNodeList' in HTML Living Standard."
+        }
+    ]
 }

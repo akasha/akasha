@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MouseEvent.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/x",
-    "description": "The MouseEvent.x property is an alias for the MouseEvent.clientX property."
+    "description": "The MouseEvent.x property is an alias for the MouseEvent.clientX property.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-x",
+            "description": "The definition of 'MouseEvent.x' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

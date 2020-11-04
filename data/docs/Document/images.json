@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.images",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/images",
-    "description": "The images read-only property of the Document interface returns a collection of the images in the current HTML document."
+    "description": "The images read-only property of the Document interface returns a collection of the images in the current HTML document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-images",
+            "description": "The definition of 'Document.images' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117",
+            "description": "The definition of 'Document.images' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

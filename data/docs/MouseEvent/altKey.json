@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "MouseEvent.altKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/altKey",
-    "description": "The MouseEvent.altKey read-only property is a Boolean that indicates whether the alt key was pressed or not when a given mouse event occurs."
+    "description": "The MouseEvent.altKey read-only property is a Boolean that indicates whether the alt key was pressed or not when a given mouse event occurs.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-altKey",
+            "description": "The definition of 'MouseEvent.altkey' in Document Object Model (DOM) Level 3 Events Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
+            "description": "The definition of 'MouseEvent.altkey' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

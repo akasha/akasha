@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLTableSectionElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableSectionElement",
-    "description": "The HTMLTableSectionElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table."
+    "description": "The HTMLTableSectionElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of sections, that is headers, footers and bodies, in an HTML table.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/tabular-data.html#htmltablesectionelement",
+            "description": "The definition of 'HTMLTableSectionElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/tabular-data.html#htmltablesectionelement",
+            "description": "The definition of 'HTMLTableSectionElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-67417573",
+            "description": "The definition of 'HTMLTableSectionElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-67417573",
+            "description": "The definition of 'HTMLTableSectionElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

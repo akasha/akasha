@@ -1,27 +1,27 @@
 
 {
     "name": "HTMLLinkElement",
-    "lastModifiedAt": 1600311800750,
+    "lastModifiedAt": 1604450381368,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193419418
+            "lastModifiedAt": 1604450376615
         },
         {
             "name": "as",
-            "lastModifiedAt": 1599391779414
+            "lastModifiedAt": 1604450377358
         },
         {
             "name": "referrerPolicy",
-            "lastModifiedAt": 1596581421002
+            "lastModifiedAt": 1604450377824
         },
         {
             "name": "rel",
-            "lastModifiedAt": 1596581421454
+            "lastModifiedAt": 1604450378439
         },
         {
             "name": "relList",
-            "lastModifiedAt": 1596581422253
+            "lastModifiedAt": 1604450378940
         }
     ]
 }

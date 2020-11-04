@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DedicatedWorkerGlobalScope.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DedicatedWorkerGlobalScope/name",
-    "description": "The name read-only property of the DedicatedWorkerGlobalScope interface returns the name that the Worker was (optionally) given when it was created. This is the name that the Worker() constructor can pass to get a reference to the DedicatedWorkerGlobalScope."
+    "description": "The name read-only property of the DedicatedWorkerGlobalScope interface returns the name that the Worker was (optionally) given when it was created. This is the name that the Worker() constructor can pass to get a reference to the DedicatedWorkerGlobalScope.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-dedicatedworkerglobalscope-name",
+            "description": "The definition of 'name' in HTML Living Standard."
+        }
+    ]
 }

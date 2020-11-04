@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HashChangeEvent.oldURL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/oldURL",
-    "description": "The oldURL read-only property of the HashChangeEvent interface returns the previous URL from which the window was navigated."
+    "description": "The oldURL read-only property of the HashChangeEvent interface returns the previous URL from which the window was navigated.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hashchangeevent-oldurl",
+            "description": "The definition of 'HashChangeEvent: oldURL' in HTML Living Standard."
+        }
+    ]
 }

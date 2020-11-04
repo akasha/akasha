@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.currentRoundTripTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/currentRoundTripTime",
-    "description": "The RTCIceCandidatePairStats property currentRoundTripTime is a floating-point value indicating the number of seconds it takes for data to be sent by this peer to the remote peer and back over the connection described by this pair of ICE candidates."
+    "description": "The RTCIceCandidatePairStats property currentRoundTripTime is a floating-point value indicating the number of seconds it takes for data to be sent by this peer to the remote peer and back over the connection described by this pair of ICE candidates.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-currentroundtriptime",
+            "description": "The definition of 'RTCIceCandidatePairStats.currentRoundTripTime' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

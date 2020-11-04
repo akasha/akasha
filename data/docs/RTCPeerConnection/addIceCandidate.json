@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.addIceCandidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/addIceCandidate",
-    "description": "When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate()."
+    "description": "When a web site or app using RTCPeerConnection receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's ICE agent by calling RTCPeerConnection.addIceCandidate().",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-addicecandidate",
+            "description": "The definition of 'RTCPeerConnection.addIceCandidate()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

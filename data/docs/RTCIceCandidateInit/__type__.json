@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCIceCandidateInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit",
-    "description": "The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate."
+    "description": "The WebRTC API's RTCIceCandidateInit dictionary, which contains the information needed to fundamentally describe an RTCIceCandidate.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit",
+            "description": "The definition of 'RTCIceCandidateInit' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

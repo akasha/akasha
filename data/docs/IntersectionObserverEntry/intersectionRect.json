@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "IntersectionObserverEntry.intersectionRect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/intersectionRect",
-    "description": "The IntersectionObserverEntry interface's read-only intersectionRect property is a DOMRectReadOnly object which describes the smallest rectangle that contains the entire portion of the target element which is currently visible within the intersection root."
+    "description": "The IntersectionObserverEntry interface's read-only intersectionRect property is a DOMRectReadOnly object which describes the smallest rectangle that contains the entire portion of the target element which is currently visible within the intersection root.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionrect",
+            "description": "The definition of 'IntersectionObserverEntry.intersectionRect' in Intersection Observer."
+        }
+    ]
 }

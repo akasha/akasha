@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.connectionstatechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event",
     "description": "The connectionstatechange event is sent to the ontrack event handler on an RTCPeerConnection object after a new track has been added to an RTCRtpReceiver which is part of the connection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-connectionstatechange",
+            "description": "The definition of 'connectionstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "connectionstatechange",
     "eventType": "Event",
     "eventHandlerProperty": "onconnectionstatechange",

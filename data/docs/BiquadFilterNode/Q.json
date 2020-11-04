@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BiquadFilterNode.Q",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/Q",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-q",
+            "description": "The definition of 'Q' in Web Audio API."
+        }
+    ]
 }

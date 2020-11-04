@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.onfullscreenerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/onfullscreenerror",
-    "description": "The Element interface's onfullscreenerror property is an event handler for the fullscreenerror event which is sent to the element when an error occurs while attempting to transition into or out of full-screen mode."
+    "description": "The Element interface's onfullscreenerror property is an event handler for the fullscreenerror event which is sent to the element when an error occurs while attempting to transition into or out of full-screen mode.",
+    "refs": [
+        {
+            "name": "Fullscreen API",
+            "href": "https://fullscreen.spec.whatwg.org/#dom-element-onfullscreenerror",
+            "description": "The definition of 'onfullscreenerror' in Fullscreen API."
+        }
+    ]
 }

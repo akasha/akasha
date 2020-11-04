@@ -3,5 +3,21 @@
     "kind": "Property",
     "name": "HTMLElement.accessKeyLabel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/accessKeyLabel",
-    "description": "The HTMLElement.accessKeyLabel read-only property returns a String that represents the element's assigned access key (if any); otherwise it returns an empty string."
+    "description": "The HTMLElement.accessKeyLabel read-only property returns a String containing the element's browser-assigned access key (if any); otherwise it returns an empty string.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-accesskeylabel",
+            "description": "The definition of 'HTMLElement.accessKeyLabel' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/"
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/editing.html#dom-accesskeylabel",
+            "description": "The definition of 'HTMLElement.accessKeyLabel' in HTML5."
+        }
+    ]
 }

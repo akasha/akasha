@@ -1,7 +1,7 @@
 
 {
     "name": "NavigatorOnLine",
-    "lastModifiedAt": 1600312470132,
+    "lastModifiedAt": 1604449535468,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "onLine",
-            "lastModifiedAt": 1596581117244
+            "lastModifiedAt": 1604449535417
         }
     ]
 }

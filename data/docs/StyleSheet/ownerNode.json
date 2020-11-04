@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "StyleSheet.ownerNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/ownerNode",
-    "description": "The ownerNode property of the StyleSheet interface returns the node that associates this style sheet with the document."
+    "description": "The ownerNode property of the StyleSheet interface returns the node that associates this style sheet with the document.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-stylesheet-ownernode",
+            "description": "The definition of 'StyleSheet: ownerNode' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

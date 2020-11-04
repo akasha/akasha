@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondragstart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragstart",
-    "description": "A global event handler for the dragstart event."
+    "description": "A global event handler for the dragstart event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragstart",
+            "description": "The definition of 'ondragstart' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragstart",
+            "description": "The definition of 'ondragstart' in HTML 5.1."
+        }
+    ]
 }

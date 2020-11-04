@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/protocol",
-    "description": "The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer."
+    "description": "The RTCIceCandidateStats dictionary's protocol  property specifies the protocol the specified candidate would use for communication with the remote peer.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-protocol",
+            "description": "The definition of 'RTCIceCandidateStats.protocol' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

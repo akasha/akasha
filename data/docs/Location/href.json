@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Location.href",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/href",
-    "description": "The href property of the Location interface is a stringifier that returns a USVString containing the whole URL, and allows the href to be updated."
+    "description": "The href property of the Location interface is a stringifier that returns a USVString containing the whole URL, and allows the href to be updated.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-location-href",
+            "description": "The definition of 'href' in HTML Living Standard."
+        }
+    ]
 }

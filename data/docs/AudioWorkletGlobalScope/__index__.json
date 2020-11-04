@@ -1,15 +1,15 @@
 
 {
     "name": "AudioWorkletGlobalScope",
-    "lastModifiedAt": 1601466855248,
+    "lastModifiedAt": 1604448435881,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192549283
+            "lastModifiedAt": 1604448433965
         },
         {
             "name": "registerProcessor",
-            "lastModifiedAt": 1597192550759
+            "lastModifiedAt": 1604448435881
         }
     ]
 }

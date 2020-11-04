@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioContext.getOutputTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/getOutputTimestamp",
-    "description": "The getOutputTimestamp() property of the AudioContext interface returns a new AudioTimestamp object containing two audio timestamp values relating to the current audio context."
+    "description": "The getOutputTimestamp() property of the AudioContext interface returns a new AudioTimestamp object containing two audio timestamp values relating to the current audio context.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-getoutputtimestamp",
+            "description": "The definition of 'getOutputTimestamp()' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "NavigatorID.userAgent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent",
-    "description": "The NavigatorID.userAgent read-only property returns the user agent string for the current browser."
+    "description": "The NavigatorID.userAgent read-only property returns the user agent string for the current browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-useragent",
+            "description": "The definition of 'NavigatorID.userAgent' in HTML Living Standard."
+        }
+    ]
 }

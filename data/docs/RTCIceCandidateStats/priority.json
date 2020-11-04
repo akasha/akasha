@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.priority",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/priority",
-    "description": "The RTCIceCandidateStats dictionary's priority property is a positive integer value indicating the priority (or desirability) of the described candidate."
+    "description": "The RTCIceCandidateStats dictionary's priority property is a positive integer value indicating the priority (or desirability) of the described candidate.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-port",
+            "description": "The definition of 'RTCIceCandidateStats.port' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

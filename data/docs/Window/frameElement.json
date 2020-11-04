@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.frameElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/frameElement",
-    "description": "The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded."
+    "description": "The Window.frameElement property returns the element (such as iframe or object) in which the window is embedded.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-frameelement",
+            "description": "The definition of 'Window.frameElement' in HTML Living Standard."
+        }
+    ]
 }

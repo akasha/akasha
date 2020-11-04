@@ -1,15 +1,15 @@
 
 {
     "name": "CanvasGradient",
-    "lastModifiedAt": 1600310810216,
+    "lastModifiedAt": 1604450655189,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193567619
+            "lastModifiedAt": 1604450654059
         },
         {
             "name": "addColorStop",
-            "lastModifiedAt": 1596581570074
+            "lastModifiedAt": 1604450655189
         }
     ]
 }

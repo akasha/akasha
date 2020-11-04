@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.ordered",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/ordered",
-    "description": "The read-only RTCDataChannel property ordered indicates whether or not the data channel guarantees in-order delivery of messages; the default is true, which indicates that the data channel is indeed ordered."
+    "description": "The read-only RTCDataChannel property ordered indicates whether or not the data channel guarantees in-order delivery of messages; the default is true, which indicates that the data channel is indeed ordered.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-ordered",
+            "description": "The definition of 'RTCDataChannel.ordered' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

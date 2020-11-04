@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLLabelElement.control",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/control",
-    "description": "The read-only HTMLLabelElement.control property returns a reference to the control (in the form of an object of type HTMLElement or one of its derivatives) with which the label element is associated, or null if the label isn't associated with a control."
+    "description": "The read-only HTMLLabelElement.control property returns a reference to the control (in the form of an object of type HTMLElement or one of its derivatives) with which the label element is associated, or null if the label isn't associated with a control.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-label-control",
+            "description": "The definition of 'control' in HTML Living Standard."
+        }
+    ]
 }

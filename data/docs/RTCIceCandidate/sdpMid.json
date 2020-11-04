@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.sdpMid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/sdpMid",
-    "description": "The read-only property sdpMid on the RTCIceCandidate interface returns a DOMString specifying the media stream identification tag of the media component with which the candidate is associated."
+    "description": "The read-only property sdpMid on the RTCIceCandidate interface returns a DOMString specifying the media stream identification tag of the media component with which the candidate is associated.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-sdpmid",
+            "description": "The definition of 'RTCIceCandidate.sdpMid' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

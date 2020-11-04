@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioParam.maxValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/maxValue",
-    "description": "The maxValue read-only property of the AudioParam interface represents the maximum possible value for the parameter's nominal (effective) range."
+    "description": "The maxValue read-only property of the AudioParam interface represents the maximum possible value for the parameter's nominal (effective) range.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-maxvalue",
+            "description": "The definition of 'maxValue' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "ConstantSourceNode.ConstantSourceNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/ConstantSourceNode",
-    "description": "The ConstantSourceNode() constructor creates a new ConstantSourceNode object instance, representing an audio source which constantly outputs samples whose values are always the same."
+    "description": "The ConstantSourceNode() constructor creates a new ConstantSourceNode object instance, representing an audio source which constantly outputs samples whose values are always the same.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-constantsourcenode-constantsourcenode",
+            "description": "The definition of 'ConstantSourceNode: ConstantSourceNode' in Web Audio API."
+        }
+    ]
 }

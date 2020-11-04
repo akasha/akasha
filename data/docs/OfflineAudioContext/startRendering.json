@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OfflineAudioContext.startRendering",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/startRendering",
-    "description": "The startRendering() method of the OfflineAudioContext Interface starts rendering the audio graph, taking into account the current connections and the current scheduled changes."
+    "description": "The startRendering() method of the OfflineAudioContext Interface starts rendering the audio graph, taking into account the current connections and the current scheduled changes.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-startrendering",
+            "description": "The definition of 'startRendering()' in Web Audio API."
+        }
+    ]
 }

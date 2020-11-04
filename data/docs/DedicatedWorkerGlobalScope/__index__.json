@@ -1,15 +1,15 @@
 
 {
     "name": "DedicatedWorkerGlobalScope",
-    "lastModifiedAt": 1600311037508,
+    "lastModifiedAt": 1604450403975,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193438805
+            "lastModifiedAt": 1604450399381
         },
         {
             "name": "close",
-            "lastModifiedAt": 1596581433700
+            "lastModifiedAt": 1604450402056
         },
         {
             "name": "message_event",
@@ -21,19 +21,19 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1599279127330
+            "lastModifiedAt": 1604450399942
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1599279131285
+            "lastModifiedAt": 1604450400442
         },
         {
             "name": "onmessageerror",
-            "lastModifiedAt": 1599279132389
+            "lastModifiedAt": 1604450401523
         },
         {
             "name": "postMessage",
-            "lastModifiedAt": 1596581434541
+            "lastModifiedAt": 1604450402643
         }
     ]
 }

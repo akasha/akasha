@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpTransceiver.stop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/stop",
-    "description": "The stop() method in the RTCRtpTransceiver interface permanently stops the transceiver by stopping both the associated RTCRtpSender and RTCRtpReceiver."
+    "description": "The stop() method in the RTCRtpTransceiver interface permanently stops the transceiver by stopping both the associated RTCRtpSender and RTCRtpReceiver.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-stop",
+            "description": "The definition of 'RTCRtpTransceiver.stop()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

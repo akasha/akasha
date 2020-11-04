@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Body.body",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Body/body",
-    "description": "The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents."
+    "description": "The body read-only property of the Body mixin is a simple getter used to expose a ReadableStream of the body contents.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-body-body",
+            "description": "The definition of 'body' in Fetch."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ScrollToOptions.top",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions/top",
-    "description": "A double."
+    "description": "A double.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top",
+            "description": "The definition of 'top' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

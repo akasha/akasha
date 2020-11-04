@@ -1,15 +1,15 @@
 
 {
     "name": "PageTransitionEvent",
-    "lastModifiedAt": 1600312571028,
+    "lastModifiedAt": 1604450268216,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193323601
+            "lastModifiedAt": 1604450267692
         },
         {
             "name": "persisted",
-            "lastModifiedAt": 1596581343464
+            "lastModifiedAt": 1604450268167
         }
     ]
 }

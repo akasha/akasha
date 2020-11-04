@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onmessage",
-    "description": "The RTCDataChannel.onmessage property stores an EventHandler which specifies a function to be called when the message event is fired on the channel. This event is represented by the MessageEvent interface. This event is sent to the channel when a message is received from the other peer."
+    "description": "The RTCDataChannel.onmessage property stores an EventHandler which specifies a function to be called when the message event is fired on the channel. This event is represented by the MessageEvent interface. This event is sent to the channel when a message is received from the other peer.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onmessage",
+            "description": "The definition of 'RTCDataChannel.onmessage' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

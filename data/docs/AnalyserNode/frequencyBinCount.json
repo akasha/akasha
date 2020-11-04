@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AnalyserNode.frequencyBinCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/frequencyBinCount",
-    "description": "The frequencyBinCount read-only property of the AnalyserNode interface is an unsigned integer half that of the AnalyserNode.fftSize. This generally equates to the number of data values you will have to play with for the visualization."
+    "description": "The frequencyBinCount read-only property of the AnalyserNode interface is an unsigned integer half that of the AnalyserNode.fftSize. This generally equates to the number of data values you will have to play with for the visualization.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-frequencybincount",
+            "description": "The definition of 'frequencyBinCount' in Web Audio API."
+        }
+    ]
 }

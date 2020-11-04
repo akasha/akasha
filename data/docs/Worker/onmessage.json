@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Worker.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/onmessage",
-    "description": "The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method)."
+    "description": "The onmessage property of the Worker interface represents an EventHandler, that is a function to be called when the message event occurs. These events are of type MessageEvent and will be called when the worker's parent receives a message (i.e. from the DedicatedWorkerGlobalScope.postMessage method).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-worker-onmessage",
+            "description": "The definition of 'Worker.onmessage' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.productSub",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/productSub",
-    "description": "The Navigator.productSub read-only property returns the build number of the current browser."
+    "description": "The Navigator.productSub read-only property returns the build number of the current browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-productsub",
+            "description": "The definition of 'NavigatorID: productSub' in HTML Living Standard."
+        }
+    ]
 }

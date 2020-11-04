@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioListener.positionX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/positionX",
-    "description": "The positionX read-only property of the AudioListener interface is an AudioParam representing the x position of the listener in 3D cartesian space."
+    "description": "The positionX read-only property of the AudioListener interface is an AudioParam representing the x position of the listener in 3D cartesian space.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-positionx",
+            "description": "The definition of 'positionX' in Web Audio API."
+        }
+    ]
 }

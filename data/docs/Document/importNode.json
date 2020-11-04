@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.importNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/importNode",
-    "description": "The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later."
+    "description": "The Document object's importNode() method creates a copy of a Node or DocumentFragment from another document, to be inserted into the current document later.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-importnode",
+            "description": "The definition of 'document.importNode()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#Core-Document-importNode",
+            "description": "The definition of 'document.importNode()' in Document Object Model (DOM) Level 2 Core Specification."
+        }
+    ]
 }

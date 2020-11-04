@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DOMException",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException",
-    "description": "The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API."
+    "description": "The DOMException interface represents an abnormal event (called an exception) that occurs as a result of calling a method or accessing a property of a web API.",
+    "refs": [
+        {
+            "name": "Web IDL",
+            "href": "https://heycam.github.io/webidl/#idl-DOMException",
+            "description": "The definition of 'constructor' in Web IDL."
+        }
+    ]
 }

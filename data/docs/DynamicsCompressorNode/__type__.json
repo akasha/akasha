@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DynamicsCompressorNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode",
-    "description": "Inherits properties from its parent, AudioNode."
+    "description": "Inherits properties from its parent, AudioNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dynamicscompressornode",
+            "description": "The definition of 'DynamicsCompressorNode' in Web Audio API."
+        }
+    ]
 }

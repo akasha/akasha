@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.getConfiguration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getConfiguration",
-    "description": "The RTCPeerConnection.getConfiguration() method returns an RTCConfiguration object which indicates the current configuration of the RTCPeerConnection on which the method is called."
+    "description": "The RTCPeerConnection.getConfiguration() method returns an RTCConfiguration object which indicates the current configuration of the RTCPeerConnection on which the method is called.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-getconfiguration",
+            "description": "The definition of 'getConfiguration()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

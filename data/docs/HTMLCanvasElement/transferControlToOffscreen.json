@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLCanvasElement.transferControlToOffscreen",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/transferControlToOffscreen",
-    "description": "The HTMLCanvasElement.transferControlToOffscreen() method transfers control to an OffscreenCanvas object, either on the main thread or on a worker."
+    "description": "The HTMLCanvasElement.transferControlToOffscreen() method transfers control to an OffscreenCanvas object, either on the main thread or on a worker.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/canvas.html#dom-canvas-transfercontroltooffscreen",
+            "description": "The definition of 'HTMLCanvasElement.transferControlToOffscreen()' in HTML Living Standard."
+        }
+    ]
 }

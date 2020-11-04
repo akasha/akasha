@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createBiquadFilter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter",
-    "description": "A BiquadFilterNode."
+    "description": "A BiquadFilterNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbiquadfilter",
+            "description": "The definition of 'createBiquadFilter()' in Web Audio API."
+        }
+    ]
 }

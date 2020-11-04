@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLInputElement.labels",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/labels",
-    "description": "The HTMLInputElement.labels read-only property returns a NodeList of the label elements associated with the input element."
+    "description": "The HTMLInputElement.labels read-only property returns a NodeList of the label elements associated with the input element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels",
+            "description": "The definition of 'labels' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-lfe-labels",
+            "description": "The definition of 'labels' in HTML5."
+        }
+    ]
 }

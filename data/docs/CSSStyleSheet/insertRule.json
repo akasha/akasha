@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "CSSStyleSheet.insertRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/insertRule",
-    "description": "The CSSStyleSheet.insertRule() method inserts a new CSS rule into the current style sheet, with some restrictions."
+    "description": "The CSSStyleSheet.insertRule() method inserts a new CSS rule into the current style sheet, with some restrictions.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-insertrule",
+            "description": "The definition of 'CSSStyleSheet.insertRule' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet-insertRule",
+            "description": "The definition of 'CSSStyleSheet.insertRule' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

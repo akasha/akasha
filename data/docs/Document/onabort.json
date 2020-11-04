@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.onabort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onabort",
-    "description": "The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window."
+    "description": "The onabort property of the GlobalEventHandlers mixin is the EventHandler for processing abort events sent to the window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onabort",
+            "description": "The definition of 'onabort' in HTML Living Standard."
+        }
+    ]
 }

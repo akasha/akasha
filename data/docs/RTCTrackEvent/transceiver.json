@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCTrackEvent.transceiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/transceiver",
-    "description": "The WebRTC API interface RTCTrackEvent's read-only transceiver property indicates the RTCRtpTransceiver affiliated with the event's track."
+    "description": "The WebRTC API interface RTCTrackEvent's read-only transceiver property indicates the RTCRtpTransceiver affiliated with the event's track.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-trackevent-transceiver",
+            "description": "The definition of 'RTCTrackEvent.transceiver' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLMediaElement.onerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/onerror",
-    "description": "The onerror property of the HTMLMediaElement interface is the EventHandler for processing error events."
+    "description": "The onerror property of the HTMLMediaElement interface is the EventHandler for processing error events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onerror",
+            "description": "The definition of 'onerror' in HTML Living Standard."
+        }
+    ]
 }

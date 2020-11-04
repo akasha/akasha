@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoTrackList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/length",
-    "description": "The read-only VideoTrackList property length returns the number of entries in the VideoTrackList, each of which is a VideoTrack representing one video track in the media element."
+    "description": "The read-only VideoTrackList property length returns the number of entries in the VideoTrackList, each of which is a VideoTrack representing one video track in the media element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-videotracklist-length",
+            "description": "The definition of 'VideoTrackList: length' in HTML Living Standard."
+        }
+    ]
 }

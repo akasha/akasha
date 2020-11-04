@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DynamicsCompressorNode.knee",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/knee",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-knee",
+            "description": "The definition of 'knee' in Web Audio API."
+        }
+    ]
 }

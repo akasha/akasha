@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Response",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response",
-    "description": "The Response interface of the Fetch API represents the response to a request."
+    "description": "The Response interface of the Fetch API represents the response to a request.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#response-class",
+            "description": "The definition of 'Response' in Fetch."
+        }
+    ]
 }

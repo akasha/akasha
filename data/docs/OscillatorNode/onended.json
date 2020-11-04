@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "OscillatorNode.onended",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/onended",
-    "description": "The onended property of the OscillatorNode interface is used to set the event handler for the ended event, which fires when the tone has stopped playing."
+    "description": "The onended property of the OscillatorNode interface is used to set the event handler for the ended event, which fires when the tone has stopped playing.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended",
+            "description": "The definition of 'onended' in Web Audio API."
+        }
+    ]
 }

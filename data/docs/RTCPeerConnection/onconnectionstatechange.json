@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.onconnectionstatechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onconnectionstatechange",
-    "description": "The RTCPeerConnection.onconnectionstatechange property specifies an EventHandler which is called to handle the connectionstatechange event when it occurs on an instance of RTCPeerConnection. This happens whenever the aggregate state of the connection changes."
+    "description": "The RTCPeerConnection.onconnectionstatechange property specifies an EventHandler which is called to handle the connectionstatechange event when it occurs on an instance of RTCPeerConnection. This happens whenever the aggregate state of the connection changes.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onconnectionstatechange",
+            "description": "The definition of 'RTCPeerConnection.onconnectionstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

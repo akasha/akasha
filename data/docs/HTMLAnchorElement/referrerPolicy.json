@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLAnchorElement.referrerPolicy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement/referrerPolicy",
-    "description": "The HTMLAnchorElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the a element defining which referrer is sent when fetching the resource."
+    "description": "The HTMLAnchorElement.referrerPolicy property reflect the HTML referrerpolicy attribute of the a element defining which referrer is sent when fetching the resource.",
+    "refs": [
+        {
+            "name": "Referrer Policy",
+            "href": "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute",
+            "description": "The definition of 'referrerPolicy attribute' in Referrer Policy."
+        }
+    ]
 }

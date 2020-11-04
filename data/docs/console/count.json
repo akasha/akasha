@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.count",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/count",
-    "description": "The console.count() method logs the number of times that this particular call to count() has been called."
+    "description": "The console.count() method logs the number of times that this particular call to count() has been called.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#count",
+            "description": "The definition of 'console.count()' in Console API."
+        }
+    ]
 }

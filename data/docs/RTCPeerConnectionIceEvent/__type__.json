@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCPeerConnectionIceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent",
-    "description": "The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection."
+    "description": "The RTCPeerConnectionIceEvent interface represents events that occurs in relation to ICE candidates with the target, usually an RTCPeerConnection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcpeerconnectioniceevent",
+            "description": "The definition of 'RTCPeerConnectionIceEvent' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

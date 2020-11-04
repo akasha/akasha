@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OfflineAudioContext.suspend",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/suspend",
-    "description": "The suspend() method of the OfflineAudioContext interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext."
+    "description": "The suspend() method of the OfflineAudioContext interface schedules a suspension of the time progression in the audio context at the specified time and returns a promise. This is generally useful at the time of manipulating the audio graph synchronously on OfflineAudioContext.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-suspend",
+            "description": "The definition of 'suspend()' in Web Audio API."
+        }
+    ]
 }

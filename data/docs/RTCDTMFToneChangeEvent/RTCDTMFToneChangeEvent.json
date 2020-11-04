@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent",
-    "description": "The RTCDTMFToneChangeEvent() constructor creates a new RTCDTMFToneChangeEvent."
+    "description": "The RTCDTMFToneChangeEvent() constructor creates a new RTCDTMFToneChangeEvent.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdtmftonechangeevent",
+            "description": "The definition of 'RTCDTMFToneChangeEvent()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

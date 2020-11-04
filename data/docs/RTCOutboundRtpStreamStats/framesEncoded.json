@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCOutboundRtpStreamStats.framesEncoded",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/framesEncoded",
-    "description": "The framesEncoded property of the RTCOutboundRtpStreamStats dictionary indicates the total number of frames that have been encoded by this RTCRtpSender for this media source."
+    "description": "The framesEncoded property of the RTCOutboundRtpStreamStats dictionary indicates the total number of frames that have been encoded by this RTCRtpSender for this media source.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-framesencoded",
+            "description": "The definition of 'RTCOutboundRtpStreamStats.framesEncoded' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

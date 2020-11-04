@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.customElements",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/customElements",
-    "description": "The customElements read-only property of the Window interface returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and get information about previously registered custom elements."
+    "description": "The customElements read-only property of the Window interface returns a reference to the CustomElementRegistry object, which can be used to register new custom elements and get information about previously registered custom elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-window-customelements",
+            "description": "The definition of 'window.customElements' in HTML Living Standard."
+        }
+    ]
 }

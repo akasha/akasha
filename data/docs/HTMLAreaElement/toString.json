@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "HTMLAreaElement.toString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/toString",
-    "description": "The HTMLHyperlinkElementUtils.toString() stringifier method returns a USVString containing the whole URL. It is a read-only version of HTMLHyperlinkElementUtils.href."
+    "description": "The HTMLHyperlinkElementUtils.toString() stringifier method returns a USVString containing the whole URL. It is a read-only version of HTMLHyperlinkElementUtils.href.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-href"
+        }
+    ]
 }

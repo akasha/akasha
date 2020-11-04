@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerLocation.href",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/href",
-    "description": "The URLUtilsReadOnly.href read-only property is a stringifier that returns a DOMString containing the whole URL."
+    "description": "The URLUtilsReadOnly.href read-only property is a stringifier that returns a DOMString containing the whole URL.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-href",
+            "description": "The definition of 'URLUtilsReadOnly.href' in URL."
+        }
+    ]
 }

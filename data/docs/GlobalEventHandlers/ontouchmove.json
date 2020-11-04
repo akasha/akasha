@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ontouchmove",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchmove",
-    "description": "A global event handler for the touchmove event."
+    "description": "A global event handler for the touchmove event.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchmove"
+        }
+    ]
 }

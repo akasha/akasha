@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLSelectElement.namedItem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/namedItem",
-    "description": "The HTMLSelectElement.namedItem() method returns the HTMLOptionElement corresponding to the HTMLOptionElement whose name or id match the specified name, or null if no option matches."
+    "description": "The HTMLSelectElement.namedItem() method returns the HTMLOptionElement corresponding to the HTMLOptionElement whose name or id match the specified name, or null if no option matches.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-select-nameditem",
+            "description": "The definition of 'HTMLSelectElement.namedItem()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-select-nameditem",
+            "description": "The definition of 'HTMLSelectElement.namedItem()' in HTML5."
+        }
+    ]
 }

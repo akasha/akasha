@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "NavigatorOnLine.onLine",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorOnLine/onLine",
-    "description": "Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection."
+    "description": "Returns the online status of the browser. The property returns a boolean value, with true meaning online and false meaning offline. The property sends updates whenever the browser's ability to connect to the network changes. The update occurs when the user follows links or when a script requests a remote page. For example, the property should return false when users click links soon after they lose internet connection.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-navigator-online",
+            "description": "The definition of 'navigator.onLine' in HTML Living Standard."
+        }
+    ]
 }

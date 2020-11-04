@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Window.stop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/stop",
-    "description": "The window.stop() stops further resource loading in the current browsing context, equivalent to the stop button in the browser."
+    "description": "The window.stop() stops further resource loading in the current browsing context, equivalent to the stop button in the browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-window-stop",
+            "description": "The definition of 'Window.stop()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-window-stop",
+            "description": "The definition of 'Window.stop' in HTML5."
+        }
+    ]
 }

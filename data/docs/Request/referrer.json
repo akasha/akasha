@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Request.referrer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/referrer",
-    "description": "The referrer read-only property of the Request interface is set by the user agent to be the referrer of the Request. (e.g., client, no-referrer, or a URL.)"
+    "description": "The referrer read-only property of the Request interface is set by the user agent to be the referrer of the Request. (e.g., client, no-referrer, or a URL.)",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-request-referrer",
+            "description": "The definition of 'referrer' in Fetch."
+        }
+    ]
 }

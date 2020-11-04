@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Navigator.requestMediaKeySystemAccess",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess",
-    "description": "The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web."
+    "description": "The Navigator.requestMediaKeySystemAccess() method returns a Promise which delivers a MediaKeySystemAccess object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream. This method is part of the Encrypted Media Extensions API, which brings support for encrypted media and DRM-protected video to the web.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess",
+            "description": "The definition of 'requestMediaKeySystemAccess()' in Encrypted Media Extensions."
+        }
+    ]
 }

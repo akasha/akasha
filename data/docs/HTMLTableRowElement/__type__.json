@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLTableRowElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement",
-    "description": "The HTMLTableRowElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table."
+    "description": "The HTMLTableRowElement interface provides special properties and methods (beyond the HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmltablerowelement",
+            "description": "The definition of 'HTMLTableRowElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/tabular-data.html#the-tr-element",
+            "description": "The definition of 'HTMLTableRowElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6986576",
+            "description": "The definition of 'HTMLTableRowElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-6986576",
+            "description": "The definition of 'HTMLTableRowElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

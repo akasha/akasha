@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.onclose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclose",
-    "description": "The RTCDataChannel.onclose property is an EventHandler which specifies a function to be called by the browser when the close event is received by the RTCDataChannel. This is a simple Event which indicates that the data channel has closed down."
+    "description": "The RTCDataChannel.onclose property is an EventHandler which specifies a function to be called by the browser when the close event is received by the RTCDataChannel. This is a simple Event which indicates that the data channel has closed down.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onclose",
+            "description": "The definition of 'RTCDataChannel.onclose' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLSlotElement.assignedNodes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement/assignedNodes",
-    "description": "The assignedNodes() property of the HTMLSlotElement interface returns a sequence of the nodes assigned to this slot, and if the flatten option is set to true, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content."
+    "description": "The assignedNodes() property of the HTMLSlotElement interface returns a sequence of the nodes assigned to this slot, and if the flatten option is set to true, the assigned nodes of any other slots that are descendants of this slot. If no assigned nodes are found, it returns the slot's fallback content.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-slot-assignednodes",
+            "description": "The definition of 'assignedNodes' in HTML Living Standard."
+        }
+    ]
 }

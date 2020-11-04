@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.textTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/textTracks",
-    "description": "The read-only textTracks property on HTMLMediaElement objects returns a TextTrackList object listing all of the TextTrack objects representing the media element's text tracks"
+    "description": "The read-only textTracks property on HTMLMediaElement objects returns a TextTrackList object listing all of the TextTrack objects representing the media element's text tracks",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-texttracks",
+            "description": "The definition of 'HTMLMediaElement.textTracks' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.textTracks' in HTML5."
+        }
+    ]
 }

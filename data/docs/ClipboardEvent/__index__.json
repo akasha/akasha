@@ -1,19 +1,19 @@
 
 {
     "name": "ClipboardEvent",
-    "lastModifiedAt": 1601463731389,
+    "lastModifiedAt": 1604446969586,
     "entries": [
         {
             "name": "ClipboardEvent",
-            "lastModifiedAt": 1597190550889
+            "lastModifiedAt": 1604446968752
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190550641
+            "lastModifiedAt": 1604446967718
         },
         {
             "name": "clipboardData",
-            "lastModifiedAt": 1597190551136
+            "lastModifiedAt": 1604446969546
         }
     ]
 }

@@ -1,43 +1,43 @@
 
 {
     "name": "OscillatorNode",
-    "lastModifiedAt": 1601466809042,
+    "lastModifiedAt": 1604448394249,
     "entries": [
         {
             "name": "OscillatorNode",
-            "lastModifiedAt": 1597192534208
+            "lastModifiedAt": 1604448390293
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599280715844
+            "lastModifiedAt": 1604448389130
         },
         {
             "name": "detune",
-            "lastModifiedAt": 1600307322200
+            "lastModifiedAt": 1604448390943
         },
         {
             "name": "frequency",
-            "lastModifiedAt": 1597192534583
+            "lastModifiedAt": 1604448391532
         },
         {
             "name": "onended",
-            "lastModifiedAt": 1600307323041
+            "lastModifiedAt": 1604448392276
         },
         {
             "name": "setPeriodicWave",
-            "lastModifiedAt": 1597192534852
+            "lastModifiedAt": 1604448393251
         },
         {
             "name": "start",
-            "lastModifiedAt": 1597192535644
+            "lastModifiedAt": 1604448393718
         },
         {
             "name": "stop",
-            "lastModifiedAt": 1597192536027
+            "lastModifiedAt": 1604448394249
         },
         {
             "name": "type",
-            "lastModifiedAt": 1600307323298
+            "lastModifiedAt": 1604448392751
         }
     ]
 }

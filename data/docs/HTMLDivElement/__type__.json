@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLDivElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDivElement",
-    "description": "The HTMLDivElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating div elements."
+    "description": "The HTMLDivElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating div elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmldivelement",
+            "description": "The definition of 'HTMLDivElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/grouping-content.html#the-div-element",
+            "description": "The definition of 'HTMLDivElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-22445964",
+            "description": "The definition of 'HTMLDivElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-22445964",
+            "description": "The definition of 'HTMLDivElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

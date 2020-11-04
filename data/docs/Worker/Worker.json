@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Worker.Worker",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/Worker",
-    "description": "The Worker() constructor creates a Worker object that executes the script at the specified URL. This script must obey the same-origin policy."
+    "description": "The Worker() constructor creates a Worker object that executes the script at the specified URL. This script must obey the same-origin policy.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-worker",
+            "description": "The definition of 'Worker()' in HTML Living Standard."
+        }
+    ]
 }

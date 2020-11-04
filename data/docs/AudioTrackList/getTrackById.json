@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "AudioTrackList.getTrackById",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/getTrackById",
-    "description": "The AudioTrackList method getTrackById() returns the first AudioTrack object from the track list whose id matches the specified string."
+    "description": "The AudioTrackList method getTrackById() returns the first AudioTrack object from the track list whose id matches the specified string.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-audiotracklist-gettrackbyid",
+            "description": "The definition of 'AudioTrackList.getTrackById()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-getTrackById",
+            "description": "The definition of 'AudioTrackList.getTrackById()' in HTML5."
+        }
+    ]
 }

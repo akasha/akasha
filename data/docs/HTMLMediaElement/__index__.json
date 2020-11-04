@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLMediaElement",
-    "lastModifiedAt": 1600311855978,
+    "lastModifiedAt": 1604450462365,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597191890948
+            "lastModifiedAt": 1604450411042
         },
         {
             "name": "abort_event",
@@ -13,19 +13,19 @@
         },
         {
             "name": "audioTracks",
-            "lastModifiedAt": 1599280649630
+            "lastModifiedAt": 1604450411585
         },
         {
             "name": "autoplay",
-            "lastModifiedAt": 1596581440645
+            "lastModifiedAt": 1604450412099
         },
         {
             "name": "buffered",
-            "lastModifiedAt": 1599280650832
+            "lastModifiedAt": 1604450412567
         },
         {
             "name": "canPlayType",
-            "lastModifiedAt": 1596581463197
+            "lastModifiedAt": 1604450439032
         },
         {
             "name": "canplay_event",
@@ -37,47 +37,47 @@
         },
         {
             "name": "captureStream",
-            "lastModifiedAt": 1596581464226
+            "lastModifiedAt": 1604450439795
         },
         {
             "name": "controller",
-            "lastModifiedAt": 1596581441360
+            "lastModifiedAt": 1604450413070
         },
         {
             "name": "controls",
-            "lastModifiedAt": 1599280652543
+            "lastModifiedAt": 1604450413711
         },
         {
             "name": "controlsList",
-            "lastModifiedAt": 1599280653744
+            "lastModifiedAt": 1604450414885
         },
         {
             "name": "crossOrigin",
-            "lastModifiedAt": 1596581444279
+            "lastModifiedAt": 1604450415472
         },
         {
             "name": "currentSrc",
-            "lastModifiedAt": 1599280655569
+            "lastModifiedAt": 1604450416657
         },
         {
             "name": "currentTime",
-            "lastModifiedAt": 1596581445043
+            "lastModifiedAt": 1604450417829
         },
         {
             "name": "defaultMuted",
-            "lastModifiedAt": 1596581445291
+            "lastModifiedAt": 1604450418463
         },
         {
             "name": "defaultPlaybackRate",
-            "lastModifiedAt": 1596581445759
+            "lastModifiedAt": 1604450419383
         },
         {
             "name": "disableRemotePlayback",
-            "lastModifiedAt": 1596581446735
+            "lastModifiedAt": 1604450436227
         },
         {
             "name": "duration",
-            "lastModifiedAt": 1596581447333
+            "lastModifiedAt": 1604450419902
         },
         {
             "name": "durationchange_event",
@@ -89,7 +89,7 @@
         },
         {
             "name": "ended",
-            "lastModifiedAt": 1596790583328
+            "lastModifiedAt": 1604450421102
         },
         {
             "name": "ended_event",
@@ -97,7 +97,7 @@
         },
         {
             "name": "error",
-            "lastModifiedAt": 1596790583741
+            "lastModifiedAt": 1604450421590
         },
         {
             "name": "error_event",
@@ -105,11 +105,11 @@
         },
         {
             "name": "fastSeek",
-            "lastModifiedAt": 1596581464798
+            "lastModifiedAt": 1604450440287
         },
         {
             "name": "load",
-            "lastModifiedAt": 1596581465285
+            "lastModifiedAt": 1604450441490
         },
         {
             "name": "loadeddata_event",
@@ -125,11 +125,11 @@
         },
         {
             "name": "loop",
-            "lastModifiedAt": 1596581448317
+            "lastModifiedAt": 1604450422199
         },
         {
             "name": "mediaGroup",
-            "lastModifiedAt": 1596581449250
+            "lastModifiedAt": 1604450423423
         },
         {
             "name": "msInsertAudioEffect",
@@ -137,7 +137,7 @@
         },
         {
             "name": "muted",
-            "lastModifiedAt": 1596581452040
+            "lastModifiedAt": 1604450424007
         },
         {
             "name": "networkState",
@@ -145,11 +145,11 @@
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1596581453372
+            "lastModifiedAt": 1604450425721
         },
         {
             "name": "pause",
-            "lastModifiedAt": 1596790602906
+            "lastModifiedAt": 1604450443139
         },
         {
             "name": "pause_event",
@@ -157,11 +157,11 @@
         },
         {
             "name": "paused",
-            "lastModifiedAt": 1599280670515
+            "lastModifiedAt": 1604450426569
         },
         {
             "name": "play",
-            "lastModifiedAt": 1596790603319
+            "lastModifiedAt": 1604450443647
         },
         {
             "name": "play_event",
@@ -169,7 +169,7 @@
         },
         {
             "name": "playbackRate",
-            "lastModifiedAt": 1596581454678
+            "lastModifiedAt": 1604450427768
         },
         {
             "name": "playing_event",
@@ -193,7 +193,7 @@
         },
         {
             "name": "seekable",
-            "lastModifiedAt": 1599280674514
+            "lastModifiedAt": 1604450429612
         },
         {
             "name": "seeked_event",
@@ -205,7 +205,7 @@
         },
         {
             "name": "setMediaKeys",
-            "lastModifiedAt": 1596581468337
+            "lastModifiedAt": 1604450445999
         },
         {
             "name": "setSinkId",
@@ -213,15 +213,15 @@
         },
         {
             "name": "sinkId",
-            "lastModifiedAt": 1596581458954
+            "lastModifiedAt": 1604450430304
         },
         {
             "name": "src",
-            "lastModifiedAt": 1596581459249
+            "lastModifiedAt": 1604450431677
         },
         {
             "name": "srcObject",
-            "lastModifiedAt": 1599280677477
+            "lastModifiedAt": 1604450432888
         },
         {
             "name": "stalled_event",
@@ -233,7 +233,7 @@
         },
         {
             "name": "textTracks",
-            "lastModifiedAt": 1596581460742
+            "lastModifiedAt": 1604450434066
         },
         {
             "name": "timeupdate_event",
@@ -241,11 +241,11 @@
         },
         {
             "name": "videoTracks",
-            "lastModifiedAt": 1596581461129
+            "lastModifiedAt": 1604450434537
         },
         {
             "name": "volume",
-            "lastModifiedAt": 1599280679660
+            "lastModifiedAt": 1604450435219
         },
         {
             "name": "volumechange_event",

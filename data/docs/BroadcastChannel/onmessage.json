@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BroadcastChannel.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/onmessage",
-    "description": "The BroadcastChannel.onmessage event handler is a property that specifies the function to execute when a message event, of type MessageEvent, is received by this BroadcastChannel. Such an event is sent by the browser with a message broadcasted to the channel."
+    "description": "The BroadcastChannel.onmessage event handler is a property that specifies the function to execute when a message event, of type MessageEvent, is received by this BroadcastChannel. Such an event is sent by the browser with a message broadcasted to the channel.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#handler-broadcastchannel-onmessage",
+            "description": "The definition of 'BroadcastChannel.onmessage' in HTML Living Standard."
+        }
+    ]
 }

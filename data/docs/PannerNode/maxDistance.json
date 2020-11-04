@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.maxDistance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/maxDistance",
-    "description": "A double. The default is 10000, and non-positive values are not allowed."
+    "description": "A double. The default is 10000, and non-positive values are not allowed.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-maxdistance",
+            "description": "The definition of 'maxDistance' in Web Audio API."
+        }
+    ]
 }

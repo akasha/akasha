@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "TrackEvent.track",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/track",
-    "description": "The read-only track property of the TrackEvent interface specifies the media track object to which the event applies."
+    "description": "The read-only track property of the TrackEvent interface specifies the media track object to which the event applies.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-trackevent-track",
+            "description": "The definition of 'TrackEvent.track' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-trackevent-track",
+            "description": "The definition of 'TrackEvent.track' in HTML5."
+        }
+    ]
 }

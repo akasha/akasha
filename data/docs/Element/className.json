@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "Element.className",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/className",
-    "description": "The className property of the Element interface gets and sets the value of the class attribute of the specified element."
+    "description": "The className property of the Element interface gets and sets the value of the class attribute of the specified element.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-classname",
+            "description": "The definition of 'element.className' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-element-classname",
+            "description": "The definition of 'element.className' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176",
+            "description": "The definition of 'element.className' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

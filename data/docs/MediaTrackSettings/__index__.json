@@ -1,71 +1,71 @@
 
 {
     "name": "MediaTrackSettings",
-    "lastModifiedAt": 1601465187997,
+    "lastModifiedAt": 1604448237821,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1596544739749
+            "lastModifiedAt": 1604448225998
         },
         {
             "name": "aspectRatio",
-            "lastModifiedAt": 1600303690032
+            "lastModifiedAt": 1604448226629
         },
         {
             "name": "autoGainControl",
-            "lastModifiedAt": 1600303690293
+            "lastModifiedAt": 1604448227164
         },
         {
             "name": "channelCount",
-            "lastModifiedAt": 1600303690592
+            "lastModifiedAt": 1604448227880
         },
         {
             "name": "cursor",
-            "lastModifiedAt": 1600303690840
+            "lastModifiedAt": 1604448228495
         },
         {
             "name": "deviceId",
-            "lastModifiedAt": 1600303691640
+            "lastModifiedAt": 1604448229006
         },
         {
             "name": "displaySurface",
-            "lastModifiedAt": 1600303692024
+            "lastModifiedAt": 1604448229519
         },
         {
             "name": "echoCancellation",
-            "lastModifiedAt": 1600303692982
+            "lastModifiedAt": 1604448230133
         },
         {
             "name": "facingMode",
-            "lastModifiedAt": 1600303693776
+            "lastModifiedAt": 1604448230663
         },
         {
             "name": "frameRate",
-            "lastModifiedAt": 1600303694026
+            "lastModifiedAt": 1604448231729
         },
         {
             "name": "groupId",
-            "lastModifiedAt": 1600303694272
+            "lastModifiedAt": 1604448232284
         },
         {
             "name": "height",
-            "lastModifiedAt": 1600303694517
+            "lastModifiedAt": 1604448232754
         },
         {
             "name": "latency",
-            "lastModifiedAt": 1600303695308
+            "lastModifiedAt": 1604448233786
         },
         {
             "name": "noiseSuppression",
-            "lastModifiedAt": 1600303696113
+            "lastModifiedAt": 1604448234396
         },
         {
             "name": "sampleRate",
-            "lastModifiedAt": 1600303696354
+            "lastModifiedAt": 1604448235047
         },
         {
             "name": "sampleSize",
-            "lastModifiedAt": 1600303696742
+            "lastModifiedAt": 1604448236212
         },
         {
             "name": "volume",
@@ -73,7 +73,7 @@
         },
         {
             "name": "width",
-            "lastModifiedAt": 1600303698050
+            "lastModifiedAt": 1604448237821
         }
     ]
 }

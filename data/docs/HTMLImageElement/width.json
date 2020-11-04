@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/width",
-    "description": "The width property of the HTMLImageElement interface indicates the width at which an image is drawn in CSS pixels if it's being drawn or rendered to any visual medium such as a screen or printer. Otherwise, it's the natural, pixel density-corrected width of the image."
+    "description": "The width property of the HTMLImageElement interface indicates the width at which an image is drawn in CSS pixels if it's being drawn or rendered to any visual medium such as a screen or printer. Otherwise, it's the natural, pixel density-corrected width of the image.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-width",
+            "description": "The definition of 'HTMLImageElement.width' in HTML Living Standard."
+        }
+    ]
 }

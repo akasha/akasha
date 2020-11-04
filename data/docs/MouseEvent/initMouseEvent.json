@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "MouseEvent.initMouseEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/initMouseEvent",
-    "description": "The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method)."
+    "description": "The MouseEvent.initMouseEvent() method initializes the value of a mouse event once it's been created (normally using the Document.createEvent() method).",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-MouseEvent-initializers",
+            "description": "The definition of 'MouseEvent.initMouseEvent()' in Document Object Model (DOM) Level 3 Events Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initMouseEvent",
+            "description": "The definition of 'MouseEvent.initMouseEvent()' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

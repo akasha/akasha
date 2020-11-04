@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DOMException.DOMException",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException/DOMException",
-    "description": "The DOMException() constructor returns a DOMException object with a specified message and name."
+    "description": "The DOMException() constructor returns a DOMException object with a specified message and name.",
+    "refs": [
+        {
+            "name": "Web IDL",
+            "href": "https://heycam.github.io/webidl/#dom-domexception-domexception",
+            "description": "The definition of 'DOMException()' in Web IDL."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.remoteId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/remoteId",
-    "description": "The remoteId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCRemoteOutboundRtpStreamStats object representing the remote peer's RTCRtpSender which is sending the media to the local peer."
+    "description": "The remoteId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCRemoteOutboundRtpStreamStats object representing the remote peer's RTCRtpSender which is sending the media to the local peer.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-remoteid",
+            "description": "The definition of 'RTCInboundRtpStreamStats.remoteId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

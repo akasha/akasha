@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.canTrickleIceCandidates",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/canTrickleIceCandidates",
-    "description": "The read-only RTCPeerConnection property canTrickleIceCandidates returns a Boolean which indicates whether or not the remote peer can accept trickled ICE candidates."
+    "description": "The read-only RTCPeerConnection property canTrickleIceCandidates returns a Boolean which indicates whether or not the remote peer can accept trickled ICE candidates.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-cantrickleicecandidates",
+            "description": "The definition of 'RTCPeerConnection.canTrickleIceCandidates' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "History.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/state",
-    "description": "The History.state property returns a value representing the state at the top of the history stack."
+    "description": "The History.state property returns a value representing the state at the top of the history stack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-history-state",
+            "description": "The definition of 'History.state' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-history-state",
+            "description": "The definition of 'History.state' in HTML5."
+        }
+    ]
 }

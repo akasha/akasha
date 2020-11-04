@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onanimationcancel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationcancel",
-    "description": "The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events."
+    "description": "The onanimationcancel property of the GlobalEventHandlers mixin is the EventHandler for processing animationcancel events.",
+    "refs": [
+        {
+            "name": "CSS Animations",
+            "href": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel",
+            "description": "The definition of 'onanimationcancel' in CSS Animations."
+        }
+    ]
 }

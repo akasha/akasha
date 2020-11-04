@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.mediaDevices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/mediaDevices",
-    "description": "The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing."
+    "description": "The Navigator.mediaDevices read-only property returns a MediaDevices object, which provides access to connected media input devices like cameras and microphones, as well as screen sharing.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#mediadevices",
+            "description": "The definition of 'NavigatorUserMedia.mediaDevices' in Media Capture and Streams."
+        }
+    ]
 }

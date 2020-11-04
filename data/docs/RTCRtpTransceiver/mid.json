@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.mid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/mid",
-    "description": "The read-only RTCRtpTransceiver interface's mid property specifies the negotiated media ID (mid) which the local and remote peers have agreed upon to uniquely identify the stream's pairing of sender and receiver."
+    "description": "The read-only RTCRtpTransceiver interface's mid property specifies the negotiated media ID (mid) which the local and remote peers have agreed upon to uniquely identify the stream's pairing of sender and receiver.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtptransceiver-mid",
+            "description": "The definition of 'RTCRtpTransceiver.mid' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

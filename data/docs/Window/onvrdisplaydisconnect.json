@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onvrdisplaydisconnect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydisconnect",
-    "description": "The onvrdisplaydisconnect event handler property of the Window interface is called when a compatible VR display has been disconnected from the computer (when the vrdisplaydisconnect event fires)."
+    "description": "The onvrdisplaydisconnect event handler property of the Window interface is called when a compatible VR display has been disconnected from the computer (when the vrdisplaydisconnect event fires).",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaydisconnect",
+            "description": "The definition of 'onvrdisplaydisconnect' in WebVR 1.1."
+        }
+    ]
 }

@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "Gamepad",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad",
-    "description": "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id."
+    "description": "The Gamepad interface of the Gamepad API defines an individual gamepad or other controller, allowing access to information such as button presses, axis positions, and id.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/#gamepad-interface",
+            "description": "The definition of 'Gamepad' in Gamepad."
+        },
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute",
+            "description": "The definition of 'displayId' in WebVR 1.1."
+        },
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface",
+            "description": "The definition of 'Gamepad extensions' in Gamepad Extensions."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransferItem.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/type",
-    "description": "The read-only DataTransferItem.type property returns the type (format) of the DataTransferItem object representing the drag data item. The type is a Unicode string generally given by a MIME type, although a MIME type is not required."
+    "description": "The read-only DataTransferItem.type property returns the type (format) of the DataTransferItem object representing the drag data item. The type is a Unicode string generally given by a MIME type, although a MIME type is not required.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitem-type",
+            "description": "The definition of 'type' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitem-type",
+            "description": "The definition of 'type' in HTML 5.1."
+        }
+    ]
 }

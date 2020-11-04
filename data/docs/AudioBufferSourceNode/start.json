@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioBufferSourceNode.start",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start",
-    "description": "undefined."
+    "description": "undefined.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffersourcenode-start",
+            "description": "The definition of 'start()' in Web Audio API."
+        }
+    ]
 }

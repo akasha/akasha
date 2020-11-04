@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceTransport.onstatechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/onstatechange",
-    "description": "The onstatechange event handler for the RTCIceTransport interface is a property which specifies a function to serve as the EventHandler for the statechange event that is fired whenever the transport's state changes."
+    "description": "The onstatechange event handler for the RTCIceTransport interface is a property which specifies a function to serve as the EventHandler for the statechange event that is fired whenever the transport's state changes.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-onstatechange",
+            "description": "The definition of 'RTCIceTransport.onstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

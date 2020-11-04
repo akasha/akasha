@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.part",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/part",
-    "description": "The part property of the Element interface represents the part identifier(s) of the element (i.e. set using the part attribute), returned as a DOMTokenList. These can be used to style parts of a shadow DOM, via the ::part pseudo-element."
+    "description": "The part property of the Element interface represents the part identifier(s) of the element (i.e. set using the part attribute), returned as a DOMTokenList. These can be used to style parts of a shadow DOM, via the ::part pseudo-element.",
+    "refs": [
+        {
+            "name": "Shadow Parts",
+            "href": "https://drafts.csswg.org/css-shadow-parts-1/#idl",
+            "description": "The definition of 'Element.part' in Shadow Parts."
+        }
+    ]
 }

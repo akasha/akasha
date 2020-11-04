@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerNavigator.appName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appName",
-    "description": "The value of the NavigatorID.appName property is always &quot;Netscape&quot;, in any browser. This property is kept only for compatibility purposes."
+    "description": "The value of the NavigatorID.appName property is always &quot;Netscape&quot;, in any browser. This property is kept only for compatibility purposes.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-appname",
+            "description": "The definition of 'NavigatorID.appName' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLIFrameElement.src",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/src",
-    "description": "The HTMLIFrameElement.src property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource."
+    "description": "The HTMLIFrameElement.src property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-iframe-src",
+            "description": "The definition of 'HTMLIFrameElement: src' in HTML Living Standard."
+        }
+    ]
 }

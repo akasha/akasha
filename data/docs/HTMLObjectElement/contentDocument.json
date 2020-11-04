@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.contentDocument",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/contentDocument",
-    "description": "The contentDocument read-only property of the HTMLObjectElement interface Returns a Document representing the active document of the object element's nested browsing context, if any; otherwise null."
+    "description": "The contentDocument read-only property of the HTMLObjectElement interface Returns a Document representing the active document of the object element's nested browsing context, if any; otherwise null.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-object-contentwindow",
+            "description": "The definition of 'contentDocument' in HTML Living Standard."
+        }
+    ]
 }

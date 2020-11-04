@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamTrack.onended",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onended",
-    "description": "The MediaStreamTrack.onended event handler is used to specify a function which serves as an EventHandler to be called when the ended event occurs on the track. This event occurs when the track will no longer provide data to the stream for any reason, including the end of the media input being reached, the user revoking needed permissions, the source device being removed, or the remote peer ending a connection."
+    "description": "The MediaStreamTrack.onended event handler is used to specify a function which serves as an EventHandler to be called when the ended event occurs on the track. This event occurs when the track will no longer provide data to the stream for any reason, including the end of the media input being reached, the user revoking needed permissions, the source device being removed, or the remote peer ending a connection.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-onended",
+            "description": "The definition of 'MediaStreamTrack.onended' in Media Capture and Streams."
+        }
+    ]
 }

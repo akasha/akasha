@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLDialogElement.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/close",
-    "description": "Void."
+    "description": "Void.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-dialog-close",
+            "description": "The definition of 'close()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/interactive-elements.html#dom-htmldialogelement-close",
+            "description": "The definition of 'close()' in HTML 5.1."
+        }
+    ]
 }

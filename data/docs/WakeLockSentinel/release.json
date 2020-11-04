@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WakeLockSentinel.release",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/release",
-    "description": "The release() method of the WakeLockSentinel interface releases the WakeLockSentinel, returning a Promise that is resolved once the sentinel has been successfully released."
+    "description": "The release() method of the WakeLockSentinel interface releases the WakeLockSentinel, returning a Promise that is resolved once the sentinel has been successfully released.",
+    "refs": [
+        {
+            "name": "Screen Wake Lock API",
+            "href": "https://w3c.github.io/screen-wake-lock/#the-release-method",
+            "description": "The definition of 'release()' in Screen Wake Lock API."
+        }
+    ]
 }

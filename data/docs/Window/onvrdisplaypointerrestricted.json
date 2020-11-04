@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onvrdisplaypointerrestricted",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaypointerrestricted",
-    "description": "The onvrdisplaypointerrestricted property of the Window interface represents an event handler that will run when the VR display's pointer input is restricted to consumption via a pointerlocked element."
+    "description": "The onvrdisplaypointerrestricted property of the Window interface represents an event handler that will run when the VR display's pointer input is restricted to consumption via a pointerlocked element.",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaypointerrestricted",
+            "description": "The definition of 'onvrdisplaypointerrestricted' in WebVR 1.1."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpEncodingParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters",
-    "description": "An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender."
+    "description": "An instance of the WebRTC API's RTCRtpEncodingParameters dictionary describes a single configuration of a codec for an RTCRtpSender.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters",
+            "description": "The definition of 'RTCRtpEncodingParameters' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

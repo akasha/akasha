@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerGlobalScope.location",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/location",
-    "description": "The location read-only property of the WorkerGlobalScope interface returns the WorkerLocation associated with the worker. It is a specific location object, mostly a subset of the Location for browsing scopes, but adapted to workers."
+    "description": "The location read-only property of the WorkerGlobalScope interface returns the WorkerLocation associated with the worker. It is a specific location object, mostly a subset of the Location for browsing scopes, but adapted to workers.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-workerglobalscope-location",
+            "description": "The definition of 'location' in HTML Living Standard."
+        }
+    ]
 }

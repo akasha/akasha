@@ -4,6 +4,13 @@
     "name": "Window.vrdisplaydeactivate_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplaydeactivate_event",
     "description": "You can use the vrdisplaydeactivate event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaydeactivate",
+            "description": "The definition of 'vrdisplaydeactivate' in WebVR 1.1."
+        }
+    ],
     "eventName": "vrdisplaydeactivate",
     "eventType": "VRDisplayEvent",
     "eventHandlerProperty": "onvrdisplaydeactivate",

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLFormControlsCollection.namedItem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection/namedItem",
-    "description": "The HTMLFormControlsCollection.namedItem() method returns the RadioNodeList or the Element in the collection whose name or id match the specified name, or null if no node matches."
+    "description": "The HTMLFormControlsCollection.namedItem() method returns the RadioNodeList or the Element in the collection whose name or id match the specified name, or null if no node matches.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-htmlformcontrolscollection-nameditem",
+            "description": "The definition of 'HTMLFormControlsCollection.namedItem()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection",
+            "description": "The definition of 'HTMLFormControlsCollection' in HTML5."
+        }
+    ]
 }

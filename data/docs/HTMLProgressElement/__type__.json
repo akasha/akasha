@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "HTMLProgressElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLProgressElement",
-    "description": "The HTMLProgressElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of progress elements."
+    "description": "The HTMLProgressElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of progress elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlprogresselement",
+            "description": "The definition of 'HTMLProgressElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/forms.html#the-progress-element",
+            "description": "The definition of 'HTMLProgressElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#the-progress-element",
+            "description": "The definition of 'HTMLProgressElement' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "AudioTrackList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList",
-    "description": "The AudioTrackList interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate AudioTrack object in the list."
+    "description": "The AudioTrackList interface is used to represent a list of the audio tracks contained within a given HTML media element, with each track represented by a separate AudioTrack object in the list.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#audiotracklist",
+            "description": "The definition of 'AudioTrackList' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#audiotracklist",
+            "description": "The definition of 'AudioTrackList' in HTML5."
+        }
+    ]
 }

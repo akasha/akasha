@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "IntersectionObserverEntry.boundingClientRect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry/boundingClientRect",
-    "description": "The IntersectionObserverEntry interface's read-only boundingClientRect property returns a DOMRectReadOnly which in essence describes a rectangle describing the smallest rectangle that contains the entire target element."
+    "description": "The IntersectionObserverEntry interface's read-only boundingClientRect property returns a DOMRectReadOnly which in essence describes a rectangle describing the smallest rectangle that contains the entire target element.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-boundingclientrect",
+            "description": "The definition of 'IntersectionObserverEntry.boundingClientRect' in Intersection Observer."
+        }
+    ]
 }

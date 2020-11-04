@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStream.getAudioTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getAudioTracks",
-    "description": "The getAudioTracks() method of the MediaStream interface returns a sequence that represents all the MediaStreamTrack objects in this stream's track set where MediaStreamTrack.kind is audio."
+    "description": "The getAudioTracks() method of the MediaStream interface returns a sequence that represents all the MediaStreamTrack objects in this stream's track set where MediaStreamTrack.kind is audio.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-getaudiotracks",
+            "description": "The definition of 'getAudioTracks()' in Media Capture and Streams."
+        }
+    ]
 }

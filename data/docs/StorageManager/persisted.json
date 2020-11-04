@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "StorageManager.persisted",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persisted",
-    "description": "The persisted() method of the StorageManager interface returns a Promise that resolves to true if box mode is persistent for your site's storage."
+    "description": "The persisted() method of the StorageManager interface returns a Promise that resolves to true if box mode is persistent for your site's storage.",
+    "refs": [
+        {
+            "name": "Storage",
+            "href": "https://storage.spec.whatwg.org/#dom-storagemanager-persisted",
+            "description": "The definition of 'persisted' in Storage."
+        }
+    ]
 }

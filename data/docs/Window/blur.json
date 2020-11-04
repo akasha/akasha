@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Window.blur",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/blur",
-    "description": "Shifts focus away from the window."
+    "description": "Shifts focus away from the window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-window-blur",
+            "description": "The definition of 'Window.blur()' in HTML Living Standard."
+        }
+    ]
 }

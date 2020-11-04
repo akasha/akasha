@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "MediaStream.MediaStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/MediaStream",
-    "description": "The MediaStream() constructor returns a newly-created MediaStream, which serves as a collection of media tracks, each represented by a MediaStreamTrack object."
+    "description": "The MediaStream() constructor returns a newly-created MediaStream, which serves as a collection of media tracks, each represented by a MediaStreamTrack object.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#mediastream",
+            "description": "The definition of 'MediaStream' in Media Capture and Streams."
+        }
+    ]
 }

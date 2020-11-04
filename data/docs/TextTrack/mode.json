@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "TextTrack.mode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrack/mode",
-    "description": "The TextTrack interface's mode property is a string specifying and controlling the text track's mode: disabled, hidden, or showing."
+    "description": "The TextTrack interface's mode property is a string specifying and controlling the text track's mode: disabled, hidden, or showing.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-texttrack-mode",
+            "description": "The definition of 'mode' in HTML Living Standard."
+        }
+    ]
 }

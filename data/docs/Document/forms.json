@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.forms",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/forms",
-    "description": "The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document."
+    "description": "The forms read-only property of the Document interface returns an HTMLCollection listing all the form elements contained in the document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-forms",
+            "description": "The definition of 'Document.forms' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064",
+            "description": "The definition of 'Document.forms' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

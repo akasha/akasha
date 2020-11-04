@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "StorageManager.estimate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/estimate",
-    "description": "The estimate() method of the StorageManager interface asks the Storage Manager for how much storage the current origin takes up (usage), and how much space is available (quota)."
+    "description": "The estimate() method of the StorageManager interface asks the Storage Manager for how much storage the current origin takes up (usage), and how much space is available (quota).",
+    "refs": [
+        {
+            "name": "Storage",
+            "href": "https://storage.spec.whatwg.org/#dom-storagemanager-estimate",
+            "description": "The definition of 'estimate()' in Storage."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.has",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/has",
-    "description": "The has() method of the URLSearchParams interface returns a Boolean that indicates whether a parameter with the specified name exists."
+    "description": "The has() method of the URLSearchParams interface returns a Boolean that indicates whether a parameter with the specified name exists.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-has",
+            "description": "The definition of 'has()' in URL."
+        }
+    ]
 }

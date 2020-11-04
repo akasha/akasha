@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStream.getTrackById",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getTrackById",
-    "description": "The MediaStream.getTrackById() method returns a MediaStreamTrack object representing the track with the specified ID string. If there is no track with the specified ID, this method returns null."
+    "description": "The MediaStream.getTrackById() method returns a MediaStreamTrack object representing the track with the specified ID string. If there is no track with the specified ID, this method returns null.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-gettrackbyid",
+            "description": "The definition of 'getTrackById()' in Media Capture and Streams."
+        }
+    ]
 }

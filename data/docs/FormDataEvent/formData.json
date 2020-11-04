@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FormDataEvent.formData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/formData",
-    "description": "The formData read only property of the FormDataEvent interface contains the FormData object representing the data contained in the form when the event was fired."
+    "description": "The formData read only property of the FormDataEvent interface contains the FormData object representing the data contained in the form when the event was fired.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-formdataevent-formdata",
+            "description": "The definition of 'formData' in HTML Living Standard."
+        }
+    ]
 }

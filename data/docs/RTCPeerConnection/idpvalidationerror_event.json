@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.idpvalidationerror_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/idpvalidationerror_event",
     "description": "An idpvalidationerror event informs the target, a RTCPeerConnection object's onidpvalidationerror event handler, that the identity provider (IdP) encountered an error while validating an identity assertion.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-mediastream-idpvalidationerror",
+            "description": "The definition of 'idpvalidationerror' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "idpvalidationerror",
     "eventType": "RTCIdentityErrorEvent",
     "eventHandlerProperty": "onidpvalidationerror",

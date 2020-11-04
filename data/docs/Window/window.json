@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "Window.window",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/window",
-    "description": "The window property of a Window object points to the window object itself."
+    "description": "The window property of a Window object points to the window object itself.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-window",
+            "description": "The definition of 'Window.window' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/browsers.html#dom-window",
+            "description": "The definition of 'Window.window' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-window",
+            "description": "The definition of 'Window.window' in HTML5."
+        }
+    ]
 }

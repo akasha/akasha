@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceServer.username",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceServer/username",
-    "description": "The RTCIceServer dictionary's username property is a string which specifies the username to use when authenticating with the ICE server being described."
+    "description": "The RTCIceServer dictionary's username property is a string which specifies the username to use when authenticating with the ICE server being described.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtciceserver-username",
+            "description": "The definition of 'RTCIceServer.username' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

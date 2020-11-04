@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Range.endContainer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/endContainer",
-    "description": "The Range.endContainer read-only property returns the Node within which the Range ends. To change the end position of a node, use the Range.setEnd() method or a similar one."
+    "description": "The Range.endContainer read-only property returns the Node within which the Range ends. To change the end position of a node, use the Range.setEnd() method or a similar one.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-endcontainer",
+            "description": "The definition of 'Range.endContainer' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-endParent",
+            "description": "The definition of 'Range.endContainer' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

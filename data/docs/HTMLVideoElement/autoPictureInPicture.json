@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.autoPictureInPicture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/autoPictureInPicture",
+    "description": "The HTMLVideoElement  autoPictureInPicture property reflects the HTML attribute indicating whether the video should enter or leave picture-in-picture mode automatically.",
+    "refs": [
+        {
+            "name": "Unknown",
+            "href": "",
+            "description": "The definition of 'HTMLVideoElement.autoPictureInPicture' in Unknown."
+        }
+    ]
+}

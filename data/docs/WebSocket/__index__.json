@@ -1,11 +1,11 @@
 
 {
     "name": "WebSocket",
-    "lastModifiedAt": 1600313976092,
+    "lastModifiedAt": 1604450615691,
     "entries": [
         {
             "name": "WebSocket",
-            "lastModifiedAt": 1597193540250
+            "lastModifiedAt": 1604450603554
         },
         {
             "name": "__type__",
@@ -13,15 +13,15 @@
         },
         {
             "name": "binaryType",
-            "lastModifiedAt": 1596581545534
+            "lastModifiedAt": 1604450604077
         },
         {
             "name": "bufferedAmount",
-            "lastModifiedAt": 1596581546390
+            "lastModifiedAt": 1604450604539
         },
         {
             "name": "close",
-            "lastModifiedAt": 1596790677948
+            "lastModifiedAt": 1604450612129
         },
         {
             "name": "close_event",
@@ -33,7 +33,7 @@
         },
         {
             "name": "extensions",
-            "lastModifiedAt": 1596581546786
+            "lastModifiedAt": 1604450605558
         },
         {
             "name": "message_event",
@@ -41,19 +41,19 @@
         },
         {
             "name": "onclose",
-            "lastModifiedAt": 1599279280376
+            "lastModifiedAt": 1604450606004
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1599279281040
+            "lastModifiedAt": 1604450606638
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1596581548148
+            "lastModifiedAt": 1604450607221
         },
         {
             "name": "onopen",
-            "lastModifiedAt": 1596711724923
+            "lastModifiedAt": 1604450608252
         },
         {
             "name": "open_event",
@@ -61,7 +61,7 @@
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1596581548727
+            "lastModifiedAt": 1604450608973
         },
         {
             "name": "readyState",
@@ -69,11 +69,11 @@
         },
         {
             "name": "send",
-            "lastModifiedAt": 1596581549906
+            "lastModifiedAt": 1604450613157
         },
         {
             "name": "url",
-            "lastModifiedAt": 1596581549375
+            "lastModifiedAt": 1604450611143
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaList.mediaText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaList/mediaText",
-    "description": "The mediaText property of the MediaList interface is a stringifier that returns a DOMString representing the MediaList as text, and also allows you to set a new MediaList."
+    "description": "The mediaText property of the MediaList interface is a stringifier that returns a DOMString representing the MediaList as text, and also allows you to set a new MediaList.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-medialist-mediatext",
+            "description": "The definition of 'mediaText' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

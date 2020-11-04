@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "LinkStyle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/LinkStyle",
-    "description": "The LinkStyle interface provides access to the associated CSS style sheet of a node."
+    "description": "The LinkStyle interface provides access to the associated CSS style sheet of a node.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#the-linkstyle-interface",
+            "description": "The definition of 'LinkStyle' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-LinkStyle",
+            "description": "The definition of 'LinkStyle' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

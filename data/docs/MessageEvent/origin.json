@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MessageEvent.origin",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/origin",
-    "description": "The origin read-only property of the MessageEvent interface is a USVString representing the origin of the message emitter."
+    "description": "The origin read-only property of the MessageEvent interface is a USVString representing the origin of the message emitter.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-messageevent-origin",
+            "description": "The definition of 'MessageEvent: origin' in HTML Living Standard."
+        }
+    ]
 }

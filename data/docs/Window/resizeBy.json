@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Window.resizeBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/resizeBy",
-    "description": "The Window.resizeBy() method resizes the current window by a specified amount."
+    "description": "The Window.resizeBy() method resizes the current window by a specified amount.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-resizeby",
+            "description": "The definition of 'window.resizeBy()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

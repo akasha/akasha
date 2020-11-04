@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamTrackAudioSourceOptions.mediaStreamTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack",
-    "description": "The MediaStreamTrackAudioSourceOptions dictionary's mediaStreamTrack property must contain a reference to the MediaStreamTrack from which the MediaStreamTrackAudioSourceNode being created using the MediaStreamTrackAudioSourceNode() constructor."
+    "description": "The MediaStreamTrackAudioSourceOptions dictionary's mediaStreamTrack property must contain a reference to the MediaStreamTrack from which the MediaStreamTrackAudioSourceNode being created using the MediaStreamTrackAudioSourceNode() constructor.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack",
+            "description": "The definition of 'MediaStreamTrackAudioSourceOptions.mediaStream' in Web Audio API."
+        }
+    ]
 }

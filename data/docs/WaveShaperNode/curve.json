@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WaveShaperNode.curve",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/curve",
-    "description": "The curve property of the WaveShaperNode interface is a Float32Array of numbers describing the distortion to apply."
+    "description": "The curve property of the WaveShaperNode interface is a Float32Array of numbers describing the distortion to apply.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-waveshapernode-curve",
+            "description": "The definition of 'curve' in Web Audio API."
+        }
+    ]
 }

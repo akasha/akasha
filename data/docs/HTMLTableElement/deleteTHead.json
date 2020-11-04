@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLTableElement.deleteTHead",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTHead",
-    "description": "The HTMLTableElement.deleteTHead() removes the thead element from a given table."
+    "description": "The HTMLTableElement.deleteTHead() removes the thead element from a given table.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-table-deletethead",
+            "description": "The definition of 'HTMLTableElement: deleteTHead' in HTML Living Standard."
+        }
+    ]
 }

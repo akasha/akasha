@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.group",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/group",
-    "description": "Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called."
+    "description": "Creates a new inline group in the Web Console log. This indents following console messages by an additional level, until console.groupEnd() is called.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#group",
+            "description": "The definition of 'console.group()' in Console API."
+        }
+    ]
 }

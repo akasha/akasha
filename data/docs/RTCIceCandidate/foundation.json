@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.foundation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/foundation",
-    "description": "The RTCIceCandidate interface's read-only foundation property is a string which uniquely identifies the candidate across multiple transports."
+    "description": "The RTCIceCandidate interface's read-only foundation property is a string which uniquely identifies the candidate across multiple transports.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-foundation",
+            "description": "The definition of 'RTCIceCandidate.foundation' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

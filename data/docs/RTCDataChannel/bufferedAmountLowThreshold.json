@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.bufferedAmountLowThreshold",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedAmountLowThreshold",
-    "description": "The RTCDataChannel property bufferedAmountLowThreshold is used to specify the number of bytes of buffered outgoing data that is considered &quot;low.&quot; The default value is 0."
+    "description": "The RTCDataChannel property bufferedAmountLowThreshold is used to specify the number of bytes of buffered outgoing data that is considered &quot;low.&quot; The default value is 0.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-bufferedamountlowthreshold",
+            "description": "The definition of 'RTCDataChannel.bufferedAmountLowThreshold' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

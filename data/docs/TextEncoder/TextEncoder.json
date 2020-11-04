@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "TextEncoder.TextEncoder",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/TextEncoder",
-    "description": "The TextEncoder() constructor returns a newly created utf-8 TextEncoder object."
+    "description": "The TextEncoder() constructor returns a newly created utf-8 TextEncoder object.",
+    "refs": [
+        {
+            "name": "Encoding",
+            "href": "https://encoding.spec.whatwg.org/#dom-textencoder",
+            "description": "The definition of 'TextEncoder()' in Encoding."
+        }
+    ]
 }

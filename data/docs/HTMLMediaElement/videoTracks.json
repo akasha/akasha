@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLMediaElement.videoTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/videoTracks",
-    "description": "The read-only videoTracks property on HTMLMediaElement objects returns a VideoTrackList object listing all of the VideoTrack objects representing the media element's video tracks."
+    "description": "The read-only videoTracks property on HTMLMediaElement objects returns a VideoTrackList object listing all of the VideoTrack objects representing the media element's video tracks.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-videotracks",
+            "description": "The definition of 'HTMLMediaElement.videoTracks' in HTML Living Standard."
+        }
+    ]
 }

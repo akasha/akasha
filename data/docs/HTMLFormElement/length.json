@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLFormElement.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/length",
-    "description": "The HTMLFormElement.length read-only property returns the number of controls in the form element."
+    "description": "The HTMLFormElement.length read-only property returns the number of controls in the form element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-form-length",
+            "description": "The definition of 'HTMLFormElement: length' in HTML Living Standard."
+        }
+    ]
 }

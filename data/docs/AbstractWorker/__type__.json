@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AbstractWorker",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractWorker",
-    "description": "The AbstractWorker interface of the Web Workers API is an abstract interface that defines properties and methods that are common to all types of worker, including not only the basic Worker, but also ServiceWorker and SharedWorker."
+    "description": "The AbstractWorker interface of the Web Workers API is an abstract interface that defines properties and methods that are common to all types of worker, including not only the basic Worker, but also ServiceWorker and SharedWorker.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#abstractworker",
+            "description": "The definition of 'AbstractWorker' in HTML Living Standard."
+        }
+    ]
 }

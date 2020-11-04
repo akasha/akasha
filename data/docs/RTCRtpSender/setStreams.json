@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpSender.setStreams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/setStreams",
-    "description": "The RTCRtpSender method setStreams() associates the sender's track with the specified MediaStream or array of MediaStream objects."
+    "description": "The RTCRtpSender method setStreams() associates the sender's track with the specified MediaStream or array of MediaStream objects.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-setstreams",
+            "description": "The definition of 'RTCRtpSender.setStreams()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

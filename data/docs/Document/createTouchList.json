@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createTouchList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createTouchList",
-    "description": "The Document.createTouchList() method creates and returns a new TouchList object."
+    "description": "The Document.createTouchList() method creates and returns a new TouchList object.",
+    "refs": [
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-Document-createTouchList-TouchList-Touch-touches",
+            "description": "The definition of 'Document.createTouchList()' in Touch Events."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.ondblclick",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/ondblclick",
-    "description": "The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element."
+    "description": "The ondblclick property of the GlobalEventHandlers mixin is an EventHandler that processes dblclick events on the given element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-ondblclick",
+            "description": "The definition of 'ondblclick' in HTML Living Standard."
+        }
+    ]
 }

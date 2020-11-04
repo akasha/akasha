@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createNSResolver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createNSResolver",
-    "description": "Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node."
+    "description": "Creates an XPathNSResolver which resolves namespaces with respect to the definitions in scope for a specified node.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver",
+            "description": "The definition of 'document.createNSResolver' in Document Object Model (DOM) Level 3 XPath Specification."
+        }
+    ]
 }

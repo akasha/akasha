@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.rolloffFactor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/rolloffFactor",
-    "description": "A number whose range depends on the distanceModel of the panner as follows (negative values are not allowed):"
+    "description": "A number whose range depends on the distanceModel of the panner as follows (negative values are not allowed):",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-rollofffactor",
+            "description": "The definition of 'rolloffFactor' in Web Audio API."
+        }
+    ]
 }

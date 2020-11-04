@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLTimeElement",
-    "lastModifiedAt": 1600311984983,
+    "lastModifiedAt": 1604449813146,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193219118
+            "lastModifiedAt": 1604449812617
         },
         {
             "name": "dateTime",

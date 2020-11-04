@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.screenY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/screenY",
-    "description": "The Window.screenY read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen."
+    "description": "The Window.screenY read-only property returns the vertical distance, in CSS pixels, of the top border of the user's browser viewport to the top edge of the screen.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-screeny",
+            "description": "The definition of 'Window.screenY' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "StereoPannerNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode",
-    "description": "The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode."
+    "description": "The pan property takes a unitless value between -1 (full left pan) and 1 (full right pan). This interface was introduced as a much simpler way to apply a simple panning effect than having to use a full PannerNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#stereopannernode",
+            "description": "The definition of 'StereoPannerNode' in Web Audio API."
+        }
+    ]
 }

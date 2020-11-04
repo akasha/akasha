@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLTableElement.tBodies",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tBodies",
-    "description": "The HTMLTableElement.tBodies read-only property returns a live HTMLCollection of the bodies in a table."
+    "description": "The HTMLTableElement.tBodies read-only property returns a live HTMLCollection of the bodies in a table.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-table-tbodies",
+            "description": "The definition of 'HTMLTableElement: tBodies' in HTML Living Standard."
+        }
+    ]
 }

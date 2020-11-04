@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransfer.effectAllowed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/effectAllowed",
-    "description": "The DataTransfer.effectAllowed property specifies the effect that is allowed for a drag operation. The copy operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The move operation is used to indicate that the data being dragged will be moved, and the link operation is used to indicate that some form of relationship or connection will be created between the source and drop locations."
+    "description": "The DataTransfer.effectAllowed property specifies the effect that is allowed for a drag operation. The copy operation is used to indicate that the data being dragged will be copied from its present location to the drop location. The move operation is used to indicate that the data being dragged will be moved, and the link operation is used to indicate that some form of relationship or connection will be created between the source and drop locations.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-effectallowed",
+            "description": "The definition of 'effectAllowed' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransfer-effectallowed",
+            "description": "The definition of 'effectAllowed' in HTML 5.1."
+        }
+    ]
 }

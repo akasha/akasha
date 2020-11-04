@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Body.formData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Body/formData",
-    "description": "The formData() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a FormData object."
+    "description": "The formData() method of the Body mixin takes a Response stream and reads it to completion. It returns a promise that resolves with a FormData object.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-body-formdata",
+            "description": "The definition of 'formData()' in Fetch."
+        }
+    ]
 }

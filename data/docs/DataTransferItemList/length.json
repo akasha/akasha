@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransferItemList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/length",
-    "description": "The read-only length property of the DataTransferItemList interface returns the number of items currently in the drag item list."
+    "description": "The read-only length property of the DataTransferItemList interface returns the number of items currently in the drag item list.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-length",
+            "description": "The definition of 'length' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-length",
+            "description": "The definition of 'length' in HTML 5.1."
+        }
+    ]
 }

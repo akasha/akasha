@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLCanvasElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement",
-    "description": "The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface."
+    "description": "The HTMLCanvasElement interface provides properties and methods for manipulating the layout and presentation of canvas elements. The HTMLCanvasElement interface also inherits the properties and methods of the HTMLElement interface.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlcanvaselement",
+            "description": "The definition of 'HTMLCanvasElement' in HTML Living Standard."
+        },
+        {
+            "name": "Media Capture from DOM Elements",
+            "href": "https://w3c.github.io/mediacapture-fromelement/#html-canvas-element-media-capture-extensions",
+            "description": "The definition of 'HTMLCanvasElement' in Media Capture from DOM Elements."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLAreaElement.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/port",
-    "description": "The HTMLHyperlinkElementUtils.port property is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''."
+    "description": "The HTMLHyperlinkElementUtils.port property is a USVString containing the port number of the URL. If the URL does not contain an explicit port number, it will be set to ''.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-port",
+            "description": "The definition of 'HTMLHyperlinkElementUtils.port' in HTML Living Standard."
+        }
+    ]
 }

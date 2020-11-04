@@ -1,15 +1,15 @@
 
 {
     "name": "NavigatorStorage",
-    "lastModifiedAt": 1600312474057,
+    "lastModifiedAt": 1604450880251,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193599569
+            "lastModifiedAt": 1604450879736
         },
         {
             "name": "storage",
-            "lastModifiedAt": 1597193599859
+            "lastModifiedAt": 1604450880211
         }
     ]
 }

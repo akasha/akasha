@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackSettings.noiseSuppression",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/noiseSuppression",
-    "description": "The MediaTrackSettings dictionary's noiseSuppression property is a Boolean value whose value indicates whether or not noise suppression technology is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.noiseSuppression property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+    "description": "The MediaTrackSettings dictionary's noiseSuppression property is a Boolean value whose value indicates whether or not noise suppression technology is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.noiseSuppression property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-noisesuppression",
+            "description": "The definition of 'noiseSuppression' in Media Capture and Streams."
+        }
+    ]
 }

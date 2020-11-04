@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MimeType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MimeType",
-    "description": "The MimeType interface provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object."
+    "description": "The MimeType interface provides contains information about a MIME type associated with a particular plugin. NavigatorPlugins.mimeTypes returns an array of this object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#mimetype",
+            "description": "The definition of 'MimeType' in HTML Living Standard."
+        }
+    ]
 }

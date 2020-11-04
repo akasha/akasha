@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.onclosing",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/onclosing",
-    "description": "The RTCDataChannel.onclosing property is an EventHandler which specifies a function to be called by the browser when the closing event is received by the RTCDataChannel. This is a simple Event which indicates that the data channel is being closed, that is, RTCDataChannel transitions to &quot;closing&quot; state. For example, after RTCDataChannel.close() was called but the underlying data transport might not have been closed yet."
+    "description": "The RTCDataChannel.onclosing property is an EventHandler which specifies a function to be called by the browser when the closing event is received by the RTCDataChannel. This is a simple Event which indicates that the data channel is being closed, that is, RTCDataChannel transitions to &quot;closing&quot; state. For example, after RTCDataChannel.close() was called but the underlying data transport might not have been closed yet.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-onclosing",
+            "description": "The definition of 'RTCDataChannel.onclosing' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

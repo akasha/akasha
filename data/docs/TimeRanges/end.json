@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "TimeRanges.end",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges/end",
-    "description": "Returns the time offset at which a specified time range ends."
+    "description": "Returns the time offset at which a specified time range ends.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-timeranges-end",
+            "description": "The definition of 'TimeRanges.end()' in HTML Living Standard."
+        }
+    ]
 }

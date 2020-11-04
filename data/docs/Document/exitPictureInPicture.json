@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.exitPictureInPicture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/exitPictureInPicture",
-    "description": "The Document method exitPictureInPicture() requests that a video contained in this document, which is currently floating, be taken out of picture-in-picture mode, restoring the previous state of the screen."
+    "description": "The Document method exitPictureInPicture() requests that a video contained in this document, which is currently floating, be taken out of picture-in-picture mode, restoring the previous state of the screen.",
+    "refs": [
+        {
+            "name": "Unknown",
+            "href": "",
+            "description": "The definition of 'Document.exitPictureInPicture()' in Unknown."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WaveShaperNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode",
-    "description": "A WaveShaperNode always has exactly one input and one output."
+    "description": "A WaveShaperNode always has exactly one input and one output.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#waveshapernode",
+            "description": "The definition of 'WaveShaperNode' in Web Audio API."
+        }
+    ]
 }

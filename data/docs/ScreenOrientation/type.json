@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ScreenOrientation.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/type",
-    "description": "The type read-only property of the ScreenOrientation interface returns the document's current orientation type, one of &quot;portrait-primary&quot;, &quot;portrait-secondary&quot;, &quot;landscape-primary&quot;, or &quot;landscape-secondary&quot;."
+    "description": "The type read-only property of the ScreenOrientation interface returns the document's current orientation type, one of &quot;portrait-primary&quot;, &quot;portrait-secondary&quot;, &quot;landscape-primary&quot;, or &quot;landscape-secondary&quot;.",
+    "refs": [
+        {
+            "name": "Screen Orientation API",
+            "href": "https://w3c.github.io/screen-orientation/#dom-screenorientation-type",
+            "description": "The definition of 'type' in Screen Orientation API."
+        }
+    ]
 }

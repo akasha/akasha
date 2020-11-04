@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.innerHTML",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML",
-    "description": "The Element property innerHTML gets or sets the HTML or XML markup contained within the element."
+    "description": "The Element property innerHTML gets or sets the HTML or XML markup contained within the element.",
+    "refs": [
+        {
+            "name": "DOM Parsing and Serialization",
+            "href": "https://w3c.github.io/DOM-Parsing/#dom-innerhtml-innerhtml",
+            "description": "The definition of 'Element.innerHTML' in DOM Parsing and Serialization."
+        }
+    ]
 }

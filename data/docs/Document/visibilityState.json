@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.visibilityState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState",
-    "description": "The Document.visibilityState read-only property returns the visibility of the document, that is in which context this element is now visible. It is useful to know if the document is in the background or an invisible tab, or only loaded for pre-rendering."
+    "description": "The Document.visibilityState read-only property returns the visibility of the document, that is in which context this element is now visible. It is useful to know if the document is in the background or an invisible tab, or only loaded for pre-rendering.",
+    "refs": [
+        {
+            "name": "Page Visibility (Second Edition)",
+            "href": "https://www.w3.org/TR/page-visibility/#visibility-states-and-the-visibilitystate-enum",
+            "description": "The definition of 'Document.visibilityState' in Page Visibility (Second Edition)."
+        }
+    ]
 }

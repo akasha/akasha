@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Worklet.addModule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Worklet/addModule",
-    "description": "The addModule() method of the Worklet interface loads the module in the given JavaScript file and adds it to the current Worklet."
+    "description": "The addModule() method of the Worklet interface loads the module in the given JavaScript file and adds it to the current Worklet.",
+    "refs": [
+        {
+            "name": "Worklets Level 1",
+            "href": "https://drafts.css-houdini.org/worklets/#dom-worklet-addmodule",
+            "description": "The definition of 'addModule()' in Worklets Level 1."
+        }
+    ]
 }

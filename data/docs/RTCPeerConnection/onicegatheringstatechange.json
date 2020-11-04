@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.onicegatheringstatechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onicegatheringstatechange",
-    "description": "The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state&mdash;that is, whether or not the ICE agent is actively gathering candidates&mdash;changes."
+    "description": "The RTCPeerConnection.onicegatheringstatechange property is an EventHandler which specifies a function to be called when the icegatheringstatechange event is sent to an RTCPeerConnection instance. This happens when the ICE gathering state&mdash;that is, whether or not the ICE agent is actively gathering candidates&mdash;changes.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onicegatheringstatechange",
+            "description": "The definition of 'RTCPeerConnection.onicegatheringstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

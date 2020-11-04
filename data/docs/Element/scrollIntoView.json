@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.scrollIntoView",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView",
-    "description": "The Element interface's scrollIntoView() method scrolls the element's parent container such that the element on which scrollIntoView() is called is visible to the user"
+    "description": "The Element interface's scrollIntoView() method scrolls the element's parent container such that the element on which scrollIntoView() is called is visible to the user",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-scrollintoview",
+            "description": "The definition of 'Element.scrollIntoView()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ANGLE_instanced_arrays.vertexAttribDivisorANGLE",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ANGLE_instanced_arrays/vertexAttribDivisorANGLE",
-    "description": "The ANGLE_instanced_arrays.vertexAttribDivisorANGLE() method of the WebGL API  modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with ext.drawArraysInstancedANGLE() and ext.drawElementsInstancedANGLE()."
+    "description": "The ANGLE_instanced_arrays.vertexAttribDivisorANGLE() method of the WebGL API  modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with ext.drawArraysInstancedANGLE() and ext.drawElementsInstancedANGLE().",
+    "refs": [
+        {
+            "name": "ANGLE_instanced_arrays",
+            "href": "https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/",
+            "description": "The definition of 'ANGLE_instanced_arrays' in ANGLE_instanced_arrays."
+        }
+    ]
 }

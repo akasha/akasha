@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BaseAudioContext.currentTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/currentTime",
-    "description": "The currentTime read-only property of the BaseAudioContext interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0."
+    "description": "The currentTime read-only property of the BaseAudioContext interface returns a double representing an ever-increasing hardware timestamp in seconds that can be used for scheduling audio playback, visualizing timelines, etc. It starts at 0.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-currenttime",
+            "description": "The definition of 'currentTime' in Web Audio API."
+        }
+    ]
 }

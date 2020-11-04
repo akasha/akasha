@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaDeviceInfo.deviceId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/deviceId",
-    "description": "The deviceId readonly property of the MediaDeviceInfo interface returns a DOMString that is an identifier for the represented device and is persisted across sessions."
+    "description": "The deviceId readonly property of the MediaDeviceInfo interface returns a DOMString that is an identifier for the represented device and is persisted across sessions.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediadeviceinfo-deviceid",
+            "description": "The definition of 'deviceId' in Media Capture and Streams."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ScreenOrientation.unlock",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/unlock",
-    "description": "The unlock() property of the ScreenOrientation interface unlocks the orientation of the containing document from its default orientation."
+    "description": "The unlock() property of the ScreenOrientation interface unlocks the orientation of the containing document from its default orientation.",
+    "refs": [
+        {
+            "name": "Screen Orientation API",
+            "href": "https://w3c.github.io/screen-orientation/#dom-screenorientation-unlock",
+            "description": "The definition of 'unlock()' in Screen Orientation API."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLMediaElement.load",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/load",
-    "description": "The HTMLMediaElement method load() resets the media element to its initial state and begins the process of selecting a media source and loading the media in preparation for playback to begin at the beginning."
+    "description": "The HTMLMediaElement method load() resets the media element to its initial state and begins the process of selecting a media source and loading the media in preparation for playback to begin at the beginning.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-media-load",
+            "description": "The definition of 'HTMLMediaElement.load()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlmediaelement-load",
+            "description": "The definition of 'HTMLMediaElement.load()' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLSelectElement.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/item",
-    "description": "The HTMLSelectElement.item() method returns the Element corresponding to the HTMLOptionElement whose position in the options list corresponds to the index given in the parameter, or null if there are none."
+    "description": "The HTMLSelectElement.item() method returns the Element corresponding to the HTMLOptionElement whose position in the options list corresponds to the index given in the parameter, or null if there are none.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-select-item",
+            "description": "The definition of 'HTMLSelectElement.item()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-select-item",
+            "description": "The definition of 'HTMLSelectElement.item()' in HTML5."
+        }
+    ]
 }

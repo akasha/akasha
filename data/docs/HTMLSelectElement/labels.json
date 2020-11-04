@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLSelectElement.labels",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/labels",
-    "description": "The HTMLSelectElement.labels read-only property returns a NodeList of the label elements associated with the select element."
+    "description": "The HTMLSelectElement.labels read-only property returns a NodeList of the label elements associated with the select element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels",
+            "description": "The definition of 'labels' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-lfe-labels",
+            "description": "The definition of 'labels' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GamepadPose.hasPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/hasPosition",
-    "description": "The hasPosition read-only property of the GamepadPose interface returns a Boolean stating whether the Gamepad can track and return position information."
+    "description": "The hasPosition read-only property of the GamepadPose interface returns a Boolean stating whether the Gamepad can track and return position information.",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-hasposition",
+            "description": "The definition of 'hasPosition' in Gamepad Extensions."
+        }
+    ]
 }

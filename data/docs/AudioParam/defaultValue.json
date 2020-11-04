@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioParam.defaultValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/defaultValue",
-    "description": "The defaultValue read-only property of the AudioParam interface represents the initial value of the attributes as defined by the specific AudioNode creating the AudioParam."
+    "description": "The defaultValue read-only property of the AudioParam interface represents the initial value of the attributes as defined by the specific AudioNode creating the AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-defaultvalue",
+            "description": "The definition of 'defaultValue' in Web Audio API."
+        }
+    ]
 }

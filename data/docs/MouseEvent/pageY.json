@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "MouseEvent.pageY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY",
-    "description": "The pageY read-only property of the MouseEvent interface returns the Y (vertical) coordinate in pixels of the event relative to the whole document. This property takes into account any vertical scrolling of the page."
+    "description": "The pageY read-only property of the MouseEvent interface returns the Y (vertical) coordinate in pixels of the event relative to the whole document. This property takes into account any vertical scrolling of the page.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-pagey",
+            "description": "The definition of 'pageY' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-Touch-pageY",
+            "description": "The definition of 'pageY' in Touch Events."
+        }
+    ]
 }

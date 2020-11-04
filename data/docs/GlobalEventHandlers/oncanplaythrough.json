@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.oncanplaythrough",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/oncanplaythrough",
-    "description": "The oncanplaythrough property of the GlobalEventHandlers mixin is the EventHandler for processing canplaythrough events."
+    "description": "The oncanplaythrough property of the GlobalEventHandlers mixin is the EventHandler for processing canplaythrough events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-oncanplaythrough",
+            "description": "The definition of 'oncanplaythrough' in HTML Living Standard."
+        }
+    ]
 }

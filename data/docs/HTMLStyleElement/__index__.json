@@ -1,15 +1,15 @@
 
 {
     "name": "HTMLStyleElement",
-    "lastModifiedAt": 1600311947717,
+    "lastModifiedAt": 1604449841713,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193224345
+            "lastModifiedAt": 1604449838704
         },
         {
             "name": "media",
-            "lastModifiedAt": 1596581195763
+            "lastModifiedAt": 1604449839446
         },
         {
             "name": "scoped",

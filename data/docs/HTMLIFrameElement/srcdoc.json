@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLIFrameElement.srcdoc",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/srcdoc",
-    "description": "The srcdoc property of the HTMLIFrameElement specifies the content of the page."
+    "description": "The srcdoc property of the HTMLIFrameElement specifies the content of the page.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#attr-iframe-srcdoc",
+            "description": "The definition of 'HTMLIFrameElement: srcdoc' in HTML Living Standard."
+        }
+    ]
 }

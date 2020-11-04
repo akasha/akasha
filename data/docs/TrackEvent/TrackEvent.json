@@ -3,5 +3,17 @@
     "kind": "Constructor",
     "name": "TrackEvent.TrackEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent/TrackEvent",
-    "description": "The TrackEvent() constructor creates and returns a new TrackEvent object describing an event which occurred on a list of tracks (AudioTrackList, VideoTrackList, or TextTrackList)."
+    "description": "The TrackEvent() constructor creates and returns a new TrackEvent object describing an event which occurred on a list of tracks (AudioTrackList, VideoTrackList, or TextTrackList).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-trackevent-trackevent",
+            "description": "The definition of 'TrackEvent()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-trackevent-trackevent",
+            "description": "The definition of 'TrackEvent()' in HTML5."
+        }
+    ]
 }

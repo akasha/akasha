@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DynamicsCompressorNode.attack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/attack",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-attack",
+            "description": "The definition of 'attack' in Web Audio API."
+        }
+    ]
 }

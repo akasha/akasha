@@ -3,5 +3,17 @@
     "kind": "Constructor",
     "name": "DragEvent.DragEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/DragEvent",
-    "description": "This constructor is used to create a synthetic DragEvent object."
+    "description": "This constructor is used to create a synthetic DragEvent object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#the-dragevent-interface",
+            "description": "The definition of 'DragEvent' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#the-dragevent-interface",
+            "description": "The definition of 'DragEvent' in HTML 5.1."
+        }
+    ]
 }

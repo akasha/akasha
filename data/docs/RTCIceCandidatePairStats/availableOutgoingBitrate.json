@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.availableOutgoingBitrate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate",
-    "description": "The RTCIceCandidatePairStats property availableOutgoingBitrate returns a value indicative of the available outbound capacity of the network connection represented by the candidate pair."
+    "description": "The RTCIceCandidatePairStats property availableOutgoingBitrate returns a value indicative of the available outbound capacity of the network connection represented by the candidate pair.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-availableoutgoingbitrate",
+            "description": "The definition of 'RTCIceCandidatePairStats.availableoutgoingbitrate' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

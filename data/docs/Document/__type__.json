@@ -3,5 +3,62 @@
     "kind": "Type",
     "name": "Document",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document",
-    "description": "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree."
+    "description": "The Document interface represents any web page loaded in the browser and serves as an entry point into the web page's content, which is the DOM tree.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-document",
+            "description": "The definition of 'Document' in DOM."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/dom.html#the-document-object",
+            "description": "The definition of 'Document' in HTML Living Standard."
+        },
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface",
+            "description": "The definition of 'Document' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Pointer Lock",
+            "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
+            "description": "The definition of 'Document' in Pointer Lock."
+        },
+        {
+            "name": "Page Visibility (Second Edition)",
+            "href": "https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface",
+            "description": "The definition of 'Document' in Page Visibility (Second Edition)."
+        },
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#extensions-to-document-interface",
+            "description": "The definition of 'Document' in Selection API."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#interface-document",
+            "description": "The definition of 'Document' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/#i-Document",
+            "description": "The definition of 'Document' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator",
+            "description": "The definition of 'XPathEvaluator' in Document Object Model (DOM) Level 3 XPath Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/#i-Document",
+            "description": "The definition of 'Document' in Document Object Model (DOM) Level 2 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/#i-Document",
+            "description": "The definition of 'Document' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

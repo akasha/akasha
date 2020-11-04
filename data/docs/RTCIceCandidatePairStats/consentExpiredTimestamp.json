@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.consentExpiredTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentExpiredTimestamp",
-    "description": "The RTCIceCandidatePairStats property consentExpiredTimestamp indicates the time at which the most recent STUN binding response expired."
+    "description": "The RTCIceCandidatePairStats property consentExpiredTimestamp indicates the time at which the most recent STUN binding response expired.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentexpiredtimestamp",
+            "description": "The definition of 'RTCIceCandidatePairStats.consentExpiredTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

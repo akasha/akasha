@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStreamTrack.getCapabilities",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/getCapabilities",
-    "description": "The getCapabilities() method of the MediaStreamTrack interface returns a MediaTrackCapabilities object which specifies the values or range of values which each constrainable property, based upon the platform and user agent."
+    "description": "The getCapabilities() method of the MediaStreamTrack interface returns a MediaTrackCapabilities object which specifies the values or range of values which each constrainable property, based upon the platform and user agent.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-getcapabilities",
+            "description": "The definition of 'getCapabilities()' in Media Capture and Streams."
+        }
+    ]
 }

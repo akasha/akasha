@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "URL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL",
-    "description": "The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL."
+    "description": "The URL interface is used to parse, construct, normalize, and encode URLs. It works by providing properties which allow you to easily read and modify the components of a URL.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#creating-revoking",
+            "description": "The definition of 'URL' in File API."
+        },
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#api",
+            "description": "The definition of 'API' in URL."
+        }
+    ]
 }

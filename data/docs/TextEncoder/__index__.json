@@ -1,27 +1,27 @@
 
 {
     "name": "TextEncoder",
-    "lastModifiedAt": 1601468766993,
+    "lastModifiedAt": 1604448972054,
     "entries": [
         {
             "name": "TextEncoder",
-            "lastModifiedAt": 1597193099897
+            "lastModifiedAt": 1604448969991
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193099100
+            "lastModifiedAt": 1604448968956
         },
         {
             "name": "encode",
-            "lastModifiedAt": 1600307115378
+            "lastModifiedAt": 1604448971380
         },
         {
             "name": "encodeInto",
-            "lastModifiedAt": 1600307115943
+            "lastModifiedAt": 1604448972054
         },
         {
             "name": "encoding",
-            "lastModifiedAt": 1600307114276
+            "lastModifiedAt": 1604448970643
         }
     ]
 }

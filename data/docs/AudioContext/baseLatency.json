@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioContext.baseLatency",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/baseLatency",
-    "description": "The baseLatency read-only property of the AudioContext interface returns a double that represents the number of seconds of processing latency incurred by the AudioContext passing an audio buffer from the AudioDestinationNode &mdash; i.e. the end of the audio graph &mdash; into the host system's audio subsystem ready for playing."
+    "description": "The baseLatency read-only property of the AudioContext interface returns a double that represents the number of seconds of processing latency incurred by the AudioContext passing an audio buffer from the AudioDestinationNode &mdash; i.e. the end of the audio graph &mdash; into the host system's audio subsystem ready for playing.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-baselatency",
+            "description": "The definition of 'baseLatency' in Web Audio API."
+        }
+    ]
 }

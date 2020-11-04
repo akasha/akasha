@@ -1,15 +1,15 @@
 
 {
     "name": "RTCErrorEvent",
-    "lastModifiedAt": 1601467186127,
+    "lastModifiedAt": 1604448751983,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1601467185190
+            "lastModifiedAt": 1604448750631
         },
         {
             "name": "error",
-            "lastModifiedAt": 1601467186126
+            "lastModifiedAt": 1604448751983
         }
     ]
 }

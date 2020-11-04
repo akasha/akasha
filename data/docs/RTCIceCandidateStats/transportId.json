@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.transportId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/transportId",
-    "description": "The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken."
+    "description": "The RTCIceCandidateStats dictionary's transportId property is a string that uniquely identifies the transport that produced the RTCTransportStats from which information about this candidate was taken.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-transportid",
+            "description": "The definition of 'RTCIceCandidateStats.transportId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

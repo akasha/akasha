@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "HTMLSelectElement.add",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/add",
-    "description": "The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element."
+    "description": "The HTMLSelectElement.add() method adds an element to the collection of option elements for this select element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-select-add",
+            "description": "The definition of 'HTMLSelectElement.add()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-select-add",
+            "description": "The definition of 'HTMLSelectElement.add()' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14493106",
+            "description": "The definition of 'HTMLSelectElement.add()' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14493106",
+            "description": "The definition of 'HTMLSelectElement.add()' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

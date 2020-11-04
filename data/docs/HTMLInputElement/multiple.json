@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLInputElement.multiple",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/multiple",
-    "description": "The HTMLInputElement.multiple property indicates if an input can have more than one value. Firefox currently only supports multiple for input type=&quot;file&quot;."
+    "description": "The HTMLInputElement.multiple property indicates if an input can have more than one value. Firefox currently only supports multiple for input type=&quot;file&quot;.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#attr-input-multiple",
+            "description": "The definition of 'multiple' in HTML Living Standard."
+        }
+    ]
 }

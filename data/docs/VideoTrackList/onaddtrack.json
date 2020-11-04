@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoTrackList.onaddtrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrackList/onaddtrack",
-    "description": "The VideoTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new video track has been added to the media element whose video tracks the VideoTrackList represents."
+    "description": "The VideoTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new video track has been added to the media element whose video tracks the VideoTrackList represents.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack",
+            "description": "The definition of 'VideoTrackList: onaddtrack' in HTML Living Standard."
+        }
+    ]
 }

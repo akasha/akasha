@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createBufferSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createBufferSource",
-    "description": "An AudioBufferSourceNode."
+    "description": "An AudioBufferSourceNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbuffersource",
+            "description": "The definition of 'createBufferSource()' in Web Audio API."
+        }
+    ]
 }

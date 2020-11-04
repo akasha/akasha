@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/port",
-    "description": "The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate."
+    "description": "The RTCIceCandidateStats dictionary's port property specifies the network port used by the candidate.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-port",
+            "description": "The definition of 'RTCIceCandidateStats.port' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

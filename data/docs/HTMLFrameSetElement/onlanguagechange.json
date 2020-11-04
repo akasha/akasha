@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLFrameSetElement.onlanguagechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement/onlanguagechange",
-    "description": "The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events."
+    "description": "The onlanguagechange property of the WindowEventHandlers mixin is the EventHandler for processing languagechange events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-window-onlanguagechange",
+            "description": "The definition of 'WindowEventHandler.onlanguagechange' in HTML Living Standard."
+        }
+    ]
 }

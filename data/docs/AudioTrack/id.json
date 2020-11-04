@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrack.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/id",
-    "description": "The id property contains a string which uniquely identifies the track represented by the AudioTrack."
+    "description": "The id property contains a string which uniquely identifies the track represented by the AudioTrack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-id",
+            "description": "The definition of 'AudioTrack.id' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotrack-id",
+            "description": "The definition of 'AudioTrack.id' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.firstElementChild",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/firstElementChild",
-    "description": "The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements."
+    "description": "The ParentNode.firstElementChild read-only property returns the object's first child Element, or null if there are no child elements.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-parentnode-firstelementchild",
+            "description": "The definition of 'ParentNode.firstElementChild' in DOM."
+        },
+        {
+            "name": "Element Traversal Specification",
+            "href": "https://www.w3.org/TR/ElementTraversal/#attribute-firstElementChild",
+            "description": "The definition of 'ElementTraversal.firstElementChild' in Element Traversal Specification."
+        }
+    ]
 }

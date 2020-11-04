@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.component",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/component",
-    "description": "The read-only component property on the RTCIceCandidate interface is a string which indicates whether the candidate is an RTP or an RTCP candidate."
+    "description": "The read-only component property on the RTCIceCandidate interface is a string which indicates whether the candidate is an RTP or an RTCP candidate.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-component",
+            "description": "The definition of 'RTCIceCandidate.component' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

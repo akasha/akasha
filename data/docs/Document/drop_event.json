@@ -4,6 +4,13 @@
     "name": "Document.drop_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/drop_event",
     "description": "The drop event is fired when an element or text selection is dropped on a valid drop target.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dndevents",
+            "description": "The definition of 'drop event' in HTML Living Standard."
+        }
+    ],
     "eventName": "drop",
     "eventType": "DragEvent",
     "eventHandlerProperty": "ondrop",

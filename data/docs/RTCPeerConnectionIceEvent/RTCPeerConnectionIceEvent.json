@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent",
-    "description": "The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent."
+    "description": "The RTCPeerConnectionIceEvent() constructor creates a new RTCPeerConnectionIceEvent.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceevent-constructor",
+            "description": "The definition of 'RTCPeerConnectionIceEvent()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Constructor",
     "name": "Window.StaticRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/StaticRange",
-    "description": "The DOM StaticRange interface extends AbstractRange to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree."
+    "description": "The DOM StaticRange interface extends AbstractRange to provide a method to specify a range of content in the DOM whose contents don't update to reflect changes which occur within the DOM tree.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-staticrange",
+            "description": "The definition of 'StaticRange' in DOM."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#interface-staticrange",
+            "description": "The definition of 'StaticRange' in Static Range."
+        }
+    ]
 }

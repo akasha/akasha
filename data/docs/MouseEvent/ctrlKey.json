@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "MouseEvent.ctrlKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/ctrlKey",
-    "description": "The MouseEvent.ctrlKey read-only property is a Boolean that indicates whether the ctrl key was pressed or not when a given mouse event occurs."
+    "description": "The MouseEvent.ctrlKey read-only property is a Boolean that indicates whether the ctrl key was pressed or not when a given mouse event occurs.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-ctrlKey",
+            "description": "The definition of 'MouseEvent.ctrlKey' in Document Object Model (DOM) Level 3 Events Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
+            "description": "The definition of 'MouseEvent.ctrlKey' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

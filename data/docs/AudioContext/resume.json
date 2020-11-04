@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioContext.resume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/resume",
-    "description": "The resume() method of the AudioContext interface resumes the progression of time in an audio context that has previously been suspended."
+    "description": "The resume() method of the AudioContext interface resumes the progression of time in an audio context that has previously been suspended.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-resume",
+            "description": "The definition of 'resume()' in Web Audio API."
+        }
+    ]
 }

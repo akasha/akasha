@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.locks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/locks",
-    "description": "The locks read-only property of the Navigator interface returns a LockManager object which provides methods for requesting a new Lock object and querying for an existing Lock object."
+    "description": "The locks read-only property of the Navigator interface returns a LockManager object which provides methods for requesting a new Lock object and querying for an existing Lock object.",
+    "refs": [
+        {
+            "name": "Web Locks API",
+            "href": "https://wicg.github.io/web-locks/#navigator-mixins",
+            "description": "The definition of 'locks' in Web Locks API."
+        }
+    ]
 }

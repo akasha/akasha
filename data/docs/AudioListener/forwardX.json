@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioListener.forwardX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/forwardX",
-    "description": "The forwardX read-only property of the AudioListener interface is an AudioParam representing the x value of the direction vector defining the forward direction the listener is pointing in."
+    "description": "The forwardX read-only property of the AudioListener interface is an AudioParam representing the x value of the direction vector defining the forward direction the listener is pointing in.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardx",
+            "description": "The definition of 'forwardX' in Web Audio API."
+        }
+    ]
 }

@@ -1,23 +1,23 @@
 
 {
     "name": "CSSStyleRule",
-    "lastModifiedAt": 1601504305123,
+    "lastModifiedAt": 1604447343840,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190732345
+            "lastModifiedAt": 1604447342077
         },
         {
             "name": "selectorText",
-            "lastModifiedAt": 1599279829383
+            "lastModifiedAt": 1604447343329
         },
         {
             "name": "style",
-            "lastModifiedAt": 1597190733502
+            "lastModifiedAt": 1604447342714
         },
         {
             "name": "styleMap",
-            "lastModifiedAt": 1597190734309
+            "lastModifiedAt": 1604447343840
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WebSocket.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/close",
-    "description": "The WebSocket.close() method closes the WebSocket connection or connection attempt, if any. If the connection is already CLOSED, this method does nothing."
+    "description": "The WebSocket.close() method closes the WebSocket connection or connection attempt, if any. If the connection is already CLOSED, this method does nothing.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/web-sockets.html#dom-websocket-close",
+            "description": "The definition of 'WebSocket.close()' in HTML Living Standard."
+        }
+    ]
 }

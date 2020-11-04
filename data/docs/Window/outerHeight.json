@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.outerHeight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/outerHeight",
-    "description": "The Window.outerHeight read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles."
+    "description": "The Window.outerHeight read-only property returns the height in pixels of the whole browser window, including any sidebar, window chrome, and window-resizing borders/handles.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-outerheight",
+            "description": "The definition of 'Window.outerHeight' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

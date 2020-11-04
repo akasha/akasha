@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Screen.lockOrientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/lockOrientation",
-    "description": "The lockOrientation() method of the Screen interface locks the screen into a specified orientation. The ScreenOrientation.lock() method should be used instead."
+    "description": "The lockOrientation() method of the Screen interface locks the screen into a specified orientation. The ScreenOrientation.lock() method should be used instead.",
+    "refs": [
+        {
+            "name": "Screen Orientation API",
+            "href": "https://w3c.github.io/screen-orientation/published/20140220.html#extensions-to-the-screen-interface",
+            "description": "The definition of 'lockOrientation()' in Screen Orientation API."
+        }
+    ]
 }

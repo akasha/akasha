@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLImageElement.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/name",
-    "description": "The HTMLImageElement interface's deprecated name property specifies a name for the element. This has been replaced by the id property available on all elements."
+    "description": "The HTMLImageElement interface's deprecated name property specifies a name for the element. This has been replaced by the id property available on all elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#attr-img-name",
+            "description": "The definition of 'HTMLImageElement.name' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 4.01 Specification",
+            "href": "https://www.w3.org/TR/html401/struct/objects.html#adef-name-IMG",
+            "description": "The definition of 'HTMLImageElement.name' in HTML 4.01 Specification."
+        }
+    ]
 }

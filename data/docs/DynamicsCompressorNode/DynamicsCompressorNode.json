@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DynamicsCompressorNode.DynamicsCompressorNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/DynamicsCompressorNode",
-    "description": "The DynamicsCompressorNode() constructor creates a new DynamicsCompressorNode object which provides a compression effect, which lowers the volume of the loudest parts of the signal"
+    "description": "The DynamicsCompressorNode() constructor creates a new DynamicsCompressorNode object which provides a compression effect, which lowers the volume of the loudest parts of the signal",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dynamicscompressornode",
+            "description": "The definition of 'DynamicsCompressorNode()' in Web Audio API."
+        }
+    ]
 }

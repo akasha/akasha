@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLButtonElement.labels",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLButtonElement/labels",
-    "description": "The HTMLButtonElement.labels read-only property returns a NodeList of the label elements associated with the button element."
+    "description": "The HTMLButtonElement.labels read-only property returns a NodeList of the label elements associated with the button element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-lfe-labels",
+            "description": "The definition of 'labels' in HTML Living Standard."
+        }
+    ]
 }

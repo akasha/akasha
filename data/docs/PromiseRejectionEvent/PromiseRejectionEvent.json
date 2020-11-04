@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "PromiseRejectionEvent.PromiseRejectionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/PromiseRejectionEvent",
-    "description": "The PromiseRejectionEvent() constructor returns a newly created PromiseRejectionEvent, which represents events fired when a JavaScript Promise is rejected."
+    "description": "The PromiseRejectionEvent() constructor returns a newly created PromiseRejectionEvent, which represents events fired when a JavaScript Promise is rejected.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#the-promiserejectionevent-interface",
+            "description": "The definition of 'the PromiseRejectionEvent interface' in HTML Living Standard."
+        }
+    ]
 }

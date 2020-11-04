@@ -4,6 +4,13 @@
     "name": "HTMLCanvasElement.webglcontextcreationerror_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event",
     "description": "",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.4",
+            "description": "The definition of 'webglcontextcreationerror' in WebGL 1.0."
+        }
+    ],
     "eventName": "webglcontextcreationerror",
     "eventType": "WebGLContextEvent",
     "eventHandlerProperty": "none",

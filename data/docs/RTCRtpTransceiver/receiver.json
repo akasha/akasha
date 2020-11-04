@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.receiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/receiver",
-    "description": "The read-only  receiver property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpReceiver responsible for receiving and decoding incoming media data for the transceiver's stream."
+    "description": "The read-only  receiver property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpReceiver responsible for receiving and decoding incoming media data for the transceiver's stream.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-receiver",
+            "description": "The definition of 'RTCRtpTransceiver.receiver' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

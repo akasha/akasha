@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ScreenOrientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation",
-    "description": "The ScreenOrientation interface of the the Screen Orientation API provides information about the current orientation of the document."
+    "description": "The ScreenOrientation interface of the the Screen Orientation API provides information about the current orientation of the document.",
+    "refs": [
+        {
+            "name": "Screen Orientation API",
+            "href": "https://w3c.github.io/screen-orientation/#screenorientation-interface",
+            "description": "The definition of 'ScreenOrientation' in Screen Orientation API."
+        }
+    ]
 }

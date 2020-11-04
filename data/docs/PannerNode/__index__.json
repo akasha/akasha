@@ -1,79 +1,79 @@
 
 {
     "name": "PannerNode",
-    "lastModifiedAt": 1601466954571,
+    "lastModifiedAt": 1604448535894,
     "entries": [
         {
             "name": "PannerNode",
-            "lastModifiedAt": 1600307048569
+            "lastModifiedAt": 1604448522506
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192581024
+            "lastModifiedAt": 1604448521431
         },
         {
             "name": "coneInnerAngle",
-            "lastModifiedAt": 1600307049158
+            "lastModifiedAt": 1604448523547
         },
         {
             "name": "coneOuterAngle",
-            "lastModifiedAt": 1600307049412
+            "lastModifiedAt": 1604448524219
         },
         {
             "name": "coneOuterGain",
-            "lastModifiedAt": 1600307049801
+            "lastModifiedAt": 1604448524744
         },
         {
             "name": "distanceModel",
-            "lastModifiedAt": 1600307050067
+            "lastModifiedAt": 1604448525358
         },
         {
             "name": "maxDistance",
-            "lastModifiedAt": 1600307050333
+            "lastModifiedAt": 1604448526464
         },
         {
             "name": "orientationX",
-            "lastModifiedAt": 1600307050586
+            "lastModifiedAt": 1604448527598
         },
         {
             "name": "orientationY",
-            "lastModifiedAt": 1600307050836
+            "lastModifiedAt": 1604448528043
         },
         {
             "name": "orientationZ",
-            "lastModifiedAt": 1600307051098
+            "lastModifiedAt": 1604448528717
         },
         {
             "name": "panningModel",
-            "lastModifiedAt": 1600307051896
+            "lastModifiedAt": 1604448529468
         },
         {
             "name": "positionX",
-            "lastModifiedAt": 1600307052142
+            "lastModifiedAt": 1604448530294
         },
         {
             "name": "positionY",
-            "lastModifiedAt": 1600307052483
+            "lastModifiedAt": 1604448531097
         },
         {
             "name": "positionZ",
-            "lastModifiedAt": 1600307052741
+            "lastModifiedAt": 1604448531774
         },
         {
             "name": "refDistance",
-            "lastModifiedAt": 1600307053003
+            "lastModifiedAt": 1604448532824
         },
         {
             "name": "rolloffFactor",
-            "lastModifiedAt": 1600307053331
+            "lastModifiedAt": 1604448533844
         },
         {
             "name": "setOrientation",
-            "lastModifiedAt": 1600307053601
+            "lastModifiedAt": 1604448534875
         },
         {
             "name": "setPosition",
-            "lastModifiedAt": 1597192581574
+            "lastModifiedAt": 1604448535394
         },
         {
             "name": "setVelocity",

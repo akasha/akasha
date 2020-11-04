@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCIceCandidate.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/toJSON",
-    "description": "The RTCIceCandidate method toJSON() converts the RTCIceCandidate on which it's called into JSON in the form of an RTCIceCandidateInit object."
+    "description": "The RTCIceCandidate method toJSON() converts the RTCIceCandidate on which it's called into JSON in the form of an RTCIceCandidateInit object.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-tojson",
+            "description": "The definition of 'RTCIceCandidate.toJSON()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

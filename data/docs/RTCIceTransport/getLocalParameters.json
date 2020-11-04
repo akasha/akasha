@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCIceTransport.getLocalParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalParameters",
-    "description": "The RTCIceTransport method getLocalParameters() returns an RTCIceParameters object which provides information uniquely identifying the local peer for the duration of the ICE session."
+    "description": "The RTCIceTransport method getLocalParameters() returns an RTCIceParameters object which provides information uniquely identifying the local peer for the duration of the ICE session.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalparameters",
+            "description": "The definition of 'RTCIceTransport.getLocalParameters' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

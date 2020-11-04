@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "TextTrackList.getTrackById",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/getTrackById",
-    "description": "The TextTrackList method getTrackById() returns the first TextTrack object from the track list whose id matches the specified string."
+    "description": "The TextTrackList method getTrackById() returns the first TextTrack object from the track list whose id matches the specified string.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-texttracklist-gettrackbyid",
+            "description": "The definition of 'TextTrackList.getTrackById()' in HTML Living Standard."
+        }
+    ]
 }

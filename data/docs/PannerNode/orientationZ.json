@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.orientationZ",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationZ",
-    "description": "An AudioParam whose value is the Z component of the direction the audio source is facing, in 3D Cartesian coordinate space."
+    "description": "An AudioParam whose value is the Z component of the direction the audio source is facing, in 3D Cartesian coordinate space.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-orientationz",
+            "description": "The definition of 'orientationZ' in Web Audio API."
+        }
+    ]
 }

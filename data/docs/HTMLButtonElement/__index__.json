@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLButtonElement",
-    "lastModifiedAt": 1600311613017,
+    "lastModifiedAt": 1604450367164,
     "entries": [
         {
             "name": "__type__",
@@ -13,7 +13,7 @@
         },
         {
             "name": "labels",
-            "lastModifiedAt": 1596581408713
+            "lastModifiedAt": 1604450362953
         }
     ]
 }

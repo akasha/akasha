@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WEBGL_debug_shaders",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_shaders",
-    "description": "The WEBGL_debug_shaders extension is part of the WebGL API and exposes a method to debug shaders from privileged contexts."
+    "description": "The WEBGL_debug_shaders extension is part of the WebGL API and exposes a method to debug shaders from privileged contexts.",
+    "refs": [
+        {
+            "name": "WEBGL_debug_shaders",
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_shaders/",
+            "description": "The definition of 'WEBGL_debug_shaders' in WEBGL_debug_shaders."
+        }
+    ]
 }

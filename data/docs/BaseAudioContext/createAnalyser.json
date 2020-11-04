@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createAnalyser",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createAnalyser",
-    "description": "The createAnalyser() method of the BaseAudioContext interface creates an AnalyserNode, which can be used to expose audio time and frequency data and create data visualisations."
+    "description": "The createAnalyser() method of the BaseAudioContext interface creates an AnalyserNode, which can be used to expose audio time and frequency data and create data visualisations.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createanalyser",
+            "description": "The definition of 'createAnalyser()' in Web Audio API."
+        }
+    ]
 }

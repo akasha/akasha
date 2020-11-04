@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "XRFrame.getPose",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose",
+    "description": "The XRFrame method getPose() returns the relative position and orientation&mdash;the pose&mdash;of one XRSpace to that of another space."
+}

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.audioTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/audioTracks",
-    "description": "The read-only audioTracks property on HTMLMediaElement objects returns an AudioTrackList object listing all of the  AudioTrack objects representing the media element's audio tracks."
+    "description": "The read-only audioTracks property on HTMLMediaElement objects returns an AudioTrackList object listing all of the  AudioTrack objects representing the media element's audio tracks.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-audiotracks",
+            "description": "The definition of 'HTMLMediaElement.audioTracks' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.audioTracks' in HTML5."
+        }
+    ]
 }

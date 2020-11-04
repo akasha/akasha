@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.get",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get",
-    "description": "The get() method of the URLSearchParams interface returns the first value associated to the given search parameter."
+    "description": "The get() method of the URLSearchParams interface returns the first value associated to the given search parameter.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-get",
+            "description": "The definition of 'get()' in URL."
+        }
+    ]
 }

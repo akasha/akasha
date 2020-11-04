@@ -4,6 +4,13 @@
     "name": "MediaStreamTrack.unmute_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/unmute_event",
     "description": "The unmute event is sent to a MediaStreamTrack when the track's source is once again able to provide media data after a period of not being able to do so.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#event-mediastreamtrack-unmute",
+            "description": "The definition of 'unmute' in Media Capture and Streams."
+        }
+    ],
     "eventName": "unmute",
     "eventType": "Event",
     "eventHandlerProperty": "onunmute",

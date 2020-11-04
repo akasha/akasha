@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CSSStyleRule.selectorText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule/selectorText",
-    "description": "The CSSRule.selectorText property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see Using dynamic styling information."
+    "description": "The CSSRule.selectorText property gets the textual representation of the selector for the rule set. This is readonly in some browsers; to set stylesheet rules dynamically cross-browser, see Using dynamic styling information.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssstylerule-selectortext",
+            "description": "The definition of 'CSSStyleRule.selectorText' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

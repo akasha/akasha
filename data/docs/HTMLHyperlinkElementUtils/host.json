@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLHyperlinkElementUtils.host",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/host",
-    "description": "The HTMLHyperlinkElementUtils.host property is a USVString containing the host, that is the hostname, and then, if the port of the URL is nonempty, a ':', and the port of the URL."
+    "description": "The HTMLHyperlinkElementUtils.host property is a USVString containing the host, that is the hostname, and then, if the port of the URL is nonempty, a ':', and the port of the URL.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-host",
+            "description": "The definition of 'HTMLHyperlinkElementUtils.host' in HTML Living Standard."
+        }
+    ]
 }

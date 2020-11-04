@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioNode.context",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/context",
-    "description": "The read-only context property of the AudioNode interface returns the associated BaseAudioContext, that is the object representing the processing graph the node is participating in."
+    "description": "The read-only context property of the AudioNode interface returns the associated BaseAudioContext, that is the object representing the processing graph the node is participating in.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-context",
+            "description": "The definition of 'context' in Web Audio API."
+        }
+    ]
 }

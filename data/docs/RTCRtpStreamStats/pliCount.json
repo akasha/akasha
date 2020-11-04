@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "RTCRtpStreamStats.pliCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/pliCount",
-    "description": "The pliCount property of the RTCRtpStreamStats dictionary states the number of times the stream's receiving end sent a Picture Loss Indication (PLI) packet to the sender."
+    "description": "The pliCount property of the RTCRtpStreamStats dictionary states the number of times the stream's receiving end sent a Picture Loss Indication (PLI) packet to the sender.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-plicount",
+            "description": "The definition of 'RTCInboundRtpStreamStats: pliCount' in Identifiers for WebRTC's Statistics API."
+        },
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcoutboundrtpstreamstats-plicount",
+            "description": "The definition of 'RTCOutboundRtpStreamStats: pliCount' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

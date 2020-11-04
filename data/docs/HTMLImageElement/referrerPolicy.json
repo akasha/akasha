@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.referrerPolicy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/referrerPolicy",
-    "description": "The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource."
+    "description": "The HTMLImageElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the img element defining which referrer is sent when fetching the resource.",
+    "refs": [
+        {
+            "name": "Referrer Policy",
+            "href": "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute",
+            "description": "The definition of 'referrerPolicy attribute' in Referrer Policy."
+        }
+    ]
 }

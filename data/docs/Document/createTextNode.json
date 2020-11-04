@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createTextNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode",
-    "description": "Creates a new Text node. This method can be used to escape HTML characters."
+    "description": "Creates a new Text node. This method can be used to escape HTML characters.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-createtextnode",
+            "description": "The definition of 'Document: createTextNode' in DOM."
+        }
+    ]
 }

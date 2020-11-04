@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onvrdisplayfocus",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayfocus",
-    "description": "The onvrdisplayfocus property of the Window interface represents an event handler that will run when presentation to a display has resumed after being blurred (when the vrdisplayfocus event fires)."
+    "description": "The onvrdisplayfocus property of the Window interface represents an event handler that will run when presentation to a display has resumed after being blurred (when the vrdisplayfocus event fires).",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayfocus",
+            "description": "The definition of 'onvrdisplayfocus' in WebVR 1.1."
+        }
+    ]
 }

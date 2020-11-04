@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "CSSStyleDeclaration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration",
-    "description": "The CSSStyleDeclaration interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties."
+    "description": "The CSSStyleDeclaration interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#the-cssstyledeclaration-interface",
+            "description": "The definition of 'CSSStyleDeclaration' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration",
+            "description": "The definition of 'CSSStyleDeclaration' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

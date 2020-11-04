@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AnalyserNode.getFloatFrequencyData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getFloatFrequencyData",
-    "description": "The getFloatFrequencyData() method of the AnalyserNode Interface copies the current frequency data into a Float32Array array passed into it."
+    "description": "The getFloatFrequencyData() method of the AnalyserNode Interface copies the current frequency data into a Float32Array array passed into it.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-getfloatfrequencydata",
+            "description": "The definition of 'getFloatFrequencyData()' in Web Audio API."
+        }
+    ]
 }

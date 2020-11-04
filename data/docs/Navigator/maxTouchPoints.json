@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Navigator.maxTouchPoints",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/maxTouchPoints",
-    "description": "The maxTouchPoints read-only property of the Navigator interface returns the maximum number of simultaneous touch contact points are supported by the current device."
+    "description": "The maxTouchPoints read-only property of the Navigator interface returns the maximum number of simultaneous touch contact points are supported by the current device.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#extensions-to-the-navigator-interface",
+            "description": "The definition of 'maxTouchPoints' in Pointer Events – Level 2."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#extensions-to-the-navigator-interface",
+            "description": "The definition of 'maxTouchPoints' in Pointer Events."
+        }
+    ]
 }

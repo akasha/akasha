@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioBufferSourceNode.loop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/loop",
-    "description": "The loop property's default value is false."
+    "description": "The loop property's default value is false.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffersourcenode-loop",
+            "description": "The definition of 'loop' in Web Audio API."
+        }
+    ]
 }

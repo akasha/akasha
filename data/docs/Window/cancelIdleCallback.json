@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Window.cancelIdleCallback",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelIdleCallback",
-    "description": "The window.cancelIdleCallback() method cancels a callback previously scheduled with window.requestIdleCallback()."
+    "description": "The window.cancelIdleCallback() method cancels a callback previously scheduled with window.requestIdleCallback().",
+    "refs": [
+        {
+            "name": "Cooperative Scheduling of Background Tasks",
+            "href": "https://www.w3.org/TR/requestidlecallback/"
+        }
+    ]
 }

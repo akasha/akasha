@@ -1,47 +1,47 @@
 
 {
     "name": "Response",
-    "lastModifiedAt": 1601468805155,
+    "lastModifiedAt": 1604449015346,
     "entries": [
         {
             "name": "Response",
-            "lastModifiedAt": 1597193108966
+            "lastModifiedAt": 1604449002066
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193108703
+            "lastModifiedAt": 1604449001603
         },
         {
             "name": "arrayBuffer",
-            "lastModifiedAt": 1600308781489
+            "lastModifiedAt": 1604449010559
         },
         {
             "name": "blob",
-            "lastModifiedAt": 1600308782050
+            "lastModifiedAt": 1604449011090
         },
         {
             "name": "bodyUsed",
-            "lastModifiedAt": 1600308775330
+            "lastModifiedAt": 1604449002924
         },
         {
             "name": "clone",
-            "lastModifiedAt": 1597193112321
+            "lastModifiedAt": 1604449012128
         },
         {
             "name": "error",
-            "lastModifiedAt": 1597193112617
+            "lastModifiedAt": 1604449012742
         },
         {
             "name": "headers",
-            "lastModifiedAt": 1597193109434
+            "lastModifiedAt": 1604449003461
         },
         {
             "name": "json",
-            "lastModifiedAt": 1600308784258
+            "lastModifiedAt": 1604449013772
         },
         {
             "name": "ok",
-            "lastModifiedAt": 1597193109971
+            "lastModifiedAt": 1604449003957
         },
         {
             "name": "redirect",
@@ -49,27 +49,27 @@
         },
         {
             "name": "redirected",
-            "lastModifiedAt": 1597193110342
+            "lastModifiedAt": 1604449004986
         },
         {
             "name": "status",
-            "lastModifiedAt": 1597193110582
+            "lastModifiedAt": 1604449005580
         },
         {
             "name": "statusText",
-            "lastModifiedAt": 1597193110823
+            "lastModifiedAt": 1604449006111
         },
         {
             "name": "text",
-            "lastModifiedAt": 1600308785696
+            "lastModifiedAt": 1604449015346
         },
         {
             "name": "type",
-            "lastModifiedAt": 1597193111463
+            "lastModifiedAt": 1604449007150
         },
         {
             "name": "url",
-            "lastModifiedAt": 1599391963427
+            "lastModifiedAt": 1604449008168
         },
         {
             "name": "useFinalURL",

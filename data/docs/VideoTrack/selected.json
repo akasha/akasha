@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoTrack.selected",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack/selected",
-    "description": "The VideoTrack property selected controls whether or not a particular video track is active."
+    "description": "The VideoTrack property selected controls whether or not a particular video track is active.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-videotrack-selected",
+            "description": "The definition of 'VideoTrack: selected' in HTML Living Standard."
+        }
+    ]
 }

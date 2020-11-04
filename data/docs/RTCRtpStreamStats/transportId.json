@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpStreamStats.transportId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/transportId",
-    "description": "The RTCRtpStreamStats dictionary's transportId property is a string which uniquely identifies the object from which the statistics contained in the RTCTransportStats properties in the RTCStatsReport."
+    "description": "The RTCRtpStreamStats dictionary's transportId property is a string which uniquely identifies the object from which the statistics contained in the RTCTransportStats properties in the RTCStatsReport.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-transportid",
+            "description": "The definition of 'RTCRtpStreamStats.transportId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

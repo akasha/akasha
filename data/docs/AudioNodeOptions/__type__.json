@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioNodeOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNodeOptions",
-    "description": "The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects."
+    "description": "The AudioNodeOptions dictionary of the Web Audio API specifies options that can be used when creating new AudioNode objects.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dictdef-audionodeoptions",
+            "description": "The definition of 'AudioNodeOptions' in Web Audio API."
+        }
+    ]
 }

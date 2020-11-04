@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Range.startContainer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/startContainer",
-    "description": "The Range.startContainer read-only property returns the Node within which the Range starts. To change the start position of a node, use one of the Range.setStart() methods."
+    "description": "The Range.startContainer read-only property returns the Node within which the Range starts. To change the start position of a node, use one of the Range.setStart() methods.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-startcontainer",
+            "description": "The definition of 'Range.endContainer' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-startParent",
+            "description": "The definition of 'Range.startContainer' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

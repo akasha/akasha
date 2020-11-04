@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLSelectElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement",
-    "description": "The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface."
+    "description": "The HTMLSelectElement interface represents a select HTML Element. These elements also share all of the properties and methods of other HTML elements via the HTMLElement interface.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlselectelement",
+            "description": "The definition of 'HTMLSelectElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#htmlselectelement",
+            "description": "The definition of 'HTMLSelectElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-94282980",
+            "description": "The definition of 'HTMLSelectElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-94282980",
+            "description": "The definition of 'HTMLSelectElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.trace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/trace",
-    "description": "The console interface's trace() method outputs a stack trace to the Web Console."
+    "description": "The console interface's trace() method outputs a stack trace to the Web Console.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#trace",
+            "description": "The definition of 'console.trace()' in Console API."
+        }
+    ]
 }

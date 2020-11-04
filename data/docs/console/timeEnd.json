@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.timeEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/timeEnd",
-    "description": "Stops a timer that was previously started by calling console.time()."
+    "description": "Stops a timer that was previously started by calling console.time().",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#timeend",
+            "description": "The definition of 'console.timeEnd()' in Console API."
+        }
+    ]
 }

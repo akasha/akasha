@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Range.cloneRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/cloneRange",
-    "description": "The Range.cloneRange() method returns a Range object with boundary points identical to the cloned Range."
+    "description": "The Range.cloneRange() method returns a Range object with boundary points identical to the cloned Range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-clonerange",
+            "description": "The definition of 'Range.cloneRange()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-clone",
+            "description": "The definition of 'Range.cloneRange()' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

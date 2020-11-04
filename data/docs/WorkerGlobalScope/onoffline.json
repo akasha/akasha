@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerGlobalScope.onoffline",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/onoffline",
-    "description": "The onoffline property of the WorkerGlobalScope interface represents an EventHandler to be called when the offline event occurs and bubbles through the Worker."
+    "description": "The onoffline property of the WorkerGlobalScope interface represents an EventHandler to be called when the offline event occurs and bubbles through the Worker.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-workerglobalscope-onoffline",
+            "description": "The definition of 'WorkerGlobalScope.onoffline' in HTML Living Standard."
+        }
+    ]
 }

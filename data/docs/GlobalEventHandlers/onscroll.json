@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onscroll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onscroll",
-    "description": "The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events."
+    "description": "The onscroll property of the GlobalEventHandlers mixin is an EventHandler that processes scroll events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-onscroll",
+            "description": "The definition of 'onscroll' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-scroll",
+            "description": "The definition of 'onscroll' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

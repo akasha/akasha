@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "OscillatorNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode",
-    "description": "The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created&mdash;in effect, a constant tone."
+    "description": "The OscillatorNode interface represents a periodic waveform, such as a sine wave. It is an AudioScheduledSourceNode audio-processing module that causes a specified frequency of a given wave to be created&mdash;in effect, a constant tone.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#oscillatornode",
+            "description": "The definition of 'OscillatorNode' in Web Audio API."
+        }
+    ]
 }

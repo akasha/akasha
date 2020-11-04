@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.loop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/loop",
-    "description": "The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the media element should start over when it reaches the end."
+    "description": "The HTMLMediaElement.loop property reflects the loop HTML attribute, which controls whether the media element should start over when it reaches the end.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-loop",
+            "description": "The definition of 'HTMLMediaElement.loop' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.loop' in HTML5."
+        }
+    ]
 }

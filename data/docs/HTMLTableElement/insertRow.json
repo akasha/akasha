@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "HTMLTableElement.insertRow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow",
-    "description": "The HTMLTableElement.insertRow() method inserts a new row (tr) in a given table, and returns a reference to the new row."
+    "description": "The HTMLTableElement.insertRow() method inserts a new row (tr) in a given table, and returns a reference to the new row.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/tables.html#dom-table-insertrow",
+            "description": "The definition of 'HTMLTableElement.insertRow()' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-93995626",
+            "description": "The definition of 'HTMLTableElement.insertRow()' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-39872903",
+            "description": "The definition of 'HTMLTableElement.insertRow()' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

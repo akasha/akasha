@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Request",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request",
-    "description": "The Request interface of the Fetch API represents a resource request."
+    "description": "The Request interface of the Fetch API represents a resource request.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#request-class",
+            "description": "The definition of 'Request' in Fetch."
+        }
+    ]
 }

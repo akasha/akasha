@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DynamicsCompressorNode.release",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/release",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-release",
+            "description": "The definition of 'release' in Web Audio API."
+        }
+    ]
 }

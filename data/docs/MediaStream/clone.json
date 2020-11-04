@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStream.clone",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/clone",
-    "description": "The clone() method of the MediaStream interface creates a duplicate of the MediaStream. This new MediaStream object has a new unique id and contains clones of every MediaStreamTrack contained by the MediaStream on which clone() was called."
+    "description": "The clone() method of the MediaStream interface creates a duplicate of the MediaStream. This new MediaStream object has a new unique id and contains clones of every MediaStreamTrack contained by the MediaStream on which clone() was called.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-clone",
+            "description": "The definition of 'MediaStream.clone()' in Media Capture and Streams."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.exitPointerLock",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/exitPointerLock",
-    "description": "The exitPointerLock() method asynchronously releases a pointer lock previously requested through Element.requestPointerLock."
+    "description": "The exitPointerLock() method asynchronously releases a pointer lock previously requested through Element.requestPointerLock.",
+    "refs": [
+        {
+            "name": "Pointer Lock",
+            "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
+            "description": "The definition of 'Document' in Pointer Lock."
+        }
+    ]
 }

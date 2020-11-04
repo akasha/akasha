@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.autoplay",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/autoplay",
-    "description": "The HTMLMediaElement.autoplay property reflects the autoplay HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption."
+    "description": "The HTMLMediaElement.autoplay property reflects the autoplay HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-media-autoplay",
+            "description": "The definition of 'HTMLMediaElement.autoplay' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.autoplay' in HTML5."
+        }
+    ]
 }

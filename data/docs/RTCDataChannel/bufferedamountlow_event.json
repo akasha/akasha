@@ -4,6 +4,13 @@
     "name": "RTCDataChannel.bufferedamountlow_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/bufferedamountlow_event",
     "description": "A bufferedamountlow event is sent to an RTCDataChannel when the number of bytes currently in the outbound data transfer buffer falls below the threshold specified in bufferedAmountLowThreshold.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-datachannel-bufferedamountlow",
+            "description": "The definition of 'bufferedamountlow' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "bufferedamountlow",
     "eventType": "Event",
     "eventHandlerProperty": "onbufferedamountlow",

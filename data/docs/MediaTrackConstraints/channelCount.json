@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.channelCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/channelCount",
-    "description": "The MediaTrackConstraints dictionary's channelCount property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the channelCount constrainable property."
+    "description": "The MediaTrackConstraints dictionary's channelCount property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the channelCount constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-channelcount",
+            "description": "The definition of 'channelCount' in Media Capture and Streams."
+        }
+    ]
 }

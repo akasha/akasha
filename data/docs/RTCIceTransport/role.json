@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceTransport.role",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/role",
-    "description": "The read-only RTCIceTransport property role indicates which ICE role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled."
+    "description": "The read-only RTCIceTransport property role indicates which ICE role the transport is fulfilling: that of the controlling agent, or the agent that is being controlled.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-icetransport-role",
+            "description": "The definition of 'RTCIceTransport.role' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

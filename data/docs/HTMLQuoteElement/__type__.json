@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLQuoteElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLQuoteElement",
-    "description": "The HTMLQuoteElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating quoting elements, like blockquote and q, but not the cite element."
+    "description": "The HTMLQuoteElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating quoting elements, like blockquote and q, but not the cite element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlquoteelement",
+            "description": "The definition of 'HTMLQuoteElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/grouping-content.html#the-blockquote-element",
+            "description": "The definition of 'HTMLQuoteElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-70319763",
+            "description": "The definition of 'HTMLQuoteElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-70319763",
+            "description": "The definition of 'HTMLQuoteElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

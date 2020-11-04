@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createPanner",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createPanner",
-    "description": "The panner node is spatialized in relation to the AudioContext's AudioListener (defined by the AudioContext.listener attribute), which represents the position and orientation of the person listening to the audio."
+    "description": "The panner node is spatialized in relation to the AudioContext's AudioListener (defined by the AudioContext.listener attribute), which represents the position and orientation of the person listening to the audio.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createpanner",
+            "description": "The definition of 'createPanner()' in Web Audio API."
+        }
+    ]
 }

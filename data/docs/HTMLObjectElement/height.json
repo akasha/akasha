@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/height",
-    "description": "The height property of the HTMLObjectElement interface Returns a DOMString that reflects the height HTML attribute, specifying the displayed height of the resource in CSS pixels."
+    "description": "The height property of the HTMLObjectElement interface Returns a DOMString that reflects the height HTML attribute, specifying the displayed height of the resource in CSS pixels.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-dim-height",
+            "description": "The definition of 'height' in HTML Living Standard."
+        }
+    ]
 }

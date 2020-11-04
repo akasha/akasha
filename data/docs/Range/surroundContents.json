@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Range.surroundContents",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/surroundContents",
-    "description": "The Range.surroundContents() method moves content of the Range into a new node, placing the new node at the start of the specified range."
+    "description": "The Range.surroundContents() method moves content of the Range into a new node, placing the new node at the start of the specified range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-surroundcontents",
+            "description": "The definition of 'Range.surroundContents()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-surroundContents",
+            "description": "The definition of 'Range.surroundContents()' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

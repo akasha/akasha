@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Navigator.share",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share",
-    "description": "The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device."
+    "description": "The navigator.share() method of the Web Share API invokes the native sharing mechanism of the device.",
+    "refs": [
+        {
+            "name": "Web Share API",
+            "href": "https://w3c.github.io/web-share/#share-method",
+            "description": "The definition of 'share()' in Web Share API."
+        }
+    ]
 }

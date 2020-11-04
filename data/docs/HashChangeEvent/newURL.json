@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HashChangeEvent.newURL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent/newURL",
-    "description": "The newURL read-only property of the HashChangeEvent interface returns the new URL to which the window is navigating."
+    "description": "The newURL read-only property of the HashChangeEvent interface returns the new URL to which the window is navigating.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hashchangeevent-newurl",
+            "description": "The definition of 'HashChangeEvent: newURL' in HTML Living Standard."
+        }
+    ]
 }

@@ -4,6 +4,13 @@
     "name": "RTCIceTransport.gatheringstatechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/gatheringstatechange_event",
     "description": "A gatheringstatechange event is sent to an RTCIceTransport when its ICE candidate gathering state changes.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-icetransport-gatheringstatechange",
+            "description": "The definition of 'gatheringstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "gatheringstatechange",
     "eventType": "Event",
     "eventHandlerProperty": "ongatheringstatechange",

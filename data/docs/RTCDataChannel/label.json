@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.label",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/label",
-    "description": "The read-only RTCDataChannel property label returns a DOMString containing a name describing the data channel. These labels are not required to be unique."
+    "description": "The read-only RTCDataChannel property label returns a DOMString containing a name describing the data channel. These labels are not required to be unique.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-label",
+            "description": "The definition of 'RTCDataChannel.label' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

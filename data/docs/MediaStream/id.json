@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStream.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/id",
-    "description": "The MediaStream.id() read-only property is a DOMString containing 36 characters denoting a unique identifier (GUID) for the object."
+    "description": "The MediaStream.id() read-only property is a DOMString containing 36 characters denoting a unique identifier (GUID) for the object.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-id",
+            "description": "The definition of 'MediaStream.id' in Media Capture and Streams."
+        }
+    ]
 }

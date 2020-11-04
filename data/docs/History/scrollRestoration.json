@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "History.scrollRestoration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/scrollRestoration",
-    "description": "The scrollRestoration property of History interface allows web applications to explicitly set default scroll restoration behavior on history navigation."
+    "description": "The scrollRestoration property of History interface allows web applications to explicitly set default scroll restoration behavior on history navigation.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#scroll-restoration-mode",
+            "description": "The definition of 'scroll restoration mode' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-history-scrollrestoration",
+            "description": "The definition of 'History.scrollRestoration' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioContext.createMediaStreamDestination",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamDestination",
-    "description": "The MediaStream is created when the node is created and is accessible via the MediaStreamAudioDestinationNode's stream attribute. This stream can be used in a similar way as a MediaStream obtained via navigator.getUserMedia &mdash; it can, for example, be sent to a remote peer using the RTCPeerConnection addStream() method."
+    "description": "The MediaStream is created when the node is created and is accessible via the MediaStreamAudioDestinationNode's stream attribute. This stream can be used in a similar way as a MediaStream obtained via navigator.getUserMedia &mdash; it can, for example, be sent to a remote peer using the RTCPeerConnection addStream() method.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamdestination",
+            "description": "The definition of 'createMediaStreamDestination()' in Web Audio API."
+        }
+    ]
 }

@@ -4,6 +4,12 @@
     "name": "Window.animationstart_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/animationstart_event",
     "description": "The animationstart event is fired when a CSS Animation has started. If there is an animation-delay, this event will fire once the delay period has expired. A negative delay will cause the event to fire with an elapsedTime equal to the absolute value of the delay (and, correspondingly, the animation will begin playing at that time index into the sequence).",
+    "refs": [
+        {
+            "name": "CSS Animations",
+            "href": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationstart"
+        }
+    ],
     "eventName": "animationstart",
     "eventType": "AnimationEvent",
     "eventHandlerProperty": "onanimationstart",

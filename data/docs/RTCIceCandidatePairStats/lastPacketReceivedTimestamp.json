@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.lastPacketReceivedTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/lastPacketReceivedTimestamp",
-    "description": "The RTCIceCandidatePairStats property lastPacketReceivedTimestamp indicates the time at which the connection described by the candidate pair last received a packet. STUN packets are not included."
+    "description": "The RTCIceCandidatePairStats property lastPacketReceivedTimestamp indicates the time at which the connection described by the candidate pair last received a packet. STUN packets are not included.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-lastpacketreceivedtimestamp",
+            "description": "The definition of 'RTCIceCandidatePairStats.lastPacketReceivedTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

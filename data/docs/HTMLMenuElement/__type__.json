@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "HTMLMenuElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMenuElement",
-    "description": "The HTMLMenuElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating menu elements."
+    "description": "The HTMLMenuElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating menu elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/grouping-content.html#htmlmenuelement",
+            "description": "The definition of 'HTMLMenuElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.2",
+            "href": "https://www.w3.org/TR/html52/grouping-content.html#htmlmenuelement",
+            "description": "The definition of 'HTMLMenuElement' in HTML 5.2."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/interactive-elements.html#htmlmenuelement-htmlmenuelement",
+            "description": "The definition of 'HTMLMenuElement' in HTML 5.1."
+        }
+    ]
 }

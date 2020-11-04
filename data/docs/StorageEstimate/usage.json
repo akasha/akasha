@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "StorageEstimate.usage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageEstimate/usage",
-    "description": "The StorageEstimate dictionary's usage property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. The value is an estimate because the user agent may use compression, duplication prevention techniques, and other methods to improve storage efficiency."
+    "description": "The StorageEstimate dictionary's usage property is a conservative approximation of how much storage is allotted to the origin or Web app that called StorageManager.estimate(); there may be more space available, but there will not be less. The value is an estimate because the user agent may use compression, duplication prevention techniques, and other methods to improve storage efficiency.",
+    "refs": [
+        {
+            "name": "Storage",
+            "href": "https://storage.spec.whatwg.org/#dom-storageestimate-usage",
+            "description": "The definition of 'usage' in Storage."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.fecPacketsReceived",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/fecPacketsReceived",
-    "description": "The fecPacketsReceived property of the RTCInboundRtpStreamStats dictionary indicates how many Forward Error Correction (FEC) packets have been received by this RTP receiver from the remote peer."
+    "description": "The fecPacketsReceived property of the RTCInboundRtpStreamStats dictionary indicates how many Forward Error Correction (FEC) packets have been received by this RTP receiver from the remote peer.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-fecpacketsreceived",
+            "description": "The definition of 'RTCInboundRtpStreamStats.fecPacketsReceived' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

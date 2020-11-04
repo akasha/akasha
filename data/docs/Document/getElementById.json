@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "Document.getElementById",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById",
-    "description": "The Document method getElementById() returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly."
+    "description": "The Document method getElementById() returns an Element object representing the element whose id property matches the specified string. Since element IDs are required to be unique if specified, they're a useful way to get access to a specific element quickly.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#method-getElementById",
+            "description": "The definition of 'getElementById' in Document Object Model (DOM) Level 1 Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBId",
+            "description": "The definition of 'getElementById' in Document Object Model (DOM) Level 2 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-getElBId",
+            "description": "The definition of 'getElementById' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-nonelementparentnode-getelementbyid",
+            "description": "The definition of 'getElementById' in DOM."
+        }
+    ]
 }

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Navigator.contacts",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/contacts",
+    "description": "The contacts read-only property of the Navigator interface returns a ContactsManager interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.",
+    "refs": [
+        {
+            "name": "Unknown",
+            "href": "",
+            "description": "The definition of 'Navigator.contacts' in Unknown."
+        }
+    ]
+}

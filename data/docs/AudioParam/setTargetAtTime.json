@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioParam.setTargetAtTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setTargetAtTime",
-    "description": "The setTargetAtTime() method of the AudioParam interface schedules the start of a gradual change to the AudioParam value. This is useful for decay or release portions of ADSR envelopes."
+    "description": "The setTargetAtTime() method of the AudioParam interface schedules the start of a gradual change to the AudioParam value. This is useful for decay or release portions of ADSR envelopes.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-settargetattime",
+            "description": "The definition of 'setTargetAtTime' in Web Audio API."
+        }
+    ]
 }

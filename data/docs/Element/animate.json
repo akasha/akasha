@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Element.animate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/animate",
-    "description": "The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance."
+    "description": "The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.",
+    "refs": [
+        {
+            "name": "Web Animations Level 2",
+            "href": "https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite",
+            "description": "The definition of 'KeyframeAnimationOptions.iterationComposite' in Web Animations Level 2."
+        },
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#animatable",
+            "description": "The definition of 'animate()' in Web Animations."
+        }
+    ]
 }

@@ -1,35 +1,35 @@
 
 {
     "name": "OffscreenCanvas",
-    "lastModifiedAt": 1600312562048,
+    "lastModifiedAt": 1604450218820,
     "entries": [
         {
             "name": "OffscreenCanvas",
-            "lastModifiedAt": 1596581308423
+            "lastModifiedAt": 1604450215450
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599391610081
+            "lastModifiedAt": 1604450214981
         },
         {
             "name": "convertToBlob",
-            "lastModifiedAt": 1600308643789
+            "lastModifiedAt": 1604450217255
         },
         {
             "name": "getContext",
-            "lastModifiedAt": 1596581310481
+            "lastModifiedAt": 1604450217756
         },
         {
             "name": "height",
-            "lastModifiedAt": 1596581309388
+            "lastModifiedAt": 1604450216240
         },
         {
             "name": "transferToImageBitmap",
-            "lastModifiedAt": 1600308645450
+            "lastModifiedAt": 1604450218820
         },
         {
             "name": "width",
-            "lastModifiedAt": 1596581310193
+            "lastModifiedAt": 1604450216713
         }
     ]
 }

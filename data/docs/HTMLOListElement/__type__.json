@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLOListElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOListElement",
-    "description": "The HTMLOListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements."
+    "description": "The HTMLOListElement interface provides special properties (beyond those defined on the regular HTMLElement interface it also has available to it by inheritance) for manipulating ordered list elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlolistelement",
+            "description": "The definition of 'HTMLOListElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/grouping-content.html#the-ol-element",
+            "description": "The definition of 'HTMLOListElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-58056027",
+            "description": "The definition of 'HTMLOListElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-58056027",
+            "description": "The definition of 'HTMLOListElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

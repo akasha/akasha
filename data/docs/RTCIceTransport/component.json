@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceTransport.component",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/component",
-    "description": "The read-only RTCIceTransport property component specifies whether the object is serving to transport RTP or RTCP. The value is one of the strings in RTCIceComponent."
+    "description": "The read-only RTCIceTransport property component specifies whether the object is serving to transport RTP or RTCP. The value is one of the strings in RTCIceComponent.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-icetransport-component",
+            "description": "The definition of 'RTCIceTransport.component' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

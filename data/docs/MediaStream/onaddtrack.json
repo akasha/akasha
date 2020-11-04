@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStream.onaddtrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/onaddtrack",
-    "description": "The MediaStream.onaddtrack property is an EventHandler which specifies a function to be called when the addtrack event occurs on a MediaStream instance. This happens when a new track of any kind is added to the media stream."
+    "description": "The MediaStream.onaddtrack property is an EventHandler which specifies a function to be called when the addtrack event occurs on a MediaStream instance. This happens when a new track of any kind is added to the media stream.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#event-mediastream-addtrack",
+            "description": "The definition of 'MediaStream.onaddtrack' in Media Capture and Streams."
+        }
+    ]
 }

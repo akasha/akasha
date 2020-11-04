@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.volume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/volume",
-    "description": "The HTMLMediaElement.volume property sets the volume at which the media will be played."
+    "description": "The HTMLMediaElement.volume property sets the volume at which the media will be played.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-volume",
+            "description": "The definition of 'HTMLMediaElement.volume' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.volume' in HTML5."
+        }
+    ]
 }

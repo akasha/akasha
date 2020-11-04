@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebSocket.binaryType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/binaryType",
-    "description": "The WebSocket.binaryType property returns the type of binary data being transmitted by the connection."
+    "description": "The WebSocket.binaryType property returns the type of binary data being transmitted by the connection.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-binarytype",
+            "description": "The definition of 'WebSocket: binaryType' in HTML Living Standard."
+        }
+    ]
 }

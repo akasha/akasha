@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.tagName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/tagName",
-    "description": "The tagName read-only property of the Element interface returns the tag name of the element on which it's called."
+    "description": "The tagName read-only property of the Element interface returns the tag name of the element on which it's called.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-tagname",
+            "description": "The definition of 'Element: tagName' in DOM."
+        }
+    ]
 }

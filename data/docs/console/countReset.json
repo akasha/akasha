@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.countReset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/countReset",
-    "description": "The console.countReset() method resets counter used with console.count()."
+    "description": "The console.countReset() method resets counter used with console.count().",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#count",
+            "description": "The definition of 'console.countReset()' in Console API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpSynchronizationSource.voiceActivityFlag",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource/voiceActivityFlag",
-    "description": "The read-only voiceActivityFlag property of the RTCRtpSynchronizationSource interface indicates whether or not the most recent RTP packet on the source includes voice activity."
+    "description": "The read-only voiceActivityFlag property of the RTCRtpSynchronizationSource interface indicates whether or not the most recent RTP packet on the source includes voice activity.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource-voiceactivityflag",
+            "description": "The definition of 'voiceActivityFlag' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Window.cancelAnimationFrame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/cancelAnimationFrame",
-    "description": "The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame()."
+    "description": "The window.cancelAnimationFrame() method cancels an animation frame request previously scheduled through a call to window.requestAnimationFrame().",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#animationframeprovider-cancelanimationframe",
+            "description": "The definition of 'cancelAnimationFrame()' in HTML Living Standard."
+        }
+    ]
 }

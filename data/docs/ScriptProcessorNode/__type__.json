@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ScriptProcessorNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode",
-    "description": "The ScriptProcessorNode interface allows the generation, processing, or analyzing of audio using JavaScript."
+    "description": "The ScriptProcessorNode interface allows the generation, processing, or analyzing of audio using JavaScript.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#the-scriptprocessornode-interface---deprecated",
+            "description": "The definition of 'ScriptProcessorNode' in Web Audio API."
+        }
+    ]
 }

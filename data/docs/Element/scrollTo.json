@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.scrollTo",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTo",
-    "description": "The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element."
+    "description": "The scrollTo() method of the Element interface scrolls to a particular set of coordinates inside a given element.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-scrollto-options-options",
+            "description": "The definition of 'element.scrollTo()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

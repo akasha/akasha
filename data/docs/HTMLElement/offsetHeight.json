@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLElement.offsetHeight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight",
-    "description": "The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer."
+    "description": "The HTMLElement.offsetHeight read-only property returns the height of an element, including vertical padding and borders, as an integer.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetheight",
+            "description": "The definition of 'offsetHeight' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

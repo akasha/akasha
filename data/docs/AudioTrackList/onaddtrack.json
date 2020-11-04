@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrackList.onaddtrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onaddtrack",
-    "description": "The AudioTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new audio track has been added to the media element whose audio tracks the AudioTrackList represents."
+    "description": "The AudioTrackList property onaddtrack is an event handler which is called when the addtrack event occurs, indicating that a new audio track has been added to the media element whose audio tracks the AudioTrackList represents.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-tracklist-onaddtrack",
+            "description": "The definition of 'AudioTrackList.onaddtrack' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onaddtrack",
+            "description": "The definition of 'AudioTrackList.onaddtrack' in HTML5."
+        }
+    ]
 }

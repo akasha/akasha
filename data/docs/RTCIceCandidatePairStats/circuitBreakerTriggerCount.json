@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.circuitBreakerTriggerCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/circuitBreakerTriggerCount",
-    "description": "The RTCIceCandidatePairStats property circuitBreakerTriggerCount indicates the number of times the circuit-breaker has been triggered to indicate a connection timeout or other unexpected connection abort on this specific connection configuration."
+    "description": "The RTCIceCandidatePairStats property circuitBreakerTriggerCount indicates the number of times the circuit-breaker has been triggered to indicate a connection timeout or other unexpected connection abort on this specific connection configuration.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-circuitbreakertriggercount",
+            "description": "The definition of 'RTCIceCandidatePairStats.circuitBreakerTriggerCount' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

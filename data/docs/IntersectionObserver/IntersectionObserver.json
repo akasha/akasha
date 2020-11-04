@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "IntersectionObserver.IntersectionObserver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver",
-    "description": "The IntersectionObserver() constructor creates and returns a new IntersectionObserver object."
+    "description": "The IntersectionObserver() constructor creates and returns a new IntersectionObserver object.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-intersectionobserver",
+            "description": "The definition of 'IntersectionObserver constructor' in Intersection Observer."
+        }
+    ]
 }

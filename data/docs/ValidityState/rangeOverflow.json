@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "ValidityState.rangeOverflow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/rangeOverflow",
-    "description": "The read-only rangeOverflow property of a ValidityState object indicates if the value of an input, after having been edited by the user, does not conform to the constraints set by the element's max attribute."
+    "description": "The read-only rangeOverflow property of a ValidityState object indicates if the value of an input, after having been edited by the user, does not conform to the constraints set by the element's max attribute.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-rangeoverflow",
+            "description": "The definition of 'ValidityState.rangeOverflow' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-rangeoverflow",
+            "description": "The definition of 'ValidityState.rangeOverflow' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-rangeoverflow",
+            "description": "The definition of 'ValidityState.rangeOverflow' in HTML5."
+        }
+    ]
 }

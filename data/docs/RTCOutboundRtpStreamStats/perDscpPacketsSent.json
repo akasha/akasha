@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCOutboundRtpStreamStats.perDscpPacketsSent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent",
-    "description": "The perDscpPacketsSent property of the RTCOutboundRtpStreamStats dictionary is a record comprised of key/value pairs in which each key is a string representation of a Differentiated Services Code Point and the value is the number of packets sent for that DCSP."
+    "description": "The perDscpPacketsSent property of the RTCOutboundRtpStreamStats dictionary is a record comprised of key/value pairs in which each key is a string representation of a Differentiated Services Code Point and the value is the number of packets sent for that DCSP.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-perDscpPacketsSent",
+            "description": "The definition of 'RTCOutboundRtpStreamStats.perDscpPacketsSent' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

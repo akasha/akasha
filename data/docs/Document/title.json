@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.title",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/title",
-    "description": "The document.title property gets or sets the current title of the document."
+    "description": "The document.title property gets or sets the current title of the document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#document.title",
+            "description": "The definition of 'document.title' in HTML Living Standard."
+        }
+    ]
 }

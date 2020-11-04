@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaDevices.enumerateDevices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices",
-    "description": "The MediaDevices method enumerateDevices() requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth."
+    "description": "The MediaDevices method enumerateDevices() requests a list of the available media input and output devices, such as microphones, cameras, headsets, and so forth.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediadevices-enumeratedevices",
+            "description": "The definition of 'mediaDevices: enumerateDevices' in Media Capture and Streams."
+        }
+    ]
 }

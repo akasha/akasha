@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onselect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselect",
-    "description": "The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events."
+    "description": "The onselect property of the GlobalEventHandlers mixin is an EventHandler that processes select events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onselect",
+            "description": "The definition of 'onselect' in HTML Living Standard."
+        }
+    ]
 }

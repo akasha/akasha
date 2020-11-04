@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.echoCancellation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/echoCancellation",
-    "description": "The MediaTrackConstraints dictionary's echoCancellation property is a ConstrainBoolean describing the requested or mandatory constraints placed upon the value of the echoCancellation constrainable property."
+    "description": "The MediaTrackConstraints dictionary's echoCancellation property is a ConstrainBoolean describing the requested or mandatory constraints placed upon the value of the echoCancellation constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-echocancellation",
+            "description": "The definition of 'echoCancellation' in Media Capture and Streams."
+        }
+    ]
 }

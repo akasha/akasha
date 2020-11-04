@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Location.toString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/toString",
-    "description": "The toString() stringifier method of the Location interface returns a USVString containing the whole URL. It is a read-only version of Location.href."
+    "description": "The toString() stringifier method of the Location interface returns a USVString containing the whole URL. It is a read-only version of Location.href.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-location-href"
+        }
+    ]
 }

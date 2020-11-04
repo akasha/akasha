@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "GamepadHapticActuator",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator",
-    "description": "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware."
+    "description": "The GamepadHapticActuator interface of the Gamepad API represents hardware in the controller designed to provide haptic feedback to the user (if available), most commonly vibration hardware.",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuator-interface",
+            "description": "The definition of 'GamepadHapticActuator' in Gamepad Extensions."
+        }
+    ]
 }

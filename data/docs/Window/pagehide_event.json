@@ -4,6 +4,18 @@
     "name": "Window.pagehide_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event",
     "description": "The pagehide event is sent to a Window when the browser hides the current page in the process of presenting a different page from the session's history.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#event-pagehide",
+            "description": "The definition of 'pagehide' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#event-pagehide",
+            "description": "The definition of 'pagehide' in HTML5."
+        }
+    ],
     "eventName": "pagehide",
     "eventType": "PageTransitionEvent",
     "eventHandlerProperty": "onpagehide",

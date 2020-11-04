@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLElement",
-    "lastModifiedAt": 1601504765141,
+    "lastModifiedAt": 1604449811266,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190846630
+            "lastModifiedAt": 1604447730526
         },
         {
             "name": "accessKey",
@@ -13,23 +13,23 @@
         },
         {
             "name": "accessKeyLabel",
-            "lastModifiedAt": 1596581176588
+            "lastModifiedAt": 1604447789334
         },
         {
             "name": "animationcancel_event",
-            "lastModifiedAt": 1597359876671
+            "lastModifiedAt": 1604447801833
         },
         {
             "name": "animationend_event",
-            "lastModifiedAt": 1597359877418
+            "lastModifiedAt": 1604447802981
         },
         {
             "name": "animationiteration_event",
-            "lastModifiedAt": 1597359878586
+            "lastModifiedAt": 1604447803613
         },
         {
             "name": "animationstart_event",
-            "lastModifiedAt": 1597359879185
+            "lastModifiedAt": 1604447804076
         },
         {
             "name": "beforeinput_event",
@@ -41,11 +41,11 @@
         },
         {
             "name": "click",
-            "lastModifiedAt": 1599391410544
+            "lastModifiedAt": 1604447799542
         },
         {
             "name": "contentEditable",
-            "lastModifiedAt": 1596581176957
+            "lastModifiedAt": 1604447731129
         },
         {
             "name": "contextMenu",
@@ -53,7 +53,7 @@
         },
         {
             "name": "dir",
-            "lastModifiedAt": 1596581177760
+            "lastModifiedAt": 1604447733620
         },
         {
             "name": "forceSpellCheck",
@@ -65,15 +65,15 @@
         },
         {
             "name": "hidden",
-            "lastModifiedAt": 1596581179768
+            "lastModifiedAt": 1604447734265
         },
         {
             "name": "inert",
-            "lastModifiedAt": 1599391396438
+            "lastModifiedAt": 1604447791190
         },
         {
             "name": "innerText",
-            "lastModifiedAt": 1599391396975
+            "lastModifiedAt": 1604447735478
         },
         {
             "name": "input_event",
@@ -81,15 +81,15 @@
         },
         {
             "name": "invalid_event",
-            "lastModifiedAt": 1597359876005
+            "lastModifiedAt": 1604447801286
         },
         {
             "name": "isContentEditable",
-            "lastModifiedAt": 1596581180878
+            "lastModifiedAt": 1604447736709
         },
         {
             "name": "lang",
-            "lastModifiedAt": 1596581183476
+            "lastModifiedAt": 1604447737273
         },
         {
             "name": "lostpointercapture_event",
@@ -97,43 +97,43 @@
         },
         {
             "name": "offsetHeight",
-            "lastModifiedAt": 1596581184163
+            "lastModifiedAt": 1604447737892
         },
         {
             "name": "offsetLeft",
-            "lastModifiedAt": 1596581184550
+            "lastModifiedAt": 1604447738501
         },
         {
             "name": "offsetParent",
-            "lastModifiedAt": 1596581184822
+            "lastModifiedAt": 1604447739206
         },
         {
             "name": "offsetTop",
-            "lastModifiedAt": 1596581185076
+            "lastModifiedAt": 1604447740092
         },
         {
             "name": "offsetWidth",
-            "lastModifiedAt": 1596581185443
+            "lastModifiedAt": 1604447741021
         },
         {
             "name": "onabort",
-            "lastModifiedAt": 1600308453441
+            "lastModifiedAt": 1604447742316
         },
         {
             "name": "onblur",
-            "lastModifiedAt": 1600308455699
+            "lastModifiedAt": 1604447744776
         },
         {
             "name": "onchange",
-            "lastModifiedAt": 1600308457163
+            "lastModifiedAt": 1604447747125
         },
         {
             "name": "onclick",
-            "lastModifiedAt": 1600308457775
+            "lastModifiedAt": 1604447748462
         },
         {
             "name": "oncontextmenu",
-            "lastModifiedAt": 1600308458651
+            "lastModifiedAt": 1604447750461
         },
         {
             "name": "oncopy",
@@ -145,51 +145,51 @@
         },
         {
             "name": "ondblclick",
-            "lastModifiedAt": 1600308460234
+            "lastModifiedAt": 1604447753781
         },
         {
             "name": "onfocus",
-            "lastModifiedAt": 1600308462071
+            "lastModifiedAt": 1604447755834
         },
         {
             "name": "oninput",
-            "lastModifiedAt": 1600308463243
+            "lastModifiedAt": 1604447757880
         },
         {
             "name": "onkeydown",
-            "lastModifiedAt": 1600308464139
+            "lastModifiedAt": 1604447760003
         },
         {
             "name": "onkeypress",
-            "lastModifiedAt": 1600308464805
+            "lastModifiedAt": 1604447760983
         },
         {
             "name": "onkeyup",
-            "lastModifiedAt": 1600308465411
+            "lastModifiedAt": 1604447762643
         },
         {
             "name": "onload",
-            "lastModifiedAt": 1600308466016
+            "lastModifiedAt": 1604447764202
         },
         {
             "name": "onmousedown",
-            "lastModifiedAt": 1600308468108
+            "lastModifiedAt": 1604447766504
         },
         {
             "name": "onmousemove",
-            "lastModifiedAt": 1600308469355
+            "lastModifiedAt": 1604447768689
         },
         {
             "name": "onmouseout",
-            "lastModifiedAt": 1600308469921
+            "lastModifiedAt": 1604447769805
         },
         {
             "name": "onmouseover",
-            "lastModifiedAt": 1600308470688
+            "lastModifiedAt": 1604447771362
         },
         {
             "name": "onmouseup",
-            "lastModifiedAt": 1600308471276
+            "lastModifiedAt": 1604447773113
         },
         {
             "name": "onpaste",
@@ -197,23 +197,23 @@
         },
         {
             "name": "onreset",
-            "lastModifiedAt": 1600308475503
+            "lastModifiedAt": 1604447778658
         },
         {
             "name": "onresize",
-            "lastModifiedAt": 1600308475885
+            "lastModifiedAt": 1604447779593
         },
         {
             "name": "onscroll",
-            "lastModifiedAt": 1600308477119
+            "lastModifiedAt": 1604447780589
         },
         {
             "name": "onselect",
-            "lastModifiedAt": 1600308477738
+            "lastModifiedAt": 1604447782934
         },
         {
             "name": "onsubmit",
-            "lastModifiedAt": 1600308478918
+            "lastModifiedAt": 1604447784949
         },
         {
             "name": "outerText",
@@ -237,7 +237,7 @@
         },
         {
             "name": "pointermove_event",
-            "lastModifiedAt": 1597359887248
+            "lastModifiedAt": 1604447812054
         },
         {
             "name": "pointerout_event",
@@ -253,27 +253,27 @@
         },
         {
             "name": "style",
-            "lastModifiedAt": 1596581187017
+            "lastModifiedAt": 1604447796861
         },
         {
             "name": "title",
-            "lastModifiedAt": 1596581187362
+            "lastModifiedAt": 1604447787505
         },
         {
             "name": "transitioncancel_event",
-            "lastModifiedAt": 1597359890957
+            "lastModifiedAt": 1604447814380
         },
         {
             "name": "transitionend_event",
-            "lastModifiedAt": 1597359891626
+            "lastModifiedAt": 1604447815000
         },
         {
             "name": "transitionrun_event",
-            "lastModifiedAt": 1597359892257
+            "lastModifiedAt": 1604447815476
         },
         {
             "name": "transitionstart_event",
-            "lastModifiedAt": 1597359892904
+            "lastModifiedAt": 1604447816036
         }
     ]
 }

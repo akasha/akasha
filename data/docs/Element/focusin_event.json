@@ -4,6 +4,16 @@
     "name": "Element.focusin_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event",
     "description": "The focusin event fires when an element is about to receive focus. The main difference between this event and focus is that focusin bubbles while focus does not.",
+    "refs": [
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#event-type-focusin"
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#event-type-focusin"
+        }
+    ],
     "eventName": "focusin",
     "eventType": "FocusEvent",
     "eventHandlerProperty": "onfocusin",

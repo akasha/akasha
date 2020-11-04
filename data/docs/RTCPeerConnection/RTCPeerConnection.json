@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "RTCPeerConnection.RTCPeerConnection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection",
-    "description": "The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer."
+    "description": "The RTCPeerConnection() constructor returns a newly-created RTCPeerConnection, which represents a connection between the local device and a remote peer.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection",
+            "description": "The definition of 'RTCPeerConnection()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

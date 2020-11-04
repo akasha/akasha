@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "StyleSheetList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheetList",
-    "description": "The StyleSheetList interface represents a list of StyleSheet."
+    "description": "The StyleSheetList interface represents a list of StyleSheet.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#the-stylesheetlist-interface",
+            "description": "The definition of 'CSSStyleSheetList' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpSender.transport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/transport",
-    "description": "The read-only transport property of an RTCRtpSender object provides the RTCDtlsTransport object used to interact with the underlying transport over which the sender is exchanging Real-time Transport Control Protocol (RTCP) packets."
+    "description": "The read-only transport property of an RTCRtpSender object provides the RTCDtlsTransport object used to interact with the underlying transport over which the sender is exchanging Real-time Transport Control Protocol (RTCP) packets.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsender-transport",
+            "description": "The definition of 'RTCRtpSender.transport' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Response.clone",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/clone",
-    "description": "The clone() method of the Response interface creates a clone of a response object, identical in every way, but stored in a different variable."
+    "description": "The clone() method of the Response interface creates a clone of a response object, identical in every way, but stored in a different variable.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-response-clone",
+            "description": "The definition of 'clone()' in Fetch."
+        }
+    ]
 }

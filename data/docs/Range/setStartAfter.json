@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Range.setStartAfter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/setStartAfter",
-    "description": "The Range.setStartAfter() method sets the start position of a Range relative to a Node. The parent Node of the start of the Range will be the same as that for the referenceNode."
+    "description": "The Range.setStartAfter() method sets the start position of a Range relative to a Node. The parent Node of the start of the Range will be the same as that for the referenceNode.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-setstartafter",
+            "description": "The definition of 'Range.setStartAfter()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setStartAfter",
+            "description": "The definition of 'Range.setStartAfter()' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+        }
+    ]
 }

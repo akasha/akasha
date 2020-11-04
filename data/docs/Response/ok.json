@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Response.ok",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/ok",
-    "description": "The ok read-only property of the Response interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not."
+    "description": "The ok read-only property of the Response interface contains a Boolean stating whether the response was successful (status in the range 200-299) or not.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-response-ok",
+            "description": "The definition of 'ok' in Fetch."
+        }
+    ]
 }

@@ -1,0 +1,23 @@
+
+{
+    "name": "XRFrame",
+    "lastModifiedAt": 1601467522385,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1599279716783
+        },
+        {
+            "name": "getPose",
+            "lastModifiedAt": 1599279717737
+        },
+        {
+            "name": "getViewerPose",
+            "lastModifiedAt": 1599279718208
+        },
+        {
+            "name": "session",
+            "lastModifiedAt": 1599279717243
+        }
+    ]
+}

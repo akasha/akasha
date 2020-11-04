@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.receiverId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/receiverId",
-    "description": "The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream."
+    "description": "The receiverId property of the RTCInboundRtpStreamStats dictionary specifies the id of the RTCAudioReceiverStats or RTCVideoReceiverStats object representing the RTCRtpReceiver receiving the stream.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-receiverid",
+            "description": "The definition of 'RTCInboundRtpStreamStats.receiverId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

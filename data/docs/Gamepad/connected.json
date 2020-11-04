@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Gamepad.connected",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/connected",
-    "description": "The Gamepad.connected property of the Gamepad interface returns a boolean indicating whether the gamepad is still connected to the system."
+    "description": "The Gamepad.connected property of the Gamepad interface returns a boolean indicating whether the gamepad is still connected to the system.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/#dom-gamepad-connected",
+            "description": "The definition of 'Gamepad.connected' in Gamepad."
+        }
+    ]
 }

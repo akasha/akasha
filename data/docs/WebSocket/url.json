@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebSocket.url",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/url",
-    "description": "The WebSocket.url read-only property returns the absolute URL of the WebSocket as resolved by the constructor."
+    "description": "The WebSocket.url read-only property returns the absolute URL of the WebSocket as resolved by the constructor.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-url",
+            "description": "The definition of 'WebSocket: url' in HTML Living Standard."
+        }
+    ]
 }

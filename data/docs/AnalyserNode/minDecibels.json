@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AnalyserNode.minDecibels",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/minDecibels",
-    "description": "The minDecibels property of the AnalyserNode interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values &mdash; basically, this specifies the minimum value for the range of results when using getFloatFrequencyData() or getByteFrequencyData()."
+    "description": "The minDecibels property of the AnalyserNode interface is a double value representing the minimum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte/float values &mdash; basically, this specifies the minimum value for the range of results when using getFloatFrequencyData() or getByteFrequencyData().",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-mindecibels",
+            "description": "The definition of 'minDecibels' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLInputElement.setRangeText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setRangeText",
-    "description": "The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string."
+    "description": "The HTMLInputElement.setRangeText() method replaces a range of text in an input or textarea element with a new string.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setrangetext",
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setrangetext",
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML5."
+        }
+    ]
 }

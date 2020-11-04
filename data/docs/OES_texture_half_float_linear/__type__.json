@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "OES_texture_half_float_linear",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OES_texture_half_float_linear",
-    "description": "The OES_texture_half_float_linear extension is part of the WebGL API and allows linear filtering with half floating-point pixel types for textures."
+    "description": "The OES_texture_half_float_linear extension is part of the WebGL API and allows linear filtering with half floating-point pixel types for textures.",
+    "refs": [
+        {
+            "name": "OES_texture_half_float_linear",
+            "href": "https://www.khronos.org/registry/webgl/extensions/OES_texture_half_float_linear/",
+            "description": "The definition of 'OES_texture_half_float_linear' in OES_texture_half_float_linear."
+        }
+    ]
 }

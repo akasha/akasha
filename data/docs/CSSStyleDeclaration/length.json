@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "CSSStyleDeclaration.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/length",
-    "description": "The read-only property returns an integer that represents the number of style declarations in this CSS declaration block."
+    "description": "The read-only property returns an integer that represents the number of style declarations in this CSS declaration block.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-length",
+            "description": "The definition of 'CSSStyleDeclaration.length' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration",
+            "description": "The definition of 'CSSStyleDeclaration' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

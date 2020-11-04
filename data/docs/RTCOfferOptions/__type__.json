@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCOfferOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOfferOptions",
-    "description": "The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method."
+    "description": "The RTCOfferOptions dictionary is used to provide optional settings when creating an RTCPeerConnection offer with the createOffer() method.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions",
+            "description": "The definition of 'RTCOfferOptions' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

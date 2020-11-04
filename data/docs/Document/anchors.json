@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.anchors",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/anchors",
-    "description": "The anchors read-only property of the Document interface returns a list of all of the anchors in the document."
+    "description": "The anchors read-only property of the Document interface returns a list of all of the anchors in the document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-anchors",
+            "description": "The definition of 'Document.anchors' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-7577272",
+            "description": "The definition of 'Document.anchors' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

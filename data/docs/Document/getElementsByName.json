@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.getElementsByName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByName",
-    "description": "The getElementsByName() method of the Document object returns a NodeList Collection of elements with a given name in the document."
+    "description": "The getElementsByName() method of the Document object returns a NodeList Collection of elements with a given name in the document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-getelementsbyname",
+            "description": "The definition of 'Document.getElementsByName()' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259",
+            "description": "The definition of 'Document.getElementsByName()' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

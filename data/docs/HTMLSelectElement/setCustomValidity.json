@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLSelectElement.setCustomValidity",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/setCustomValidity",
-    "description": "The HTMLSelectElement.setCustomValidity() method sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does not have a custom validity error."
+    "description": "The HTMLSelectElement.setCustomValidity() method sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does not have a custom validity error.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-cva-setcustomvalidity",
+            "description": "The definition of 'HTMLSelectElement.setCustomValidity()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-cva-setcustomvalidity",
+            "description": "The definition of 'HTMLSelectElement.setCustomValidity()' in HTML5."
+        }
+    ]
 }

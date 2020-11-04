@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.groupId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/groupId",
-    "description": "The MediaTrackConstraints dictionary's groupId property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the groupId constrainable property."
+    "description": "The MediaTrackConstraints dictionary's groupId property is a ConstrainDOMString describing the requested or mandatory constraints placed upon the value of the groupId constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-groupid",
+            "description": "The definition of 'groupId' in Media Capture and Streams."
+        }
+    ]
 }

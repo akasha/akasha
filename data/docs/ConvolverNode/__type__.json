@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ConvolverNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConvolverNode",
-    "description": "The ConvolverNode interface is an AudioNode that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect. A ConvolverNode always has exactly one input and one output."
+    "description": "The ConvolverNode interface is an AudioNode that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect. A ConvolverNode always has exactly one input and one output.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#ConvolverNode",
+            "description": "The definition of 'ConvolverNode' in Web Audio API."
+        }
+    ]
 }

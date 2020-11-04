@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpSynchronizationSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSynchronizationSource",
-    "description": "The RTCRtpSynchronizationSource dictionary of the the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC)."
+    "description": "The RTCRtpSynchronizationSource dictionary of the the WebRTC API is used by getSynchronizationSources() to describe a particular synchronization source (SSRC).",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource",
+            "description": "The definition of 'RTCRtpSynchronizationSource' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

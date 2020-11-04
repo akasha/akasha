@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Navigator.getBattery",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery",
-    "description": "The getBattery() method provides information about the system's battery. It returns a battery promise, which is resolved in a BatteryManager object providing also some new events you can handle to monitor the battery status. This implements the Battery Status API; see that documentation for additional details, a guide to using the API, and sample code."
+    "description": "The getBattery() method provides information about the system's battery. It returns a battery promise, which is resolved in a BatteryManager object providing also some new events you can handle to monitor the battery status. This implements the Battery Status API; see that documentation for additional details, a guide to using the API, and sample code.",
+    "refs": [
+        {
+            "name": "Battery Status API",
+            "href": "https://w3c.github.io/battery/#dom-navigator-getbattery",
+            "description": "The definition of 'Navigator.getBattery()' in Battery Status API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WindowEventHandlers.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage",
-    "description": "The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event."
+    "description": "The onmessage property of the WindowEventHandlers mixin is the EventHandler called whenever an object receives a message event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-window-onmessage",
+            "description": "The definition of 'onmessage' in HTML Living Standard."
+        }
+    ]
 }

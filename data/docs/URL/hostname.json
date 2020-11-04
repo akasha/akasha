@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "URL.hostname",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname",
-    "description": "The hostname property of the URL interface is a USVString containing the domain name of the URL."
+    "description": "The hostname property of the URL interface is a USVString containing the domain name of the URL.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-hostname",
+            "description": "The definition of 'URL.hostname' in URL."
+        }
+    ]
 }

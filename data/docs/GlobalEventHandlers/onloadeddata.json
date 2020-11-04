@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onloadeddata",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadeddata",
-    "description": "The onloadeddata property of the GlobalEventHandlers mixin is the EventHandler for processing loadeddata events."
+    "description": "The onloadeddata property of the GlobalEventHandlers mixin is the EventHandler for processing loadeddata events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-onloadeddata",
+            "description": "The definition of 'onloadeddata' in HTML Living Standard."
+        }
+    ]
 }

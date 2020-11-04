@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLMapElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMapElement",
-    "description": "The HTMLMapElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements."
+    "description": "The HTMLMapElement interface provides special properties and methods (beyond those of the regular object HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of map elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlmapelement",
+            "description": "The definition of 'HTMLMapElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-map-element",
+            "description": "The definition of 'HTMLMapElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-94109203",
+            "description": "The definition of 'HTMLAreaElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-94109203",
+            "description": "The definition of 'HTMLAreaElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

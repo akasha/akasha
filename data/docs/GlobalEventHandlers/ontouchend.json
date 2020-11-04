@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ontouchend",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchend",
-    "description": "A global event handler for the touchend event."
+    "description": "A global event handler for the touchend event.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchend"
+        }
+    ]
 }

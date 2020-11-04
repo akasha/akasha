@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "PannerNode.PannerNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/PannerNode",
-    "description": "The PannerNode() constructor of the Web Audio API creates a new PannerNode object instance."
+    "description": "The PannerNode() constructor of the Web Audio API creates a new PannerNode object instance.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-pannernode",
+            "description": "The definition of 'PannerNode()' in Web Audio API."
+        }
+    ]
 }

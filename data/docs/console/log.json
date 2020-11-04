@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.log",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/log",
-    "description": "The Console method log() outputs a message to the web console."
+    "description": "The Console method log() outputs a message to the web console.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#log",
+            "description": "The definition of 'console.log()' in Console API."
+        }
+    ]
 }

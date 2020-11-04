@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackSupportedConstraints.autoGainControl",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/autoGainControl",
-    "description": "The MediaTrackSupportedConstraints dictionary's autoGainControl property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the autoGainControl constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false."
+    "description": "The MediaTrackSupportedConstraints dictionary's autoGainControl property is a read-only Boolean value which is present (and set to true) in the object returned by MediaDevices.getSupportedConstraints() if and only if the user agent supports the autoGainControl constraint. If the constraint isn't supported, it's not included in the list, so this value will never be false.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-autogaincontrol",
+            "description": "The definition of 'autoGainControl' in Media Capture and Streams."
+        }
+    ]
 }

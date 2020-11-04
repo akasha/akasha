@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLMediaElement.setMediaKeys",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/setMediaKeys",
-    "description": "The setMediaKeys() property of the HTMLMediaElement interface returns a Promise that resolves to the passed MediaKeys, which are those used to decrypt media during playback."
+    "description": "The setMediaKeys() property of the HTMLMediaElement interface returns a Promise that resolves to the passed MediaKeys, which are those used to decrypt media during playback.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-setmediakeys",
+            "description": "The definition of 'setMediaKeys()' in Encrypted Media Extensions."
+        }
+    ]
 }

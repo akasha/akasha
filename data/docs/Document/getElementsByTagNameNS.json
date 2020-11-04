@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.getElementsByTagNameNS",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagNameNS",
-    "description": "Returns a list of elements with the given tag name belonging to the given namespace. The complete document is searched, including the root node."
+    "description": "Returns a list of elements with the given tag name belonging to the given namespace. The complete document is searched, including the root node.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-getelementsbytagnamens",
+            "description": "The definition of 'document.getElementsByTagNameNS' in DOM."
+        }
+    ]
 }

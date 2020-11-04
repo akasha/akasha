@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLSelectElement.autofocus",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/autofocus",
-    "description": "The HTMLSelectElement.autofocus property is a Boolean that reflects the autofocus HTML attribute, which indicates whether the associated select element  will get input focus when the page loads, unless the user overrides it."
+    "description": "The HTMLSelectElement.autofocus property is a Boolean that reflects the autofocus HTML attribute, which indicates whether the associated select element  will get input focus when the page loads, unless the user overrides it.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-fe-autofocus",
+            "description": "The definition of 'autofocus' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.2",
+            "href": "https://www.w3.org/TR/html52/sec-forms.html#autofocusing-a-form-control-the-autofocus-attribute",
+            "description": "The definition of 'autofocus' in HTML 5.2."
+        }
+    ]
 }

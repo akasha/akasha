@@ -4,6 +4,13 @@
     "name": "Window.vrdisplayblur_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayblur_event",
     "description": "You can use the vrdisplayblur event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayblur",
+            "description": "The definition of 'vrdisplayblur' in WebVR 1.1."
+        }
+    ],
     "eventName": "vrdisplayblur",
     "eventType": "VRDisplayEvent",
     "eventHandlerProperty": "onvrdisplayblur",

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MessagePort.postMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/postMessage",
-    "description": "The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts."
+    "description": "The postMessage() method of the MessagePort interface sends a message from the port, and optionally, transfers ownership of objects to other browsing contexts.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#dom-messageport-postmessage",
+            "description": "The definition of 'postMessage()' in HTML Living Standard."
+        }
+    ]
 }

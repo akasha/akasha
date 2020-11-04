@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.orientationY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationY",
-    "description": "An AudioParam whose value is the Y component of the direction the audio source is facing, in 3D Cartesian coordinate space."
+    "description": "An AudioParam whose value is the Y component of the direction the audio source is facing, in 3D Cartesian coordinate space.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-orientationy",
+            "description": "The definition of 'orientationY' in Web Audio API."
+        }
+    ]
 }

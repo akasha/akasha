@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.sender",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/sender",
-    "description": "The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream."
+    "description": "The read-only  sender property of WebRTC's RTCRtpTransceiver interface indicates the RTCRtpSender responsible for encoding and sending outgoing media data for the transceiver's stream.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-sender",
+            "description": "The definition of 'RTCRtpTransceiver.sender' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

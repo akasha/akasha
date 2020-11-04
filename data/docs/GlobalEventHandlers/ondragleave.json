@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondragleave",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragleave",
-    "description": "A global event handler for the dragleave event."
+    "description": "A global event handler for the dragleave event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragleave",
+            "description": "The definition of 'ondragleave' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragleave",
+            "description": "The definition of 'ondragleave' in HTML 5.1."
+        }
+    ]
 }

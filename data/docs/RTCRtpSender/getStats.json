@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpSender.getStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender/getStats",
-    "description": "The RTCRtpSender method getStats() asynchronously requests an RTCStatsReport object which provides statistics about outgoing traffic on the RTCPeerConnection which owns the sender, returning a Promise which is fulfilled when the results are available."
+    "description": "The RTCRtpSender method getStats() asynchronously requests an RTCStatsReport object which provides statistics about outgoing traffic on the RTCPeerConnection which owns the sender, returning a Promise which is fulfilled when the results are available.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#widl-RTCRtpSender-getStats-Promise-RTCStatsReport",
+            "description": "The definition of 'RTCRtpSender.getStats()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

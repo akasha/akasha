@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.navigator",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator",
-    "description": "The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script."
+    "description": "The Window.navigator read-only property returns a reference to the Navigator object, which has methods and properties about the application running the script.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator",
+            "description": "The definition of 'Window: navigator' in HTML Living Standard."
+        }
+    ]
 }

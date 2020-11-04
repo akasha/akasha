@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "CloseEvent.CloseEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent/CloseEvent",
-    "description": "The CloseEvent() constructor creates a new CloseEvent."
+    "description": "The CloseEvent() constructor creates a new CloseEvent.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#closeevent",
+            "description": "The definition of 'CloseEvent()' in HTML Living Standard."
+        }
+    ]
 }

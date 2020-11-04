@@ -1,67 +1,67 @@
 
 {
     "name": "Location",
-    "lastModifiedAt": 1600312144930,
+    "lastModifiedAt": 1604450675437,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193576601
+            "lastModifiedAt": 1604450664621
         },
         {
             "name": "ancestorOrigins",
-            "lastModifiedAt": 1596581575700
+            "lastModifiedAt": 1604450665693
         },
         {
             "name": "assign",
-            "lastModifiedAt": 1599391318744
+            "lastModifiedAt": 1604450673356
         },
         {
             "name": "hash",
-            "lastModifiedAt": 1596581575963
+            "lastModifiedAt": 1604450671554
         },
         {
             "name": "host",
-            "lastModifiedAt": 1596581576306
+            "lastModifiedAt": 1604450668562
         },
         {
             "name": "hostname",
-            "lastModifiedAt": 1596581577263
+            "lastModifiedAt": 1604450669277
         },
         {
             "name": "href",
-            "lastModifiedAt": 1596581577641
+            "lastModifiedAt": 1604450666941
         },
         {
             "name": "origin",
-            "lastModifiedAt": 1596581577889
+            "lastModifiedAt": 1604450672578
         },
         {
             "name": "pathname",
-            "lastModifiedAt": 1596581578701
+            "lastModifiedAt": 1604450670440
         },
         {
             "name": "port",
-            "lastModifiedAt": 1599391315053
+            "lastModifiedAt": 1604450669793
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1596581579278
+            "lastModifiedAt": 1604450667534
         },
         {
             "name": "reload",
-            "lastModifiedAt": 1596581580755
+            "lastModifiedAt": 1604450673971
         },
         {
             "name": "replace",
-            "lastModifiedAt": 1596581581038
+            "lastModifiedAt": 1604450674707
         },
         {
             "name": "search",
-            "lastModifiedAt": 1596581580135
+            "lastModifiedAt": 1604450670947
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1596581581349
+            "lastModifiedAt": 1604450675437
         }
     ]
 }

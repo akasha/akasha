@@ -4,6 +4,13 @@
     "name": "AudioScheduledSourceNode.ended_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/ended_event",
     "description": "The ended event of the AudioScheduledSourceNode interface is fired when the source node has stopped playing.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended",
+            "description": "The definition of 'onended' in Web Audio API."
+        }
+    ],
     "eventName": "ended",
     "eventType": "Event",
     "eventHandlerProperty": "onended",

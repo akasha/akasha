@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioContext.suspend",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/suspend",
-    "description": "The suspend() method of the AudioContext Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process &mdash; this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while."
+    "description": "The suspend() method of the AudioContext Interface suspends the progression of time in the audio context, temporarily halting audio hardware access and reducing CPU/battery usage in the process &mdash; this is useful if you want an application to power down the audio hardware when it will not be using an audio context for a while.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-suspend",
+            "description": "The definition of 'close()' in Web Audio API."
+        }
+    ]
 }

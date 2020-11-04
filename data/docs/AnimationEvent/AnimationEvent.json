@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "AnimationEvent.AnimationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEvent/AnimationEvent",
-    "description": "The AnimationEvent() constructor returns a newly created AnimationEvent, representing an event in relation with an animation."
+    "description": "The AnimationEvent() constructor returns a newly created AnimationEvent, representing an event in relation with an animation.",
+    "refs": [
+        {
+            "name": "CSS Animations",
+            "href": "https://drafts.csswg.org/css-animations/#dom-animationevent-animationevent",
+            "description": "The definition of 'AnimationEvent()' in CSS Animations."
+        }
+    ]
 }

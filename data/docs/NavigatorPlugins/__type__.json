@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "NavigatorPlugins",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins",
-    "description": "The NavigatorPlugins mixin adds to the Navigator interface methods and properties for discovering and interacting with plugins installed into the browser."
+    "description": "The NavigatorPlugins mixin adds to the Navigator interface methods and properties for discovering and interacting with plugins installed into the browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#navigatorplugins",
+            "description": "The definition of 'NavigatorPlugins' in HTML Living Standard."
+        }
+    ]
 }

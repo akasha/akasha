@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createOscillator",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createOscillator",
-    "description": "The createOscillator() method of the BaseAudioContext interface creates an OscillatorNode, a source representing a periodic waveform. It basically generates a constant tone."
+    "description": "The createOscillator() method of the BaseAudioContext interface creates an OscillatorNode, a source representing a periodic waveform. It basically generates a constant tone.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createoscillator",
+            "description": "The definition of 'createOscillator' in Web Audio API."
+        }
+    ]
 }

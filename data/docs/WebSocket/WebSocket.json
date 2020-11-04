@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "WebSocket.WebSocket",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket",
-    "description": "The WebSocket() constructor returns a new WebSocket object."
+    "description": "The WebSocket() constructor returns a new WebSocket object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-websocket",
+            "description": "The definition of 'the WebSocket constructor' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Body",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Body",
-    "description": "The Body mixin of the Fetch API represents the body of the response/request, allowing you to declare what its content type is and how it should be handled."
+    "description": "The Body mixin of the Fetch API represents the body of the response/request, allowing you to declare what its content type is and how it should be handled.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#body-mixin",
+            "description": "The definition of 'Body' in Fetch."
+        }
+    ]
 }

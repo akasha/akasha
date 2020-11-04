@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PannerNode.orientationX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/orientationX",
-    "description": "An AudioParam whose value is the X component of the direction in which the audio source is facing, in 3D Cartesian coordinate space."
+    "description": "An AudioParam whose value is the X component of the direction in which the audio source is facing, in 3D Cartesian coordinate space.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-orientationx",
+            "description": "The definition of 'orientationX' in Web Audio API."
+        }
+    ]
 }

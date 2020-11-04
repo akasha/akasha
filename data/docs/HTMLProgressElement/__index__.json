@@ -1,15 +1,15 @@
 
 {
     "name": "HTMLProgressElement",
-    "lastModifiedAt": 1600311911668,
+    "lastModifiedAt": 1604450270553,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193325377
+            "lastModifiedAt": 1604450269049
         },
         {
             "name": "labels",
-            "lastModifiedAt": 1596581344982
+            "lastModifiedAt": 1604450269517
         }
     ]
 }

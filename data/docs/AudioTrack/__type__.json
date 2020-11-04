@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "AudioTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack",
-    "description": "The AudioTrack interface represents a single audio track from one of the HTML media elements, audio or video."
+    "description": "The AudioTrack interface represents a single audio track from one of the HTML media elements, audio or video.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#audiotrack",
+            "description": "The definition of 'AudioTrack' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#audiotrack",
+            "description": "The definition of 'AudioTrack' in HTML5."
+        }
+    ]
 }

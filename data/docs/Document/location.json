@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.location",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/location",
-    "description": "The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL."
+    "description": "The Document.location read-only property returns a Location object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#the-location-interface",
+            "description": "The definition of 'Document.location' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#the-location-interface",
+            "description": "The definition of 'Document.location' in HTML5."
+        }
+    ]
 }

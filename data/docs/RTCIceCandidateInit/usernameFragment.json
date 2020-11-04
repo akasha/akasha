@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateInit.usernameFragment",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/usernameFragment",
-    "description": "The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property."
+    "description": "The optional property usernameFragment in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's usernameFragment property.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-usernamefragment",
+            "description": "The definition of 'RTCIceCandidateInit.usernameFragment' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

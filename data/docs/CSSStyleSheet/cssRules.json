@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CSSStyleSheet.cssRules",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/cssRules",
-    "description": "The read-only CSSStyleSheet property cssRules returns a live CSSRuleList which provides a real-time, up-to-date list of every CSS rule which comprises the stylesheet."
+    "description": "The read-only CSSStyleSheet property cssRules returns a live CSSRuleList which provides a real-time, up-to-date list of every CSS rule which comprises the stylesheet.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-cssrules",
+            "description": "The definition of 'CSSStyleSheet.cssRules' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

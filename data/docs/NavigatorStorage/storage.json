@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "NavigatorStorage.storage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage/storage",
-    "description": "The NavigatorStorage.storage read-only property returns the singleton StorageManager object used to access the overall storage capabilities of the browser for the current site or app."
+    "description": "The NavigatorStorage.storage read-only property returns the singleton StorageManager object used to access the overall storage capabilities of the browser for the current site or app.",
+    "refs": [
+        {
+            "name": "Storage",
+            "href": "https://storage.spec.whatwg.org/#navigatorstorage",
+            "description": "The definition of 'navigator.storage' in Storage."
+        }
+    ]
 }

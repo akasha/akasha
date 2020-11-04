@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrack.label",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/label",
-    "description": "The read-only AudioTrack property label returns a string specifying the audio track's human-readable label, if one is available; otherwise, it returns an empty string."
+    "description": "The read-only AudioTrack property label returns a string specifying the audio track's human-readable label, if one is available; otherwise, it returns an empty string.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-label",
+            "description": "The definition of 'AudioTrack.label' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotrack-label",
+            "description": "The definition of 'AudioTrack.label' in HTML5."
+        }
+    ]
 }

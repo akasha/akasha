@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "DataTransfer.clearData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/clearData",
-    "description": "The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing."
+    "description": "The DataTransfer.clearData() method removes the drag operation's drag data for the given type. If data for the given type does not exist, this method does nothing.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-cleardata",
+            "description": "The definition of 'DataTransfer.clearData()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransfer-cleardata",
+            "description": "The definition of 'DataTransfer.clearData()' in HTML 5.1."
+        }
+    ]
 }

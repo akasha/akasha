@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createDelay",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createDelay",
-    "description": "The createDelay() method of the BaseAudioContext Interface is used to create a DelayNode, which is used to delay the incoming audio signal by a certain amount of time."
+    "description": "The createDelay() method of the BaseAudioContext Interface is used to create a DelayNode, which is used to delay the incoming audio signal by a certain amount of time.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createdelay",
+            "description": "The definition of 'createDelay()' in Web Audio API."
+        }
+    ]
 }

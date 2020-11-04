@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioScheduledSourceNode.start",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/start",
-    "description": "The start() method on AudioScheduledSourceNode schedules a sound to begin playback at the specified time. If no time is specified, then the sound begins playing immediately."
+    "description": "The start() method on AudioScheduledSourceNode schedules a sound to begin playback at the specified time. If no time is specified, then the sound begins playing immediately.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-start",
+            "description": "The definition of 'start()' in Web Audio API."
+        }
+    ]
 }

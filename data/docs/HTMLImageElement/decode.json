@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLImageElement.decode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decode",
-    "description": "The decode() method of the HTMLImageElement interface returns a Promise that resolves when the image is decoded and it is safe to append the image to the DOM."
+    "description": "The decode() method of the HTMLImageElement interface returns a Promise that resolves when the image is decoded and it is safe to append the image to the DOM.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-decode",
+            "description": "The definition of 'decode()' in HTML Living Standard."
+        }
+    ]
 }

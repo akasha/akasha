@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.scripts",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/scripts",
-    "description": "The scripts property of the Document interface returns a list of the script elements in the document. The returned object is an HTMLCollection."
+    "description": "The scripts property of the Document interface returns a list of the script elements in the document. The returned object is an HTMLCollection.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-scripts",
+            "description": "The definition of 'Document.scripts' in HTML Living Standard."
+        }
+    ]
 }

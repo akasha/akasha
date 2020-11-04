@@ -1,39 +1,39 @@
 
 {
     "name": "Range",
-    "lastModifiedAt": 1604009209486,
+    "lastModifiedAt": 1604447949343,
     "entries": [
         {
             "name": "Range",
-            "lastModifiedAt": 1597190881448
+            "lastModifiedAt": 1604447927227
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190881158
+            "lastModifiedAt": 1604447926654
         },
         {
             "name": "cloneContents",
-            "lastModifiedAt": 1597190884041
+            "lastModifiedAt": 1604447932790
         },
         {
             "name": "cloneRange",
-            "lastModifiedAt": 1597190884336
+            "lastModifiedAt": 1604447933372
         },
         {
             "name": "collapse",
-            "lastModifiedAt": 1597190884642
+            "lastModifiedAt": 1604447934037
         },
         {
             "name": "collapsed",
-            "lastModifiedAt": 1597190881774
+            "lastModifiedAt": 1604447928334
         },
         {
             "name": "commonAncestorContainer",
-            "lastModifiedAt": 1599279681828
+            "lastModifiedAt": 1604447929476
         },
         {
             "name": "compareBoundaryPoints",
-            "lastModifiedAt": 1597190885035
+            "lastModifiedAt": 1604447934583
         },
         {
             "name": "compareNode",
@@ -41,99 +41,99 @@
         },
         {
             "name": "comparePoint",
-            "lastModifiedAt": 1597190886206
+            "lastModifiedAt": 1604447936344
         },
         {
             "name": "createContextualFragment",
-            "lastModifiedAt": 1597190886628
+            "lastModifiedAt": 1604447937422
         },
         {
             "name": "deleteContents",
-            "lastModifiedAt": 1597190887433
+            "lastModifiedAt": 1604447938051
         },
         {
             "name": "detach",
-            "lastModifiedAt": 1599279696947
+            "lastModifiedAt": 1604447938739
         },
         {
             "name": "endContainer",
-            "lastModifiedAt": 1597190882619
+            "lastModifiedAt": 1604447930093
         },
         {
             "name": "endOffset",
-            "lastModifiedAt": 1597190883176
+            "lastModifiedAt": 1604447930607
         },
         {
             "name": "extractContents",
-            "lastModifiedAt": 1597190888026
+            "lastModifiedAt": 1604447939957
         },
         {
             "name": "getBoundingClientRect",
-            "lastModifiedAt": 1597190888854
+            "lastModifiedAt": 1604447940559
         },
         {
             "name": "getClientRects",
-            "lastModifiedAt": 1597190889252
+            "lastModifiedAt": 1604447941194
         },
         {
             "name": "insertNode",
-            "lastModifiedAt": 1597190889575
+            "lastModifiedAt": 1604447941851
         },
         {
             "name": "intersectsNode",
-            "lastModifiedAt": 1597190890124
+            "lastModifiedAt": 1604447942497
         },
         {
             "name": "isPointInRange",
-            "lastModifiedAt": 1597190890937
+            "lastModifiedAt": 1604447943000
         },
         {
             "name": "selectNode",
-            "lastModifiedAt": 1597190891210
+            "lastModifiedAt": 1604447943611
         },
         {
             "name": "selectNodeContents",
-            "lastModifiedAt": 1597190891611
+            "lastModifiedAt": 1604447944225
         },
         {
             "name": "setEnd",
-            "lastModifiedAt": 1597190892040
+            "lastModifiedAt": 1604447944754
         },
         {
             "name": "setEndAfter",
-            "lastModifiedAt": 1597190892459
+            "lastModifiedAt": 1604447945845
         },
         {
             "name": "setEndBefore",
-            "lastModifiedAt": 1597190892962
+            "lastModifiedAt": 1604447946408
         },
         {
             "name": "setStart",
-            "lastModifiedAt": 1597190893801
+            "lastModifiedAt": 1604447947050
         },
         {
             "name": "setStartAfter",
-            "lastModifiedAt": 1597190894657
+            "lastModifiedAt": 1604447947635
         },
         {
             "name": "setStartBefore",
-            "lastModifiedAt": 1597190895046
+            "lastModifiedAt": 1604447948240
         },
         {
             "name": "startContainer",
-            "lastModifiedAt": 1597190883451
+            "lastModifiedAt": 1604447931135
         },
         {
             "name": "startOffset",
-            "lastModifiedAt": 1597190883732
+            "lastModifiedAt": 1604447931795
         },
         {
             "name": "surroundContents",
-            "lastModifiedAt": 1597190895327
+            "lastModifiedAt": 1604447948803
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1597190895608
+            "lastModifiedAt": 1604447949343
         }
     ]
 }

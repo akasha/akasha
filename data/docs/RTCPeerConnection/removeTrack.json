@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.removeTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/removeTrack",
-    "description": "The RTCPeerConnection.removeTrack() method tells the local end of the connection to stop sending media from the specified track, without actually removing the corresponding RTCRtpSender from the list of senders as reported by RTCPeerConnection.getSenders()."
+    "description": "The RTCPeerConnection.removeTrack() method tells the local end of the connection to stop sending media from the specified track, without actually removing the corresponding RTCRtpSender from the list of senders as reported by RTCPeerConnection.getSenders().",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-removetrack",
+            "description": "The definition of 'RTCPeerConnection.removeTrack()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

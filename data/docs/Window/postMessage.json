@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Window.postMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage",
-    "description": "The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it."
+    "description": "The window.postMessage() method safely enables cross-origin communication between Window objects; e.g., between a page and a pop-up that it spawned, or between a page and an iframe embedded within it.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#dom-window-postmessage",
+            "description": "The definition of 'postMessage()' in HTML Living Standard."
+        }
+    ]
 }

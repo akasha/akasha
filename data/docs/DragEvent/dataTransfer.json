@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DragEvent.dataTransfer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DragEvent/dataTransfer",
-    "description": "The DragEvent.dataTransfer property holds the drag operation's data (as a DataTransfer object)."
+    "description": "The DragEvent.dataTransfer property holds the drag operation's data (as a DataTransfer object).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-dragevent-datatransfer",
+            "description": "The definition of 'DragEvent.dataTransfer' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-dragevent-datatransfer",
+            "description": "The definition of 'DragEvent.dataTransfer' in HTML 5.1."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerLocation.hash",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/hash",
-    "description": "The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the fragment identifier of the URL. The hash is not percent encoded."
+    "description": "The URLUtilsReadOnly.hash read-only property returns a DOMString containing a '#' followed by the fragment identifier of the URL. The hash is not percent encoded.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-hash",
+            "description": "The definition of 'URLUtilsReadOnly.hash' in URL."
+        }
+    ]
 }

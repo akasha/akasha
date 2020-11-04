@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCSctpTransport.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCSctpTransport/state",
-    "description": "The state read-only property of the RTCSctpTransport interface provides information which describes a Stream Control Transmission Protocol (SCTP) transport state."
+    "description": "The state read-only property of the RTCSctpTransport interface provides information which describes a Stream Control Transmission Protocol (SCTP) transport state.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcsctptransport-state",
+            "description": "The definition of 'RTCSctpTransport.state' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

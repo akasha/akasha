@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "OfflineAudioCompletionEvent.renderedBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/renderedBuffer",
-    "description": "The renderedBuffer read-only property of the OfflineAudioCompletionEvent interface is an AudioBuffer containing the result of processing an OfflineAudioContext."
+    "description": "The renderedBuffer read-only property of the OfflineAudioCompletionEvent interface is an AudioBuffer containing the result of processing an OfflineAudioContext.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocompletionevent-renderedbuffer",
+            "description": "The definition of 'renderedBuffer' in Web Audio API."
+        }
+    ]
 }

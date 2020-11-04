@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDTMFSender.toneBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/toneBuffer",
-    "description": "The RTCDTMFSender interface's toneBuffer property returns a string containing a list of the DTMF tones currently queued for sending to the remote peer over the RTCPeerConnection. To place tones into the buffer, call insertDTMF()."
+    "description": "The RTCDTMFSender interface's toneBuffer property returns a string containing a list of the DTMF tones currently queued for sending to the remote peer over the RTCPeerConnection. To place tones into the buffer, call insertDTMF().",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-tonebuffer",
+            "description": "The definition of 'RTCDTMFSender.toneBuffer' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

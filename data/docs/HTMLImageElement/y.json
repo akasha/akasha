@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/y",
-    "description": "The read-only HTMLImageElement property y indicates the y-coordinate of the img element's top border edge relative to the root element's origin."
+    "description": "The read-only HTMLImageElement property y indicates the y-coordinate of the img element's top border edge relative to the root element's origin.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-htmlimageelement-y",
+            "description": "The definition of 'HTMLImageElement.y' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

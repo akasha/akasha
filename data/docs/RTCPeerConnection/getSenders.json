@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.getSenders",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getSenders",
-    "description": "The RTCPeerConnection method getSenders() returns an array of RTCRtpSender objects, each of which represents the RTP sender responsible for transmitting one track's data."
+    "description": "The RTCPeerConnection method getSenders() returns an array of RTCRtpSender objects, each of which represents the RTP sender responsible for transmitting one track's data.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-getsenders",
+            "description": "The definition of 'RTCPeerConnection.getSenders()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

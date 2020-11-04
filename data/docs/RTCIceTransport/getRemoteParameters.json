@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCIceTransport.getRemoteParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getRemoteParameters",
-    "description": "The RTCIceTransport method getRemoteParameters() returns an RTCIceParameters object which provides information uniquely identifying the remote peer for the duration of the ICE session."
+    "description": "The RTCIceTransport method getRemoteParameters() returns an RTCIceParameters object which provides information uniquely identifying the remote peer for the duration of the ICE session.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremoteparameters",
+            "description": "The definition of 'RTCIceTransport.getRemoteParameters' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

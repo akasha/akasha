@@ -4,6 +4,18 @@
     "name": "Window.pageshow_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event",
     "description": "The pageshow event is sent to a Window when the browser displays the window's document due to navigation.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#event-pageshow",
+            "description": "The definition of 'pageshow' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#event-pageshow",
+            "description": "The definition of 'pageshow' in HTML5."
+        }
+    ],
     "eventName": "pageshow",
     "eventType": "PageTransitionEvent",
     "eventHandlerProperty": "onpageshow",

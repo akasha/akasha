@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpStreamStats.trackId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/trackId",
-    "description": "The RTCRtpStreamStats dictionary's trackId property is a string which uniquely identifies the RTCMediaStreamTrackStats object which contains the track statistics for the MediaStreamTrack for which statistics are provided in this object."
+    "description": "The RTCRtpStreamStats dictionary's trackId property is a string which uniquely identifies the RTCMediaStreamTrackStats object which contains the track statistics for the MediaStreamTrack for which statistics are provided in this object.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-trackid",
+            "description": "The definition of 'RTCRtpStreamStats.trackId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

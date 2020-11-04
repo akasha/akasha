@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "HTMLSlotElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSlotElement",
-    "description": "Fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change."
+    "description": "Fired on an HTMLSlotElement instance (slot element) when the node(s) contained in that slot change.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#htmlslotelement",
+            "description": "The definition of 'HTMLSlotElement' in HTML Living Standard."
+        }
+    ]
 }

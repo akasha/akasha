@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "AudioNode.connect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect",
-    "description": "If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined."
+    "description": "If the destination is a node, connect() returns a reference to the destination AudioNode object, allowing you to chain multiple connect() calls. In some browsers, older implementations of this interface return undefined.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-connect",
+            "description": "The definition of 'connect() to an AudioNode' in Web Audio API."
+        },
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-connect-destinationparam-output",
+            "description": "The definition of 'connect() to an AudioParam' in Web Audio API."
+        }
+    ]
 }

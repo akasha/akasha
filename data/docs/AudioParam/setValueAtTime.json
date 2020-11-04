@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioParam.setValueAtTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueAtTime",
-    "description": "The setValueAtTime() method of the AudioParam interface schedules an instant change to the AudioParam value at a precise time, as measured against AudioContext.currentTime. The new value is given in the value parameter."
+    "description": "The setValueAtTime() method of the AudioParam interface schedules an instant change to the AudioParam value at a precise time, as measured against AudioContext.currentTime. The new value is given in the value parameter.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-setvalueattime",
+            "description": "The definition of 'setValueAtTime' in Web Audio API."
+        }
+    ]
 }

@@ -4,6 +4,18 @@
     "name": "Document.DOMContentLoaded_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event",
     "description": "The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#stop-parsing",
+            "description": "The definition of 'DOMContentLoaded' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/syntax.html#the-end",
+            "description": "The definition of 'DOMContentLoaded' in HTML5."
+        }
+    ],
     "eventName": "DOMContentLoaded",
     "eventType": "Event",
     "eventHandlerProperty": "None",

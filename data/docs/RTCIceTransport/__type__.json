@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCIceTransport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport",
-    "description": "The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received."
+    "description": "The RTCIceTransport interface provides access to information about the ICE transport layer over which the data is being sent and received.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport",
+            "description": "The definition of 'RTCIceTransport' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

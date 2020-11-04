@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createTouch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createTouch",
-    "description": "The Document.createTouch() method creates and returns a new Touch object."
+    "description": "The Document.createTouch() method creates and returns a new Touch object.",
+    "refs": [
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY",
+            "description": "The definition of 'Document.createTouch()' in Touch Events."
+        }
+    ]
 }

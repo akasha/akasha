@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.bytesReceived",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/bytesReceived",
-    "description": "The RTCInboundRtpStreamStats dictionary's bytesReceived property is an integer value which indicates the total number of bytes received so far from this synchronization source (SSRC)."
+    "description": "The RTCInboundRtpStreamStats dictionary's bytesReceived property is an integer value which indicates the total number of bytes received so far from this synchronization source (SSRC).",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-bytesreceived",
+            "description": "The definition of 'RTCInboundRtpStreamStats.bytesReceived' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

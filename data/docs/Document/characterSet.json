@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.characterSet",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/characterSet",
-    "description": "The Document.characterSet read-only property returns the character encoding of the document that it's currently rendered with."
+    "description": "The Document.characterSet read-only property returns the character encoding of the document that it's currently rendered with.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-characterset",
+            "description": "The definition of 'characterSet' in DOM."
+        }
+    ]
 }

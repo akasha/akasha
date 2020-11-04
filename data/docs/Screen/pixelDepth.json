@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Screen.pixelDepth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/pixelDepth",
-    "description": "Returns the bit depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't."
+    "description": "Returns the bit depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-screen-pixeldepth",
+            "description": "The definition of 'Screen.pixelDepth' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

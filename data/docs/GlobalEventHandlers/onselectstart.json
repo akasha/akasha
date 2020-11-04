@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onselectstart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onselectstart",
-    "description": "The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events."
+    "description": "The onselectstart property of the GlobalEventHandlers mixin is an EventHandler that processes selectstart events.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectstart",
+            "description": "The definition of 'GlobalEventHandlers.onselectstart' in Selection API."
+        }
+    ]
 }

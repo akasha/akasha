@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLAreaElement.hash",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/hash",
-    "description": "The HTMLHyperlinkElementUtils.hash property returns a USVString containing a '#' followed by the fragment identifier of the URL."
+    "description": "The HTMLHyperlinkElementUtils.hash property returns a USVString containing a '#' followed by the fragment identifier of the URL.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-hash",
+            "description": "The definition of 'HTMLHyperlinkElementUtils.hash' in HTML Living Standard."
+        }
+    ]
 }

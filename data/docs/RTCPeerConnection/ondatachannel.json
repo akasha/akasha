@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.ondatachannel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ondatachannel",
-    "description": "The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel()."
+    "description": "The RTCPeerConnection.ondatachannel property is an EventHandler which specifies a function which is called when the datachannel event occurs on an RTCPeerConnection. This event, of type RTCDataChannelEvent, is sent when an RTCDataChannel is added to the connection by the remote peer calling createDataChannel().",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-ondatachannel",
+            "description": "The definition of 'RTCPeerConnection.ondatachannel' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

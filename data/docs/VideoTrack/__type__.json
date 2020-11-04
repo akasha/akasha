@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "VideoTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoTrack",
-    "description": "The VideoTrack interface represents a single video track from a video element."
+    "description": "The VideoTrack interface represents a single video track from a video element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#videotrack",
+            "description": "The definition of 'VideoTrack' in HTML Living Standard."
+        }
+    ]
 }

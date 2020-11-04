@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.lastPacketReceivedTimestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/lastPacketReceivedTimestamp",
-    "description": "The lastPacketReceivedTimestamp property of the RTCInboundRtpStreamStats dictionary indicates the time at which the most recently received packet arrived from this source."
+    "description": "The lastPacketReceivedTimestamp property of the RTCInboundRtpStreamStats dictionary indicates the time at which the most recently received packet arrived from this source.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-lastpacketreceivedtimestamp",
+            "description": "The definition of 'RTCInboundRtpStreamStats.lastPacketReceivedTimestamp' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

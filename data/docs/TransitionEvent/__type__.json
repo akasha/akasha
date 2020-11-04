@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "TransitionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent",
-    "description": "The TransitionEvent interface represents events providing information related to transitions."
+    "description": "The TransitionEvent interface represents events providing information related to transitions.",
+    "refs": [
+        {
+            "name": "CSS Transitions",
+            "href": "https://drafts.csswg.org/css-transitions/#interface-transitionevent",
+            "description": "The definition of 'TransitionEvent' in CSS Transitions."
+        }
+    ]
 }

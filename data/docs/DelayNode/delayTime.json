@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DelayNode.delayTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/delayTime",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-delaynode-delaytime",
+            "description": "The definition of 'delayTime' in Web Audio API."
+        }
+    ]
 }

@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.icegatheringstatechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/icegatheringstatechange_event",
     "description": "The icegatheringstatechange event is sent to the onicegatheringstatechange event handler on an RTCPeerConnection when the state of the ICE candidate gathering process changes.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-icegatheringstatechange",
+            "description": "The definition of 'icecandidatestatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "icegatheringstatechange",
     "eventType": "Event",
     "eventHandlerProperty": "onicegatheringstatechange",

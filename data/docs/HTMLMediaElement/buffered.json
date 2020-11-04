@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.buffered",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/buffered",
-    "description": "The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed."
+    "description": "The HTMLMediaElement.buffered read-only property returns a new TimeRanges object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the buffered property is accessed.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#media-elements",
+            "description": "The definition of 'HTMLMediaElement.buffered' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.buffered' in HTML5."
+        }
+    ]
 }

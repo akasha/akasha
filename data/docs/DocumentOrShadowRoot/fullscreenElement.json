@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DocumentOrShadowRoot.fullscreenElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/fullscreenElement",
-    "description": "The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use."
+    "description": "The DocumentOrShadowRoot.fullscreenElement read-only property returns the Element that is currently being presented in full-screen mode in this document, or null if full-screen mode is not currently in use.",
+    "refs": [
+        {
+            "name": "Fullscreen API",
+            "href": "https://fullscreen.spec.whatwg.org/#dom-document-fullscreenelement",
+            "description": "The definition of 'Document.fullscreenElement' in Fullscreen API."
+        }
+    ]
 }

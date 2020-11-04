@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpCodecCapability",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpCodecCapability",
-    "description": "The WebRTC API's RTCRtpCodecCapability dictionary provides information describing the capabilities of a single media codec."
+    "description": "The WebRTC API's RTCRtpCodecCapability dictionary provides information describing the capabilities of a single media codec.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcrtpcodeccapability",
+            "description": "The definition of 'RTCRtpCodecCapability' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -4,6 +4,13 @@
     "name": "HTMLDetailsElement.toggle_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDetailsElement/toggle_event",
     "description": "The toggle event fires when the open/closed state of a details element is toggled.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#event-toggle",
+            "description": "The definition of 'toggle event' in HTML Living Standard."
+        }
+    ],
     "eventName": "toggle",
     "eventType": "Event",
     "eventHandlerProperty": "None",

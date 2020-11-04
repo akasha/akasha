@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createWaveShaper",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createWaveShaper",
-    "description": "A WaveShaperNode."
+    "description": "A WaveShaperNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createwaveshaper",
+            "description": "The definition of 'createWaveShaper()' in Web Audio API."
+        }
+    ]
 }

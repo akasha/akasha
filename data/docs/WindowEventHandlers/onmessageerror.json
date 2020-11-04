@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WindowEventHandlers.onmessageerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessageerror",
-    "description": "The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized."
+    "description": "The onmessageerror event handler of the WindowEventHandlers interface is an EventListener, called whenever an MessageEvent of type messageerror is fired on a window&mdash;that is, when it receives a message that cannot be deserialized.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-window-onmessageerror",
+            "description": "The definition of 'onmessageerror' in HTML Living Standard."
+        }
+    ]
 }

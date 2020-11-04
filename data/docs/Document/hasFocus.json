@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.hasFocus",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/hasFocus",
-    "description": "The hasFocus() method of the Document interface returns a Boolean value indicating whether the document or any element inside the document has focus. This method can be used to determine whether the active element in a document has focus."
+    "description": "The hasFocus() method of the Document interface returns a Boolean value indicating whether the document or any element inside the document has focus. This method can be used to determine whether the active element in a document has focus.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-document-hasfocus",
+            "description": "The definition of 'Document.hasFocus()' in HTML Living Standard."
+        }
+    ]
 }

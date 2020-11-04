@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PannerNode.setOrientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/setOrientation",
-    "description": "Void."
+    "description": "Void.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-setorientation",
+            "description": "The definition of 'setOrientation()' in Web Audio API."
+        }
+    ]
 }

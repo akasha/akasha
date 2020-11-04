@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateInit.sdpMid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateInit/sdpMid",
-    "description": "The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property."
+    "description": "The optional property sdpMid in the RTCIceCandidateInit dictionary specifies the value of the RTCIceCandidate object's sdpMid property.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmid",
+            "description": "The definition of 'RTCIceCandidateInit.sdpMid' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

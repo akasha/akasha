@@ -3,5 +3,32 @@
     "kind": "Type",
     "name": "HTMLElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement",
-    "description": "The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it."
+    "description": "The HTMLElement interface represents any HTML element. Some elements directly implement this interface, while others implement it via an interface that inherits it.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-htmlelement-interface",
+            "description": "The definition of 'HTMLElement' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/elements.html#htmlelement",
+            "description": "The definition of 'HTMLElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/dom.html#htmlelement",
+            "description": "The definition of 'HTMLElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-011100101",
+            "description": "The definition of 'HTMLElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-011100101",
+            "description": "The definition of 'HTMLElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

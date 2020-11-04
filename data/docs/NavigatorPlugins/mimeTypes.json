@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "NavigatorPlugins.mimeTypes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorPlugins/mimeTypes",
-    "description": "Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser."
+    "description": "Returns a MimeTypeArray object, which contains a list of MimeType objects representing the MIME types recognized by the browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-mimetypes",
+            "description": "The definition of 'NavigatorPlugins.mimeTypes' in HTML Living Standard."
+        }
+    ]
 }

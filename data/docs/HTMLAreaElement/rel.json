@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLAreaElement.rel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/rel",
-    "description": "The HTMLAreaElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the area element and the current document."
+    "description": "The HTMLAreaElement.rel property reflects the rel attribute. It is a DOMString containing a space-separated list of link types indicating the relationship between the resource represented by the area element and the current document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-area-rel",
+            "description": "The definition of 'rel' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpSender",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpSender",
-    "description": "The RTCRtpSender interface provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer."
+    "description": "The RTCRtpSender interface provides the ability to control and obtain details about how a particular MediaStreamTrack is encoded and sent to a remote peer.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcrtpsender-interface",
+            "description": "The definition of 'RTCRtpSender' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

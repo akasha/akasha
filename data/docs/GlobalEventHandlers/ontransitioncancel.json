@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ontransitioncancel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitioncancel",
-    "description": "The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events."
+    "description": "The ontransitioncancel property of the GlobalEventHandlers mixin is an EventHandler that processes transitioncancel events.",
+    "refs": [
+        {
+            "name": "CSS Transitions",
+            "href": "https://drafts.csswg.org/css-transitions/#dom-globaleventhandlers-ontransitioncancel",
+            "description": "The definition of 'ontransitioncancel' in CSS Transitions."
+        }
+    ]
 }

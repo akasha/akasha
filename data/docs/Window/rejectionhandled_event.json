@@ -4,6 +4,13 @@
     "name": "Window.rejectionhandled_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/rejectionhandled_event",
     "description": "The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#unhandled-promise-rejections",
+            "description": "The definition of 'rejectionhandled' in HTML Living Standard."
+        }
+    ],
     "eventName": "rejectionhandled",
     "eventType": "PromiseRejectionEvent",
     "eventHandlerProperty": "onrejectionhandled",

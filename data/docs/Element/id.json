@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "Element.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/id",
-    "description": "The id property of the Element interface represents the element's identifier, reflecting the id global attribute."
+    "description": "The id property of the Element interface represents the element's identifier, reflecting the id global attribute.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-id",
+            "description": "The definition of 'id' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-63534901",
+            "description": "The definition of 'id' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-63534901",
+            "description": "The definition of 'id' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

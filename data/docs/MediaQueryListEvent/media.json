@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaQueryListEvent.media",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryListEvent/media",
-    "description": "The media read-only property of the MediaQueryListEvent interface is a DOMString representing a serialized media query."
+    "description": "The media read-only property of the MediaQueryListEvent interface is a DOMString representing a serialized media query.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mediaquerylistevent-media",
+            "description": "The definition of 'media' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

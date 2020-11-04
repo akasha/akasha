@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioContextOptions.sampleRate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions/sampleRate",
-    "description": "The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named sampleRate, which indicates the sample rate to use for the new context."
+    "description": "The AudioContextOptions dictionary (used when instantiating an AudioContext) may contain a property named sampleRate, which indicates the sample rate to use for the new context.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontextoptions-samplerate",
+            "description": "The definition of 'AudioContextOptions.sampleRate' in Web Audio API."
+        }
+    ]
 }

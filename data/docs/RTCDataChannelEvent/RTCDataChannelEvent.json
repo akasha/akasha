@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "RTCDataChannelEvent.RTCDataChannelEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannelEvent/RTCDataChannelEvent",
-    "description": "The RTCDataChannelEvent() constructor creates a new RTCDataChannelEvent."
+    "description": "The RTCDataChannelEvent() constructor creates a new RTCDataChannelEvent.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannelevent",
+            "description": "The definition of 'RTCDataChannelEvent' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

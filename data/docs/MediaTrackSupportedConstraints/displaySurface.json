@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackSupportedConstraints.displaySurface",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSupportedConstraints/displaySurface",
-    "description": "The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used."
+    "description": "The MediaTrackSupportedConstraints dictionary's displaySurface property indicates whether or not the displaySurface constraint is supported by the user agent and the device on which the content is being used.",
+    "refs": [
+        {
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediatracksupportedconstraints-displaysurface",
+            "description": "The definition of 'MediaTrackSupportedConstraints.displaySurface' in Screen Capture."
+        }
+    ]
 }

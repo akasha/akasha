@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.onsignalingstatechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/onsignalingstatechange",
-    "description": "The onsignalingstatechange event handler property of the RTCPeerConnection interface specifies a function to be called when the signalingstatechange event occurs on an RTCPeerConnection interface."
+    "description": "The onsignalingstatechange event handler property of the RTCPeerConnection interface specifies a function to be called when the signalingstatechange event occurs on an RTCPeerConnection interface.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-onsignalingstatechange",
+            "description": "The definition of 'RTCPeerConnection.onsignalingstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

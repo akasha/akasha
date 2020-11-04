@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamAudioSourceNode.mediaStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioSourceNode/mediaStream",
-    "description": "The MediaStreamAudioSourceNode interface's read-only mediaStream property indicates the MediaStream that contains the audio track from which the node is receiving audio."
+    "description": "The MediaStreamAudioSourceNode interface's read-only mediaStream property indicates the MediaStream that contains the audio track from which the node is receiving audio.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-mediastreamaudiosourcenode-mediastream",
+            "description": "The definition of 'MediaStreamAudioSourceNode.mediaStream' in Web Audio API."
+        }
+    ]
 }

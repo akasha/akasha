@@ -4,6 +4,28 @@
     "name": "HTMLFormElement.submit_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event",
     "description": "The submit event fires when a form is submitted.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#event-submit",
+            "description": "The definition of 'submit' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.2",
+            "href": "https://www.w3.org/TR/html52/fullindex.html#eventdef-global-submit",
+            "description": "The definition of 'submit' in HTML 5.2."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/fullindex.html#eventdef-global-submit",
+            "description": "The definition of 'submit' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/index.html#events-0",
+            "description": "The definition of 'submit' in HTML5."
+        }
+    ],
     "eventName": "submit",
     "eventType": "SubmitEvent",
     "eventHandlerProperty": "onsubmit",

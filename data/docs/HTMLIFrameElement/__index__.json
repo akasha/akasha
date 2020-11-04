@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLIFrameElement",
-    "lastModifiedAt": 1600311766006,
+    "lastModifiedAt": 1604450499165,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193464574
+            "lastModifiedAt": 1604450489958
         },
         {
             "name": "allowPaymentRequest",
@@ -13,23 +13,23 @@
         },
         {
             "name": "contentDocument",
-            "lastModifiedAt": 1599279163021
+            "lastModifiedAt": 1604450494700
         },
         {
             "name": "contentWindow",
-            "lastModifiedAt": 1596581492299
+            "lastModifiedAt": 1604450490918
         },
         {
             "name": "csp",
-            "lastModifiedAt": 1596581492695
+            "lastModifiedAt": 1604450491510
         },
         {
             "name": "featurePolicy",
-            "lastModifiedAt": 1596581493522
+            "lastModifiedAt": 1604450492088
         },
         {
             "name": "referrerPolicy",
-            "lastModifiedAt": 1596581495686
+            "lastModifiedAt": 1604450492579
         },
         {
             "name": "setNfcFocus",
@@ -37,11 +37,11 @@
         },
         {
             "name": "src",
-            "lastModifiedAt": 1596581496503
+            "lastModifiedAt": 1604450497611
         },
         {
             "name": "srcdoc",
-            "lastModifiedAt": 1596581496743
+            "lastModifiedAt": 1604450498231
         }
     ]
 }

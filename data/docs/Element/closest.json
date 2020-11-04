@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.closest",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/closest",
-    "description": "For browsers that do not support Element.closest(), but carry support for element.matches() (or a prefixed equivalent, meaning IE9+), a polyfill exists:"
+    "description": "The closest() method traverses the Element and its parents (heading toward the document root) until it finds a node that matches the provided selector string. Will return itself or the matching ancestor. If no such element exists, it returns null.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-closest",
+            "description": "The definition of 'Element.closest()' in DOM."
+        }
+    ]
 }

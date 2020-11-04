@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "HTMLElement.title",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/title",
-    "description": "The HTMLElement.title property represents the title of the element: the text usually displayed in a 'tooltip' popup when the mouse is over the node."
+    "description": "The HTMLElement.title property represents the title of the element: the text usually displayed in a 'tooltip' popup when the mouse is over the node.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-title",
+            "description": "The definition of 'title' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-78276800",
+            "description": "The definition of 'title' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-78276800",
+            "description": "The definition of 'title' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

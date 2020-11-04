@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "Window.onunload",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onunload",
-    "description": "The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs."
+    "description": "The onunload property of the WindowEventHandlers mixin is the EventHandler for processing unload events. These events fire when the window is unloading its content and resources. The resource removal is processed after the unload event occurs.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-window-onunload",
+            "description": "The definition of 'onunload' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/#windoweventhandlers",
+            "description": "The definition of 'GlobalEventHandlers' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/#windoweventhandlers",
+            "description": "The definition of 'GlobalEventHandlers' in HTML5."
+        }
+    ]
 }

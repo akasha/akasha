@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerNavigator.appVersion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerNavigator/appVersion",
-    "description": "Returns either &quot;4.0&quot; or a string representing version information about the browser."
+    "description": "Returns either &quot;4.0&quot; or a string representing version information about the browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-appversion",
+            "description": "The definition of 'NavigatorID.appVersion' in HTML Living Standard."
+        }
+    ]
 }

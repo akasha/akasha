@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "HTMLVideoElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement",
-    "description": "The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement."
+    "description": "The HTMLVideoElement interface provides special properties and methods for manipulating video objects. It also inherits properties and methods of HTMLMediaElement and HTMLElement.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlvideoelement",
+            "description": "The definition of 'HTMLVideoElement' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "ValidityState.rangeUnderflow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/rangeUnderflow",
-    "description": "The read-only rangeUnderflow property of a ValidityState object indicates if the value of an input, after having been edited by the user, does not conform to the constraints set by the element's min attribute."
+    "description": "The read-only rangeUnderflow property of a ValidityState object indicates if the value of an input, after having been edited by the user, does not conform to the constraints set by the element's min attribute.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-rangeunderflow",
+            "description": "The definition of 'ValidityState.rangeUnderflow' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-rangeunderflow",
+            "description": "The definition of 'ValidityState.rangeUnderflow' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-rangeunderflow",
+            "description": "The definition of 'ValidityState.rangeUnderflow' in HTML5."
+        }
+    ]
 }

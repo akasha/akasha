@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "EventSource.EventSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/EventSource",
-    "description": "The EventSource() constructor returns a newly-created EventSource, which represents a remote resource."
+    "description": "The EventSource() constructor returns a newly-created EventSource, which represents a remote resource.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource",
+            "description": "The definition of 'EventSource()' in HTML Living Standard."
+        }
+    ]
 }

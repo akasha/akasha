@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Navigator",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator",
-    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities."
+    "description": "The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#the-navigator-object",
+            "description": "The definition of 'the Navigator object' in HTML Living Standard."
+        }
+    ]
 }

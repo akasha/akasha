@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.contentType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/contentType",
-    "description": "The Document.contentType read-only property returns the MIME type that the document is being rendered as. This may come from HTTP headers or other sources of MIME information, and might be affected by automatic type conversions performed by either the browser or extensions."
+    "description": "The Document.contentType read-only property returns the MIME type that the document is being rendered as. This may come from HTTP headers or other sources of MIME information, and might be affected by automatic type conversions performed by either the browser or extensions.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-contenttype",
+            "description": "The definition of 'Document.contentType' in DOM."
+        }
+    ]
 }

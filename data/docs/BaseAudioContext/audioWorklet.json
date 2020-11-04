@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BaseAudioContext.audioWorklet",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/audioWorklet",
-    "description": "The audioWorklet read-only property of the BaseAudioContext interface returns an instance of AudioWorklet that can be used for adding AudioWorkletProcessor-derived classes which implement custom audio processing."
+    "description": "The audioWorklet read-only property of the BaseAudioContext interface returns an instance of AudioWorklet that can be used for adding AudioWorkletProcessor-derived classes which implement custom audio processing.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-audioworklet",
+            "description": "The definition of 'audioWorklet' in Web Audio API."
+        }
+    ]
 }

@@ -4,6 +4,13 @@
     "name": "ScriptProcessorNode.audioprocess_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ScriptProcessorNode/audioprocess_event",
     "description": "The audioprocess event of the ScriptProcessorNode interface is fired when an input buffer of a script processor is ready to be processed.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#AudioProcessingEvent-section",
+            "description": "The definition of 'AudioProcessingEvent' in Web Audio API."
+        }
+    ],
     "eventName": "audioprocess",
     "eventType": "AudioProcessingEvent",
     "eventHandlerProperty": "onaudioprocess",

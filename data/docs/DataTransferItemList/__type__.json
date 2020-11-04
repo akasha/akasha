@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "DataTransferItemList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList",
-    "description": "The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList."
+    "description": "The DataTransferItemList object is a list of DataTransferItem objects representing items being dragged. During a drag operation, each DragEvent has a dataTransfer property and that property is a DataTransferItemList.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#datatransferitemlist",
+            "description": "The definition of 'DataTransferItemList' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#datatransferitemlist",
+            "description": "The definition of 'DataTransferItemList' in HTML 5.1."
+        }
+    ]
 }

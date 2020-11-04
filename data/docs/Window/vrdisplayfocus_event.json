@@ -4,6 +4,13 @@
     "name": "Window.vrdisplayfocus_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayfocus_event",
     "description": "You can use the vrdisplayfocus event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayfocus",
+            "description": "The definition of 'vrdisplayfocus' in WebVR 1.1."
+        }
+    ],
     "eventName": "vrdisplayfocus",
     "eventType": "VRDisplayEvent",
     "eventHandlerProperty": "onvrdisplayfocus",

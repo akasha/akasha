@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLLabelElement.htmlFor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLLabelElement/htmlFor",
-    "description": "The HTMLLabelElement.htmlFor property reflects the value of the for content property. That means that this script-accessible property is used to set and read the value of the content property for, which is the ID of the label's associated control element."
+    "description": "The HTMLLabelElement.htmlFor property reflects the value of the for content property. That means that this script-accessible property is used to set and read the value of the content property for, which is the ID of the label's associated control element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-label-htmlfor",
+            "description": "The definition of 'htmlFor' in HTML Living Standard."
+        }
+    ]
 }

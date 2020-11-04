@@ -4,6 +4,13 @@
     "name": "Window.vrdisplayactivate_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/vrdisplayactivate_event",
     "description": "You can use the vrdisplayactivate event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayactivate",
+            "description": "The definition of 'vrdisplayactivate' in WebVR 1.1."
+        }
+    ],
     "eventName": "vrdisplayactivate",
     "eventType": "VRDisplayEvent",
     "eventHandlerProperty": "onvrdisplayactivate",

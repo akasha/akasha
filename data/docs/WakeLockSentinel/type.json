@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WakeLockSentinel.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/type",
-    "description": "The read-only type property of the WakeLockSentinel interface returns a String representation of the currently acquired WakeLockSentinel type."
+    "description": "The read-only type property of the WakeLockSentinel interface returns a String representation of the currently acquired WakeLockSentinel type.",
+    "refs": [
+        {
+            "name": "Screen Wake Lock API",
+            "href": "https://w3c.github.io/screen-wake-lock/#the-wakelocktype-enum",
+            "description": "The definition of 'WakeLockType' in Screen Wake Lock API."
+        }
+    ]
 }

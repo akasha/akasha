@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "WorkerGlobalScope.indexedDB",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/indexedDB",
-    "description": "The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases."
+    "description": "The indexedDB read-only property of the WindowOrWorkerGlobalScope mixin provides a mechanism for applications to asynchronously access the capabilities of indexed databases.",
+    "refs": [
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-windoworworkerglobalscope-indexeddb",
+            "description": "The definition of 'indexedDB' in Indexed Database API Draft."
+        },
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-windoworworkerglobalscope-indexeddb",
+            "description": "The definition of 'indexedDB' in Indexed Database API 2.0."
+        }
+    ]
 }

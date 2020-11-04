@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.deleted",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/deleted",
-    "description": "The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released."
+    "description": "The RTCIceCandidateStats dictionary's deleted property indicates whether or not the candidate has been deleted or released.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-deleted",
+            "description": "The definition of 'RTCIceCandidateStats.deleted' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

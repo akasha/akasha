@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpStreamStats.ssrc",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/ssrc",
-    "description": "The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary."
+    "description": "The RTCRtpStreamStats dictionary's ssrc property provides the Synchronization Source (SSRC), an integer which uniquely identifies the source of the RTP packets whose statistics are covered by the RTCStatsReport that includes this RTCRtpStreamStats dictionary.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-ssrc",
+            "description": "The definition of 'RTCRtpStreamStats.ssrc' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

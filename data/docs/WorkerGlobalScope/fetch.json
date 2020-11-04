@@ -3,5 +3,21 @@
     "kind": "Method",
     "name": "WorkerGlobalScope.fetch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/fetch",
-    "description": "The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available."
+    "description": "The fetch() method of the WindowOrWorkerGlobalScope mixin starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#fetch-method",
+            "description": "The definition of 'fetch()' in Fetch."
+        },
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-global-fetch",
+            "description": "The definition of 'fetch()' in Fetch."
+        },
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/"
+        }
+    ]
 }

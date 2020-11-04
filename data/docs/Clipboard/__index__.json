@@ -1,27 +1,27 @@
 
 {
     "name": "Clipboard",
-    "lastModifiedAt": 1601463736566,
+    "lastModifiedAt": 1604446972837,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279577773
+            "lastModifiedAt": 1604446970229
         },
         {
             "name": "read",
-            "lastModifiedAt": 1597190552386
+            "lastModifiedAt": 1604446970720
         },
         {
             "name": "readText",
-            "lastModifiedAt": 1597190552755
+            "lastModifiedAt": 1604446971575
         },
         {
             "name": "write",
-            "lastModifiedAt": 1597190553219
+            "lastModifiedAt": 1604446972195
         },
         {
             "name": "writeText",
-            "lastModifiedAt": 1597190553553
+            "lastModifiedAt": 1604446972837
         }
     ]
 }

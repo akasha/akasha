@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLDataElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataElement",
-    "description": "The HTMLDataElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating data elements."
+    "description": "The HTMLDataElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating data elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmldataelement",
+            "description": "The definition of 'HTMLDataElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#the-data-element",
+            "description": "The definition of 'HTMLDataElement' in HTML5."
+        }
+    ]
 }

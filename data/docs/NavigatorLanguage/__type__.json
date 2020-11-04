@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "NavigatorLanguage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage",
-    "description": "NavigatorLanguage contains methods and properties related to the language of the navigator."
+    "description": "NavigatorLanguage contains methods and properties related to the language of the navigator.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#navigatorlanguage",
+            "description": "The definition of 'NavigatorLanguage' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/#navigatorlanguage",
+            "description": "The definition of 'NavigatorLanguage' in HTML5."
+        }
+    ]
 }

@@ -1,35 +1,35 @@
 
 {
     "name": "Storage",
-    "lastModifiedAt": 1600313559020,
+    "lastModifiedAt": 1604450398758,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193437191
+            "lastModifiedAt": 1604450394731
         },
         {
             "name": "clear",
-            "lastModifiedAt": 1600305070862
+            "lastModifiedAt": 1604450396241
         },
         {
             "name": "getItem",
-            "lastModifiedAt": 1600305071658
+            "lastModifiedAt": 1604450397265
         },
         {
             "name": "key",
-            "lastModifiedAt": 1596581432845
+            "lastModifiedAt": 1604450397825
         },
         {
             "name": "length",
-            "lastModifiedAt": 1596581432558
+            "lastModifiedAt": 1604450395743
         },
         {
             "name": "removeItem",
-            "lastModifiedAt": 1600305072511
+            "lastModifiedAt": 1604450398287
         },
         {
             "name": "setItem",
-            "lastModifiedAt": 1600305072902
+            "lastModifiedAt": 1604450398758
         }
     ]
 }

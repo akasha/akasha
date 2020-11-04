@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLTableElement",
-    "lastModifiedAt": 1600311971654,
+    "lastModifiedAt": 1604449703365,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193195321
+            "lastModifiedAt": 1604449687376
         },
         {
             "name": "align",
@@ -21,7 +21,7 @@
         },
         {
             "name": "caption",
-            "lastModifiedAt": 1596581159610
+            "lastModifiedAt": 1604449689653
         },
         {
             "name": "cellPadding",
@@ -29,31 +29,31 @@
         },
         {
             "name": "createCaption",
-            "lastModifiedAt": 1596581161787
+            "lastModifiedAt": 1604449696975
         },
         {
             "name": "createTFoot",
-            "lastModifiedAt": 1596581162098
+            "lastModifiedAt": 1604449697994
         },
         {
             "name": "createTHead",
-            "lastModifiedAt": 1596581162344
+            "lastModifiedAt": 1604449699005
         },
         {
             "name": "deleteCaption",
-            "lastModifiedAt": 1596581162714
+            "lastModifiedAt": 1604449699613
         },
         {
             "name": "deleteRow",
-            "lastModifiedAt": 1596581163136
+            "lastModifiedAt": 1604449700096
         },
         {
             "name": "deleteTFoot",
-            "lastModifiedAt": 1596581163567
+            "lastModifiedAt": 1604449701184
         },
         {
             "name": "deleteTHead",
-            "lastModifiedAt": 1596581164402
+            "lastModifiedAt": 1604449702508
         },
         {
             "name": "frame",
@@ -61,11 +61,11 @@
         },
         {
             "name": "insertRow",
-            "lastModifiedAt": 1596581164819
+            "lastModifiedAt": 1604449703365
         },
         {
             "name": "rows",
-            "lastModifiedAt": 1599391357743
+            "lastModifiedAt": 1604449692068
         },
         {
             "name": "rules",
@@ -77,15 +77,15 @@
         },
         {
             "name": "tBodies",
-            "lastModifiedAt": 1596581160282
+            "lastModifiedAt": 1604449694133
         },
         {
             "name": "tFoot",
-            "lastModifiedAt": 1596581161122
+            "lastModifiedAt": 1604449694744
         },
         {
             "name": "tHead",
-            "lastModifiedAt": 1596581161480
+            "lastModifiedAt": 1604449695794
         },
         {
             "name": "width",

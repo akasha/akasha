@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.defaultView",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/defaultView",
-    "description": "In browsers, document.defaultView returns the window object associated with a document, or null if none is available."
+    "description": "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-defaultview",
+            "description": "The definition of 'Document.defaultView' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-document-defaultview",
+            "description": "The definition of 'Document.defaultView' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerLocation.search",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/search",
-    "description": "The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL."
+    "description": "The URLUtilsReadOnly.search read-only property returns a DOMString containing a '?' followed by the parameters of the URL.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-search",
+            "description": "The definition of 'URLUtilsReadOnly.search' in URL."
+        }
+    ]
 }

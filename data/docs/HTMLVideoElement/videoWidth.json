@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLVideoElement.videoWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoWidth",
-    "description": "The HTMLVideoElement interface's read-only videoWidth property indicates the intrinsic width of the video, expressed in CSS pixels. In simple terms, this is the width of the media in its natural size."
+    "description": "The HTMLVideoElement interface's read-only videoWidth property indicates the intrinsic width of the video, expressed in CSS pixels. In simple terms, this is the width of the media in its natural size.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-video-videowidth",
+            "description": "The definition of 'HTMLVideoElement.videoWidth' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlvideoelement-videowidth",
+            "description": "The definition of 'HTMLVideoElement.videoWidth' in HTML5."
+        }
+    ]
 }

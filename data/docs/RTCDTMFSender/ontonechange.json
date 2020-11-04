@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDTMFSender.ontonechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/ontonechange",
-    "description": "The ontonechange property of the RTCDTMFSender interface is used to set the event handler for the tonechange event, which is sent to the RTCDTMFSender each time a tone begins or ends. The event handler receives as input a single parameter of type RTCDTMFToneChangeEvent, which describes the change."
+    "description": "The ontonechange property of the RTCDTMFSender interface is used to set the event handler for the tonechange event, which is sent to the RTCDTMFSender each time a tone begins or ends. The event handler receives as input a single parameter of type RTCDTMFToneChangeEvent, which describes the change.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdtmfsender-ontonechange",
+            "description": "The definition of 'ontonechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

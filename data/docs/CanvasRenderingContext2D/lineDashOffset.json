@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CanvasRenderingContext2D.lineDashOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset",
-    "description": "The CanvasRenderingContext2D.lineDashOffset property of the Canvas 2D API sets the line dash offset, or &quot;phase.&quot;"
+    "description": "The CanvasRenderingContext2D.lineDashOffset property of the Canvas 2D API sets the line dash offset, or &quot;phase.&quot;",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-linedashoffset",
+            "description": "The definition of 'CanvasRenderingContext2D.lineDashOffset' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioParam.exponentialRampToValueAtTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/exponentialRampToValueAtTime",
-    "description": "A reference to this AudioParam object. In some browsers older implementations of this interface return void."
+    "description": "A reference to this AudioParam object. In some browsers older implementations of this interface return void.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-exponentialramptovalueattime",
+            "description": "The definition of 'exponentialRampToValueAtTime' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.decoding",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding",
-    "description": "The decoding property of the HTMLImageElement interface represents a hint given to the browser on how it should decode the image."
+    "description": "The decoding property of the HTMLImageElement interface represents a hint given to the browser on how it should decode the image.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-img-decoding",
+            "description": "The definition of 'decoding' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.language",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language",
-    "description": "The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI."
+    "description": "The NavigatorLanguage.language read-only property returns a string representing the preferred language of the user, usually the language of the browser UI.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-language",
+            "description": "The definition of 'NavigatorLanguage: language' in HTML Living Standard."
+        }
+    ]
 }

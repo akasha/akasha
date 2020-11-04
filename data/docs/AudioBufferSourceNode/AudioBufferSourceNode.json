@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "AudioBufferSourceNode.AudioBufferSourceNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/AudioBufferSourceNode",
-    "description": "The AudioBufferSourceNode() constructor creates a new AudioBufferSourceNode object instance."
+    "description": "The AudioBufferSourceNode() constructor creates a new AudioBufferSourceNode object instance.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#AudioBufferSourceNode",
+            "description": "The definition of 'AudioBufferSourceNode()' in Web Audio API."
+        }
+    ]
 }

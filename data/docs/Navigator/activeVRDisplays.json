@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.activeVRDisplays",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/activeVRDisplays",
-    "description": "The activeVRDisplays read-only property of the Navigator interface returns an array containing every VRDisplay object that is currently presenting (VRDisplay.ispresenting is true)."
+    "description": "The activeVRDisplays read-only property of the Navigator interface returns an array containing every VRDisplay object that is currently presenting (VRDisplay.ispresenting is true).",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#navigator-activevrdisplays-attribute",
+            "description": "The definition of 'activeVRDisplays' in WebVR 1.1."
+        }
+    ]
 }

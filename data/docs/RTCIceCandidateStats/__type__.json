@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCIceCandidateStats",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats",
-    "description": "The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate."
+    "description": "The WebRTC API's RTCIceCandidateStats dictionary provides statistics related to an RTCIceCandidate.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#icecandidate-dict*",
+            "description": "The definition of 'RTCIceCandidateStats' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

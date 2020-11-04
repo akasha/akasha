@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "ValidityState.badInput",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/badInput",
-    "description": "The read-only badInput property of a ValidityState object indicates if the user has provided input that the browser is unable to convert. For example, if you have a number input element whose content is a string. Note: While this is unsupported in Internet Explorer, any non-numeric value will be dismissed from the field if it is a number input."
+    "description": "The read-only badInput property of a ValidityState object indicates if the user has provided input that the browser is unable to convert. For example, if you have a number input element whose content is a string. Note: While this is unsupported in Internet Explorer, any non-numeric value will be dismissed from the field if it is a number input.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-badinput",
+            "description": "The definition of 'ValidityState.badInput' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-badinput",
+            "description": "The definition of 'ValidityState.badInput' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-badinput",
+            "description": "The definition of 'ValidityState.badInput' in HTML5."
+        }
+    ]
 }

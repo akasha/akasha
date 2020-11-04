@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Gamepad.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/id",
-    "description": "The Gamepad.id property of the Gamepad interface returns a string containing some information about the controller."
+    "description": "The Gamepad.id property of the Gamepad interface returns a string containing some information about the controller.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/#dom-gamepad-id",
+            "description": "The definition of 'Gamepad.id' in Gamepad."
+        }
+    ]
 }

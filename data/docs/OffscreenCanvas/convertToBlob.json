@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OffscreenCanvas.convertToBlob",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/convertToBlob",
-    "description": "The OffscreenCanvas.convertToBlob()method creates a Blob object representing the image contained in the canvas."
+    "description": "The OffscreenCanvas.convertToBlob()method creates a Blob object representing the image contained in the canvas.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-converttoblob",
+            "description": "The definition of 'OffscreenCanvas: convertToBlob' in HTML Living Standard."
+        }
+    ]
 }

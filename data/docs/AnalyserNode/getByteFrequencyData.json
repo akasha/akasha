@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AnalyserNode.getByteFrequencyData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData",
-    "description": "The getByteFrequencyData() method of the AnalyserNode interface copies the current frequency data into a Uint8Array (unsigned byte array) passed into it."
+    "description": "The getByteFrequencyData() method of the AnalyserNode interface copies the current frequency data into a Uint8Array (unsigned byte array) passed into it.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-getbytefrequencydata",
+            "description": "The definition of 'getByteFrequencyData()' in Web Audio API."
+        }
+    ]
 }

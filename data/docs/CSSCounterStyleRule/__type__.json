@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CSSCounterStyleRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSCounterStyleRule",
-    "description": "The CSSCounterStyleRule interface represents an @counter-style at-rule."
+    "description": "The CSSCounterStyleRule interface represents an @counter-style at-rule.",
+    "refs": [
+        {
+            "name": "CSS Counter Styles Level 3",
+            "href": "https://drafts.csswg.org/css-counter-styles-3/#the-csscounterstylerule-interface",
+            "description": "The definition of 'CSSCounterStyleRule' in CSS Counter Styles Level 3."
+        }
+    ]
 }

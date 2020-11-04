@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.naturalWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/naturalWidth",
-    "description": "The HTMLImageElement interface's read-only naturalWidth property returns the intrinsic (natural), density-corrected width of the image in CSS pixels."
+    "description": "The HTMLImageElement interface's read-only naturalWidth property returns the intrinsic (natural), density-corrected width of the image in CSS pixels.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-naturalwidth",
+            "description": "The definition of 'HTMLImageElement.naturalWidth' in HTML Living Standard."
+        }
+    ]
 }

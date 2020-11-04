@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Request.cache",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/cache",
-    "description": "The cache read-only property of the Request interface contains the cache mode of the request. It controls how the request will interact with the browser's HTTP cache."
+    "description": "The cache read-only property of the Request interface contains the cache mode of the request. It controls how the request will interact with the browser's HTTP cache.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-request-cache",
+            "description": "The definition of 'cache' in Fetch."
+        }
+    ]
 }

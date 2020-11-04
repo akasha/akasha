@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioParam.cancelAndHoldAtTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelAndHoldAtTime",
-    "description": "The cancelAndHoldAtTime() property of the AudioParam interface cancels all scheduled future changes to the AudioParam but holds its value at a given time until further changes are made using other methods."
+    "description": "The cancelAndHoldAtTime() property of the AudioParam interface cancels all scheduled future changes to the AudioParam but holds its value at a given time until further changes are made using other methods.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelandholdattime",
+            "description": "The definition of 'cancelAndHoldAtTime()' in Web Audio API."
+        }
+    ]
 }

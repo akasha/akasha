@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "StyleSheet.media",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/media",
-    "description": "The media property of the StyleSheet interface specifies the intended destination media for style information. It is a read-only, array-like MediaList object and can be removed with deleteMedium() and added with appendMedium()."
+    "description": "The media property of the StyleSheet interface specifies the intended destination media for style information. It is a read-only, array-like MediaList object and can be removed with deleteMedium() and added with appendMedium().",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-stylesheet-media",
+            "description": "The definition of 'StyleSheet: media' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

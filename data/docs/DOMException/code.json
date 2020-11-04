@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMException.code",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException/code",
-    "description": "The code read-only property of the DOMException interface returns a short that contains one of the error code constants, or 0 if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the DOMException.name attribute."
+    "description": "The code read-only property of the DOMException interface returns a short that contains one of the error code constants, or 0 if none match. This field is used for historical reasons. New DOM exceptions don't use this anymore: they put this info in the DOMException.name attribute.",
+    "refs": [
+        {
+            "name": "Web IDL",
+            "href": "https://heycam.github.io/webidl/#dom-domexception-code",
+            "description": "The definition of 'code' in Web IDL."
+        }
+    ]
 }

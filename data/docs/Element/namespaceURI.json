@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.namespaceURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/namespaceURI",
-    "description": "The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace."
+    "description": "The Element.namespaceURI read-only property returns the namespace URI of the element, or null if the element is not in a namespace.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-namespaceuri",
+            "description": "The definition of 'Element: namespaceURI' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "History.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/length",
-    "description": "The History.length read-only property returns an integer representing the number of elements in the session history, including the currently loaded page."
+    "description": "The History.length read-only property returns an integer representing the number of elements in the session history, including the currently loaded page.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#dom-history-length",
+            "description": "The definition of 'History.length' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-history-length",
+            "description": "The definition of 'History.length' in HTML5."
+        }
+    ]
 }

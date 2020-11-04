@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.setRemoteDescription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/setRemoteDescription",
-    "description": "The RTCPeerConnection method setRemoteDescription() sets the specified session description as the remote peer's current offer or answer. The description specifies the properties of the remote end of the connection, including the media format."
+    "description": "The RTCPeerConnection method setRemoteDescription() sets the specified session description as the remote peer's current offer or answer. The description specifies the properties of the remote end of the connection, including the media format.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-setremotedescription",
+            "description": "The definition of 'RTCPeerConnection.setRemoteDescription()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

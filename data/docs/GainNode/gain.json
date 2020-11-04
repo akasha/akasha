@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GainNode.gain",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GainNode/gain",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-gainnode-gain",
+            "description": "The definition of 'gain' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "OscillatorNode.stop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OscillatorNode/stop",
-    "description": "The following example shows basic usage of an AudioContext to create an oscillator node. For an applied example, check out our Violent Theremin demo (see app.js for relevant code)."
+    "description": "The following example shows basic usage of an AudioContext to create an oscillator node. For an applied example, check out our Violent Theremin demo (see app.js for relevant code).",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-stop",
+            "description": "The definition of 'stop' in Web Audio API."
+        }
+    ]
 }

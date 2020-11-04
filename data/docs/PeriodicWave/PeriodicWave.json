@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "PeriodicWave.PeriodicWave",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PeriodicWave/PeriodicWave",
-    "description": "The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance."
+    "description": "The PeriodicWave() constructor of the Web Audio API creates a new PeriodicWave object instance.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#periodicwave",
+            "description": "The definition of 'PeriodicWave' in Web Audio API."
+        }
+    ]
 }

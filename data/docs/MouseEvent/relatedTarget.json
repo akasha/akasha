@@ -3,5 +3,31 @@
     "kind": "Property",
     "name": "MouseEvent.relatedTarget",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget",
-    "description": "The MouseEvent.relatedTarget read-only property is the secondary target for the mouse event, if there is one. That is:"
+    "description": "The MouseEvent.relatedTarget read-only property is the secondary target for the mouse event, if there is one. That is:",
+    "refs": [
+        {
+            "name": "mouseenter",
+            "href": "/en-US/docs/Web/Events/mouseenter"
+        },
+        {
+            "name": "mouseleave",
+            "href": "/en-US/docs/Web/Events/mouseleave"
+        },
+        {
+            "name": "mouseout",
+            "href": "/en-US/docs/Web/Events/mouseout"
+        },
+        {
+            "name": "mouseover",
+            "href": "/en-US/docs/Web/Events/mouseover"
+        },
+        {
+            "name": "dragenter",
+            "href": "/en-US/docs/Web/Events/dragenter"
+        },
+        {
+            "name": "dragexit",
+            "href": "/en-US/docs/Web/Events/dragexit"
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ontouchcancel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontouchcancel",
-    "description": "The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events."
+    "description": "The ontouchcancel property of the GlobalEventHandlers mixin is an EventHandler that processes touchcancel events.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-globaleventhandlers-ontouchcancel"
+        }
+    ]
 }

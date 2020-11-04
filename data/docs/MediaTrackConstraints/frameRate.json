@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.frameRate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/frameRate",
-    "description": "The MediaTrackConstraints dictionary's frameRate property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the frameRate constrainable property."
+    "description": "The MediaTrackConstraints dictionary's frameRate property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the frameRate constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-framerate",
+            "description": "The definition of 'frameRate' in Media Capture and Streams."
+        }
+    ]
 }

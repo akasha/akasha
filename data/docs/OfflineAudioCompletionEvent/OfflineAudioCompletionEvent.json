@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "OfflineAudioCompletionEvent.OfflineAudioCompletionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioCompletionEvent/OfflineAudioCompletionEvent",
-    "description": "The OfflineAudioCompletionEvent() constructor of the Web Audio API creates a new OfflineAudioCompletionEvent object instance."
+    "description": "The OfflineAudioCompletionEvent() constructor of the Web Audio API creates a new OfflineAudioCompletionEvent object instance.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocompletionevent-offlineaudiocompletionevent",
+            "description": "The definition of 'OfflineAudioCompletionEvent()' in Web Audio API."
+        }
+    ]
 }

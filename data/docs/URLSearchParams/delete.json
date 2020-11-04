@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.delete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/delete",
-    "description": "The delete() method of the URLSearchParams interface deletes the given search parameter and all its associated values, from the list of all search parameters."
+    "description": "The delete() method of the URLSearchParams interface deletes the given search parameter and all its associated values, from the list of all search parameters.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-delete",
+            "description": "The definition of 'delete()' in URL."
+        }
+    ]
 }

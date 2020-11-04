@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.consentRequestsSent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/consentRequestsSent",
-    "description": "The RTCIceCandidatePairStats property consentRequestsSent specifies the number of consent requests that have been sent by this peer to the remote peer on the connection described by the pair of candidates."
+    "description": "The RTCIceCandidatePairStats property consentRequestsSent specifies the number of consent requests that have been sent by this peer to the remote peer on the connection described by the pair of candidates.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-consentrequestssent",
+            "description": "The definition of 'RTCIceCandidatePairStats.consentRequestsSent' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

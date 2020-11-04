@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCInboundRtpStreamStats.packetsFailedDecryption",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption",
-    "description": "The packetsFailedDecryption property of the RTCInboundRtpStreamStats dictionary indicates the total number of RTP packets which failed to be decrypted successfully after being received by the local end of the connection during this session."
+    "description": "The packetsFailedDecryption property of the RTCInboundRtpStreamStats dictionary indicates the total number of RTP packets which failed to be decrypted successfully after being received by the local end of the connection during this session.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcinboundrtpstreamstats-packetsfaileddecryption",
+            "description": "The definition of 'RTCInboundRtpStreamStats.packetsFailedDecryption' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WindowOrWorkerGlobalScope.btoa",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/btoa",
-    "description": "The WindowOrWorkerGlobalScope.btoa() method creates a Base64-encoded ASCII string from a binary string (i.e., a String object in which each character in the string is treated as a byte of binary data)."
+    "description": "The WindowOrWorkerGlobalScope.btoa() method creates a Base64-encoded ASCII string from a binary string (i.e., a String object in which each character in the string is treated as a byte of binary data).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-btoa",
+            "description": "The definition of 'WindowOrWorkerGlobalScope.btoa()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/#dom-windowbase64-btoa",
+            "description": "The definition of 'WindowBase64.btoa()' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/#dom-windowbase64-btoa",
+            "description": "The definition of 'WindowBase64.btoa()' in HTML5."
+        }
+    ]
 }

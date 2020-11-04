@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/id",
-    "description": "The read-only RTCDataChannel property id returns an ID number (between 0 and 65,534) which uniquely identifies the RTCDataChannel."
+    "description": "The read-only RTCDataChannel property id returns an ID number (between 0 and 65,534) which uniquely identifies the RTCDataChannel.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdatachannel-id",
+            "description": "The definition of 'RTCDataChannel.id' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

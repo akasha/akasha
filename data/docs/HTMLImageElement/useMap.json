@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.useMap",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/useMap",
-    "description": "The useMap property on the HTMLImageElement interface reflects the value of the HTML usemap attribute, which is a string providing the name of the client-side image map to apply to the image."
+    "description": "The useMap property on the HTMLImageElement interface reflects the value of the HTML usemap attribute, which is a string providing the name of the client-side image map to apply to the image.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-usemap",
+            "description": "The definition of 'HTMLImageElement.useMap' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BiquadFilterNode.detune",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/detune",
-    "description": "An a-rate AudioParam."
+    "description": "An a-rate AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-detune",
+            "description": "The definition of 'detune' in Web Audio API."
+        }
+    ]
 }

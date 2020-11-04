@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DelayNode.DelayNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DelayNode/DelayNode",
-    "description": "The DelayNode() constructor of the Web Audio API creates a new DelayNode object with a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data, and its propagation to the output."
+    "description": "The DelayNode() constructor of the Web Audio API creates a new DelayNode object with a delay-line; an AudioNode audio-processing module that causes a delay between the arrival of an input data, and its propagation to the output.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-delaynode-delaynode",
+            "description": "The definition of 'DelayNode()' in Web Audio API."
+        }
+    ]
 }

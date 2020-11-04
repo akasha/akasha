@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Screen.orientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/orientation",
-    "description": "The orientation read-only property of the Screen interface returns the current orientation of the screen."
+    "description": "The orientation read-only property of the Screen interface returns the current orientation of the screen.",
+    "refs": [
+        {
+            "name": "Screen Orientation API",
+            "href": "https://w3c.github.io/screen-orientation/#dom-screen-orientation",
+            "description": "The definition of 'orientation' in Screen Orientation API."
+        }
+    ]
 }

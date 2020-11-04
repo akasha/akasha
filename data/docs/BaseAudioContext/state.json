@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BaseAudioContext.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/state",
-    "description": "A DOMString. Possible values are:"
+    "description": "A DOMString. Possible values are:",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-state",
+            "description": "The definition of 'state' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.set",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/set",
-    "description": "The set() method of the URLSearchParams interface sets the value associated with a given search parameter to the given value. If there were several matching values, this method deletes the others. If the search parameter doesn't exist, this method creates it."
+    "description": "The set() method of the URLSearchParams interface sets the value associated with a given search parameter to the given value. If there were several matching values, this method deletes the others. If the search parameter doesn't exist, this method creates it.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-set",
+            "description": "The definition of 'set()' in URL."
+        }
+    ]
 }

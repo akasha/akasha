@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createStereoPanner",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createStereoPanner",
-    "description": "A StereoPannerNode."
+    "description": "A StereoPannerNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createstereopanner",
+            "description": "The definition of 'createStereoPanner()' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FullscreenOptions.navigationUI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions/navigationUI",
-    "description": "The FullscreenOptions dictionary's navigationUI property is used when calling requestFullscreen() to specify to what extent the user agent should include its standard user interface while the element is presented in full-screen mode."
+    "description": "The FullscreenOptions dictionary's navigationUI property is used when calling requestFullscreen() to specify to what extent the user agent should include its standard user interface while the element is presented in full-screen mode.",
+    "refs": [
+        {
+            "name": "Fullscreen API",
+            "href": "https://fullscreen.spec.whatwg.org/#dictdef-fullscreenoptions",
+            "description": "The definition of 'FullscreenOptions' in Fullscreen API."
+        }
+    ]
 }

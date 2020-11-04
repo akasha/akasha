@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpTransceiver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver",
-    "description": "The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state."
+    "description": "The WebRTC interface RTCRtpTransceiver describes a permanent pairing of an RTCRtpSender and an RTCRtpReceiver, along with some shared state.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcrtptransceiver-interface",
+            "description": "The definition of 'RTCRtpTransceiver' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Storage.clear",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Storage/clear",
-    "description": "The clear() method of the Storage interface clears all keys stored in a given Storage object."
+    "description": "The clear() method of the Storage interface clears all keys stored in a given Storage object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-clear",
+            "description": "The definition of 'Storage.clear' in HTML Living Standard."
+        }
+    ]
 }

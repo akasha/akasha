@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLEmbedElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLEmbedElement",
-    "description": "The HTMLEmbedElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating embed elements."
+    "description": "The HTMLEmbedElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating embed elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlembedelement",
+            "description": "The definition of 'HTMLEmbedElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-embed-element",
+            "description": "The definition of 'HTMLEmbedElement' in HTML5."
+        }
+    ]
 }

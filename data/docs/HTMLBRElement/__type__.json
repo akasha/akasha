@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLBRElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBRElement",
-    "description": "The HTMLBRElement interface represents a HTML line break element (br). It inherits from HTMLElement."
+    "description": "The HTMLBRElement interface represents a HTML line break element (br). It inherits from HTMLElement.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlbrelement",
+            "description": "The definition of 'HTMLBRElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/textlevel-semantics.html#the-br-element",
+            "description": "The definition of 'HTMLBRElement' in HTML5."
+        }
+    ]
 }

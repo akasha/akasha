@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioWorkletProcessor.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/port",
-    "description": "The read-only port property of the AudioWorkletProcessor interface returns the associated MessagePort. It can be used to communicate between the processor and the AudioWorkletNode to which it belongs."
+    "description": "The read-only port property of the AudioWorkletProcessor interface returns the associated MessagePort. It can be used to communicate between the processor and the AudioWorkletNode to which it belongs.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioworkletprocessor-port",
+            "description": "The definition of 'port' in Web Audio API."
+        }
+    ]
 }

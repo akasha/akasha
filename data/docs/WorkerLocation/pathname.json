@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerLocation.pathname",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/pathname",
-    "description": "The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL."
+    "description": "The URLUtilsReadOnly.pathname read-only property returns a DOMString containing an initial '/' followed by the path of the URL.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-pathname",
+            "description": "The definition of 'URLUtilsReadOnly.pathname' in URL."
+        }
+    ]
 }

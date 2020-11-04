@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpEncodingParameters.scaleResolutionDownBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpEncodingParameters/scaleResolutionDownBy",
-    "description": "The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding."
+    "description": "The RTCRtpEncodingParameters dictionary's scaleResolutionDownBy property can be used to specify a factor by which to reduce the size of a video track during encoding.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpencodingparameters-scaleresolutiondownby",
+            "description": "The definition of 'RTCRtpEncodingParameters.scaleResolutionDownBy' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

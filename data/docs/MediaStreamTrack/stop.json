@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStreamTrack.stop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/stop",
-    "description": "The MediaStreamTrack.stop() method stops the track."
+    "description": "The MediaStreamTrack.stop() method stops the track.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-stop",
+            "description": "The definition of 'MediaStreamTrack.stop()' in Media Capture and Streams."
+        }
+    ]
 }

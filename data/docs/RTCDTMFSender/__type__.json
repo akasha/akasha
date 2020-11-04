@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCDTMFSender",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender",
-    "description": "Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface."
+    "description": "Listen to these events using addEventListener() or by assigning an event listener to the oneventname property of this interface.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcdtmfsender",
+            "description": "The definition of 'RTCDTMFSender' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

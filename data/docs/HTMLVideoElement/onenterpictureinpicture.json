@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "HTMLVideoElement.onenterpictureinpicture",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/onenterpictureinpicture",
+    "description": "The onenterpictureinpicture property of the HTMLVideoElement interface is an EventHandler that processes HTMLVideoElement.enterpictureinpicture events.",
+    "refs": [
+        {
+            "name": "Unknown",
+            "href": "",
+            "description": "The definition of 'HTMLVideoElement.onenterpictureinpicture' in Unknown."
+        }
+    ]
+}

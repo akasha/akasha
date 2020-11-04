@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerGlobalScope.performance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/performance",
-    "description": "The  performance read-only property of the WorkerGlobalScope interface returns a Performance object to be used on the worker."
+    "description": "The  performance read-only property of the WorkerGlobalScope interface returns a Performance object to be used on the worker.",
+    "refs": [
+        {
+            "name": "High Resolution Time Level 2",
+            "href": "https://www.w3.org/TR/hr-time-2/#the-performance-attribute",
+            "description": "The definition of 'performance' in High Resolution Time Level 2."
+        }
+    ]
 }

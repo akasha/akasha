@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "GainNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GainNode",
-    "description": "The GainNode interface represents a change in volume. It is an AudioNode audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A GainNode always has exactly one input and one output, both with the same number of channels."
+    "description": "The GainNode interface represents a change in volume. It is an AudioNode audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A GainNode always has exactly one input and one output, both with the same number of channels.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#gainnode",
+            "description": "The definition of 'GainNode' in Web Audio API."
+        }
+    ]
 }

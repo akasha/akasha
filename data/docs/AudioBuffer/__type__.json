@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer",
-    "description": "The AudioBuffer interface represents a short audio asset residing in memory, created from an audio file using the AudioContext.decodeAudioData() method, or from raw data using AudioContext.createBuffer(). Once put into an AudioBuffer, the audio can then be played by being passed into an AudioBufferSourceNode."
+    "description": "The AudioBuffer interface represents a short audio asset residing in memory, created from an audio file using the AudioContext.decodeAudioData() method, or from raw data using AudioContext.createBuffer(). Once put into an AudioBuffer, the audio can then be played by being passed into an AudioBufferSourceNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#audiobuffer",
+            "description": "The definition of 'AudioBuffer' in Web Audio API."
+        }
+    ]
 }

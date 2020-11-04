@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PannerNode.setPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PannerNode/setPosition",
-    "description": "Void."
+    "description": "Void.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-setposition",
+            "description": "The definition of 'setPosition()' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioListener.setPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/setPosition",
-    "description": "Void."
+    "description": "Void.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-setposition",
+            "description": "The definition of 'setPosition()' in Web Audio API."
+        }
+    ]
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "AudioContextOptions",
-    "lastModifiedAt": 1601466792157,
+    "lastModifiedAt": 1604448380561,
     "entries": [
         {
             "name": "__type__",
@@ -9,11 +9,11 @@
         },
         {
             "name": "latencyHint",
-            "lastModifiedAt": 1597192526600
+            "lastModifiedAt": 1604448379970
         },
         {
             "name": "sampleRate",
-            "lastModifiedAt": 1597192526863
+            "lastModifiedAt": 1604448380561
         }
     ]
 }

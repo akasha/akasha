@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MessageChannel.port1",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel/port1",
-    "description": "The port1 read-only property of the MessageChannel interface returns the first port of the message channel &mdash; the port attached to the context that originated the channel."
+    "description": "The port1 read-only property of the MessageChannel interface returns the first port of the message channel &mdash; the port attached to the context that originated the channel.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#dom-messagechannel-port1",
+            "description": "The definition of 'port1' in HTML Living Standard."
+        }
+    ]
 }

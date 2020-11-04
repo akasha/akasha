@@ -1,19 +1,19 @@
 
 {
     "name": "CSSPseudoElement",
-    "lastModifiedAt": 1601504049421,
+    "lastModifiedAt": 1604447146890,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190652837
+            "lastModifiedAt": 1604447144392
         },
         {
             "name": "element",
-            "lastModifiedAt": 1597190653651
+            "lastModifiedAt": 1604447144855
         },
         {
             "name": "type",
-            "lastModifiedAt": 1597190654451
+            "lastModifiedAt": 1604447146814
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "History.back",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/back",
-    "description": "The History.back() method causes the browser to move back one page in the session history."
+    "description": "The History.back() method causes the browser to move back one page in the session history.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#history",
+            "description": "The definition of 'History.back()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-history-back",
+            "description": "The definition of 'History.back()' in HTML5."
+        }
+    ]
 }

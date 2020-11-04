@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Location.reload",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload",
-    "description": "The Location.reload() method reloads the current URL, like the Refresh button."
+    "description": "The Location.reload() method reloads the current URL, like the Refresh button.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#dom-location-reload",
+            "description": "The definition of 'Location.reload()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-location-reload",
+            "description": "The definition of 'Location.reload()' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpStreamStats.codecId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpStreamStats/codecId",
-    "description": "The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream."
+    "description": "The RTCRtpStreamStats dictionary's codecId property is a string which uniquely identifies the object that was inspected to produce the data in the RTCCodecStats for the RTP stream.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcrtpstreamstats-codecid",
+            "description": "The definition of 'RTCRtpStreamStats.codecId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

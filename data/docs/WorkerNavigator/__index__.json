@@ -1,63 +1,63 @@
 
 {
     "name": "WorkerNavigator",
-    "lastModifiedAt": 1601466407657,
+    "lastModifiedAt": 1604450523276,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192269124
+            "lastModifiedAt": 1604450508224
         },
         {
             "name": "appCodeName",
-            "lastModifiedAt": 1600306077305
+            "lastModifiedAt": 1604450509449
         },
         {
             "name": "appName",
-            "lastModifiedAt": 1600306078435
+            "lastModifiedAt": 1604450510375
         },
         {
             "name": "appVersion",
-            "lastModifiedAt": 1600306078981
+            "lastModifiedAt": 1604450511989
         },
         {
             "name": "connection",
-            "lastModifiedAt": 1596581502733
+            "lastModifiedAt": 1604450512446
         },
         {
             "name": "language",
-            "lastModifiedAt": 1600306080063
+            "lastModifiedAt": 1604450513651
         },
         {
             "name": "languages",
-            "lastModifiedAt": 1600306080619
+            "lastModifiedAt": 1604450514933
         },
         {
             "name": "locks",
-            "lastModifiedAt": 1599279794111
+            "lastModifiedAt": 1604450515955
         },
         {
             "name": "onLine",
-            "lastModifiedAt": 1600306081715
+            "lastModifiedAt": 1604450517037
         },
         {
             "name": "permissions",
-            "lastModifiedAt": 1596581503418
+            "lastModifiedAt": 1604450517489
         },
         {
             "name": "platform",
-            "lastModifiedAt": 1600306082760
+            "lastModifiedAt": 1604450518975
         },
         {
             "name": "product",
-            "lastModifiedAt": 1600306083299
+            "lastModifiedAt": 1604450519924
         },
         {
             "name": "taintEnabled",
-            "lastModifiedAt": 1600306085165
+            "lastModifiedAt": 1604450523276
         },
         {
             "name": "userAgent",
-            "lastModifiedAt": 1600306083825
+            "lastModifiedAt": 1604450521407
         }
     ]
 }

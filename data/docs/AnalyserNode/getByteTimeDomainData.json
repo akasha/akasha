@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AnalyserNode.getByteTimeDomainData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteTimeDomainData",
-    "description": "The getByteTimeDomainData() method of the AnalyserNode Interface copies the current waveform, or time-domain, data into a Uint8Array (unsigned byte array) passed into it."
+    "description": "The getByteTimeDomainData() method of the AnalyserNode Interface copies the current waveform, or time-domain, data into a Uint8Array (unsigned byte array) passed into it.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-getbytetimedomaindata",
+            "description": "The definition of 'getByteTimeDomainData()' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaError.message",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaError/message",
-    "description": "The read-only property MediaError.message returns a DOMString which contains a human-readable string offering specific diagnostic details related to the error described by the MediaError object, or an empty string (&quot;&quot;) if no diagnostic information can be determined or provided."
+    "description": "The read-only property MediaError.message returns a DOMString which contains a human-readable string offering specific diagnostic details related to the error described by the MediaError object, or an empty string (&quot;&quot;) if no diagnostic information can be determined or provided.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#dom-mediaerror-message",
+            "description": "The definition of 'MediaError.message' in HTML Living Standard."
+        }
+    ]
 }

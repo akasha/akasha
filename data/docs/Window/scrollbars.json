@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Window.scrollbars",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollbars",
-    "description": "The Window.scrollbars property returns the scrollbars object, whose visibility can be checked."
+    "description": "The Window.scrollbars property returns the scrollbars object, whose visibility can be checked.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-window-scrollbars",
+            "description": "The definition of 'Window.scrollbars' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-window-scrollbars",
+            "description": "The definition of 'Window.scrollbars' in HTML5."
+        }
+    ]
 }

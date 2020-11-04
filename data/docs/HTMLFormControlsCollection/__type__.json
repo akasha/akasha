@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLFormControlsCollection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormControlsCollection",
-    "description": "The HTMLFormControlsCollection interface represents a collection of HTML form control elements."
+    "description": "The HTMLFormControlsCollection interface represents a collection of HTML form control elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/infrastructure.html#htmlformcontrolscollection",
+            "description": "The definition of 'HTMLFormControlsCollection' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/infrastructure.html#htmlformcontrolscollection",
+            "description": "The definition of 'HTMLFormControlsCollection' in HTML5."
+        }
+    ]
 }

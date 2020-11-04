@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "IntersectionObserver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver",
-    "description": "provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport."
+    "description": "provides a way to asynchronously observe changes in the intersection of a target element with an ancestor element or with a top-level document's viewport.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#intersection-observer-interface",
+            "description": "The definition of 'IntersectionObserver' in Intersection Observer."
+        }
+    ]
 }

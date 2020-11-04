@@ -4,6 +4,12 @@
     "name": "Document.animationiteration_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/animationiteration_event",
     "description": "The animationiteration event is fired when an iteration of a CSS Animation ends, and another one begins. This event does not occur at the same time as the animationend event, and therefore does not occur for animations with an animation-iteration-count of one.",
+    "refs": [
+        {
+            "name": "CSS Animations",
+            "href": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration"
+        }
+    ],
     "eventName": "animationiteration",
     "eventType": "AnimationEvent",
     "eventHandlerProperty": "onanimationiteration",

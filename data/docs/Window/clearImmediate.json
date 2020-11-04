@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Window.clearImmediate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearImmediate",
-    "description": "This method clears the action specified by window.setImmediate."
+    "description": "This method clears the action specified by window.setImmediate.",
+    "refs": [
+        {
+            "name": "Efficient Script Yielding",
+            "href": "https://w3c.github.io/setImmediate/#si-setImmediate",
+            "description": "The definition of 'setImmediate' in Efficient Script Yielding."
+        }
+    ]
 }

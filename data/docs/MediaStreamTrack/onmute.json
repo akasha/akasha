@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamTrack.onmute",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/onmute",
-    "description": "MediaStreamTrack's onmute event handler is called when the mute event is received."
+    "description": "MediaStreamTrack's onmute event handler is called when the mute event is received.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-onmute",
+            "description": "The definition of 'MediaStreamTrack.onmute' in Media Capture and Streams."
+        }
+    ]
 }

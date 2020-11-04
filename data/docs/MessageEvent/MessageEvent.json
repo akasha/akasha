@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "MessageEvent.MessageEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent/MessageEvent",
-    "description": "The MessageEvent() constructor creates a new MessageEvent object instance."
+    "description": "The MessageEvent() constructor creates a new MessageEvent object instance.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-event-constructor",
+            "description": "The definition of 'MessageEvent()' in HTML Living Standard."
+        }
+    ]
 }

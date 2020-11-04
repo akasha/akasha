@@ -4,6 +4,13 @@
     "name": "Document.readystatechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/readystatechange_event",
     "description": "The readystatechange event is fired when the readyState attribute of a document has changed.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#event-readystatechange",
+            "description": "The definition of 'readystatechange' in HTML Living Standard."
+        }
+    ],
     "eventName": "readystatechange",
     "eventType": "Event",
     "eventHandlerProperty": "onreadystatechange",

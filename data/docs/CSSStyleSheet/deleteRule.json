@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CSSStyleSheet.deleteRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/deleteRule",
-    "description": "The CSSStyleSheet method deleteRule() removes a rule from the stylesheet object."
+    "description": "The CSSStyleSheet method deleteRule() removes a rule from the stylesheet object.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-deleterule",
+            "description": "The definition of 'CSSStyleSheet.deleteRule()' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

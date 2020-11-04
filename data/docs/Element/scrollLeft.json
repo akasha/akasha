@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.scrollLeft",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollLeft",
-    "description": "The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge."
+    "description": "The Element.scrollLeft property gets or sets the number of pixels that an element's content is scrolled from its left edge.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-scrollleft",
+            "description": "The definition of 'scrollLeft' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

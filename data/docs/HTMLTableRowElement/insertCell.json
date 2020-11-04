@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "HTMLTableRowElement.insertCell",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/insertCell",
-    "description": "The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell."
+    "description": "The HTMLTableRowElement.insertCell() method inserts a new cell (td) into a table row (tr) and returns a reference to the cell.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/tables.html#dom-tr-insertcell",
+            "description": "The definition of 'HTMLTableRowElement.insertCell()' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68927016",
+            "description": "The definition of 'HTMLTableRowElement.insertCell()' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

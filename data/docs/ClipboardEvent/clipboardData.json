@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ClipboardEvent.clipboardData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ClipboardEvent/clipboardData",
-    "description": "The ClipboardEvent.clipboardData property holds a DataTransfer object, which can be used:"
+    "description": "The ClipboardEvent.clipboardData property holds a DataTransfer object, which can be used:",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#clipboardevent-clipboarddata",
+            "description": "The definition of 'ClipboardEvent.clipboardData' in Clipboard API and events."
+        }
+    ]
 }

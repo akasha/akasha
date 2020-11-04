@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Storage.removeItem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem",
-    "description": "The removeItem() method of the Storage interface, when passed a key name, will remove that key from the given Storage object if it exists. The Storage interface of the Web Storage API provides access to a particular domain's session or local storage."
+    "description": "The removeItem() method of the Storage interface, when passed a key name, will remove that key from the given Storage object if it exists. The Storage interface of the Web Storage API provides access to a particular domain's session or local storage.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-removeitem",
+            "description": "The definition of 'Storage.removeItem' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "URL.pathname",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname",
-    "description": "The pathname property of the URL interface is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path)."
+    "description": "The pathname property of the URL interface is a USVString containing an initial '/' followed by the path of the URL (or the empty string if there is no path).",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-pathname",
+            "description": "The definition of 'URL.pathname' in URL."
+        }
+    ]
 }

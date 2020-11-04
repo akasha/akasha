@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.shadowRoot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot",
-    "description": "The Element.shadowRoot read-only property represents the shadow root hosted by the element."
+    "description": "The Element.shadowRoot read-only property represents the shadow root hosted by the element.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-shadowroot",
+            "description": "The definition of 'shadowRoot' in DOM."
+        }
+    ]
 }

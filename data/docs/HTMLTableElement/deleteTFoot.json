@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLTableElement.deleteTFoot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/deleteTFoot",
-    "description": "The HTMLTableElement.deleteTFoot() method removes the tfoot element from a given table."
+    "description": "The HTMLTableElement.deleteTFoot() method removes the tfoot element from a given table.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-table-deletetfoot",
+            "description": "The definition of 'HTMLTableElement: deleteTFoot' in HTML Living Standard."
+        }
+    ]
 }

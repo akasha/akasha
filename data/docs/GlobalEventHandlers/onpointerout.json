@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onpointerout",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerout",
-    "description": "The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events."
+    "description": "The onpointerout property of the GlobalEventHandlers mixin is an EventHandler that processes pointerout events.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout",
+            "description": "The definition of 'onpointerout' in Pointer Events – Level 2."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout",
+            "description": "The definition of 'onpointerout' in Pointer Events."
+        }
+    ]
 }

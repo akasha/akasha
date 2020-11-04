@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.getTransceivers",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/getTransceivers",
-    "description": "The RTCPeerConnection interface's getTransceivers() method returns a list of the RTCRtpTransceiver objects being used to send and receive data on the connection."
+    "description": "The RTCPeerConnection interface's getTransceivers() method returns a list of the RTCRtpTransceiver objects being used to send and receive data on the connection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-gettransceivers",
+            "description": "The definition of 'RTCPeerConnection.getTransceivers()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrackList.onchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrackList/onchange",
-    "description": "The AudioTrackList property onchange is an event handler which is called when the change event occurs, indicating that one or more of the AudioTracks in the AudioTrackList have been enabled or disabled."
+    "description": "The AudioTrackList property onchange is an event handler which is called when the change event occurs, indicating that one or more of the AudioTracks in the AudioTrackList have been enabled or disabled.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange",
+            "description": "The definition of 'AudioTrackList.onchange' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotracklist-onchange",
+            "description": "The definition of 'AudioTrackList.onchange' in HTML5."
+        }
+    ]
 }

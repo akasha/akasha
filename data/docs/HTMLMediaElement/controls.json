@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.controls",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/controls",
-    "description": "The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls for playing the media item will be displayed."
+    "description": "The HTMLMediaElement.controls property reflects the controls HTML attribute, which controls whether user interface controls for playing the media item will be displayed.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-controls",
+            "description": "The definition of 'HTMLMediaElement.controls' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.controls' in HTML5."
+        }
+    ]
 }

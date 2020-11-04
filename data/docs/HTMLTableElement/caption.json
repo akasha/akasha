@@ -3,5 +3,27 @@
     "kind": "Property",
     "name": "HTMLTableElement.caption",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/caption",
-    "description": "The HTMLTableElement.caption property represents the table caption. If no caption element is associated with the table, this property is null."
+    "description": "The HTMLTableElement.caption property represents the table caption. If no caption element is associated with the table, this property is null.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/tabular-data.html#dom-table-caption",
+            "description": "The definition of 'HTMLTableElement.caption' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/tabular-data.html#dom-table-caption",
+            "description": "The definition of 'HTMLTableElement.caption' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-14594520",
+            "description": "The definition of 'HTMLTableElement.caption' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-14594520",
+            "description": "The definition of 'HTMLTableElement.caption' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Location.replace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/replace",
-    "description": "The replace() method of the Location interface replaces the current resource with the one at the provided URL. The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it."
+    "description": "The replace() method of the Location interface replaces the current resource with the one at the provided URL. The difference from the assign() method is that after using replace() the current page will not be saved in session History, meaning the user won't be able to use the back button to navigate to it.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#dom-location-replace",
+            "description": "The definition of 'Location.replace()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-location-replace",
+            "description": "The definition of 'Location.replace()' in HTML5."
+        }
+    ]
 }

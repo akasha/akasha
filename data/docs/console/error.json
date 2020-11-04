@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/error",
-    "description": "Outputs an error message to the Web Console."
+    "description": "Outputs an error message to the Web Console.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#error",
+            "description": "The definition of 'console.error()' in Console API."
+        }
+    ]
 }

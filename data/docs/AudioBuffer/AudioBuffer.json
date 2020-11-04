@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "AudioBuffer.AudioBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/AudioBuffer",
-    "description": "The AudioBuffer constructor of the Web Audio API creates a new AudioBuffer object."
+    "description": "The AudioBuffer constructor of the Web Audio API creates a new AudioBuffer object.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#AudioBuffer",
+            "description": "The definition of 'AudioBuffer' in Web Audio API."
+        }
+    ]
 }

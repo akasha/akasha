@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMException.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMException/name",
-    "description": "The name read-only property of the DOMException interface returns a DOMString that contains one of the strings associated with an error name."
+    "description": "The name read-only property of the DOMException interface returns a DOMString that contains one of the strings associated with an error name.",
+    "refs": [
+        {
+            "name": "Web IDL",
+            "href": "https://heycam.github.io/webidl/#dom-domexception-name",
+            "description": "The definition of 'name' in Web IDL."
+        }
+    ]
 }

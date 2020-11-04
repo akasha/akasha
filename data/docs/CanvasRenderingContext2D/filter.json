@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CanvasRenderingContext2D.filter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/filter",
-    "description": "The CanvasRenderingContext2D.filter property of the Canvas 2D API provides filter effects such as blurring and grayscaling. It is similar to the CSS filter property and accepts the same values."
+    "description": "The CanvasRenderingContext2D.filter property of the Canvas 2D API provides filter effects such as blurring and grayscaling. It is similar to the CSS filter property and accepts the same values.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#filters",
+            "description": "The definition of 'CanvasRenderingContext2D.filter' in HTML Living Standard."
+        }
+    ]
 }

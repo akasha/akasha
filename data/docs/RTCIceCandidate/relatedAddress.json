@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.relatedAddress",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedAddress",
-    "description": "The RTCIceCandidate interface's read-only relatedAddress property is a string indicating the related address of a relay or reflexive candidate."
+    "description": "The RTCIceCandidate interface's read-only relatedAddress property is a string indicating the related address of a relay or reflexive candidate.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-relatedaddress",
+            "description": "The definition of 'RTCIceCandidate.relatedAddress' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

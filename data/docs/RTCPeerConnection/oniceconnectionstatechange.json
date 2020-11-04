@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.oniceconnectionstatechange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/oniceconnectionstatechange",
-    "description": "The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes."
+    "description": "The RTCPeerConnection.oniceconnectionstatechange property is an event handler which specifies a function to be called when the iceconnectionstatechange event is fired on an RTCPeerConnection instance. This happens when the state of the connection's ICE agent, as represented by the iceConnectionState property, changes.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-oniceconnectionstatechange",
+            "description": "The definition of 'RTCPeerConnection.oniceconnectionstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

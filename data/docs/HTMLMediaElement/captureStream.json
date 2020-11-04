@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLMediaElement.captureStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/captureStream",
-    "description": "The captureStream() property of the HTMLMediaElement interface returns a MediaStream object which is streaming a real-time capture of the content being rendered in the media element."
+    "description": "The captureStream() property of the HTMLMediaElement interface returns a MediaStream object which is streaming a real-time capture of the content being rendered in the media element.",
+    "refs": [
+        {
+            "name": "Media Capture from DOM Elements",
+            "href": "https://w3c.github.io/mediacapture-fromelement/#dom-htmlmediaelement-capturestream",
+            "description": "The definition of 'captureStream()' in Media Capture from DOM Elements."
+        }
+    ]
 }

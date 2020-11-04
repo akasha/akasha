@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLModElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLModElement",
-    "description": "The HTMLModElement interface provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is del and ins."
+    "description": "The HTMLModElement interface provides special properties (beyond the regular methods and properties available through the HTMLElement interface they also have available to them by inheritance) for manipulating modification elements, that is del and ins.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/edits.html#htmlmodelement",
+            "description": "The definition of 'HTMLAnchorElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/edits.html#htmlmodelement",
+            "description": "The definition of 'HTMLAnchorElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-79359609",
+            "description": "The definition of 'HTMLModElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-79359609",
+            "description": "The definition of 'HTMLModElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

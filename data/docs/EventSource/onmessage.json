@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "EventSource.onmessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/onmessage",
-    "description": "The onmessage property of the EventSource interface is an EventHandler called when a message event is received, that is when a message is coming from the source."
+    "description": "The onmessage property of the EventSource interface is an EventHandler called when a message event is received, that is when a message is coming from the source.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#handler-eventsource-onmessage",
+            "description": "The definition of 'onmessage' in HTML Living Standard."
+        }
+    ]
 }

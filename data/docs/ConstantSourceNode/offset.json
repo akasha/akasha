@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ConstantSourceNode.offset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ConstantSourceNode/offset",
-    "description": "The read-only offset property of the ConstantSourceNode interface returns a AudioParam object indicating the numeric a-rate value which is always returned by the source when asked for the next sample."
+    "description": "The read-only offset property of the ConstantSourceNode interface returns a AudioParam object indicating the numeric a-rate value which is always returned by the source when asked for the next sample.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-constantsourcenode-offset",
+            "description": "The definition of 'offset' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GamepadPose.orientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose/orientation",
-    "description": "The orientation read-only property of the GamepadPose interface returns the orientation of the Gamepad, as a quarternion value."
+    "description": "The orientation read-only property of the GamepadPose interface returns the orientation of the Gamepad, as a quarternion value.",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-orientation",
+            "description": "The definition of 'orientation' in Gamepad Extensions."
+        }
+    ]
 }

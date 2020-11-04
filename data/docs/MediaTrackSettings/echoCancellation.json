@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackSettings.echoCancellation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackSettings/echoCancellation",
-    "description": "The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints()."
+    "description": "The MediaTrackSettings dictionary's echoCancellation property is a Boolean value whose value indicates whether or not echo cancellation is enabled on an audio track. This lets you determine what value was selected to comply with your specified constraints for this property's value as described in the MediaTrackConstraints.echoCancellation property you provided when calling either getUserMedia() or MediaStreamTrack.applyConstraints().",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksettings-echocancellation",
+            "description": "The definition of 'echoCancellation' in Media Capture and Streams."
+        }
+    ]
 }

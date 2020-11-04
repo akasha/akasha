@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Gamepad.hapticActuators",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/hapticActuators",
-    "description": "The hapticActuators read-only property of the Gamepad interface returns an array containing GamepadHapticActuator objects, each of which represents haptic feedback hardware available on the controller."
+    "description": "The hapticActuators read-only property of the Gamepad interface returns an array containing GamepadHapticActuator objects, each of which represents haptic feedback hardware available on the controller.",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface",
+            "description": "The definition of 'hapticActuators' in Gamepad Extensions."
+        }
+    ]
 }

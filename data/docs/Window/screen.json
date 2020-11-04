@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.screen",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/screen",
-    "description": "The Window property screen returns a reference to the screen object associated with the window. The screen object, implementing the Screen interface, is a special object for inspecting properties of the screen on which the current window is being rendered."
+    "description": "The Window property screen returns a reference to the screen object associated with the window. The screen object, implementing the Screen interface, is a special object for inspecting properties of the screen on which the current window is being rendered.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-screen",
+            "description": "The definition of 'window.screen' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

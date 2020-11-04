@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Request.method",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/method",
-    "description": "The method read-only property of the Request interface contains the request's method (GET, POST, etc.)"
+    "description": "The method read-only property of the Request interface contains the request's method (GET, POST, etc.)",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-request-method",
+            "description": "The definition of 'method' in Fetch."
+        }
+    ]
 }

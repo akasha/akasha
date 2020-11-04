@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BroadcastChannel.postMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage",
-    "description": "The BroadcastChannel.postMessage() sends a message, which can be of any kind of Object, to each listener in any browsing context with the same origin. The message is transmitted as a message event targeted at each BroadcastChannel bound to the channel."
+    "description": "The BroadcastChannel.postMessage() sends a message, which can be of any kind of Object, to each listener in any browsing context with the same origin. The message is transmitted as a message event targeted at each BroadcastChannel bound to the channel.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-postmessage",
+            "description": "The definition of 'BroadcastChannel.postmessage()' in HTML Living Standard."
+        }
+    ]
 }

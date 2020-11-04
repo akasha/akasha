@@ -4,6 +4,12 @@
     "name": "HTMLElement.animationcancel_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationcancel_event",
     "description": "The animationcancel event is fired when a CSS Animation unexpectedly aborts. In other words, any time it stops running without sending an animationend event. This might happen when the animation-name is changed such that the animation is removed, or when the animating node is hidden using CSS. Therefore, either directly or because any of its containing nodes are hidden.",
+    "refs": [
+        {
+            "name": "CSS Animations",
+            "href": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationcancel"
+        }
+    ],
     "eventName": "animationcancel",
     "eventType": "AnimationEvent",
     "eventHandlerProperty": "onanimationcancel",

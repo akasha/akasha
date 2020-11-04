@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onpointerenter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerenter",
-    "description": "The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events."
+    "description": "The onpointerenter property of the GlobalEventHandlers mixin is an EventHandler that processes pointerenter events.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter",
+            "description": "The definition of 'onpointerenter' in Pointer Events – Level 2."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter",
+            "description": "The definition of 'onpointerenter' in Pointer Events."
+        }
+    ]
 }

@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLParamElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLParamElement",
-    "description": "The HTMLParamElement interface provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating param elements, representing a pair of a key and a value that acts as a parameter for an object element."
+    "description": "The HTMLParamElement interface provides special properties (beyond those of the regular HTMLElement object interface it inherits) for manipulating param elements, representing a pair of a key and a value that acts as a parameter for an object element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlparamelement",
+            "description": "The definition of 'HTMLParamElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-param-element",
+            "description": "The definition of 'HTMLParamElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64077273",
+            "description": "The definition of 'HTMLParamElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-64077273",
+            "description": "The definition of 'HTMLParamElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

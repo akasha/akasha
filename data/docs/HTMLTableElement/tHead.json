@@ -3,5 +3,27 @@
     "kind": "Property",
     "name": "HTMLTableElement.tHead",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/tHead",
-    "description": "The HTMLTableElement.tHead represents the thead element of a table. Its value will be null if there is no such element."
+    "description": "The HTMLTableElement.tHead represents the thead element of a table. Its value will be null if there is no such element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/tabular-data.html#dom-table-thead",
+            "description": "The definition of 'HTMLTableElement.tHead' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/tabular-data.html#dom-table-thead",
+            "description": "The definition of 'HTMLTableElement.tHead' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-9530944",
+            "description": "The definition of 'HTMLTableElement.tHead' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-9530944",
+            "description": "The definition of 'HTMLTableElement.tHead' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

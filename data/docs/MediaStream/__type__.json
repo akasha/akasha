@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream",
-    "description": "The MediaStream interface represents a stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack."
+    "description": "The MediaStream interface represents a stream of media content. A stream consists of several tracks such as video or audio tracks. Each track is specified as an instance of MediaStreamTrack.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream",
+            "description": "The definition of 'MediaStream' in Media Capture and Streams."
+        }
+    ]
 }

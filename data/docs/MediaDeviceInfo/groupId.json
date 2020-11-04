@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaDeviceInfo.groupId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDeviceInfo/groupId",
-    "description": "The groupId readonly property of the MediaDeviceInfo interface returns a DOMString that is a group identifier."
+    "description": "The groupId readonly property of the MediaDeviceInfo interface returns a DOMString that is a group identifier.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediadeviceinfo-groupid",
+            "description": "The definition of 'groupId' in Media Capture and Streams."
+        }
+    ]
 }

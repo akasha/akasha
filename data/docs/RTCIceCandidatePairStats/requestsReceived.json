@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.requestsReceived",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/requestsReceived",
-    "description": "The RTCIceCandidatePairStats dictionary's requestsReceived property indicates the total number of STUN connectivity check requests that have been received so far on the connection described by this pairing of candidates."
+    "description": "The RTCIceCandidatePairStats dictionary's requestsReceived property indicates the total number of STUN connectivity check requests that have been received so far on the connection described by this pairing of candidates.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-requestsreceived",
+            "description": "The definition of 'RTCIceCandidatePairStats.requestsReceived' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

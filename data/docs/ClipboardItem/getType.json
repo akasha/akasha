@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ClipboardItem.getType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ClipboardItem/getType",
-    "description": "The getType() method of the ClipboardItem interface returns a Promise that resolves with a Blob of the requested  MIME type or an error if the MIME type is not found."
+    "description": "The getType() method of the ClipboardItem interface returns a Promise that resolves with a Blob of the requested  MIME type or an error if the MIME type is not found.",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#clipboarditem",
+            "description": "The definition of 'ClipboardItem' in Clipboard API and events."
+        }
+    ]
 }

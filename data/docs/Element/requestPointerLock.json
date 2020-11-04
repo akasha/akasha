@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.requestPointerLock",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/requestPointerLock",
-    "description": "The Element.requestPointerLock() method lets you asynchronously ask for the pointer to be locked on the given element."
+    "description": "The Element.requestPointerLock() method lets you asynchronously ask for the pointer to be locked on the given element.",
+    "refs": [
+        {
+            "name": "Pointer Lock",
+            "href": "https://w3c.github.io/pointerlock/#dom-element-requestpointerlock",
+            "description": "The definition of 'requestPointerLock()' in Pointer Lock."
+        }
+    ]
 }

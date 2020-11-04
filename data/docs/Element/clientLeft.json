@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Element.clientLeft",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/clientLeft",
-    "description": "The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right&ndash;to&ndash;left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only."
+    "description": "The width of the left border of an element in pixels. It includes the width of the vertical scrollbar if the text direction of the element is right&ndash;to&ndash;left and if there is an overflow causing a left vertical scrollbar to be rendered. clientLeft does not include the left margin or the left padding. clientLeft is read-only.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-clientleft",
+            "description": "The definition of 'clientLeft' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "TrackEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TrackEvent",
-    "description": "The TrackEvent interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are addtrack and removetrack."
+    "description": "The TrackEvent interface, which is part of the HTML DOM specification, is used for events which represent changes to a set of available tracks on an HTML media element; these events are addtrack and removetrack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#the-trackevent-interface",
+            "description": "The definition of 'TrackEvent' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#trackevent",
+            "description": "The definition of 'TrackEvent' in HTML5."
+        }
+    ]
 }

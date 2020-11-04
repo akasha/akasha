@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.nominated",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/nominated",
-    "description": "The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection."
+    "description": "The RTCIceCandidatePairStats property nominated specifies whether or not the candidate pair described by the underlying RTCIceCandidatePair has been nominated to be used as the configuration for the WebRTC connection.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-nominated",
+            "description": "The definition of 'RTCIceCandidatePairStats.nominated' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

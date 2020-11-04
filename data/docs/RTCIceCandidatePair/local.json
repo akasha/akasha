@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePair.local",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair/local",
-    "description": "The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection."
+    "description": "The local property of the RTCIceCandidatePair dictionary specifies the RTCIceCandidate which describes the configuration of the local end of a viable WebRTC connection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-local",
+            "description": "The definition of 'RTCIceCandidatePair.local' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

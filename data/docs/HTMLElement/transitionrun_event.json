@@ -4,6 +4,13 @@
     "name": "HTMLElement.transitionrun_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionrun_event",
     "description": "The transitionrun event is fired when a CSS transition is first created, i.e. before any transition-delay has begun.",
+    "refs": [
+        {
+            "name": "CSS Transitions",
+            "href": "https://drafts.csswg.org/css-transitions/#transitionrun",
+            "description": "The definition of 'transitionrun' in CSS Transitions."
+        }
+    ],
     "eventName": "transitionrun",
     "eventType": "TransitionEvent",
     "eventHandlerProperty": "ontransitionrun",

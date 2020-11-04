@@ -1,67 +1,67 @@
 
 {
     "name": "WindowOrWorkerGlobalScope",
-    "lastModifiedAt": 1602131746844,
+    "lastModifiedAt": 1604449553849,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192067313
+            "lastModifiedAt": 1604448990866
         },
         {
             "name": "atob",
-            "lastModifiedAt": 1596711354645
+            "lastModifiedAt": 1604448994839
         },
         {
             "name": "btoa",
-            "lastModifiedAt": 1596581123830
+            "lastModifiedAt": 1604448995975
         },
         {
             "name": "caches",
-            "lastModifiedAt": 1596711351570
+            "lastModifiedAt": 1604448991324
         },
         {
             "name": "clearInterval",
-            "lastModifiedAt": 1596581124230
+            "lastModifiedAt": 1604448996474
         },
         {
             "name": "clearTimeout",
-            "lastModifiedAt": 1596581124515
+            "lastModifiedAt": 1604448996967
         },
         {
             "name": "createImageBitmap",
-            "lastModifiedAt": 1596581125465
+            "lastModifiedAt": 1604448997448
         },
         {
             "name": "crossOriginIsolated",
-            "lastModifiedAt": 1596711351962
+            "lastModifiedAt": 1604448991978
         },
         {
             "name": "fetch",
-            "lastModifiedAt": 1596581125855
+            "lastModifiedAt": 1604448997943
         },
         {
             "name": "indexedDB",
-            "lastModifiedAt": 1596711352222
+            "lastModifiedAt": 1604448992590
         },
         {
             "name": "isSecureContext",
-            "lastModifiedAt": 1596711353019
+            "lastModifiedAt": 1604448993611
         },
         {
             "name": "origin",
-            "lastModifiedAt": 1596711353434
+            "lastModifiedAt": 1604448994148
         },
         {
             "name": "queueMicrotask",
-            "lastModifiedAt": 1596581126255
+            "lastModifiedAt": 1604448998403
         },
         {
             "name": "setInterval",
-            "lastModifiedAt": 1596581126697
+            "lastModifiedAt": 1604448999621
         },
         {
             "name": "setTimeout",
-            "lastModifiedAt": 1596581127088
+            "lastModifiedAt": 1604449000244
         }
     ]
 }

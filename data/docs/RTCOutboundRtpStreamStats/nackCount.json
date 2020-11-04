@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCOutboundRtpStreamStats.nackCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/nackCount",
-    "description": "The nackCount property of the RTCOutboundRtpStreamStats dictionary is a numeric value indicating the number of times the RTCRtpSender described by this object received a NACK packet from the remote receiver."
+    "description": "The nackCount property of the RTCOutboundRtpStreamStats dictionary is a numeric value indicating the number of times the RTCRtpSender described by this object received a NACK packet from the remote receiver.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-nackcount",
+            "description": "The definition of 'RTCOutboundRtpStreamStats.nackCount' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

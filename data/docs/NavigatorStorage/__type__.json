@@ -3,5 +3,11 @@
     "kind": "Type",
     "name": "NavigatorStorage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NavigatorStorage",
-    "description": "The NavigatorStorage mixin adds to the Navigator and WorkerNavigator interfaces the Navigator.storage property, which provides access to the StorageManager singleton used for controlling the persistence of data stores as well as obtaining information"
+    "description": "The NavigatorStorage mixin adds to the Navigator and WorkerNavigator interfaces the Navigator.storage property, which provides access to the StorageManager singleton used for controlling the persistence of data stores as well as obtaining information",
+    "refs": [
+        {
+            "name": "Storage",
+            "href": "https://storage.spec.whatwg.org/"
+        }
+    ]
 }

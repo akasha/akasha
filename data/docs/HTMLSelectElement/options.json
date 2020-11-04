@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLSelectElement.options",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/options",
-    "description": "The HTMLSelectElement.options read-only property returns a HTMLOptionsCollection of the option elements contained by the select element."
+    "description": "The HTMLSelectElement.options read-only property returns a HTMLOptionsCollection of the option elements contained by the select element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-select-options",
+            "description": "The definition of 'options' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#htmlselectelement",
+            "description": "The definition of 'options' in HTML5."
+        }
+    ]
 }

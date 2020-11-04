@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCPeerConnection.generateCertificate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/generateCertificate",
-    "description": "The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated."
+    "description": "The static  RTCPeerConnection.generateCertificate() function creates an X.509 certificate and corresponding private key, returning a promise that resolves with the new RTCCertificate once it's generated.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate",
+            "description": "The definition of 'RTCPeerConnection.generateCertificate()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

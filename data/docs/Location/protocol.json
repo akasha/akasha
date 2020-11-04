@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Location.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/protocol",
-    "description": "The protocol property of the Location interface is a USVString representing the protocol scheme of the URL, including the final ':'."
+    "description": "The protocol property of the Location interface is a USVString representing the protocol scheme of the URL, including the final ':'.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-location-protocol",
+            "description": "The definition of 'protocol' in HTML Living Standard."
+        }
+    ]
 }

@@ -1,11 +1,11 @@
 
 {
     "name": "CanvasRenderingContext2D",
-    "lastModifiedAt": 1600310852151,
+    "lastModifiedAt": 1604449934547,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1596581220550
+            "lastModifiedAt": 1604449883084
         },
         {
             "name": "addHitRegion",
@@ -13,23 +13,23 @@
         },
         {
             "name": "arc",
-            "lastModifiedAt": 1600303822805
+            "lastModifiedAt": 1604449897788
         },
         {
             "name": "arcTo",
-            "lastModifiedAt": 1600303823744
+            "lastModifiedAt": 1604449898458
         },
         {
             "name": "beginPath",
-            "lastModifiedAt": 1600303824030
+            "lastModifiedAt": 1604449898996
         },
         {
             "name": "bezierCurveTo",
-            "lastModifiedAt": 1600303824267
+            "lastModifiedAt": 1604449900164
         },
         {
             "name": "canvas",
-            "lastModifiedAt": 1600303813743
+            "lastModifiedAt": 1604449884029
         },
         {
             "name": "clearHitRegions",
@@ -37,31 +37,31 @@
         },
         {
             "name": "clearRect",
-            "lastModifiedAt": 1600303826147
+            "lastModifiedAt": 1604449901679
         },
         {
             "name": "clip",
-            "lastModifiedAt": 1600303826560
+            "lastModifiedAt": 1604449902609
         },
         {
             "name": "closePath",
-            "lastModifiedAt": 1600303827500
+            "lastModifiedAt": 1604449903106
         },
         {
             "name": "createImageData",
-            "lastModifiedAt": 1600303828175
+            "lastModifiedAt": 1604449904294
         },
         {
             "name": "createLinearGradient",
-            "lastModifiedAt": 1600303828431
+            "lastModifiedAt": 1604449904945
         },
         {
             "name": "createPattern",
-            "lastModifiedAt": 1600303828693
+            "lastModifiedAt": 1604449905602
         },
         {
             "name": "createRadialGradient",
-            "lastModifiedAt": 1600303828943
+            "lastModifiedAt": 1604449906538
         },
         {
             "name": "currentTransform",
@@ -69,15 +69,15 @@
         },
         {
             "name": "direction",
-            "lastModifiedAt": 1600303814389
+            "lastModifiedAt": 1604449885270
         },
         {
             "name": "drawFocusIfNeeded",
-            "lastModifiedAt": 1600303829196
+            "lastModifiedAt": 1604449907724
         },
         {
             "name": "drawImage",
-            "lastModifiedAt": 1600303830159
+            "lastModifiedAt": 1604449908901
         },
         {
             "name": "drawWidgetAsOnScreen",
@@ -89,111 +89,111 @@
         },
         {
             "name": "ellipse",
-            "lastModifiedAt": 1600303831088
+            "lastModifiedAt": 1604449911330
         },
         {
             "name": "fill",
-            "lastModifiedAt": 1600303831369
+            "lastModifiedAt": 1604449911861
         },
         {
             "name": "fillRect",
-            "lastModifiedAt": 1600303831642
+            "lastModifiedAt": 1604449912393
         },
         {
             "name": "fillStyle",
-            "lastModifiedAt": 1600303815340
+            "lastModifiedAt": 1604449885778
         },
         {
             "name": "fillText",
-            "lastModifiedAt": 1600303832301
+            "lastModifiedAt": 1604449912885
         },
         {
             "name": "filter",
-            "lastModifiedAt": 1600303815626
+            "lastModifiedAt": 1604449886329
         },
         {
             "name": "font",
-            "lastModifiedAt": 1600303815869
+            "lastModifiedAt": 1604449886827
         },
         {
             "name": "getImageData",
-            "lastModifiedAt": 1600303832692
+            "lastModifiedAt": 1604449913694
         },
         {
             "name": "getLineDash",
-            "lastModifiedAt": 1600303832942
+            "lastModifiedAt": 1604449914842
         },
         {
             "name": "getTransform",
-            "lastModifiedAt": 1600303833209
+            "lastModifiedAt": 1604449915455
         },
         {
             "name": "globalAlpha",
-            "lastModifiedAt": 1600303816125
+            "lastModifiedAt": 1604449887350
         },
         {
             "name": "globalCompositeOperation",
-            "lastModifiedAt": 1600303817060
+            "lastModifiedAt": 1604449888127
         },
         {
             "name": "imageSmoothingEnabled",
-            "lastModifiedAt": 1600303817359
+            "lastModifiedAt": 1604449888638
         },
         {
             "name": "imageSmoothingQuality",
-            "lastModifiedAt": 1600303817669
+            "lastModifiedAt": 1604449889137
         },
         {
             "name": "isPointInPath",
-            "lastModifiedAt": 1600303833545
+            "lastModifiedAt": 1604449916620
         },
         {
             "name": "isPointInStroke",
-            "lastModifiedAt": 1600303833792
+            "lastModifiedAt": 1604449917787
         },
         {
             "name": "lineCap",
-            "lastModifiedAt": 1600303817910
+            "lastModifiedAt": 1604449889655
         },
         {
             "name": "lineDashOffset",
-            "lastModifiedAt": 1600303818165
+            "lastModifiedAt": 1604449890201
         },
         {
             "name": "lineJoin",
-            "lastModifiedAt": 1600303818429
+            "lastModifiedAt": 1604449890722
         },
         {
             "name": "lineTo",
-            "lastModifiedAt": 1600303834043
+            "lastModifiedAt": 1604449918438
         },
         {
             "name": "lineWidth",
-            "lastModifiedAt": 1600303818699
+            "lastModifiedAt": 1604449891223
         },
         {
             "name": "measureText",
-            "lastModifiedAt": 1600303834290
+            "lastModifiedAt": 1604449919630
         },
         {
             "name": "miterLimit",
-            "lastModifiedAt": 1600303818948
+            "lastModifiedAt": 1604449891763
         },
         {
             "name": "moveTo",
-            "lastModifiedAt": 1600303834570
+            "lastModifiedAt": 1604449920219
         },
         {
             "name": "putImageData",
-            "lastModifiedAt": 1600303834817
+            "lastModifiedAt": 1604449920746
         },
         {
             "name": "quadraticCurveTo",
-            "lastModifiedAt": 1600303835184
+            "lastModifiedAt": 1604449921956
         },
         {
             "name": "rect",
-            "lastModifiedAt": 1600303835438
+            "lastModifiedAt": 1604449923103
         },
         {
             "name": "removeHitRegion",
@@ -201,83 +201,83 @@
         },
         {
             "name": "resetTransform",
-            "lastModifiedAt": 1600303835963
+            "lastModifiedAt": 1604449924965
         },
         {
             "name": "restore",
-            "lastModifiedAt": 1600303836201
+            "lastModifiedAt": 1604449925911
         },
         {
             "name": "rotate",
-            "lastModifiedAt": 1600303836493
+            "lastModifiedAt": 1604449926802
         },
         {
             "name": "save",
-            "lastModifiedAt": 1600303836757
+            "lastModifiedAt": 1604449928068
         },
         {
             "name": "scale",
-            "lastModifiedAt": 1600303837013
+            "lastModifiedAt": 1604449928689
         },
         {
             "name": "scrollPathIntoView",
-            "lastModifiedAt": 1600303837334
+            "lastModifiedAt": 1604449929314
         },
         {
             "name": "setLineDash",
-            "lastModifiedAt": 1600303838279
+            "lastModifiedAt": 1604449929943
         },
         {
             "name": "setTransform",
-            "lastModifiedAt": 1600303839217
+            "lastModifiedAt": 1604449931239
         },
         {
             "name": "shadowBlur",
-            "lastModifiedAt": 1600303819198
+            "lastModifiedAt": 1604449892258
         },
         {
             "name": "shadowColor",
-            "lastModifiedAt": 1600303820147
+            "lastModifiedAt": 1604449892786
         },
         {
             "name": "shadowOffsetX",
-            "lastModifiedAt": 1600303820527
+            "lastModifiedAt": 1604449893325
         },
         {
             "name": "shadowOffsetY",
-            "lastModifiedAt": 1600303820801
+            "lastModifiedAt": 1604449893854
         },
         {
             "name": "stroke",
-            "lastModifiedAt": 1600303839464
+            "lastModifiedAt": 1604449932402
         },
         {
             "name": "strokeRect",
-            "lastModifiedAt": 1600303839833
+            "lastModifiedAt": 1604449932932
         },
         {
             "name": "strokeStyle",
-            "lastModifiedAt": 1600303821052
+            "lastModifiedAt": 1604449894373
         },
         {
             "name": "strokeText",
-            "lastModifiedAt": 1600303840940
+            "lastModifiedAt": 1604449933538
         },
         {
             "name": "textAlign",
-            "lastModifiedAt": 1600303821304
+            "lastModifiedAt": 1604449894876
         },
         {
             "name": "textBaseline",
-            "lastModifiedAt": 1600303821601
+            "lastModifiedAt": 1604449896028
         },
         {
             "name": "transform",
-            "lastModifiedAt": 1600303841199
+            "lastModifiedAt": 1604449934020
         },
         {
             "name": "translate",
-            "lastModifiedAt": 1600303841477
+            "lastModifiedAt": 1604449934547
         }
     ]
 }

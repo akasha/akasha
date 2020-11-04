@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRemoteOutboundRtpStreamStats.localId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRemoteOutboundRtpStreamStats/localId",
-    "description": "The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value."
+    "description": "The RTCRemoteOutboundRtpStreamStats dictionary's  localId property is a string which can be used to identify the RTCInboundRtpStreamStats object whose remoteId matches this value.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcremoteoutboundrtpstreamstats-localid",
+            "description": "The definition of 'RTCRemoteOutboundRtpStreamStats.localId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

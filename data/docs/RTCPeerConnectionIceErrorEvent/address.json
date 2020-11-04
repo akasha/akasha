@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnectionIceErrorEvent.address",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnectionIceErrorEvent/address",
-    "description": "The RTCPeerConnectionIceErrorEvent property address is a string which indicates the local IP address being used to communicate with the STUN or TURN server during negotiations. The error which occurred involved this address."
+    "description": "The RTCPeerConnectionIceErrorEvent property address is a string which indicates the local IP address being used to communicate with the STUN or TURN server during negotiations. The error which occurred involved this address.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnectioniceerrorevent-address",
+            "description": "The definition of 'RTCPeerConnectionIceErrorEvent.address' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

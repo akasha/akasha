@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.relatedPort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/relatedPort",
-    "description": "The RTCIceCandidate interface's read-only relatedPort property indicates the port number of reflexive or relay candidates."
+    "description": "The RTCIceCandidate interface's read-only relatedPort property indicates the port number of reflexive or relay candidates.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-relatedport",
+            "description": "The definition of 'RTCIceCandidate.relatedPort' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

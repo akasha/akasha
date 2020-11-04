@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Window.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/length",
-    "description": "Returns the number of frames (either frame or iframe elements) in the window."
+    "description": "Returns the number of frames (either frame or iframe elements) in the window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-length",
+            "description": "The definition of 'Window.length' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-length",
+            "description": "The definition of 'Window.length' in HTML5."
+        }
+    ]
 }

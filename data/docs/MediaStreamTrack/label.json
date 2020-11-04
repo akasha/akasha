@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamTrack.label",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/label",
-    "description": "The MediaStreamTrack.label read-only property returns a DOMString containing a user agent-assigned label that identifies the track source, as in &quot;internal microphone&quot;."
+    "description": "The MediaStreamTrack.label read-only property returns a DOMString containing a user agent-assigned label that identifies the track source, as in &quot;internal microphone&quot;.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-label",
+            "description": "The definition of 'MediaStreamTrack.label' in Media Capture and Streams."
+        }
+    ]
 }

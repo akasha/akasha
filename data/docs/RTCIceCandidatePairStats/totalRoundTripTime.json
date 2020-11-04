@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.totalRoundTripTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/totalRoundTripTime",
-    "description": "The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object."
+    "description": "The RTCIceCandidatePairStats dictionary's totalRoundTripTime property is the total time that has elapsed between sending STUN requests and receiving the responses, for all such requests that have been made so far on the pair of candidates described by this RTCIceCandidatePairStats object.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-totalroundtriptime",
+            "description": "The definition of 'RTCIceCandidatePairStats.totalRoundTripTime' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

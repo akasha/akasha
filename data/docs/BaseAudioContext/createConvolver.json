@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createConvolver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createConvolver",
-    "description": "A ConvolverNode."
+    "description": "A ConvolverNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createconvolver",
+            "description": "The definition of 'createConvolver()' in Web Audio API."
+        }
+    ]
 }

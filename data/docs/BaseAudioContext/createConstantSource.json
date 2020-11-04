@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createConstantSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createConstantSource",
-    "description": "The createConstantSource() property of the BaseAudioContext interface creates a ConstantSourceNode object, which is an audio source that continuously outputs a monaural (one-channel) sound signal whose samples all have the same value."
+    "description": "The createConstantSource() property of the BaseAudioContext interface creates a ConstantSourceNode object, which is an audio source that continuously outputs a monaural (one-channel) sound signal whose samples all have the same value.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createconstantsource",
+            "description": "The definition of 'createConstantSource()' in Web Audio API."
+        }
+    ]
 }

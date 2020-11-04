@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.maxPacketLifeTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/maxPacketLifeTime",
-    "description": "The read-only RTCDataChannel property maxPacketLifeTime returns the amount of time, in milliseconds, the browser is allowed to take to attempt to transmit a message, as set when the data channel was created, or null."
+    "description": "The read-only RTCDataChannel property maxPacketLifeTime returns the amount of time, in milliseconds, the browser is allowed to take to attempt to transmit a message, as set when the data channel was created, or null.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-maxpacketlifetime",
+            "description": "The definition of 'RTCDataChannel.maxPacketLifeTime' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

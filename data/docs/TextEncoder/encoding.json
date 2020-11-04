@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "TextEncoder.encoding",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder/encoding",
-    "description": "The TextEncoder.encoding read-only property returns a DOMString containing the name of the encoding algorithm used by the specific encoder."
+    "description": "The TextEncoder.encoding read-only property returns a DOMString containing the name of the encoding algorithm used by the specific encoder.",
+    "refs": [
+        {
+            "name": "Encoding",
+            "href": "https://encoding.spec.whatwg.org/#dom-textencoder-encoding",
+            "description": "The definition of 'TextEncoder.encoding' in Encoding."
+        }
+    ]
 }

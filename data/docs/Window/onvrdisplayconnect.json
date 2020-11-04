@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onvrdisplayconnect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplayconnect",
-    "description": "The onvrdisplayconnect property of the Window interface represents an event handler that will run when a compatible VR display has been connected to the computer (when the vrdisplayconnect event fires)."
+    "description": "The onvrdisplayconnect property of the Window interface represents an event handler that will run when a compatible VR display has been connected to the computer (when the vrdisplayconnect event fires).",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayconnect",
+            "description": "The definition of 'onvrdisplayconnect' in WebVR 1.1."
+        }
+    ]
 }

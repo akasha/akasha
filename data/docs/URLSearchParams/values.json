@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.values",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/values",
-    "description": "The values() method of the URLsearchParams interface returns an iterator allowing iteration through all values contained in this object. The values are USVString objects."
+    "description": "The values() method of the URLsearchParams interface returns an iterator allowing iteration through all values contained in this object. The values are USVString objects.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#interface-urlsearchparams",
+            "description": "The definition of 'values() (see \"iterable\")' in URL."
+        }
+    ]
 }

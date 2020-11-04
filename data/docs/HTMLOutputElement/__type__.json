@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "HTMLOutputElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLOutputElement",
-    "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of output elements."
+    "description": "The HTMLOutputElement interface provides properties and methods (beyond those inherited from HTMLElement) for manipulating the layout and presentation of output elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmloutputelement",
+            "description": "The definition of 'HTMLOutputElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/forms.html#the-output-element",
+            "description": "The definition of 'HTMLOutputElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#the-output-element",
+            "description": "The definition of 'HTMLOutputElement' in HTML5."
+        }
+    ]
 }

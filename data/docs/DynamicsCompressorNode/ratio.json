@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DynamicsCompressorNode.ratio",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DynamicsCompressorNode/ratio",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-ratio",
+            "description": "The definition of 'ratio' in Web Audio API."
+        }
+    ]
 }

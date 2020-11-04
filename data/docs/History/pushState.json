@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "History.pushState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/History/pushState",
-    "description": "In an HTML document, the history.pushState() method adds a state to the browser's session history stack."
+    "description": "In an HTML document, the history.pushState() method adds an entry to the browser's session history stack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#dom-history-pushstate",
+            "description": "The definition of 'History.pushState()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/history.html#dom-history-pushstate",
+            "description": "The definition of 'History.pushState()' in HTML5."
+        }
+    ]
 }

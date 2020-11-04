@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Response.error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/error",
-    "description": "The error() method of the Response interface returns a new Response object associated with a network error."
+    "description": "The error() method of the Response interface returns a new Response object associated with a network error.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-response-error",
+            "description": "The definition of 'error()' in Fetch."
+        }
+    ]
 }

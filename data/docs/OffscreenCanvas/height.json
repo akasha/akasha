@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "OffscreenCanvas.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/height",
-    "description": "The height property returns and sets the height of an OffscreenCanvas object."
+    "description": "The height property returns and sets the height of an OffscreenCanvas object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-height",
+            "description": "The definition of 'OffscreenCanvas.height' in HTML Living Standard."
+        }
+    ]
 }

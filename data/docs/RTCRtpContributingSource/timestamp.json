@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpContributingSource.timestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpContributingSource/timestamp",
-    "description": "The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source."
+    "description": "The read-only timestamp property of the RTCRtpContributingSource interface returns a DOMHighResTimeStamp indicating the most recent time of playout of an RTP packet from the source.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpcontributingsource-timestamp",
+            "description": "The definition of 'timestamp' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

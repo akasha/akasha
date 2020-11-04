@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioDestinationNode.maxChannelCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode/maxChannelCount",
-    "description": "An unsigned long."
+    "description": "An unsigned long.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiodestinationnode-maxchannelcount",
+            "description": "The definition of 'maxChannelCount' in Web Audio API."
+        }
+    ]
 }

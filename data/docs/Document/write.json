@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.write",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/write",
-    "description": "The Document.write() method writes a string of text to a document stream opened by document.open()."
+    "description": "The Document.write() method writes a string of text to a document stream opened by document.open().",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-write",
+            "description": "The definition of 'document.write(...)' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634",
+            "description": "The definition of 'document.write(...)' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

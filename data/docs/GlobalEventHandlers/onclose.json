@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onclose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclose",
-    "description": "The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element."
+    "description": "The onclose property of the GlobalEventHandlers mixin is an EventHandler for processing close events sent to a dialog element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclose",
+            "description": "The definition of 'onclose' in HTML Living Standard."
+        }
+    ]
 }

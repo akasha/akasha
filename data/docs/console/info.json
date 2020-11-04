@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.info",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/info",
-    "description": "The console.info() method outputs an informational message to the Web Console. In Firefox, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log."
+    "description": "The console.info() method outputs an informational message to the Web Console. In Firefox, a small &quot;i&quot; icon is displayed next to these items in the Web Console's log.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#info",
+            "description": "The definition of 'console.info()' in Console API."
+        }
+    ]
 }

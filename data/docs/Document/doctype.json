@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.doctype",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/doctype",
-    "description": "Returns the Document Type Declaration (DTD) associated with current document. The returned object implements the DocumentType interface. Use DOMImplementation.createDocumentType() to create a DocumentType."
+    "description": "Returns the Document Type Declaration (DTD) associated with current document. The returned object implements the DocumentType interface. Use DOMImplementation.createDocumentType() to create a DocumentType.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-doctype",
+            "description": "The definition of 'Document: doctype' in DOM."
+        }
+    ]
 }

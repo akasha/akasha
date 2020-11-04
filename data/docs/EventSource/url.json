@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "EventSource.url",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventSource/url",
-    "description": "The url read-only property of the EventSource interface returns a DOMString representing the URL of the source."
+    "description": "The url read-only property of the EventSource interface returns a DOMString representing the URL of the source.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-url",
+            "description": "The definition of 'url' in HTML Living Standard."
+        }
+    ]
 }

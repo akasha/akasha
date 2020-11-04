@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.warn",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/warn",
-    "description": "Outputs a warning message to the Web Console."
+    "description": "Outputs a warning message to the Web Console.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#warn",
+            "description": "The definition of 'console.warn()' in Console API."
+        }
+    ]
 }

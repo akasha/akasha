@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.getBoundingClientRect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect",
-    "description": "The Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport."
+    "description": "The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-getboundingclientrect",
+            "description": "The definition of 'Element.getBoundingClientRect()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

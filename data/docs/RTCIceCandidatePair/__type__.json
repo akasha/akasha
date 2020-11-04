@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCIceCandidatePair",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePair",
-    "description": "The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints."
+    "description": "The RTCIceCandidatePair dictionary describes a pair of ICE candidates which together comprise a description of a viable connection between two WebRTC endpoints.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#rtcicecandidatepair",
+            "description": "The definition of 'RTCIceCandidatePair' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CSSPseudoElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSPseudoElement",
-    "description": "The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo()."
+    "description": "The CSSPseudoElement interface represents a pseudo-element that may be the target of an event or animated using the Web Animations API. Instances of this interface may be obtained by calling Element.pseudo().",
+    "refs": [
+        {
+            "name": "CSS Pseudo-Elements Level 4",
+            "href": "https://drafts.csswg.org/css-pseudo-4/#CSSPseudoElement-interface",
+            "description": "The definition of 'CSSPseudoElement' in CSS Pseudo-Elements Level 4."
+        }
+    ]
 }

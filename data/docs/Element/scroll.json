@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.scroll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/scroll",
-    "description": "The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element."
+    "description": "The scroll() method of the Element interface scrolls the element to a particular set of coordinates inside a given element.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-element-scroll-options-options",
+            "description": "The definition of 'element.scroll()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "IntersectionObserverEntry",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry",
-    "description": "The IntersectionObserverEntry interface of the Intersection Observer API describes the intersection between the target element and its root container at a specific moment of transition."
+    "description": "The IntersectionObserverEntry interface of the Intersection Observer API describes the intersection between the target element and its root container at a specific moment of transition.",
+    "refs": [
+        {
+            "name": "Intersection Observer",
+            "href": "https://w3c.github.io/IntersectionObserver/#intersection-observer-entry",
+            "description": "The definition of 'IntersectionObserverEntry' in Intersection Observer."
+        }
+    ]
 }

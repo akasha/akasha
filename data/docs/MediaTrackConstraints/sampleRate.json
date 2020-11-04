@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.sampleRate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/sampleRate",
-    "description": "The MediaTrackConstraints dictionary's sampleRate property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the sampleRate constrainable property."
+    "description": "The MediaTrackConstraints dictionary's sampleRate property is a ConstrainLong describing the requested or mandatory constraints placed upon the value of the sampleRate constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-samplerate",
+            "description": "The definition of 'sampleRate' in Media Capture and Streams."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioParam.minValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/minValue",
-    "description": "The minValue read-only property of the AudioParam interface represents the minimum possible value for the parameter's nominal (effective) range."
+    "description": "The minValue read-only property of the AudioParam interface represents the minimum possible value for the parameter's nominal (effective) range.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-minvalue",
+            "description": "The definition of 'minValue' in Web Audio API."
+        }
+    ]
 }

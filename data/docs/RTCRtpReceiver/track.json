@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpReceiver.track",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/track",
-    "description": "The track read-only property of the RTCRtpReceiver interface returns the MediaStreamTrack associated with the current RTCRtpReceiver instance."
+    "description": "The track read-only property of the RTCRtpReceiver interface returns the MediaStreamTrack associated with the current RTCRtpReceiver instance.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtpreceiver-track",
+            "description": "The definition of 'track' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

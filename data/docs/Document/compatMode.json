@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.compatMode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/compatMode",
-    "description": "The Document.compatMode property indicates whether the document is rendered in Quirks mode or Standards mode."
+    "description": "The Document.compatMode read-only property indicates whether the document is rendered in Quirks mode or Standards mode.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-compatmode",
+            "description": "The definition of 'compatMode' in DOM."
+        }
+    ]
 }

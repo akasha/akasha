@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PromiseRejectionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent",
-    "description": "The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected."
+    "description": "The PromiseRejectionEvent interface represents events which are sent to the global script context when JavaScript Promises are rejected.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#promiserejectionevent",
+            "description": "The definition of 'PromiseRejectionEvent' in HTML Living Standard."
+        }
+    ]
 }

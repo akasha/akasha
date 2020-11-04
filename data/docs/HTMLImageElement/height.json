@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLImageElement.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/height",
-    "description": "The height property of the HTMLImageElement interface indicates the height at which the image is drawn, in CSS pixels if the image is being drawn or rendered to any visual medium such as the screen or a printer; otherwise, it's the natural, pixel density corrected height of the image."
+    "description": "The height property of the HTMLImageElement interface indicates the height at which the image is drawn, in CSS pixels if the image is being drawn or rendered to any visual medium such as the screen or a printer; otherwise, it's the natural, pixel density corrected height of the image.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-height",
+            "description": "The definition of 'HTMLImageElement.height' in HTML Living Standard."
+        }
+    ]
 }

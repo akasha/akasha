@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaDevices.getDisplayMedia",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia",
-    "description": "The MediaDevices interface's getDisplayMedia() method prompts the user to select and grant permission to capture the contents of a display or portion thereof (such as a window) as a MediaStream."
+    "description": "The MediaDevices interface's getDisplayMedia() method prompts the user to select and grant permission to capture the contents of a display or portion thereof (such as a window) as a MediaStream.",
+    "refs": [
+        {
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediadevices-getdisplaymedia",
+            "description": "The definition of 'MediaDevices.getDisplayMedia()' in Screen Capture."
+        }
+    ]
 }

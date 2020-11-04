@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createRange",
-    "description": "The Document.createRange() method returns a new Range object."
+    "description": "The Document.createRange() method returns a new Range object.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-createrange",
+            "description": "The definition of 'document.createRange' in DOM."
+        }
+    ]
 }

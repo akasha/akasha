@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onstorage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onstorage",
-    "description": "The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events."
+    "description": "The onstorage property of the WindowEventHandlers mixin is an EventHandler for processing storage events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage",
+            "description": "The definition of 'onstorage' in HTML Living Standard."
+        }
+    ]
 }

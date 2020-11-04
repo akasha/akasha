@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioScheduledSourceNode.stop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioScheduledSourceNode/stop",
-    "description": "The stop() method on AudioScheduledSourceNode schedules a sound to cease playback at the specified time. If no time is specified, then the sound stops playing immediately."
+    "description": "The stop() method on AudioScheduledSourceNode schedules a sound to cease playback at the specified time. If no time is specified, then the sound stops playing immediately.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-stop",
+            "description": "The definition of 'stop()' in Web Audio API."
+        }
+    ]
 }

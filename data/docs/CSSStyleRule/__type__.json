@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "CSSStyleRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleRule",
-    "description": "CSSStyleRule represents a single CSS style rule. It implements the CSSRule interface with a type value of 1 (CSSRule.STYLE_RULE)."
+    "description": "CSSStyleRule represents a single CSS style rule. It implements the CSSRule interface with a type value of 1 (CSSRule.STYLE_RULE).",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#the-cssstylerule-interface",
+            "description": "The definition of 'CSSStyleRule' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleRule",
+            "description": "The definition of 'CSSRule' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

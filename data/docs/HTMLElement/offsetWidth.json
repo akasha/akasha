@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLElement.offsetWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth",
-    "description": "The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer."
+    "description": "The HTMLElement.offsetWidth read-only property returns the layout width of an element as an integer.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetwidth",
+            "description": "The definition of 'offsetWidth' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

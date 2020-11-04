@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Location.hostname",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/hostname",
-    "description": "The hostname property of the Location interface is a USVString containing the domain of the URL."
+    "description": "The hostname property of the Location interface is a USVString containing the domain of the URL.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-location-hostname",
+            "description": "The definition of 'hostname' in HTML Living Standard."
+        }
+    ]
 }

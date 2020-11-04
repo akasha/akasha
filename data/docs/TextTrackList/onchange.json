@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "TextTrackList.onchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackList/onchange",
-    "description": "The TextTrackList property onchange is an event handler which is called when the change event occurs, indicating that a change has occurred on a TextTrack in the VideoTrackList."
+    "description": "The TextTrackList property onchange is an event handler which is called when the change event occurs, indicating that a change has occurred on a TextTrack in the VideoTrackList.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-tracklist-onchange",
+            "description": "The definition of 'TextTrackList: onchange' in HTML Living Standard."
+        }
+    ]
 }

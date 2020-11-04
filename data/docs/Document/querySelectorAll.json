@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "Document.querySelectorAll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll",
-    "description": "The Document method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors."
+    "description": "The Document method querySelectorAll() returns a static (not live) NodeList representing a list of the document's elements that match the specified group of selectors.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-parentnode-queryselectorall",
+            "description": "The definition of 'ParentNode.querySelectorAll()' in DOM."
+        },
+        {
+            "name": "Selectors API Level 2",
+            "href": "https://dev.w3.org/2006/webapi/selectors-api2/#dom-parentnode-queryselectorall",
+            "description": "The definition of 'ParentNode.querySelectorAll()' in Selectors API Level 2."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-parentnode-queryselectorall",
+            "description": "The definition of 'ParentNode.querySelectorAll()' in DOM4."
+        },
+        {
+            "name": "Selectors API Level 1",
+            "href": "https://www.w3.org/TR/selectors-api/#interface-definitions",
+            "description": "The definition of 'document.querySelector()' in Selectors API Level 1."
+        }
+    ]
 }

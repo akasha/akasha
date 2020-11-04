@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLUnknownElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLUnknownElement",
-    "description": "The HTMLUnknownElement interface represents an invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods."
+    "description": "The HTMLUnknownElement interface represents an invalid HTML element and derives from the HTMLElement interface, but without implementing any additional properties or methods.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/elements.html#htmlunknownelement",
+            "description": "The definition of 'HTMLUnknownElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/dom.html#htmlunknownelement",
+            "description": "The definition of 'HTMLUnknownElement' in HTML5."
+        }
+    ]
 }

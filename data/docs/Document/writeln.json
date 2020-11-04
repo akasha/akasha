@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.writeln",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/writeln",
-    "description": "Writes a string of text followed by a newline character to a document."
+    "description": "Writes a string of text followed by a newline character to a document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-writeln",
+            "description": "The definition of 'document.writeln()' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-35318390",
+            "description": "The definition of 'document.writeln()' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

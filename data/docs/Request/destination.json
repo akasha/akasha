@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Request.destination",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/destination",
-    "description": "The destination read-only property of the Request interface returns a string describing the type of content being requested."
+    "description": "The destination read-only property of the Request interface returns a string describing the type of content being requested.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-request-destination",
+            "description": "The definition of 'destination' in Fetch."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WakeLockSentinel.released",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLockSentinel/released",
-    "description": "The read-only released property of the WakeLockSentinel interface returns a boolean that indicates whether a WakeLockSentinel has been released yet."
+    "description": "The read-only released property of the WakeLockSentinel interface returns a boolean that indicates whether a WakeLockSentinel has been released yet.",
+    "refs": [
+        {
+            "name": "Screen Wake Lock API",
+            "href": "https://w3c.github.io/screen-wake-lock/#dom-wakelocksentinel-released",
+            "description": "The definition of 'released' in Screen Wake Lock API."
+        }
+    ]
 }

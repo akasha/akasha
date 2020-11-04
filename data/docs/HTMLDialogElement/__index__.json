@@ -1,15 +1,15 @@
 
 {
     "name": "HTMLDialogElement",
-    "lastModifiedAt": 1600311634195,
+    "lastModifiedAt": 1604450274542,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193328370
+            "lastModifiedAt": 1604450271296
         },
         {
             "name": "close",
-            "lastModifiedAt": 1596790523265
+            "lastModifiedAt": 1604450273086
         },
         {
             "name": "close_event",
@@ -17,19 +17,19 @@
         },
         {
             "name": "open",
-            "lastModifiedAt": 1599278992728
+            "lastModifiedAt": 1604450271901
         },
         {
             "name": "returnValue",
-            "lastModifiedAt": 1596581347575
+            "lastModifiedAt": 1604450272360
         },
         {
             "name": "show",
-            "lastModifiedAt": 1596581348840
+            "lastModifiedAt": 1604450273581
         },
         {
             "name": "showModal",
-            "lastModifiedAt": 1596581349260
+            "lastModifiedAt": 1604450274089
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.computedStyleMap",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/computedStyleMap",
-    "description": "The computedStyleMap() method of the Element interface returns a StylePropertyMapReadOnly interface which provides a read-only representation of a CSS declaration block that is an alternative to CSSStyleDeclaration."
+    "description": "The computedStyleMap() method of the Element interface returns a StylePropertyMapReadOnly interface which provides a read-only representation of a CSS declaration block that is an alternative to CSSStyleDeclaration.",
+    "refs": [
+        {
+            "name": "CSS Typed OM Level 1",
+            "href": "https://drafts.css-houdini.org/css-typed-om-1/#dom-element-computedstylemap",
+            "description": "The definition of 'computedStyleMap()' in CSS Typed OM Level 1."
+        }
+    ]
 }

@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "ValidityState.typeMismatch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/typeMismatch",
-    "description": "If the type attribute expects specific strings, such as the email and url types and the value don't doesn't conform to the constraints set by the type, the typeMismatch property will be true."
+    "description": "If the type attribute expects specific strings, such as the email and url types and the value don't doesn't conform to the constraints set by the type, the typeMismatch property will be true.",
+    "refs": [
+        {
+            "name": "email",
+            "href": "/en-US/docs/Web/HTML/Element/input/email"
+        },
+        {
+            "name": "url",
+            "href": "/en-US/docs/Web/HTML/Element/input/url"
+        }
+    ]
 }

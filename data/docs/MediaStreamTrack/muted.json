@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaStreamTrack.muted",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack/muted",
-    "description": "The muted read-only property of the MediaStreamTrack interface returns a Boolean value indicating whether or not the track is currently unable to provide media output."
+    "description": "The muted read-only property of the MediaStreamTrack interface returns a Boolean value indicating whether or not the track is currently unable to provide media output.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-muted",
+            "description": "The definition of 'muted' in Media Capture and Streams."
+        }
+    ]
 }

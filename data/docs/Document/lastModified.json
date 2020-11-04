@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.lastModified",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/lastModified",
-    "description": "The lastModified property of the Document interface returns a string containing the date and time on which the current document was last modified."
+    "description": "The lastModified property of the Document interface returns a string containing the date and time on which the current document was last modified.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-lastmodified",
+            "description": "The definition of 'document.lastModified' in HTML Living Standard."
+        }
+    ]
 }

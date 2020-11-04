@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MouseEvent.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/y",
-    "description": "The MouseEvent.y property is an alias for the MouseEvent.clientY property."
+    "description": "The MouseEvent.y property is an alias for the MouseEvent.clientY property.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-y",
+            "description": "The definition of 'MouseEvent.y' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

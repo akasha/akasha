@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.insertAdjacentHTML",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML",
-    "description": "The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct innerHTML manipulation."
+    "description": "The insertAdjacentHTML() method of the Element interface parses the specified text as HTML or XML and inserts the resulting nodes into the DOM tree at a specified position. It does not reparse the element it is being used on, and thus it does not corrupt the existing elements inside that element. This avoids the extra step of serialization, making it much faster than direct innerHTML manipulation.",
+    "refs": [
+        {
+            "name": "DOM Parsing and Serialization",
+            "href": "https://w3c.github.io/DOM-Parsing/#dom-element-insertadjacenthtml",
+            "description": "The definition of 'Element.insertAdjacentHTML()' in DOM Parsing and Serialization."
+        }
+    ]
 }

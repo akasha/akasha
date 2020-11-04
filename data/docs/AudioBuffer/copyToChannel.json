@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioBuffer.copyToChannel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyToChannel",
-    "description": "The copyToChannel() method of the AudioBuffer interface copies the samples to the specified channel of the AudioBuffer, from the source array."
+    "description": "The copyToChannel() method of the AudioBuffer interface copies the samples to the specified channel of the AudioBuffer, from the source array.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffer-copytochannel",
+            "description": "The definition of 'copyToChannel' in Web Audio API."
+        }
+    ]
 }

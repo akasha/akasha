@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Location.assign",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Location/assign",
-    "description": "The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the &quot;back&quot; button."
+    "description": "The Location.assign() method causes the window to load and display the document at the URL specified. After the navigation occurs, the user can navigate back to the page that called Location.assign() by pressing the &quot;back&quot; button.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/history.html#dom-location-assign",
+            "description": "The definition of 'Location.assign()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-location-assign",
+            "description": "The definition of 'Location.assign()' in HTML5."
+        }
+    ]
 }

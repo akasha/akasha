@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioListener.upY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioListener/upY",
-    "description": "The upY read-only property of the AudioListener interface is an AudioParam representing the y value of the direction vector defining the up direction the listener is pointing in."
+    "description": "The upY read-only property of the AudioListener interface is an AudioParam representing the y value of the direction vector defining the up direction the listener is pointing in.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-upy",
+            "description": "The definition of 'upY' in Web Audio API."
+        }
+    ]
 }

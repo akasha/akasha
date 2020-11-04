@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.debug",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/debug",
-    "description": "The console method debug() outputs a message to the web console at the &quot;debug&quot; log level. The message is only displayed to the user if the console is configured to display debug output."
+    "description": "The console method debug() outputs a message to the web console at the &quot;debug&quot; log level. The message is only displayed to the user if the console is configured to display debug output.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#debug",
+            "description": "The definition of 'console.debug()' in Console API."
+        }
+    ]
 }

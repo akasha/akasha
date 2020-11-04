@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onloadedmetadata",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onloadedmetadata",
-    "description": "The onloadedmetadata property of the GlobalEventHandlers mixin is the EventHandler for processing loadedmetadata events."
+    "description": "The onloadedmetadata property of the GlobalEventHandlers mixin is the EventHandler for processing loadedmetadata events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-onloadedmetadata",
+            "description": "The definition of 'onloadedmetadata' in HTML Living Standard."
+        }
+    ]
 }

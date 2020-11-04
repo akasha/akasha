@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.iceconnectionstatechange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceconnectionstatechange_event",
     "description": "An iceconnectionstatechange event is sent to an RTCPeerConnection object each time the ICE connection state changes during the negotiation process.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-iceconnectionstatechange",
+            "description": "The definition of 'iceconnectionstatechange' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "iceconnectionstatechange",
     "eventType": "Event",
     "eventHandlerProperty": "oniceconnectionstatechange",

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/close",
-    "description": "The Document.close() method finishes writing to a document, opened with Document.open()."
+    "description": "The Document.close() method finishes writing to a document, opened with Document.open().",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-close",
+            "description": "The definition of 'document.close()' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-98948567",
+            "description": "The definition of 'document.close()' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ReportingObserver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReportingObserver",
-    "description": "The ReportingObserver interface of the Reporting API allows you to collect and access reports."
+    "description": "The ReportingObserver interface of the Reporting API allows you to collect and access reports.",
+    "refs": [
+        {
+            "name": "Reporting API",
+            "href": "https://w3c.github.io/reporting/#interface-reporting-observer",
+            "description": "The definition of 'ReportingObserver' in Reporting API."
+        }
+    ]
 }

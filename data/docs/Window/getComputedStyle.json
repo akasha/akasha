@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Window.getComputedStyle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle",
-    "description": "The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain."
+    "description": "The Window.getComputedStyle() method returns an object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle",
+            "description": "The definition of 'getComputedStyle()' in CSS Object Model (CSSOM)."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Style Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Style/#CSS-CSSview-getComputedStyle",
+            "description": "The definition of 'getComputedStyle()' in Document Object Model (DOM) Level 2 Style Specification."
+        }
+    ]
 }

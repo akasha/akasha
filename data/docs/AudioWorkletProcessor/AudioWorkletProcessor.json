@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "AudioWorkletProcessor.AudioWorkletProcessor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor/AudioWorkletProcessor",
-    "description": "The AudioWorkletProcessor() constructor creates a new AudioWorkletProcessor object, which represents an underlying audio processing mechanism of an AudioWorkletNode."
+    "description": "The AudioWorkletProcessor() constructor creates a new AudioWorkletProcessor object, which represents an underlying audio processing mechanism of an AudioWorkletNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioworkletprocessor-audioworkletprocessor",
+            "description": "The definition of 'AudioWorkletProcessor()' in Web Audio API."
+        }
+    ]
 }

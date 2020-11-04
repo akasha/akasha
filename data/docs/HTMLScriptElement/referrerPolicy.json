@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLScriptElement.referrerPolicy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/referrerPolicy",
-    "description": "The referrerPolicy property of the HTMLScriptElement interface reflects the HTML referrerpolicy of the script element and fetches made by that script, defining which referrer is sent when fetching the resource."
+    "description": "The referrerPolicy property of the HTMLScriptElement interface reflects the HTML referrerpolicy of the script element and fetches made by that script, defining which referrer is sent when fetching the resource.",
+    "refs": [
+        {
+            "name": "Referrer Policy",
+            "href": "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute",
+            "description": "The definition of 'referrerpolicy attribute' in Referrer Policy."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-script-referrerpolicy",
+            "description": "The definition of 'HTMLScriptElement: referrerPolicy' in HTML Living Standard."
+        }
+    ]
 }

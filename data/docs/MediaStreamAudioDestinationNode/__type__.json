@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaStreamAudioDestinationNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamAudioDestinationNode",
-    "description": "Inherits properties from its parent, AudioNode."
+    "description": "Inherits properties from its parent, AudioNode.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#mediastreamaudiodestinationnode",
+            "description": "The definition of 'MediaStreamAudioDestinationNode' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Plugin",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Plugin",
-    "description": "The Plugin interface provides information about a browser plugin."
+    "description": "The Plugin interface provides information about a browser plugin.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-plugin",
+            "description": "The definition of 'Plugin' in HTML Living Standard."
+        }
+    ]
 }

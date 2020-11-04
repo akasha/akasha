@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onpopstate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onpopstate",
-    "description": "The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window."
+    "description": "The onpopstate property of the WindowEventHandlers mixin is the EventHandler for processing popstate events on the window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate",
+            "description": "The definition of 'onpopstate' in HTML Living Standard."
+        }
+    ]
 }

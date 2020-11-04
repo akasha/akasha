@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioTrack.sourceBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/sourceBuffer",
-    "description": "The read-only AudioTrack property sourceBuffer returns the SourceBuffer that created the track, or null if the track was not created by a SourceBuffer or the SourceBuffer has been removed from the MediaSource.sourceBuffers attribute of its parent media source."
+    "description": "The read-only AudioTrack property sourceBuffer returns the SourceBuffer that created the track, or null if the track was not created by a SourceBuffer or the SourceBuffer has been removed from the MediaSource.sourceBuffers attribute of its parent media source.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#dom-audiotrack-sourcebuffer",
+            "description": "The definition of 'AudioTrack: sourceBuffer' in Media Source Extensions."
+        }
+    ]
 }

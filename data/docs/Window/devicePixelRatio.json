@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.devicePixelRatio",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio",
-    "description": "The devicePixelRatio of Window interface returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device."
+    "description": "The devicePixelRatio of Window interface returns the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-devicepixelratio",
+            "description": "The definition of 'Window.devicePixelRatio' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

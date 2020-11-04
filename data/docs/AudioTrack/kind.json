@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AudioTrack.kind",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioTrack/kind",
-    "description": "The kind property contains a string indicating the category of audio contained in the AudioTrack."
+    "description": "The kind property contains a string indicating the category of audio contained in the AudioTrack.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/media.html#dom-audiotrack-kind",
+            "description": "The definition of 'AudioTrack: kind' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-audiotrack-kind",
+            "description": "The definition of 'AudioTrack.kind' in HTML5."
+        }
+    ]
 }

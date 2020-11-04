@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidateStats.address",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidateStats/address",
-    "description": "The address property of the RTCIceCandidateStats dictionary indicates the address of the ICE candidate. While it's preferred that the address be specified as an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as well."
+    "description": "The address property of the RTCIceCandidateStats dictionary indicates the address of the ICE candidate. While it's preferred that the address be specified as an IPv4 or IPv6 numeric address, a fully-qualified domain name can be used as well.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-address",
+            "description": "The definition of 'RTCIceCandidateStats.address' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

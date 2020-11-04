@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "URLSearchParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams",
-    "description": "The URLSearchParams interface defines utility methods to work with the query string of a URL."
+    "description": "The URLSearchParams interface defines utility methods to work with the query string of a URL.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#urlsearchparams",
+            "description": "The definition of 'URLSearchParams' in URL."
+        }
+    ]
 }

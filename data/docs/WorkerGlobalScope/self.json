@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerGlobalScope.self",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/self",
-    "description": "The self read-only property of the WorkerGlobalScope interface returns a reference to the WorkerGlobalScope itself. Most of the time it is a specific scope like DedicatedWorkerGlobalScope,  SharedWorkerGlobalScope, or ServiceWorkerGlobalScope."
+    "description": "The self read-only property of the WorkerGlobalScope interface returns a reference to the WorkerGlobalScope itself. Most of the time it is a specific scope like DedicatedWorkerGlobalScope,  SharedWorkerGlobalScope, or ServiceWorkerGlobalScope.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-workerglobalscope-self",
+            "description": "The definition of 'self' in HTML Living Standard."
+        }
+    ]
 }

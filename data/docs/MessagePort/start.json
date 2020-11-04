@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MessagePort.start",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MessagePort/start",
-    "description": "The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage."
+    "description": "The start() method of the MessagePort interface starts the sending of messages queued on the port. This method is only needed when using EventTarget.addEventListener; it is implied when using MessageChannel.onmessage.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/web-messaging.html#dom-messageport-start",
+            "description": "The definition of 'start()' in HTML Living Standard."
+        }
+    ]
 }

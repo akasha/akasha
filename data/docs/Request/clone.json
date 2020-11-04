@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Request.clone",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/clone",
-    "description": "The clone() method of the Request interface creates a copy of the current Request object."
+    "description": "The clone() method of the Request interface creates a copy of the current Request object.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-request-clone",
+            "description": "The definition of 'clone' in Fetch."
+        }
+    ]
 }

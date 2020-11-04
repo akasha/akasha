@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDTMFToneChangeEvent.tone",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFToneChangeEvent/tone",
-    "description": "The read-only property RTCDTMFToneChangeEvent.tone returns the DTMF character which has just begun to play, or an empty string (&quot;&quot;). if all queued tones have finished playing (that is, RTCDTMFSender.toneBuffer is empty)."
+    "description": "The read-only property RTCDTMFToneChangeEvent.tone returns the DTMF character which has just begun to play, or an empty string (&quot;&quot;). if all queued tones have finished playing (that is, RTCDTMFSender.toneBuffer is empty).",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcdtmftonechangeevent-tone",
+            "description": "The definition of 'RTCDTMFToneChangeEvent.tone' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

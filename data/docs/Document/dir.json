@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Document.dir",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dir",
-    "description": "The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right."
+    "description": "The Document.dir property is a DOMString representing the directionality of the text of the document, whether left to right (default) or right to left. Possible values are 'rtl', right to left, and 'ltr', left to right.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-dir",
+            "description": "The definition of 'Document.dir' in HTML Living Standard."
+        }
+    ]
 }

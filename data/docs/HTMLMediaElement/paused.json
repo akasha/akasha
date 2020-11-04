@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.paused",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/paused",
-    "description": "The read-only HTMLMediaElement.paused property tells whether the media element is paused."
+    "description": "The read-only HTMLMediaElement.paused property tells whether the media element is paused.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-paused",
+            "description": "The definition of 'HTMLMediaElement.paused' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.paused' in HTML5."
+        }
+    ]
 }

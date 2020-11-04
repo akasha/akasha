@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Headers.Headers",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Headers/Headers",
-    "description": "The Headers() constructor creates a new Headers object."
+    "description": "The Headers() constructor creates a new Headers object.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-headers",
+            "description": "The definition of 'Headers()' in Fetch."
+        }
+    ]
 }

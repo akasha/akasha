@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCTrackEvent.streams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCTrackEvent/streams",
-    "description": "The WebRTC API interface RTCTrackEvent's read-only streams property specifies an array of MediaStream objects, one for each of the streams that comprise the track being added to the RTCPeerConnection."
+    "description": "The WebRTC API interface RTCTrackEvent's read-only streams property specifies an array of MediaStream objects, one for each of the streams that comprise the track being added to the RTCPeerConnection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtctrackevent-streams",
+            "description": "The definition of 'RTCTrackEvent.streams' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpReceiver.getContributingSources",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getContributingSources",
-    "description": "The getContributingSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one CSRC (contributing source) identifier received by the current RTCRtpReceiver in the last ten seconds."
+    "description": "The getContributingSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one CSRC (contributing source) identifier received by the current RTCRtpReceiver in the last ten seconds.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getcontributingsources",
+            "description": "The definition of 'getContributingSources()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

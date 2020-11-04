@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.screenLeft",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/screenLeft",
-    "description": "The Window.screenLeft read-only property returns the horizontal distance, in CSS pixels, from the left border of the user's browser viewport to the left side of the screen."
+    "description": "The Window.screenLeft read-only property returns the horizontal distance, in CSS pixels, from the left border of the user's browser viewport to the left side of the screen.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-window-screenx",
+            "description": "The definition of 'Window.screenLeft' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

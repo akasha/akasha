@@ -1,15 +1,15 @@
 
 {
     "name": "HTMLDetailsElement",
-    "lastModifiedAt": 1600311630282,
+    "lastModifiedAt": 1604449815966,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193222334
+            "lastModifiedAt": 1604449815083
         },
         {
             "name": "toggle_event",
-            "lastModifiedAt": 1597358253538
+            "lastModifiedAt": 1604449815966
         }
     ]
 }

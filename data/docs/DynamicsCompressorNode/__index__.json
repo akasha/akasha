@@ -1,39 +1,39 @@
 
 {
     "name": "DynamicsCompressorNode",
-    "lastModifiedAt": 1601466894120,
+    "lastModifiedAt": 1604448473462,
     "entries": [
         {
             "name": "DynamicsCompressorNode",
-            "lastModifiedAt": 1597192564336
+            "lastModifiedAt": 1604448469038
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192564094
+            "lastModifiedAt": 1604448468175
         },
         {
             "name": "attack",
-            "lastModifiedAt": 1597192566340
+            "lastModifiedAt": 1604448469549
         },
         {
             "name": "knee",
-            "lastModifiedAt": 1597192564911
+            "lastModifiedAt": 1604448470060
         },
         {
             "name": "ratio",
-            "lastModifiedAt": 1597192565734
+            "lastModifiedAt": 1604448471103
         },
         {
             "name": "reduction",
-            "lastModifiedAt": 1599279239172
+            "lastModifiedAt": 1604448471699
         },
         {
             "name": "release",
-            "lastModifiedAt": 1597192566610
+            "lastModifiedAt": 1604448472709
         },
         {
             "name": "threshold",
-            "lastModifiedAt": 1597192564639
+            "lastModifiedAt": 1604448473235
         }
     ]
 }

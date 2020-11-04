@@ -1,31 +1,31 @@
 
 {
     "name": "ScreenOrientation",
-    "lastModifiedAt": 1600313359482,
+    "lastModifiedAt": 1604448342408,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192293116
+            "lastModifiedAt": 1604448338149
         },
         {
             "name": "angle",
-            "lastModifiedAt": 1597192293772
+            "lastModifiedAt": 1604448339209
         },
         {
             "name": "lock",
-            "lastModifiedAt": 1597192294307
+            "lastModifiedAt": 1604448341347
         },
         {
             "name": "onchange",
-            "lastModifiedAt": 1600306188106
+            "lastModifiedAt": 1604448340320
         },
         {
             "name": "type",
-            "lastModifiedAt": 1599279909525
+            "lastModifiedAt": 1604448340774
         },
         {
             "name": "unlock",
-            "lastModifiedAt": 1597192294548
+            "lastModifiedAt": 1604448342408
         }
     ]
 }

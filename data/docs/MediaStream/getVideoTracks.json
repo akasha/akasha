@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaStream.getVideoTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaStream/getVideoTracks",
-    "description": "The getVideoTracks() method of the MediaStream interface returns a sequence of MediaStreamTrack objects representing the video tracks in this stream."
+    "description": "The getVideoTracks() method of the MediaStream interface returns a sequence of MediaStreamTrack objects representing the video tracks in this stream.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-getvideotracks",
+            "description": "The definition of 'getVideoTracks()' in Media Capture and Streams."
+        }
+    ]
 }

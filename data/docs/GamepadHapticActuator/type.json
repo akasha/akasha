@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "GamepadHapticActuator.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator/type",
-    "description": "The type read-only property of the GamepadHapticActuator interface returns an enum representing the type of the haptic hardware."
+    "description": "The type read-only property of the GamepadHapticActuator interface returns an enum representing the type of the haptic hardware.",
+    "refs": [
+        {
+            "name": "Gamepad Extensions",
+            "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadhapticactuatortype",
+            "description": "The definition of 'GamepadHapticActuatorType' in Gamepad Extensions."
+        }
+    ]
 }

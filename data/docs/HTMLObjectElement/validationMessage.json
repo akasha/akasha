@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.validationMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/validationMessage",
-    "description": "The validationMessage read-only property of the HTMLObjectElement interface returns a DOMString representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (willValidate is false), or it satisfies its constraints."
+    "description": "The validationMessage read-only property of the HTMLObjectElement interface returns a DOMString representing a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (willValidate is false), or it satisfies its constraints.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-cva-validationmessage",
+            "description": "The definition of 'validationMessage' in HTML Living Standard."
+        }
+    ]
 }

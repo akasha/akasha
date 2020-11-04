@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "BroadcastChannel.BroadcastChannel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel",
-    "description": "The BroadcastChannel() constructor creates a new BroadcastChannel and connects it to the underlying channel."
+    "description": "The BroadcastChannel() constructor creates a new BroadcastChannel and connects it to the underlying channel.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel",
+            "description": "The definition of 'BroadcastChannel()' in HTML Living Standard."
+        }
+    ]
 }

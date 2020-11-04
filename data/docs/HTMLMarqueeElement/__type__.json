@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLMarqueeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMarqueeElement",
-    "description": "The HTMLMarqueeElement interface provides methods to manipulate marquee elements."
+    "description": "The HTMLMarqueeElement interface provides methods to manipulate marquee elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/obsolete.html#htmlmarqueeelement",
+            "description": "The definition of 'HTMLMarqueeElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.2",
+            "href": "https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement",
+            "description": "The definition of 'HTMLMarqueeElement' in HTML 5.2."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/obsolete.html#htmlmarqueeelement-htmlmarqueeelement",
+            "description": "The definition of 'HTMLMarqueeElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/obsolete.html#htmlmarqueeelement",
+            "description": "The definition of 'HTMLMarqueeElement' in HTML5."
+        }
+    ]
 }

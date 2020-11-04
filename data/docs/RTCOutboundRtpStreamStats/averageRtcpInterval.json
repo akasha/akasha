@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCOutboundRtpStreamStats.averageRtcpInterval",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCOutboundRtpStreamStats/averageRtcpInterval",
-    "description": "The averageRtcpInterval property of the RTCOutboundRtpStreamStats dictionary is a floating-point value indicating the average time that should pass between transmissions of RTCP packets on this stream."
+    "description": "The averageRtcpInterval property of the RTCOutboundRtpStreamStats dictionary is a floating-point value indicating the average time that should pass between transmissions of RTCP packets on this stream.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-averagertcpinterval",
+            "description": "The definition of 'RTCOutboundRtpStreamStats.averageRtcpInterval' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

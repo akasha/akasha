@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WEBGL_compressed_texture_astc.getSupportedProfiles",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles",
-    "description": "The WEBGL_compressed_texture_astc.getSupportedProfiles() method returns an array of strings containing the names of the ASTC profiles supported by the implementation."
+    "description": "The WEBGL_compressed_texture_astc.getSupportedProfiles() method returns an array of strings containing the names of the ASTC profiles supported by the implementation.",
+    "refs": [
+        {
+            "name": "WEBGL_compressed_texture_astc",
+            "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/",
+            "description": "The definition of 'WEBGL_compressed_texture_astc' in WEBGL_compressed_texture_astc."
+        }
+    ]
 }

@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "HTMLElement.hidden",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden",
-    "description": "The HTMLElement property hidden is a Boolean which is true if the element is hidden; otherwise the value is false. This is quite different from using the CSS property display to control the visibility of an element."
+    "description": "The HTMLElement property hidden is a Boolean which is true if the element is hidden; otherwise the value is false. This is quite different from using the CSS property display to control the visibility of an element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-hidden",
+            "description": "The definition of 'HTMLElement.hidden' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#the-hidden-attribute",
+            "description": "The definition of 'HTMLElement.hidden' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/editing.html#the-hidden-attribute",
+            "description": "The definition of 'HTMLElement.hidden' in HTML5."
+        }
+    ]
 }

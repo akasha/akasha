@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.getElementsByClassName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getElementsByClassName",
-    "description": "The Element method getElementsByClassName() returns a live HTMLCollection which contains every descendant element which has the specified class name or names."
+    "description": "The Element method getElementsByClassName() returns a live HTMLCollection which contains every descendant element which has the specified class name or names.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-getelementsbyclassname",
+            "description": "The definition of 'Element.getElementsByClassName()' in DOM."
+        }
+    ]
 }

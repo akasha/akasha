@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PromiseRejectionEvent.reason",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent/reason",
-    "description": "The PromiseRejectionEvent reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected."
+    "description": "The PromiseRejectionEvent reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-promiserejectionevent-reason",
+            "description": "The definition of 'PromiseRejectionEvent.reason' in HTML Living Standard."
+        }
+    ]
 }

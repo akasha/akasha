@@ -1,7 +1,7 @@
 
 {
     "name": "CSSStyleSheet",
-    "lastModifiedAt": 1601504308986,
+    "lastModifiedAt": 1604447346811,
     "entries": [
         {
             "name": "__type__",
@@ -9,19 +9,19 @@
         },
         {
             "name": "cssRules",
-            "lastModifiedAt": 1597190735541
+            "lastModifiedAt": 1604447344991
         },
         {
             "name": "deleteRule",
-            "lastModifiedAt": 1597190736119
+            "lastModifiedAt": 1604447346197
         },
         {
             "name": "insertRule",
-            "lastModifiedAt": 1597190736376
+            "lastModifiedAt": 1604447346811
         },
         {
             "name": "ownerRule",
-            "lastModifiedAt": 1597190735805
+            "lastModifiedAt": 1604447345582
         }
     ]
 }

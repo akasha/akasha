@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioBuffer.copyFromChannel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/copyFromChannel",
-    "description": "The copyFromChannel() method of the AudioBuffer interface copies the audio sample data from the specified channel of the AudioBuffer to a specified Float32Array."
+    "description": "The copyFromChannel() method of the AudioBuffer interface copies the audio sample data from the specified channel of the AudioBuffer to a specified Float32Array.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffer-copyfromchannel",
+            "description": "The definition of 'copyFromChannel' in Web Audio API."
+        }
+    ]
 }

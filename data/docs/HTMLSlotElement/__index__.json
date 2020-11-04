@@ -1,27 +1,27 @@
 
 {
     "name": "HTMLSlotElement",
-    "lastModifiedAt": 1600311938280,
+    "lastModifiedAt": 1604450569449,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193502449
+            "lastModifiedAt": 1604450567262
         },
         {
             "name": "assignedElements",
-            "lastModifiedAt": 1596581525850
+            "lastModifiedAt": 1604450568465
         },
         {
             "name": "assignedNodes",
-            "lastModifiedAt": 1596581526140
+            "lastModifiedAt": 1604450568992
         },
         {
             "name": "name",
-            "lastModifiedAt": 1599391929649
+            "lastModifiedAt": 1604450567705
         },
         {
             "name": "slotchange_event",
-            "lastModifiedAt": 1597360359663
+            "lastModifiedAt": 1604450569449
         }
     ]
 }

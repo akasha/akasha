@@ -1,15 +1,15 @@
 
 {
     "name": "Screen",
-    "lastModifiedAt": 1601504566435,
+    "lastModifiedAt": 1604448355989,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190812561
+            "lastModifiedAt": 1604447621018
         },
         {
             "name": "availHeight",
-            "lastModifiedAt": 1600308826455
+            "lastModifiedAt": 1604447621700
         },
         {
             "name": "availLeft",
@@ -21,15 +21,15 @@
         },
         {
             "name": "availWidth",
-            "lastModifiedAt": 1600308827299
+            "lastModifiedAt": 1604447623359
         },
         {
             "name": "colorDepth",
-            "lastModifiedAt": 1600308827606
+            "lastModifiedAt": 1604447624480
         },
         {
             "name": "height",
-            "lastModifiedAt": 1600308827913
+            "lastModifiedAt": 1604447625039
         },
         {
             "name": "left",
@@ -37,7 +37,7 @@
         },
         {
             "name": "lockOrientation",
-            "lastModifiedAt": 1599391879653
+            "lastModifiedAt": 1604447631899
         },
         {
             "name": "mozBrightness",
@@ -49,15 +49,15 @@
         },
         {
             "name": "onorientationchange",
-            "lastModifiedAt": 1600308829588
+            "lastModifiedAt": 1604447628159
         },
         {
             "name": "orientation",
-            "lastModifiedAt": 1600308829961
+            "lastModifiedAt": 1604447629225
         },
         {
             "name": "pixelDepth",
-            "lastModifiedAt": 1600308830268
+            "lastModifiedAt": 1604447630340
         },
         {
             "name": "top",
@@ -65,11 +65,11 @@
         },
         {
             "name": "unlockOrientation",
-            "lastModifiedAt": 1599391880703
+            "lastModifiedAt": 1604447632514
         },
         {
             "name": "width",
-            "lastModifiedAt": 1600308830813
+            "lastModifiedAt": 1604447631412
         }
     ]
 }

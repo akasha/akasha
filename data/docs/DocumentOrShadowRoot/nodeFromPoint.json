@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "DocumentOrShadowRoot.nodeFromPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint",
-    "description": "The DocumentOrShadowRoot mixin of the Shadow DOM API provides APIs that are shared between documents and shadow roots. The following features are included in both Document and ShadowRoot."
+    "description": "The DocumentOrShadowRoot mixin of the Shadow DOM API provides APIs that are shared between documents and shadow roots. The following features are included in both Document and ShadowRoot.",
+    "refs": [
+        {
+            "name": "Shadow DOM",
+            "href": "https://w3c.github.io/webcomponents/spec/shadow/#extensions-to-the-documentorshadowroot-mixin",
+            "description": "The definition of 'DocumentOrShadowRoot' in Shadow DOM."
+        },
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#mixin-documentorshadowroot",
+            "description": "The definition of 'DocumentOrShadowRoot' in DOM."
+        }
+    ]
 }

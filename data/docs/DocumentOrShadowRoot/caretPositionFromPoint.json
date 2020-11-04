@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DocumentOrShadowRoot.caretPositionFromPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint",
-    "description": "The caretPositionFromPoint() property of the DocumentOrShadowRoot interface returns a CaretPosition object, containing the DOM node, along with the caret and caret's character offset within that node."
+    "description": "The caretPositionFromPoint() property of the DocumentOrShadowRoot interface returns a CaretPosition object, containing the DOM node, along with the caret and caret's character offset within that node.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-document-caretpositionfrompoint",
+            "description": "The definition of 'caretPositionFromPoint()' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

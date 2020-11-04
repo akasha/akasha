@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaQueryList.onchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/onchange",
-    "description": "The onchange property of the MediaQueryList interface is an event handler property representing a function that is invoked when the change event fires, i.e when the status of media query support changes. The event object is a MediaQueryListEvent instance, which is recognised as a MediaListQuery instance in older browsers, for backwards compatibility purposes."
+    "description": "The onchange property of the MediaQueryList interface is an event handler property representing a function that is invoked when the change event fires, i.e when the status of media query support changes. The event object is a MediaQueryListEvent instance, which is recognised as a MediaListQuery instance in older browsers, for backwards compatibility purposes.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mediaquerylist-onchange",
+            "description": "The definition of 'onchange' in CSS Object Model (CSSOM) View Module."
+        }
+    ]
 }

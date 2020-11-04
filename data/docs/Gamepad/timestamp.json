@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Gamepad.timestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/timestamp",
-    "description": "The Gamepad.timestamp property of the Gamepad interface returns a DOMHighResTimeStamp representing the last time the data for this gamepad was updated."
+    "description": "The Gamepad.timestamp property of the Gamepad interface returns a DOMHighResTimeStamp representing the last time the data for this gamepad was updated.",
+    "refs": [
+        {
+            "name": "Gamepad",
+            "href": "https://w3c.github.io/gamepad/#dom-gamepad-timestamp",
+            "description": "The definition of 'Gamepad.timestamp' in Gamepad."
+        }
+    ]
 }

@@ -1,47 +1,47 @@
 
 {
     "name": "WorkerLocation",
-    "lastModifiedAt": 1600314486146,
+    "lastModifiedAt": 1604449676021,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193181425
+            "lastModifiedAt": 1604449659791
         },
         {
             "name": "hash",
-            "lastModifiedAt": 1600309083763
+            "lastModifiedAt": 1604449661251
         },
         {
             "name": "host",
-            "lastModifiedAt": 1600309084294
+            "lastModifiedAt": 1604449662453
         },
         {
             "name": "hostname",
-            "lastModifiedAt": 1600309084827
+            "lastModifiedAt": 1604449663410
         },
         {
             "name": "href",
-            "lastModifiedAt": 1600309085369
+            "lastModifiedAt": 1604449664526
         },
         {
             "name": "origin",
-            "lastModifiedAt": 1600309086455
+            "lastModifiedAt": 1604449665503
         },
         {
             "name": "pathname",
-            "lastModifiedAt": 1600309087000
+            "lastModifiedAt": 1604449666441
         },
         {
             "name": "port",
-            "lastModifiedAt": 1600309087532
+            "lastModifiedAt": 1604449667920
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1600309088070
+            "lastModifiedAt": 1604449669129
         },
         {
             "name": "search",
-            "lastModifiedAt": 1600309088617
+            "lastModifiedAt": 1604449670875
         },
         {
             "name": "toString",

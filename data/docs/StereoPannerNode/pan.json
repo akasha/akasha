@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "StereoPannerNode.pan",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StereoPannerNode/pan",
-    "description": "An a-rate AudioParam containing the panning to apply."
+    "description": "An a-rate AudioParam containing the panning to apply.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-stereopannernode-pan",
+            "description": "The definition of 'pan' in Web Audio API."
+        }
+    ]
 }

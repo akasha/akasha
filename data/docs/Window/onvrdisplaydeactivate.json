@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.onvrdisplaydeactivate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onvrdisplaydeactivate",
-    "description": "The onvrdisplaydeactivate property of the Window interface represents an event handler that will run when a display can no longer be presented to (when the vrdisplaydeactivate event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity."
+    "description": "The onvrdisplaydeactivate property of the Window interface represents an event handler that will run when a display can no longer be presented to (when the vrdisplaydeactivate event fires), for example if an HMD has gone into standby or sleep mode due to a period of inactivity.",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaydeactivate",
+            "description": "The definition of 'onvrdisplaydeactivate' in WebVR 1.1."
+        }
+    ]
 }

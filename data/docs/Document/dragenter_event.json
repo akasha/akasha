@@ -4,6 +4,13 @@
     "name": "Document.dragenter_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/dragenter_event",
     "description": "The dragenter event is fired when a dragged element or text selection enters a valid drop target.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dndevents",
+            "description": "The definition of 'dragenter' in HTML Living Standard."
+        }
+    ],
     "eventName": "dragenter",
     "eventType": "DragEvent",
     "eventHandlerProperty": "ondragenter",

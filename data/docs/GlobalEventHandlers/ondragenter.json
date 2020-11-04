@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.ondragenter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ondragenter",
-    "description": "A global event handler for the dragenter event."
+    "description": "A global event handler for the dragenter event.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#ix-handler-ondragenter",
+            "description": "The definition of 'ondragenter' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/index.html#ix-handler-ondragenter",
+            "description": "The definition of 'ondragenter' in HTML 5.1."
+        }
+    ]
 }

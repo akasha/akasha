@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "ValidityState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState",
-    "description": "The ValidityState interface represents the validity states that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid."
+    "description": "The ValidityState interface represents the validity states that an element can be in, with respect to constraint validation. Together, they help explain why an element's value fails to validate, if it's not valid.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#validitystate",
+            "description": "The definition of 'ValidityState' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#validitystate-validitystate",
+            "description": "The definition of 'ValidityState' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#validitystate",
+            "description": "The definition of 'ValidityState' in HTML5."
+        }
+    ]
 }

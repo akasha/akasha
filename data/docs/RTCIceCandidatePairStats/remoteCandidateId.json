@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.remoteCandidateId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/remoteCandidateId",
-    "description": "The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates."
+    "description": "The RTCIceCandidatePairStats property remoteCandidateId is a string that uniquely identifies the remote ICE candidate which was analyzed to generate the RTCIceCandidateStats used to compute the statistics for this pair of candidates.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-remotecandidateid",
+            "description": "The definition of 'RTCIceCandidatePairStats.remoteCandidateId' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

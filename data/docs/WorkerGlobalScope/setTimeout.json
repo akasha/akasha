@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WorkerGlobalScope.setTimeout",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/setTimeout",
-    "description": "The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires."
+    "description": "The setTimeout() method of the WindowOrWorkerGlobalScope mixin (and successor to Window.setTimeout()) sets a timer which executes a function or specified piece of code once the timer expires.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout",
+            "description": "The definition of 'WindowOrWorkerGlobalScope.setTimeout()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-settimeout",
+            "description": "The definition of 'WindowTimers.setTimeout()' in HTML Living Standard."
+        }
+    ]
 }

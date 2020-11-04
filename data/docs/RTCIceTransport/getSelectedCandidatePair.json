@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCIceTransport.getSelectedCandidatePair",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getSelectedCandidatePair",
-    "description": "The RTCIceTransport method getSelectedCandidatePair() returns an RTCIceCandidatePair object containing the current best-choice pair of ICE candidates describing the configuration of the endpoints of the transport."
+    "description": "The RTCIceTransport method getSelectedCandidatePair() returns an RTCIceCandidatePair object containing the current best-choice pair of ICE candidates describing the configuration of the endpoints of the transport.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getselectedcandidatepair",
+            "description": "The definition of 'RTCIceTransport.getSelectedCandidatePair()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

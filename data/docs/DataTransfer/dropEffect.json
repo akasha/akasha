@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransfer.dropEffect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/dropEffect",
-    "description": "The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur."
+    "description": "The DataTransfer.dropEffect property controls the feedback (typically visual) the user is given during a drag and drop operation. It will affect which cursor is displayed while dragging. For example, when the user hovers over a target drop element, the browser's cursor may indicate which type of operation will occur.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-dropeffect",
+            "description": "The definition of 'dropEffect' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransfer-dropeffect",
+            "description": "The definition of 'dropEffect' in HTML 5.1."
+        }
+    ]
 }

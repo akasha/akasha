@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "HTMLMeterElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMeterElement",
-    "description": "The HTML meter elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of meter elements."
+    "description": "The HTML meter elements expose the HTMLMeterElement interface, which provides special properties and methods (beyond the HTMLElement object interface they also have available to them by inheritance) for manipulating the layout and presentation of meter elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlmeterelement",
+            "description": "The definition of 'HTMLMeterElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/forms.html#the-meter-element",
+            "description": "The definition of 'HTMLMeterElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#the-meter-element",
+            "description": "The definition of 'HTMLMeterElement' in HTML5."
+        }
+    ]
 }

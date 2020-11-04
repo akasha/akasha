@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Path2D.Path2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Path2D/Path2D",
-    "description": "The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data."
+    "description": "The Path2D() constructor returns a newly instantiated Path2D object, optionally with another path as an argument (creates a copy), or optionally with a string consisting of SVG path data.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-path2d",
+            "description": "The definition of 'Path2D()' in HTML Living Standard."
+        }
+    ]
 }

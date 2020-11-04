@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCIceTransport.getLocalCandidates",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceTransport/getLocalCandidates",
-    "description": "The RTCIceTransport method getLocalCandidates() returns an array of RTCIceCandidate objects, one for each of the candidates that have been gathered by the local device during the current ICE agent session."
+    "description": "The RTCIceTransport method getLocalCandidates() returns an array of RTCIceCandidate objects, one for each of the candidates that have been gathered by the local device during the current ICE agent session.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getlocalcandidates",
+            "description": "The definition of 'RTCIceCandidate.getLocalCandidates()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

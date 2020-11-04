@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.clipboard",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard",
-    "description": "The Clipboard API adds to the Navigator interface the read-only clipboard property, which returns the Clipboard object used to read and write the clipboard's contents."
+    "description": "The Clipboard API adds to the Navigator interface the read-only clipboard property, which returns the Clipboard object used to read and write the clipboard's contents.",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#navigator-clipboard",
+            "description": "The definition of 'navigator.clipboard' in Clipboard API and events."
+        }
+    ]
 }

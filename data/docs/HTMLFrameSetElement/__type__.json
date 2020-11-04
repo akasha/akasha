@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "HTMLFrameSetElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFrameSetElement",
-    "description": "The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating frameset elements."
+    "description": "The HTMLFrameSetElement interface provides special properties (beyond those of the regular HTMLElement interface they also inherit) for manipulating frameset elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlframesetelement",
+            "description": "The definition of 'HTMLFrameSetElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/obsolete.html#htmlframesetelement",
+            "description": "The definition of 'HTMLFrameSetElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-ID-43829095",
+            "description": "The definition of 'HTMLBodyElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-43829095",
+            "description": "The definition of 'HTMLBodyElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

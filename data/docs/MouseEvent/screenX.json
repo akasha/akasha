@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "MouseEvent.screenX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/screenX",
-    "description": "The screenX read-only property of the MouseEvent interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates."
+    "description": "The screenX read-only property of the MouseEvent interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-screenx",
+            "description": "The definition of 'screenX' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-screenX",
+            "description": "The definition of 'MouseEvent.screenX' in Document Object Model (DOM) Level 3 Events Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
+            "description": "The definition of 'MouseEvent.sceenX' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

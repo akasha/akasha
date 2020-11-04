@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Clipboard.write",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/write",
-    "description": "The Clipboard method write() writes arbitrary data, such as images, to the clipboard."
+    "description": "The Clipboard method write() writes arbitrary data, such as images, to the clipboard.",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#dom-clipboard-write",
+            "description": "The definition of 'write()' in Clipboard API and events."
+        }
+    ]
 }

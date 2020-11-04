@@ -4,6 +4,13 @@
     "name": "Document.visibilitychange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event",
     "description": "The visibilitychange event is fired at the document when the content of its tab have become visible or have been hidden.",
+    "refs": [
+        {
+            "name": "Page Visibility (Second Edition)",
+            "href": "https://www.w3.org/TR/page-visibility/#dfn-visibilitychange",
+            "description": "The definition of 'visibilitychange' in Page Visibility (Second Edition)."
+        }
+    ],
     "eventName": "visibilitychange",
     "eventType": "Event",
     "eventHandlerProperty": "onvisibilitychange",

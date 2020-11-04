@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "console.clear",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/console/clear",
-    "description": "The console.clear() method clears the console if the environment allows it."
+    "description": "The console.clear() method clears the console if the environment allows it.",
+    "refs": [
+        {
+            "name": "Console API",
+            "href": "https://console.spec.whatwg.org/#clear",
+            "description": "The definition of 'console.clear()' in Console API."
+        }
+    ]
 }

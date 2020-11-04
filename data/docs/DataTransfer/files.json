@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransfer.files",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/files",
-    "description": "The DataTransfer.files property is a list of the files in the drag operation. If the operation includes no files, the list is empty."
+    "description": "The DataTransfer.files property is a list of the files in the drag operation. If the operation includes no files, the list is empty.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-files",
+            "description": "The definition of 'files' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransfer-files",
+            "description": "The definition of 'files' in HTML 5.1."
+        }
+    ]
 }

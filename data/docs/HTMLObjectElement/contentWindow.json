@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.contentWindow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/contentWindow",
-    "description": "The contentWindow read-only property of the HTMLObjectElement interface returns a WindowProxy representing the window proxy of the object element's nested browsing context, if any; otherwise null."
+    "description": "The contentWindow read-only property of the HTMLObjectElement interface returns a WindowProxy representing the window proxy of the object element's nested browsing context, if any; otherwise null.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-object-contentwindow",
+            "description": "The definition of 'contentWindow' in HTML Living Standard."
+        }
+    ]
 }

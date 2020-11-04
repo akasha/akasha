@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Window.requestFileSystem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestFileSystem",
-    "description": "The non-standard Window method requestFileSystem() method is a Google Chrome-specific method which lets a web site or app gain access to a sandboxed file system for its own use. The returned FileSystem is then available for use with the other file system APIs."
+    "description": "The non-standard Window method requestFileSystem() method is a Google Chrome-specific method which lets a web site or app gain access to a sandboxed file system for its own use. The returned FileSystem is then available for use with the other file system APIs.",
+    "refs": [
+        {
+            "name": "File and Directory Entries API",
+            "href": "https://wicg.github.io/entries-api/"
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioNode.disconnect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/disconnect",
-    "description": "undefined"
+    "description": "undefined",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-disconnect",
+            "description": "The definition of 'disconnect' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onpointerleave",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerleave",
-    "description": "The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API."
+    "description": "The global event handler for the pointerleave event, which is delivered to a Node when the pointer (mouse cursor, fingertip, etc.) exits its hit test area (for example, if the cursor exits an Element or Window's content area). This event is part of the Pointer Events API.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerleave",
+            "description": "The definition of 'onpointerleave' in Pointer Events – Level 2."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerleave",
+            "description": "The definition of 'onpointerleave' in Pointer Events."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Window.closed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/closed",
-    "description": "The Window.closed read-only property indicates whether the referenced window is closed or not."
+    "description": "The Window.closed read-only property indicates whether the referenced window is closed or not.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-window-closed",
+            "description": "The definition of 'window.closed' in HTML Living Standard."
+        }
+    ]
 }

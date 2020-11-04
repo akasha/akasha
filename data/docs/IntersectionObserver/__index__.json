@@ -1,43 +1,43 @@
 
 {
     "name": "IntersectionObserver",
-    "lastModifiedAt": 1600312107443,
+    "lastModifiedAt": 1604448214363,
     "entries": [
         {
             "name": "IntersectionObserver",
-            "lastModifiedAt": 1600308564226
+            "lastModifiedAt": 1604448208036
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192128022
+            "lastModifiedAt": 1604448206875
         },
         {
             "name": "disconnect",
-            "lastModifiedAt": 1597192130028
+            "lastModifiedAt": 1604448212006
         },
         {
             "name": "observe",
-            "lastModifiedAt": 1597192130284
+            "lastModifiedAt": 1604448213177
         },
         {
             "name": "root",
-            "lastModifiedAt": 1597192128538
+            "lastModifiedAt": 1604448209396
         },
         {
             "name": "rootMargin",
-            "lastModifiedAt": 1597192128840
+            "lastModifiedAt": 1604448210027
         },
         {
             "name": "takeRecords",
-            "lastModifiedAt": 1597192130652
+            "lastModifiedAt": 1604448213786
         },
         {
             "name": "thresholds",
-            "lastModifiedAt": 1597192129210
+            "lastModifiedAt": 1604448210765
         },
         {
             "name": "unobserve",
-            "lastModifiedAt": 1597192130903
+            "lastModifiedAt": 1604448214363
         }
     ]
 }

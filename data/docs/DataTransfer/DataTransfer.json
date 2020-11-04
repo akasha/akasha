@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DataTransfer.DataTransfer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/DataTransfer",
-    "description": "The DataTransfer constructor creates a new DataTransfer object instance."
+    "description": "The DataTransfer constructor creates a new DataTransfer object instance.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-datatransfer",
+            "description": "The definition of 'the DataTransfer() constructor' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCDTMFSender.insertDTMF",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDTMFSender/insertDTMF",
-    "description": "The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends."
+    "description": "The insertDTMF() method on the RTCDTMFSender interface starts sending tones to the remote peer over the RTCPeerConnection. Sending of the tones is performed asynchronously, with tonechange events sent to the RTCDTMFSender every time a tone starts or ends.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-RTCDTMFSender-insertDTMF",
+            "description": "The definition of 'RTCDTMFSender.insertDTMF()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioDestinationNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode",
-    "description": "The AudioDestinationNode interface represents the end destination of an audio graph in a given context &mdash; usually the speakers of your device. It can also be the node that will &quot;record&quot; the audio data when used with an OfflineAudioContext."
+    "description": "The AudioDestinationNode interface represents the end destination of an audio graph in a given context &mdash; usually the speakers of your device. It can also be the node that will &quot;record&quot; the audio data when used with an OfflineAudioContext.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#AudioDestinationNode",
+            "description": "The definition of 'AudioDestinationNode' in Web Audio API."
+        }
+    ]
 }

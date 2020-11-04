@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "HTMLTimeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTimeElement",
-    "description": "The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating time elements."
+    "description": "The HTMLTimeElement interface provides special properties (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating time elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmltimeelement",
+            "description": "The definition of 'HTMLTimeElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/text-level-semantics.html#the-time-element",
+            "description": "The definition of 'HTMLTimeElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/text-level-semantics.html#the-time-element",
+            "description": "The definition of 'HTMLTimeElement' in HTML5."
+        }
+    ]
 }

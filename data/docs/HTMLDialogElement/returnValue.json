@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLDialogElement.returnValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/returnValue",
-    "description": "The returnValue property of the HTMLDialogElement interface gets or sets the return value for the dialog, usually to indicate which button the user pressed to close it."
+    "description": "The returnValue property of the HTMLDialogElement interface gets or sets the return value for the dialog, usually to indicate which button the user pressed to close it.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-dialog-returnvalue",
+            "description": "The definition of 'returnvalue' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/interactive-elements.html#dom-htmldialogelement-returnvalue",
+            "description": "The definition of 'returnvalue' in HTML 5.1."
+        }
+    ]
 }

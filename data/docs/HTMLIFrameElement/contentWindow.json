@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLIFrameElement.contentWindow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentWindow",
-    "description": "The contentWindow property returns the Window object of an HTMLIFrameElement. You can use this Window object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global Window object."
+    "description": "The contentWindow property returns the Window object of an HTMLIFrameElement. You can use this Window object to access the iframe's document and its internal DOM. This attribute is read-only, but its properties can be manipulated like the global Window object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-iframe-contentwindow",
+            "description": "The definition of 'HTMLIFrameElement: contentWindow' in HTML Living Standard."
+        }
+    ]
 }

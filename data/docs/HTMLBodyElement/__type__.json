@@ -3,5 +3,32 @@
     "kind": "Type",
     "name": "HTMLBodyElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement",
-    "description": "The HTMLBodyElement interface provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating body elements."
+    "description": "The HTMLBodyElement interface provides special properties (beyond those inherited from the regular HTMLElement interface) for manipulating body elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmlbodyelement",
+            "description": "The definition of 'HTMLBodyElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sections.html#the-body-element",
+            "description": "The definition of 'HTMLBodyElement' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/sections.html#the-body-element",
+            "description": "The definition of 'HTMLBodyElement' in HTML5."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-62018039",
+            "description": "The definition of 'HTMLBodyElement' in Document Object Model (DOM) Level 2 HTML Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-62018039",
+            "description": "The definition of 'HTMLBodyElement' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

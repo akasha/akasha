@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "StorageManager.persist",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageManager/persist",
-    "description": "The persist() method of the StorageManager interface requests permission to use persistent storage, and returns a Promise that resolves to true if permission is granted and box mode is persistent, and false otherwise."
+    "description": "The persist() method of the StorageManager interface requests permission to use persistent storage, and returns a Promise that resolves to true if permission is granted and box mode is persistent, and false otherwise.",
+    "refs": [
+        {
+            "name": "Storage",
+            "href": "https://storage.spec.whatwg.org/#dom-storagemanager-persist",
+            "description": "The definition of 'persist' in Storage."
+        }
+    ]
 }

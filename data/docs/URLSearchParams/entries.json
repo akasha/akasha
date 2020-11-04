@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "URLSearchParams.entries",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/entries",
-    "description": "The entries() method of the URLSearchParams interface returns an iterator allowing iteration through all key/value pairs contained in this object. The key and value of each pair are USVString objects."
+    "description": "The entries() method of the URLSearchParams interface returns an iterator allowing iteration through all key/value pairs contained in this object. The key and value of each pair are USVString objects.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#interface-urlsearchparams",
+            "description": "The definition of 'entries() (see \"iterable\")' in URL."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Window.top",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/top",
-    "description": "Returns a reference to the topmost window in the window hierarchy."
+    "description": "Returns a reference to the topmost window in the window hierarchy.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-top",
+            "description": "The definition of 'window.top' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-top",
+            "description": "The definition of 'window.top' in HTML5."
+        }
+    ]
 }

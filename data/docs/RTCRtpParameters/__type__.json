@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCRtpParameters",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpParameters",
-    "description": "The RTCRtpParameters dictionary is the basic object describing the parameters of an RTP transport. It is extended separately for senders and receivers in the form of the RTCRtpSendParameters and RTCRtpReceiveParameters dictionaries."
+    "description": "The RTCRtpParameters dictionary is the basic object describing the parameters of an RTP transport. It is extended separately for senders and receivers in the form of the RTCRtpSendParameters and RTCRtpReceiveParameters dictionaries.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiveparameters",
+            "description": "The definition of 'RTCRtpReceiveParameters' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

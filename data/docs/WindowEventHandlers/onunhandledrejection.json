@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WindowEventHandlers.onunhandledrejection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onunhandledrejection",
-    "description": "The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections."
+    "description": "The onunhandledrejection property of the WindowEventHandlers mixin is the EventHandler for processing unhandledrejection events. These events are raised for unhandled Promise rejections.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onunhandledrejection",
+            "description": "The definition of 'onunhandledrejection' in HTML Living Standard."
+        }
+    ]
 }

@@ -4,6 +4,13 @@
     "name": "Window.unload_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event",
     "description": "The unload event is fired when the document or a child resource is being unloaded.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#event-unload",
+            "description": "The definition of 'unload' in HTML Living Standard."
+        }
+    ],
     "eventName": "unload",
     "eventType": "Event",
     "eventHandlerProperty": "onunload",

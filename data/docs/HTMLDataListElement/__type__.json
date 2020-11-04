@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "HTMLDataListElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLDataListElement",
-    "description": "The HTMLDataListElement interface provides special properties (beyond the HTMLElement object interface it also has available to it by inheritance) to manipulate datalist elements and their content."
+    "description": "The HTMLDataListElement interface provides special properties (beyond the HTMLElement object interface it also has available to it by inheritance) to manipulate datalist elements and their content.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#htmldatalistelement",
+            "description": "The definition of 'HTMLDataListElement' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#the-datalist-element",
+            "description": "The definition of 'HTMLDataListElement' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "TransitionEvent.pseudoElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent/pseudoElement",
-    "description": "The TransitionEvent.pseudoElement read-only property is a DOMString, starting with '::', containing the name of the pseudo-element the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: ''."
+    "description": "The TransitionEvent.pseudoElement read-only property is a DOMString, starting with '::', containing the name of the pseudo-element the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: ''.",
+    "refs": [
+        {
+            "name": "CSS Transitions",
+            "href": "https://drafts.csswg.org/css-transitions/#Events-TransitionEvent-pseudoElement",
+            "description": "The definition of 'TransitionEvent.pseudoElement' in CSS Transitions."
+        }
+    ]
 }

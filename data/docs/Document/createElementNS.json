@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.createElementNS",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS",
-    "description": "Creates an element with the specified namespace URI and qualified name."
+    "description": "Creates an element with the specified namespace URI and qualified name.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-createelementns",
+            "description": "The definition of 'Document.createElementNS()' in DOM."
+        }
+    ]
 }

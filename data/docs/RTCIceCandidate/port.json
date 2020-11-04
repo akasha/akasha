@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidate.port",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate/port",
-    "description": "The RTCIceCandidate interface's read-only port property contains the port number on the device at the address given by ip at which the candidate's peer can be reached."
+    "description": "The RTCIceCandidate interface's read-only port property contains the port number on the device at the address given by ip at which the candidate's peer can be reached.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-port",
+            "description": "The definition of 'RTCIceCandidate.port' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

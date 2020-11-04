@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Gamepad.displayId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Gamepad/displayId",
-    "description": "The displayId read-only property of the Gamepad interface returns the VRDisplay.displayId of the associated VRDisplay &mdash; the VRDisplay that the gamepad is controlling the displayed scene of."
+    "description": "The displayId read-only property of the Gamepad interface returns the VRDisplay.displayId of the associated VRDisplay &mdash; the VRDisplay that the gamepad is controlling the displayed scene of.",
+    "refs": [
+        {
+            "name": "WebVR 1.1",
+            "href": "https://immersive-web.github.io/webvr/spec/1.1/#gamepad-getvrdisplays-attribute",
+            "description": "The definition of 'displayId' in WebVR 1.1."
+        }
+    ]
 }

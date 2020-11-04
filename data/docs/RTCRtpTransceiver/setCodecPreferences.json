@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpTransceiver.setCodecPreferences",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences",
-    "description": "The RTCRtpTransceiver method setCodecPreferences() configures the transceiver's codecs given a list of RTCRtpCodecCapability objects specifying the new preferences for each codec."
+    "description": "The RTCRtpTransceiver method setCodecPreferences() configures the transceiver's codecs given a list of RTCRtpCodecCapability objects specifying the new preferences for each codec.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-setcodecpreferences",
+            "description": "The definition of 'RTCRtpTransceiver.setCodecPreferences()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

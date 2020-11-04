@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Response.status",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/status",
-    "description": "The status read-only property of the Response interface contains the status code of the response (e.g., 200 for a success)."
+    "description": "The status read-only property of the Response interface contains the status code of the response (e.g., 200 for a success).",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-response-status",
+            "description": "The definition of 'status' in Fetch."
+        }
+    ]
 }

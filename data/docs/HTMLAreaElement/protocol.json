@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLAreaElement.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLAreaElement/protocol",
-    "description": "The HTMLHyperlinkElementUtils.protocol property is a USVString representing the protocol scheme of the URL, including the final ':'."
+    "description": "The HTMLHyperlinkElementUtils.protocol property is a USVString representing the protocol scheme of the URL, including the final ':'.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-protocol",
+            "description": "The definition of 'HTMLHyperlinkElementUtils.protocol' in HTML Living Standard."
+        }
+    ]
 }

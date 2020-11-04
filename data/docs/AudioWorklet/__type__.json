@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioWorklet",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet",
-    "description": "The AudioWorklet interface of the Web Audio API is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing."
+    "description": "The AudioWorklet interface of the Web Audio API is used to supply custom audio processing scripts that execute in a separate thread to provide very low latency audio processing.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#audioworklet",
+            "description": "The definition of 'AudioWorklet' in Web Audio API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DataTransferItemList.DataTransferItem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/DataTransferItem",
-    "description": "The DataTransferItem() getter method implements support for accessing items in the DataTransferItemList using array-style syntax (that is DataTransferItem[index])."
+    "description": "The DataTransferItem() getter method implements support for accessing items in the DataTransferItemList using array-style syntax (that is DataTransferItem[index]).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#the-datatransferitemlist-interface",
+            "description": "The definition of 'DataTransferItem getter' in HTML Living Standard."
+        }
+    ]
 }

@@ -4,6 +4,13 @@
     "name": "RTCPeerConnection.peeridentity_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/peeridentity_event",
     "description": "The peeridentity event is sent to the connection concerned when peer identity has been set and verified on it. The new identiy can be access using the RTCPeerConnection.peerIdentity property.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#event-mediastream-peeridentity",
+            "description": "The definition of 'peeridentity' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ],
     "eventName": "peeridentity",
     "eventType": "Event",
     "eventHandlerProperty": "onpeeridentity",

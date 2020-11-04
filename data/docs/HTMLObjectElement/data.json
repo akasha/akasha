@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.data",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/data",
-    "description": "The data property of the HTMLObjectElement interface returns a DOMString that reflects the data HTML attribute, specifying the address of a resource's data."
+    "description": "The data property of the HTMLObjectElement interface returns a DOMString that reflects the data HTML attribute, specifying the address of a resource's data.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-object-data",
+            "description": "The definition of 'data' in HTML Living Standard."
+        }
+    ]
 }

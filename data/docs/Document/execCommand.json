@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Document.execCommand",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand",
-    "description": "When an HTML document has been switched to designMode, its document object exposes an execCommand method to run commands that manipulate the current editable region, such as form inputs or contentEditable elements."
+    "description": "When an HTML document has been switched to designMode, its document object exposes an execCommand method to run commands that manipulate the current editable region, such as form inputs or contentEditable elements.",
+    "refs": [
+        {
+            "name": "execCommand",
+            "href": "https://w3c.github.io/editing/docs/execCommand/"
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Storage.setItem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Storage/setItem",
-    "description": "The setItem() method of the Storage interface, when passed a key name and value, will add that key to the given Storage object, or update that key's value if it already exists."
+    "description": "The setItem() method of the Storage interface, when passed a key name and value, will add that key to the given Storage object, or update that key's value if it already exists.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-setitem",
+            "description": "The definition of 'Storage.setItem' in HTML Living Standard."
+        }
+    ]
 }

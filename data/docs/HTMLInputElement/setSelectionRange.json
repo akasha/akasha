@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "HTMLInputElement.setSelectionRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange",
-    "description": "The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element."
+    "description": "The HTMLInputElement.setSelectionRange() method sets the start and end positions of the current text selection in an input or textarea element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange",
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/forms.html#dom-textarea/input-setselectionrange",
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange",
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML5."
+        }
+    ]
 }

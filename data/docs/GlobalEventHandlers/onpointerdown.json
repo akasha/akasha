@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onpointerdown",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpointerdown",
-    "description": "The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects."
+    "description": "The GlobalEventHandlers event handler onpointerdown is used to specify the event handler for the pointerdown event, which is fired when the pointing device is initially pressed. This event can be sent to Window, Document, and Element objects.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerdown",
+            "description": "The definition of 'onpointerdown' in Pointer Events – Level 2."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerdown",
+            "description": "The definition of 'onpointerdown' in Pointer Events."
+        }
+    ]
 }

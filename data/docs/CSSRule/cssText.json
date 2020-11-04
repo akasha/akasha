@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CSSRule.cssText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSRule/cssText",
-    "description": "The cssText property of the CSSRule interface returns the actual text of a CSSStyleSheet style-rule."
+    "description": "The cssText property of the CSSRule interface returns the actual text of a CSSStyleSheet style-rule.",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM)",
+            "href": "https://drafts.csswg.org/cssom/#dom-cssrule-csstext",
+            "description": "The definition of 'CSSRule: cssText' in CSS Object Model (CSSOM)."
+        }
+    ]
 }

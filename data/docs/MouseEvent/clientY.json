@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "MouseEvent.clientY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientY",
-    "description": "The clientY read-only property of the MouseEvent interface provides the vertical coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page)."
+    "description": "The clientY read-only property of the MouseEvent interface provides the vertical coordinate within the application's viewport at which the event occurred (as opposed to the coordinate within the page).",
+    "refs": [
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-clienty",
+            "description": "The definition of 'clientY' in CSS Object Model (CSSOM) View Module."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-clientY",
+            "description": "The definition of 'MouseEvent.clientY' in Document Object Model (DOM) Level 3 Events Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
+            "description": "The definition of 'MouseEvent.clientY' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

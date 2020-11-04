@@ -1,7 +1,7 @@
 
 {
     "name": "RTCConfiguration",
-    "lastModifiedAt": 1601467324600,
+    "lastModifiedAt": 1604448700440,
     "entries": [
         {
             "name": "__type__",
@@ -9,19 +9,19 @@
         },
         {
             "name": "bundlePolicy",
-            "lastModifiedAt": 1599279093474
+            "lastModifiedAt": 1604448698686
         },
         {
             "name": "certificates",
-            "lastModifiedAt": 1599279094274
+            "lastModifiedAt": 1604448699158
         },
         {
             "name": "iceServers",
-            "lastModifiedAt": 1599279094840
+            "lastModifiedAt": 1604448699913
         },
         {
             "name": "iceTransportPolicy",
-            "lastModifiedAt": 1599279095076
+            "lastModifiedAt": 1604448700440
         }
     ]
 }

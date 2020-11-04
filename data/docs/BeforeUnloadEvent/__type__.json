@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "BeforeUnloadEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BeforeUnloadEvent",
-    "description": "The beforeunload event is fired when the window, the document and its resources are about to be unloaded."
+    "description": "The beforeunload event is fired when the window, the document and its resources are about to be unloaded.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-beforeunloadevent-interface",
+            "description": "The definition of 'BeforeUnloadEvent' in HTML Living Standard."
+        }
+    ]
 }

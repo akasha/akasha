@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLElement.inert",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert",
-    "description": "The boolean inert attribute, when present, may make the browser &quot;ignore&quot; the element from assistive technologies, page search and text selection. This can be useful when building UIs such as modals where you would want to &quot;trap&quot; the focus inside the modal when it's visible."
+    "description": "The HTMLElement property inert is a Boolean that, when present, makes the browser &quot;ignore&quot; user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to &quot;trap&quot; the focus inside the modal when it's visible.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#inert-subtrees",
+            "description": "The definition of 'HTMLElement.inert' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "TextTrackCue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TextTrackCue",
-    "description": "TextTrackCue is an abstract class which is used as the basis for the various derived cue types, such as VTTCue; you will instead work with those derived types."
+    "description": "TextTrackCue is an abstract class which is used as the basis for the various derived cue types, such as VTTCue; you will instead work with those derived types.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#texttrackcue",
+            "description": "The definition of 'TextTrackCue' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/#texttrackcue",
+            "description": "The definition of 'TextTrackCue' in HTML5."
+        }
+    ]
 }

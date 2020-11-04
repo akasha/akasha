@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLIFrameElement.referrerPolicy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/referrerPolicy",
-    "description": "The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource."
+    "description": "The HTMLIFrameElement.referrerPolicy property reflects the HTML referrerpolicy attribute of the iframe element defining which referrer is sent when fetching the resource.",
+    "refs": [
+        {
+            "name": "Referrer Policy",
+            "href": "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute",
+            "description": "The definition of 'referrerpolicy attribute' in Referrer Policy."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-iframe-referrerpolicy",
+            "description": "The definition of 'HTMLIFrameElement: referrerPolicy' in HTML Living Standard."
+        }
+    ]
 }

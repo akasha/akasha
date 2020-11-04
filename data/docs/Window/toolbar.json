@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Window.toolbar",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/toolbar",
-    "description": "The Window.toolbar property returns the toolbar object, whose visibility can be toggled in the window."
+    "description": "The Window.toolbar property returns the toolbar object, whose visibility can be toggled in the window.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-window-toolbar",
+            "description": "The definition of 'Window.toolbar' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/browsers.html#dom-window-toolbar",
+            "description": "The definition of 'Window.toolbar' in HTML5."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Document.applets",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/applets",
-    "description": "The applets property of the Document interface returns a list of the applets within a document."
+    "description": "The applets property of the Document interface returns a list of the applets within a document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-document-applets",
+            "description": "The definition of 'Document.applets' in HTML Living Standard."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 HTML Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-85113862",
+            "description": "The definition of 'Document.applets' in Document Object Model (DOM) Level 2 HTML Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.requestFullscreen",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/requestFullscreen",
-    "description": "The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode."
+    "description": "The Element.requestFullscreen() method issues an asynchronous request to make the element be displayed in full-screen mode.",
+    "refs": [
+        {
+            "name": "Fullscreen API",
+            "href": "https://fullscreen.spec.whatwg.org/#dom-element-requestfullscreen",
+            "description": "The definition of 'Element.requestFullscreen()' in Fullscreen API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "URL.username",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/username",
-    "description": "The username property of the URL interface is a USVString containing the username specified before the domain name."
+    "description": "The username property of the URL interface is a USVString containing the username specified before the domain name.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-username",
+            "description": "The definition of 'username' in URL."
+        }
+    ]
 }

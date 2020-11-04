@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "RTCErrorEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCErrorEvent",
-    "description": "The WebRTC API's RTCErrorEvent interface represents an error sent to a WebRTC object. It's based on the standard Event interface, but adds RTC-specific information describing the error, as shown below."
+    "description": "The WebRTC API's RTCErrorEvent interface represents an error sent to a WebRTC object. It's based on the standard Event interface, but adds RTC-specific information describing the error, as shown below.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcerrorevent",
+            "description": "The definition of 'RTCErrorEvent' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

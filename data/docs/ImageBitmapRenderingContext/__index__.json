@@ -1,15 +1,15 @@
 
 {
     "name": "ImageBitmapRenderingContext",
-    "lastModifiedAt": 1600312092580,
+    "lastModifiedAt": 1604450267095,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279576112
+            "lastModifiedAt": 1604450266059
         },
         {
             "name": "transferFromImageBitmap",
-            "lastModifiedAt": 1596581342693
+            "lastModifiedAt": 1604450267095
         }
     ]
 }

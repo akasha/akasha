@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLVideoElement.videoHeight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/videoHeight",
-    "description": "The HTMLVideoElement interface's read-only videoHeight property indicates the intrinsic height of the video, expressed in CSS pixels. In simple terms, this is the height of the media in its natural size."
+    "description": "The HTMLVideoElement interface's read-only videoHeight property indicates the intrinsic height of the video, expressed in CSS pixels. In simple terms, this is the height of the media in its natural size.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-video-videoheight",
+            "description": "The definition of 'HTMLVideoElement.videoHeight' in HTML Living Standard."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/semantics-embedded-content.html#dom-htmlvideoelement-videoheight",
+            "description": "The definition of 'HTMLVideoElement.videoHeight' in HTML5."
+        }
+    ]
 }

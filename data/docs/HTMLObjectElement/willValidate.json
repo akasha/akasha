@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLObjectElement.willValidate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/willValidate",
-    "description": "The willValidate read-only property of the HTMLObjectElement interface returns a Boolean that indicates whether the element is a candidate for constraint validation. Always false for HTMLObjectElement objects."
+    "description": "The willValidate read-only property of the HTMLObjectElement interface returns a Boolean that indicates whether the element is a candidate for constraint validation. Always false for HTMLObjectElement objects.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-cva-willvalidate",
+            "description": "The definition of 'willValidate' in HTML Living Standard."
+        }
+    ]
 }

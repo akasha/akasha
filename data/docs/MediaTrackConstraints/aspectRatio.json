@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaTrackConstraints.aspectRatio",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/aspectRatio",
-    "description": "The MediaTrackConstraints dictionary's aspectRatio property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the aspectRatio constrainable property."
+    "description": "The MediaTrackConstraints dictionary's aspectRatio property is a ConstrainDouble describing the requested or mandatory constraints placed upon the value of the aspectRatio constrainable property.",
+    "refs": [
+        {
+            "name": "Media Capture and Streams",
+            "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-aspectratio",
+            "description": "The definition of 'aspectRatio' in Media Capture and Streams."
+        }
+    ]
 }

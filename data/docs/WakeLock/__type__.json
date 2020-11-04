@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WakeLock",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WakeLock",
-    "description": "The WakeLock interface of the Screen Wake Lock API prevents device screens from dimming or locking when an application needs to keep running."
+    "description": "The WakeLock interface of the Screen Wake Lock API prevents device screens from dimming or locking when an application needs to keep running.",
+    "refs": [
+        {
+            "name": "Screen Wake Lock API",
+            "href": "https://w3c.github.io/screen-wake-lock/#the-wakelock-interface",
+            "description": "The definition of 'WakeLock' in Screen Wake Lock API."
+        }
+    ]
 }

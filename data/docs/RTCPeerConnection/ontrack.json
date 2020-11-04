@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.ontrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/ontrack",
-    "description": "The RTCPeerConnection property ontrack is an EventHandler which specifies a function to be called when the track event occurs, indicating that a track has been added to the RTCPeerConnection."
+    "description": "The RTCPeerConnection property ontrack is an EventHandler which specifies a function to be called when the track event occurs, indicating that a track has been added to the RTCPeerConnection.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-ontrack",
+            "description": "The definition of 'RTCPeerConnection.ontrack' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

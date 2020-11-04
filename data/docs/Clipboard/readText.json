@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Clipboard.readText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/readText",
-    "description": "The Clipboard interface's readText() method returns a Promise which resolves with a copy of the textual contents of the system clipboard."
+    "description": "The Clipboard interface's readText() method returns a Promise which resolves with a copy of the textual contents of the system clipboard.",
+    "refs": [
+        {
+            "name": "Clipboard API and events",
+            "href": "https://w3c.github.io/clipboard-apis/#dom-clipboard-readtext",
+            "description": "The definition of 'readText()' in Clipboard API and events."
+        }
+    ]
 }

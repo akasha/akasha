@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "ValidityState.tooShort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/tooShort",
-    "description": "The read-only tooShort property of a ValidityState object indicates if the value of an input, button, select, output, fieldset or textarea, after having been edited by the user, is less than the minimum code-unit length established by the element's minlength attribute."
+    "description": "The read-only tooShort property of a ValidityState object indicates if the value of an input, button, select, output, fieldset or textarea, after having been edited by the user, is less than the minimum code-unit length established by the element's minlength attribute.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-tooshort",
+            "description": "The definition of 'ValidityState.tooShort' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-tooshort",
+            "description": "The definition of 'ValidityState.tooShort' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-tooshort",
+            "description": "The definition of 'ValidityState.tooShort' in HTML5."
+        }
+    ]
 }

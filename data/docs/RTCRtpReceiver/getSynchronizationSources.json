@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "RTCRtpReceiver.getSynchronizationSources",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpReceiver/getSynchronizationSources",
-    "description": "The getSynchronizationSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one SSRC (synchronization source) identifier received by the current RTCRtpReceiver in the last ten seconds."
+    "description": "The getSynchronizationSources() method of the RTCRtpReceiver interface returns an array of RTCRtpContributingSource instances, each corresponding to one SSRC (synchronization source) identifier received by the current RTCRtpReceiver in the last ten seconds.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpreceiver-getsynchronizationsources",
+            "description": "The definition of 'getSynchronizationSources()' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

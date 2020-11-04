@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CanvasRenderingContext2D.createLinearGradient",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient",
-    "description": "The CanvasRenderingContext2D.createLinearGradient() method of the Canvas 2D API creates a gradient along the line connecting two given coordinates."
+    "description": "The CanvasRenderingContext2D.createLinearGradient() method of the Canvas 2D API creates a gradient along the line connecting two given coordinates.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-createlineargradient",
+            "description": "The definition of 'CanvasRenderingContext2D.createLinearGradient' in HTML Living Standard."
+        }
+    ]
 }

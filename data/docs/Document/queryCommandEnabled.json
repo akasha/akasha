@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Document.queryCommandEnabled",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/queryCommandEnabled",
-    "description": "The Document.queryCommandEnabled() method reports whether or not the specified editor command is enabled by the browser."
+    "description": "The Document.queryCommandEnabled() method reports whether or not the specified editor command is enabled by the browser.",
+    "refs": [
+        {
+            "name": "execCommand",
+            "href": "https://w3c.github.io/editing/execCommand.html#querycommandenabled()"
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BiquadFilterNode.frequency",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/frequency",
-    "description": "An AudioParam."
+    "description": "An AudioParam.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-frequency",
+            "description": "The definition of 'frequency' in Web Audio API."
+        }
+    ]
 }

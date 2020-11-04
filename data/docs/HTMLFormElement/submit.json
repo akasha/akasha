@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "HTMLFormElement.submit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit",
-    "description": "The HTMLFormElement.submit() method submits a given form."
+    "description": "The HTMLFormElement.submit() method submits a given form.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-form-submit",
+            "description": "The definition of 'HTMLFormElement: submit' in HTML Living Standard."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "WaveShaperNode.WaveShaperNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/WaveShaperNode",
-    "description": "The WaveShaperNode() constructor of the Web Audio API creates a new WaveShaperNode object which is an AudioNode that represents a non-linear distorter."
+    "description": "The WaveShaperNode() constructor of the Web Audio API creates a new WaveShaperNode object which is an AudioNode that represents a non-linear distorter.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-waveshapernode-waveshapernode",
+            "description": "The definition of 'WaveShaperNode()' in Web Audio API."
+        }
+    ]
 }

@@ -1,15 +1,15 @@
 
 {
     "name": "BiquadFilterNode",
-    "lastModifiedAt": 1601466917048,
+    "lastModifiedAt": 1604448496813,
     "entries": [
         {
             "name": "BiquadFilterNode",
-            "lastModifiedAt": 1597192571817
+            "lastModifiedAt": 1604448491366
         },
         {
             "name": "Q",
-            "lastModifiedAt": 1600308273324
+            "lastModifiedAt": 1604448494667
         },
         {
             "name": "__type__",
@@ -17,19 +17,19 @@
         },
         {
             "name": "detune",
-            "lastModifiedAt": 1600308271989
+            "lastModifiedAt": 1604448492441
         },
         {
             "name": "frequency",
-            "lastModifiedAt": 1600308272235
+            "lastModifiedAt": 1604448492926
         },
         {
             "name": "gain",
-            "lastModifiedAt": 1600308272501
+            "lastModifiedAt": 1604448493475
         },
         {
             "name": "getFrequencyResponse",
-            "lastModifiedAt": 1597192572100
+            "lastModifiedAt": 1604448496813
         },
         {
             "name": "type",

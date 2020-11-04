@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "HTMLCanvasElement.toDataURL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL",
-    "description": "The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi."
+    "description": "The HTMLCanvasElement.toDataURL() method returns a data URI containing a representation of the image in the format specified by the type parameter (defaults to PNG). The returned image is in a resolution of 96 dpi.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-canvas-todataurl",
+            "description": "The definition of 'HTMLCanvasElement.toDataURL' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/scripting-1.html#dom-canvas-todataurl",
+            "description": "The definition of 'HTMLCanvasElement.toDataURL' in HTML 5.1."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/scripting-1.html#dom-canvas-todataurl",
+            "description": "The definition of 'HTMLCanvasElement.toDataURL' in HTML5."
+        }
+    ]
 }

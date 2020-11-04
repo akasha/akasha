@@ -1,11 +1,11 @@
 
 {
     "name": "ImageBitmap",
-    "lastModifiedAt": 1600312091635,
+    "lastModifiedAt": 1604449866933,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193238119
+            "lastModifiedAt": 1604449865461
         },
         {
             "name": "close",
@@ -13,11 +13,11 @@
         },
         {
             "name": "height",
-            "lastModifiedAt": 1596581207662
+            "lastModifiedAt": 1604449865929
         },
         {
             "name": "width",
-            "lastModifiedAt": 1596581207907
+            "lastModifiedAt": 1604449866375
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WorkerLocation.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerLocation/protocol",
-    "description": "The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme of the URL, including the final ':'."
+    "description": "The URLUtilsReadOnly.protocol read-only property returns a DOMString containing the protocol scheme of the URL, including the final ':'.",
+    "refs": [
+        {
+            "name": "URL",
+            "href": "https://url.spec.whatwg.org/#dom-url-protocol",
+            "description": "The definition of 'URLUtilsReadOnly.protocol' in URL."
+        }
+    ]
 }

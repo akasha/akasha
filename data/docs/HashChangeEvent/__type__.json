@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "HashChangeEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent",
-    "description": "The HashChangeEvent interface represents events that fire when the fragment identifier of the URL has changed."
+    "description": "The HashChangeEvent interface represents events that fire when the fragment identifier of the URL has changed.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#the-hashchangeevent-interface",
+            "description": "The definition of 'HashChangeEvent' in HTML Living Standard."
+        }
+    ]
 }

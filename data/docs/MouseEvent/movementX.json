@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MouseEvent.movementX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/movementX",
-    "description": "The movementX read-only property of the MouseEvent interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementX = currentEvent.screenX - previousEvent.screenX."
+    "description": "The movementX read-only property of the MouseEvent interface provides the difference in the X coordinate of the mouse pointer between the given event and the previous mousemove event. In other words, the value of the property is computed like this: currentEvent.movementX = currentEvent.screenX - previousEvent.screenX.",
+    "refs": [
+        {
+            "name": "Pointer Lock",
+            "href": "https://w3c.github.io/pointerlock/#dom-mouseevent-movementx",
+            "description": "The definition of 'MouseEvent.movementX' in Pointer Lock."
+        }
+    ]
 }

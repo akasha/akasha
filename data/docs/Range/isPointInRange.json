@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Range.isPointInRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/isPointInRange",
-    "description": "The Range.isPointInRange() method returns a boolean indicating whether the given point is in the Range. It returns true if the point (cursor position) at offset within ReferenceNode is within this range."
+    "description": "The Range.isPointInRange() method returns a boolean indicating whether the given point is in the Range. It returns true if the point (cursor position) at offset within ReferenceNode is within this range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-ispointinrange",
+            "description": "The definition of 'Range.isPointInRange()' in DOM."
+        }
+    ]
 }

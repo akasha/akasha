@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCDataChannel.negotiated",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel/negotiated",
-    "description": "The read-only RTCDataChannel property negotiated indicates whether the RTCDataChannel's connection was negotiated by the Web app (true) or by the WebRTC layer (false)."
+    "description": "The read-only RTCDataChannel property negotiated indicates whether the RTCDataChannel's connection was negotiated by the Web app (true) or by the WebRTC layer (false).",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-negotiated",
+            "description": "The definition of 'RTCDataChannel.negotiated' in WebRTC 1.0: Real-time Communication Between Browsers."
+        }
+    ]
 }

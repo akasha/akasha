@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.doNotTrack",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/doNotTrack",
-    "description": "The Navigator.doNotTrack property returns the user's Do Not Track setting, which indicates whether the user is requesting web sites and advertisers to not track them."
+    "description": "The Navigator.doNotTrack property returns the user's Do Not Track setting, which indicates whether the user is requesting web sites and advertisers to not track them.",
+    "refs": [
+        {
+            "name": "Tracking Preference Expression (DNT)",
+            "href": "https://www.w3.org/TR/tracking-dnt/#dom-navigator-donottrack",
+            "description": "The definition of 'Navigator.doNotTrack' in Tracking Preference Expression (DNT)."
+        }
+    ]
 }

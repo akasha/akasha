@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioNode.numberOfOutputs",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/numberOfOutputs",
-    "description": "The numberOfOutputs property of the AudioNode interface returns the number of outputs coming out of the node."
+    "description": "The numberOfOutputs property of the AudioNode interface returns the number of outputs coming out of the node.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-numberofoutputs",
+            "description": "The definition of 'numberOfOutputs' in Web Audio API."
+        }
+    ]
 }

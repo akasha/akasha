@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BaseAudioContext.createDynamicsCompressor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor",
-    "description": "Compression lowers the volume of the loudest parts of the signal and raises the volume of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is especially important in games and musical applications where large numbers of individual sounds are played simultaneously, where you want to control the overall signal level and help avoid clipping (distorting) of the audio output."
+    "description": "Compression lowers the volume of the loudest parts of the signal and raises the volume of the softest parts. Overall, a louder, richer, and fuller sound can be achieved. It is especially important in games and musical applications where large numbers of individual sounds are played simultaneously, where you want to control the overall signal level and help avoid clipping (distorting) of the audio output.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createdynamicscompressor",
+            "description": "The definition of 'createDynamicsCompressor()' in Web Audio API."
+        }
+    ]
 }

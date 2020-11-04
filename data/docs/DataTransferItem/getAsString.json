@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "DataTransferItem.getAsString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItem/getAsString",
-    "description": "The DataTransferItem.getAsString() method invokes the given callback with the drag data item's string data as the argument if the item's kind is a Plain unicode string (i.e. kind is string)."
+    "description": "The DataTransferItem.getAsString() method invokes the given callback with the drag data item's string data as the argument if the item's kind is a Plain unicode string (i.e. kind is string).",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitem-getasstring",
+            "description": "The definition of 'getAsString()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitem-getasstring",
+            "description": "The definition of 'getAsString()' in HTML 5.1."
+        }
+    ]
 }

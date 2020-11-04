@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "OffscreenCanvas.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas/width",
-    "description": "The width property returns and sets the width of an OffscreenCanvas object."
+    "description": "The width property returns and sets the width of an OffscreenCanvas object.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-offscreencanvas-width",
+            "description": "The definition of 'OffscreenCanvas.width' in HTML Living Standard."
+        }
+    ]
 }

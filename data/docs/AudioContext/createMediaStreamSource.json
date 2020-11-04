@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioContext.createMediaStreamSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createMediaStreamSource",
-    "description": "For more details about media stream audio source nodes, check out the MediaStreamAudioSourceNode reference page."
+    "description": "For more details about media stream audio source nodes, check out the MediaStreamAudioSourceNode reference page.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediastreamsource",
+            "description": "The definition of 'AudioContext.createMediaStreamSource()' in Web Audio API."
+        }
+    ]
 }

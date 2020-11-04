@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AudioParam.setValueCurveAtTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/setValueCurveAtTime",
-    "description": "The setValueCurveAtTime() method of the AudioParam interface schedules the parameter's value to change following a curve defined by a list of values."
+    "description": "The setValueCurveAtTime() method of the AudioParam interface schedules the parameter's value to change following a curve defined by a list of values.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-setvaluecurveattime",
+            "description": "The definition of 'setValueCurveAtTime' in Web Audio API."
+        }
+    ]
 }

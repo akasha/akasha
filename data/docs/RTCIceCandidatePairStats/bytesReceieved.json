@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCIceCandidatePairStats.bytesReceieved",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidatePairStats/bytesReceieved",
-    "description": "The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair."
+    "description": "The RTCIceCandidatePairStats property bytesReceived indicates the total number of payload bytes&mdash;that is, bytes which aren't overhead such as headers or padding&mdash;that hve been received to date on the connection described by the candidate pair.",
+    "refs": [
+        {
+            "name": "Identifiers for WebRTC's Statistics API",
+            "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatepairstats-bytesreceived",
+            "description": "The definition of 'RTCIceCandidatePairStats.bytesReceived' in Identifiers for WebRTC's Statistics API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.vendorSub",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vendorSub",
-    "description": "The value of the Navigator.vendorSub property is always the empty string, in any browser."
+    "description": "The value of the Navigator.vendorSub property is always the empty string, in any browser.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-vendorsub",
+            "description": "The definition of 'NavigatorID: vendorSub' in HTML Living Standard."
+        }
+    ]
 }

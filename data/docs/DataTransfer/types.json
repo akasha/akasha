@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "DataTransfer.types",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer/types",
-    "description": "The DataTransfer.types read-only property returns an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation."
+    "description": "The DataTransfer.types read-only property returns an array of the drag data formats (as strings) that were set in the dragstart event. The order of the formats is the same order as the data included in the drag operation.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransfer-types",
+            "description": "The definition of 'types' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransfer-types",
+            "description": "The definition of 'types' in HTML 5.1."
+        }
+    ]
 }

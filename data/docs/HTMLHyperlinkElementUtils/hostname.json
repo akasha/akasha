@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "HTMLHyperlinkElementUtils.hostname",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLHyperlinkElementUtils/hostname",
-    "description": "The HTMLHyperlinkElementUtils.hostname property is a USVString containing the domain of the URL."
+    "description": "The HTMLHyperlinkElementUtils.hostname property is a USVString containing the domain of the URL.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-hostname",
+            "description": "The definition of 'HTMLHyperlinkElementUtils.hostname' in HTML Living Standard."
+        }
+    ]
 }

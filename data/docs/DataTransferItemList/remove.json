@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "DataTransferItemList.remove",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/remove",
-    "description": "undefined."
+    "description": "undefined.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-remove",
+            "description": "The definition of 'remove()' in HTML Living Standard."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-remove",
+            "description": "The definition of 'remove()' in HTML 5.1."
+        }
+    ]
 }

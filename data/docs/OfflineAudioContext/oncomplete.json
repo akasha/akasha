@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "OfflineAudioContext.oncomplete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext/oncomplete",
-    "description": "When processing is complete, you might want to use the oncomplete handler the prompt the user that the audio can now be played, and enable the play button."
+    "description": "When processing is complete, you might want to use the oncomplete handler the prompt the user that the audio can now be played, and enable the play button.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-oncomplete",
+            "description": "The definition of 'oncomplete' in Web Audio API."
+        }
+    ]
 }
