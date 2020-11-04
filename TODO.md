@@ -28,8 +28,6 @@ complete as there is too much un-said.
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
 
-* Link with OpenGL docs ala https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glBindBuffer.xml
-
 * Some doc entries include documentation for constants .. scan for that?.
 
 * Extract param docs for methods and constructors.
