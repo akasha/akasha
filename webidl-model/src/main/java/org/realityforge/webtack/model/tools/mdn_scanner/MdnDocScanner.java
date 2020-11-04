@@ -291,11 +291,15 @@ public final class MdnDocScanner
               final List<TextNode> textNodes = a.textNodes();
               final String name = textNodes.get( 0 ).text();
               final String href = a.attr( "href" );
-              final String refDescription = a.text().substring( name.length() ).trim();
+              final String refDescription =
+                a.text().substring( name.length() ).trim().replace( "that specification", name );
               final ExternalRef ref = new ExternalRef();
               ref.setName( name );
               ref.setHref( href );
-              ref.setDescription( refDescription.replace( "that specification", name ) );
+              if ( !refDescription.isEmpty() )
+              {
+                ref.setDescription( refDescription );
+              }
               refs.add( ref );
             }
           }
