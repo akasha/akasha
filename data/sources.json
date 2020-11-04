@@ -593,10 +593,5 @@
     {
         "lastModifiedTime": 0,
         "name": "whatwg_xhr_patch"
-    },
-    {
-        "lastModifiedTime": 1604428065000,
-        "name": "worklets",
-        "url": "https://html.spec.whatwg.org/multipage/worklets.html"
     }
 ]
