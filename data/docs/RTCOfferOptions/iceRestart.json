@@ -7,7 +7,7 @@
     "refs": [
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
-            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart ",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcofferoptions-icerestart",
             "description": "The definition of 'RTCOfferOptions.iceRestart' in WebRTC 1.0: Real-time Communication Between Browsers."
         }
     ]
