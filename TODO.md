@@ -58,7 +58,7 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Change the way that globals are implemented. So that a global context based on window would be named `GlobalWindow` and would extend `Window`. Thus we could eliminate the instance methods on `Global` and add static methods to access the methods on window and static access to the namespaces. Once this is in place we could consider generating multiple globals for each context and exposing all the common namespaces on the `Global` object.
+* Add static methods to `Global` to access the methods on window namespaces. Once this is in place we could consider generating multiple globals for each context and exposing all the common namespaces on the `Global` object.
 
 * Change the implementation class of namespaces to be `XNamespace` rather than `X` and then make `X` contain static methods that mirror those on the namespace. Thus we would have `Console.log(...)` which would result in a call like `Global.globalThis().console().log(...)`
 
