@@ -114,6 +114,22 @@ the appropriate patch. A better solution is to import the browser specific WebID
 and merge the differences as desired. This should be relatively easy for chrome and gecko based browsers that already
 have publicly available WebIDL files.
 
+#### The globalThis / ExposureSet relationship is not yet finalized
+
+Javascript has the notion of a global object that is named `globalThis` in modern versions of javascript.
+The properties, operations and namespaces exposed on the global object differs in different JavaScript
+environments.
+
+Historically, accessing the global object has required different syntax in different JavaScript environments. On
+the web you can use `window`, `self`, or `frames` - but in Web Workers only `self` will work. In Node.js none of
+these work, and you must instead use `global`. In WebIDL, the `ExposureSet` extended attribute is used to control
+whether an interface or namespace is present in a particular Javascript environment.
+
+WebTack currently assumes that the generated library is used in a specific JavaScript environment. This makes it
+difficult to reuse the library across different Javascript environments. WebTack generates a single
+`Global.globalThis()` static method to access the global object which is quite verbose. Both of these implementation
+decisions will be re-evaluated going forward.
+
 #### Missing/Incomplete Features
 
 WebTack is missing a handful of features.
