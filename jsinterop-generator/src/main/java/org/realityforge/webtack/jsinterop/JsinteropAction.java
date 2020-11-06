@@ -202,6 +202,7 @@ final class JsinteropAction
     if ( null != _globalInterface )
     {
       generateGlobalThisInterface( _globalInterface );
+      generateGlobalThisAccessor( _globalInterface );
     }
 
     if ( _generateTypeCatalog )
@@ -265,6 +266,48 @@ final class JsinteropAction
                        typeMappingContent.getBytes( StandardCharsets.UTF_8 ) );
   }
 
+  private void generateGlobalThisAccessor( @Nonnull final String globalInterface )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .classBuilder( "Global" )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( type );
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                          .addMember( "name", "$S", "goog.global" )
+                          .build() );
+
+    type.addJavadoc( "Accessor for the global <b>globalThis</b> property also know as the global object.\n" +
+                     "\n" +
+                     "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" );
+
+    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
+
+    final TypeName globalType = lookupClassName( "Global" + NamingUtil.pascalCase( globalInterface ) );
+
+    type.addField( FieldSpec
+                     .builder( globalType, "globalThis", Modifier.PRIVATE, Modifier.STATIC )
+                     .build() );
+
+    type.addMethod( MethodSpec.methodBuilder( "globalThis" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                      .addAnnotation( BasicTypes.NONNULL )
+                      .returns( globalType )
+                      .addStatement( "return globalThis" )
+                      .addJavadoc( "Accessor for the global <b>globalThis</b> property contains the global " +
+                                   "<i>this</i> value, which is akin to the global object.\n" +
+                                   "\n" +
+                                   "@return the global object\n" +
+                                   "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
+                      .build() );
+
+    writeTopLevelType( type );
+  }
+
   private void generateGlobalThisInterface( @Nonnull final String globalInterface )
     throws IOException
   {
@@ -276,7 +319,7 @@ final class JsinteropAction
     }
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( "Global" )
+        .classBuilder( "Global" + NamingUtil.pascalCase( globalInterface ) )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .superclass( lookupClassName( definition.getName() ) );
     writeGeneratedAnnotation( type );
@@ -322,23 +365,6 @@ final class JsinteropAction
                         .addAnnotation( BasicTypes.NONNULL )
                         .build() );
     }
-
-    final TypeName globalType = ClassName.bestGuess( "Global" );
-
-    type.addField( FieldSpec.builder( globalType, "globalThis", Modifier.PRIVATE, Modifier.STATIC ).build() );
-
-    type.addMethod( MethodSpec.methodBuilder( "globalThis" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
-                      .addAnnotation( BasicTypes.NONNULL )
-                      .returns( globalType )
-                      .addStatement( "return globalThis" )
-                      .addJavadoc( "Accessor for the global <b>globalThis</b> property contains the global " +
-                                   "<i>this</i> value, which is akin to the global object.\n" +
-                                   "\n" +
-                                   "@return the global object\n" +
-                                   "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
-                      .build() );
 
     writeTopLevelType( type );
   }
