@@ -70,9 +70,6 @@ complete as there is too much un-said.
 * Add `[alias=SomeAlias]` extended attribute that will create an alias method via a `@JsOverlay` that calls base
   method. The alias method will also omit any arguments that have a `values=` extended attribute with a single value
 
-* Define operation alias `canvas.getContext()` that passed `WebGL2RenderingContextAttributes` and returns
-  `WebGL2RenderingContext` and whos first  parameter is `values=` restricted to the appropriate value.
-
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
   more meaningful subgraphs.
