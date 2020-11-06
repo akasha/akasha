@@ -29,10 +29,14 @@
         "url": "https://www.w3.org/TR/clipboard-apis/"
     },
     {
-        "lastModifiedTime": 1602818171000,
+        "lastModifiedTime": 1604610640000,
         "name": "common",
         "selector": "[data-level~=4.] ~ pre.idl",
         "url": "https://heycam.github.io/webidl/"
+    },
+    {
+        "lastModifiedTime": 0,
+        "name": "common_patch"
     },
     {
         "lastModifiedTime": 1600209748000,

@@ -1,0 +1,37 @@
+{
+  "sourceSelector": "name=common name=common_patch",
+  "stages": [
+    {
+      "name": "RemoveMember",
+      "description": "Attribute redefined with better typing",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 1,
+        "elementNamePattern": "^DOMException$",
+        "memberNamePattern": "^code$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "RemoveMember",
+      "description": "Members removed as now inherited from parent interface",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 2,
+        "elementNamePattern": "^DOMException$",
+        "memberNamePattern": "^(message|name)$",
+        "types": ["interface_type"]
+      }
+    },
+    {
+      "name": "ChangeExtends",
+      "description": "Actually model how it logically works",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^DOMException$",
+        "parentType": "Error"
+      }
+    }
+  ]
+}
