@@ -60,6 +60,10 @@ the browser API easier for java developers. A few differences from Elemental2 in
   report errors when incorrect values are supplied.
 * Several other minor usability improvements, particularly with respect to union types.
 
+One of the greatest advantages of WebTack is the ability to quickly generate API for new specifications. First you
+run a single command to register the spec url, extracting the WebIDL from the specification and extract the
+documentation from MDN. Then you run a second command to regenerate the java library.
+
 ### The Now
 
 Experiments with WebTack are ongoing but so far the experiments have largely proved successful. Several web apps
