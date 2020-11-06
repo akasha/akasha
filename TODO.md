@@ -67,9 +67,6 @@ complete as there is too much un-said.
 
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
 
-* Add `[alias=SomeAlias]` extended attribute that will create an alias method via a `@JsOverlay` that calls base
-  method. The alias method will also omit any arguments that have a `values=` extended attribute with a single value
-
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
   more meaningful subgraphs.
@@ -87,7 +84,8 @@ complete as there is too much un-said.
   `canvas.getWebGL2Context()`. In an ideal world we could also remove the nullability annotation so that the user
   was not forced to check nullability ... maybe this could be somehow incorporated into the contract. (It seems that
   the only way to implement this is to add a constraint language on type that makes claims such as if arg1 is constant
-  value X then arg2 must be of type Y.
+  value X then arg2 must be of type Y. To create the overlay method we may need to define an extended attribute on
+  operation that defines scenario.
 
 * Make `AbstractProcessor` cache instance of `PipelineContext`
 
