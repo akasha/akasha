@@ -44,9 +44,6 @@ complete as there is too much un-said.
 
 * Complete `react4j-vchat`
 
-* webgl renderer of some kind.
- - a good one is https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/blob/master/script.js
-
 * Port https://github.com/toji/webxr-particles
 
 * WebRTC + XR + Hand-tracking to create VR chat with a real feel of social presence. Each "area" would be hosted
