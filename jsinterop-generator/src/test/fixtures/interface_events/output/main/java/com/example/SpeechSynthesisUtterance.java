@@ -38,8 +38,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addEndListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "end", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "end", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -55,8 +55,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeEndListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "end", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "end", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -72,8 +72,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addResumeListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "resume", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "resume", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -89,8 +89,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeResumeListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "resume", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "resume", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -106,8 +106,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void addStartListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    addEventListener( "start", Js.cast( callback ), options );
+      final boolean useCapture) {
+    addEventListener( "start", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay
@@ -123,8 +123,8 @@ public class SpeechSynthesisUtterance extends EventTarget {
 
   @JsOverlay
   public final void removeStartListener(@Nonnull final SpeechSynthesisEventListener callback,
-      final boolean options) {
-    removeEventListener( "start", Js.cast( callback ), options );
+      final boolean useCapture) {
+    removeEventListener( "start", Js.cast( callback ), useCapture );
   }
 
   @JsOverlay

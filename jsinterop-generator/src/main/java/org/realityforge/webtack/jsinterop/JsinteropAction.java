@@ -1754,9 +1754,9 @@ final class JsinteropAction
     {
       method
         .addParameter( ParameterSpec
-                         .builder( TypeName.BOOLEAN, "options", Modifier.FINAL )
+                         .builder( TypeName.BOOLEAN, "useCapture", Modifier.FINAL )
                          .build() )
-        .addStatement( "addEventListener( $S, $T.cast( callback ), options )", eventName, JsinteropTypes.JS );
+        .addStatement( "addEventListener( $S, $T.cast( callback ), useCapture )", eventName, JsinteropTypes.JS );
     }
     else
     {
@@ -1797,9 +1797,9 @@ final class JsinteropAction
     {
       method
         .addParameter( ParameterSpec
-                         .builder( TypeName.BOOLEAN, "options", Modifier.FINAL )
+                         .builder( TypeName.BOOLEAN, "useCapture", Modifier.FINAL )
                          .build() )
-        .addStatement( "removeEventListener( $S, $T.cast( callback ), options )", eventName, JsinteropTypes.JS );
+        .addStatement( "removeEventListener( $S, $T.cast( callback ), useCapture )", eventName, JsinteropTypes.JS );
     }
     else
     {
