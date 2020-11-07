@@ -58,7 +58,7 @@ complete as there is too much un-said.
 
 # Java Generation
 
-* Add static methods to `Global` to access the methods on window namespaces. Once this is in place we could consider generating multiple globals for each context and exposing all the common namespaces on the `Global` object.
+* Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.
 
 * Change the implementation class of namespaces to be `XNamespace` rather than `X` and then make `X` contain static methods that mirror those on the namespace. Thus we would have `Console.log(...)` which would result in a call like `Global.globalThis().console().log(...)`
 

@@ -305,7 +305,194 @@ final class JsinteropAction
                                    "@see <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis\">globalThis - MDN</a>\n" )
                       .build() );
 
+    final WebIDLSchema schema = getSchema();
+    InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
+    while ( null != definition )
+    {
+      generateGlobalAttributes( definition.getAttributes(), type );
+
+      for ( final OperationMember operation : definition.getOperations() )
+      {
+        final OperationMember.Kind operationKind = operation.getKind();
+        if ( OperationMember.Kind.DEFAULT == operationKind ||
+             (
+               ( OperationMember.Kind.STRINGIFIER == operationKind ||
+                 OperationMember.Kind.GETTER == operationKind ||
+                 OperationMember.Kind.SETTER == operationKind ||
+                 OperationMember.Kind.DELETER == operationKind ) &&
+               null != operation.getName() ) )
+        {
+          generateGlobalOperation( operation, type );
+        }
+      }
+      final String inherits = definition.getInherits();
+      definition = null == inherits ? null : schema.getInterfaceByName( inherits );
+    }
+
+    for ( final NamespaceDefinition namespace : schema.getNamespaces() )
+    {
+      final String methodName = NamingUtil.camelCase( safeJsPropertyMethodName( namespace.getName() ) );
+      type.addMethod( MethodSpec
+                        .methodBuilder( methodName )
+                        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                        .returns( lookupClassName( namespace.getName() ) )
+                        .addAnnotation( BasicTypes.NONNULL )
+                        .addStatement( "return globalThis().$N()", methodName )
+                        .build() );
+    }
+
     writeTopLevelType( type );
+  }
+
+  private void generateGlobalAttributes( @Nonnull final List<AttributeMember> attributes,
+                                         @Nonnull final TypeSpec.Builder type )
+  {
+    attributes
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .forEach( attribute -> generateGlobalAttribute( attribute, type ) );
+  }
+
+  private void generateGlobalAttribute( @Nonnull final AttributeMember attribute, @Nonnull final TypeSpec.Builder type )
+  {
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
+    {
+      generateGlobalReadOnlyAttribute( attribute, type );
+    }
+    else
+    {
+      generateGlobalReadWriteAttribute( attribute, type );
+    }
+  }
+
+  private void generateGlobalReadOnlyAttribute( @Nonnull final AttributeMember attribute,
+                                                @Nonnull final TypeSpec.Builder type )
+  {
+    assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    final Type attributeType = attribute.getType();
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
+    final String name = attribute.getName();
+    final TypeName actualJavaType = toTypeName( actualType );
+    final String methodName = safeJsPropertyMethodName( name );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( actualJavaType );
+    maybeAddCustomAnnotations( attribute, method );
+    maybeAddJavadoc( attribute, method );
+    if ( schema.isNullable( attributeType ) )
+    {
+      method.addAnnotation( BasicTypes.NULLABLE );
+    }
+    else if ( !actualJavaType.isPrimitive() )
+    {
+      method.addAnnotation( BasicTypes.NONNULL );
+    }
+    addMagicConstantAnnotationIfNeeded( actualType, method );
+    method.addStatement( "return globalThis().$N()", methodName );
+    type.addMethod( method.build() );
+  }
+
+  private void generateGlobalReadWriteAttribute( @Nonnull final AttributeMember attribute,
+                                                 @Nonnull final TypeSpec.Builder type )
+  {
+    assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
+    final Type attributeType = attribute.getType();
+    final WebIDLSchema schema = getSchema();
+    final Type actualType = schema.resolveType( attributeType );
+    final String name = attribute.getName();
+    final TypeName actualJavaType = toTypeName( actualType );
+    final String methodName = safeJsPropertyMethodName( name );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .returns( actualJavaType );
+    maybeAddCustomAnnotations( attribute, method );
+    maybeAddJavadoc( attribute, method );
+    if ( schema.isNullable( attributeType ) )
+    {
+      method.addAnnotation( BasicTypes.NULLABLE );
+    }
+    else if ( !actualJavaType.isPrimitive() )
+    {
+      method.addAnnotation( BasicTypes.NONNULL );
+    }
+    addMagicConstantAnnotationIfNeeded( actualType, method );
+    method.addStatement( "return globalThis().$N", methodName );
+    type.addMethod( method.build() );
+  }
+
+  private void generateGlobalOperation( @Nonnull final OperationMember operation,
+                                        @Nonnull final TypeSpec.Builder type )
+  {
+    final List<Argument> arguments = operation.getArguments();
+    final int argCount = arguments.size();
+    final long optionalCount = arguments.stream().filter( Argument::isOptional ).count();
+    for ( int i = 0; i <= optionalCount; i++ )
+    {
+      final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
+      final List<List<TypedValue>> explodedTypeList =
+        explodeTypeList( argumentList.stream().map( v -> (AttributedNode) v ).collect( Collectors.toList() ),
+                         argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+      for ( final List<TypedValue> typeList : explodedTypeList )
+      {
+        generateGlobalOperation( operation, argumentList, typeList, type );
+      }
+    }
+  }
+
+  private void generateGlobalOperation( @Nonnull final OperationMember operation,
+                                        @Nonnull final List<Argument> arguments,
+                                        @Nonnull final List<TypedValue> typeList,
+                                        @Nonnull final TypeSpec.Builder type )
+  {
+    final OperationMember.Kind operationKind = operation.getKind();
+    assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
+    final String name = operation.getName();
+    assert null != name;
+    final String methodName = javaMethodName( name, operation );
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC );
+    maybeAddCustomAnnotations( operation, method );
+    maybeAddJavadoc( operation, method );
+    final Type returnType = operation.getReturnType();
+    emitReturnType( returnType, method );
+    int index = 0;
+    for ( final Argument argument : arguments )
+    {
+      generateArgument( argument, typeList.get( index++ ), false, method );
+    }
+    final StringBuilder sb = new StringBuilder();
+    final List<Object> args = new ArrayList<>();
+    if ( Kind.Void != returnType.getKind() )
+    {
+      sb.append( "return " );
+    }
+    sb.append( "globalThis().$N(" );
+    args.add( methodName );
+
+    boolean firstArg = true;
+    for ( final Argument argument : arguments )
+    {
+      if ( !firstArg )
+      {
+        sb.append( ", " );
+      }
+      else
+      {
+        firstArg = false;
+      }
+      sb.append( "$N" );
+      args.add( javaName( argument ) );
+    }
+    sb.append( ")" );
+    method.addStatement( sb.toString(), args.toArray() );
+    type.addMethod( method.build() );
   }
 
   private void generateGlobalThisInterface( @Nonnull final String globalInterface )

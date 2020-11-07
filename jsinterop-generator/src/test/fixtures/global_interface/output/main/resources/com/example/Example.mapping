@@ -1,2 +1,5 @@
+EventTarget=com.example.EventTarget
 GlobalWindow=com.example.GlobalWindow
+Object=java.lang.Object
+ScrollToOptions=com.example.ScrollToOptions
 Window=com.example.Window

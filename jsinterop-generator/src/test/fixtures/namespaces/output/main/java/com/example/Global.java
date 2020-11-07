@@ -34,4 +34,23 @@ public final class Global {
   public static GlobalWindow globalThis() {
     return globalThis;
   }
+
+  public static boolean closed() {
+    return globalThis().closed();
+  }
+
+  @Nonnull
+  public static Console console() {
+    return globalThis().console();
+  }
+
+  @Nonnull
+  public static CSS css() {
+    return globalThis().css();
+  }
+
+  @Nonnull
+  public static WebAssembly webAssembly() {
+    return globalThis().webAssembly();
+  }
 }
