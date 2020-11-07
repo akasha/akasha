@@ -11,8 +11,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "CSS"
 )
-public final class CSS {
-  private CSS() {
+public final class CascadingStyleSheetoNamespace {
+  private CascadingStyleSheetoNamespace() {
   }
 
   @Nonnull

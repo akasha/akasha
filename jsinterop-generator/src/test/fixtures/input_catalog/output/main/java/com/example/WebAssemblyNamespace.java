@@ -1,24 +1,21 @@
 package com.example;
 
-import elemental3.MyAnnotation;
-import elemental3.MyAnnotation2;
+import com.biz.MyActiveMode;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @Generated("org.realityforge.webtack")
-@MyAnnotation
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "CSS"
+    name = "WebAssembly"
 )
-public final class CSS {
-  private CSS() {
+public final class WebAssemblyNamespace {
+  private WebAssemblyNamespace() {
   }
 
-  @MyAnnotation2
-  @Nonnull
-  public native String escape(@Nonnull String ident);
+  public native boolean validate(@TxMode @Nonnull String txMode,
+      @MyActiveMode @Nonnull String mode);
 }

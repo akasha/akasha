@@ -1,6 +1,6 @@
 ArrayBuffer=elemental2.core.ArrayBuffer
-CSS=com.example.CSS
+CSS=com.example.CSSNamespace
 GlobalWindow=com.example.GlobalWindow
-WebAssembly=com.example.WebAssembly
+WebAssembly=com.example.WebAssemblyNamespace
 Window=com.example.Window
-console=com.example.Console
+console=com.example.ConsoleNamespace

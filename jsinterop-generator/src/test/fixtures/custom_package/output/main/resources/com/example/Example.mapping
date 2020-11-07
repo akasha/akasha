@@ -1,4 +1,4 @@
-CSS=com.example.mynamespaces.CSS
+CSS=com.example.mynamespaces.CSSNamespace
 Event=com.example.myinterfaces.Event
 EventInit=com.example.mydictionaries.EventInit
 EventListener=com.example.mycallbackinterfaces.EventListener

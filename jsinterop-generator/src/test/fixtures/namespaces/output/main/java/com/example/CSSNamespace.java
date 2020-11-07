@@ -1,8 +1,5 @@
 package com.example;
 
-import com.example.web_assembly.Module;
-import elemental2.core.ArrayBuffer;
-import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -12,12 +9,12 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "WebAssembly"
+    name = "CSS"
 )
-public final class WebAssembly {
-  private WebAssembly() {
+public final class CSSNamespace {
+  private CSSNamespace() {
   }
 
   @Nonnull
-  public native Promise<Module> compile(@Nonnull ArrayBuffer bytes);
+  public native String escape(@Nonnull String ident);
 }

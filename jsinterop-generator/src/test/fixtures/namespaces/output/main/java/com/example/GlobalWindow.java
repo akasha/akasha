@@ -25,17 +25,17 @@ public final class GlobalWindow extends Window {
       name = "console"
   )
   @Nonnull
-  public native Console console();
+  public native ConsoleNamespace console();
 
   @JsProperty(
       name = "CSS"
   )
   @Nonnull
-  public native CSS css();
+  public native CSSNamespace css();
 
   @JsProperty(
       name = "WebAssembly"
   )
   @Nonnull
-  public native WebAssembly webAssembly();
+  public native WebAssemblyNamespace webAssembly();
 }

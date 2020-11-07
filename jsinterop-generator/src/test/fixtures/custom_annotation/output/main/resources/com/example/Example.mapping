@@ -1,4 +1,4 @@
-CSS=com.example.CSS
+CSS=com.example.CSSNamespace
 Event=com.example.Event
 EventInit=com.example.EventInit
 EventListener=com.example.EventListener

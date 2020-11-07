@@ -17,8 +17,8 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly"
 )
-public final class WebAssembly {
-  private WebAssembly() {
+public final class WebAssemblyNamespace {
+  private WebAssemblyNamespace() {
   }
 
   /**

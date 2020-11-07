@@ -1,4 +1,4 @@
-CSS=com.example.CascadingStyleSheeto
+CSS=com.example.CascadingStyleSheetoNamespace
 Event=com.example.MyEvent
 EventInit=com.example.EventOptions
 EventListener=com.example.EventEar

@@ -1,6 +1,8 @@
 package com.example;
 
-import com.biz.MyActiveMode;
+import com.example.web_assembly.Module;
+import elemental2.core.ArrayBuffer;
+import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -12,10 +14,10 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "WebAssembly"
 )
-public final class WebAssembly {
-  private WebAssembly() {
+public final class WebAssemblyNamespace {
+  private WebAssemblyNamespace() {
   }
 
-  public native boolean validate(@TxMode @Nonnull String txMode,
-      @MyActiveMode @Nonnull String mode);
+  @Nonnull
+  public native Promise<Module> compile(@Nonnull ArrayBuffer bytes);
 }

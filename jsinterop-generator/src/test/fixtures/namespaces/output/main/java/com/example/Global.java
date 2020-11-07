@@ -40,17 +40,17 @@ public final class Global {
   }
 
   @Nonnull
-  public static Console console() {
+  public static ConsoleNamespace console() {
     return globalThis().console();
   }
 
   @Nonnull
-  public static CSS css() {
+  public static CSSNamespace css() {
     return globalThis().css();
   }
 
   @Nonnull
-  public static WebAssembly webAssembly() {
+  public static WebAssemblyNamespace webAssembly() {
     return globalThis().webAssembly();
   }
 }

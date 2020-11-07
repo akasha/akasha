@@ -2618,13 +2618,18 @@ final class JsinteropAction
     schema.getConstEnumerations().forEach( this::registerDefinition );
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
-    schema.getNamespaces().forEach( this::registerDefinition );
+    schema.getNamespaces().forEach( n -> registerDefinition( n, "Namespace" ) );
   }
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
+    registerDefinition( definition, "" );
+  }
+
+  private void registerDefinition( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
+  {
     final String javaType =
-      derivePackagePrefix( definition ) + NamingUtil.uppercaseFirstCharacter( javaName( definition ) );
+      derivePackagePrefix( definition ) + NamingUtil.uppercaseFirstCharacter( javaName( definition ) ) + suffix;
     tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
   }
 

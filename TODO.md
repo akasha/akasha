@@ -60,7 +60,7 @@ complete as there is too much un-said.
 
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.
 
-* Change the implementation class of namespaces to be `XNamespace` rather than `X` and then make `X` contain static methods that mirror those on the namespace. Thus we would have `Console.log(...)` which would result in a call like `Global.console().log(...)`
+* Create class `X` for namespaced named `X` that contains static methods that delegates to mirror those on the namespace. Thus we would have `Console.log(...)` which would result in a call like `Global.console().log(...)`
 
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
 
