@@ -325,6 +325,20 @@ final class JsinteropAction
           generateGlobalOperation( operation, type );
         }
       }
+      for ( final EventMember event : definition.getEvents() )
+      {
+        final CallbackInterfaceDefinition callbackInterface =
+          schema.findCallbackInterfaceByName( event.getEventType().getName() + "Listener" );
+        if ( null != callbackInterface )
+        {
+          generateGlobalAddEventListener( event, 0, type );
+          generateGlobalAddEventListener( event, 1, type );
+          generateGlobalAddEventListener( event, 2, type );
+          generateGlobalRemoveEventListener( event, 0, type );
+          generateGlobalRemoveEventListener( event, 1, type );
+          generateGlobalRemoveEventListener( event, 2, type );
+        }
+      }
       final String inherits = definition.getInherits();
       definition = null == inherits ? null : schema.getInterfaceByName( inherits );
     }
@@ -492,6 +506,92 @@ final class JsinteropAction
     }
     sb.append( ")" );
     method.addStatement( sb.toString(), args.toArray() );
+    type.addMethod( method.build() );
+  }
+
+  private void generateGlobalAddEventListener( @Nonnull final EventMember event,
+                                               final int variant,
+                                               @Nonnull final TypeSpec.Builder type )
+  {
+    final String eventName = event.getName();
+    final TypeName listenerType = lookupClassName( event.getEventType().getName() + "Listener" );
+    final String methodName = "add" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener";
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addParameter( ParameterSpec
+                         .builder( listenerType, "callback", Modifier.FINAL )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    if ( 0 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( lookupClassName( "AddEventListenerOptions" ),
+                                   "options",
+                                   Modifier.FINAL )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() )
+        .addStatement( "globalThis().$N( callback, options )", methodName );
+    }
+    else if ( 1 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( TypeName.BOOLEAN, "useCapture", Modifier.FINAL )
+                         .build() )
+        .addStatement( "globalThis().$N( callback, useCapture )", methodName );
+    }
+    else
+    {
+      assert 2 == variant;
+      method.addStatement( "globalThis().$N( callback )", methodName );
+    }
+
+    type.addMethod( method.build() );
+  }
+
+  private void generateGlobalRemoveEventListener( @Nonnull final EventMember event,
+                                                  final int variant,
+                                                  @Nonnull final TypeSpec.Builder type )
+  {
+    final String eventName = event.getName();
+    final TypeName listenerType = lookupClassName( event.getEventType().getName() + "Listener" );
+    final String methodName = "remove" + NamingUtil.uppercaseFirstCharacter( eventName ) + "Listener";
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+        .addParameter( ParameterSpec
+                         .builder( listenerType, "callback", Modifier.FINAL )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    if ( 0 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( lookupClassName( "EventListenerOptions" ),
+                                   "options",
+                                   Modifier.FINAL )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() )
+        .addStatement( "globalThis().$N( callback, options )", methodName );
+    }
+    else if ( 1 == variant )
+    {
+      method
+        .addParameter( ParameterSpec
+                         .builder( TypeName.BOOLEAN, "useCapture", Modifier.FINAL )
+                         .build() )
+        .addStatement( "globalThis().$N( callback, useCapture )", methodName );
+    }
+    else
+    {
+      assert 2 == variant;
+      method.addStatement( "globalThis().$N( callback )", methodName );
+    }
+
     type.addMethod( method.build() );
   }
 

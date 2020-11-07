@@ -1,4 +1,10 @@
+AddEventListenerOptions=com.example.AddEventListenerOptions
+Event=com.example.Event
+EventListener=com.example.EventListener
+EventListenerOptions=com.example.EventListenerOptions
 EventTarget=com.example.EventTarget
+FocusEvent=com.example.FocusEvent
+FocusEventListener=com.example.FocusEventListener
 GlobalWindow=com.example.GlobalWindow
 Object=java.lang.Object
 ScrollToOptions=com.example.ScrollToOptions

@@ -1,6 +1,5 @@
 package com.example;
 
-import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -76,6 +75,62 @@ public final class Global {
     return globalThis().get(name);
   }
 
+  public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addDOMContentLoadedListener( callback, options );
+  }
+
+  public static void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addDOMContentLoadedListener( callback, useCapture );
+  }
+
+  public static void addDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    globalThis().addDOMContentLoadedListener( callback );
+  }
+
+  public static void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeDOMContentLoadedListener( callback, options );
+  }
+
+  public static void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeDOMContentLoadedListener( callback, useCapture );
+  }
+
+  public static void removeDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    globalThis().removeDOMContentLoadedListener( callback );
+  }
+
+  public static void addFocusListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addFocusListener( callback, options );
+  }
+
+  public static void addFocusListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    globalThis().addFocusListener( callback, useCapture );
+  }
+
+  public static void addFocusListener(@Nonnull final FocusEventListener callback) {
+    globalThis().addFocusListener( callback );
+  }
+
+  public static void removeFocusListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeFocusListener( callback, options );
+  }
+
+  public static void removeFocusListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    globalThis().removeFocusListener( callback, useCapture );
+  }
+
+  public static void removeFocusListener(@Nonnull final FocusEventListener callback) {
+    globalThis().removeFocusListener( callback );
+  }
+
   @Nonnull
   public static String id() {
     return globalThis().id;
@@ -85,7 +140,83 @@ public final class Global {
     return globalThis().open();
   }
 
-  public static boolean dispatchEvent(@DoNotAutobox @Nullable Object event) {
+  public static void addEventListener(@Nonnull String type, @Nullable EventListener callback,
+      @Nonnull AddEventListenerOptions options) {
+    globalThis().addEventListener(type, callback, options);
+  }
+
+  public static void addEventListener(@Nonnull String type, @Nullable EventListener callback,
+      boolean options) {
+    globalThis().addEventListener(type, callback, options);
+  }
+
+  public static void addEventListener(@Nonnull String type, @Nullable EventListener callback) {
+    globalThis().addEventListener(type, callback);
+  }
+
+  /**
+   * Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent().
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent">EventTarget.dispatchEvent - MDN</a>
+   */
+  public static boolean dispatchEvent(@Nonnull Event event) {
     return globalThis().dispatchEvent(event);
+  }
+
+  /**
+   * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
+   */
+  public static void removeEventListener(@Nonnull String type, @Nullable EventListener callback,
+      @Nonnull EventListenerOptions options) {
+    globalThis().removeEventListener(type, callback, options);
+  }
+
+  /**
+   * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
+   */
+  public static void removeEventListener(@Nonnull String type, @Nullable EventListener callback,
+      boolean options) {
+    globalThis().removeEventListener(type, callback, options);
+  }
+
+  /**
+   * The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener">EventTarget.removeEventListener - MDN</a>
+   */
+  public static void removeEventListener(@Nonnull String type, @Nullable EventListener callback) {
+    globalThis().removeEventListener(type, callback);
+  }
+
+  public static void addBingListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    globalThis().addBingListener( callback, options );
+  }
+
+  public static void addBingListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().addBingListener( callback, useCapture );
+  }
+
+  public static void addBingListener(@Nonnull final EventListener callback) {
+    globalThis().addBingListener( callback );
+  }
+
+  public static void removeBingListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    globalThis().removeBingListener( callback, options );
+  }
+
+  public static void removeBingListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    globalThis().removeBingListener( callback, useCapture );
+  }
+
+  public static void removeBingListener(@Nonnull final EventListener callback) {
+    globalThis().removeBingListener( callback );
   }
 }

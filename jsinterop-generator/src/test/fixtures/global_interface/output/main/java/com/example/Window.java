@@ -2,9 +2,11 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -46,4 +48,72 @@ public class Window extends EventTarget {
 
   @Nonnull
   public native Object get(@Nonnull String name);
+
+  @JsOverlay
+  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    addEventListener( "DOMContentLoaded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeDOMContentLoadedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "DOMContentLoaded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addFocusListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "focus", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addFocusListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    addEventListener( "focus", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void addFocusListener(@Nonnull final FocusEventListener callback) {
+    addEventListener( "focus", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeFocusListener(@Nonnull final FocusEventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "focus", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeFocusListener(@Nonnull final FocusEventListener callback,
+      final boolean useCapture) {
+    removeEventListener( "focus", Js.cast( callback ), useCapture );
+  }
+
+  @JsOverlay
+  public final void removeFocusListener(@Nonnull final FocusEventListener callback) {
+    removeEventListener( "focus", Js.cast( callback ) );
+  }
 }
