@@ -172,11 +172,13 @@ final class JsinteropAction
         generatePartialInterface( definition );
       }
     }
+    final List<NamespaceDefinition> namespacesGenerated = new ArrayList<>();
     for ( final NamespaceDefinition definition : schema.getNamespaces() )
     {
       if ( !isIdlTypePredefined( definition.getName() ) )
       {
         generateNamespace( definition );
+        namespacesGenerated.add( definition );
       }
     }
 
@@ -203,6 +205,10 @@ final class JsinteropAction
     {
       generateGlobalThisInterface( _globalInterface );
       generateGlobalThisAccessor( _globalInterface );
+      for ( final NamespaceDefinition definition : namespacesGenerated )
+      {
+        generateStaticNamespace( definition );
+      }
     }
 
     if ( _generateTypeCatalog )
@@ -1450,6 +1456,34 @@ final class JsinteropAction
     writeTopLevelType( name, type );
   }
 
+  private void generateStaticNamespace( @Nonnull final NamespaceDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .classBuilder( deriveSimpleJavaType( definition, "" ) )
+        .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
+    writeGeneratedAnnotation( type );
+    maybeAddJavadoc( definition, type );
+
+
+    type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
+
+    type.addMethod( MethodSpec.methodBuilder( "namespace" )
+                      .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                      .addAnnotation( BasicTypes.NONNULL )
+                      .returns( lookupClassName( definition.getName() ) )
+                      .addStatement( "return $T.$N()",
+                                     lookupClassName( "Global" ),
+                                     NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName() ) ) )
+                      .addJavadoc( "Return the '" + definition.getName() + "' namespace object.\n" +
+                                   "\n" +
+                                   "@return the '" + definition.getName() + "' namespace object\n" )
+                      .build() );
+
+    writeTopLevelType( "Global" + definition.getName(), type );
+  }
+
   private void generateInterface( @Nonnull final InterfaceDefinition definition )
     throws IOException
   {
@@ -2618,7 +2652,10 @@ final class JsinteropAction
     schema.getConstEnumerations().forEach( this::registerDefinition );
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
-    schema.getNamespaces().forEach( n -> registerDefinition( n, "Namespace" ) );
+    schema.getNamespaces().forEach( definition -> {
+      registerDefinition( definition, "Namespace" );
+      tryRegisterIdlToJavaTypeMapping( "Global" + definition.getName(), deriveJavaType( definition, "" ) );
+    } );
   }
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
@@ -2628,9 +2665,19 @@ final class JsinteropAction
 
   private void registerDefinition( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
   {
-    final String javaType =
-      derivePackagePrefix( definition ) + NamingUtil.uppercaseFirstCharacter( javaName( definition ) ) + suffix;
-    tryRegisterIdlToJavaTypeMapping( definition.getName(), javaType );
+    tryRegisterIdlToJavaTypeMapping( definition.getName(), deriveJavaType( definition, suffix ) );
+  }
+
+  @Nonnull
+  private String deriveJavaType( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
+  {
+    return derivePackagePrefix( definition ) + deriveSimpleJavaType( definition, suffix );
+  }
+
+  @Nonnull
+  private String deriveSimpleJavaType( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
+  {
+    return NamingUtil.uppercaseFirstCharacter( javaName( definition ) ) + suffix;
   }
 
   @Nonnull
