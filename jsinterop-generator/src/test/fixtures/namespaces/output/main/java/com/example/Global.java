@@ -2,9 +2,6 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
-import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsType;
 
 /**
  * Accessor for the global <b>globalThis</b> property also know as the global object.
@@ -12,11 +9,6 @@ import jsinterop.annotations.JsType;
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis">globalThis - MDN</a>
  */
 @Generated("org.realityforge.webtack")
-@JsType(
-    isNative = true,
-    namespace = JsPackage.GLOBAL,
-    name = "goog.global"
-)
 public final class Global {
   private static GlobalWindow globalThis;
 
@@ -29,7 +21,6 @@ public final class Global {
    * @return the global object
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis">globalThis - MDN</a>
    */
-  @JsOverlay
   @Nonnull
   public static GlobalWindow globalThis() {
     return globalThis;

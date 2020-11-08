@@ -280,11 +280,6 @@ final class JsinteropAction
         .classBuilder( lookupClassName( "$Global" ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "goog.global" )
-                          .build() );
 
     type.addJavadoc( "Accessor for the global <b>globalThis</b> property also know as the global object.\n" +
                      "\n" +
@@ -300,7 +295,6 @@ final class JsinteropAction
 
     type.addMethod( MethodSpec.methodBuilder( "globalThis" )
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                      .addAnnotation( JsinteropTypes.JS_OVERLAY )
                       .addAnnotation( BasicTypes.NONNULL )
                       .returns( globalType )
                       .addStatement( "return globalThis" )
