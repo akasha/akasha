@@ -297,7 +297,7 @@ final class JsinteropAction
                       .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                       .addAnnotation( BasicTypes.NONNULL )
                       .returns( globalType )
-                      .addStatement( "return globalThis" )
+                      .addStatement( "return $T.uncheckedCast( $T.global() )", JsinteropTypes.JS, JsinteropTypes.JS )
                       .addJavadoc( "Accessor for the global <b>globalThis</b> property contains the global " +
                                    "<i>this</i> value, which is akin to the global object.\n" +
                                    "\n" +

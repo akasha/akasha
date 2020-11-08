@@ -2,6 +2,7 @@ package com.example;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
+import jsinterop.base.Js;
 
 /**
  * Accessor for the global <b>globalThis</b> property also know as the global object.
@@ -23,7 +24,7 @@ public final class Global {
    */
   @Nonnull
   public static GlobalWindow globalThis() {
-    return globalThis;
+    return Js.uncheckedCast( Js.global() );
   }
 
   public static boolean closed() {
