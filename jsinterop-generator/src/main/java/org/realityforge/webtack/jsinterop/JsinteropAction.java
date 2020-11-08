@@ -277,7 +277,7 @@ final class JsinteropAction
   {
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( "Global" )
+        .classBuilder( lookupClassName( "$Global" ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
@@ -292,7 +292,7 @@ final class JsinteropAction
 
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
-    final TypeName globalType = lookupClassName( "Global" + NamingUtil.pascalCase( globalInterface ) );
+    final TypeName globalType = lookupClassName( "$Global" + globalInterface );
 
     type.addField( FieldSpec
                      .builder( globalType, "globalThis", Modifier.PRIVATE, Modifier.STATIC )
@@ -315,7 +315,7 @@ final class JsinteropAction
     InterfaceDefinition definition = schema.getInterfaceByName( globalInterface );
     while ( null != definition )
     {
-      generateGlobalAttributes( definition.getAttributes(), type );
+      generateStaticAttributes( definition.getAttributes(), type, true );
 
       for ( final OperationMember operation : definition.getOperations() )
       {
@@ -328,7 +328,7 @@ final class JsinteropAction
                  OperationMember.Kind.DELETER == operationKind ) &&
                null != operation.getName() ) )
         {
-          generateGlobalOperation( operation, type );
+          generateDelegateOperation( operation, type, true );
         }
       }
       for ( final EventMember event : definition.getEvents() )
@@ -361,32 +361,36 @@ final class JsinteropAction
                         .build() );
     }
 
-    writeTopLevelType( type );
+    writeTopLevelType( "$Global", type );
   }
 
-  private void generateGlobalAttributes( @Nonnull final List<AttributeMember> attributes,
-                                         @Nonnull final TypeSpec.Builder type )
+  private void generateStaticAttributes( @Nonnull final List<AttributeMember> attributes,
+                                         @Nonnull final TypeSpec.Builder type,
+                                         final boolean global )
   {
     attributes
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
-      .forEach( attribute -> generateGlobalAttribute( attribute, type ) );
+      .forEach( attribute -> generateStaticAttribute( attribute, type, global ) );
   }
 
-  private void generateGlobalAttribute( @Nonnull final AttributeMember attribute, @Nonnull final TypeSpec.Builder type )
+  private void generateStaticAttribute( @Nonnull final AttributeMember attribute,
+                                        @Nonnull final TypeSpec.Builder type,
+                                        final boolean global )
   {
     if ( attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY ) )
     {
-      generateGlobalReadOnlyAttribute( attribute, type );
+      generateStaticReadOnlyAttribute( attribute, type, global );
     }
     else
     {
-      generateGlobalReadWriteAttribute( attribute, type );
+      generateStaticReadWriteAttribute( attribute, type, global );
     }
   }
 
-  private void generateGlobalReadOnlyAttribute( @Nonnull final AttributeMember attribute,
-                                                @Nonnull final TypeSpec.Builder type )
+  private void generateStaticReadOnlyAttribute( @Nonnull final AttributeMember attribute,
+                                                @Nonnull final TypeSpec.Builder type,
+                                                final boolean global )
   {
     assert attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -411,12 +415,13 @@ final class JsinteropAction
       method.addAnnotation( BasicTypes.NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
-    method.addStatement( "return globalThis().$N()", methodName );
+    method.addStatement( "return $N().$N()", global ? "globalThis" : "namespace", methodName );
     type.addMethod( method.build() );
   }
 
-  private void generateGlobalReadWriteAttribute( @Nonnull final AttributeMember attribute,
-                                                 @Nonnull final TypeSpec.Builder type )
+  private void generateStaticReadWriteAttribute( @Nonnull final AttributeMember attribute,
+                                                 @Nonnull final TypeSpec.Builder type,
+                                                 final boolean global )
   {
     assert !attribute.getModifiers().contains( AttributeMember.Modifier.READ_ONLY );
     final Type attributeType = attribute.getType();
@@ -441,12 +446,13 @@ final class JsinteropAction
       method.addAnnotation( BasicTypes.NONNULL );
     }
     addMagicConstantAnnotationIfNeeded( actualType, method );
-    method.addStatement( "return globalThis().$N", methodName );
+    method.addStatement( "return $N().$N", global ? "globalThis" : "namespace", methodName );
     type.addMethod( method.build() );
   }
 
-  private void generateGlobalOperation( @Nonnull final OperationMember operation,
-                                        @Nonnull final TypeSpec.Builder type )
+  private void generateDelegateOperation( @Nonnull final OperationMember operation,
+                                          @Nonnull final TypeSpec.Builder type,
+                                          final boolean global )
   {
     final List<Argument> arguments = operation.getArguments();
     final int argCount = arguments.size();
@@ -459,15 +465,16 @@ final class JsinteropAction
                          argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
-        generateGlobalOperation( operation, argumentList, typeList, type );
+        generateDelegateOperation( operation, argumentList, typeList, type, global );
       }
     }
   }
 
-  private void generateGlobalOperation( @Nonnull final OperationMember operation,
-                                        @Nonnull final List<Argument> arguments,
-                                        @Nonnull final List<TypedValue> typeList,
-                                        @Nonnull final TypeSpec.Builder type )
+  private void generateDelegateOperation( @Nonnull final OperationMember operation,
+                                          @Nonnull final List<Argument> arguments,
+                                          @Nonnull final List<TypedValue> typeList,
+                                          @Nonnull final TypeSpec.Builder type,
+                                          final boolean global )
   {
     final OperationMember.Kind operationKind = operation.getKind();
     assert OperationMember.Kind.STATIC != operationKind && OperationMember.Kind.CONSTRUCTOR != operationKind;
@@ -493,7 +500,8 @@ final class JsinteropAction
     {
       sb.append( "return " );
     }
-    sb.append( "globalThis().$N(" );
+    sb.append( "$N().$N(" );
+    args.add( global ? "globalThis" : "namespace" );
     args.add( methodName );
 
     boolean firstArg = true;
@@ -612,7 +620,7 @@ final class JsinteropAction
     }
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( "Global" + NamingUtil.pascalCase( globalInterface ) )
+        .classBuilder( lookupClassName( "$Global" + definition.getName() ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
         .superclass( lookupClassName( definition.getName() ) );
     writeGeneratedAnnotation( type );
@@ -1459,14 +1467,30 @@ final class JsinteropAction
   private void generateStaticNamespace( @Nonnull final NamespaceDefinition definition )
     throws IOException
   {
+    final String idlName = "$Static" + definition.getName();
     final TypeSpec.Builder type =
       TypeSpec
-        .classBuilder( deriveSimpleJavaType( definition, "" ) )
+        .classBuilder( lookupClassName( idlName ).simpleName() )
         .addModifiers( Modifier.PUBLIC, Modifier.FINAL );
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
+    generateStaticAttributes( definition.getAttributes(), type, false );
 
+    for ( final OperationMember operation : definition.getOperations() )
+    {
+      final OperationMember.Kind operationKind = operation.getKind();
+      if ( OperationMember.Kind.DEFAULT == operationKind ||
+           (
+             ( OperationMember.Kind.STRINGIFIER == operationKind ||
+               OperationMember.Kind.GETTER == operationKind ||
+               OperationMember.Kind.SETTER == operationKind ||
+               OperationMember.Kind.DELETER == operationKind ) &&
+             null != operation.getName() ) )
+      {
+        generateDelegateOperation( operation, type, false );
+      }
+    }
     type.addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() );
 
     type.addMethod( MethodSpec.methodBuilder( "namespace" )
@@ -1474,14 +1498,14 @@ final class JsinteropAction
                       .addAnnotation( BasicTypes.NONNULL )
                       .returns( lookupClassName( definition.getName() ) )
                       .addStatement( "return $T.$N()",
-                                     lookupClassName( "Global" ),
+                                     lookupClassName( "$Global" ),
                                      NamingUtil.camelCase( safeJsPropertyMethodName( definition.getName() ) ) )
                       .addJavadoc( "Return the '" + definition.getName() + "' namespace object.\n" +
                                    "\n" +
                                    "@return the '" + definition.getName() + "' namespace object\n" )
                       .build() );
 
-    writeTopLevelType( "Global" + definition.getName(), type );
+    writeTopLevelType( idlName, type );
   }
 
   private void generateInterface( @Nonnull final InterfaceDefinition definition )
@@ -2653,31 +2677,36 @@ final class JsinteropAction
     schema.getInterfaces().forEach( this::registerDefinition );
     schema.getPartialInterfaces().forEach( this::registerDefinition );
     schema.getNamespaces().forEach( definition -> {
-      registerDefinition( definition, "Namespace" );
-      tryRegisterIdlToJavaTypeMapping( "Global" + definition.getName(), deriveJavaType( definition, "" ) );
+      tryRegisterIdlToJavaTypeMapping( definition.getName(), deriveJavaType( definition, "", "Namespace" ) );
+      tryRegisterIdlToJavaTypeMapping( "$Static" + definition.getName(), deriveJavaType( definition, "", "" ) );
     } );
+    if ( null != _globalInterface )
+    {
+      final InterfaceDefinition global = schema.getInterfaceByName( _globalInterface );
+      tryRegisterIdlToJavaTypeMapping( "$Global" + global.getName(), deriveJavaType( global, "Global", "" ) );
+      tryRegisterIdlToJavaTypeMapping( "$Global", getPackageName() + ".Global" );
+    }
   }
 
   private void registerDefinition( @Nonnull final NamedDefinition definition )
   {
-    registerDefinition( definition, "" );
-  }
-
-  private void registerDefinition( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
-  {
-    tryRegisterIdlToJavaTypeMapping( definition.getName(), deriveJavaType( definition, suffix ) );
+    tryRegisterIdlToJavaTypeMapping( definition.getName(), deriveJavaType( definition, "", "" ) );
   }
 
   @Nonnull
-  private String deriveJavaType( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
+  private String deriveJavaType( @Nonnull final NamedDefinition definition,
+                                 @Nonnull final String prefix,
+                                 @Nonnull final String suffix )
   {
-    return derivePackagePrefix( definition ) + deriveSimpleJavaType( definition, suffix );
+    return derivePackagePrefix( definition ) + deriveSimpleJavaType( definition, prefix, suffix );
   }
 
   @Nonnull
-  private String deriveSimpleJavaType( @Nonnull final NamedDefinition definition, @Nonnull final String suffix )
+  private String deriveSimpleJavaType( @Nonnull final NamedDefinition definition,
+                                       @Nonnull final String prefix,
+                                       @Nonnull final String suffix )
   {
-    return NamingUtil.uppercaseFirstCharacter( javaName( definition ) ) + suffix;
+    return prefix + NamingUtil.uppercaseFirstCharacter( javaName( definition ) ) + suffix;
   }
 
   @Nonnull

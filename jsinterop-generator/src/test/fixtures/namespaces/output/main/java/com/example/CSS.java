@@ -8,6 +8,11 @@ public final class CSS {
   private CSS() {
   }
 
+  @Nonnull
+  public static String escape(@Nonnull String ident) {
+    return namespace().escape(ident);
+  }
+
   /**
    * Return the 'CSS' namespace object.
    *

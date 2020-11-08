@@ -60,8 +60,6 @@ complete as there is too much un-said.
 
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.
 
-* Create class `X` for namespaced named `X` that contains static methods that delegates to mirror those on the namespace. Thus we would have `Console.log(...)` which would result in a call like `Global.console().log(...)`
-
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
 
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
