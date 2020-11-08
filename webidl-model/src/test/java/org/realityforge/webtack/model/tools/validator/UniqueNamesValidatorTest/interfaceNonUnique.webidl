@@ -14,11 +14,20 @@ dictionary DictionaryA {};
 dictionary DictionaryB {};
 dictionary DictionaryC {};
 
+const enum ConstEnumerationA { EnumContainer.A };
+const enum ConstEnumerationB { EnumContainer.A };
+const enum ConstEnumerationC { EnumContainer.A };
+
+interface EnumContainer {
+  const unsigned short A = 4;
+};
+
 interface CallbackA {};
 interface CallbackInterfaceA {};
 interface EnumerationA {};
 interface DictionaryA {};
 interface TypedefA {};
+interface ConstEnumerationA {};
 
 typedef long long TypedefA;
 typedef long long TypedefB;

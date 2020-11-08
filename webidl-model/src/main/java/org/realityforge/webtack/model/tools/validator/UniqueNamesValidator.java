@@ -5,6 +5,7 @@ import java.util.Collection;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.CallbackDefinition;
 import org.realityforge.webtack.model.CallbackInterfaceDefinition;
+import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.InterfaceDefinition;
@@ -24,6 +25,7 @@ final class UniqueNamesValidator
     schema.getCallbackInterfaces()
       .forEach( n -> verifyNameUnique( errors, schema, n.getName(), "callback interface" ) );
     schema.getEnumerations().forEach( n -> verifyNameUnique( errors, schema, n.getName(), "enumeration" ) );
+    schema.getConstEnumerations().forEach( n -> verifyNameUnique( errors, schema, n.getName(), "const enumeration" ) );
     schema.getDictionaries().forEach( n -> verifyNameUnique( errors, schema, n.getName(), "dictionary" ) );
     schema.getInterfaces().forEach( n -> verifyNameUnique( errors, schema, n.getName(), "interface" ) );
     schema.getTypedefs().forEach( n -> verifyNameUnique( errors, schema, n.getName(), "typedef" ) );
@@ -63,6 +65,16 @@ final class UniqueNamesValidator
       {
         final String message =
           "Enumeration named '" + name + "' conflicts with a " + type + " with the same name.";
+        errors.add( new ValidationError( existing, message, true ) );
+      }
+    }
+    if ( !"const enumeration".equals( type ) )
+    {
+      final ConstEnumerationDefinition existing = schema.findConstEnumerationByName( name );
+      if ( null != existing )
+      {
+        final String message =
+          "Const enumeration named '" + name + "' conflicts with a " + type + " with the same name.";
         errors.add( new ValidationError( existing, message, true ) );
       }
     }

@@ -18,8 +18,17 @@ interface InterfaceA {};
 interface InterfaceB {};
 interface InterfaceC {};
 
+const enum ConstEnumerationA { EnumContainer.A };
+const enum ConstEnumerationB { EnumContainer.A };
+const enum ConstEnumerationC { EnumContainer.A };
+
+interface EnumContainer {
+  const unsigned short A = 4;
+};
+
 typedef long long CallbackA;
 typedef long long CallbackInterfaceA;
 typedef long long EnumerationA;
 typedef long long DictionaryA;
 typedef long long InterfaceA;
+typedef long long ConstEnumerationA;
