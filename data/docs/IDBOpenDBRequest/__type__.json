@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "IDBOpenDBRequest",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest",
-    "description": "Also inherits methods from its parents IDBRequest and EventTarget."
+    "description": "Also inherits methods from its parents IDBRequest and EventTarget.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#idbopendbrequest",
+            "description": "The definition of 'IDBOpenDBRequest' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#idbopendbrequest",
+            "description": "The definition of 'IDBOpenDBRequest' in Indexed Database API Draft."
+        }
+    ]
 }

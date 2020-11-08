@@ -5,7 +5,7 @@
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event",
     "description": "The upgradeneeded event is fired when an attempt was made to open a database with a version number higher than its current version.",
     "eventName": "upgradeneeded",
-    "eventType": "Event",
+    "eventType": "IDBVersionChangeEvent",
     "eventHandlerProperty": "onupgradeneeded",
     "eventBubbles": true,
     "eventCancelable": true

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBOpenDBRequest.onblocked",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/onblocked",
-    "description": "The onblocked event handler of the IDBOpenDBRequest interface is the event handler for the blocked event. This event is triggered when the upgradeneeded should be triggered because of a version change but the database is still in use (that is, not closed) somewhere, even after the versionchange event was sent."
+    "description": "The onblocked event handler of the IDBOpenDBRequest interface is the event handler for the blocked event. This event is triggered when the upgradeneeded should be triggered because of a version change but the database is still in use (that is, not closed) somewhere, even after the versionchange event was sent.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onblocked",
+            "description": "The definition of 'onblocked' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onblocked",
+            "description": "The definition of 'onblocked' in Indexed Database API Draft."
+        }
+    ]
 }

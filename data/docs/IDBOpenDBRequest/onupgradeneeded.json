@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBOpenDBRequest.onupgradeneeded",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBOpenDBRequest/onupgradeneeded",
-    "description": "In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our To-do Notifications app (view example live.)"
+    "description": "In the following example you can see the onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded. For a full working example, see our To-do Notifications app (view example live.)",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbopendbrequest-onupgradeneeded",
+            "description": "The definition of 'onupgradeneeded' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbopendbrequest-onupgradeneeded",
+            "description": "The definition of 'onupgradeneeded' in Indexed Database API Draft."
+        }
+    ]
 }
