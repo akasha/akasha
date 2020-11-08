@@ -137,8 +137,6 @@ Generate host element factories: Events would need to be specially handled to ma
 * It would be nice to extend WebIDL and support throws either as an expression or maybe an extended attribute.
   The Gecko WebIDL files actually have a `[Throws]` extended attribute that we could look into to drive this?
 
-* Expand `const enum` support to cover off all remaining APIs such as `svg` and `gl`.
-
 ### Validations
 
 This section lists some validations that should be implemented to at least confirm some of our assumptions:
