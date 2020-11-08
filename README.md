@@ -81,7 +81,7 @@ can be added as a maven dependency:
 <dependency>
   <groupId>org.realityforge.webtack</groupId>
   <artifactId>webtack-elemental3-complete</artifactId>
-  <version>0.02</version>
+  <version>0.03</version>
 </dependency>
 ```
 
