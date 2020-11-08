@@ -17,7 +17,7 @@ complete as there is too much un-said.
   - atomize
 
 * Figure out a way how to manage which versions of the elemental3 packages have been deployed. We
-  have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.02` to maven central
+  have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.03` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
 * Remove dependency on `elemental2-core`
