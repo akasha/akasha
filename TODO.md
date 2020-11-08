@@ -22,6 +22,10 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
+* Consider allowing some unions to be have extended attributes that indicate that they should be converted into
+  marker interfaces for all the contained types. `IntegerTypedArray` could be converted into such an abstraction
+  as could `Transfer` and `TexImageSource`
+
 * Change ArrayBufferView so it is interface implemented by TypeArrays
 
 # Docs Integration
@@ -83,10 +87,6 @@ complete as there is too much un-said.
   operation that defines scenario.
 
 * Make `AbstractProcessor` cache instance of `PipelineContext`
-
-* Consider allowing some unions to be have extended attributes that indicate that they should be converted into
-  marker interfaces for all the contained types. `IntegerTypedArray` could be converted into such an abstraction
-  as could `Transfer` and `TexImageSource`
 
 # React4j Host Element Factories
 
