@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Nonnull;
 
-public final class StringUtils
+public final class StringUtil
 {
   @Nonnull
   private static final Map<Character, String> htmlEncodeChars = new HashMap<>();
@@ -271,7 +271,7 @@ public final class StringUtils
     htmlEncodeChars.put( '\u2666', "&diams;" );
   }
 
-  private StringUtils()
+  private StringUtil()
   {
   }
 

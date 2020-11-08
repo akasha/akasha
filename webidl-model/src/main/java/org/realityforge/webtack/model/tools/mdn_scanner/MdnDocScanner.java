@@ -30,7 +30,7 @@ import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexException;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.IndexIOException;
-import org.realityforge.webtack.model.tools.util.StringUtils;
+import org.realityforge.webtack.model.tools.util.StringUtil;
 
 public final class MdnDocScanner
 {
@@ -272,7 +272,7 @@ public final class MdnDocScanner
       // Replace any non-breaking-space characters with a space as that is the best way for downstream consumers
       // Then replace any other special characters with their equivalent html entities as the description is
       // expected to be HTML "phrasing content" soo that it can easily be added to javadoc like tools
-      entry.setDescription( StringUtils.encodeHtml( description.replace( '\u00A0', ' ' ) ) );
+      entry.setDescription( StringUtil.encodeHtml( description.replace( '\u00A0', ' ' ) ) );
 
       entry.setRefs( null );
       final Element standardsElement = document.selectFirst( "table.standard-table" );
@@ -298,7 +298,7 @@ public final class MdnDocScanner
               ref.setHref( href );
               if ( !refDescription.isEmpty() )
               {
-                ref.setDescription( StringUtils.encodeHtml( refDescription ) );
+                ref.setDescription( StringUtil.encodeHtml( refDescription ) );
               }
               refs.add( ref );
             }
