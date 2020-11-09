@@ -20,7 +20,7 @@ final class PartialDictionaryValidator
       if ( null == schema.findDictionaryByName( name ) )
       {
         final String message =
-          "Dictionary named '" + name + "' does not exist but a partial for the dictionary does exist";
+          "Dictionary named '" + name + "' does not exist but a partial for the dictionary does exist";
         errors.add( new ValidationError( partial, message, true ) );
       }
     }

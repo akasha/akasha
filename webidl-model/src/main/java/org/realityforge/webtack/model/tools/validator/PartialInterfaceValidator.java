@@ -20,7 +20,7 @@ final class PartialInterfaceValidator
       if ( null == schema.findInterfaceByName( name ) )
       {
         final String message =
-          "Interface named '" + name + "' does not exist but a partial for the interface does exist";
+          "Interface named '" + name + "' does not exist but a partial for the interface does exist";
         errors.add( new ValidationError( partial, message, true ) );
       }
     }

@@ -20,7 +20,7 @@ final class PartialMixinValidator
       if ( null == schema.findMixinByName( name ) )
       {
         final String message =
-          "Mixin named '" + name + "' does not exist but a partial for the mixin does exist";
+          "Mixin named '" + name + "' does not exist but a partial for the mixin does exist";
         errors.add( new ValidationError( partial, message, true ) );
       }
     }
