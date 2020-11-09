@@ -32,7 +32,7 @@ public final class PartialInterfaceValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Interface named 'InterfaceB' does not exist but a partial for the interface does exist" );
+                        "Interface named 'InterfaceB' does not exist but a partial for the interface does exist" );
   }
 
   @Nonnull

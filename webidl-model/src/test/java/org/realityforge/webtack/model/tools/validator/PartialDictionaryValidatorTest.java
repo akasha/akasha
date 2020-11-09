@@ -32,7 +32,7 @@ public final class PartialDictionaryValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Dictionary named 'DictionaryB' does not exist but a partial for the dictionary does exist" );
+                        "Dictionary named 'DictionaryB' does not exist but a partial for the dictionary does exist" );
   }
 
   @Nonnull

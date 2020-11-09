@@ -32,7 +32,7 @@ public final class PartialMixinValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Mixin named 'MixinB' does not exist but a partial for the mixin does exist" );
+                        "Mixin named 'MixinB' does not exist but a partial for the mixin does exist" );
   }
 
   @Nonnull
