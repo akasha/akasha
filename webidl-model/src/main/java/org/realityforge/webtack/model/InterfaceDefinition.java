@@ -34,6 +34,8 @@ public final class InterfaceDefinition
   private InterfaceDefinition _superInterface;
   @Nonnull
   private final List<InterfaceDefinition> _directSubInterfaces = new ArrayList<>();
+  @Nonnull
+  private final List<TypedefDefinition> _markerTypes = new ArrayList<>();
 
   public InterfaceDefinition( @Nonnull final String name,
                               @Nullable final String inherits,
@@ -80,6 +82,13 @@ public final class InterfaceDefinition
   {
     assert _linked;
     return _directSubInterfaces;
+  }
+
+  @Nonnull
+  public List<TypedefDefinition> getMarkerTypes()
+  {
+    assert _linked;
+    return _markerTypes;
   }
 
   @Nonnull
@@ -258,5 +267,10 @@ public final class InterfaceDefinition
       _superInterface._directSubInterfaces.add( this );
     }
     _linked = true;
+  }
+
+  void addMarkerType( @Nonnull final TypedefDefinition definition )
+  {
+    _markerTypes.add( definition );
   }
 }

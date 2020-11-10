@@ -10,6 +10,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class WebIDLSchema
   extends Node
@@ -46,6 +47,7 @@ public final class WebIDLSchema
   private final Map<String, List<PartialNamespaceDefinition>> _partialNamespaces;
   @Nonnull
   private final Map<String, TypedefDefinition> _typedefs;
+  private boolean _linked;
 
   public WebIDLSchema( @Nonnull final Map<String, CallbackDefinition> callbacks,
                        @Nonnull final Map<String, CallbackInterfaceDefinition> callbackInterfaces,
@@ -600,6 +602,24 @@ public final class WebIDLSchema
 
   public void link()
   {
-    getInterfaces().forEach( e -> e.link( this ) );
+    if ( !_linked )
+    {
+      _linked = true;
+      getInterfaces().forEach( e -> e.link( this ) );
+      for ( final TypedefDefinition definition : getTypedefs() )
+      {
+        final Type type = definition.getType();
+        if ( Kind.Union == type.getKind() &&
+             definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE ) )
+        {
+          final UnionType unionType = (UnionType) type;
+          for ( final Type memberType : unionType.getMemberTypes() )
+          {
+            assert Kind.TypeReference == memberType.getKind();
+            getInterfaceByName( ( (TypeReference) memberType ).getName() ).addMarkerType( definition );
+          }
+        }
+      }
+    }
   }
 }
