@@ -275,7 +275,7 @@ public final class MdnDocScanner
       entry.setDescription( StringUtil.encodeHtml( description.replace( '\u00A0', ' ' ) ) );
 
       entry.setRefs( null );
-      final Element standardsElement = document.selectFirst( "table.standard-table" );
+      final Element standardsElement = document.selectFirst( "#Specifications + table.standard-table" );
       if ( null != standardsElement )
       {
         final List<ExternalRef> refs = new ArrayList<>();
