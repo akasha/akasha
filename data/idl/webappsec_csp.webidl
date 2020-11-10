@@ -17,6 +17,7 @@ dictionary SecurityPolicyViolationEventInit : EventInit {
   required unsigned short statusCode;
 };
 
+[Exposed=Window]
 interface CSPViolationReportBody : ReportBody {
   readonly attribute USVString? blockedURL;
   readonly attribute unsigned long? columnNumber;
@@ -31,7 +32,7 @@ interface CSPViolationReportBody : ReportBody {
   readonly attribute unsigned short statusCode;
 };
 
-[Constructor( DOMString type, optional SecurityPolicyViolationEventInit eventInitDict ), Exposed=(Window,Worker)]
+[Exposed=(Window,Worker)]
 interface SecurityPolicyViolationEvent : Event {
   readonly attribute USVString blockedURI;
   readonly attribute USVString blockedURL;
@@ -49,4 +50,5 @@ interface SecurityPolicyViolationEvent : Event {
   readonly attribute USVString sourceFile;
   readonly attribute unsigned short statusCode;
   readonly attribute DOMString violatedDirective;
+  constructor( DOMString type, optional SecurityPolicyViolationEventInit eventInitDict = {} );
 };
