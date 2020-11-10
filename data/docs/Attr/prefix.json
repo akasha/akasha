@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Attr.prefix",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr/prefix",
-    "description": "The Attr.prefix read-only property returns the namespace prefix of the specified attribute, or null if no prefix is specified."
+    "description": "The Attr.prefix read-only property returns the namespace prefix of the specified attribute, or null if no prefix is specified.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-attr-prefix",
+            "description": "The definition of 'Attr: prefix' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-attr-prefix",
+            "description": "The definition of 'Attr.prefix' in DOM4."
+        }
+    ]
 }

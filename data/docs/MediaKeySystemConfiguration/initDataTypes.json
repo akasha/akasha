@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySystemConfiguration.initDataTypes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/initDataTypes",
-    "description": "The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data."
+    "description": "The MediaKeySystemConfiguration.initDataTypes read-only property returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-initdatatypes",
+            "description": "The definition of 'initDataTypes' in Encrypted Media Extensions."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Event.initEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/initEvent",
-    "description": "The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent()."
+    "description": "The Event.initEvent() method is used to initialize the value of an event created using Document.createEvent().",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-initevent",
+            "description": "The definition of 'Event.initEvent()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-initEvent",
+            "description": "The definition of 'Event.initEvent()' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

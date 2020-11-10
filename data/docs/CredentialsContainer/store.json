@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "CredentialsContainer.store",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store",
-    "description": "The store() method of the CredentialsContainer stores a set of credentials for the user inside a Credential instance, returning this in a Promise."
+    "description": "The store() method of the CredentialsContainer stores a set of credentials for the user inside a Credential instance, returning this in a Promise.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/"
+        }
+    ]
 }

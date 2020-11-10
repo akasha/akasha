@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Geolocation.getCurrentPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition",
-    "description": "The Geolocation.getCurrentPosition() method is used to get the current position of the device."
+    "description": "The Geolocation.getCurrentPosition() method is used to get the current position of the device.",
+    "refs": [
+        {
+            "name": "Geolocation API",
+            "href": "https://w3c.github.io/geolocation-api/"
+        }
+    ]
 }

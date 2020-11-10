@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBDatabase.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/name",
-    "description": "A DOMString containing the name of the connected database."
+    "description": "A DOMString containing the name of the connected database.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-name",
+            "description": "The definition of 'name' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-name",
+            "description": "The definition of 'name' in Indexed Database API Draft."
+        }
+    ]
 }

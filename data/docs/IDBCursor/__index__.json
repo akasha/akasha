@@ -1,11 +1,11 @@
 
 {
     "name": "IDBCursor",
-    "lastModifiedAt": 1601465130857,
+    "lastModifiedAt": 1604970867235,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192107352
+            "lastModifiedAt": 1604970862301
         },
         {
             "name": "advance",
@@ -25,19 +25,19 @@
         },
         {
             "name": "key",
-            "lastModifiedAt": 1600308548706
+            "lastModifiedAt": 1604970863462
         },
         {
             "name": "primaryKey",
-            "lastModifiedAt": 1600308548944
+            "lastModifiedAt": 1604970863953
         },
         {
             "name": "request",
-            "lastModifiedAt": 1600308549740
+            "lastModifiedAt": 1604970864571
         },
         {
             "name": "source",
-            "lastModifiedAt": 1600308550547
+            "lastModifiedAt": 1604970865079
         },
         {
             "name": "update",

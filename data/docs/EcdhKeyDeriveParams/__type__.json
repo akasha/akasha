@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "EcdhKeyDeriveParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EcdhKeyDeriveParams",
-    "description": "The EcdhKeyDeriveParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(),  when using the ECDH algorithm."
+    "description": "The EcdhKeyDeriveParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.deriveKey(),  when using the ECDH algorithm.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdhKeyDeriveParams",
+            "description": "The definition of 'SubtleCrypto.EcdhKeyDeriveParams' in Web Cryptography API."
+        }
+    ]
 }

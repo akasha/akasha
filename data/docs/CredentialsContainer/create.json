@@ -3,5 +3,16 @@
     "kind": "Method",
     "name": "CredentialsContainer.create",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/create",
-    "description": "The create() method of the CredentialsContainer interface returns a Promise that resolves with a new Credential instance based on the provided options, or null if no Credential object can be created."
+    "description": "The create() method of the CredentialsContainer interface returns a Promise that resolves with a new Credential instance based on the provided options, or null if no Credential object can be created.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get",
+            "description": "The definition of 'get()' in Credential Management Level 1."
+        },
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/"
+        }
+    ]
 }

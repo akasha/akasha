@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MutationObserver.observe",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/observe",
-    "description": "The MutationObserver method observe() configures the MutationObserver callback to begin receiving notifications of changes to the DOM that match the given options."
+    "description": "The MutationObserver method observe() configures the MutationObserver callback to begin receiving notifications of changes to the DOM that match the given options.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-mutationobserver-observe",
+            "description": "The definition of 'MutationObserver.observe()' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MutationObserver.disconnect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/disconnect",
-    "description": "The MutationObserver method disconnect() tells the observer to stop watching for mutations."
+    "description": "The MutationObserver method disconnect() tells the observer to stop watching for mutations.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-mutationobserver-disconnect",
+            "description": "The definition of 'MutationObserver.disconnect()' in DOM."
+        }
+    ]
 }

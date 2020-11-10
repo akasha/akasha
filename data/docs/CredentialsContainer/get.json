@@ -3,5 +3,16 @@
     "kind": "Method",
     "name": "CredentialsContainer.get",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get",
-    "description": "The get() method of the CredentialsContainer interface returns a Promise to a single Credential instance that matches the provided parameters. If no match is found the Promise will resolve to null."
+    "description": "The get() method of the CredentialsContainer interface returns a Promise to a single Credential instance that matches the provided parameters. If no match is found the Promise will resolve to null.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialscontainer-get",
+            "description": "The definition of 'get()' in Credential Management Level 1."
+        },
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/"
+        }
+    ]
 }

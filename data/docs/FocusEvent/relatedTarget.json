@@ -3,5 +3,23 @@
     "kind": "Property",
     "name": "FocusEvent.relatedTarget",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/relatedTarget",
-    "description": "The FocusEvent.relatedTarget read-only property is the secondary target, depending on the type of event:"
+    "description": "The FocusEvent.relatedTarget read-only property is the secondary target, depending on the type of event:",
+    "refs": [
+        {
+            "name": "blur",
+            "href": "/en-US/docs/Web/Events/blur"
+        },
+        {
+            "name": "focus",
+            "href": "/en-US/docs/Web/Events/focus"
+        },
+        {
+            "name": "focusin",
+            "href": "/en-US/docs/Web/Events/focusin"
+        },
+        {
+            "name": "focusout",
+            "href": "/en-US/docs/Web/Events/focusout"
+        }
+    ]
 }

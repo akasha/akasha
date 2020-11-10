@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Event.timeStamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/timeStamp",
-    "description": "The timeStamp read-only property of the Event interface returns the time (in milliseconds) at which the event was created."
+    "description": "The timeStamp read-only property of the Event interface returns the time (in milliseconds) at which the event was created.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-timestamp",
+            "description": "The definition of 'Event.timeStamp' in DOM."
+        }
+    ]
 }

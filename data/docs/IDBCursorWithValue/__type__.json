@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "IDBCursorWithValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursorWithValue",
-    "description": "The IDBCursorWithValue interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property."
+    "description": "The IDBCursorWithValue interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database. It is the same as the IDBCursor, except that it includes the value property.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#idbcursorwithvalue",
+            "description": "The definition of 'IDBCursorWithValue' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#idbcursorwithvalue",
+            "description": "The definition of 'IDBCursorWithValue' in Indexed Database API Draft."
+        }
+    ]
 }

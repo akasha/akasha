@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
-    "description": "The Event interface represents an event which takes place in the DOM."
+    "description": "The Event interface represents an event which takes place in the DOM.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-event",
+            "description": "The definition of 'Event' in DOM."
+        }
+    ]
 }

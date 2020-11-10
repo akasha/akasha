@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "EffectTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming",
-    "description": "The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play."
+    "description": "The EffectTiming dictionary, part of the Web Animations API, is used by Element.animate(), KeyframeEffectReadOnly(), and KeyframeEffect() to describe timing properties for animation effects. These properties are all optional, although without setting a duration the animation will not play.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#the-effecttiming-dictionaries",
+            "description": "The definition of 'EffectTiming' in Web Animations."
+        }
+    ]
 }

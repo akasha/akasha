@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeyMessageEvent.messageType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/messageType",
-    "description": "The MediaKeyMessageEvent.messageType read-only property indicates the type of message. It may be one of license-request, license-renewal, license-release, or individualization-request."
+    "description": "The MediaKeyMessageEvent.messageType read-only property indicates the type of message. It may be one of license-request, license-renewal, license-release, or individualization-request.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeymessageevent-messagetype",
+            "description": "The definition of 'messageType' in Encrypted Media Extensions."
+        }
+    ]
 }

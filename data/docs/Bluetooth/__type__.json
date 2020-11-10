@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Bluetooth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth",
-    "description": "The Bluetooth interface of the Web Bluetooth API returns a Promise to a BluetoothDevice object with the specified options."
+    "description": "The Bluetooth interface of the Web Bluetooth API returns a Promise to a BluetoothDevice object with the specified options.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#bluetooth",
+            "description": "The definition of 'Bluetooth' in Web Bluetooth."
+        }
+    ]
 }

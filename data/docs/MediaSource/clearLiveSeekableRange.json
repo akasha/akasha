@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaSource.clearLiveSeekableRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/clearLiveSeekableRange",
-    "description": "The clearLiveSeekableRange() method of the MediaSource interface clears a seekable range previously set with a call to setLiveSeekableRange()."
+    "description": "The clearLiveSeekableRange() method of the MediaSource interface clears a seekable range previously set with a call to setLiveSeekableRange().",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#dom-mediasource-clearliveseekablerange",
+            "description": "The definition of 'clearLiveSeekableRange()' in Media Source Extensions."
+        }
+    ]
 }

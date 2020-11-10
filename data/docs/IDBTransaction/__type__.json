@@ -3,5 +3,19 @@
     "kind": "Type",
     "name": "IDBTransaction",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction",
-    "description": "The IDBTransaction interface of the IndexedDB API provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use IDBDatabase to start transactions, IDBTransaction to set the mode of the transaction (e.g. is it readonly or readwrite), and you access an IDBObjectStore to make a request. You can also use an IDBTransaction object to abort transactions."
+    "description": "The IDBTransaction interface of the IndexedDB API provides a static, asynchronous transaction on a database using event handler attributes. All reading and writing of data is done within transactions. You use IDBDatabase to start transactions, IDBTransaction to set the mode of the transaction (e.g. is it readonly or readwrite), and you access an IDBObjectStore to make a request. You can also use an IDBTransaction object to abort transactions.",
+    "refs": [
+        {
+            "name": "READ_ONLY",
+            "href": ""
+        },
+        {
+            "name": "READ_WRITE",
+            "href": ""
+        },
+        {
+            "name": "VERSION_CHANGE",
+            "href": ""
+        }
+    ]
 }

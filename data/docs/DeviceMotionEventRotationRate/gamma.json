@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DeviceMotionEventRotationRate.gamma",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/gamma",
-    "description": "This property indicates the rate of rotation around the Y axis -- in degrees per second -- in a DeviceMotionEventRotationRate object."
+    "description": "This property indicates the rate of rotation around the Y axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-gamma",
+            "description": "The definition of 'DeviceMotionEventRotationRate: gamma' in DeviceOrientation Event Specification."
+        }
+    ]
 }

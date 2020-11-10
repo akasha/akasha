@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Clients.get",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clients/get",
-    "description": "The get() method of the Clients interface gets a service worker client matching a given id and returns it in a Promise."
+    "description": "The get() method of the Clients interface gets a service worker client matching a given id and returns it in a Promise.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-clients-get",
+            "description": "The definition of 'get()' in Service Workers."
+        }
+    ]
 }

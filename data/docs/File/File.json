@@ -3,5 +3,11 @@
     "kind": "Constructor",
     "name": "File.File",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/File",
-    "description": "The File() constructor creates a new File object instance."
+    "description": "The File() constructor creates a new File object instance.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/"
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Blob.size",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/size",
-    "description": "The Blob interface's size property returns the size of the Blob or File in bytes."
+    "description": "The Blob interface's size property returns the size of the Blob or File in bytes.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dfn-size",
+            "description": "The definition of 'Blob.size' in File API."
+        }
+    ]
 }

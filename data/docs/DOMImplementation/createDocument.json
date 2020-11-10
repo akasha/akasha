@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "DOMImplementation.createDocument",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createDocument",
-    "description": "The DOMImplementation.createDocument() method creates and returns an XMLDocument."
+    "description": "The DOMImplementation.createDocument() method creates and returns an XMLDocument.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domimplementation-createdocument",
+            "description": "The definition of 'DOMImplementation.createDocument' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#Level-2-Core-DOM-createDocument",
+            "description": "The definition of 'DOMImplementation.createDocument' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#Level-2-Core-DOM-createDocument",
+            "description": "The definition of 'DOMImplementation.createDocument' in Document Object Model (DOM) Level 2 Core Specification."
+        }
+    ]
 }

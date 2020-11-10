@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "EffectTiming.iterationStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/iterationStart",
-    "description": "Web Animations API's EffectTiming dictionary's  iterationStart property specifies the repetition number which repetition the animation begins at and its progress through it."
+    "description": "Web Animations API's EffectTiming dictionary's  iterationStart property specifies the repetition number which repetition the animation begins at and its progress through it.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#iteration-start",
+            "description": "The definition of 'iterationStart' in Web Animations."
+        }
+    ]
 }

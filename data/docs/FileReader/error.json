@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FileReader.error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/error",
-    "description": "The FileReader error property returns the error that occurred while reading the file."
+    "description": "The FileReader error property returns the error that occurred while reading the file.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dom-filereader-error",
+            "description": "The definition of 'FileReader: error' in File API."
+        }
+    ]
 }

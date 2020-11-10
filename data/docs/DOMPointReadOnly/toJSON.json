@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMPointReadOnly.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/toJSON",
-    "description": "The DOMPointReadOnly method toJSON() returns a DOMPointInit object giving the JSON form of the point object."
+    "description": "The DOMPointReadOnly method toJSON() returns a DOMPointInit object giving the JSON form of the point object.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompointreadonly-tojson",
+            "description": "The definition of 'DOMPointReadOnly.toJSON()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

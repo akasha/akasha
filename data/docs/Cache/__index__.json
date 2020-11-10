@@ -1,11 +1,11 @@
 
 {
     "name": "Cache",
-    "lastModifiedAt": 1601466356587,
+    "lastModifiedAt": 1604969515622,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192331578
+            "lastModifiedAt": 1604969510361
         },
         {
             "name": "add",
@@ -17,23 +17,23 @@
         },
         {
             "name": "delete",
-            "lastModifiedAt": 1599279151264
+            "lastModifiedAt": 1604969512896
         },
         {
             "name": "keys",
-            "lastModifiedAt": 1597192333949
+            "lastModifiedAt": 1604969513395
         },
         {
             "name": "match",
-            "lastModifiedAt": 1597192331823
+            "lastModifiedAt": 1604969513929
         },
         {
             "name": "matchAll",
-            "lastModifiedAt": 1597192332072
+            "lastModifiedAt": 1604969515001
         },
         {
             "name": "put",
-            "lastModifiedAt": 1597192332885
+            "lastModifiedAt": 1604969515621
         }
     ]
 }

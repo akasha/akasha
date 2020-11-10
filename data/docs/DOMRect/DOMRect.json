@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DOMRect.DOMRect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRect/DOMRect",
-    "description": "The DOMRect() constructor creates a new DOMRect object."
+    "description": "The DOMRect() constructor creates a new DOMRect object.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-domrect-domrect",
+            "description": "The definition of 'DOMRect()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

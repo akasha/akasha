@@ -1,7 +1,7 @@
 
 {
     "name": "Document",
-    "lastModifiedAt": 1604450873025,
+    "lastModifiedAt": 1604969977686,
     "entries": [
         {
             "name": "DOMContentLoaded_event",
@@ -205,7 +205,7 @@
         },
         {
             "name": "domConfig",
-            "lastModifiedAt": 1600306278713
+            "lastModifiedAt": 1604969807646
         },
         {
             "name": "domain",

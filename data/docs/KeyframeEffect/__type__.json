@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "KeyframeEffect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect",
-    "description": "The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the Animation() constructor."
+    "description": "The KeyframeEffect interface of the Web Animations API lets us create sets of animatable properties and values, called keyframes. These can then be played using the Animation() constructor.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#the-keyframeeffect-interface",
+            "description": "The definition of 'KeyframeEffect' in Web Animations."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.effect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/effect",
-    "description": "The Animation.effect property of the Web Animations API gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on AnimationEffectReadOnly, such as KeyframeEffect, or null."
+    "description": "The Animation.effect property of the Web Animations API gets and sets the target effect of an animation. The target effect may be either an effect object of a type based on AnimationEffectReadOnly, such as KeyframeEffect, or null.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-effect",
+            "description": "The definition of 'Animation.effect' in Web Animations."
+        }
+    ]
 }

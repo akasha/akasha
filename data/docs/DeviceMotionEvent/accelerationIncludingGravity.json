@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "DeviceMotionEvent.accelerationIncludingGravity",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent/accelerationIncludingGravity",
-    "description": "The accelerationIncludingGravity property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2). Unlike DeviceMotionEvent.acceleration which compensates for the influence of gravity, its value is the sum of the acceleration of the device as induced by the user and the acceleration caused by gravity."
+    "description": "The accelerationIncludingGravity property returns the amount of acceleration recorded by the device, in meters per second squared (m/s2). Unlike DeviceMotionEvent.acceleration which compensates for the influence of gravity, its value is the sum of the acceleration of the device as induced by the user and the acceleration caused by gravity.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/"
+        }
+    ]
 }

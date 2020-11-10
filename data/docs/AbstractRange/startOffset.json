@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AbstractRange.startOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/startOffset",
-    "description": "The read-only startOffset property of the AbstractRange interface returns the offset into the start node of the range's start position."
+    "description": "The read-only startOffset property of the AbstractRange interface returns the offset into the start node of the range's start position.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-startoffset",
+            "description": "The definition of 'startOffset' in DOM."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-startoffset",
+            "description": "The definition of 'startOffset' in Static Range."
+        }
+    ]
 }

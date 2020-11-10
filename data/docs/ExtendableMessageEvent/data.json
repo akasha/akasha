@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ExtendableMessageEvent.data",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/data",
-    "description": "The data read-only property of the ExtendableMessageEvent interface returns the event's data. It can be any data type."
+    "description": "The data read-only property of the ExtendableMessageEvent interface returns the event's data. It can be any data type.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-data",
+            "description": "The definition of 'ExtendableMessageEvent.data' in Service Workers."
+        }
+    ]
 }

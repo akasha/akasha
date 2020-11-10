@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CacheStorage.delete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/delete",
-    "description": "The delete() method of the CacheStorage interface finds the Cache object matching the cacheName, and if found, deletes the Cache object and returns a Promise that resolves to true. If no Cache object is found, it resolves to false."
+    "description": "The delete() method of the CacheStorage interface finds the Cache object matching the cacheName, and if found, deletes the Cache object and returns a Promise that resolves to true. If no Cache object is found, it resolves to false.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cache-storage-delete",
+            "description": "The definition of 'CacheStorage: delete' in Service Workers."
+        }
+    ]
 }

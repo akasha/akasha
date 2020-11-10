@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBRequest.result",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/result",
-    "description": "any"
+    "description": "any",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbrequest-result",
+            "description": "The definition of 'result' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbrequest-result",
+            "description": "The definition of 'result' in Indexed Database API Draft."
+        }
+    ]
 }

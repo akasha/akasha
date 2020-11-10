@@ -1,11 +1,11 @@
 
 {
     "name": "FileReader",
-    "lastModifiedAt": 1601464953055,
+    "lastModifiedAt": 1604970275851,
     "entries": [
         {
             "name": "FileReader",
-            "lastModifiedAt": 1597191935593
+            "lastModifiedAt": 1604970263887
         },
         {
             "name": "__type__",
@@ -13,7 +13,7 @@
         },
         {
             "name": "abort",
-            "lastModifiedAt": 1597191937425
+            "lastModifiedAt": 1604970267848
         },
         {
             "name": "abort_event",
@@ -21,7 +21,7 @@
         },
         {
             "name": "error",
-            "lastModifiedAt": 1597191935992
+            "lastModifiedAt": 1604970264836
         },
         {
             "name": "error_event",
@@ -57,19 +57,19 @@
         },
         {
             "name": "readAsArrayBuffer",
-            "lastModifiedAt": 1597191938243
+            "lastModifiedAt": 1604970268494
         },
         {
             "name": "readAsBinaryString",
-            "lastModifiedAt": 1597191938496
+            "lastModifiedAt": 1604970269313
         },
         {
             "name": "readAsDataURL",
-            "lastModifiedAt": 1597191938907
+            "lastModifiedAt": 1604970269782
         },
         {
             "name": "readAsText",
-            "lastModifiedAt": 1597191939186
+            "lastModifiedAt": 1604970270356
         },
         {
             "name": "readyState",

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AuthenticatorResponse.clientDataJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorResponse/clientDataJSON",
-    "description": "The clientDataJSON property of the AuthenticatorResponse interface stores a JSON string in an ArrayBuffer, representing the client data that was passed to CredentialsContainer.create() or CredentialsContainer.get(). This property is only accessed on one of the child objects of AuthenticatorResponse, specifically AuthenticatorAttestationResponse or AuthenticatorAssertionResponse."
+    "description": "The clientDataJSON property of the AuthenticatorResponse interface stores a JSON string in an ArrayBuffer, representing the client data that was passed to CredentialsContainer.create() or CredentialsContainer.get(). This property is only accessed on one of the child objects of AuthenticatorResponse, specifically AuthenticatorAttestationResponse or AuthenticatorAssertionResponse.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-authenticatorresponse-clientdatajson",
+            "description": "The definition of 'clientDataJSON' in Web Authentication: An API for accessing Public Key Credentials Level 1."
+        }
+    ]
 }

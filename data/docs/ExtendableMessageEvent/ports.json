@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ExtendableMessageEvent.ports",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/ports",
-    "description": "The ports read-only property of the ExtendableMessageEvent interface returns the array containing the MessagePort objects representing the ports of the associated message channel (the channel the message is being sent through.)"
+    "description": "The ports read-only property of the ExtendableMessageEvent interface returns the array containing the MessagePort objects representing the ports of the associated message channel (the channel the message is being sent through.)",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-ports",
+            "description": "The definition of 'ExtendableMessageEvent.ports' in Service Workers."
+        }
+    ]
 }

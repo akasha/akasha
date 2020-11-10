@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBDatabase.onversionchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onversionchange",
-    "description": "This example shows an IDBOpenDBRequest.onupgradeneeded block that creates a new object store; it also includes onerror and onabort functions to handle non-success cases, and an onversionchange function to notify when a database structure change has occurred."
+    "description": "This example shows an IDBOpenDBRequest.onupgradeneeded block that creates a new object store; it also includes onerror and onabort functions to handle non-success cases, and an onversionchange function to notify when a database structure change has occurred.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onversionchange",
+            "description": "The definition of 'onversionchange' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-onversionchange",
+            "description": "The definition of 'onversionchange' in Indexed Database API Draft."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "File.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/type",
-    "description": "Returns the media type (MIME) of the file represented by a File object."
+    "description": "Returns the media type (MIME) of the file represented by a File object.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dfn-type",
+            "description": "The definition of 'type' in File API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMPointInit.z",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/z",
-    "description": "The DOMPointInit dictionary's z property is used to specify the z-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object."
+    "description": "The DOMPointInit dictionary's z property is used to specify the z-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompointinit-z",
+            "description": "The definition of 'z' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

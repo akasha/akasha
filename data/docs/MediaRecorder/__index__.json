@@ -1,19 +1,19 @@
 
 {
     "name": "MediaRecorder",
-    "lastModifiedAt": 1600312203257,
+    "lastModifiedAt": 1604971069937,
     "entries": [
         {
             "name": "MediaRecorder",
-            "lastModifiedAt": 1597192230254
+            "lastModifiedAt": 1604971054730
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192229958
+            "lastModifiedAt": 1604971054160
         },
         {
             "name": "audioBitsPerSecond",
-            "lastModifiedAt": 1596544794472
+            "lastModifiedAt": 1604971055305
         },
         {
             "name": "error_event",
@@ -25,35 +25,35 @@
         },
         {
             "name": "isTypeSupported",
-            "lastModifiedAt": 1596544796984
+            "lastModifiedAt": 1604971065589
         },
         {
             "name": "mimeType",
-            "lastModifiedAt": 1599279136416
+            "lastModifiedAt": 1604971056905
         },
         {
             "name": "ondataavailable",
-            "lastModifiedAt": 1600305090639
+            "lastModifiedAt": 1604971057932
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1597241023577
+            "lastModifiedAt": 1604971058415
         },
         {
             "name": "onpause",
-            "lastModifiedAt": 1600305091557
+            "lastModifiedAt": 1604971058973
         },
         {
             "name": "onresume",
-            "lastModifiedAt": 1600305091795
+            "lastModifiedAt": 1604971060002
         },
         {
             "name": "onstart",
-            "lastModifiedAt": 1600305092028
+            "lastModifiedAt": 1604971060618
         },
         {
             "name": "onstop",
-            "lastModifiedAt": 1600305092284
+            "lastModifiedAt": 1604971061697
         },
         {
             "name": "onwarning",
@@ -61,35 +61,35 @@
         },
         {
             "name": "pause",
-            "lastModifiedAt": 1596544797230
+            "lastModifiedAt": 1604971066073
         },
         {
             "name": "requestData",
-            "lastModifiedAt": 1596544797514
+            "lastModifiedAt": 1604971066607
         },
         {
             "name": "resume",
-            "lastModifiedAt": 1596544798309
+            "lastModifiedAt": 1604971067912
         },
         {
             "name": "start",
-            "lastModifiedAt": 1596544798641
+            "lastModifiedAt": 1604971068458
         },
         {
             "name": "state",
-            "lastModifiedAt": 1599279136928
+            "lastModifiedAt": 1604971063233
         },
         {
             "name": "stop",
-            "lastModifiedAt": 1596544798899
+            "lastModifiedAt": 1604971069150
         },
         {
             "name": "stream",
-            "lastModifiedAt": 1599279138044
+            "lastModifiedAt": 1604971064256
         },
         {
             "name": "videoBitsPerSecond",
-            "lastModifiedAt": 1596544796183
+            "lastModifiedAt": 1604971065086
         }
     ]
 }

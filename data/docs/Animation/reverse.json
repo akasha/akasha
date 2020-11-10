@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Animation.reverse",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/reverse",
-    "description": "The Animation.reverse() method of the Animation Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse."
+    "description": "The Animation.reverse() method of the Animation Interface reverses the playback direction, meaning the animation ends at its beginning. If called on an unplayed animation, the whole animation is played backwards. If called on a paused animation, the animation will continue in reverse.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-reverse",
+            "description": "The definition of 'reverse()' in Web Animations."
+        }
+    ]
 }

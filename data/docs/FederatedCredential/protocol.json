@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FederatedCredential.protocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/protocol",
-    "description": "The protocol property of the FederatedCredential interface returns a read-only DOMString containing a credential's federated identity protocol. If this property is null, the protocol may be inferred from the FederatedCredential.provider property."
+    "description": "The protocol property of the FederatedCredential interface returns a read-only DOMString containing a credential's federated identity protocol. If this property is null, the protocol may be inferred from the FederatedCredential.provider property.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-federatedcredential-protocol",
+            "description": "The definition of 'protocol' in Credential Management Level 1."
+        }
+    ]
 }

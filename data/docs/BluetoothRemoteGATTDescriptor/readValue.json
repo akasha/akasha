@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTDescriptor.readValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/readValue",
-    "description": "The BluetoothRemoteGATTDescriptor.readValue() method returns a Promise that resolves to an ArrayBuffer holding a duplicate  of the value property if it is available and supported. Otherwise it throws an error."
+    "description": "The BluetoothRemoteGATTDescriptor.readValue() method returns a Promise that resolves to an ArrayBuffer holding a duplicate  of the value property if it is available and supported. Otherwise it throws an error.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-readvalue",
+            "description": "The definition of 'readValue()' in Web Bluetooth."
+        }
+    ]
 }

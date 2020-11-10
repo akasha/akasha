@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AnimationEffect.getTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/getTiming",
-    "description": "The AnimationEffect.getTiming() method of the AnimationEffect interface returns an EffectTiming object containing the timing properties for the Animation Effect."
+    "description": "The AnimationEffect.getTiming() method of the AnimationEffect interface returns an EffectTiming object containing the timing properties for the Animation Effect.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animationeffect-gettiming",
+            "description": "The definition of 'AnimationEffect.getTiming()' in Web Animations."
+        }
+    ]
 }

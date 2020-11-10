@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySystemConfiguration.audioCapabilities",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/audioCapabilities",
-    "description": "The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs."
+    "description": "The MediaKeySystemConfiguration.audioCapabilities read-only property returns an array of supported audio type and capability pairs.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-audiocapabilities",
+            "description": "The definition of 'audioCapabilities' in Encrypted Media Extensions."
+        }
+    ]
 }

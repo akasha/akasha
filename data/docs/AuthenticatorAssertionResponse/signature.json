@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AuthenticatorAssertionResponse.signature",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/signature",
-    "description": "The signature read-only property of the AuthenticatorAssertionResponse interface is an ArrayBuffer object which is the signature of the authenticator for both AuthenticatorAssertionResponse.authenticatorData and a SHA-256 hash of the client data (AuthenticatorAssertionResponse.clientDataJSON)."
+    "description": "The signature read-only property of the AuthenticatorAssertionResponse interface is an ArrayBuffer object which is the signature of the authenticator for both AuthenticatorAssertionResponse.authenticatorData and a SHA-256 hash of the client data (AuthenticatorAssertionResponse.clientDataJSON).",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-signature",
+            "description": "The definition of 'signature' in Web Authentication: An API for accessing Public Key Credentials Level 1."
+        }
+    ]
 }

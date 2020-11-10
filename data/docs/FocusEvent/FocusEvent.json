@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "FocusEvent.FocusEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FocusEvent/FocusEvent",
-    "description": "The FocusEvent() constructor returns a newly created FocusEvent object with an optional EventTarget. When the event has both a source and a destination, the relatedTarget value must be set to the other target."
+    "description": "The FocusEvent() constructor returns a newly created FocusEvent object with an optional EventTarget. When the event has both a source and a destination, the relatedTarget value must be set to the other target.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-FocusEvent",
+            "description": "The definition of 'FocusEvent()' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

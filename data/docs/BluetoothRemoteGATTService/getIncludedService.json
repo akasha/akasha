@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTService.getIncludedService",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService",
-    "description": "The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID)."
+    "description": "The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice",
+            "description": "The definition of 'getIncludedService()' in Web Bluetooth."
+        }
+    ]
 }

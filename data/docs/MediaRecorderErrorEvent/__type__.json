@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaRecorderErrorEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent",
-    "description": "The MediaRecorderErrorEvent interface represents errors returned by the MediaStream Recording API. It is an Event object that encapsulates a reference to a DOMException describing the error that occurred."
+    "description": "The MediaRecorderErrorEvent interface represents errors returned by the MediaStream Recording API. It is an Event object that encapsulates a reference to a DOMException describing the error that occurred.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#errorevent-section",
+            "description": "The definition of 'MediaRecorderErrorEvent' in MediaStream Recording."
+        }
+    ]
 }

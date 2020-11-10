@@ -1,7 +1,7 @@
 
 {
     "name": "GlobalEventHandlers",
-    "lastModifiedAt": 1604449444986,
+    "lastModifiedAt": 1604970395275,
     "entries": [
         {
             "name": "__type__",
@@ -129,7 +129,7 @@
         },
         {
             "name": "ongotpointercapture",
-            "lastModifiedAt": 1604447042783
+            "lastModifiedAt": 1604970344792
         },
         {
             "name": "oninput",
@@ -173,7 +173,7 @@
         },
         {
             "name": "onlostpointercapture",
-            "lastModifiedAt": 1604447053512
+            "lastModifiedAt": 1604970354032
         },
         {
             "name": "onmousedown",
@@ -221,35 +221,35 @@
         },
         {
             "name": "onpointercancel",
-            "lastModifiedAt": 1604447062441
+            "lastModifiedAt": 1604970363195
         },
         {
             "name": "onpointerdown",
-            "lastModifiedAt": 1604447063720
+            "lastModifiedAt": 1604970363757
         },
         {
             "name": "onpointerenter",
-            "lastModifiedAt": 1604447064352
+            "lastModifiedAt": 1604970364623
         },
         {
             "name": "onpointerleave",
-            "lastModifiedAt": 1604447065001
+            "lastModifiedAt": 1604970365271
         },
         {
             "name": "onpointermove",
-            "lastModifiedAt": 1604447065511
+            "lastModifiedAt": 1604970365881
         },
         {
             "name": "onpointerout",
-            "lastModifiedAt": 1604447066334
+            "lastModifiedAt": 1604970366438
         },
         {
             "name": "onpointerover",
-            "lastModifiedAt": 1604447067039
+            "lastModifiedAt": 1604970367007
         },
         {
             "name": "onpointerup",
-            "lastModifiedAt": 1604447068003
+            "lastModifiedAt": 1604970368294
         },
         {
             "name": "onreset",

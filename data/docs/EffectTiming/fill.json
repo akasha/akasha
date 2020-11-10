@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "EffectTiming.fill",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EffectTiming/fill",
-    "description": "The Web Animations API's EffectTiming dictionary's fill property specifies a fill mode, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by iterationStart or after animation's end time."
+    "description": "The Web Animations API's EffectTiming dictionary's fill property specifies a fill mode, which defines how the element to which the animation is applied should look when the animation sequence is not actively running, such as before the time specified by iterationStart or after animation's end time.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#enumdef-fillmode",
+            "description": "The definition of 'fill' in Web Animations."
+        }
+    ]
 }

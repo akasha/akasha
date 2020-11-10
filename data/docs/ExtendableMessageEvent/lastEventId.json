@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ExtendableMessageEvent.lastEventId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/lastEventId",
-    "description": "The lastEventID read-only property of the ExtendableMessageEvent interface represents, in server-sent events, the last event ID of the event source. This is an empty string."
+    "description": "The lastEventID read-only property of the ExtendableMessageEvent interface represents, in server-sent events, the last event ID of the event source. This is an empty string.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-lasteventid",
+            "description": "The definition of 'ExtendableMessageEvent.lastEventId' in Service Workers."
+        }
+    ]
 }

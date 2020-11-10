@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMPointInit.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/x",
-    "description": "The DOMPointInit dictionary's x property is used to specify the x component of a point in 2D or 3D space when either creating or serializing a DOMPoint or DOMPointReadOnly."
+    "description": "The DOMPointInit dictionary's x property is used to specify the x component of a point in 2D or 3D space when either creating or serializing a DOMPoint or DOMPointReadOnly.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompointinit-x",
+            "description": "The definition of 'x' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

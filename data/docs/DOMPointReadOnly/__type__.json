@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DOMPointReadOnly",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly",
-    "description": "The DOMPointReadOnly interface specifies the coordinate and perspective fields used by DOMPoint to define a 2D or 3D point in a coordinate system."
+    "description": "The DOMPointReadOnly interface specifies the coordinate and perspective fields used by DOMPoint to define a 2D or 3D point in a coordinate system.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#DOMPoint",
+            "description": "The definition of 'DOMPoint' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

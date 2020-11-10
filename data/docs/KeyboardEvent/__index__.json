@@ -1,11 +1,11 @@
 
 {
     "name": "KeyboardEvent",
-    "lastModifiedAt": 1600312126687,
+    "lastModifiedAt": 1604970988175,
     "entries": [
         {
             "name": "KeyboardEvent",
-            "lastModifiedAt": 1597192485689
+            "lastModifiedAt": 1604970973904
         },
         {
             "name": "__type__",
@@ -13,23 +13,23 @@
         },
         {
             "name": "altKey",
-            "lastModifiedAt": 1597192486088
+            "lastModifiedAt": 1604970975017
         },
         {
             "name": "charCode",
-            "lastModifiedAt": 1600306247330
+            "lastModifiedAt": 1604970975628
         },
         {
             "name": "code",
-            "lastModifiedAt": 1597192486356
+            "lastModifiedAt": 1604970976433
         },
         {
             "name": "ctrlKey",
-            "lastModifiedAt": 1597192486700
+            "lastModifiedAt": 1604970977468
         },
         {
             "name": "getModifierState",
-            "lastModifiedAt": 1599279976928
+            "lastModifiedAt": 1604970986656
         },
         {
             "name": "initKeyEvent",
@@ -41,15 +41,15 @@
         },
         {
             "name": "isComposing",
-            "lastModifiedAt": 1597192487001
+            "lastModifiedAt": 1604970978187
         },
         {
             "name": "key",
-            "lastModifiedAt": 1597192487427
+            "lastModifiedAt": 1604970978826
         },
         {
             "name": "keyCode",
-            "lastModifiedAt": 1600306249929
+            "lastModifiedAt": 1604970980340
         },
         {
             "name": "keyIdentifier",
@@ -61,19 +61,19 @@
         },
         {
             "name": "metaKey",
-            "lastModifiedAt": 1597192488339
+            "lastModifiedAt": 1604970983135
         },
         {
             "name": "repeat",
-            "lastModifiedAt": 1597192488598
+            "lastModifiedAt": 1604970984159
         },
         {
             "name": "shiftKey",
-            "lastModifiedAt": 1597192488947
+            "lastModifiedAt": 1604970984771
         },
         {
             "name": "which",
-            "lastModifiedAt": 1600306252747
+            "lastModifiedAt": 1604970985406
         }
     ]
 }

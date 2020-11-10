@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Blob.stream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/stream",
-    "description": "The Blob interface's stream() method returns a ReadableStream which upon reading returns the data contained within the Blob."
+    "description": "The Blob interface's stream() method returns a ReadableStream which upon reading returns the data contained within the Blob.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dom-blob-stream",
+            "description": "The definition of 'Blob.stream()' in File API."
+        }
+    ]
 }

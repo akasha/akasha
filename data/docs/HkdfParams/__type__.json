@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "HkdfParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HkdfParams",
-    "description": "See the examples for SubtleCrypto.deriveKey()."
+    "description": "See the examples for SubtleCrypto.deriveKey().",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-HkdfParams",
+            "description": "The definition of 'SubtleCrypto.HkdfParams' in Web Cryptography API."
+        }
+    ]
 }

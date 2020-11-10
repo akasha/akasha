@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "FormData.has",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/has",
-    "description": "The has() method of the FormData interface returns a boolean stating whether a FormData object contains a certain key."
+    "description": "The has() method of the FormData interface returns a boolean stating whether a FormData object contains a certain key.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#dom-formdata-has",
+            "description": "The definition of 'has()' in XMLHttpRequest."
+        }
+    ]
 }

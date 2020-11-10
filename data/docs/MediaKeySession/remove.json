@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaKeySession.remove",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/remove",
-    "description": "The MediaKeySession.remove() method returns a Promise after removing any session data associated with the current object."
+    "description": "The MediaKeySession.remove() method returns a Promise after removing any session data associated with the current object.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-sessionid",
+            "description": "The definition of 'remove()' in Encrypted Media Extensions."
+        }
+    ]
 }

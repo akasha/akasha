@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Geolocation.watchPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition",
-    "description": "The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes."
+    "description": "The Geolocation method watchPosition() method is used to register a handler function that will be called automatically each time the position of the device changes.",
+    "refs": [
+        {
+            "name": "Geolocation API",
+            "href": "https://w3c.github.io/geolocation-api/#dom-geolocation-watchposition",
+            "description": "The definition of 'watchPosition()' in Geolocation API."
+        }
+    ]
 }

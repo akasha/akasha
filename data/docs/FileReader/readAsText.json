@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "FileReader.readAsText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsText",
-    "description": "The readAsText() method is used to read the contents of the specified Blob or File. When the read operation is complete, the readyState is changed to DONE, the loadend event is triggered, and the result property contains the contents of the file as a text string."
+    "description": "The readAsText() method is used to read the contents of the specified Blob or File. When the read operation is complete, the readyState is changed to DONE, the loadend event is triggered, and the result property contains the contents of the file as a text string.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#readAsDataText",
+            "description": "The definition of 'readAsText()' in File API."
+        }
+    ]
 }

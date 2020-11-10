@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CacheStorage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage",
-    "description": "The CacheStorage interface represents the storage for Cache objects."
+    "description": "The CacheStorage interface represents the storage for Cache objects.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cachestorage",
+            "description": "The definition of 'CacheStorage' in Service Workers."
+        }
+    ]
 }

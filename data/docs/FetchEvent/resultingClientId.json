@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FetchEvent.resultingClientId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/resultingClientId",
-    "description": "The resultingClientId read-only property of the FetchEvent interface is the id of the client that replaces the previous client during a page navigation."
+    "description": "The resultingClientId read-only property of the FetchEvent interface is the id of the client that replaces the previous client during a page navigation.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-resultingclientid",
+            "description": "The definition of 'resultingClientId' in Service Workers."
+        }
+    ]
 }

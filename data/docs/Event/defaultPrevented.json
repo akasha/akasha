@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Event.defaultPrevented",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/defaultPrevented",
-    "description": "The defaultPrevented read-only property of the Event interface returns a Boolean indicating whether or not the call to Event.preventDefault() canceled the event."
+    "description": "The defaultPrevented read-only property of the Event interface returns a Boolean indicating whether or not the call to Event.preventDefault() canceled the event.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-defaultprevented",
+            "description": "The definition of 'Event.defaultPrevented()' in DOM."
+        }
+    ]
 }

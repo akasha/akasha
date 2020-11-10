@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AnimationPlaybackEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent",
-    "description": "The AnimationPlaybackEvent interface of the Web Animations API represents animation events."
+    "description": "The AnimationPlaybackEvent interface of the Web Animations API represents animation events.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#the-animationplaybackevent-interface",
+            "description": "The definition of 'AnimationPlaybackEvent' in Web Animations."
+        }
+    ]
 }

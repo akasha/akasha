@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CacheStorage.match",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match",
-    "description": "The match() method of the CacheStorage interface checks if a given Request or url string is a key for a stored Response. This method returns a Promise for a Response, or a Promise which resolves to undefined if no match is found."
+    "description": "The match() method of the CacheStorage interface checks if a given Request or url string is a key for a stored Response. This method returns a Promise for a Response, or a Promise which resolves to undefined if no match is found.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cache-storage-match",
+            "description": "The definition of 'CacheStorage: match' in Service Workers."
+        }
+    ]
 }

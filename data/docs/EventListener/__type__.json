@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "EventListener",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventListener",
-    "description": "The EventListener interface represents an object that can handle an event dispatched by an EventTarget object."
+    "description": "The EventListener interface represents an object that can handle an event dispatched by an EventTarget object.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#callbackdef-eventlistener",
+            "description": "The definition of 'EventListener' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener",
+            "description": "The definition of 'EventListener' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Animation.Animation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/Animation",
-    "description": "The Animation() constructor of the Web Animations API returns a new Animation object instance."
+    "description": "The Animation() constructor of the Web Animations API returns a new Animation object instance.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-animation",
+            "description": "The definition of 'Animation()' in Web Animations."
+        }
+    ]
 }

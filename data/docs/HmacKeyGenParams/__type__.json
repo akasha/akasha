@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "HmacKeyGenParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HmacKeyGenParams",
-    "description": "The HmacKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating a key for the HMAC algorithm."
+    "description": "The HmacKeyGenParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.generateKey(), when generating a key for the HMAC algorithm.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacKeyGenParams",
+            "description": "The definition of 'SubtleCrypto.HmacKeyGenParams' in Web Cryptography API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "EventTarget.EventTarget",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/EventTarget",
-    "description": "The EventTarget() constructor creates a new EventTarget object instance."
+    "description": "The EventTarget() constructor creates a new EventTarget object instance.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-eventtarget-eventtarget",
+            "description": "The definition of 'EventTarget() constructor' in DOM."
+        }
+    ]
 }

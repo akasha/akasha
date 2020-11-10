@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Event.Event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/Event",
-    "description": "The Event() constructor creates a new Event."
+    "description": "The Event() constructor creates a new Event.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-event",
+            "description": "The definition of 'Event()' in DOM."
+        }
+    ]
 }

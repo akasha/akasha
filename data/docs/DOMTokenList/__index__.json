@@ -1,63 +1,63 @@
 
 {
     "name": "DOMTokenList",
-    "lastModifiedAt": 1604008738486,
+    "lastModifiedAt": 1604969733688,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193028483
+            "lastModifiedAt": 1604969726110
         },
         {
             "name": "add",
-            "lastModifiedAt": 1597193030052
+            "lastModifiedAt": 1604969728395
         },
         {
             "name": "contains",
-            "lastModifiedAt": 1599278999957
+            "lastModifiedAt": 1604969728886
         },
         {
             "name": "entries",
-            "lastModifiedAt": 1597193031496
+            "lastModifiedAt": 1604969729504
         },
         {
             "name": "forEach",
-            "lastModifiedAt": 1597193031800
+            "lastModifiedAt": 1604969729977
         },
         {
             "name": "item",
-            "lastModifiedAt": 1597193029357
+            "lastModifiedAt": 1604969730574
         },
         {
             "name": "keys",
-            "lastModifiedAt": 1597193032040
+            "lastModifiedAt": 1604969731167
         },
         {
             "name": "length",
-            "lastModifiedAt": 1597193028814
+            "lastModifiedAt": 1604969726624
         },
         {
             "name": "remove",
-            "lastModifiedAt": 1597193030311
+            "lastModifiedAt": 1604969731709
         },
         {
             "name": "replace",
-            "lastModifiedAt": 1599279001998
+            "lastModifiedAt": 1604969732185
         },
         {
             "name": "supports",
-            "lastModifiedAt": 1599279003056
+            "lastModifiedAt": 1604969732664
         },
         {
             "name": "toggle",
-            "lastModifiedAt": 1597193031238
+            "lastModifiedAt": 1604969733189
         },
         {
             "name": "value",
-            "lastModifiedAt": 1599278998824
+            "lastModifiedAt": 1604969727638
         },
         {
             "name": "values",
-            "lastModifiedAt": 1597193032465
+            "lastModifiedAt": 1604969733688
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Blob.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/type",
-    "description": "The type property of a Blob object returns the MIME type of the file."
+    "description": "The type property of a Blob object returns the MIME type of the file.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dfn-type",
+            "description": "The definition of 'Blob.type' in File API."
+        }
+    ]
 }

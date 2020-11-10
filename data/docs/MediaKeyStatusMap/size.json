@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeyStatusMap.size",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/size",
-    "description": "The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map."
+    "description": "The size read-only property of the MediaKeyStatusMap interface returns the number of key/value paIrs in the status map.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-size",
+            "description": "The definition of 'size' in Encrypted Media Extensions."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTService.device",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device",
-    "description": "The BluetoothGATTService.device read-only property returns information about a Bluetooth device through an instance of BluetoothDevice."
+    "description": "The BluetoothGATTService.device read-only property returns information about a Bluetooth device through an instance of BluetoothDevice.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-device",
+            "description": "The definition of 'device' in Web Bluetooth."
+        }
+    ]
 }

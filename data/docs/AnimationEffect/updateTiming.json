@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AnimationEffect.updateTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/updateTiming",
-    "description": "The updateTiming() method of the AnimationEffect interface updates the specified timing properties for an animation effect."
+    "description": "The updateTiming() method of the AnimationEffect interface updates the specified timing properties for an animation effect.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animationeffect-updatetiming",
+            "description": "The definition of 'AnimationEffect.updateTiming()' in Web Animations."
+        }
+    ]
 }

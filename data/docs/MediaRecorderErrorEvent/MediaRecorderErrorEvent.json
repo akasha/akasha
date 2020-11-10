@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "MediaRecorderErrorEvent.MediaRecorderErrorEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent",
-    "description": "The MediaRecorderErrorEvent() constructor creates a new MediaRecorderErrorEvent object that represents an error that occurred during the recording of media by the MediaStream Recording API."
+    "description": "The MediaRecorderErrorEvent() constructor creates a new MediaRecorderErrorEvent object that represents an error that occurred during the recording of media by the MediaStream Recording API.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecordererrorevent-mediarecordererrorevent",
+            "description": "The definition of 'MediaRecorderErrorEvent()' in MediaStream Recording."
+        }
+    ]
 }

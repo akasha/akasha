@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "InputEvent.inputType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/inputType",
-    "description": "The inputType read-only property of the InputEvent interface returns the type of change made to editible content. Possible changes include for example inserting, deleting, and formatting text."
+    "description": "The inputType read-only property of the InputEvent interface returns the type of change made to editible content. Possible changes include for example inserting, deleting, and formatting text.",
+    "refs": [
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#dom-inputevent-inputtype",
+            "description": "The definition of 'inputType' in UI Events."
+        }
+    ]
 }

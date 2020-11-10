@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.playbackRate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/playbackRate",
-    "description": "The Animation.playbackRate property of the Web Animations API returns or sets the playback rate of the animation."
+    "description": "The Animation.playbackRate property of the Web Animations API returns or sets the playback rate of the animation.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-playbackrate",
+            "description": "The definition of 'Animation.playbackRate' in Web Animations."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.onfinish",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/onfinish",
-    "description": "The Animation interface's onfinish property (from the Web Animations API) is the event handler for the finish event. This event is sent when the animation finishes playing."
+    "description": "The Animation interface's onfinish property (from the Web Animations API) is the event handler for the finish event. This event is sent when the animation finishes playing.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-onfinish",
+            "description": "The definition of 'Animation.onfinish' in Web Animations."
+        }
+    ]
 }

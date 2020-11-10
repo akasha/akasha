@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "BlobEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent",
-    "description": "The BlobEvent interface represents events associated with a Blob. These blobs are typically, but not necessarily,  associated with media content."
+    "description": "The BlobEvent interface represents events associated with a Blob. These blobs are typically, but not necessarily,  associated with media content.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#blobevent-section",
+            "description": "The definition of 'BlobEvent' in MediaStream Recording."
+        }
+    ]
 }

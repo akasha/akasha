@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "DeviceOrientationEvent.beta",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/beta",
-    "description": "Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,  by which the device is tipped forward or backward. See Orientation and motion data explained for details."
+    "description": "Returns the rotation of the device around the X axis; that is, the number of degrees, ranged between -180 and 180,  by which the device is tipped forward or backward. See Orientation and motion data explained for details.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/"
+        }
+    ]
 }

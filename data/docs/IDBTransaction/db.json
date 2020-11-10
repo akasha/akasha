@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBTransaction.db",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/db",
-    "description": "An IDBDatabase object."
+    "description": "An IDBDatabase object.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbtransaction-db",
+            "description": "The definition of 'db' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-db",
+            "description": "The definition of 'db' in Indexed Database API Draft."
+        }
+    ]
 }

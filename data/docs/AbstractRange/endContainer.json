@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AbstractRange.endContainer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/endContainer",
-    "description": "The endContainer property of the AbstractRange interface returns the Node in which the end of the range is located."
+    "description": "The endContainer property of the AbstractRange interface returns the Node in which the end of the range is located.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-endcontainer",
+            "description": "The definition of 'endContainer' in DOM."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-endcontainer",
+            "description": "The definition of 'endContainer' in Static Range."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBKeyRange.lower",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/lower",
-    "description": "The lower bound of the key range (can be any type.)"
+    "description": "The lower bound of the key range (can be any type.)",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbkeyrange-lower",
+            "description": "The definition of 'lower' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-lower",
+            "description": "The definition of 'lower' in Indexed Database API Draft."
+        }
+    ]
 }

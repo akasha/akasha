@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AesCtrParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AesCtrParams",
-    "description": "The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm."
+    "description": "The AesCtrParams dictionary of the Web Crypto API represents the object that should be passed as the algorithm parameter into SubtleCrypto.encrypt(), SubtleCrypto.decrypt(), SubtleCrypto.wrapKey(), or SubtleCrypto.unwrapKey(), when using the AES-CTR algorithm.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-AesCtrParams",
+            "description": "The definition of 'SubtleCrypto.AesCtrParams' in Web Cryptography API."
+        }
+    ]
 }

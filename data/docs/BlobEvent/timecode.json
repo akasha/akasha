@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BlobEvent.timecode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/timecode",
-    "description": "The timecode readonlyinline property of the BlobEvent interface a DOMHighResTimeStamp indicating the difference between the timestamp of the first chunk in data, and the timestamp of the first chunk in the first BlobEvent produced by this recorder."
+    "description": "The timecode readonlyinline property of the BlobEvent interface a DOMHighResTimeStamp indicating the difference between the timestamp of the first chunk in data, and the timestamp of the first chunk in the first BlobEvent produced by this recorder.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-blobevent-timecode",
+            "description": "The definition of 'timecode' in MediaStream Recording."
+        }
+    ]
 }

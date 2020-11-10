@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBFactory.deleteDatabase",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/deleteDatabase",
-    "description": "The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately, and performs the deletion operation asynchronously."
+    "description": "The deleteDatabase() method of the IDBFactory interface requests the deletion of a database. The method returns an IDBOpenDBRequest object immediately, and performs the deletion operation asynchronously.",
+    "refs": [
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbfactory-deletedatabase",
+            "description": "The definition of 'deleteDatabase()' in Indexed Database API Draft."
+        },
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbfactory-deletedatabase",
+            "description": "The definition of 'deleteDatabase()' in Indexed Database API 2.0."
+        }
+    ]
 }

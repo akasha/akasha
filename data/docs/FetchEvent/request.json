@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FetchEvent.request",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/request",
-    "description": "The request read-only property of the FetchEvent interface returns the Request that triggered the event handler."
+    "description": "The request read-only property of the FetchEvent interface returns the Request that triggered the event handler.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#fetch-event-request",
+            "description": "The definition of 'request' in Service Workers."
+        }
+    ]
 }

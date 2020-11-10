@@ -1,23 +1,23 @@
 
 {
     "name": "Geolocation",
-    "lastModifiedAt": 1600311456680,
+    "lastModifiedAt": 1604970324917,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192015528
+            "lastModifiedAt": 1604970323495
         },
         {
             "name": "clearWatch",
-            "lastModifiedAt": 1597192016634
+            "lastModifiedAt": 1604970323957
         },
         {
             "name": "getCurrentPosition",
-            "lastModifiedAt": 1597192015889
+            "lastModifiedAt": 1604970324443
         },
         {
             "name": "watchPosition",
-            "lastModifiedAt": 1597192016380
+            "lastModifiedAt": 1604970324917
         }
     ]
 }

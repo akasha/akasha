@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "Event.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/type",
-    "description": "The type read-only property of the Event interface returns a string containing the event's type. It is set when the event is constructed and is the name commonly used to refer to the specific event, such as click, load, or error."
+    "description": "The type read-only property of the Event interface returns a string containing the event's type. It is set when the event is constructed and is the name commonly used to refer to the specific event, such as click, load, or error.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-type",
+            "description": "The definition of 'Event.type' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-type",
+            "description": "The definition of 'Event.type' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

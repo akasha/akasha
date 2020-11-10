@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaSource.addSourceBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/addSourceBuffer",
-    "description": "The addSourceBuffer() method of the MediaSource interface creates a new SourceBuffer of the given MIME type and adds it to the MediaSource's sourceBuffers list. The new SourceBuffer is also returned."
+    "description": "The addSourceBuffer() method of the MediaSource interface creates a new SourceBuffer of the given MIME type and adds it to the MediaSource's sourceBuffers list. The new SourceBuffer is also returned.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#dom-mediasource-addsourcebuffer",
+            "description": "The definition of 'addSourceBuffer()' in Media Source Extensions."
+        }
+    ]
 }

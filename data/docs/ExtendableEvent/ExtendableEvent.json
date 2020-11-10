@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "ExtendableEvent.ExtendableEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableEvent/ExtendableEvent",
-    "description": "The ExtendableEvent() constructor creates a new ExtendableEvent object."
+    "description": "The ExtendableEvent() constructor creates a new ExtendableEvent object.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-extendableevent-extendableevent",
+            "description": "The definition of 'ExtendableEvent' in Service Workers."
+        }
+    ]
 }

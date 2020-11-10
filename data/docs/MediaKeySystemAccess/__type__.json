@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaKeySystemAccess",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess",
-    "description": "The MediaKeySystemAccess interface of the EncryptedMediaExtensions API provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the Navigator.requestMediaKeySystemAccess() method."
+    "description": "The MediaKeySystemAccess interface of the EncryptedMediaExtensions API provides access to a Key System for decryption and/or a content protection provider. You can request an instance of this object using the Navigator.requestMediaKeySystemAccess() method.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#mediakeysystemaccess-interface",
+            "description": "The definition of 'MediaKeySystemAccess' in Encrypted Media Extensions."
+        }
+    ]
 }

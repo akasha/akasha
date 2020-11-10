@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTServer.disconnect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTServer/disconnect",
-    "description": "The BluetoothRemoteGATTServer.disconnect() method causes the script execution environment to disconnect from this.device."
+    "description": "The BluetoothRemoteGATTServer.disconnect() method causes the script execution environment to disconnect from this.device.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattserver-disconnect",
+            "description": "The definition of 'disconnect()' in Web Bluetooth."
+        }
+    ]
 }

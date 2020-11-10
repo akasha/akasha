@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Event.stopImmediatePropagation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation",
-    "description": "The stopImmediatePropagation() method of the Event interface prevents other listeners of the same event from being called."
+    "description": "The stopImmediatePropagation() method of the Event interface prevents other listeners of the same event from being called.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-stopimmediatepropagation",
+            "description": "The definition of 'Event.stopImmediatePropagation()' in DOM."
+        }
+    ]
 }

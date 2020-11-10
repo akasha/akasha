@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AuthenticatorAssertionResponse",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse",
-    "description": "The AuthenticatorAssertionResponse interface of the Web Authentication API is returned by CredentialsContainer.get() when a PublicKeyCredential is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved."
+    "description": "The AuthenticatorAssertionResponse interface of the Web Authentication API is returned by CredentialsContainer.get() when a PublicKeyCredential is passed, and provides proof to a service that it has a key pair and that the authentication request is valid and approved.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#iface-authenticatorassertionresponse",
+            "description": "The definition of 'AuthenticatorAssertionResponse interface' in Web Authentication: An API for accessing Public Key Credentials Level 1."
+        }
+    ]
 }

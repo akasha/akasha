@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DOMPoint.DOMPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/DOMPoint",
-    "description": "The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties."
+    "description": "The DOMPoint() constructor creates and returns a new DOMPoint object, given the values for some or all of its properties.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompoint-dompoint",
+            "description": "The definition of 'DOMPoint()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

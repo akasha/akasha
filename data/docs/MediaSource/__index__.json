@@ -1,7 +1,7 @@
 
 {
     "name": "MediaSource",
-    "lastModifiedAt": 1600312213405,
+    "lastModifiedAt": 1604971082654,
     "entries": [
         {
             "name": "MediaSource",
@@ -9,19 +9,19 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192142477
+            "lastModifiedAt": 1604971072961
         },
         {
             "name": "activeSourceBuffers",
-            "lastModifiedAt": 1599391974720
+            "lastModifiedAt": 1604971074698
         },
         {
             "name": "addSourceBuffer",
-            "lastModifiedAt": 1597192145802
+            "lastModifiedAt": 1604971078384
         },
         {
             "name": "clearLiveSeekableRange",
-            "lastModifiedAt": 1597192146063
+            "lastModifiedAt": 1604971078846
         },
         {
             "name": "duration",
@@ -33,11 +33,11 @@
         },
         {
             "name": "isTypeSupported",
-            "lastModifiedAt": 1597192147357
+            "lastModifiedAt": 1604971080948
         },
         {
             "name": "readyState",
-            "lastModifiedAt": 1597192144133
+            "lastModifiedAt": 1604971075964
         },
         {
             "name": "removeSourceBuffer",
@@ -45,11 +45,11 @@
         },
         {
             "name": "setLiveSeekableRange",
-            "lastModifiedAt": 1597192146952
+            "lastModifiedAt": 1604971082654
         },
         {
             "name": "sourceBuffers",
-            "lastModifiedAt": 1597192143039
+            "lastModifiedAt": 1604971076996
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySystemConfiguration.persistentState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/persistentState",
-    "description": "The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required."
+    "description": "The MediaKeySystemConfiguration.persistentState read-only property indicates whether the ability to persist state is required.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-persistentstate",
+            "description": "The definition of 'persistentState' in Encrypted Media Extensions."
+        }
+    ]
 }

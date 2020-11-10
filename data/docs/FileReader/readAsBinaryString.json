@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "FileReader.readAsBinaryString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsBinaryString",
-    "description": "The readAsBinaryString method is used to start reading the contents of the specified Blob or File. When the read operation is finished, the readyState becomes DONE, and the loadend is triggered. At that time, the result attribute contains the raw binary data from the file."
+    "description": "The readAsBinaryString method is used to start reading the contents of the specified Blob or File. When the read operation is finished, the readyState becomes DONE, and the loadend is triggered. At that time, the result attribute contains the raw binary data from the file.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#readAsBinaryString",
+            "description": "The definition of 'readAsBinaryString' in File API."
+        }
+    ]
 }

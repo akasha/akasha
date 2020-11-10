@@ -1,31 +1,31 @@
 
 {
     "name": "CacheStorage",
-    "lastModifiedAt": 1601466274306,
+    "lastModifiedAt": 1604969519421,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192310061
+            "lastModifiedAt": 1604969516161
         },
         {
             "name": "delete",
-            "lastModifiedAt": 1597192312527
+            "lastModifiedAt": 1604969516758
         },
         {
             "name": "has",
-            "lastModifiedAt": 1597192311287
+            "lastModifiedAt": 1604969517237
         },
         {
             "name": "keys",
-            "lastModifiedAt": 1599279666214
+            "lastModifiedAt": 1604969517714
         },
         {
             "name": "match",
-            "lastModifiedAt": 1599279662365
+            "lastModifiedAt": 1604969518403
         },
         {
             "name": "open",
-            "lastModifiedAt": 1597192312260
+            "lastModifiedAt": 1604969519421
         }
     ]
 }

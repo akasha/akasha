@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Client.postMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage",
-    "description": "The postMessage() method of the Client interface allows a service worker to send a message to a client (a Window, Worker, or SharedWorker). The message is received in the &quot;message&quot; event on navigator.serviceWorker."
+    "description": "The postMessage() method of the Client interface allows a service worker to send a message to a client (a Window, Worker, or SharedWorker). The message is received in the &quot;message&quot; event on navigator.serviceWorker.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-client-postmessage-message-options",
+            "description": "The definition of 'postMessage()' in Service Workers."
+        }
+    ]
 }

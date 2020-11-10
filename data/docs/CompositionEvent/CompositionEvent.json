@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "CompositionEvent.CompositionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/CompositionEvent",
-    "description": "The CompositionEvent() constructor creates a new CompositionEvent object instance."
+    "description": "The CompositionEvent() constructor creates a new CompositionEvent object instance.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#dom-compositionevent-compositionevent",
+            "description": "The definition of 'CompositionEvent()' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

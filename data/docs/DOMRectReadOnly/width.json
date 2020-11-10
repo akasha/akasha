@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMRectReadOnly.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/width",
-    "description": "The width read-only property of the DOMRectReadOnly interface represents the width of the DOMRect."
+    "description": "The width read-only property of the DOMRectReadOnly interface represents the width of the DOMRect.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-domrectreadonly-width",
+            "description": "The definition of 'width' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

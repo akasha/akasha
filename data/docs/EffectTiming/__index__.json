@@ -1,43 +1,43 @@
 
 {
     "name": "EffectTiming",
-    "lastModifiedAt": 1600311261164,
+    "lastModifiedAt": 1604970023139,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192509022
+            "lastModifiedAt": 1604970018127
         },
         {
             "name": "delay",
-            "lastModifiedAt": 1599280584399
+            "lastModifiedAt": 1604970018681
         },
         {
             "name": "direction",
-            "lastModifiedAt": 1599280585457
+            "lastModifiedAt": 1604970019352
         },
         {
             "name": "duration",
-            "lastModifiedAt": 1599280586554
+            "lastModifiedAt": 1604970019843
         },
         {
             "name": "easing",
-            "lastModifiedAt": 1599280587211
+            "lastModifiedAt": 1604970020635
         },
         {
             "name": "endDelay",
-            "lastModifiedAt": 1599280587826
+            "lastModifiedAt": 1604970021308
         },
         {
             "name": "fill",
-            "lastModifiedAt": 1599280589022
+            "lastModifiedAt": 1604970021762
         },
         {
             "name": "iterationStart",
-            "lastModifiedAt": 1599280590088
+            "lastModifiedAt": 1604970022769
         },
         {
             "name": "iterations",
-            "lastModifiedAt": 1599280590644
+            "lastModifiedAt": 1604970022318
         }
     ]
 }

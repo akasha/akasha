@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AuthenticatorAssertionResponse.authenticatorData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/authenticatorData",
-    "description": "The authenticatorData property of the AuthenticatorAssertionResponse interface returns an ArrayBuffer containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator."
+    "description": "The authenticatorData property of the AuthenticatorAssertionResponse interface returns an ArrayBuffer containing information from the authenticator such as the Relying Party ID Hash (rpIdHash), a signature counter, test of user presence, user verification flags, and any extensions processed by the authenticator.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-authenticatordata",
+            "description": "The definition of 'authenticatorData' in Web Authentication: An API for accessing Public Key Credentials Level 1."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "File.lastModified",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/File/lastModified",
-    "description": "The File.lastModified read-only property provides the last modified date of the file as the number of milliseconds since the Unix epoch (January 1, 1970 at midnight). Files without a known last modified date return the current date."
+    "description": "The File.lastModified read-only property provides the last modified date of the file as the number of milliseconds since the Unix epoch (January 1, 1970 at midnight). Files without a known last modified date return the current date.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#file-attrs",
+            "description": "The definition of 'lastModified' in File API."
+        }
+    ]
 }

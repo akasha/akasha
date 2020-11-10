@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySystemAccess.keySystem",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/keySystem",
-    "description": "The MediaKeySystemAccess.keySystem read-only property returns a DOMString identifying the key system being used."
+    "description": "The MediaKeySystemAccess.keySystem read-only property returns a DOMString identifying the key system being used.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-keysystem",
+            "description": "The definition of 'keySystem' in Encrypted Media Extensions."
+        }
+    ]
 }

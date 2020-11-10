@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Coordinates.latitude",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Coordinates/latitude",
-    "description": "The GeolocationCoordinates.latitude read-only property is a double representing the latitude of the position in decimal degrees."
+    "description": "The GeolocationCoordinates.latitude read-only property is a double representing the latitude of the position in decimal degrees.",
+    "refs": [
+        {
+            "name": "Geolocation API",
+            "href": "https://w3c.github.io/geolocation-api/#dom-geolocationcoordinates-latitude",
+            "description": "The definition of 'GeolocationCoordinates.latitude' in Geolocation API."
+        }
+    ]
 }

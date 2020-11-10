@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "FetchEvent.FetchEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/FetchEvent",
-    "description": "The FetchEvent() constructor creates a new FetchEvent object."
+    "description": "The FetchEvent() constructor creates a new FetchEvent object.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-fetchevent",
+            "description": "The definition of 'FetchEvent() constructor' in Service Workers."
+        }
+    ]
 }

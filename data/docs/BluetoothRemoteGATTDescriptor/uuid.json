@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTDescriptor.uuid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/uuid",
-    "description": "The BluetoothRemoteGATTDescriptor.uuid read-only property returns the UUID of the characteristic descriptor, for example '00002902-0000-1000-8000-00805f9b34fb' for theClient Characteristic Configuration descriptor."
+    "description": "The BluetoothRemoteGATTDescriptor.uuid read-only property returns the UUID of the characteristic descriptor, for example '00002902-0000-1000-8000-00805f9b34fb' for theClient Characteristic Configuration descriptor.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-uuid",
+            "description": "The definition of 'uuid' in Web Bluetooth."
+        }
+    ]
 }

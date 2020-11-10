@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Blob.Blob",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/Blob",
-    "description": "The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array."
+    "description": "The Blob() constructor returns a new Blob object. The content of the blob consists of the concatenation of the values given in the parameter array.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#constructorBlob",
+            "description": "The definition of 'Blob()' in File API."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "DeviceOrientationEvent.alpha",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/alpha",
-    "description": "Returns the rotation of the device around the Z axis; that is, the number of degrees by which the device is being twisted around the center of the screen. See Orientation and motion data explained for details."
+    "description": "Returns the rotation of the device around the Z axis; that is, the number of degrees by which the device is being twisted around the center of the screen. See Orientation and motion data explained for details.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/"
+        }
+    ]
 }

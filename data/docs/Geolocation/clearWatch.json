@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Geolocation.clearWatch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/clearWatch",
-    "description": "The Geolocation.clearWatch() method is used to unregister location/error monitoring handlers previously installed using Geolocation.watchPosition()."
+    "description": "The Geolocation.clearWatch() method is used to unregister location/error monitoring handlers previously installed using Geolocation.watchPosition().",
+    "refs": [
+        {
+            "name": "Geolocation API",
+            "href": "https://w3c.github.io/geolocation-api/"
+        }
+    ]
 }

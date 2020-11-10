@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/id",
-    "description": "The Animation.id property of the Web Animations API returns or sets a string used to identify the animation."
+    "description": "The Animation.id property of the Web Animations API returns or sets a string used to identify the animation.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-id",
+            "description": "The definition of 'Animation.id' in Web Animations."
+        }
+    ]
 }

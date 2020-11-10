@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMMatrixReadOnly.flipX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/flipX",
-    "description": "The flipX() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix flipped about the x-axis."
+    "description": "The flipX() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix flipped about the x-axis.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-flipx",
+            "description": "The definition of 'DOMMatrixReadOnly.flipX()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

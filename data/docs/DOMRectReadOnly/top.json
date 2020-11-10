@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMRectReadOnly.top",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/top",
-    "description": "The top read-only property of the DOMRectReadOnly interface returns the top coordinate value of the DOMRect. (Has the same value as y, or y + height if height is negative.)"
+    "description": "The top read-only property of the DOMRectReadOnly interface returns the top coordinate value of the DOMRect. (Has the same value as y, or y + height if height is negative.)",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-domrectreadonly-top",
+            "description": "The definition of 'top' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

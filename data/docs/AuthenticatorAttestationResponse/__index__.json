@@ -1,19 +1,19 @@
 
 {
     "name": "AuthenticatorAttestationResponse",
-    "lastModifiedAt": 1600310687099,
+    "lastModifiedAt": 1604969380125,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192656862
+            "lastModifiedAt": 1604969378949
         },
         {
             "name": "attestationObject",
-            "lastModifiedAt": 1597192657247
+            "lastModifiedAt": 1604969379543
         },
         {
             "name": "getTransports",
-            "lastModifiedAt": 1597192657520
+            "lastModifiedAt": 1604969380125
         }
     ]
 }

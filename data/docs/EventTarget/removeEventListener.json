@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "EventTarget.removeEventListener",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener",
-    "description": "The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"
+    "description": "The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener",
+            "description": "The definition of 'EventTarget.removeEventListener()' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener",
+            "description": "The definition of 'EventTarget.removeEventListener()' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener",
+            "description": "The definition of 'EventTarget.removeEventListener()' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Attr.localName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr/localName",
-    "description": "The Attr.localName read-only property returns the local part of the qualified name of an attribute."
+    "description": "The Attr.localName read-only property returns the local part of the qualified name of an attribute.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-attr-localname",
+            "description": "The definition of 'Attr.localName' in DOM."
+        }
+    ]
 }

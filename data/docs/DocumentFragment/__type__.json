@@ -3,5 +3,32 @@
     "kind": "Type",
     "name": "DocumentFragment",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
-    "description": "The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document."
+    "description": "The DocumentFragment interface represents a minimal document object that has no parent. It is used as a lightweight version of Document that stores a segment of a document structure comprised of nodes just like a standard document.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-documentfragment",
+            "description": "The definition of 'DocumentFragment' in DOM."
+        },
+        {
+            "name": "Selectors API Level 1",
+            "href": "https://www.w3.org/TR/selectors-api/#the-apis",
+            "description": "The definition of 'DocumentFragment' in Selectors API Level 1."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-B63ED1A3",
+            "description": "The definition of 'DocumentFragment' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-B63ED1A3",
+            "description": "The definition of 'DocumentFragment' in Document Object Model (DOM) Level 2 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-B63ED1A3",
+            "description": "The definition of 'DocumentFragment' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

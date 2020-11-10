@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DeviceMotionEventAcceleration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventAcceleration",
-    "description": "A DeviceMotionEventAcceleration object provides information about the amount of acceleration the device is experiencing along all three axes."
+    "description": "A DeviceMotionEventAcceleration object provides information about the amount of acceleration the device is experiencing along all three axes.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/#devicemotioneventacceleration",
+            "description": "The definition of 'DeviceMotionEventAcceleration' in DeviceOrientation Event Specification."
+        }
+    ]
 }

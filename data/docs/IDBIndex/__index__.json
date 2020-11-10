@@ -1,11 +1,11 @@
 
 {
     "name": "IDBIndex",
-    "lastModifiedAt": 1601465167144,
+    "lastModifiedAt": 1604970894422,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192120311
+            "lastModifiedAt": 1604970885773
         },
         {
             "name": "count",
@@ -33,7 +33,7 @@
         },
         {
             "name": "keyPath",
-            "lastModifiedAt": 1597192122269
+            "lastModifiedAt": 1604970886972
         },
         {
             "name": "locale",
@@ -45,11 +45,11 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1597192121686
+            "lastModifiedAt": 1604970889002
         },
         {
             "name": "objectStore",
-            "lastModifiedAt": 1597192121939
+            "lastModifiedAt": 1604970889734
         },
         {
             "name": "openCursor",

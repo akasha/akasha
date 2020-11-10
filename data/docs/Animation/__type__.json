@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Animation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation",
-    "description": "The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source."
+    "description": "The Animation interface of the Web Animations API represents a single animation player and provides playback controls and a timeline for an animation node or source.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#the-animation-interface",
+            "description": "The definition of 'Animation' in Web Animations."
+        }
+    ]
 }

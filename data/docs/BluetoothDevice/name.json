@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothDevice.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/name",
-    "description": "The BluetoothDevice.name read-only property returns a DOMString that provides a human-readable name for the device."
+    "description": "The BluetoothDevice.name read-only property returns a DOMString that provides a human-readable name for the device.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-name",
+            "description": "The definition of 'name' in Web Bluetooth."
+        }
+    ]
 }

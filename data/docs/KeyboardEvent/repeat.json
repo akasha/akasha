@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "KeyboardEvent.repeat",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat",
-    "description": "The repeat read-only property of the KeyboardEvent interface returns a Boolean that is true if the given key is being held down such that it is automatically repeating."
+    "description": "The repeat read-only property of the KeyboardEvent interface returns a Boolean that is true if the given key is being held down such that it is automatically repeating.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-KeyboardEvent-repeat",
+            "description": "The definition of 'KeyboardEvent.repeat' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

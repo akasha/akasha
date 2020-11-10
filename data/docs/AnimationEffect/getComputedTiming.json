@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "AnimationEffect.getComputedTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect/getComputedTiming",
-    "description": "The getComputedTiming() method of the AnimationEffect interface returns the calculated timing properties for this animation effect."
+    "description": "The getComputedTiming() method of the AnimationEffect interface returns the calculated timing properties for this animation effect.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animationeffect-getcomputedtiming",
+            "description": "The definition of 'AnimationEffect.getComputedTiming()' in Web Animations."
+        }
+    ]
 }

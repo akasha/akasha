@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTCharacteristic.service",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/service",
-    "description": "The BluetoothRemoteGATTCharacteristic.service read-only property returns the BluetoothGATTService this characteristic belongs to."
+    "description": "The BluetoothRemoteGATTCharacteristic.service read-only property returns the BluetoothGATTService this characteristic belongs to.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-service",
+            "description": "The definition of 'service' in Web Bluetooth."
+        }
+    ]
 }

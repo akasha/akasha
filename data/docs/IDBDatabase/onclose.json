@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "IDBDatabase.onclose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/onclose",
-    "description": "A function which is called when the close event is fired."
+    "description": "A function which is called when the close event is fired.",
+    "refs": [
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-onclose",
+            "description": "The definition of 'onclose' in Indexed Database API Draft."
+        }
+    ]
 }

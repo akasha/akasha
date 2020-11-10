@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaSource.sourceBuffers",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/sourceBuffers",
-    "description": "The sourceBuffers read-only property of the MediaSource interface returns a SourceBufferList object containing the list of SourceBuffer objects associated with this MediaSource."
+    "description": "The sourceBuffers read-only property of the MediaSource interface returns a SourceBufferList object containing the list of SourceBuffer objects associated with this MediaSource.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-mediasource-sourcebuffers",
+            "description": "The definition of 'sourceBuffers' in Media Source Extensions."
+        }
+    ]
 }

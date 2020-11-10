@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBCursor.source",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/source",
-    "description": "The IDBObjectStore or IDBIndex that the cursor is iterating over."
+    "description": "The IDBObjectStore or IDBIndex that the cursor is iterating over.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbcursor-source",
+            "description": "The definition of 'source' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-source",
+            "description": "The definition of 'source' in Indexed Database API Draft."
+        }
+    ]
 }

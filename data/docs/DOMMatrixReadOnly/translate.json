@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMMatrixReadOnly.translate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMMatrixReadOnly/translate",
-    "description": "The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied."
+    "description": "The translate() method of the DOMMatrixReadOnly interface creates a new matrix being the result of the original matrix with a translation applied.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dommatrixreadonly-translate",
+            "description": "The definition of 'DOMMatrixReadOnly.translate()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

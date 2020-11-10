@@ -3,5 +3,11 @@
     "kind": "Constructor",
     "name": "MediaRecorder.MediaRecorder",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/MediaRecorder",
-    "description": "The MediaRecorder() constructor creates a new MediaRecorder object that will record a specified MediaStream."
+    "description": "The MediaRecorder() constructor creates a new MediaRecorder object that will record a specified MediaStream.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/"
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothCharacteristicProperties.reliableWrite",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/reliableWrite",
-    "description": "The reliableWrite read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if reliable writes to the characteristic is permitted."
+    "description": "The reliableWrite read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if reliable writes to the characteristic is permitted.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothcharacteristicproperties-reliablewrite",
+            "description": "The definition of 'reliableWrite' in Web Bluetooth."
+        }
+    ]
 }

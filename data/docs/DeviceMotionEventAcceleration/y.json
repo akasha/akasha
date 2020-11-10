@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DeviceMotionEventAcceleration.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventAcceleration/y",
-    "description": "This read-only property indicates the amount of acceleration that occurred along the Y axis in a DeviceMotionEventAcceleration object."
+    "description": "This read-only property indicates the amount of acceleration that occurred along the Y axis in a DeviceMotionEventAcceleration object.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/#dom-devicemotioneventacceleration-y",
+            "description": "The definition of 'DeviceMotionEventAcceleration: y' in DeviceOrientation Event Specification."
+        }
+    ]
 }

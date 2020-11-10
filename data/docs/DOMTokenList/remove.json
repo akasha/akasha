@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMTokenList.remove",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/remove",
-    "description": "The remove() method of the DOMTokenList interface removes the specified tokens from the list."
+    "description": "The remove() method of the DOMTokenList interface removes the specified tokens from the list.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-remove",
+            "description": "The definition of 'remove()' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AbortSignal.aborted",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal/aborted",
-    "description": "The aborted read-only property returns a Boolean that indicates whether the DOM request(s) the signal is communicating with is/are aborted (true) or not (false)."
+    "description": "The aborted read-only property returns a Boolean that indicates whether the DOM request(s) the signal is communicating with is/are aborted (true) or not (false).",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-abortsignal-onabort",
+            "description": "The definition of 'onabort' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBVersionChangeEvent.oldVersion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/oldVersion",
-    "description": "The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database."
+    "description": "The oldVersion read-only property of the IDBVersionChangeEvent interface returns the old version number of the database.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbversionchangeevent-oldversion",
+            "description": "The definition of 'oldVersion' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbversionchangeevent-oldversion",
+            "description": "The definition of 'oldVersion' in Indexed Database API Draft."
+        }
+    ]
 }

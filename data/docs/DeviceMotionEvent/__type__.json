@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DeviceMotionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent",
-    "description": "The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation."
+    "description": "The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/#devicemotionevent",
+            "description": "The definition of 'DeviceMotionEvent' in DeviceOrientation Event Specification."
+        }
+    ]
 }

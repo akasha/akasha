@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySession.expiration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySession/expiration",
-    "description": "The MediaKeySession.expiration read-only property returns the time after which the keys in the current session can no longer be used to decrypt media data, or NaN if no such time exists. This value is determined by the CDM and measured in milliseconds since January 1, 1970, UTC. This value may change during a session lifetime, such as when an action triggers the start of a window."
+    "description": "The MediaKeySession.expiration read-only property returns the time after which the keys in the current session can no longer be used to decrypt media data, or NaN if no such time exists. This value is determined by the CDM and measured in milliseconds since January 1, 1970, UTC. This value may change during a session lifetime, such as when an action triggers the start of a window.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-expiration",
+            "description": "The definition of 'expiration' in Encrypted Media Extensions."
+        }
+    ]
 }

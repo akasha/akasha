@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "FileReader.abort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/abort",
-    "description": "The abort method aborts the read operation. Upon return, the readyState will be DONE."
+    "description": "The abort method aborts the read operation. Upon return, the readyState will be DONE.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#abort",
+            "description": "The definition of 'abort()' in File API."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Client.url",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Client/url",
-    "description": "The url read-only property of the Client interface returns the URL of the current service worker client."
+    "description": "The url read-only property of the Client interface returns the URL of the current service worker client.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#client-url",
+            "description": "The definition of 'url' in Service Workers."
+        }
+    ]
 }

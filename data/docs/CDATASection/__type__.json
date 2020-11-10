@@ -3,5 +3,32 @@
     "kind": "Type",
     "name": "CDATASection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CDATASection",
-    "description": "The CDATASection interface represents a CDATA section that can be used within XML to include extended portions of unescaped text. The symbols  and &amp; don&rsquo;t need escaping as they normally do when inside a CDATA section."
+    "description": "The CDATASection interface represents a CDATA section that can be used within XML to include extended portions of unescaped text. The symbols  and &amp; don&rsquo;t need escaping as they normally do when inside a CDATA section.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-cdatasection",
+            "description": "The definition of 'CDATASection' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#cdatasection",
+            "description": "The definition of 'CDATASection' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-667469212",
+            "description": "The definition of 'CDATASection' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-667469212",
+            "description": "The definition of 'CDATASection' in Document Object Model (DOM) Level 2 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-667469212",
+            "description": "The definition of 'CDATASection' in Document Object Model (DOM) Level 1 Specification."
+        }
+    ]
 }

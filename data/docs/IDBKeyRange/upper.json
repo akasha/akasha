@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBKeyRange.upper",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBKeyRange/upper",
-    "description": "The upper bound of the key range (can be any type.)"
+    "description": "The upper bound of the key range (can be any type.)",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbkeyrange-upper",
+            "description": "The definition of 'upper' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbkeyrange-upper",
+            "description": "The definition of 'upper' in Indexed Database API Draft."
+        }
+    ]
 }

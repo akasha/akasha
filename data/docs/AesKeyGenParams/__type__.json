@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AesKeyGenParams",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AesKeyGenParams",
-    "description": "See the examples for SubtleCrypto.generateKey()."
+    "description": "See the examples for SubtleCrypto.generateKey().",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-AesKeyGenParams",
+            "description": "The definition of 'SubtleCrypto.AesKeyGenParams' in Web Cryptography API."
+        }
+    ]
 }

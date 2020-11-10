@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "DeviceOrientationEvent.absolute",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/absolute",
-    "description": "Indicates whether or not the device is providing orientation data absolutely (that is, in reference to the Earth's coordinate frame) or using some arbitrary frame determined by the device. See Orientation and motion data explained for details."
+    "description": "Indicates whether or not the device is providing orientation data absolutely (that is, in reference to the Earth's coordinate frame) or using some arbitrary frame determined by the device. See Orientation and motion data explained for details.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/"
+        }
+    ]
 }

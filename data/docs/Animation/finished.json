@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.finished",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/finished",
-    "description": "The Animation.finished read-only property of the Web Animations API returns a Promise which resolves once the animation has finished playing."
+    "description": "The Animation.finished read-only property of the Web Animations API returns a Promise which resolves once the animation has finished playing.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-finished",
+            "description": "The definition of 'Animation.finished' in Web Animations."
+        }
+    ]
 }

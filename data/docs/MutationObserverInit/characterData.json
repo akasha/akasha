@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MutationObserverInit.characterData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/characterData",
-    "description": "The MutationObserverInit dictionary's optional characterData property is used to specify whether or not to monitor the node or nodes being observed for changes to their textual contents."
+    "description": "The MutationObserverInit dictionary's optional characterData property is used to specify whether or not to monitor the node or nodes being observed for changes to their textual contents.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-mutationobserverinit-characterdata",
+            "description": "The definition of 'MutationObserverInit.characterData' in DOM."
+        }
+    ]
 }

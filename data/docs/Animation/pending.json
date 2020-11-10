@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.pending",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/pending",
-    "description": "The read-only Animation.pending property of the Web Animations API indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation."
+    "description": "The read-only Animation.pending property of the Web Animations API indicates whether the animation is currently waiting for an asynchronous operation such as initiating playback or pausing a running animation.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-currenttime",
+            "description": "The definition of 'pending' in Web Animations."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MediaKeySystemConfiguration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration",
-    "description": "The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use."
+    "description": "The MediaKeySystemConfiguration dictionary holds configuration information about the media key system in use.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#mediakeysystemconfiguration-dictionary",
+            "description": "The definition of 'MediaKeySystemConfiguration' in Encrypted Media Extensions."
+        }
+    ]
 }

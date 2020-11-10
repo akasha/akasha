@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "KeyboardEvent.keyCode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode",
-    "description": "The deprecated KeyboardEvent.keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key."
+    "description": "The deprecated KeyboardEvent.keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-KeyboardEvent-keyCode",
+            "description": "The definition of 'KeyboardEvent.keyCode' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

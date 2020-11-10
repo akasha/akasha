@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Comment.Comment",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Comment/Comment",
-    "description": "The Comment() constructor returns a newly created Comment object with the optional DOMString given in parameter as its textual content."
+    "description": "The Comment() constructor returns a newly created Comment object with the optional DOMString given in parameter as its textual content.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-comment-comment",
+            "description": "The definition of 'Comment: Comment' in DOM."
+        }
+    ]
 }

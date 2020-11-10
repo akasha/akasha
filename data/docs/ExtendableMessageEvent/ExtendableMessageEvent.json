@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "ExtendableMessageEvent.ExtendableMessageEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ExtendableMessageEvent/ExtendableMessageEvent",
-    "description": "The ExtendableMessageEvent() constructor creates a new ExtendableMessageEvent object instance."
+    "description": "The ExtendableMessageEvent() constructor creates a new ExtendableMessageEvent object instance.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-extendablemessageevent",
+            "description": "The definition of 'ExtendableMessageEvent()' in Service Workers."
+        }
+    ]
 }

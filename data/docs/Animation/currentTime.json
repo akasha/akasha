@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.currentTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/currentTime",
-    "description": "The Animation.currentTime property of the Web Animations API returns and sets the current time value of the animation in milliseconds, whether running or paused."
+    "description": "The Animation.currentTime property of the Web Animations API returns and sets the current time value of the animation in milliseconds, whether running or paused.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-currenttime",
+            "description": "The definition of 'currentTime' in Web Animations."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MutationObserver.takeRecords",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/takeRecords",
-    "description": "The MutationObserver method takeRecords() returns a list of all matching DOM changes that have been detected but not yet processed by the observer's callback function, leaving the mutation queue empty."
+    "description": "The MutationObserver method takeRecords() returns a list of all matching DOM changes that have been detected but not yet processed by the observer's callback function, leaving the mutation queue empty.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-mutationobserver-takerecords",
+            "description": "The definition of 'MutationObserver.takeRecords()' in DOM."
+        }
+    ]
 }

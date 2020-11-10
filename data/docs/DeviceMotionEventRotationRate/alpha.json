@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DeviceMotionEventRotationRate.alpha",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEventRotationRate/alpha",
-    "description": "This property indicates the rate of rotation around the Z axis -- in degrees per second -- in a DeviceMotionEventRotationRate object."
+    "description": "This property indicates the rate of rotation around the Z axis -- in degrees per second -- in a DeviceMotionEventRotationRate object.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-alpha",
+            "description": "The definition of 'DeviceMotionEventRotationRate: alpha' in DeviceOrientation Event Specification."
+        }
+    ]
 }

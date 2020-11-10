@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySystemConfiguration.videoCapabilities",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/videoCapabilities",
-    "description": "The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs."
+    "description": "The MediaKeySystemConfiguration.videoCapabilities read-only property returns an array of supported video type and capability pairs.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-videocapabilities",
+            "description": "The definition of 'videoCapabilities' in Encrypted Media Extensions."
+        }
+    ]
 }

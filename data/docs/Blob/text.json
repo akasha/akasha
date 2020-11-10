@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Blob.text",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob/text",
-    "description": "The text() method in the Blob interface returns a Promise that resolves with a string containing the contents of the blob, interpreted as UTF-8."
+    "description": "The text() method in the Blob interface returns a Promise that resolves with a string containing the contents of the blob, interpreted as UTF-8.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dom-blob-text",
+            "description": "The definition of 'Blob.text()' in File API."
+        }
+    ]
 }

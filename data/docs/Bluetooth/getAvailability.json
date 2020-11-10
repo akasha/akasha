@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Bluetooth.getAvailability",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/getAvailability",
-    "description": "The getAvailability() method of Bluetooth interface of Web Bluetooth API interface exposes the Bluetooth capabilities of the current device. For a returns a Boolean which is true if the deveice has a Bluetooth adapter and false otherwise (unless user configured User Agent not to expose a real value)."
+    "description": "The getAvailability() method of Bluetooth interface of Web Bluetooth API interface exposes the Bluetooth capabilities of the current device. For a returns a Boolean which is true if the deveice has a Bluetooth adapter and false otherwise (unless user configured User Agent not to expose a real value).",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getavailability",
+            "description": "The definition of 'getAvailability()' in Web Bluetooth."
+        }
+    ]
 }

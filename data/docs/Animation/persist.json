@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Animation.persist",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/persist",
-    "description": "None."
+    "description": "None.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-persist",
+            "description": "The definition of 'persist()' in Web Animations."
+        }
+    ]
 }

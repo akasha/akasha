@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeyMessageEvent.message",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyMessageEvent/message",
-    "description": "The MediaKeyMessageEvent.message read-only property returns an ArrayBuffer with a message from the content decryption module. Messages vary by key system."
+    "description": "The MediaKeyMessageEvent.message read-only property returns an ArrayBuffer with a message from the content decryption module. Messages vary by key system.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeymessageevent-message",
+            "description": "The definition of 'message' in Encrypted Media Extensions."
+        }
+    ]
 }

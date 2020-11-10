@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DocumentTimeline.DocumentTimeline",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentTimeline/DocumentTimeline",
-    "description": "The DocumentTimeline() constructor of the Web Animations API creates a new instance of the DocumentTimeline object associated with the active document of the current browsing context."
+    "description": "The DocumentTimeline() constructor of the Web Animations API creates a new instance of the DocumentTimeline object associated with the active document of the current browsing context.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-documenttimeline-documenttimeline",
+            "description": "The definition of 'DocumentTimeline()' in Web Animations."
+        }
+    ]
 }

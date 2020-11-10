@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "AbortController.AbortController",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbortController/AbortController",
-    "description": "The AbortController() constructor creates a new AbortController object instance."
+    "description": "The AbortController() constructor creates a new AbortController object instance.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-abortcontroller-abortcontroller",
+            "description": "The definition of 'AbortController()' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "FederatedCredential.provider",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential/provider",
-    "description": "The provider property of the FederatedCredential interface returns a USVString containing a credential's federated identity provider."
+    "description": "The provider property of the FederatedCredential interface returns a USVString containing a credential's federated identity provider.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/"
+        }
+    ]
 }

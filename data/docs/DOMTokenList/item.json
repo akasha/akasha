@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMTokenList.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/item",
-    "description": "The item() method of the DOMTokenList interface returns an item in the list by its index."
+    "description": "The item() method of the DOMTokenList interface returns an item in the list by its index.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-item",
+            "description": "The definition of 'item()' in DOM."
+        }
+    ]
 }

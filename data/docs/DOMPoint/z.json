@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMPoint.z",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/z",
-    "description": "The DOMPoint interface's z property specifies the depth coordinate of a point in space."
+    "description": "The DOMPoint interface's z property specifies the depth coordinate of a point in space.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompoint-z",
+            "description": "The definition of 'z' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

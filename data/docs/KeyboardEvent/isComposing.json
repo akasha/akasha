@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "KeyboardEvent.isComposing",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/isComposing",
-    "description": "The KeyboardEvent.isComposing read-only property returns a Boolean value indicating if the event is fired within a composition session, i.e. after compositionstart and before compositionend."
+    "description": "The KeyboardEvent.isComposing read-only property returns a Boolean value indicating if the event is fired within a composition session, i.e. after compositionstart and before compositionend.",
+    "refs": [
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#dom-keyboardevent-iscomposing",
+            "description": "The definition of 'KeyboardEvent.prototype.isComposing' in UI Events."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-KeyboardEvent-isComposing",
+            "description": "The definition of 'KeyboardEvent.prototype.isComposing' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

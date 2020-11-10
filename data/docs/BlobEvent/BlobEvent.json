@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "BlobEvent.BlobEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/BlobEvent",
-    "description": "The BlobEvent() constructor returns a newly created BlobEvent object with an associated Blob."
+    "description": "The BlobEvent() constructor returns a newly created BlobEvent object with an associated Blob.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-blobevent-blobevent",
+            "description": "The definition of 'BlobEvent: BlobEvent' in MediaStream Recording."
+        }
+    ]
 }

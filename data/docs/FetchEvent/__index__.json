@@ -1,11 +1,11 @@
 
 {
     "name": "FetchEvent",
-    "lastModifiedAt": 1601466283856,
+    "lastModifiedAt": 1604970252309,
     "entries": [
         {
             "name": "FetchEvent",
-            "lastModifiedAt": 1597192313635
+            "lastModifiedAt": 1604970179070
         },
         {
             "name": "PreloadRequest",
@@ -13,7 +13,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599391651282
+            "lastModifiedAt": 1604970178565
         },
         {
             "name": "client",
@@ -21,7 +21,7 @@
         },
         {
             "name": "clientId",
-            "lastModifiedAt": 1597192313869
+            "lastModifiedAt": 1604970180846
         },
         {
             "name": "isReload",
@@ -29,19 +29,19 @@
         },
         {
             "name": "navigationPreload",
-            "lastModifiedAt": 1600308394312
+            "lastModifiedAt": 1604970182180
         },
         {
             "name": "preloadResponse",
-            "lastModifiedAt": 1599391652856
+            "lastModifiedAt": 1604970183207
         },
         {
             "name": "replacesClientId",
-            "lastModifiedAt": 1597192314386
+            "lastModifiedAt": 1604970183960
         },
         {
             "name": "request",
-            "lastModifiedAt": 1597192314998
+            "lastModifiedAt": 1604970184443
         },
         {
             "name": "respondWith",
@@ -49,7 +49,7 @@
         },
         {
             "name": "resultingClientId",
-            "lastModifiedAt": 1597192314681
+            "lastModifiedAt": 1604970184914
         }
     ]
 }

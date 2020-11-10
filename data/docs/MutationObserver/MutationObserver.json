@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "MutationObserver.MutationObserver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver/MutationObserver",
-    "description": "The DOM MutationObserver() constructor &mdash; part of the MutationObserver interface &mdash; creates and returns a new observer which invokes a specified callback when DOM events occur."
+    "description": "The DOM MutationObserver() constructor &mdash; part of the MutationObserver interface &mdash; creates and returns a new observer which invokes a specified callback when DOM events occur.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-mutationobserver-mutationobserver",
+            "description": "The definition of 'MutationObserver()' in DOM."
+        }
+    ]
 }

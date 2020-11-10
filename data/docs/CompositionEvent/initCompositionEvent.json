@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CompositionEvent.initCompositionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent/initCompositionEvent",
-    "description": "The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance."
+    "description": "The initCompositionEvent() method of the CompositionEvent interface initializes the attributes of a CompositionEvent object instance.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-interface-CompositionEvent-initializers",
+            "description": "The definition of 'initCompositionEvent()' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

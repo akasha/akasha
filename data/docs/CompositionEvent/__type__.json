@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "CompositionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent",
-    "description": "The DOM CompositionEvent represents events that occur due to the user indirectly entering text."
+    "description": "The DOM CompositionEvent represents events that occur due to the user indirectly entering text.",
+    "refs": [
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#interface-compositionevent",
+            "description": "The definition of 'CompositionEvent' in UI Events."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#idl-compositionevent",
+            "description": "The definition of 'CompositionEvent' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

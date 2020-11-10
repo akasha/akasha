@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CryptoKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CryptoKey",
-    "description": "The CryptoKey interface of the Web Crypto API represents a cryptographic key obtained from one of the SubtleCrypto methods generateKey(), deriveKey(), importKey(), or unwrapKey()."
+    "description": "The CryptoKey interface of the Web Crypto API represents a cryptographic key obtained from one of the SubtleCrypto methods generateKey(), deriveKey(), importKey(), or unwrapKey().",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKey",
+            "description": "The definition of 'CryptoKey' in Web Cryptography API."
+        }
+    ]
 }

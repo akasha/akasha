@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BlobEvent.data",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BlobEvent/data",
-    "description": "The BlobEvent.data read-only property represents a Blob associated with the event."
+    "description": "The BlobEvent.data read-only property represents a Blob associated with the event.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-blobevent-data",
+            "description": "The definition of 'BlobEvent.data' in MediaStream Recording."
+        }
+    ]
 }

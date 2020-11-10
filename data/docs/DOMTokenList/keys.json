@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMTokenList.keys",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/keys",
-    "description": "The keys() method of the DOMTokenList interface returns an iterator allowing to go through all keys contained in this object. The keys are of type unsigned integer."
+    "description": "The keys() method of the DOMTokenList interface returns an iterator allowing to go through all keys contained in this object. The keys are of type unsigned integer.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#domtokenlist",
+            "description": "The definition of 'keys() (as iterable&lt;Node&gt;)' in DOM."
+        }
+    ]
 }

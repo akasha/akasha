@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Animation.commitStyles",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/commitStyles",
-    "description": "None."
+    "description": "None.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-commitstyles",
+            "description": "The definition of 'commitStyles()' in Web Animations."
+        }
+    ]
 }

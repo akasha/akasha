@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaRecorder.videoBitsPerSecond",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/videoBitsPerSecond",
-    "description": "The videoBitsPerSecond read-only property of the MediaRecorder interface returns the video encoding bit rate in use."
+    "description": "The videoBitsPerSecond read-only property of the MediaRecorder interface returns the video encoding bit rate in use.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-videobitspersecond",
+            "description": "The definition of 'videoBitsPerSecond' in MediaStream Recording."
+        }
+    ]
 }

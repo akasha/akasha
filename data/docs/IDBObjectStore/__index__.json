@@ -1,11 +1,11 @@
 
 {
     "name": "IDBObjectStore",
-    "lastModifiedAt": 1601465096885,
+    "lastModifiedAt": 1604970915827,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599280562928
+            "lastModifiedAt": 1604970901914
         },
         {
             "name": "add",
@@ -57,15 +57,15 @@
         },
         {
             "name": "indexNames",
-            "lastModifiedAt": 1597192087376
+            "lastModifiedAt": 1604970903684
         },
         {
             "name": "keyPath",
-            "lastModifiedAt": 1597192087640
+            "lastModifiedAt": 1604970904148
         },
         {
             "name": "name",
-            "lastModifiedAt": 1597192087949
+            "lastModifiedAt": 1604970905077
         },
         {
             "name": "openCursor",
@@ -81,7 +81,7 @@
         },
         {
             "name": "transaction",
-            "lastModifiedAt": 1597192088763
+            "lastModifiedAt": 1604970905816
         }
     ]
 }

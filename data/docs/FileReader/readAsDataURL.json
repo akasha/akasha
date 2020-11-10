@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "FileReader.readAsDataURL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL",
-    "description": "The readAsDataURL method is used to read the contents of the specified Blob or File. When the read operation is finished, the readyState becomes DONE, and the loadend is triggered. At that time, the result attribute contains the data as a data: URL representing the file's data as a base64 encoded string."
+    "description": "The readAsDataURL method is used to read the contents of the specified Blob or File. When the read operation is finished, the readyState becomes DONE, and the loadend is triggered. At that time, the result attribute contains the data as a data: URL representing the file's data as a base64 encoded string.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#readAsDataURL",
+            "description": "The definition of 'readAsDataURL()' in File API."
+        }
+    ]
 }

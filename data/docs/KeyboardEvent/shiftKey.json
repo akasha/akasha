@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "KeyboardEvent.shiftKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/shiftKey",
-    "description": "The KeyboardEvent.shiftKey read-only property is a Boolean that indicates if the shift key was pressed (true) or not (false) when the event occurred."
+    "description": "The KeyboardEvent.shiftKey read-only property is a Boolean that indicates if the shift key was pressed (true) or not (false) when the event occurred.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-KeyboardEvent-shiftKey",
+            "description": "The definition of 'KeyboardEvent.shiftKey' in Document Object Model (DOM) Level 3 Events Specification."
+        }
+    ]
 }

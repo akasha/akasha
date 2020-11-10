@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "InputEvent.dataTransfer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/dataTransfer",
-    "description": "The dataTransfer read-only property of the InputEvent interface returns a DataTransfer object containing information about richtext or plaintext data being added to or removed from editible content."
+    "description": "The dataTransfer read-only property of the InputEvent interface returns a DataTransfer object containing information about richtext or plaintext data being added to or removed from editible content.",
+    "refs": [
+        {
+            "name": "Input Events Level 2",
+            "href": "https://w3c.github.io/input-events/#dom-inputevent-datatransfer",
+            "description": "The definition of 'dataTransfer' in Input Events Level 2."
+        }
+    ]
 }

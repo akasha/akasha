@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLCollection",
-    "lastModifiedAt": 1604009111060,
+    "lastModifiedAt": 1604970482397,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193054417
+            "lastModifiedAt": 1604970480879
         },
         {
             "name": "item",

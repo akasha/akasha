@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AnimationPlaybackEvent.currentTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/currentTime",
-    "description": "The currentTime read-only property of the AnimationPlaybackEvent interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was idle at the time the event was generated."
+    "description": "The currentTime read-only property of the AnimationPlaybackEvent interface represents the current time of the animation that generated the event at the moment the event is queued. This will be unresolved if the animation was idle at the time the event was generated.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animationplaybackevent-currenttime",
+            "description": "The definition of 'AnimationPlaybackEvent.currentTime' in Web Animations."
+        }
+    ]
 }

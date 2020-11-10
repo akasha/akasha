@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ChildNode.before",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/before",
-    "description": "The ChildNode.before() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just before this ChildNode. DOMString objects are inserted as equivalent Text nodes."
+    "description": "The ChildNode.before() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just before this ChildNode. DOMString objects are inserted as equivalent Text nodes.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-childnode-before",
+            "description": "The definition of 'ChildNode.before()' in DOM."
+        }
+    ]
 }

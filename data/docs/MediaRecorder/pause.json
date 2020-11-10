@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaRecorder.pause",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/pause",
-    "description": "The Media.pause() method (part of the MediaRecorder API) is used to pause recording of media streams."
+    "description": "The Media.pause() method (part of the MediaRecorder API) is used to pause recording of media streams.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-pause",
+            "description": "The definition of 'MediaRecorder.pause()' in MediaStream Recording."
+        }
+    ]
 }

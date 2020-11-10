@@ -1,23 +1,23 @@
 
 {
     "name": "AuthenticatorAssertionResponse",
-    "lastModifiedAt": 1600310684637,
+    "lastModifiedAt": 1604969378053,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279772365
+            "lastModifiedAt": 1604969376016
         },
         {
             "name": "authenticatorData",
-            "lastModifiedAt": 1597192653607
+            "lastModifiedAt": 1604969376648
         },
         {
             "name": "signature",
-            "lastModifiedAt": 1597192653846
+            "lastModifiedAt": 1604969377223
         },
         {
             "name": "userHandle",
-            "lastModifiedAt": 1597192654247
+            "lastModifiedAt": 1604969377905
         }
     ]
 }

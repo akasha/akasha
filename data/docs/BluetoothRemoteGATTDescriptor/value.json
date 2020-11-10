@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTDescriptor.value",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTDescriptor/value",
-    "description": "The BluetoothRemoteGATTDescriptor.value read-only property returns an ArrayBuffer containing the currently cached descriptor value. This value gets updated when the value of the descriptor is read."
+    "description": "The BluetoothRemoteGATTDescriptor.value read-only property returns an ArrayBuffer containing the currently cached descriptor value. This value gets updated when the value of the descriptor is read.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattdescriptor-value",
+            "description": "The definition of 'value' in Web Bluetooth."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "IDBCursor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor",
-    "description": "The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database."
+    "description": "The IDBCursor interface of the IndexedDB API represents a cursor for traversing or iterating over multiple records in a database.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#cursor-interface",
+            "description": "The definition of 'cursor' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#cursor-interface",
+            "description": "The definition of 'cursor' in Indexed Database API Draft."
+        }
+    ]
 }

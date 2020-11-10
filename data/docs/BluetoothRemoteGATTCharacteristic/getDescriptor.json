@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "BluetoothRemoteGATTCharacteristic.getDescriptor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor",
-    "description": "The BluetoothRemoteGATTCharacteristic.getDescriptor() method returns a Promise that resolves to the first BluetoothGATTDescriptor for a given descriptor UUID."
+    "description": "The BluetoothRemoteGATTCharacteristic.getDescriptor() method returns a Promise that resolves to the first BluetoothGATTDescriptor for a given descriptor UUID.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-getdescriptor",
+            "description": "The definition of 'getDescriptor()' in Web Bluetooth."
+        }
+    ]
 }

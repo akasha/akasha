@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBCursor.primaryKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/primaryKey",
-    "description": "A value of any data type."
+    "description": "A value of any data type.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbcursor-primarykey",
+            "description": "The definition of 'primaryKey' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-primarykey",
+            "description": "The definition of 'primaryKey' in Indexed Database API Draft."
+        }
+    ]
 }

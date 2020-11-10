@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBDatabase.objectStoreNames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/objectStoreNames",
-    "description": "A DOMStringList containing a list of the names of the object stores currently in the connected database."
+    "description": "A DOMStringList containing a list of the names of the object stores currently in the connected database.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-objectstorenames",
+            "description": "The definition of 'objectStoreNames' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-objectstorenames",
+            "description": "The definition of 'objectStoreNames' in Indexed Database API Draft."
+        }
+    ]
 }

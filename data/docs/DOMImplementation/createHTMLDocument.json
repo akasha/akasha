@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMImplementation.createHTMLDocument",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createHTMLDocument",
-    "description": "The DOMImplementation.createHTMLDocument() method creates a new HTML Document."
+    "description": "The DOMImplementation.createHTMLDocument() method creates a new HTML Document.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domimplementation-createhtmldocument",
+            "description": "The definition of 'DOMImplementation.createHTMLDocument' in DOM."
+        }
+    ]
 }

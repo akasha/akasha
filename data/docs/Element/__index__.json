@@ -1,7 +1,7 @@
 
 {
     "name": "Element",
-    "lastModifiedAt": 1604449174495,
+    "lastModifiedAt": 1604970125176,
     "entries": [
         {
             "name": "DOMActivate_event",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447149269
+            "lastModifiedAt": 1604970024210
         },
         {
             "name": "accessKey",
@@ -205,7 +205,7 @@
         },
         {
             "name": "hasPointerCapture",
-            "lastModifiedAt": 1604447205979
+            "lastModifiedAt": 1604970077715
         },
         {
             "name": "id",

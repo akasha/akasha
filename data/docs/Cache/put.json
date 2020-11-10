@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Cache.put",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/put",
-    "description": "The put() method of the Cache interface allows key/value pairs to be added to the current Cache object."
+    "description": "The put() method of the Cache interface allows key/value pairs to be added to the current Cache object.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cache-put",
+            "description": "The definition of 'Cache: put' in Service Workers."
+        }
+    ]
 }

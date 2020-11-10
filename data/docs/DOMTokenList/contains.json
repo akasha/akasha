@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMTokenList.contains",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/contains",
-    "description": "The contains() method of the DOMTokenList interface returns a Boolean &mdash; true if the underlying list contains the given token, otherwise false."
+    "description": "The contains() method of the DOMTokenList interface returns a Boolean &mdash; true if the underlying list contains the given token, otherwise false.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-contains",
+            "description": "The definition of 'contains()' in DOM."
+        }
+    ]
 }

@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "EventTarget.addEventListener",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener",
-    "description": "The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."
+    "description": "The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener",
+            "description": "The definition of 'EventTarget.addEventListener()' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-eventtarget-addeventlistener",
+            "description": "The definition of 'EventTarget.addEventListener()' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-addEventListener",
+            "description": "The definition of 'EventTarget.addEventListener()' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

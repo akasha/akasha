@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Animation.pause",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/pause",
-    "description": "The pause() method of the Web Animations API's Animation interface suspends playback of the animation."
+    "description": "The pause() method of the Web Animations API's Animation interface suspends playback of the animation.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-pause",
+            "description": "The definition of 'play()' in Web Animations."
+        }
+    ]
 }

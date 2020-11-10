@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "AnimationPlaybackEvent.AnimationPlaybackEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationPlaybackEvent/AnimationPlaybackEvent",
-    "description": "The AnimationPlaybackEvent() constructor of the Web Animations API returns a new AnimationPlaybackEvent object instance."
+    "description": "The AnimationPlaybackEvent() constructor of the Web Animations API returns a new AnimationPlaybackEvent object instance.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animationplaybackevent-animationplaybackevent",
+            "description": "The definition of 'AnimationPlaybackEvent()' in Web Animations."
+        }
+    ]
 }

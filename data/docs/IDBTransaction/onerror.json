@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBTransaction.onerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/onerror",
-    "description": "The onerror event handler of the IDBTransaction interface handles the error event, fired when a request returns an error and bubbles up to the transaction object."
+    "description": "The onerror event handler of the IDBTransaction interface handles the error event, fired when a request returns an error and bubbles up to the transaction object.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbtransaction-onerror",
+            "description": "The definition of 'onerror' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-onerror",
+            "description": "The definition of 'onerror' in Indexed Database API Draft."
+        }
+    ]
 }

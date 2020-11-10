@@ -1,23 +1,23 @@
 
 {
     "name": "AbortController",
-    "lastModifiedAt": 1604009222069,
+    "lastModifiedAt": 1604969238240,
     "entries": [
         {
             "name": "AbortController",
-            "lastModifiedAt": 1597193087569
+            "lastModifiedAt": 1604969236912
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193087189
+            "lastModifiedAt": 1604969235861
         },
         {
             "name": "abort",
-            "lastModifiedAt": 1597193088673
+            "lastModifiedAt": 1604969238240
         },
         {
             "name": "signal",
-            "lastModifiedAt": 1597193087831
+            "lastModifiedAt": 1604969237594
         }
     ]
 }

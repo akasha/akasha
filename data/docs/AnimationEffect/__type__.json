@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AnimationEffect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AnimationEffect",
-    "description": "The AnimationEffect interface of the Web Animations API defines current and future animation effects like KeyframeEffect, which can be passed to Animation objects for playing, and KeyframeEffectReadOnly (which is used by CSS Animations and Transitions)."
+    "description": "The AnimationEffect interface of the Web Animations API defines current and future animation effects like KeyframeEffect, which can be passed to Animation objects for playing, and KeyframeEffectReadOnly (which is used by CSS Animations and Transitions).",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#the-animationeffect-interface",
+            "description": "The definition of 'AnimationEffect' in Web Animations."
+        }
+    ]
 }

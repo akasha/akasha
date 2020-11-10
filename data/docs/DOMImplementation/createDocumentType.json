@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "DOMImplementation.createDocumentType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMImplementation/createDocumentType",
-    "description": "The DOMImplementation.createDocumentType() method returns a DocumentType object which can either be used with DOMImplementation.createDocument upon document creation or can be put into the document via methods like Node.insertBefore() or Node.replaceChild()."
+    "description": "The DOMImplementation.createDocumentType() method returns a DocumentType object which can either be used with DOMImplementation.createDocument upon document creation or can be put into the document via methods like Node.insertBefore() or Node.replaceChild().",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domimplementation-createdocumenttype",
+            "description": "The definition of 'DOMImplementation.createDocumentType' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#Level-2-Core-DOM-createDocType",
+            "description": "The definition of 'DOMImplementation.createDocumentType' in Document Object Model (DOM) Level 3 Core Specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#Level-2-Core-DOM-createDocType",
+            "description": "The definition of 'DOMImplementation.createDocumentType' in Document Object Model (DOM) Level 2 Core Specification."
+        }
+    ]
 }

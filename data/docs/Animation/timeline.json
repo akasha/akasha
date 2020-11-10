@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.timeline",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/timeline",
-    "description": "The Animation.timeline property of the Animation interface returns or sets the timeline associated with this animation. A timeline is a source of time values for synchronization purposes, and is an AnimationTimeline-based object. By default, the animation's timeline and the Document's timeline are the same."
+    "description": "The Animation.timeline property of the Animation interface returns or sets the timeline associated with this animation. A timeline is a source of time values for synchronization purposes, and is an AnimationTimeline-based object. By default, the animation's timeline and the Document's timeline are the same.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-timeline",
+            "description": "The definition of 'Animation.timeline' in Web Animations."
+        }
+    ]
 }

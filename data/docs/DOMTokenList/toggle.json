@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMTokenList.toggle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle",
-    "description": "The toggle() method of the DOMTokenList interface removes a given token from the list and returns false. If token doesn't exist it's added and the function returns true."
+    "description": "The toggle() method of the DOMTokenList interface removes a given token from the list and returns false. If token doesn't exist it's added and the function returns true.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-toggle",
+            "description": "The definition of 'toggle()' in DOM."
+        }
+    ]
 }

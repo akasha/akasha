@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Animation.ready",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/ready",
-    "description": "The read-only Animation.ready property of the Web Animations API returns a Promise which resolves when the animation is ready to play. A new promise is created every time the animation enters the &quot;pending&quot; play state as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again."
+    "description": "The read-only Animation.ready property of the Web Animations API returns a Promise which resolves when the animation is ready to play. A new promise is created every time the animation enters the &quot;pending&quot; play state as well as when the animation is canceled, since in both of those scenarios, the animation is ready to be started again.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-ready",
+            "description": "The definition of 'Animation.ready' in Web Animations."
+        }
+    ]
 }

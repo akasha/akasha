@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CryptoKeyPair",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair",
-    "description": "The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm."
+    "description": "The CryptoKeyPair dictionary of the Web Crypto API represents a key pair for an asymmetric cryptography algorithm, also known as a public-key algorithm.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-CryptoKeyPair",
+            "description": "The definition of 'CryptoKeyPair' in Web Cryptography API."
+        }
+    ]
 }

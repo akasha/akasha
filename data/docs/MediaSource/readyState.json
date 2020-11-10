@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaSource.readyState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/readyState",
-    "description": "The readyState read-only property of the MediaSource interface returns an enum representing the state of the current MediaSource. The three possible values are:"
+    "description": "The readyState read-only property of the MediaSource interface returns an enum representing the state of the current MediaSource. The three possible values are:",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-mediasource-readystate",
+            "description": "The definition of 'readyState' in Media Source Extensions."
+        }
+    ]
 }

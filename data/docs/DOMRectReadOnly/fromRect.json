@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMRectReadOnly.fromRect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/fromRect",
-    "description": "The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions."
+    "description": "The fromRect() property of the DOMRectReadOnly interface creates a new DOMRectReadOnly object with a given location and dimensions.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-domrect-fromrect",
+            "description": "The definition of 'fromRect()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

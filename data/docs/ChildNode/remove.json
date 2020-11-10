@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ChildNode.remove",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/remove",
-    "description": "The ChildNode.remove() method removes the object from the tree it belongs to."
+    "description": "The ChildNode.remove() method removes the object from the tree it belongs to.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-childnode-remove",
+            "description": "The definition of 'ChildNode.remove' in DOM."
+        }
+    ]
 }

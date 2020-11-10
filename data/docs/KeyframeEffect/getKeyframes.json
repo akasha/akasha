@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "KeyframeEffect.getKeyframes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/getKeyframes",
-    "description": "The getKeyframes() method of a KeyframeEffect returns an Array of the computed keyframes that make up this animation along with their computed offsets."
+    "description": "The getKeyframes() method of a KeyframeEffect returns an Array of the computed keyframes that make up this animation along with their computed offsets.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-getkeyframes",
+            "description": "The definition of 'KeyframeEffect.getKeyframes()' in Web Animations."
+        }
+    ]
 }

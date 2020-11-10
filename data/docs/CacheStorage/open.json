@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CacheStorage.open",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/open",
-    "description": "The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName."
+    "description": "The open() method of the CacheStorage interface returns a Promise that resolves to the Cache object matching the cacheName.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cache-storage-open",
+            "description": "The definition of 'CacheStorage: open' in Service Workers."
+        }
+    ]
 }

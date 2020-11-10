@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DOMQuad",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMQuad",
-    "description": "A DOMQuad is a collection of four DOMPoints defining the corners of an arbitrary quadrilateral. Returning DOMQuads lets getBoxQuads() return accurate information even when arbitrary 2D or 3D transforms are present. It has a handy bounds attribute returning a DOMRectReadOnly for those cases where you just want an axis-aligned bounding rectangle."
+    "description": "A DOMQuad is a collection of four DOMPoints defining the corners of an arbitrary quadrilateral. Returning DOMQuads lets getBoxQuads() return accurate information even when arbitrary 2D or 3D transforms are present. It has a handy bounds attribute returning a DOMRectReadOnly for those cases where you just want an axis-aligned bounding rectangle.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#DOMQuad",
+            "description": "The definition of 'DOMQuad' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "DOMRectReadOnly.DOMRectReadOnly",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/DOMRectReadOnly",
-    "description": "The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object."
+    "description": "The DOMRectReadOnly() constructor creates a new DOMRectReadOnly object.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-domrectreadonly-domrectreadonly",
+            "description": "The definition of 'DOMRectReadOnly()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

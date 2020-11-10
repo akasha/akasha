@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "Attr",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Attr",
-    "description": "The Attr interface represents one of a DOM element's attributes as an object. In most DOM methods, you will directly retrieve the attribute as a string (e.g., Element.getAttribute()), but certain functions (e.g., Element.getAttributeNode()) or means of iterating return Attr types."
+    "description": "The Attr interface represents one of a DOM element's attributes as an object. In most DOM methods, you will directly retrieve the attribute as a string (e.g., Element.getAttribute()), but certain functions (e.g., Element.getAttributeNode()) or means of iterating return Attr types.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-attr",
+            "description": "The definition of 'Attr' in DOM."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#interface-attr",
+            "description": "The definition of 'Attr' in DOM4."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024",
+            "description": "The definition of 'Attr' in Document Object Model (DOM) Level 3 Core Specification."
+        }
+    ]
 }

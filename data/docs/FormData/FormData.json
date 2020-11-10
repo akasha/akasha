@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "FormData.FormData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData",
-    "description": "The FormData() constructor creates a new FormData object."
+    "description": "The FormData() constructor creates a new FormData object.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#dom-formdata",
+            "description": "The definition of 'FormData()' in XMLHttpRequest."
+        }
+    ]
 }

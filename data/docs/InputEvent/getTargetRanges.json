@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "InputEvent.getTargetRanges",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent/getTargetRanges",
-    "description": "The getTargetRanges() property of the InputEvent interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled."
+    "description": "The getTargetRanges() method of the InputEvent interface returns an array of static ranges that will be affected by a change to the DOM if the input event is not canceled.",
+    "refs": [
+        {
+            "name": "Input Events Level 2",
+            "href": "https://w3c.github.io/input-events/#dom-inputevent-gettargetranges",
+            "description": "The definition of 'getTargetRanges()' in Input Events Level 2."
+        }
+    ]
 }

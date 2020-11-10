@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "InputEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/InputEvent",
-    "description": "The InputEvent interface represents an event notifying of editable content change."
+    "description": "The InputEvent interface represents an event notifying the user of editable content changes.",
+    "refs": [
+        {
+            "name": "Input Events Level 2",
+            "href": "https://w3c.github.io/input-events/#interface-InputEvent",
+            "description": "The definition of 'InputEvent' in Input Events Level 2."
+        },
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#interface-inputevent",
+            "description": "The definition of 'InputEvent' in UI Events."
+        }
+    ]
 }

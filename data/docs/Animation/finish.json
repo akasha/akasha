@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Animation.finish",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Animation/finish",
-    "description": "The finish() method of the Web Animations API's Animation Interface sets the current playback time to the end of the animation corresponding to the current playback direction."
+    "description": "The finish() method of the Web Animations API's Animation Interface sets the current playback time to the end of the animation corresponding to the current playback direction.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-finish",
+            "description": "The definition of 'finish()' in Web Animations."
+        }
+    ]
 }

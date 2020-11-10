@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "MediaKeyStatusMap.keys",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeyStatusMap/keys",
-    "description": "The keys property of the MediaKeyStatusMap interface returns a new Iterator object, containing keys for each element in the status map, in insertion order"
+    "description": "The keys property of the MediaKeyStatusMap interface returns a new Iterator object, containing keys for each element in the status map, in insertion order",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/"
+        }
+    ]
 }

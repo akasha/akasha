@@ -1,23 +1,23 @@
 
 {
     "name": "FederatedCredential",
-    "lastModifiedAt": 1600311391370,
+    "lastModifiedAt": 1604970177946,
     "entries": [
         {
             "name": "FederatedCredential",
-            "lastModifiedAt": 1597190560057
+            "lastModifiedAt": 1604970176597
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190559783
+            "lastModifiedAt": 1604970175491
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1597190560754
+            "lastModifiedAt": 1604970177293
         },
         {
             "name": "provider",
-            "lastModifiedAt": 1599391291721
+            "lastModifiedAt": 1604970177833
         }
     ]
 }

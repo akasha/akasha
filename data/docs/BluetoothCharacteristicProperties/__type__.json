@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "BluetoothCharacteristicProperties",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties",
-    "description": "The BluetoothCharacteristicProperties interface of the the Web Bluetooth API provides the operations that are valid on the given BluetoothRemoteGATTCharacteristic."
+    "description": "The BluetoothCharacteristicProperties interface of the the Web Bluetooth API provides the operations that are valid on the given BluetoothRemoteGATTCharacteristic.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#characteristicproperties-interface",
+            "description": "The definition of 'BluetoothCharacteristicProperties' in Web Bluetooth."
+        }
+    ]
 }

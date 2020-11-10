@@ -1,27 +1,27 @@
 
 {
     "name": "DOMPointInit",
-    "lastModifiedAt": 1600310983210,
+    "lastModifiedAt": 1604969706411,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192023967
+            "lastModifiedAt": 1604969703246
         },
         {
             "name": "w",
-            "lastModifiedAt": 1597192025593
+            "lastModifiedAt": 1604969703754
         },
         {
             "name": "x",
-            "lastModifiedAt": 1597192024274
+            "lastModifiedAt": 1604969704479
         },
         {
             "name": "y",
-            "lastModifiedAt": 1597192024521
+            "lastModifiedAt": 1604969705091
         },
         {
             "name": "z",
-            "lastModifiedAt": 1597192024761
+            "lastModifiedAt": 1604969706212
         }
     ]
 }

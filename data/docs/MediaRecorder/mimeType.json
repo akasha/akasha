@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaRecorder.mimeType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/mimeType",
-    "description": "The mimeType read-only property returns the MIME media type that was specified when creating the MediaRecorder object, or, if none was specified, which was chosen by the browser."
+    "description": "The mimeType read-only property returns the MIME media type that was specified when creating the MediaRecorder object, or, if none was specified, which was chosen by the browser.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-mimetype",
+            "description": "The definition of 'MediaRecorder.mimeType' in MediaStream Recording."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Crypto.getRandomValues",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues",
-    "description": "The Crypto.getRandomValues() method lets you get cryptographically strong random values. The array given as the parameter is filled with random numbers (random in its cryptographic meaning)."
+    "description": "The Crypto.getRandomValues() method lets you get cryptographically strong random values. The array given as the parameter is filled with random numbers (random in its cryptographic meaning).",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#Crypto-method-getRandomValues"
+        }
+    ]
 }

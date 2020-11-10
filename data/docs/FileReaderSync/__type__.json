@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "FileReaderSync",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReaderSync",
-    "description": "The FileReaderSync interface allows to read File or Blob objects synchronously."
+    "description": "The FileReaderSync interface allows to read File or Blob objects synchronously.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#FileReaderSync",
+            "description": "The definition of 'FileReaderSync' in File API."
+        }
+    ]
 }

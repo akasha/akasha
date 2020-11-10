@@ -3,5 +3,11 @@
     "kind": "Constructor",
     "name": "DeviceOrientationEvent.DeviceOrientationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent/DeviceOrientationEvent",
-    "description": "The DeviceOrientationEvent constructor creates a new DeviceOrientationEvent."
+    "description": "The DeviceOrientationEvent constructor creates a new DeviceOrientationEvent.",
+    "refs": [
+        {
+            "name": "DeviceOrientation Event Specification",
+            "href": "https://w3c.github.io/deviceorientation/"
+        }
+    ]
 }

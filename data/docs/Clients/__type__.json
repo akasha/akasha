@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Clients",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clients",
-    "description": "The Clients interface provides access to Client objects. Access it via self.clients within a service worker."
+    "description": "The Clients interface provides access to Client objects. Access it via self.clients within a service worker.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#clients",
+            "description": "The definition of 'Clients' in Service Workers."
+        }
+    ]
 }

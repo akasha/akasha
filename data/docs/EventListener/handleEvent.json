@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "EventListener.handleEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventListener/handleEvent",
-    "description": "The EventListener method handleEvent() method is called by the user agent when an event is sent to the EventListener, in order to handle events that occur on an observed EventTarget."
+    "description": "The EventListener method handleEvent() method is called by the user agent when an event is sent to the EventListener, in order to handle events that occur on an observed EventTarget.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-eventlistener-handleevent",
+            "description": "The definition of 'EventListener.handleEvent()' in DOM."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener-handleEvent",
+            "description": "The definition of 'EventListener.handleEvent()' in Document Object Model (DOM) Level 2 Events Specification."
+        }
+    ]
 }

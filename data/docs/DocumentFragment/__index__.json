@@ -1,39 +1,39 @@
 
 {
     "name": "DocumentFragment",
-    "lastModifiedAt": 1604009139405,
+    "lastModifiedAt": 1604969985170,
     "entries": [
         {
             "name": "DocumentFragment",
-            "lastModifiedAt": 1597193063261
+            "lastModifiedAt": 1604969978673
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193062471
+            "lastModifiedAt": 1604969978185
         },
         {
             "name": "childElementCount",
-            "lastModifiedAt": 1600305182996
+            "lastModifiedAt": 1604969979326
         },
         {
             "name": "children",
-            "lastModifiedAt": 1600305183548
+            "lastModifiedAt": 1604969979880
         },
         {
             "name": "firstElementChild",
-            "lastModifiedAt": 1600305184683
+            "lastModifiedAt": 1604969980470
         },
         {
             "name": "lastElementChild",
-            "lastModifiedAt": 1600305185516
+            "lastModifiedAt": 1604969981385
         },
         {
             "name": "querySelector",
-            "lastModifiedAt": 1597193064687
+            "lastModifiedAt": 1604969984640
         },
         {
             "name": "querySelectorAll",
-            "lastModifiedAt": 1597193065494
+            "lastModifiedAt": 1604969985170
         }
     ]
 }

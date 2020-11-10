@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DisplayMediaStreamConstraints.video",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DisplayMediaStreamConstraints/video",
-    "description": "The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia()."
+    "description": "The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().",
+    "refs": [
+        {
+            "name": "Unknown",
+            "href": "",
+            "description": "The definition of 'DisplayMediaStreamConstraints.video' in Unknown."
+        }
+    ]
 }

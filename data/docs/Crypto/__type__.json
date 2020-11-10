@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Crypto",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Crypto",
-    "description": "The Crypto interface represents basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives."
+    "description": "The Crypto interface represents basic cryptography features available in the current context. It allows access to a cryptographically strong random number generator and to cryptographic primitives.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#crypto-interface",
+            "description": "The definition of 'Crypto' in Web Cryptography API."
+        }
+    ]
 }

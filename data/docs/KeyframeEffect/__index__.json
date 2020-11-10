@@ -1,27 +1,27 @@
 
 {
     "name": "KeyframeEffect",
-    "lastModifiedAt": 1600312133561,
+    "lastModifiedAt": 1604970994520,
     "entries": [
         {
             "name": "KeyframeEffect",
-            "lastModifiedAt": 1599280131936
+            "lastModifiedAt": 1604970990019
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599280130832
+            "lastModifiedAt": 1604970989523
         },
         {
             "name": "composite",
-            "lastModifiedAt": 1599280135024
+            "lastModifiedAt": 1604970991428
         },
         {
             "name": "getKeyframes",
-            "lastModifiedAt": 1599280135997
+            "lastModifiedAt": 1604970993948
         },
         {
             "name": "iterationComposite",
-            "lastModifiedAt": 1597192519606
+            "lastModifiedAt": 1604970991904
         },
         {
             "name": "setKeyframes",
@@ -29,7 +29,7 @@
         },
         {
             "name": "target",
-            "lastModifiedAt": 1599280132595
+            "lastModifiedAt": 1604970992429
         }
     ]
 }

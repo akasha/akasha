@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaRecorder.start",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/start",
-    "description": "The MediaRecorder method start(), which is part of the MediaStream Recording API, begins recording media into one or more Blob objects."
+    "description": "The MediaRecorder method start(), which is part of the MediaStream Recording API, begins recording media into one or more Blob objects.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-start",
+            "description": "The definition of 'MediaRecorder.start()' in MediaStream Recording."
+        }
+    ]
 }

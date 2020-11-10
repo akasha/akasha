@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AuthenticatorAssertionResponse.userHandle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AuthenticatorAssertionResponse/userHandle",
-    "description": "The userHandle read-only property of the AuthenticatorAssertionResponse interface is an ArrayBuffer object which is an opaque identifier for the given user. Such an identifier can be used by the relying party's server to link the user account with its corresponding credentials and other data."
+    "description": "The userHandle read-only property of the AuthenticatorAssertionResponse interface is an ArrayBuffer object which is an opaque identifier for the given user. Such an identifier can be used by the relying party's server to link the user account with its corresponding credentials and other data.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-authenticatorassertionresponse-userhandle",
+            "description": "The definition of 'userHandle' in Web Authentication: An API for accessing Public Key Credentials Level 1."
+        }
+    ]
 }

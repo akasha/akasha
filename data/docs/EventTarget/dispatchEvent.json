@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "EventTarget.dispatchEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/dispatchEvent",
-    "description": "Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()."
+    "description": "Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent().",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-eventtarget-dispatchevent",
+            "description": "The definition of 'EventTarget.dispatchEvent()' in DOM."
+        }
+    ]
 }

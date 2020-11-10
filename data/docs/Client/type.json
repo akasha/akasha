@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Client.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Client/type",
-    "description": "The type read-only property of the Client interface indicates the type of client the service worker is controlling."
+    "description": "The type read-only property of the Client interface indicates the type of client the service worker is controlling.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#client-type",
+            "description": "The definition of 'type' in Service Workers."
+        }
+    ]
 }

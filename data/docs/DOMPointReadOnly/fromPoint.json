@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMPointReadOnly.fromPoint",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/fromPoint",
-    "description": "The static DOMPointReadOnly method fromPoint() creates and returns a new DOMPointReadOnly object given a source point."
+    "description": "The static DOMPointReadOnly method fromPoint() creates and returns a new DOMPointReadOnly object given a source point.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompointreadonly-frompoint",
+            "description": "The definition of 'fromPoint()' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

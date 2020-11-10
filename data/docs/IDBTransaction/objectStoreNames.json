@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBTransaction.objectStoreNames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/objectStoreNames",
-    "description": "The objectStoreNames read-only property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects."
+    "description": "The objectStoreNames read-only property of the IDBTransaction interface returns a DOMStringList of names of IDBObjectStore objects.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-objectstorenames",
+            "description": "The definition of 'ObjectStoreNames' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-objectstorenames",
+            "description": "The definition of 'ObjectStoreNames' in Indexed Database API Draft."
+        }
+    ]
 }

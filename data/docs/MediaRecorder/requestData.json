@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaRecorder.requestData",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/requestData",
-    "description": "The MediaRecorder.requestData() method (part of the MediaRecorder API) is used to raise a dataavailable event containing a Blob object of the captured media as it was when the method was called."
+    "description": "The MediaRecorder.requestData() method (part of the MediaRecorder API) is used to raise a dataavailable event containing a Blob object of the captured media as it was when the method was called.",
+    "refs": [
+        {
+            "name": "MediaStream Recording",
+            "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-requestdata",
+            "description": "The definition of 'MediaRecorder.requestData()' in MediaStream Recording."
+        }
+    ]
 }

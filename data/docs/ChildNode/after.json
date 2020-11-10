@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ChildNode.after",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/after",
-    "description": "The ChildNode.after() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just after this ChildNode. DOMString objects are inserted as equivalent Text nodes."
+    "description": "The ChildNode.after() method inserts a set of Node or DOMString objects in the children list of this ChildNode's parent, just after this ChildNode. DOMString objects are inserted as equivalent Text nodes.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-childnode-after",
+            "description": "The definition of 'ChildNode.after()' in DOM."
+        }
+    ]
 }

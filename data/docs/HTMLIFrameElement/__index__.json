@@ -1,7 +1,7 @@
 
 {
     "name": "HTMLIFrameElement",
-    "lastModifiedAt": 1604450499165,
+    "lastModifiedAt": 1604970610199,
     "entries": [
         {
             "name": "__type__",
@@ -33,7 +33,7 @@
         },
         {
             "name": "setNfcFocus",
-            "lastModifiedAt": 1600305133420
+            "lastModifiedAt": 1604970610199
         },
         {
             "name": "src",

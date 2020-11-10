@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MutationObserverInit.childList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserverInit/childList",
-    "description": "The MutationObserverInit dictionary's optional childList property indicates whether or not to monitor the specified node or nodes for the addition or removal of new child nodes."
+    "description": "The MutationObserverInit dictionary's optional childList property indicates whether or not to monitor the specified node or nodes for the addition or removal of new child nodes.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-mutationobserverinit-childlist",
+            "description": "The definition of 'MutationObserverInit.childList' in DOM."
+        }
+    ]
 }

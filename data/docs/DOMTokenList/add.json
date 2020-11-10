@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "DOMTokenList.add",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/add",
-    "description": "The add() method of the DOMTokenList interface adds the given token to the list."
+    "description": "The add() method of the DOMTokenList interface adds the given token to the list.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-domtokenlist-add",
+            "description": "The definition of 'add()' in DOM."
+        }
+    ]
 }

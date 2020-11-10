@@ -1,23 +1,23 @@
 
 {
     "name": "Attr",
-    "lastModifiedAt": 1604009105899,
+    "lastModifiedAt": 1604969290904,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193050175
+            "lastModifiedAt": 1604969288341
         },
         {
             "name": "localName",
-            "lastModifiedAt": 1597193051040
+            "lastModifiedAt": 1604969288837
         },
         {
             "name": "namespaceURI",
-            "lastModifiedAt": 1597193050767
+            "lastModifiedAt": 1604969289861
         },
         {
             "name": "prefix",
-            "lastModifiedAt": 1597193051886
+            "lastModifiedAt": 1604969290452
         }
     ]
 }

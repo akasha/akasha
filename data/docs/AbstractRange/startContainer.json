@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "AbstractRange.startContainer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AbstractRange/startContainer",
-    "description": "The read-only startContainer property of the AbstractRange interface returns the start Node for the range."
+    "description": "The read-only startContainer property of the AbstractRange interface returns the start Node for the range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-startcontainer",
+            "description": "The definition of 'startContainer ' in DOM."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-startcontainer",
+            "description": "The definition of 'startContainer' in Static Range."
+        }
+    ]
 }

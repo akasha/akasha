@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBVersionChangeEvent.newVersion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent/newVersion",
-    "description": "A 64-bit integer."
+    "description": "A 64-bit integer.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbversionchangeevent-newversion",
+            "description": "The definition of 'newVersion' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbversionchangeevent-newversion",
+            "description": "The definition of 'newVersion' in Indexed Database API Draft."
+        }
+    ]
 }

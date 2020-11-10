@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaKeySystemAccess.createMediaKeys",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemAccess/createMediaKeys",
-    "description": "The MediaKeySystemAccess.createMediaKeys() method returns a Promise that resolves to a new MediaKeys object."
+    "description": "The MediaKeySystemAccess.createMediaKeys() method returns a Promise that resolves to a new MediaKeys object.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-createmediakeys",
+            "description": "The definition of 'createMediaKeys()' in Encrypted Media Extensions."
+        }
+    ]
 }

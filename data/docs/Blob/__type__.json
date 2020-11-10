@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Blob",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Blob",
-    "description": "The Blob object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a ReadableStream so its methods can be used for processing the data."
+    "description": "The Blob object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a ReadableStream so its methods can be used for processing the data.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#blob-section",
+            "description": "The definition of 'The Blob interface' in File API."
+        }
+    ]
 }

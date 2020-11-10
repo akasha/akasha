@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMPoint.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPoint/y",
-    "description": "The DOMPoint interface's y property holds the vertical coordinate, y, for a point in space."
+    "description": "The DOMPoint interface's y property holds the vertical coordinate, y, for a point in space.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompoint-y",
+            "description": "The definition of 'y' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

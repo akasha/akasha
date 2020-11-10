@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaKeySystemConfiguration.distinctiveIdentifier",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaKeySystemConfiguration/distinctiveIdentifier",
-    "description": "The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required."
+    "description": "The MediaKeySystemConfiguration.distinctiveIdentifier read-only property indicates whether a persistent distinctive identifier is required.",
+    "refs": [
+        {
+            "name": "Encrypted Media Extensions",
+            "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier",
+            "description": "The definition of 'distinctiveIdentifier' in Encrypted Media Extensions."
+        }
+    ]
 }

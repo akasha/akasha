@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FetchEvent.replacesClientId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/replacesClientId",
-    "description": "The replacesClientId read-only property of the FetchEvent interface is the id of the client that is being replaced during a page navigation."
+    "description": "The replacesClientId read-only property of the FetchEvent interface is the id of the client that is being replaced during a page navigation.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-replacesclientid",
+            "description": "The definition of 'replacesClientId' in Service Workers."
+        }
+    ]
 }

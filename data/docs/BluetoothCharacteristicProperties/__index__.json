@@ -1,39 +1,39 @@
 
 {
     "name": "BluetoothCharacteristicProperties",
-    "lastModifiedAt": 1600310734992,
+    "lastModifiedAt": 1604969430847,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599280728219
+            "lastModifiedAt": 1604969423985
         },
         {
             "name": "authenticatedSignedWrites",
-            "lastModifiedAt": 1599280728831
+            "lastModifiedAt": 1604969424661
         },
         {
             "name": "broadcast",
-            "lastModifiedAt": 1596712330065
+            "lastModifiedAt": 1604969425667
         },
         {
             "name": "indicate",
-            "lastModifiedAt": 1596712331145
+            "lastModifiedAt": 1604969426121
         },
         {
             "name": "notify",
-            "lastModifiedAt": 1596712331966
+            "lastModifiedAt": 1604969426945
         },
         {
             "name": "read",
-            "lastModifiedAt": 1599280730813
+            "lastModifiedAt": 1604969427423
         },
         {
             "name": "reliableWrite",
-            "lastModifiedAt": 1596712333271
+            "lastModifiedAt": 1604969427985
         },
         {
             "name": "write",
-            "lastModifiedAt": 1596712334557
+            "lastModifiedAt": 1604969429255
         }
     ]
 }

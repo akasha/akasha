@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Clients.openWindow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Clients/openWindow",
-    "description": "The openWindow() method of the Clients interface creates a new top level browsing context and loads a given URL. If the calling script doesn't have permission to show popups, openWindow() will throw an InvalidAccessError."
+    "description": "The openWindow() method of the Clients interface creates a new top level browsing context and loads a given URL. If the calling script doesn't have permission to show popups, openWindow() will throw an InvalidAccessError.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#clients-openwindow",
+            "description": "The definition of 'Clients: openWindow' in Service Workers."
+        }
+    ]
 }

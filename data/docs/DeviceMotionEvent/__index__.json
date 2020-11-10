@@ -1,7 +1,7 @@
 
 {
     "name": "DeviceMotionEvent",
-    "lastModifiedAt": 1600311043837,
+    "lastModifiedAt": 1604969769405,
     "entries": [
         {
             "name": "DeviceMotionEvent",
@@ -9,23 +9,23 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190976986
+            "lastModifiedAt": 1604969765090
         },
         {
             "name": "acceleration",
-            "lastModifiedAt": 1597190978026
+            "lastModifiedAt": 1604969767071
         },
         {
             "name": "accelerationIncludingGravity",
-            "lastModifiedAt": 1597190978410
+            "lastModifiedAt": 1604969767645
         },
         {
             "name": "interval",
-            "lastModifiedAt": 1597190979054
+            "lastModifiedAt": 1604969768113
         },
         {
             "name": "rotationRate",
-            "lastModifiedAt": 1597190978684
+            "lastModifiedAt": 1604969769183
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "CustomEvent.detail",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/detail",
-    "description": "The detail readonly property of the CustomEvent interface returns any data passed when initializing the event."
+    "description": "The detail readonly property of the CustomEvent interface returns any data passed when initializing the event.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-customevent-detail",
+            "description": "The definition of 'detail' in DOM."
+        }
+    ]
 }

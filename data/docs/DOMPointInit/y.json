@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "DOMPointInit.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointInit/y",
-    "description": "The DOMPointInit dictionary's y property is used to specify the y-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object."
+    "description": "The DOMPointInit dictionary's y property is used to specify the y-coordinate of a point in 2D or 3D space when either creating or serializing to JSON a DOMPoint or DOMPointReadOnly object.",
+    "refs": [
+        {
+            "name": "Geometry Interfaces Module Level 1",
+            "href": "https://drafts.fxtf.org/geometry/#dom-dompointinit-y",
+            "description": "The definition of 'y' in Geometry Interfaces Module Level 1."
+        }
+    ]
 }

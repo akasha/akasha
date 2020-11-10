@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BluetoothRemoteGATTCharacteristic.uuid",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTCharacteristic/uuid",
-    "description": "The BluetoothRemoteGATTCharacteristic.uuid read-only property returns DOMString containing the UUID of the characteristic, for example '00002a37-0000-1000-8000-00805f9b34fb' for the Heart Rate Measurement characteristic."
+    "description": "The BluetoothRemoteGATTCharacteristic.uuid read-only property returns DOMString containing the UUID of the characteristic, for example '00002a37-0000-1000-8000-00805f9b34fb' for the Heart Rate Measurement characteristic.",
+    "refs": [
+        {
+            "name": "Web Bluetooth",
+            "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-uuid",
+            "description": "The definition of 'uuid' in Web Bluetooth."
+        }
+    ]
 }

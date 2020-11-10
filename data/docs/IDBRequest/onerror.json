@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "IDBRequest.onerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBRequest/onerror",
-    "description": "The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. Also included at the bottom is an onerror function that reports what the error was if the request fails. For a full working example, see our To-do Notifications app (view example live.)"
+    "description": "The following example requests a given record title, onsuccess gets the associated record from the IDBObjectStore (made available as objectStoreTitleRequest.result), updates one property of the record, and then puts the updated record back into the object store. Also included at the bottom is an onerror function that reports what the error was if the request fails. For a full working example, see our To-do Notifications app (view example live.)",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbrequest-onerror",
+            "description": "The definition of 'onerror' in Indexed Database API 2.0."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbrequest-onerror",
+            "description": "The definition of 'onerror' in Indexed Database API Draft."
+        }
+    ]
 }
