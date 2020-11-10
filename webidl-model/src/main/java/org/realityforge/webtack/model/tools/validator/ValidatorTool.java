@@ -35,6 +35,7 @@ public final class ValidatorTool
     }
     validators.add( new TypeReferenceValidator() );
     validators.add( new ConstEnumerationValidator() );
+    validators.add( new MarkerTypeUnionValidator() );
     return new AggregateValidator( validators );
   }
 }

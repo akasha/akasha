@@ -48,6 +48,15 @@ public final class ExtendedAttributes
    * A custom extended property that specifies the name of a java annotation that is added to the the specified element.
    */
   public static final String JAVA_ANNOTATION = "JavaAnnotation";
+  /**
+   * The MarkerType extended attribute can be added to a UnionType to indicate that the union can be treated as a separate.
+   * The member types of the union be interface types.
+   *
+   * <p>When generating the code for this, it should be generated as a java marker interface and the java classes that
+   * are generated to model the WebIDL interface types should implement the java interface.</p>
+   */
+  @Nonnull
+  public static final String MARKER_TYPE = "MarkerType";
 
   private ExtendedAttributes()
   {
