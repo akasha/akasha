@@ -8,17 +8,17 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5",
-            "description": "The definition of 'bufferSubData' in WebGL 1.0."
+            "description": "The definition of 'bufferSubData' in the 'WebGL 1.0' specification."
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBufferSubData.xml",
-            "description": "The definition of 'glBufferSubData' in OpenGL ES 2.0."
+            "description": "The definition of 'glBufferSubData' in the 'OpenGL ES 2.0' specification."
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBufferSubData.xhtml",
-            "description": "The definition of 'glBufferSubData' in OpenGL ES 3.0."
+            "description": "The definition of 'glBufferSubData' in the 'OpenGL ES 3.0' specification."
         }
     ]
 }

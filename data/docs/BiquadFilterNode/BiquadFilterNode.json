@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-biquadfilternode",
-            "description": "The definition of 'BiquadFilterNode()' in Web Audio API."
+            "description": "The definition of 'BiquadFilterNode()' in the 'Web Audio API' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.onfetch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onfetch",
-    "description": "The onfetch property of the ServiceWorkerGlobalScope interface is an event handler fired whenever a fetch event occurs (usually when the WindowOrWorkerGlobalScope.fetch() method is called.)"
+    "description": "The onfetch property of the ServiceWorkerGlobalScope interface is an event handler fired whenever a fetch event occurs (usually when the WindowOrWorkerGlobalScope.fetch() method is called.)",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-event-handlers",
+            "description": "The definition of 'Event Handlers' in the 'Service Workers' specification."
+        }
+    ]
 }

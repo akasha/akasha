@@ -1,87 +1,87 @@
 
 {
     "name": "PerformanceResourceTiming",
-    "lastModifiedAt": 1601465653425,
+    "lastModifiedAt": 1604977355930,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192288623
+            "lastModifiedAt": 1604977342295
         },
         {
             "name": "connectEnd",
-            "lastModifiedAt": 1600305413141
+            "lastModifiedAt": 1604977342755
         },
         {
             "name": "connectStart",
-            "lastModifiedAt": 1600305413403
+            "lastModifiedAt": 1604977343252
         },
         {
             "name": "decodedBodySize",
-            "lastModifiedAt": 1600305414207
+            "lastModifiedAt": 1604977343756
         },
         {
             "name": "domainLookupEnd",
-            "lastModifiedAt": 1600305414491
+            "lastModifiedAt": 1604977344211
         },
         {
             "name": "domainLookupStart",
-            "lastModifiedAt": 1600305415316
+            "lastModifiedAt": 1604977344716
         },
         {
             "name": "encodedBodySize",
-            "lastModifiedAt": 1600305415845
+            "lastModifiedAt": 1604977345189
         },
         {
             "name": "fetchStart",
-            "lastModifiedAt": 1600305416138
+            "lastModifiedAt": 1604977345715
         },
         {
             "name": "initiatorType",
-            "lastModifiedAt": 1600305416521
+            "lastModifiedAt": 1604977346213
         },
         {
             "name": "nextHopProtocol",
-            "lastModifiedAt": 1600305416906
+            "lastModifiedAt": 1604977346716
         },
         {
             "name": "redirectEnd",
-            "lastModifiedAt": 1600305417191
+            "lastModifiedAt": 1604977347208
         },
         {
             "name": "redirectStart",
-            "lastModifiedAt": 1600305417464
+            "lastModifiedAt": 1604977347948
         },
         {
             "name": "requestStart",
-            "lastModifiedAt": 1600305418283
+            "lastModifiedAt": 1604977348408
         },
         {
             "name": "responseEnd",
-            "lastModifiedAt": 1600305418574
+            "lastModifiedAt": 1604977349433
         },
         {
             "name": "responseStart",
-            "lastModifiedAt": 1600305418875
+            "lastModifiedAt": 1604977349940
         },
         {
             "name": "secureConnectionStart",
-            "lastModifiedAt": 1600305419679
+            "lastModifiedAt": 1604977350418
         },
         {
             "name": "serverTiming",
-            "lastModifiedAt": 1600305419942
+            "lastModifiedAt": 1604977351451
         },
         {
             "name": "toJSON",
-            "lastModifiedAt": 1599279354319
+            "lastModifiedAt": 1604977355930
         },
         {
             "name": "transferSize",
-            "lastModifiedAt": 1600305420371
+            "lastModifiedAt": 1604977352535
         },
         {
             "name": "workerStart",
-            "lastModifiedAt": 1600305421205
+            "lastModifiedAt": 1604977353047
         }
     ]
 }

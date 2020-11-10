@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGTextPositioningElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTextPositioningElement",
-    "description": "The SVGTextPositioningElement interface is implemented by elements that support attributes that position individual text glyphs. It is inherited by SVGTextElement, SVGTSpanElement, SVGTRefElement and SVGAltGlyphElement."
+    "description": "The SVGTextPositioningElement interface is implemented by elements that support attributes that position individual text glyphs. It is inherited by SVGTextElement, SVGTSpanElement, SVGTRefElement and SVGAltGlyphElement.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/text.html#InterfaceSVGTextPositioningElement",
+            "description": "The definition of 'SVGTextPositioningElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTextPositioningElement",
+            "description": "The definition of 'SVGTextPositioningElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

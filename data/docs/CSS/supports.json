@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "CSS.supports",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSS/supports",
-    "description": "The CSS.supports() method returns a Boolean value indicating if the browser supports a given CSS feature, or not.",
-    "refs": [
-        {
-            "name": "CSS Conditional Rules Module Level 3",
-            "href": "https://drafts.csswg.org/css-conditional-3/#dom-css-supports",
-            "description": "The definition of 'CSS: supports()' in CSS Conditional Rules Module Level 3."
-        }
-    ]
+    "description": "The CSS.supports() method returns a Boolean value indicating if the browser supports a given CSS feature, or not."
 }

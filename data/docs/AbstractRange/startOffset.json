@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-startoffset",
-            "description": "The definition of 'startOffset' in DOM."
+            "description": "The definition of 'startOffset' in the 'DOM' specification."
         },
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-startoffset",
-            "description": "The definition of 'startOffset' in Static Range."
+            "description": "The definition of 'startOffset' in the 'Static Range' specification."
         }
     ]
 }

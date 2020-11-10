@@ -1,23 +1,23 @@
 
 {
     "name": "DeviceMotionEventAcceleration",
-    "lastModifiedAt": 1604969773236,
+    "lastModifiedAt": 1604975784715,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969770120
+            "lastModifiedAt": 1604975782962
         },
         {
             "name": "x",
-            "lastModifiedAt": 1604969771081
+            "lastModifiedAt": 1604975783585
         },
         {
             "name": "y",
-            "lastModifiedAt": 1604969772124
+            "lastModifiedAt": 1604975784227
         },
         {
             "name": "z",
-            "lastModifiedAt": 1604969773236
+            "lastModifiedAt": 1604975784715
         }
     ]
 }

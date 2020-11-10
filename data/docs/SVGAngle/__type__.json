@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGAngle",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAngle",
-    "description": "The SVGAngle interface is used to represent a value that can be an angle or number value. An SVGAngle reflected through the animVal attribute is always read only."
+    "description": "The SVGAngle interface is used to represent a value that can be an angle or number value. An SVGAngle reflected through the animVal attribute is always read only.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGAngle",
+            "description": "The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGAngle",
+            "description": "The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRPermissionStatus",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionStatus",
-    "description": "The XRPermissionStatus interface defines the object returned by calling navigator.permissions.query() for the xr permission name; it indicates whether or not the app or site has permission to use WebXR, an may be monitored over time for changes to that permissions tate."
+    "description": "The XRPermissionStatus interface defines the object returned by calling navigator.permissions.query() for the xr permission name; it indicates whether or not the app or site has permission to use WebXR, an may be monitored over time for changes to that permissions tate.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrpermissionstatus",
+            "description": "The definition of 'XRPermissionStatus' in the 'WebXR Device API' specification."
+        }
+    ]
 }

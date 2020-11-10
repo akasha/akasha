@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelandholdattime",
-            "description": "The definition of 'cancelAndHoldAtTime()' in Web Audio API."
+            "description": "The definition of 'cancelAndHoldAtTime()' in the 'Web Audio API' specification."
         }
     ]
 }

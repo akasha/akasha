@@ -3,27 +3,5 @@
     "kind": "Type",
     "name": "Comment",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Comment",
-    "description": "The Comment interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view.",
-    "refs": [
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#comment",
-            "description": "The definition of 'Comment' in DOM."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 3 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1728279322",
-            "description": "The definition of 'Comment' in Document Object Model (DOM) Level 3 Core Specification."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1728279322",
-            "description": "The definition of 'Comment' in Document Object Model (DOM) Level 2 Core Specification."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1728279322",
-            "description": "The definition of 'Comment' in Document Object Model (DOM) Level 1 Specification."
-        }
-    ]
+    "description": "The Comment interface represents textual notations within markup; although it is generally not visually shown, such comments are available to be read in the source view."
 }

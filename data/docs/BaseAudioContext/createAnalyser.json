@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createanalyser",
-            "description": "The definition of 'createAnalyser()' in Web Audio API."
+            "description": "The definition of 'createAnalyser()' in the 'Web Audio API' specification."
         }
     ]
 }

@@ -3,22 +3,5 @@
     "kind": "Property",
     "name": "Document.body",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/body",
-    "description": "The Document.body property represents the body or frameset node of the current document, or null if no such element exists.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/dom.html#dom-document-body",
-            "description": "The definition of 'Document.body' in HTML Living Standard."
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/dom.html#dom-document-body",
-            "description": "The definition of 'Document.body' in HTML 5.1."
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/dom.html#dom-document-body",
-            "description": "The definition of 'Document.body' in HTML5."
-        }
-    ]
+    "description": "The Document.body property represents the body or frameset node of the current document, or null if no such element exists."
 }

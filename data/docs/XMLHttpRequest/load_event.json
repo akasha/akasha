@@ -4,6 +4,12 @@
     "name": "XMLHttpRequest.load_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/load_event",
     "description": "The load event is fired when an XMLHttpRequest transaction completes successfully.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#event-xhr-load"
+        }
+    ],
     "eventName": "load",
     "eventType": "ProgressEvent",
     "eventHandlerProperty": "onload",

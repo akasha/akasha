@@ -8,7 +8,7 @@
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.6",
-            "description": "The definition of 'WebGLVertexArrayObject' in WebGL 2.0."
+            "description": "The definition of 'WebGLVertexArrayObject' in the 'WebGL 2.0' specification."
         }
     ]
 }

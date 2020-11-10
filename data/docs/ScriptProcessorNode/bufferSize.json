@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#widl-ScriptProcessorNode-bufferSize",
-            "description": "The definition of 'bufferSize' in Web Audio API."
+            "description": "The definition of 'bufferSize' in the 'Web Audio API' specification."
         }
     ]
 }

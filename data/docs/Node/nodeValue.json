@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Node.nodeValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeValue",
-    "description": "The nodeValue property of the Node interface returns or sets the value of the current node."
+    "description": "The nodeValue property of the Node interface returns or sets the value of the current node.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-nodevalue",
+            "description": "The definition of 'Node: nodeValue' in the 'DOM' specification."
+        }
+    ]
 }

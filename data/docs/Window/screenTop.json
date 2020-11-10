@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-screeny",
-            "description": "The definition of 'Window.screenTop' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'Window.screenTop' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

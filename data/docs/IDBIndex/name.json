@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "IDBIndex.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/name",
-    "description": "A DOMString specifying a name for the index.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbindex-name",
-            "description": "The definition of 'name' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-name",
-            "description": "The definition of 'name' in Indexed Database API Draft."
-        }
-    ]
+    "description": "A DOMString specifying a name for the index."
 }

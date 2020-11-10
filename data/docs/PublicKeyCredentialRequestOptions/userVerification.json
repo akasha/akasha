@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PublicKeyCredentialRequestOptions.userVerification",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions/userVerification",
-    "description": "userVerification is an optional property of the PublicKeyCredentialRequestOptions. This is a string which indicates how the user verification should be part of the authentication process."
+    "description": "userVerification is an optional property of the PublicKeyCredentialRequestOptions. This is a string which indicates how the user verification should be part of the authentication process.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification",
+            "description": "The definition of 'userVerification' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        }
+    ]
 }

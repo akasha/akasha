@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#extensions-to-window-interface",
-            "description": "The definition of 'Window.getSelection()' in Selection API."
+            "description": "The definition of 'Window.getSelection()' in the 'Selection API' specification."
         }
     ]
 }

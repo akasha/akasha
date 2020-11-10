@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing",
-            "description": "The definition of 'self.queueMicrotask()' in HTML Living Standard."
+            "description": "The definition of 'self.queueMicrotask()' in the 'HTML Living Standard' specification."
         }
     ]
 }

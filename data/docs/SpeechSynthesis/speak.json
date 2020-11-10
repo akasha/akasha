@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechSynthesis.speak",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speak",
-    "description": "The speak() method of the SpeechSynthesis interface adds an utterance to the utterance queue; it will be spoken when any other utterances queued before it have been spoken."
+    "description": "The speak() method of the SpeechSynthesis interface adds an utterance to the utterance queue; it will be spoken when any other utterances queued before it have been spoken.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-speak",
+            "description": "The definition of 'speak()' in the 'Web Speech API' specification."
+        }
+    ]
 }

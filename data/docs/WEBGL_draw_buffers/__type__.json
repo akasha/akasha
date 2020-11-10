@@ -8,7 +8,7 @@
         {
             "name": "WEBGL_draw_buffers",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_draw_buffers/",
-            "description": "The definition of 'WEBGL_draw_buffers' in WEBGL_draw_buffers."
+            "description": "The definition of 'WEBGL_draw_buffers' in the 'WEBGL_draw_buffers' specification."
         }
     ]
 }

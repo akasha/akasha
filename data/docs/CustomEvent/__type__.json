@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-customevent",
-            "description": "The definition of 'CustomEvent' in DOM."
+            "description": "The definition of 'CustomEvent' in the 'DOM' specification."
         }
     ]
 }

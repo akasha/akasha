@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLVideoElement.onleavepictureinpicture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/onleavepictureinpicture",
-    "description": "The onleavepictureinpicture property of the HTMLVideoElement interface is an EventHandler that processes HTMLVideoElement.leavepictureinpicture events.",
-    "refs": [
-        {
-            "name": "Unknown",
-            "href": "",
-            "description": "The definition of 'HTMLVideoElement.onleavepictureinpicture' in Unknown."
-        }
-    ]
+    "description": "The onleavepictureinpicture property of the HTMLVideoElement interface is an EventHandler that processes HTMLVideoElement.leavepictureinpicture events."
 }

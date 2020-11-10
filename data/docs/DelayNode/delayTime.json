@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-delaynode-delaytime",
-            "description": "The definition of 'delayTime' in Web Audio API."
+            "description": "The definition of 'delayTime' in the 'Web Audio API' specification."
         }
     ]
 }

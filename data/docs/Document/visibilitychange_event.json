@@ -8,7 +8,7 @@
         {
             "name": "Page Visibility (Second Edition)",
             "href": "https://www.w3.org/TR/page-visibility/#dfn-visibilitychange",
-            "description": "The definition of 'visibilitychange' in Page Visibility (Second Edition)."
+            "description": "The definition of 'visibilitychange' in the 'Page Visibility (Second Edition)' specification."
         }
     ],
     "eventName": "visibilitychange",

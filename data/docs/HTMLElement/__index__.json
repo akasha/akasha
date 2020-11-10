@@ -1,11 +1,11 @@
 
 {
     "name": "HTMLElement",
-    "lastModifiedAt": 1604970562498,
+    "lastModifiedAt": 1604976490891,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447730526
+            "lastModifiedAt": 1604976419077
         },
         {
             "name": "accessKey",
@@ -13,7 +13,7 @@
         },
         {
             "name": "accessKeyLabel",
-            "lastModifiedAt": 1604447789334
+            "lastModifiedAt": 1604976463422
         },
         {
             "name": "animationcancel_event",
@@ -41,11 +41,11 @@
         },
         {
             "name": "click",
-            "lastModifiedAt": 1604447799542
+            "lastModifiedAt": 1604976471951
         },
         {
             "name": "contentEditable",
-            "lastModifiedAt": 1604447731129
+            "lastModifiedAt": 1604976419604
         },
         {
             "name": "contextMenu",
@@ -53,7 +53,7 @@
         },
         {
             "name": "dir",
-            "lastModifiedAt": 1604447733620
+            "lastModifiedAt": 1604976421004
         },
         {
             "name": "forceSpellCheck",
@@ -65,15 +65,15 @@
         },
         {
             "name": "hidden",
-            "lastModifiedAt": 1604447734265
+            "lastModifiedAt": 1604976421522
         },
         {
             "name": "inert",
-            "lastModifiedAt": 1604447791190
+            "lastModifiedAt": 1604976465728
         },
         {
             "name": "innerText",
-            "lastModifiedAt": 1604447735478
+            "lastModifiedAt": 1604976422455
         },
         {
             "name": "input_event",
@@ -81,15 +81,15 @@
         },
         {
             "name": "invalid_event",
-            "lastModifiedAt": 1604447801286
+            "lastModifiedAt": 1604976473970
         },
         {
             "name": "isContentEditable",
-            "lastModifiedAt": 1604447736709
+            "lastModifiedAt": 1604976423087
         },
         {
             "name": "lang",
-            "lastModifiedAt": 1604447737273
+            "lastModifiedAt": 1604976423620
         },
         {
             "name": "lostpointercapture_event",
@@ -97,43 +97,43 @@
         },
         {
             "name": "offsetHeight",
-            "lastModifiedAt": 1604447737892
+            "lastModifiedAt": 1604976424137
         },
         {
             "name": "offsetLeft",
-            "lastModifiedAt": 1604447738501
+            "lastModifiedAt": 1604976424636
         },
         {
             "name": "offsetParent",
-            "lastModifiedAt": 1604447739206
+            "lastModifiedAt": 1604976425115
         },
         {
             "name": "offsetTop",
-            "lastModifiedAt": 1604447740092
+            "lastModifiedAt": 1604976425646
         },
         {
             "name": "offsetWidth",
-            "lastModifiedAt": 1604447741021
+            "lastModifiedAt": 1604976426150
         },
         {
             "name": "onabort",
-            "lastModifiedAt": 1604447742316
+            "lastModifiedAt": 1604976426873
         },
         {
             "name": "onblur",
-            "lastModifiedAt": 1604447744776
+            "lastModifiedAt": 1604976429419
         },
         {
             "name": "onchange",
-            "lastModifiedAt": 1604447747125
+            "lastModifiedAt": 1604976430786
         },
         {
             "name": "onclick",
-            "lastModifiedAt": 1604447748462
+            "lastModifiedAt": 1604976431382
         },
         {
             "name": "oncontextmenu",
-            "lastModifiedAt": 1604447750461
+            "lastModifiedAt": 1604976432486
         },
         {
             "name": "oncopy",
@@ -145,51 +145,51 @@
         },
         {
             "name": "ondblclick",
-            "lastModifiedAt": 1604447753781
+            "lastModifiedAt": 1604976434468
         },
         {
             "name": "onfocus",
-            "lastModifiedAt": 1604447755834
+            "lastModifiedAt": 1604976436429
         },
         {
             "name": "oninput",
-            "lastModifiedAt": 1604447757880
+            "lastModifiedAt": 1604976438254
         },
         {
             "name": "onkeydown",
-            "lastModifiedAt": 1604447760003
+            "lastModifiedAt": 1604976439768
         },
         {
             "name": "onkeypress",
-            "lastModifiedAt": 1604447760983
+            "lastModifiedAt": 1604976440320
         },
         {
             "name": "onkeyup",
-            "lastModifiedAt": 1604447762643
+            "lastModifiedAt": 1604976441476
         },
         {
             "name": "onload",
-            "lastModifiedAt": 1604447764202
+            "lastModifiedAt": 1604976442090
         },
         {
             "name": "onmousedown",
-            "lastModifiedAt": 1604447766504
+            "lastModifiedAt": 1604976445118
         },
         {
             "name": "onmousemove",
-            "lastModifiedAt": 1604447768689
+            "lastModifiedAt": 1604976446208
         },
         {
             "name": "onmouseout",
-            "lastModifiedAt": 1604447769805
+            "lastModifiedAt": 1604976446745
         },
         {
             "name": "onmouseover",
-            "lastModifiedAt": 1604447771362
+            "lastModifiedAt": 1604976447287
         },
         {
             "name": "onmouseup",
-            "lastModifiedAt": 1604447773113
+            "lastModifiedAt": 1604976447829
         },
         {
             "name": "onpaste",
@@ -197,23 +197,23 @@
         },
         {
             "name": "onreset",
-            "lastModifiedAt": 1604447778658
+            "lastModifiedAt": 1604976453787
         },
         {
             "name": "onresize",
-            "lastModifiedAt": 1604447779593
+            "lastModifiedAt": 1604976454402
         },
         {
             "name": "onscroll",
-            "lastModifiedAt": 1604447780589
+            "lastModifiedAt": 1604976454996
         },
         {
             "name": "onselect",
-            "lastModifiedAt": 1604447782934
+            "lastModifiedAt": 1604976455573
         },
         {
             "name": "onsubmit",
-            "lastModifiedAt": 1604447784949
+            "lastModifiedAt": 1604976456956
         },
         {
             "name": "outerText",
@@ -253,27 +253,27 @@
         },
         {
             "name": "style",
-            "lastModifiedAt": 1604447796861
+            "lastModifiedAt": 1604976469809
         },
         {
             "name": "title",
-            "lastModifiedAt": 1604447787505
+            "lastModifiedAt": 1604976461674
         },
         {
             "name": "transitioncancel_event",
-            "lastModifiedAt": 1604447814380
+            "lastModifiedAt": 1604976489252
         },
         {
             "name": "transitionend_event",
-            "lastModifiedAt": 1604447815000
+            "lastModifiedAt": 1604976489754
         },
         {
             "name": "transitionrun_event",
-            "lastModifiedAt": 1604447815476
+            "lastModifiedAt": 1604976490372
         },
         {
             "name": "transitionstart_event",
-            "lastModifiedAt": 1604447816036
+            "lastModifiedAt": 1604976490891
         }
     ]
 }

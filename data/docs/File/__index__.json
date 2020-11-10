@@ -1,7 +1,7 @@
 
 {
     "name": "File",
-    "lastModifiedAt": 1604970259891,
+    "lastModifiedAt": 1604976196424,
     "entries": [
         {
             "name": "File",
@@ -9,11 +9,11 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604970253354
+            "lastModifiedAt": 1604976191682
         },
         {
             "name": "lastModified",
-            "lastModifiedAt": 1604970255814
+            "lastModifiedAt": 1604976192676
         },
         {
             "name": "lastModifiedDate",
@@ -25,15 +25,15 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1604970258481
+            "lastModifiedAt": 1604976194674
         },
         {
             "name": "type",
-            "lastModifiedAt": 1604970259349
+            "lastModifiedAt": 1604976195964
         },
         {
             "name": "webkitRelativePath",
-            "lastModifiedAt": 1604970259891
+            "lastModifiedAt": 1604976196424
         }
     ]
 }

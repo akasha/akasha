@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/the-video-element.html#dom-media-seekable",
-            "description": "The definition of 'HTMLMediaElement' in HTML Living Standard."
+            "description": "The definition of 'HTMLMediaElement' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-media-seekable",
-            "description": "The definition of 'HTMLMediaElement' in HTML5."
+            "description": "The definition of 'HTMLMediaElement' in the 'HTML5' specification."
         },
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#htmlmediaelement-extensions",
-            "description": "The definition of 'HTMLMediaElement extensions, like for seekable' in Media Source Extensions."
+            "description": "The definition of 'HTMLMediaElement extensions, like for seekable' in the 'Media Source Extensions' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-hashchangeevent-oldurl",
-            "description": "The definition of 'HashChangeEvent: oldURL' in HTML Living Standard."
+            "description": "The definition of 'HashChangeEvent: oldURL' in the 'HTML Living Standard' specification."
         }
     ]
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLTableElement.rows",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/rows",
-    "description": "The read-only HTMLTableElement property rows returns a live HTMLCollection of all the rows in the table, including the rows contained within any thead, tfoot, and tbody elements.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-table-rows",
-            "description": "The definition of 'HTMLTableElement: rows' in HTML Living Standard."
-        }
-    ]
+    "description": "The read-only HTMLTableElement property rows returns a live HTMLCollection of all the rows in the table, including the rows contained within any thead, tfoot, and tbody elements."
 }

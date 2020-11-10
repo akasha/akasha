@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-orientationz",
-            "description": "The definition of 'orientationZ' in Web Audio API."
+            "description": "The definition of 'orientationZ' in the 'Web Audio API' specification."
         }
     ]
 }

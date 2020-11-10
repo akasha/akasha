@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisEvent.charIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/charIndex",
-    "description": "The charIndex read-only property of the SpeechSynthesisUtterance interface returns the index position of the character in the SpeechSynthesisUtterance.text that was being spoken when the event was triggered."
+    "description": "The charIndex read-only property of the SpeechSynthesisUtterance interface returns the index position of the character in the SpeechSynthesisUtterance.text that was being spoken when the event was triggered.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisevent-charindex",
+            "description": "The definition of 'charIndex' in the 'Web Speech API' specification."
+        }
+    ]
 }

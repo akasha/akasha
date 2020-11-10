@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.verify",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify",
-    "description": "The verify() method of the SubtleCrypto interface verifies a digital signature."
+    "description": "The verify() method of the SubtleCrypto interface verifies a digital signature.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-verify",
+            "description": "The definition of 'SubtleCrypto.verify()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

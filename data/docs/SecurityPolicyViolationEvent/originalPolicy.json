@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.originalPolicy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/originalPolicy",
-    "description": "The originalPolicy read-only property of the SecurityPolicyViolationEvent interface is a DOMString containing the policy whose enforcement uncovered the violation."
+    "description": "The originalPolicy read-only property of the SecurityPolicyViolationEvent interface is a DOMString containing the policy whose enforcement uncovered the violation.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-originalpolicy",
+            "description": "The definition of 'originalPolicy' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

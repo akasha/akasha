@@ -8,7 +8,7 @@
         {
             "name": "XMLHttpRequest",
             "href": "https://xhr.spec.whatwg.org/#dom-formdata-delete",
-            "description": "The definition of 'delete()' in XMLHttpRequest."
+            "description": "The definition of 'delete()' in the 'XMLHttpRequest' specification."
         }
     ]
 }

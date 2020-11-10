@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRView.eye",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/eye",
-    "description": "The XRView interface's read-only eye property is a string taken from the XREye enumerated type, indicating which eye's viewpoint the XRView represents: left or right. For views which represent neither eye, such as monoscopic views, this property's value is none."
+    "description": "The XRView interface's read-only eye property is a string taken from the XREye enumerated type, indicating which eye's viewpoint the XRView represents: left or right. For views which represent neither eye, such as monoscopic views, this property's value is none.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrview-eye",
+            "description": "The definition of 'XRView.eye' in the 'WebXR Device API' specification."
+        }
+    ]
 }

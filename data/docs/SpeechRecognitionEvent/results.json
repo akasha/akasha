@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognitionEvent.results",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionEvent/results",
-    "description": "The results read-only property of the SpeechRecognitionEvent interface returns a SpeechRecognitionResultList object representing all the speech recognition results for the current session."
+    "description": "The results read-only property of the SpeechRecognitionEvent interface returns a SpeechRecognitionResultList object representing all the speech recognition results for the current session.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionevent-results",
+            "description": "The definition of 'results' in the 'Web Speech API' specification."
+        }
+    ]
 }

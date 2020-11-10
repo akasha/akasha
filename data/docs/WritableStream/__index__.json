@@ -1,27 +1,27 @@
 
 {
     "name": "WritableStream",
-    "lastModifiedAt": 1600314507902,
+    "lastModifiedAt": 1604978986287,
     "entries": [
         {
             "name": "WritableStream",
-            "lastModifiedAt": 1597192138458
+            "lastModifiedAt": 1604978983935
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599391460303
+            "lastModifiedAt": 1604978983318
         },
         {
             "name": "abort",
-            "lastModifiedAt": 1597192139146
+            "lastModifiedAt": 1604978985265
         },
         {
             "name": "getWriter",
-            "lastModifiedAt": 1597192140194
+            "lastModifiedAt": 1604978986287
         },
         {
             "name": "locked",
-            "lastModifiedAt": 1599391462505
+            "lastModifiedAt": 1604978984474
         }
     ]
 }

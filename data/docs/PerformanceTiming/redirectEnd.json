@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.redirectEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/redirectEnd",
-    "description": "The legacy PerformanceTiming.redirectEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, the last HTTP redirect is completed, that is when the last byte of the HTTP response has been received. If there is no redirect, or if one of the redirect is not of the same origin, the value returned is 0."
+    "description": "The legacy PerformanceTiming.redirectEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, the last HTTP redirect is completed, that is when the last byte of the HTTP response has been received. If there is no redirect, or if one of the redirect is not of the same origin, the value returned is 0.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-redirectend",
+            "description": "The definition of 'PerformanceTiming.redirectEnd' in the 'Navigation Timing' specification."
+        }
+    ]
 }

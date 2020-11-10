@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRViewerPose.views",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewerPose/views",
-    "description": "The read-only XRViewerPose property views returns an array which contains every XRView which must be rendered in order to fully represent the scene from the viewpoint defined by the viewer pose. For monoscopic devices, this array contains a single view."
+    "description": "The read-only XRViewerPose property views returns an array which contains every XRView which must be rendered in order to fully represent the scene from the viewpoint defined by the viewer pose. For monoscopic devices, this array contains a single view.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrviewerpose-views",
+            "description": "The definition of 'XRViewerPose.views' in the 'WebXR Device API' specification."
+        }
+    ]
 }

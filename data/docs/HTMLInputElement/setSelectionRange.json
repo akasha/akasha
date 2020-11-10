@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/forms.html#dom-textarea/input-setselectionrange",
-            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML Living Standard."
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/forms.html#dom-textarea/input-setselectionrange",
-            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML 5.1."
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#dom-textarea/input-setselectionrange",
-            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in HTML5."
+            "description": "The definition of 'HTMLInputElement.setSelectionRange()' in the 'HTML5' specification."
         }
     ]
 }

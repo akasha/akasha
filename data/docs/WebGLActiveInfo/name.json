@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebGLActiveInfo.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLActiveInfo/name",
-    "description": "The read-only WebGLActiveInfo.name property represents the name of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods."
+    "description": "The read-only WebGLActiveInfo.name property represents the name of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLActiveInfo-name",
+            "description": "The definition of 'WebGLActiveInfo.name' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

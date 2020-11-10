@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmldialogelement",
-            "description": "The definition of 'HTMLDialogElement' in HTML Living Standard."
+            "description": "The definition of 'HTMLDialogElement' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.2",
             "href": "https://www.w3.org/TR/html52/interactive-elements.html#the-dialog-element",
-            "description": "The definition of '&lt;dialog&gt;' in HTML 5.2."
+            "description": "The definition of '&lt;dialog&gt;' in the 'HTML 5.2' specification."
         }
     ]
 }

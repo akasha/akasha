@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "SpeechSynthesisUtterance.SpeechSynthesisUtterance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance",
-    "description": "The SpeechSynthesisUtterance() constructor of the SpeechSynthesisUtterance interface returns a new SpeechSynthesisUtterance object instance."
+    "description": "The SpeechSynthesisUtterance() constructor of the SpeechSynthesisUtterance interface returns a new SpeechSynthesisUtterance object instance.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-speechsynthesisutterance",
+            "description": "The definition of 'SpeechSynthesisUtterance()' in the 'Web Speech API' specification."
+        }
+    ]
 }

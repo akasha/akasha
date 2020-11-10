@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#request-class",
-            "description": "The definition of 'Request' in Fetch."
+            "description": "The definition of 'Request' in the 'Fetch' specification."
         }
     ]
 }

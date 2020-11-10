@@ -3,5 +3,16 @@
     "kind": "Method",
     "name": "SVGImageElement.decode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decode",
-    "description": "The decode() method of the SVGImageElement interface initiates asynchronous decoding of an image, returning a Promise that"
+    "description": "The decode() method of the SVGImageElement interface initiates asynchronous decoding of an image, returning a Promise that",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/"
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-img-decode",
+            "description": "The definition of 'decode()' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

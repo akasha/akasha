@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XR.requestSession",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XR/requestSession",
-    "description": "The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session."
+    "description": "The XRSystem interface's requestSession() method returns a promise which resolves to an XRSession object through which you can manage the requested type of WebXR session.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsystem-requestsession",
+            "description": "The definition of 'requestSession()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

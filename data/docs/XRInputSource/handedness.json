@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSource.handedness",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/handedness",
-    "description": "The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all."
+    "description": "The read-only XRInputSource property handedness indicates which of the user's hands the WebXR input source is associated with, or if it's not associated with a hand at all.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsource-handedness",
+            "description": "The definition of 'XRInputSource.handedness' in the 'WebXR Device API' specification."
+        }
+    ]
 }

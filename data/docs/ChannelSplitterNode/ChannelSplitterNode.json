@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#channelsplitternode",
-            "description": "The definition of 'ChannelSplitterNode' in Web Audio API."
+            "description": "The definition of 'ChannelSplitterNode' in the 'Web Audio API' specification."
         }
     ]
 }

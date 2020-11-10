@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGPathElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement",
-    "description": "The SVGPathElement interface corresponds to the path element."
+    "description": "The SVGPathElement interface corresponds to the path element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/paths.html#InterfaceSVGPathElement",
+            "description": "The definition of 'SVGPathElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/paths.html#InterfaceSVGPathElement",
+            "description": "The definition of 'SVGPathElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

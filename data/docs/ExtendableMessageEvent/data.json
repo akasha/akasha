@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-data",
-            "description": "The definition of 'ExtendableMessageEvent.data' in Service Workers."
+            "description": "The definition of 'ExtendableMessageEvent.data' in the 'Service Workers' specification."
         }
     ]
 }

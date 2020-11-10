@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-response-ok",
-            "description": "The definition of 'ok' in Fetch."
+            "description": "The definition of 'ok' in the 'Fetch' specification."
         }
     ]
 }

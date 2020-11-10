@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "IDBObjectStore.transaction",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/transaction",
-    "description": "An IDBTransaction object.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-transaction",
-            "description": "The definition of 'transaction' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-transaction",
-            "description": "The definition of 'transaction' in Indexed Database API Draft."
-        }
-    ]
+    "description": "An IDBTransaction object."
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-EcdsaParams",
-            "description": "The definition of 'SubtleCrypto.EcdsaParams' in Web Cryptography API."
+            "description": "The definition of 'SubtleCrypto.EcdsaParams' in the 'Web Cryptography API' specification."
         }
     ]
 }

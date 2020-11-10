@@ -8,57 +8,57 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-document",
-            "description": "The definition of 'Document' in DOM."
+            "description": "The definition of 'Document' in the 'DOM' specification."
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#the-document-object",
-            "description": "The definition of 'Document' in HTML Living Standard."
+            "description": "The definition of 'Document' in the 'HTML Living Standard' specification."
         },
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'Document' in the 'CSS Object Model (CSSOM) View Module' specification."
         },
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in Pointer Lock."
+            "description": "The definition of 'Document' in the 'Pointer Lock' specification."
         },
         {
             "name": "Page Visibility (Second Edition)",
             "href": "https://www.w3.org/TR/page-visibility/#extensions-to-the-document-interface",
-            "description": "The definition of 'Document' in Page Visibility (Second Edition)."
+            "description": "The definition of 'Document' in the 'Page Visibility (Second Edition)' specification."
         },
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#extensions-to-document-interface",
-            "description": "The definition of 'Document' in Selection API."
+            "description": "The definition of 'Document' in the 'Selection API' specification."
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#interface-document",
-            "description": "The definition of 'Document' in DOM4."
+            "description": "The definition of 'Document' in the 'DOM4' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/#i-Document",
-            "description": "The definition of 'Document' in Document Object Model (DOM) Level 3 Core Specification."
+            "description": "The definition of 'Document' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 3 XPath Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator",
-            "description": "The definition of 'XPathEvaluator' in Document Object Model (DOM) Level 3 XPath Specification."
+            "description": "The definition of 'XPathEvaluator' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Core/#i-Document",
-            "description": "The definition of 'Document' in Document Object Model (DOM) Level 2 Core Specification."
+            "description": "The definition of 'Document' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/#i-Document",
-            "description": "The definition of 'Document' in Document Object Model (DOM) Level 1 Specification."
+            "description": "The definition of 'Document' in the 'Document Object Model (DOM) Level 1 Specification' specification."
         }
     ]
 }

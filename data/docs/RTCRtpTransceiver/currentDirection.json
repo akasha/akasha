@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.currentDirection",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection",
-    "description": "The read-only RTCRtpTransceiver property currentDirection is a string which indicates the current directionality of the transceiver."
+    "description": "The read-only RTCRtpTransceiver property currentDirection is a string which indicates the current directionality of the transceiver.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-currentdirection",
+            "description": "The definition of 'RTCRtpTransceiver.currentDirection' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+        }
+    ]
 }

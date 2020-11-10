@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.connectionState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/connectionState",
-    "description": "The read-only connectionState property of the RTCPeerConnection interface indicates the current state of the peer connection by returning one of the string values specified by the enum RTCPeerConnectionState."
+    "description": "The read-only connectionState property of the RTCPeerConnection interface indicates the current state of the peer connection by returning one of the string values specified by the enum RTCPeerConnectionState.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-connection-state",
+            "description": "The definition of 'RTCPeerConnection.connectionState' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+        }
+    ]
 }

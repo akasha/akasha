@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-document-lastmodified",
-            "description": "The definition of 'document.lastModified' in HTML Living Standard."
+            "description": "The definition of 'document.lastModified' in the 'HTML Living Standard' specification."
         }
     ]
 }

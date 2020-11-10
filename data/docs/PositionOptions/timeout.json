@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PositionOptions.timeout",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PositionOptions/timeout",
-    "description": "The PositionOptions.timeout property is a positive long value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. The default value is Infinity, meaning that getCurrentPosition() won't return until the position is available."
+    "description": "The PositionOptions.timeout property is a positive long value representing the maximum length of time (in milliseconds) the device is allowed to take in order to return a position. The default value is Infinity, meaning that getCurrentPosition() won't return until the position is available.",
+    "refs": [
+        {
+            "name": "Geolocation API",
+            "href": "https://w3c.github.io/geolocation-api/#dom-positionoptions-timeout",
+            "description": "The definition of 'PositionOptions.timeout' in the 'Geolocation API' specification."
+        }
+    ]
 }

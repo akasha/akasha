@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ServiceWorkerGlobalScope.skipWaiting",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting",
-    "description": "The ServiceWorkerGlobalScope.skipWaiting() method of the ServiceWorkerGlobalScope forces the waiting service worker to become the active service worker."
+    "description": "The ServiceWorkerGlobalScope.skipWaiting() method of the ServiceWorkerGlobalScope forces the waiting service worker to become the active service worker.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-serviceworkerglobalscope-skipwaiting",
+            "description": "The definition of 'skipWaiting()' in the 'Service Workers' specification."
+        }
+    ]
 }

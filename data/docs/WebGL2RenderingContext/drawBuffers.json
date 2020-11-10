@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.drawBuffers",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawBuffers",
-    "description": "The WebGL2RenderingContext.drawBuffers() method of the WebGL 2 API defines draw buffers to which fragment colors are written into. The draw buffer settings are part of the state of the currently bound framebuffer or the drawingbuffer if no framebuffer is bound."
+    "description": "The WebGL2RenderingContext.drawBuffers() method of the WebGL 2 API defines draw buffers to which fragment colors are written into. The draw buffer settings are part of the state of the currently bound framebuffer or the drawingbuffer if no framebuffer is bound.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.11",
+            "description": "The definition of 'drawBuffers' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawBuffers.xhtml",
+            "description": "The definition of 'glDrawBuffers' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

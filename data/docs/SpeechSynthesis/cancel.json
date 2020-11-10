@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechSynthesis.cancel",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel",
-    "description": "The cancel() method of the SpeechSynthesis interface removes all utterances from the utterance queue."
+    "description": "The cancel() method of the SpeechSynthesis interface removes all utterances from the utterance queue.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-cancel",
+            "description": "The definition of 'cancel()' in the 'Web Speech API' specification."
+        }
+    ]
 }

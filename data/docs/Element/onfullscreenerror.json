@@ -8,7 +8,7 @@
         {
             "name": "Fullscreen API",
             "href": "https://fullscreen.spec.whatwg.org/#dom-element-onfullscreenerror",
-            "description": "The definition of 'onfullscreenerror' in Fullscreen API."
+            "description": "The definition of 'onfullscreenerror' in the 'Fullscreen API' specification."
         }
     ]
 }

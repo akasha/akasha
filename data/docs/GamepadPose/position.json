@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadpose-position",
-            "description": "The definition of 'position' in Gamepad Extensions."
+            "description": "The definition of 'position' in the 'Gamepad Extensions' specification."
         }
     ]
 }

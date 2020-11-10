@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRViewport.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRViewport/y",
-    "description": "The read-only XRViewport interface's y property indicates the offset from the bottom edge of the destination surface (typically a XRWebGLLayer to the bottom edge of the viewport within the surface into which WebXR content is to be rendered."
+    "description": "The read-only XRViewport interface's y property indicates the offset from the bottom edge of the destination surface (typically a XRWebGLLayer to the bottom edge of the viewport within the surface into which WebXR content is to be rendered.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrviewport-y",
+            "description": "The definition of 'XRViewport.y' in the 'WebXR Device API' specification."
+        }
+    ]
 }

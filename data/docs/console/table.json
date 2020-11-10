@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#table",
-            "description": "The definition of 'console.table()' in Console API."
+            "description": "The definition of 'console.table()' in the 'Console API' specification."
         }
     ]
 }

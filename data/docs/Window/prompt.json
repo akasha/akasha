@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Window.prompt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt",
-    "description": "The Window.prompt() displays a dialog with an optional message prompting the user to input some text.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-prompt",
-            "description": "The definition of 'prompt()' in HTML Living Standard."
-        }
-    ]
+    "description": "The Window.prompt() displays a dialog with an optional message prompting the user to input some text."
 }

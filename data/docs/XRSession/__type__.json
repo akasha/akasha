@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRSession",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession",
-    "description": "The WebXR Device API's XRSession interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the XRSystem interface's requestSession() method."
+    "description": "The WebXR Device API's XRSession interface represents an ongoing XR session, providing methods and properties used to interact with and control the session. To open a WebXR session, use the XRSystem interface's requestSession() method.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrsession-interface",
+            "description": "The definition of 'XRSession' in the 'WebXR Device API' specification."
+        }
+    ]
 }

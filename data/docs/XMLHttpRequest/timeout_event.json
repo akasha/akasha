@@ -4,6 +4,13 @@
     "name": "XMLHttpRequest.timeout_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout_event",
     "description": "The timeout event is fired when progression is terminated due to preset time expiring.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#event-xhr-timeout",
+            "description": "The definition of 'timeout event' in the 'XMLHttpRequest' specification."
+        }
+    ],
     "eventName": "timeout",
     "eventType": "ProgressEvent",
     "eventHandlerProperty": "ontimeout",

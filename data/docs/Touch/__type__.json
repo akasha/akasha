@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "Touch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch",
-    "description": "The Touch interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad."
+    "description": "The Touch interface represents a single contact point on a touch-sensitive device. The contact point is commonly a finger or stylus and the device may be a touchscreen or trackpad.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#touch-interface",
+            "description": "The definition of 'Touch' in the 'Touch Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#touch-interface",
+            "description": "The definition of 'Touch' in the 'Touch Events' specification."
+        }
+    ]
 }

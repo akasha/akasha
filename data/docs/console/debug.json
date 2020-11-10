@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#debug",
-            "description": "The definition of 'console.debug()' in Console API."
+            "description": "The definition of 'console.debug()' in the 'Console API' specification."
         }
     ]
 }

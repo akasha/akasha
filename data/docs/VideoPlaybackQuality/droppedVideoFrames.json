@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoPlaybackQuality.droppedVideoFrames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/droppedVideoFrames",
-    "description": "The read-only droppedVideoFrames property of the VideoPlaybackQuality interface returns the number of video frames which have been dropped rather than being displayed since the last time the media was loaded into the HTMLVideoElement."
+    "description": "The read-only droppedVideoFrames property of the VideoPlaybackQuality interface returns the number of video frames which have been dropped rather than being displayed since the last time the media was loaded into the HTMLVideoElement.",
+    "refs": [
+        {
+            "name": "Media Playback Quality",
+            "href": "https://w3c.github.io/media-playback-quality/#videoplaybackquality-interface",
+            "description": "The definition of 'VideoPlaybackQuality.droppedVideoFrames' in the 'Media Playback Quality' specification."
+        }
+    ]
 }

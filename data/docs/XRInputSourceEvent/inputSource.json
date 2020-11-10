@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSourceEvent.inputSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/inputSource",
-    "description": "The XRInputSourceEvent interface's read-only inputSource property specifies the XRInputSource which generated the input event."
+    "description": "The XRInputSourceEvent interface's read-only inputSource property specifies the XRInputSource which generated the input event.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsourceevent-inputsource",
+            "description": "The definition of 'XRInputSourceEvent.inputSource' in the 'WebXR Device API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-animation",
-            "description": "The definition of 'Animation()' in Web Animations."
+            "description": "The definition of 'Animation()' in the 'Web Animations' specification."
         }
     ]
 }

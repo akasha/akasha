@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-response-clone",
-            "description": "The definition of 'clone()' in Fetch."
+            "description": "The definition of 'clone()' in the 'Fetch' specification."
         }
     ]
 }

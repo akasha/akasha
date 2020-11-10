@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "FileReader",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader",
-    "description": "The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read."
+    "description": "The FileReader object lets web applications asynchronously read the contents of files (or raw data buffers) stored on the user's computer, using File or Blob objects to specify the file or data to read.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dfn-filereader",
+            "description": "The definition of 'FileReader' in the 'File API' specification."
+        }
+    ]
 }

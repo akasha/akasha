@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onanimationiteration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onanimationiteration",
-    "description": "The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events.",
-    "refs": [
-        {
-            "name": "CSS Animations",
-            "href": "https://drafts.csswg.org/css-animations/#eventdef-animationevent-animationiteration",
-            "description": "The definition of 'onanimationiteration' in CSS Animations."
-        }
-    ]
+    "description": "The onanimationiteration property of the GlobalEventHandlers mixin is the EventHandler for processing animationiteration events."
 }

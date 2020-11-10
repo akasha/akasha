@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.fetchStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/fetchStart",
-    "description": "The fetchStart read-only property represents a timestamp immediately before the browser starts to fetch the resource."
+    "description": "The fetchStart read-only property represents a timestamp immediately before the browser starts to fetch the resource.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-fetchstart",
+            "description": "The definition of 'fetchStart' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "SVGImageElement.preserveAspectRatio",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/preserveAspectRatio",
-    "description": "The preserveAspectRatio read-only property of the SVGImageElement interface returns an SVGAnimatedPreserveAspectRatio corresponding to the preserveAspectRatio attribute of the given image element."
+    "description": "The preserveAspectRatio read-only property of the SVGImageElement interface returns an SVGAnimatedPreserveAspectRatio corresponding to the preserveAspectRatio attribute of the given image element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute",
+            "description": "The definition of 'preserveAspectRatio' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/coords.html#PreserveAspectRatioAttribute",
+            "description": "The definition of 'preserveAspectRatio' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

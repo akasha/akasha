@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WheelEvent.deltaMode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaMode",
-    "description": "The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of the delta values scroll amount. Permitted values are:"
+    "description": "The WheelEvent.deltaMode read-only property returns an unsigned long representing the unit of the delta values scroll amount. Permitted values are:",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaMode",
+            "description": "The definition of 'WheelEvent.deltaMode' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+        }
+    ]
 }

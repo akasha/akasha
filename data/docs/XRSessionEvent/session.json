@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRSessionEvent.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/session",
-    "description": "The read-only XRSessionEvent interface's session property indicates which XRSession the event is about."
+    "description": "The read-only XRSessionEvent interface's session property indicates which XRSession the event is about.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsessionevent-session",
+            "description": "The definition of 'XRSessionEvent.session' in the 'WebXR Device API' specification."
+        }
+    ]
 }

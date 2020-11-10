@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.deleteFromDocument",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/deleteFromDocument",
-    "description": "The deleteFromDocument() method of the Selection interface deletes the selected text from the document's DOM."
+    "description": "The deleteFromDocument() method of the Selection interface deletes the selected text from the document's DOM.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-deletefromdocument",
+            "description": "The definition of 'Selection.deleteFromDocument()' in the 'Selection API' specification."
+        }
+    ]
 }

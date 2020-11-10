@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ServiceWorkerContainer.register",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/register",
-    "description": "The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL."
+    "description": "The register() method of the ServiceWorkerContainer interface creates or updates a ServiceWorkerRegistration for the given scriptURL.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-register",
+            "description": "The definition of 'ServiceWorkerContainer: register' in the 'Service Workers' specification."
+        }
+    ]
 }

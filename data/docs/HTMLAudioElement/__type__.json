@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmlaudioelement",
-            "description": "The definition of 'HTMLAudioElement' in HTML Living Standard."
+            "description": "The definition of 'HTMLAudioElement' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#the-audio-element",
-            "description": "The definition of 'HTMLAudioElement' in HTML5."
+            "description": "The definition of 'HTMLAudioElement' in the 'HTML5' specification."
         }
     ]
 }

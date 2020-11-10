@@ -8,7 +8,7 @@
         {
             "name": "Clipboard API and events",
             "href": "https://w3c.github.io/clipboard-apis/#clipboarditem",
-            "description": "The definition of 'ClipboardItem' in Clipboard API and events."
+            "description": "The definition of 'ClipboardItem' in the 'Clipboard API and events' specification."
         }
     ]
 }

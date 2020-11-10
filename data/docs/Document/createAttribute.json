@@ -3,27 +3,5 @@
     "kind": "Method",
     "name": "Document.createAttribute",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createAttribute",
-    "description": "The Document.createAttribute() method creates a new attribute node, and returns it. The object created a node implementing the Attr interface. The DOM does not enforce what sort of attributes can be added to a particular element in this manner.",
-    "refs": [
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#dom-document-createattribute",
-            "description": "The definition of 'Document.createAttribute()' in DOM."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 3 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1084891198",
-            "description": "The definition of 'Document.createAttribute()' in Document Object Model (DOM) Level 3 Core Specification."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Core Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1084891198",
-            "description": "The definition of 'Document.createAttribute()' in Document Object Model (DOM) Level 2 Core Specification."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 1 Specification",
-            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1084891198",
-            "description": "The definition of 'Document.createAttribute()' in Document Object Model (DOM) Level 1 Specification."
-        }
-    ]
+    "description": "The Document.createAttribute() method creates a new attribute node, and returns it. The object created a node implementing the Attr interface. The DOM does not enforce what sort of attributes can be added to a particular element in this manner."
 }

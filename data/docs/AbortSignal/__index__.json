@@ -1,11 +1,11 @@
 
 {
     "name": "AbortSignal",
-    "lastModifiedAt": 1604969241220,
+    "lastModifiedAt": 1604975273937,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969239391
+            "lastModifiedAt": 1604975271826
         },
         {
             "name": "abort_event",
@@ -13,11 +13,11 @@
         },
         {
             "name": "aborted",
-            "lastModifiedAt": 1604969240056
+            "lastModifiedAt": 1604975272322
         },
         {
             "name": "onabort",
-            "lastModifiedAt": 1604969240604
+            "lastModifiedAt": 1604975272798
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-origin",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.origin' in HTML Living Standard."
+            "description": "The definition of 'WindowOrWorkerGlobalScope.origin' in the 'HTML Living Standard' specification."
         }
     ]
 }

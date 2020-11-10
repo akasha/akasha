@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Window.moveTo",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveTo",
-    "description": "The moveTo() method of the Window interface moves the current window to the specified coordinates.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-window-moveto",
-            "description": "The definition of 'window.moveTo()' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The moveTo() method of the Window interface moves the current window to the specified coordinates."
 }

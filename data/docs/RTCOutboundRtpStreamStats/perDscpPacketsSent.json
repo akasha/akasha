@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-perDscpPacketsSent",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.perDscpPacketsSent' in Identifiers for WebRTC's Statistics API."
+            "description": "The definition of 'RTCOutboundRtpStreamStats.perDscpPacketsSent' in the 'Identifiers for WebRTC's Statistics API' specification."
         }
     ]
 }

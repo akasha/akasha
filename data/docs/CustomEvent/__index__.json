@@ -1,23 +1,23 @@
 
 {
     "name": "CustomEvent",
-    "lastModifiedAt": 1604969656230,
+    "lastModifiedAt": 1604975668100,
     "entries": [
         {
             "name": "CustomEvent",
-            "lastModifiedAt": 1604969655064
+            "lastModifiedAt": 1604975666871
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969654344
+            "lastModifiedAt": 1604975665805
         },
         {
             "name": "detail",
-            "lastModifiedAt": 1604969655666
+            "lastModifiedAt": 1604975667397
         },
         {
             "name": "initCustomEvent",
-            "lastModifiedAt": 1604969656230
+            "lastModifiedAt": 1604975668100
         }
     ]
 }

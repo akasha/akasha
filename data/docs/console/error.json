@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#error",
-            "description": "The definition of 'console.error()' in Console API."
+            "description": "The definition of 'console.error()' in the 'Console API' specification."
         }
     ]
 }

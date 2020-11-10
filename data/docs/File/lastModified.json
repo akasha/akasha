@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#file-attrs",
-            "description": "The definition of 'lastModified' in File API."
+            "description": "The definition of 'lastModified' in the 'File API' specification."
         }
     ]
 }

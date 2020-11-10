@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XPathEvaluator.createNSResolver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createNSResolver",
-    "description": "This method adapts any DOM node to resolve namespaces so that an XPath expression can be easily evaluated relative to the context of the node where it appeared within the document."
+    "description": "This method adapts any DOM node to resolve namespaces so that an XPath expression can be easily evaluated relative to the context of the node where it appeared within the document.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver",
+            "description": "The definition of 'XPathEvaluator.createNSResolver()' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+        }
+    ]
 }

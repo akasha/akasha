@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLFormElement.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/name",
-    "description": "The HTMLFormElement.name property represents the name of the current form element as a string.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-form-name",
-            "description": "The definition of 'HTMLFormElement: name' in HTML Living Standard."
-        }
-    ]
+    "description": "The HTMLFormElement.name property represents the name of the current form element as a string."
 }

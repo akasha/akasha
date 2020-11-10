@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.createSampler",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/createSampler",
-    "description": "The WebGL2RenderingContext.createSampler() method of the WebGL 2 API creates and initializes WebGLSampler objects."
+    "description": "The WebGL2RenderingContext.createSampler() method of the WebGL 2 API creates and initializes WebGLSampler objects.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13",
+            "description": "The definition of 'createSampler' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGenSamplers.xhtml",
+            "description": "The definition of 'glGenSamplers' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

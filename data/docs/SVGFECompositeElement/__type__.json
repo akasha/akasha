@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFECompositeElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFECompositeElement",
-    "description": "The SVGFECompositeElement interface corresponds to the feComposite element."
+    "description": "The SVGFECompositeElement interface corresponds to the feComposite element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFECompositeElement",
+            "description": "The definition of 'SVGFECompositeElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFECompositeElement",
+            "description": "The definition of 'SVGFECompositeElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

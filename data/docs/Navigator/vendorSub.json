@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-vendorsub",
-            "description": "The definition of 'NavigatorID: vendorSub' in HTML Living Standard."
+            "description": "The definition of 'NavigatorID: vendorSub' in the 'HTML Living Standard' specification."
         }
     ]
 }

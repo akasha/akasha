@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.connectEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/connectEnd",
-    "description": "The connectEnd read-only property returns the timestamp immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as SSL handshake and SOCKS authentication."
+    "description": "The connectEnd read-only property returns the timestamp immediately after the browser finishes establishing the connection to the server to retrieve the resource. The timestamp value includes the time interval to establish the transport connection, as well as other time intervals such as SSL handshake and SOCKS authentication.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-connectend",
+            "description": "The definition of 'connectEnd' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

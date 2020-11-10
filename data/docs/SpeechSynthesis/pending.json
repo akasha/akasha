@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesis.pending",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pending",
-    "description": "The pending read-only property of the SpeechSynthesis interface is a Boolean that returns true if the utterance queue contains as-yet-unspoken utterances."
+    "description": "The pending read-only property of the SpeechSynthesis interface is a Boolean that returns true if the utterance queue contains as-yet-unspoken utterances.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-pending",
+            "description": "The definition of 'pending' in the 'Web Speech API' specification."
+        }
+    ]
 }

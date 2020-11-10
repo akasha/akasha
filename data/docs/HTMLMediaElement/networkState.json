@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.networkState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/networkState",
-    "description": "The HTMLMediaElement.networkState property indicates the current state of the fetching of media over the network."
+    "description": "The HTMLMediaElement.networkState property indicates the current state of the fetching of media over the network.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-networkstate",
+            "description": "The definition of 'HTMLMediaElement.networkState' in the 'HTML Living Standard' specification."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.networkState' in the 'HTML5' specification."
+        }
+    ]
 }

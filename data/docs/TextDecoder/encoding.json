@@ -8,7 +8,7 @@
         {
             "name": "Encoding",
             "href": "https://encoding.spec.whatwg.org/#dom-textdecoder-encoding",
-            "description": "The definition of 'TextDecoder.encoding' in Encoding."
+            "description": "The definition of 'TextDecoder.encoding' in the 'Encoding' specification."
         }
     ]
 }

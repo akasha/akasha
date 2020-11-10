@@ -1,39 +1,39 @@
 
 {
     "name": "DOMPointReadOnly",
-    "lastModifiedAt": 1604969712190,
+    "lastModifiedAt": 1604975723229,
     "entries": [
         {
             "name": "DOMPointReadOnly",
-            "lastModifiedAt": 1604969707545
+            "lastModifiedAt": 1604975718047
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969706952
+            "lastModifiedAt": 1604975717506
         },
         {
             "name": "fromPoint",
-            "lastModifiedAt": 1604969711329
+            "lastModifiedAt": 1604975722353
         },
         {
             "name": "toJSON",
-            "lastModifiedAt": 1604969712190
+            "lastModifiedAt": 1604975723229
         },
         {
             "name": "w",
-            "lastModifiedAt": 1604969708364
+            "lastModifiedAt": 1604975718559
         },
         {
             "name": "x",
-            "lastModifiedAt": 1604969709125
+            "lastModifiedAt": 1604975719575
         },
         {
             "name": "y",
-            "lastModifiedAt": 1604969710035
+            "lastModifiedAt": 1604975720652
         },
         {
             "name": "z",
-            "lastModifiedAt": 1604969710623
+            "lastModifiedAt": 1604975721678
         }
     ]
 }

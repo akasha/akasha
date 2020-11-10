@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SVGElement.onsubmit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onsubmit",
-    "description": "The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events."
+    "description": "The onsubmit property of the GlobalEventHandlers mixin is an EventHandler that processes submit events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onsubmit",
+            "description": "The definition of 'onsubmit' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

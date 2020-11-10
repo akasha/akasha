@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.violatedDirective",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/violatedDirective",
-    "description": "The violatedDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation."
+    "description": "The violatedDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-violateddirective",
+            "description": "The definition of 'violatedDirective' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

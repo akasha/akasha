@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-commonancestorcontainer",
-            "description": "The definition of 'Range.commonAncestorContainer' in DOM."
+            "description": "The definition of 'Range.commonAncestorContainer' in the 'DOM' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-attr-commonParent",
-            "description": "The definition of 'Range.commonAncestorContainer' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+            "description": "The definition of 'Range.commonAncestorContainer' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceNavigation.redirectCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/redirectCount",
-    "description": "The legacy PerformanceNavigation.redirectCount read-only property returns an unsigned short representing the number of REDIRECTs done before reaching the page."
+    "description": "The legacy PerformanceNavigation.redirectCount read-only property returns an unsigned short representing the number of REDIRECTs done before reaching the page.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-redirectcount",
+            "description": "The definition of 'PerformanceNavigation.redirectCount' in the 'Navigation Timing' specification."
+        }
+    ]
 }

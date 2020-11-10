@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.samplerParameter",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/samplerParameter",
+    "description": "The WebGL2RenderingContext.samplerParameter[if]() methods of the WebGL 2 API set WebGLSampler parameters."
+}

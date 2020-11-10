@@ -1,7 +1,7 @@
 
 {
     "name": "console",
-    "lastModifiedAt": 1604448962185,
+    "lastModifiedAt": 1604979122967,
     "entries": [
         {
             "name": "__type__",
@@ -9,51 +9,51 @@
         },
         {
             "name": "clear",
-            "lastModifiedAt": 1604448947846
+            "lastModifiedAt": 1604979108564
         },
         {
             "name": "count",
-            "lastModifiedAt": 1604448948890
+            "lastModifiedAt": 1604979109350
         },
         {
             "name": "countReset",
-            "lastModifiedAt": 1604448949428
+            "lastModifiedAt": 1604979109833
         },
         {
             "name": "debug",
-            "lastModifiedAt": 1604448950198
+            "lastModifiedAt": 1604979110465
         },
         {
             "name": "dir",
-            "lastModifiedAt": 1604448950690
+            "lastModifiedAt": 1604979111516
         },
         {
             "name": "dirxml",
-            "lastModifiedAt": 1604448951167
+            "lastModifiedAt": 1604979112106
         },
         {
             "name": "error",
-            "lastModifiedAt": 1604448952239
+            "lastModifiedAt": 1604979113148
         },
         {
             "name": "group",
-            "lastModifiedAt": 1604448953149
+            "lastModifiedAt": 1604979114060
         },
         {
             "name": "groupCollapsed",
-            "lastModifiedAt": 1604448953660
+            "lastModifiedAt": 1604979114541
         },
         {
             "name": "groupEnd",
-            "lastModifiedAt": 1604448954145
+            "lastModifiedAt": 1604979115561
         },
         {
             "name": "info",
-            "lastModifiedAt": 1604448954632
+            "lastModifiedAt": 1604979116337
         },
         {
             "name": "log",
-            "lastModifiedAt": 1604448955708
+            "lastModifiedAt": 1604979116913
         },
         {
             "name": "profile",
@@ -65,19 +65,19 @@
         },
         {
             "name": "table",
-            "lastModifiedAt": 1604448957736
+            "lastModifiedAt": 1604979118881
         },
         {
             "name": "time",
-            "lastModifiedAt": 1604448958199
+            "lastModifiedAt": 1604979119399
         },
         {
             "name": "timeEnd",
-            "lastModifiedAt": 1604448959361
+            "lastModifiedAt": 1604979120452
         },
         {
             "name": "timeLog",
-            "lastModifiedAt": 1604448960042
+            "lastModifiedAt": 1604979120920
         },
         {
             "name": "timeStamp",
@@ -85,11 +85,11 @@
         },
         {
             "name": "trace",
-            "lastModifiedAt": 1604448961690
+            "lastModifiedAt": 1604979122488
         },
         {
             "name": "warn",
-            "lastModifiedAt": 1604448962185
+            "lastModifiedAt": 1604979122967
         }
     ]
 }

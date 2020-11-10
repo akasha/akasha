@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SVGImageElement.decoding",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/decoding",
-    "description": "The decoding property of the SVGImageElement interface represents a hint given to the browser on how it should decode the image."
+    "description": "The decoding property of the SVGImageElement interface represents a hint given to the browser on how it should decode the image.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#image-decoding-hint",
+            "description": "The definition of 'decoding' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Window.innerWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/innerWidth",
-    "description": "The read-only Window property innerWidth returns the interior width of the window in pixels. This includes the width of the vertical scroll bar, if one is present.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-window-innerwidth",
-            "description": "The definition of 'window.innerWidth' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The read-only Window property innerWidth returns the interior width of the window in pixels. This includes the width of the vertical scroll bar, if one is present."
 }

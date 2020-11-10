@@ -1,11 +1,11 @@
 
 {
     "name": "BluetoothRemoteGATTCharacteristic",
-    "lastModifiedAt": 1604969447166,
+    "lastModifiedAt": 1604975467262,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969439423
+            "lastModifiedAt": 1604975458803
         },
         {
             "name": "characteristicvaluechanged_event",
@@ -13,43 +13,43 @@
         },
         {
             "name": "getDescriptor",
-            "lastModifiedAt": 1604969443688
+            "lastModifiedAt": 1604975463049
         },
         {
             "name": "getDescriptors",
-            "lastModifiedAt": 1604969444311
+            "lastModifiedAt": 1604975463584
         },
         {
             "name": "properties",
-            "lastModifiedAt": 1604969440036
+            "lastModifiedAt": 1604975459357
         },
         {
             "name": "readValue",
-            "lastModifiedAt": 1604969444805
+            "lastModifiedAt": 1604975465083
         },
         {
             "name": "service",
-            "lastModifiedAt": 1604969441374
+            "lastModifiedAt": 1604975460434
         },
         {
             "name": "startNotifications",
-            "lastModifiedAt": 1604969445300
+            "lastModifiedAt": 1604975466126
         },
         {
             "name": "stopNotifications",
-            "lastModifiedAt": 1604969446410
+            "lastModifiedAt": 1604975466636
         },
         {
             "name": "uuid",
-            "lastModifiedAt": 1604969442396
+            "lastModifiedAt": 1604975461108
         },
         {
             "name": "value",
-            "lastModifiedAt": 1604969442997
+            "lastModifiedAt": 1604975462170
         },
         {
             "name": "writeValue",
-            "lastModifiedAt": 1604969447166
+            "lastModifiedAt": 1604975467262
         }
     ]
 }

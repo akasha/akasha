@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.onboundary",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onboundary",
-    "description": "The onboundary property of the SpeechSynthesisUtterance interface represents an event handler that will run when the spoken utterance reaches a word or sentence boundary (when the boundary event fires.)"
+    "description": "The onboundary property of the SpeechSynthesisUtterance interface represents an event handler that will run when the spoken utterance reaches a word or sentence boundary (when the boundary event fires.)",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onboundary",
+            "description": "The definition of 'onboundary' in the 'Web Speech API' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRSession.environmentBlendMode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/environmentBlendMode",
-    "description": "The XRSession interface's read-only environmentBlendMode property identifies if&mdash;and to  what degree&mdash;the computer-generated imagery is overlaid atop the real world."
+    "description": "The XRSession interface's read-only environmentBlendMode property identifies if&mdash;and to  what degree&mdash;the computer-generated imagery is overlaid atop the real world.",
+    "refs": [
+        {
+            "name": "WebXR Augmented Reality Module",
+            "href": "https://immersive-web.github.io/webxr-ar-module/#xrenvironmentblendmode-enum",
+            "description": "The definition of 'XRSession.environmentBlendMode' in the 'WebXR Augmented Reality Module' specification."
+        }
+    ]
 }

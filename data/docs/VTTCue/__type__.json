@@ -3,5 +3,11 @@
     "kind": "Type",
     "name": "VTTCue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VTTCue",
-    "description": "This interface also inherits properties from TextTrackCue."
+    "description": "This interface also inherits properties from TextTrackCue.",
+    "refs": [
+        {
+            "name": "WebVTT: The Web Video Text Tracks Format",
+            "href": "https://w3c.github.io/webvtt/"
+        }
+    ]
 }

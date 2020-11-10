@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-getavailability",
-            "description": "The definition of 'getAvailability()' in Web Bluetooth."
+            "description": "The definition of 'getAvailability()' in the 'Web Bluetooth' specification."
         }
     ]
 }

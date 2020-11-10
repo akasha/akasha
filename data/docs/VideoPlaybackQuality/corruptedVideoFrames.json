@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoPlaybackQuality.corruptedVideoFrames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/corruptedVideoFrames",
-    "description": "The VideoPlaybackQuality interface's read-only corruptedVideoFrames property the number of corrupted video frames that have been received since the video element was last loaded or reloaded."
+    "description": "The VideoPlaybackQuality interface's read-only corruptedVideoFrames property the number of corrupted video frames that have been received since the video element was last loaded or reloaded.",
+    "refs": [
+        {
+            "name": "Media Playback Quality",
+            "href": "https://w3c.github.io/media-playback-quality/#dom-videoplaybackquality-corruptedvideoframes",
+            "description": "The definition of 'VideoPlaybackQuality: corruptedVideoFrames' in the 'Media Playback Quality' specification."
+        }
+    ]
 }

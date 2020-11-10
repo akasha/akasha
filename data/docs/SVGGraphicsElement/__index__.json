@@ -1,15 +1,15 @@
 
 {
     "name": "SVGGraphicsElement",
-    "lastModifiedAt": 1600313253562,
+    "lastModifiedAt": 1604977893732,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192387504
+            "lastModifiedAt": 1604977892494
         },
         {
             "name": "getBBox",
-            "lastModifiedAt": 1597192388098
+            "lastModifiedAt": 1604977893732
         }
     ]
 }

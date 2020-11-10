@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-screen-pixeldepth",
-            "description": "The definition of 'Screen.pixelDepth' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'Screen.pixelDepth' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

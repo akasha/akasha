@@ -8,7 +8,7 @@
         {
             "name": "Network Information API",
             "href": "https://wicg.github.io/netinfo/#connection-attribute",
-            "description": "The definition of 'Navigator.connection' in Network Information API."
+            "description": "The definition of 'Navigator.connection' in the 'Network Information API' specification."
         }
     ]
 }

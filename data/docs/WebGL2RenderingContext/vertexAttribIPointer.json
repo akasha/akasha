@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.vertexAttribIPointer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribIPointer",
-    "description": "The WebGL2RenderingContext.vertexAttribIPointer() method of the WebGL 2 API specifies integer data formats and locations of vertex attributes in a vertex attributes array."
+    "description": "The WebGL2RenderingContext.vertexAttribIPointer() method of the WebGL 2 API specifies integer data formats and locations of vertex attributes in a vertex attributes array.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8",
+            "description": "The definition of 'vertexAttribIPointer' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glVertexAttribPointer.xhtml",
+            "description": "The definition of 'glVertexAttribPointer' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

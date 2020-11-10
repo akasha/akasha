@@ -1,51 +1,51 @@
 
 {
     "name": "SpeechSynthesis",
-    "lastModifiedAt": 1601466489337,
+    "lastModifiedAt": 1604978140218,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192367243
+            "lastModifiedAt": 1604978134129
         },
         {
             "name": "cancel",
-            "lastModifiedAt": 1596712036766
+            "lastModifiedAt": 1604978136778
         },
         {
             "name": "getVoices",
-            "lastModifiedAt": 1596712037307
+            "lastModifiedAt": 1604978137259
         },
         {
             "name": "onvoiceschanged",
-            "lastModifiedAt": 1597238896605
+            "lastModifiedAt": 1604978134672
         },
         {
             "name": "pause",
-            "lastModifiedAt": 1596712037969
+            "lastModifiedAt": 1604978137819
         },
         {
             "name": "paused",
-            "lastModifiedAt": 1596712034680
+            "lastModifiedAt": 1604978135137
         },
         {
             "name": "pending",
-            "lastModifiedAt": 1596712035203
+            "lastModifiedAt": 1604978135647
         },
         {
             "name": "resume",
-            "lastModifiedAt": 1596712038887
+            "lastModifiedAt": 1604978138307
         },
         {
             "name": "speak",
-            "lastModifiedAt": 1596712039498
+            "lastModifiedAt": 1604978139408
         },
         {
             "name": "speaking",
-            "lastModifiedAt": 1599280114234
+            "lastModifiedAt": 1604978136150
         },
         {
             "name": "voiceschanged_event",
-            "lastModifiedAt": 1597358843793
+            "lastModifiedAt": 1604978140166
         }
     ]
 }

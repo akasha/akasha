@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "XMLHttpRequestEventTarget.onloadstart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onloadstart",
-    "description": "The XMLHttpRequestEventTarget.onloadstart is the function called when an XMLHttpRequest transaction starts transferring data."
+    "description": "The XMLHttpRequestEventTarget.onloadstart is the function called when an XMLHttpRequest transaction starts transferring data.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#handler-xhr-onloadstart"
+        }
+    ]
 }

@@ -1,39 +1,39 @@
 
 {
     "name": "NavigatorID",
-    "lastModifiedAt": 1604449561224,
+    "lastModifiedAt": 1604977167712,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449555998
+            "lastModifiedAt": 1604977167087
         },
         {
             "name": "appCodeName",
-            "lastModifiedAt": 1604449556550
+            "lastModifiedAt": 1604977167136
         },
         {
             "name": "appName",
-            "lastModifiedAt": 1604449557596
+            "lastModifiedAt": 1604977167177
         },
         {
             "name": "appVersion",
-            "lastModifiedAt": 1604449558063
+            "lastModifiedAt": 1604977167217
         },
         {
             "name": "platform",
-            "lastModifiedAt": 1604449558556
+            "lastModifiedAt": 1604977167272
         },
         {
             "name": "product",
-            "lastModifiedAt": 1604449559585
+            "lastModifiedAt": 1604977167332
         },
         {
             "name": "taintEnabled",
-            "lastModifiedAt": 1604449561224
+            "lastModifiedAt": 1604977167712
         },
         {
             "name": "userAgent",
-            "lastModifiedAt": 1604449560395
+            "lastModifiedAt": 1604977167372
         }
     ]
 }

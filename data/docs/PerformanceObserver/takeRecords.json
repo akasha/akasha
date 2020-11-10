@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PerformanceObserver.takeRecords",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/takeRecords",
-    "description": "The takeRecords() method of the PerformanceObserver interface returns the current list of performance entries stored in the performance observer, emptying it out."
+    "description": "The takeRecords() method of the PerformanceObserver interface returns the current list of performance entries stored in the performance observer, emptying it out.",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#dom-performanceobserver-takerecords",
+            "description": "The definition of 'takeRecords()' in the 'Performance Timeline Level 2' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechSynthesis.resume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/resume",
-    "description": "The resume() method of the SpeechSynthesis interface puts the SpeechSynthesis object into a non-paused state: resumes it if it was already paused."
+    "description": "The resume() method of the SpeechSynthesis interface puts the SpeechSynthesis object into a non-paused state: resumes it if it was already paused.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-resume",
+            "description": "The definition of 'resume()' in the 'Web Speech API' specification."
+        }
+    ]
 }

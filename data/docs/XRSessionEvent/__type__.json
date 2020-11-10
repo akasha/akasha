@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRSessionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent",
-    "description": "The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession."
+    "description": "The WebXR Device API's XRSessionEvent interface describes an event which indicates the change of the state of an XRSession.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrsessionevent",
+            "description": "The definition of 'XRSessionEvent' in the 'WebXR Device API' specification."
+        }
+    ]
 }

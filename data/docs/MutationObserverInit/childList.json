@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-mutationobserverinit-childlist",
-            "description": "The definition of 'MutationObserverInit.childList' in DOM."
+            "description": "The definition of 'MutationObserverInit.childList' in the 'DOM' specification."
         }
     ]
 }

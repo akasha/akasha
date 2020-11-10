@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "HTMLTableElement.createCaption",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createCaption",
-    "description": "The HTMLTableElement.createCaption() method returns the caption element associated with a given table. If no caption element exists on the table, this method creates it, and then returns it.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-table-createcaption",
-            "description": "The definition of 'HTMLTableElement: createCaption' in HTML Living Standard."
-        }
-    ]
+    "description": "The HTMLTableElement.createCaption() method returns the caption element associated with a given table. If no caption element exists on the table, this method creates it, and then returns it."
 }

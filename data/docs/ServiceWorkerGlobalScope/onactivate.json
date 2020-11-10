@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.onactivate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onactivate",
-    "description": "The onactivate property of the ServiceWorkerGlobalScope interface is an event handler fired whenever an activate event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes."
+    "description": "The onactivate property of the ServiceWorkerGlobalScope interface is an event handler fired whenever an activate event occurs (when the service worker activates). This happens after installation, when the page to be controlled by the service worker refreshes.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#service-worker-global-scope-event-handlers",
+            "description": "The definition of 'Event Handlers' in the 'Service Workers' specification."
+        }
+    ]
 }

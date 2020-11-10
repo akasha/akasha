@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechRecognitionResult.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/item",
-    "description": "The item getter of the SpeechRecognitionResult interface is a standard getter that allows SpeechRecognitionAlternative objects within the result to be accessed via array syntax."
+    "description": "The item getter of the SpeechRecognitionResult interface is a standard getter that allows SpeechRecognitionAlternative objects within the result to be accessed via array syntax.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionresult-item",
+            "description": "The definition of 'item()' in the 'Web Speech API' specification."
+        }
+    ]
 }

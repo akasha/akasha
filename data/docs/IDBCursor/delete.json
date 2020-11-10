@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBCursor.delete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/delete",
-    "description": "The delete() method of the IDBCursor interface returns an IDBRequest object, and, in a separate thread, deletes the record at the cursor's position, without changing the cursor's position. Once the record is deleted, the cursor's value is set to null."
+    "description": "The delete() method of the IDBCursor interface returns an IDBRequest object, and, in a separate thread, deletes the record at the cursor's position, without changing the cursor's position. Once the record is deleted, the cursor's value is set to null.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbcursor-delete",
+            "description": "The definition of 'delete()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-delete",
+            "description": "The definition of 'delete()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

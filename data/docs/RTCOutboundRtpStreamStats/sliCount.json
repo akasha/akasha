@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-slicount",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.sliCount' in Identifiers for WebRTC's Statistics API."
+            "description": "The definition of 'RTCOutboundRtpStreamStats.sliCount' in the 'Identifiers for WebRTC's Statistics API' specification."
         }
     ]
 }

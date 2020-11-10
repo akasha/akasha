@@ -1,39 +1,39 @@
 
 {
     "name": "PushSubscription",
-    "lastModifiedAt": 1600312767579,
+    "lastModifiedAt": 1604977446961,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192284733
+            "lastModifiedAt": 1604977443109
         },
         {
             "name": "endpoint",
-            "lastModifiedAt": 1599279704835
+            "lastModifiedAt": 1604977443577
         },
         {
             "name": "expirationTime",
-            "lastModifiedAt": 1597192286013
+            "lastModifiedAt": 1604977444059
         },
         {
             "name": "getKey",
-            "lastModifiedAt": 1597192287049
+            "lastModifiedAt": 1604975198178
         },
         {
             "name": "options",
-            "lastModifiedAt": 1597192286248
+            "lastModifiedAt": 1604977444556
         },
         {
             "name": "subscriptionId",
-            "lastModifiedAt": 1600306002656
+            "lastModifiedAt": 1604975197543
         },
         {
             "name": "toJSON",
-            "lastModifiedAt": 1597192287832
+            "lastModifiedAt": 1604977446512
         },
         {
             "name": "unsubscribe",
-            "lastModifiedAt": 1597192288224
+            "lastModifiedAt": 1604977446961
         }
     ]
 }

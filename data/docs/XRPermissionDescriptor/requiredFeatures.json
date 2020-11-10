@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRPermissionDescriptor.requiredFeatures",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/requiredFeatures",
-    "description": "The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work."
+    "description": "The XRPermissionDescriptor dictionary's requiredFeatures property should be set prior to calling navigator.permissions.query() to a list of WebXR features which must be supported for the app to work.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-requiredfeatures",
+            "description": "The definition of 'XRPermissionDescriptor.requiredFeatures' in the 'WebXR Device API' specification."
+        }
+    ]
 }

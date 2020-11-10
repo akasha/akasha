@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechSynthesis.pause",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause",
-    "description": "The pause() method of the SpeechSynthesis interface puts the SpeechSynthesis object into a paused state."
+    "description": "The pause() method of the SpeechSynthesis interface puts the SpeechSynthesis object into a paused state.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-pause",
+            "description": "The definition of 'pause()' in the 'Web Speech API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-KeyboardEvent-repeat",
-            "description": "The definition of 'KeyboardEvent.repeat' in Document Object Model (DOM) Level 3 Events Specification."
+            "description": "The definition of 'KeyboardEvent.repeat' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
         }
     ]
 }

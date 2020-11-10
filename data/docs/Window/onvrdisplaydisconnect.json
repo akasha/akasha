@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaydisconnect",
-            "description": "The definition of 'onvrdisplaydisconnect' in WebVR 1.1."
+            "description": "The definition of 'onvrdisplaydisconnect' in the 'WebVR 1.1' specification."
         }
     ]
 }

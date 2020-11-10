@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "NamedNodeMap",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NamedNodeMap",
-    "description": "The NamedNodeMap interface represents a collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array."
+    "description": "The NamedNodeMap interface represents a collection of Attr objects. Objects inside a NamedNodeMap are not in any particular order, unlike NodeList, although they may be accessed by an index as in an array.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-namednodemap",
+            "description": "The definition of 'NamedNodeMap' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1780488922",
+            "description": "The definition of 'NamedNodeMap' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1780488922",
+            "description": "The definition of 'NamedNodeMap' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/core.html#ID-1780488922",
+            "description": "The definition of 'NamedNodeMap' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+        }
+    ]
 }

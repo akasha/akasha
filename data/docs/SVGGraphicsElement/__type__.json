@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SVGGraphicsElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement",
-    "description": "The SVGGraphicsElement interface represents SVG elements whose primary purpose is to directly render graphics into a group."
+    "description": "The SVGGraphicsElement interface represents SVG elements whose primary purpose is to directly render graphics into a group.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGGraphicsElement",
+            "description": "The definition of 'SVGGraphicsElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ]
 }

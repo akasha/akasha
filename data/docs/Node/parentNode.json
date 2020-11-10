@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Node.parentNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/parentNode",
-    "description": "The Node.parentNode read-only property returns the parent of the specified node in the DOM tree."
+    "description": "The Node.parentNode read-only property returns the parent of the specified node in the DOM tree.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-parentnode",
+            "description": "The definition of 'Node: parentNode' in the 'DOM' specification."
+        }
+    ]
 }

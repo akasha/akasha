@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-oscillatornode-detune",
-            "description": "The definition of 'detune' in Web Audio API."
+            "description": "The definition of 'detune' in the 'Web Audio API' specification."
         }
     ]
 }

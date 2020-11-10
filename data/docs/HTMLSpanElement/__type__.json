@@ -8,22 +8,22 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#htmlspanelement",
-            "description": "The definition of 'HTMLSpanElement' in HTML Living Standard."
+            "description": "The definition of 'HTMLSpanElement' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.2",
             "href": "https://www.w3.org/TR/html52/textlevel-semantics.html#htmlspanelement",
-            "description": "The definition of 'HTMLSpanElement' in HTML 5.2."
+            "description": "The definition of 'HTMLSpanElement' in the 'HTML 5.2' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/textlevel-semantics.html#htmlspanelement",
-            "description": "The definition of 'HTMLSpanElement' in HTML 5.1."
+            "description": "The definition of 'HTMLSpanElement' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/text-level-semantics.html#htmlspanelement",
-            "description": "The definition of 'HTMLSpanElement' in HTML5."
+            "description": "The definition of 'HTMLSpanElement' in the 'HTML5' specification."
         }
     ]
 }

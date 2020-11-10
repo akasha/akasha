@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidate-relatedaddress",
-            "description": "The definition of 'RTCIceCandidate.relatedAddress' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'RTCIceCandidate.relatedAddress' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

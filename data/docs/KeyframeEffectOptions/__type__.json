@@ -8,12 +8,12 @@
         {
             "name": "Web Animations Level 2",
             "href": "https://drafts.csswg.org/web-animations-2/#the-keyframeeffectoptions-dictionary",
-            "description": "The definition of 'KeyframeEffectOptions' in Web Animations Level 2."
+            "description": "The definition of 'KeyframeEffectOptions' in the 'Web Animations Level 2' specification."
         },
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#the-keyframeeffectoptions-dictionary",
-            "description": "The definition of 'KeyframeEffectOptions' in Web Animations."
+            "description": "The definition of 'KeyframeEffectOptions' in the 'Web Animations' specification."
         }
     ]
 }

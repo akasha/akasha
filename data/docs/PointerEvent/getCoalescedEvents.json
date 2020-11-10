@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PointerEvent.getCoalescedEvents",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/getCoalescedEvents",
-    "description": "The getCoalescedEvents() method of the PointerEvent interface returns a sequence of all PointerEvent instances that were coalesced into the dispatched pointermove event."
+    "description": "The getCoalescedEvents() method of the PointerEvent interface returns a sequence of all PointerEvent instances that were coalesced into the dispatched pointermove event.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 3",
+            "href": "https://w3c.github.io/pointerevents/#dom-pointerevent-getcoalescedevents",
+            "description": "The definition of 'getCoalescedEvents()' in the 'Pointer Events &ndash; Level 3' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "BiquadFilterNode.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/BiquadFilterNode/type",
-    "description": "A string (enum) representing a BiquadFilterType."
+    "description": "A string (enum) representing a BiquadFilterType.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-type",
+            "description": "The definition of 'type' in the 'Web Audio API' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PublicKeyCredentialRequestOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredentialRequestOptions",
-    "description": "The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential."
+    "description": "The PublicKeyCredentialRequestOptions dictionary of the Web Authentication API holds the options passed to navigator.credentials.get() in order to fetch a given PublicKeyCredential.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dictdef-publickeycredentialrequestoptions",
+            "description": "The definition of 'PublicKeyCredentialRequestOptions dictionary' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        }
+    ]
 }

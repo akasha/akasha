@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.toString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/toString",
-    "description": "The Selection.toString() method returns a string currently being represented by the selection object, i.e. the currently selected text."
+    "description": "The Selection.toString() method returns a string currently being represented by the selection object, i.e. the currently selected text.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#idl-def-selection-",
+            "description": "The definition of 'Selection: toString()' in the 'Selection API' specification."
+        }
+    ]
 }

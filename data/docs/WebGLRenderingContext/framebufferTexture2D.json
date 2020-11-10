@@ -8,17 +8,17 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6",
-            "description": "The definition of 'framebufferTexture2D' in WebGL 1.0."
+            "description": "The definition of 'framebufferTexture2D' in the 'WebGL 1.0' specification."
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glFramebufferTexture2D.xml",
-            "description": "The definition of 'glFramebufferTexture2D' in OpenGL ES 2.0."
+            "description": "The definition of 'glFramebufferTexture2D' in the 'OpenGL ES 2.0' specification."
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTexture2D.xhtml",
-            "description": "The definition of 'glFramebufferTexture2D' in OpenGL ES 3.0."
+            "description": "The definition of 'glFramebufferTexture2D' in the 'OpenGL ES 3.0' specification."
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGGradientElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGradientElement",
-    "description": "The SVGGradient interface is a base interface used by SVGLinearGradientElement and SVGRadialGradientElement."
+    "description": "The SVGGradient interface is a base interface used by SVGLinearGradientElement and SVGRadialGradientElement.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGGradientElement",
+            "description": "The definition of 'SVGGradientElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGGradientElement",
+            "description": "The definition of 'SVGGradientElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

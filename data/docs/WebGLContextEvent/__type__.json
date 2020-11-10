@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebGLContextEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent",
-    "description": "The WebContextEvent interface is part of the WebGL API and is an interface for an event that is generated in response to a status change to the WebGL rendering context."
+    "description": "The WebContextEvent interface is part of the WebGL API and is an interface for an event that is generated in response to a status change to the WebGL rendering context.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15",
+            "description": "The definition of 'WebGLContextEvent' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

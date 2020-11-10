@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "WritableStream.getWriter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/getWriter",
-    "description": "The getWriter() method of the WritableStream interface returns a new instance of WritableStreamDefaultWriter and locks the stream to that instance. While the stream is locked, no other writer can be acquired until this one is released."
+    "description": "The getWriter() method of the WritableStream interface returns a new instance of WritableStreamDefaultWriter and locks the stream to that instance. While the stream is locked, no other writer can be acquired until this one is released.",
+    "refs": [
+        {
+            "name": "Streams",
+            "href": "https://streams.spec.whatwg.org/#ws-get-writer",
+            "description": "The definition of 'getWriter()' in the 'Streams' specification."
+        }
+    ]
 }

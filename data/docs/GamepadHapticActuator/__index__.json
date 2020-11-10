@@ -1,19 +1,19 @@
 
 {
     "name": "GamepadHapticActuator",
-    "lastModifiedAt": 1604970314478,
+    "lastModifiedAt": 1604976239596,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448196884
+            "lastModifiedAt": 1604976238573
         },
         {
             "name": "pulse",
-            "lastModifiedAt": 1604448198786
+            "lastModifiedAt": 1604976239596
         },
         {
             "name": "type",
-            "lastModifiedAt": 1604448197926
+            "lastModifiedAt": 1604976239065
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-messageevent-data",
-            "description": "The definition of 'MessageEvent: data' in HTML Living Standard."
+            "description": "The definition of 'MessageEvent: data' in the 'HTML Living Standard' specification."
         }
     ]
 }

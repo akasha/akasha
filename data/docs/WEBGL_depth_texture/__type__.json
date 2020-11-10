@@ -8,7 +8,7 @@
         {
             "name": "WEBGL_depth_texture",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_depth_texture/",
-            "description": "The definition of 'WEBGL_depth_texture' in WEBGL_depth_texture."
+            "description": "The definition of 'WEBGL_depth_texture' in the 'WEBGL_depth_texture' specification."
         }
     ]
 }

@@ -3,17 +3,5 @@
     "kind": "Method",
     "name": "WindowOrWorkerGlobalScope.clearTimeout",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout",
-    "description": "The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout().",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-cleartimeout",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.clearTimeout()' in HTML Living Standard."
-        },
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-cleartimeout",
-            "description": "The definition of 'clearTimeout()' in HTML Living Standard."
-        }
-    ]
+    "description": "The clearTimeout() method of the WindowOrWorkerGlobalScope mixin cancels a timeout previously established by calling setTimeout()."
 }

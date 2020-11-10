@@ -3,5 +3,27 @@
     "kind": "Type",
     "name": "NodeList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
-    "description": "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll()."
+    "description": "NodeList objects are collections of nodes, usually returned by properties such as Node.childNodes and methods such as document.querySelectorAll().",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-nodelist",
+            "description": "The definition of 'NodeList' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-536297177",
+            "description": "The definition of 'NodeList' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-536297177",
+            "description": "The definition of 'NodeList' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-536297177",
+            "description": "The definition of 'NodeList' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Screen Orientation API",
             "href": "https://w3c.github.io/screen-orientation/#dom-screen-orientation",
-            "description": "The definition of 'orientation' in Screen Orientation API."
+            "description": "The definition of 'orientation' in the 'Screen Orientation API' specification."
         }
     ]
 }

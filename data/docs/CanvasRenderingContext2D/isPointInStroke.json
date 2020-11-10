@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-ispointinstroke",
-            "description": "The definition of 'CanvasRenderingContext2D.isPointInStroke' in HTML Living Standard."
+            "description": "The definition of 'CanvasRenderingContext2D.isPointInStroke' in the 'HTML Living Standard' specification."
         }
     ]
 }

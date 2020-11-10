@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "IDBObjectStore.keyPath",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/keyPath",
-    "description": "If this property is null, the application must provide a key for each modification operation.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-keypath",
-            "description": "The definition of 'keyPath' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-keypath",
-            "description": "The definition of 'keyPath' in Indexed Database API Draft."
-        }
-    ]
+    "description": "If this property is null, the application must provide a key for each modification operation."
 }

@@ -1,27 +1,27 @@
 
 {
     "name": "WindowClient",
-    "lastModifiedAt": 1601466314864,
+    "lastModifiedAt": 1604978773418,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192321590
+            "lastModifiedAt": 1604978770098
         },
         {
             "name": "focus",
-            "lastModifiedAt": 1599278932923
+            "lastModifiedAt": 1604978772708
         },
         {
             "name": "focused",
-            "lastModifiedAt": 1597192321970
+            "lastModifiedAt": 1604978771112
         },
         {
             "name": "navigate",
-            "lastModifiedAt": 1599278933383
+            "lastModifiedAt": 1604978773418
         },
         {
             "name": "visibilityState",
-            "lastModifiedAt": 1599278932305
+            "lastModifiedAt": 1604978772141
         }
     ]
 }

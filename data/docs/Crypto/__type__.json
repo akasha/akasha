@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#crypto-interface",
-            "description": "The definition of 'Crypto' in Web Cryptography API."
+            "description": "The definition of 'Crypto' in the 'Web Cryptography API' specification."
         }
     ]
 }

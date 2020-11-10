@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRInputSourceArray.values",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray/values",
-    "description": "The XRInputSourceArray method  values() returns a JavaScript iterator that can walk over the list of XRInputSource objects contained in the array, from first to last."
+    "description": "The XRInputSourceArray method  values() returns a JavaScript iterator that can walk over the list of XRInputSource objects contained in the array, from first to last.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrinputsourcearray",
+            "description": "The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification."
+        }
+    ]
 }

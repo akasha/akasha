@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.workerStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/workerStart",
-    "description": "The workerStart read-only property of the PerformanceResourceTiming interface returns a DOMHighResTimeStamp immediately before dispatching the FetchEvent if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0."
+    "description": "The workerStart read-only property of the PerformanceResourceTiming interface returns a DOMHighResTimeStamp immediately before dispatching the FetchEvent if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 2",
+            "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-workerstart",
+            "description": "The definition of 'workerStart' in the 'Resource Timing Level 2' specification."
+        }
+    ]
 }

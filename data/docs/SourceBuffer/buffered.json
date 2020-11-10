@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBuffer.buffered",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/buffered",
-    "description": "The buffered read-only property of the SourceBuffer interface returns the time ranges that are currently buffered in the SourceBuffer as a normalized TimeRanges object."
+    "description": "The buffered read-only property of the SourceBuffer interface returns the time ranges that are currently buffered in the SourceBuffer as a normalized TimeRanges object.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-buffered",
+            "description": "The definition of 'buffered' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

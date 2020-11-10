@@ -1,19 +1,19 @@
 
 {
     "name": "ServiceWorkerGlobalScope",
-    "lastModifiedAt": 1601466304685,
+    "lastModifiedAt": 1604978044992,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599278008971
+            "lastModifiedAt": 1604978030383
         },
         {
             "name": "activate_event",
-            "lastModifiedAt": 1597358290982
+            "lastModifiedAt": 1604978040663
         },
         {
             "name": "caches",
-            "lastModifiedAt": 1597190528193
+            "lastModifiedAt": 1604978031448
         },
         {
             "name": "clients",
@@ -21,11 +21,11 @@
         },
         {
             "name": "contentdelete_event",
-            "lastModifiedAt": 1599278013963
+            "lastModifiedAt": 1604978041135
         },
         {
             "name": "install_event",
-            "lastModifiedAt": 1597358291642
+            "lastModifiedAt": 1604978041679
         },
         {
             "name": "message_event",
@@ -37,51 +37,51 @@
         },
         {
             "name": "onactivate",
-            "lastModifiedAt": 1599279459138
+            "lastModifiedAt": 1604978032880
         },
         {
             "name": "oncontentdelete",
-            "lastModifiedAt": 1599278018160
+            "lastModifiedAt": 1604978044757
         },
         {
             "name": "onfetch",
-            "lastModifiedAt": 1600305765457
+            "lastModifiedAt": 1604978033889
         },
         {
             "name": "oninstall",
-            "lastModifiedAt": 1597190531459
+            "lastModifiedAt": 1604978034372
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1599279461918
+            "lastModifiedAt": 1604978035064
         },
         {
             "name": "onnotificationclick",
-            "lastModifiedAt": 1597190532566
+            "lastModifiedAt": 1604978035766
         },
         {
             "name": "onnotificationclose",
-            "lastModifiedAt": 1600305767310
+            "lastModifiedAt": 1604978036376
         },
         {
             "name": "onperiodicsync",
-            "lastModifiedAt": 1601466293963
+            "lastModifiedAt": 1604978036852
         },
         {
             "name": "onpush",
-            "lastModifiedAt": 1597190532946
+            "lastModifiedAt": 1604978037346
         },
         {
             "name": "onpushsubscriptionchange",
-            "lastModifiedAt": 1597190533490
+            "lastModifiedAt": 1604978037838
         },
         {
             "name": "push_event",
-            "lastModifiedAt": 1597358294434
+            "lastModifiedAt": 1604978043703
         },
         {
             "name": "pushsubscriptionchange_event",
-            "lastModifiedAt": 1597358295084
+            "lastModifiedAt": 1604978044247
         },
         {
             "name": "registration",
@@ -89,7 +89,7 @@
         },
         {
             "name": "skipWaiting",
-            "lastModifiedAt": 1597190528568
+            "lastModifiedAt": 1604978040044
         }
     ]
 }

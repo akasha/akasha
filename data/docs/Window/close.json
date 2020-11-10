@@ -3,17 +3,5 @@
     "kind": "Method",
     "name": "Window.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/close",
-    "description": "The Window.close() method closes the current window, or the window on which it was called.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-window-close",
-            "description": "The definition of 'window.close()' in HTML Living Standard."
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/browsers.html#dom-window-close",
-            "description": "The definition of 'Window.close()' in HTML5."
-        }
-    ]
+    "description": "The Window.close() method closes the current window, or the window on which it was called."
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.initiatorType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/initiatorType",
-    "description": "The initiatorType read-only property is a string that represents the type of resource that initiated the performance event."
+    "description": "The initiatorType read-only property is a string that represents the type of resource that initiated the performance event.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-initiatortype",
+            "description": "The definition of 'initiatorType' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

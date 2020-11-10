@@ -1,31 +1,31 @@
 
 {
     "name": "PerformanceEntry",
-    "lastModifiedAt": 1601465549175,
+    "lastModifiedAt": 1604977317589,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192258544
+            "lastModifiedAt": 1604977313561
         },
         {
             "name": "duration",
-            "lastModifiedAt": 1597192259691
+            "lastModifiedAt": 1604977314061
         },
         {
             "name": "entryType",
-            "lastModifiedAt": 1599279347668
+            "lastModifiedAt": 1604977315106
         },
         {
             "name": "name",
-            "lastModifiedAt": 1597192258856
+            "lastModifiedAt": 1604977316221
         },
         {
             "name": "startTime",
-            "lastModifiedAt": 1597192259373
+            "lastModifiedAt": 1604977316704
         },
         {
             "name": "toJSON",
-            "lastModifiedAt": 1597192259980
+            "lastModifiedAt": 1604977317589
         }
     ]
 }

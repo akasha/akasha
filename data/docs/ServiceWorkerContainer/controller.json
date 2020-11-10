@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerContainer.controller",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/controller",
-    "description": "The controller read-only property of the ServiceWorkerContainer interface returns a ServiceWorker object if its state is activating or activated (the same object returned by ServiceWorkerRegistration.active). This property returns null if the request is a force refresh (Shift + refresh) or if there is no active worker."
+    "description": "The controller read-only property of the ServiceWorkerContainer interface returns a ServiceWorker object if its state is activating or activated (the same object returned by ServiceWorkerRegistration.active). This property returns null if the request is a force refresh (Shift + refresh) or if there is no active worker.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-controller",
+            "description": "The definition of 'ServiceWorkerRegistration.controller' in the 'Service Workers' specification."
+        }
+    ]
 }

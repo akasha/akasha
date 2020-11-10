@@ -8,7 +8,7 @@
         {
             "name": "WebXR Device API",
             "href": "https://immersive-web.github.io/webxr/#navigator-xr-attribute",
-            "description": "The definition of 'Navigator.xr' in WebXR Device API."
+            "description": "The definition of 'Navigator.xr' in the 'WebXR Device API' specification."
         }
     ]
 }

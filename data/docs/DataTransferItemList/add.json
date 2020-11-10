@@ -3,17 +3,5 @@
     "kind": "Method",
     "name": "DataTransferItemList.add",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DataTransferItemList/add",
-    "description": "The DataTransferItemList.add() method creates a new DataTransferItem using the specified data and adds it to the drag data list. The item may be a File or a string of a given type. If the item is successfully added to the list, the newly-created DataTransferItem object is returned.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-add",
-            "description": "The definition of 'add()' in HTML Living Standard."
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-add",
-            "description": "The definition of 'add()' in HTML 5.1."
-        }
-    ]
+    "description": "The DataTransferItemList.add() method creates a new DataTransferItem using the specified data and adds it to the drag data list. The item may be a File or a string of a given type. If the item is successfully added to the list, the newly-created DataTransferItem object is returned."
 }

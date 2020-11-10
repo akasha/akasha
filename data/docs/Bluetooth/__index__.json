@@ -1,11 +1,11 @@
 
 {
     "name": "Bluetooth",
-    "lastModifiedAt": 1604969423170,
+    "lastModifiedAt": 1604975442578,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969420522
+            "lastModifiedAt": 1604975439562
         },
         {
             "name": "availabilitychanged_event",
@@ -13,23 +13,23 @@
         },
         {
             "name": "getAvailability",
-            "lastModifiedAt": 1604969422043
+            "lastModifiedAt": 1604975441588
         },
         {
             "name": "getDevices",
-            "lastModifiedAt": 1604969422571
+            "lastModifiedAt": 1604975442049
         },
         {
             "name": "onavailabilitychanged",
-            "lastModifiedAt": 1604969421483
+            "lastModifiedAt": 1604975440539
         },
         {
             "name": "referringDevice",
-            "lastModifiedAt": 1604969420996
+            "lastModifiedAt": 1604975440035
         },
         {
             "name": "requestDevice",
-            "lastModifiedAt": 1604969423170
+            "lastModifiedAt": 1604975442578
         }
     ]
 }

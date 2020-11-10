@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-mediaquerylist-onchange",
-            "description": "The definition of 'onchange' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'onchange' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

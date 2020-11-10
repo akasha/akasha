@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PerformanceObserverEntryList.getEntriesByName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList/getEntriesByName",
-    "description": "The getEntriesByName() method of the PerformanceObserverEntryList interface returns a list of explicitly observed performance entry objects for a given name and entry type. The list's members are determined by the set of entry types specified in the call to the observe() method. The list is available in the observer's callback function (as the first parameter in the callback)."
+    "description": "The getEntriesByName() method of the PerformanceObserverEntryList interface returns a list of explicitly observed performance entry objects for a given name and entry type. The list's members are determined by the set of entry types specified in the call to the observe() method. The list is available in the observer's callback function (as the first parameter in the callback).",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#dom-performanceobserverentrylist-getentriesbyname",
+            "description": "The definition of 'getEntriesByName()' in the 'Performance Timeline Level 2' specification."
+        }
+    ]
 }

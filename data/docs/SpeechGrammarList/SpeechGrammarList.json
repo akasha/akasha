@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "SpeechGrammarList.SpeechGrammarList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/SpeechGrammarList",
-    "description": "The SpeechGrammarList() constructor creates a new SpeechGrammarList object instance."
+    "description": "The SpeechGrammarList() constructor creates a new SpeechGrammarList object instance.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechreco-speechgrammarlist",
+            "description": "The definition of 'SpeechGrammarList' in the 'Web Speech API' specification."
+        }
+    ]
 }

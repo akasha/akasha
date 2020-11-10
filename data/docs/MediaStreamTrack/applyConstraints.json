@@ -8,12 +8,12 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints",
-            "description": "The definition of 'applyConstraints()' in Media Capture and Streams."
+            "description": "The definition of 'applyConstraints()' in the 'Media Capture and Streams' specification."
         },
         {
             "name": "MediaStream Image Capture",
             "href": "https://w3c.github.io/mediacapture-image/#mediatrackconstraintset-section",
-            "description": "The definition of 'applyConstraints()' in MediaStream Image Capture."
+            "description": "The definition of 'applyConstraints()' in the 'MediaStream Image Capture' specification."
         }
     ]
 }

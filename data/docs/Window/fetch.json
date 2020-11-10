@@ -8,12 +8,12 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#fetch-method",
-            "description": "The definition of 'fetch()' in Fetch."
+            "description": "The definition of 'fetch()' in the 'Fetch' specification."
         },
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-global-fetch",
-            "description": "The definition of 'fetch()' in Fetch."
+            "description": "The definition of 'fetch()' in the 'Fetch' specification."
         },
         {
             "name": "Credential Management Level 1",

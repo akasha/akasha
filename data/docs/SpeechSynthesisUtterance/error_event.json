@@ -4,6 +4,13 @@
     "name": "SpeechSynthesisUtterance.error_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/error_event",
     "description": "You can use the error event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#utterance-events",
+            "description": "The definition of 'speech synthesis utterance events' in the 'Web Speech API' specification."
+        }
+    ],
     "eventName": "error",
     "eventType": "SpeechSynthesisErrorEvent",
     "eventHandlerProperty": "onerror",

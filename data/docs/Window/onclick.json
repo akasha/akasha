@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Window.onclick",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/onclick",
-    "description": "The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onclick",
-            "description": "The definition of 'onclick' in HTML Living Standard."
-        }
-    ]
+    "description": "The onclick property of the GlobalEventHandlers mixin is the EventHandler for processing click events on a given element."
 }

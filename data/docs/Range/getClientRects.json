@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Range.getClientRects",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Range/getClientRects",
-    "description": "The Range.getClientRects() method returns a list of DOMRect objects representing the area of the screen occupied by the range. This is created by aggregating the results of calls to Element.getClientRects() for all the elements in the range.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-range-getclientrects",
-            "description": "The definition of 'Range.getClientRects()' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The Range.getClientRects() method returns a list of DOMRect objects representing the area of the screen occupied by the range. This is created by aggregating the results of calls to Element.getClientRects() for all the elements in the range."
 }

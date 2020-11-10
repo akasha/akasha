@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCRtpTransceiver.direction",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCRtpTransceiver/direction",
-    "description": "The RTCRtpTransceiver property direction is a string which indicates the transceiver's preferred directionality."
+    "description": "The RTCRtpTransceiver property direction is a string which indicates the transceiver's preferred directionality.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiver-direction",
+            "description": "The definition of 'RTCRtpTransceiver.direction' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+        }
+    ]
 }

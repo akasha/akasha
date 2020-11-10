@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.loadEventEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventEnd",
-    "description": "The legacy PerformanceTiming.loadEventEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the load event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns 0."
+    "description": "The legacy PerformanceTiming.loadEventEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the load event handler terminated, that is when the load event is completed. If this event has not yet been sent, or is not yet completed, it returns 0.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-loadedeventend",
+            "description": "The definition of 'PerformanceTiming.loadEventEnd' in the 'Navigation Timing' specification."
+        }
+    ]
 }

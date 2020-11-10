@@ -1,31 +1,31 @@
 
 {
     "name": "XRRigidTransform",
-    "lastModifiedAt": 1601467496050,
+    "lastModifiedAt": 1604979078868,
     "entries": [
         {
             "name": "XRRigidTransform",
-            "lastModifiedAt": 1600309117795
+            "lastModifiedAt": 1604979076063
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599391533853
+            "lastModifiedAt": 1604979075022
         },
         {
             "name": "inverse",
-            "lastModifiedAt": 1600309118121
+            "lastModifiedAt": 1604979076569
         },
         {
             "name": "matrix",
-            "lastModifiedAt": 1600309118431
+            "lastModifiedAt": 1604979077099
         },
         {
             "name": "orientation",
-            "lastModifiedAt": 1600309118668
+            "lastModifiedAt": 1604979078249
         },
         {
             "name": "position",
-            "lastModifiedAt": 1600309118941
+            "lastModifiedAt": 1604979078733
         }
     ]
 }

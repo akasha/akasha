@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-media-videotracks",
-            "description": "The definition of 'HTMLMediaElement.videoTracks' in HTML Living Standard."
+            "description": "The definition of 'HTMLMediaElement.videoTracks' in the 'HTML Living Standard' specification."
         }
     ]
 }

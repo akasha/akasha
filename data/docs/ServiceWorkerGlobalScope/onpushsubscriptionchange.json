@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.onpushsubscriptionchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onpushsubscriptionchange",
-    "description": "The ServiceWorkerGlobalScope.onpushsubscriptionchange event of the ServiceWorkerGlobalScope interface is fired to indicate a change in push subscription that was triggered outside the application's control, e.g. when browser refresh the push subscription."
+    "description": "The ServiceWorkerGlobalScope.onpushsubscriptionchange event of the ServiceWorkerGlobalScope interface is fired to indicate a change in push subscription that was triggered outside the application's control, e.g. when browser refresh the push subscription.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-serviceworkerglobalscope-onpushsubscriptionchange",
+            "description": "The definition of 'onpushsubscriptionchange' in the 'Push API' specification."
+        }
+    ]
 }

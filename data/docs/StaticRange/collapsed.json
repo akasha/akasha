@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "StaticRange.collapsed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/collapsed",
-    "description": "The collapsed read-only property of the StaticRange interface returns true if the range's start position and end position are the same."
+    "description": "The collapsed read-only property of the StaticRange interface returns true if the range's start position and end position are the same.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-collapsed",
+            "description": "The definition of 'collapsed' in the 'DOM' specification."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-staticrange-collapsed",
+            "description": "The definition of 'collapsed' in the 'Static Range' specification."
+        }
+    ]
 }

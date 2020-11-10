@@ -1,7 +1,7 @@
 
 {
     "name": "CSSRule",
-    "lastModifiedAt": 1604969496257,
+    "lastModifiedAt": 1604975511971,
     "entries": [
         {
             "name": "__type__",
@@ -9,11 +9,11 @@
         },
         {
             "name": "cssText",
-            "lastModifiedAt": 1604447112660
+            "lastModifiedAt": 1604975511514
         },
         {
             "name": "parentStyleSheet",
-            "lastModifiedAt": 1604447113232
+            "lastModifiedAt": 1604975511971
         }
     ]
 }

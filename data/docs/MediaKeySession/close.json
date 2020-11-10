@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-close",
-            "description": "The definition of 'close()' in Encrypted Media Extensions."
+            "description": "The definition of 'close()' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

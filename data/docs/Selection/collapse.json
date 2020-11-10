@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.collapse",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/collapse",
-    "description": "The Selection.collapse() method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there."
+    "description": "The Selection.collapse() method collapses the current selection to a single point. The document is not modified. If the content is focused and editable, the caret will blink there.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-collapse",
+            "description": "The definition of 'Selection.collapse()' in the 'Selection API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-scrolltooptions-top",
-            "description": "The definition of 'top' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'top' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

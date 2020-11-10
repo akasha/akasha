@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getTexParameter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getTexParameter",
-    "description": "The WebGLRenderingContext.getTexParameter() method of the WebGL API returns information about the given texture."
+    "description": "The WebGLRenderingContext.getTexParameter() method of the WebGL API returns information about the given texture.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.8",
+            "description": "The definition of 'getTexParameter' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetTexParameter.xml",
+            "description": "The definition of 'glGetTexParameter' in the 'OpenGL ES 2.0' specification."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6",
+            "description": "The definition of 'getTexParameter' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTexParameter.xhtml",
+            "description": "The definition of 'glGetTexParameter' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

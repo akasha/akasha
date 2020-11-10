@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#DelayNode",
-            "description": "The definition of 'DelayNode' in Web Audio API."
+            "description": "The definition of 'DelayNode' in the 'Web Audio API' specification."
         }
     ]
 }

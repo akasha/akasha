@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRReferenceSpaceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent",
-    "description": "The WebXR Device API interface XRReferenceSpaceEvent represents an event sent to an XRReferenceSpace. Currently, the only event  that uses this type is the reset event."
+    "description": "The WebXR Device API interface XRReferenceSpaceEvent represents an event sent to an XRReferenceSpace. Currently, the only event  that uses this type is the reset event.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrreferencespaceevent",
+            "description": "The definition of 'XRReferenceSpaceEvent' in the 'WebXR Device API' specification."
+        }
+    ]
 }

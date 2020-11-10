@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#cache-match",
-            "description": "The definition of 'Cache match' in Service Workers."
+            "description": "The definition of 'Cache match' in the 'Service Workers' specification."
         }
     ]
 }

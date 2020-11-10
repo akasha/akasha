@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.connectEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/connectEnd",
-    "description": "The legacy PerformanceTiming.connectEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, where the connection is opened network. If the transport layer reports an error and the connection establishment is started again, the last connection establisment end time is given. If a persistent connection is used, the value will be the same as PerformanceTiming.fetchStart. A connection is considered as opened when all secure connection handshake, or SOCKS authentication, is terminated."
+    "description": "The legacy PerformanceTiming.connectEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, where the connection is opened network. If the transport layer reports an error and the connection establishment is started again, the last connection establisment end time is given. If a persistent connection is used, the value will be the same as PerformanceTiming.fetchStart. A connection is considered as opened when all secure connection handshake, or SOCKS authentication, is terminated.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-connectend",
+            "description": "The definition of 'PerformanceTiming.connectEnd' in the 'Navigation Timing' specification."
+        }
+    ]
 }

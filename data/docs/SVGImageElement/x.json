@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SVGImageElement.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/x",
-    "description": "The x read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the x attribute of the given image element."
+    "description": "The x read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the x attribute of the given image element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__x",
+            "description": "The definition of 'x' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ]
 }

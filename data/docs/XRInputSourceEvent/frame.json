@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSourceEvent.frame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/frame",
-    "description": "The read-only XRInputSourceEvent property frame specifies an XRFrame object representing the event frame during which a WebXR user input occurred."
+    "description": "The read-only XRInputSourceEvent property frame specifies an XRFrame object representing the event frame during which a WebXR user input occurred.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsourceevent-frame",
+            "description": "The definition of 'XRInputSourceEvent.frame' in the 'WebXR Device API' specification."
+        }
+    ]
 }

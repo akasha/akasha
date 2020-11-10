@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGTransformList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTransformList",
-    "description": "The SVGTransformList defines a list of SVGTransform objects."
+    "description": "The SVGTransformList defines a list of SVGTransform objects.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/coords.html#InterfaceSVGTransformList",
+            "description": "The definition of 'SVGTransformList' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/coords.html#InterfaceSVGTransformList",
+            "description": "The definition of 'SVGTransformList' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

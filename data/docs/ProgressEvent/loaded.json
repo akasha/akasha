@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ProgressEvent.loaded",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/loaded",
-    "description": "The ProgressEvent.loaded read-only property is an integer representing the amount of work already performed by the underlying process. The ratio of work done can be calculated with the property and ProgressEvent.total. When downloading a resource using HTTP, this only represent the part of the content itself, not headers and other overhead."
+    "description": "The ProgressEvent.loaded read-only property is an integer representing the amount of work already performed by the underlying process. The ratio of work done can be calculated with the property and ProgressEvent.total. When downloading a resource using HTTP, this only represent the part of the content itself, not headers and other overhead.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#dom-progressevent-loaded",
+            "description": "The definition of 'ProgressEvent.loaded' in the 'XMLHttpRequest' specification."
+        }
+    ]
 }

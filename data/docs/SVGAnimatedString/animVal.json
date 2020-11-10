@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "SVGAnimatedString.animVal",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString/animVal",
-    "description": "AnimVal attribute or animVal property contains the same value as the baseVal property.If the given attribute or property is being animated, contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, then it contains the same value as baseVal"
+    "description": "AnimVal attribute or animVal property contains the same value as the baseVal property.If the given attribute or property is being animated, contains the current animated value of the attribute or property. If the given attribute or property is not currently being animated, then it contains the same value as baseVal",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#__svg__SVGAnimatedString__animVal"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#__svg__SVGAnimatedString__animVal"
+        }
+    ]
 }

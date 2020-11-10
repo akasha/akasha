@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceNavigationTiming.loadEventEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/loadEventEnd",
-    "description": "The loadEventEnd read-only property returns a timestamp which is equal to the time when the load event of the current document is completed."
+    "description": "The loadEventEnd read-only property returns a timestamp which is equal to the time when the load event of the current document is completed.",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-loadeventend",
+            "description": "The definition of 'loadEventEnd' in the 'Navigation Timing Level 2' specification."
+        }
+    ]
 }

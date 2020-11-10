@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Window.moveBy",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/moveBy",
-    "description": "The moveBy() method of the Window interface moves the current window by a specified amount.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-window-moveby",
-            "description": "The definition of 'window.moveBy()' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The moveBy() method of the Window interface moves the current window by a specified amount."
 }

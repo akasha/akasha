@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PushMessageData.blob",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/blob",
-    "description": "The blob()method of the PushMessageData interface extracts push message data as a Blob object."
+    "description": "The blob()method of the PushMessageData interface extracts push message data as a Blob object.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushmessagedata-blob",
+            "description": "The definition of 'blob()' in the 'Push API' specification."
+        }
+    ]
 }

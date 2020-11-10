@@ -1,35 +1,35 @@
 
 {
     "name": "KeyboardEvent",
-    "lastModifiedAt": 1604970988175,
+    "lastModifiedAt": 1604976907396,
     "entries": [
         {
             "name": "KeyboardEvent",
-            "lastModifiedAt": 1604970973904
+            "lastModifiedAt": 1604976895600
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192485302
+            "lastModifiedAt": 1604976895111
         },
         {
             "name": "altKey",
-            "lastModifiedAt": 1604970975017
+            "lastModifiedAt": 1604976896127
         },
         {
             "name": "charCode",
-            "lastModifiedAt": 1604970975628
+            "lastModifiedAt": 1604976897336
         },
         {
             "name": "code",
-            "lastModifiedAt": 1604970976433
+            "lastModifiedAt": 1604976898039
         },
         {
             "name": "ctrlKey",
-            "lastModifiedAt": 1604970977468
+            "lastModifiedAt": 1604976899092
         },
         {
             "name": "getModifierState",
-            "lastModifiedAt": 1604970986656
+            "lastModifiedAt": 1604976906308
         },
         {
             "name": "initKeyEvent",
@@ -41,15 +41,15 @@
         },
         {
             "name": "isComposing",
-            "lastModifiedAt": 1604970978187
+            "lastModifiedAt": 1604976899600
         },
         {
             "name": "key",
-            "lastModifiedAt": 1604970978826
+            "lastModifiedAt": 1604976900154
         },
         {
             "name": "keyCode",
-            "lastModifiedAt": 1604970980340
+            "lastModifiedAt": 1604976900758
         },
         {
             "name": "keyIdentifier",
@@ -57,23 +57,23 @@
         },
         {
             "name": "location",
-            "lastModifiedAt": 1597192487968
+            "lastModifiedAt": 1604976902288
         },
         {
             "name": "metaKey",
-            "lastModifiedAt": 1604970983135
+            "lastModifiedAt": 1604976902749
         },
         {
             "name": "repeat",
-            "lastModifiedAt": 1604970984159
+            "lastModifiedAt": 1604976903228
         },
         {
             "name": "shiftKey",
-            "lastModifiedAt": 1604970984771
+            "lastModifiedAt": 1604976903976
         },
         {
             "name": "which",
-            "lastModifiedAt": 1604970985406
+            "lastModifiedAt": 1604976904456
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-keystatuses",
-            "description": "The definition of 'keyStatuses' in Encrypted Media Extensions."
+            "description": "The definition of 'keyStatuses' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

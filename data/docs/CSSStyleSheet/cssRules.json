@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#dom-cssstylesheet-cssrules",
-            "description": "The definition of 'CSSStyleSheet.cssRules' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'CSSStyleSheet.cssRules' in the 'CSS Object Model (CSSOM)' specification."
         }
     ]
 }

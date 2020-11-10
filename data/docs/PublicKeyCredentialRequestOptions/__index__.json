@@ -1,35 +1,35 @@
 
 {
     "name": "PublicKeyCredentialRequestOptions",
-    "lastModifiedAt": 1600312747489,
+    "lastModifiedAt": 1604977429491,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192648715
+            "lastModifiedAt": 1604977424603
         },
         {
             "name": "allowCredentials",
-            "lastModifiedAt": 1597192650155
+            "lastModifiedAt": 1604977425057
         },
         {
             "name": "challenge",
-            "lastModifiedAt": 1597192649006
+            "lastModifiedAt": 1604977425514
         },
         {
             "name": "extensions",
-            "lastModifiedAt": 1597192650694
+            "lastModifiedAt": 1604977426182
         },
         {
             "name": "rpId",
-            "lastModifiedAt": 1599391549356
+            "lastModifiedAt": 1604977427189
         },
         {
             "name": "timeout",
-            "lastModifiedAt": 1597192649385
+            "lastModifiedAt": 1604977428212
         },
         {
             "name": "userVerification",
-            "lastModifiedAt": 1597192650435
+            "lastModifiedAt": 1604977429232
         }
     ]
 }

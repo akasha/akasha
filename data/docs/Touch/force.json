@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "Touch.force",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/force",
-    "description": "The Touch.force read-only property returns the amount of pressure the user is applying to the touch surface for a Touch point."
+    "description": "The Touch.force read-only property returns the amount of pressure the user is applying to the touch surface for a Touch point.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touch-force"
+        }
+    ]
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLElement.innerText",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText",
-    "description": "The innerText property of the HTMLElement interface represents the &quot;rendered&quot; text content of a node and its descendants.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/dom.html#the-innertext-idl-attribute",
-            "description": "The definition of 'innerText' in HTML Living Standard."
-        }
-    ]
+    "description": "The innerText property of the HTMLElement interface represents the &quot;rendered&quot; text content of a node and its descendants."
 }

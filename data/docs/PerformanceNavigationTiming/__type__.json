@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PerformanceNavigationTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming",
-    "description": "The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document."
+    "description": "The PerformanceNavigationTiming interface provides methods and properties to store and retrieve metrics regarding the browser's document navigation events. For example, this interface can be used to determine how much time it takes to load or unload a document.",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#sec-PerformanceNavigationTiming",
+            "description": "The definition of 'PerformanceNavigationTiming' in the 'Navigation Timing Level 2' specification."
+        }
+    ]
 }

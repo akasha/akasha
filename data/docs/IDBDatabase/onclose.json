@@ -8,7 +8,7 @@
         {
             "name": "Indexed Database API Draft",
             "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-onclose",
-            "description": "The definition of 'onclose' in Indexed Database API Draft."
+            "description": "The definition of 'onclose' in the 'Indexed Database API Draft' specification."
         }
     ]
 }

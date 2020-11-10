@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-iframe-contentdocument",
-            "description": "The definition of 'HTMLIFrameElement: contentDocument' in HTML Living Standard."
+            "description": "The definition of 'HTMLIFrameElement: contentDocument' in the 'HTML Living Standard' specification."
         }
     ]
 }

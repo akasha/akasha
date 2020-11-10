@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "PointerEvent.pressure",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pressure",
-    "description": "The pressure read-only property of the PointerEvent interface indicates the normalized pressure of the pointer input."
+    "description": "The pressure read-only property of the PointerEvent interface indicates the normalized pressure of the pointer input.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pressure",
+            "description": "The definition of 'pressure' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pressure",
+            "description": "The definition of 'pressure' in the 'Pointer Events' specification."
+        }
+    ]
 }

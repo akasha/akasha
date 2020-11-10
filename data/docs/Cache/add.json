@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Cache.add",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/add",
-    "description": "The add() method of the Cache interface takes a URL, retrieves it, and adds the resulting response object to the given cache."
+    "description": "The add() method of the Cache interface takes a URL, retrieves it, and adds the resulting response object to the given cache.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cache-add",
+            "description": "The definition of 'Cache: add' in the 'Service Workers' specification."
+        }
+    ]
 }

@@ -3,22 +3,5 @@
     "kind": "Property",
     "name": "WindowEventHandlers.onbeforeunload",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload",
-    "description": "The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#handler-window-onbeforeunload",
-            "description": "The definition of 'onbeforeunload' in HTML Living Standard."
-        },
-        {
-            "name": "HTML 5.1",
-            "href": "https://www.w3.org/TR/html51/#windoweventhandlers",
-            "description": "The definition of 'GlobalEventHandlers' in HTML 5.1."
-        },
-        {
-            "name": "HTML5",
-            "href": "https://www.w3.org/TR/html52/#windoweventhandlers",
-            "description": "The definition of 'GlobalEventHandlers' in HTML5."
-        }
-    ]
+    "description": "The onbeforeunload property of the WindowEventHandlers mixin is the EventHandler for processing beforeunload events. These events fire when a window is about to unload its resources. At this point, the document is still visible and the event is still cancelable."
 }

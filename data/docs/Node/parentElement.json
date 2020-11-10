@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Node.parentElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement",
-    "description": "The Node.parentElement read-only property returns the DOM node's parent Element, or null if the node either has no parent, or its parent isn't a DOM Element."
+    "description": "The Node.parentElement read-only property returns the DOM node's parent Element, or null if the node either has no parent, or its parent isn't a DOM Element.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-parentelement",
+            "description": "The definition of 'parentElement' in the 'DOM' specification."
+        }
+    ]
 }

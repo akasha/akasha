@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRRenderState.inlineVerticalFieldOfView",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/inlineVerticalFieldOfView",
-    "description": "The read-only inlineVerticalFieldOfView property of the XRRenderState interface returns the default vertical field of view for &quot;inline&quot; sessions and null for all immersive sessions."
+    "description": "The read-only inlineVerticalFieldOfView property of the XRRenderState interface returns the default vertical field of view for &quot;inline&quot; sessions and null for all immersive sessions.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrrenderstate-inlineVerticalFieldOfView",
+            "description": "The definition of 'XRRenderState.inlineVerticalFieldOfView' in the 'WebXR Device API' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.setBaseAndExtent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/setBaseAndExtent",
-    "description": "The setBaseAndExtent() method of the Selection interface sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them."
+    "description": "The setBaseAndExtent() method of the Selection interface sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-setbaseandextent",
+            "description": "The definition of 'Selection.setBaseAndExtent()' in the 'Selection API' specification."
+        }
+    ]
 }

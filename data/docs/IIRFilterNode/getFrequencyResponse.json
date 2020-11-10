@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "IIRFilterNode.getFrequencyResponse",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IIRFilterNode/getFrequencyResponse",
-    "description": "undefined",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#widl-IIRFilterNode-getFrequencyResponse-void-Float32Array-frequencyHz-Float32Array-magResponse-Float32Array-phaseResponse",
-            "description": "The definition of 'getFrequencyResponse()' in Web Audio API."
-        }
-    ]
+    "description": "undefined"
 }

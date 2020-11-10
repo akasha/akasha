@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SVGElement.onmouseover",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/onmouseover",
-    "description": "The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events."
+    "description": "The onmouseover property of the GlobalEventHandlers mixin is an EventHandler that processes mouseover events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmouseover",
+            "description": "The definition of 'onmouseover' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

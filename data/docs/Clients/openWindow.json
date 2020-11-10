@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#clients-openwindow",
-            "description": "The definition of 'Clients: openWindow' in Service Workers."
+            "description": "The definition of 'Clients: openWindow' in the 'Service Workers' specification."
         }
     ]
 }

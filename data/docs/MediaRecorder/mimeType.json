@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-mimetype",
-            "description": "The definition of 'MediaRecorder.mimeType' in MediaStream Recording."
+            "description": "The definition of 'MediaRecorder.mimeType' in the 'MediaStream Recording' specification."
         }
     ]
 }

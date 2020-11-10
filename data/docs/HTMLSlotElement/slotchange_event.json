@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#mutation-observers",
-            "description": "The definition of '&quot;Mutation observers&quot; and slotchange event' in DOM."
+            "description": "The definition of '&quot;Mutation observers&quot; and slotchange event' in the 'DOM' specification."
         }
     ],
     "eventName": "slotchange",

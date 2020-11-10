@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-mutationobserverinit-characterdataoldvalue",
-            "description": "The definition of 'MutationObserverInit.characterDataOldValue' in DOM."
+            "description": "The definition of 'MutationObserverInit.characterDataOldValue' in the 'DOM' specification."
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SecurityPolicyViolationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent",
-    "description": "The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated."
+    "description": "The SecurityPolicyViolationEvent interface inherits from Event, and represents the event object of an event sent on a document or worker when its content security policy is violated.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 2",
+            "href": "https://w3c.github.io/webappsec-csp/2/#firing-securitypolicyviolationevent-events",
+            "description": "The definition of 'SecurityPolicyViolationEvent' in the 'Content Security Policy Level 2' specification."
+        },
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#report-violation",
+            "description": "The definition of 'SecurityPolicyViolationEvent' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

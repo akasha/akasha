@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.responseEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd",
-    "description": "The responseEnd read-only property returns a timestamp immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first."
+    "description": "The responseEnd read-only property returns a timestamp immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-responseend",
+            "description": "The definition of 'responseEnd' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

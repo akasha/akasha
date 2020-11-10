@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLFormElement.action",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/action",
-    "description": "The HTMLFormElement.action property represents the action of the form element.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-fs-action",
-            "description": "The definition of 'HTMLFormElement: action' in HTML Living Standard."
-        }
-    ]
+    "description": "The HTMLFormElement.action property represents the action of the form element."
 }

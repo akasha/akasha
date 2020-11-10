@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebGLQuery",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLQuery",
-    "description": "The WebGLQuery interface is part of the WebGL 2 API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available."
+    "description": "The WebGLQuery interface is part of the WebGL 2 API and provides ways to asynchronously query for information. By default, occlusion queries and primitive queries are available.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.2",
+            "description": "The definition of 'WebGLQuery' in the 'WebGL 2.0' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#channelmergernode",
-            "description": "The definition of 'ChannelMergerNode' in Web Audio API."
+            "description": "The definition of 'ChannelMergerNode' in the 'Web Audio API' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRWebGLLayerInit.alpha",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/alpha",
-    "description": "The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel."
+    "description": "The alpha property is a Boolean value which, if present and set to true in the XRWebGLLayerInit dictionary passed into the XRWebGLLayer() constructor, specifies that the new layer's color buffer is to include an alpha channel.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-alpha",
+            "description": "The definition of 'XRWebGLLayerInit.alpha' in the 'WebXR Device API' specification."
+        }
+    ]
 }

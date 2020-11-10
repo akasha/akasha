@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.vertexAttribDivisor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/vertexAttribDivisor",
-    "description": "The WebGL2RenderingContext.vertexAttribDivisor() method of the WebGL 2 API modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with gl.drawArraysInstanced() and gl.drawElementsInstanced()."
+    "description": "The WebGL2RenderingContext.vertexAttribDivisor() method of the WebGL 2 API modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with gl.drawArraysInstanced() and gl.drawElementsInstanced().",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9",
+            "description": "The definition of 'vertexAttribDivisor' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glVertexAttribDivisor.xhtml",
+            "description": "The definition of 'glVertexAttribDivisor' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

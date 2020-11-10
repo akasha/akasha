@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Document.evaluate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/evaluate",
-    "description": "Returns an XPathResult based on an XPath expression and other given parameters."
+    "description": "Returns an XPathResult based on an XPath expression and other given parameters.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-evaluate",
+            "description": "The definition of 'Document.evaluate' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Type",
     "name": "VTTRegion",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VTTRegion",
-    "description": "The VTTRegion interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes a portion of the video to render a VTTCue onto."
+    "description": "The VTTRegion interface&mdash;part of the API for handling WebVTT (text tracks on media presentations)&mdash;describes a portion of the video to render a VTTCue onto.",
+    "refs": [
+        {
+            "name": "WebVTT: The Web Video Text Tracks Format",
+            "href": "https://w3c.github.io/webvtt/"
+        }
+    ]
 }

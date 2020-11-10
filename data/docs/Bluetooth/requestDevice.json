@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetooth-requestdevice",
-            "description": "The definition of 'requestDevice()' in Web Bluetooth."
+            "description": "The definition of 'requestDevice()' in the 'Web Bluetooth' specification."
         }
     ]
 }

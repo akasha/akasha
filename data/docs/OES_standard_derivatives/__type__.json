@@ -8,7 +8,7 @@
         {
             "name": "OES_standard_derivatives",
             "href": "https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/",
-            "description": "The definition of 'OES_standard_derivatives' in OES_standard_derivatives."
+            "description": "The definition of 'OES_standard_derivatives' in the 'OES_standard_derivatives' specification."
         }
     ]
 }

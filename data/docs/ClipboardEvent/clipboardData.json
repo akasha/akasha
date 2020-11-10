@@ -8,7 +8,7 @@
         {
             "name": "Clipboard API and events",
             "href": "https://w3c.github.io/clipboard-apis/#clipboardevent-clipboarddata",
-            "description": "The definition of 'ClipboardEvent.clipboardData' in Clipboard API and events."
+            "description": "The definition of 'ClipboardEvent.clipboardData' in the 'Clipboard API and events' specification."
         }
     ]
 }

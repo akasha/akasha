@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dom-blob-arraybuffer",
-            "description": "The definition of 'Blob.arrayBuffer()' in File API."
+            "description": "The definition of 'Blob.arrayBuffer()' in the 'File API' specification."
         }
     ]
 }

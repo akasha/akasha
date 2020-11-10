@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.statusCode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/statusCode",
-    "description": "The statusCode read-only property of the SecurityPolicyViolationEvent interface is a number representing the HTTP status code of the document or worker in which the violation occurred."
+    "description": "The statusCode read-only property of the SecurityPolicyViolationEvent interface is a number representing the HTTP status code of the document or worker in which the violation occurred.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-statuscode",
+            "description": "The definition of 'statusCode' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

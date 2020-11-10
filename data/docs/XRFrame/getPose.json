@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRFrame.getPose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getPose",
-    "description": "The XRFrame method getPose() returns the relative position and orientation&mdash;the pose&mdash;of one XRSpace to that of another space."
+    "description": "The XRFrame method getPose() returns the relative position and orientation&mdash;the pose&mdash;of one XRSpace to that of another space.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrframe-getpose",
+            "description": "The definition of 'XRFrame.getPose()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

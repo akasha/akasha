@@ -1,31 +1,31 @@
 
 {
     "name": "BluetoothRemoteGATTDescriptor",
-    "lastModifiedAt": 1604969451331,
+    "lastModifiedAt": 1604975470721,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969447655
+            "lastModifiedAt": 1604975467788
         },
         {
             "name": "characteristic",
-            "lastModifiedAt": 1604969449894
+            "lastModifiedAt": 1604975469556
         },
         {
             "name": "readValue",
-            "lastModifiedAt": 1604969450818
+            "lastModifiedAt": 1604975470192
         },
         {
             "name": "uuid",
-            "lastModifiedAt": 1604969448297
+            "lastModifiedAt": 1604975468359
         },
         {
             "name": "value",
-            "lastModifiedAt": 1604969448772
+            "lastModifiedAt": 1604975469084
         },
         {
             "name": "writeValue",
-            "lastModifiedAt": 1604969451331
+            "lastModifiedAt": 1604975470721
         }
     ]
 }

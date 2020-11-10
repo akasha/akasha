@@ -1,11 +1,11 @@
 
 {
     "name": "SharedWorkerGlobalScope",
-    "lastModifiedAt": 1604450213017,
+    "lastModifiedAt": 1604978066587,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450210476
+            "lastModifiedAt": 1604978063690
         },
         {
             "name": "applicationCache",
@@ -13,7 +13,7 @@
         },
         {
             "name": "close",
-            "lastModifiedAt": 1604450212492
+            "lastModifiedAt": 1604978066079
         },
         {
             "name": "connect_event",
@@ -21,11 +21,11 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1604450211471
+            "lastModifiedAt": 1604978064941
         },
         {
             "name": "onconnect",
-            "lastModifiedAt": 1604450211939
+            "lastModifiedAt": 1604978065548
         }
     ]
 }

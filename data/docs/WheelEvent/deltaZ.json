@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WheelEvent.deltaZ",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaZ",
-    "description": "The WheelEvent.deltaZ read-only property is a double representing the scroll amount along the z-axis, in the WheelEvent.deltaMode unit."
+    "description": "The WheelEvent.deltaZ read-only property is a double representing the scroll amount along the z-axis, in the WheelEvent.deltaMode unit.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaZ",
+            "description": "The definition of 'WheelEvent.deltaZ' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+        }
+    ]
 }

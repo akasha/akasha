@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "FetchEvent.respondWith",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith",
-    "description": "The respondWith() method of FetchEvent prevents the browser's default fetch handling, and allows you to provide a promise for a Response yourself."
+    "description": "The respondWith() method of FetchEvent prevents the browser's default fetch handling, and allows you to provide a promise for a Response yourself.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-respondwith",
+            "description": "The definition of 'respondWith()' in the 'Service Workers' specification."
+        }
+    ]
 }

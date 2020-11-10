@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-headers-delete",
-            "description": "The definition of 'delete()' in Fetch."
+            "description": "The definition of 'delete()' in the 'Fetch' specification."
         }
     ]
 }

@@ -4,6 +4,13 @@
     "name": "SpeechRecognition.result_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/result_event",
     "description": "The result event of the Web Speech API is fired when the speech recognition service returns a result &mdash; a word or phrase has been positively recognized and this has been communicated back to the app",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechreco-events",
+            "description": "The definition of 'speech recognition events' in the 'Web Speech API' specification."
+        }
+    ],
     "eventName": "result",
     "eventType": "SpeechRecognitionEvent",
     "eventHandlerProperty": "onresult",

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "NotificationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent",
-    "description": "The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker."
+    "description": "The parameter passed into the onnotificationclick handler, the NotificationEvent interface represents a notification click event that is dispatched on the ServiceWorkerGlobalScope of a ServiceWorker.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#notificationevent",
+            "description": "The definition of 'NotificationEvent' in the 'Notifications API' specification."
+        }
+    ]
 }

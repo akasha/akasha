@@ -8,7 +8,7 @@
         {
             "name": "Screen Orientation API",
             "href": "https://w3c.github.io/screen-orientation/published/20140220.html#extensions-to-the-screen-interface",
-            "description": "The definition of 'lockOrientation()' in Screen Orientation API."
+            "description": "The definition of 'lockOrientation()' in the 'Screen Orientation API' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.getAttributeNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNode",
-    "description": "Returns the specified attribute of the specified element, as an Attr node."
+    "description": "Returns the specified attribute of the specified element, as an Attr node.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-getattributenode",
+            "description": "The definition of 'getAttributeNode()' in the 'DOM' specification."
+        }
+    ]
 }

@@ -1,39 +1,39 @@
 
 {
     "name": "IntersectionObserverEntry",
-    "lastModifiedAt": 1604970969098,
+    "lastModifiedAt": 1604976891490,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448215043
+            "lastModifiedAt": 1604976886227
         },
         {
             "name": "boundingClientRect",
-            "lastModifiedAt": 1604448215662
+            "lastModifiedAt": 1604976886753
         },
         {
             "name": "intersectionRatio",
-            "lastModifiedAt": 1604448216701
+            "lastModifiedAt": 1604976887769
         },
         {
             "name": "intersectionRect",
-            "lastModifiedAt": 1604448217834
+            "lastModifiedAt": 1604976888769
         },
         {
             "name": "isIntersecting",
-            "lastModifiedAt": 1604448218453
+            "lastModifiedAt": 1604976889350
         },
         {
             "name": "rootBounds",
-            "lastModifiedAt": 1604448218942
+            "lastModifiedAt": 1604976890212
         },
         {
             "name": "target",
-            "lastModifiedAt": 1604448219518
+            "lastModifiedAt": 1604976890711
         },
         {
             "name": "time",
-            "lastModifiedAt": 1604448220613
+            "lastModifiedAt": 1604976891188
         }
     ]
 }

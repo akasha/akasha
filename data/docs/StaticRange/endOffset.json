@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "StaticRange.endOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endOffset",
-    "description": "The endOffset property of the StaticRange interface returns the offset into the end node of the range's end position."
+    "description": "The endOffset property of the StaticRange interface returns the offset into the end node of the range's end position.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-endoffset",
+            "description": "The definition of 'endOffset' in the 'DOM' specification."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-staticrange-endoffset",
+            "description": "The definition of 'endOffset' in the 'Static Range' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "RTCPeerConnection.iceGatheringState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState",
-    "description": "The read-only property RTCPeerConnection.iceGatheringState returns an enum of type RTCIceGatheringState that describes connection's ICE gathering state. This lets you detect, for example, when collection of ICE candidates has finished."
+    "description": "The read-only property RTCPeerConnection.iceGatheringState returns an enum of type RTCIceGatheringState that describes connection's ICE gathering state. This lets you detect, for example, when collection of ICE candidates has finished.",
+    "refs": [
+        {
+            "name": "WebRTC 1.0: Real-time Communication Between Browsers",
+            "href": "https://w3c.github.io/webrtc-pc/#dom-peerconnection-ice-gathering-state",
+            "description": "The definition of 'RTCPeerConnection.iceGatheringState' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
+        }
+    ]
 }

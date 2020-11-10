@@ -1,43 +1,43 @@
 
 {
     "name": "GamepadPose",
-    "lastModifiedAt": 1604970321927,
+    "lastModifiedAt": 1604976244953,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448189934
+            "lastModifiedAt": 1604976240186
         },
         {
             "name": "angularAcceleration",
-            "lastModifiedAt": 1604448190518
+            "lastModifiedAt": 1604976240691
         },
         {
             "name": "angularVelocity",
-            "lastModifiedAt": 1604448191530
+            "lastModifiedAt": 1604976241152
         },
         {
             "name": "hasOrientation",
-            "lastModifiedAt": 1604448192541
+            "lastModifiedAt": 1604976241648
         },
         {
             "name": "hasPosition",
-            "lastModifiedAt": 1604448193057
+            "lastModifiedAt": 1604976242132
         },
         {
             "name": "linearAcceleration",
-            "lastModifiedAt": 1604448193721
+            "lastModifiedAt": 1604976242646
         },
         {
             "name": "linearVelocity",
-            "lastModifiedAt": 1604448194525
+            "lastModifiedAt": 1604976243107
         },
         {
             "name": "orientation",
-            "lastModifiedAt": 1604448195302
+            "lastModifiedAt": 1604976243593
         },
         {
             "name": "position",
-            "lastModifiedAt": 1604448195980
+            "lastModifiedAt": 1604976244627
         }
     ]
 }

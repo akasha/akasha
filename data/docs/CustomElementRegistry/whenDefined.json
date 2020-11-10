@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CustomElementRegistry.whenDefined",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/whenDefined",
-    "description": "The whenDefined() method of the CustomElementRegistry interface returns a Promise that resolves when the named element is defined."
+    "description": "The whenDefined() method of the CustomElementRegistry interface returns a Promise that resolves when the named element is defined.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-customelementregistry-whendefined",
+            "description": "The definition of 'customElements.whenDefined()' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

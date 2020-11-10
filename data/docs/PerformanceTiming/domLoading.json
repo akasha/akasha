@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.domLoading",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domLoading",
-    "description": "The legacy PerformanceTiming.domLoading read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the parser started its work, that is when its Document.readyState changes to 'loading' and the corresponding readystatechange event is thrown."
+    "description": "The legacy PerformanceTiming.domLoading read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the parser started its work, that is when its Document.readyState changes to 'loading' and the corresponding readystatechange event is thrown.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-domloading",
+            "description": "The definition of 'PerformanceTiming.domLoading' in the 'Navigation Timing' specification."
+        }
+    ]
 }

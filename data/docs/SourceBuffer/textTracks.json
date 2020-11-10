@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBuffer.textTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/textTracks",
-    "description": "The textTracks read-only property of the SourceBuffer interface returns a list of the text tracks currently contained inside the SourceBuffer."
+    "description": "The textTracks read-only property of the SourceBuffer interface returns a list of the text tracks currently contained inside the SourceBuffer.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-texttracks",
+            "description": "The definition of 'textTracks' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

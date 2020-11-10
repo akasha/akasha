@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "PointerEvent.pointerId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerId",
-    "description": "The pointerId read-only property of the PointerEvent interface is an identifier assigned to a given pointer event. The identifier is unique, being different from the identifiers of all other active pointer events. Since the value may be randomly generated, it is not guaranteed to convey any particular meaning."
+    "description": "The pointerId read-only property of the PointerEvent interface is an identifier assigned to a given pointer event. The identifier is unique, being different from the identifiers of all other active pointer events. Since the value may be randomly generated, it is not guaranteed to convey any particular meaning.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointerid",
+            "description": "The definition of 'pointerId' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerId",
+            "description": "The definition of 'pointerId' in the 'Pointer Events' specification."
+        }
+    ]
 }

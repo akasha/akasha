@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRRigidTransform.position",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/position",
-    "description": "The read-only XRRigidTransform property position is a DOMPointReadOnly object which provides the 3D point, specified in meters, describing the translation component of the transform."
+    "description": "The read-only XRRigidTransform property position is a DOMPointReadOnly object which provides the 3D point, specified in meters, describing the translation component of the transform.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrrigidtransform-position",
+            "description": "The definition of 'XRRigidTransform.position' in the 'WebXR Device API' specification."
+        }
+    ]
 }

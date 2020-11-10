@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#trace",
-            "description": "The definition of 'console.trace()' in Console API."
+            "description": "The definition of 'console.trace()' in the 'Console API' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XMLSerializer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer",
-    "description": "The XMLSerializer interface provides the serializeToString() method to construct an XML string representing a DOM tree."
+    "description": "The XMLSerializer interface provides the serializeToString() method to construct an XML string representing a DOM tree.",
+    "refs": [
+        {
+            "name": "DOM Parsing and Serialization",
+            "href": "https://w3c.github.io/DOM-Parsing/#the-xmlserializer-interface",
+            "description": "The definition of 'XMLSerializer' in the 'DOM Parsing and Serialization' specification."
+        }
+    ]
 }

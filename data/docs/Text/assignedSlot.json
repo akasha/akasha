@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Text.assignedSlot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Text/assignedSlot",
-    "description": "The assignedSlot property of the Text interface returns the HTMLSlotElement object associated with the element."
+    "description": "The assignedSlot property of the Text interface returns the HTMLSlotElement object associated with the element.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-slotable-assignedslot",
+            "description": "The definition of 'assignedSlot' in the 'DOM' specification."
+        }
+    ]
 }

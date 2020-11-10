@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattservice-getincludedservice",
-            "description": "The definition of 'getIncludedService()' in Web Bluetooth."
+            "description": "The definition of 'getIncludedService()' in the 'Web Bluetooth' specification."
         }
     ]
 }

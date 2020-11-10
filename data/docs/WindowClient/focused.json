@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WindowClient.focused",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/focused",
-    "description": "The focused read-only property of the WindowClient interface is a Boolean that indicates whether the current client has focus."
+    "description": "The focused read-only property of the WindowClient interface is a Boolean that indicates whether the current client has focus.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-windowclient-focused",
+            "description": "The definition of 'WindowClient: focused' in the 'Service Workers' specification."
+        }
+    ]
 }

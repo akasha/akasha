@@ -1,7 +1,7 @@
 
 {
     "name": "NodeIterator",
-    "lastModifiedAt": 1604009152719,
+    "lastModifiedAt": 1604977209738,
     "entries": [
         {
             "name": "__type__",
@@ -17,7 +17,7 @@
         },
         {
             "name": "filter",
-            "lastModifiedAt": 1597193067621
+            "lastModifiedAt": 1604977204362
         },
         {
             "name": "nextNode",

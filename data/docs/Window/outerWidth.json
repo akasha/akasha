@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Window.outerWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/outerWidth",
-    "description": "Window.outerWidth read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-window-outerwidth",
-            "description": "The definition of 'Window.outerWidth' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "Window.outerWidth read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles."
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesis.paused",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/paused",
-    "description": "The paused read-only property of the SpeechSynthesis interface is a Boolean that returns true if the SpeechSynthesis object is in a paused state, or false if not."
+    "description": "The paused read-only property of the SpeechSynthesis interface is a Boolean that returns true if the SpeechSynthesis object is in a paused state, or false if not.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-paused",
+            "description": "The definition of 'paused' in the 'Web Speech API' specification."
+        }
+    ]
 }

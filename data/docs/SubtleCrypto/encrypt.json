@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.encrypt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/encrypt",
-    "description": "The encrypt() method of the SubtleCrypto interface encrypts data."
+    "description": "The encrypt() method of the SubtleCrypto interface encrypts data.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#SubtleCrypto-method-encrypt",
+            "description": "The definition of 'SubtleCrypto.encrypt()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFEFuncRElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEFuncRElement",
-    "description": "The SVGFEFuncRElement interface corresponds to the feFuncR element."
+    "description": "The SVGFEFuncRElement interface corresponds to the feFuncR element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEFuncRElement",
+            "description": "The definition of 'SVGFEFuncRElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEFuncRElement",
+            "description": "The definition of 'SVGFEFuncRElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

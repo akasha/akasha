@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Navigator.oscpu",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/oscpu",
-    "description": "The Navigator.oscpu property returns a string that identifies the current operating system."
+    "description": "The Navigator.oscpu property returns a string that identifies the current operating system.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-oscpu",
+            "description": "The definition of 'NavigatorID: oscpu' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

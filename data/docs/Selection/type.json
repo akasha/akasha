@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Selection.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/type",
-    "description": "The type read-only property of the Selection interface returns a DOMString describing the type of the current selection."
+    "description": "The type read-only property of the Selection interface returns a DOMString describing the type of the current selection.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-type",
+            "description": "The definition of 'Selection.type' in the 'Selection API' specification."
+        }
+    ]
 }

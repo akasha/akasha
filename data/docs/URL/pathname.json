@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-pathname",
-            "description": "The definition of 'URL.pathname' in URL."
+            "description": "The definition of 'URL.pathname' in the 'URL' specification."
         }
     ]
 }

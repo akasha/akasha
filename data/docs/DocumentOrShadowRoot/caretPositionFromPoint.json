@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-document-caretpositionfrompoint",
-            "description": "The definition of 'caretPositionFromPoint()' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'caretPositionFromPoint()' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

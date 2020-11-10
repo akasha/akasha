@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-context-2d-clearrect",
-            "description": "The definition of 'CanvasRenderingContext2D.clearRect' in HTML Living Standard."
+            "description": "The definition of 'CanvasRenderingContext2D.clearRect' in the 'HTML Living Standard' specification."
         }
     ]
 }

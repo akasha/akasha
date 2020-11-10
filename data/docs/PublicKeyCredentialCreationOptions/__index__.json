@@ -1,47 +1,47 @@
 
 {
     "name": "PublicKeyCredentialCreationOptions",
-    "lastModifiedAt": 1600312741373,
+    "lastModifiedAt": 1604977424074,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192642771
+            "lastModifiedAt": 1604977418429
         },
         {
             "name": "attestation",
-            "lastModifiedAt": 1597192646122
+            "lastModifiedAt": 1604977419447
         },
         {
             "name": "authenticatorSelection",
-            "lastModifiedAt": 1597192645579
+            "lastModifiedAt": 1604977420091
         },
         {
             "name": "challenge",
-            "lastModifiedAt": 1597192644037
+            "lastModifiedAt": 1604977420573
         },
         {
             "name": "excludeCredentials",
-            "lastModifiedAt": 1597192645026
+            "lastModifiedAt": 1604977421033
         },
         {
             "name": "extensions",
-            "lastModifiedAt": 1597192646466
+            "lastModifiedAt": 1604977421491
         },
         {
             "name": "pubKeyCredParams",
-            "lastModifiedAt": 1597192644308
+            "lastModifiedAt": 1604977421949
         },
         {
             "name": "rp",
-            "lastModifiedAt": 1597192643291
+            "lastModifiedAt": 1604977422688
         },
         {
             "name": "timeout",
-            "lastModifiedAt": 1597192644717
+            "lastModifiedAt": 1604977423160
         },
         {
             "name": "user",
-            "lastModifiedAt": 1597192643735
+            "lastModifiedAt": 1604977423644
         }
     ]
 }

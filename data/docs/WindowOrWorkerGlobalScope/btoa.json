@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-btoa",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.btoa()' in HTML Living Standard."
+            "description": "The definition of 'WindowOrWorkerGlobalScope.btoa()' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/#dom-windowbase64-btoa",
-            "description": "The definition of 'WindowBase64.btoa()' in HTML 5.1."
+            "description": "The definition of 'WindowBase64.btoa()' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/#dom-windowbase64-btoa",
-            "description": "The definition of 'WindowBase64.btoa()' in HTML5."
+            "description": "The definition of 'WindowBase64.btoa()' in the 'HTML5' specification."
         }
     ]
 }

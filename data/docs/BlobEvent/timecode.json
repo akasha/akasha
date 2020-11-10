@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-blobevent-timecode",
-            "description": "The definition of 'timecode' in MediaStream Recording."
+            "description": "The definition of 'timecode' in the 'MediaStream Recording' specification."
         }
     ]
 }

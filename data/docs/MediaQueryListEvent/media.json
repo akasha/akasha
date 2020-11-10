@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-mediaquerylistevent-media",
-            "description": "The definition of 'media' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'media' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

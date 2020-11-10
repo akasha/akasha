@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraintset-aspectratio",
-            "description": "The definition of 'aspectRatio' in Media Capture and Streams."
+            "description": "The definition of 'aspectRatio' in the 'Media Capture and Streams' specification."
         }
     ]
 }

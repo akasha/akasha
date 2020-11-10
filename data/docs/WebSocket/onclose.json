@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#handler-websocket-onclose",
-            "description": "The definition of 'WebSocket: onclose' in HTML Living Standard."
+            "description": "The definition of 'WebSocket: onclose' in the 'HTML Living Standard' specification."
         }
     ]
 }

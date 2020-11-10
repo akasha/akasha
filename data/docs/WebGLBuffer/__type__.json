@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebGLBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLBuffer",
-    "description": "The WebGLBuffer interface is part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors."
+    "description": "The WebGLBuffer interface is part of the WebGL API and represents an opaque buffer object storing data such as vertices or colors.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.4",
+            "description": "The definition of 'WebGLBuffer' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

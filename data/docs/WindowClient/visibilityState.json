@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WindowClient.visibilityState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowClient/visibilityState",
-    "description": "The visibilityState read-only property of the WindowClient interface indicates the visibility of the current client. This value can be one of &quot;hidden&quot;, &quot;visible&quot;, or &quot;prerender&quot;."
+    "description": "The visibilityState read-only property of the WindowClient interface indicates the visibility of the current client. This value can be one of &quot;hidden&quot;, &quot;visible&quot;, or &quot;prerender&quot;.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-windowclient-visibilitystate",
+            "description": "The definition of 'visibilityState' in the 'Service Workers' specification."
+        }
+    ]
 }

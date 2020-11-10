@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#scroll-restoration-mode",
-            "description": "The definition of 'scroll restoration mode' in HTML Living Standard."
+            "description": "The definition of 'scroll restoration mode' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/browsers.html#dom-history-scrollrestoration",
-            "description": "The definition of 'History.scrollRestoration' in HTML5."
+            "description": "The definition of 'History.scrollRestoration' in the 'HTML5' specification."
         }
     ]
 }

@@ -1,27 +1,27 @@
 
 {
     "name": "CustomElementRegistry",
-    "lastModifiedAt": 1604969653183,
+    "lastModifiedAt": 1604975665304,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450260566
+            "lastModifiedAt": 1604975659483
         },
         {
             "name": "define",
-            "lastModifiedAt": 1596581339985
+            "lastModifiedAt": 1604975663286
         },
         {
             "name": "get",
-            "lastModifiedAt": 1604450264220
+            "lastModifiedAt": 1604975664327
         },
         {
             "name": "upgrade",
-            "lastModifiedAt": 1604450264681
+            "lastModifiedAt": 1604975664810
         },
         {
             "name": "whenDefined",
-            "lastModifiedAt": 1596581341921
+            "lastModifiedAt": 1604975665304
         }
     ]
 }

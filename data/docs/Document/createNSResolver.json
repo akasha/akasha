@@ -8,7 +8,7 @@
         {
             "name": "Document Object Model (DOM) Level 3 XPath Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createNSResolver",
-            "description": "The definition of 'document.createNSResolver' in Document Object Model (DOM) Level 3 XPath Specification."
+            "description": "The definition of 'document.createNSResolver' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
         }
     ]
 }

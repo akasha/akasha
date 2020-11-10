@@ -1,19 +1,19 @@
 
 {
     "name": "XRInputSourceEventInit",
-    "lastModifiedAt": 1601467475913,
+    "lastModifiedAt": 1604979049414,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192941869
+            "lastModifiedAt": 1604979047828
         },
         {
             "name": "frame",
-            "lastModifiedAt": 1596711372542
+            "lastModifiedAt": 1604979049376
         },
         {
             "name": "inputSource",
-            "lastModifiedAt": 1596711372996
+            "lastModifiedAt": 1604979048329
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Selection.anchorOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/anchorOffset",
-    "description": "The Selection.anchorOffset read-only property returns the number of characters that the selection's anchor is offset within the Selection.anchorNode."
+    "description": "The Selection.anchorOffset read-only property returns the number of characters that the selection's anchor is offset within the Selection.anchorNode.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-anchoroffset",
+            "description": "The definition of 'Selection.anchorOffset' in the 'Selection API' specification."
+        }
+    ]
 }

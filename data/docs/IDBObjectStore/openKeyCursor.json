@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBObjectStore.openKeyCursor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/openKeyCursor",
-    "description": "To determine if the add operation has completed successfully, listen for the results&rsquo;s success event."
+    "description": "To determine if the add operation has completed successfully, listen for the results&rsquo;s success event.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-openkeycursor",
+            "description": "The definition of 'openKeyCursor()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-openkeycursor",
+            "description": "The definition of 'openKeyCursor()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBObjectStore.deleteIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/deleteIndex",
-    "description": "Note that this method must be called only from a VersionChange transaction mode callback. Note that this method synchronously modifies the IDBObjectStore.indexNames property."
+    "description": "Note that this method must be called only from a VersionChange transaction mode callback. Note that this method synchronously modifies the IDBObjectStore.indexNames property.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-deleteindex",
+            "description": "The definition of 'deleteIndex()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-deleteindex",
+            "description": "The definition of 'deleteIndex()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

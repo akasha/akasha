@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Screen.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/width",
-    "description": "The Screen.width read-only property returns the width of the screen in pixels.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-screen-width",
-            "description": "The definition of 'Screen.width' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The Screen.width read-only property returns the width of the screen in pixels."
 }

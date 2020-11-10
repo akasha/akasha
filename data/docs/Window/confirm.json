@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Window.confirm",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm",
-    "description": "The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-confirm",
-            "description": "The definition of 'confirm()' in HTML Living Standard."
-        }
-    ]
+    "description": "The Window.confirm() method displays a modal dialog with an optional message and two buttons: OK and Cancel."
 }

@@ -1,23 +1,23 @@
 
 {
     "name": "HTMLVideoElement",
-    "lastModifiedAt": 1604970841666,
+    "lastModifiedAt": 1604976773939,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450472705
+            "lastModifiedAt": 1604976762500
         },
         {
             "name": "autoPictureInPicture",
-            "lastModifiedAt": 1604450472948
+            "lastModifiedAt": 1604976763568
         },
         {
             "name": "disablePictureInPicture",
-            "lastModifiedAt": 1604450473212
+            "lastModifiedAt": 1604976764617
         },
         {
             "name": "getVideoPlaybackQuality",
-            "lastModifiedAt": 1604450478772
+            "lastModifiedAt": 1604976771630
         },
         {
             "name": "msFrameStep",
@@ -45,23 +45,23 @@
         },
         {
             "name": "onenterpictureinpicture",
-            "lastModifiedAt": 1604450476120
+            "lastModifiedAt": 1604976767152
         },
         {
             "name": "onleavepictureinpicture",
-            "lastModifiedAt": 1604450476358
+            "lastModifiedAt": 1604976768367
         },
         {
             "name": "requestPictureInPicture",
-            "lastModifiedAt": 1604450480492
+            "lastModifiedAt": 1604976773939
         },
         {
             "name": "videoHeight",
-            "lastModifiedAt": 1604450476856
+            "lastModifiedAt": 1604976768836
         },
         {
             "name": "videoWidth",
-            "lastModifiedAt": 1604450477328
+            "lastModifiedAt": 1604976769511
         }
     ]
 }

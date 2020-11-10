@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "UIEvent.view",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/view",
-    "description": "The UIEvent.view read-only property returns the WindowProxy object from which the event was generated. In browsers, this is the Window object the event happened in."
+    "description": "The UIEvent.view read-only property returns the WindowProxy object from which the event was generated. In browsers, this is the Window object the event happened in.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-UIEvent",
+            "description": "The definition of 'UIEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent",
+            "description": "The definition of 'UIEvent' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+        }
+    ]
 }

@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGUnitTypes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGUnitTypes",
-    "description": "The SVGUnitTypes interface defines a commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes."
+    "description": "The SVGUnitTypes interface defines a commonly used set of constants used for reflecting gradientUnits, patternContentUnits and other similar attributes.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGUnitTypes",
+            "description": "The definition of 'SVGUnitTypes' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGUnitTypes",
+            "description": "The definition of 'SVGUnitTypes' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

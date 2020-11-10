@@ -8,7 +8,7 @@
         {
             "name": "Beacon",
             "href": "https://w3c.github.io/beacon/#sendbeacon-method",
-            "description": "The definition of 'sendBeacon()' in Beacon."
+            "description": "The definition of 'sendBeacon()' in the 'Beacon' specification."
         }
     ]
 }

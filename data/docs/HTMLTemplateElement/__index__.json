@@ -1,15 +1,15 @@
 
 {
     "name": "HTMLTemplateElement",
-    "lastModifiedAt": 1604970818697,
+    "lastModifiedAt": 1604976750159,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450285452
+            "lastModifiedAt": 1604976749458
         },
         {
             "name": "content",
-            "lastModifiedAt": 1604450285894
+            "lastModifiedAt": 1604976750116
         }
     ]
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLFormElement.enctype",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype",
-    "description": "The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-fs-enctype",
-            "description": "The definition of 'HTMLFormElement: enctype' in HTML Living Standard."
-        }
-    ]
+    "description": "The HTMLFormElement.enctype property is the MIME type of content that is used to submit the form to the server. Possible values are:"
 }

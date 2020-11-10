@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRPermissionDescriptor.optionalFeatures",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPermissionDescriptor/optionalFeatures",
-    "description": "The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them."
+    "description": "The XRPermissionDescriptor dictionary's optionalFeatures property is used to specify a list of WebXR features which your app or site would like to use but can operate without if permission isn't granted to use them.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrpermissiondescriptor-optionalfeatures",
+            "description": "The definition of 'XRPermissionDescriptor.optionalFeatures' in the 'WebXR Device API' specification."
+        }
+    ]
 }

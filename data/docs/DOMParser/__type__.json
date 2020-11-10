@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "DOMParser",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMParser",
-    "description": "The DOMParser interface provides the ability to parse XML or HTML source code from a string into a DOM Document."
+    "description": "The DOMParser interface provides the ability to parse XML or HTML source code from a string into a DOM Document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-parsing-and-serialization",
+            "description": "The definition of 'DOM parsing' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

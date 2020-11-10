@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#characteristicproperties-interface",
-            "description": "The definition of 'BluetoothCharacteristicProperties' in Web Bluetooth."
+            "description": "The definition of 'BluetoothCharacteristicProperties' in the 'Web Bluetooth' specification."
         }
     ]
 }

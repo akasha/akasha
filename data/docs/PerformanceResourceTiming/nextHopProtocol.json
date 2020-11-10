@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.nextHopProtocol",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/nextHopProtocol",
-    "description": "The nextHopProtocol read-only property is a string representing the network protocol used to fetch the resource, as identified by the ALPN Protocol ID (RFC7301)."
+    "description": "The nextHopProtocol read-only property is a string representing the network protocol used to fetch the resource, as identified by the ALPN Protocol ID (RFC7301).",
+    "refs": [
+        {
+            "name": "Resource Timing Level 2",
+            "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-nexthopprotocol",
+            "description": "The definition of 'nextHopProtocol' in the 'Resource Timing Level 2' specification."
+        }
+    ]
 }

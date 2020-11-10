@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-disconnect",
-            "description": "The definition of 'disconnect' in Web Audio API."
+            "description": "The definition of 'disconnect' in the 'Web Audio API' specification."
         }
     ]
 }

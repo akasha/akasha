@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-positiony",
-            "description": "The definition of 'positionY' in Web Audio API."
+            "description": "The definition of 'positionY' in the 'Web Audio API' specification."
         }
     ]
 }

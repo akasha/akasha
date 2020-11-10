@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "MediaElementAudioSourceNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaElementAudioSourceNode",
-    "description": "A MediaElementSourceNode has no inputs and exactly one output, and is created using the AudioContext.createMediaElementSource() method. The amount of channels in the output equals the number of channels of the audio referenced by the HTMLMediaElement used in the creation of the node, or is 1 if the HTMLMediaElement has no audio.",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#mediaelementaudiosourcenode",
-            "description": "The definition of 'MediaElementAudioSourceNode' in Web Audio API."
-        }
-    ]
+    "description": "A MediaElementSourceNode has no inputs and exactly one output, and is created using the AudioContext.createMediaElementSource() method. The amount of channels in the output equals the number of channels of the audio referenced by the HTMLMediaElement used in the creation of the node, or is 1 if the HTMLMediaElement has no audio."
 }

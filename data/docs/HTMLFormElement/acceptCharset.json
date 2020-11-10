@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLFormElement.acceptCharset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/acceptCharset",
-    "description": "The HTMLFormElement.acceptCharset property represents a list of the supported character encodings for the given form element. This list can be comma-separated or space-separated.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-form-acceptcharset",
-            "description": "The definition of 'HTMLFormElement: acceptCharset' in HTML Living Standard."
-        }
-    ]
+    "description": "The HTMLFormElement.acceptCharset property represents a list of the supported character encodings for the given form element. This list can be comma-separated or space-separated."
 }

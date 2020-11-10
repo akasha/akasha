@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Window.innerHeight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight",
-    "description": "The read-only innerHeight property of the Window interface returns the interior height of the window in pixels, including the height of the horizontal scroll bar, if present.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-window-innerheight",
-            "description": "The definition of 'window.innerHeight' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The read-only innerHeight property of the Window interface returns the interior height of the window in pixels, including the height of the horizontal scroll bar, if present."
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBObjectStore.createIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/createIndex",
-    "description": "Note that this method must be called only from a VersionChange transaction mode callback."
+    "description": "Note that this method must be called only from a VersionChange transaction mode callback.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbobjectstore-createindex",
+            "description": "The definition of 'createIndex()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-createindex",
+            "description": "The definition of 'createIndex()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

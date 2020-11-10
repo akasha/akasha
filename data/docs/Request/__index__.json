@@ -1,35 +1,35 @@
 
 {
     "name": "Request",
-    "lastModifiedAt": 1604449039985,
+    "lastModifiedAt": 1604977747959,
     "entries": [
         {
             "name": "Request",
-            "lastModifiedAt": 1597193117924
+            "lastModifiedAt": 1604977731243
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449024627
+            "lastModifiedAt": 1604977730746
         },
         {
             "name": "arrayBuffer",
-            "lastModifiedAt": 1604449036121
+            "lastModifiedAt": 1604977742930
         },
         {
             "name": "blob",
-            "lastModifiedAt": 1604449036666
+            "lastModifiedAt": 1604977744805
         },
         {
             "name": "bodyUsed",
-            "lastModifiedAt": 1604449026830
+            "lastModifiedAt": 1604977733126
         },
         {
             "name": "cache",
-            "lastModifiedAt": 1604449027836
+            "lastModifiedAt": 1604977734736
         },
         {
             "name": "clone",
-            "lastModifiedAt": 1604449037554
+            "lastModifiedAt": 1604977745335
         },
         {
             "name": "context",
@@ -37,51 +37,51 @@
         },
         {
             "name": "credentials",
-            "lastModifiedAt": 1604449029330
+            "lastModifiedAt": 1604977735714
         },
         {
             "name": "destination",
-            "lastModifiedAt": 1604449029806
+            "lastModifiedAt": 1604977736265
         },
         {
             "name": "headers",
-            "lastModifiedAt": 1604449030828
+            "lastModifiedAt": 1604977736722
         },
         {
             "name": "integrity",
-            "lastModifiedAt": 1604449031271
+            "lastModifiedAt": 1604977737229
         },
         {
             "name": "json",
-            "lastModifiedAt": 1604449039194
+            "lastModifiedAt": 1604977746684
         },
         {
             "name": "method",
-            "lastModifiedAt": 1604449031877
+            "lastModifiedAt": 1604977737784
         },
         {
             "name": "mode",
-            "lastModifiedAt": 1604449032340
+            "lastModifiedAt": 1604977738367
         },
         {
             "name": "redirect",
-            "lastModifiedAt": 1604449033364
+            "lastModifiedAt": 1604977738867
         },
         {
             "name": "referrer",
-            "lastModifiedAt": 1604449033841
+            "lastModifiedAt": 1604977739329
         },
         {
             "name": "referrerPolicy",
-            "lastModifiedAt": 1604449034319
+            "lastModifiedAt": 1604977740390
         },
         {
             "name": "text",
-            "lastModifiedAt": 1604449039985
+            "lastModifiedAt": 1604977747959
         },
         {
             "name": "url",
-            "lastModifiedAt": 1604449034774
+            "lastModifiedAt": 1604977740866
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBCursor.update",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/update",
-    "description": "The update() method of the IDBCursor interface returns an IDBRequest object, and, in a separate thread, updates the value at the current position of the cursor in the object store. If the cursor points to a record that has just been deleted, a new record is created."
+    "description": "The update() method of the IDBCursor interface returns an IDBRequest object, and, in a separate thread, updates the value at the current position of the cursor in the object store. If the cursor points to a record that has just been deleted, a new record is created.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbcursor-update",
+            "description": "The definition of 'update()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-update",
+            "description": "The definition of 'update()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

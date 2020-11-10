@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "StorageEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StorageEvent",
-    "description": "A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document."
+    "description": "A StorageEvent is sent to a window when a storage area it has access to is changed within the context of another document.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/webstorage.html#the-storageevent-interface",
+            "description": "The definition of 'The StorageEvent interface' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

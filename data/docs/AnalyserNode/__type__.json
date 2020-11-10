@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#analysernode",
-            "description": "The definition of 'AnalyserNode' in Web Audio API."
+            "description": "The definition of 'AnalyserNode' in the 'Web Audio API' specification."
         }
     ]
 }

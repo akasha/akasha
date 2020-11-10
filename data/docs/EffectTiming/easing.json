@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#time-transformations",
-            "description": "The definition of 'easing' in Web Animations."
+            "description": "The definition of 'easing' in the 'Web Animations' specification."
         }
     ]
 }

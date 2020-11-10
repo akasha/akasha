@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VisualViewport.offsetTop",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/offsetTop",
-    "description": "The offsetTop read-only property of the VisualViewport interface returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels."
+    "description": "The offsetTop read-only property of the VisualViewport interface returns the offset of the top edge of the visual viewport from the top edge of the layout viewport in CSS pixels.",
+    "refs": [
+        {
+            "name": "Visual Viewport API",
+            "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-offsettop",
+            "description": "The definition of 'offsetTop' in the 'Visual Viewport API' specification."
+        }
+    ]
 }

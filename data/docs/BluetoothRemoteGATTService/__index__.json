@@ -1,35 +1,35 @@
 
 {
     "name": "BluetoothRemoteGATTService",
-    "lastModifiedAt": 1604969461873,
+    "lastModifiedAt": 1604975479469,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969457317
+            "lastModifiedAt": 1604975475137
         },
         {
             "name": "device",
-            "lastModifiedAt": 1604969457783
+            "lastModifiedAt": 1604975475661
         },
         {
             "name": "getCharacteristic",
-            "lastModifiedAt": 1604969459585
+            "lastModifiedAt": 1604975477251
         },
         {
             "name": "getCharacteristics",
-            "lastModifiedAt": 1604969460200
+            "lastModifiedAt": 1604975477698
         },
         {
             "name": "getIncludedService",
-            "lastModifiedAt": 1604969461365
+            "lastModifiedAt": 1604975478451
         },
         {
             "name": "getIncludedServices",
-            "lastModifiedAt": 1604969461873
+            "lastModifiedAt": 1604975479469
         },
         {
             "name": "isPrimary",
-            "lastModifiedAt": 1604969458266
+            "lastModifiedAt": 1604975476171
         },
         {
             "name": "serviceadded_event",
@@ -45,7 +45,7 @@
         },
         {
             "name": "uuid",
-            "lastModifiedAt": 1604969458873
+            "lastModifiedAt": 1604975476651
         }
     ]
 }

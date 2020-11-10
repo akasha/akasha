@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-worker-navigator",
-            "description": "The definition of 'navigator' in HTML Living Standard."
+            "description": "The definition of 'navigator' in the 'HTML Living Standard' specification."
         }
     ]
 }

@@ -1,51 +1,51 @@
 
 {
     "name": "AnalyserNode",
-    "lastModifiedAt": 1604969257535,
+    "lastModifiedAt": 1604975290706,
     "entries": [
         {
             "name": "AnalyserNode",
-            "lastModifiedAt": 1604448437234
+            "lastModifiedAt": 1604975283395
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448436646
+            "lastModifiedAt": 1604975282879
         },
         {
             "name": "fftSize",
-            "lastModifiedAt": 1604448438343
+            "lastModifiedAt": 1604975283935
         },
         {
             "name": "frequencyBinCount",
-            "lastModifiedAt": 1604448438981
+            "lastModifiedAt": 1604975284950
         },
         {
             "name": "getByteFrequencyData",
-            "lastModifiedAt": 1604448442689
+            "lastModifiedAt": 1604975288856
         },
         {
             "name": "getByteTimeDomainData",
-            "lastModifiedAt": 1604448443722
+            "lastModifiedAt": 1604975289482
         },
         {
             "name": "getFloatFrequencyData",
-            "lastModifiedAt": 1604448444770
+            "lastModifiedAt": 1604975290152
         },
         {
             "name": "getFloatTimeDomainData",
-            "lastModifiedAt": 1604448445353
+            "lastModifiedAt": 1604975290705
         },
         {
             "name": "maxDecibels",
-            "lastModifiedAt": 1604448439439
+            "lastModifiedAt": 1604975285487
         },
         {
             "name": "minDecibels",
-            "lastModifiedAt": 1604448440452
+            "lastModifiedAt": 1604975286499
         },
         {
             "name": "smoothingTimeConstant",
-            "lastModifiedAt": 1604448441481
+            "lastModifiedAt": 1604975287542
         }
     ]
 }

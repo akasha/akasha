@@ -1,15 +1,15 @@
 
 {
     "name": "WEBGL_compressed_texture_astc",
-    "lastModifiedAt": 1604448627665,
+    "lastModifiedAt": 1604978360625,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192695886
+            "lastModifiedAt": 1604978359289
         },
         {
             "name": "getSupportedProfiles",
-            "lastModifiedAt": 1604448627665
+            "lastModifiedAt": 1604978360625
         }
     ]
 }

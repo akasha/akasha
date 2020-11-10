@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#stereopannernode",
-            "description": "The definition of 'StereoPannerNode' in Web Audio API."
+            "description": "The definition of 'StereoPannerNode' in the 'Web Audio API' specification."
         }
     ]
 }

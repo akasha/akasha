@@ -1,63 +1,63 @@
 
 {
     "name": "SecurityPolicyViolationEvent",
-    "lastModifiedAt": 1600313376029,
+    "lastModifiedAt": 1604978002118,
     "entries": [
         {
             "name": "SecurityPolicyViolationEvent",
-            "lastModifiedAt": 1597361359370
+            "lastModifiedAt": 1604977994420
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597361358538
+            "lastModifiedAt": 1604977993801
         },
         {
             "name": "blockedURI",
-            "lastModifiedAt": 1597361360195
+            "lastModifiedAt": 1604977994985
         },
         {
             "name": "columnNumber",
-            "lastModifiedAt": 1597361361007
+            "lastModifiedAt": 1604977995489
         },
         {
             "name": "disposition",
-            "lastModifiedAt": 1597361361866
+            "lastModifiedAt": 1604977995953
         },
         {
             "name": "documentURI",
-            "lastModifiedAt": 1597361362463
+            "lastModifiedAt": 1604977996954
         },
         {
             "name": "effectiveDirective",
-            "lastModifiedAt": 1597361363324
+            "lastModifiedAt": 1604977997460
         },
         {
             "name": "lineNumber",
-            "lastModifiedAt": 1597361363683
+            "lastModifiedAt": 1604977998062
         },
         {
             "name": "originalPolicy",
-            "lastModifiedAt": 1597361364618
+            "lastModifiedAt": 1604977998553
         },
         {
             "name": "referrer",
-            "lastModifiedAt": 1597361365012
+            "lastModifiedAt": 1604977999070
         },
         {
             "name": "sample",
-            "lastModifiedAt": 1597361365406
+            "lastModifiedAt": 1604977999561
         },
         {
             "name": "sourceFile",
-            "lastModifiedAt": 1597361365755
+            "lastModifiedAt": 1604978000642
         },
         {
             "name": "statusCode",
-            "lastModifiedAt": 1597361366130
+            "lastModifiedAt": 1604978001115
         },
         {
             "name": "violatedDirective",
-            "lastModifiedAt": 1597361366472
+            "lastModifiedAt": 1604978001604
         }
     ]
 }

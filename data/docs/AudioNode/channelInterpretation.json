@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "AudioNode.channelInterpretation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/channelInterpretation",
-    "description": "When the number of channels doesn't match between an input and an output, up- or down-mixing happens according the following rules. This can be somewhat controlled by setting the AudioNode.channelInterpretation property to speakers or discrete:"
+    "description": "When the number of channels doesn't match between an input and an output, up- or down-mixing happens according the following rules. This can be somewhat controlled by setting the AudioNode.channelInterpretation property to speakers or discrete:",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-audionode-channelinterpretation",
+            "description": "The definition of 'channelInterpretation' in the 'Web Audio API' specification."
+        }
+    ]
 }

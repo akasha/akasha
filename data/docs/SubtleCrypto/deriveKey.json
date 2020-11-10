@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.deriveKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveKey",
-    "description": "The deriveKey() method of the SubtleCrypto interface can be used to derive a secret key from a master key."
+    "description": "The deriveKey() method of the SubtleCrypto interface can be used to derive a secret key from a master key.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveKey",
+            "description": "The definition of 'SubtleCrypto.deriveKey()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

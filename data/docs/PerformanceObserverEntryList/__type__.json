@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PerformanceObserverEntryList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserverEntryList",
-    "description": "The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method."
+    "description": "The PerformanceObserverEntryList interface is a list of peformance events that were explicitly observed via the observe() method.",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#idl-def-performanceobserverentrylist",
+            "description": "The definition of 'PerformanceObserverEntryList' in the 'Performance Timeline Level 2' specification."
+        }
+    ]
 }

@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-previouselementsibling",
-            "description": "The definition of 'NonDocumentTypeChildNode.previousElementSibling' in DOM."
+            "description": "The definition of 'NonDocumentTypeChildNode.previousElementSibling' in the 'DOM' specification."
         },
         {
             "name": "Element Traversal Specification",
             "href": "https://www.w3.org/TR/ElementTraversal/#attribute-previousElementSibling",
-            "description": "The definition of 'ElementTraversal.previousElementSibling' in Element Traversal Specification."
+            "description": "The definition of 'ElementTraversal.previousElementSibling' in the 'Element Traversal Specification' specification."
         }
     ]
 }

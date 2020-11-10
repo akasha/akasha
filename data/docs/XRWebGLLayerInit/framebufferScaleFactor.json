@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRWebGLLayerInit.framebufferScaleFactor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/framebufferScaleFactor",
-    "description": "The XRWebGLLayerInit dictionary's framebufferScaleFactor property, when specified upon instantiating a new XRWebGLLayer using its constructor, XRWebGLLayer(), specifies the scaling factor to use when determining the size of the frame buffer to use when rendering the scene, relative to the default XR device display resolution."
+    "description": "The XRWebGLLayerInit dictionary's framebufferScaleFactor property, when specified upon instantiating a new XRWebGLLayer using its constructor, XRWebGLLayer(), specifies the scaling factor to use when determining the size of the frame buffer to use when rendering the scene, relative to the default XR device display resolution.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-framebufferscalefactor",
+            "description": "The definition of 'XRWebGLLayerInit.framebufferScaleFactor' in the 'WebXR Device API' specification."
+        }
+    ]
 }

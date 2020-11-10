@@ -8,7 +8,7 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#the-lostpointercapture-event",
-            "description": "The definition of 'onlostpointercapture' in Pointer Events &ndash; Level 2."
+            "description": "The definition of 'onlostpointercapture' in the 'Pointer Events &ndash; Level 2' specification."
         }
     ]
 }

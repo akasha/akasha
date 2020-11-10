@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getParameter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getParameter",
-    "description": "The WebGLRenderingContext.getParameter() method of the WebGL API returns a value for the passed parameter name."
+    "description": "The WebGLRenderingContext.getParameter() method of the WebGL API returns a value for the passed parameter name.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'getParameter' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2",
+            "description": "The definition of 'getParameter' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGet.xml",
+            "description": "The definition of 'glGet' in the 'OpenGL ES 2.0' specification."
+        }
+    ]
 }

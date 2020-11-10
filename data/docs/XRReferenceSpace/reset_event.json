@@ -4,6 +4,13 @@
     "name": "XRReferenceSpace.reset_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/reset_event",
     "description": "The reset event is sent to an XRReferenceSpace object when a discontinuity is detected in either the native origin or the effective origin, causing a jump in the position or orientation of objects oriented using the reference space.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#eventdef-xrreferencespace-reset",
+            "description": "The definition of 'reset event' in the 'WebXR Device API' specification."
+        }
+    ],
     "eventName": "reset",
     "eventType": "XRReferenceSpaceEvent",
     "eventHandlerProperty": "onreset",

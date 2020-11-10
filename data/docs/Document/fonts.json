@@ -8,7 +8,7 @@
         {
             "name": "CSS Font Loading Module Level 3",
             "href": "https://drafts.csswg.org/css-font-loading/#FontFaceSet-interface",
-            "description": "The definition of 'FontFaceSet' in CSS Font Loading Module Level 3."
+            "description": "The definition of 'FontFaceSet' in the 'CSS Font Loading Module Level 3' specification."
         }
     ]
 }

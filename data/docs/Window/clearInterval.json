@@ -3,17 +3,5 @@
     "kind": "Method",
     "name": "Window.clearInterval",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/clearInterval",
-    "description": "The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval().",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-clearinterval",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.clearInterval()' in HTML Living Standard."
-        },
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-clearinterval",
-            "description": "The definition of 'clearInterval()' in HTML Living Standard."
-        }
-    ]
+    "description": "The clearInterval() method of the WindowOrWorkerGlobalScope mixin cancels a timed, repeating action which was previously established by a call to setInterval()."
 }

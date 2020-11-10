@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "UIEvent.detail",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/UIEvent/detail",
-    "description": "The UIEvent.detail read-only property, when non-zero, provides the current (or next, depending on the event) click count."
+    "description": "The UIEvent.detail read-only property, when non-zero, provides the current (or next, depending on the event) click count.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-UIEvent-detail",
+            "description": "The definition of 'UIEvent.detail' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-UIEvent-detail",
+            "description": "The definition of 'UIEvent.detail' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+        }
+    ]
 }

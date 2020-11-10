@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognitionResult.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult/length",
-    "description": "The length read-only property of the SpeechRecognitionResult interface returns the length of the &quot;array&quot; &mdash; the number of SpeechRecognitionAlternative objects contained in the result (also referred to as &quot;n-best alternatives&quot;.)"
+    "description": "The length read-only property of the SpeechRecognitionResult interface returns the length of the &quot;array&quot; &mdash; the number of SpeechRecognitionAlternative objects contained in the result (also referred to as &quot;n-best alternatives&quot;.)",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionresult-length",
+            "description": "The definition of 'length' in the 'Web Speech API' specification."
+        }
+    ]
 }

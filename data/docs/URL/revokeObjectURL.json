@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "URL.revokeObjectURL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL",
-    "description": "The URL.revokeObjectURL() static method releases an existing object URL which was previously created by calling URL.createObjectURL().",
-    "refs": [
-        {
-            "name": "File API",
-            "href": "https://w3c.github.io/FileAPI/#dfn-revokeObjectURL",
-            "description": "The definition of 'revokeObjectURL()' in File API."
-        }
-    ]
+    "description": "The URL.revokeObjectURL() static method releases an existing object URL which was previously created by calling URL.createObjectURL()."
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "DOMPointReadOnly.w",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/w",
-    "description": "The DOMPointReadOnly interface's w property holds the point's perspective value, w, for a read-only point in space.",
-    "refs": [
-        {
-            "name": "Geometry Interfaces Module Level 1",
-            "href": "https://drafts.fxtf.org/geometry/#dom-dompointreadonly-w",
-            "description": "The definition of 'w' in Geometry Interfaces Module Level 1."
-        }
-    ]
+    "description": "The DOMPointReadOnly interface's w property holds the point's perspective value, w, for a read-only point in space."
 }

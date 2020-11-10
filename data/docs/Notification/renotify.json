@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.renotify",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/renotify",
-    "description": "The renotify read-only property of the Notification interface specifies whether the user should be notified after a new notification replaces an old one, as specified in the renotify option of the Notification() constructor."
+    "description": "The renotify read-only property of the Notification interface specifies whether the user should be notified after a new notification replaces an old one, as specified in the renotify option of the Notification() constructor.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-renotify",
+            "description": "The definition of 'renotify' in the 'Notifications API' specification."
+        }
+    ]
 }

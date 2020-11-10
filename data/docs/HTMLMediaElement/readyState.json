@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "HTMLMediaElement.readyState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/readyState",
-    "description": "The HTMLMediaElement.readyState property indicates the readiness state of the media."
+    "description": "The HTMLMediaElement.readyState property indicates the readiness state of the media.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-media-readystate",
+            "description": "The definition of 'HTMLMediaElement.readyState' in the 'HTML Living Standard' specification."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
+            "description": "The definition of 'HTMLMediaElement.readyState' in the 'HTML5' specification."
+        }
+    ]
 }

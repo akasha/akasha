@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.getTransformFeedbackVarying",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getTransformFeedbackVarying",
-    "description": "The WebGL2RenderingContext.getTransformFeedbackVarying() method of the WebGL 2 API returns information about varying variables from WebGLTransformFeedback buffers."
+    "description": "The WebGL2RenderingContext.getTransformFeedbackVarying() method of the WebGL 2 API returns information about varying variables from WebGLTransformFeedback buffers.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
+            "description": "The definition of 'getTransformFeedbackVarying' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetTransformFeedbackVarying.xhtml",
+            "description": "The definition of 'glGetTransformFeedbackVarying' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ProgressEvent.total",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent/total",
-    "description": "The ProgressEvent.total read-only property is an unsigned 64-bit integer value indicating the total size of the data being processed or transmitted. In the case of an HTTP transmission, this is the size of the body of the message (the Content-Length), and does not include headers and other overhead."
+    "description": "The ProgressEvent.total read-only property is an unsigned 64-bit integer value indicating the total size of the data being processed or transmitted. In the case of an HTTP transmission, this is the size of the body of the message (the Content-Length), and does not include headers and other overhead.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#dom-progressevent-total",
+            "description": "The definition of 'ProgressEvent.lengthComputable' in the 'XMLHttpRequest' specification."
+        }
+    ]
 }

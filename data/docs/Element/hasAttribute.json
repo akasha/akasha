@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "Element.hasAttribute",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/hasAttribute",
-    "description": "The Element.hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not."
+    "description": "The Element.hasAttribute() method returns a Boolean value indicating whether the specified element has the specified attribute or not.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-hasattribute",
+            "description": "The definition of 'Element.hasAttribute()' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-ElHasAttr",
+            "description": "The definition of 'Element.hasAttribute()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElHasAttr",
+            "description": "The definition of 'Element.hasAttribute()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+        }
+    ]
 }

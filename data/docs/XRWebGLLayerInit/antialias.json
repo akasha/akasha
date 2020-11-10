@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRWebGLLayerInit.antialias",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/antialias",
-    "description": "The Boolean antialias property, if present and set to true in the XRWebGLLayerInit object provided as the XRWebGLLayer() constructor's layerInit parameter, requests that the new WebGL rendering layer support anti-aliasing. If this property is missing or is false, anti-aliasing is not desired."
+    "description": "The Boolean antialias property, if present and set to true in the XRWebGLLayerInit object provided as the XRWebGLLayer() constructor's layerInit parameter, requests that the new WebGL rendering layer support anti-aliasing. If this property is missing or is false, anti-aliasing is not desired.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-antialias",
+            "description": "The definition of 'XRWebGLLayerInit.antialias' in the 'WebXR Device API' specification."
+        }
+    ]
 }

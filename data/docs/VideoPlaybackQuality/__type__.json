@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "VideoPlaybackQuality",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality",
-    "description": "A VideoPlaybackQuality object is returned by the HTMLVideoElement.getVideoPlaybackQuality() method and contains metrics that can be used to determine the playback quality of a video."
+    "description": "A VideoPlaybackQuality object is returned by the HTMLVideoElement.getVideoPlaybackQuality() method and contains metrics that can be used to determine the playback quality of a video.",
+    "refs": [
+        {
+            "name": "Media Playback Quality",
+            "href": "https://w3c.github.io/media-playback-quality/#idl-def-videoplaybackquality",
+            "description": "The definition of 'VideoPlaybackQuality' in the 'Media Playback Quality' specification."
+        }
+    ]
 }

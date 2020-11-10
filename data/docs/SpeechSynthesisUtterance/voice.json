@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.voice",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/voice",
-    "description": "The voice property of the SpeechSynthesisUtterance interface gets and sets the voice that will be used to speak the utterance."
+    "description": "The voice property of the SpeechSynthesisUtterance interface gets and sets the voice that will be used to speak the utterance.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-voice",
+            "description": "The definition of 'voice' in the 'Web Speech API' specification."
+        }
+    ]
 }

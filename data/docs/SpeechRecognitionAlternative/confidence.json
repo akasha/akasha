@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognitionAlternative.confidence",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/confidence",
-    "description": "The confidence read-only property of the SpeechRecognitionResult interface returns a numeric estimate of how confident the speech recognition system is that the recognition is correct."
+    "description": "The confidence read-only property of the SpeechRecognitionResult interface returns a numeric estimate of how confident the speech recognition system is that the recognition is correct.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionalternative-confidence",
+            "description": "The definition of 'confidence' in the 'Web Speech API' specification."
+        }
+    ]
 }

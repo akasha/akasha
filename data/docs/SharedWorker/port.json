@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-sharedworker-port",
-            "description": "The definition of 'AbstractWorker.onerror' in HTML Living Standard."
+            "description": "The definition of 'AbstractWorker.onerror' in the 'HTML Living Standard' specification."
         }
     ]
 }

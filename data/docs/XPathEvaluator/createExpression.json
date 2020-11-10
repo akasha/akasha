@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XPathEvaluator.createExpression",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathEvaluator/createExpression",
-    "description": "This method compiles an XPathExpression which can then be used for (repeated) evaluations of the XPath expression."
+    "description": "This method compiles an XPathExpression which can then be used for (repeated) evaluations of the XPath expression.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathEvaluator-createExpression",
+            "description": "The definition of 'XPathEvaluator.createExpression()' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+        }
+    ]
 }

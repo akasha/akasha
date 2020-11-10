@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRWebGLLayer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer",
-    "description": "The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device."
+    "description": "The XRWebGLLayer interface of the WebXR Device API provides a linkage between the WebXR device (or simulated XR device, in the case of an inline session) and a WebGL context used to render the scene for display on the device.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrwebgllayer-interface",
+            "description": "The definition of 'XRWebGLLayer' in the 'WebXR Device API' specification."
+        }
+    ]
 }

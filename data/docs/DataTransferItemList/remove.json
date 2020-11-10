@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-datatransferitemlist-remove",
-            "description": "The definition of 'remove()' in HTML Living Standard."
+            "description": "The definition of 'remove()' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/editing.html#dom-datatransferitemlist-remove",
-            "description": "The definition of 'remove()' in HTML 5.1."
+            "description": "The definition of 'remove()' in the 'HTML 5.1' specification."
         }
     ]
 }

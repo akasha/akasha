@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webstorage.html#dom-storage-setitem",
-            "description": "The definition of 'Storage.setItem' in HTML Living Standard."
+            "description": "The definition of 'Storage.setItem' in the 'HTML Living Standard' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-documentorshadowroot-getanimations",
-            "description": "The definition of 'document.getAnimations()' in Web Animations."
+            "description": "The definition of 'document.getAnimations()' in the 'Web Animations' specification."
         }
     ]
 }

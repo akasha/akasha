@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#navigator-extension-requestmediakeysystemaccess",
-            "description": "The definition of 'requestMediaKeySystemAccess()' in Encrypted Media Extensions."
+            "description": "The definition of 'requestMediaKeySystemAccess()' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

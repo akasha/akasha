@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRView.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView/transform",
-    "description": "The read-only transform property of the XRView interface is an XRRigidTransform object which provides the position and orientation of the viewpoint relative to the XRReferenceSpace specified when the XRFrame.getViewerPose() method was called to obtain the view object."
+    "description": "The read-only transform property of the XRView interface is an XRRigidTransform object which provides the position and orientation of the viewpoint relative to the XRReferenceSpace specified when the XRFrame.getViewerPose() method was called to obtain the view object.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrview-transform",
+            "description": "The definition of 'XRView.transform' in the 'WebXR Device API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-headers-set",
-            "description": "The definition of 'set()' in Fetch."
+            "description": "The definition of 'set()' in the 'Fetch' specification."
         }
     ]
 }

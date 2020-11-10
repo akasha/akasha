@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-timeranges-end",
-            "description": "The definition of 'TimeRanges.end()' in HTML Living Standard."
+            "description": "The definition of 'TimeRanges.end()' in the 'HTML Living Standard' specification."
         }
     ]
 }

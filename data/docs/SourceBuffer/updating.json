@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBuffer.updating",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/updating",
-    "description": "The updating read-only property of the SourceBuffer interface indicates whether the SourceBuffer is currently being updated &mdash; i.e. whether an SourceBuffer.appendBuffer(),  SourceBuffer.appendStream(), or SourceBuffer.remove() operation is currently in progress."
+    "description": "The updating read-only property of the SourceBuffer interface indicates whether the SourceBuffer is currently being updated &mdash; i.e. whether an SourceBuffer.appendBuffer(),  SourceBuffer.appendStream(), or SourceBuffer.remove() operation is currently in progress.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-updating",
+            "description": "The definition of 'updating' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

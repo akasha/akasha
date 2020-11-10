@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "PushManager",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager",
-    "description": "The PushManager interface of the Push API provides a way to receive notifications from third-party servers as well as request URLs for push notifications."
+    "description": "The PushManager interface of the Push API provides a way to receive notifications from third-party servers as well as request URLs for push notifications.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#pushmanager-interface",
+            "description": "The definition of 'PushManager' in the 'Push API' specification."
+        }
+    ]
 }

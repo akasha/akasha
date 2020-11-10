@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastreamtrack-label",
-            "description": "The definition of 'MediaStreamTrack.label' in Media Capture and Streams."
+            "description": "The definition of 'MediaStreamTrack.label' in the 'Media Capture and Streams' specification."
         }
     ]
 }

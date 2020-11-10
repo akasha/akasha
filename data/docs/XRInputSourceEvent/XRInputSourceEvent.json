@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "XRInputSourceEvent.XRInputSourceEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEvent/XRInputSourceEvent",
-    "description": "The XRInputSourceEvent() constructor creates and returns a new XRInputSourceEvent object describing an event (state change) which has occurred on a WebXR user input device represented by an XRInputSource."
+    "description": "The XRInputSourceEvent() constructor creates and returns a new XRInputSourceEvent object describing an event (state change) which has occurred on a WebXR user input device represented by an XRInputSource.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrinputsourceevent",
+            "description": "The definition of 'XRInputSourceEvent' in the 'WebXR Device API' specification."
+        }
+    ]
 }

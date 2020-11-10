@@ -1,263 +1,279 @@
 
 {
     "name": "WebGL2RenderingContext",
-    "lastModifiedAt": 1600313856969,
+    "lastModifiedAt": 1604978442796,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192690726
+            "lastModifiedAt": 1604978395925
         },
         {
             "name": "beginQuery",
-            "lastModifiedAt": 1600307534470
+            "lastModifiedAt": 1604978397149
         },
         {
             "name": "beginTransformFeedback",
-            "lastModifiedAt": 1600307534759
+            "lastModifiedAt": 1604978397679
         },
         {
             "name": "bindBufferBase",
-            "lastModifiedAt": 1600307535001
+            "lastModifiedAt": 1604978398571
         },
         {
             "name": "bindBufferRange",
-            "lastModifiedAt": 1600307535280
+            "lastModifiedAt": 1604978399082
         },
         {
             "name": "bindSampler",
-            "lastModifiedAt": 1600307535601
+            "lastModifiedAt": 1604978399731
         },
         {
             "name": "bindTransformFeedback",
-            "lastModifiedAt": 1600307535889
+            "lastModifiedAt": 1604978400544
         },
         {
             "name": "bindVertexArray",
-            "lastModifiedAt": 1600307536214
+            "lastModifiedAt": 1604978401049
         },
         {
             "name": "blitFramebuffer",
-            "lastModifiedAt": 1600307536519
+            "lastModifiedAt": 1604978401650
+        },
+        {
+            "name": "clearBuffer",
+            "lastModifiedAt": 1604978402058
         },
         {
             "name": "clientWaitSync",
-            "lastModifiedAt": 1600307536781
+            "lastModifiedAt": 1604978402599
         },
         {
             "name": "compressedTexSubImage3D",
-            "lastModifiedAt": 1600307537222
+            "lastModifiedAt": 1604978403809
         },
         {
             "name": "copyBufferSubData",
-            "lastModifiedAt": 1600307537610
+            "lastModifiedAt": 1604978404435
         },
         {
             "name": "copyTexSubImage3D",
-            "lastModifiedAt": 1600307538615
+            "lastModifiedAt": 1604978405062
         },
         {
             "name": "createQuery",
-            "lastModifiedAt": 1600307539120
+            "lastModifiedAt": 1604978405694
         },
         {
             "name": "createSampler",
-            "lastModifiedAt": 1600307539438
+            "lastModifiedAt": 1604978406927
         },
         {
             "name": "createTransformFeedback",
-            "lastModifiedAt": 1600307539974
+            "lastModifiedAt": 1604978407542
         },
         {
             "name": "createVertexArray",
-            "lastModifiedAt": 1600307540233
+            "lastModifiedAt": 1604978408066
         },
         {
             "name": "deleteQuery",
-            "lastModifiedAt": 1600307540504
+            "lastModifiedAt": 1604978408702
         },
         {
             "name": "deleteSampler",
-            "lastModifiedAt": 1600307540793
+            "lastModifiedAt": 1604978409232
         },
         {
             "name": "deleteSync",
-            "lastModifiedAt": 1600307541062
+            "lastModifiedAt": 1604978409739
         },
         {
             "name": "deleteTransformFeedback",
-            "lastModifiedAt": 1600307541323
+            "lastModifiedAt": 1604978410973
         },
         {
             "name": "deleteVertexArray",
-            "lastModifiedAt": 1600307541582
+            "lastModifiedAt": 1604978411637
         },
         {
             "name": "drawArraysInstanced",
-            "lastModifiedAt": 1600307541865
+            "lastModifiedAt": 1604978412163
         },
         {
             "name": "drawBuffers",
-            "lastModifiedAt": 1600307542131
+            "lastModifiedAt": 1604978413375
         },
         {
             "name": "drawElementsInstanced",
-            "lastModifiedAt": 1600307542458
+            "lastModifiedAt": 1604978413888
         },
         {
             "name": "drawRangeElements",
-            "lastModifiedAt": 1600307542816
+            "lastModifiedAt": 1604978414434
         },
         {
             "name": "endQuery",
-            "lastModifiedAt": 1600307543089
+            "lastModifiedAt": 1604978414974
         },
         {
             "name": "endTransformFeedback",
-            "lastModifiedAt": 1600307543393
+            "lastModifiedAt": 1604978415612
         },
         {
             "name": "fenceSync",
-            "lastModifiedAt": 1600307543651
+            "lastModifiedAt": 1604978416128
         },
         {
             "name": "framebufferTextureLayer",
-            "lastModifiedAt": 1600307543935
+            "lastModifiedAt": 1604978416658
         },
         {
             "name": "getActiveUniformBlockName",
-            "lastModifiedAt": 1600307544236
+            "lastModifiedAt": 1604978417241
         },
         {
             "name": "getActiveUniformBlockParameter",
-            "lastModifiedAt": 1600307544551
+            "lastModifiedAt": 1604978418445
         },
         {
             "name": "getActiveUniforms",
-            "lastModifiedAt": 1600307544826
+            "lastModifiedAt": 1604978418998
         },
         {
             "name": "getBufferSubData",
-            "lastModifiedAt": 1600307545207
+            "lastModifiedAt": 1604978420179
         },
         {
             "name": "getFragDataLocation",
-            "lastModifiedAt": 1600307545490
+            "lastModifiedAt": 1604978420728
         },
         {
             "name": "getIndexedParameter",
-            "lastModifiedAt": 1600307545739
+            "lastModifiedAt": 1604978421629
         },
         {
             "name": "getInternalformatParameter",
-            "lastModifiedAt": 1600307546020
+            "lastModifiedAt": 1604978422808
         },
         {
             "name": "getQuery",
-            "lastModifiedAt": 1600307546301
+            "lastModifiedAt": 1604978423315
         },
         {
             "name": "getQueryParameter",
-            "lastModifiedAt": 1600307546621
+            "lastModifiedAt": 1604978423944
         },
         {
             "name": "getSamplerParameter",
-            "lastModifiedAt": 1600307546880
+            "lastModifiedAt": 1604978424853
         },
         {
             "name": "getSyncParameter",
-            "lastModifiedAt": 1600307547149
+            "lastModifiedAt": 1604978426196
         },
         {
             "name": "getTransformFeedbackVarying",
-            "lastModifiedAt": 1600307547404
+            "lastModifiedAt": 1604978426743
         },
         {
             "name": "getUniformBlockIndex",
-            "lastModifiedAt": 1600307547675
+            "lastModifiedAt": 1604978427392
         },
         {
             "name": "getUniformIndices",
-            "lastModifiedAt": 1600307547944
+            "lastModifiedAt": 1604978427888
         },
         {
             "name": "invalidateFramebuffer",
-            "lastModifiedAt": 1600307548311
+            "lastModifiedAt": 1604978428594
         },
         {
             "name": "invalidateSubFramebuffer",
-            "lastModifiedAt": 1600307548579
+            "lastModifiedAt": 1604978429520
         },
         {
             "name": "isQuery",
-            "lastModifiedAt": 1600307548828
+            "lastModifiedAt": 1604978430329
         },
         {
             "name": "isSampler",
-            "lastModifiedAt": 1600307549234
+            "lastModifiedAt": 1604978430897
         },
         {
             "name": "isSync",
-            "lastModifiedAt": 1600307549491
+            "lastModifiedAt": 1604978431473
         },
         {
             "name": "isTransformFeedback",
-            "lastModifiedAt": 1600307549777
+            "lastModifiedAt": 1604978432010
         },
         {
             "name": "isVertexArray",
-            "lastModifiedAt": 1600307550721
+            "lastModifiedAt": 1604978432536
         },
         {
             "name": "pauseTransformFeedback",
-            "lastModifiedAt": 1600307550998
+            "lastModifiedAt": 1604978433079
         },
         {
             "name": "readBuffer",
-            "lastModifiedAt": 1600307551264
+            "lastModifiedAt": 1604978433728
         },
         {
             "name": "renderbufferStorageMultisample",
-            "lastModifiedAt": 1600307551532
+            "lastModifiedAt": 1604978434694
         },
         {
             "name": "resumeTransformFeedback",
-            "lastModifiedAt": 1600307552491
+            "lastModifiedAt": 1604978435188
+        },
+        {
+            "name": "samplerParameter",
+            "lastModifiedAt": 1604978435454
         },
         {
             "name": "texImage3D",
-            "lastModifiedAt": 1600307552752
+            "lastModifiedAt": 1604978435941
         },
         {
             "name": "texStorage2D",
-            "lastModifiedAt": 1600307553152
+            "lastModifiedAt": 1604978436457
         },
         {
             "name": "texStorage3D",
-            "lastModifiedAt": 1600307553428
+            "lastModifiedAt": 1604978437115
         },
         {
             "name": "texSubImage3D",
-            "lastModifiedAt": 1600307553722
+            "lastModifiedAt": 1604978437637
         },
         {
             "name": "transformFeedbackVaryings",
-            "lastModifiedAt": 1600307553980
+            "lastModifiedAt": 1604978438174
+        },
+        {
+            "name": "uniform",
+            "lastModifiedAt": 1604978439116
         },
         {
             "name": "uniformBlockBinding",
-            "lastModifiedAt": 1600307554335
+            "lastModifiedAt": 1604978439625
+        },
+        {
+            "name": "uniformMatrix",
+            "lastModifiedAt": 1604978440044
         },
         {
             "name": "vertexAttribDivisor",
-            "lastModifiedAt": 1600307554588
+            "lastModifiedAt": 1604978440728
         },
         {
             "name": "vertexAttribIPointer",
-            "lastModifiedAt": 1600307555305
+            "lastModifiedAt": 1604978441583
         },
         {
             "name": "waitSync",
-            "lastModifiedAt": 1600307555584
+            "lastModifiedAt": 1604978442796
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Referrer Policy",
             "href": "https://w3c.github.io/webappsec-referrer-policy/#referrer-policy-delivery-referrer-attribute",
-            "description": "The definition of 'referrerpolicy attribute' in Referrer Policy."
+            "description": "The definition of 'referrerpolicy attribute' in the 'Referrer Policy' specification."
         }
     ]
 }

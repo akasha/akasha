@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.data",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/data",
-    "description": "The data read-only property of the Notification interface returns a structured clone of the notification's data, as specified in the data option of the Notification() constructor."
+    "description": "The data read-only property of the Notification interface returns a structured clone of the notification's data, as specified in the data option of the Notification() constructor.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-data",
+            "description": "The definition of 'data' in the 'Notifications API' specification."
+        }
+    ]
 }

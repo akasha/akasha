@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PerformanceNavigationTiming.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/toJSON",
-    "description": "The toJSON() method is a serializer - it returns a JSON representation of the PerformanceNavigationTiming object."
+    "description": "The toJSON() method is a serializer - it returns a JSON representation of the PerformanceNavigationTiming object.",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-tojson",
+            "description": "The definition of 'toJSON()' in the 'Navigation Timing Level 2' specification."
+        }
+    ]
 }

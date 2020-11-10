@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onplay",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onplay",
-    "description": "The onplay property of the GlobalEventHandlers mixin is the EventHandler for processing play events.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onplay",
-            "description": "The definition of 'onplay' in HTML Living Standard."
-        }
-    ]
+    "description": "The onplay property of the GlobalEventHandlers mixin is the EventHandler for processing play events."
 }

@@ -1,95 +1,95 @@
 
 {
     "name": "SpeechSynthesisUtterance",
-    "lastModifiedAt": 1601466472171,
+    "lastModifiedAt": 1604978161435,
     "entries": [
         {
             "name": "SpeechSynthesisUtterance",
-            "lastModifiedAt": 1600306086382
+            "lastModifiedAt": 1604978147172
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192356566
+            "lastModifiedAt": 1604978146702
         },
         {
             "name": "boundary_event",
-            "lastModifiedAt": 1597358584476
+            "lastModifiedAt": 1604978157185
         },
         {
             "name": "end_event",
-            "lastModifiedAt": 1597358584950
+            "lastModifiedAt": 1604978158205
         },
         {
             "name": "error_event",
-            "lastModifiedAt": 1597358585970
+            "lastModifiedAt": 1604978158840
         },
         {
             "name": "lang",
-            "lastModifiedAt": 1596711928277
+            "lastModifiedAt": 1604978148082
         },
         {
             "name": "mark_event",
-            "lastModifiedAt": 1597358586510
+            "lastModifiedAt": 1604978159354
         },
         {
             "name": "onboundary",
-            "lastModifiedAt": 1597238381034
+            "lastModifiedAt": 1604978148621
         },
         {
             "name": "onend",
-            "lastModifiedAt": 1597238381438
+            "lastModifiedAt": 1604978149362
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1597238382254
+            "lastModifiedAt": 1604978150446
         },
         {
             "name": "onmark",
-            "lastModifiedAt": 1597238382702
+            "lastModifiedAt": 1604978150975
         },
         {
             "name": "onpause",
-            "lastModifiedAt": 1597238383058
+            "lastModifiedAt": 1604978151562
         },
         {
             "name": "onresume",
-            "lastModifiedAt": 1597238383460
+            "lastModifiedAt": 1604978152056
         },
         {
             "name": "onstart",
-            "lastModifiedAt": 1597238383770
+            "lastModifiedAt": 1604978152588
         },
         {
             "name": "pause_event",
-            "lastModifiedAt": 1597358587174
+            "lastModifiedAt": 1604978159813
         },
         {
             "name": "pitch",
-            "lastModifiedAt": 1596711928892
+            "lastModifiedAt": 1604978153130
         },
         {
             "name": "rate",
-            "lastModifiedAt": 1596711930056
+            "lastModifiedAt": 1604978153619
         },
         {
             "name": "resume_event",
-            "lastModifiedAt": 1597358587647
+            "lastModifiedAt": 1604978160368
         },
         {
             "name": "start_event",
-            "lastModifiedAt": 1597358588706
+            "lastModifiedAt": 1604978161100
         },
         {
             "name": "text",
-            "lastModifiedAt": 1596711930647
+            "lastModifiedAt": 1604978154094
         },
         {
             "name": "voice",
-            "lastModifiedAt": 1596711931310
+            "lastModifiedAt": 1604978154573
         },
         {
             "name": "volume",
-            "lastModifiedAt": 1596711931982
+            "lastModifiedAt": 1604978155773
         }
     ]
 }

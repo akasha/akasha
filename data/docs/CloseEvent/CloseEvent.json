@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/comms.html#closeevent",
-            "description": "The definition of 'CloseEvent()' in HTML Living Standard."
+            "description": "The definition of 'CloseEvent()' in the 'HTML Living Standard' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Node.lookupNamespaceURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/lookupNamespaceURI",
-    "description": "The Node.lookupNamespaceURI() method accepts a prefix and returns the namespace URI associated with it on the given node if found (and null if not)."
+    "description": "The Node.lookupNamespaceURI() method accepts a prefix and returns the namespace URI associated with it on the given node if found (and null if not).",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-lookupnamespaceuri",
+            "description": "The definition of 'Node: lookupNamespaceURI' in the 'DOM' specification."
+        }
+    ]
 }

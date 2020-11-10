@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-eventsource-readystate",
-            "description": "The definition of 'readyState' in HTML Living Standard."
+            "description": "The definition of 'readyState' in the 'HTML Living Standard' specification."
         }
     ]
 }

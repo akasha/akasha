@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ShadowRoot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot",
-    "description": "The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree."
+    "description": "The ShadowRoot interface of the Shadow DOM API is the root node of a DOM subtree that is rendered separately from a document's main DOM tree.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#interface-shadowroot",
+            "description": "The definition of 'Interface ShadowRoot' in the 'DOM' specification."
+        }
+    ]
 }

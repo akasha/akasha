@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSourcesChangeEventInit.removed",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEventInit/removed",
-    "description": "The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession."
+    "description": "The XRInputSourcesChangeEventInit property removed is an array of zero or more XRInputSource objects, each representing one input source which has been removed from the XRSession.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeeventinit-removed",
+            "description": "The definition of 'XRInputSourcesChangeEventInit.removed' in the 'WebXR Device API' specification."
+        }
+    ]
 }

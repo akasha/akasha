@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-hash",
-            "description": "The definition of 'URLUtilsReadOnly.hash' in URL."
+            "description": "The definition of 'URLUtilsReadOnly.hash' in the 'URL' specification."
         }
     ]
 }

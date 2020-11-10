@@ -1,27 +1,27 @@
 
 {
     "name": "RTCSessionDescription",
-    "lastModifiedAt": 1604448750164,
+    "lastModifiedAt": 1604977672959,
     "entries": [
         {
             "name": "RTCSessionDescription",
-            "lastModifiedAt": 1597192764104
+            "lastModifiedAt": 1604977670229
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599278970428
+            "lastModifiedAt": 1604977669755
         },
         {
             "name": "sdp",
-            "lastModifiedAt": 1604448749143
+            "lastModifiedAt": 1604977671253
         },
         {
             "name": "toJSON",
-            "lastModifiedAt": 1604448750164
+            "lastModifiedAt": 1604977672959
         },
         {
             "name": "type",
-            "lastModifiedAt": 1604448749624
+            "lastModifiedAt": 1604977672278
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechGrammar.src",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/src",
-    "description": "The src property of the SpeechGrammar interface sets and returns a string containing the grammar from within in the SpeechGrammar object."
+    "description": "The src property of the SpeechGrammar interface sets and returns a string containing the grammar from within in the SpeechGrammar object.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechgrammar-src",
+            "description": "The definition of 'src' in the 'Web Speech API' specification."
+        }
+    ]
 }

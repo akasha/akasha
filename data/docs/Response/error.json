@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-response-error",
-            "description": "The definition of 'error()' in Fetch."
+            "description": "The definition of 'error()' in the 'Fetch' specification."
         }
     ]
 }

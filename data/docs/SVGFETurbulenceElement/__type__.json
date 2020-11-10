@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFETurbulenceElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFETurbulenceElement",
-    "description": "The SVGFETurbulenceElement interface corresponds to the feTurbulence element."
+    "description": "The SVGFETurbulenceElement interface corresponds to the feTurbulence element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFETurbulenceElement",
+            "description": "The definition of 'SVGFETurbulenceElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFETurbulenceElement",
+            "description": "The definition of 'SVGFETurbulenceElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

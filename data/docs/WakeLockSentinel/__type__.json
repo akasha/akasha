@@ -8,7 +8,7 @@
         {
             "name": "Screen Wake Lock API",
             "href": "https://w3c.github.io/screen-wake-lock/#the-wakelocksentinel-interface",
-            "description": "The definition of 'WakeLockSentinel' in Screen Wake Lock API."
+            "description": "The definition of 'WakeLockSentinel' in the 'Screen Wake Lock API' specification."
         }
     ]
 }

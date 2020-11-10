@@ -1,43 +1,43 @@
 
 {
     "name": "History",
-    "lastModifiedAt": 1604970858704,
+    "lastModifiedAt": 1604976788528,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449654445
+            "lastModifiedAt": 1604976783394
         },
         {
             "name": "back",
-            "lastModifiedAt": 1604449656593
+            "lastModifiedAt": 1604976785456
         },
         {
             "name": "forward",
-            "lastModifiedAt": 1604449657600
+            "lastModifiedAt": 1604976786219
         },
         {
             "name": "go",
-            "lastModifiedAt": 1604449658192
+            "lastModifiedAt": 1604976786804
         },
         {
             "name": "length",
-            "lastModifiedAt": 1604449654910
+            "lastModifiedAt": 1604976783893
         },
         {
             "name": "pushState",
-            "lastModifiedAt": 1604449658769
+            "lastModifiedAt": 1604976787885
         },
         {
             "name": "replaceState",
-            "lastModifiedAt": 1604449659301
+            "lastModifiedAt": 1604976788528
         },
         {
             "name": "scrollRestoration",
-            "lastModifiedAt": 1604449655530
+            "lastModifiedAt": 1604976784372
         },
         {
             "name": "state",
-            "lastModifiedAt": 1604449655993
+            "lastModifiedAt": 1604976784860
         }
     ]
 }

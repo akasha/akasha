@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-lasteventid",
-            "description": "The definition of 'ExtendableMessageEvent.lastEventId' in Service Workers."
+            "description": "The definition of 'ExtendableMessageEvent.lastEventId' in the 'Service Workers' specification."
         }
     ]
 }

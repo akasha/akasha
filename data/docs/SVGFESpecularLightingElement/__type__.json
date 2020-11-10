@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFESpecularLightingElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFESpecularLightingElement",
-    "description": "The SVGFESpecularLightingElement interface corresponds to the feSpecularLighting element."
+    "description": "The SVGFESpecularLightingElement interface corresponds to the feSpecularLighting element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFESpecularLightingElement",
+            "description": "The definition of 'SVGFESpecularLightingElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFESpecularLightingElement",
+            "description": "The definition of 'SVGFESpecularLightingElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-rtcicecandidatestats-address",
-            "description": "The definition of 'RTCIceCandidateStats.address' in Identifiers for WebRTC's Statistics API."
+            "description": "The definition of 'RTCIceCandidateStats.address' in the 'Identifiers for WebRTC's Statistics API' specification."
         }
     ]
 }

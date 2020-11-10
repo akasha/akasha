@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-HmacImportParams",
-            "description": "The definition of 'SubtleCrypto.HmacImportParams' in Web Cryptography API."
+            "description": "The definition of 'SubtleCrypto.HmacImportParams' in the 'Web Cryptography API' specification."
         }
     ]
 }

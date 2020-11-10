@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-persist",
-            "description": "The definition of 'persist()' in Web Animations."
+            "description": "The definition of 'persist()' in the 'Web Animations' specification."
         }
     ]
 }

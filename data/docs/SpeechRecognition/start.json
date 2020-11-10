@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechRecognition.start",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/start",
-    "description": "The start() method of the Web Speech API starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition."
+    "description": "The start() method of the Web Speech API starts the speech recognition service listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-start",
+            "description": "The definition of 'start()' in the 'Web Speech API' specification."
+        }
+    ]
 }

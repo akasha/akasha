@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-abortcontroller-signal",
-            "description": "The definition of 'signal' in DOM."
+            "description": "The definition of 'signal' in the 'DOM' specification."
         }
     ]
 }

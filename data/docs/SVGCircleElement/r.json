@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "SVGCircleElement.r",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGCircleElement/r",
-    "description": "The r read-only property of the SVGCircleElement interface reflects the r attribute of a circle element and by that defines the radius of the circle."
+    "description": "The r read-only property of the SVGCircleElement interface reflects the r attribute of a circle element and by that defines the radius of the circle.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/shapes.html#__svg__SVGCircleElement__r",
+            "description": "The definition of 'SVGCircleElement.r' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/shapes.html#__svg__SVGCircleElement__r",
+            "description": "The definition of 'SVGCircleElement.r' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

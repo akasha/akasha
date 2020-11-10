@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.domainLookupEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/domainLookupEnd",
-    "description": "The domainLookupEnd read-only property returns the timestamp immediately after the browser finishes the domain name lookup for the resource."
+    "description": "The domainLookupEnd read-only property returns the timestamp immediately after the browser finishes the domain name lookup for the resource.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-domainlookupend",
+            "description": "The definition of 'domainLookupEnd' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

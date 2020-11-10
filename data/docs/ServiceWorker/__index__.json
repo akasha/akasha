@@ -1,27 +1,27 @@
 
 {
     "name": "ServiceWorker",
-    "lastModifiedAt": 1601466336979,
+    "lastModifiedAt": 1604978022055,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279566022
+            "lastModifiedAt": 1604978019558
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1600305878393
+            "lastModifiedAt": 1604978020523
         },
         {
             "name": "onstatechange",
-            "lastModifiedAt": 1600305878642
+            "lastModifiedAt": 1604978020997
         },
         {
             "name": "scriptURL",
-            "lastModifiedAt": 1597192327479
+            "lastModifiedAt": 1604978021491
         },
         {
             "name": "state",
-            "lastModifiedAt": 1597192327776
+            "lastModifiedAt": 1604978021968
         }
     ]
 }

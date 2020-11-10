@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "AudioBufferSourceNode.playbackRate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/playbackRate",
-    "description": "The playbackRate property of the AudioBufferSourceNode interface Is a k-rate AudioParam that defines the speed at which the audio asset will be played.",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffersourcenode-playbackrate",
-            "description": "The definition of 'playbackRate' in Web Audio API."
-        }
-    ]
+    "description": "The playbackRate property of the AudioBufferSourceNode interface Is a k-rate AudioParam that defines the speed at which the audio asset will be played."
 }

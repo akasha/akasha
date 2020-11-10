@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PublicKeyCredential.isUserVerifyingPlatformAuthenticatorAvailable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/isUserVerifyingPlatformAuthenticatorAvailable",
-    "description": "isUserVerifyingPlatformAuthenticatorAvailable() is a static method of the PublicKeyCredential interface that returns a Promise which resolves to true if a user-verifying platform authenticator is available."
+    "description": "isUserVerifyingPlatformAuthenticatorAvailable() is a static method of the PublicKeyCredential interface that returns a Promise which resolves to true if a user-verifying platform authenticator is available.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-publickeycredential-isuserverifyingplatformauthenticatoravailable",
+            "description": "The definition of 'isUserVerifyingPlatformAuthenticatorAvailable' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        }
+    ]
 }

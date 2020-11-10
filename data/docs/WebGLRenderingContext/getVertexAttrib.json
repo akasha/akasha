@@ -8,22 +8,22 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
-            "description": "The definition of 'getVertexAttrib' in WebGL 1.0."
+            "description": "The definition of 'getVertexAttrib' in the 'WebGL 1.0' specification."
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetVertexAttrib.xml",
-            "description": "The definition of 'glGetVertexAttrib' in OpenGL ES 2.0."
+            "description": "The definition of 'glGetVertexAttrib' in the 'OpenGL ES 2.0' specification."
         },
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8",
-            "description": "The definition of 'getVertexAttrib' in WebGL 2.0."
+            "description": "The definition of 'getVertexAttrib' in the 'WebGL 2.0' specification."
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetVertexAttrib.xhtml",
-            "description": "The definition of 'glGetVertexAttrib' in OpenGL ES 3.0."
+            "description": "The definition of 'glGetVertexAttrib' in the 'OpenGL ES 3.0' specification."
         }
     ]
 }

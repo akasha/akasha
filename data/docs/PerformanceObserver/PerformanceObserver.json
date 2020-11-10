@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "PerformanceObserver.PerformanceObserver",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver/PerformanceObserver",
-    "description": "The PerformanceObserver() constructor creates a new PerformanceObserver object with the given observer callback. The observer callback is invoked when performance entry events are recorded for the entry types that have been registered, via the observe() method."
+    "description": "The PerformanceObserver() constructor creates a new PerformanceObserver object with the given observer callback. The observer callback is invoked when performance entry events are recorded for the entry types that have been registered, via the observe() method.",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#idl-def-performanceobservercallback",
+            "description": "The definition of 'PerformanceObserver()' in the 'Performance Timeline Level 2' specification."
+        }
+    ]
 }

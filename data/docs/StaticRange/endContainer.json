@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "StaticRange.endContainer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/endContainer",
-    "description": "The endContainer property of the StaticRange interface returns the end Node for the range."
+    "description": "The endContainer property of the StaticRange interface returns the end Node for the range.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-endcontainer",
+            "description": "The definition of 'endContainer' in the 'DOM' specification."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-staticrange-endcontainer",
+            "description": "The definition of 'endContainer' in the 'Static Range' specification."
+        }
+    ]
 }

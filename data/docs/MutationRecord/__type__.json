@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "MutationRecord",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MutationRecord",
-    "description": "A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback."
+    "description": "A MutationRecord represents an individual DOM mutation. It is the object that is passed to MutationObserver's callback.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#mutationrecord",
+            "description": "The definition of 'MutationRecord' in the 'DOM' specification."
+        }
+    ]
 }

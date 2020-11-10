@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocompletionevent-renderedbuffer",
-            "description": "The definition of 'renderedBuffer' in Web Audio API."
+            "description": "The definition of 'renderedBuffer' in the 'Web Audio API' specification."
         }
     ]
 }

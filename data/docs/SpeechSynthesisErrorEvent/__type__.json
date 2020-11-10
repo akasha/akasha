@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SpeechSynthesisErrorEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisErrorEvent",
-    "description": "The SpeechSynthesisErrorEvent interface of the Web Speech API contains information about any errors that occur while processing SpeechSynthesisUtterance objects in the speech service."
+    "description": "The SpeechSynthesisErrorEvent interface of the Web Speech API contains information about any errors that occur while processing SpeechSynthesisUtterance objects in the speech service.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechsynthesiserrorevent",
+            "description": "The definition of 'SpeechSynthesisErrorEvent' in the 'Web Speech API' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.attachShadow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow",
-    "description": "The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot."
+    "description": "The Element.attachShadow() method attaches a shadow DOM tree to the specified element and returns a reference to its ShadowRoot.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-attachshadow",
+            "description": "The definition of 'attachShadow()' in the 'DOM' specification."
+        }
+    ]
 }

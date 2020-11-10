@@ -1,7 +1,7 @@
 
 {
     "name": "NavigatorStorage",
-    "lastModifiedAt": 1604450880251,
+    "lastModifiedAt": 1604977173603,
     "entries": [
         {
             "name": "__type__",
@@ -9,7 +9,7 @@
         },
         {
             "name": "storage",
-            "lastModifiedAt": 1604450880211
+            "lastModifiedAt": 1604977173549
         }
     ]
 }

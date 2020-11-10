@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#URL-stringification-behavior",
-            "description": "The definition of 'stringifier' in URL."
+            "description": "The definition of 'stringifier' in the 'URL' specification."
         }
     ]
 }

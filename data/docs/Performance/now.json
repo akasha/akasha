@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Performance.now",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/now",
-    "description": "The performance.now() method returns a DOMHighResTimeStamp, measured in milliseconds."
+    "description": "The performance.now() method returns a DOMHighResTimeStamp, measured in milliseconds.",
+    "refs": [
+        {
+            "name": "High Resolution Time Level 2",
+            "href": "https://www.w3.org/TR/hr-time-2/#dom-performance-now",
+            "description": "The definition of 'performance.now()' in the 'High Resolution Time Level 2' specification."
+        },
+        {
+            "name": "High Resolution Time",
+            "href": "https://www.w3.org/TR/hr-time-1/#dom-performance-now",
+            "description": "The definition of 'performance.now()' in the 'High Resolution Time' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XMLHttpRequest.overrideMimeType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/overrideMimeType",
-    "description": "The XMLHttpRequest method overrideMimeType() specifies a MIME type other than the one provided by the server to be used instead when interpreting the data being transferred in a request."
+    "description": "The XMLHttpRequest method overrideMimeType() specifies a MIME type other than the one provided by the server to be used instead when interpreting the data being transferred in a request.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#the-overridemimetype()-method",
+            "description": "The definition of 'overrideMimeType()' in the 'XMLHttpRequest' specification."
+        }
+    ]
 }

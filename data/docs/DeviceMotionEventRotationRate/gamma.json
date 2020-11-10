@@ -8,7 +8,7 @@
         {
             "name": "DeviceOrientation Event Specification",
             "href": "https://w3c.github.io/deviceorientation/#dom-devicemotioneventrotationrate-gamma",
-            "description": "The definition of 'DeviceMotionEventRotationRate: gamma' in DeviceOrientation Event Specification."
+            "description": "The definition of 'DeviceMotionEventRotationRate: gamma' in the 'DeviceOrientation Event Specification' specification."
         }
     ]
 }

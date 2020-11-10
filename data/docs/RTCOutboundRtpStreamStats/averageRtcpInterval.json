@@ -8,7 +8,7 @@
         {
             "name": "Identifiers for WebRTC's Statistics API",
             "href": "https://w3c.github.io/webrtc-stats/#dom-RTCOutboundRtpStreamStats-averagertcpinterval",
-            "description": "The definition of 'RTCOutboundRtpStreamStats.averageRtcpInterval' in Identifiers for WebRTC's Statistics API."
+            "description": "The definition of 'RTCOutboundRtpStreamStats.averageRtcpInterval' in the 'Identifiers for WebRTC's Statistics API' specification."
         }
     ]
 }

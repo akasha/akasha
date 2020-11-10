@@ -8,7 +8,7 @@
         {
             "name": "Screen Capture",
             "href": "https://w3c.github.io/mediacapture-screen-share/#dom-mediadevices-getdisplaymedia",
-            "description": "The definition of 'MediaDevices.getDisplayMedia()' in Screen Capture."
+            "description": "The definition of 'MediaDevices.getDisplayMedia()' in the 'Screen Capture' specification."
         }
     ]
 }

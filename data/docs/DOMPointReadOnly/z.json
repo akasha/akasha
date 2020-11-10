@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "DOMPointReadOnly.z",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMPointReadOnly/z",
-    "description": "The DOMPointReadOnly interface's z property holds the depth coordinate, z, for a read-only point in space.",
-    "refs": [
-        {
-            "name": "Geometry Interfaces Module Level 1",
-            "href": "https://drafts.fxtf.org/geometry/#dom-dompointreadonly-z",
-            "description": "The definition of 'z' in Geometry Interfaces Module Level 1."
-        }
-    ]
+    "description": "The DOMPointReadOnly interface's z property holds the depth coordinate, z, for a read-only point in space."
 }

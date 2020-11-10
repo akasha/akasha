@@ -3,5 +3,25 @@
     "kind": "Type",
     "name": "ServiceWorkerRegistration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration",
-    "description": "The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin."
+    "description": "The ServiceWorkerRegistration interface of the Service Worker API represents the service worker registration. You register a service worker to control one or more pages that share the same origin.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#serviceworkerregistration",
+            "description": "The definition of 'ServiceWorkerRegistration' in the 'Service Workers' specification."
+        },
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-serviceworkerregistration-pushmanager",
+            "description": "The definition of 'PushManager' in the 'Push API' specification."
+        },
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/"
+        },
+        {
+            "name": "Web Background Synchronization",
+            "href": "https://wicg.github.io/background-sync/spec/"
+        }
+    ]
 }

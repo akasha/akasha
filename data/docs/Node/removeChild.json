@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Node.removeChild",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild",
-    "description": "The Node.removeChild() method removes a child node from the DOM and returns the removed node."
+    "description": "The Node.removeChild() method removes a child node from the DOM and returns the removed node.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-removechild",
+            "description": "The definition of 'Node: removeChild' in the 'DOM' specification."
+        }
+    ]
 }

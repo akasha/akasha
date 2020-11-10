@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SyncManager",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncManager",
-    "description": "The SyncManager interface of the the ServiceWorker API provides an interface for registering and listing sync registrations."
+    "description": "The SyncManager interface of the the ServiceWorker API provides an interface for registering and listing sync registrations.",
+    "refs": [
+        {
+            "name": "Web Background Synchronization",
+            "href": "https://wicg.github.io/background-sync/spec/#sync-manager-interface",
+            "description": "The definition of 'SyncManager' in the 'Web Background Synchronization' specification."
+        }
+    ]
 }

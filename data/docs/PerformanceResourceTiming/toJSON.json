@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PerformanceResourceTiming.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/toJSON",
-    "description": "The toJSON() method is a serializer that returns a JSON representation of the PerformanceResourceTiming object."
+    "description": "The toJSON() method is a serializer that returns a JSON representation of the PerformanceResourceTiming object.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 2",
+            "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-tojson",
+            "description": "The definition of 'toJSON' in the 'Resource Timing Level 2' specification."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Type",
     "name": "Notification",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification",
-    "description": "The Notification interface of the Notifications API is used to configure and display desktop notifications to the user."
+    "description": "The Notification interface of the Notifications API is used to configure and display desktop notifications to the user.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/"
+        }
+    ]
 }

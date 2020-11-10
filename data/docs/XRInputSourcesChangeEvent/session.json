@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSourcesChangeEvent.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourcesChangeEvent/session",
-    "description": "The XRInputSourcesChangeEvent property session specifies the XRSession to which the input source list change event applies."
+    "description": "The XRInputSourcesChangeEvent property session specifies the XRSession to which the input source list change event applies.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsourceschangeevent-session",
+            "description": "The definition of 'XRInputSourcesChangeEvent.session' in the 'WebXR Device API' specification."
+        }
+    ]
 }

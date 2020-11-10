@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceNavigationTiming.domContentLoadedEventStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/domContentLoadedEventStart",
-    "description": "The domContentLoadedEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent fires the DOMContentLoaded event at the current document."
+    "description": "The domContentLoadedEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent fires the DOMContentLoaded event at the current document.",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-domcontentloadedeventstart",
+            "description": "The definition of 'domContentLoadedEventStart' in the 'Navigation Timing Level 2' specification."
+        }
+    ]
 }

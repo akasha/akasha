@@ -1,19 +1,19 @@
 
 {
     "name": "HTMLInputElement",
-    "lastModifiedAt": 1604970637298,
+    "lastModifiedAt": 1604976567404,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1596581143878
+            "lastModifiedAt": 1604976557044
         },
         {
             "name": "invalid_event",
-            "lastModifiedAt": 1604449652662
+            "lastModifiedAt": 1604976566359
         },
         {
             "name": "labels",
-            "lastModifiedAt": 1604449643746
+            "lastModifiedAt": 1604976557522
         },
         {
             "name": "mozGetFileNameArray",
@@ -21,11 +21,11 @@
         },
         {
             "name": "mozSetFileNameArray",
-            "lastModifiedAt": 1604449647706
+            "lastModifiedAt": 1604976561567
         },
         {
             "name": "multiple",
-            "lastModifiedAt": 1604449644771
+            "lastModifiedAt": 1604976558095
         },
         {
             "name": "search_event",
@@ -33,31 +33,31 @@
         },
         {
             "name": "select",
-            "lastModifiedAt": 1604449648301
+            "lastModifiedAt": 1604976562583
         },
         {
             "name": "setRangeText",
-            "lastModifiedAt": 1604449648859
+            "lastModifiedAt": 1604976563658
         },
         {
             "name": "setSelectionRange",
-            "lastModifiedAt": 1604449649454
+            "lastModifiedAt": 1604976564144
         },
         {
             "name": "stepDown",
-            "lastModifiedAt": 1604449649951
+            "lastModifiedAt": 1604976564771
         },
         {
             "name": "stepUp",
-            "lastModifiedAt": 1604449651103
+            "lastModifiedAt": 1604976566038
         },
         {
             "name": "webkitEntries",
-            "lastModifiedAt": 1604449646640
+            "lastModifiedAt": 1604976559816
         },
         {
             "name": "webkitdirectory",
-            "lastModifiedAt": 1604449646006
+            "lastModifiedAt": 1604976559292
         }
     ]
 }

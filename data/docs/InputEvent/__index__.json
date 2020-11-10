@@ -1,7 +1,7 @@
 
 {
     "name": "InputEvent",
-    "lastModifiedAt": 1604970956119,
+    "lastModifiedAt": 1604976877074,
     "entries": [
         {
             "name": "InputEvent",
@@ -9,27 +9,27 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604970952301
+            "lastModifiedAt": 1604976873673
         },
         {
             "name": "data",
-            "lastModifiedAt": 1604970953555
+            "lastModifiedAt": 1604976874668
         },
         {
             "name": "dataTransfer",
-            "lastModifiedAt": 1604970954288
+            "lastModifiedAt": 1604976875185
         },
         {
             "name": "getTargetRanges",
-            "lastModifiedAt": 1604970956119
+            "lastModifiedAt": 1604976877074
         },
         {
             "name": "inputType",
-            "lastModifiedAt": 1604970954835
+            "lastModifiedAt": 1604976875658
         },
         {
             "name": "isComposing",
-            "lastModifiedAt": 1604970955377
+            "lastModifiedAt": 1604976876407
         }
     ]
 }

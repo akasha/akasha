@@ -1,15 +1,15 @@
 
 {
     "name": "HTMLTableRowElement",
-    "lastModifiedAt": 1604970813536,
+    "lastModifiedAt": 1604976744563,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450282827
+            "lastModifiedAt": 1604976741521
         },
         {
             "name": "insertCell",
-            "lastModifiedAt": 1604450284987
+            "lastModifiedAt": 1604976744563
         },
         {
             "name": "rowIndex",

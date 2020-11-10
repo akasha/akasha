@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "AudioParam.cancelScheduledValues",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioParam/cancelScheduledValues",
-    "description": "A reference to this AudioParam object. In some older implementations this method returns void.",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-cancelscheduledvalues",
-            "description": "The definition of 'cancelScheduledValues' in Web Audio API."
-        }
-    ]
+    "description": "A reference to this AudioParam object. In some older implementations this method returns void."
 }

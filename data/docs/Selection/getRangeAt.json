@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.getRangeAt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/getRangeAt",
-    "description": "The Selection.getRangeAt() method returns a range object representing one of the ranges currently selected."
+    "description": "The Selection.getRangeAt() method returns a range object representing one of the ranges currently selected.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-getrangeat",
+            "description": "The definition of 'Selection: getRangeAt()' in the 'Selection API' specification."
+        }
+    ]
 }

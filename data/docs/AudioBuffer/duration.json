@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "AudioBuffer.duration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/duration",
-    "description": "A double.",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffer-duration",
-            "description": "The definition of 'duration' in Web Audio API."
-        }
-    ]
+    "description": "A double."
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRSessionEventInit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEventInit",
-    "description": "The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values."
+    "description": "The XRSessionEventInit dictionary is used when calling the XRSessionEvent() constructor to provide the new event's initial values.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dictdef-xrsessioneventinit",
+            "description": "The definition of 'XRSessionEventInit' in the 'WebXR Device API' specification."
+        }
+    ]
 }

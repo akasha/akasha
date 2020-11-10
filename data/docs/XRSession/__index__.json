@@ -1,47 +1,47 @@
 
 {
     "name": "XRSession",
-    "lastModifiedAt": 1601467533666,
+    "lastModifiedAt": 1604979086439,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192978201
+            "lastModifiedAt": 1604979079515
         },
         {
             "name": "cancelAnimationFrame",
-            "lastModifiedAt": 1599279359010
+            "lastModifiedAt": 1604979083924
         },
         {
             "name": "end",
-            "lastModifiedAt": 1599279359555
+            "lastModifiedAt": 1604979084421
         },
         {
             "name": "environmentBlendMode",
-            "lastModifiedAt": 1599279355692
+            "lastModifiedAt": 1604979080577
         },
         {
             "name": "inputSources",
-            "lastModifiedAt": 1599279356761
+            "lastModifiedAt": 1604979081040
         },
         {
             "name": "renderState",
-            "lastModifiedAt": 1599279357361
+            "lastModifiedAt": 1604979082114
         },
         {
             "name": "requestAnimationFrame",
-            "lastModifiedAt": 1599279360679
+            "lastModifiedAt": 1604979084927
         },
         {
             "name": "requestReferenceSpace",
-            "lastModifiedAt": 1599279361272
+            "lastModifiedAt": 1604979085405
         },
         {
             "name": "updateRenderState",
-            "lastModifiedAt": 1599279361949
+            "lastModifiedAt": 1604979086439
         },
         {
             "name": "visibilityState",
-            "lastModifiedAt": 1599279357895
+            "lastModifiedAt": 1604979082594
         }
     ]
 }

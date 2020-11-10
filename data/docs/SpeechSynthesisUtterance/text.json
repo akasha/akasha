@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.text",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/text",
-    "description": "The text property of the SpeechSynthesisUtterance interface gets and sets the text that will be synthesised when the utterance is spoken."
+    "description": "The text property of the SpeechSynthesisUtterance interface gets and sets the text that will be synthesised when the utterance is spoken.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-text",
+            "description": "The definition of 'text' in the 'Web Speech API' specification."
+        }
+    ]
 }

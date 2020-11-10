@@ -1,7 +1,7 @@
 
 {
     "name": "Geolocation",
-    "lastModifiedAt": 1604970324917,
+    "lastModifiedAt": 1604976246858,
     "entries": [
         {
             "name": "__type__",
@@ -17,7 +17,7 @@
         },
         {
             "name": "watchPosition",
-            "lastModifiedAt": 1604970324917
+            "lastModifiedAt": 1604976246858
         }
     ]
 }

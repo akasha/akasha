@@ -1,51 +1,51 @@
 
 {
     "name": "RTCRtpStreamStats",
-    "lastModifiedAt": 1604448872194,
+    "lastModifiedAt": 1604977657568,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448864783
+            "lastModifiedAt": 1604977650862
         },
         {
             "name": "codecId",
-            "lastModifiedAt": 1604448865254
+            "lastModifiedAt": 1604977651315
         },
         {
             "name": "firCount",
-            "lastModifiedAt": 1604448865708
+            "lastModifiedAt": 1604977651869
         },
         {
             "name": "kind",
-            "lastModifiedAt": 1604448866174
+            "lastModifiedAt": 1604977652899
         },
         {
             "name": "nackCount",
-            "lastModifiedAt": 1604448867193
+            "lastModifiedAt": 1604977653944
         },
         {
             "name": "pliCount",
-            "lastModifiedAt": 1604448867879
+            "lastModifiedAt": 1604977654608
         },
         {
             "name": "qpSum",
-            "lastModifiedAt": 1604448868896
+            "lastModifiedAt": 1604977655102
         },
         {
             "name": "sliCount",
-            "lastModifiedAt": 1604448869364
+            "lastModifiedAt": 1604977655827
         },
         {
             "name": "ssrc",
-            "lastModifiedAt": 1604448870399
+            "lastModifiedAt": 1604977656320
         },
         {
             "name": "trackId",
-            "lastModifiedAt": 1604448871456
+            "lastModifiedAt": 1604977656811
         },
         {
             "name": "transportId",
-            "lastModifiedAt": 1604448872194
+            "lastModifiedAt": 1604977657568
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VisualViewport.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/width",
-    "description": "The width read-only property of the VisualViewport interface returns the width of the visual viewport, in CSS pixels."
+    "description": "The width read-only property of the VisualViewport interface returns the width of the visual viewport, in CSS pixels.",
+    "refs": [
+        {
+            "name": "Visual Viewport API",
+            "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-width",
+            "description": "The definition of 'width' in the 'Visual Viewport API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-response-status",
-            "description": "The definition of 'status' in Fetch."
+            "description": "The definition of 'status' in the 'Fetch' specification."
         }
     ]
 }

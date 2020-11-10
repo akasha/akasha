@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval",
-            "description": "The definition of 'WindowOrWorkerGlobalScope.setInterval()' in HTML Living Standard."
+            "description": "The definition of 'WindowOrWorkerGlobalScope.setInterval()' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#dom-setinterval",
-            "description": "The definition of 'WindowTimers.setInterval()' in HTML Living Standard."
+            "description": "The definition of 'WindowTimers.setInterval()' in the 'HTML Living Standard' specification."
         }
     ]
 }

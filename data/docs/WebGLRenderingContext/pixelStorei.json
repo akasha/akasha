@@ -3,5 +3,32 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.pixelStorei",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/pixelStorei",
-    "description": "The WebGLRenderingContext.pixelStorei() method of the WebGL API specifies the pixel storage modes."
+    "description": "The WebGLRenderingContext.pixelStorei() method of the WebGL API specifies the pixel storage modes.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'pixelStorei' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#PIXEL_STORAGE_PARAMETERS",
+            "description": "The definition of 'Pixel Storage Parameters' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glPixelStorei.xml",
+            "description": "The definition of 'glPixelStorei' in the 'OpenGL ES 2.0' specification."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2",
+            "description": "The definition of 'pixelStorei' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glPixelStorei.xhtml",
+            "description": "The definition of 'glPixelStorei' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

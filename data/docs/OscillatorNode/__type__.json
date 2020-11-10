@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#oscillatornode",
-            "description": "The definition of 'OscillatorNode' in Web Audio API."
+            "description": "The definition of 'OscillatorNode' in the 'Web Audio API' specification."
         }
     ]
 }

@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-stepmismatch",
-            "description": "The definition of 'ValidityState.stepMismatch' in HTML Living Standard."
+            "description": "The definition of 'ValidityState.stepMismatch' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-stepmismatch",
-            "description": "The definition of 'ValidityState.stepMismatch' in HTML 5.1."
+            "description": "The definition of 'ValidityState.stepMismatch' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-stepmismatch",
-            "description": "The definition of 'ValidityState.stepMismatch' in HTML5."
+            "description": "The definition of 'ValidityState.stepMismatch' in the 'HTML5' specification."
         }
     ]
 }

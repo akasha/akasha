@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFEComponentTransferElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEComponentTransferElement",
-    "description": "The SVGFEComponentTransferElement interface corresponds to the feComponentTransfer element."
+    "description": "The SVGFEComponentTransferElement interface corresponds to the feComponentTransfer element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEComponentTransferElement",
+            "description": "The definition of 'SVGFEComponentTransferElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEComponentTransferElement",
+            "description": "The definition of 'SVGFEComponentTransferElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

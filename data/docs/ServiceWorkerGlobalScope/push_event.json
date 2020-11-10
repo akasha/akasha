@@ -4,6 +4,13 @@
     "name": "ServiceWorkerGlobalScope.push_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/push_event",
     "description": "The push event is sent to a service worker's global scope (represented by the ServiceWorkerGlobalScope interface) when the service worker has received a push message.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#extensions-to-the-serviceworkerglobalscope-interface",
+            "description": "The definition of 'push' in the 'Push API' specification."
+        }
+    ],
     "eventName": "push",
     "eventType": "PushEvent",
     "eventHandlerProperty": "onpush",

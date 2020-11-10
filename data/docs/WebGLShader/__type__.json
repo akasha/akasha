@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WebGLShader",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader",
-    "description": "The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders."
+    "description": "The WebGLShader is part of the WebGL API and can either be a vertex or a fragment shader. A WebGLProgram requires both types of shaders.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.8",
+            "description": "The definition of 'WebGLShader' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

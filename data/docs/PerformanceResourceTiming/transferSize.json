@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.transferSize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/transferSize",
-    "description": "The transferSize read-only property represents the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body (as defined by RFC7230)."
+    "description": "The transferSize read-only property represents the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body (as defined by RFC7230).",
+    "refs": [
+        {
+            "name": "Resource Timing Level 2",
+            "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-transfersize",
+            "description": "The definition of 'transferSize' in the 'Resource Timing Level 2' specification."
+        }
+    ]
 }

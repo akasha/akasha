@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-method",
-            "description": "The definition of 'method' in Fetch."
+            "description": "The definition of 'method' in the 'Fetch' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#navigator-serviceworker",
-            "description": "The definition of 'navigator.serviceWorker' in Service Workers."
+            "description": "The definition of 'navigator.serviceWorker' in the 'Service Workers' specification."
         }
     ]
 }

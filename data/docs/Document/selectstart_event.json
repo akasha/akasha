@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#selectstart-event",
-            "description": "The definition of 'selectstart' in Selection API."
+            "description": "The definition of 'selectstart' in the 'Selection API' specification."
         }
     ],
     "eventName": "selectstart",

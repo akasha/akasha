@@ -8,7 +8,7 @@
         {
             "name": "Web Cryptography API",
             "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-AesGcmParams",
-            "description": "The definition of 'SubtleCrypto.AesGcmParams' in Web Cryptography API."
+            "description": "The definition of 'SubtleCrypto.AesGcmParams' in the 'Web Cryptography API' specification."
         }
     ]
 }

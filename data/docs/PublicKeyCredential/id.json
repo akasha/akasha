@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "PublicKeyCredential.id",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/id",
-    "description": "The id read-only property of the PublicKeyCredential interface is a DOMString, inherited from Credential, which represents the identifier of the current PublicKeyCredential instance."
+    "description": "The id read-only property of the PublicKeyCredential interface is a DOMString, inherited from Credential, which represents the identifier of the current PublicKeyCredential instance.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#iface-pkcredential",
+            "description": "The definition of 'id' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        },
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-credential-id",
+            "description": "The definition of 'id' in the 'Credential Management Level 1' specification."
+        }
+    ]
 }

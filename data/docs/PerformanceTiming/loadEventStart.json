@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.loadEventStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/loadEventStart",
-    "description": "The legacy PerformanceTiming.loadEventStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the load event was sent for the current document. If this event has not yet been sent, it returns 0."
+    "description": "The legacy PerformanceTiming.loadEventStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the load event was sent for the current document. If this event has not yet been sent, it returns 0.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-loadeventstart",
+            "description": "The definition of 'PerformanceTiming.loadEventStart' in the 'Navigation Timing' specification."
+        }
+    ]
 }

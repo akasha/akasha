@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "Event.eventPhase",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Event/eventPhase",
-    "description": "The eventPhase read-only property of the Event interface indicates which phase of the event flow is currently being evaluated."
+    "description": "The eventPhase read-only property of the Event interface indicates which phase of the event flow is currently being evaluated.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-event-eventphase",
+            "description": "The definition of 'Event.eventPhase' in the 'DOM' specification."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-event-eventphase",
+            "description": "The definition of 'Event.eventPhase' in the 'DOM4' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-eventPhase",
+            "description": "The definition of 'Event.eventPhase' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
+        }
+    ]
 }

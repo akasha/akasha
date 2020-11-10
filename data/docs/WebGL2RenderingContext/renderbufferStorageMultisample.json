@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.renderbufferStorageMultisample",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/renderbufferStorageMultisample",
-    "description": "The WebGL2RenderingContext.renderbufferStorageMultisample() method of the WebGL 2 API returns creates and initializes a renderbuffer object's data store and allows specifying a number of samples to be used."
+    "description": "The WebGL2RenderingContext.renderbufferStorageMultisample() method of the WebGL 2 API returns creates and initializes a renderbuffer object's data store and allows specifying a number of samples to be used.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.5",
+            "description": "The definition of 'glRenderbufferStorageMultisample' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glRenderbufferStorageMultisample.xhtml",
+            "description": "The definition of 'glRenderbufferStorageMultisample' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

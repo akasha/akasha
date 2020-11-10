@@ -6,12 +6,19 @@
     "description": "If the type attribute expects specific strings, such as the email and url types and the value don't doesn't conform to the constraints set by the type, the typeMismatch property will be true.",
     "refs": [
         {
-            "name": "email",
-            "href": "/en-US/docs/Web/HTML/Element/input/email"
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/constraints.html#dom-validitystate-typemismatch",
+            "description": "The definition of 'ValidityState.typeMismatch' in the 'HTML Living Standard' specification."
         },
         {
-            "name": "url",
-            "href": "/en-US/docs/Web/HTML/Element/input/url"
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-validitystate-typemismatch",
+            "description": "The definition of 'ValidityState.typeMismatch' in the 'HTML 5.1' specification."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/forms.html#dom-validitystate-typemismatch",
+            "description": "The definition of 'ValidityState.typeMismatch' in the 'HTML5' specification."
         }
     ]
 }

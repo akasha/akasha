@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "SVGAnimatedString.baseVal",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGAnimatedString/baseVal",
-    "description": "BaseVal gets or sets the base value of the given attribute before any animations are applied.The base value of the given attribute before applying any animations. Setter throws DOMException."
+    "description": "BaseVal gets or sets the base value of the given attribute before any animations are applied.The base value of the given attribute before applying any animations. Setter throws DOMException.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#__svg__SVGAnimatedString__baseVal"
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#__svg__SVGAnimatedString__baseVal"
+        }
+    ]
 }

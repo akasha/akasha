@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PublicKeyCredential.getClientExtensionResults",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/getClientExtensionResults",
-    "description": "getClientExtensionResults() is a method of the PublicKeyCredential interface that returns an ArrayBuffer which contains a map between the extensions identifiers and their results after having being processed by the client."
+    "description": "getClientExtensionResults() is a method of the PublicKeyCredential interface that returns an ArrayBuffer which contains a map between the extensions identifiers and their results after having being processed by the client.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-publickeycredential-getclientextensionresults",
+            "description": "The definition of 'getClientExtensionResults()' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        }
+    ]
 }

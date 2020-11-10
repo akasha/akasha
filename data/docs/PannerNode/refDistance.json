@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-pannernode-refdistance",
-            "description": "The definition of 'refDistance' in Web Audio API."
+            "description": "The definition of 'refDistance' in the 'Web Audio API' specification."
         }
     ]
 }

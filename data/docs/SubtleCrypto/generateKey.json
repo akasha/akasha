@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.generateKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/generateKey",
-    "description": "Use the generateKey() method of the SubtleCrypto interface to generate a new key (for symmetric algorithms) or key pair (for public-key algorithms)."
+    "description": "Use the generateKey() method of the SubtleCrypto interface to generate a new key (for symmetric algorithms) or key pair (for public-key algorithms).",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-generateKey",
+            "description": "The definition of 'SubtleCrypto.generateKey()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

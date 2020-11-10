@@ -3,5 +3,15 @@
     "kind": "Type",
     "name": "TouchList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchList",
-    "description": "The TouchList interface represents a list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding TouchList object would have one Touch object for each finger, for a total of three entries."
+    "description": "The TouchList interface represents a list of contact points on a touch surface. For example, if the user has three fingers on the touch surface (such as a screen or trackpad), the corresponding TouchList object would have one Touch object for each finger, for a total of three entries.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#touchlist-interface"
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#touchlist-interface"
+        }
+    ]
 }

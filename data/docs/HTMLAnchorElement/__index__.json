@@ -1,67 +1,67 @@
 
 {
     "name": "HTMLAnchorElement",
-    "lastModifiedAt": 1604970427742,
+    "lastModifiedAt": 1604976349250,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450617757
+            "lastModifiedAt": 1604976316968
         },
         {
             "name": "download",
-            "lastModifiedAt": 1604450618234
+            "lastModifiedAt": 1604976317480
         },
         {
             "name": "hash",
-            "lastModifiedAt": 1604450618851
+            "lastModifiedAt": 1604976319011
         },
         {
             "name": "host",
-            "lastModifiedAt": 1604450619464
+            "lastModifiedAt": 1604976320924
         },
         {
             "name": "hostname",
-            "lastModifiedAt": 1604450620095
+            "lastModifiedAt": 1604976323211
         },
         {
             "name": "href",
-            "lastModifiedAt": 1604450620742
+            "lastModifiedAt": 1604976324837
         },
         {
             "name": "origin",
-            "lastModifiedAt": 1604450621655
+            "lastModifiedAt": 1604976326622
         },
         {
             "name": "password",
-            "lastModifiedAt": 1604450622293
+            "lastModifiedAt": 1604976328450
         },
         {
             "name": "pathname",
-            "lastModifiedAt": 1604450623194
+            "lastModifiedAt": 1604976329883
         },
         {
             "name": "port",
-            "lastModifiedAt": 1604450623821
+            "lastModifiedAt": 1604976332258
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1604450624465
+            "lastModifiedAt": 1604976334597
         },
         {
             "name": "referrerPolicy",
-            "lastModifiedAt": 1604450625202
+            "lastModifiedAt": 1604976335221
         },
         {
             "name": "rel",
-            "lastModifiedAt": 1604450625786
+            "lastModifiedAt": 1604976335823
         },
         {
             "name": "relList",
-            "lastModifiedAt": 1604450626552
+            "lastModifiedAt": 1604976336849
         },
         {
             "name": "search",
-            "lastModifiedAt": 1604450627455
+            "lastModifiedAt": 1604976338908
         },
         {
             "name": "toString",
@@ -69,7 +69,7 @@
         },
         {
             "name": "username",
-            "lastModifiedAt": 1604450628087
+            "lastModifiedAt": 1604976340949
         }
     ]
 }

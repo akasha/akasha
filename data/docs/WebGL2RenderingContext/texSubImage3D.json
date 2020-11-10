@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.texSubImage3D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texSubImage3D",
-    "description": "The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture."
+    "description": "The WebGL2RenderingContext.texSubImage3D() method of the WebGL API specifies a sub-rectangle of the current texture.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6",
+            "description": "The definition of 'texSubImage3D' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glTexSubImage3D.xhtml",
+            "description": "The definition of 'glTexSubImage2D' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-hostname",
-            "description": "The definition of 'URLUtilsReadOnly.hostname' in URL."
+            "description": "The definition of 'URLUtilsReadOnly.hostname' in the 'URL' specification."
         }
     ]
 }

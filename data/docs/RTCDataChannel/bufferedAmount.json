@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-datachannel-bufferedamount",
-            "description": "The definition of 'RTCDataChannel.bufferedAmount' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'RTCDataChannel.bufferedAmount' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

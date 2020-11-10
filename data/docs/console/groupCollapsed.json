@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#groupcollapsed",
-            "description": "The definition of 'console.groupCollapsed()' in Console API."
+            "description": "The definition of 'console.groupCollapsed()' in the 'Console API' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-pagetransitionevent-persisted",
-            "description": "The definition of 'PageTransitionEvent: persisted' in HTML Living Standard."
+            "description": "The definition of 'PageTransitionEvent: persisted' in the 'HTML Living Standard' specification."
         }
     ]
 }

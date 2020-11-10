@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#gamepadhapticactuator-interface",
-            "description": "The definition of 'GamepadHapticActuator' in Gamepad Extensions."
+            "description": "The definition of 'GamepadHapticActuator' in the 'Gamepad Extensions' specification."
         }
     ]
 }

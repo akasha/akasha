@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dictdef-mediastreamaudiosourceoptions",
-            "description": "The definition of 'MediaStreamAudioSourceOptions' in Web Audio API."
+            "description": "The definition of 'MediaStreamAudioSourceOptions' in the 'Web Audio API' specification."
         }
     ]
 }

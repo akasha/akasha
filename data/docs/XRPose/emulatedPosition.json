@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRPose.emulatedPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRPose/emulatedPosition",
-    "description": "The emulatedPosition read-only attribute of the XRPose interface is a Boolean value indicating whether or not both the the position component of the pose's transform is directly taken from the XR device, or it's simulated or computed based on other sources."
+    "description": "The emulatedPosition read-only attribute of the XRPose interface is a Boolean value indicating whether or not both the the position component of the pose's transform is directly taken from the XR device, or it's simulated or computed based on other sources.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrpose-emulatedposition",
+            "description": "The definition of 'XRPose.emulatedPosition' in the 'WebXR Device API' specification."
+        }
+    ]
 }

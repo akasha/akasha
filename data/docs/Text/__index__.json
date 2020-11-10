@@ -1,7 +1,7 @@
 
 {
     "name": "Text",
-    "lastModifiedAt": 1604009183812,
+    "lastModifiedAt": 1604978213283,
     "entries": [
         {
             "name": "Text",
@@ -9,11 +9,11 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193080380
+            "lastModifiedAt": 1604978209799
         },
         {
             "name": "assignedSlot",
-            "lastModifiedAt": 1597193081178
+            "lastModifiedAt": 1604978211299
         },
         {
             "name": "isElementContentWhitespace",
@@ -21,11 +21,11 @@
         },
         {
             "name": "splitText",
-            "lastModifiedAt": 1600305862156
+            "lastModifiedAt": 1604978213283
         },
         {
             "name": "wholeText",
-            "lastModifiedAt": 1597193080936
+            "lastModifiedAt": 1604978211919
         }
     ]
 }

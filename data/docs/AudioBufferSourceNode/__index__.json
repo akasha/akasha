@@ -1,43 +1,43 @@
 
 {
     "name": "AudioBufferSourceNode",
-    "lastModifiedAt": 1604969305888,
+    "lastModifiedAt": 1604975334556,
     "entries": [
         {
             "name": "AudioBufferSourceNode",
-            "lastModifiedAt": 1604448540850
+            "lastModifiedAt": 1604975329787
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448540384
+            "lastModifiedAt": 1604975328878
         },
         {
             "name": "buffer",
-            "lastModifiedAt": 1604448541417
+            "lastModifiedAt": 1604975330674
         },
         {
             "name": "detune",
-            "lastModifiedAt": 1604448542450
+            "lastModifiedAt": 1604975331159
         },
         {
             "name": "loop",
-            "lastModifiedAt": 1604448543472
+            "lastModifiedAt": 1604975331777
         },
         {
             "name": "loopEnd",
-            "lastModifiedAt": 1604448544703
+            "lastModifiedAt": 1604975332835
         },
         {
             "name": "loopStart",
-            "lastModifiedAt": 1604448545292
+            "lastModifiedAt": 1604975333317
         },
         {
             "name": "playbackRate",
-            "lastModifiedAt": 1604448545747
+            "lastModifiedAt": 1604975333784
         },
         {
             "name": "start",
-            "lastModifiedAt": 1604448546555
+            "lastModifiedAt": 1604975334556
         }
     ]
 }

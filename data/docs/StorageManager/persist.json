@@ -8,7 +8,7 @@
         {
             "name": "Storage",
             "href": "https://storage.spec.whatwg.org/#dom-storagemanager-persist",
-            "description": "The definition of 'persist' in Storage."
+            "description": "The definition of 'persist' in the 'Storage' specification."
         }
     ]
 }

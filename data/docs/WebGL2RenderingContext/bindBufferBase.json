@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.bindBufferBase",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferBase",
-    "description": "The WebGL2RenderingContext.bindBufferBase() method of the WebGL 2 API binds a given WebGLBuffer to a given binding point (target) at a given index."
+    "description": "The WebGL2RenderingContext.bindBufferBase() method of the WebGL 2 API binds a given WebGLBuffer to a given binding point (target) at a given index.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16",
+            "description": "The definition of 'bindBufferBase' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBufferBase.xhtml",
+            "description": "The definition of 'glBindBufferBase' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

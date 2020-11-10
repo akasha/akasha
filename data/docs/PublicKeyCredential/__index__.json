@@ -1,31 +1,31 @@
 
 {
     "name": "PublicKeyCredential",
-    "lastModifiedAt": 1600312733897,
+    "lastModifiedAt": 1604977417932,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279900653
+            "lastModifiedAt": 1604977415374
         },
         {
             "name": "getClientExtensionResults",
-            "lastModifiedAt": 1597192656178
+            "lastModifiedAt": 1604977417476
         },
         {
             "name": "id",
-            "lastModifiedAt": 1597192654833
+            "lastModifiedAt": 1604977415839
         },
         {
             "name": "isUserVerifyingPlatformAuthenticatorAvailable",
-            "lastModifiedAt": 1597192656592
+            "lastModifiedAt": 1604977417932
         },
         {
             "name": "rawId",
-            "lastModifiedAt": 1597192655086
+            "lastModifiedAt": 1604977416332
         },
         {
             "name": "response",
-            "lastModifiedAt": 1597192655874
+            "lastModifiedAt": 1604977416812
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-frequency",
-            "description": "The definition of 'frequency' in Web Audio API."
+            "description": "The definition of 'frequency' in the 'Web Audio API' specification."
         }
     ]
 }

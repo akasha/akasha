@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.onend",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onend",
-    "description": "The onend property of the SpeechSynthesisUtterance interface represents an event handler that will run when the utterance has finished being spoken (when the end event fires.)"
+    "description": "The onend property of the SpeechSynthesisUtterance interface represents an event handler that will run when the utterance has finished being spoken (when the end event fires.)",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-onend",
+            "description": "The definition of 'onend' in the 'Web Speech API' specification."
+        }
+    ]
 }

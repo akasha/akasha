@@ -3,5 +3,32 @@
     "kind": "Method",
     "name": "Node.insertBefore",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore",
-    "description": "The Node.insertBefore() method inserts a node before a reference node as a child of a specified parent node."
+    "description": "The Node.insertBefore() method inserts a node before a reference node as a child of a specified parent node.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-insertbefore",
+            "description": "The definition of 'Node.insertBefore' in the 'DOM' specification."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-node-insertbefore",
+            "description": "The definition of 'Node.insertBefore' in the 'DOM4' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-952280727",
+            "description": "The definition of 'Node.insertBefore' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-952280727",
+            "description": "The definition of 'Node.insertBefore' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-insertBefore",
+            "description": "The definition of 'Node.insertBefore' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PushManager.supportedContentEncodings",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager/supportedContentEncodings",
-    "description": "The supportedContentEncodings read-only property of the PushManager interface returns an array of supported content codings that can be used to encrypt the payload of a push message."
+    "description": "The supportedContentEncodings read-only property of the PushManager interface returns an array of supported content codings that can be used to encrypt the payload of a push message.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushmanager-supportedcontentencodings",
+            "description": "The definition of 'supportedContentEncodings' in the 'Push API' specification."
+        }
+    ]
 }

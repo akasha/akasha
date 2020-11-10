@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemconfiguration-distinctiveidentifier",
-            "description": "The definition of 'distinctiveIdentifier' in Encrypted Media Extensions."
+            "description": "The definition of 'distinctiveIdentifier' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

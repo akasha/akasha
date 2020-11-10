@@ -8,7 +8,7 @@
         {
             "name": "OES_vertex_array_object",
             "href": "https://www.khronos.org/registry/webgl/extensions/OES_vertex_array_object/",
-            "description": "The definition of 'OES_vertex_array_object' in OES_vertex_array_object."
+            "description": "The definition of 'OES_vertex_array_object' in the 'OES_vertex_array_object' specification."
         }
     ]
 }

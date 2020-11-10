@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.requireInteraction",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/requireInteraction",
-    "description": "The requireInteraction read-only property of the Notification interface returns a Boolean indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically."
+    "description": "The requireInteraction read-only property of the Notification interface returns a Boolean indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-requireinteraction",
+            "description": "The definition of 'requireInteraction' in the 'Notifications API' specification."
+        }
+    ]
 }

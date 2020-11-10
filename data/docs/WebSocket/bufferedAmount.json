@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-bufferedamount",
-            "description": "The definition of 'WebSocket: bufferedAmount' in HTML Living Standard."
+            "description": "The definition of 'WebSocket: bufferedAmount' in the 'HTML Living Standard' specification."
         }
     ]
 }

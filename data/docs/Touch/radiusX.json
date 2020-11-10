@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "Touch.radiusX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/radiusX",
-    "description": "Returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as Touch.screenX."
+    "description": "Returns the X radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as Touch.screenX.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touch-radiusx"
+        }
+    ]
 }

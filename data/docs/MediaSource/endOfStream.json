@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaSource.endOfStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/endOfStream",
-    "description": "The endOfStream() method of the MediaSource interface signals the end of the stream."
+    "description": "The endOfStream() method of the MediaSource interface signals the end of the stream.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#dom-mediasource-endofstream",
+            "description": "The definition of 'endOfStream()' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

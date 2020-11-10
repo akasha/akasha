@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRWebGLLayer.getNativeFramebufferScaleFactor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getNativeFramebufferScaleFactor",
-    "description": "The static method XRWebGLLayer.getNativeFramebufferScaleFactor() returns a floating-point scaling factor by which one can multiply the specified XRSession's resolution to get the native resolution of the WebXR device's frame buffer."
+    "description": "The static method XRWebGLLayer.getNativeFramebufferScaleFactor() returns a floating-point scaling factor by which one can multiply the specified XRSession's resolution to get the native resolution of the WebXR device's frame buffer.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-getnativeframebufferscalefactor",
+            "description": "The definition of 'static XRWebGLLayer.getNativeFramebufferScaleFactor()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

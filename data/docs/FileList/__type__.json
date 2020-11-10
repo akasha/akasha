@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "FileList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileList",
-    "description": "An object of this type is returned by the files property of the HTML input element; this lets you access the list of files selected with the input type=&quot;file&quot; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage."
+    "description": "An object of this type is returned by the files property of the HTML input element; this lets you access the list of files selected with the input type=&quot;file&quot; element. It's also used for a list of files dropped into web content when using the drag and drop API; see the DataTransfer object for details on this usage.",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#filelist-section",
+            "description": "The definition of 'FileList' in the 'File API' specification."
+        },
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#concept-input-type-file-selected",
+            "description": "The definition of 'selected files' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Input Events Level 2",
             "href": "https://w3c.github.io/input-events/#dom-inputevent-gettargetranges",
-            "description": "The definition of 'getTargetRanges()' in Input Events Level 2."
+            "description": "The definition of 'getTargetRanges()' in the 'Input Events Level 2' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.badge",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/badge",
-    "description": "The badge property of the Notification interface returns the URL of the image used to represent the notification when there is not enough space to display the notification itself."
+    "description": "The badge property of the Notification interface returns the URL of the image used to represent the notification when there is not enough space to display the notification itself.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-badge",
+            "description": "The definition of 'badge' in the 'Notifications API' specification."
+        }
+    ]
 }

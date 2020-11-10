@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "IDBIndex.keyPath",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/keyPath",
-    "description": "Any data type that can be used as a key path.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbindex-keypath",
-            "description": "The definition of 'keyPath' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-keypath",
-            "description": "The definition of 'keyPath' in Indexed Database API Draft."
-        }
-    ]
+    "description": "Any data type that can be used as a key path."
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "IDBObjectStore.getKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBObjectStore/getKey",
-    "description": "If a key is successfully found, then a structured clone of it is created and set as the result of the request object."
+    "description": "If a key is successfully found, then a structured clone of it is created and set as the result of the request object.",
+    "refs": [
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbobjectstore-getkey",
+            "description": "The definition of 'getKey()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "DOMRect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRect",
-    "description": "A DOMRect describes the size and position of a rectangle.",
-    "refs": [
-        {
-            "name": "Geometry Interfaces Module Level 1",
-            "href": "https://drafts.fxtf.org/geometry/#DOMRect",
-            "description": "The definition of 'DOMRect' in Geometry Interfaces Module Level 1."
-        }
-    ]
+    "description": "A DOMRect describes the size and position of a rectangle."
 }

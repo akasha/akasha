@@ -1,27 +1,27 @@
 
 {
     "name": "Navigator",
-    "lastModifiedAt": 1604450209941,
+    "lastModifiedAt": 1604977165018,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604446974513
+            "lastModifiedAt": 1604977129123
         },
         {
             "name": "activeVRDisplays",
-            "lastModifiedAt": 1604446974818
+            "lastModifiedAt": 1604977130225
         },
         {
             "name": "appCodeName",
-            "lastModifiedAt": 1604446975411
+            "lastModifiedAt": 1604977131232
         },
         {
             "name": "appName",
-            "lastModifiedAt": 1604446976517
+            "lastModifiedAt": 1604977132487
         },
         {
             "name": "appVersion",
-            "lastModifiedAt": 1604446977547
+            "lastModifiedAt": 1604977133993
         },
         {
             "name": "battery",
@@ -37,19 +37,19 @@
         },
         {
             "name": "clipboard",
-            "lastModifiedAt": 1604446979775
+            "lastModifiedAt": 1604977136385
         },
         {
             "name": "connection",
-            "lastModifiedAt": 1604446980396
+            "lastModifiedAt": 1604977136892
         },
         {
             "name": "contacts",
-            "lastModifiedAt": 1604446981247
+            "lastModifiedAt": 1604977137359
         },
         {
             "name": "cookieEnabled",
-            "lastModifiedAt": 1604446981956
+            "lastModifiedAt": 1604977137996
         },
         {
             "name": "credentials",
@@ -57,23 +57,23 @@
         },
         {
             "name": "deviceMemory",
-            "lastModifiedAt": 1604446983631
+            "lastModifiedAt": 1604977140167
         },
         {
             "name": "doNotTrack",
-            "lastModifiedAt": 1604446984207
+            "lastModifiedAt": 1604977140652
         },
         {
             "name": "geolocation",
-            "lastModifiedAt": 1604446984829
+            "lastModifiedAt": 1604977141893
         },
         {
             "name": "getBattery",
-            "lastModifiedAt": 1604447006416
+            "lastModifiedAt": 1604977159203
         },
         {
             "name": "getGamepads",
-            "lastModifiedAt": 1604447007047
+            "lastModifiedAt": 1604977159869
         },
         {
             "name": "getUserMedia",
@@ -81,35 +81,35 @@
         },
         {
             "name": "getVRDisplays",
-            "lastModifiedAt": 1604447008371
+            "lastModifiedAt": 1604977160867
         },
         {
             "name": "keyboard",
-            "lastModifiedAt": 1604446985434
+            "lastModifiedAt": 1604977142391
         },
         {
             "name": "language",
-            "lastModifiedAt": 1604446986449
+            "lastModifiedAt": 1604977143480
         },
         {
             "name": "languages",
-            "lastModifiedAt": 1604446988025
+            "lastModifiedAt": 1604977144605
         },
         {
             "name": "locks",
-            "lastModifiedAt": 1604446988858
+            "lastModifiedAt": 1604977145088
         },
         {
             "name": "maxTouchPoints",
-            "lastModifiedAt": 1604446989440
+            "lastModifiedAt": 1604977145706
         },
         {
             "name": "mediaDevices",
-            "lastModifiedAt": 1604446990049
+            "lastModifiedAt": 1604977146342
         },
         {
             "name": "mediaSession",
-            "lastModifiedAt": 1604446991170
+            "lastModifiedAt": 1604977146845
         },
         {
             "name": "mozNotification",
@@ -125,19 +125,19 @@
         },
         {
             "name": "onLine",
-            "lastModifiedAt": 1604446993550
+            "lastModifiedAt": 1604977147812
         },
         {
             "name": "oscpu",
-            "lastModifiedAt": 1596544782803
+            "lastModifiedAt": 1604977148394
         },
         {
             "name": "permissions",
-            "lastModifiedAt": 1604446995401
+            "lastModifiedAt": 1604974904582
         },
         {
             "name": "platform",
-            "lastModifiedAt": 1604446996405
+            "lastModifiedAt": 1604977150206
         },
         {
             "name": "presentation",
@@ -145,47 +145,47 @@
         },
         {
             "name": "product",
-            "lastModifiedAt": 1604446997695
+            "lastModifiedAt": 1604977151725
         },
         {
             "name": "productSub",
-            "lastModifiedAt": 1604446998877
+            "lastModifiedAt": 1604977152238
         },
         {
             "name": "registerProtocolHandler",
-            "lastModifiedAt": 1604447010054
+            "lastModifiedAt": 1604977161910
         },
         {
             "name": "requestMediaKeySystemAccess",
-            "lastModifiedAt": 1604447010670
+            "lastModifiedAt": 1604977162422
         },
         {
             "name": "sendBeacon",
-            "lastModifiedAt": 1604447011899
+            "lastModifiedAt": 1604977162951
         },
         {
             "name": "serviceWorker",
-            "lastModifiedAt": 1604446999472
+            "lastModifiedAt": 1604977153470
         },
         {
             "name": "share",
-            "lastModifiedAt": 1604447012481
+            "lastModifiedAt": 1604977163487
         },
         {
             "name": "taintEnabled",
-            "lastModifiedAt": 1604447013710
+            "lastModifiedAt": 1604977164509
         },
         {
             "name": "userAgent",
-            "lastModifiedAt": 1604447000829
+            "lastModifiedAt": 1604977155299
         },
         {
             "name": "vendor",
-            "lastModifiedAt": 1604447002173
+            "lastModifiedAt": 1604977155799
         },
         {
             "name": "vendorSub",
-            "lastModifiedAt": 1604447002792
+            "lastModifiedAt": 1604977156311
         },
         {
             "name": "vibrate",
@@ -197,11 +197,11 @@
         },
         {
             "name": "webdriver",
-            "lastModifiedAt": 1604447003354
+            "lastModifiedAt": 1604977156813
         },
         {
             "name": "xr",
-            "lastModifiedAt": 1604447004175
+            "lastModifiedAt": 1604977157361
         }
     ]
 }

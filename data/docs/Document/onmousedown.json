@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Document.onmousedown",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onmousedown",
-    "description": "The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onmousedown",
-            "description": "The definition of 'onmousedown' in HTML Living Standard."
-        }
-    ]
+    "description": "The onmousedown property of the GlobalEventHandlers mixin is an EventHandler that processes mousedown events."
 }

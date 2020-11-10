@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-eventtarget-removeeventlistener",
-            "description": "The definition of 'EventTarget.removeEventListener()' in DOM."
+            "description": "The definition of 'EventTarget.removeEventListener()' in the 'DOM' specification."
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#dom-eventtarget-removeeventlistener",
-            "description": "The definition of 'EventTarget.removeEventListener()' in DOM4."
+            "description": "The definition of 'EventTarget.removeEventListener()' in the 'DOM4' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-removeEventListener",
-            "description": "The definition of 'EventTarget.removeEventListener()' in Document Object Model (DOM) Level 2 Events Specification."
+            "description": "The definition of 'EventTarget.removeEventListener()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
         }
     ]
 }

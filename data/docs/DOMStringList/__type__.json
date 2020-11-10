@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#the-domstringlist-interface",
-            "description": "The definition of 'DOMStringList' in HTML Living Standard."
+            "description": "The definition of 'DOMStringList' in the 'HTML Living Standard' specification."
         }
     ]
 }

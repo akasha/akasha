@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerout",
-            "description": "The definition of 'onpointerout' in Pointer Events &ndash; Level 2."
+            "description": "The definition of 'onpointerout' in the 'Pointer Events &ndash; Level 2' specification."
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerout",
-            "description": "The definition of 'onpointerout' in Pointer Events."
+            "description": "The definition of 'onpointerout' in the 'Pointer Events' specification."
         }
     ]
 }

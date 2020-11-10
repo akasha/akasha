@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "Node.appendChild",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild",
-    "description": "The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node)."
+    "description": "The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node).",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-appendchild",
+            "description": "The definition of 'Node.appendChild()' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107",
+            "description": "The definition of 'Node.appendChild()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-184E7107",
+            "description": "The definition of 'Node.appendChild()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 1 Specification",
+            "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-184E7107",
+            "description": "The definition of 'Node.appendChild()' in the 'Document Object Model (DOM) Level 1 Specification' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.image",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/image",
-    "description": "The image read-only property of the Notification interface contains the URL of an image to be displayed as part of the notification"
+    "description": "The image read-only property of the Notification interface contains the URL of an image to be displayed as part of the notification",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#image-resource",
+            "description": "The definition of 'image' in the 'Notifications API' specification."
+        }
+    ]
 }

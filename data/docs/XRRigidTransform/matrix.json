@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRRigidTransform.matrix",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/matrix",
-    "description": "The read-only XRRigidTransform property matrix returns the transform matrix represented by the object. The returned matrix can then be premultiplied with a column vector to rotate the vector by the 3D rotation specified by the orientation, then translate it by the position."
+    "description": "The read-only XRRigidTransform property matrix returns the transform matrix represented by the object. The returned matrix can then be premultiplied with a column vector to rotate the vector by the 3D rotation specified by the orientation, then translate it by the position.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrrigidtransform-matrix",
+            "description": "The definition of 'XRRigidTransform.matrix' in the 'WebXR Device API' specification."
+        }
+    ]
 }

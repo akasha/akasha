@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SVGGraphicsElement.getBBox",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGraphicsElement/getBBox",
-    "description": "The SVGGraphicsElement.getBBox() allows us to determine the coordinates of the smallest rectangle in which the object fits. The coordinates returned are with respect to the current SVG space (after the application of all geometry attributes on all the elements contained in the target element)."
+    "description": "The SVGGraphicsElement.getBBox() allows us to determine the coordinates of the smallest rectangle in which the object fits. The coordinates returned are with respect to the current SVG space (after the application of all geometry attributes on all the elements contained in the target element).",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#__svg__SVGLocatable__getBBox",
+            "description": "The definition of 'getBBox' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

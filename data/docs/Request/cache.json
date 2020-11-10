@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-cache",
-            "description": "The definition of 'cache' in Fetch."
+            "description": "The definition of 'cache' in the 'Fetch' specification."
         }
     ]
 }

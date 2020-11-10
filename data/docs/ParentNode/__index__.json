@@ -1,7 +1,7 @@
 
 {
     "name": "ParentNode",
-    "lastModifiedAt": 1604008702383,
+    "lastModifiedAt": 1604977288052,
     "entries": [
         {
             "name": "__type__",
@@ -33,11 +33,11 @@
         },
         {
             "name": "querySelector",
-            "lastModifiedAt": 1597193019402
+            "lastModifiedAt": 1604977286092
         },
         {
             "name": "querySelectorAll",
-            "lastModifiedAt": 1597193019784
+            "lastModifiedAt": 1604977287037
         },
         {
             "name": "replaceChildren",

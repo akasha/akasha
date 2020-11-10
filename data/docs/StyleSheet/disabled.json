@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "StyleSheet.disabled",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StyleSheet/disabled",
-    "description": "The disabled property of the StyleSheet interface determines whether the style sheet is prevented from applying to the document.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#dom-stylesheet-disabled",
-            "description": "The definition of 'StyleSheet.disabled' in CSS Object Model (CSSOM)."
-        },
-        {
-            "name": "Document Object Model (DOM) Level 2 Style Specification",
-            "href": "https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-StyleSheet-disabled",
-            "description": "The definition of 'StyleSheet.disabled' in Document Object Model (DOM) Level 2 Style Specification."
-        }
-    ]
+    "description": "The disabled property of the StyleSheet interface determines whether the style sheet is prevented from applying to the document."
 }

@@ -1,31 +1,31 @@
 
 {
     "name": "DataTransferItem",
-    "lastModifiedAt": 1604969751801,
+    "lastModifiedAt": 1604975763920,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450276796
+            "lastModifiedAt": 1604975759452
         },
         {
             "name": "getAsFile",
-            "lastModifiedAt": 1604450278291
+            "lastModifiedAt": 1604975762408
         },
         {
             "name": "getAsString",
-            "lastModifiedAt": 1604450278773
+            "lastModifiedAt": 1604975762896
         },
         {
             "name": "kind",
-            "lastModifiedAt": 1604450277252
+            "lastModifiedAt": 1604975760533
         },
         {
             "name": "type",
-            "lastModifiedAt": 1604450277734
+            "lastModifiedAt": 1604975761303
         },
         {
             "name": "webkitGetAsEntry",
-            "lastModifiedAt": 1604450279326
+            "lastModifiedAt": 1604975763920
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.resumeTransformFeedback",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/resumeTransformFeedback",
-    "description": "The WebGL2RenderingContext.resumeTransformFeedback() method of the WebGL 2 API resumes a transform feedback operation."
+    "description": "The WebGL2RenderingContext.resumeTransformFeedback() method of the WebGL 2 API resumes a transform feedback operation.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
+            "description": "The definition of 'resumeTransformFeedback' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glResumeTransformFeedback.xhtml",
+            "description": "The definition of 'glResumeTransformFeedback' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

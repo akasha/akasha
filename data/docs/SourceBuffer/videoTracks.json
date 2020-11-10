@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBuffer.videoTracks",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/videoTracks",
-    "description": "The videoTracks read-only property of the SourceBuffer interface returns a list of the video tracks currently contained inside the SourceBuffer."
+    "description": "The videoTracks read-only property of the SourceBuffer interface returns a list of the video tracks currently contained inside the SourceBuffer.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-videotracks",
+            "description": "The definition of 'videoTracks' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

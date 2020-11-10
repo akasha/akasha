@@ -3,11 +3,5 @@
     "kind": "Property",
     "name": "HTMLMediaElement.controlsList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/controlsList",
-    "description": "The controlsList property of the HTMLMediaElement interface returns a DOMTokenList that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The DOMTokenList takes one or more of three possible values: nodownload, nofullscreen, and noremoteplayback.",
-    "refs": [
-        {
-            "name": "Controls List API: Solution outline",
-            "href": "https://wicg.github.io/controls-list/#solution-outline"
-        }
-    ]
+    "description": "The controlsList property of the HTMLMediaElement interface returns a DOMTokenList that helps the user agent select what controls to show on the media element whenever the user agent shows its own set of controls. The DOMTokenList takes one or more of three possible values: nodownload, nofullscreen, and noremoteplayback."
 }

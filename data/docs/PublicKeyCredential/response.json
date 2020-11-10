@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PublicKeyCredential.response",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/response",
-    "description": "The response read-only property of the PublicKeyCredential interface is an AuthenticatorResponse object which is sent from the authenticator to the user agent for the creation/fetching of credentials. The information contained in this response will be used by the relying party's server to verify the demand is legitimate."
+    "description": "The response read-only property of the PublicKeyCredential interface is an AuthenticatorResponse object which is sent from the authenticator to the user agent for the creation/fetching of credentials. The information contained in this response will be used by the relying party's server to verify the demand is legitimate.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-publickeycredential-response",
+            "description": "The definition of 'response' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        }
+    ]
 }

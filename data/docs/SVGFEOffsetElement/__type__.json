@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFEOffsetElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEOffsetElement",
-    "description": "The SVGFEOffsetElement interface corresponds to the feOffset element."
+    "description": "The SVGFEOffsetElement interface corresponds to the feOffset element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEOffsetElement",
+            "description": "The definition of 'SVGFEOffsetElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEOffsetElement",
+            "description": "The definition of 'SVGFEOffsetElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

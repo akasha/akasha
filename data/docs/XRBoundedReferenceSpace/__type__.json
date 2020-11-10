@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRBoundedReferenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace",
-    "description": "The WebXR Device API's XRBoundedReferenceSpace interface describes a virtual world reference space which has preset boundaries. This extends XRReferenceSpace, which describes an essentially unrestricted space around the viewer's position."
+    "description": "The WebXR Device API's XRBoundedReferenceSpace interface describes a virtual world reference space which has preset boundaries. This extends XRReferenceSpace, which describes an essentially unrestricted space around the viewer's position.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrboundedreferencespace-interface",
+            "description": "The definition of 'XRBoundedReferenceSpace' in the 'WebXR Device API' specification."
+        }
+    ]
 }

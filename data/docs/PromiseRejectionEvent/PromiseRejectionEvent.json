@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#the-promiserejectionevent-interface",
-            "description": "The definition of 'the PromiseRejectionEvent interface' in HTML Living Standard."
+            "description": "The definition of 'the PromiseRejectionEvent interface' in the 'HTML Living Standard' specification."
         }
     ]
 }

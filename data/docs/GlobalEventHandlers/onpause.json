@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "GlobalEventHandlers.onpause",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onpause",
-    "description": "The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#handler-onpause",
-            "description": "The definition of 'onpause' in HTML Living Standard."
-        }
-    ]
+    "description": "The onpause property of the GlobalEventHandlers mixin is the EventHandler for processing pause events."
 }

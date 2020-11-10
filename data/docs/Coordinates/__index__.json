@@ -1,39 +1,39 @@
 
 {
     "name": "Coordinates",
-    "lastModifiedAt": 1604969634989,
+    "lastModifiedAt": 1604975647513,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604969624703
+            "lastModifiedAt": 1604975636684
         },
         {
             "name": "accuracy",
-            "lastModifiedAt": 1604969625796
+            "lastModifiedAt": 1604975638518
         },
         {
             "name": "altitude",
-            "lastModifiedAt": 1604969626822
+            "lastModifiedAt": 1604975639791
         },
         {
             "name": "altitudeAccuracy",
-            "lastModifiedAt": 1604969628075
+            "lastModifiedAt": 1604975641020
         },
         {
             "name": "heading",
-            "lastModifiedAt": 1604969629052
+            "lastModifiedAt": 1604975642806
         },
         {
             "name": "latitude",
-            "lastModifiedAt": 1604969630563
+            "lastModifiedAt": 1604975644046
         },
         {
             "name": "longitude",
-            "lastModifiedAt": 1604969631652
+            "lastModifiedAt": 1604975645111
         },
         {
             "name": "speed",
-            "lastModifiedAt": 1604969633517
+            "lastModifiedAt": 1604975646092
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.containsNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/containsNode",
-    "description": "The Selection.containsNode() method indicates whether a specfied node is part of the selection."
+    "description": "The Selection.containsNode() method indicates whether a specfied node is part of the selection.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-containsnode",
+            "description": "The definition of 'Selection.containsNode()' in the 'Selection API' specification."
+        }
+    ]
 }

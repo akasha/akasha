@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisVoice.lang",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisVoice/lang",
-    "description": "The lang read-only property of the SpeechSynthesisVoice interface returns a BCP 47 language tag indicating the language of the voice."
+    "description": "The lang read-only property of the SpeechSynthesisVoice interface returns a BCP 47 language tag indicating the language of the voice.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisvoice-lang",
+            "description": "The definition of 'lang' in the 'Web Speech API' specification."
+        }
+    ]
 }

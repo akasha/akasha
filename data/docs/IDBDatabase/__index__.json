@@ -1,11 +1,11 @@
 
 {
     "name": "IDBDatabase",
-    "lastModifiedAt": 1604970881410,
+    "lastModifiedAt": 1604976808745,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604970869195
+            "lastModifiedAt": 1604976798538
         },
         {
             "name": "abort_event",
@@ -13,7 +13,7 @@
         },
         {
             "name": "close",
-            "lastModifiedAt": 1604970874402
+            "lastModifiedAt": 1604976804036
         },
         {
             "name": "close_event",
@@ -33,27 +33,27 @@
         },
         {
             "name": "name",
-            "lastModifiedAt": 1604970869859
+            "lastModifiedAt": 1604976799057
         },
         {
             "name": "objectStoreNames",
-            "lastModifiedAt": 1604970870408
+            "lastModifiedAt": 1604976800071
         },
         {
             "name": "onabort",
-            "lastModifiedAt": 1604970870921
+            "lastModifiedAt": 1604976801117
         },
         {
             "name": "onclose",
-            "lastModifiedAt": 1604970871467
+            "lastModifiedAt": 1604976801637
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1604970872659
+            "lastModifiedAt": 1604976802137
         },
         {
             "name": "onversionchange",
-            "lastModifiedAt": 1604970873305
+            "lastModifiedAt": 1604976802916
         },
         {
             "name": "transaction",
@@ -61,7 +61,7 @@
         },
         {
             "name": "version",
-            "lastModifiedAt": 1604970873900
+            "lastModifiedAt": 1604976803367
         },
         {
             "name": "versionchange_event",

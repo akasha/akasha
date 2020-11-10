@@ -8,7 +8,7 @@
         {
             "name": "Gamepad",
             "href": "https://w3c.github.io/gamepad/#event-gamepaddisconnected",
-            "description": "The definition of 'gamepaddisconnected event' in Gamepad."
+            "description": "The definition of 'gamepaddisconnected event' in the 'Gamepad' specification."
         }
     ]
 }

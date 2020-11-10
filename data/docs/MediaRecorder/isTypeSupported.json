@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-istypesupported",
-            "description": "The definition of 'isTypeSupported()' in MediaStream Recording."
+            "description": "The definition of 'isTypeSupported()' in the 'MediaStream Recording' specification."
         }
     ]
 }

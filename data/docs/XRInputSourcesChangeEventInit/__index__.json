@@ -1,23 +1,23 @@
 
 {
     "name": "XRInputSourcesChangeEventInit",
-    "lastModifiedAt": 1601467459845,
+    "lastModifiedAt": 1604979055533,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279112347
+            "lastModifiedAt": 1604979053913
         },
         {
             "name": "added",
-            "lastModifiedAt": 1599279113443
+            "lastModifiedAt": 1604979054416
         },
         {
             "name": "removed",
-            "lastModifiedAt": 1596711653764
+            "lastModifiedAt": 1604979054872
         },
         {
             "name": "session",
-            "lastModifiedAt": 1596711654265
+            "lastModifiedAt": 1604979055408
         }
     ]
 }

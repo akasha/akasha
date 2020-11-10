@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.volume",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/volume",
-    "description": "The volume property of the SpeechSynthesisUtterance interface gets and sets the volume that the utterance will be spoken at."
+    "description": "The volume property of the SpeechSynthesisUtterance interface gets and sets the volume that the utterance will be spoken at.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-volume",
+            "description": "The definition of 'volume' in the 'Web Speech API' specification."
+        }
+    ]
 }

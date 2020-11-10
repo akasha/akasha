@@ -1,7 +1,7 @@
 
 {
     "name": "RTCIceCandidatePairStats",
-    "lastModifiedAt": 1604448924445,
+    "lastModifiedAt": 1604975265800,
     "entries": [
         {
             "name": "__type__",
@@ -61,11 +61,11 @@
         },
         {
             "name": "lastResponseTimestamp",
-            "lastModifiedAt": 1604448906991
+            "lastModifiedAt": 1604975263537
         },
         {
             "name": "localCandidateId",
-            "lastModifiedAt": 1604448907771
+            "lastModifiedAt": 1604975264775
         },
         {
             "name": "nominated",

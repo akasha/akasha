@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "MediaSource.removeSourceBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaSource/removeSourceBuffer",
-    "description": "The removeSourceBuffer() method of the MediaSource interface removes the given SourceBuffer from the SourceBuffers list associated with this MediaSource object."
+    "description": "The removeSourceBuffer() method of the MediaSource interface removes the given SourceBuffer from the SourceBuffers list associated with this MediaSource object.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#dom-mediasource-removesourcebuffer",
+            "description": "The definition of 'removeSourceBuffer()' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

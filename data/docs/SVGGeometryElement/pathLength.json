@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SVGGeometryElement.pathLength",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/pathLength",
-    "description": "The SVGGeometryElement.pathLength property reflects the pathLength attribute and returns the total length of the path, in user units."
+    "description": "The SVGGeometryElement.pathLength property reflects the pathLength attribute and returns the total length of the path, in user units.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#__svg__SVGGeometryElement__pathLength",
+            "description": "The definition of 'SVGGeometryElement.pathLength' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ]
 }

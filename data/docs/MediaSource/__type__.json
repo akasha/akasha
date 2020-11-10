@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#mediasource",
-            "description": "The definition of 'MediaSource' in Media Source Extensions."
+            "description": "The definition of 'MediaSource' in the 'Media Source Extensions' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtpreceiver-track",
-            "description": "The definition of 'track' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'track' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

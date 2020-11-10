@@ -1,7 +1,7 @@
 
 {
     "name": "MediaRecorder",
-    "lastModifiedAt": 1604971069937,
+    "lastModifiedAt": 1604976987827,
     "entries": [
         {
             "name": "MediaRecorder",
@@ -13,7 +13,7 @@
         },
         {
             "name": "audioBitsPerSecond",
-            "lastModifiedAt": 1604971055305
+            "lastModifiedAt": 1604976973788
         },
         {
             "name": "error_event",
@@ -25,35 +25,35 @@
         },
         {
             "name": "isTypeSupported",
-            "lastModifiedAt": 1604971065589
+            "lastModifiedAt": 1604976983692
         },
         {
             "name": "mimeType",
-            "lastModifiedAt": 1604971056905
+            "lastModifiedAt": 1604976975625
         },
         {
             "name": "ondataavailable",
-            "lastModifiedAt": 1604971057932
+            "lastModifiedAt": 1604976976389
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1604971058415
+            "lastModifiedAt": 1604976976847
         },
         {
             "name": "onpause",
-            "lastModifiedAt": 1604971058973
+            "lastModifiedAt": 1604976977890
         },
         {
             "name": "onresume",
-            "lastModifiedAt": 1604971060002
+            "lastModifiedAt": 1604976978505
         },
         {
             "name": "onstart",
-            "lastModifiedAt": 1604971060618
+            "lastModifiedAt": 1604976979539
         },
         {
             "name": "onstop",
-            "lastModifiedAt": 1604971061697
+            "lastModifiedAt": 1604976980041
         },
         {
             "name": "onwarning",
@@ -61,35 +61,35 @@
         },
         {
             "name": "pause",
-            "lastModifiedAt": 1604971066073
+            "lastModifiedAt": 1604976984199
         },
         {
             "name": "requestData",
-            "lastModifiedAt": 1604971066607
+            "lastModifiedAt": 1604976984945
         },
         {
             "name": "resume",
-            "lastModifiedAt": 1604971067912
+            "lastModifiedAt": 1604976985777
         },
         {
             "name": "start",
-            "lastModifiedAt": 1604971068458
+            "lastModifiedAt": 1604976986278
         },
         {
             "name": "state",
-            "lastModifiedAt": 1604971063233
+            "lastModifiedAt": 1604976981398
         },
         {
             "name": "stop",
-            "lastModifiedAt": 1604971069150
+            "lastModifiedAt": 1604976987048
         },
         {
             "name": "stream",
-            "lastModifiedAt": 1604971064256
+            "lastModifiedAt": 1604976981881
         },
         {
             "name": "videoBitsPerSecond",
-            "lastModifiedAt": 1604971065086
+            "lastModifiedAt": 1604976983144
         }
     ]
 }

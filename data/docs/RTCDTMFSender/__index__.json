@@ -1,27 +1,27 @@
 
 {
     "name": "RTCDTMFSender",
-    "lastModifiedAt": 1604448836278,
+    "lastModifiedAt": 1604977458920,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448833774
+            "lastModifiedAt": 1604977456543
         },
         {
             "name": "insertDTMF",
-            "lastModifiedAt": 1604448835225
+            "lastModifiedAt": 1604977458061
         },
         {
             "name": "ontonechange",
-            "lastModifiedAt": 1604448834242
+            "lastModifiedAt": 1604977457048
         },
         {
             "name": "toneBuffer",
-            "lastModifiedAt": 1604448834730
+            "lastModifiedAt": 1604977457511
         },
         {
             "name": "tonechange_event",
-            "lastModifiedAt": 1604448836239
+            "lastModifiedAt": 1604977458828
         }
     ]
 }

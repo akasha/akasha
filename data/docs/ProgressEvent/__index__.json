@@ -1,15 +1,15 @@
 
 {
     "name": "ProgressEvent",
-    "lastModifiedAt": 1600312726533,
+    "lastModifiedAt": 1604977411876,
     "entries": [
         {
             "name": "ProgressEvent",
-            "lastModifiedAt": 1597193625929
+            "lastModifiedAt": 1604977409168
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193625515
+            "lastModifiedAt": 1604977408703
         },
         {
             "name": "initProgressEvent",
@@ -17,15 +17,15 @@
         },
         {
             "name": "lengthComputable",
-            "lastModifiedAt": 1597193626483
+            "lastModifiedAt": 1604977409946
         },
         {
             "name": "loaded",
-            "lastModifiedAt": 1597193626733
+            "lastModifiedAt": 1604977410459
         },
         {
             "name": "total",
-            "lastModifiedAt": 1600304973930
+            "lastModifiedAt": 1604977410953
         }
     ]
 }

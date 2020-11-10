@@ -1,19 +1,19 @@
 
 {
     "name": "DocumentOrShadowRoot",
-    "lastModifiedAt": 1604969996063,
+    "lastModifiedAt": 1604975992711,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447312149
+            "lastModifiedAt": 1604975984017
         },
         {
             "name": "activeElement",
-            "lastModifiedAt": 1604447312667
+            "lastModifiedAt": 1604975984510
         },
         {
             "name": "caretPositionFromPoint",
-            "lastModifiedAt": 1604447317614
+            "lastModifiedAt": 1604975988654
         },
         {
             "name": "elementFromPoint",
@@ -25,15 +25,15 @@
         },
         {
             "name": "fullscreenElement",
-            "lastModifiedAt": 1604447313715
+            "lastModifiedAt": 1604975985821
         },
         {
             "name": "getAnimations",
-            "lastModifiedAt": 1604969992712
+            "lastModifiedAt": 1604975990621
         },
         {
             "name": "getSelection",
-            "lastModifiedAt": 1604447319766
+            "lastModifiedAt": 1604975991118
         },
         {
             "name": "msElementsFromRect",
@@ -41,23 +41,23 @@
         },
         {
             "name": "nodeFromPoint",
-            "lastModifiedAt": 1604447320837
+            "lastModifiedAt": 1604975992147
         },
         {
             "name": "nodesFromPoint",
-            "lastModifiedAt": 1604447321387
+            "lastModifiedAt": 1604975992711
         },
         {
             "name": "pictureInPictureElement",
-            "lastModifiedAt": 1604447316462
+            "lastModifiedAt": 1604975986296
         },
         {
             "name": "pointerLockElement",
-            "lastModifiedAt": 1604447314747
+            "lastModifiedAt": 1604975986904
         },
         {
             "name": "styleSheets",
-            "lastModifiedAt": 1604447315602
+            "lastModifiedAt": 1604975987388
         }
     ]
 }

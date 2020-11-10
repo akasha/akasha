@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.encodedBodySize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/encodedBodySize",
-    "description": "The encodedBodySize read-only property represents the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content-codings."
+    "description": "The encodedBodySize read-only property represents the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content-codings.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 2",
+            "href": "https://www.w3.org/TR/resource-timing-2/#dom-performanceresourcetiming-encodedbodysize",
+            "description": "The definition of 'encodedBodySize' in the 'Resource Timing Level 2' specification."
+        }
+    ]
 }

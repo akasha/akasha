@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "Touch.identifier",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/identifier",
-    "description": "The Touch.identifier returns a value uniquely identifying this point of contact with the touch surface. This value remains consistent for every event involving this finger's (or stylus's) movement on the surface until it is lifted off the surface."
+    "description": "The Touch.identifier returns a value uniquely identifying this point of contact with the touch surface. This value remains consistent for every event involving this finger's (or stylus's) movement on the surface until it is lifted off the surface.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touch-identifier"
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-Touch-identifier"
+        }
+    ]
 }

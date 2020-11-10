@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRReferenceSpace.getOffsetReferenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpace/getOffsetReferenceSpace",
-    "description": "The XRReferenceSpace interface's getOffsetReferenceSpace() method returns a new reference space object which describes the relative difference in position between the object on which the method is called and a given point in 3D space."
+    "description": "The XRReferenceSpace interface's getOffsetReferenceSpace() method returns a new reference space object which describes the relative difference in position between the object on which the method is called and a given point in 3D space.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespace-getoffsetreferencespace",
+            "description": "The definition of 'getOffsetReferenceSpace()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

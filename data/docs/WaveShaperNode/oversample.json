@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WaveShaperNode.oversample",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WaveShaperNode/oversample",
-    "description": "The oversample property of the WaveShaperNode interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal."
+    "description": "The oversample property of the WaveShaperNode interface is an enumerated value indicating if oversampling must be used. Oversampling is a technique for creating more samples (up-sampling) before applying a distortion effect to the audio signal.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#dom-waveshapernode-oversample",
+            "description": "The definition of 'oversample' in the 'Web Audio API' specification."
+        }
+    ]
 }

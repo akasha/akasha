@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.rate",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/rate",
-    "description": "The rate property of the SpeechSynthesisUtterance interface gets and sets the speed at which the utterance will be spoken at."
+    "description": "The rate property of the SpeechSynthesisUtterance interface gets and sets the speed at which the utterance will be spoken at.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-rate",
+            "description": "The definition of 'rate' in the 'Web Speech API' specification."
+        }
+    ]
 }

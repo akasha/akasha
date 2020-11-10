@@ -1,27 +1,27 @@
 
 {
     "name": "DOMException",
-    "lastModifiedAt": 1604969660070,
+    "lastModifiedAt": 1604975670844,
     "entries": [
         {
             "name": "DOMException",
-            "lastModifiedAt": 1604447016972
+            "lastModifiedAt": 1604975669164
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447016464
+            "lastModifiedAt": 1604975668618
         },
         {
             "name": "code",
-            "lastModifiedAt": 1604447017587
+            "lastModifiedAt": 1604975669689
         },
         {
             "name": "message",
-            "lastModifiedAt": 1604447018710
+            "lastModifiedAt": 1604975670258
         },
         {
             "name": "name",
-            "lastModifiedAt": 1604447019819
+            "lastModifiedAt": 1604975670726
         }
     ]
 }

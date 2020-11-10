@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoPlaybackQuality.creationTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/creationTime",
-    "description": "The read-only creationTime property on the VideoPlaybackQuality interface reports the number of milliseconds since the browsing context was created this quality sample was recorded."
+    "description": "The read-only creationTime property on the VideoPlaybackQuality interface reports the number of milliseconds since the browsing context was created this quality sample was recorded.",
+    "refs": [
+        {
+            "name": "Media Playback Quality",
+            "href": "https://w3c.github.io/media-playback-quality/#videoplaybackquality-interface",
+            "description": "The definition of 'VideoPlaybackQuality.corruptedVideoFrames' in the 'Media Playback Quality' specification."
+        }
+    ]
 }

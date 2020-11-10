@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.onpush",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onpush",
-    "description": "The ServiceWorkerGlobalScope.onpush event of the ServiceWorkerGlobalScope interface is fired whenever a push message is received by a service worker via a push server."
+    "description": "The ServiceWorkerGlobalScope.onpush event of the ServiceWorkerGlobalScope interface is fired whenever a push message is received by a service worker via a push server.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-serviceworkerglobalscope-onpush",
+            "description": "The definition of 'onpush' in the 'Push API' specification."
+        }
+    ]
 }

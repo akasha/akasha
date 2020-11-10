@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.deleteVertexArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/deleteVertexArray",
-    "description": "The WebGL2RenderingContext.deleteVertexArray() method of the WebGL 2 API deletes a given WebGLVertexArrayObject object."
+    "description": "The WebGL2RenderingContext.deleteVertexArray() method of the WebGL 2 API deletes a given WebGLVertexArrayObject object.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17",
+            "description": "The definition of 'deleteVertexArray' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDeleteVertexArrays.xhtml",
+            "description": "The definition of 'glDeleteVertexArrays' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

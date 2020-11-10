@@ -8,7 +8,7 @@
         {
             "name": "Content Security Policy: Embedded Enforcement",
             "href": "https://w3c.github.io/webappsec-cspee/#dom-htmliframeelement-csp",
-            "description": "The definition of 'csp' in Content Security Policy: Embedded Enforcement."
+            "description": "The definition of 'csp' in the 'Content Security Policy: Embedded Enforcement' specification."
         }
     ]
 }

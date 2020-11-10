@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.domContentLoadedEventStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart",
-    "description": "The legacy PerformanceTiming.domContentLoadedEventStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, right before the parser sent the DOMContentLoaded event, that is right after all the scripts that need to be executed right after parsing has been executed."
+    "description": "The legacy PerformanceTiming.domContentLoadedEventStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, right before the parser sent the DOMContentLoaded event, that is right after all the scripts that need to be executed right after parsing has been executed.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-domcontentloadedeventstart",
+            "description": "The definition of 'PerformanceTiming.domContentLoadedEventStart' in the 'Navigation Timing' specification."
+        }
+    ]
 }

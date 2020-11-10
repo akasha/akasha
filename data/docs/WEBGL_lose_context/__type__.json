@@ -8,7 +8,7 @@
         {
             "name": "WEBGL_lose_context",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_lose_context/",
-            "description": "The definition of 'WEBGL_lose_context' in WEBGL_lose_context."
+            "description": "The definition of 'WEBGL_lose_context' in the 'WEBGL_lose_context' specification."
         }
     ]
 }

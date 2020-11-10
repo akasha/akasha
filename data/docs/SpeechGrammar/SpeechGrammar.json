@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "SpeechGrammar.SpeechGrammar",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/SpeechGrammar",
-    "description": "The SpeechGrammar constructor of the SpeechGrammar interface creates a new SpeechGrammar object instance."
+    "description": "The SpeechGrammar constructor of the SpeechGrammar interface creates a new SpeechGrammar object instance.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/dom-speechgrammar-speechgrammar",
+            "description": "The definition of 'SpeechGrammar()' in the 'Web Speech API' specification."
+        }
+    ]
 }

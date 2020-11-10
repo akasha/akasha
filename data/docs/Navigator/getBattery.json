@@ -8,7 +8,7 @@
         {
             "name": "Battery Status API",
             "href": "https://w3c.github.io/battery/#dom-navigator-getbattery",
-            "description": "The definition of 'Navigator.getBattery()' in Battery Status API."
+            "description": "The definition of 'Navigator.getBattery()' in the 'Battery Status API' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcrtpsynchronizationsource-rtptimestamp",
-            "description": "The definition of 'rtpTimestamp' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'rtpTimestamp' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

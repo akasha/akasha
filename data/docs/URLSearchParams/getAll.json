@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-getall",
-            "description": "The definition of 'getAll()' in URL."
+            "description": "The definition of 'getAll()' in the 'URL' specification."
         }
     ]
 }

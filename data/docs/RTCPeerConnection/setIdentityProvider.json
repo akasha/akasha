@@ -8,7 +8,7 @@
         {
             "name": "Identity for WebRTC",
             "href": "https://w3c.github.io/webrtc-identity/#dfn-setidentityprovider",
-            "description": "The definition of 'RTCPeerConnection.setIdentityProvider()' in Identity for WebRTC."
+            "description": "The definition of 'RTCPeerConnection.setIdentityProvider()' in the 'Identity for WebRTC' specification."
         }
     ]
 }

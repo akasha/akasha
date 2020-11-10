@@ -1,59 +1,59 @@
 
 {
     "name": "RTCOutboundRtpStreamStats",
-    "lastModifiedAt": 1604448938529,
+    "lastModifiedAt": 1604977556714,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448928284
+            "lastModifiedAt": 1604977544836
         },
         {
             "name": "averageRtcpInterval",
-            "lastModifiedAt": 1604448928902
+            "lastModifiedAt": 1604977545419
         },
         {
             "name": "firCount",
-            "lastModifiedAt": 1604448929364
+            "lastModifiedAt": 1604977545910
         },
         {
             "name": "framesEncoded",
-            "lastModifiedAt": 1604448929883
+            "lastModifiedAt": 1604977546383
         },
         {
             "name": "lastPacketSentTimestamp",
-            "lastModifiedAt": 1604448930356
+            "lastModifiedAt": 1604977546844
         },
         {
             "name": "nackCount",
-            "lastModifiedAt": 1604448930828
+            "lastModifiedAt": 1604977547303
         },
         {
             "name": "perDscpPacketsSent",
-            "lastModifiedAt": 1604448931300
+            "lastModifiedAt": 1604977548303
         },
         {
             "name": "pliCount",
-            "lastModifiedAt": 1604448932561
+            "lastModifiedAt": 1604977548906
         },
         {
             "name": "qpSum",
-            "lastModifiedAt": 1604448933046
+            "lastModifiedAt": 1604977549526
         },
         {
             "name": "qualityLimitationReason",
-            "lastModifiedAt": 1604448933574
+            "lastModifiedAt": 1604977550202
         },
         {
             "name": "remoteId",
-            "lastModifiedAt": 1604448934354
+            "lastModifiedAt": 1604977550854
         },
         {
             "name": "sliCount",
-            "lastModifiedAt": 1604448935424
+            "lastModifiedAt": 1604977551952
         },
         {
             "name": "trackId",
-            "lastModifiedAt": 1604448935886
+            "lastModifiedAt": 1604977552976
         }
     ]
 }

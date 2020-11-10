@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-body-json",
-            "description": "The definition of 'Body.json()' in Fetch."
+            "description": "The definition of 'Body.json()' in the 'Fetch' specification."
         }
     ]
 }

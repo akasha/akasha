@@ -8,12 +8,12 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dfn-createObjectURL",
-            "description": "The definition of 'createObjectURL()' in File API."
+            "description": "The definition of 'createObjectURL()' in the 'File API' specification."
         },
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#dom-url-createobjecturl",
-            "description": "The definition of 'URL' in Media Source Extensions."
+            "description": "The definition of 'URL' in the 'Media Source Extensions' specification."
         }
     ]
 }

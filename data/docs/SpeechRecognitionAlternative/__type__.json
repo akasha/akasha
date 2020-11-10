@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SpeechRecognitionAlternative",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative",
-    "description": "The SpeechRecognitionAlternative interface of the Web Speech API represents a single word that has been recognised by the speech recognition service."
+    "description": "The SpeechRecognitionAlternative interface of the Web Speech API represents a single word that has been recognised by the speech recognition service.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechreco-alternative",
+            "description": "The definition of 'SpeechRecognitionAlternative' in the 'Web Speech API' specification."
+        }
+    ]
 }

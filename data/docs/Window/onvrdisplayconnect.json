@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplayconnect",
-            "description": "The definition of 'onvrdisplayconnect' in WebVR 1.1."
+            "description": "The definition of 'onvrdisplayconnect' in the 'WebVR 1.1' specification."
         }
     ]
 }

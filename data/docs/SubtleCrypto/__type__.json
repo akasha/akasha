@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SubtleCrypto",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto",
-    "description": "The SubtleCrypto interface of the Web Crypto API provides a number of low-level cryptographic functions. Access to the features of SubtleCrypto is obtained through the subtle property of the Crypto object you get from Window.crypto."
+    "description": "The SubtleCrypto interface of the Web Crypto API provides a number of low-level cryptographic functions. Access to the features of SubtleCrypto is obtained through the subtle property of the Crypto object you get from Window.crypto.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#subtlecrypto-interface",
+            "description": "The definition of 'SubtleCrypto' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

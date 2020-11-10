@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "PointerEvent.pointerType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/pointerType",
-    "description": "The pointerType read-only property of the PointerEvent interface indicates the device type (mouse, pen, or touch) that caused a given pointer event."
+    "description": "The pointerType read-only property of the PointerEvent interface indicates the device type (mouse, pen, or touch) that caused a given pointer event.",
+    "refs": [
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-pointerType",
+            "description": "The definition of 'pointerType' in the 'Pointer Events' specification."
+        },
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-pointertype",
+            "description": "The definition of 'pointerType' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "CSS Object Model (CSSOM) View Module",
+            "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-mouseevent-interface",
+            "description": "The definition of 'MouseEvent' in the 'CSS Object Model (CSSOM) View Module' specification."
+        }
+    ]
 }

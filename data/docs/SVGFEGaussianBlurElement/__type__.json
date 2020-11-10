@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFEGaussianBlurElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEGaussianBlurElement",
-    "description": "The SVGFEGaussianBlurElement interface corresponds to the feGaussianBlur element."
+    "description": "The SVGFEGaussianBlurElement interface corresponds to the feGaussianBlur element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEGaussianBlurElement",
+            "description": "The definition of 'SVGFEGaussianBlurElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEGaussianBlurElement",
+            "description": "The definition of 'SVGFEGaussianBlurElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

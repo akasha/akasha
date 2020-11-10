@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "IDBTransaction.oncomplete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBTransaction/oncomplete",
-    "description": "The oncomplete event handler of the IDBTransaction interface handles the complete event, fired when the transaction successfully completes.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbtransaction-oncomplete",
-            "description": "The definition of 'oncomplete' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbtransaction-oncomplete",
-            "description": "The definition of 'oncomplete' in Indexed Database API Draft."
-        }
-    ]
+    "description": "The oncomplete event handler of the IDBTransaction interface handles the complete event, fired when the transaction successfully completes."
 }

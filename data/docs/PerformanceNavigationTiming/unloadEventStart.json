@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceNavigationTiming.unloadEventStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/unloadEventStart",
-    "description": "The unloadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent starts the unload event of the previous document. If there is no previous document, this property returns 0."
+    "description": "The unloadEventStart read-only property returns a timestamp representing the time value equal to the time immediately before the user agent starts the unload event of the previous document. If there is no previous document, this property returns 0.",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-unloadeventstart",
+            "description": "The definition of 'unloadEventStart' in the 'Navigation Timing Level 2' specification."
+        }
+    ]
 }

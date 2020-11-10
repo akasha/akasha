@@ -8,17 +8,17 @@
         {
             "name": "CSS Conditional Rules Module Level 3",
             "href": "https://drafts.csswg.org/css-conditional-3/#the-cssmediarule-interface",
-            "description": "The definition of 'CSSMediaRule' in CSS Conditional Rules Module Level 3."
+            "description": "The definition of 'CSSMediaRule' in the 'CSS Conditional Rules Module Level 3' specification."
         },
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-cssmediarule-interface",
-            "description": "The definition of 'CSSMediaRule' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'CSSMediaRule' in the 'CSS Object Model (CSSOM)' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Style Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule",
-            "description": "The definition of 'CSSMediaRule' in Document Object Model (DOM) Level 2 Style Specification."
+            "description": "The definition of 'CSSMediaRule' in the 'Document Object Model (DOM) Level 2 Style Specification' specification."
         }
     ]
 }

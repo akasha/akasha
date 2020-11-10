@@ -8,7 +8,7 @@
         {
             "name": "ANGLE_instanced_arrays",
             "href": "https://www.khronos.org/registry/webgl/extensions/ANGLE_instanced_arrays/",
-            "description": "The definition of 'ANGLE_instanced_arrays' in ANGLE_instanced_arrays."
+            "description": "The definition of 'ANGLE_instanced_arrays' in the 'ANGLE_instanced_arrays' specification."
         }
     ]
 }

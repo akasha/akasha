@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SpeechGrammar",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar",
-    "description": "The SpeechGrammar interface of the Web Speech API represents a set of words or patterns of words that we want the recognition service to recognize."
+    "description": "The SpeechGrammar interface of the Web Speech API represents a set of words or patterns of words that we want the recognition service to recognize.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechreco-speechgrammar",
+            "description": "The definition of 'SpeechGrammar' in the 'Web Speech API' specification."
+        }
+    ]
 }

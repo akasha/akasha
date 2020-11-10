@@ -1,27 +1,27 @@
 
 {
     "name": "MediaDeviceInfo",
-    "lastModifiedAt": 1604971009539,
+    "lastModifiedAt": 1604976931425,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448287872
+            "lastModifiedAt": 1604976928409
         },
         {
             "name": "deviceId",
-            "lastModifiedAt": 1604448288600
+            "lastModifiedAt": 1604976929413
         },
         {
             "name": "groupId",
-            "lastModifiedAt": 1604448289270
+            "lastModifiedAt": 1604976930001
         },
         {
             "name": "kind",
-            "lastModifiedAt": 1604448290076
+            "lastModifiedAt": 1604976930456
         },
         {
             "name": "label",
-            "lastModifiedAt": 1604448290870
+            "lastModifiedAt": 1604976931224
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysession-expiration",
-            "description": "The definition of 'expiration' in Encrypted Media Extensions."
+            "description": "The definition of 'expiration' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

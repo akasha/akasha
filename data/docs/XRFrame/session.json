@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRFrame.session",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/session",
-    "description": "An XRFrame object's read-only session property returns the XRSession object that generated the frame."
+    "description": "An XRFrame object's read-only session property returns the XRSession object that generated the frame.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrframe-session",
+            "description": "The definition of 'XRFrame.session' in the 'WebXR Device API' specification."
+        }
+    ]
 }

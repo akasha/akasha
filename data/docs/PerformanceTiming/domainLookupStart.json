@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.domainLookupStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/domainLookupStart",
-    "description": "The legacy PerformanceTiming.domainLookupStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, where the domain lookup starts. If a persistent connection is used, or the information is stored in a cache or a local resource, the value will be the same as PerformanceTiming.fetchStart."
+    "description": "The legacy PerformanceTiming.domainLookupStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, where the domain lookup starts. If a persistent connection is used, or the information is stored in a cache or a local resource, the value will be the same as PerformanceTiming.fetchStart.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-domainlookupstart",
+            "description": "The definition of 'PerformanceTiming.domainLookupStart' in the 'Navigation Timing' specification."
+        }
+    ]
 }

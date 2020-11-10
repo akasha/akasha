@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "AudioBuffer.numberOfChannels",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/numberOfChannels",
-    "description": "An integer.",
-    "refs": [
-        {
-            "name": "Web Audio API",
-            "href": "https://webaudio.github.io/web-audio-api/#dom-audiobuffer-numberofchannels",
-            "description": "The definition of 'numberOfChannels' in Web Audio API."
-        }
-    ]
+    "description": "An integer."
 }

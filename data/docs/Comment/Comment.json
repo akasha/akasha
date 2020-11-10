@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-comment-comment",
-            "description": "The definition of 'Comment: Comment' in DOM."
+            "description": "The definition of 'Comment: Comment' in the 'DOM' specification."
         }
     ]
 }

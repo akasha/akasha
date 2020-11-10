@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.onclick",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/onclick",
-    "description": "The onclick property of the Notification interface specifies an event listener to receive click events. These events occur when the user clicks on a displayed Notification."
+    "description": "The onclick property of the Notification interface specifies an event listener to receive click events. These events occur when the user clicks on a displayed Notification.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-onclick",
+            "description": "The definition of 'onclick' in the 'Notifications API' specification."
+        }
+    ]
 }

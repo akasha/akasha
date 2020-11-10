@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.effectiveDirective",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/effectiveDirective",
-    "description": "The effectiveDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation."
+    "description": "The effectiveDirective read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing the directive whose enforcement uncovered the violation.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-effectivedirective",
+            "description": "The definition of 'effectiveDirective' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

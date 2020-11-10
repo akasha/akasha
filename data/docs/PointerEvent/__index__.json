@@ -1,7 +1,7 @@
 
 {
     "name": "PointerEvent",
-    "lastModifiedAt": 1600312708268,
+    "lastModifiedAt": 1604977395102,
     "entries": [
         {
             "name": "PointerEvent",
@@ -9,51 +9,51 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192272956
+            "lastModifiedAt": 1604977386124
         },
         {
             "name": "getCoalescedEvents",
-            "lastModifiedAt": 1597192276311
+            "lastModifiedAt": 1604977395102
         },
         {
             "name": "height",
-            "lastModifiedAt": 1597192273738
+            "lastModifiedAt": 1604977387666
         },
         {
             "name": "isPrimary",
-            "lastModifiedAt": 1597192275787
+            "lastModifiedAt": 1604977388714
         },
         {
             "name": "pointerId",
-            "lastModifiedAt": 1597192273237
+            "lastModifiedAt": 1604977389242
         },
         {
             "name": "pointerType",
-            "lastModifiedAt": 1597192275549
+            "lastModifiedAt": 1604977389718
         },
         {
             "name": "pressure",
-            "lastModifiedAt": 1597192273986
+            "lastModifiedAt": 1604977390332
         },
         {
             "name": "tangentialPressure",
-            "lastModifiedAt": 1597192274240
+            "lastModifiedAt": 1604977391379
         },
         {
             "name": "tiltX",
-            "lastModifiedAt": 1597192274626
+            "lastModifiedAt": 1604977391889
         },
         {
             "name": "tiltY",
-            "lastModifiedAt": 1597192274929
+            "lastModifiedAt": 1604977392612
         },
         {
             "name": "twist",
-            "lastModifiedAt": 1597192275240
+            "lastModifiedAt": 1604977393090
         },
         {
             "name": "width",
-            "lastModifiedAt": 1597192273494
+            "lastModifiedAt": 1604977394163
         }
     ]
 }

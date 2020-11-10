@@ -1,7 +1,7 @@
 
 {
     "name": "Element",
-    "lastModifiedAt": 1604970125176,
+    "lastModifiedAt": 1604976128941,
     "entries": [
         {
             "name": "DOMActivate_event",
@@ -9,7 +9,7 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604970024210
+            "lastModifiedAt": 1604976025279
         },
         {
             "name": "accessKey",
@@ -17,15 +17,15 @@
         },
         {
             "name": "animate",
-            "lastModifiedAt": 1604447189388
+            "lastModifiedAt": 1604976059988
         },
         {
             "name": "attachShadow",
-            "lastModifiedAt": 1597190672918
+            "lastModifiedAt": 1604976060806
         },
         {
             "name": "attributes",
-            "lastModifiedAt": 1604447150521
+            "lastModifiedAt": 1604976026542
         },
         {
             "name": "auxclick_event",
@@ -41,19 +41,19 @@
         },
         {
             "name": "childElementCount",
-            "lastModifiedAt": 1604447151475
+            "lastModifiedAt": 1604976027165
         },
         {
             "name": "children",
-            "lastModifiedAt": 1604447152600
+            "lastModifiedAt": 1604976027739
         },
         {
             "name": "classList",
-            "lastModifiedAt": 1604447153404
+            "lastModifiedAt": 1604976029076
         },
         {
             "name": "className",
-            "lastModifiedAt": 1604447154066
+            "lastModifiedAt": 1604976029762
         },
         {
             "name": "click_event",
@@ -61,23 +61,23 @@
         },
         {
             "name": "clientHeight",
-            "lastModifiedAt": 1604447154917
+            "lastModifiedAt": 1604976030267
         },
         {
             "name": "clientLeft",
-            "lastModifiedAt": 1604447156115
+            "lastModifiedAt": 1604976030906
         },
         {
             "name": "clientTop",
-            "lastModifiedAt": 1604447157364
+            "lastModifiedAt": 1604976031554
         },
         {
             "name": "clientWidth",
-            "lastModifiedAt": 1604447157985
+            "lastModifiedAt": 1604976032070
         },
         {
             "name": "closest",
-            "lastModifiedAt": 1604447191827
+            "lastModifiedAt": 1604976061860
         },
         {
             "name": "compositionend_event",
@@ -93,11 +93,11 @@
         },
         {
             "name": "computedStyleMap",
-            "lastModifiedAt": 1604447192573
+            "lastModifiedAt": 1604976062448
         },
         {
             "name": "contextmenu_event",
-            "lastModifiedAt": 1604447248303
+            "lastModifiedAt": 1604976114855
         },
         {
             "name": "copy_event",
@@ -125,7 +125,7 @@
         },
         {
             "name": "firstElementChild",
-            "lastModifiedAt": 1604447160661
+            "lastModifiedAt": 1604976033263
         },
         {
             "name": "focus_event",
@@ -149,51 +149,51 @@
         },
         {
             "name": "getAnimations",
-            "lastModifiedAt": 1604447194768
+            "lastModifiedAt": 1604976064130
         },
         {
             "name": "getAttribute",
-            "lastModifiedAt": 1604447195417
+            "lastModifiedAt": 1604976064945
         },
         {
             "name": "getAttributeNS",
-            "lastModifiedAt": 1599280782983
+            "lastModifiedAt": 1604976065451
         },
         {
             "name": "getAttributeNames",
-            "lastModifiedAt": 1604447197472
+            "lastModifiedAt": 1604976066035
         },
         {
             "name": "getAttributeNode",
-            "lastModifiedAt": 1597190676997
+            "lastModifiedAt": 1604976066820
         },
         {
             "name": "getAttributeNodeNS",
-            "lastModifiedAt": 1597190677288
+            "lastModifiedAt": 1604976067503
         },
         {
             "name": "getBoundingClientRect",
-            "lastModifiedAt": 1604447199459
+            "lastModifiedAt": 1604976068211
         },
         {
             "name": "getClientRects",
-            "lastModifiedAt": 1604447200423
+            "lastModifiedAt": 1604976069457
         },
         {
             "name": "getElementsByClassName",
-            "lastModifiedAt": 1604447201672
+            "lastModifiedAt": 1604976070743
         },
         {
             "name": "getElementsByTagName",
-            "lastModifiedAt": 1604447202330
+            "lastModifiedAt": 1604976071917
         },
         {
             "name": "getElementsByTagNameNS",
-            "lastModifiedAt": 1604447202873
+            "lastModifiedAt": 1604976073093
         },
         {
             "name": "hasAttribute",
-            "lastModifiedAt": 1597190679513
+            "lastModifiedAt": 1604976073725
         },
         {
             "name": "hasAttributeNS",
@@ -201,19 +201,19 @@
         },
         {
             "name": "hasAttributes",
-            "lastModifiedAt": 1604447205384
+            "lastModifiedAt": 1604976076024
         },
         {
             "name": "hasPointerCapture",
-            "lastModifiedAt": 1604970077715
+            "lastModifiedAt": 1604976076662
         },
         {
             "name": "id",
-            "lastModifiedAt": 1604447161330
+            "lastModifiedAt": 1604976034469
         },
         {
             "name": "innerHTML",
-            "lastModifiedAt": 1604447162077
+            "lastModifiedAt": 1604976035330
         },
         {
             "name": "insertAdjacentElement",
@@ -221,7 +221,7 @@
         },
         {
             "name": "insertAdjacentHTML",
-            "lastModifiedAt": 1604447207962
+            "lastModifiedAt": 1604976078471
         },
         {
             "name": "insertAdjacentText",
@@ -229,15 +229,15 @@
         },
         {
             "name": "lastElementChild",
-            "lastModifiedAt": 1604447163122
+            "lastModifiedAt": 1604976036255
         },
         {
             "name": "localName",
-            "lastModifiedAt": 1604447164326
+            "lastModifiedAt": 1604976037484
         },
         {
             "name": "matches",
-            "lastModifiedAt": 1604447209858
+            "lastModifiedAt": 1604976079757
         },
         {
             "name": "mousedown_event",
@@ -277,19 +277,19 @@
         },
         {
             "name": "namespaceURI",
-            "lastModifiedAt": 1604447165258
+            "lastModifiedAt": 1604976038053
         },
         {
             "name": "nextElementSibling",
-            "lastModifiedAt": 1604447166297
+            "lastModifiedAt": 1604976039394
         },
         {
             "name": "onfullscreenchange",
-            "lastModifiedAt": 1604447166923
+            "lastModifiedAt": 1604976039936
         },
         {
             "name": "onfullscreenerror",
-            "lastModifiedAt": 1604447167889
+            "lastModifiedAt": 1604976040847
         },
         {
             "name": "openOrClosedShadowRoot",
@@ -297,11 +297,11 @@
         },
         {
             "name": "outerHTML",
-            "lastModifiedAt": 1604447170465
+            "lastModifiedAt": 1604976042220
         },
         {
             "name": "part",
-            "lastModifiedAt": 1604447171181
+            "lastModifiedAt": 1604976042778
         },
         {
             "name": "paste_event",
@@ -309,27 +309,27 @@
         },
         {
             "name": "prefix",
-            "lastModifiedAt": 1604447171789
+            "lastModifiedAt": 1604976043734
         },
         {
             "name": "previousElementSibling",
-            "lastModifiedAt": 1604447172949
+            "lastModifiedAt": 1604976044812
         },
         {
             "name": "querySelector",
-            "lastModifiedAt": 1604447212124
+            "lastModifiedAt": 1604976082839
         },
         {
             "name": "querySelectorAll",
-            "lastModifiedAt": 1604447213299
+            "lastModifiedAt": 1604976084026
         },
         {
             "name": "releasePointerCapture",
-            "lastModifiedAt": 1597190683803
+            "lastModifiedAt": 1604976084723
         },
         {
             "name": "remove",
-            "lastModifiedAt": 1604447215090
+            "lastModifiedAt": 1604976085570
         },
         {
             "name": "removeAttribute",
@@ -345,11 +345,11 @@
         },
         {
             "name": "requestFullscreen",
-            "lastModifiedAt": 1604447219328
+            "lastModifiedAt": 1604976089046
         },
         {
             "name": "requestPointerLock",
-            "lastModifiedAt": 1604447220535
+            "lastModifiedAt": 1604976089532
         },
         {
             "name": "runtimeStyle",
@@ -357,19 +357,19 @@
         },
         {
             "name": "scroll",
-            "lastModifiedAt": 1604447221052
+            "lastModifiedAt": 1604976090177
         },
         {
             "name": "scrollBy",
-            "lastModifiedAt": 1604447222030
+            "lastModifiedAt": 1604976090779
         },
         {
             "name": "scrollHeight",
-            "lastModifiedAt": 1604447174180
+            "lastModifiedAt": 1604976045990
         },
         {
             "name": "scrollIntoView",
-            "lastModifiedAt": 1604447222681
+            "lastModifiedAt": 1604976091783
         },
         {
             "name": "scrollIntoViewIfNeeded",
@@ -377,7 +377,7 @@
         },
         {
             "name": "scrollLeft",
-            "lastModifiedAt": 1604447175102
+            "lastModifiedAt": 1604976046600
         },
         {
             "name": "scrollLeftMax",
@@ -385,11 +385,11 @@
         },
         {
             "name": "scrollTo",
-            "lastModifiedAt": 1604447223993
+            "lastModifiedAt": 1604976092856
         },
         {
             "name": "scrollTop",
-            "lastModifiedAt": 1604447177068
+            "lastModifiedAt": 1604976048274
         },
         {
             "name": "scrollTopMax",
@@ -397,7 +397,7 @@
         },
         {
             "name": "scrollWidth",
-            "lastModifiedAt": 1604447178527
+            "lastModifiedAt": 1604976049420
         },
         {
             "name": "scroll_event",
@@ -409,7 +409,7 @@
         },
         {
             "name": "setAttribute",
-            "lastModifiedAt": 1597190688651
+            "lastModifiedAt": 1604976094104
         },
         {
             "name": "setAttributeNS",
@@ -417,7 +417,7 @@
         },
         {
             "name": "setAttributeNode",
-            "lastModifiedAt": 1597190690018
+            "lastModifiedAt": 1604976095837
         },
         {
             "name": "setAttributeNodeNS",
@@ -429,11 +429,11 @@
         },
         {
             "name": "setPointerCapture",
-            "lastModifiedAt": 1597190691114
+            "lastModifiedAt": 1604976097610
         },
         {
             "name": "shadowRoot",
-            "lastModifiedAt": 1604447179080
+            "lastModifiedAt": 1604976049962
         },
         {
             "name": "show_event",
@@ -441,7 +441,7 @@
         },
         {
             "name": "slot",
-            "lastModifiedAt": 1604447180351
+            "lastModifiedAt": 1604976051181
         },
         {
             "name": "tabStop",
@@ -449,7 +449,7 @@
         },
         {
             "name": "tagName",
-            "lastModifiedAt": 1604447181352
+            "lastModifiedAt": 1604976052383
         },
         {
             "name": "toggleAttribute",
@@ -489,7 +489,7 @@
         },
         {
             "name": "wheel_event",
-            "lastModifiedAt": 1604447235182
+            "lastModifiedAt": 1604976103825
         }
     ]
 }

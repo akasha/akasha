@@ -1,23 +1,23 @@
 
 {
     "name": "XRPermissionDescriptor",
-    "lastModifiedAt": 1601467472608,
+    "lastModifiedAt": 1604979058423,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1601467471432
+            "lastModifiedAt": 1604979056293
         },
         {
             "name": "mode",
-            "lastModifiedAt": 1601467471802
+            "lastModifiedAt": 1604979056759
         },
         {
             "name": "optionalFeatures",
-            "lastModifiedAt": 1601467472109
+            "lastModifiedAt": 1604979057783
         },
         {
             "name": "requiredFeatures",
-            "lastModifiedAt": 1601467472472
+            "lastModifiedAt": 1604979058285
         }
     ]
 }

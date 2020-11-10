@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Element.setPointerCapture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/setPointerCapture",
-    "description": "The setPointerCapture() method of the Element interface is used to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer will be targeted at the capture element until capture is released (via Element.releasePointerCapture())."
+    "description": "The setPointerCapture() method of the Element interface is used to designate a specific element as the capture target of future pointer events. Subsequent events for the pointer will be targeted at the capture element until capture is released (via Element.releasePointerCapture()).",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#idl-def-element-setpointercapture-pointerid",
+            "description": "The definition of 'setPointerCapture' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-Element-setPointerCapture-void-long-pointerId",
+            "description": "The definition of 'setPointerCapture' in the 'Pointer Events' specification."
+        }
+    ]
 }

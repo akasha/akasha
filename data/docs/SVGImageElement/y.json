@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SVGImageElement.y",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGImageElement/y",
-    "description": "The y read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the y attribute of the given image element."
+    "description": "The y read-only property of the SVGImageElement interface returns an SVGAnimatedLength corresponding to the y attribute of the given image element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/single-page.html#embedded-__svg__SVGImageElement__y",
+            "description": "The definition of 'y' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ]
 }

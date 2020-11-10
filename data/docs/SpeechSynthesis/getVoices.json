@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechSynthesis.getVoices",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices",
-    "description": "The getVoices() method of the SpeechSynthesis interface returns a list of SpeechSynthesisVoice objects representing all the available voices on the current device."
+    "description": "The getVoices() method of the SpeechSynthesis interface returns a list of SpeechSynthesisVoice objects representing all the available voices on the current device.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesis-getvoices",
+            "description": "The definition of 'getVoices()' in the 'Web Speech API' specification."
+        }
+    ]
 }

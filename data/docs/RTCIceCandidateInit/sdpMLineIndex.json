@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidateinit-sdpmlineindex",
-            "description": "The definition of 'RTCIceCandidateInit.sdpMLineIndex' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'RTCIceCandidateInit.sdpMLineIndex' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

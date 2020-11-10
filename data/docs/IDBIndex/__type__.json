@@ -3,17 +3,5 @@
     "kind": "Type",
     "name": "IDBIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex",
-    "description": "IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#idbindex",
-            "description": "The definition of 'IDBIndex' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#index-interface",
-            "description": "The definition of 'IDBIndex' in Indexed Database API Draft."
-        }
-    ]
+    "description": "IDBIndex interface of the IndexedDB API provides asynchronous access to an index in a database. An index is a kind of object store for looking up records in another object store, called the referenced object store. You use this interface to retrieve data."
 }

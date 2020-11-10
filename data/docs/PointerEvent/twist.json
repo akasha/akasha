@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PointerEvent.twist",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/twist",
-    "description": "The twist read-only property of the PointerEvent interface represents the clockwise rotation of the pointer (e.g., pen stylus) around its major axis, in degrees."
+    "description": "The twist read-only property of the PointerEvent interface represents the clockwise rotation of the pointer (e.g., pen stylus) around its major axis, in degrees.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-twist",
+            "description": "The definition of 'twist' in the 'Pointer Events &ndash; Level 2' specification."
+        }
+    ]
 }

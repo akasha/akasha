@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.isVertexArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isVertexArray",
-    "description": "The WebGL2RenderingContext.isVertexArray() method of the WebGL API returns true if the passed object is a valid WebGLVertexArrayObject object."
+    "description": "The WebGL2RenderingContext.isVertexArray() method of the WebGL API returns true if the passed object is a valid WebGLVertexArrayObject object.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.17",
+            "description": "The definition of 'isVertexArray' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glIsVertexArray.xhtml",
+            "description": "The definition of 'glIsVertexArray' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

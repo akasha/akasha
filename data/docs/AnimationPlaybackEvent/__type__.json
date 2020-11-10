@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#the-animationplaybackevent-interface",
-            "description": "The definition of 'AnimationPlaybackEvent' in Web Animations."
+            "description": "The definition of 'AnimationPlaybackEvent' in the 'Web Animations' specification."
         }
     ]
 }

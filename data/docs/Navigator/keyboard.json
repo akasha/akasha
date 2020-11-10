@@ -8,7 +8,7 @@
         {
             "name": "Keyboard Map",
             "href": "https://wicg.github.io/keyboard-map/#navigator-interface",
-            "description": "The definition of 'keyboard' in Keyboard Map."
+            "description": "The definition of 'keyboard' in the 'Keyboard Map' specification."
         }
     ]
 }

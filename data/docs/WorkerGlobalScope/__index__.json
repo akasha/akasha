@@ -1,31 +1,31 @@
 
 {
     "name": "WorkerGlobalScope",
-    "lastModifiedAt": 1604449838086,
+    "lastModifiedAt": 1604978947932,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449817331
+            "lastModifiedAt": 1604978926260
         },
         {
             "name": "atob",
-            "lastModifiedAt": 1604449827198
+            "lastModifiedAt": 1604978938999
         },
         {
             "name": "btoa",
-            "lastModifiedAt": 1604449828579
+            "lastModifiedAt": 1604978939691
         },
         {
             "name": "caches",
-            "lastModifiedAt": 1604449817849
+            "lastModifiedAt": 1604978928082
         },
         {
             "name": "clearInterval",
-            "lastModifiedAt": 1604449829823
+            "lastModifiedAt": 1604978940717
         },
         {
             "name": "clearTimeout",
-            "lastModifiedAt": 1604449830788
+            "lastModifiedAt": 1604978941710
         },
         {
             "name": "close",
@@ -41,15 +41,15 @@
         },
         {
             "name": "fetch",
-            "lastModifiedAt": 1604449834226
+            "lastModifiedAt": 1604978944669
         },
         {
             "name": "importScripts",
-            "lastModifiedAt": 1604449834700
+            "lastModifiedAt": 1604978945132
         },
         {
             "name": "indexedDB",
-            "lastModifiedAt": 1604449820454
+            "lastModifiedAt": 1604978931918
         },
         {
             "name": "languagechange_event",
@@ -57,43 +57,43 @@
         },
         {
             "name": "location",
-            "lastModifiedAt": 1604449821206
+            "lastModifiedAt": 1604978933487
         },
         {
             "name": "navigator",
-            "lastModifiedAt": 1604449822114
+            "lastModifiedAt": 1604978933983
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1604449823030
+            "lastModifiedAt": 1604978934456
         },
         {
             "name": "onlanguagechange",
-            "lastModifiedAt": 1604449823715
+            "lastModifiedAt": 1604978935057
         },
         {
             "name": "onoffline",
-            "lastModifiedAt": 1604449824436
+            "lastModifiedAt": 1604978935678
         },
         {
             "name": "ononline",
-            "lastModifiedAt": 1604449824911
+            "lastModifiedAt": 1604978936702
         },
         {
             "name": "performance",
-            "lastModifiedAt": 1604449825755
+            "lastModifiedAt": 1604978937808
         },
         {
             "name": "self",
-            "lastModifiedAt": 1604449826232
+            "lastModifiedAt": 1604978938286
         },
         {
             "name": "setInterval",
-            "lastModifiedAt": 1604449836238
+            "lastModifiedAt": 1604978946126
         },
         {
             "name": "setTimeout",
-            "lastModifiedAt": 1604449837298
+            "lastModifiedAt": 1604978947282
         }
     ]
 }

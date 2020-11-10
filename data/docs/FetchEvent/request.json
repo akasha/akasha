@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#fetch-event-request",
-            "description": "The definition of 'request' in Service Workers."
+            "description": "The definition of 'request' in the 'Service Workers' specification."
         }
     ]
 }

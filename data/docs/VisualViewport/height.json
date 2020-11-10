@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VisualViewport.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/height",
-    "description": "The height read-only property of the VisualViewport interface returns the height of the visual viewport, in CSS pixels."
+    "description": "The height read-only property of the VisualViewport interface returns the height of the visual viewport, in CSS pixels.",
+    "refs": [
+        {
+            "name": "Visual Viewport API",
+            "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-height",
+            "description": "The definition of 'height' in the 'Visual Viewport API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-service",
-            "description": "The definition of 'service' in Web Bluetooth."
+            "description": "The definition of 'service' in the 'Web Bluetooth' specification."
         }
     ]
 }

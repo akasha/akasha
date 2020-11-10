@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ServiceWorkerRegistration.unregister",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/unregister",
-    "description": "The unregister() method of the ServiceWorkerRegistration interface unregisters the service worker registration and returns a Promise. The promise will resolve to false if no registration was found, otherwise it resolves to true irrespective of whether unregistration happened or not (it may not unregister if someone else just called ServiceWorkerContainer.register() with the same scope.) The service worker will finish any ongoing operations before it is unregistered."
+    "description": "The unregister() method of the ServiceWorkerRegistration interface unregisters the service worker registration and returns a Promise. The promise will resolve to false if no registration was found, otherwise it resolves to true irrespective of whether unregistration happened or not (it may not unregister if someone else just called ServiceWorkerContainer.register() with the same scope.) The service worker will finish any ongoing operations before it is unregistered.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/navigator-service-worker-unregister",
+            "description": "The definition of 'ServiceWorkerRegistration.unregister()' in the 'Service Workers' specification."
+        }
+    ]
 }

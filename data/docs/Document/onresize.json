@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Document.onresize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/onresize",
-    "description": "The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-onresize",
-            "description": "The definition of 'onresize' in HTML Living Standard."
-        }
-    ]
+    "description": "The onresize property of the GlobalEventHandlers interface is an EventHandler that processes resize events."
 }

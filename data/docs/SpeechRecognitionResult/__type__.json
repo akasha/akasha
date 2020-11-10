@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SpeechRecognitionResult",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionResult",
-    "description": "The SpeechRecognitionResult interface of the Web Speech API represents a single recognition match, which may contain multiple SpeechRecognitionAlternative objects."
+    "description": "The SpeechRecognitionResult interface of the Web Speech API represents a single recognition match, which may contain multiple SpeechRecognitionAlternative objects.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechreco-result",
+            "description": "The definition of 'SpeechRecognitionResult' in the 'Web Speech API' specification."
+        }
+    ]
 }

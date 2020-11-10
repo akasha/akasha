@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Node.contains",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/contains",
-    "description": "The Node.contains() method returns a Boolean value indicating whether a node is a descendant of a given node, i.e. the node itself, one of its direct children (childNodes), one of the children's direct children, and so on."
+    "description": "The Node.contains() method returns a Boolean value indicating whether a node is a descendant of a given node, i.e. the node itself, one of its direct children (childNodes), one of the children's direct children, and so on.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-contains",
+            "description": "The definition of 'Node.contains()' in the 'DOM' specification."
+        }
+    ]
 }

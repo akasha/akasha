@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.addRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/addRange",
-    "description": "The Selection.addRange() method adds a Range to a Selection."
+    "description": "The Selection.addRange() method adds a Range to a Selection.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-addrange",
+            "description": "The definition of 'Selection.addRange()' in the 'Selection API' specification."
+        }
+    ]
 }

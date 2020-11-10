@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-onended",
-            "description": "The definition of 'onended' in Web Audio API."
+            "description": "The definition of 'onended' in the 'Web Audio API' specification."
         }
     ],
     "eventName": "ended",

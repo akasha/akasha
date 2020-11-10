@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-value",
-            "description": "The definition of 'value' in Web Audio API."
+            "description": "The definition of 'value' in the 'Web Audio API' specification."
         }
     ]
 }

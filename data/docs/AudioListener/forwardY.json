@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audiolistener-forwardy",
-            "description": "The definition of 'forwardY' in Web Audio API."
+            "description": "The definition of 'forwardY' in the 'Web Audio API' specification."
         }
     ]
 }

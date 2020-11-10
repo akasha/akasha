@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "DocumentFragment.childElementCount",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment/childElementCount",
-    "description": "The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element.",
-    "refs": [
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#dom-parentnode-childelementcount",
-            "description": "The definition of 'ParentNode.childElementCount' in DOM."
-        },
-        {
-            "name": "Element Traversal Specification",
-            "href": "https://www.w3.org/TR/ElementTraversal/#attribute-childElementCount",
-            "description": "The definition of 'ElementTraversal.childElementCount' in Element Traversal Specification."
-        }
-    ]
+    "description": "The ParentNode.childElementCount read-only property returns an unsigned long representing the number of child elements of the given element."
 }

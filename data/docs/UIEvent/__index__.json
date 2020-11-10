@@ -1,15 +1,15 @@
 
 {
     "name": "UIEvent",
-    "lastModifiedAt": 1600313686192,
+    "lastModifiedAt": 1604978290495,
     "entries": [
         {
             "name": "UIEvent",
-            "lastModifiedAt": 1600305842477
+            "lastModifiedAt": 1604978285073
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192481398
+            "lastModifiedAt": 1604978284473
         },
         {
             "name": "cancelBubble",
@@ -17,11 +17,11 @@
         },
         {
             "name": "detail",
-            "lastModifiedAt": 1600305843664
+            "lastModifiedAt": 1604978286103
         },
         {
             "name": "initUIEvent",
-            "lastModifiedAt": 1597192482500
+            "lastModifiedAt": 1604978290495
         },
         {
             "name": "layerX",
@@ -37,11 +37,11 @@
         },
         {
             "name": "sourceCapabilities",
-            "lastModifiedAt": 1600305845232
+            "lastModifiedAt": 1604978288284
         },
         {
             "name": "view",
-            "lastModifiedAt": 1600305845483
+            "lastModifiedAt": 1604978289848
         }
     ]
 }

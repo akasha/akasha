@@ -8,12 +8,12 @@
         {
             "name": "Web Animations Level 2",
             "href": "https://drafts.csswg.org/web-animations-2/#dom-keyframeeffect-iterationcomposite",
-            "description": "The definition of 'KeyframeAnimationOptions.iterationComposite' in Web Animations Level 2."
+            "description": "The definition of 'KeyframeAnimationOptions.iterationComposite' in the 'Web Animations Level 2' specification."
         },
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#animatable",
-            "description": "The definition of 'animate()' in Web Animations."
+            "description": "The definition of 'animate()' in the 'Web Animations' specification."
         }
     ]
 }

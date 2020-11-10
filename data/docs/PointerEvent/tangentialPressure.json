@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PointerEvent.tangentialPressure",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tangentialPressure",
-    "description": "The tangentialPressure read-only property of the PointerEvent interface represents the normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress)."
+    "description": "The tangentialPressure read-only property of the PointerEvent interface represents the normalized tangential pressure of the pointer input (also known as barrel pressure or cylinder stress).",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tangentialpressure",
+            "description": "The definition of 'tangentialPressure' in the 'Pointer Events &ndash; Level 2' specification."
+        }
+    ]
 }

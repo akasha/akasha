@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSource.gripSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/gripSpace",
-    "description": "The read-only XRInputSource property gripSpace returns an XRSpace whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand."
+    "description": "The read-only XRInputSource property gripSpace returns an XRSpace whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsource-gripspace",
+            "description": "The definition of 'XRInputSource.gripSpace' in the 'WebXR Device API' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.sign",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign",
-    "description": "The sign() method of the SubtleCrypto interface generates a digital signature."
+    "description": "The sign() method of the SubtleCrypto interface generates a digital signature.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-sign",
+            "description": "The definition of 'SubtleCrypto.sign()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

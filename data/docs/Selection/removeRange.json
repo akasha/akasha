@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.removeRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeRange",
-    "description": "The Selection.removeRange() method removes a range from a selection."
+    "description": "The Selection.removeRange() method removes a range from a selection.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-removerange",
+            "description": "The definition of 'Selection.removeRange()' in the 'Selection API' specification."
+        }
+    ]
 }

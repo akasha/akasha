@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement",
-    "description": "All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface."
+    "description": "All of the SVG DOM interfaces that correspond directly to elements in the SVG language derive from the SVGElement interface.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGElement",
+            "description": "The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGElement",
+            "description": "The definition of 'SVGElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

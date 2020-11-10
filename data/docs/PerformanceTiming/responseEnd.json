@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.responseEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/responseEnd",
-    "description": "The legacy PerformanceTiming.responseEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the browser received the last byte of the response, or when the connection is closed if this happened first, from the server from a cache or from a local resource."
+    "description": "The legacy PerformanceTiming.responseEnd read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the browser received the last byte of the response, or when the connection is closed if this happened first, from the server from a cache or from a local resource.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-responseEnd",
+            "description": "The definition of 'PerformanceTiming.responseEnd' in the 'Navigation Timing' specification."
+        }
+    ]
 }

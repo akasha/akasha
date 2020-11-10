@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Response.redirect",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Response/redirect",
-    "description": "The redirect() method of the Response interface returns a Response resulting in a redirect to the specified URL."
+    "description": "The redirect() method of the Response interface returns a Response resulting in a redirect to the specified URL.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-response-redirect",
+            "description": "The definition of 'redirect()' in the 'Fetch' specification."
+        }
+    ]
 }

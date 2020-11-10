@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserver-disconnect",
-            "description": "The definition of 'IntersectionObserver.disconnect()' in Intersection Observer."
+            "description": "The definition of 'IntersectionObserver.disconnect()' in the 'Intersection Observer' specification."
         }
     ]
 }

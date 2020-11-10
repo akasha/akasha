@@ -8,7 +8,7 @@
         {
             "name": "Touch Events",
             "href": "https://www.w3.org/TR/touch-events/#widl-Document-createTouch-Touch-WindowProxy-view-EventTarget-target-long-identifier-long-pageX-long-pageY-long-screenX-long-screenY",
-            "description": "The definition of 'Document.createTouch()' in Touch Events."
+            "description": "The definition of 'Document.createTouch()' in the 'Touch Events' specification."
         }
     ]
 }

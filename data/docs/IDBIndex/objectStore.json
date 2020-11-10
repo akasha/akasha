@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "IDBIndex.objectStore",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBIndex/objectStore",
-    "description": "An IDBObjectStore.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbindex-objectstore",
-            "description": "The definition of 'objectStore' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbindex-objectstore",
-            "description": "The definition of 'objectStore' in Indexed Database API Draft."
-        }
-    ]
+    "description": "An IDBObjectStore."
 }

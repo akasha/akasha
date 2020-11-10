@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Node.isSameNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/isSameNode",
-    "description": "The isSameNode() method for Node objects tests whether two nodes are the same (that is, whether they reference the same object)."
+    "description": "The isSameNode() method for Node objects tests whether two nodes are the same (that is, whether they reference the same object).",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-issamenode",
+            "description": "The definition of 'Node: isSameNode' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-isSameNode",
+            "description": "The definition of 'Node.isSameNode()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        }
+    ]
 }

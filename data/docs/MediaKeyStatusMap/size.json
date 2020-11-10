@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeystatusmap-size",
-            "description": "The definition of 'size' in Encrypted Media Extensions."
+            "description": "The definition of 'size' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

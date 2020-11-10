@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSourceEventInit.inputSource",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceEventInit/inputSource",
-    "description": "The XRInputSourceEventInit dictionary's inputSource property is used when calling the XRInputSourceEvent() constructor to specify the XRInputSource from which the newly-created event is being sent."
+    "description": "The XRInputSourceEventInit dictionary's inputSource property is used when calling the XRInputSourceEvent() constructor to specify the XRInputSource from which the newly-created event is being sent.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsourceeventinit-inputsource",
+            "description": "The definition of 'XRInputSourceEventInit.inputSource' in the 'WebXR Device API' specification."
+        }
+    ]
 }

@@ -8,27 +8,27 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#htmlscriptelement",
-            "description": "The definition of 'HTMLScriptElement' in HTML Living Standard."
+            "description": "The definition of 'HTMLScriptElement' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/scripting-1.html#the-script-element",
-            "description": "The definition of 'HTMLScriptElement' in HTML 5.1."
+            "description": "The definition of 'HTMLScriptElement' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/scripting-1.html#the-script-element",
-            "description": "The definition of 'HTMLScriptElement' in HTML5."
+            "description": "The definition of 'HTMLScriptElement' in the 'HTML5' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-81598695",
-            "description": "The definition of 'HTMLScriptElement' in Document Object Model (DOM) Level 2 HTML Specification."
+            "description": "The definition of 'HTMLScriptElement' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 1 Specification",
             "href": "https://www.w3.org/TR/REC-DOM-Level-1/level-one-html.html#ID-81598695",
-            "description": "The definition of 'HTMLScriptElement' in Document Object Model (DOM) Level 1 Specification."
+            "description": "The definition of 'HTMLScriptElement' in the 'Document Object Model (DOM) Level 1 Specification' specification."
         }
     ]
 }

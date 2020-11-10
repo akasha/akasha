@@ -1,19 +1,19 @@
 
 {
     "name": "GamepadEvent",
-    "lastModifiedAt": 1604970312528,
+    "lastModifiedAt": 1604976238100,
     "entries": [
         {
             "name": "GamepadEvent",
-            "lastModifiedAt": 1604448134901
+            "lastModifiedAt": 1604976237557
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448134225
+            "lastModifiedAt": 1604976237093
         },
         {
             "name": "gamepad",
-            "lastModifiedAt": 1604448135757
+            "lastModifiedAt": 1604976238048
         }
     ]
 }

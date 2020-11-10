@@ -4,6 +4,13 @@
     "name": "SVGElement.load_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/load_event",
     "description": "The load event fires on an SVGElement when it is loaded in the browser, e.g. in the DOM in the case of an embedded svg. It is basically the same as the standard load DOM event.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/single-page.html#interact-LoadEvent",
+            "description": "The definition of 'load' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ],
     "eventName": "load",
     "eventType": "SVGEvent",
     "eventHandlerProperty": "onload",

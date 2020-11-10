@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBufferList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList/length",
-    "description": "The length read-only property of the SourceBufferList interface returns the number of SourceBuffer objects in the list."
+    "description": "The length read-only property of the SourceBufferList interface returns the number of SourceBuffer objects in the list.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebufferlist-length",
+            "description": "The definition of 'length' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBuffer.appendWindowEnd",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/appendWindowEnd",
-    "description": "The appendWindowEnd property of the SourceBuffer interface controls the timestamp for the end of the append window, a timestamp range that can be used to filter what media data is appended to the SourceBuffer. Coded media frames with timestamps wthin this range will be appended, whereas those outside the range will be filtered out."
+    "description": "The appendWindowEnd property of the SourceBuffer interface controls the timestamp for the end of the append window, a timestamp range that can be used to filter what media data is appended to the SourceBuffer. Coded media frames with timestamps wthin this range will be appended, whereas those outside the range will be filtered out.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-appendwindowend",
+            "description": "The definition of 'appendWindowEnd' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

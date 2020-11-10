@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognition.maxAlternatives",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/maxAlternatives",
-    "description": "The maxAlternatives property of the SpeechRecognition interface sets the maximum number of SpeechRecognitionAlternatives provided per SpeechRecognitionResult."
+    "description": "The maxAlternatives property of the SpeechRecognition interface sets the maximum number of SpeechRecognitionAlternatives provided per SpeechRecognitionResult.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-maxalternatives",
+            "description": "The definition of 'maxAlternatives' in the 'Web Speech API' specification."
+        }
+    ]
 }

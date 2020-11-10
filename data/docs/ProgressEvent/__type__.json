@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ProgressEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ProgressEvent",
-    "description": "The ProgressEvent interface represents events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an img, audio, video, style or link)."
+    "description": "The ProgressEvent interface represents events measuring progress of an underlying process, like an HTTP request (for an XMLHttpRequest, or the loading of the underlying resource of an img, audio, video, style or link).",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#interface-progressevent",
+            "description": "The definition of 'ProgressEvent' in the 'XMLHttpRequest' specification."
+        }
+    ]
 }

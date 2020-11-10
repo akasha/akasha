@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.framebufferTextureLayer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/framebufferTextureLayer",
-    "description": "The WebGL2RenderingContext.framebufferTextureLayer() method of the WebGL 2 API attaches a single layer of a texture to a framebuffer."
+    "description": "The WebGL2RenderingContext.framebufferTextureLayer() method of the WebGL 2 API attaches a single layer of a texture to a framebuffer.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4",
+            "description": "The definition of 'framebufferTextureLayer' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glFramebufferTextureLayer.xhtml",
+            "description": "The definition of 'glFramebufferTextureLayer' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

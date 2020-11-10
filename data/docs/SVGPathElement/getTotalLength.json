@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SVGPathElement.getTotalLength",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGPathElement/getTotalLength",
-    "description": "The SVGPathElement.getTotalLength() method returns the user agent's computed value for the total length of the path in user units."
+    "description": "The SVGPathElement.getTotalLength() method returns the user agent's computed value for the total length of the path in user units.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/paths.html#__svg__SVGPathElement__getTotalLength",
+            "description": "The definition of 'SVGPathElement.getTotalLength()' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

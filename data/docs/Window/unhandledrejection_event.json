@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#unhandled-promise-rejections",
-            "description": "The definition of 'unhandledrejection' in HTML Living Standard."
+            "description": "The definition of 'unhandledrejection' in the 'HTML Living Standard' specification."
         }
     ],
     "eventName": "unhandledrejection",

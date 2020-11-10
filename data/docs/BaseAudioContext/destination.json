@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-destination",
-            "description": "The definition of 'destination' in Web Audio API."
+            "description": "The definition of 'destination' in the 'Web Audio API' specification."
         }
     ]
 }

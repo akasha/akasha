@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorker.state",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker/state",
-    "description": "The state read-only property of the ServiceWorker interface returns a string representing the current state of the service worker. It can be one of the following values: installing, installed, activating, activated, or redundant."
+    "description": "The state read-only property of the ServiceWorker interface returns a string representing the current state of the service worker. It can be one of the following values: installing, installed, activating, activated, or redundant.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#service-worker-state",
+            "description": "The definition of 'state' in the 'Service Workers' specification."
+        }
+    ]
 }

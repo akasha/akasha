@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#warn",
-            "description": "The definition of 'console.warn()' in Console API."
+            "description": "The definition of 'console.warn()' in the 'Console API' specification."
         }
     ]
 }

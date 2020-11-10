@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRSession.end",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/end",
-    "description": "The end() method shuts down the XRSession on which it's called, returning a promise which resolves once the session has fully shut down."
+    "description": "The end() method shuts down the XRSession on which it's called, returning a promise which resolves once the session has fully shut down.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsession-end",
+            "description": "The definition of 'XRSession.end' in the 'WebXR Device API' specification."
+        }
+    ]
 }

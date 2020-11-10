@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRWebGLLayer.framebufferHeight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferHeight",
-    "description": "The read-only XRWebGLLayer property framebufferHeight indicates the height of the framebuffer, in pixels."
+    "description": "The read-only XRWebGLLayer property framebufferHeight indicates the height of the framebuffer, in pixels.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-framebufferheight",
+            "description": "The definition of 'XRWebGLLayer.framebufferHeight' in the 'WebXR Device API' specification."
+        }
+    ]
 }

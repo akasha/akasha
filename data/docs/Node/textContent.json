@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Node.textContent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent",
-    "description": "The textContent property of the Node interface represents the text content of the node and its descendants."
+    "description": "The textContent property of the Node interface represents the text content of the node and its descendants.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-textcontent",
+            "description": "The definition of 'Node.textContent' in the 'DOM' specification."
+        }
+    ]
 }

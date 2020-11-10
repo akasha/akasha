@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-endoffset",
-            "description": "The definition of 'endOffset' in DOM."
+            "description": "The definition of 'endOffset' in the 'DOM' specification."
         },
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-endoffset",
-            "description": "The definition of 'endOffset' in Static Range."
+            "description": "The definition of 'endOffset' in the 'Static Range' specification."
         }
     ]
 }

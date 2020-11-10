@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Selection.removeAllRanges",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/removeAllRanges",
-    "description": "The Selection.removeAllRanges() method removes all ranges from the selection, leaving the anchorNode and focusNode properties equal to null and leaving nothing selected."
+    "description": "The Selection.removeAllRanges() method removes all ranges from the selection, leaving the anchorNode and focusNode properties equal to null and leaving nothing selected.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-removeallranges",
+            "description": "The definition of 'Selection.removeAllRanges()' in the 'Selection API' specification."
+        }
+    ]
 }

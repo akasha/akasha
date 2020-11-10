@@ -8,12 +8,12 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-length",
-            "description": "The definition of 'CSSStyleDeclaration.length' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'CSSStyleDeclaration.length' in the 'CSS Object Model (CSSOM)' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Style Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration",
-            "description": "The definition of 'CSSStyleDeclaration' in Document Object Model (DOM) Level 2 Style Specification."
+            "description": "The definition of 'CSSStyleDeclaration' in the 'Document Object Model (DOM) Level 2 Style Specification' specification."
         }
     ]
 }

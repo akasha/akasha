@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebGLActiveInfo.size",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLActiveInfo/size",
-    "description": "The read-only WebGLActiveInfo.size property is a Number representing the size of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods."
+    "description": "The read-only WebGLActiveInfo.size property is a Number representing the size of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLActiveInfo-size",
+            "description": "The definition of 'WebGLActiveInfo.size' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

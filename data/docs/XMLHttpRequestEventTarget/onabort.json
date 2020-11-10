@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "XMLHttpRequestEventTarget.onabort",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequestEventTarget/onabort",
-    "description": "The XMLHttpRequestEventTarget.onabort is the function called when an XMLHttpRequest transaction is aborted, such as when the XMLHttpRequest.abort() function is called."
+    "description": "The XMLHttpRequestEventTarget.onabort is the function called when an XMLHttpRequest transaction is aborted, such as when the XMLHttpRequest.abort() function is called.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#handler-xhr-onabort"
+        }
+    ]
 }

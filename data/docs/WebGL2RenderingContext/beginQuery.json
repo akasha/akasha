@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.beginQuery",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/beginQuery",
-    "description": "The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query. The target parameter indicates which kind of query to begin."
+    "description": "The WebGL2RenderingContext.beginQuery() method of the WebGL 2 API starts an asynchronous query. The target parameter indicates which kind of query to begin.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.12",
+            "description": "The definition of 'beginQuery' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBeginQuery.xhtml",
+            "description": "The definition of 'glBeginQuery' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

@@ -1,11 +1,11 @@
 
 {
     "name": "IDBObjectStore",
-    "lastModifiedAt": 1604970915827,
+    "lastModifiedAt": 1604976841691,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604970901914
+            "lastModifiedAt": 1604976828537
         },
         {
             "name": "add",
@@ -25,7 +25,7 @@
         },
         {
             "name": "createIndex",
-            "lastModifiedAt": 1599280570359
+            "lastModifiedAt": 1604976835447
         },
         {
             "name": "delete",
@@ -33,23 +33,23 @@
         },
         {
             "name": "deleteIndex",
-            "lastModifiedAt": 1599280571661
+            "lastModifiedAt": 1604976837148
         },
         {
             "name": "get",
-            "lastModifiedAt": 1597192092145
+            "lastModifiedAt": 1604976837904
         },
         {
             "name": "getAll",
-            "lastModifiedAt": 1597192092766
+            "lastModifiedAt": 1604976838665
         },
         {
             "name": "getAllKeys",
-            "lastModifiedAt": 1597192093083
+            "lastModifiedAt": 1604976839155
         },
         {
             "name": "getKey",
-            "lastModifiedAt": 1597192092458
+            "lastModifiedAt": 1604976839627
         },
         {
             "name": "index",
@@ -57,15 +57,15 @@
         },
         {
             "name": "indexNames",
-            "lastModifiedAt": 1604970903684
+            "lastModifiedAt": 1604976829461
         },
         {
             "name": "keyPath",
-            "lastModifiedAt": 1604970904148
+            "lastModifiedAt": 1604976830199
         },
         {
             "name": "name",
-            "lastModifiedAt": 1604970905077
+            "lastModifiedAt": 1604976830722
         },
         {
             "name": "openCursor",
@@ -73,7 +73,7 @@
         },
         {
             "name": "openKeyCursor",
-            "lastModifiedAt": 1599280577405
+            "lastModifiedAt": 1604976841219
         },
         {
             "name": "put",
@@ -81,7 +81,7 @@
         },
         {
             "name": "transaction",
-            "lastModifiedAt": 1604970905816
+            "lastModifiedAt": 1604976831752
         }
     ]
 }

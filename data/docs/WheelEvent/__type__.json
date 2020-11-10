@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "WheelEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent",
-    "description": "The WheelEvent interface represents events that occur due to the user moving a mouse wheel or similar input device."
+    "description": "The WheelEvent interface represents events that occur due to the user moving a mouse wheel or similar input device.",
+    "refs": [
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#interface-wheelevent",
+            "description": "The definition of 'The WheelEvent interface' in the 'UI Events' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#interface-wheelevent",
+            "description": "The definition of 'WheelEvent' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+        }
+    ]
 }

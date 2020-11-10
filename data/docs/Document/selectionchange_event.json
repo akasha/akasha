@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#selectionchange-event",
-            "description": "The definition of 'selectionchange' in Selection API."
+            "description": "The definition of 'selectionchange' in the 'Selection API' specification."
         }
     ],
     "eventName": "selectionchange",

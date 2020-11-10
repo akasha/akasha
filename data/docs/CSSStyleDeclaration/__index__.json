@@ -1,11 +1,11 @@
 
 {
     "name": "CSSStyleDeclaration",
-    "lastModifiedAt": 1604969503564,
+    "lastModifiedAt": 1604975518096,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447327882
+            "lastModifiedAt": 1604975513209
         },
         {
             "name": "getPropertyCSSValue",
@@ -25,7 +25,7 @@
         },
         {
             "name": "length",
-            "lastModifiedAt": 1604447328583
+            "lastModifiedAt": 1604975514265
         },
         {
             "name": "parentRule",

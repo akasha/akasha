@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "PushSubscription.getKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/getKey",
-    "description": "The getKey() method of the PushSubscription interface returns an ArrayBuffer representing a client public key, which can then be sent to a server and used in encrypting push message data."
+    "description": "The getKey() method of the PushSubscription interface returns an ArrayBuffer representing a client public key, which can then be sent to a server and used in encrypting push message data.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/"
+        }
+    ]
 }

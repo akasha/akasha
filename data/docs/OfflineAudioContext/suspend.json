@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-offlineaudiocontext-suspend",
-            "description": "The definition of 'suspend()' in Web Audio API."
+            "description": "The definition of 'suspend()' in the 'Web Audio API' specification."
         }
     ]
 }

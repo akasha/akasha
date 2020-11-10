@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#extensions-to-the-navigator-interface",
-            "description": "The definition of 'maxTouchPoints' in Pointer Events – Level 2."
+            "description": "The definition of 'maxTouchPoints' in the 'Pointer Events &ndash; Level 2' specification."
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#extensions-to-the-navigator-interface",
-            "description": "The definition of 'maxTouchPoints' in Pointer Events."
+            "description": "The definition of 'maxTouchPoints' in the 'Pointer Events' specification."
         }
     ]
 }

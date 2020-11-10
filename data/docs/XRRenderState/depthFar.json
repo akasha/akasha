@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRRenderState.depthFar",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthFar",
-    "description": "The depthFar read-only property of the XRRenderState interface returns the distance in meters of the far clip plane from the viewer."
+    "description": "The depthFar read-only property of the XRRenderState interface returns the distance in meters of the far clip plane from the viewer.",
+    "refs": [
+        {
+            "name": "Unknown",
+            "href": "",
+            "description": "The definition of 'XRRenderState.depthFar' in the 'Unknown' specification."
+        }
+    ]
 }

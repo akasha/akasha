@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-childnode",
-            "description": "The definition of 'ChildNode' in DOM."
+            "description": "The definition of 'ChildNode' in the 'DOM' specification."
         },
         {
             "name": "Element Traversal Specification",
             "href": "https://www.w3.org/TR/ElementTraversal/#interface-elementTraversal",
-            "description": "The definition of 'ElementTraversal' in Element Traversal Specification."
+            "description": "The definition of 'ElementTraversal' in the 'Element Traversal Specification' specification."
         }
     ]
 }

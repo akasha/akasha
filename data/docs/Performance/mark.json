@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Performance.mark",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark",
-    "description": "The mark() method creates a timestamp in the browser's performance entry buffer with the given name."
+    "description": "The mark() method creates a timestamp in the browser's performance entry buffer with the given name.",
+    "refs": [
+        {
+            "name": "User Timing Level 2",
+            "href": "https://w3c.github.io/user-timing/#dom-performance-mark",
+            "description": "The definition of 'mark()' in the 'User Timing Level 2' specification."
+        },
+        {
+            "name": "User Timing",
+            "href": "https://www.w3.org/TR/user-timing/#dom-performance-mark",
+            "description": "The definition of 'mark()' in the 'User Timing' specification."
+        }
+    ]
 }

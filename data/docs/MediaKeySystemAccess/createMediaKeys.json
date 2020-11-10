@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-mediakeysystemaccess-createmediakeys",
-            "description": "The definition of 'createMediaKeys()' in Encrypted Media Extensions."
+            "description": "The definition of 'createMediaKeys()' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

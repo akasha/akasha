@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createconstantsource",
-            "description": "The definition of 'createConstantSource()' in Web Audio API."
+            "description": "The definition of 'createConstantSource()' in the 'Web Audio API' specification."
         }
     ]
 }

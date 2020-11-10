@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "TouchEvent.ctrlKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/ctrlKey",
-    "description": "A Boolean value indicating whether the control (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false."
+    "description": "A Boolean value indicating whether the control (Control) key is enabled when the touch event is created. If this key is enabled, the attribute's value is true. Otherwise, it is false.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touchevent-ctrlkey"
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-TouchEvent-ctrlKey"
+        }
+    ]
 }

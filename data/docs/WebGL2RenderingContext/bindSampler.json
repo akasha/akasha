@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.bindSampler",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindSampler",
-    "description": "The WebGL2RenderingContext.bindSampler() method of the WebGL 2 API binds a passed WebGLSampler object to the texture unit at the passed index."
+    "description": "The WebGL2RenderingContext.bindSampler() method of the WebGL 2 API binds a passed WebGLSampler object to the texture unit at the passed index.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13",
+            "description": "The definition of 'bindSampler' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBindSampler.xhtml",
+            "description": "The definition of 'glBindSampler' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

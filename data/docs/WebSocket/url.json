@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-url",
-            "description": "The definition of 'WebSocket: url' in HTML Living Standard."
+            "description": "The definition of 'WebSocket: url' in the 'HTML Living Standard' specification."
         }
     ]
 }

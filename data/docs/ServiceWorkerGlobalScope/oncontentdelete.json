@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.oncontentdelete",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/oncontentdelete",
-    "description": "The oncontentdelete property of the ServiceWorkerGlobalScope interface is an event handler fired when an item is removed from the indexed content via the user agent."
+    "description": "The oncontentdelete property of the ServiceWorkerGlobalScope interface is an event handler fired when an item is removed from the indexed content via the user agent.",
+    "refs": [
+        {
+            "name": "Content Index API",
+            "href": "https://wicg.github.io/content-index/spec/#extensions-to-service-worker-global",
+            "description": "The definition of 'contentdelete' in the 'Content Index API' specification."
+        }
+    ]
 }

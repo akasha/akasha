@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerRegistration.index",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/index",
-    "description": "The index read-only property of the ServiceWorkerRegistration interface returns a reference to the ContentIndex interface, which allows for indexing of offline content."
+    "description": "The index read-only property of the ServiceWorkerRegistration interface returns a reference to the ContentIndex interface, which allows for indexing of offline content.",
+    "refs": [
+        {
+            "name": "Content Index API",
+            "href": "https://wicg.github.io/content-index/spec/#extensions-to-service-worker-registration",
+            "description": "The definition of 'index' in the 'Content Index API' specification."
+        }
+    ]
 }

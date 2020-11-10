@@ -1,47 +1,47 @@
 
 {
     "name": "XPathResult",
-    "lastModifiedAt": 1604009127005,
+    "lastModifiedAt": 1604979025468,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193058515
+            "lastModifiedAt": 1604979018956
         },
         {
             "name": "booleanValue",
-            "lastModifiedAt": 1597193058744
+            "lastModifiedAt": 1604979019410
         },
         {
             "name": "invalidIteratorState",
-            "lastModifiedAt": 1597193059536
+            "lastModifiedAt": 1604979020434
         },
         {
             "name": "iterateNext",
-            "lastModifiedAt": 1597193061682
+            "lastModifiedAt": 1604979025002
         },
         {
             "name": "numberValue",
-            "lastModifiedAt": 1597193059761
+            "lastModifiedAt": 1604979021477
         },
         {
             "name": "resultType",
-            "lastModifiedAt": 1597193060089
+            "lastModifiedAt": 1604979022071
         },
         {
             "name": "singleNodeValue",
-            "lastModifiedAt": 1597193060936
+            "lastModifiedAt": 1604979022552
         },
         {
             "name": "snapshotItem",
-            "lastModifiedAt": 1597193062061
+            "lastModifiedAt": 1604979025468
         },
         {
             "name": "snapshotLength",
-            "lastModifiedAt": 1597193061181
+            "lastModifiedAt": 1604979023029
         },
         {
             "name": "stringValue",
-            "lastModifiedAt": 1597193061428
+            "lastModifiedAt": 1604979023485
         }
     ]
 }

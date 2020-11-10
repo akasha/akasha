@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "PointerEvent.tiltY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent/tiltY",
-    "description": "The tiltY read-only property of the PointerEvent interface is the angle (in degrees) between the X-Z plane of the pointer and the screen. This property is typically only useful for a pen/stylus pointer type."
+    "description": "The tiltY read-only property of the PointerEvent interface is the angle (in degrees) between the X-Z plane of the pointer and the screen. This property is typically only useful for a pen/stylus pointer type.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#dom-pointerevent-tilty",
+            "description": "The definition of 'tiltY' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-PointerEventInit-tiltY",
+            "description": "The definition of 'tiltY' in the 'Pointer Events' specification."
+        }
+    ]
 }

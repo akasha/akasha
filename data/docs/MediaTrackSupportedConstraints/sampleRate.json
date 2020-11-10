@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediatracksupportedconstraints-samplerate",
-            "description": "The definition of 'sampleRate' in Media Capture and Streams."
+            "description": "The definition of 'sampleRate' in the 'Media Capture and Streams' specification."
         }
     ]
 }

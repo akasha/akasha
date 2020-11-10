@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SourceBufferList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBufferList",
-    "description": "The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects."
+    "description": "The SourceBufferList interface represents a simple container list for multiple SourceBuffer objects.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#sourcebufferlist",
+            "description": "The definition of 'SourceBufferList' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

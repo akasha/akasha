@@ -3,17 +3,5 @@
     "kind": "Method",
     "name": "Window.requestAnimationFrame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame",
-    "description": "The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#animation-frames",
-            "description": "The definition of 'requestAnimationFrame' in HTML Living Standard."
-        },
-        {
-            "name": "Timing control for script-based animations",
-            "href": "https://www.w3.org/TR/animation-timing/#dom-windowanimationtiming-requestanimationframe",
-            "description": "The definition of 'requestAnimationFrame' in Timing control for script-based animations."
-        }
-    ]
+    "description": "The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint."
 }

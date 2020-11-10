@@ -8,7 +8,7 @@
         {
             "name": "Credential Management Level 1",
             "href": "https://w3c.github.io/webappsec-credential-management/#dom-federatedcredential-protocol",
-            "description": "The definition of 'protocol' in Credential Management Level 1."
+            "description": "The definition of 'protocol' in the 'Credential Management Level 1' specification."
         }
     ]
 }

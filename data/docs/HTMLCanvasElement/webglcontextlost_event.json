@@ -8,7 +8,7 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2",
-            "description": "The definition of 'webglcontextlost' in WebGL 1.0."
+            "description": "The definition of 'webglcontextlost' in the 'WebGL 1.0' specification."
         }
     ],
     "eventName": "webglcontextlost",

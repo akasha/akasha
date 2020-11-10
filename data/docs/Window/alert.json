@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Window.alert",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/alert",
-    "description": "The Window.alert() method displays an alert dialog with the optional specified content and an OK button.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#dom-alert",
-            "description": "The definition of 'alert()' in HTML Living Standard."
-        }
-    ]
+    "description": "The Window.alert() method displays an alert dialog with the optional specified content and an OK button."
 }

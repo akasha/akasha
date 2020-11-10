@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Selection.focusNode",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Selection/focusNode",
-    "description": "The Selection.focusNode read-only property returns the Node in which the selection ends."
+    "description": "The Selection.focusNode read-only property returns the Node in which the selection ends.",
+    "refs": [
+        {
+            "name": "Selection API",
+            "href": "https://w3c.github.io/selection-api/#dom-selection-focusnode",
+            "description": "The definition of 'Selection.focusNode' in the 'Selection API' specification."
+        }
+    ]
 }

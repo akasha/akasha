@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGTSpanElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTSpanElement",
-    "description": "The SVGTSpanElement interface represents a tspan element."
+    "description": "The SVGTSpanElement interface represents a tspan element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/text.html#InterfaceSVGTSpanElement",
+            "description": "The definition of 'SVGTSpanElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/text.html#InterfaceSVGTSpanElement",
+            "description": "The definition of 'SVGTSpanElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "XMLHttpRequest.response",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/response",
-    "description": "The XMLHttpRequest response property returns the response's body content as an ArrayBuffer, Blob, Document, JavaScript Object, or DOMString, depending on the value of the request's responseType property."
+    "description": "The XMLHttpRequest response property returns the response's body content as an ArrayBuffer, Blob, Document, JavaScript Object, or DOMString, depending on the value of the request's responseType property.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#the-response-attribute"
+        }
+    ]
 }

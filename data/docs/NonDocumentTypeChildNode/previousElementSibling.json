@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "NonDocumentTypeChildNode.previousElementSibling",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling",
-    "description": "The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list."
+    "description": "The NonDocumentTypeChildNode.previousElementSibling read-only property returns the Element immediately prior to the specified one in its parent's children list, or null if the specified element is the first one in the list.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-previouselementsibling",
+            "description": "The definition of 'NonDocumentTypeChildNode.previousElementSibling' in the 'DOM' specification."
+        },
+        {
+            "name": "Element Traversal Specification",
+            "href": "https://www.w3.org/TR/ElementTraversal/#attribute-previousElementSibling",
+            "description": "The definition of 'ElementTraversal.previousElementSibling' in the 'Element Traversal Specification' specification."
+        }
+    ]
 }

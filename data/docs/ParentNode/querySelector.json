@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "ParentNode.querySelector",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/querySelector",
-    "description": "The ParentNode mixin defines the querySelector() method as returning an Element representing the first element matching the specified group of selectors which are descendants of the object on which the method was called."
+    "description": "The ParentNode mixin defines the querySelector() method as returning an Element representing the first element matching the specified group of selectors which are descendants of the object on which the method was called.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-parentnode-queryselector",
+            "description": "The definition of 'ParentNode.querySelector()' in the 'DOM' specification."
+        },
+        {
+            "name": "Selectors API Level 2",
+            "href": "https://dev.w3.org/2006/webapi/selectors-api2/#dom-parentnode-queryselector",
+            "description": "The definition of 'ParentNode.querySelector()' in the 'Selectors API Level 2' specification."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#dom-parentnode-queryselector",
+            "description": "The definition of 'ParentNode.querySelector()' in the 'DOM4' specification."
+        },
+        {
+            "name": "Selectors API Level 1",
+            "href": "https://www.w3.org/TR/selectors-api/#interface-definitions",
+            "description": "The definition of 'document.querySelector()' in the 'Selectors API Level 1' specification."
+        }
+    ]
 }

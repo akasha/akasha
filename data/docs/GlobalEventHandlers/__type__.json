@@ -8,27 +8,27 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/",
-            "description": "The definition of 'Extension to GlobalEventHandlers' in Selection API."
+            "description": "The definition of 'Extension to GlobalEventHandlers' in the 'Selection API' specification."
         },
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#extensions-to-the-document-interface",
-            "description": "The definition of 'Extension of Document' in Pointer Lock."
+            "description": "The definition of 'Extension of Document' in the 'Pointer Lock' specification."
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#globaleventhandlers",
-            "description": "The definition of 'GlobalEventHandlers' in HTML Living Standard."
+            "description": "The definition of 'GlobalEventHandlers' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/#globaleventhandlers",
-            "description": "The definition of 'GlobalEventHandlers' in HTML 5.1."
+            "description": "The definition of 'GlobalEventHandlers' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/#globaleventhandlers",
-            "description": "The definition of 'GlobalEventHandlers' in HTML5."
+            "description": "The definition of 'GlobalEventHandlers' in the 'HTML5' specification."
         }
     ]
 }

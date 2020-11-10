@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-defaultvalue",
-            "description": "The definition of 'defaultValue' in Web Audio API."
+            "description": "The definition of 'defaultValue' in the 'Web Audio API' specification."
         }
     ]
 }

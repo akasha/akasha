@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.drawElementsInstanced",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/drawElementsInstanced",
-    "description": "The WebGL2RenderingContext.drawElementsInstanced() method of the WebGL 2 API renders primitives from array data like the gl.drawElements() method. In addition, it can execute multiple instances of a set of elements."
+    "description": "The WebGL2RenderingContext.drawElementsInstanced() method of the WebGL 2 API renders primitives from array data like the gl.drawElements() method. In addition, it can execute multiple instances of a set of elements.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.9",
+            "description": "The definition of 'drawElementsInstanced' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glDrawElementsInstanced.xhtml",
+            "description": "The definition of 'glDrawElementsInstanced' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

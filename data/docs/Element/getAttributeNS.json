@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "Element.getAttributeNS",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNS",
-    "description": "The getAttributeNS() method of the Element interface returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or &quot;&quot; (the empty string); see Notes for details."
+    "description": "The getAttributeNS() method of the Element interface returns the string value of the attribute with the specified namespace and name. If the named attribute does not exist, the value returned will either be null or &quot;&quot; (the empty string); see Notes for details.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-getattributens",
+            "description": "The definition of 'Element.getAttributeNS()' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 3 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-Core/#ID-ElGetAttrNS",
+            "description": "The definition of 'Element.getAttributeNS()' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Core Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Core/#ID-ElGetAttrNS",
+            "description": "The definition of 'Element.getAttributeNS()' in the 'Document Object Model (DOM) Level 2 Core Specification' specification."
+        }
+    ]
 }

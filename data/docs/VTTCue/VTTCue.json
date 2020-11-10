@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "VTTCue.VTTCue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/VTTCue",
-    "description": "The VTTCue() constructor creates and returns a new VTTCue object."
+    "description": "The VTTCue() constructor creates and returns a new VTTCue object.",
+    "refs": [
+        {
+            "name": "WebVTT: The Web Video Text Tracks Format",
+            "href": "https://w3c.github.io/webvtt/#dom-vttcue-vttcue",
+            "description": "The definition of 'VTTCue()' in the 'WebVTT: The Web Video Text Tracks Format' specification."
+        }
+    ]
 }

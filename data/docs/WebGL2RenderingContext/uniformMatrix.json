@@ -1,0 +1,19 @@
+
+{
+    "kind": "Method",
+    "name": "WebGL2RenderingContext.uniformMatrix",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/uniformMatrix",
+    "description": "The WebGL2RenderingContext.uniformMatrix[234]x[234]fv() methods of the WebGL 2 API specify matrix values for uniform variables.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8",
+            "description": "The definition of 'uniformMatrix' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glUniform.xhtml",
+            "description": "The definition of 'glUniformMatrix' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
+}

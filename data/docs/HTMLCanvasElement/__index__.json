@@ -1,23 +1,23 @@
 
 {
     "name": "HTMLCanvasElement",
-    "lastModifiedAt": 1604970480257,
+    "lastModifiedAt": 1604976403620,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450656207
+            "lastModifiedAt": 1604976393945
         },
         {
             "name": "captureStream",
-            "lastModifiedAt": 1604450659050
+            "lastModifiedAt": 1604976398321
         },
         {
             "name": "getContext",
-            "lastModifiedAt": 1604450659805
+            "lastModifiedAt": 1604976398821
         },
         {
             "name": "height",
-            "lastModifiedAt": 1604450656821
+            "lastModifiedAt": 1604976394954
         },
         {
             "name": "mozOpaque",
@@ -25,31 +25,31 @@
         },
         {
             "name": "toBlob",
-            "lastModifiedAt": 1604450660298
+            "lastModifiedAt": 1604976399701
         },
         {
             "name": "toDataURL",
-            "lastModifiedAt": 1604450660770
+            "lastModifiedAt": 1604976400196
         },
         {
             "name": "transferControlToOffscreen",
-            "lastModifiedAt": 1604450661381
+            "lastModifiedAt": 1604976401268
         },
         {
             "name": "webglcontextcreationerror_event",
-            "lastModifiedAt": 1604450662511
+            "lastModifiedAt": 1604976401876
         },
         {
             "name": "webglcontextlost_event",
-            "lastModifiedAt": 1604450663505
+            "lastModifiedAt": 1604976402552
         },
         {
             "name": "webglcontextrestored_event",
-            "lastModifiedAt": 1604450664055
+            "lastModifiedAt": 1604976403620
         },
         {
             "name": "width",
-            "lastModifiedAt": 1604450657927
+            "lastModifiedAt": 1604976396479
         }
     ]
 }

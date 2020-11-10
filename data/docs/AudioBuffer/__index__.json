@@ -1,43 +1,43 @@
 
 {
     "name": "AudioBuffer",
-    "lastModifiedAt": 1604969299091,
+    "lastModifiedAt": 1604975328246,
     "entries": [
         {
             "name": "AudioBuffer",
-            "lastModifiedAt": 1604448455315
+            "lastModifiedAt": 1604975323951
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448454691
+            "lastModifiedAt": 1604975323317
         },
         {
             "name": "copyFromChannel",
-            "lastModifiedAt": 1604448457946
+            "lastModifiedAt": 1604975327315
         },
         {
             "name": "copyToChannel",
-            "lastModifiedAt": 1604448459233
+            "lastModifiedAt": 1604975327776
         },
         {
             "name": "duration",
-            "lastModifiedAt": 1604448455833
+            "lastModifiedAt": 1604975324565
         },
         {
             "name": "getChannelData",
-            "lastModifiedAt": 1604448460258
+            "lastModifiedAt": 1604975328246
         },
         {
             "name": "length",
-            "lastModifiedAt": 1604448456288
+            "lastModifiedAt": 1604975325034
         },
         {
             "name": "numberOfChannels",
-            "lastModifiedAt": 1604448456852
+            "lastModifiedAt": 1604975325538
         },
         {
             "name": "sampleRate",
-            "lastModifiedAt": 1604448457292
+            "lastModifiedAt": 1604975326560
         }
     ]
 }

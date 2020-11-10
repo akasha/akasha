@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "FileReader.readyState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readyState",
-    "description": "The FileReader readyState property provides the current state of the reading operation a FileReader is in. A FileReader exists in one of the following states:"
+    "description": "The FileReader readyState property provides the current state of the reading operation a FileReader is in. A FileReader exists in one of the following states:",
+    "refs": [
+        {
+            "name": "File API",
+            "href": "https://w3c.github.io/FileAPI/#dom-filereader-readystate",
+            "description": "The definition of 'readyState' in the 'File API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-resume",
-            "description": "The definition of 'MediaRecorder.resume()' in MediaStream Recording."
+            "description": "The definition of 'MediaRecorder.resume()' in the 'MediaStream Recording' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "WindowClient",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WindowClient",
-    "description": "The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources."
+    "description": "The WindowClient interface of the ServiceWorker API represents the scope of a service worker client that is a document in a browsing context, controlled by an active worker. The service worker client independently selects and uses a service worker for its own loading and sub-resources.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#windowclient",
+            "description": "The definition of 'WindowClient' in the 'Service Workers' specification."
+        }
+    ]
 }

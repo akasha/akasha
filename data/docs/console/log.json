@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#log",
-            "description": "The definition of 'console.log()' in Console API."
+            "description": "The definition of 'console.log()' in the 'Console API' specification."
         }
     ]
 }

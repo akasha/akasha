@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "XMLHttpRequest.upload",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/upload",
-    "description": "The XMLHttpRequest upload property returns an XMLHttpRequestUpload object that can be observed to monitor an upload's progress."
+    "description": "The XMLHttpRequest upload property returns an XMLHttpRequestUpload object that can be observed to monitor an upload's progress.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#the-upload-attribute"
+        }
+    ]
 }

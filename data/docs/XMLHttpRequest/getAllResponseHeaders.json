@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XMLHttpRequest.getAllResponseHeaders",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders",
-    "description": "The XMLHttpRequest method getAllResponseHeaders() returns all the response headers, separated by CRLF, as a string, or returns null if no response has been received."
+    "description": "The XMLHttpRequest method getAllResponseHeaders() returns all the response headers, separated by CRLF, as a string, or returns null if no response has been received.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#the-getallresponseheaders()-method",
+            "description": "The definition of 'getAllResponseHeaders()' in the 'XMLHttpRequest' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.referrer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/referrer",
-    "description": "The referrer read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the referrer of the resources whose policy was violated. This will be a URL or null."
+    "description": "The referrer read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the referrer of the resources whose policy was violated. This will be a URL or null.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-referrer",
+            "description": "The definition of 'referrer' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

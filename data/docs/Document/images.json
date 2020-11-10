@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-document-images",
-            "description": "The definition of 'Document.images' in HTML Living Standard."
+            "description": "The definition of 'Document.images' in the 'HTML Living Standard' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 HTML Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117",
-            "description": "The definition of 'Document.images' in Document Object Model (DOM) Level 2 HTML Specification."
+            "description": "The definition of 'Document.images' in the 'Document Object Model (DOM) Level 2 HTML Specification' specification."
         }
     ]
 }

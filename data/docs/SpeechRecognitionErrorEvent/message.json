@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognitionErrorEvent.message",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent/message",
-    "description": "The message read-only property of the SpeechRecognitionErrorEvent interface returns a message describing the error in more detail."
+    "description": "The message read-only property of the SpeechRecognitionErrorEvent interface returns a message describing the error in more detail.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionerrorevent-message",
+            "description": "The definition of 'message' in the 'Web Speech API' specification."
+        }
+    ]
 }

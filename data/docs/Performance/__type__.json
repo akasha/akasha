@@ -3,5 +3,42 @@
     "kind": "Type",
     "name": "Performance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance",
-    "description": "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API."
+    "description": "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.",
+    "refs": [
+        {
+            "name": "High Resolution Time Level 2",
+            "href": "https://www.w3.org/TR/hr-time-2/#sec-performance",
+            "description": "The definition of 'Performance' in the 'High Resolution Time Level 2' specification."
+        },
+        {
+            "name": "High Resolution Time",
+            "href": "https://www.w3.org/TR/hr-time-1/#performance",
+            "description": "The definition of 'Performance' in the 'High Resolution Time' specification."
+        },
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#extensions-to-the-performance-interface",
+            "description": "The definition of 'Performance extensions' in the 'Performance Timeline Level 2' specification."
+        },
+        {
+            "name": "Performance Timeline",
+            "href": "https://www.w3.org/TR/performance-timeline/#extensions-to-the-performance-interface",
+            "description": "The definition of 'Performance extensions' in the 'Performance Timeline' specification."
+        },
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#extensions-performance-interface",
+            "description": "The definition of 'Performance extensions' in the 'Resource Timing Level 1' specification."
+        },
+        {
+            "name": "User Timing Level 2",
+            "href": "https://w3c.github.io/user-timing/#extensions-performance-interface",
+            "description": "The definition of 'Performance extensions' in the 'User Timing Level 2' specification."
+        },
+        {
+            "name": "User Timing",
+            "href": "https://www.w3.org/TR/user-timing/#extensions-performance-interface",
+            "description": "The definition of 'Performance extensions' in the 'User Timing' specification."
+        }
+    ]
 }

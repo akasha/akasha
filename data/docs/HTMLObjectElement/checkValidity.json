@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-cva-checkvalidity",
-            "description": "The definition of 'checkValidity' in HTML Living Standard."
+            "description": "The definition of 'checkValidity' in the 'HTML Living Standard' specification."
         }
     ]
 }

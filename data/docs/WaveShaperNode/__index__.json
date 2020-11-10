@@ -1,23 +1,23 @@
 
 {
     "name": "WaveShaperNode",
-    "lastModifiedAt": 1604448403774,
+    "lastModifiedAt": 1604978374948,
     "entries": [
         {
             "name": "WaveShaperNode",
-            "lastModifiedAt": 1604448402430
+            "lastModifiedAt": 1604978373758
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448401299
+            "lastModifiedAt": 1604978373144
         },
         {
             "name": "curve",
-            "lastModifiedAt": 1604448403058
+            "lastModifiedAt": 1604978374308
         },
         {
             "name": "oversample",
-            "lastModifiedAt": 1597192539195
+            "lastModifiedAt": 1604978374850
         }
     ]
 }

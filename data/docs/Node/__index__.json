@@ -1,15 +1,15 @@
 
 {
     "name": "Node",
-    "lastModifiedAt": 1604008887541,
+    "lastModifiedAt": 1604977199926,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279944577
+            "lastModifiedAt": 1604977175093
         },
         {
             "name": "appendChild",
-            "lastModifiedAt": 1597193040457
+            "lastModifiedAt": 1604977189344
         },
         {
             "name": "baseURI",
@@ -21,59 +21,59 @@
         },
         {
             "name": "childNodes",
-            "lastModifiedAt": 1597193036200
+            "lastModifiedAt": 1604977177191
         },
         {
             "name": "cloneNode",
-            "lastModifiedAt": 1597193040819
+            "lastModifiedAt": 1604977189864
         },
         {
             "name": "compareDocumentPosition",
-            "lastModifiedAt": 1599279958504
+            "lastModifiedAt": 1604977191039
         },
         {
             "name": "contains",
-            "lastModifiedAt": 1597193041877
+            "lastModifiedAt": 1604977192169
         },
         {
             "name": "firstChild",
-            "lastModifiedAt": 1597193036503
+            "lastModifiedAt": 1604977177741
         },
         {
             "name": "getRootNode",
-            "lastModifiedAt": 1597193042675
+            "lastModifiedAt": 1604977193284
         },
         {
             "name": "hasChildNodes",
-            "lastModifiedAt": 1597193043494
+            "lastModifiedAt": 1604977193790
         },
         {
             "name": "insertBefore",
-            "lastModifiedAt": 1597193043877
+            "lastModifiedAt": 1604977194364
         },
         {
             "name": "isConnected",
-            "lastModifiedAt": 1597193036810
+            "lastModifiedAt": 1604977178243
         },
         {
             "name": "isDefaultNamespace",
-            "lastModifiedAt": 1597193044174
+            "lastModifiedAt": 1604977195565
         },
         {
             "name": "isEqualNode",
-            "lastModifiedAt": 1599279963300
+            "lastModifiedAt": 1604977196152
         },
         {
             "name": "isSameNode",
-            "lastModifiedAt": 1597193044943
+            "lastModifiedAt": 1604977197296
         },
         {
             "name": "lastChild",
-            "lastModifiedAt": 1597193037192
+            "lastModifiedAt": 1604977178729
         },
         {
             "name": "lookupNamespaceURI",
-            "lastModifiedAt": 1597193045460
+            "lastModifiedAt": 1604977197905
         },
         {
             "name": "lookupPrefix",
@@ -81,23 +81,23 @@
         },
         {
             "name": "nextSibling",
-            "lastModifiedAt": 1597193037431
+            "lastModifiedAt": 1604977179235
         },
         {
             "name": "nodeName",
-            "lastModifiedAt": 1597193037681
+            "lastModifiedAt": 1604977180388
         },
         {
             "name": "nodeType",
-            "lastModifiedAt": 1597193037941
+            "lastModifiedAt": 1604977183164
         },
         {
             "name": "nodeValue",
-            "lastModifiedAt": 1597193038239
+            "lastModifiedAt": 1604977183899
         },
         {
             "name": "normalize",
-            "lastModifiedAt": 1599279965553
+            "lastModifiedAt": 1604977198913
         },
         {
             "name": "outerText",
@@ -105,31 +105,31 @@
         },
         {
             "name": "ownerDocument",
-            "lastModifiedAt": 1597193038506
+            "lastModifiedAt": 1604977185914
         },
         {
             "name": "parentElement",
-            "lastModifiedAt": 1597193039170
+            "lastModifiedAt": 1604977186510
         },
         {
             "name": "parentNode",
-            "lastModifiedAt": 1597193038852
+            "lastModifiedAt": 1604977186992
         },
         {
             "name": "previousSibling",
-            "lastModifiedAt": 1597193039956
+            "lastModifiedAt": 1604977187633
         },
         {
             "name": "removeChild",
-            "lastModifiedAt": 1597193046124
+            "lastModifiedAt": 1604977199416
         },
         {
             "name": "replaceChild",
-            "lastModifiedAt": 1597193046430
+            "lastModifiedAt": 1604977199926
         },
         {
             "name": "textContent",
-            "lastModifiedAt": 1597193040209
+            "lastModifiedAt": 1604977188146
         }
     ]
 }

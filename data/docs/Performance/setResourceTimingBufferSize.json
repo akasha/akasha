@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Performance.setResourceTimingBufferSize",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/setResourceTimingBufferSize",
-    "description": "The setResourceTimingBufferSize() method sets the browser's resource timing buffer size to the specified number of &quot;resource&quot; performance entry type objects."
+    "description": "The setResourceTimingBufferSize() method sets the browser's resource timing buffer size to the specified number of &quot;resource&quot; performance entry type objects.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performance-setresourcetimingbuffersize",
+            "description": "The definition of 'setResourceTimingBufferSize()' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

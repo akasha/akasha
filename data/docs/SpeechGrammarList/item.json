@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SpeechGrammarList.item",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/item",
-    "description": "The item getter of the SpeechGrammarList interface is a standard getter &mdash; it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax."
+    "description": "The item getter of the SpeechGrammarList interface is a standard getter &mdash; it allows individual SpeechGrammar objects to be retrieved from the SpeechGrammarList using array syntax.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechgrammarlist-item",
+            "description": "The definition of 'item()' in the 'Web Speech API' specification."
+        }
+    ]
 }

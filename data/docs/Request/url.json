@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-url",
-            "description": "The definition of 'url' in Fetch."
+            "description": "The definition of 'url' in the 'Fetch' specification."
         }
     ]
 }

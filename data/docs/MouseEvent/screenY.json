@@ -8,17 +8,17 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-mouseevent-screeny",
-            "description": "The definition of 'screenY' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'screenY' in the 'CSS Object Model (CSSOM) View Module' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 3 Events Specification",
             "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-screenY",
-            "description": "The definition of 'MouseEvent.screenY' in Document Object Model (DOM) Level 3 Events Specification."
+            "description": "The definition of 'MouseEvent.screenY' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
-            "description": "The definition of 'MouseEvent.sceenY' in Document Object Model (DOM) Level 2 Events Specification."
+            "description": "The definition of 'MouseEvent.sceenY' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
         }
     ]
 }

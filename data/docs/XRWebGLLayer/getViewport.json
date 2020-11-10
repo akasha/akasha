@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRWebGLLayer.getViewport",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/getViewport",
-    "description": "The XRWebGLLayer interface's getViewport() method returns the XRViewport that should be used to render the specified XRView into the WebGL layer."
+    "description": "The XRWebGLLayer interface's getViewport() method returns the XRViewport that should be used to render the specified XRView into the WebGL layer.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-getviewport",
+            "description": "The definition of 'XRWebGLLayer.getViewport()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

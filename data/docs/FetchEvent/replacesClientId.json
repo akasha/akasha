@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-replacesclientid",
-            "description": "The definition of 'replacesClientId' in Service Workers."
+            "description": "The definition of 'replacesClientId' in the 'Service Workers' specification."
         }
     ]
 }

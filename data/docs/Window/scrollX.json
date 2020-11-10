@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Window.scrollX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollX",
-    "description": "The read-only scrollX property of the Window interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the scrollY property.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-window-scrollx",
-            "description": "The definition of 'window.scrollX' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The read-only scrollX property of the Window interface returns the number of pixels that the document is currently scrolled horizontally. This value is subpixel precise in modern browsers, meaning that it isn't necessarily a whole number. You can get the number of pixels the document is scrolled vertically from the scrollY property."
 }

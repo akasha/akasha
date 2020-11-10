@@ -1,23 +1,23 @@
 
 {
     "name": "MessageChannel",
-    "lastModifiedAt": 1604971164813,
+    "lastModifiedAt": 1604977075112,
     "entries": [
         {
             "name": "MessageChannel",
-            "lastModifiedAt": 1604450241649
+            "lastModifiedAt": 1604977073363
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450241048
+            "lastModifiedAt": 1604977072349
         },
         {
             "name": "port1",
-            "lastModifiedAt": 1604450242161
+            "lastModifiedAt": 1604977074424
         },
         {
             "name": "port2",
-            "lastModifiedAt": 1604450242661
+            "lastModifiedAt": 1604977075022
         }
     ]
 }

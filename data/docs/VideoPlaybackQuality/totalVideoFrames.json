@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VideoPlaybackQuality.totalVideoFrames",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VideoPlaybackQuality/totalVideoFrames",
-    "description": "The VideoPlaybackQuality interface's totalVideoFrames read-only property returns the total number of video frames that have been displayed or dropped since the media was loaded."
+    "description": "The VideoPlaybackQuality interface's totalVideoFrames read-only property returns the total number of video frames that have been displayed or dropped since the media was loaded.",
+    "refs": [
+        {
+            "name": "Media Playback Quality",
+            "href": "https://w3c.github.io/media-playback-quality/#videoplaybackquality-interface",
+            "description": "The definition of 'VideoPlaybackQuality.totalVideoFrames' in the 'Media Playback Quality' specification."
+        }
+    ]
 }

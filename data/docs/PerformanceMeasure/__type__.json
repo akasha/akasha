@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "PerformanceMeasure",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceMeasure",
-    "description": "PerformanceMeasure is an abstract interface for PerformanceEntry objects with an entryType of &quot;measure&quot;. Entries of this type are created by calling performance.measure() to add a named DOMHighResTimeStamp (the measure) between two marks to the browser's performance timeline."
+    "description": "PerformanceMeasure is an abstract interface for PerformanceEntry objects with an entryType of &quot;measure&quot;. Entries of this type are created by calling performance.measure() to add a named DOMHighResTimeStamp (the measure) between two marks to the browser's performance timeline.",
+    "refs": [
+        {
+            "name": "User Timing Level 2",
+            "href": "https://w3c.github.io/user-timing/#dom-performance-measure",
+            "description": "The definition of 'PerformanceMeasure' in the 'User Timing Level 2' specification."
+        },
+        {
+            "name": "User Timing",
+            "href": "https://www.w3.org/TR/user-timing/#performancemeasure",
+            "description": "The definition of 'PerformanceMeasure' in the 'User Timing' specification."
+        }
+    ]
 }

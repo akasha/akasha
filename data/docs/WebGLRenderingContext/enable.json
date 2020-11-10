@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.enable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/enable",
-    "description": "The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context."
+    "description": "The WebGLRenderingContext.enable() method of the WebGL API enables specific WebGL capabilities for this context.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'enable' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glEnable.xml",
+            "description": "The definition of 'glEnable' in the 'OpenGL ES 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml",
+            "description": "The definition of 'glEnable' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

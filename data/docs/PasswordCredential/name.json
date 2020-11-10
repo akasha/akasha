@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PasswordCredential.name",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/name",
-    "description": "The name read-only property of the PasswordCredential interface returns a USVSTring containing a human-readable public name for display in a credential chooser."
+    "description": "The name read-only property of the PasswordCredential interface returns a USVSTring containing a human-readable public name for display in a credential chooser.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-name",
+            "description": "The definition of 'name' in the 'Credential Management Level 1' specification."
+        }
+    ]
 }

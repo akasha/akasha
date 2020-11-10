@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-addtrack",
-            "description": "The definition of 'addTrack()' in Media Capture and Streams."
+            "description": "The definition of 'addTrack()' in the 'Media Capture and Streams' specification."
         }
     ]
 }

@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getFramebufferAttachmentParameter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter",
-    "description": "The WebGLRenderingContext.getFramebufferAttachmentParameter() method of the WebGL API returns information about a framebuffer's attachment."
+    "description": "The WebGLRenderingContext.getFramebufferAttachmentParameter() method of the WebGL API returns information about a framebuffer's attachment.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.6",
+            "description": "The definition of 'getFramebufferAttachmentParameter' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetFramebufferAttachmentParameteriv.xml",
+            "description": "The definition of 'glGetFramebufferAttachmentParameteriv' in the 'OpenGL ES 2.0' specification."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4",
+            "description": "The definition of 'getFramebufferAttachmentParameter' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetFramebufferAttachmentParameteriv.xhtml",
+            "description": "The definition of 'glGetFramebufferAttachmentParameteriv' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

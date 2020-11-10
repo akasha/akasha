@@ -1,19 +1,19 @@
 
 {
     "name": "HashChangeEvent",
-    "lastModifiedAt": 1604970844266,
+    "lastModifiedAt": 1604976776393,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450354643
+            "lastModifiedAt": 1604976774649
         },
         {
             "name": "newURL",
-            "lastModifiedAt": 1604450355083
+            "lastModifiedAt": 1604976775680
         },
         {
             "name": "oldURL",
-            "lastModifiedAt": 1604450355552
+            "lastModifiedAt": 1604976776280
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Pointer Lock",
             "href": "https://w3c.github.io/pointerlock/#dom-mouseevent-movementy",
-            "description": "The definition of 'MouseEvent.movementY' in Pointer Lock."
+            "description": "The definition of 'MouseEvent.movementY' in the 'Pointer Lock' specification."
         }
     ]
 }

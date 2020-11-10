@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audioparam-maxvalue",
-            "description": "The definition of 'maxValue' in Web Audio API."
+            "description": "The definition of 'maxValue' in the 'Web Audio API' specification."
         }
     ]
 }

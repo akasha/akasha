@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.onerror",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/onerror",
-    "description": "The onerror property of the Notification interface specifies an event listener to receive error events. These events occur when something goes wrong with a Notification (in many cases an error preventing the notification from being displayed.)"
+    "description": "The onerror property of the Notification interface specifies an event listener to receive error events. These events occur when something goes wrong with a Notification (in many cases an error preventing the notification from being displayed.)",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-onerror",
+            "description": "The definition of 'onerror' in the 'Notifications API' specification."
+        }
+    ]
 }

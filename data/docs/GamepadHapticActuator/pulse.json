@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#dom-gamepadhapticactuator-pulse",
-            "description": "The definition of 'pulse()' in Gamepad Extensions."
+            "description": "The definition of 'pulse()' in the 'Gamepad Extensions' specification."
         }
     ]
 }

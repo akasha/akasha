@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRWebGLLayer.framebufferWidth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayer/framebufferWidth",
-    "description": "The read-only XRWebGLLayer property framebufferWidth specifies the width of the framebuffer, in pixels."
+    "description": "The read-only XRWebGLLayer property framebufferWidth specifies the width of the framebuffer, in pixels.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayer-framebufferwidth",
+            "description": "The definition of 'XRWebGLLayer.framebufferWidth' in the 'WebXR Device API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-mediarecorder-requestdata",
-            "description": "The definition of 'MediaRecorder.requestData()' in MediaStream Recording."
+            "description": "The definition of 'MediaRecorder.requestData()' in the 'MediaStream Recording' specification."
         }
     ]
 }

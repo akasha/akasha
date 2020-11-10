@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/browsing-the-web.html#event-pageshow",
-            "description": "The definition of 'pageshow' in HTML Living Standard."
+            "description": "The definition of 'pageshow' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/browsers.html#event-pageshow",
-            "description": "The definition of 'pageshow' in HTML5."
+            "description": "The definition of 'pageshow' in the 'HTML5' specification."
         }
     ],
     "eventName": "pageshow",

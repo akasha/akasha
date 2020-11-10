@@ -8,7 +8,7 @@
         {
             "name": "Clipboard API and events",
             "href": "https://w3c.github.io/clipboard-apis/#clipboard-interface",
-            "description": "The definition of 'Clipboard' in Clipboard API and events."
+            "description": "The definition of 'Clipboard' in the 'Clipboard API and events' specification."
         }
     ]
 }

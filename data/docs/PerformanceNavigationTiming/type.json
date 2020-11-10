@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceNavigationTiming.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type",
-    "description": "The type read-only property returns a string representing the type of navigation. The value must be one of the following:"
+    "description": "The type read-only property returns a string representing the type of navigation. The value must be one of the following:",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#dom-performancenavigationtiming-type",
+            "description": "The definition of 'type' in the 'Navigation Timing Level 2' specification."
+        }
+    ]
 }

@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "Window.print",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/print",
-    "description": "Opens the Print Dialog to print the current document.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#printing",
-            "description": "The definition of 'print()' in HTML Living Standard."
-        }
-    ]
+    "description": "Opens the Print Dialog to print the current document."
 }

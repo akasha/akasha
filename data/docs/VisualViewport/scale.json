@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VisualViewport.scale",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/scale",
-    "description": "The scale read-only property of the VisualViewport interface returns the pinch-zoom scaling factor applied to the visual viewport."
+    "description": "The scale read-only property of the VisualViewport interface returns the pinch-zoom scaling factor applied to the visual viewport.",
+    "refs": [
+        {
+            "name": "Visual Viewport API",
+            "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-scale",
+            "description": "The definition of 'scale' in the 'Visual Viewport API' specification."
+        }
+    ]
 }

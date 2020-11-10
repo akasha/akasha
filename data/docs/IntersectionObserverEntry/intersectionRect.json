@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionrect",
-            "description": "The definition of 'IntersectionObserverEntry.intersectionRect' in Intersection Observer."
+            "description": "The definition of 'IntersectionObserverEntry.intersectionRect' in the 'Intersection Observer' specification."
         }
     ]
 }

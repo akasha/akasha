@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFEConvolveMatrixElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEConvolveMatrixElement",
-    "description": "The SVGFEConvolveMatrixElement interface corresponds to the feConvolveMatrix element."
+    "description": "The SVGFEConvolveMatrixElement interface corresponds to the feConvolveMatrix element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEConvolveMatrixElement",
+            "description": "The definition of 'SVGFEConvolveMatrixElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEConvolveMatrixElement",
+            "description": "The definition of 'SVGFEConvolveMatrixElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

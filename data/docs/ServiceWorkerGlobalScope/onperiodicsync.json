@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.onperiodicsync",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onperiodicsync",
-    "description": "The onperiodicsync property of the ServiceWorkerGlobalScope interface is an event handler fired at timed intervals, specified when registering a PeriodicSyncManager."
+    "description": "The onperiodicsync property of the ServiceWorkerGlobalScope interface is an event handler fired at timed intervals, specified when registering a PeriodicSyncManager.",
+    "refs": [
+        {
+            "name": "Web Periodic Background Synchronization",
+            "href": "https://wicg.github.io/periodic-background-sync/#extensions-to-serviceworkerregistration",
+            "description": "The definition of 'onperiodicsync' in the 'Web Periodic Background Synchronization' specification."
+        }
+    ]
 }

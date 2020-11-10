@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "HTMLTableElement.createTFoot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/createTFoot",
-    "description": "The HTMLTableElement.createTFoot() method returns the tfoot element associated with a given table. If no footer exists in the table, this methods creates it, and then returns it.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-table-createtfoot",
-            "description": "The definition of 'HTMLTableElement: createTFoot' in HTML Living Standard."
-        }
-    ]
+    "description": "The HTMLTableElement.createTFoot() method returns the tfoot element associated with a given table. If no footer exists in the table, this methods creates it, and then returns it."
 }

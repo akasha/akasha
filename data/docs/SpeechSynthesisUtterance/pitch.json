@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.pitch",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch",
-    "description": "The pitch property of the SpeechSynthesisUtterance interface gets and sets the pitch at which the utterance will be spoken at."
+    "description": "The pitch property of the SpeechSynthesisUtterance interface gets and sets the pitch at which the utterance will be spoken at.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-pitch",
+            "description": "The definition of 'pitch' in the 'Web Speech API' specification."
+        }
+    ]
 }

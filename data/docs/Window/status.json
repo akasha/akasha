@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Window.status",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/status",
-    "description": "The status property of the Window interface was originally intended to set the text in the status bar at the bottom of the browser window. However, the HTML standard now requires setting window.status to have no effect on the text displayed in the status bar.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#dom-window-status",
-            "description": "The definition of 'window.status' in HTML Living Standard."
-        }
-    ]
+    "description": "The status property of the Window interface was originally intended to set the text in the status bar at the bottom of the browser window. However, the HTML standard now requires setting window.status to have no effect on the text displayed in the status bar."
 }

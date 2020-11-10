@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-mutationobserverinit-attributeoldvalue",
-            "description": "The definition of 'MutationObserverInit.attributeOldValue' in DOM."
+            "description": "The definition of 'MutationObserverInit.attributeOldValue' in the 'DOM' specification."
         }
     ]
 }

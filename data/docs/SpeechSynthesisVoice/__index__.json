@@ -1,11 +1,11 @@
 
 {
     "name": "SpeechSynthesisVoice",
-    "lastModifiedAt": 1601466443402,
+    "lastModifiedAt": 1604978164039,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192347164
+            "lastModifiedAt": 1604978161905
         },
         {
             "name": "default",
@@ -13,19 +13,19 @@
         },
         {
             "name": "lang",
-            "lastModifiedAt": 1596712531155
+            "lastModifiedAt": 1604978162407
         },
         {
             "name": "localService",
-            "lastModifiedAt": 1596712532160
+            "lastModifiedAt": 1604978162925
         },
         {
             "name": "name",
-            "lastModifiedAt": 1596712533310
+            "lastModifiedAt": 1604978163427
         },
         {
             "name": "voiceURI",
-            "lastModifiedAt": 1596712533966
+            "lastModifiedAt": 1604978163894
         }
     ]
 }

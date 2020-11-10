@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-destination",
-            "description": "The definition of 'destination' in Fetch."
+            "description": "The definition of 'destination' in the 'Fetch' specification."
         }
     ]
 }

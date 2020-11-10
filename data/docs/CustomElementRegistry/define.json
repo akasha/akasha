@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "CustomElementRegistry.define",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define",
-    "description": "The define() method of the CustomElementRegistry interface defines a new custom element."
+    "description": "The define() method of the CustomElementRegistry interface defines a new custom element.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/custom-elements.html#dom-customelementregistry-define",
+            "description": "The definition of 'customElements.define()' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

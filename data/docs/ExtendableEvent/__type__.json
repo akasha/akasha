@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#extendableevent",
-            "description": "The definition of 'ExtendableEvent' in Service Workers."
+            "description": "The definition of 'ExtendableEvent' in the 'Service Workers' specification."
         }
     ]
 }

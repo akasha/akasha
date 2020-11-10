@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Node.replaceChild",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild",
-    "description": "The Node.replaceChild() method replaces a child node within the given (parent) node."
+    "description": "The Node.replaceChild() method replaces a child node within the given (parent) node.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-replacechild",
+            "description": "The definition of 'Node: replaceChild' in the 'DOM' specification."
+        }
+    ]
 }

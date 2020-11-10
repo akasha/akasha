@@ -8,7 +8,7 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.13",
-            "description": "The definition of 'WebGLRenderingContext.isContextLost' in WebGL 1.0."
+            "description": "The definition of 'WebGLRenderingContext.isContextLost' in the 'WebGL 1.0' specification."
         }
     ]
 }

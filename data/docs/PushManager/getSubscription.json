@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PushManager.getSubscription",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager/getSubscription",
-    "description": "The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription."
+    "description": "The PushManager.getSubscription() method of the PushManager interface retrieves an existing push subscription.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushmanager-getsubscription",
+            "description": "The definition of 'getSubscription()' in the 'Push API' specification."
+        }
+    ]
 }

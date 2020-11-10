@@ -1,19 +1,19 @@
 
 {
     "name": "XRPose",
-    "lastModifiedAt": 1601467549785,
+    "lastModifiedAt": 1604979062047,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193005849
+            "lastModifiedAt": 1604979061006
         },
         {
             "name": "emulatedPosition",
-            "lastModifiedAt": 1596711428670
+            "lastModifiedAt": 1604979061480
         },
         {
             "name": "transform",
-            "lastModifiedAt": 1596711429148
+            "lastModifiedAt": 1604979061955
         }
     ]
 }

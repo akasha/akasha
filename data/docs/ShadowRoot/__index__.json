@@ -1,11 +1,11 @@
 
 {
     "name": "ShadowRoot",
-    "lastModifiedAt": 1604009248054,
+    "lastModifiedAt": 1604978059019,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193089206
+            "lastModifiedAt": 1604978055820
         },
         {
             "name": "delegatesFocus",
@@ -13,7 +13,7 @@
         },
         {
             "name": "host",
-            "lastModifiedAt": 1599391849718
+            "lastModifiedAt": 1604978056780
         },
         {
             "name": "innerHTML",
@@ -21,7 +21,7 @@
         },
         {
             "name": "mode",
-            "lastModifiedAt": 1599391850696
+            "lastModifiedAt": 1604978058863
         }
     ]
 }

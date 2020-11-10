@@ -3,5 +3,22 @@
     "kind": "Type",
     "name": "PointerEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent",
-    "description": "The PointerEvent interface represents the state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc."
+    "description": "The PointerEvent interface represents the state of a DOM event produced by a pointer such as the geometry of the contact point, the device type that generated the event, the amount of pressure that was applied on the contact surface, etc.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 3",
+            "href": "https://w3c.github.io/pointerevents/#pointerevent-interface",
+            "description": "The definition of 'PointerEvent' in the 'Pointer Events &ndash; Level 3' specification."
+        },
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#pointerevent-interface",
+            "description": "The definition of 'PointerEvent' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#pointerevent-interface",
+            "description": "The definition of 'PointerEvent' in the 'Pointer Events' specification."
+        }
+    ]
 }

@@ -1,35 +1,35 @@
 
 {
     "name": "XRWebGLLayerInit",
-    "lastModifiedAt": 1601467465977,
+    "lastModifiedAt": 1604979107449,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192933710
+            "lastModifiedAt": 1604979104179
         },
         {
             "name": "alpha",
-            "lastModifiedAt": 1596711851998
+            "lastModifiedAt": 1604979104659
         },
         {
             "name": "antialias",
-            "lastModifiedAt": 1596711852619
+            "lastModifiedAt": 1604979105260
         },
         {
             "name": "depth",
-            "lastModifiedAt": 1599279624635
+            "lastModifiedAt": 1604979105741
         },
         {
             "name": "framebufferScaleFactor",
-            "lastModifiedAt": 1596711853905
+            "lastModifiedAt": 1604979106223
         },
         {
             "name": "ignoreDepthValues",
-            "lastModifiedAt": 1596711854371
+            "lastModifiedAt": 1604979106677
         },
         {
             "name": "stencil",
-            "lastModifiedAt": 1599279626703
+            "lastModifiedAt": 1604979107207
         }
     ]
 }

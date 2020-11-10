@@ -8,7 +8,7 @@
         {
             "name": "OES_texture_float",
             "href": "https://www.khronos.org/registry/webgl/extensions/OES_texture_float/",
-            "description": "The definition of 'OES_texture_float' in OES_texture_float."
+            "description": "The definition of 'OES_texture_float' in the 'OES_texture_float' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "WritableStream.WritableStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WritableStream/WritableStream",
-    "description": "The WritableStream() constructor creates a new WritableStream object instance."
+    "description": "The WritableStream() constructor creates a new WritableStream object instance.",
+    "refs": [
+        {
+            "name": "Streams",
+            "href": "https://streams.spec.whatwg.org/#ws-constructor",
+            "description": "The definition of 'WritableStream()' in the 'Streams' specification."
+        }
+    ]
 }

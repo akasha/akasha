@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechGrammar.weight",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammar/weight",
-    "description": "The optional weight property of the SpeechGrammar interface sets and returns the weight of the SpeechGrammar object."
+    "description": "The optional weight property of the SpeechGrammar interface sets and returns the weight of the SpeechGrammar object.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechgrammar-weight",
+            "description": "The definition of 'weight' in the 'Web Speech API' specification."
+        }
+    ]
 }

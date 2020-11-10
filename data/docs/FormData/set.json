@@ -8,7 +8,7 @@
         {
             "name": "XMLHttpRequest",
             "href": "https://xhr.spec.whatwg.org/#dom-formdata-set",
-            "description": "The definition of 'set()' in XMLHttpRequest."
+            "description": "The definition of 'set()' in the 'XMLHttpRequest' specification."
         }
     ]
 }

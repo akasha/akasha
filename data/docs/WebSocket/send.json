@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-websocket-send",
-            "description": "The definition of 'WebSocket: send' in HTML Living Standard."
+            "description": "The definition of 'WebSocket: send' in the 'HTML Living Standard' specification."
         }
     ]
 }

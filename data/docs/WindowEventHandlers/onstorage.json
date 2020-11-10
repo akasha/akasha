@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onstorage",
-            "description": "The definition of 'onstorage' in HTML Living Standard."
+            "description": "The definition of 'onstorage' in the 'HTML Living Standard' specification."
         }
     ]
 }

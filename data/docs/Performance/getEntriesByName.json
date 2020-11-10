@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Performance.getEntriesByName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/getEntriesByName",
-    "description": "The getEntriesByName() method returns a list of PerformanceEntry objects for the given name and type. The list's members (entries) can be created by making performance marks or measures (for example by calling the mark() method) at explicit points in time."
+    "description": "The getEntriesByName() method returns a list of PerformanceEntry objects for the given name and type. The list's members (entries) can be created by making performance marks or measures (for example by calling the mark() method) at explicit points in time.",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#dom-performance-getentriesbyname",
+            "description": "The definition of 'getEntriesByName()' in the 'Performance Timeline Level 2' specification."
+        },
+        {
+            "name": "Performance Timeline",
+            "href": "https://www.w3.org/TR/performance-timeline/#dom-performance-getentriesbyname",
+            "description": "The definition of 'getEntriesByName()' in the 'Performance Timeline' specification."
+        }
+    ]
 }

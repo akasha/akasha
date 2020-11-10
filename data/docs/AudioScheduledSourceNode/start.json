@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audioscheduledsourcenode-start",
-            "description": "The definition of 'start()' in Web Audio API."
+            "description": "The definition of 'start()' in the 'Web Audio API' specification."
         }
     ]
 }

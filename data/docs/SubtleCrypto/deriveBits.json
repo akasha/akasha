@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.deriveBits",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/deriveBits",
-    "description": "The deriveBits() method of the SubtleCrypto interface can be used to derive an array of bits from a base key."
+    "description": "The deriveBits() method of the SubtleCrypto interface can be used to derive an array of bits from a base key.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-deriveBits",
+            "description": "The definition of 'SubtleCrypto.deriveBits()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

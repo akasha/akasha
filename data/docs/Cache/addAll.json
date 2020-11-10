@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Cache.addAll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Cache/addAll",
-    "description": "The addAll() method of the Cache interface takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations."
+    "description": "The addAll() method of the Cache interface takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#cache-addAll",
+            "description": "The definition of 'Cache: addAll' in the 'Service Workers' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Reporting API",
             "href": "https://w3c.github.io/reporting/#dictdef-reportingobserveroptions",
-            "description": "The definition of 'ReportingObserverOptions' in Reporting API."
+            "description": "The definition of 'ReportingObserverOptions' in the 'Reporting API' specification."
         }
     ]
 }

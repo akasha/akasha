@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Element.getAttributeNodeNS",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttributeNodeNS",
-    "description": "Returns the Attr node for the attribute with the given namespace and name."
+    "description": "Returns the Attr node for the attribute with the given namespace and name.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-element-getattributenodens",
+            "description": "The definition of 'getAttributeNodeNS()' in the 'DOM' specification."
+        }
+    ]
 }

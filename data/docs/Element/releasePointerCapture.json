@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Element.releasePointerCapture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/releasePointerCapture",
-    "description": "The releasePointerCapture() method of the Element interface releases (stops) pointer capture that was previously set for a specific (PointerEvent) pointer."
+    "description": "The releasePointerCapture() method of the Element interface releases (stops) pointer capture that was previously set for a specific (PointerEvent) pointer.",
+    "refs": [
+        {
+            "name": "Pointer Events – Level 2",
+            "href": "https://www.w3.org/TR/pointerevents2/#idl-def-element-releasepointercapture-pointerid",
+            "description": "The definition of 'releasePointerCapture' in the 'Pointer Events &ndash; Level 2' specification."
+        },
+        {
+            "name": "Pointer Events",
+            "href": "https://www.w3.org/TR/pointerevents1/#widl-Element-releasePointerCapture-void-long-pointerId",
+            "description": "The definition of 'releasePointerCapture' in the 'Pointer Events' specification."
+        }
+    ]
 }

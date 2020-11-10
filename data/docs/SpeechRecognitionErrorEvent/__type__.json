@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SpeechRecognitionErrorEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionErrorEvent",
-    "description": "The SpeechRecognitionErrorEvent interface of the Web Speech API represents error messages from the recognition service."
+    "description": "The SpeechRecognitionErrorEvent interface of the Web Speech API represents error messages from the recognition service.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#speechrecognitionerrorevent",
+            "description": "The definition of 'SpeechRecognitionErrorEvent' in the 'Web Speech API' specification."
+        }
+    ]
 }

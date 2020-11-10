@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XMLSerializer.serializeToString",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLSerializer/serializeToString",
-    "description": "The XMLSerializer method serializeToString() constructs a string representing the specified DOM tree in XML form."
+    "description": "The XMLSerializer method serializeToString() constructs a string representing the specified DOM tree in XML form.",
+    "refs": [
+        {
+            "name": "DOM Parsing and Serialization",
+            "href": "https://w3c.github.io/DOM-Parsing/#dom-xmlserializer-serializetostring",
+            "description": "The definition of 'serializeToString()' in the 'DOM Parsing and Serialization' specification."
+        }
+    ]
 }

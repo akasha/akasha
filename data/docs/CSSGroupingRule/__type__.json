@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "CSSGroupingRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSGroupingRule",
-    "description": "An object implementing the CSSGroupingRule interface represents any CSS at-rule that contains other rules nested within it.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM)",
-            "href": "https://drafts.csswg.org/cssom/#cssgroupingrule",
-            "description": "The definition of 'CSSGroupingRule' in CSS Object Model (CSSOM)."
-        }
-    ]
+    "description": "An object implementing the CSSGroupingRule interface represents any CSS at-rule that contains other rules nested within it."
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#the-animationeffect-interface",
-            "description": "The definition of 'AnimationEffect' in Web Animations."
+            "description": "The definition of 'AnimationEffect' in the 'Web Animations' specification."
         }
     ]
 }

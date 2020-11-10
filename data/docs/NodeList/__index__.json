@@ -1,11 +1,11 @@
 
 {
     "name": "NodeList",
-    "lastModifiedAt": 1604009163618,
+    "lastModifiedAt": 1604977214600,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193072653
+            "lastModifiedAt": 1604977210353
         },
         {
             "name": "entries",
@@ -13,11 +13,11 @@
         },
         {
             "name": "forEach",
-            "lastModifiedAt": 1597193073773
+            "lastModifiedAt": 1604977212414
         },
         {
             "name": "item",
-            "lastModifiedAt": 1597193073132
+            "lastModifiedAt": 1604977212944
         },
         {
             "name": "keys",
@@ -25,7 +25,7 @@
         },
         {
             "name": "length",
-            "lastModifiedAt": 1597193072891
+            "lastModifiedAt": 1604977210817
         },
         {
             "name": "values",

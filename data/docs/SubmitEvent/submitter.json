@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#dom-submitevent-submitter",
-            "description": "The definition of 'SubmitEvent.submitter' in HTML Living Standard."
+            "description": "The definition of 'SubmitEvent.submitter' in the 'HTML Living Standard' specification."
         }
     ]
 }

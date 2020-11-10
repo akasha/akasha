@@ -4,6 +4,12 @@
     "name": "XMLHttpRequest.error_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/error_event",
     "description": "The error event is fired when the request encountered an error.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#event-xhr-error"
+        }
+    ],
     "eventName": "error",
     "eventType": "ProgressEvent",
     "eventHandlerProperty": "onerror",

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XPathResult.booleanValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/booleanValue",
-    "description": "The read-only booleanValue property of the XPathResult interface returns the boolean value of a result with XPathResult.resultType being BOOLEAN_TYPE."
+    "description": "The read-only booleanValue property of the XPathResult interface returns the boolean value of a result with XPathResult.resultType being BOOLEAN_TYPE.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-booleanValue",
+            "description": "The definition of 'XPathResult.booleanValue' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+        }
+    ]
 }

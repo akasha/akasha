@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFEBlendElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFEBlendElement",
-    "description": "The SVGFEBlendElement interface corresponds to the feBlend element."
+    "description": "The SVGFEBlendElement interface corresponds to the feBlend element.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFEBlendElement",
+            "description": "The definition of 'SVGFEBlendElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFEBlendElement",
+            "description": "The definition of 'SVGFEBlendElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

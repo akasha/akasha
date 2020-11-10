@@ -8,7 +8,7 @@
         {
             "name": "File API",
             "href": "https://w3c.github.io/FileAPI/#dfn-type",
-            "description": "The definition of 'type' in File API."
+            "description": "The definition of 'type' in the 'File API' specification."
         }
     ]
 }

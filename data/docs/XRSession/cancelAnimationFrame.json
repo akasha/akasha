@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRSession.cancelAnimationFrame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/cancelAnimationFrame",
-    "description": "The cancelAnimationFrame() method of the XRSession interface cancels an animation frame which was previously requested by calling requestAnimationFrame."
+    "description": "The cancelAnimationFrame() method of the XRSession interface cancels an animation frame which was previously requested by calling requestAnimationFrame.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsession-cancelanimationframe",
+            "description": "The definition of 'XRSession.cancelAnimationFrame' in the 'WebXR Device API' specification."
+        }
+    ]
 }

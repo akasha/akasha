@@ -1,23 +1,23 @@
 
 {
     "name": "PerformanceObserverEntryList",
-    "lastModifiedAt": 1601465557474,
+    "lastModifiedAt": 1604977341748,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192263051
+            "lastModifiedAt": 1604977340211
         },
         {
             "name": "getEntries",
-            "lastModifiedAt": 1597192263358
+            "lastModifiedAt": 1604977340828
         },
         {
             "name": "getEntriesByName",
-            "lastModifiedAt": 1597192263939
+            "lastModifiedAt": 1604977341303
         },
         {
             "name": "getEntriesByType",
-            "lastModifiedAt": 1597192263681
+            "lastModifiedAt": 1604977341748
         }
     ]
 }

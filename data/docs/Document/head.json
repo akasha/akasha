@@ -8,17 +8,17 @@
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/dom.html#dom-document-head",
-            "description": "The definition of 'Document.head' in HTML 5.1."
+            "description": "The definition of 'Document.head' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/dom.html#dom-document-head",
-            "description": "The definition of 'Document.head' in HTML5."
+            "description": "The definition of 'Document.head' in the 'HTML5' specification."
         },
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/dom.html#dom-document-head",
-            "description": "The definition of 'Document.head' in HTML Living Standard."
+            "description": "The definition of 'Document.head' in the 'HTML Living Standard' specification."
         }
     ]
 }

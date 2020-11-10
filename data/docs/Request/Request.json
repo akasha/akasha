@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Request.Request",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Request/Request",
-    "description": "The Request() constructor creates a new Request object."
+    "description": "The Request() constructor creates a new Request object.",
+    "refs": [
+        {
+            "name": "Fetch",
+            "href": "https://fetch.spec.whatwg.org/#dom-request",
+            "description": "The definition of 'Request()' in the 'Fetch' specification."
+        }
+    ]
 }

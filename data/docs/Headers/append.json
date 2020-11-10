@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-headers-append",
-            "description": "The definition of 'append()' in Fetch."
+            "description": "The definition of 'append()' in the 'Fetch' specification."
         }
     ]
 }

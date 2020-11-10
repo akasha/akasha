@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicetransport-getremoteparameters",
-            "description": "The definition of 'RTCIceTransport.getRemoteParameters' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'RTCIceTransport.getRemoteParameters' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

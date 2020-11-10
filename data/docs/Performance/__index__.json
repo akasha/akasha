@@ -1,43 +1,43 @@
 
 {
     "name": "Performance",
-    "lastModifiedAt": 1602131759095,
+    "lastModifiedAt": 1604977313070,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192078385
+            "lastModifiedAt": 1604977300585
         },
         {
             "name": "clearMarks",
-            "lastModifiedAt": 1599391517509
+            "lastModifiedAt": 1604977305700
         },
         {
             "name": "clearMeasures",
-            "lastModifiedAt": 1599391518502
+            "lastModifiedAt": 1604977306727
         },
         {
             "name": "clearResourceTimings",
-            "lastModifiedAt": 1599391519015
+            "lastModifiedAt": 1604977307209
         },
         {
             "name": "getEntries",
-            "lastModifiedAt": 1597192080926
+            "lastModifiedAt": 1604977307983
         },
         {
             "name": "getEntriesByName",
-            "lastModifiedAt": 1597192081315
+            "lastModifiedAt": 1604977308481
         },
         {
             "name": "getEntriesByType",
-            "lastModifiedAt": 1597192081595
+            "lastModifiedAt": 1604977309004
         },
         {
             "name": "mark",
-            "lastModifiedAt": 1597192081924
+            "lastModifiedAt": 1604977309511
         },
         {
             "name": "measure",
-            "lastModifiedAt": 1597192082546
+            "lastModifiedAt": 1604977310148
         },
         {
             "name": "memory",
@@ -45,23 +45,23 @@
         },
         {
             "name": "navigation",
-            "lastModifiedAt": 1599391514797
+            "lastModifiedAt": 1604977301603
         },
         {
             "name": "now",
-            "lastModifiedAt": 1597192082860
+            "lastModifiedAt": 1604977310681
         },
         {
             "name": "onresourcetimingbufferfull",
-            "lastModifiedAt": 1597192084397
+            "lastModifiedAt": 1604977302689
         },
         {
             "name": "resourcetimingbufferfull_event",
-            "lastModifiedAt": 1597359982810
+            "lastModifiedAt": 1604977313007
         },
         {
             "name": "setResourceTimingBufferSize",
-            "lastModifiedAt": 1599391523906
+            "lastModifiedAt": 1604977311755
         },
         {
             "name": "timeOrigin",
@@ -69,11 +69,11 @@
         },
         {
             "name": "timing",
-            "lastModifiedAt": 1597192078955
+            "lastModifiedAt": 1604975060644
         },
         {
             "name": "toJSON",
-            "lastModifiedAt": 1597192083768
+            "lastModifiedAt": 1604977312252
         }
     ]
 }

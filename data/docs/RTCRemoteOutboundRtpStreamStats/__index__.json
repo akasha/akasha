@@ -1,19 +1,19 @@
 
 {
     "name": "RTCRemoteOutboundRtpStreamStats",
-    "lastModifiedAt": 1604448941198,
+    "lastModifiedAt": 1604977619368,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448938992
+            "lastModifiedAt": 1604977616977
         },
         {
             "name": "localId",
-            "lastModifiedAt": 1604448940262
+            "lastModifiedAt": 1604977617876
         },
         {
             "name": "remoteTimestamp",
-            "lastModifiedAt": 1604448940734
+            "lastModifiedAt": 1604977618892
         },
         {
             "name": "reportsSent",

@@ -1,35 +1,35 @@
 
 {
     "name": "Notification",
-    "lastModifiedAt": 1600312534905,
+    "lastModifiedAt": 1604977232672,
     "entries": [
         {
             "name": "Notification",
-            "lastModifiedAt": 1597193597056
+            "lastModifiedAt": 1604977218750
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597193596671
+            "lastModifiedAt": 1604974972662
         },
         {
             "name": "actions",
-            "lastModifiedAt": 1600303802136
+            "lastModifiedAt": 1604977219288
         },
         {
             "name": "badge",
-            "lastModifiedAt": 1600303802384
+            "lastModifiedAt": 1604977219794
         },
         {
             "name": "body",
-            "lastModifiedAt": 1600303802627
+            "lastModifiedAt": 1604977220271
         },
         {
             "name": "close",
-            "lastModifiedAt": 1600303810607
+            "lastModifiedAt": 1604974990326
         },
         {
             "name": "data",
-            "lastModifiedAt": 1600303802873
+            "lastModifiedAt": 1604977220752
         },
         {
             "name": "dir",
@@ -37,23 +37,23 @@
         },
         {
             "name": "icon",
-            "lastModifiedAt": 1600303803497
+            "lastModifiedAt": 1604977221716
         },
         {
             "name": "image",
-            "lastModifiedAt": 1600303804309
+            "lastModifiedAt": 1604977222192
         },
         {
             "name": "lang",
-            "lastModifiedAt": 1600303804539
+            "lastModifiedAt": 1604977223276
         },
         {
             "name": "maxActions",
-            "lastModifiedAt": 1600303805337
+            "lastModifiedAt": 1604974980696
         },
         {
             "name": "onclick",
-            "lastModifiedAt": 1600303805585
+            "lastModifiedAt": 1604977224483
         },
         {
             "name": "onclose",
@@ -61,7 +61,7 @@
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1600303806618
+            "lastModifiedAt": 1604977225630
         },
         {
             "name": "onshow",
@@ -69,23 +69,23 @@
         },
         {
             "name": "permission",
-            "lastModifiedAt": 1600303807172
+            "lastModifiedAt": 1604977226617
         },
         {
             "name": "renotify",
-            "lastModifiedAt": 1600303807427
+            "lastModifiedAt": 1604977227668
         },
         {
             "name": "requestPermission",
-            "lastModifiedAt": 1597193597507
+            "lastModifiedAt": 1604974990819
         },
         {
             "name": "requireInteraction",
-            "lastModifiedAt": 1600303808226
+            "lastModifiedAt": 1604977228338
         },
         {
             "name": "silent",
-            "lastModifiedAt": 1600303809023
+            "lastModifiedAt": 1604977228829
         },
         {
             "name": "tag",
@@ -93,15 +93,15 @@
         },
         {
             "name": "timestamp",
-            "lastModifiedAt": 1600303809797
+            "lastModifiedAt": 1604977230055
         },
         {
             "name": "title",
-            "lastModifiedAt": 1600303810052
+            "lastModifiedAt": 1604977230591
         },
         {
             "name": "vibrate",
-            "lastModifiedAt": 1600303810318
+            "lastModifiedAt": 1604977231077
         }
     ]
 }

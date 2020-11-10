@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.bindBufferRange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/bindBufferRange",
-    "description": "The WebGL2RenderingContext.bindBufferRange() method of the WebGL 2 API binds a range of a given WebGLBuffer to a given binding point (target) at a given index."
+    "description": "The WebGL2RenderingContext.bindBufferRange() method of the WebGL 2 API binds a range of a given WebGLBuffer to a given binding point (target) at a given index.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16",
+            "description": "The definition of 'bindBufferRange' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBufferRange.xhtml",
+            "description": "The definition of 'glBindBufferRange' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRSession.requestAnimationFrame",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSession/requestAnimationFrame",
-    "description": "The XRSession method requestAnimationFrame(), much like the Window method of the same name, schedules a callback to be executed the next time the browser is ready to paint the session's virtual environment to the XR display."
+    "description": "The XRSession method requestAnimationFrame(), much like the Window method of the same name, schedules a callback to be executed the next time the browser is ready to paint the session's virtual environment to the XR display.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsession-requestanimationframe",
+            "description": "The definition of 'XRSession.requestAnimationFrame' in the 'WebXR Device API' specification."
+        }
+    ]
 }

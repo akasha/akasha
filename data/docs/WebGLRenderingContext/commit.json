@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.commit",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/commit",
-    "description": "The WebGLRenderingContext.commit() method pushes frames back to the original HTMLCanvasElement, if the context is not directly fixed to a specific canvas.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/#offscreencontext-commit",
-            "description": "The definition of 'the commit() method of the OffscreenCanvas object's rendering context' in HTML Living Standard."
-        }
-    ]
+    "description": "The WebGLRenderingContext.commit() method pushes frames back to the original HTMLCanvasElement, if the context is not directly fixed to a specific canvas."
 }

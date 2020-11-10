@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "KeyframeEffect.setKeyframes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyframeEffect/setKeyframes",
-    "description": "The setKeyframes() method of the KeyframeEffect interface replaces the keyframes that make up the affected KeyframeEffect with a new set of keyframes."
+    "description": "The setKeyframes() method of the KeyframeEffect interface replaces the keyframes that make up the affected KeyframeEffect with a new set of keyframes.",
+    "refs": [
+        {
+            "name": "Web Animations",
+            "href": "https://drafts.csswg.org/web-animations-1/#dom-keyframeeffect-setkeyframes",
+            "description": "The definition of 'KeyframeEffect.setKeyframes()' in the 'Web Animations' specification."
+        }
+    ]
 }

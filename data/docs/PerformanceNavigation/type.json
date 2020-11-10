@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceNavigation.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigation/type",
-    "description": "The legacy PerformanceNavigation.type read-only property returns an unsigned short containing a constant describing how the navigation to this page was done. Possible values are:"
+    "description": "The legacy PerformanceNavigation.type read-only property returns an unsigned short containing a constant describing how the navigation to this page was done. Possible values are:",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancenavigation-type",
+            "description": "The definition of 'PerformanceNavigation.type' in the 'Navigation Timing' specification."
+        }
+    ]
 }

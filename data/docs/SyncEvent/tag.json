@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SyncEvent.tag",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SyncEvent/tag",
-    "description": "The SyncEvent.tag read-only property of the SyncEvent interface returns the developer-defined identifier for this SyncEvent. This is the value passed in the tag parameter of the SyncEvent() constructor."
+    "description": "The SyncEvent.tag read-only property of the SyncEvent interface returns the developer-defined identifier for this SyncEvent. This is the value passed in the tag parameter of the SyncEvent() constructor.",
+    "refs": [
+        {
+            "name": "Web Background Synchronization",
+            "href": "https://wicg.github.io/background-sync/spec/#sync-event",
+            "description": "The definition of 'tag' in the 'Web Background Synchronization' specification."
+        }
+    ]
 }

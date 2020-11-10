@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/comms.html#handler-broadcastchannel-onmessage",
-            "description": "The definition of 'BroadcastChannel.onmessage' in HTML Living Standard."
+            "description": "The definition of 'BroadcastChannel.onmessage' in the 'HTML Living Standard' specification."
         }
     ]
 }

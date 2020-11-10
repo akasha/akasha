@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XPathResult.invalidIteratorState",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/invalidIteratorState",
-    "description": "The read-only invalidIteratorState property of the XPathResult interface signifies that the iterator has become invalid. It is true if XPathResult.resultType is UNORDERED_NODE_ITERATOR_TYPE or ORDERED_NODE_ITERATOR_TYPE and the document has been modified since this result was returned."
+    "description": "The read-only invalidIteratorState property of the XPathResult interface signifies that the iterator has become invalid. It is true if XPathResult.resultType is UNORDERED_NODE_ITERATOR_TYPE or ORDERED_NODE_ITERATOR_TYPE and the document has been modified since this result was returned.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-invalid-iterator-state",
+            "description": "The definition of 'XPathResult.invalidIteratorState' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+        }
+    ]
 }

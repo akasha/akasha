@@ -1,63 +1,63 @@
 
 {
     "name": "RTCDataChannel",
-    "lastModifiedAt": 1604448745107,
+    "lastModifiedAt": 1604977479151,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448727289
+            "lastModifiedAt": 1604977461769
         },
         {
             "name": "binaryType",
-            "lastModifiedAt": 1604448727812
+            "lastModifiedAt": 1604977462838
         },
         {
             "name": "bufferedAmount",
-            "lastModifiedAt": 1604448728378
+            "lastModifiedAt": 1604977463315
         },
         {
             "name": "bufferedAmountLowThreshold",
-            "lastModifiedAt": 1604448728853
+            "lastModifiedAt": 1604977463830
         },
         {
             "name": "bufferedamountlow_event",
-            "lastModifiedAt": 1604448742913
+            "lastModifiedAt": 1604977476334
         },
         {
             "name": "close",
-            "lastModifiedAt": 1604448741237
+            "lastModifiedAt": 1604977475378
         },
         {
             "name": "close_event",
-            "lastModifiedAt": 1604448743459
+            "lastModifiedAt": 1604977477232
         },
         {
             "name": "error_event",
-            "lastModifiedAt": 1604448743922
+            "lastModifiedAt": 1604977477880
         },
         {
             "name": "id",
-            "lastModifiedAt": 1604448730042
+            "lastModifiedAt": 1604977464859
         },
         {
             "name": "label",
-            "lastModifiedAt": 1604448730739
+            "lastModifiedAt": 1604977465360
         },
         {
             "name": "maxPacketLifeTime",
-            "lastModifiedAt": 1604448731290
+            "lastModifiedAt": 1604977466252
         },
         {
             "name": "maxRetransmits",
-            "lastModifiedAt": 1604448732404
+            "lastModifiedAt": 1604977466895
         },
         {
             "name": "message_event",
-            "lastModifiedAt": 1604448744413
+            "lastModifiedAt": 1604977478439
         },
         {
             "name": "negotiated",
-            "lastModifiedAt": 1604448733492
+            "lastModifiedAt": 1604977467390
         },
         {
             "name": "onbufferedamountlow",
@@ -65,23 +65,23 @@
         },
         {
             "name": "onclose",
-            "lastModifiedAt": 1604448734771
+            "lastModifiedAt": 1604977468904
         },
         {
             "name": "onclosing",
-            "lastModifiedAt": 1604448735272
+            "lastModifiedAt": 1604977469555
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1604448736006
+            "lastModifiedAt": 1604977470041
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1604448737390
+            "lastModifiedAt": 1604977470775
         },
         {
             "name": "onopen",
-            "lastModifiedAt": 1604448738566
+            "lastModifiedAt": 1604977471287
         },
         {
             "name": "open_event",
@@ -89,19 +89,19 @@
         },
         {
             "name": "ordered",
-            "lastModifiedAt": 1604448739202
+            "lastModifiedAt": 1604977471755
         },
         {
             "name": "protocol",
-            "lastModifiedAt": 1604448739788
+            "lastModifiedAt": 1604977472819
         },
         {
             "name": "readyState",
-            "lastModifiedAt": 1596544585172
+            "lastModifiedAt": 1604977473868
         },
         {
             "name": "send",
-            "lastModifiedAt": 1604448742288
+            "lastModifiedAt": 1604977475834
         }
     ]
 }

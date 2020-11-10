@@ -1,31 +1,31 @@
 
 {
     "name": "SVGGeometryElement",
-    "lastModifiedAt": 1600313249060,
+    "lastModifiedAt": 1604977889968,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192452730
+            "lastModifiedAt": 1604977886239
         },
         {
             "name": "getPointAtLength",
-            "lastModifiedAt": 1597192454343
+            "lastModifiedAt": 1604977887378
         },
         {
             "name": "getTotalLength",
-            "lastModifiedAt": 1597192453946
+            "lastModifiedAt": 1604977887852
         },
         {
             "name": "isPointInFill",
-            "lastModifiedAt": 1597192453384
+            "lastModifiedAt": 1604977888930
         },
         {
             "name": "isPointInStroke",
-            "lastModifiedAt": 1597192453640
+            "lastModifiedAt": 1604977889968
         },
         {
             "name": "pathLength",
-            "lastModifiedAt": 1597192453124
+            "lastModifiedAt": 1604977886813
         }
     ]
 }

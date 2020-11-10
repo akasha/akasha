@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRInputSourceArray",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSourceArray",
-    "description": "The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources."
+    "description": "The interface XRInputSourceArray represents a live list of WebXR input sources, and is used as the return value of the XRSession property inputSources.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrinputsourcearray-interface",
+            "description": "The definition of 'XRInputSourceArray' in the 'WebXR Device API' specification."
+        }
+    ]
 }

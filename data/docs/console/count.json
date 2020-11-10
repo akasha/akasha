@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#count",
-            "description": "The definition of 'console.count()' in Console API."
+            "description": "The definition of 'console.count()' in the 'Console API' specification."
         }
     ]
 }

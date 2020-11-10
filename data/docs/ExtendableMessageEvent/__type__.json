@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#extendablemessageevent",
-            "description": "The definition of 'ExtendableMessageEvent' in Service Workers."
+            "description": "The definition of 'ExtendableMessageEvent' in the 'Service Workers' specification."
         }
     ]
 }

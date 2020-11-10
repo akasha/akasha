@@ -8,17 +8,17 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#current-document-readiness",
-            "description": "The definition of 'Document readiness' in HTML Living Standard."
+            "description": "The definition of 'Document readiness' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
             "href": "https://www.w3.org/TR/html51/#current-document-readiness",
-            "description": "The definition of 'Document readiness' in HTML 5.1."
+            "description": "The definition of 'Document readiness' in the 'HTML 5.1' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/#current-document-readiness",
-            "description": "The definition of 'Document readiness' in HTML5."
+            "description": "The definition of 'Document readiness' in the 'HTML5' specification."
         }
     ]
 }

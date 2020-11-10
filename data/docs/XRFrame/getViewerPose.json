@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XRFrame.getViewerPose",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRFrame/getViewerPose",
-    "description": "The getViewerPose() method, a member of the XRFrame interface, returns a XRViewerPose object which describes the viewer's pose (position and orientation) relative to the specified reference space."
+    "description": "The getViewerPose() method, a member of the XRFrame interface, returns a XRViewerPose object which describes the viewer's pose (position and orientation) relative to the specified reference space.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrframe-getviewerpose",
+            "description": "The definition of 'XRFrame.getViewerPose()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

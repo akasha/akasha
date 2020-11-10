@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothremotegattcharacteristic-value",
-            "description": "The definition of 'value' in Web Bluetooth."
+            "description": "The definition of 'value' in the 'Web Bluetooth' specification."
         }
     ]
 }

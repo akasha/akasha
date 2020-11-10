@@ -8,7 +8,7 @@
         {
             "name": "Media Source Extensions",
             "href": "https://w3c.github.io/media-source/#dom-videotrack-sourcebuffer",
-            "description": "The definition of 'VideoTrack: sourceBuffer' in Media Source Extensions."
+            "description": "The definition of 'VideoTrack: sourceBuffer' in the 'Media Source Extensions' specification."
         }
     ]
 }

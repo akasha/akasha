@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-window-screenx",
-            "description": "The definition of 'Window.screenLeft' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'Window.screenLeft' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

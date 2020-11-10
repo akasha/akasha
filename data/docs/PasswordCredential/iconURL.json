@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PasswordCredential.iconURL",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential/iconURL",
-    "description": "The iconURL read-only property of the PasswordCredential interface returns a USVString containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication."
+    "description": "The iconURL read-only property of the PasswordCredential interface returns a USVString containing a URL pointing to an image for an icon. This image is intended for display in a credential chooser. The URL must be accessible without authentication.",
+    "refs": [
+        {
+            "name": "Credential Management Level 1",
+            "href": "https://w3c.github.io/webappsec-credential-management/#dom-credentialuserdata-iconurl",
+            "description": "The definition of 'iconURL' in the 'Credential Management Level 1' specification."
+        }
+    ]
 }

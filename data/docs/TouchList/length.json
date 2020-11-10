@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "TouchList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchList/length",
-    "description": "The length read-only property indicates the number of items (touch points) in a given TouchList."
+    "description": "The length read-only property indicates the number of items (touch points) in a given TouchList.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touchlist-length"
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-TouchList-length"
+        }
+    ]
 }

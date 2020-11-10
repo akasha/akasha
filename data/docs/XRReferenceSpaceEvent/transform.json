@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRReferenceSpaceEvent.transform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/transform",
-    "description": "The read-only XRReferenceSpaceEvent property transform indicates the position and orientation of the affected referenceSpace's native origin after the changes the event represents are applied."
+    "description": "The read-only XRReferenceSpaceEvent property transform indicates the position and orientation of the affected referenceSpace's native origin after the changes the event represents are applied.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespaceevent-transform",
+            "description": "The definition of 'XRReferenceSpaceEvent.transform' in the 'WebXR Device API' specification."
+        }
+    ]
 }

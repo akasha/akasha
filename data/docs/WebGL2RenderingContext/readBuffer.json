@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.readBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/readBuffer",
-    "description": "The WebGL2RenderingContext.readBuffer() method of the WebGL 2 API selects a color buffer as the source for pixels for subsequent calls to copyTexImage2D, copyTexSubImage2D, copyTexSubImage3D or readPixels."
+    "description": "The WebGL2RenderingContext.readBuffer() method of the WebGL 2 API selects a color buffer as the source for pixels for subsequent calls to copyTexImage2D, copyTexSubImage2D, copyTexSubImage3D or readPixels.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.4",
+            "description": "The definition of 'readBuffer' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glReadBuffer.xhtml",
+            "description": "The definition of 'glReadBuffer' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

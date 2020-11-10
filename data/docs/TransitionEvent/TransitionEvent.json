@@ -8,7 +8,7 @@
         {
             "name": "CSS Transitions",
             "href": "https://drafts.csswg.org/css-transitions/#dom-transitionevent-transitionevent",
-            "description": "The definition of 'TransitionEvent()' in CSS Transitions."
+            "description": "The definition of 'TransitionEvent()' in the 'CSS Transitions' specification."
         }
     ]
 }

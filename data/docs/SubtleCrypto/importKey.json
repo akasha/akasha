@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SubtleCrypto.importKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/importKey",
-    "description": "The importKey() method of the SubtleCrypto interface imports a key: that is, it takes as input a key in an external, portable format and gives you a CryptoKey object that you can use in the Web Crypto API."
+    "description": "The importKey() method of the SubtleCrypto interface imports a key: that is, it takes as input a key in an external, portable format and gives you a CryptoKey object that you can use in the Web Crypto API.",
+    "refs": [
+        {
+            "name": "Web Cryptography API",
+            "href": "https://www.w3.org/TR/WebCryptoAPI/#dfn-SubtleCrypto-method-importKey",
+            "description": "The definition of 'SubtleCrypto.importKey()' in the 'Web Cryptography API' specification."
+        }
+    ]
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "ImageData.width",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageData/width",
-    "description": "The readonly ImageData.width property returns the number of pixels per row in the ImageData object.",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata-width",
-            "description": "The definition of 'ImageData.width' in HTML Living Standard."
-        }
-    ]
+    "description": "The readonly ImageData.width property returns the number of pixels per row in the ImageData object."
 }

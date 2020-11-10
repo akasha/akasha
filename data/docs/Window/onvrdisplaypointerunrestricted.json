@@ -8,7 +8,7 @@
         {
             "name": "WebVR 1.1",
             "href": "https://immersive-web.github.io/webvr/spec/1.1/#dom-window-onvrdisplaypointerunrestricted",
-            "description": "The definition of 'onvrdisplaypointerunrestricted' in WebVR 1.1."
+            "description": "The definition of 'onvrdisplaypointerunrestricted' in the 'WebVR 1.1' specification."
         }
     ]
 }

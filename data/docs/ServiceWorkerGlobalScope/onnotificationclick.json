@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.onnotificationclick",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick",
-    "description": "The ServiceWorkerGlobalScope.onnotificationclick property is an event handler called whenever the notificationclick event is dispatched on the ServiceWorkerGlobalScope object, that is when a user clicks on a displayed notification spawned by ServiceWorkerRegistration.showNotification()."
+    "description": "The ServiceWorkerGlobalScope.onnotificationclick property is an event handler called whenever the notificationclick event is dispatched on the ServiceWorkerGlobalScope object, that is when a user clicks on a displayed notification spawned by ServiceWorkerRegistration.showNotification().",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-serviceworkerglobalscope-onnotificationclick",
+            "description": "The definition of 'onnotificationclick' in the 'Notifications API' specification."
+        }
+    ]
 }

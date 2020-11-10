@@ -8,7 +8,7 @@
         {
             "name": "Encrypted Media Extensions",
             "href": "https://w3c.github.io/encrypted-media/#dom-htmlmediaelement-setmediakeys",
-            "description": "The definition of 'setMediaKeys()' in Encrypted Media Extensions."
+            "description": "The definition of 'setMediaKeys()' in the 'Encrypted Media Extensions' specification."
         }
     ]
 }

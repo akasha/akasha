@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "IDBCursor.continuePrimaryKey",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/continuePrimaryKey",
-    "description": "The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter."
+    "description": "The continuePrimaryKey() method of the IDBCursor interface advances the cursor to the to the item whose key matches the key parameter as well as whose primary key matches the primary key parameter.",
+    "refs": [
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-continueprimarykey",
+            "description": "The definition of 'continuePrimaryKey()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

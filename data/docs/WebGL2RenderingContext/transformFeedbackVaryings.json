@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.transformFeedbackVaryings",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/transformFeedbackVaryings",
-    "description": "The WebGL2RenderingContext.transformFeedbackVaryings() method of the WebGL 2 API specifies values to record in WebGLTransformFeedback buffers."
+    "description": "The WebGL2RenderingContext.transformFeedbackVaryings() method of the WebGL 2 API specifies values to record in WebGLTransformFeedback buffers.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.15",
+            "description": "The definition of 'transformFeedbackVaryings' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glTransformFeedbackVaryings.xhtml",
+            "description": "The definition of 'glTransformFeedbackVaryings' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

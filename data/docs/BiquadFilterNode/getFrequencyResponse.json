@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-biquadfilternode-getfrequencyresponse",
-            "description": "The definition of 'getFrequencyResponse()' in Web Audio API."
+            "description": "The definition of 'getFrequencyResponse()' in the 'Web Audio API' specification."
         }
     ]
 }

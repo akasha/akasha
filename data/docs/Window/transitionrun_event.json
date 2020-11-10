@@ -8,7 +8,7 @@
         {
             "name": "CSS Transitions",
             "href": "https://drafts.csswg.org/css-transitions/#transitionrun",
-            "description": "The definition of 'transitionrun' in CSS Transitions."
+            "description": "The definition of 'transitionrun' in the 'CSS Transitions' specification."
         }
     ],
     "eventName": "transitionrun",

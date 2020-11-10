@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/interaction.html#dom-accesskeylabel",
-            "description": "The definition of 'HTMLElement.accessKeyLabel' in HTML Living Standard."
+            "description": "The definition of 'HTMLElement.accessKeyLabel' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML 5.1",
@@ -17,7 +17,7 @@
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/editing.html#dom-accesskeylabel",
-            "description": "The definition of 'HTMLElement.accessKeyLabel' in HTML5."
+            "description": "The definition of 'HTMLElement.accessKeyLabel' in the 'HTML5' specification."
         }
     ]
 }

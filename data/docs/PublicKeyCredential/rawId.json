@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PublicKeyCredential.rawId",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PublicKeyCredential/rawId",
-    "description": "The rawId read-only property of the PublicKeyCredential interface is an ArrayBuffer object containing the identifier of the credentials."
+    "description": "The rawId read-only property of the PublicKeyCredential interface is an ArrayBuffer object containing the identifier of the credentials.",
+    "refs": [
+        {
+            "name": "Web Authentication: An API for accessing Public Key Credentials Level 1",
+            "href": "https://w3c.github.io/webauthn/#dom-publickeycredential-rawid",
+            "description": "The definition of 'rawId' in the 'Web Authentication: An API for accessing Public Key Credentials Level 1' specification."
+        }
+    ]
 }

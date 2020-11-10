@@ -1,23 +1,23 @@
 
 {
     "name": "HTMLLabelElement",
-    "lastModifiedAt": 1604970641187,
+    "lastModifiedAt": 1604976571339,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450297916
+            "lastModifiedAt": 1604976569666
         },
         {
             "name": "control",
-            "lastModifiedAt": 1604450298942
+            "lastModifiedAt": 1604976570148
         },
         {
             "name": "form",
-            "lastModifiedAt": 1604450299389
+            "lastModifiedAt": 1604976570763
         },
         {
             "name": "htmlFor",
-            "lastModifiedAt": 1604450299920
+            "lastModifiedAt": 1604976571339
         }
     ]
 }

@@ -6,32 +6,19 @@
     "description": "The HTMLInputElement.stepUp() method increments the value of a numeric type of  input element by the value of the step attribute, or the default step value if the step attribute is not explicitly set. The method, when invoked, increments the value by (step * n), where n defaults to 1 if not specified, and step defaults to the default value for step if not specified.",
     "refs": [
         {
-            "name": "date",
-            "href": "/en-US/docs/Web/HTML/Element/input/date"
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup",
+            "description": "The definition of 'stepUp()' in the 'HTML Living Standard' specification."
         },
         {
-            "name": "month",
-            "href": "/en-US/docs/Web/HTML/Element/input/month"
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/sec-forms.html#dom-htmlinputelement-stepup",
+            "description": "The definition of 'stepUp()' in the 'HTML 5.1' specification."
         },
         {
-            "name": "week",
-            "href": "/en-US/docs/Web/HTML/Element/input/week"
-        },
-        {
-            "name": "time",
-            "href": "/en-US/docs/Web/HTML/Element/input/time"
-        },
-        {
-            "name": "datetime-local",
-            "href": "/en-US/docs/Web/HTML/Element/input/datetime-local"
-        },
-        {
-            "name": "number",
-            "href": "/en-US/docs/Web/HTML/Element/input/number"
-        },
-        {
-            "name": "range",
-            "href": "/en-US/docs/Web/HTML/Element/input/range"
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/sec-forms.html#dom-htmlinputelement-stepup",
+            "description": "The definition of 'stepUp()' in the 'HTML5' specification."
         }
     ]
 }

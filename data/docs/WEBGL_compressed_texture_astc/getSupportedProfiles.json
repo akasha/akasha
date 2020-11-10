@@ -8,7 +8,7 @@
         {
             "name": "WEBGL_compressed_texture_astc",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/",
-            "description": "The definition of 'WEBGL_compressed_texture_astc' in WEBGL_compressed_texture_astc."
+            "description": "The definition of 'WEBGL_compressed_texture_astc' in the 'WEBGL_compressed_texture_astc' specification."
         }
     ]
 }

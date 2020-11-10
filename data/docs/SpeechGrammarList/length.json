@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechGrammarList.length",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList/length",
-    "description": "The length read-only property of the SpeechGrammarList interface returns the number of SpeechGrammar objects contained in the SpeechGrammarList."
+    "description": "The length read-only property of the SpeechGrammarList interface returns the number of SpeechGrammar objects contained in the SpeechGrammarList.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechgrammarlist-length",
+            "description": "The definition of 'length' in the 'Web Speech API' specification."
+        }
+    ]
 }

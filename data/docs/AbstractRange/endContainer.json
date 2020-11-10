@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-endcontainer",
-            "description": "The definition of 'endContainer' in DOM."
+            "description": "The definition of 'endContainer' in the 'DOM' specification."
         },
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-endcontainer",
-            "description": "The definition of 'endContainer' in Static Range."
+            "description": "The definition of 'endContainer' in the 'Static Range' specification."
         }
     ]
 }

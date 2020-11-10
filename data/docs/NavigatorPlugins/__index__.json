@@ -1,23 +1,23 @@
 
 {
     "name": "NavigatorPlugins",
-    "lastModifiedAt": 1604449542838,
+    "lastModifiedAt": 1604977172581,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449540798
+            "lastModifiedAt": 1604977170880
         },
         {
             "name": "javaEnabled",
-            "lastModifiedAt": 1604449542838
+            "lastModifiedAt": 1604977172581
         },
         {
             "name": "mimeTypes",
-            "lastModifiedAt": 1604449541274
+            "lastModifiedAt": 1604977171532
         },
         {
             "name": "plugins",
-            "lastModifiedAt": 1604449541762
+            "lastModifiedAt": 1604977172002
         }
     ]
 }

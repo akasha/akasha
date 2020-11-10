@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognition.onstart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/onstart",
-    "description": "The onstart property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition (when the start event fires.)"
+    "description": "The onstart property of the SpeechRecognition interface represents an event handler that will run when the speech recognition service has begun listening to incoming audio with intent to recognize grammars associated with the current SpeechRecognition (when the start event fires.)",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-onstart",
+            "description": "The definition of 'onstart' in the 'Web Speech API' specification."
+        }
+    ]
 }

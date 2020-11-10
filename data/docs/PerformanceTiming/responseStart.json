@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.responseStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/responseStart",
-    "description": "The legacy PerformanceTiming.responseStart read-only property returns an unsigned long long representing the moment in time (in milliseconds since the UNIX epoch) when the browser received the first byte of the response from the server, cache, or local resource."
+    "description": "The legacy PerformanceTiming.responseStart read-only property returns an unsigned long long representing the moment in time (in milliseconds since the UNIX epoch) when the browser received the first byte of the response from the server, cache, or local resource.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-responsestart",
+            "description": "The definition of 'PerformanceTiming.responseStart' in the 'Navigation Timing' specification."
+        }
+    ]
 }

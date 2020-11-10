@@ -8,17 +8,17 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-attr",
-            "description": "The definition of 'Attr' in DOM."
+            "description": "The definition of 'Attr' in the 'DOM' specification."
         },
         {
             "name": "DOM4",
             "href": "https://www.w3.org/TR/dom/#interface-attr",
-            "description": "The definition of 'Attr' in DOM4."
+            "description": "The definition of 'Attr' in the 'DOM4' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 3 Core Specification",
             "href": "https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-637646024",
-            "description": "The definition of 'Attr' in Document Object Model (DOM) Level 3 Core Specification."
+            "description": "The definition of 'Attr' in the 'Document Object Model (DOM) Level 3 Core Specification' specification."
         }
     ]
 }

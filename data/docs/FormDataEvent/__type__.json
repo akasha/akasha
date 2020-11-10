@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-formdataevent-interface",
-            "description": "The definition of 'FormDataEvent' in HTML Living Standard."
+            "description": "The definition of 'FormDataEvent' in the 'HTML Living Standard' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-request-integrity",
-            "description": "The definition of 'integrity' in Fetch."
+            "description": "The definition of 'integrity' in the 'Fetch' specification."
         }
     ]
 }

@@ -1,19 +1,19 @@
 
 {
     "name": "CSSNamespaceRule",
-    "lastModifiedAt": 1604969490638,
+    "lastModifiedAt": 1604975506777,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447325727
+            "lastModifiedAt": 1604975505690
         },
         {
             "name": "namespaceURI",
-            "lastModifiedAt": 1604447326167
+            "lastModifiedAt": 1604975506179
         },
         {
             "name": "prefix",
-            "lastModifiedAt": 1604447326637
+            "lastModifiedAt": 1604975506685
         }
     ]
 }

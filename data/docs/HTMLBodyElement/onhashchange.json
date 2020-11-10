@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "HTMLBodyElement.onhashchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLBodyElement/onhashchange",
-    "description": "The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events."
+    "description": "The WindowEventHandlers.onhashchange property of the WindowEventHandlers mixin is the EventHandler for processing hashchange events.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#handler-window-onhashchange",
+            "description": "The definition of 'onhashchange' in the 'HTML Living Standard' specification."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/#windoweventhandlers",
+            "description": "The definition of 'GlobalEventHandlers' in the 'HTML 5.1' specification."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/#windoweventhandlers",
+            "description": "The definition of 'GlobalEventHandlers' in the 'HTML5' specification."
+        }
+    ]
 }

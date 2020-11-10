@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-mediaquerylist-addlistener",
-            "description": "The definition of 'addListener' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'addListener' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

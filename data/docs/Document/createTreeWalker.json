@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Document.createTreeWalker",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createTreeWalker",
-    "description": "The Document.createTreeWalker() creator method returns a newly created TreeWalker object."
+    "description": "The Document.createTreeWalker() creator method returns a newly created TreeWalker object.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-document-createtreewalker",
+            "description": "The definition of 'Document.createTreeWalker' in the 'DOM' specification."
+        },
+        {
+            "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#NodeIteratorFactory-createTreeWalker",
+            "description": "The definition of 'Document.createTreeWalker' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
+        }
+    ]
 }

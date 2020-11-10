@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#rtcrtpcapabilities",
-            "description": "The definition of 'RTCRtpCapabilities' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'RTCRtpCapabilities' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

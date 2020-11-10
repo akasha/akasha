@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createbuffersource",
-            "description": "The definition of 'createBufferSource()' in Web Audio API."
+            "description": "The definition of 'createBufferSource()' in the 'Web Audio API' specification."
         }
     ]
 }

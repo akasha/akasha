@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGComponentTransferFunctionElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGComponentTransferFunctionElement",
-    "description": "The SVGComponentTransferFunctionElement interface defines a base interface used by the component transfer function interfaces."
+    "description": "The SVGComponentTransferFunctionElement interface defines a base interface used by the component transfer function interfaces.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGComponentTransferFunctionElement",
+            "description": "The definition of 'SVGComponentTransferFunctionElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGComponentTransferFunctionElement",
+            "description": "The definition of 'SVGComponentTransferFunctionElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

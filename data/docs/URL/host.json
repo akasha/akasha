@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-host",
-            "description": "The definition of 'URL.host' in URL."
+            "description": "The definition of 'URL.host' in the 'URL' specification."
         }
     ]
 }

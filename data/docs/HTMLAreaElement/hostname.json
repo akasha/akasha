@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-hyperlink-hostname",
-            "description": "The definition of 'HTMLHyperlinkElementUtils.hostname' in HTML Living Standard."
+            "description": "The definition of 'HTMLHyperlinkElementUtils.hostname' in the 'HTML Living Standard' specification."
         }
     ]
 }

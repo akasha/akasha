@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Screen.height",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/height",
-    "description": "The Screen.height read-only property returns the height of the screen in pixels.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-screen-height",
-            "description": "The definition of 'Screen.height' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The Screen.height read-only property returns the height of the screen in pixels."
 }

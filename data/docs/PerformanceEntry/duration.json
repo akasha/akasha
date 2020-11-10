@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "PerformanceEntry.duration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/duration",
-    "description": "The duration property returns a timestamp that is the duration of the performance entry."
+    "description": "The duration property returns a timestamp that is the duration of the performance entry.",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#dom-performanceentry-duration",
+            "description": "The definition of 'duration' in the 'Performance Timeline Level 2' specification."
+        },
+        {
+            "name": "Performance Timeline",
+            "href": "https://www.w3.org/TR/performance-timeline/#dom-performanceentry-duration",
+            "description": "The definition of 'duration' in the 'Performance Timeline' specification."
+        }
+    ]
 }

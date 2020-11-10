@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-fetchevent-fetchevent",
-            "description": "The definition of 'FetchEvent() constructor' in Service Workers."
+            "description": "The definition of 'FetchEvent() constructor' in the 'Service Workers' specification."
         }
     ]
 }

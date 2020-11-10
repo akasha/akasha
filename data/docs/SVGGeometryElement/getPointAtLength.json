@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SVGGeometryElement.getPointAtLength",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/getPointAtLength",
-    "description": "The SVGGeometryElement.getPointAtLength() method returns the point at a given distance along the path."
+    "description": "The SVGGeometryElement.getPointAtLength() method returns the point at a given distance along the path.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#__svg__SVGGeometryElement__getPointAtLength",
+            "description": "The definition of 'SVGGeometryElement.getTotalLength()' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ]
 }

@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "Performance.timing",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/timing",
-    "description": "The legacy Performance.timing read-only property returns a PerformanceTiming object containing latency-related performance information."
+    "description": "The legacy Performance.timing read-only property returns a PerformanceTiming object containing latency-related performance information.",
+    "refs": [
+        {
+            "name": "Navigation Timing Level 2",
+            "href": "https://w3c.github.io/navigation-timing/#obsolete"
+        }
+    ]
 }

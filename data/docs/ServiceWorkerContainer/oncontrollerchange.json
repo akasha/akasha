@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerContainer.oncontrollerchange",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/oncontrollerchange",
-    "description": "The oncontrollerchange property of the ServiceWorkerContainer interface is an event handler fired whenever a controllerchange event occurs &mdash; when the document's associated ServiceWorkerRegistration acquires a new active worker."
+    "description": "The oncontrollerchange property of the ServiceWorkerContainer interface is an event handler fired whenever a controllerchange event occurs &mdash; when the document's associated ServiceWorkerRegistration acquires a new active worker.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-oncontrollerchange",
+            "description": "The definition of 'ServiceWorkerContainer: oncontrollerchange' in the 'Service Workers' specification."
+        }
+    ]
 }

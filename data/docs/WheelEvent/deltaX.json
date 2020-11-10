@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WheelEvent.deltaX",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WheelEvent/deltaX",
-    "description": "The WheelEvent.deltaX read-only property is a double representing the horizontal scroll amount in the WheelEvent.deltaMode unit."
+    "description": "The WheelEvent.deltaX read-only property is a double representing the horizontal scroll amount in the WheelEvent.deltaMode unit.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-WheelEvent-deltaX",
+            "description": "The definition of 'WheelEvent.deltaX' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
+        }
+    ]
 }

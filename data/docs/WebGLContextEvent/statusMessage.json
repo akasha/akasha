@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebGLContextEvent.statusMessage",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLContextEvent/statusMessage",
-    "description": "The read-only WebGLContextEvent.statusMessage property contains additional event status information, or is an empty string if no additional information is available."
+    "description": "The read-only WebGLContextEvent.statusMessage property contains additional event status information, or is an empty string if no additional information is available.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.1",
+            "description": "The definition of 'WebGLContextEvent.statusMessage' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

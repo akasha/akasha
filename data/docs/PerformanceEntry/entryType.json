@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "PerformanceEntry.entryType",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry/entryType",
-    "description": "The entryType property returns a DOMString representing the type of performance metric such as, for example, &quot;mark&quot;. This property is read only."
+    "description": "The entryType property returns a DOMString representing the type of performance metric such as, for example, &quot;mark&quot;. This property is read only.",
+    "refs": [
+        {
+            "name": "Performance Timeline Level 2",
+            "href": "https://w3c.github.io/performance-timeline/#dom-performanceentry-entrytype",
+            "description": "The definition of 'entryType' in the 'Performance Timeline Level 2' specification."
+        },
+        {
+            "name": "Performance Timeline",
+            "href": "https://www.w3.org/TR/performance-timeline/#dom-performanceentry-entrytype",
+            "description": "The definition of 'entryType' in the 'Performance Timeline' specification."
+        }
+    ]
 }

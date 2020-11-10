@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "NodeList.forEach",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach",
-    "description": "The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order."
+    "description": "The forEach() method of the NodeList interface calls the callback given in parameter once for each value pair in the list, in insertion order.",
+    "refs": [
+        {
+            "name": "Web IDL",
+            "href": "https://heycam.github.io/webidl/#es-forEach",
+            "description": "The definition of 'forEach' in the 'Web IDL' specification."
+        }
+    ]
 }

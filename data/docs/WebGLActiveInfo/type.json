@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "WebGLActiveInfo.type",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLActiveInfo/type",
-    "description": "The read-only WebGLActiveInfo.type property represents the type of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods."
+    "description": "The read-only WebGLActiveInfo.type property represents the type of the requested data returned by calling the getActiveAttrib() or getActiveUniform() methods.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#DOM-WebGLActiveInfo-type",
+            "description": "The definition of 'WebGLActiveInfo.type' in the 'WebGL 1.0' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#iteration-count",
-            "description": "The definition of 'iterations' in Web Animations."
+            "description": "The definition of 'iterations' in the 'Web Animations' specification."
         }
     ]
 }

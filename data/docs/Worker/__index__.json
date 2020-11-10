@@ -1,15 +1,15 @@
 
 {
     "name": "Worker",
-    "lastModifiedAt": 1604449958216,
+    "lastModifiedAt": 1604978925486,
     "entries": [
         {
             "name": "Worker",
-            "lastModifiedAt": 1604449954191
+            "lastModifiedAt": 1604978920245
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449953699
+            "lastModifiedAt": 1604978919730
         },
         {
             "name": "message_event",
@@ -21,23 +21,23 @@
         },
         {
             "name": "onerror",
-            "lastModifiedAt": 1604449954716
+            "lastModifiedAt": 1604978921324
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1604449955204
+            "lastModifiedAt": 1604978921914
         },
         {
             "name": "onmessageerror",
-            "lastModifiedAt": 1604449955692
+            "lastModifiedAt": 1604978922446
         },
         {
             "name": "postMessage",
-            "lastModifiedAt": 1604449956225
+            "lastModifiedAt": 1604978923486
         },
         {
             "name": "terminate",
-            "lastModifiedAt": 1604449957218
+            "lastModifiedAt": 1604978923955
         }
     ]
 }

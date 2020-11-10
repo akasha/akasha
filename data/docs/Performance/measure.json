@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "Performance.measure",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure",
-    "description": "The measure() method creates a named timestamp in the browser's performance entry buffer between marks, the navigation start time, or the current time. When measuring between two marks, there is a start mark and end mark, respectively. The named timestamp is referred to as a measure."
+    "description": "The measure() method creates a named timestamp in the browser's performance entry buffer between marks, the navigation start time, or the current time. When measuring between two marks, there is a start mark and end mark, respectively. The named timestamp is referred to as a measure.",
+    "refs": [
+        {
+            "name": "User Timing Level 2",
+            "href": "https://w3c.github.io/user-timing/#dom-performance-measure",
+            "description": "The definition of 'measure()' in the 'User Timing Level 2' specification."
+        },
+        {
+            "name": "User Timing",
+            "href": "https://www.w3.org/TR/user-timing/#dom-performance-measure",
+            "description": "The definition of 'measure()' in the 'User Timing' specification."
+        }
+    ]
 }

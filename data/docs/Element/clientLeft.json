@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-element-clientleft",
-            "description": "The definition of 'clientLeft' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'clientLeft' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

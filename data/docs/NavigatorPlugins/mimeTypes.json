@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-navigator-mimetypes",
-            "description": "The definition of 'NavigatorPlugins.mimeTypes' in HTML Living Standard."
+            "description": "The definition of 'NavigatorPlugins.mimeTypes' in the 'HTML Living Standard' specification."
         }
     ]
 }

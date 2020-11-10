@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.blockedURI",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/blockedURI",
-    "description": "The blockedURI read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the URI of the resource that was blocked because it violates a policy."
+    "description": "The blockedURI read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the URI of the resource that was blocked because it violates a policy.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-blockeduri",
+            "description": "The definition of 'blockedURI' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

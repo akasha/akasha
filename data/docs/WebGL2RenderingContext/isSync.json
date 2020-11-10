@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.isSync",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isSync",
-    "description": "The WebGL2RenderingContext.isSync() method of the WebGL 2 API returns true if the passed object is a valid WebGLSync object."
+    "description": "The WebGL2RenderingContext.isSync() method of the WebGL 2 API returns true if the passed object is a valid WebGLSync object.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14",
+            "description": "The definition of 'isSync' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glIsSync.xhtml",
+            "description": "The definition of 'glIsSync' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

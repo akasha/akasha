@@ -8,7 +8,7 @@
         {
             "name": "WEBGL_compressed_texture_s3tc",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/",
-            "description": "The definition of 'WEBGL_compressed_texture_s3tc' in WEBGL_compressed_texture_s3tc."
+            "description": "The definition of 'WEBGL_compressed_texture_s3tc' in the 'WEBGL_compressed_texture_s3tc' specification."
         }
     ]
 }

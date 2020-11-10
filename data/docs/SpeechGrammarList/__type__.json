@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "SpeechGrammarList",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechGrammarList",
-    "description": "The SpeechGrammarList interface of the Web Speech API represents a list of SpeechGrammar objects containing words or patterns of words that we want the recognition service to recognize."
+    "description": "The SpeechGrammarList interface of the Web Speech API represents a list of SpeechGrammar objects containing words or patterns of words that we want the recognition service to recognize.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechgrammarlist-speechgrammarlist",
+            "description": "The definition of 'SpeechGrammarList()' in the 'Web Speech API' specification."
+        }
+    ]
 }

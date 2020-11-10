@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dictdef-audioparamdescriptor",
-            "description": "The definition of 'AudioParamDescriptor' in Web Audio API."
+            "description": "The definition of 'AudioParamDescriptor' in the 'Web Audio API' specification."
         }
     ]
 }

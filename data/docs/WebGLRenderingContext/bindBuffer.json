@@ -8,22 +8,22 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.5",
-            "description": "The definition of 'bindBuffer' in WebGL 1.0."
+            "description": "The definition of 'bindBuffer' in the 'WebGL 1.0' specification."
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glBindBuffer.xml",
-            "description": "The definition of 'glBindBuffer' in OpenGL ES 2.0."
+            "description": "The definition of 'glBindBuffer' in the 'OpenGL ES 2.0' specification."
         },
         {
             "name": "WebGL 2.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.1",
-            "description": "The definition of 'bindBuffer' in WebGL 2.0."
+            "description": "The definition of 'bindBuffer' in the 'WebGL 2.0' specification."
         },
         {
             "name": "OpenGL ES 3.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glBindBuffer.xhtml",
-            "description": "The definition of 'glBindBuffer' in OpenGL ES 3.0."
+            "description": "The definition of 'glBindBuffer' in the 'OpenGL ES 3.0' specification."
         }
     ]
 }

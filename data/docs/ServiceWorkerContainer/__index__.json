@@ -1,23 +1,23 @@
 
 {
     "name": "ServiceWorkerContainer",
-    "lastModifiedAt": 1601466345205,
+    "lastModifiedAt": 1604978029713,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599391908388
+            "lastModifiedAt": 1604978022653
         },
         {
             "name": "controller",
-            "lastModifiedAt": 1599391909129
+            "lastModifiedAt": 1604978023109
         },
         {
             "name": "getRegistration",
-            "lastModifiedAt": 1599391911110
+            "lastModifiedAt": 1604978026679
         },
         {
             "name": "getRegistrations",
-            "lastModifiedAt": 1597192329654
+            "lastModifiedAt": 1604978027430
         },
         {
             "name": "message_event",
@@ -25,7 +25,7 @@
         },
         {
             "name": "oncontrollerchange",
-            "lastModifiedAt": 1600308837633
+            "lastModifiedAt": 1604978023584
         },
         {
             "name": "onerror",
@@ -33,19 +33,19 @@
         },
         {
             "name": "onmessage",
-            "lastModifiedAt": 1599391913378
+            "lastModifiedAt": 1604978025228
         },
         {
             "name": "ready",
-            "lastModifiedAt": 1600308839927
+            "lastModifiedAt": 1604978026110
         },
         {
             "name": "register",
-            "lastModifiedAt": 1597192329147
+            "lastModifiedAt": 1604978028187
         },
         {
             "name": "startMessages",
-            "lastModifiedAt": 1597192329899
+            "lastModifiedAt": 1604978029203
         }
     ]
 }

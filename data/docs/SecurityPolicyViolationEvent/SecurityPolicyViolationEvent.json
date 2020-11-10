@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "SecurityPolicyViolationEvent.SecurityPolicyViolationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/SecurityPolicyViolationEvent",
-    "description": "The SecurityPolicyViolationEvent constructor creates a new SecurityPolicyViolationEvent object instance."
+    "description": "The SecurityPolicyViolationEvent constructor creates a new SecurityPolicyViolationEvent object instance.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-securitypolicyviolationevent",
+            "description": "The definition of 'SecurityPolicyViolationEvent' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-ratio",
-            "description": "The definition of 'ratio' in Web Audio API."
+            "description": "The definition of 'ratio' in the 'Web Audio API' specification."
         }
     ]
 }

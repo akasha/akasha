@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "CaretPosition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CaretPosition",
-    "description": "The CaretPosition interface represents the caret position, an indicator for the text insertion point. You can get a CaretPosition using the document.caretPositionFromPoint method.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#caret-position",
-            "description": "The definition of 'CaretPosition' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The CaretPosition interface represents the caret position, an indicator for the text insertion point. You can get a CaretPosition using the document.caretPositionFromPoint method."
 }

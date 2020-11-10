@@ -1,7 +1,7 @@
 
 {
     "name": "RTCIceServer",
-    "lastModifiedAt": 1604448684544,
+    "lastModifiedAt": 1604977518982,
     "entries": [
         {
             "name": "__type__",
@@ -9,19 +9,19 @@
         },
         {
             "name": "credential",
-            "lastModifiedAt": 1604448682458
+            "lastModifiedAt": 1604977516786
         },
         {
             "name": "credentialType",
-            "lastModifiedAt": 1604448683054
+            "lastModifiedAt": 1604977517464
         },
         {
             "name": "urls",
-            "lastModifiedAt": 1604448683800
+            "lastModifiedAt": 1604977517934
         },
         {
             "name": "username",
-            "lastModifiedAt": 1604448684544
+            "lastModifiedAt": 1604977518982
         }
     ]
 }

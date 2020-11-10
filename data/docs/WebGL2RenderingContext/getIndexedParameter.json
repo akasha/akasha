@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.getIndexedParameter",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getIndexedParameter",
-    "description": "The WebGL2RenderingContext.getIndexedParameter() method of the WebGL 2 API returns indexed information about a given target."
+    "description": "The WebGL2RenderingContext.getIndexedParameter() method of the WebGL 2 API returns indexed information about a given target.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.2",
+            "description": "The definition of 'getIndexedParameter' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGet.xhtml",
+            "description": "The definition of 'glGet' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

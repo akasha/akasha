@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-currenttime",
-            "description": "The definition of 'pending' in Web Animations."
+            "description": "The definition of 'pending' in the 'Web Animations' specification."
         }
     ]
 }

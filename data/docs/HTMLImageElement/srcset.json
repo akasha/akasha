@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-img-srcset",
-            "description": "The definition of 'HTMLImageElement.srcset' in HTML Living Standard."
+            "description": "The definition of 'HTMLImageElement.srcset' in the 'HTML Living Standard' specification."
         }
     ]
 }

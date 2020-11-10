@@ -3,5 +3,11 @@
     "kind": "Method",
     "name": "Notification.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/close",
-    "description": "The close() method of the Notification interface is used to close/remove a previously displayed notification."
+    "description": "The close() method of the Notification interface is used to close/remove a previously displayed notification.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/"
+        }
+    ]
 }

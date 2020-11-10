@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#dom-screen-availwidth",
-            "description": "The definition of 'Screen.availWidth' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'Screen.availWidth' in the 'CSS Object Model (CSSOM) View Module' specification."
         }
     ]
 }

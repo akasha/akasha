@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "VisualViewport.onscroll",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/onscroll",
-    "description": "The onscroll event handler of the VisualViewport interface is called when a viewport is scrolled, i.e. when the scroll event is fired."
+    "description": "The onscroll event handler of the VisualViewport interface is called when a viewport is scrolled, i.e. when the scroll event is fired.",
+    "refs": [
+        {
+            "name": "Visual Viewport API",
+            "href": "https://wicg.github.io/visual-viewport/#dom-visualviewport-onscroll",
+            "description": "The definition of 'onscroll' in the 'Visual Viewport API' specification."
+        }
+    ]
 }

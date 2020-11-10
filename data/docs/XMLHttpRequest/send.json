@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XMLHttpRequest.send",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/send",
-    "description": "The XMLHttpRequest method send() sends the request to the server."
+    "description": "The XMLHttpRequest method send() sends the request to the server.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#the-send()-method",
+            "description": "The definition of 'send()' in the 'XMLHttpRequest' specification."
+        }
+    ]
 }

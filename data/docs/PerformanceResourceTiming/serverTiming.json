@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.serverTiming",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/serverTiming",
-    "description": "The serverTiming read-only property returns an array of PerformanceServerTiming entries containing server timing metrics."
+    "description": "The serverTiming read-only property returns an array of PerformanceServerTiming entries containing server timing metrics.",
+    "refs": [
+        {
+            "name": "Server Timing",
+            "href": "https://w3c.github.io/server-timing/#servertiming-attribute",
+            "description": "The definition of 'serverTiming' in the 'Server Timing' specification."
+        }
+    ]
 }

@@ -3,5 +3,27 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getUniform",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getUniform",
-    "description": "The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location."
+    "description": "The WebGLRenderingContext.getUniform() method of the WebGL API returns the value of a uniform variable at a given location.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.10",
+            "description": "The definition of 'getUniform' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetUniform.xml",
+            "description": "The definition of 'glGetUniform' in the 'OpenGL ES 2.0' specification."
+        },
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.8",
+            "description": "The definition of 'getUniform' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniform.xhtml",
+            "description": "The definition of 'glGetUniform' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

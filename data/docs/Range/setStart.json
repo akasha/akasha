@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-setstart",
-            "description": "The definition of 'Range.setStart()' in DOM."
+            "description": "The definition of 'Range.setStart()' in the 'DOM' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level2-Range-method-setStart",
-            "description": "The definition of 'Range.setStart()' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+            "description": "The definition of 'Range.setStart()' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
         }
     ]
 }

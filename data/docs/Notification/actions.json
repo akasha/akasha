@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.actions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/actions",
-    "description": "The actions read-only property of the Notification interface returns the list of NotificationAction objects set using the actions option when creating the notification using the Notification() constructor."
+    "description": "The actions read-only property of the Notification interface returns the list of NotificationAction objects set using the actions option when creating the notification using the Notification() constructor.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-actions",
+            "description": "The definition of 'actions' in the 'Notifications API' specification."
+        }
+    ]
 }

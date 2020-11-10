@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-contenttype",
-            "description": "The definition of 'Document.contentType' in DOM."
+            "description": "The definition of 'Document.contentType' in the 'DOM' specification."
         }
     ]
 }

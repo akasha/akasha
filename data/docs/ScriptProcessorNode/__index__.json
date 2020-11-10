@@ -1,23 +1,23 @@
 
 {
     "name": "ScriptProcessorNode",
-    "lastModifiedAt": 1604448500802,
+    "lastModifiedAt": 1604977990370,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448498085
+            "lastModifiedAt": 1604977987649
         },
         {
             "name": "audioprocess_event",
-            "lastModifiedAt": 1604448500631
+            "lastModifiedAt": 1604977990318
         },
         {
             "name": "bufferSize",
-            "lastModifiedAt": 1604448498965
+            "lastModifiedAt": 1604977988148
         },
         {
             "name": "onaudioprocess",
-            "lastModifiedAt": 1604448499543
+            "lastModifiedAt": 1604977989238
         }
     ]
 }

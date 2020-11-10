@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-username",
-            "description": "The definition of 'username' in URL."
+            "description": "The definition of 'username' in the 'URL' specification."
         }
     ]
 }

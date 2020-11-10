@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "XR.isSessionSupported",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XR/isSessionSupported",
-    "description": "The XRSystem method isSessionSupported() returns a promise which resolves to true if the specified WebXR session mode is supported by the user's WebXR device. Otherwise, the promise resolves with false."
+    "description": "The XRSystem method isSessionSupported() returns a promise which resolves to true if the specified WebXR session mode is supported by the user's WebXR device. Otherwise, the promise resolves with false.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsystem-issessionsupported",
+            "description": "The definition of 'isSessionSupported()' in the 'WebXR Device API' specification."
+        }
+    ]
 }

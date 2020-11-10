@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#groupend",
-            "description": "The definition of 'console.groupEnd()' in Console API."
+            "description": "The definition of 'console.groupEnd()' in the 'Console API' specification."
         }
     ]
 }

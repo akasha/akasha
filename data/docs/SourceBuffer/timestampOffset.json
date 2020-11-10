@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SourceBuffer.timestampOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset",
-    "description": "The timestampOffset property of the SourceBuffer interface controls the offset applied to timestamps inside media segments that are appended to the SourceBuffer."
+    "description": "The timestampOffset property of the SourceBuffer interface controls the offset applied to timestamps inside media segments that are appended to the SourceBuffer.",
+    "refs": [
+        {
+            "name": "Media Source Extensions",
+            "href": "https://w3c.github.io/media-source/#idl-def-sourcebuffer-timestampoffset",
+            "description": "The definition of 'timestampOffset' in the 'Media Source Extensions' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Bluetooth",
             "href": "https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothcharacteristicproperties-indicate",
-            "description": "The definition of 'indicate' in Web Bluetooth."
+            "description": "The definition of 'indicate' in the 'Web Bluetooth' specification."
         }
     ]
 }

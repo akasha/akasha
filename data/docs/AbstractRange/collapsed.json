@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-range-collapsed",
-            "description": "The definition of 'collapsed' in DOM."
+            "description": "The definition of 'collapsed' in the 'DOM' specification."
         },
         {
             "name": "Static Range",
             "href": "https://w3c.github.io/staticrange/#dom-AbstractRange-collapsed",
-            "description": "The definition of 'collapsed' in Static Range."
+            "description": "The definition of 'collapsed' in the 'Static Range' specification."
         }
     ]
 }

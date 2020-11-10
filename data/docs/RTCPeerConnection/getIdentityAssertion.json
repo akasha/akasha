@@ -8,7 +8,7 @@
         {
             "name": "Identity for WebRTC",
             "href": "https://w3c.github.io/webrtc-identity/#dfn-getidentityassertion",
-            "description": "The definition of 'RTCPeerConnection.getIdentityAssertion()' in Identity for WebRTC."
+            "description": "The definition of 'RTCPeerConnection.getIdentityAssertion()' in the 'Identity for WebRTC' specification."
         }
     ]
 }

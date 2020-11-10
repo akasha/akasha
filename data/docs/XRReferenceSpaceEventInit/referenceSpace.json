@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRReferenceSpaceEventInit.referenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace",
-    "description": "The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor."
+    "description": "The XRReferenceSpaceEventInit property referenceSpace is used to establish the value of a newly-constructed XRReferenceSpaceEvent object when calling the XRReferenceSpaceEvent() constructor.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespaceeventinit-referencespace",
+            "description": "The definition of 'XRReferenceSpaceEventInit.referenceSpace' in the 'WebXR Device API' specification."
+        }
+    ]
 }

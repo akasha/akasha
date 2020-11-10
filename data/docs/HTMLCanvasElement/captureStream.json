@@ -8,7 +8,7 @@
         {
             "name": "Media Capture from DOM Elements",
             "href": "https://w3c.github.io/mediacapture-fromelement/#dom-htmlcanvaselement-capturestream",
-            "description": "The definition of 'HTMLCanvasElement.captureStream()' in Media Capture from DOM Elements."
+            "description": "The definition of 'HTMLCanvasElement.captureStream()' in the 'Media Capture from DOM Elements' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-document-doctype",
-            "description": "The definition of 'Document: doctype' in DOM."
+            "description": "The definition of 'Document: doctype' in the 'DOM' specification."
         }
     ]
 }

@@ -1,15 +1,15 @@
 
 {
     "name": "XRPermissionStatus",
-    "lastModifiedAt": 1601467537873,
+    "lastModifiedAt": 1604979060111,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1601467537510
+            "lastModifiedAt": 1604979058884
         },
         {
             "name": "granted",
-            "lastModifiedAt": 1601467537831
+            "lastModifiedAt": 1604979060050
         }
     ]
 }

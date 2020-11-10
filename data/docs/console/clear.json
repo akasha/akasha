@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#clear",
-            "description": "The definition of 'console.clear()' in Console API."
+            "description": "The definition of 'console.clear()' in the 'Console API' specification."
         }
     ]
 }

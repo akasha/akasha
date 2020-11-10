@@ -1,39 +1,39 @@
 
 {
     "name": "ReadableStream",
-    "lastModifiedAt": 1600313058684,
+    "lastModifiedAt": 1604977720355,
     "entries": [
         {
             "name": "ReadableStream",
-            "lastModifiedAt": 1597192136391
+            "lastModifiedAt": 1604977715509
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599279785082
+            "lastModifiedAt": 1604977714872
         },
         {
             "name": "cancel",
-            "lastModifiedAt": 1599279786897
+            "lastModifiedAt": 1604977716704
         },
         {
             "name": "getReader",
-            "lastModifiedAt": 1600306071131
+            "lastModifiedAt": 1604977717201
         },
         {
             "name": "locked",
-            "lastModifiedAt": 1599279786410
+            "lastModifiedAt": 1604977716153
         },
         {
             "name": "pipeThrough",
-            "lastModifiedAt": 1600306071377
+            "lastModifiedAt": 1604977718239
         },
         {
             "name": "pipeTo",
-            "lastModifiedAt": 1600306071651
+            "lastModifiedAt": 1604977719311
         },
         {
             "name": "tee",
-            "lastModifiedAt": 1600306071959
+            "lastModifiedAt": 1604977720355
         }
     ]
 }

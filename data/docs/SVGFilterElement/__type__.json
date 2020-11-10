@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGFilterElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGFilterElement",
-    "description": "The SVGFilterElement interface provides access to the properties of filter elements, as well as methods to manipulate them."
+    "description": "The SVGFilterElement interface provides access to the properties of filter elements, as well as methods to manipulate them.",
+    "refs": [
+        {
+            "name": "Filter Effects Module Level 1",
+            "href": "https://drafts.fxtf.org/filter-effects/#InterfaceSVGFilterElement",
+            "description": "The definition of 'SVGFilterElement' in the 'Filter Effects Module Level 1' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/filters.html#InterfaceSVGFilterElement",
+            "description": "The definition of 'SVGFilterElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

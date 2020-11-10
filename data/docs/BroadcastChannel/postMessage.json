@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/comms.html#dom-broadcastchannel-postmessage",
-            "description": "The definition of 'BroadcastChannel.postmessage()' in HTML Living Standard."
+            "description": "The definition of 'BroadcastChannel.postmessage()' in the 'HTML Living Standard' specification."
         }
     ]
 }

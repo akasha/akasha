@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Slottable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Slottable",
-    "description": "The Slottable mixin defines features that allow nodes to become the contents of a slot element &mdash; the following features are included in both Element and Text."
+    "description": "The Slottable mixin defines features that allow nodes to become the contents of a slot element &mdash; the following features are included in both Element and Text.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#slotable",
+            "description": "The definition of 'Slottable' in the 'DOM' specification."
+        }
+    ]
 }

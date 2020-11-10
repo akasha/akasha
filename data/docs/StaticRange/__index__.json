@@ -1,39 +1,39 @@
 
 {
     "name": "StaticRange",
-    "lastModifiedAt": 1604009255938,
+    "lastModifiedAt": 1604978169780,
     "entries": [
         {
             "name": "StaticRange",
-            "lastModifiedAt": 1597193092928
+            "lastModifiedAt": 1604978165790
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599278818690
+            "lastModifiedAt": 1604978165278
         },
         {
             "name": "collapsed",
-            "lastModifiedAt": 1597193093230
+            "lastModifiedAt": 1604978166296
         },
         {
             "name": "endContainer",
-            "lastModifiedAt": 1597193093532
+            "lastModifiedAt": 1604978167351
         },
         {
             "name": "endOffset",
-            "lastModifiedAt": 1597193093864
+            "lastModifiedAt": 1604978167816
         },
         {
             "name": "startContainer",
-            "lastModifiedAt": 1599278821064
+            "lastModifiedAt": 1604978168314
         },
         {
             "name": "startOffset",
-            "lastModifiedAt": 1599278821525
+            "lastModifiedAt": 1604978168818
         },
         {
             "name": "toRange",
-            "lastModifiedAt": 1597193095285
+            "lastModifiedAt": 1604978169780
         }
     ]
 }

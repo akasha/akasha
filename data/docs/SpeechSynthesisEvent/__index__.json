@@ -1,27 +1,27 @@
 
 {
     "name": "SpeechSynthesisEvent",
-    "lastModifiedAt": 1601466480768,
+    "lastModifiedAt": 1604978145368,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192364047
+            "lastModifiedAt": 1604978142565
         },
         {
             "name": "charIndex",
-            "lastModifiedAt": 1596712236735
+            "lastModifiedAt": 1604978143119
         },
         {
             "name": "elapsedTime",
-            "lastModifiedAt": 1599280522042
+            "lastModifiedAt": 1604978143626
         },
         {
             "name": "name",
-            "lastModifiedAt": 1596712238092
+            "lastModifiedAt": 1604978144182
         },
         {
             "name": "utterance",
-            "lastModifiedAt": 1596712239184
+            "lastModifiedAt": 1604978145195
         }
     ]
 }

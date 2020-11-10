@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "SVGGeometryElement.isPointInFill",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGGeometryElement/isPointInFill",
-    "description": "The SVGGeometryElement.isPointInFill() method determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the pointer-events property on the element determines whether a point is considered to be within the fill. The point argument is interpreted as a point in the local coordiante system of the element."
+    "description": "The SVGGeometryElement.isPointInFill() method determines whether a given point is within the fill shape of an element. Normal hit testing rules apply; the value of the pointer-events property on the element determines whether a point is considered to be within the fill. The point argument is interpreted as a point in the local coordiante system of the element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#__svg__SVGGeometryElement__isPointInFill",
+            "description": "The definition of 'SVGGeometryElement.isPointInFill()' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ]
 }

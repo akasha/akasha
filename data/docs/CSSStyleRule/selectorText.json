@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#dom-cssstylerule-selectortext",
-            "description": "The definition of 'CSSStyleRule.selectorText' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'CSSStyleRule.selectorText' in the 'CSS Object Model (CSSOM)' specification."
         }
     ]
 }

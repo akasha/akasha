@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRRigidTransform.orientation",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/orientation",
-    "description": "The read-only XRRigidTransform property orientation is a DOMPointReadOnly containing a normalized quaternion (also called a unit quaternion or versor) specifying the rotational component of the transform represented by the object."
+    "description": "The read-only XRRigidTransform property orientation is a DOMPointReadOnly containing a normalized quaternion (also called a unit quaternion or versor) specifying the rotational component of the transform represented by the object.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrrigidtransform-orientation",
+            "description": "The definition of 'XRRigidTransform.orientation' in the 'WebXR Device API' specification."
+        }
+    ]
 }

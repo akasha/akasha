@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBFactory.open",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBFactory/open",
-    "description": "If an error occurs while the database connection is being opened, then an error event is fired on the request object returned from this method."
+    "description": "If an error occurs while the database connection is being opened, then an error event is fired on the request object returned from this method.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbfactory-open",
+            "description": "The definition of 'open()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbfactory-open",
+            "description": "The definition of 'open()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

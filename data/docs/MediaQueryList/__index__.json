@@ -1,31 +1,31 @@
 
 {
     "name": "MediaQueryList",
-    "lastModifiedAt": 1604971050049,
+    "lastModifiedAt": 1604976969261,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604447636674
+            "lastModifiedAt": 1604976965896
         },
         {
             "name": "addListener",
-            "lastModifiedAt": 1604447639679
+            "lastModifiedAt": 1604976968437
         },
         {
             "name": "matches",
-            "lastModifiedAt": 1604447637517
+            "lastModifiedAt": 1604976966374
         },
         {
             "name": "media",
-            "lastModifiedAt": 1604447638025
+            "lastModifiedAt": 1604976966852
         },
         {
             "name": "onchange",
-            "lastModifiedAt": 1604447638509
+            "lastModifiedAt": 1604976967856
         },
         {
             "name": "removeListener",
-            "lastModifiedAt": 1604447640856
+            "lastModifiedAt": 1604976968932
         }
     ]
 }

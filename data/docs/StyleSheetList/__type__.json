@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-stylesheetlist-interface",
-            "description": "The definition of 'CSSStyleSheetList' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'CSSStyleSheetList' in the 'CSS Object Model (CSSOM)' specification."
         }
     ]
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "TouchEvent",
-    "lastModifiedAt": 1600313656596,
+    "lastModifiedAt": 1604978258645,
     "entries": [
         {
             "name": "TouchEvent",
@@ -9,35 +9,35 @@
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192473607
+            "lastModifiedAt": 1604978253229
         },
         {
             "name": "altKey",
-            "lastModifiedAt": 1599279010340
+            "lastModifiedAt": 1604978254254
         },
         {
             "name": "changedTouches",
-            "lastModifiedAt": 1597192474370
+            "lastModifiedAt": 1604978254821
         },
         {
             "name": "ctrlKey",
-            "lastModifiedAt": 1599279011278
+            "lastModifiedAt": 1604978255369
         },
         {
             "name": "metaKey",
-            "lastModifiedAt": 1599279012423
+            "lastModifiedAt": 1604978255988
         },
         {
             "name": "shiftKey",
-            "lastModifiedAt": 1599279012900
+            "lastModifiedAt": 1604978256505
         },
         {
             "name": "targetTouches",
-            "lastModifiedAt": 1597192476732
+            "lastModifiedAt": 1604978257699
         },
         {
             "name": "touches",
-            "lastModifiedAt": 1597192477150
+            "lastModifiedAt": 1604978258276
         }
     ]
 }

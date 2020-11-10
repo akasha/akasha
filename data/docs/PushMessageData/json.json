@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PushMessageData.json",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/json",
-    "description": "The json()method of the PushMessageData interface extracts push message data by parsing it as a JSON string and returning the result."
+    "description": "The json()method of the PushMessageData interface extracts push message data by parsing it as a JSON string and returning the result.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushmessagedata-json",
+            "description": "The definition of 'json()' in the 'Push API' specification."
+        }
+    ]
 }

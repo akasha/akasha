@@ -4,6 +4,13 @@
     "name": "ServiceWorkerGlobalScope.pushsubscriptionchange_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event",
     "description": "The pushsubscriptionchange event is sent to the global scope of a ServiceWorker to indicate a change in push subscription that was triggered outside the application's control.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#the-pushsubscriptionchange-event",
+            "description": "The definition of 'pushsubscriptionchange' in the 'Push API' specification."
+        }
+    ],
     "eventName": "pushsubscriptionchange",
     "eventType": "PushSubscriptionChangeEvent",
     "eventHandlerProperty": "onpushsubscriptionchange",

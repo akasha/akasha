@@ -8,7 +8,7 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#dom-stylesheet-parentstylesheet",
-            "description": "The definition of 'StyleSheet: parentStyleSheet' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'StyleSheet: parentStyleSheet' in the 'CSS Object Model (CSSOM)' specification."
         }
     ]
 }

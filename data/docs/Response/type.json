@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-response-type",
-            "description": "The definition of 'type' in Fetch."
+            "description": "The definition of 'type' in the 'Fetch' specification."
         }
     ]
 }

@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "ImageData.data",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ImageData/data",
-    "description": "The readonly ImageData.data property returns a Uint8ClampedArray that contains the ImageData object's pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer values between 0 and 255 (inclusive).",
-    "refs": [
-        {
-            "name": "HTML Living Standard",
-            "href": "https://html.spec.whatwg.org/multipage/scripting.html#dom-imagedata-data",
-            "description": "The definition of 'ImageData.data' in HTML Living Standard."
-        }
-    ]
+    "description": "The readonly ImageData.data property returns a Uint8ClampedArray that contains the ImageData object's pixel data. Data is stored as a one-dimensional array in the RGBA order, with integer values between 0 and 255 (inclusive)."
 }

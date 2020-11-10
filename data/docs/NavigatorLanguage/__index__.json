@@ -1,19 +1,19 @@
 
 {
     "name": "NavigatorLanguage",
-    "lastModifiedAt": 1604449538590,
+    "lastModifiedAt": 1604977169083,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449536725
+            "lastModifiedAt": 1604977168890
         },
         {
             "name": "language",
-            "lastModifiedAt": 1604449537871
+            "lastModifiedAt": 1604977168939
         },
         {
             "name": "languages",
-            "lastModifiedAt": 1604449538495
+            "lastModifiedAt": 1604977168998
         }
     ]
 }

@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.waitSync",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/waitSync",
-    "description": "The WebGL2RenderingContext.waitSync() method of the WebGL 2 API returns immediately, but waits on the GL server until the given WebGLSync object is signaled."
+    "description": "The WebGL2RenderingContext.waitSync() method of the WebGL 2 API returns immediately, but waits on the GL server until the given WebGLSync object is signaled.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.14",
+            "description": "The definition of 'waitSync' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glWaitSync.xhtml",
+            "description": "The definition of 'glWaitSync' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

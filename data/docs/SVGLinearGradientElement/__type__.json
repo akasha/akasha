@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGLinearGradientElement",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGLinearGradientElement",
-    "description": "The SVGLinearGradientElement interface corresponds to the linearGradient element."
+    "description": "The SVGLinearGradientElement interface corresponds to the linearGradient element.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/pservers.html#InterfaceSVGLinearGradientElement",
+            "description": "The definition of 'SVGLinearGradientElement' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/pservers.html#InterfaceSVGLinearGradientElement",
+            "description": "The definition of 'SVGLinearGradientElement' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

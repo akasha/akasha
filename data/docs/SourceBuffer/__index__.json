@@ -1,19 +1,19 @@
 
 {
     "name": "SourceBuffer",
-    "lastModifiedAt": 1600313459634,
+    "lastModifiedAt": 1604978079787,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1599391765842
+            "lastModifiedAt": 1604978068391
         },
         {
             "name": "abort",
-            "lastModifiedAt": 1597192152223
+            "lastModifiedAt": 1604978075964
         },
         {
             "name": "appendBuffer",
-            "lastModifiedAt": 1597192152561
+            "lastModifiedAt": 1604978076715
         },
         {
             "name": "appendBufferAsync",
@@ -25,19 +25,19 @@
         },
         {
             "name": "appendWindowEnd",
-            "lastModifiedAt": 1597192149284
+            "lastModifiedAt": 1604978069411
         },
         {
             "name": "appendWindowStart",
-            "lastModifiedAt": 1597192149592
+            "lastModifiedAt": 1604978069931
         },
         {
             "name": "audioTracks",
-            "lastModifiedAt": 1597192149909
+            "lastModifiedAt": 1604978070993
         },
         {
             "name": "buffered",
-            "lastModifiedAt": 1599391768469
+            "lastModifiedAt": 1604978071456
         },
         {
             "name": "changeType",
@@ -45,11 +45,11 @@
         },
         {
             "name": "mode",
-            "lastModifiedAt": 1599391768941
+            "lastModifiedAt": 1604978071923
         },
         {
             "name": "remove",
-            "lastModifiedAt": 1597192153625
+            "lastModifiedAt": 1604978079255
         },
         {
             "name": "removeAsync",
@@ -57,11 +57,11 @@
         },
         {
             "name": "textTracks",
-            "lastModifiedAt": 1597192150728
+            "lastModifiedAt": 1604978072514
         },
         {
             "name": "timestampOffset",
-            "lastModifiedAt": 1597192150994
+            "lastModifiedAt": 1604978072999
         },
         {
             "name": "trackDefaults",
@@ -69,11 +69,11 @@
         },
         {
             "name": "updating",
-            "lastModifiedAt": 1599391771733
+            "lastModifiedAt": 1604978073946
         },
         {
             "name": "videoTracks",
-            "lastModifiedAt": 1597192151782
+            "lastModifiedAt": 1604978074430
         }
     ]
 }

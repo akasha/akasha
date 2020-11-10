@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Node.nodeName",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeName",
-    "description": "The nodeName read-only property returns the name of the current Node as a string."
+    "description": "The nodeName read-only property returns the name of the current Node as a string.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-nodename",
+            "description": "The definition of 'nodeName' in the 'DOM' specification."
+        }
+    ]
 }

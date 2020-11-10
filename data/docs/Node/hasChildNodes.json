@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Node.hasChildNodes",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Node/hasChildNodes",
-    "description": "The Node.hasChildNodes() method returns a Boolean value indicating whether the given Node has child nodes or not."
+    "description": "The Node.hasChildNodes() method returns a Boolean value indicating whether the given Node has child nodes or not.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-node-haschildnodes",
+            "description": "The definition of 'Node: hasChildNodes' in the 'DOM' specification."
+        }
+    ]
 }

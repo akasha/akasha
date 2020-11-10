@@ -8,7 +8,7 @@
         {
             "name": "WebRTC 1.0: Real-time Communication Between Browsers",
             "href": "https://w3c.github.io/webrtc-pc/#dom-rtcicecandidatepair-remote",
-            "description": "The definition of 'RTCIceCandidatePair.remote' in WebRTC 1.0: Real-time Communication Between Browsers."
+            "description": "The definition of 'RTCIceCandidatePair.remote' in the 'WebRTC 1.0: Real-time Communication Between Browsers' specification."
         }
     ]
 }

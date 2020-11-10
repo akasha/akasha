@@ -3,5 +3,22 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.disable",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/disable",
-    "description": "The WebGLRenderingContext.disable() method of the WebGL API disables specific WebGL capabilities for this context."
+    "description": "The WebGLRenderingContext.disable() method of the WebGL API disables specific WebGL capabilities for this context.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'disable' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glDisable.xml",
+            "description": "The definition of 'glDisable' in the 'OpenGL ES 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glEnable.xhtml",
+            "description": "The definition of 'glDisable' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

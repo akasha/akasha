@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "KeyboardEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent",
-    "description": "KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard."
+    "description": "KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard.",
+    "refs": [
+        {
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#interface-keyboardevent",
+            "description": "The definition of 'KeyboardEvent' in the 'UI Events' specification."
+        }
+    ]
 }

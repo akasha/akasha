@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisEvent.utterance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/utterance",
-    "description": "The utterance read-only property of the SpeechSynthesisUtterance interface returns the SpeechSynthesisUtterance instance that the event was triggered on."
+    "description": "The utterance read-only property of the SpeechSynthesisUtterance interface returns the SpeechSynthesisUtterance instance that the event was triggered on.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisevent-utterance",
+            "description": "The definition of 'utterance' in the 'Web Speech API' specification."
+        }
+    ]
 }

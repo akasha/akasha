@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRReferenceSpaceEvent.referenceSpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRReferenceSpaceEvent/referenceSpace",
-    "description": "The read-only XRReferenceSpaceEvent property referenceSpace specifies the reference space which is the originator of the event."
+    "description": "The read-only XRReferenceSpaceEvent property referenceSpace specifies the reference space which is the originator of the event.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrreferencespaceevent-referencespace",
+            "description": "The definition of 'XRReferenceSpaceEvent.referenceSpace' in the 'WebXR Device API' specification."
+        }
+    ]
 }

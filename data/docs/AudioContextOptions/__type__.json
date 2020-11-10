@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "AudioContextOptions",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/AudioContextOptions",
-    "description": "The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes."
+    "description": "The AudioContextOptions dictionary is used to specify configuration options when constructing a new AudioContext object to represent a graph of web audio nodes.",
+    "refs": [
+        {
+            "name": "Web Audio API",
+            "href": "https://webaudio.github.io/web-audio-api/#AudioContextOptions",
+            "description": "The definition of 'AudioContextOptions' in the 'Web Audio API' specification."
+        }
+    ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "CSS Properties and Values API Level 1",
             "href": "https://drafts.css-houdini.org/css-properties-values-api-1/#the-registerproperty-function",
-            "description": "The definition of 'The registerProperty() function' in CSS Properties and Values API Level 1."
+            "description": "The definition of 'The registerProperty() function' in the 'CSS Properties and Values API Level 1' specification."
         }
     ]
 }

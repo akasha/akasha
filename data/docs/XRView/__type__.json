@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "XRView",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRView",
-    "description": "The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint."
+    "description": "The WebXR Device API's XRView interface provides information describing a single view into the XR scene for a specific frame, providing orientation and position information for the viewpoint.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#xrview-interface",
+            "description": "The definition of 'XRView' in the 'WebXR Device API' specification."
+        }
+    ]
 }

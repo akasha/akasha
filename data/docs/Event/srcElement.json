@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-srcelement",
-            "description": "The definition of 'Event.srcElement' in DOM."
+            "description": "The definition of 'Event.srcElement' in the 'DOM' specification."
         }
     ]
 }

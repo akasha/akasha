@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.title",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/title",
-    "description": "The title read-only property of the Notification interface indicates the title of the notification, as specified in the title parameter of the Notification() constructor."
+    "description": "The title read-only property of the Notification interface indicates the title of the notification, as specified in the title parameter of the Notification() constructor.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-title",
+            "description": "The definition of 'title' in the 'Notifications API' specification."
+        }
+    ]
 }

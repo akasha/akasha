@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.texStorage2D",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texStorage2D",
-    "description": "The WebGL2RenderingContext.texStorage2D() method of the WebGL API specifies all levels of two-dimensional texture storage."
+    "description": "The WebGL2RenderingContext.texStorage2D() method of the WebGL API specifies all levels of two-dimensional texture storage.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.6",
+            "description": "The definition of 'texStorage2D' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glTexStorage2D.xhtml",
+            "description": "The definition of 'glTexStorage2D' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

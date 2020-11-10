@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Notification.timestamp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/timestamp",
-    "description": "The timestamp read-only property of the Notification interface returns a DOMTimeStamp, as specified in the timestamp option of the Notification() constructor."
+    "description": "The timestamp read-only property of the Notification interface returns a DOMTimeStamp, as specified in the timestamp option of the Notification() constructor.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-timestamp",
+            "description": "The definition of 'timestamp' in the 'Notifications API' specification."
+        }
+    ]
 }

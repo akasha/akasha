@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "Slottable.assignedSlot",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Slottable/assignedSlot",
-    "description": "The assignedSlot read-only property of the Slottable interface returns an HTMLSlotElement representing the slot element the node is inserted in."
+    "description": "The assignedSlot read-only property of the Slottable interface returns an HTMLSlotElement representing the slot element the node is inserted in.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-slotable-assignedslot",
+            "description": "The definition of 'assignedSlot' in the 'DOM' specification."
+        }
+    ]
 }

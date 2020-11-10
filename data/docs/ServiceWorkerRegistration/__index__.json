@@ -1,11 +1,11 @@
 
 {
     "name": "ServiceWorkerRegistration",
-    "lastModifiedAt": 1601466332054,
+    "lastModifiedAt": 1604978055185,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597190518732
+            "lastModifiedAt": 1604978045591
         },
         {
             "name": "active",
@@ -13,51 +13,51 @@
         },
         {
             "name": "getNotifications",
-            "lastModifiedAt": 1597190523897
+            "lastModifiedAt": 1604978053322
         },
         {
             "name": "index",
-            "lastModifiedAt": 1599278005676
+            "lastModifiedAt": 1604978046575
         },
         {
             "name": "installing",
-            "lastModifiedAt": 1599279496167
+            "lastModifiedAt": 1604978047129
         },
         {
             "name": "navigationPreload",
-            "lastModifiedAt": 1597190522106
+            "lastModifiedAt": 1604978047637
         },
         {
             "name": "onupdatefound",
-            "lastModifiedAt": 1600305808626
+            "lastModifiedAt": 1604978048461
         },
         {
             "name": "periodicSync",
-            "lastModifiedAt": 1600305808876
+            "lastModifiedAt": 1604978049014
         },
         {
             "name": "pushManager",
-            "lastModifiedAt": 1599279499620
+            "lastModifiedAt": 1604978049544
         },
         {
             "name": "scope",
-            "lastModifiedAt": 1599279495638
+            "lastModifiedAt": 1604978050929
         },
         {
             "name": "showNotification",
-            "lastModifiedAt": 1597190524301
+            "lastModifiedAt": 1604978054230
         },
         {
             "name": "sync",
-            "lastModifiedAt": 1599279500731
+            "lastModifiedAt": 1604978051428
         },
         {
             "name": "unregister",
-            "lastModifiedAt": 1597190524569
+            "lastModifiedAt": 1604978054709
         },
         {
             "name": "update",
-            "lastModifiedAt": 1599279502821
+            "lastModifiedAt": 1604978055185
         },
         {
             "name": "waiting",

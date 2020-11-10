@@ -8,7 +8,7 @@
         {
             "name": "Intersection Observer",
             "href": "https://w3c.github.io/IntersectionObserver/#intersection-observer-interface",
-            "description": "The definition of 'IntersectionObserver' in Intersection Observer."
+            "description": "The definition of 'IntersectionObserver' in the 'Intersection Observer' specification."
         }
     ]
 }

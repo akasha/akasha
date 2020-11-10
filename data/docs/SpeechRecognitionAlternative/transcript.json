@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognitionAlternative.transcript",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognitionAlternative/transcript",
-    "description": "The transcript read-only property of the SpeechRecognitionResult interface returns a string containing the transcript of the recognised word(s)."
+    "description": "The transcript read-only property of the SpeechRecognitionResult interface returns a string containing the transcript of the recognised word(s).",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognitionalternative-transcript",
+            "description": "The definition of 'transcript' in the 'Web Speech API' specification."
+        }
+    ]
 }

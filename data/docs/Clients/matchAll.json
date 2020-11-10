@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#clients-matchall",
-            "description": "The definition of 'Clients: matchall' in Service Workers."
+            "description": "The definition of 'Clients: matchall' in the 'Service Workers' specification."
         }
     ]
 }

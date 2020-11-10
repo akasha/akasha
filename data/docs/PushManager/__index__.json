@@ -1,15 +1,15 @@
 
 {
     "name": "PushManager",
-    "lastModifiedAt": 1600312759371,
+    "lastModifiedAt": 1604977438912,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192278407
+            "lastModifiedAt": 1604977432879
         },
         {
             "name": "getSubscription",
-            "lastModifiedAt": 1599391564205
+            "lastModifiedAt": 1604977435010
         },
         {
             "name": "hasPermission",
@@ -17,7 +17,7 @@
         },
         {
             "name": "permissionState",
-            "lastModifiedAt": 1599391564663
+            "lastModifiedAt": 1604977436469
         },
         {
             "name": "register",
@@ -29,11 +29,11 @@
         },
         {
             "name": "subscribe",
-            "lastModifiedAt": 1597192279479
+            "lastModifiedAt": 1604977437904
         },
         {
             "name": "supportedContentEncodings",
-            "lastModifiedAt": 1597192278664
+            "lastModifiedAt": 1604977433938
         },
         {
             "name": "unregister",

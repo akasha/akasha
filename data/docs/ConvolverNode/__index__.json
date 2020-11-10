@@ -1,23 +1,23 @@
 
 {
     "name": "ConvolverNode",
-    "lastModifiedAt": 1604969623563,
+    "lastModifiedAt": 1604975635638,
     "entries": [
         {
             "name": "ConvolverNode",
-            "lastModifiedAt": 1597192541077
+            "lastModifiedAt": 1604975634561
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448408804
+            "lastModifiedAt": 1604975634030
         },
         {
             "name": "buffer",
-            "lastModifiedAt": 1604448410347
+            "lastModifiedAt": 1604975635055
         },
         {
             "name": "normalize",
-            "lastModifiedAt": 1604448410872
+            "lastModifiedAt": 1604975635548
         }
     ]
 }

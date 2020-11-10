@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.sourceFile",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/sourceFile",
-    "description": "The sourceFile read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the URI of the document or worker in which the violation was found."
+    "description": "The sourceFile read-only property of the SecurityPolicyViolationEvent interface is a USVString representing the URI of the document or worker in which the violation was found.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-sourcefile",
+            "description": "The definition of 'sourceFile' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

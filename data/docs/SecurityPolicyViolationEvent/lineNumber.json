@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.lineNumber",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/lineNumber",
-    "description": "The lineNumber read-only property of the SecurityPolicyViolationEvent interface is the line number in the document or worker at which the violation occurred."
+    "description": "The lineNumber read-only property of the SecurityPolicyViolationEvent interface is the line number in the document or worker at which the violation occurred.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-linenumber",
+            "description": "The definition of 'lineNumber' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

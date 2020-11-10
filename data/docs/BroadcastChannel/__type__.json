@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/comms.html#broadcastchannel",
-            "description": "The definition of 'BroadcastChannel' in HTML Living Standard."
+            "description": "The definition of 'BroadcastChannel' in the 'HTML Living Standard' specification."
         }
     ]
 }

@@ -4,6 +4,13 @@
     "name": "SVGElement.unload_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/unload_event",
     "description": "The unload event is fired when the DOM implementation removes an SVG document from a window or frame.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/single-page.html#interact-UnloadEvent",
+            "description": "The definition of 'unload' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        }
+    ],
     "eventName": "unload",
     "eventType": "SVGEvent",
     "eventHandlerProperty": "onunload",

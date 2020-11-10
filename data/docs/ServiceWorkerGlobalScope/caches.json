@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "ServiceWorkerGlobalScope.caches",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/caches",
-    "description": "The caches read-only property of the ServiceWorkerGlobalScope interface returns the CacheStorage object associated with the service worker."
+    "description": "The caches read-only property of the ServiceWorkerGlobalScope interface returns the CacheStorage object associated with the service worker.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#global-caches",
+            "description": "The definition of 'ServiceWorkerGlobalScope.caches' in the 'Service Workers' specification."
+        }
+    ]
 }

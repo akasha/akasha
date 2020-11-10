@@ -3,5 +3,22 @@
     "kind": "Property",
     "name": "SVGElement.dataset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGElement/dataset",
-    "description": "The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to all the custom data attributes (data-*) set on the element."
+    "description": "The dataset read-only property of the HTMLOrForeignElement interface provides read/write access to custom data attributes (data-*) on elements.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/dom.html#dom-dataset",
+            "description": "The definition of 'HTMLElement.dataset' in the 'HTML Living Standard' specification."
+        },
+        {
+            "name": "HTML 5.1",
+            "href": "https://www.w3.org/TR/html51/dom.html#dom-dataset",
+            "description": "The definition of 'HTMLElement.dataset' in the 'HTML 5.1' specification."
+        },
+        {
+            "name": "HTML5",
+            "href": "https://www.w3.org/TR/html52/dom.html#dom-dataset",
+            "description": "The definition of 'HTMLElement.dataset' in the 'HTML5' specification."
+        }
+    ]
 }

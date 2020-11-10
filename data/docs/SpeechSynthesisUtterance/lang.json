@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisUtterance.lang",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/lang",
-    "description": "The lang property of the SpeechSynthesisUtterance interface gets and sets the language of the utterance."
+    "description": "The lang property of the SpeechSynthesisUtterance interface gets and sets the language of the utterance.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisutterance-lang",
+            "description": "The definition of 'lang' in the 'Web Speech API' specification."
+        }
+    ]
 }

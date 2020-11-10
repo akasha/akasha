@@ -4,6 +4,12 @@
     "name": "XMLHttpRequest.abort_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/abort_event",
     "description": "The abort event is fired when a request has been aborted, for example because the program called XMLHttpRequest.abort().",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#event-xhr-abort"
+        }
+    ],
     "eventName": "abort",
     "eventType": "ProgressEvent",
     "eventHandlerProperty": "onabort",

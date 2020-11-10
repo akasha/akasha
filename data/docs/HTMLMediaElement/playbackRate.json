@@ -8,12 +8,12 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-media-playbackrate",
-            "description": "The definition of 'HTMLMediaElement.playbackRate' in HTML Living Standard."
+            "description": "The definition of 'HTMLMediaElement.playbackRate' in the 'HTML Living Standard' specification."
         },
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#htmlmediaelement",
-            "description": "The definition of 'HTMLMediaElement.playbackRate' in HTML5."
+            "description": "The definition of 'HTMLMediaElement.playbackRate' in the 'HTML5' specification."
         }
     ]
 }

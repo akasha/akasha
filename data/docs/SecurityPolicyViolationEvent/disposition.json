@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.disposition",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/disposition",
-    "description": "The disposition read-only property of the SecurityPolicyViolationEvent interface indicates how the violated policy is configured to be treated by the user agent."
+    "description": "The disposition read-only property of the SecurityPolicyViolationEvent interface indicates how the violated policy is configured to be treated by the user agent.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-disposition",
+            "description": "The definition of 'disposition' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

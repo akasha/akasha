@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.isSampler",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/isSampler",
-    "description": "The WebGL2RenderingContext.isSampler() method of the WebGL 2 API returns true if the passed object is a valid WebGLSampler object."
+    "description": "The WebGL2RenderingContext.isSampler() method of the WebGL 2 API returns true if the passed object is a valid WebGLSampler object.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.13",
+            "description": "The definition of 'isSampler' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glIsSampler.xhtml",
+            "description": "The definition of 'glIsSampler' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

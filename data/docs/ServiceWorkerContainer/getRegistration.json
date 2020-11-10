@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ServiceWorkerContainer.getRegistration",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistration",
-    "description": "The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined."
+    "description": "The getRegistration() method of the ServiceWorkerContainer interface gets a ServiceWorkerRegistration object whose scope URL matches the provided document URL.  The method returns a Promise that resolves to a ServiceWorkerRegistration or undefined.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#dom-serviceworkercontainer-getregistration",
+            "description": "The definition of 'ServiceWorkerContainer: getRegistration' in the 'Service Workers' specification."
+        }
+    ]
 }

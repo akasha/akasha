@@ -3,17 +3,5 @@
     "kind": "Method",
     "name": "IDBDatabase.close",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBDatabase/close",
-    "description": "The connection is not actually closed until all transactions created using this connection are complete. No new transactions can be created for this connection once this method is called. Methods that create transactions throw an exception if a closing operation is pending.",
-    "refs": [
-        {
-            "name": "Indexed Database API 2.0",
-            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-close",
-            "description": "The definition of 'close()' in Indexed Database API 2.0."
-        },
-        {
-            "name": "Indexed Database API Draft",
-            "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-close",
-            "description": "The definition of 'close()' in Indexed Database API Draft."
-        }
-    ]
+    "description": "The connection is not actually closed until all transactions created using this connection are complete. No new transactions can be created for this connection once this method is called. Methods that create transactions throw an exception if a closing operation is pending."
 }

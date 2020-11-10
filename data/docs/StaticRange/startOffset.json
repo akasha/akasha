@@ -3,5 +3,17 @@
     "kind": "Property",
     "name": "StaticRange.startOffset",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/StaticRange/startOffset",
-    "description": "The read-only startOffset property of the StaticRange interface returns the offset into the start node of the range's start position."
+    "description": "The read-only startOffset property of the StaticRange interface returns the offset into the start node of the range's start position.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#dom-range-startoffset",
+            "description": "The definition of 'startOffset' in the 'DOM' specification."
+        },
+        {
+            "name": "Static Range",
+            "href": "https://w3c.github.io/staticrange/#dom-staticrange-startoffset",
+            "description": "The definition of 'startOffset' in the 'Static Range' specification."
+        }
+    ]
 }

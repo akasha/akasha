@@ -8,12 +8,12 @@
         {
             "name": "Indexed Database API 2.0",
             "href": "https://www.w3.org/TR/IndexedDB/#dom-idbdatabase-onversionchange",
-            "description": "The definition of 'onversionchange' in Indexed Database API 2.0."
+            "description": "The definition of 'onversionchange' in the 'Indexed Database API 2.0' specification."
         },
         {
             "name": "Indexed Database API Draft",
             "href": "https://w3c.github.io/IndexedDB/#dom-idbdatabase-onversionchange",
-            "description": "The definition of 'onversionchange' in Indexed Database API Draft."
+            "description": "The definition of 'onversionchange' in the 'Indexed Database API Draft' specification."
         }
     ]
 }

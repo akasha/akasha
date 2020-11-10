@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "Touch.screenY",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Touch/screenY",
-    "description": "Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset."
+    "description": "Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touch-screeny"
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-Touch-screenY"
+        }
+    ]
 }

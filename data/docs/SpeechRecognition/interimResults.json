@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognition.interimResults",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/interimResults",
-    "description": "The interimResults property of the SpeechRecognition interface controls whether interim results should be returned (true) or not (false.) Interim results are results that are not yet final (e.g. the SpeechRecognitionResult.isFinal property is false.)"
+    "description": "The interimResults property of the SpeechRecognition interface controls whether interim results should be returned (true) or not (false.) Interim results are results that are not yet final (e.g. the SpeechRecognitionResult.isFinal property is false.)",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-interimresults",
+            "description": "The definition of 'interimResults' in the 'Web Speech API' specification."
+        }
+    ]
 }

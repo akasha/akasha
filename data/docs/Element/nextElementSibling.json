@@ -3,17 +3,5 @@
     "kind": "Property",
     "name": "Element.nextElementSibling",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/nextElementSibling",
-    "description": "The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list.",
-    "refs": [
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#dom-nondocumenttypechildnode-nextelementsibling",
-            "description": "The definition of 'ChildNodenextElementSibling' in DOM."
-        },
-        {
-            "name": "Element Traversal Specification",
-            "href": "https://www.w3.org/TR/ElementTraversal/#attribute-nextElementSibling",
-            "description": "The definition of 'ElementTraversal.nextElementSibling' in Element Traversal Specification."
-        }
-    ]
+    "description": "The NonDocumentTypeChildNode.nextElementSibling read-only property returns the element immediately following the specified one in its parent's children list, or null if the specified element is the last one in the list."
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animation-replacestate",
-            "description": "The definition of 'Animation.replaceState' in Web Animations."
+            "description": "The definition of 'Animation.replaceState' in the 'Web Animations' specification."
         }
     ]
 }

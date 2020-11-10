@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-dynamicscompressornode-knee",
-            "description": "The definition of 'knee' in Web Audio API."
+            "description": "The definition of 'knee' in the 'Web Audio API' specification."
         }
     ]
 }

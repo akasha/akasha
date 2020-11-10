@@ -1,31 +1,31 @@
 
 {
     "name": "XRInputSource",
-    "lastModifiedAt": 1601467526137,
+    "lastModifiedAt": 1604979040312,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192972099
+            "lastModifiedAt": 1604979035722
         },
         {
             "name": "gripSpace",
-            "lastModifiedAt": 1596711958418
+            "lastModifiedAt": 1604979036724
         },
         {
             "name": "handedness",
-            "lastModifiedAt": 1599279918962
+            "lastModifiedAt": 1604979037877
         },
         {
             "name": "profiles",
-            "lastModifiedAt": 1596711959540
+            "lastModifiedAt": 1604979038480
         },
         {
             "name": "targetRayMode",
-            "lastModifiedAt": 1599279920581
+            "lastModifiedAt": 1604979039059
         },
         {
             "name": "targetRaySpace",
-            "lastModifiedAt": 1596711960960
+            "lastModifiedAt": 1604979039827
         }
     ]
 }

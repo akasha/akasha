@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-mediastreamtrackaudiosourceoptions-mediastreamtrack",
-            "description": "The definition of 'MediaStreamTrackAudioSourceOptions.mediaStream' in Web Audio API."
+            "description": "The definition of 'MediaStreamTrackAudioSourceOptions.mediaStream' in the 'Web Audio API' specification."
         }
     ]
 }

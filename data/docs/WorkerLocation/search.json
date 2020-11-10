@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-search",
-            "description": "The definition of 'URLUtilsReadOnly.search' in URL."
+            "description": "The definition of 'URLUtilsReadOnly.search' in the 'URL' specification."
         }
     ]
 }

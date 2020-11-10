@@ -8,7 +8,7 @@
         {
             "name": "Service Workers",
             "href": "https://w3c.github.io/ServiceWorker/#dom-extendablemessageevent-ports",
-            "description": "The definition of 'ExtendableMessageEvent.ports' in Service Workers."
+            "description": "The definition of 'ExtendableMessageEvent.ports' in the 'Service Workers' specification."
         }
     ]
 }

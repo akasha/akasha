@@ -1,15 +1,15 @@
 
 {
     "name": "DataTransfer",
-    "lastModifiedAt": 1604969746352,
+    "lastModifiedAt": 1604975758948,
     "entries": [
         {
             "name": "DataTransfer",
-            "lastModifiedAt": 1604450319579
+            "lastModifiedAt": 1604975746309
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604450318553
+            "lastModifiedAt": 1604975745675
         },
         {
             "name": "addElement",
@@ -17,27 +17,27 @@
         },
         {
             "name": "clearData",
-            "lastModifiedAt": 1604450327172
+            "lastModifiedAt": 1604975753623
         },
         {
             "name": "dropEffect",
-            "lastModifiedAt": 1604450320247
+            "lastModifiedAt": 1604975746866
         },
         {
             "name": "effectAllowed",
-            "lastModifiedAt": 1604450320737
+            "lastModifiedAt": 1604975747381
         },
         {
             "name": "files",
-            "lastModifiedAt": 1604450321203
+            "lastModifiedAt": 1604975748188
         },
         {
             "name": "getData",
-            "lastModifiedAt": 1604450327806
+            "lastModifiedAt": 1604975754117
         },
         {
             "name": "items",
-            "lastModifiedAt": 1604450322213
+            "lastModifiedAt": 1604975748714
         },
         {
             "name": "mozClearDataAt",
@@ -73,15 +73,15 @@
         },
         {
             "name": "setData",
-            "lastModifiedAt": 1604450331110
+            "lastModifiedAt": 1604975758450
         },
         {
             "name": "setDragImage",
-            "lastModifiedAt": 1604450332127
+            "lastModifiedAt": 1604975758948
         },
         {
             "name": "types",
-            "lastModifiedAt": 1604450325784
+            "lastModifiedAt": 1604975751977
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ReadableStream.pipeThrough",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/pipeThrough",
-    "description": "The pipeThrough() method of the ReadableStream interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair."
+    "description": "The pipeThrough() method of the ReadableStream interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.",
+    "refs": [
+        {
+            "name": "Streams",
+            "href": "https://streams.spec.whatwg.org/#rs-pipe-through",
+            "description": "The definition of 'pipeThrough()' in the 'Streams' specification."
+        }
+    ]
 }

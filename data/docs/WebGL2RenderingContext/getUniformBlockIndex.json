@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGL2RenderingContext.getUniformBlockIndex",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/getUniformBlockIndex",
-    "description": "The WebGL2RenderingContext.getUniformBlockIndex() method of the WebGL 2 API retrieves the index of a uniform block within a WebGLProgram."
+    "description": "The WebGL2RenderingContext.getUniformBlockIndex() method of the WebGL 2 API retrieves the index of a uniform block within a WebGLProgram.",
+    "refs": [
+        {
+            "name": "WebGL 2.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.7.16",
+            "description": "The definition of 'getUniformBlockIndex' in the 'WebGL 2.0' specification."
+        },
+        {
+            "name": "OpenGL ES 3.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man3/html/glGetUniformBlockIndex.xhtml",
+            "description": "The definition of 'glGetUniformBlockIndex' in the 'OpenGL ES 3.0' specification."
+        }
+    ]
 }

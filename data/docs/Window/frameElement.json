@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/browsers.html#dom-frameelement",
-            "description": "The definition of 'Window.frameElement' in HTML Living Standard."
+            "description": "The definition of 'Window.frameElement' in the 'HTML Living Standard' specification."
         }
     ]
 }

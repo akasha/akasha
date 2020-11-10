@@ -8,12 +8,12 @@
         {
             "name": "Pointer Events – Level 2",
             "href": "https://www.w3.org/TR/pointerevents2/#dom-globaleventhandlers-onpointerenter",
-            "description": "The definition of 'onpointerenter' in Pointer Events &ndash; Level 2."
+            "description": "The definition of 'onpointerenter' in the 'Pointer Events &ndash; Level 2' specification."
         },
         {
             "name": "Pointer Events",
             "href": "https://www.w3.org/TR/pointerevents1/#widl-GlobalEventHandlers-onpointerenter",
-            "description": "The definition of 'onpointerenter' in Pointer Events."
+            "description": "The definition of 'onpointerenter' in the 'Pointer Events' specification."
         }
     ]
 }

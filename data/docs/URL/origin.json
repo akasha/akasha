@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-url-origin",
-            "description": "The definition of 'URL.origin' in URL."
+            "description": "The definition of 'URL.origin' in the 'URL' specification."
         }
     ]
 }

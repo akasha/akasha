@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "IDBCursor.advance",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor/advance",
-    "description": "The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward."
+    "description": "The advance() method of the IDBCursor interface sets the number of times a cursor should move its position forward.",
+    "refs": [
+        {
+            "name": "Indexed Database API 2.0",
+            "href": "https://www.w3.org/TR/IndexedDB/#dom-idbcursor-advance",
+            "description": "The definition of 'advance()' in the 'Indexed Database API 2.0' specification."
+        },
+        {
+            "name": "Indexed Database API Draft",
+            "href": "https://w3c.github.io/IndexedDB/#dom-idbcursor-advance",
+            "description": "The definition of 'advance()' in the 'Indexed Database API Draft' specification."
+        }
+    ]
 }

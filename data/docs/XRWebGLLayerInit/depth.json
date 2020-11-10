@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRWebGLLayerInit.depth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLLayerInit/depth",
-    "description": "When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer."
+    "description": "When using the XRWebGLLayer() constructor to create a new WebGL rendering layer for WebXR, providing as the layerInit parameter an object whose depth property is false will request that the new layer be created without a depth buffer.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrwebgllayerinit-depth",
+            "description": "The definition of 'XRWebGLLayerInit.depth' in the 'WebXR Device API' specification."
+        }
+    ]
 }

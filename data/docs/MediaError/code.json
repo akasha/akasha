@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "MediaError.code",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/MediaError/code",
-    "description": "The read-only property MediaError.code returns a numeric value which represents the kind of error that occurred on a media element. To get a text string with specific diagnostic information, see MediaError.message."
+    "description": "The read-only property MediaError.code returns a numeric value which represents the kind of error that occurred on a media element. To get a text string with specific diagnostic information, see MediaError.message.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/#dom-mediaerror-code",
+            "description": "The definition of 'MediaError.code' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

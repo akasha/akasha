@@ -4,6 +4,13 @@
     "name": "VisualViewport.resize_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/VisualViewport/resize_event",
     "description": "You can use the resize event in an addEventListener method:",
+    "refs": [
+        {
+            "name": "Visual Viewport API",
+            "href": "https://wicg.github.io/visual-viewport/#events",
+            "description": "The definition of 'VisualViewport events' in the 'Visual Viewport API' specification."
+        }
+    ],
     "eventName": "resize",
     "eventType": "Event",
     "eventHandlerProperty": "onresize",

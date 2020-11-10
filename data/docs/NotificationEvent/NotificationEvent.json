@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "NotificationEvent.NotificationEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/NotificationEvent/NotificationEvent",
-    "description": "The NotificationEvent() constructor creates a new NotificationEvent object."
+    "description": "The NotificationEvent() constructor creates a new NotificationEvent object.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notificationevent-notificationevent",
+            "description": "The definition of 'NotificationEvent() constructor' in the 'Notifications API' specification."
+        }
+    ]
 }

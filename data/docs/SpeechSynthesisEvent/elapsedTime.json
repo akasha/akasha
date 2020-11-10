@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechSynthesisEvent.elapsedTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent/elapsedTime",
-    "description": "The elapsedTime read-only property of the SpeechSynthesisUtterance interface returns the elapsed time in seconds after the SpeechSynthesisUtterance.text started being spoken that the event was triggered at."
+    "description": "The elapsedTime read-only property of the SpeechSynthesisUtterance interface returns the elapsed time in seconds after the SpeechSynthesisUtterance.text started being spoken that the event was triggered at.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechsynthesisevent-elapsedtime",
+            "description": "The definition of 'elapsedTime' in the 'Web Speech API' specification."
+        }
+    ]
 }

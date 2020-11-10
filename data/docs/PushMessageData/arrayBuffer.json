@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PushMessageData.arrayBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushMessageData/arrayBuffer",
-    "description": "The arrayBuffer()method of the PushMessageData interface extracts push message data as an ArrayBuffer object."
+    "description": "The arrayBuffer()method of the PushMessageData interface extracts push message data as an ArrayBuffer object.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushmessagedata-arraybuffer",
+            "description": "The definition of 'arrayBuffer()' in the 'Push API' specification."
+        }
+    ]
 }

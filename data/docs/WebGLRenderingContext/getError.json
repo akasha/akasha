@@ -3,5 +3,17 @@
     "kind": "Method",
     "name": "WebGLRenderingContext.getError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/getError",
-    "description": "The WebGLRenderingContext.getError() method of the WebGL API returns error information."
+    "description": "The WebGLRenderingContext.getError() method of the WebGL API returns error information.",
+    "refs": [
+        {
+            "name": "WebGL 1.0",
+            "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.3",
+            "description": "The definition of 'getError' in the 'WebGL 1.0' specification."
+        },
+        {
+            "name": "OpenGL ES 2.0",
+            "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glGetError.xml",
+            "description": "The definition of 'glGetError' in the 'OpenGL ES 2.0' specification."
+        }
+    ]
 }

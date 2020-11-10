@@ -1,15 +1,15 @@
 
 {
     "name": "NavigatorConcurrentHardware",
-    "lastModifiedAt": 1604449540186,
+    "lastModifiedAt": 1604977166611,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604449539658
+            "lastModifiedAt": 1604977166065
         },
         {
             "name": "hardwareConcurrency",
-            "lastModifiedAt": 1604449540138
+            "lastModifiedAt": 1604974922283
         }
     ]
 }

@@ -3,5 +3,15 @@
     "kind": "Property",
     "name": "TouchEvent.changedTouches",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent/changedTouches",
-    "description": "The changedTouches read-only property is a TouchList whose touch points (Touch objects) varies depending on the event type, as follows:"
+    "description": "The changedTouches read-only property is a TouchList whose touch points (Touch objects) varies depending on the event type, as follows:",
+    "refs": [
+        {
+            "name": "Touch Events – Level 2",
+            "href": "https://w3c.github.io/touch-events/#dom-touchevent-changedtouches"
+        },
+        {
+            "name": "Touch Events",
+            "href": "https://www.w3.org/TR/touch-events/#widl-TouchEvent-changedTouches"
+        }
+    ]
 }

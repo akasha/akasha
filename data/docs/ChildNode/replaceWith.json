@@ -3,12 +3,5 @@
     "kind": "Method",
     "name": "ChildNode.replaceWith",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ChildNode/replaceWith",
-    "description": "The ChildNode.replaceWith() method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects. DOMString objects are inserted as equivalent Text nodes.",
-    "refs": [
-        {
-            "name": "DOM",
-            "href": "https://dom.spec.whatwg.org/#dom-childnode-replacewith",
-            "description": "The definition of 'ChildNode.replacewith()' in DOM."
-        }
-    ]
+    "description": "The ChildNode.replaceWith() method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects. DOMString objects are inserted as equivalent Text nodes."
 }

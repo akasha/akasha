@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SpeechRecognition.grammars",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition/grammars",
-    "description": "The grammars property of the SpeechRecognition interface returns and sets a collection of SpeechGrammar objects that represent the grammars that will be understood by the current SpeechRecognition."
+    "description": "The grammars property of the SpeechRecognition interface returns and sets a collection of SpeechGrammar objects that represent the grammars that will be understood by the current SpeechRecognition.",
+    "refs": [
+        {
+            "name": "Web Speech API",
+            "href": "https://wicg.github.io/speech-api/#dom-speechrecognition-grammars",
+            "description": "The definition of 'grammars' in the 'Web Speech API' specification."
+        }
+    ]
 }

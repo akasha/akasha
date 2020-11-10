@@ -1,15 +1,15 @@
 
 {
     "name": "ChannelSplitterNode",
-    "lastModifiedAt": 1604969580288,
+    "lastModifiedAt": 1604975593471,
     "entries": [
         {
             "name": "ChannelSplitterNode",
-            "lastModifiedAt": 1604448477126
+            "lastModifiedAt": 1604975593396
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448476573
+            "lastModifiedAt": 1604975592920
         }
     ]
 }

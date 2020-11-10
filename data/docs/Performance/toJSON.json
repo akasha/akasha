@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Performance.toJSON",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/toJSON",
-    "description": "The toJSON() method of the Performance interface is a standard serializer: it returns a JSON representation of the performance object's properties."
+    "description": "The toJSON() method of the Performance interface is a standard serializer: it returns a JSON representation of the performance object's properties.",
+    "refs": [
+        {
+            "name": "High Resolution Time Level 2",
+            "href": "https://www.w3.org/TR/hr-time-2/#dom-performance-tojson",
+            "description": "The definition of 'toJSON() serializer' in the 'High Resolution Time Level 2' specification."
+        }
+    ]
 }

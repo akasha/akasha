@@ -4,6 +4,12 @@
     "name": "XMLHttpRequest.loadstart_event",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/loadstart_event",
     "description": "The loadstart event is fired when a request has started to load data.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#event-xhr-loadstart"
+        }
+    ],
     "eventName": "loadstart",
     "eventType": "ProgressEvent",
     "eventHandlerProperty": "onloadstart",

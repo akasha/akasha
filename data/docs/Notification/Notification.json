@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Notification.Notification",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification",
-    "description": "The Notification() constructor creates a new Notification object instance, which represents a user notification."
+    "description": "The Notification() constructor creates a new Notification object instance, which represents a user notification.",
+    "refs": [
+        {
+            "name": "Notifications API",
+            "href": "https://notifications.spec.whatwg.org/#dom-notification-notification",
+            "description": "The definition of 'Notification() constructor' in the 'Notifications API' specification."
+        }
+    ]
 }

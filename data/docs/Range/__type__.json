@@ -8,22 +8,22 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#interface-range",
-            "description": "The definition of 'Range' in DOM."
+            "description": "The definition of 'Range' in the 'DOM' specification."
         },
         {
             "name": "DOM Parsing and Serialization",
             "href": "https://w3c.github.io/DOM-Parsing/#extensions-to-the-range-interface",
-            "description": "The definition of 'Extensions to Range' in DOM Parsing and Serialization."
+            "description": "The definition of 'Extensions to Range' in the 'DOM Parsing and Serialization' specification."
         },
         {
             "name": "CSS Object Model (CSSOM) View Module",
             "href": "https://drafts.csswg.org/cssom-view/#extensions-to-the-range-interface",
-            "description": "The definition of 'Extensions to Range' in CSS Object Model (CSSOM) View Module."
+            "description": "The definition of 'Extensions to Range' in the 'CSS Object Model (CSSOM) View Module' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Traversal and Range Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Interface",
-            "description": "The definition of 'Range' in Document Object Model (DOM) Level 2 Traversal and Range Specification."
+            "description": "The definition of 'Range' in the 'Document Object Model (DOM) Level 2 Traversal and Range Specification' specification."
         }
     ]
 }

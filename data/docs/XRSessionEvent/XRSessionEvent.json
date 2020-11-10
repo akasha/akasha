@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "XRSessionEvent.XRSessionEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRSessionEvent/XRSessionEvent",
-    "description": "The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object."
+    "description": "The WebXR Device API's XRSessionEvent() constructor creates and returns a new XRSessionEvent object.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrsessionevent-xrsessionevent",
+            "description": "The definition of 'XRSessionEvent() constructor' in the 'WebXR Device API' specification."
+        }
+    ]
 }

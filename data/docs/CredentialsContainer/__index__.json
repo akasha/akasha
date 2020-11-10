@@ -1,7 +1,7 @@
 
 {
     "name": "CredentialsContainer",
-    "lastModifiedAt": 1604969641917,
+    "lastModifiedAt": 1604975653232,
     "entries": [
         {
             "name": "__type__",
@@ -9,15 +9,15 @@
         },
         {
             "name": "create",
-            "lastModifiedAt": 1604969639495
+            "lastModifiedAt": 1604975651133
         },
         {
             "name": "get",
-            "lastModifiedAt": 1604969640239
+            "lastModifiedAt": 1604975651730
         },
         {
             "name": "preventSilentAccess",
-            "lastModifiedAt": 1604969640872
+            "lastModifiedAt": 1604975652202
         },
         {
             "name": "store",

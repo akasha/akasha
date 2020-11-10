@@ -8,7 +8,7 @@
         {
             "name": "MediaStream Recording",
             "href": "https://w3c.github.io/mediacapture-record/#dom-blobevent-blobevent",
-            "description": "The definition of 'BlobEvent: BlobEvent' in MediaStream Recording."
+            "description": "The definition of 'BlobEvent: BlobEvent' in the 'MediaStream Recording' specification."
         }
     ]
 }

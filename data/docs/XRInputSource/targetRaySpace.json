@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRInputSource.targetRaySpace",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRInputSource/targetRaySpace",
-    "description": "The read-only XRInputSource property targetRaySpace returns an XRSpace (typically an XRReferenceSpace) representing the position and orientation of the target ray in the virtual space."
+    "description": "The read-only XRInputSource property targetRaySpace returns an XRSpace (typically an XRReferenceSpace) representing the position and orientation of the target ray in the virtual space.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrinputsource-targetrayspace",
+            "description": "The definition of 'XRInputSource.targetRaySpace' in the 'WebXR Device API' specification."
+        }
+    ]
 }

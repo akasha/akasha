@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "XMLDocument",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLDocument",
-    "description": "The XMLDocument interface represents an XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents."
+    "description": "The XMLDocument interface represents an XML document. It inherits from the generic Document and does not add any specific methods or properties to it: nevertheless, several algorithms behave differently with the two types of documents.",
+    "refs": [
+        {
+            "name": "DOM",
+            "href": "https://dom.spec.whatwg.org/#xmldocument",
+            "description": "The definition of 'XMLDocument' in the 'DOM' specification."
+        },
+        {
+            "name": "DOM4",
+            "href": "https://www.w3.org/TR/dom/#xmldocument",
+            "description": "The definition of 'XMLDocument' in the 'DOM4' specification."
+        }
+    ]
 }

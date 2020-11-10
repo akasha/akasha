@@ -8,7 +8,7 @@
         {
             "name": "Web Animations",
             "href": "https://drafts.csswg.org/web-animations-1/#dom-animationeffect-gettiming",
-            "description": "The definition of 'AnimationEffect.getTiming()' in Web Animations."
+            "description": "The definition of 'AnimationEffect.getTiming()' in the 'Web Animations' specification."
         }
     ]
 }

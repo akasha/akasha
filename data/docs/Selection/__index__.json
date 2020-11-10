@@ -1,67 +1,67 @@
 
 {
     "name": "Selection",
-    "lastModifiedAt": 1601465780571,
+    "lastModifiedAt": 1604978018374,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192295271
+            "lastModifiedAt": 1604978002766
         },
         {
             "name": "addRange",
-            "lastModifiedAt": 1597192299099
+            "lastModifiedAt": 1604978007903
         },
         {
             "name": "anchorNode",
-            "lastModifiedAt": 1597192296100
+            "lastModifiedAt": 1604978003372
         },
         {
             "name": "anchorOffset",
-            "lastModifiedAt": 1597192296897
+            "lastModifiedAt": 1604978003890
         },
         {
             "name": "collapse",
-            "lastModifiedAt": 1597192299424
+            "lastModifiedAt": 1604978008401
         },
         {
             "name": "collapseToEnd",
-            "lastModifiedAt": 1597192299715
+            "lastModifiedAt": 1604978008859
         },
         {
             "name": "collapseToStart",
-            "lastModifiedAt": 1597192300028
+            "lastModifiedAt": 1604978009730
         },
         {
             "name": "containsNode",
-            "lastModifiedAt": 1597192301023
+            "lastModifiedAt": 1604978010201
         },
         {
             "name": "deleteFromDocument",
-            "lastModifiedAt": 1597192301358
+            "lastModifiedAt": 1604978010713
         },
         {
             "name": "empty",
-            "lastModifiedAt": 1597192302493
+            "lastModifiedAt": 1604978011761
         },
         {
             "name": "extend",
-            "lastModifiedAt": 1597192302761
+            "lastModifiedAt": 1604978012241
         },
         {
             "name": "focusNode",
-            "lastModifiedAt": 1597192297129
+            "lastModifiedAt": 1604978004400
         },
         {
             "name": "focusOffset",
-            "lastModifiedAt": 1597192297382
+            "lastModifiedAt": 1604978004944
         },
         {
             "name": "getRangeAt",
-            "lastModifiedAt": 1597192303605
+            "lastModifiedAt": 1604978012779
         },
         {
             "name": "isCollapsed",
-            "lastModifiedAt": 1597192297645
+            "lastModifiedAt": 1604978005417
         },
         {
             "name": "modify",
@@ -69,35 +69,35 @@
         },
         {
             "name": "rangeCount",
-            "lastModifiedAt": 1597192298344
+            "lastModifiedAt": 1604978006030
         },
         {
             "name": "removeAllRanges",
-            "lastModifiedAt": 1597192304829
+            "lastModifiedAt": 1604978013987
         },
         {
             "name": "removeRange",
-            "lastModifiedAt": 1597192304788
+            "lastModifiedAt": 1604978015038
         },
         {
             "name": "selectAllChildren",
-            "lastModifiedAt": 1597192305086
+            "lastModifiedAt": 1604978015556
         },
         {
             "name": "setBaseAndExtent",
-            "lastModifiedAt": 1597192305492
+            "lastModifiedAt": 1604978016623
         },
         {
             "name": "setPosition",
-            "lastModifiedAt": 1597192305794
+            "lastModifiedAt": 1604978017315
         },
         {
             "name": "toString",
-            "lastModifiedAt": 1597192306057
+            "lastModifiedAt": 1604978018373
         },
         {
             "name": "type",
-            "lastModifiedAt": 1597192298711
+            "lastModifiedAt": 1604978007055
         }
     ]
 }

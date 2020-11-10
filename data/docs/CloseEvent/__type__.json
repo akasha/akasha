@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "CloseEvent",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent",
-    "description": "A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute."
+    "description": "A CloseEvent is sent to clients using WebSockets when the connection is closed. This is delivered to the listener indicated by the WebSocket object's onclose attribute.",
+    "refs": [
+        {
+            "name": "HTML Living Standard",
+            "href": "https://html.spec.whatwg.org/multipage/web-sockets.html#the-closeevent-interface",
+            "description": "The definition of 'CloseEvent' in the 'HTML Living Standard' specification."
+        }
+    ]
 }

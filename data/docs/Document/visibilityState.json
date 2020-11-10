@@ -8,7 +8,7 @@
         {
             "name": "Page Visibility (Second Edition)",
             "href": "https://www.w3.org/TR/page-visibility/#visibility-states-and-the-visibilitystate-enum",
-            "description": "The definition of 'Document.visibilityState' in Page Visibility (Second Edition)."
+            "description": "The definition of 'Document.visibilityState' in the 'Page Visibility (Second Edition)' specification."
         }
     ]
 }

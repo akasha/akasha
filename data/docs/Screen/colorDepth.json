@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "Screen.colorDepth",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Screen/colorDepth",
-    "description": "The Screen.colorDepth read-only property returns the color depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-screen-colordepth",
-            "description": "The definition of 'Screen.colorDepth' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The Screen.colorDepth read-only property returns the color depth of the screen. Per the CSSOM, some implementations return 24 for compatibility reasons. See the browser compatibility section for those that don't."
 }

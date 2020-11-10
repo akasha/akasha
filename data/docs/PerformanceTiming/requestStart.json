@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceTiming.requestStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming/requestStart",
-    "description": "The legacy PerformanceTiming.requestStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the browser sent the request to obtain the actual document, from the server or from a cache. If the transport layer fails after the start of the request and the connection is reopened, this property will be set to the time corresponding to the new request."
+    "description": "The legacy PerformanceTiming.requestStart read-only property returns an unsigned long long representing the moment, in miliseconds since the UNIX epoch, when the browser sent the request to obtain the actual document, from the server or from a cache. If the transport layer fails after the start of the request and the connection is reopened, this property will be set to the time corresponding to the new request.",
+    "refs": [
+        {
+            "name": "Navigation Timing",
+            "href": "https://www.w3.org/TR/navigation-timing/#dom-performancetiming-requeststart",
+            "description": "The definition of 'PerformanceTiming.requestStart' in the 'Navigation Timing' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "TransformStream",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/TransformStream",
-    "description": "The TransformStream interface of the Streams API represents a set of transformable data."
+    "description": "The TransformStream interface of the Streams API represents a set of transformable data.",
+    "refs": [
+        {
+            "name": "Streams",
+            "href": "https://streams.spec.whatwg.org/#ts-class",
+            "description": "The definition of 'TransformStream' in the 'Streams' specification."
+        }
+    ]
 }

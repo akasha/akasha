@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PushSubscription.expirationTime",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/expirationTime",
-    "description": "The expirationTime read-only property of the PushSubscription interface returns a DOMHighResTimeStamp of the subscription expiration time associated with the push subscription, if there is one, or null otherwise."
+    "description": "The expirationTime read-only property of the PushSubscription interface returns a DOMHighResTimeStamp of the subscription expiration time associated with the push subscription, if there is one, or null otherwise.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushsubscription-expirationtime",
+            "description": "The definition of 'expirationTime' in the 'Push API' specification."
+        }
+    ]
 }

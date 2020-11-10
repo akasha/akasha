@@ -8,7 +8,7 @@
         {
             "name": "Gamepad Extensions",
             "href": "https://w3c.github.io/gamepad/extensions.html#partial-gamepad-interface",
-            "description": "The definition of 'pose' in Gamepad Extensions."
+            "description": "The definition of 'pose' in the 'Gamepad Extensions' specification."
         }
     ]
 }

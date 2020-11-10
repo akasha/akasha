@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XRRigidTransform.inverse",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRigidTransform/inverse",
-    "description": "The read-only inverse property of the XRRigidTransform interface returns another XRRigidTransform object which is the inverse of its owning transform."
+    "description": "The read-only inverse property of the XRRigidTransform interface returns another XRRigidTransform object which is the inverse of its owning transform.",
+    "refs": [
+        {
+            "name": "WebXR Device API",
+            "href": "https://immersive-web.github.io/webxr/#dom-xrrigidtransform-inverse",
+            "description": "The definition of 'XRRigidTransform.inverse' in the 'WebXR Device API' specification."
+        }
+    ]
 }

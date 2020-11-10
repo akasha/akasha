@@ -8,12 +8,12 @@
         {
             "name": "CSS Object Model (CSSOM)",
             "href": "https://drafts.csswg.org/cssom/#the-linkstyle-interface",
-            "description": "The definition of 'LinkStyle' in CSS Object Model (CSSOM)."
+            "description": "The definition of 'LinkStyle' in the 'CSS Object Model (CSSOM)' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Style Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-LinkStyle",
-            "description": "The definition of 'LinkStyle' in Document Object Model (DOM) Level 2 Style Specification."
+            "description": "The definition of 'LinkStyle' in the 'Document Object Model (DOM) Level 2 Style Specification' specification."
         }
     ]
 }

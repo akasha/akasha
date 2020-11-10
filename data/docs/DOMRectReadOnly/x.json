@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "DOMRectReadOnly.x",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly/x",
-    "description": "The x read-only property of the DOMRectReadOnly interface represents the x coordinate of the DOMRect's origin.",
-    "refs": [
-        {
-            "name": "Geometry Interfaces Module Level 1",
-            "href": "https://drafts.fxtf.org/geometry/#dom-domrectreadonly-x",
-            "description": "The definition of 'x' in Geometry Interfaces Module Level 1."
-        }
-    ]
+    "description": "The x read-only property of the DOMRectReadOnly interface represents the x coordinate of the DOMRect's origin."
 }

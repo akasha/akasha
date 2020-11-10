@@ -8,7 +8,7 @@
         {
             "name": "HTML5",
             "href": "https://www.w3.org/TR/html52/embedded-content-0.html#dom-object-typemustmatch",
-            "description": "The definition of 'HTMLObjectElement' in HTML5."
+            "description": "The definition of 'HTMLObjectElement' in the 'HTML5' specification."
         }
     ]
 }

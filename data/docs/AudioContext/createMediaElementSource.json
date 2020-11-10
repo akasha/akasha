@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-audiocontext-createmediaelementsource",
-            "description": "The definition of 'createMediaElementSource()' in Web Audio API."
+            "description": "The definition of 'createMediaElementSource()' in the 'Web Audio API' specification."
         }
     ]
 }

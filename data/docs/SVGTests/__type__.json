@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGTests",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGTests",
-    "description": "The SVGTests interface is used to reflect conditional processing attributes and is mixed into other interfaces for elements that support these attributes."
+    "description": "The SVGTests interface is used to reflect conditional processing attributes and is mixed into other interfaces for elements that support these attributes.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGTests",
+            "description": "The definition of 'SVGTests' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGTests",
+            "description": "The definition of 'SVGTests' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

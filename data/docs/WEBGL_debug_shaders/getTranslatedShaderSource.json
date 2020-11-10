@@ -8,7 +8,7 @@
         {
             "name": "WEBGL_debug_shaders",
             "href": "https://www.khronos.org/registry/webgl/extensions/WEBGL_debug_shaders/",
-            "description": "The definition of 'WEBGL_debug_shaders.getTranslatedShaderSource' in WEBGL_debug_shaders."
+            "description": "The definition of 'WEBGL_debug_shaders.getTranslatedShaderSource' in the 'WEBGL_debug_shaders' specification."
         }
     ]
 }

@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.sample",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/sample",
-    "description": "The sample read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing a sample of the resource that caused the violation."
+    "description": "The sample read-only property of the SecurityPolicyViolationEvent interface is a DOMString representing a sample of the resource that caused the violation.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-sample",
+            "description": "The definition of 'sample' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

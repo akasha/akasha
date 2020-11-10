@@ -8,12 +8,12 @@
         {
             "name": "WebGL 1.0",
             "href": "https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.14.4",
-            "description": "The definition of 'viewport' in WebGL 1.0."
+            "description": "The definition of 'viewport' in the 'WebGL 1.0' specification."
         },
         {
             "name": "OpenGL ES 2.0",
             "href": "https://www.khronos.org/opengles/sdk/docs/man/xhtml/glViewport.xml",
-            "description": "The definition of 'glViewport' in OpenGL ES 2.0."
+            "description": "The definition of 'glViewport' in the 'OpenGL ES 2.0' specification."
         }
     ]
 }

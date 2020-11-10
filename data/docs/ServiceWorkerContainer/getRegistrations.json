@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "ServiceWorkerContainer.getRegistrations",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerContainer/getRegistrations",
-    "description": "The getRegistrations() method of the ServiceWorkerContainer interface gets all ServiceWorkerRegistrations associated with a ServiceWorkerContainer, in an array. The method returns a Promise that resolves to an array of ServiceWorkerRegistration."
+    "description": "The getRegistrations() method of the ServiceWorkerContainer interface gets all ServiceWorkerRegistrations associated with a ServiceWorkerContainer, in an array. The method returns a Promise that resolves to an array of ServiceWorkerRegistration.",
+    "refs": [
+        {
+            "name": "Service Workers",
+            "href": "https://w3c.github.io/ServiceWorker/#navigator-service-worker-getRegistrations",
+            "description": "The definition of 'getRegistrations()' in the 'Service Workers' specification."
+        }
+    ]
 }

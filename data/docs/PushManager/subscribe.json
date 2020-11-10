@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "PushManager.subscribe",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe",
-    "description": "The subscribe() method of the PushManager interface subscribes to a push service."
+    "description": "The subscribe() method of the PushManager interface subscribes to a push service.",
+    "refs": [
+        {
+            "name": "Push API",
+            "href": "https://w3c.github.io/push-api/#dom-pushmanager-subscribe",
+            "description": "The definition of 'subscribe()' in the 'Push API' specification."
+        }
+    ]
 }

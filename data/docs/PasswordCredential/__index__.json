@@ -1,39 +1,39 @@
 
 {
     "name": "PasswordCredential",
-    "lastModifiedAt": 1600312595544,
+    "lastModifiedAt": 1604977293641,
     "entries": [
         {
             "name": "PasswordCredential",
-            "lastModifiedAt": 1597190567196
+            "lastModifiedAt": 1604975045881
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1599278707643
+            "lastModifiedAt": 1604975045368
         },
         {
             "name": "additionalData",
-            "lastModifiedAt": 1599278707804
+            "lastModifiedAt": 1604975047105
         },
         {
             "name": "iconURL",
-            "lastModifiedAt": 1599278707865
+            "lastModifiedAt": 1604977291061
         },
         {
             "name": "idName",
-            "lastModifiedAt": 1599278707930
+            "lastModifiedAt": 1604975048921
         },
         {
             "name": "name",
-            "lastModifiedAt": 1599278707996
+            "lastModifiedAt": 1604977292143
         },
         {
             "name": "password",
-            "lastModifiedAt": 1599278708065
+            "lastModifiedAt": 1604977292630
         },
         {
             "name": "passwordName",
-            "lastModifiedAt": 1599278708139
+            "lastModifiedAt": 1604975050948
         }
     ]
 }

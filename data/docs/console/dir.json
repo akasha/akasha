@@ -8,7 +8,7 @@
         {
             "name": "Console API",
             "href": "https://console.spec.whatwg.org/#dir",
-            "description": "The definition of 'console.dir()' in Console API."
+            "description": "The definition of 'console.dir()' in the 'Console API' specification."
         }
     ]
 }

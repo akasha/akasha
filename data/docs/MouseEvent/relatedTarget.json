@@ -6,28 +6,19 @@
     "description": "The MouseEvent.relatedTarget read-only property is the secondary target for the mouse event, if there is one. That is:",
     "refs": [
         {
-            "name": "mouseenter",
-            "href": "/en-US/docs/Web/Events/mouseenter"
+            "name": "UI Events",
+            "href": "https://w3c.github.io/uievents/#dom-mouseevent-relatedtarget",
+            "description": "The definition of 'MouseEvent.relatedTarget' in the 'UI Events' specification."
         },
         {
-            "name": "mouseleave",
-            "href": "/en-US/docs/Web/Events/mouseleave"
+            "name": "Document Object Model (DOM) Level 3 Events Specification",
+            "href": "https://www.w3.org/TR/2014/WD-DOM-Level-3-Events-20140925/#widl-MouseEvent-relatedTarget",
+            "description": "The definition of 'MouseEvent.relatedTarget' in the 'Document Object Model (DOM) Level 3 Events Specification' specification."
         },
         {
-            "name": "mouseout",
-            "href": "/en-US/docs/Web/Events/mouseout"
-        },
-        {
-            "name": "mouseover",
-            "href": "/en-US/docs/Web/Events/mouseover"
-        },
-        {
-            "name": "dragenter",
-            "href": "/en-US/docs/Web/Events/dragenter"
-        },
-        {
-            "name": "dragexit",
-            "href": "/en-US/docs/Web/Events/dragexit"
+            "name": "Document Object Model (DOM) Level 2 Events Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-MouseEvent",
+            "description": "The definition of 'MouseEvent.altkey' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
         }
     ]
 }

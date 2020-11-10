@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "SecurityPolicyViolationEvent.columnNumber",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SecurityPolicyViolationEvent/columnNumber",
-    "description": "The columnNumber read-only property of the SecurityPolicyViolationEvent interface is the column number in the document or worker at which the violation occurred."
+    "description": "The columnNumber read-only property of the SecurityPolicyViolationEvent interface is the column number in the document or worker at which the violation occurred.",
+    "refs": [
+        {
+            "name": "Content Security Policy Level 3",
+            "href": "https://w3c.github.io/webappsec-csp/#dom-securitypolicyviolationevent-columnnumber",
+            "description": "The definition of 'columnNumber' in the 'Content Security Policy Level 3' specification."
+        }
+    ]
 }

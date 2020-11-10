@@ -8,7 +8,7 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-mutationobserver-takerecords",
-            "description": "The definition of 'MutationObserver.takeRecords()' in DOM."
+            "description": "The definition of 'MutationObserver.takeRecords()' in the 'DOM' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Web Audio API",
             "href": "https://webaudio.github.io/web-audio-api/#dom-analysernode-getfloatfrequencydata",
-            "description": "The definition of 'getFloatFrequencyData()' in Web Audio API."
+            "description": "The definition of 'getFloatFrequencyData()' in the 'Web Audio API' specification."
         }
     ]
 }

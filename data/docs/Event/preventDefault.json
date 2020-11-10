@@ -8,12 +8,12 @@
         {
             "name": "DOM",
             "href": "https://dom.spec.whatwg.org/#dom-event-preventdefault",
-            "description": "The definition of 'Event.preventDefault()' in DOM."
+            "description": "The definition of 'Event.preventDefault()' in the 'DOM' specification."
         },
         {
             "name": "Document Object Model (DOM) Level 2 Events Specification",
             "href": "https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Event-preventDefault",
-            "description": "The definition of 'Event.preventDefault()' in Document Object Model (DOM) Level 2 Events Specification."
+            "description": "The definition of 'Event.preventDefault()' in the 'Document Object Model (DOM) Level 2 Events Specification' specification."
         }
     ]
 }

@@ -8,7 +8,7 @@
         {
             "name": "Fetch",
             "href": "https://fetch.spec.whatwg.org/#dom-body-arraybuffer",
-            "description": "The definition of 'arrayBuffer()' in Fetch."
+            "description": "The definition of 'arrayBuffer()' in the 'Fetch' specification."
         }
     ]
 }

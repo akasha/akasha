@@ -1,27 +1,27 @@
 
 {
     "name": "PerformanceObserver",
-    "lastModifiedAt": 1601465553999,
+    "lastModifiedAt": 1604977339617,
     "entries": [
         {
             "name": "PerformanceObserver",
-            "lastModifiedAt": 1597192261751
+            "lastModifiedAt": 1604977337483
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1597192260907
+            "lastModifiedAt": 1604977336419
         },
         {
             "name": "disconnect",
-            "lastModifiedAt": 1597192262340
+            "lastModifiedAt": 1604977338628
         },
         {
             "name": "observe",
-            "lastModifiedAt": 1597192262027
+            "lastModifiedAt": 1604977339098
         },
         {
             "name": "takeRecords",
-            "lastModifiedAt": 1597192262749
+            "lastModifiedAt": 1604977339617
         }
     ]
 }

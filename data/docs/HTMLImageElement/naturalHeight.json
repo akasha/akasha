@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-img-naturalheight",
-            "description": "The definition of 'HTMLImageElement.naturalheight' in HTML Living Standard."
+            "description": "The definition of 'HTMLImageElement.naturalheight' in the 'HTML Living Standard' specification."
         }
     ]
 }

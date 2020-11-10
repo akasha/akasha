@@ -3,5 +3,17 @@
     "kind": "Type",
     "name": "SVGURIReference",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/SVGURIReference",
-    "description": "The SVGURIReference interface is used to reflect the href attribute and the deprecated xlink:href attribute."
+    "description": "The SVGURIReference interface is used to reflect the href attribute and the deprecated xlink:href attribute.",
+    "refs": [
+        {
+            "name": "Scalable Vector Graphics (SVG) 2",
+            "href": "https://svgwg.org/svg2-draft/types.html#InterfaceSVGURIReference",
+            "description": "The definition of 'SVGURIReference' in the 'Scalable Vector Graphics (SVG) 2' specification."
+        },
+        {
+            "name": "Scalable Vector Graphics (SVG) 1.1 (Second Edition)",
+            "href": "https://www.w3.org/TR/SVG11/types.html#InterfaceSVGURIReference",
+            "description": "The definition of 'SVGURIReference' in the 'Scalable Vector Graphics (SVG) 1.1 (Second Edition)' specification."
+        }
+    ]
 }

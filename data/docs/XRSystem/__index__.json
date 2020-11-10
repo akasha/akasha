@@ -1,27 +1,27 @@
 
 {
     "name": "XRSystem",
-    "lastModifiedAt": 1601467506601,
+    "lastModifiedAt": 1604979092173,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1601467505070
+            "lastModifiedAt": 1604979091585
         },
         {
             "name": "devicechange_event",
-            "lastModifiedAt": 1601467506335
+            "lastModifiedAt": 1604979091702
         },
         {
             "name": "isSessionSupported",
-            "lastModifiedAt": 1601467505301
+            "lastModifiedAt": 1604979091625
         },
         {
             "name": "ondevicechange",
-            "lastModifiedAt": 1601467506601
+            "lastModifiedAt": 1604979092173
         },
         {
             "name": "requestSession",
-            "lastModifiedAt": 1601467506098
+            "lastModifiedAt": 1604979091667
         }
     ]
 }

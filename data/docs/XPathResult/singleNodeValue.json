@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "XPathResult.singleNodeValue",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XPathResult/singleNodeValue",
-    "description": "The read-only singleNodeValue property of the XPathResult interface returns a Node value or null in case no node was matched of a result with XPathResult.resultType being ANY_UNORDERED_NODE_TYPE or FIRST_ORDERED_NODE_TYPE."
+    "description": "The read-only singleNodeValue property of the XPathResult interface returns a Node value or null in case no node was matched of a result with XPathResult.resultType being ANY_UNORDERED_NODE_TYPE or FIRST_ORDERED_NODE_TYPE.",
+    "refs": [
+        {
+            "name": "Document Object Model (DOM) Level 3 XPath Specification",
+            "href": "https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html#XPathResult-singleNodeValue",
+            "description": "The definition of 'XPathResult.singleNodeValue' in the 'Document Object Model (DOM) Level 3 XPath Specification' specification."
+        }
+    ]
 }

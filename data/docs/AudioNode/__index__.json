@@ -1,43 +1,43 @@
 
 {
     "name": "AudioNode",
-    "lastModifiedAt": 1604969336496,
+    "lastModifiedAt": 1604975359666,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1604448559335
+            "lastModifiedAt": 1604975355100
         },
         {
             "name": "channelCount",
-            "lastModifiedAt": 1604448560451
+            "lastModifiedAt": 1604975356119
         },
         {
             "name": "channelCountMode",
-            "lastModifiedAt": 1600303948952
+            "lastModifiedAt": 1604975356595
         },
         {
             "name": "channelInterpretation",
-            "lastModifiedAt": 1600303949791
+            "lastModifiedAt": 1604975357066
         },
         {
             "name": "connect",
-            "lastModifiedAt": 1604448565249
+            "lastModifiedAt": 1604975359169
         },
         {
             "name": "context",
-            "lastModifiedAt": 1604448562789
+            "lastModifiedAt": 1604975357523
         },
         {
             "name": "disconnect",
-            "lastModifiedAt": 1604448565776
+            "lastModifiedAt": 1604975359666
         },
         {
             "name": "numberOfInputs",
-            "lastModifiedAt": 1604448563349
+            "lastModifiedAt": 1604975358032
         },
         {
             "name": "numberOfOutputs",
-            "lastModifiedAt": 1604448564471
+            "lastModifiedAt": 1604975358505
         }
     ]
 }

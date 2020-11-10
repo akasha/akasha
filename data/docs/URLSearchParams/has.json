@@ -8,7 +8,7 @@
         {
             "name": "URL",
             "href": "https://url.spec.whatwg.org/#dom-urlsearchparams-has",
-            "description": "The definition of 'has()' in URL."
+            "description": "The definition of 'has()' in the 'URL' specification."
         }
     ]
 }

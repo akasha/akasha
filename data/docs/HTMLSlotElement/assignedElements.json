@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#dom-slot-assignedelements",
-            "description": "The definition of 'assignedElements()' in HTML Living Standard."
+            "description": "The definition of 'assignedElements()' in the 'HTML Living Standard' specification."
         }
     ]
 }

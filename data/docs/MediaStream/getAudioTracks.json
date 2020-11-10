@@ -8,7 +8,7 @@
         {
             "name": "Media Capture and Streams",
             "href": "https://w3c.github.io/mediacapture-main/#dom-mediastream-getaudiotracks",
-            "description": "The definition of 'getAudioTracks()' in Media Capture and Streams."
+            "description": "The definition of 'getAudioTracks()' in the 'Media Capture and Streams' specification."
         }
     ]
 }

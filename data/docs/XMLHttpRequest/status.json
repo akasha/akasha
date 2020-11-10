@@ -3,5 +3,11 @@
     "kind": "Property",
     "name": "XMLHttpRequest.status",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/status",
-    "description": "The read-only XMLHttpRequest.status property returns the numerical HTTP status code of the XMLHttpRequest's response."
+    "description": "The read-only XMLHttpRequest.status property returns the numerical HTTP status code of the XMLHttpRequest's response.",
+    "refs": [
+        {
+            "name": "XMLHttpRequest",
+            "href": "https://xhr.spec.whatwg.org/#the-status-attribute"
+        }
+    ]
 }

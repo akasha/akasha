@@ -3,12 +3,5 @@
     "kind": "Type",
     "name": "CSSKeyframeRule",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/CSSKeyframeRule",
-    "description": "The CSSKeyframeRule interface describes an object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE).",
-    "refs": [
-        {
-            "name": "CSS Animations",
-            "href": "https://drafts.csswg.org/css-animations/#interface-csskeyframerule",
-            "description": "The definition of 'CSSKeyframeRule' in CSS Animations."
-        }
-    ]
+    "description": "The CSSKeyframeRule interface describes an object representing a set of style for a given keyframe. It corresponds to the contains of a single keyframe of a @keyframes at-rule. It implements the CSSRule interface with a type value of 8 (CSSRule.KEYFRAME_RULE)."
 }

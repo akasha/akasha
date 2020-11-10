@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLElement.offsetLeft",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetLeft",
-    "description": "The HTMLElement.offsetLeft read-only property returns the number of pixels that the upper left corner of the current element is offset to the left within the HTMLElement.offsetParent node.",
-    "refs": [
-        {
-            "name": "CSS Object Model (CSSOM) View Module",
-            "href": "https://drafts.csswg.org/cssom-view/#dom-htmlelement-offsetleft",
-            "description": "The definition of 'offsetLeft' in CSS Object Model (CSSOM) View Module."
-        }
-    ]
+    "description": "The HTMLElement.offsetLeft read-only property returns the number of pixels that the upper left corner of the current element is offset to the left within the HTMLElement.offsetParent node."
 }

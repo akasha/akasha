@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/#workerglobalscope",
-            "description": "The definition of 'WorkerGlobalScope' in HTML Living Standard."
+            "description": "The definition of 'WorkerGlobalScope' in the 'HTML Living Standard' specification."
         }
     ]
 }

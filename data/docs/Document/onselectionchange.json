@@ -8,7 +8,7 @@
         {
             "name": "Selection API",
             "href": "https://w3c.github.io/selection-api/#dom-globaleventhandlers-onselectionchange",
-            "description": "The definition of 'GlobalEventHandlers.onselectionchange' in Selection API."
+            "description": "The definition of 'GlobalEventHandlers.onselectionchange' in the 'Selection API' specification."
         }
     ]
 }

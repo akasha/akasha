@@ -3,5 +3,12 @@
     "kind": "Property",
     "name": "PerformanceResourceTiming.requestStart",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/PerformanceResourceTiming/requestStart",
-    "description": "The requestStart read-only property returns a timestamp of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request."
+    "description": "The requestStart read-only property returns a timestamp of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request.",
+    "refs": [
+        {
+            "name": "Resource Timing Level 1",
+            "href": "https://www.w3.org/TR/resource-timing-1/#dom-performanceresourcetiming-requeststart",
+            "description": "The definition of 'requestStart' in the 'Resource Timing Level 1' specification."
+        }
+    ]
 }

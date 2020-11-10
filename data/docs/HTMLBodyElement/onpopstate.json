@@ -8,7 +8,7 @@
         {
             "name": "HTML Living Standard",
             "href": "https://html.spec.whatwg.org/multipage/webappapis.html#handler-window-onpopstate",
-            "description": "The definition of 'onpopstate' in HTML Living Standard."
+            "description": "The definition of 'onpopstate' in the 'HTML Living Standard' specification."
         }
     ]
 }
