@@ -91,6 +91,15 @@
       }
     },
     {
+      "name": "AddExtendedAttribute",
+      "description": "Convert TexImageSource into a marker type",
+      "sourceSelector": "name=webgl1",
+      "config": {
+        "namePattern": "^TexImageSource$",
+        "extendedAttribute": "MarkerType"
+      }
+    },
+    {
       "name": "ConvertConstructorAttribute",
       "description": "Convert from historic constructor attributes"
     },
