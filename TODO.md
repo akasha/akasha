@@ -22,9 +22,7 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
-* Consider allowing some unions to be have extended attributes that indicate that they should be converted into
-  marker interfaces for all the contained types. `IntegerTypedArray` could be converted into such an abstraction
-  as could `Transfer` and `TexImageSource`
+* Convert `IntegerTypedArray`, `ArrayBufferView` and `Transfer` into `MarkerType`
 
 * Change ArrayBufferView so it is interface implemented by TypeArrays
 
