@@ -1,0 +1,8 @@
+HTMLCanvasElement=com.example.HTMLCanvasElement
+HTMLImageElement=com.example.HTMLImageElement
+HTMLVideoElement=com.example.HTMLVideoElement
+ImageBitmap=com.example.ImageBitmap
+ImageData=com.example.ImageData
+OffscreenCanvas=com.example.OffscreenCanvas
+TexImageSource=com.example.TexImageSource
+WebGLRenderingContext=com.example.WebGLRenderingContext

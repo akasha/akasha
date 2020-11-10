@@ -117,10 +117,18 @@ final class JsinteropAction
       final Type type = definition.getType();
       if ( Kind.Union == type.getKind() && !isIdlTypePredefined( definition.getName() ) )
       {
-        generateUnion( definition.getName(),
-                       lookupClassName( definition.getName() ).simpleName(),
-                       (UnionType) type,
-                       getAnnotationStream( definition ).collect( Collectors.toList() ) );
+        final UnionType unionType = (UnionType) type;
+        if ( isMarkerType( definition ) )
+        {
+          generateMarkerType( definition );
+        }
+        else
+        {
+          generateUnion( definition.getName(),
+                         lookupClassName( definition.getName() ).simpleName(),
+                         unionType,
+                         getAnnotationStream( definition ).collect( Collectors.toList() ) );
+        }
       }
     }
     for ( final CallbackDefinition definition : schema.getCallbacks() )
@@ -768,8 +776,15 @@ final class JsinteropAction
                                       lookupClassName( name ),
                                       nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL,
                                       false ) );
+          if ( !isMarkerType( typedef ) )
+          {
+            explodeType( node, declaredType, resolvedType, values );
+          }
         }
-        explodeType( node, declaredType, resolvedType, values );
+        else
+        {
+          explodeType( node, declaredType, resolvedType, values );
+        }
       }
       else
       {
@@ -837,6 +852,11 @@ final class JsinteropAction
         TypedValue.Nullability.NONNULL;
       values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
     }
+  }
+
+  private boolean isMarkerType( @Nonnull final TypedefDefinition typedef )
+  {
+    return typedef.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE );
   }
 
   private void generateUnionOfMethods( @Nonnull final String idlName,
@@ -1294,6 +1314,23 @@ final class JsinteropAction
     writeTopLevelType( definition.getName(), type );
   }
 
+  private void generateMarkerType( @Nonnull final TypedefDefinition definition )
+    throws IOException
+  {
+    final TypeSpec.Builder type =
+      TypeSpec
+        .interfaceBuilder( lookupClassName( definition.getName() ).simpleName() )
+        .addModifiers( Modifier.PUBLIC );
+    writeGeneratedAnnotation( type );
+    maybeAddJavadoc( definition, type );
+    type.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_TYPE )
+                          .addMember( "isNative", "true" )
+                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                          .addMember( "name", "$S", "?" )
+                          .build() );
+    writeTopLevelType( definition.getName(), type );
+  }
+
   @Nonnull
   private TypedValue asTypedValue( @Nonnull final Type type )
   {
@@ -1513,6 +1550,11 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
+
+    for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
+    {
+      type.addSuperinterface( lookupClassName( markerType.getName() ) );
+    }
 
     if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
     {
