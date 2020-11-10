@@ -47,7 +47,7 @@ public final class StringUtil
     CHAR_TO_HTML_ENTITIES_MAP.put( '\u20AC', "&euro;" );
 
     // Character entity references for ISO 8859-1 characters
-    CHAR_TO_HTML_ENTITIES_MAP.put( '\u00A0', "&nbsp;" );
+    CHAR_TO_HTML_ENTITIES_MAP.put( '\u00A0', " " );
     CHAR_TO_HTML_ENTITIES_MAP.put( '\u00A1', "&iexcl;" );
     CHAR_TO_HTML_ENTITIES_MAP.put( '\u00A2', "&cent;" );
     CHAR_TO_HTML_ENTITIES_MAP.put( '\u00A3', "&pound;" );
