@@ -24,6 +24,8 @@ complete as there is too much un-said.
 
 * Convert `IntegerTypedArray`, `ArrayBufferView` and `Transfer` into `MarkerType`
 
+* `BufferSource` should be `MarkerType` that extends other marker types.
+
 * Change ArrayBufferView so it is interface implemented by TypeArrays
 
 # Docs Integration
