@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "SharedArrayBuffer.SharedArrayBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer",
+    "description": "The SharedArrayBuffer() constructor is used to create a SharedArrayBuffer object representing a generic, fixed-length raw binary data buffer, similar to the ArrayBuffer object."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "DataView.DataView",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/DataView",
+    "description": "The DataView() constructor is used to create DataView objects."
+}
