@@ -20,6 +20,7 @@
 // - Retained the `void` return type to maintain compatibility with the majority of WebIDL that have not followed
 //   the crazyness associated with chasing crazy spec changes to remove void.
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
+// - Removed types from bufferRelatedType that we represent as web IDL types, namely: DataView, ArrayBuffer
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
