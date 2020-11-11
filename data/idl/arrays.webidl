@@ -119,4 +119,16 @@ interface DataView {
  * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  */
 //interface Int8Array {
+//  /**
+//   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+//   *
+//   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+//   */
+//  const long long BYTES_PER_ELEMENT = 1;
+//  /**
+//   * The name property represents a string value of the typed array constructor name.
+//   *
+//   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+//   */
+//  const DOMString name = "Int8Array";
 //};
