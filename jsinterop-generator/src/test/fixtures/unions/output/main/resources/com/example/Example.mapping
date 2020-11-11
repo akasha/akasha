@@ -1,5 +1,5 @@
 AllowedBluetoothDevice=com.example.AllowedBluetoothDevice
-ArrayBuffer=elemental2.core.ArrayBuffer
+ArrayBuffer=com.example.ArrayBuffer
 ArrayBufferView=com.example.ArrayBufferView
 BluetoothCharacteristicUUID=com.example.BluetoothCharacteristicUUID
 BluetoothDataFilterInit2=com.example.BluetoothDataFilterInit2
@@ -10,7 +10,7 @@ BluetoothRemoteGATTServer=com.example.BluetoothRemoteGATTServer
 BluetoothRemoteGATTService=com.example.BluetoothRemoteGATTService
 BluetoothServiceUUID=com.example.BluetoothServiceUUID
 BufferSource=com.example.BufferSource
-DataView=elemental2.core.DataView
+DataView=com.example.DataView
 Event=com.example.Event
 EventListener2=com.example.EventListener2
 EventListener3=com.example.EventListener3

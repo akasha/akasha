@@ -1,7 +1,5 @@
 package com.example;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -39,12 +37,6 @@ public class MyType1 {
   public native Any readonlyAnyValue();
 
   @JsProperty(
-      name = "readonlyArrayBufferValueValue"
-  )
-  @Nonnull
-  public native ArrayBuffer readonlyArrayBufferValueValue();
-
-  @JsProperty(
       name = "readonlyBooleanFrozenArrayValue"
   )
   @Nonnull
@@ -77,12 +69,6 @@ public class MyType1 {
   )
   @Nonnull
   public native String readonlyDOMStringValue();
-
-  @JsProperty(
-      name = "readonlyDataViewValueValue"
-  )
-  @Nonnull
-  public native DataView readonlyDataViewValueValue();
 
   @JsProperty(
       name = "readonlyDoubleFrozenArrayValue"
@@ -159,12 +145,6 @@ public class MyType1 {
   public native int readonlyLongValue();
 
   @JsProperty(
-      name = "readonlyNullableArrayBufferValueValue"
-  )
-  @Nullable
-  public native ArrayBuffer readonlyNullableArrayBufferValueValue();
-
-  @JsProperty(
       name = "readonlyNullableBooleanFrozenArrayValue"
   )
   @Nullable
@@ -199,12 +179,6 @@ public class MyType1 {
   )
   @Nullable
   public native String readonlyNullableDOMStringValue();
-
-  @JsProperty(
-      name = "readonlyNullableDataViewValueValue"
-  )
-  @Nullable
-  public native DataView readonlyNullableDataViewValueValue();
 
   @JsProperty(
       name = "readonlyNullableDoubleFrozenArrayValue"

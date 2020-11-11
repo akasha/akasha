@@ -8,3 +8,6 @@ typedef ( double? or sequence<double?> ) IndexedKeyframeOffsetType;
 interface Blob {
   readonly attribute DOMString type;
 };
+
+interface DataView {
+};

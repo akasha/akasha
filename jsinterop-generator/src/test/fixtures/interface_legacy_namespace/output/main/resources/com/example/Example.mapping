@@ -1,4 +1,4 @@
-ArrayBuffer=elemental2.core.ArrayBuffer
+ArrayBuffer=com.example.ArrayBuffer
 CompileError=com.example.web_assembly.CompileError
 Global=com.example.web_assembly.Global
 GlobalDescriptor=com.example.GlobalDescriptor

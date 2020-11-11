@@ -8,7 +8,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "*"
+    name = "DataView"
 )
-public interface Transferable {
+public class DataView {
+  protected DataView() {
+  }
 }

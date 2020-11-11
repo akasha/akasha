@@ -1,7 +1,5 @@
 package com.example;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -39,13 +37,6 @@ public class MyType4 {
 
   @Nullable
   public static native Any anyMethod(@DoNotAutobox @Nullable Object v1);
-
-  @Nonnull
-  public static native ArrayBuffer arrayBufferValueMethod(@Nonnull ArrayBuffer v1,
-      @Nonnull ArrayBuffer v2);
-
-  @Nonnull
-  public static native ArrayBuffer arrayBufferValueMethod(@Nonnull ArrayBuffer v1);
 
   @Nonnull
   public static native JsArray<Boolean> booleanFrozenArrayMethod(@Nonnull JsArray<Boolean> v1,
@@ -97,12 +88,6 @@ public class MyType4 {
   @Nonnull
   public static native JsPropertyMap<String> byteStringRecordMethod(
       @Nonnull JsPropertyMap<String> v1);
-
-  @Nonnull
-  public static native DataView dataViewValueMethod(@Nonnull DataView v1, @Nonnull DataView v2);
-
-  @Nonnull
-  public static native DataView dataViewValueMethod(@Nonnull DataView v1);
 
   @Nonnull
   public static native String domStringMethod(@Nonnull String v1, @Nonnull String v2);
@@ -248,13 +233,6 @@ public class MyType4 {
       @Nonnull JsPropertyMap<String> v1);
 
   @Nullable
-  public static native ArrayBuffer nullableArrayBufferValueMethod(@Nullable ArrayBuffer v1,
-      @Nullable ArrayBuffer v2);
-
-  @Nullable
-  public static native ArrayBuffer nullableArrayBufferValueMethod(@Nullable ArrayBuffer v1);
-
-  @Nullable
   public static native JsArray<Boolean> nullableBooleanFrozenArrayMethod(
       @Nullable JsArray<Boolean> v1, @Nullable JsArray<Boolean> v2);
 
@@ -308,13 +286,6 @@ public class MyType4 {
 
   @Nullable
   public static native String nullableDOMStringMethod(@Nullable String v1);
-
-  @Nullable
-  public static native DataView nullableDataViewValueMethod(@Nullable DataView v1,
-      @Nullable DataView v2);
-
-  @Nullable
-  public static native DataView nullableDataViewValueMethod(@Nullable DataView v1);
 
   @Nullable
   public static native JsArray<Double> nullableDoubleFrozenArrayMethod(@Nullable JsArray<Double> v1,

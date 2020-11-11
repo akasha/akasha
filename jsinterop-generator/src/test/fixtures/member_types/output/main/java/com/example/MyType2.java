@@ -1,7 +1,5 @@
 package com.example;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -33,9 +31,6 @@ public class MyType2 {
   public Any anyValue;
 
   @Nonnull
-  public ArrayBuffer arrayBufferValueValue;
-
-  @Nonnull
   public JsArray<Boolean> booleanFrozenArrayValue;
 
   @Nonnull
@@ -50,9 +45,6 @@ public class MyType2 {
   public String byteStringValue;
 
   public byte byteValue;
-
-  @Nonnull
-  public DataView dataViewValueValue;
 
   @Nonnull
   public JsPropertyMap<String> domStringRecordValue;
@@ -105,9 +97,6 @@ public class MyType2 {
   public JsPropertyMap<String> mixedStringRecordValue;
 
   @Nullable
-  public ArrayBuffer nullableArrayBufferValueValue;
-
-  @Nullable
   public JsArray<Boolean> nullableBooleanFrozenArrayValue;
 
   @Nullable
@@ -124,9 +113,6 @@ public class MyType2 {
 
   @Nullable
   public String nullableDOMStringValue;
-
-  @Nullable
-  public DataView nullableDataViewValueValue;
 
   @Nullable
   public JsArray<Double> nullableDoubleFrozenArrayValue;

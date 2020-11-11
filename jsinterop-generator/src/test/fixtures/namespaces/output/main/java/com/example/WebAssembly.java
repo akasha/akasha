@@ -1,6 +1,5 @@
 package com.example;
 
-import elemental2.core.ArrayBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 

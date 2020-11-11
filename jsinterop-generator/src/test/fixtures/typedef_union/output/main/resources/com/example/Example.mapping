@@ -1,7 +1,7 @@
 ArrayBufferView=com.example.ArrayBufferView
 Blob=com.example.Blob
 ClipboardItemDataType=com.example.ClipboardItemDataType
-DataView=elemental2.core.DataView
+DataView=com.example.DataView
 Float32Array=elemental2.core.Float32Array
 Float64Array=elemental2.core.Float64Array
 IndexedKeyframeOffsetType=com.example.IndexedKeyframeOffsetType

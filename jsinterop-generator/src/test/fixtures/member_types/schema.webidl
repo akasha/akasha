@@ -2,10 +2,6 @@ dictionary Dictionary_requiredAnyValue {
   required any requiredAnyValue;
 };
 
-dictionary Dictionary_requiredArrayBufferValueValue {
-  required ArrayBuffer requiredArrayBufferValueValue;
-};
-
 dictionary Dictionary_requiredBooleanFrozenArrayValue {
   required FrozenArray<boolean> requiredBooleanFrozenArrayValue;
 };
@@ -28,10 +24,6 @@ dictionary Dictionary_requiredByteValue {
 
 dictionary Dictionary_requiredDOMStringValue {
   required DOMString requiredDOMStringValue;
-};
-
-dictionary Dictionary_requiredDataViewValueValue {
-  required DataView requiredDataViewValueValue;
 };
 
 dictionary Dictionary_requiredDoubleFrozenArrayValue {
@@ -90,10 +82,6 @@ dictionary Dictionary_requiredLongValue {
   required long requiredLongValue;
 };
 
-dictionary Dictionary_requiredNullableArrayBufferValueValue {
-  required ArrayBuffer? requiredNullableArrayBufferValueValue;
-};
-
 dictionary Dictionary_requiredNullableBooleanFrozenArrayValue {
   required FrozenArray<boolean>? requiredNullableBooleanFrozenArrayValue;
 };
@@ -116,10 +104,6 @@ dictionary Dictionary_requiredNullableByteValue {
 
 dictionary Dictionary_requiredNullableDOMStringValue {
   required DOMString? requiredNullableDOMStringValue;
-};
-
-dictionary Dictionary_requiredNullableDataViewValueValue {
-  required DataView? requiredNullableDataViewValueValue;
 };
 
 dictionary Dictionary_requiredNullableDoubleFrozenArrayValue {
@@ -328,14 +312,12 @@ dictionary Dictionary_requiredUnsignedShortValue {
 
 dictionary MyDictionary {
   any anyValue;
-  ArrayBuffer arrayBufferValueValue;
   FrozenArray<boolean> booleanFrozenArrayValue;
   sequence<boolean> booleanSequenceValue;
   boolean booleanValue;
   record<ByteString, ByteString> byteStringRecordValue;
   ByteString byteStringValue;
   byte byteValue;
-  DataView dataViewValueValue;
   record<DOMString, DOMString> domStringRecordValue;
   DOMString domStringValue;
   FrozenArray<double> doubleFrozenArrayValue;
@@ -353,14 +335,12 @@ dictionary MyDictionary {
   long long longLongValue;
   long longValue;
   record<DOMString, USVString> mixedStringRecordValue;
-  ArrayBuffer? nullableArrayBufferValueValue;
   FrozenArray<boolean>? nullableBooleanFrozenArrayValue;
   sequence<boolean>? nullableBooleanSequenceValue;
   boolean? nullableBooleanValue;
   ByteString? nullableByteStringValue;
   byte? nullableByteValue;
   DOMString? nullableDOMStringValue;
-  DataView? nullableDataViewValueValue;
   FrozenArray<double>? nullableDoubleFrozenArrayValue;
   sequence<double>? nullableDoubleSequenceValue;
   double? nullableDoubleValue;
@@ -425,14 +405,12 @@ dictionary MyDictionary {
 [SecureContext, Exposed=(Window,Worker)]
 interface MyType1 {
   readonly attribute any readonlyAnyValue;
-  readonly attribute ArrayBuffer readonlyArrayBufferValueValue;
   readonly attribute FrozenArray<boolean> readonlyBooleanFrozenArrayValue;
   readonly attribute sequence<boolean> readonlyBooleanSequenceValue;
   readonly attribute boolean readonlyBooleanValue;
   readonly attribute ByteString readonlyByteStringValue;
   readonly attribute byte readonlyByteValue;
   readonly attribute DOMString readonlyDOMStringValue;
-  readonly attribute DataView readonlyDataViewValueValue;
   readonly attribute FrozenArray<double> readonlyDoubleFrozenArrayValue;
   readonly attribute sequence<double> readonlyDoubleSequenceValue;
   readonly attribute double readonlyDoubleValue;
@@ -446,14 +424,12 @@ interface MyType1 {
   readonly attribute Int8Array readonlyInt8ArrayValue;
   readonly attribute long long readonlyLongLongValue;
   readonly attribute long readonlyLongValue;
-  readonly attribute ArrayBuffer? readonlyNullableArrayBufferValueValue;
   readonly attribute FrozenArray<boolean>? readonlyNullableBooleanFrozenArrayValue;
   readonly attribute sequence<boolean>? readonlyNullableBooleanSequenceValue;
   readonly attribute boolean? readonlyNullableBooleanValue;
   readonly attribute ByteString? readonlyNullableByteStringValue;
   readonly attribute byte? readonlyNullableByteValue;
   readonly attribute DOMString? readonlyNullableDOMStringValue;
-  readonly attribute DataView? readonlyNullableDataViewValueValue;
   readonly attribute FrozenArray<double>? readonlyNullableDoubleFrozenArrayValue;
   readonly attribute sequence<double>? readonlyNullableDoubleSequenceValue;
   readonly attribute double? readonlyNullableDoubleValue;
@@ -515,14 +491,12 @@ interface MyType1 {
 [SecureContext, Exposed=(Window,Worker)]
 interface MyType2 {
   attribute any anyValue;
-  attribute ArrayBuffer arrayBufferValueValue;
   attribute FrozenArray<boolean> booleanFrozenArrayValue;
   attribute sequence<boolean> booleanSequenceValue;
   attribute boolean booleanValue;
   attribute record<ByteString, ByteString> byteStringRecordValue;
   attribute ByteString byteStringValue;
   attribute byte byteValue;
-  attribute DataView dataViewValueValue;
   attribute record<DOMString, DOMString> domStringRecordValue;
   attribute DOMString domStringValue;
   attribute FrozenArray<double> doubleFrozenArrayValue;
@@ -541,14 +515,12 @@ interface MyType2 {
   attribute long long longLongValue;
   attribute long longValue;
   attribute record<DOMString, USVString> mixedStringRecordValue;
-  attribute ArrayBuffer? nullableArrayBufferValueValue;
   attribute FrozenArray<boolean>? nullableBooleanFrozenArrayValue;
   attribute sequence<boolean>? nullableBooleanSequenceValue;
   attribute boolean? nullableBooleanValue;
   attribute ByteString? nullableByteStringValue;
   attribute byte? nullableByteValue;
   attribute DOMString? nullableDOMStringValue;
-  attribute DataView? nullableDataViewValueValue;
   attribute FrozenArray<double>? nullableDoubleFrozenArrayValue;
   attribute sequence<double>? nullableDoubleSequenceValue;
   attribute double? nullableDoubleValue;
@@ -612,14 +584,12 @@ interface MyType2 {
 [SecureContext, Exposed=(Window,Worker)]
 interface MyType3 {
   any anyMethod( any v1, optional any v2 );
-  ArrayBuffer arrayBufferValueMethod( ArrayBuffer v1, optional ArrayBuffer v2 );
   FrozenArray<boolean> booleanFrozenArrayMethod( FrozenArray<boolean> v1, optional FrozenArray<boolean> v2 );
   boolean booleanMethod( boolean v1, optional boolean v2 );
   sequence<boolean> booleanSequenceMethod( sequence<boolean> v1, optional sequence<boolean> v2 );
   byte byteMethod( byte v1, optional byte v2 );
   ByteString byteStringMethod( ByteString v1, optional ByteString v2 );
   record<ByteString, ByteString> byteStringRecordMethod( record<ByteString, ByteString> v1, optional record<ByteString, ByteString> v2 );
-  DataView dataViewValueMethod( DataView v1, optional DataView v2 );
   DOMString domStringMethod( DOMString v1, optional DOMString v2 );
   record<DOMString, DOMString> domStringRecordMethod( record<DOMString, DOMString> v1, optional record<DOMString, DOMString> v2 );
   FrozenArray<double> doubleFrozenArrayMethod( FrozenArray<double> v1, optional FrozenArray<double> v2 );
@@ -638,14 +608,12 @@ interface MyType3 {
   Promise<sequence<long long>> longLongPromiseMethod( Promise<sequence<long long>> v1, optional Promise<sequence<long long>> v2 );
   long longMethod( long v1, optional long v2 );
   record<DOMString, USVString> mixedStringRecordMethod( record<DOMString, USVString> v1, optional record<DOMString, USVString> v2 );
-  ArrayBuffer? nullableArrayBufferValueMethod( ArrayBuffer? v1, optional ArrayBuffer? v2 );
   FrozenArray<boolean>? nullableBooleanFrozenArrayMethod( FrozenArray<boolean>? v1, optional FrozenArray<boolean>? v2 );
   boolean? nullableBooleanMethod( boolean? v1, optional boolean? v2 );
   sequence<boolean>? nullableBooleanSequenceMethod( sequence<boolean>? v1, optional sequence<boolean>? v2 );
   byte? nullableByteMethod( byte? v1, optional byte? v2 );
   ByteString? nullableByteStringMethod( ByteString? v1, optional ByteString? v2 );
   DOMString? nullableDOMStringMethod( DOMString? v1, optional DOMString? v2 );
-  DataView? nullableDataViewValueMethod( DataView? v1, optional DataView? v2 );
   FrozenArray<double>? nullableDoubleFrozenArrayMethod( FrozenArray<double>? v1, optional FrozenArray<double>? v2 );
   double? nullableDoubleMethod( double? v1, optional double? v2 );
   sequence<double>? nullableDoubleSequenceMethod( sequence<double>? v1, optional sequence<double>? v2 );
@@ -709,14 +677,12 @@ interface MyType3 {
 [SecureContext, Exposed=(Window,Worker)]
 interface MyType4 {
   static any anyMethod( any v1, optional any v2 );
-  static ArrayBuffer arrayBufferValueMethod( ArrayBuffer v1, optional ArrayBuffer v2 );
   static FrozenArray<boolean> booleanFrozenArrayMethod( FrozenArray<boolean> v1, optional FrozenArray<boolean> v2 );
   static boolean booleanMethod( boolean v1, optional boolean v2 );
   static sequence<boolean> booleanSequenceMethod( sequence<boolean> v1, optional sequence<boolean> v2 );
   static byte byteMethod( byte v1, optional byte v2 );
   static ByteString byteStringMethod( ByteString v1, optional ByteString v2 );
   static record<ByteString, ByteString> byteStringRecordMethod( record<ByteString, ByteString> v1, optional record<ByteString, ByteString> v2 );
-  static DataView dataViewValueMethod( DataView v1, optional DataView v2 );
   static DOMString domStringMethod( DOMString v1, optional DOMString v2 );
   static record<DOMString, DOMString> domStringRecordMethod( record<DOMString, DOMString> v1, optional record<DOMString, DOMString> v2 );
   static FrozenArray<double> doubleFrozenArrayMethod( FrozenArray<double> v1, optional FrozenArray<double> v2 );
@@ -735,14 +701,12 @@ interface MyType4 {
   static Promise<sequence<long long>> longLongPromiseMethod( Promise<sequence<long long>> v1, optional Promise<sequence<long long>> v2 );
   static long longMethod( long v1, optional long v2 );
   static record<DOMString, USVString> mixedStringRecordMethod( record<DOMString, USVString> v1, optional record<DOMString, USVString> v2 );
-  static ArrayBuffer? nullableArrayBufferValueMethod( ArrayBuffer? v1, optional ArrayBuffer? v2 );
   static FrozenArray<boolean>? nullableBooleanFrozenArrayMethod( FrozenArray<boolean>? v1, optional FrozenArray<boolean>? v2 );
   static boolean? nullableBooleanMethod( boolean? v1, optional boolean? v2 );
   static sequence<boolean>? nullableBooleanSequenceMethod( sequence<boolean>? v1, optional sequence<boolean>? v2 );
   static byte? nullableByteMethod( byte? v1, optional byte? v2 );
   static ByteString? nullableByteStringMethod( ByteString? v1, optional ByteString? v2 );
   static DOMString? nullableDOMStringMethod( DOMString? v1, optional DOMString? v2 );
-  static DataView? nullableDataViewValueMethod( DataView? v1, optional DataView? v2 );
   static FrozenArray<double>? nullableDoubleFrozenArrayMethod( FrozenArray<double>? v1, optional FrozenArray<double>? v2 );
   static double? nullableDoubleMethod( double? v1, optional double? v2 );
   static sequence<double>? nullableDoubleSequenceMethod( sequence<double>? v1, optional sequence<double>? v2 );

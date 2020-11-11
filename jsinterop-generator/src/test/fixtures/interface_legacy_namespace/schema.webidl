@@ -10,6 +10,9 @@ dictionary GlobalDescriptor {
   required any value;
 };
 
+interface ArrayBuffer {
+};
+
 [LegacyNamespace=WebAssembly]
 interface CompileError {
 };

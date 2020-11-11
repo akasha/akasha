@@ -1,7 +1,5 @@
 package com.example;
 
-import elemental2.core.ArrayBuffer;
-import elemental2.core.DataView;
 import elemental2.core.Float32Array;
 import elemental2.core.Float64Array;
 import elemental2.core.Int16Array;
@@ -52,21 +50,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary anyValue(@DoNotAutobox @Nullable final Object anyValue) {
     setAnyValue( anyValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "arrayBufferValueValue"
-  )
-  ArrayBuffer arrayBufferValueValue();
-
-  @JsProperty
-  void setArrayBufferValueValue(@Nonnull ArrayBuffer arrayBufferValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary arrayBufferValueValue(@Nonnull final ArrayBuffer arrayBufferValueValue) {
-    setArrayBufferValueValue( arrayBufferValueValue );
     return this;
   }
 
@@ -171,21 +154,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary byteValue(final byte byteValue) {
     setByteValue( byteValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "dataViewValueValue"
-  )
-  DataView dataViewValueValue();
-
-  @JsProperty
-  void setDataViewValueValue(@Nonnull DataView dataViewValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary dataViewValueValue(@Nonnull final DataView dataViewValueValue) {
-    setDataViewValueValue( dataViewValueValue );
     return this;
   }
 
@@ -472,23 +440,6 @@ public interface MyDictionary {
   }
 
   @JsProperty(
-      name = "nullableArrayBufferValueValue"
-  )
-  @Nullable
-  ArrayBuffer nullableArrayBufferValueValue();
-
-  @JsProperty
-  void setNullableArrayBufferValueValue(@Nullable ArrayBuffer nullableArrayBufferValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableArrayBufferValueValue(
-      @Nullable final ArrayBuffer nullableArrayBufferValueValue) {
-    setNullableArrayBufferValueValue( nullableArrayBufferValueValue );
-    return this;
-  }
-
-  @JsProperty(
       name = "nullableBooleanFrozenArrayValue"
   )
   @Nullable
@@ -598,23 +549,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary nullableDOMStringValue(@Nullable final String nullableDOMStringValue) {
     setNullableDOMStringValue( nullableDOMStringValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableDataViewValueValue"
-  )
-  @Nullable
-  DataView nullableDataViewValueValue();
-
-  @JsProperty
-  void setNullableDataViewValueValue(@Nullable DataView nullableDataViewValueValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableDataViewValueValue(
-      @Nullable final DataView nullableDataViewValueValue) {
-    setNullableDataViewValueValue( nullableDataViewValueValue );
     return this;
   }
 

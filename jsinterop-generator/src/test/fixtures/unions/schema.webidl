@@ -49,6 +49,9 @@ dictionary EventListenerOptions {
   boolean capture = false;
 };
 
+interface ArrayBuffer {
+};
+
 [Exposed=Window, SecureContext]
 interface BluetoothRemoteGATTCharacteristic : EventTarget {
   Promise<undefined> writeValue( BufferSource value );
@@ -66,6 +69,9 @@ interface BluetoothRemoteGATTServer {
 interface BluetoothRemoteGATTService : EventTarget {
   Promise<BluetoothRemoteGATTService> getIncludedService( BluetoothServiceUUID service );
   Promise<sequence<BluetoothRemoteGATTService>> getIncludedServices( optional BluetoothServiceUUID service );
+};
+
+interface DataView {
 };
 
 interface Event {

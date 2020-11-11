@@ -1,5 +1,5 @@
 ImageBitmap=com.example.ImageBitmap
 MessagePort=com.example.MessagePort
+Object=java.lang.Object
 PostMessageOptions=com.example.PostMessageOptions
 Sequence=elemental2.core.JsArray
-Transferable=com.example.Transferable

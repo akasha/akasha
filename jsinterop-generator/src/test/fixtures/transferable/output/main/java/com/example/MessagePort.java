@@ -14,17 +14,17 @@ import jsinterop.annotations.JsType;
     namespace = JsPackage.GLOBAL,
     name = "MessagePort"
 )
-public class MessagePort implements Transferable {
+public class MessagePort {
   protected MessagePort() {
   }
 
   public native void close();
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull JsArray<Transferable> transfer);
+      @Nonnull JsArray<Object> transfer);
 
   public native void postMessage(@DoNotAutobox @Nullable Object message,
-      @Nonnull Transferable[] transfer);
+      @Nonnull Object[] transfer);
 
   public native void start();
 }
