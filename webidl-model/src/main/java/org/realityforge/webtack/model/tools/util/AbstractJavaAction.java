@@ -397,8 +397,6 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental2.core.JsArray" );
     tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental2.core.JsIterator" );
     tryRegisterIdlToJavaTypeMapping( Kind.Symbol.name(), "elemental2.core.Symbol" );
-    tryRegisterIdlToJavaTypeMapping( Kind.ArrayBuffer.name(), "elemental2.core.ArrayBuffer" );
-    tryRegisterIdlToJavaTypeMapping( Kind.DataView.name(), "elemental2.core.DataView" );
     tryRegisterIdlToJavaTypeMapping( Kind.Int8Array.name(), "elemental2.core.Int8Array" );
     tryRegisterIdlToJavaTypeMapping( Kind.Int16Array.name(), "elemental2.core.Int16Array" );
     tryRegisterIdlToJavaTypeMapping( Kind.Int32Array.name(), "elemental2.core.Int32Array" );
@@ -567,8 +565,6 @@ public abstract class AbstractJavaAction
     }
     else if ( Kind.Object == kind ||
               Kind.Symbol == kind ||
-              Kind.ArrayBuffer == kind ||
-              Kind.DataView == kind ||
               Kind.Int8Array == kind ||
               Kind.Int16Array == kind ||
               Kind.Int32Array == kind ||

@@ -34,8 +34,6 @@ public final class TypeTest
     assertParse( "unsigned long long", Kind.UnsignedLongLong, true );
 
     // buffer types
-    assertParse( "ArrayBuffer", Kind.ArrayBuffer, true );
-    assertParse( "DataView", Kind.DataView, true );
     assertParse( "Int8Array", Kind.Int8Array, true );
     assertParse( "Int16Array", Kind.Int16Array, true );
     assertParse( "Int32Array", Kind.Int32Array, true );

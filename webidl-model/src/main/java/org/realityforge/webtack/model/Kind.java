@@ -157,18 +157,6 @@ public enum Kind
    */
   Union( null ),
   /**
-   * An object other holds a pointer (which may be null) to a buffer of a fixed number of bytes.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-ArrayBuffer">ArrayBuffer</a>
-   */
-  ArrayBuffer( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other allows typed access to integers and floating point values stored at arbitrary offsets into the buffer.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-DataView">DataView</a>
-   */
-  DataView( Flags.BUFFER_RELATED ),
-  /**
    * A view on to an ArrayBuffer other exposes it as an array of two’s complement 8-bit signed integers.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-Int8Array">Int8Array</a>

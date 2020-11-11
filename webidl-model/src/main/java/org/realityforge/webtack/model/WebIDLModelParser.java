@@ -36,8 +36,6 @@ public final class WebIDLModelParser
   private static final Map<String, Kind> BUFFER_KIND_MAP = Collections.unmodifiableMap( new HashMap<String, Kind>()
   {
     {
-      put( "ArrayBuffer", Kind.ArrayBuffer );
-      put( "DataView", Kind.DataView );
       put( "Int8Array", Kind.Int8Array );
       put( "Int16Array", Kind.Int16Array );
       put( "Int32Array", Kind.Int32Array );

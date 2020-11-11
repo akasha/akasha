@@ -1057,12 +1057,6 @@ public final class WebIDLWriter
       case Boolean:
         writer.write( "boolean" );
         break;
-      case ArrayBuffer:
-        writer.write( "ArrayBuffer" );
-        break;
-      case DataView:
-        writer.write( "DataView" );
-        break;
       case Int8Array:
         writer.write( "Int8Array" );
         break;
