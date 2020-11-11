@@ -52,20 +52,20 @@ interface Event {
   attribute boolean returnValue;
   constructor( DOMString type, optional EventInit eventInitDict = {} );
   sequence<EventTarget> composedPath();
-  void initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
-  void preventDefault();
-  void stopImmediatePropagation();
-  void stopPropagation();
+  undefined initEvent( DOMString type, optional boolean bubbles = false, optional boolean cancelable = false );
+  undefined preventDefault();
+  undefined stopImmediatePropagation();
+  undefined stopPropagation();
 };
 
 callback interface EventListener {
-  void handleEvent( Event event );
+  undefined handleEvent( Event event );
 };
 
 [Exposed=(Window,Worker,AudioWorklet)]
 interface EventTarget {
   constructor();
-  void addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );
+  undefined addEventListener( DOMString type, EventListener? callback, optional ( AddEventListenerOptions or boolean ) options = {} );
   boolean dispatchEvent( Event event );
-  void removeEventListener( DOMString type, EventListener? callback, optional ( EventListenerOptions or boolean ) options = {} );
+  undefined removeEventListener( DOMString type, EventListener? callback, optional ( EventListenerOptions or boolean ) options = {} );
 };
