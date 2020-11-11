@@ -1,5 +1,5 @@
 {
-  "sourceSelector": "name=minimal_event name=common name=common_patch name=web_bluetooth name=permissions name=bluetooth_common",
+  "sourceSelector": "name=minimal_event name=arrays name=common name=common_patch name=web_bluetooth name=permissions name=bluetooth_common",
   "pre": ["common"],
   "stages": [
     {

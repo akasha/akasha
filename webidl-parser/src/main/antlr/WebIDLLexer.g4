@@ -57,8 +57,6 @@ PROMISE : 'Promise';
 RECORD : 'record';
 QUESTION_MARK : '?';
 
-ARRAY_BUFFER : 'ArrayBuffer';
-DATA_VIEW : 'DataView';
 INT8_ARRAY : 'Int8Array';
 INT16_ARRAY : 'Int16Array';
 INT32_ARRAY : 'Int32Array';

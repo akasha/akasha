@@ -545,9 +545,7 @@ nullModifier
 ;
 
 bufferRelatedType
-  : ARRAY_BUFFER
-  | DATA_VIEW
-  | INT8_ARRAY
+  : INT8_ARRAY
   | INT16_ARRAY
   | INT32_ARRAY
   | UINT8_ARRAY
