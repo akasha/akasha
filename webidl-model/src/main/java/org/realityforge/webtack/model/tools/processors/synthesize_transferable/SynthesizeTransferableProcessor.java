@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import org.realityforge.webtack.model.DocumentationBlockTag;
@@ -82,14 +83,13 @@ final class SynthesizeTransferableProcessor
     final Map<String, TypedefDefinition> typedefs = super.transformTypedefs( inputs );
     if ( !_transferables.isEmpty() )
     {
-      final List<Type> memberTypes = new ArrayList<>();
-      for ( final InterfaceDefinition transferable : _transferables )
-      {
-        memberTypes.add( new TypeReference( transferable.getName(),
-                                            Collections.emptyList(),
-                                            false,
-                                            Collections.emptyList() ) );
-      }
+      final List<Type> memberTypes =
+        _transferables
+          .stream()
+          .map( InterfaceDefinition::getName )
+          .sorted()
+          .map( name -> new TypeReference( name, Collections.emptyList(), false, Collections.emptyList() ) )
+          .collect( Collectors.toList() );
       final UnionType type = new UnionType( memberTypes, Collections.emptyList(), false, Collections.emptyList() );
       final DocumentationBlockTag seeTag =
         new DocumentationBlockTag( "see",
