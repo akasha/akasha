@@ -15,4 +15,5 @@ org.realityforge.webtack.model.tools.processors.remove_html_constructor.RemoveHT
 org.realityforge.webtack.model.tools.processors.remove_includes.RemoveIncludesProcessorFactory
 org.realityforge.webtack.model.tools.processors.remove_member.RemoveMemberProcessorFactory
 org.realityforge.webtack.model.tools.processors.rename_type.RenameTypeProcessorFactory
+org.realityforge.webtack.model.tools.processors.synthesize_transferable.SynthesizeTransferableProcessorFactory
 org.realityforge.webtack.model.tools.processors.validate.ValidateProcessorFactory
