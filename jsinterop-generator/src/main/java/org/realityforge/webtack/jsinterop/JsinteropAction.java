@@ -71,11 +71,6 @@ final class JsinteropAction
   extends AbstractJavaAction
 {
   /**
-   * Logical/idl name used to refer to the transferable marker interface.
-   */
-  @Nonnull
-  private static final String TRANSFERABLE_IDL_NAME = "Transferable";
-  /**
    * Pattern matcher used to process link annotations.
    */
   private final Pattern _linkMatcher = Pattern.compile( "\\{@link ([^ }]*)" );
@@ -83,7 +78,6 @@ final class JsinteropAction
   private final String _globalInterface;
   private final boolean _generateGwtModule;
   private final boolean _generateTypeCatalog;
-  private boolean _transferablePresent;
 
   JsinteropAction( @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
@@ -199,11 +193,6 @@ final class JsinteropAction
       }
     }
 
-    if ( _transferablePresent && !isIdlTypePredefined( TRANSFERABLE_IDL_NAME ) )
-    {
-      writeTransferableInterface();
-    }
-
     if ( _generateGwtModule )
     {
       writeGwtModule();
@@ -244,23 +233,6 @@ final class JsinteropAction
     type.addAnnotation( annotation.build() );
 
     writeTopLevelType( name, type );
-  }
-
-  private void writeTransferableInterface()
-    throws IOException
-  {
-    final TypeSpec.Builder type =
-      TypeSpec
-        .interfaceBuilder( lookupClassName( TRANSFERABLE_IDL_NAME ).simpleName() )
-        .addModifiers( Modifier.PUBLIC );
-    writeGeneratedAnnotation( type );
-    type.addAnnotation( AnnotationSpec
-                          .builder( JsinteropTypes.JS_TYPE )
-                          .addMember( "isNative", "true" )
-                          .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
-                          .addMember( "name", "$S", "*" )
-                          .build() );
-    writeTopLevelType( type );
   }
 
   private void writeTypeCatalog()
@@ -463,8 +435,7 @@ final class JsinteropAction
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( argumentList.stream().map( v -> (AttributedNode) v ).collect( Collectors.toList() ),
-                         argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateDelegateOperation( operation, argumentList, typeList, type, global );
@@ -712,17 +683,13 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private List<List<TypedValue>> explodeTypeList( @Nonnull final List<AttributedNode> nodes,
-                                                  @Nonnull final List<Type> types )
+  private List<List<TypedValue>> explodeTypeList( @Nonnull final List<Type> types )
   {
     final List<List<TypedValue>> results = new ArrayList<>();
     results.add( new ArrayList<>() );
-    int i = 0;
     for ( final Type type : types )
     {
-      final AttributedNode node = nodes.get( i );
-      i++;
-      final List<TypedValue> itemTypes = explodeType( node, type );
+      final List<TypedValue> itemTypes = explodeType( type );
       if ( 1 == itemTypes.size() )
       {
         final TypedValue itemType = itemTypes.get( 0 );
@@ -747,15 +714,14 @@ final class JsinteropAction
   }
 
   @Nonnull
-  private List<TypedValue> explodeType( @Nullable final AttributedNode node, @Nonnull final Type type )
+  private List<TypedValue> explodeType( @Nonnull final Type type )
   {
     final List<TypedValue> values = new ArrayList<>();
-    explodeType( node, type, type, values );
+    explodeType( type, type, values );
     return values;
   }
 
-  private void explodeType( @Nullable final AttributedNode node,
-                            @Nonnull final Type declaredType,
+  private void explodeType( @Nonnull final Type declaredType,
                             @Nonnull final Type type,
                             @Nonnull final List<TypedValue> values )
   {
@@ -778,12 +744,12 @@ final class JsinteropAction
                                       false ) );
           if ( !isMarkerType( typedef ) )
           {
-            explodeType( node, declaredType, resolvedType, values );
+            explodeType( declaredType, resolvedType, values );
           }
         }
         else
         {
-          explodeType( node, declaredType, resolvedType, values );
+          explodeType( declaredType, resolvedType, values );
         }
       }
       else
@@ -810,7 +776,7 @@ final class JsinteropAction
       final UnionType unionType = (UnionType) type;
       for ( final Type memberType : unionType.getMemberTypes() )
       {
-        explodeType( node, declaredType, memberType, values );
+        explodeType( declaredType, memberType, values );
       }
     }
     else if ( Kind.Sequence == kind )
@@ -818,21 +784,8 @@ final class JsinteropAction
       final SequenceType sequenceType = (SequenceType) type;
       final Type itemType = sequenceType.getItemType();
       final boolean nullable = getSchema().isNullable( type );
-      final TypeName javaType;
-      final TypeName arrayJavaType;
-      if ( Kind.Object == itemType.getKind() &&
-           null != node &&
-           node.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
-      {
-        final ClassName transferableTypeName = lookupClassName( TRANSFERABLE_IDL_NAME );
-        javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
-        arrayJavaType = ArrayTypeName.of( transferableTypeName );
-      }
-      else
-      {
-        javaType = toTypeName( type );
-        arrayJavaType = ArrayTypeName.of( getUnexpandedType( itemType ) );
-      }
+      final TypeName javaType = toTypeName( type );
+      final TypeName arrayJavaType = ArrayTypeName.of( getUnexpandedType( itemType ) );
       final TypedValue.Nullability nullability =
         nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
       values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
@@ -879,7 +832,7 @@ final class JsinteropAction
       }
       else
       {
-        for ( final TypedValue typedValue : explodeType( null, memberType ) )
+        for ( final TypedValue typedValue : explodeType( memberType ) )
         {
           final ParameterSpec.Builder parameter =
             ParameterSpec.builder( typedValue.getJavaType(), "value", Modifier.FINAL );
@@ -940,8 +893,7 @@ final class JsinteropAction
 
     final List<DictionaryMember> requiredMembers = getRequiredDictionaryMembers( definition );
     final List<List<TypedValue>> explodedTypeList =
-      explodeTypeList( requiredMembers.stream().map( v -> (AttributedNode) v ).collect( Collectors.toList() ),
-                       requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
+      explodeTypeList( requiredMembers.stream().map( DictionaryMember::getType ).collect( Collectors.toList() ) );
     for ( final List<TypedValue> argTypes : explodedTypeList )
     {
       generateDictionaryCreateMethod( definition, requiredMembers, argTypes, type );
@@ -951,22 +903,11 @@ final class JsinteropAction
     for ( final DictionaryMember member : definition.getMembers() )
     {
       final Type actualType = schema.resolveType( member.getType() );
-      final TypeName javaType;
-      if ( Kind.Sequence == actualType.getKind() &&
-           Kind.Object == ( (SequenceType) actualType ).getItemType().getKind() &&
-           member.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
-      {
-        final ClassName transferableTypeName = lookupClassName( TRANSFERABLE_IDL_NAME );
-        javaType = ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), transferableTypeName );
-      }
-      else
-      {
-        javaType = toTypeName( actualType );
-      }
+      final TypeName javaType = toTypeName( actualType );
 
       generateDictionaryMemberGetter( member, actualType, javaType, type );
       generateDictionaryMemberSetter( member, actualType, javaType, type );
-      for ( final TypedValue typedValue : explodeType( member, member.getType() ) )
+      for ( final TypedValue typedValue : explodeType( member.getType() ) )
       {
         if ( Kind.Any != actualType.getKind() && !javaType.equals( typedValue.getJavaType() ) )
         {
@@ -981,7 +922,7 @@ final class JsinteropAction
       final DictionaryDefinition parent = schema.getDictionaryByName( superName );
       for ( final DictionaryMember member : parent.getMembers() )
       {
-        for ( final TypedValue memberType : explodeType( member, member.getType() ) )
+        for ( final TypedValue memberType : explodeType( member.getType() ) )
         {
           generateDictionaryMemberSetterReturningThis( definition, member, memberType, true, type );
         }
@@ -1167,20 +1108,11 @@ final class JsinteropAction
     else if ( Kind.Sequence == declaredType.getKind() || Kind.Sequence == resolvedType.getKind() )
     {
       final Type itemType = ( (SequenceType) resolvedType ).getItemType();
-      final TypeName itemJavaType;
-      if ( Kind.Object == itemType.getKind() &&
-           member.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
-      {
-        itemJavaType = lookupClassName( TRANSFERABLE_IDL_NAME );
-      }
-      else
-      {
-        itemJavaType = toTypeName( itemType, true );
-      }
       method.addStatement( "$N( $T.<$T>uncheckedCast( $N ) )",
                            mutatorName,
                            JsinteropTypes.JS,
-                           ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), itemJavaType ),
+                           ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
+                                                      toTypeName( itemType, true ) ),
                            paramName );
     }
     else if ( Kind.Any == declaredType.getKind() && typedValue.doNotAutobox() )
@@ -1554,12 +1486,6 @@ final class JsinteropAction
     for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
     {
       type.addSuperinterface( lookupClassName( markerType.getName() ) );
-    }
-
-    if ( definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.TRANSFERABLE ) )
-    {
-      type.addSuperinterface( lookupClassName( TRANSFERABLE_IDL_NAME ) );
-      _transferablePresent = true;
     }
 
     final String inherits = definition.getInherits();
@@ -2166,8 +2092,7 @@ final class JsinteropAction
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( argumentList.stream().map( v -> (AttributedNode) v ).collect( Collectors.toList() ),
-                         argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateDefaultOperation( operation, false, argumentList, typeList, type );
@@ -2357,8 +2282,7 @@ final class JsinteropAction
     {
       final List<Argument> argumentList = operation.getArguments().subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( argumentList.stream().map( v -> (AttributedNode) v ).collect( Collectors.toList() ),
-                         argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateStaticOperation( operation, argumentList, typeList, type );
@@ -2426,8 +2350,7 @@ final class JsinteropAction
     {
       final List<Argument> argumentList = arguments.subList( 0, argCount - i );
       final List<List<TypedValue>> explodedTypeList =
-        explodeTypeList( argumentList.stream().map( v -> (AttributedNode) v ).collect( Collectors.toList() ),
-                         argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
+        explodeTypeList( argumentList.stream().map( Argument::getType ).collect( Collectors.toList() ) );
       for ( final List<TypedValue> typeList : explodedTypeList )
       {
         generateConstructorOperation( operation, parentConstructor, argumentList, typeList, type );

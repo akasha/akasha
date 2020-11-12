@@ -308,26 +308,27 @@
       }
     },
     {
-      "name": "AddExtendedAttributeToArgument",
-      "description": "Annotate postMessage methods to indicate that they can take Transferables",
+      "name": "ChangeArgumentType",
+      "description": "Change transfer arg to the synthetic Transferable type",
       "sourceSelector": "name=whatwg_html name=serviceworker",
       "config": {
-        "expectedAddCount": 6,
+        "expectedChangeCount": 6,
         "elementNamePattern": "^.*$",
         "operationNamePattern": "^postMessage$",
         "argumentNamePattern": "^transfer$",
-        "extendedAttribute": "Transferable"
+        "type": "sequence<Transferable>"
       }
     },
+
     {
-      "name": "AddExtendedAttributeToMember",
-      "description": "Annotate postMessage option object to indicate that they can take Transferables",
+      "name": "RemoveMember",
+      "description": "Change the type of the transfer member to Transferable",
       "sourceSelector": "name=whatwg_html",
       "config": {
-        "expectedAddCount": 1,
+        "expectedRemoveCount": 1,
         "elementNamePattern": "^PostMessageOptions$",
         "memberNamePattern": "^transfer$",
-        "extendedAttribute": "Transferable"
+        "types": ["dictionary"]
       }
     },
     {
@@ -803,6 +804,12 @@
     },
     {
       "name": "Merge"
+    },
+    {
+      "name": "SynthesizeTransferable",
+      "config": {
+        "expectedTransferableCount": 6
+      }
     },
     {
       "name": "RemoveIncludes",

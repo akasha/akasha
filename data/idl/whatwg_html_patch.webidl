@@ -943,3 +943,7 @@ partial interface HTMLMediaElement {
   readonly attribute HTMLMediaElementNetworkState networkState;
   readonly attribute HTMLMediaElementReadyState readyState;
 };
+
+partial dictionary PostMessageOptions {
+  sequence<Transferable> transfer = [];
+};

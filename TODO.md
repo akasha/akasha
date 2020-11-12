@@ -22,7 +22,7 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
-* Convert `IntegerTypedArray`, `ArrayBufferView` and `Transfer` into `MarkerType`
+* Convert `IntegerTypedArray` and `ArrayBufferView` into `MarkerType`
 
 * `BufferSource` should be `MarkerType` that extends other marker types.
 
