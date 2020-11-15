@@ -6,9 +6,9 @@
     "description": "The DisplayMediaStreamConstraints dictionary's audio property is used to specify whether or not to request that the MediaStream containing screen display contents also include an audio track. This value may simply be a Boolean, where true indicates that an audio track should be included an false (the default) indicates that no audio should be included in the stream.",
     "refs": [
         {
-            "name": "Unknown",
-            "href": "",
-            "description": "The definition of 'DisplayMediaStreamConstraints.audio' in the 'Unknown' specification."
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-audio",
+            "description": "The definition of 'DisplayMediaStreamConstraints.audio' in the 'Screen Capture' specification."
         }
     ]
 }

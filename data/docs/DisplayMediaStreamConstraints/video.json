@@ -6,9 +6,9 @@
     "description": "The DisplayMediaStreamConstraints dictionary's video property is used to configure the video track in the stream returned by getDisplayMedia().",
     "refs": [
         {
-            "name": "Unknown",
-            "href": "",
-            "description": "The definition of 'DisplayMediaStreamConstraints.video' in the 'Unknown' specification."
+            "name": "Screen Capture",
+            "href": "https://w3c.github.io/mediacapture-screen-share/#dom-displaymediastreamconstraints-video",
+            "description": "The definition of 'DisplayMediaStreamConstraints.video' in the 'Screen Capture' specification."
         }
     ]
 }

@@ -1,7 +1,7 @@
 
 {
     "name": "DisplayMediaStreamConstraints",
-    "lastModifiedAt": 1604975791866,
+    "lastModifiedAt": 1605479093516,
     "entries": [
         {
             "name": "__type__",
@@ -9,11 +9,11 @@
         },
         {
             "name": "audio",
-            "lastModifiedAt": 1604975791288
+            "lastModifiedAt": 1605479092917
         },
         {
             "name": "video",
-            "lastModifiedAt": 1604975791766
+            "lastModifiedAt": 1605479093400
         }
     ]
 }
