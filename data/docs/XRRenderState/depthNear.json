@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "XRRenderState.depthNear",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/XRRenderState/depthNear",
-    "description": "The depthNear read-only property of the XRRenderState interface returns the distance in meters of the near clip plane from the viewer.",
-    "refs": [
-        {
-            "name": "Unknown",
-            "href": "",
-            "description": "The definition of 'XRRenderState.depthNear' in the 'Unknown' specification."
-        }
-    ]
+    "description": "The depthNear read-only property of the XRRenderState interface returns the distance in meters of the near clip plane from the viewer."
 }

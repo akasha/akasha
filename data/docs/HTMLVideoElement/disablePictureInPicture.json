@@ -3,12 +3,5 @@
     "kind": "Property",
     "name": "HTMLVideoElement.disablePictureInPicture",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement/disablePictureInPicture",
-    "description": "The HTMLVideoElement  disablePictureInPicture property reflects the HTML attribute indicating whether",
-    "refs": [
-        {
-            "name": "Unknown",
-            "href": "",
-            "description": "The definition of 'HTMLVideoElement.autoPictureInPicture' in the 'Unknown' specification."
-        }
-    ]
+    "description": "The HTMLVideoElement  disablePictureInPicture property reflects the HTML attribute indicating whether"
 }
