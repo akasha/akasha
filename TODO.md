@@ -103,8 +103,6 @@ Generate host element factories: Events would need to be specially handled to ma
 
 * Convert several other ECMA namespaces/types from https://tc39.es/ecma262/ to WebIDL
 
-* Create a ruby or java DSL that builds up the pipeline configuration.
-
 * Add some additional apis from:
   - https://github.com/w3c/webref/tree/master/ed/idl
   - https://github.com/w3c/webref/tree/master/tr/idl
