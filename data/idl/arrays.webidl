@@ -1,8 +1,9 @@
-/**
+/*
  * A temporary hack to emulate ArrayBufferView as an interface.
- */
+ * /
 [MarkerType]
 typedef ( DataView or DataView ) FakeArrayBufferView;
+*/
 
 /**
  * The SharedArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer, similar to the ArrayBuffer object, but in a way that they can be used to create views on shared memory.
