@@ -112,20 +112,6 @@ Generate host element factories: Events would need to be specially handled to ma
   include so each transform could be relatively isolated with the processing stages combined with custom
   idl in one place
 
-* Start to download chrome webidl as they do not seem to align with specs exactly and thus generate some issues.
-  - https://www.chromium.org/Home
-  - https://source.chromium.org/chromium/chromium/src/+/master:third_party/blink/renderer/modules/speech/window_speech_synthesis.idl?originalUrl=https:%2F%2Fcs.chromium.org%2F
-
-* Start to download gecko WebIDL as well https://github.com/mozilla/gecko-dev/tree/master/dom/webidl
-
-* Enhance `MergerTool` with a strategy that will actually merge constructs that "match". i.e. If two operations
-  have the same name and parameters then they should be collapsed into a single operation but with potentially
-  merged extended attributes. The intention is for this to be used to import gecko and/or chrome WebIDL and combine
-  it with the spec produced WebIDL so that we have a combined schema and can specifically identify which constructs
-  are browser specific. We may also combine multiple versions of schemas so we can see which versions of the browsers
-  added which features. Questions exist such as: Should blend of multiple Extended attribute `Ident` types produce
-  an `IdentList` type or only for special well-known extended attributes ala `Exposed`?
-
 * Emit closure externs for WebIDL types.
 
 * Parser is extremely slow because of it's recursive nature. Is there a way to "fix" this by reworking the
