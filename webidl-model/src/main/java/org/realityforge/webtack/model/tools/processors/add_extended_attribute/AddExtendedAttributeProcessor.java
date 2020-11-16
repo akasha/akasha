@@ -21,6 +21,7 @@ import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 final class AddExtendedAttributeProcessor
   extends AbstractProcessor
@@ -32,10 +33,12 @@ final class AddExtendedAttributeProcessor
   @Nonnull
   private final ExtendedAttribute _extendedAttribute;
 
-  AddExtendedAttributeProcessor( @Nonnull final Pattern namePattern,
+  AddExtendedAttributeProcessor( @Nonnull final PipelineContext context,
+                                 @Nonnull final Pattern namePattern,
                                  @Nullable final List<ElementType> types,
                                  @Nonnull final ExtendedAttribute extendedAttribute )
   {
+    super( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _types = types;
     _extendedAttribute = Objects.requireNonNull( extendedAttribute );

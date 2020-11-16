@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -38,17 +37,15 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 final class JavaizeEventHandlersProcessor
   extends AbstractProcessor
 {
-  @Nonnull
-  private final DocRepositoryRuntime _runtime;
   private WebIDLSchema _schema;
   @Nonnull
   private final Set<String> _declaredHandlers = new HashSet<>();
@@ -61,9 +58,9 @@ final class JavaizeEventHandlersProcessor
   @Nullable
   private String _type;
 
-  JavaizeEventHandlersProcessor( @Nonnull final DocRepositoryRuntime runtime )
+  JavaizeEventHandlersProcessor( @Nonnull final PipelineContext context )
   {
-    _runtime = Objects.requireNonNull( runtime );
+    super( context );
   }
 
   @Nullable
@@ -297,7 +294,7 @@ final class JavaizeEventHandlersProcessor
     {
       for ( final EntryIndex eventIndex : deriveEventEntries() )
       {
-        final DocEntry eventDocEntry = _runtime.getDocEntry( eventIndex );
+        final DocEntry eventDocEntry = context().docRepository().getDocEntry( eventIndex );
         final String eventHandlerProperty = eventDocEntry.getEventHandlerProperty();
         if ( input.getName().equals( eventHandlerProperty ) )
         {
@@ -352,7 +349,7 @@ final class JavaizeEventHandlersProcessor
   @Nonnull
   private List<EntryIndex> deriveEventEntriesForType( @Nonnull final String type )
   {
-    final DocIndex index = _runtime.findIndexForType( type );
+    final DocIndex index = context().docRepository().findIndexForType( type );
     return null != index ?
            index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
            Collections.emptyList();

@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -26,16 +25,13 @@ final class SynthesizeTransferableProcessor
   extends AbstractProcessor
   implements Completable
 {
-  @Nonnull
-  private final PipelineContext _context;
   private final int _expectedTransferableCount;
   @Nonnull
   private final List<InterfaceDefinition> _transferables = new ArrayList<>();
 
-  SynthesizeTransferableProcessor( @Nonnull final PipelineContext context,
-                                   final int expectedTransferableCount )
+  SynthesizeTransferableProcessor( @Nonnull final PipelineContext context, final int expectedTransferableCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _expectedTransferableCount = expectedTransferableCount;
   }
 
@@ -47,19 +43,19 @@ final class SynthesizeTransferableProcessor
     {
       if ( transferableCount != _expectedTransferableCount )
       {
-        _context.error( "Detected " + transferableCount + " [Transferable] interfaces but expected " +
-                        _expectedTransferableCount + " interfaces." );
+        context().error( "Detected " + transferableCount + " [Transferable] interfaces but expected " +
+                         _expectedTransferableCount + " interfaces." );
       }
     }
     else
     {
       if ( 0 == transferableCount )
       {
-        _context.info( "Collected " + transferableCount + " [Transferable] interfaces." );
+        context().info( "Collected " + transferableCount + " [Transferable] interfaces." );
       }
       else
       {
-        _context.debug( "Collected " + transferableCount + " [Transferable] interfaces." );
+        context().debug( "Collected " + transferableCount + " [Transferable] interfaces." );
       }
     }
   }

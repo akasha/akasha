@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
@@ -48,6 +49,7 @@ import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.spi.Processor;
 
 /**
@@ -61,6 +63,20 @@ import org.realityforge.webtack.model.tools.spi.Processor;
 public abstract class AbstractProcessor
   implements Processor
 {
+  @Nonnull
+  private final PipelineContext _context;
+
+  protected AbstractProcessor( @Nonnull final PipelineContext context )
+  {
+    _context = Objects.requireNonNull( context );
+  }
+
+  @Nonnull
+  protected final PipelineContext context()
+  {
+    return _context;
+  }
+
   @Nullable
   @Override
   public WebIDLSchema process( @Nonnull final WebIDLSchema schema )

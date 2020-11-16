@@ -1,7 +1,6 @@
 package org.realityforge.webtack.model.tools.processors.remove_html_constructor;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.OperationMember;
@@ -14,15 +13,13 @@ final class RemoveHTMLConstructorProcessor
   extends AbstractProcessor
   implements Completable
 {
-  @Nonnull
-  private final PipelineContext _context;
   private final int _expectedRemoveCount;
   private int _removeCount;
 
   RemoveHTMLConstructorProcessor( @Nonnull final PipelineContext context,
                                   final int expectedRemoveCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _expectedRemoveCount = expectedRemoveCount;
   }
 
@@ -33,19 +30,19 @@ final class RemoveHTMLConstructorProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " [HTMLConstructor] constructors but expected to " +
-                        "remove " + _expectedRemoveCount + " constructors." );
+        context().error( "Removed " + _removeCount + " [HTMLConstructor] constructors but expected to " +
+                         "remove " + _expectedRemoveCount + " constructors." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " [HTMLConstructor] constructors." );
+        context().info( "Removed " + _removeCount + " [HTMLConstructor] constructors." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " [HTMLConstructor] constructors." );
+        context().debug( "Removed " + _removeCount + " [HTMLConstructor] constructors." );
       }
     }
   }

@@ -27,8 +27,6 @@ final class RemoveElementProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _namePattern;
   @Nullable
   private final List<ElementType> _types;
@@ -43,7 +41,7 @@ final class RemoveElementProcessor
                           @Nullable final List<ElementType> types,
                           final int expectedRemoveCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _types = types;
     _expectedRemoveCount = expectedRemoveCount;
@@ -56,19 +54,19 @@ final class RemoveElementProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " elements but expected to " +
-                        "remove " + _expectedRemoveCount + " elements." );
+        context().error( "Removed " + _removeCount + " elements but expected to " +
+                         "remove " + _expectedRemoveCount + " elements." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " elements." );
+        context().info( "Removed " + _removeCount + " elements." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " elements." );
+        context().debug( "Removed " + _removeCount + " elements." );
       }
     }
   }

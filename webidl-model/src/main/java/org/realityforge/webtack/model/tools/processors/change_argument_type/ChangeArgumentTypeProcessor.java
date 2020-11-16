@@ -25,8 +25,6 @@ final class ChangeArgumentTypeProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _elementNamePattern;
   @Nonnull
   private final Pattern _operationNamePattern;
@@ -46,7 +44,7 @@ final class ChangeArgumentTypeProcessor
                                @Nonnull final Type type,
                                final int expectedChangeCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _elementNamePattern = Objects.requireNonNull( elementNamePattern );
     _operationNamePattern = Objects.requireNonNull( operationNamePattern );
     _argumentNamePattern = Objects.requireNonNull( argumentNamePattern );
@@ -61,19 +59,19 @@ final class ChangeArgumentTypeProcessor
     {
       if ( _changeCount != _expectedChangeCount )
       {
-        _context.error( "Changed " + _changeCount + " arguments but expected to " +
-                        "change " + _expectedChangeCount + " arguments." );
+        context().error( "Changed " + _changeCount + " arguments but expected to " +
+                         "change " + _expectedChangeCount + " arguments." );
       }
     }
     else
     {
       if ( 0 == _changeCount )
       {
-        _context.error( "Changed " + _changeCount + " arguments. Remove processor." );
+        context().error( "Changed " + _changeCount + " arguments. Remove processor." );
       }
       else
       {
-        _context.debug( "Changed " + _changeCount + " arguments." );
+        context().debug( "Changed " + _changeCount + " arguments." );
       }
     }
   }

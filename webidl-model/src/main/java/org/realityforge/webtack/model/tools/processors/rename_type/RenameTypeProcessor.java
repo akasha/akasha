@@ -30,8 +30,6 @@ final class RenameTypeProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _namePattern;
   @Nonnull
   private final String _replacement;
@@ -43,7 +41,7 @@ final class RenameTypeProcessor
                        @Nonnull final String replacement,
                        final int expectedRenameCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _replacement = Objects.requireNonNull( replacement );
     _expectedRenameCount = expectedRenameCount;
@@ -56,19 +54,19 @@ final class RenameTypeProcessor
     {
       if ( _renameCount != _expectedRenameCount )
       {
-        _context.error( "Renamed " + _renameCount + " types but expected to " +
-                        "rename " + _expectedRenameCount + " types." );
+        context().error( "Renamed " + _renameCount + " types but expected to " +
+                         "rename " + _expectedRenameCount + " types." );
       }
     }
     else
     {
       if ( 0 == _renameCount )
       {
-        _context.info( "Renamed " + _renameCount + " types." );
+        context().info( "Renamed " + _renameCount + " types." );
       }
       else
       {
-        _context.debug( "Renamed " + _renameCount + " types." );
+        context().debug( "Renamed " + _renameCount + " types." );
       }
     }
   }

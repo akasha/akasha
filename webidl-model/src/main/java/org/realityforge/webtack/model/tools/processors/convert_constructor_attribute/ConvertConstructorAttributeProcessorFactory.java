@@ -14,6 +14,6 @@ public final class ConvertConstructorAttributeProcessorFactory
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new ConvertConstructorAttributeProcessor();
+    return new ConvertConstructorAttributeProcessor( context );
   }
 }

@@ -16,6 +16,6 @@ public final class ExtractExposureSetProcessorFactory
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new ExtractExposureSetProcessor( requireNonNull( "globalInterface", globalInterface ) );
+    return new ExtractExposureSetProcessor( context, requireNonNull( "globalInterface", globalInterface ) );
   }
 }

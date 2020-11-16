@@ -21,7 +21,7 @@ public final class MergeDocsProcessorFactory
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new MergeDocsProcessor( context.docRepository(),
+    return new MergeDocsProcessor( context,
                                    createEvents,
                                    null == aliases ? Collections.emptyMap() : aliases,
                                    null == memberAliases ? Collections.emptyMap() : memberAliases );

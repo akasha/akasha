@@ -27,8 +27,6 @@ final class RemoveExtendedAttributeProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _namePattern;
   @Nullable
   private final List<ElementType> _types;
@@ -46,7 +44,7 @@ final class RemoveExtendedAttributeProcessor
                                     @Nonnull final ExtendedAttribute extendedAttribute,
                                     final int expectedRemoveCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _namePattern = Objects.requireNonNull( namePattern );
     _types = types;
     _extendedAttribute = Objects.requireNonNull( extendedAttribute );
@@ -60,19 +58,19 @@ final class RemoveExtendedAttributeProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " attributes but expected to " +
-                        "remove " + _expectedRemoveCount + " attributes." );
+        context().error( "Removed " + _removeCount + " attributes but expected to " +
+                         "remove " + _expectedRemoveCount + " attributes." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " attributes." );
+        context().info( "Removed " + _removeCount + " attributes." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " attributes." );
+        context().debug( "Removed " + _removeCount + " attributes." );
       }
     }
   }

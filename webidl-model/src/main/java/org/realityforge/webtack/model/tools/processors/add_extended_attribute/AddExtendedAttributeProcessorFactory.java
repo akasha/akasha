@@ -19,7 +19,8 @@ public final class AddExtendedAttributeProcessorFactory
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new AddExtendedAttributeProcessor( requirePattern( "namePattern", namePattern ),
+    return new AddExtendedAttributeProcessor( context,
+                                              requirePattern( "namePattern", namePattern ),
                                               types,
                                               requireExtendedAttribute( "extendedAttribute", extendedAttribute ) );
   }

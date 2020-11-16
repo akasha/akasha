@@ -27,8 +27,6 @@ final class RemoveMemberProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _elementNamePattern;
   @Nonnull
   private final Pattern _memberNamePattern;
@@ -44,9 +42,10 @@ final class RemoveMemberProcessor
   RemoveMemberProcessor( @Nonnull final PipelineContext context,
                          @Nonnull final Pattern elementNamePattern,
                          @Nonnull final Pattern memberNamePattern,
-                         @Nullable final List<ElementType> types, final int expectedRemoveCount )
+                         @Nullable final List<ElementType> types,
+                         final int expectedRemoveCount )
   {
-    _context = context;
+    super( context );
     _elementNamePattern = Objects.requireNonNull( elementNamePattern );
     _memberNamePattern = Objects.requireNonNull( memberNamePattern );
     _types = types;
@@ -60,19 +59,19 @@ final class RemoveMemberProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " members but expected to " +
-                        "remove " + _expectedRemoveCount + " members." );
+        context().error( "Removed " + _removeCount + " members but expected to " +
+                         "remove " + _expectedRemoveCount + " members." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " members." );
+        context().info( "Removed " + _removeCount + " members." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " elements." );
+        context().debug( "Removed " + _removeCount + " elements." );
       }
     }
   }

@@ -11,12 +11,18 @@ import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.OperationMember;
 import org.realityforge.webtack.model.Type;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 final class ConvertConstructorAttributeProcessor
   extends AbstractProcessor
 {
   @Nullable
   private InterfaceDefinition _interface;
+
+  ConvertConstructorAttributeProcessor( @Nonnull final PipelineContext context )
+  {
+    super( context );
+  }
 
   @Nullable
   @Override

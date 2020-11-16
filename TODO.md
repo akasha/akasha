@@ -86,8 +86,6 @@ complete as there is too much un-said.
   value X then arg2 must be of type Y. To create the overlay method we may need to define an extended attribute on
   operation that defines scenario.
 
-* Make `AbstractProcessor` cache instance of `PipelineContext`
-
 # React4j Host Element Factories
 
 Generate host element factories: Events would need to be specially handled to map to reacts event system but we could control whether we generate a capture handler using the `[NoBubble]` attribute on events.

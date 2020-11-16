@@ -30,11 +30,11 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocRepositoryRuntime;
 import org.realityforge.webtack.model.tools.mdn_scanner.ExternalRef;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 /**
  * Lookup DocRepositoryRuntime for documentation for elements and add javadocs if documentation is present.
@@ -42,8 +42,6 @@ import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 final class MergeDocsProcessor
   extends AbstractProcessor
 {
-  @Nonnull
-  private final DocRepositoryRuntime _runtime;
   private final boolean _createEvents;
   @Nonnull
   private final Map<String, ArrayList<String>> _aliases;
@@ -53,12 +51,12 @@ final class MergeDocsProcessor
   private boolean _typeIsMixin;
   private WebIDLSchema _schema;
 
-  MergeDocsProcessor( @Nonnull final DocRepositoryRuntime runtime,
+  MergeDocsProcessor( @Nonnull final PipelineContext context,
                       final boolean createEvents,
                       @Nonnull final Map<String, ArrayList<String>> aliases,
                       @Nonnull final Map<String, ArrayList<String>> memberAliases )
   {
-    _runtime = Objects.requireNonNull( runtime );
+    super( context );
     _createEvents = createEvents;
     _aliases = Objects.requireNonNull( aliases );
     _memberAliases = memberAliases;
@@ -134,7 +132,7 @@ final class MergeDocsProcessor
     final List<EventMember> events = super.transformEventMembers( inputs );
     if ( _createEvents )
     {
-      final DocIndex index = _runtime.findIndexForType( _type );
+      final DocIndex index = context().docRepository().findIndexForType( _type );
       final List<EntryIndex> entries =
         null != index ?
         index.getEntries().stream().filter( e -> e.getName().endsWith( "_event" ) ).collect( Collectors.toList() ) :
@@ -143,7 +141,7 @@ final class MergeDocsProcessor
       {
         for ( final EntryIndex eventIndex : entries )
         {
-          final DocEntry eventDocEntry = _runtime.getDocEntry( eventIndex );
+          final DocEntry eventDocEntry = context().docRepository().getDocEntry( eventIndex );
           final String eventName = eventDocEntry.getEventName();
           assert null != eventName;
           if ( events.stream().noneMatch( e -> e.getName().equals( eventName ) ) && !partialContainsEvent( eventName ) )
@@ -457,7 +455,7 @@ final class MergeDocsProcessor
   {
     if ( null != type )
     {
-      final DocEntry entry = _runtime.findDocEntry( type, member );
+      final DocEntry entry = context().docRepository().findDocEntry( type, member );
       if ( null != entry )
       {
         return entry;
@@ -469,7 +467,7 @@ final class MergeDocsProcessor
         {
           for ( final String alias : aliases )
           {
-            final DocEntry aliasEntry = _runtime.findDocEntry( alias, member );
+            final DocEntry aliasEntry = context().docRepository().findDocEntry( alias, member );
             if ( null != aliasEntry )
             {
               return aliasEntry;
@@ -482,7 +480,7 @@ final class MergeDocsProcessor
                 for ( final String memberAlias : memberAliases )
                 {
                   final String[] parts = memberAlias.split( "\\." );
-                  final DocEntry memberAliasEntry = _runtime.findDocEntry( parts[ 0 ], parts[ 1 ] );
+                  final DocEntry memberAliasEntry = context().docRepository().findDocEntry( parts[ 0 ], parts[ 1 ] );
                   if ( null != memberAliasEntry )
                   {
                     return memberAliasEntry;

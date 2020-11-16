@@ -27,8 +27,6 @@ final class AddExtendedAttributeToArgumentProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _elementNamePattern;
   @Nonnull
   private final Pattern _operationNamePattern;
@@ -48,7 +46,7 @@ final class AddExtendedAttributeToArgumentProcessor
                                            @Nonnull final ExtendedAttribute extendedAttribute,
                                            final int expectedAddCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _elementNamePattern = Objects.requireNonNull( elementNamePattern );
     _operationNamePattern = Objects.requireNonNull( operationNamePattern );
     _argumentNamePattern = Objects.requireNonNull( argumentNamePattern );
@@ -63,19 +61,19 @@ final class AddExtendedAttributeToArgumentProcessor
     {
       if ( _addCount != _expectedAddCount )
       {
-        _context.error( "Added " + _addCount + " extended attributes but expected to " +
-                        "add " + _expectedAddCount + " extended attributes." );
+        context().error( "Added " + _addCount + " extended attributes but expected to " +
+                         "add " + _expectedAddCount + " extended attributes." );
       }
     }
     else
     {
       if ( 0 == _addCount )
       {
-        _context.error( "Added " + _addCount + " extended attributes. Remove processor." );
+        context().error( "Added " + _addCount + " extended attributes. Remove processor." );
       }
       else
       {
-        _context.debug( "Added " + _addCount + " extended attributes." );
+        context().debug( "Added " + _addCount + " extended attributes." );
       }
     }
   }

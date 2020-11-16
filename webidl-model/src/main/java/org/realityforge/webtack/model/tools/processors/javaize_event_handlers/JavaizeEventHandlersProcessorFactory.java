@@ -14,6 +14,6 @@ public final class JavaizeEventHandlersProcessorFactory
   @Override
   public Processor create( @Nonnull final PipelineContext context )
   {
-    return new JavaizeEventHandlersProcessor( context.docRepository() );
+    return new JavaizeEventHandlersProcessor( context );
   }
 }

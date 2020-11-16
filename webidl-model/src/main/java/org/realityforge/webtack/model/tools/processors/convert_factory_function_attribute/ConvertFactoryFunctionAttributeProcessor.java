@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -26,8 +25,6 @@ final class ConvertFactoryFunctionAttributeProcessor
 {
   @Nonnull
   private final Map<String, InterfaceDefinition> _interfaces = new HashMap<>();
-  @Nonnull
-  private final PipelineContext _context;
   private final int _expectedConvertCount;
   private int _convertCount;
   private boolean _legacyFactoryFunctionPresent;
@@ -35,7 +32,7 @@ final class ConvertFactoryFunctionAttributeProcessor
   ConvertFactoryFunctionAttributeProcessor( @Nonnull final PipelineContext context,
                                             final int expectedConvertCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _expectedConvertCount = expectedConvertCount;
   }
 
@@ -46,19 +43,19 @@ final class ConvertFactoryFunctionAttributeProcessor
     {
       if ( _convertCount != _expectedConvertCount )
       {
-        _context.error( "Converted " + _convertCount + " elements but expected to " +
-                        "convert " + _expectedConvertCount + " elements." );
+        context().error( "Converted " + _convertCount + " elements but expected to " +
+                         "convert " + _expectedConvertCount + " elements." );
       }
     }
     else
     {
       if ( 0 == _convertCount )
       {
-        _context.info( "Converted " + _convertCount + " elements." );
+        context().info( "Converted " + _convertCount + " elements." );
       }
       else
       {
-        _context.debug( "Converted " + _convertCount + " elements." );
+        context().debug( "Converted " + _convertCount + " elements." );
       }
     }
   }

@@ -16,6 +16,7 @@ import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 /**
  * Transform schema extracting/retaining a particular exposure set.
@@ -32,8 +33,9 @@ final class ExtractExposureSetProcessor
   @Nonnull
   private final String _globalInterface;
 
-  ExtractExposureSetProcessor( @Nonnull final String globalInterface )
+  ExtractExposureSetProcessor( @Nonnull final PipelineContext context, @Nonnull final String globalInterface )
   {
+    super( context );
     _globalInterface = Objects.requireNonNull( globalInterface );
   }
 

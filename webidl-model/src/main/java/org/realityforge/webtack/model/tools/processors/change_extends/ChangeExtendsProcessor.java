@@ -14,8 +14,6 @@ final class ChangeExtendsProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _elementNamePattern;
   @Nonnull
   private final String _parentType;
@@ -27,7 +25,7 @@ final class ChangeExtendsProcessor
                           @Nonnull final String parentType,
                           final int expectedChangeCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _elementNamePattern = Objects.requireNonNull( elementNamePattern );
     _parentType = Objects.requireNonNull( parentType );
     _expectedChangeCount = expectedChangeCount;
@@ -40,19 +38,19 @@ final class ChangeExtendsProcessor
     {
       if ( _changeCount != _expectedChangeCount )
       {
-        _context.error( "Changed " + _changeCount + " extends but expected to " +
-                        "change " + _expectedChangeCount + " extends." );
+        context().error( "Changed " + _changeCount + " extends but expected to " +
+                         "change " + _expectedChangeCount + " extends." );
       }
     }
     else
     {
       if ( 0 == _changeCount )
       {
-        _context.error( "Changed " + _changeCount + " extends. Remove processor." );
+        context().error( "Changed " + _changeCount + " extends. Remove processor." );
       }
       else
       {
-        _context.debug( "Changed " + _changeCount + " extends." );
+        context().debug( "Changed " + _changeCount + " extends." );
       }
     }
   }

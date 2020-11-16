@@ -17,8 +17,6 @@ final class RemoveIncludesProcessor
   implements Completable
 {
   @Nonnull
-  private final PipelineContext _context;
-  @Nonnull
   private final Pattern _interfacePattern;
   @Nonnull
   private final Pattern _mixinPattern;
@@ -33,7 +31,7 @@ final class RemoveIncludesProcessor
                            @Nonnull final Pattern mixinPattern,
                            final int expectedRemoveCount )
   {
-    _context = Objects.requireNonNull( context );
+    super( context );
     _interfacePattern = Objects.requireNonNull( interfacePattern );
     _mixinPattern = Objects.requireNonNull( mixinPattern );
     _expectedRemoveCount = expectedRemoveCount;
@@ -46,19 +44,19 @@ final class RemoveIncludesProcessor
     {
       if ( _removeCount != _expectedRemoveCount )
       {
-        _context.error( "Removed " + _removeCount + " includes but expected to " +
-                        "remove " + _expectedRemoveCount + " includes." );
+        context().error( "Removed " + _removeCount + " includes but expected to " +
+                         "remove " + _expectedRemoveCount + " includes." );
       }
     }
     else
     {
       if ( 0 == _removeCount )
       {
-        _context.info( "Removed " + _removeCount + " includes." );
+        context().info( "Removed " + _removeCount + " includes." );
       }
       else
       {
-        _context.debug( "Removed " + _removeCount + " includes." );
+        context().debug( "Removed " + _removeCount + " includes." );
       }
     }
   }
