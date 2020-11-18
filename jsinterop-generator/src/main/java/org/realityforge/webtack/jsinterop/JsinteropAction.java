@@ -47,6 +47,7 @@ import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.EventMember;
 import org.realityforge.webtack.model.ExtendedAttribute;
 import org.realityforge.webtack.model.InterfaceDefinition;
+import org.realityforge.webtack.model.IterableMember;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.MapLikeMember;
 import org.realityforge.webtack.model.NamedDefinition;
@@ -1366,6 +1367,14 @@ final class JsinteropAction
     {
       generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
     }
+    final IterableMember iterable = definition.getIterable();
+    if ( null != iterable )
+    {
+      if ( null == iterable.getKeyType() )
+      {
+        generateIndexedIterableElements( name, iterable, type );
+      }
+    }
     if ( null != definition.getSetLikeMember() )
     {
       throw new UnsupportedOperationException( "setlike not yet supported in code generator" );
@@ -1379,6 +1388,62 @@ final class JsinteropAction
                           .build() );
 
     writeTopLevelType( name, type );
+  }
+
+  private void generateIndexedIterableElements( @Nonnull final String idlName,
+                                                @Nonnull final IterableMember iterable,
+                                                @Nonnull final TypeSpec.Builder type )
+  {
+    generateIndexedIterableEntry( iterable, type );
+    generateIndexedIterableEntriesMethod( idlName, type );
+  }
+
+  private void generateIndexedIterableEntriesMethod( @Nonnull final String idlName,
+                                                     @Nonnull final TypeSpec.Builder type )
+  {
+    final String methodName = "entries";
+    final MethodSpec.Builder method =
+      MethodSpec.methodBuilder( methodName )
+        .addAnnotation( BasicTypes.NONNULL )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), ClassName.bestGuess( "Entry" ) ) );
+    final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
+    if ( null != documentation )
+    {
+      method.addJavadoc( asJavadoc( documentation ) );
+    }
+    type.addMethod( method.build() );
+  }
+
+  private void generateIndexedIterableEntry( @Nonnull final IterableMember iterable,
+                                             @Nonnull final TypeSpec.Builder type )
+  {
+    type.addType( TypeSpec
+                    .classBuilder( "Entry" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                    .superclass( ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), TypeName.OBJECT ) )
+                    .addAnnotation( AnnotationSpec
+                                      .builder( JsinteropTypes.JS_TYPE )
+                                      .addMember( "isNative", "true" )
+                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                                      .addMember( "name", "$S", "Array" )
+                                      .build() )
+                    .addMethod( MethodSpec.methodBuilder( "index" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                                  .returns( TypeName.INT )
+                                  .addStatement( "return getAtAsAny( 0 ).asInt()" )
+                                  .build() )
+                    // Note that in the future @Nonnull and cast() in value method definition may not work
+                    // if primitive types or nullables are returned but works for current specs so we can
+                    // fix it if needed in the future
+                    .addMethod( MethodSpec.methodBuilder( "value" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                                  .addAnnotation( BasicTypes.NONNULL )
+                                  .returns( toTypeName( iterable.getValueType() ) )
+                                  .addStatement( "return getAtAsAny( 0 ).cast()" )
+                                  .build() ).build() );
   }
 
   private void generateOperations( @Nonnull final List<OperationMember> operations,
@@ -1577,6 +1642,14 @@ final class JsinteropAction
     if ( null != mapLike )
     {
       generateMapLikeOperations( name, definition.getOperations(), mapLike, type );
+    }
+    final IterableMember iterable = definition.getIterable();
+    if ( null != iterable )
+    {
+      if ( null == iterable.getKeyType() )
+      {
+        generateIndexedIterableElements( name, iterable, type );
+      }
     }
     if ( null != definition.getSetLikeMember() )
     {

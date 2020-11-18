@@ -7,6 +7,13 @@ interface SpeechSynthesis {
 };
 
 /**
+ * An indexed iterable.
+ */
+partial interface DOMTokenList {
+  iterable<DOMString>;
+};
+
+/**
  * A test for a read-only maplike.
  */
 [Exposed=Window]

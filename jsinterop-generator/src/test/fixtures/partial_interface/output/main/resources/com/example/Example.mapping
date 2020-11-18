@@ -1,6 +1,8 @@
+DOMTokenList=com.example.DOMTokenList
 Iterator=elemental2.core.JsIterator
 Object=java.lang.Object
 RTCStatsReport=com.example.RTCStatsReport
+Sequence=elemental2.core.JsArray
 SomeMapLikeDefiningOverrides=com.example.SomeMapLikeDefiningOverrides
 SomeOtherType=com.example.SomeOtherType
 SpeechSynthesis=com.example.SpeechSynthesis

@@ -1,4 +1,5 @@
 DOMStringMap=com.example.DOMStringMap
+DOMTokenList=com.example.DOMTokenList
 Event=com.example.Event
 EventInit=com.example.EventInit
 EventTarget=com.example.EventTarget

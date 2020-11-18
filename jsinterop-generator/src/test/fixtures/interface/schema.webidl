@@ -15,6 +15,13 @@ interface DOMStringMap {
   deleter undefined ( DOMString name );
 };
 
+/**
+ * An indexed iterable.
+ */
+interface DOMTokenList {
+  iterable<DOMString>;
+};
+
 [Exposed=(Window,Worker,AudioWorklet)]
 interface Event {
   const unsigned short AT_TARGET = 2;
