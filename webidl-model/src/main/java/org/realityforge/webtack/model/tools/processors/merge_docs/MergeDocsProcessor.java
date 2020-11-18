@@ -13,7 +13,6 @@ import org.realityforge.webtack.model.CallbackInterfaceDefinition;
 import org.realityforge.webtack.model.ConstMember;
 import org.realityforge.webtack.model.DictionaryDefinition;
 import org.realityforge.webtack.model.DictionaryMember;
-import org.realityforge.webtack.model.DocumentationBlockTag;
 import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.Element;
 import org.realityforge.webtack.model.EventMember;
@@ -29,8 +28,7 @@ import org.realityforge.webtack.model.PartialNamespaceDefinition;
 import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
-import org.realityforge.webtack.model.tools.mdn_scanner.DocKind;
-import org.realityforge.webtack.model.tools.mdn_scanner.ExternalRef;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocEntryUtil;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocIndex;
 import org.realityforge.webtack.model.tools.mdn_scanner.config2.EntryIndex;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
@@ -90,7 +88,7 @@ final class MergeDocsProcessor
                                        transformConstants( input.getConstants() ),
                                        shouldUseInputDocs( input, docEntry ) ?
                                        transformDocumentation( input.getDocumentation() ) :
-                                       createDocumentationElement( docEntry ),
+                                       DocEntryUtil.createDocumentationElement( docEntry ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
                                        transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -118,7 +116,7 @@ final class MergeDocsProcessor
                                transformSetLikeMember( input.getSetLikeMember() ),
                                shouldUseInputDocs( input, docEntry ) ?
                                transformDocumentation( input.getDocumentation() ) :
-                               createDocumentationElement( docEntry ),
+                               DocEntryUtil.createDocumentationElement( docEntry ),
                                transformExtendedAttributes( input.getExtendedAttributes() ),
                                transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -168,7 +166,7 @@ final class MergeDocsProcessor
                                                               Collections.emptyList(),
                                                               false,
                                                               Collections.emptyList() ),
-                                           createDocumentationElement( eventDocEntry ),
+                                           DocEntryUtil.createDocumentationElement( eventDocEntry ),
                                            attributes,
                                            Collections.emptyList() ) );
             }
@@ -231,7 +229,7 @@ final class MergeDocsProcessor
                                       transformSetLikeMember( input.getSetLikeMember() ),
                                       shouldUseInputDocs( input, docEntry ) ?
                                       transformDocumentation( input.getDocumentation() ) :
-                                      createDocumentationElement( docEntry ),
+                                      DocEntryUtil.createDocumentationElement( docEntry ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -253,7 +251,7 @@ final class MergeDocsProcessor
                            transformEventMembers( input.getEvents() ),
                            shouldUseInputDocs( input, docEntry ) ?
                            transformDocumentation( input.getDocumentation() ) :
-                           createDocumentationElement( docEntry ),
+                           DocEntryUtil.createDocumentationElement( docEntry ),
                            transformExtendedAttributes( input.getExtendedAttributes() ),
                            transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -275,7 +273,7 @@ final class MergeDocsProcessor
                                   transformEventMembers( input.getEvents() ),
                                   shouldUseInputDocs( input, docEntry ) ?
                                   transformDocumentation( input.getDocumentation() ) :
-                                  createDocumentationElement( docEntry ),
+                                  DocEntryUtil.createDocumentationElement( docEntry ),
                                   transformExtendedAttributes( input.getExtendedAttributes() ),
                                   transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -295,7 +293,7 @@ final class MergeDocsProcessor
                                 transformDictionaryMembers( input.getMembers() ),
                                 shouldUseInputDocs( input, docEntry ) ?
                                 transformDocumentation( input.getDocumentation() ) :
-                                createDocumentationElement( docEntry ),
+                                DocEntryUtil.createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -314,7 +312,7 @@ final class MergeDocsProcessor
                                        transformDictionaryMembers( input.getMembers() ),
                                        shouldUseInputDocs( input, docEntry ) ?
                                        transformDocumentation( input.getDocumentation() ) :
-                                       createDocumentationElement( docEntry ),
+                                       DocEntryUtil.createDocumentationElement( docEntry ),
                                        transformExtendedAttributes( input.getExtendedAttributes() ),
                                        transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -334,7 +332,7 @@ final class MergeDocsProcessor
                                transformAttributeMembers( input.getAttributes() ),
                                shouldUseInputDocs( input, docEntry ) ?
                                transformDocumentation( input.getDocumentation() ) :
-                               createDocumentationElement( docEntry ),
+                               DocEntryUtil.createDocumentationElement( docEntry ),
                                transformExtendedAttributes( input.getExtendedAttributes() ),
                                transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -354,7 +352,7 @@ final class MergeDocsProcessor
                                       transformAttributeMembers( input.getAttributes() ),
                                       shouldUseInputDocs( input, docEntry ) ?
                                       transformDocumentation( input.getDocumentation() ) :
-                                      createDocumentationElement( docEntry ),
+                                      DocEntryUtil.createDocumentationElement( docEntry ),
                                       transformExtendedAttributes( input.getExtendedAttributes() ),
                                       transformSourceLocations( input.getSourceLocations() ) );
     _type = null;
@@ -371,7 +369,7 @@ final class MergeDocsProcessor
                             transformConstValue( input.getValue() ),
                             shouldUseInputDocs( input, docEntry ) ?
                             transformDocumentation( input.getDocumentation() ) :
-                            createDocumentationElement( docEntry ),
+                            DocEntryUtil.createDocumentationElement( docEntry ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
                             transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -385,7 +383,7 @@ final class MergeDocsProcessor
                             input.getEventType(),
                             shouldUseInputDocs( input, docEntry ) ?
                             transformDocumentation( input.getDocumentation() ) :
-                            createDocumentationElement( docEntry ),
+                            DocEntryUtil.createDocumentationElement( docEntry ),
                             transformExtendedAttributes( input.getExtendedAttributes() ),
                             transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -401,7 +399,7 @@ final class MergeDocsProcessor
                                  input.getDefaultValue(),
                                  shouldUseInputDocs( input, docEntry ) ?
                                  transformDocumentation( input.getDocumentation() ) :
-                                 createDocumentationElement( docEntry ),
+                                 DocEntryUtil.createDocumentationElement( docEntry ),
                                  transformExtendedAttributes( input.getExtendedAttributes() ),
                                  transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -416,7 +414,7 @@ final class MergeDocsProcessor
                                 input.getModifiers(),
                                 shouldUseInputDocs( input, docEntry ) ?
                                 transformDocumentation( input.getDocumentation() ) :
-                                createDocumentationElement( docEntry ),
+                                DocEntryUtil.createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -433,7 +431,7 @@ final class MergeDocsProcessor
                                 transformType( input.getReturnType() ),
                                 shouldUseInputDocs( input, docEntry ) ?
                                 transformDocumentation( input.getDocumentation() ) :
-                                createDocumentationElement( docEntry ),
+                                DocEntryUtil.createDocumentationElement( docEntry ),
                                 transformExtendedAttributes( input.getExtendedAttributes() ),
                                 transformSourceLocations( input.getSourceLocations() ) );
   }
@@ -504,39 +502,6 @@ final class MergeDocsProcessor
   protected OperationMember transformOptionalOperationMember( @Nonnull final OperationMember input )
   {
     return transformOperationMember( input );
-  }
-
-  @Nonnull
-  private DocumentationElement createDocumentationElement( @Nonnull final DocEntry docEntry )
-  {
-    final List<DocumentationBlockTag> blockTags = new ArrayList<>();
-    blockTags.add( seeTag( docEntry ) );
-    final ExternalRef[] refs = docEntry.getRefs();
-    if ( null != refs )
-    {
-      for ( final ExternalRef ref : refs )
-      {
-        final String description = ref.getDescription();
-        blockTags.add( seeTag( null == description ? ref.getName() : description, ref.getHref() ) );
-      }
-    }
-    return new DocumentationElement( docEntry.getDescription(),
-                                     blockTags,
-                                     Collections.emptyList(),
-                                     true );
-  }
-
-  @Nonnull
-  private DocumentationBlockTag seeTag( @Nonnull final DocEntry docEntry )
-  {
-    final String label = docEntry.getKind() == DocKind.Event ? docEntry.getEventName() + " event" : docEntry.getName();
-    return seeTag( label + " - MDN", docEntry.getHref() );
-  }
-
-  @Nonnull
-  private DocumentationBlockTag seeTag( @Nonnull final String label, @Nonnull final String href )
-  {
-    return new DocumentationBlockTag( "see", "<a href=\"" + href + "\">" + label + "</a>" );
   }
 
   private boolean shouldUseInputDocs( @Nonnull final Element input, @Nullable final DocEntry docEntry )
