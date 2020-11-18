@@ -28,6 +28,7 @@ import javax.lang.model.SourceVersion;
 import org.realityforge.webtack.model.Attributed;
 import org.realityforge.webtack.model.ConstEnumerationDefinition;
 import org.realityforge.webtack.model.ConstEnumerationValue;
+import org.realityforge.webtack.model.DocumentationElement;
 import org.realityforge.webtack.model.EnumerationDefinition;
 import org.realityforge.webtack.model.EnumerationValue;
 import org.realityforge.webtack.model.FrozenArrayType;
@@ -41,6 +42,8 @@ import org.realityforge.webtack.model.TypeReference;
 import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.mdn_scanner.DocEntry;
+import org.realityforge.webtack.model.tools.mdn_scanner.config2.DocEntryUtil;
 import org.realityforge.webtack.model.tools.spi.Action;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
@@ -745,5 +748,13 @@ public abstract class AbstractJavaAction
         field.addAnnotation( emitMagicConstantAnnotation( constEnumeration ) );
       }
     }
+  }
+
+  @Nullable
+  protected final DocumentationElement getDocumentationElement( @Nonnull final String type,
+                                                                @Nullable final String member )
+  {
+    final DocEntry docEntry = context().docRepository().findDocEntry( type, member );
+    return null != docEntry ? DocEntryUtil.createDocumentationElement( docEntry ) : null;
   }
 }
