@@ -29,6 +29,12 @@ public final class DOMTokenList {
   }
 
   @Nonnull
+  public native JsIterator<Double> keys();
+
+  @Nonnull
+  public native JsIterator<String> values();
+
+  @Nonnull
   public native JsIterator<Entry> entries();
 
   @JsType(

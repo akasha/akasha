@@ -1395,6 +1395,8 @@ final class JsinteropAction
                                                 @Nonnull final TypeSpec.Builder type )
   {
     generateIndexedIterableEntry( iterable, type );
+    generateIndexedIterableKeysMethod( idlName, type );
+    generateIndexedIterableValuesMethod( idlName, iterable, type );
     generateIndexedIterableEntriesMethod( idlName, type );
   }
 
@@ -1408,6 +1410,42 @@ final class JsinteropAction
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), ClassName.bestGuess( "Entry" ) ) );
+    final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
+    if ( null != documentation )
+    {
+      method.addJavadoc( asJavadoc( documentation ) );
+    }
+    type.addMethod( method.build() );
+  }
+
+  private void generateIndexedIterableKeysMethod( @Nonnull final String idlName,
+                                                  @Nonnull final TypeSpec.Builder type )
+  {
+    final String methodName = "keys";
+    final MethodSpec.Builder method =
+      MethodSpec
+        .methodBuilder( methodName )
+        .addAnnotation( BasicTypes.NONNULL )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), TypeName.DOUBLE.box() ) );
+    final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
+    if ( null != documentation )
+    {
+      method.addJavadoc( asJavadoc( documentation ) );
+    }
+    type.addMethod( method.build() );
+  }
+
+  private void generateIndexedIterableValuesMethod( @Nonnull final String idlName,
+                                                    @Nonnull final IterableMember iterable,
+                                                    @Nonnull final TypeSpec.Builder type )
+  {
+    final String methodName = "values";
+    final MethodSpec.Builder method =
+      MethodSpec.methodBuilder( methodName )
+        .addAnnotation( BasicTypes.NONNULL )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), toTypeName( iterable.getValueType() ) ) );
     final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
     if ( null != documentation )
     {
