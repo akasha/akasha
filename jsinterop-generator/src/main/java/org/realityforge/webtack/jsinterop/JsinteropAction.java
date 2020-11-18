@@ -1403,7 +1403,8 @@ final class JsinteropAction
   {
     final String methodName = "entries";
     final MethodSpec.Builder method =
-      MethodSpec.methodBuilder( methodName )
+      MethodSpec
+        .methodBuilder( methodName )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), ClassName.bestGuess( "Entry" ) ) );
