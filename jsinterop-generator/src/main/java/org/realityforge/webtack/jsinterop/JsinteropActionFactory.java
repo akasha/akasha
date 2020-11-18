@@ -86,7 +86,8 @@ public final class JsinteropActionFactory
         externalTypeMappingPaths.add( catalog );
       }
     }
-    return new JsinteropAction( Paths.get( outputDirectory ),
+    return new JsinteropAction( context,
+                                Paths.get( outputDirectory ),
                                 packageName,
                                 globalInterface,
                                 predefinedTypeMappingPaths,

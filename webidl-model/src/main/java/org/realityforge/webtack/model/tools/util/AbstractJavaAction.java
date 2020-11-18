@@ -42,10 +42,13 @@ import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.spi.Action;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 
 public abstract class AbstractJavaAction
   implements Action
 {
+  @Nonnull
+  private final PipelineContext _context;
   @Nonnull
   private static final List<String> OBJECT_METHODS =
     Arrays.asList( "hashCode", "equals", "clone", "toString", "finalize", "getClass", "wait", "notifyAll", "notify" );
@@ -76,12 +79,14 @@ public abstract class AbstractJavaAction
    */
   private WebIDLSchema _schema;
 
-  protected AbstractJavaAction( @Nonnull final Path outputDirectory,
+  protected AbstractJavaAction( @Nonnull final PipelineContext context,
+                                @Nonnull final Path outputDirectory,
                                 @Nonnull final String packageName,
                                 final boolean enableMagicConstants,
                                 @Nonnull final List<Path> predefinedTypeMappingPaths,
                                 @Nonnull final List<Path> externalTypeMappingPaths )
   {
+    _context = Objects.requireNonNull( context );
     _outputDirectory = Objects.requireNonNull( outputDirectory );
     _packageName = Objects.requireNonNull( packageName );
     _enableMagicConstants = enableMagicConstants;
@@ -119,6 +124,12 @@ public abstract class AbstractJavaAction
       final String pkgName = externalMapping.getProperty( name );
       _externalIdlToJavaTypeMapping.put( name, ( pkgName.startsWith( "." ) ? getPackageName() : "" ) + pkgName );
     }
+  }
+
+  @Nonnull
+  protected final PipelineContext context()
+  {
+    return _context;
   }
 
   @Nonnull

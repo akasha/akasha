@@ -61,6 +61,7 @@ import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.UnionType;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
 import org.realityforge.webtack.model.tools.util.BasicTypes;
 import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
@@ -79,7 +80,8 @@ final class JsinteropAction
   private final boolean _generateGwtModule;
   private final boolean _generateTypeCatalog;
 
-  JsinteropAction( @Nonnull final Path outputDirectory,
+  JsinteropAction( @Nonnull final PipelineContext context,
+                   @Nonnull final Path outputDirectory,
                    @Nonnull final String packageName,
                    @Nullable final String globalInterface,
                    @Nonnull final List<Path> predefinedTypeMappingPaths,
@@ -88,7 +90,12 @@ final class JsinteropAction
                    final boolean generateTypeCatalog,
                    final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName, enableMagicConstants, predefinedTypeMappingPaths, externalTypeMappingPaths );
+    super( context,
+           outputDirectory,
+           packageName,
+           enableMagicConstants,
+           predefinedTypeMappingPaths,
+           externalTypeMappingPaths );
     _globalInterface = globalInterface;
     _generateGwtModule = generateGwtModule;
     _generateTypeCatalog = generateTypeCatalog;

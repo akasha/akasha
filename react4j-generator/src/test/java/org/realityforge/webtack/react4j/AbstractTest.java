@@ -23,7 +23,13 @@ import javax.annotation.Nullable;
 import org.realityforge.webtack.model.WebIDLModelParser;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.WebIDLWriter;
+import org.realityforge.webtack.model.tools.PipelineContextImpl;
+import org.realityforge.webtack.model.tools.pipeline.ExecutionContext;
+import org.realityforge.webtack.model.tools.pipeline.TestProgressListener;
+import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
+import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.qa.BailErrorListener;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.JavaProcess;
 import org.realityforge.webtack.model.tools.validator.ValidationError;
 import org.realityforge.webtack.model.tools.validator.ValidatorRuleConfig;
@@ -170,7 +176,8 @@ public abstract class AbstractTest
 
     final Path outputDirectory = getWorkingDir();
     final React4jAction action =
-      new React4jAction( outputDirectory,
+      new React4jAction( newPipelineContext( directory ),
+                         outputDirectory,
                          "com.example",
                          new ArrayList<>(),
                          new ArrayList<>(),
@@ -298,5 +305,27 @@ public abstract class AbstractTest
   private String asString( @Nonnull final Collection<ValidationError> errors )
   {
     return "Errors:\n" + errors.stream().map( ValidationError::getMessage ).collect( Collectors.joining( "\n" ) );
+  }
+
+  @Nonnull
+  protected PipelineContext newPipelineContext( @Nonnull final Path directory )
+  {
+    try
+    {
+      final ExecutionContext executionContext =
+        new ExecutionContext( directory.resolve( "idl" ), directory.resolve( "docs" ), new TestProgressListener() );
+      final PipelineConfig pipelineConfig = new PipelineConfig();
+      pipelineConfig.setName( "MyPipeline" );
+      pipelineConfig.setStages( new ArrayList<>() );
+      final PipelineContextImpl pipelineContext = new PipelineContextImpl( executionContext, pipelineConfig );
+      final StageConfig stage = new StageConfig();
+      stage.setName( "MyStage" );
+      pipelineContext.beforeStage( stage, Collections.emptyList() );
+      return pipelineContext;
+    }
+    catch ( final Exception e )
+    {
+      throw new IllegalStateException( e );
+    }
   }
 }

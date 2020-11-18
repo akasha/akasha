@@ -25,6 +25,7 @@ import org.realityforge.webtack.model.InterfaceDefinition;
 import org.realityforge.webtack.model.Kind;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.io.FilesUtil;
+import org.realityforge.webtack.model.tools.spi.PipelineContext;
 import org.realityforge.webtack.model.tools.util.AbstractJavaAction;
 import org.realityforge.webtack.model.tools.util.BasicTypes;
 import org.realityforge.webtack.model.tools.util.JsinteropTypes;
@@ -37,14 +38,15 @@ final class React4jAction
   private static final String HTML_ELEMENT = "HTMLElement";
   private final boolean _generateGwtModule;
 
-  React4jAction( @Nonnull final Path outputDirectory,
+  React4jAction( @Nonnull final PipelineContext context,
+                 @Nonnull final Path outputDirectory,
                  @Nonnull final String packageName,
                  @Nonnull final List<Path> predefinedTypeMappingPaths,
                  @Nonnull final List<Path> externalTypeMappingPaths,
                  final boolean generateGwtModule,
                  final boolean enableMagicConstants )
   {
-    super( outputDirectory, packageName, enableMagicConstants, predefinedTypeMappingPaths, externalTypeMappingPaths );
+    super( context, outputDirectory, packageName, enableMagicConstants, predefinedTypeMappingPaths, externalTypeMappingPaths );
     _generateGwtModule = generateGwtModule;
   }
 

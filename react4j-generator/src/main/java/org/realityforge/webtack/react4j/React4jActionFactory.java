@@ -74,7 +74,8 @@ public final class React4jActionFactory
       }
     }
 
-    return new React4jAction( Paths.get( outputDirectory ),
+    return new React4jAction( context,
+                              Paths.get( outputDirectory ),
                               packageName,
                               predefinedTypeMappingPaths,
                               externalTypeMappingPaths,
