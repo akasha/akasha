@@ -304,6 +304,10 @@
         "url": "https://w3c.github.io/touch-events/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "typedarray"
+    },
+    {
         "lastModifiedTime": 1559144861000,
         "name": "uievents",
         "url": "https://www.w3.org/TR/uievents/"
