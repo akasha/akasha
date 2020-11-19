@@ -1395,17 +1395,19 @@ final class JsinteropAction
                                                 @Nonnull final TypeSpec.Builder type )
   {
     generateIndexedIterableEntry( iterable, type );
-    generateIndexedIterableKeysMethod( idlName, type );
-    generateIndexedIterableValuesMethod( idlName, iterable, type );
-    generateIndexedIterableEntriesMethod( idlName, type );
-    generateIndexedIterableForEachMethod( idlName, iterable, type );
+    generateIterableKeysMethod( idlName, TypeName.DOUBLE, type );
+    generateIterableValuesMethod( idlName, iterable, type );
+    generateIterableEntriesMethod( idlName, type );
+    generateIterableForEachMethod( idlName, iterable, TypeName.INT, "index", type );
   }
 
-  private void generateIndexedIterableForEachMethod( @Nonnull final String idlName,
-                                                     @Nonnull final IterableMember iterable,
-                                                     @Nonnull final TypeSpec.Builder type )
+  private void generateIterableForEachMethod( @Nonnull final String idlName,
+                                              @Nonnull final IterableMember iterable,
+                                              @Nonnull final TypeName keyType,
+                                              @Nonnull final String keyName,
+                                              @Nonnull final TypeSpec.Builder type )
   {
-    final ParameterSpec indexParam = ParameterSpec.builder( TypeName.INT, "index" ).build();
+    final ParameterSpec indexParam = ParameterSpec.builder( keyType, keyName ).build();
 
     final TypeName valueType = toTypeName( iterable.getValueType() );
     final ParameterSpec.Builder valueParamBuilder = ParameterSpec.builder( valueType, "value" );
@@ -1482,8 +1484,7 @@ final class JsinteropAction
     type.addMethod( forEach3.build() );
   }
 
-  private void generateIndexedIterableEntriesMethod( @Nonnull final String idlName,
-                                                     @Nonnull final TypeSpec.Builder type )
+  private void generateIterableEntriesMethod( @Nonnull final String idlName, @Nonnull final TypeSpec.Builder type )
   {
     final String methodName = "entries";
     final MethodSpec.Builder method =
@@ -1496,8 +1497,9 @@ final class JsinteropAction
     type.addMethod( method.build() );
   }
 
-  private void generateIndexedIterableKeysMethod( @Nonnull final String idlName,
-                                                  @Nonnull final TypeSpec.Builder type )
+  private void generateIterableKeysMethod( @Nonnull final String idlName,
+                                           @Nonnull final TypeName keyType,
+                                           @Nonnull final TypeSpec.Builder type )
   {
     final String methodName = "keys";
     final MethodSpec.Builder method =
@@ -1505,14 +1507,14 @@ final class JsinteropAction
         .methodBuilder( methodName )
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), TypeName.DOUBLE.box() ) );
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), keyType.box() ) );
     maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
 
-  private void generateIndexedIterableValuesMethod( @Nonnull final String idlName,
-                                                    @Nonnull final IterableMember iterable,
-                                                    @Nonnull final TypeSpec.Builder type )
+  private void generateIterableValuesMethod( @Nonnull final String idlName,
+                                             @Nonnull final IterableMember iterable,
+                                             @Nonnull final TypeSpec.Builder type )
   {
     final String methodName = "values";
     final MethodSpec.Builder method =
