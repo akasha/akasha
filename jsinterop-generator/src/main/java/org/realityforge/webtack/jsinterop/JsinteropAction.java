@@ -1372,7 +1372,7 @@ final class JsinteropAction
     {
       if ( null == iterable.getKeyType() )
       {
-        generateIndexedIterableElements( name, iterable, type );
+        generateValueIterableElements( name, iterable, type );
       }
       else
       {
@@ -1443,11 +1443,11 @@ final class JsinteropAction
                                   .build() ).build() );
   }
 
-  private void generateIndexedIterableElements( @Nonnull final String idlName,
-                                                @Nonnull final IterableMember iterable,
-                                                @Nonnull final TypeSpec.Builder type )
+  private void generateValueIterableElements( @Nonnull final String idlName,
+                                              @Nonnull final IterableMember iterable,
+                                              @Nonnull final TypeSpec.Builder type )
   {
-    generateIndexedIterableEntry( iterable, type );
+    generateValueIterableEntry( iterable, type );
     generateIterableKeysMethod( idlName, TypeName.DOUBLE, type );
     generateIterableValuesMethod( idlName, iterable, type );
     generateIterableEntriesMethod( idlName, type );
@@ -1579,8 +1579,8 @@ final class JsinteropAction
     type.addMethod( method.build() );
   }
 
-  private void generateIndexedIterableEntry( @Nonnull final IterableMember iterable,
-                                             @Nonnull final TypeSpec.Builder type )
+  private void generateValueIterableEntry( @Nonnull final IterableMember iterable,
+                                           @Nonnull final TypeSpec.Builder type )
   {
     type.addType( TypeSpec
                     .classBuilder( "Entry" )
@@ -1812,7 +1812,7 @@ final class JsinteropAction
     {
       if ( null == iterable.getKeyType() )
       {
-        generateIndexedIterableElements( name, iterable, type );
+        generateValueIterableElements( name, iterable, type );
       }
       else
       {
