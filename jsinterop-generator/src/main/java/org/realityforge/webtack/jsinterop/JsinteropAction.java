@@ -1851,31 +1851,42 @@ final class JsinteropAction
     addNullabilityAnnotationIfRequired( mapLike.getValueType(), valueParamBuilder );
     final ParameterSpec valueParam = valueParamBuilder.build();
 
-    type.addMethod( MethodSpec
-                      .methodBuilder( "has" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addParameter( keyParam )
-                      .returns( TypeName.BOOLEAN )
-                      .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "get" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( BasicTypes.NULLABLE )
-                      .addParameter( keyParam )
-                      .returns( boxedValueType )
-                      .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "keys" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( BasicTypes.NONNULL )
-                      .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedKeyType ) )
-                      .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "values" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( BasicTypes.NONNULL )
-                      .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedValueType ) )
-                      .build() );
+    final MethodSpec.Builder has =
+      MethodSpec
+        .methodBuilder( "has" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( keyParam )
+        .returns( TypeName.BOOLEAN );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "has" ), has );
+    type.addMethod( has.build() );
+
+    final MethodSpec.Builder get = MethodSpec
+      .methodBuilder( "get" )
+      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+      .addAnnotation( BasicTypes.NULLABLE )
+      .addParameter( keyParam )
+      .returns( boxedValueType );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "get" ), get );
+    type.addMethod( get.build() );
+
+    final MethodSpec.Builder keys =
+      MethodSpec
+        .methodBuilder( "keys" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedKeyType ) );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "keys" ), keys );
+    type.addMethod( keys.build() );
+
+    final MethodSpec.Builder values =
+      MethodSpec
+        .methodBuilder( "values" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), boxedValueType ) );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "values" ), values );
+    type.addMethod( values.build() );
+
     type.addType( TypeSpec
                     .interfaceBuilder( "Entry" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
@@ -1898,13 +1909,16 @@ final class JsinteropAction
                                   .addStatement( "return $T.asArray( this )[ 1 ].cast()", JsinteropTypes.JS )
                                   .build() )
                     .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "entries" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addAnnotation( BasicTypes.NONNULL )
-                      .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ),
-                                                           ClassName.bestGuess( "Entry" ) ) )
-                      .build() );
+    final MethodSpec.Builder entries =
+      MethodSpec
+        .methodBuilder( "entries" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addAnnotation( BasicTypes.NONNULL )
+        .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ),
+                                             ClassName.bestGuess( "Entry" ) ) );
+    maybeAddJavadoc( getDocumentationElement( definitionName, "entries" ), entries );
+    type.addMethod( entries.build() );
+
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
@@ -1944,27 +1958,34 @@ final class JsinteropAction
                                                    .build() )
                                   .build() )
                     .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "forEach" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
-                                       .addAnnotation( BasicTypes.NONNULL )
-                                       .build() )
-                      .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "forEach" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
-                                       .addAnnotation( BasicTypes.NONNULL )
-                                       .build() )
-                      .build() );
-    type.addMethod( MethodSpec
-                      .methodBuilder( "forEach" )
-                      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
-                                       .addAnnotation( BasicTypes.NONNULL )
-                                       .build() )
-                      .build() );
+    final DocumentationElement forEachDocumentation = getDocumentationElement( definitionName, "forEach" );
+    final MethodSpec.Builder forEach1 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( forEachDocumentation, forEach1 );
+    type.addMethod( forEach1.build() );
+    final MethodSpec.Builder forEach2 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( forEachDocumentation, forEach2 );
+    type.addMethod( forEach2.build() );
+
+    final MethodSpec.Builder forEach3 = MethodSpec
+      .methodBuilder( "forEach" )
+      .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+      .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
+                       .addAnnotation( BasicTypes.NONNULL )
+                       .build() );
+    maybeAddJavadoc( forEachDocumentation, forEach3 );
+    type.addMethod( forEach3.build() );
     if ( !mapLike.isReadOnly() )
     {
       final boolean setPresent =
@@ -1975,12 +1996,13 @@ final class JsinteropAction
                           Kind.Void == o.getReturnType().getKind() );
       if ( !setPresent )
       {
-        type.addMethod( MethodSpec
-                          .methodBuilder( "set" )
-                          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                          .addParameter( keyParam )
-                          .addParameter( valueParam )
-                          .build() );
+        final MethodSpec.Builder set = MethodSpec
+          .methodBuilder( "set" )
+          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+          .addParameter( keyParam )
+          .addParameter( valueParam );
+        maybeAddJavadoc( getDocumentationElement( definitionName, "set" ), set );
+        type.addMethod( set.build() );
       }
 
       final boolean deletePresent =
@@ -1991,12 +2013,14 @@ final class JsinteropAction
                           Kind.Boolean == o.getReturnType().getKind() );
       if ( !deletePresent )
       {
-        type.addMethod( MethodSpec
-                          .methodBuilder( "delete" )
-                          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                          .addParameter( keyParam )
-                          .returns( TypeName.BOOLEAN )
-                          .build() );
+        final MethodSpec.Builder delete =
+          MethodSpec
+            .methodBuilder( "delete" )
+            .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+            .addParameter( keyParam )
+            .returns( TypeName.BOOLEAN );
+        maybeAddJavadoc( getDocumentationElement( definitionName, "delete" ), delete );
+        type.addMethod( delete.build() );
       }
 
       final boolean clearPresent =
@@ -2007,10 +2031,12 @@ final class JsinteropAction
                           Kind.Void == o.getReturnType().getKind() );
       if ( !clearPresent )
       {
-        type.addMethod( MethodSpec
-                          .methodBuilder( "clear" )
-                          .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
-                          .build() );
+        final MethodSpec.Builder clear =
+          MethodSpec
+            .methodBuilder( "clear" )
+            .addModifiers( Modifier.PUBLIC, Modifier.NATIVE );
+        maybeAddJavadoc( getDocumentationElement( definitionName, "clear" ), clear );
+        type.addMethod( clear.build() );
       }
     }
   }
