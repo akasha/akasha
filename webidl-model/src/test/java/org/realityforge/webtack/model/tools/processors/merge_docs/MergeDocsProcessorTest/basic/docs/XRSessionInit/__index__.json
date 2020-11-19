@@ -1,19 +1,18 @@
-
 {
-    "name": "XRSessionInit",
-    "lastModifiedAt": 0,
-    "entries": [
-        {
-            "name": "__type__",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "optionalFeatures",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "requiredFeatures",
-            "lastModifiedAt": 0
-        }
-    ]
+  "name": "XRSessionInit",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "__type__",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "optionalFeatures",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "requiredFeatures",
+      "lastModifiedAt": 0
+    }
+  ]
 }

@@ -1,27 +1,26 @@
-
 {
-    "name": "Window",
-    "lastModifiedAt": 0,
-    "entries": [
-        {
-            "name": "__type__",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "devicemotion_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "focus_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "orientationchange_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "someVar",
-            "lastModifiedAt": 0
-        }
-    ]
+  "name": "Window",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "__type__",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "devicemotion_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "focus_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "orientationchange_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "someVar",
+      "lastModifiedAt": 0
+    }
+  ]
 }

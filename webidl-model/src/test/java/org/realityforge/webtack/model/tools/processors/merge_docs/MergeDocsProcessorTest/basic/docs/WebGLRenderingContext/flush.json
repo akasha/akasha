@@ -1,7 +1,6 @@
-
 {
-    "kind": "Method",
-    "name": "WebGLRenderingContext.flush",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush",
-    "description": "Docs for WebGLRenderingContext.flush"
+  "kind": "Method",
+  "name": "WebGLRenderingContext.flush",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/flush",
+  "description": "Docs for WebGLRenderingContext.flush"
 }

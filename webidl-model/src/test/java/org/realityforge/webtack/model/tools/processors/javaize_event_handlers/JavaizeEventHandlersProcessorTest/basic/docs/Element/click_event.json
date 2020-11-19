@@ -1,10 +1,9 @@
-
 {
-    "kind": "Event",
-    "name": "Element.click_event",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event",
-    "description": "The click event",
-    "eventName": "click",
-    "eventType": "MouseEvent",
-    "eventHandlerProperty": "onclick"
+  "kind": "Event",
+  "name": "Element.click_event",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event",
+  "description": "The click event",
+  "eventName": "click",
+  "eventType": "MouseEvent",
+  "eventHandlerProperty": "onclick"
 }

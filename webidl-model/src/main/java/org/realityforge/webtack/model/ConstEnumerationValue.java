@@ -62,7 +62,9 @@ public final class ConstEnumerationValue
     else
     {
       final ConstEnumerationValue other = (ConstEnumerationValue) o;
-      return _interfaceName.equals( other._interfaceName ) && _constName.equals( other._constName ) && Objects.equals( _documentation, other._documentation );
+      return _interfaceName.equals( other._interfaceName ) &&
+             _constName.equals( other._constName ) &&
+             Objects.equals( _documentation, other._documentation );
     }
   }
 

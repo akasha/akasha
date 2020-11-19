@@ -21,7 +21,7 @@ public final class AsyncIterableMember
                               @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( documentation, extendedAttributes, sourceLocations );
-    _keyType =  keyType;
+    _keyType = keyType;
     _valueType = Objects.requireNonNull( valueType );
   }
 

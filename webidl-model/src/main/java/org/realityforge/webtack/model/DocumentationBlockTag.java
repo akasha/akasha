@@ -48,7 +48,7 @@ public final class DocumentationBlockTag
     {
       return true;
     }
-    else if ( o == null || getClass() != o.getClass()  )
+    else if ( o == null || getClass() != o.getClass() )
     {
       return false;
     }

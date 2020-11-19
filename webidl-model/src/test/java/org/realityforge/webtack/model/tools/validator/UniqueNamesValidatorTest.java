@@ -46,7 +46,8 @@ public final class UniqueNamesValidatorTest
     assertErrorPresent( errors,
                         "Typedef named 'CallbackInterfaceA' conflicts with a callback interface with the same name." );
     assertErrorPresent( errors, "Typedef named 'EnumerationA' conflicts with a enumeration with the same name." );
-    assertErrorPresent( errors, "Typedef named 'ConstEnumerationA' conflicts with a const enumeration with the same name." );
+    assertErrorPresent( errors,
+                        "Typedef named 'ConstEnumerationA' conflicts with a const enumeration with the same name." );
     assertErrorPresent( errors, "Typedef named 'DictionaryA' conflicts with a dictionary with the same name." );
     assertErrorPresent( errors, "Typedef named 'InterfaceA' conflicts with a interface with the same name." );
     assertErrorPresent( errors, "Interface named 'InterfaceA' conflicts with a typedef with the same name." );
@@ -55,7 +56,8 @@ public final class UniqueNamesValidatorTest
     assertErrorPresent( errors,
                         "Callback interface named 'CallbackInterfaceA' conflicts with a typedef with the same name." );
     assertErrorPresent( errors, "Enumeration named 'EnumerationA' conflicts with a typedef with the same name." );
-    assertErrorPresent( errors, "Const enumeration named 'ConstEnumerationA' conflicts with a typedef with the same name." );
+    assertErrorPresent( errors,
+                        "Const enumeration named 'ConstEnumerationA' conflicts with a typedef with the same name." );
   }
 
   @Test
@@ -78,7 +80,8 @@ public final class UniqueNamesValidatorTest
     assertErrorPresent( errors,
                         "Interface named 'CallbackInterfaceA' conflicts with a callback interface with the same name." );
     assertErrorPresent( errors, "Interface named 'EnumerationA' conflicts with a enumeration with the same name." );
-    assertErrorPresent( errors, "Interface named 'ConstEnumerationA' conflicts with a const enumeration with the same name." );
+    assertErrorPresent( errors,
+                        "Interface named 'ConstEnumerationA' conflicts with a const enumeration with the same name." );
     assertErrorPresent( errors, "Interface named 'DictionaryA' conflicts with a dictionary with the same name." );
     assertErrorPresent( errors, "Interface named 'TypedefA' conflicts with a typedef with the same name." );
     assertErrorPresent( errors, "Typedef named 'TypedefA' conflicts with a interface with the same name." );
@@ -87,7 +90,8 @@ public final class UniqueNamesValidatorTest
     assertErrorPresent( errors,
                         "Callback interface named 'CallbackInterfaceA' conflicts with a interface with the same name." );
     assertErrorPresent( errors, "Enumeration named 'EnumerationA' conflicts with a interface with the same name." );
-    assertErrorPresent( errors, "Const enumeration named 'ConstEnumerationA' conflicts with a interface with the same name." );
+    assertErrorPresent( errors,
+                        "Const enumeration named 'ConstEnumerationA' conflicts with a interface with the same name." );
   }
 
   @Nonnull

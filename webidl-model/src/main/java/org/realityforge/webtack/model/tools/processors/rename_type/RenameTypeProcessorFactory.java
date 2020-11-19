@@ -21,6 +21,6 @@ public final class RenameTypeProcessorFactory
     return new RenameTypeProcessor( context,
                                     requirePattern( "namePattern", namePattern ),
                                     requireNonNull( "replacement", replacement ),
-                                    expectedRenameCount);
+                                    expectedRenameCount );
   }
 }

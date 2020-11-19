@@ -46,10 +46,11 @@ public final class CallbackDefinitionTest
     // Multiple args
     {
       final CallbackDefinition definition =
-        ensureCallbackDefinition( "callback XRFrameRequestCallback = undefined (DOMHighResTimeStamp time, XRFrame frame);",
-                                  "XRFrameRequestCallback",
-                                  Kind.Void,
-                                  2 );
+        ensureCallbackDefinition(
+          "callback XRFrameRequestCallback = undefined (DOMHighResTimeStamp time, XRFrame frame);",
+          "XRFrameRequestCallback",
+          Kind.Void,
+          2 );
       final List<Argument> arguments = definition.getArguments();
       final Argument argument1 = arguments.get( 0 );
       assertEquals( argument1.getName(), "time" );

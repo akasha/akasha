@@ -1,12 +1,11 @@
-
 {
-    "kind": "Event",
-    "name": "GlobalEventHandlers.blee_event",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/blee_event",
-    "description": "The blee event...",
-    "eventName": "blee",
-    "eventType": "BleeEvent",
-    "eventHandlerProperty": "onblee",
-    "eventBubbles": true,
-    "eventCancelable": true
+  "kind": "Event",
+  "name": "GlobalEventHandlers.blee_event",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/Element/blee_event",
+  "description": "The blee event...",
+  "eventName": "blee",
+  "eventType": "BleeEvent",
+  "eventHandlerProperty": "onblee",
+  "eventBubbles": true,
+  "eventCancelable": true
 }

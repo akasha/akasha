@@ -1,35 +1,34 @@
-
 {
-    "name": "Event",
-    "lastModifiedAt": 0,
-    "entries": [
-        {
-            "name": "AT_TARGET",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "Event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "__type__",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "bubbles",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "cancelBubble",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "composedPath",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "filterGlobalEvent",
-            "lastModifiedAt": 0
-        }
-    ]
+  "name": "Event",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "AT_TARGET",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "Event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "__type__",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "bubbles",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "cancelBubble",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "composedPath",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "filterGlobalEvent",
+      "lastModifiedAt": 0
+    }
+  ]
 }

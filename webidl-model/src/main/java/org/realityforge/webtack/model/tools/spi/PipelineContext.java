@@ -19,5 +19,5 @@ public interface PipelineContext
 
   void error( @Nonnull String message );
 
-  void afterStage(  @Nonnull StageConfig stage, @Nonnull List<WebIDLSchema> schemas );
+  void afterStage( @Nonnull StageConfig stage, @Nonnull List<WebIDLSchema> schemas );
 }

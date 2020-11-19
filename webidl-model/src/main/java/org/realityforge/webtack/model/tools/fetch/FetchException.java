@@ -9,10 +9,10 @@ public final class FetchException
   @Nonnull
   private final String _url;
 
-  public FetchException( @Nonnull final String url,@Nonnull final Throwable cause )
+  public FetchException( @Nonnull final String url, @Nonnull final Throwable cause )
   {
     super( cause );
-    _url = Objects.requireNonNull(url);
+    _url = Objects.requireNonNull( url );
   }
 
   @Nonnull

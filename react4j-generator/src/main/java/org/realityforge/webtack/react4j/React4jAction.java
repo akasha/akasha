@@ -46,7 +46,12 @@ final class React4jAction
                  final boolean generateGwtModule,
                  final boolean enableMagicConstants )
   {
-    super( context, outputDirectory, packageName, enableMagicConstants, predefinedTypeMappingPaths, externalTypeMappingPaths );
+    super( context,
+           outputDirectory,
+           packageName,
+           enableMagicConstants,
+           predefinedTypeMappingPaths,
+           externalTypeMappingPaths );
     _generateGwtModule = generateGwtModule;
   }
 

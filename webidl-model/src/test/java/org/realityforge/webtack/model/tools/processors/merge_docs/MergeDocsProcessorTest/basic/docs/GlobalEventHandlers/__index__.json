@@ -1,35 +1,34 @@
-
 {
-    "name": "GlobalEventHandlers",
-    "lastModifiedAt": 0,
-    "entries": [
-        {
-            "name": "__type__",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "abort_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "blee_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "blur_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "focus_event",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "onabort",
-            "lastModifiedAt": 0
-        },
-        {
-            "name": "onblur",
-            "lastModifiedAt": 0
-        }
-    ]
+  "name": "GlobalEventHandlers",
+  "lastModifiedAt": 0,
+  "entries": [
+    {
+      "name": "__type__",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "abort_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "blee_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "blur_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "focus_event",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "onabort",
+      "lastModifiedAt": 0
+    },
+    {
+      "name": "onblur",
+      "lastModifiedAt": 0
+    }
+  ]
 }

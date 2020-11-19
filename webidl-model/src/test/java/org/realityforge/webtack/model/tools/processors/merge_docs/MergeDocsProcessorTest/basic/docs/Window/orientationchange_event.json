@@ -1,12 +1,11 @@
-
 {
-    "kind": "Event",
-    "name": "Window.orientationchange_event",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event",
-    "description": "The orientationchange event is fired when the orientation of the device has changed.",
-    "eventName": "orientationchange",
-    "eventType": "Event",
-    "eventHandlerProperty": "onorientationchange",
-    "eventBubbles": true,
-    "eventCancelable": true
+  "kind": "Event",
+  "name": "Window.orientationchange_event",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/orientationchange_event",
+  "description": "The orientationchange event is fired when the orientation of the device has changed.",
+  "eventName": "orientationchange",
+  "eventType": "Event",
+  "eventHandlerProperty": "onorientationchange",
+  "eventBubbles": true,
+  "eventCancelable": true
 }

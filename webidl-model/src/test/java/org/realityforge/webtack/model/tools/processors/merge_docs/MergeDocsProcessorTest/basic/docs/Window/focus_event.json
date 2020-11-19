@@ -1,12 +1,11 @@
-
 {
-    "kind": "Event",
-    "name": "Window.focus_event",
-    "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event",
-    "description": "The focus event fires when a Window has received focus.",
-    "eventName": "focus",
-    "eventType": "FocusEvent",
-    "eventHandlerProperty": "onfocus",
-    "eventBubbles": true,
-    "eventCancelable": true
+  "kind": "Event",
+  "name": "Window.focus_event",
+  "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window/focus_event",
+  "description": "The focus event fires when a Window has received focus.",
+  "eventName": "focus",
+  "eventType": "FocusEvent",
+  "eventHandlerProperty": "onfocus",
+  "eventBubbles": true,
+  "eventCancelable": true
 }

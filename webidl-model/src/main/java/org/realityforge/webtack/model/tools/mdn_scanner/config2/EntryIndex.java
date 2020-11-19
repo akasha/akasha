@@ -10,7 +10,6 @@ public class EntryIndex
 {
   @Nonnull
   public static final String TYPE_KEY = "__type__";
-
   //qualifiedName exists to stop Jsonb crashing when it can not find field for @JsonbTransient setter
   @SuppressWarnings( "unused" )
   private String qualifiedName;

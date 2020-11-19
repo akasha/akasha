@@ -1,23 +1,22 @@
-
 {
-    "name": "WebGLRenderingContext",
-    "lastModifiedAt": 1599389617786,
-    "entries": [
-        {
-            "name": "__type__",
-            "lastModifiedAt": 1597192683340
-        },
-        {
-            "name": "finish",
-            "lastModifiedAt": 1597192683340
-        },
-        {
-            "name": "flush",
-            "lastModifiedAt": 1597192683340
-        },
-        {
-            "name": "uniform",
-            "lastModifiedAt": 1597192683340
-        }
-    ]
+  "name": "WebGLRenderingContext",
+  "lastModifiedAt": 1599389617786,
+  "entries": [
+    {
+      "name": "__type__",
+      "lastModifiedAt": 1597192683340
+    },
+    {
+      "name": "finish",
+      "lastModifiedAt": 1597192683340
+    },
+    {
+      "name": "flush",
+      "lastModifiedAt": 1597192683340
+    },
+    {
+      "name": "uniform",
+      "lastModifiedAt": 1597192683340
+    }
+  ]
 }

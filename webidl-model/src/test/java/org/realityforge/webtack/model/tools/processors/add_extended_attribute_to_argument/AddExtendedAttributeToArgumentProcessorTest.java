@@ -44,7 +44,8 @@ public final class AddExtendedAttributeToArgumentProcessorTest
                                                        "^transfer$",
                                                        "Transferables",
                                                        2000 ) );
-    progressListener.assertContains( "stageError(MyPipeline,MyStage): ERROR: Added 2 extended attributes but expected to add 2000 extended attributes." );
+    progressListener.assertContains(
+      "stageError(MyPipeline,MyStage): ERROR: Added 2 extended attributes but expected to add 2000 extended attributes." );
   }
 
   @SuppressWarnings( "SameParameterValue" )

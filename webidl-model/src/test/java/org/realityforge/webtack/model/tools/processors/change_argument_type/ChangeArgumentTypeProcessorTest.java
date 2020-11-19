@@ -44,7 +44,8 @@ public final class ChangeArgumentTypeProcessorTest
                                                        "^type$",
                                                        "ShaderType",
                                                        2000 ) );
-    progressListener.assertContains( "stageError(MyPipeline,MyStage): ERROR: Changed 1 arguments but expected to change 2000 arguments." );
+    progressListener.assertContains(
+      "stageError(MyPipeline,MyStage): ERROR: Changed 1 arguments but expected to change 2000 arguments." );
   }
 
   @SuppressWarnings( "SameParameterValue" )
