@@ -72,9 +72,6 @@ complete as there is too much un-said.
 
 * Add codegen for `AsyncIterableMember`
 
-* Generate a test that checks whether the browser supports the symbols that are in the webidl. Essentially the test
-  would use raw inspection of objects to see if they line up with what is in WebIDL
-
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?
 
