@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.AbstractTest;
 import org.realityforge.webtack.model.WebIDLSchema;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
+import org.realityforge.webtack.model.tools.qa.TestProgressListener;
 import org.realityforge.webtack.model.tools.repository.config.RepositoryConfig;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;

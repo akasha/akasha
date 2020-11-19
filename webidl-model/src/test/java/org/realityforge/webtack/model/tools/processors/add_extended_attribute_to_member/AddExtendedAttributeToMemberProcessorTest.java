@@ -3,8 +3,8 @@ package org.realityforge.webtack.model.tools.processors.add_extended_attribute_t
 import javax.annotation.Nonnull;
 import javax.json.Json;
 import org.realityforge.webtack.model.tools.pipeline.ProgressListener;
-import org.realityforge.webtack.model.tools.pipeline.TestProgressListener;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessorTest;
+import org.realityforge.webtack.model.tools.qa.TestProgressListener;
 import org.realityforge.webtack.model.tools.spi.Processor;
 import org.realityforge.webtack.model.tools.spi.Registry;
 import org.testng.annotations.Test;

@@ -1,14 +1,14 @@
-package org.realityforge.webtack.model.tools.pipeline;
+package org.realityforge.webtack.model.tools.qa;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 import org.realityforge.webtack.model.WebIDLSchema;
+import org.realityforge.webtack.model.tools.pipeline.ProgressListener;
 import org.realityforge.webtack.model.tools.pipeline.config.PipelineConfig;
 import org.realityforge.webtack.model.tools.pipeline.config.StageConfig;
 import org.realityforge.webtack.model.tools.repository.config.SourceConfig;
-import static org.testng.Assert.*;
 
 public final class TestProgressListener
   implements ProgressListener
@@ -73,15 +73,17 @@ public final class TestProgressListener
   }
 
   @Nonnull
-  List<String> getTrace()
+  public List<String> getTrace()
   {
     return _trace;
   }
 
   public void assertContains( @Nonnull final String line )
   {
-    assertTrue( _trace.contains( line ),
-                "Expected trace to contain line:\n\n" + line +
-                "\n\nbut trace consisted of:\n\n" + String.join( "\n", _trace ) + "\n" );
+    if ( !_trace.contains( line ) )
+    {
+      throw new AssertionError( "Expected trace to contain line:\n\n" + line +
+                                "\n\nbut trace consisted of:\n\n" + String.join( "\n", _trace ) + "\n" );
+    }
   }
 }
