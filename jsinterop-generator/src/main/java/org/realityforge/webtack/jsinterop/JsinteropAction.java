@@ -1413,7 +1413,6 @@ final class JsinteropAction
     final ParameterSpec valueParam = valueParamBuilder.build();
 
     final DocumentationElement documentation = getDocumentationElement( idlName, "forEach" );
-    final String javadoc = null != documentation ? asJavadoc( documentation ) : null;
 
     type.addType( TypeSpec
                     .interfaceBuilder( "ForEachCallback" )
