@@ -1398,6 +1398,89 @@ final class JsinteropAction
     generateIndexedIterableKeysMethod( idlName, type );
     generateIndexedIterableValuesMethod( idlName, iterable, type );
     generateIndexedIterableEntriesMethod( idlName, type );
+    generateIndexedIterableForEachMethod( idlName, iterable, type );
+  }
+
+  private void generateIndexedIterableForEachMethod( @Nonnull final String idlName,
+                                                     @Nonnull final IterableMember iterable,
+                                                     @Nonnull final TypeSpec.Builder type )
+  {
+    final ParameterSpec indexParam = ParameterSpec.builder( TypeName.INT, "index" ).build();
+
+    final TypeName valueType = toTypeName( iterable.getValueType() );
+    final ParameterSpec.Builder valueParamBuilder = ParameterSpec.builder( valueType, "value" );
+    addNullabilityAnnotationIfRequired( iterable.getValueType(), valueParamBuilder );
+    final ParameterSpec valueParam = valueParamBuilder.build();
+
+    final DocumentationElement documentation = getDocumentationElement( idlName, "forEach" );
+    final String javadoc = null != documentation ? asJavadoc( documentation ) : null;
+
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( valueParam )
+                                  .build() ).build() );
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback2" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( valueParam )
+                                  .addParameter( indexParam )
+                                  .build() )
+                    .build() );
+    type.addType( TypeSpec
+                    .interfaceBuilder( "ForEachCallback3" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                    .addAnnotation( JsinteropTypes.JS_FUNCTION )
+                    .addAnnotation( FunctionalInterface.class )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "item" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.ABSTRACT )
+                                  .addParameter( valueParam )
+                                  .addParameter( indexParam )
+                                  .addParameter( ParameterSpec
+                                                   .builder( lookupClassName( idlName ), "iterable" )
+                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .build() )
+                                  .build() )
+                    .build() );
+    final MethodSpec.Builder forEach1 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( documentation, forEach1 );
+    type.addMethod( forEach1.build() );
+
+    final MethodSpec.Builder forEach2 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback2" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( documentation, forEach2 );
+    type.addMethod( forEach2.build() );
+    final MethodSpec.Builder forEach3 =
+      MethodSpec
+        .methodBuilder( "forEach" )
+        .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
+        .addParameter( ParameterSpec.builder( ClassName.bestGuess( "ForEachCallback3" ), "callback" )
+                         .addAnnotation( BasicTypes.NONNULL )
+                         .build() );
+    maybeAddJavadoc( documentation, forEach3 );
+    type.addMethod( forEach3.build() );
   }
 
   private void generateIndexedIterableEntriesMethod( @Nonnull final String idlName,
