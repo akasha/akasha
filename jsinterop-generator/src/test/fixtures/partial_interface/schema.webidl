@@ -14,6 +14,18 @@ partial interface DOMTokenList {
 };
 
 /**
+ * This type contains anonymous paired iterable.
+ */
+partial interface Headers {
+  iterable<ByteString, ByteString>;
+  undefined append( ByteString name, ByteString value );
+  undefined delete( ByteString name );
+  ByteString? get( ByteString name );
+  boolean has( ByteString name );
+  undefined set( ByteString name, ByteString value );
+};
+
+/**
  * A test for a read-only maplike.
  */
 [Exposed=Window]

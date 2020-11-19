@@ -1,4 +1,5 @@
 DOMTokenList=com.example.DOMTokenList
+Headers=com.example.Headers
 Iterator=elemental2.core.JsIterator
 Object=java.lang.Object
 RTCStatsReport=com.example.RTCStatsReport

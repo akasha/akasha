@@ -1374,6 +1374,10 @@ final class JsinteropAction
       {
         generateIndexedIterableElements( name, iterable, type );
       }
+      else
+      {
+        generatePairIterableElements( name, iterable, type );
+      }
     }
     if ( null != definition.getSetLikeMember() )
     {
@@ -1388,6 +1392,55 @@ final class JsinteropAction
                           .build() );
 
     writeTopLevelType( name, type );
+  }
+
+  private void generatePairIterableElements( @Nonnull final String idlName,
+                                             @Nonnull final IterableMember iterable,
+                                             @Nonnull final TypeSpec.Builder type )
+  {
+    final Type keyType = iterable.getKeyType();
+    assert null != keyType;
+    generatePairIterableEntry( iterable, type );
+    generateIterableKeysMethod( idlName, toTypeName( keyType ), type );
+    generateIterableValuesMethod( idlName, iterable, type );
+    generateIterableEntriesMethod( idlName, type );
+    generateIterableForEachMethod( idlName, iterable, toTypeName( keyType ), "key", type );
+  }
+
+  private void generatePairIterableEntry( @Nonnull final IterableMember iterable, @Nonnull final TypeSpec.Builder type )
+  {
+    final Type keyType = iterable.getKeyType();
+    assert null != keyType;
+    type.addType( TypeSpec
+                    .classBuilder( "Entry" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                    .superclass( ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ), TypeName.OBJECT ) )
+                    .addAnnotation( AnnotationSpec
+                                      .builder( JsinteropTypes.JS_TYPE )
+                                      .addMember( "isNative", "true" )
+                                      .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                                      .addMember( "name", "$S", "Array" )
+                                      .build() )
+                    // Note that in the future @Nonnull and cast() in value method definition may not work
+                    // if primitive types or nullables are returned but works for current specs so we can
+                    // fix it if needed in the future
+                    .addMethod( MethodSpec.methodBuilder( "key" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                                  .addAnnotation( BasicTypes.NONNULL )
+                                  .returns( toTypeName( keyType ) )
+                                  .addStatement( "return getAtAsAny( 0 ).cast()" )
+                                  .build() )
+                    // Note that in the future @Nonnull and cast() in value method definition may not work
+                    // if primitive types or nullables are returned but works for current specs so we can
+                    // fix it if needed in the future
+                    .addMethod( MethodSpec.methodBuilder( "value" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.FINAL )
+                                  .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                                  .addAnnotation( BasicTypes.NONNULL )
+                                  .returns( toTypeName( iterable.getValueType() ) )
+                                  .addStatement( "return getAtAsAny( 0 ).cast()" )
+                                  .build() ).build() );
   }
 
   private void generateIndexedIterableElements( @Nonnull final String idlName,
@@ -1760,6 +1813,10 @@ final class JsinteropAction
       if ( null == iterable.getKeyType() )
       {
         generateIndexedIterableElements( name, iterable, type );
+      }
+      else
+      {
+        generatePairIterableElements( name, iterable, type );
       }
     }
     if ( null != definition.getSetLikeMember() )

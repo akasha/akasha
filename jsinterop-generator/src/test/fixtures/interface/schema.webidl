@@ -60,6 +60,18 @@ interface EventTarget {
   boolean dispatchEvent( Event event );
 };
 
+/**
+ * This type contains anonymous paired iterable.
+ */
+interface Headers {
+  iterable<ByteString, ByteString>;
+  undefined append( ByteString name, ByteString value );
+  undefined delete( ByteString name );
+  ByteString? get( ByteString name );
+  boolean has( ByteString name );
+  undefined set( ByteString name, ByteString value );
+};
+
 interface MyThing {
 };
 
