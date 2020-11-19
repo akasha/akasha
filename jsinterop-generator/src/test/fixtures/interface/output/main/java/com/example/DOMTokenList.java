@@ -51,7 +51,7 @@ public class DOMTokenList {
     @JsOverlay
     @Nonnull
     public final String value() {
-      return getAtAsAny( 0 ).cast();
+      return getAtAsAny( 1 ).cast();
     }
   }
 

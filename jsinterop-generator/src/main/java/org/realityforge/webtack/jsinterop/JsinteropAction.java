@@ -1551,7 +1551,7 @@ final class JsinteropAction
                                   .addAnnotation( JsinteropTypes.JS_OVERLAY )
                                   .addAnnotation( BasicTypes.NONNULL )
                                   .returns( toTypeName( iterable.getValueType() ) )
-                                  .addStatement( "return getAtAsAny( 0 ).cast()" )
+                                  .addStatement( "return getAtAsAny( 1 ).cast()" )
                                   .build() ).build() );
   }
 
