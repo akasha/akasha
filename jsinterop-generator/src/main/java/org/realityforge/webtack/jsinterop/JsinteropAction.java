@@ -1410,11 +1410,7 @@ final class JsinteropAction
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), ClassName.bestGuess( "Entry" ) ) );
-    final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
 
@@ -1428,11 +1424,7 @@ final class JsinteropAction
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), TypeName.DOUBLE.box() ) );
-    final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
 
@@ -1446,11 +1438,7 @@ final class JsinteropAction
         .addAnnotation( BasicTypes.NONNULL )
         .addModifiers( Modifier.PUBLIC, Modifier.NATIVE )
         .returns( ParameterizedTypeName.get( lookupClassName( "Iterator" ), toTypeName( iterable.getValueType() ) ) );
-    final DocumentationElement documentation = getDocumentationElement( idlName, methodName );
-    if ( null != documentation )
-    {
-      method.addJavadoc( asJavadoc( documentation ) );
-    }
+    maybeAddJavadoc( getDocumentationElement( idlName, methodName ), method );
     type.addMethod( method.build() );
   }
 
@@ -2648,14 +2636,24 @@ final class JsinteropAction
       .map( ClassName::bestGuess );
   }
 
-  private void maybeAddJavadoc( @Nonnull final Element constant, @Nonnull final FieldSpec.Builder field )
+  private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final FieldSpec.Builder field )
   {
-    maybeAddJavadoc( constant.getDocumentation(), field );
+    maybeAddJavadoc( element.getDocumentation(), field );
   }
 
   private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final TypeSpec.Builder type )
   {
-    final DocumentationElement documentation = element.getDocumentation();
+    maybeAddJavadoc( element.getDocumentation(), type );
+  }
+
+  private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final MethodSpec.Builder method )
+  {
+    maybeAddJavadoc( element.getDocumentation(), method );
+  }
+
+  private void maybeAddJavadoc( @Nullable final DocumentationElement documentation,
+                                @Nonnull final TypeSpec.Builder type )
+  {
     if ( null != documentation )
     {
       type.addJavadoc( asJavadoc( documentation ) );
@@ -2671,9 +2669,9 @@ final class JsinteropAction
     }
   }
 
-  private void maybeAddJavadoc( @Nonnull final Element element, @Nonnull final MethodSpec.Builder method )
+  private void maybeAddJavadoc( @Nullable final DocumentationElement documentation,
+                                @Nonnull final MethodSpec.Builder method )
   {
-    final DocumentationElement documentation = element.getDocumentation();
     if ( null != documentation )
     {
       method.addJavadoc( asJavadoc( documentation ) );
