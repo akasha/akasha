@@ -790,10 +790,9 @@ final class JsinteropAction
     else if ( Kind.Sequence == kind )
     {
       final SequenceType sequenceType = (SequenceType) type;
-      final Type itemType = sequenceType.getItemType();
       final boolean nullable = getSchema().isNullable( type );
       final TypeName javaType = toTypeName( type );
-      final TypeName arrayJavaType = ArrayTypeName.of( getUnexpandedType( itemType ) );
+      final TypeName arrayJavaType = asArrayType( getUnexpandedType( sequenceType.getItemType() ) );
       final TypedValue.Nullability nullability =
         nullable ? TypedValue.Nullability.NULLABLE : TypedValue.Nullability.NONNULL;
       values.add( new TypedValue( declaredType, type, javaType, nullability, false ) );
@@ -2706,7 +2705,7 @@ final class JsinteropAction
     final Type actualType = getSchema().resolveType( argument.getType() );
     final TypeName type = typedValue.getJavaType();
     final ParameterSpec.Builder parameter =
-      ParameterSpec.builder( argument.isVariadic() ? ArrayTypeName.of( type ) : type, javaName( argument ) );
+      ParameterSpec.builder( argument.isVariadic() ? asArrayType( type ) : type, javaName( argument ) );
     if ( isFinal )
     {
       parameter.addModifiers( Modifier.FINAL );

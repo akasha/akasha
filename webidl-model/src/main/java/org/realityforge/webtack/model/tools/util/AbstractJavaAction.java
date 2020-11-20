@@ -1,6 +1,7 @@
 package org.realityforge.webtack.model.tools.util;
 
 import com.squareup.javapoet.AnnotationSpec;
+import com.squareup.javapoet.ArrayTypeName;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.FieldSpec;
 import com.squareup.javapoet.JavaFile;
@@ -736,5 +737,11 @@ public abstract class AbstractJavaAction
   {
     final DocEntry docEntry = context().docRepository().findDocEntry( type, member );
     return null != docEntry ? DocEntryUtil.createDocumentationElement( docEntry ) : null;
+  }
+
+  @Nonnull
+  protected final ArrayTypeName asArrayType( @Nonnull final TypeName typeName )
+  {
+    return ArrayTypeName.of( BasicTypes.BOXED_DOUBLE.equals( typeName ) ? TypeName.DOUBLE : typeName );
   }
 }
