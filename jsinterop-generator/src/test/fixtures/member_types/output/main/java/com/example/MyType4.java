@@ -1,16 +1,7 @@
 package com.example;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
 import elemental2.core.JsArray;
 import elemental2.core.Symbol;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -126,36 +117,22 @@ public class MyType4 {
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
-  public static native JsArray<Double> doubleSequenceMethod(@Nonnull Double[] v1,
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull double[] v1,
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
   public static native JsArray<Double> doubleSequenceMethod(@Nonnull JsArray<Double> v1,
-      @Nonnull Double[] v2);
+      @Nonnull double[] v2);
 
   @Nonnull
-  public static native JsArray<Double> doubleSequenceMethod(@Nonnull Double[] v1,
-      @Nonnull Double[] v2);
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull double[] v1,
+      @Nonnull double[] v2);
 
   @Nonnull
   public static native JsArray<Double> doubleSequenceMethod(@Nonnull JsArray<Double> v1);
 
   @Nonnull
-  public static native JsArray<Double> doubleSequenceMethod(@Nonnull Double[] v1);
-
-  @Nonnull
-  public static native Float32Array float32ArrayMethod(@Nonnull Float32Array v1,
-      @Nonnull Float32Array v2);
-
-  @Nonnull
-  public static native Float32Array float32ArrayMethod(@Nonnull Float32Array v1);
-
-  @Nonnull
-  public static native Float64Array float64ArrayMethod(@Nonnull Float64Array v1,
-      @Nonnull Float64Array v2);
-
-  @Nonnull
-  public static native Float64Array float64ArrayMethod(@Nonnull Float64Array v1);
+  public static native JsArray<Double> doubleSequenceMethod(@Nonnull double[] v1);
 
   @Nonnull
   public static native JsArray<Double> floatFrozenArrayMethod(@Nonnull JsArray<Double> v1,
@@ -173,40 +150,22 @@ public class MyType4 {
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
-  public static native JsArray<Double> floatSequenceMethod(@Nonnull Double[] v1,
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull double[] v1,
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
   public static native JsArray<Double> floatSequenceMethod(@Nonnull JsArray<Double> v1,
-      @Nonnull Double[] v2);
+      @Nonnull double[] v2);
 
   @Nonnull
-  public static native JsArray<Double> floatSequenceMethod(@Nonnull Double[] v1,
-      @Nonnull Double[] v2);
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull double[] v1,
+      @Nonnull double[] v2);
 
   @Nonnull
   public static native JsArray<Double> floatSequenceMethod(@Nonnull JsArray<Double> v1);
 
   @Nonnull
-  public static native JsArray<Double> floatSequenceMethod(@Nonnull Double[] v1);
-
-  @Nonnull
-  public static native Int16Array int16ArrayMethod(@Nonnull Int16Array v1, @Nonnull Int16Array v2);
-
-  @Nonnull
-  public static native Int16Array int16ArrayMethod(@Nonnull Int16Array v1);
-
-  @Nonnull
-  public static native Int32Array int32ArrayMethod(@Nonnull Int32Array v1, @Nonnull Int32Array v2);
-
-  @Nonnull
-  public static native Int32Array int32ArrayMethod(@Nonnull Int32Array v1);
-
-  @Nonnull
-  public static native Int8Array int8ArrayMethod(@Nonnull Int8Array v1, @Nonnull Int8Array v2);
-
-  @Nonnull
-  public static native Int8Array int8ArrayMethod(@Nonnull Int8Array v1);
+  public static native JsArray<Double> floatSequenceMethod(@Nonnull double[] v1);
 
   public static native int longLongMethod(int v1, int v2);
 
@@ -306,36 +265,22 @@ public class MyType4 {
       @Nullable JsArray<Double> v2);
 
   @Nullable
-  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable Double[] v1,
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable double[] v1,
       @Nullable JsArray<Double> v2);
 
   @Nullable
   public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable JsArray<Double> v1,
-      @Nullable Double[] v2);
+      @Nullable double[] v2);
 
   @Nullable
-  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable Double[] v1,
-      @Nullable Double[] v2);
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable double[] v1,
+      @Nullable double[] v2);
 
   @Nullable
   public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable JsArray<Double> v1);
 
   @Nullable
-  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable Double[] v1);
-
-  @Nullable
-  public static native Float32Array nullableFloat32ArrayMethod(@Nullable Float32Array v1,
-      @Nullable Float32Array v2);
-
-  @Nullable
-  public static native Float32Array nullableFloat32ArrayMethod(@Nullable Float32Array v1);
-
-  @Nullable
-  public static native Float64Array nullableFloat64ArrayMethod(@Nullable Float64Array v1,
-      @Nullable Float64Array v2);
-
-  @Nullable
-  public static native Float64Array nullableFloat64ArrayMethod(@Nullable Float64Array v1);
+  public static native JsArray<Double> nullableDoubleSequenceMethod(@Nullable double[] v1);
 
   @Nullable
   public static native JsArray<Double> nullableFloatFrozenArrayMethod(@Nullable JsArray<Double> v1,
@@ -355,43 +300,22 @@ public class MyType4 {
       @Nullable JsArray<Double> v2);
 
   @Nullable
-  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable Double[] v1,
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable double[] v1,
       @Nullable JsArray<Double> v2);
 
   @Nullable
   public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable JsArray<Double> v1,
-      @Nullable Double[] v2);
+      @Nullable double[] v2);
 
   @Nullable
-  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable Double[] v1,
-      @Nullable Double[] v2);
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable double[] v1,
+      @Nullable double[] v2);
 
   @Nullable
   public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable JsArray<Double> v1);
 
   @Nullable
-  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable Double[] v1);
-
-  @Nullable
-  public static native Int16Array nullableInt16ArrayMethod(@Nullable Int16Array v1,
-      @Nullable Int16Array v2);
-
-  @Nullable
-  public static native Int16Array nullableInt16ArrayMethod(@Nullable Int16Array v1);
-
-  @Nullable
-  public static native Int32Array nullableInt32ArrayMethod(@Nullable Int32Array v1,
-      @Nullable Int32Array v2);
-
-  @Nullable
-  public static native Int32Array nullableInt32ArrayMethod(@Nullable Int32Array v1);
-
-  @Nullable
-  public static native Int8Array nullableInt8ArrayMethod(@Nullable Int8Array v1,
-      @Nullable Int8Array v2);
-
-  @Nullable
-  public static native Int8Array nullableInt8ArrayMethod(@Nullable Int8Array v1);
+  public static native JsArray<Double> nullableFloatSequenceMethod(@Nullable double[] v1);
 
   @Nullable
   public static native Double nullableLongLongMethod(@Nullable Double v1, @Nullable Double v2);
@@ -442,22 +366,22 @@ public class MyType4 {
       @Nullable JsArray<Double> v2);
 
   @Nullable
-  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable Double[] v1,
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable double[] v1,
       @Nullable JsArray<Double> v2);
 
   @Nullable
   public static native JsArray<Double> nullableShortSequenceMethod(@Nullable JsArray<Double> v1,
-      @Nullable Double[] v2);
+      @Nullable double[] v2);
 
   @Nullable
-  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable Double[] v1,
-      @Nullable Double[] v2);
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable double[] v1,
+      @Nullable double[] v2);
 
   @Nullable
   public static native JsArray<Double> nullableShortSequenceMethod(@Nullable JsArray<Double> v1);
 
   @Nullable
-  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable Double[] v1);
+  public static native JsArray<Double> nullableShortSequenceMethod(@Nullable double[] v1);
 
   @Nullable
   public static native JsArray<SomeType> nullableSomeTypeFrozenArrayMethod(
@@ -516,35 +440,6 @@ public class MyType4 {
 
   @Nullable
   public static native String nullableUSVStringMethod(@Nullable String v1);
-
-  @Nullable
-  public static native Uint16Array nullableUint16ArrayMethod(@Nullable Uint16Array v1,
-      @Nullable Uint16Array v2);
-
-  @Nullable
-  public static native Uint16Array nullableUint16ArrayMethod(@Nullable Uint16Array v1);
-
-  @Nullable
-  public static native Uint32Array nullableUint32ArrayMethod(@Nullable Uint32Array v1,
-      @Nullable Uint32Array v2);
-
-  @Nullable
-  public static native Uint32Array nullableUint32ArrayMethod(@Nullable Uint32Array v1);
-
-  @Nullable
-  public static native Uint8Array nullableUint8ArrayMethod(@Nullable Uint8Array v1,
-      @Nullable Uint8Array v2);
-
-  @Nullable
-  public static native Uint8Array nullableUint8ArrayMethod(@Nullable Uint8Array v1);
-
-  @Nullable
-  public static native Uint8ClampedArray nullableUint8ClampedArrayMethod(
-      @Nullable Uint8ClampedArray v1, @Nullable Uint8ClampedArray v2);
-
-  @Nullable
-  public static native Uint8ClampedArray nullableUint8ClampedArrayMethod(
-      @Nullable Uint8ClampedArray v1);
 
   @Nullable
   public static native Double nullableUnrestrictedDoubleMethod(@Nullable Double v1,
@@ -612,22 +507,22 @@ public class MyType4 {
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
-  public static native JsArray<Double> shortSequenceMethod(@Nonnull Double[] v1,
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull double[] v1,
       @Nonnull JsArray<Double> v2);
 
   @Nonnull
   public static native JsArray<Double> shortSequenceMethod(@Nonnull JsArray<Double> v1,
-      @Nonnull Double[] v2);
+      @Nonnull double[] v2);
 
   @Nonnull
-  public static native JsArray<Double> shortSequenceMethod(@Nonnull Double[] v1,
-      @Nonnull Double[] v2);
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull double[] v1,
+      @Nonnull double[] v2);
 
   @Nonnull
   public static native JsArray<Double> shortSequenceMethod(@Nonnull JsArray<Double> v1);
 
   @Nonnull
-  public static native JsArray<Double> shortSequenceMethod(@Nonnull Double[] v1);
+  public static native JsArray<Double> shortSequenceMethod(@Nonnull double[] v1);
 
   @Nonnull
   public static native JsArray<SomeType> someTypeFrozenArrayMethod(@Nonnull JsArray<SomeType> v1,
@@ -684,33 +579,6 @@ public class MyType4 {
   @Nonnull
   public static native JsPropertyMap<SomeType> typeReferenceRecordMethod(
       @Nonnull JsPropertyMap<SomeType> v1);
-
-  @Nonnull
-  public static native Uint16Array uint16ArrayMethod(@Nonnull Uint16Array v1,
-      @Nonnull Uint16Array v2);
-
-  @Nonnull
-  public static native Uint16Array uint16ArrayMethod(@Nonnull Uint16Array v1);
-
-  @Nonnull
-  public static native Uint32Array uint32ArrayMethod(@Nonnull Uint32Array v1,
-      @Nonnull Uint32Array v2);
-
-  @Nonnull
-  public static native Uint32Array uint32ArrayMethod(@Nonnull Uint32Array v1);
-
-  @Nonnull
-  public static native Uint8Array uint8ArrayMethod(@Nonnull Uint8Array v1, @Nonnull Uint8Array v2);
-
-  @Nonnull
-  public static native Uint8Array uint8ArrayMethod(@Nonnull Uint8Array v1);
-
-  @Nonnull
-  public static native Uint8ClampedArray uint8ClampedArrayMethod(@Nonnull Uint8ClampedArray v1,
-      @Nonnull Uint8ClampedArray v2);
-
-  @Nonnull
-  public static native Uint8ClampedArray uint8ClampedArrayMethod(@Nonnull Uint8ClampedArray v1);
 
   public static native double unrestrictedDoubleMethod(double v1, double v2);
 

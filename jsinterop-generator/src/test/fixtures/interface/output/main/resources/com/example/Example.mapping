@@ -3,7 +3,6 @@ DOMTokenList=com.example.DOMTokenList
 Event=com.example.Event
 EventInit=com.example.EventInit
 EventTarget=com.example.EventTarget
-FakeFloat32Array=com.example.FakeFloat32Array
 Headers=com.example.Headers
 Iterator=elemental2.core.JsIterator
 MyThing=com.example.MyThing

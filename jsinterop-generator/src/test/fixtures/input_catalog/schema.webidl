@@ -17,7 +17,7 @@ typedef ( double? or sequence<double?> ) IndexedKeyframeOffsetType;
 /**
  * This is a predefined type.
  */
-typedef ( DOMString or Int8Array ) SomeDataType;
+typedef ( DOMString or long ) SomeDataType;
 
 /**
  * This is a predefined type.

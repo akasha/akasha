@@ -28,7 +28,7 @@ public interface Dictionary_requiredNullableDoubleSequenceValue {
   @JsOverlay
   @Nonnull
   static Dictionary_requiredNullableDoubleSequenceValue create(
-      @Nullable final Double[] requiredNullableDoubleSequenceValue) {
+      @Nullable final double[] requiredNullableDoubleSequenceValue) {
     return Js.<Dictionary_requiredNullableDoubleSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
   }
 
@@ -52,14 +52,14 @@ public interface Dictionary_requiredNullableDoubleSequenceValue {
 
   @JsOverlay
   default void setRequiredNullableDoubleSequenceValue(
-      @Nullable final Double... requiredNullableDoubleSequenceValue) {
+      @Nullable final double... requiredNullableDoubleSequenceValue) {
     setRequiredNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredNullableDoubleSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredNullableDoubleSequenceValue requiredNullableDoubleSequenceValue(
-      @Nullable final Double... requiredNullableDoubleSequenceValue) {
+      @Nullable final double... requiredNullableDoubleSequenceValue) {
     setRequiredNullableDoubleSequenceValue( requiredNullableDoubleSequenceValue );
     return this;
   }

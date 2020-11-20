@@ -81,6 +81,21 @@ interface EventTarget {
   undefined removeEventListener( DOMString type, optional ( EventListenerOptions or boolean ) options = {} );
 };
 
+interface Float32Array {
+};
+
+interface Float64Array {
+};
+
+interface Int16Array {
+};
+
+interface Int32Array {
+};
+
+interface Int8Array {
+};
+
 interface SomeDataContainer {
   static undefined myStaticMethodWithUnionArg( BluetoothDescriptorUUID name );
   static BluetoothDescriptorUUID myStaticMethodWithUnionReturn();
@@ -98,4 +113,16 @@ interface SomeServiceContainer {
   static undefined myStaticMethodWithUnionArg( optional BluetoothDescriptorUUID name );
   static BluetoothDescriptorUUID? myStaticMethodWithUnionReturn();
   constructor( optional BluetoothServiceUUID service );
+};
+
+interface Uint16Array {
+};
+
+interface Uint32Array {
+};
+
+interface Uint8Array {
+};
+
+interface Uint8ClampedArray {
 };

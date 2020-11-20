@@ -1,16 +1,7 @@
 package com.example;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
 import elemental2.core.JsArray;
 import elemental2.core.Symbol;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -64,27 +55,12 @@ public class MyType2 {
   public double doubleValue;
 
   @Nonnull
-  public Float32Array float32ArrayValue;
-
-  @Nonnull
-  public Float64Array float64ArrayValue;
-
-  @Nonnull
   public JsArray<Double> floatFrozenArrayValue;
 
   @Nonnull
   public JsArray<Double> floatSequenceValue;
 
   public float floatValue;
-
-  @Nonnull
-  public Int16Array int16ArrayValue;
-
-  @Nonnull
-  public Int32Array int32ArrayValue;
-
-  @Nonnull
-  public Int8Array int8ArrayValue;
 
   @Nonnull
   public Promise<JsArray<Double>> longLongPromiseValue;
@@ -124,12 +100,6 @@ public class MyType2 {
   public Double nullableDoubleValue;
 
   @Nullable
-  public Float32Array nullableFloat32ArrayValue;
-
-  @Nullable
-  public Float64Array nullableFloat64ArrayValue;
-
-  @Nullable
   public JsArray<Double> nullableFloatFrozenArrayValue;
 
   @Nullable
@@ -137,15 +107,6 @@ public class MyType2 {
 
   @Nullable
   public Double nullableFloatValue;
-
-  @Nullable
-  public Int16Array nullableInt16ArrayValue;
-
-  @Nullable
-  public Int32Array nullableInt32ArrayValue;
-
-  @Nullable
-  public Int8Array nullableInt8ArrayValue;
 
   @Nullable
   public Double nullableLongLongValue;
@@ -188,18 +149,6 @@ public class MyType2 {
 
   @Nullable
   public String nullableUSVStringValue;
-
-  @Nullable
-  public Uint16Array nullableUint16ArrayValue;
-
-  @Nullable
-  public Uint32Array nullableUint32ArrayValue;
-
-  @Nullable
-  public Uint8Array nullableUint8ArrayValue;
-
-  @Nullable
-  public Uint8ClampedArray nullableUint8ClampedArrayValue;
 
   @Nullable
   public Double nullableUnrestrictedDoubleValue;
@@ -249,18 +198,6 @@ public class MyType2 {
 
   @Nonnull
   public JsPropertyMap<SomeType> typeReferenceRecordValue;
-
-  @Nonnull
-  public Uint16Array uint16ArrayValue;
-
-  @Nonnull
-  public Uint32Array uint32ArrayValue;
-
-  @Nonnull
-  public Uint8Array uint8ArrayValue;
-
-  @Nonnull
-  public Uint8ClampedArray uint8ClampedArrayValue;
 
   public double unrestrictedDoubleValue;
 

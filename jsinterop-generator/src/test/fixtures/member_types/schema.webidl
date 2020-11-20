@@ -42,14 +42,6 @@ dictionary Dictionary_requiredDoubleValue {
   required double requiredDoubleValue;
 };
 
-dictionary Dictionary_requiredFloat32ArrayValue {
-  required Float32Array requiredFloat32ArrayValue;
-};
-
-dictionary Dictionary_requiredFloat64ArrayValue {
-  required Float64Array requiredFloat64ArrayValue;
-};
-
 dictionary Dictionary_requiredFloatFrozenArrayValue {
   required FrozenArray<float> requiredFloatFrozenArrayValue;
 };
@@ -60,18 +52,6 @@ dictionary Dictionary_requiredFloatSequenceValue {
 
 dictionary Dictionary_requiredFloatValue {
   required float requiredFloatValue;
-};
-
-dictionary Dictionary_requiredInt16ArrayValue {
-  required Int16Array requiredInt16ArrayValue;
-};
-
-dictionary Dictionary_requiredInt32ArrayValue {
-  required Int32Array requiredInt32ArrayValue;
-};
-
-dictionary Dictionary_requiredInt8ArrayValue {
-  required Int8Array requiredInt8ArrayValue;
 };
 
 dictionary Dictionary_requiredLongLongValue {
@@ -118,14 +98,6 @@ dictionary Dictionary_requiredNullableDoubleValue {
   required double? requiredNullableDoubleValue;
 };
 
-dictionary Dictionary_requiredNullableFloat32ArrayValue {
-  required Float32Array? requiredNullableFloat32ArrayValue;
-};
-
-dictionary Dictionary_requiredNullableFloat64ArrayValue {
-  required Float64Array? requiredNullableFloat64ArrayValue;
-};
-
 dictionary Dictionary_requiredNullableFloatFrozenArrayValue {
   required FrozenArray<float>? requiredNullableFloatFrozenArrayValue;
 };
@@ -136,18 +108,6 @@ dictionary Dictionary_requiredNullableFloatSequenceValue {
 
 dictionary Dictionary_requiredNullableFloatValue {
   required float? requiredNullableFloatValue;
-};
-
-dictionary Dictionary_requiredNullableInt16ArrayValue {
-  required Int16Array? requiredNullableInt16ArrayValue;
-};
-
-dictionary Dictionary_requiredNullableInt32ArrayValue {
-  required Int32Array? requiredNullableInt32ArrayValue;
-};
-
-dictionary Dictionary_requiredNullableInt8ArrayValue {
-  required Int8Array? requiredNullableInt8ArrayValue;
 };
 
 dictionary Dictionary_requiredNullableLongLongValue {
@@ -196,22 +156,6 @@ dictionary Dictionary_requiredNullableSymbolValue {
 
 dictionary Dictionary_requiredNullableUSVStringValue {
   required USVString? requiredNullableUSVStringValue;
-};
-
-dictionary Dictionary_requiredNullableUint16ArrayValue {
-  required Uint16Array? requiredNullableUint16ArrayValue;
-};
-
-dictionary Dictionary_requiredNullableUint32ArrayValue {
-  required Uint32Array? requiredNullableUint32ArrayValue;
-};
-
-dictionary Dictionary_requiredNullableUint8ArrayValue {
-  required Uint8Array? requiredNullableUint8ArrayValue;
-};
-
-dictionary Dictionary_requiredNullableUint8ClampedArrayValue {
-  required Uint8ClampedArray? requiredNullableUint8ClampedArrayValue;
 };
 
 dictionary Dictionary_requiredNullableUnrestrictedDoubleValue {
@@ -274,22 +218,6 @@ dictionary Dictionary_requiredUSVStringValue {
   required USVString requiredUSVStringValue;
 };
 
-dictionary Dictionary_requiredUint16ArrayValue {
-  required Uint16Array requiredUint16ArrayValue;
-};
-
-dictionary Dictionary_requiredUint32ArrayValue {
-  required Uint32Array requiredUint32ArrayValue;
-};
-
-dictionary Dictionary_requiredUint8ArrayValue {
-  required Uint8Array requiredUint8ArrayValue;
-};
-
-dictionary Dictionary_requiredUint8ClampedArrayValue {
-  required Uint8ClampedArray requiredUint8ClampedArrayValue;
-};
-
 dictionary Dictionary_requiredUnrestrictedDoubleValue {
   required unrestricted double requiredUnrestrictedDoubleValue;
 };
@@ -324,14 +252,9 @@ dictionary MyDictionary {
   record<DOMString, double> doubleRecordValue;
   sequence<double> doubleSequenceValue;
   double doubleValue;
-  Float32Array float32ArrayValue;
-  Float64Array float64ArrayValue;
   FrozenArray<float> floatFrozenArrayValue;
   sequence<float> floatSequenceValue;
   float floatValue;
-  Int16Array int16ArrayValue;
-  Int32Array int32ArrayValue;
-  Int8Array int8ArrayValue;
   long long longLongValue;
   long longValue;
   record<DOMString, USVString> mixedStringRecordValue;
@@ -344,14 +267,9 @@ dictionary MyDictionary {
   FrozenArray<double>? nullableDoubleFrozenArrayValue;
   sequence<double>? nullableDoubleSequenceValue;
   double? nullableDoubleValue;
-  Float32Array? nullableFloat32ArrayValue;
-  Float64Array? nullableFloat64ArrayValue;
   FrozenArray<float>? nullableFloatFrozenArrayValue;
   sequence<float>? nullableFloatSequenceValue;
   float? nullableFloatValue;
-  Int16Array? nullableInt16ArrayValue;
-  Int32Array? nullableInt32ArrayValue;
-  Int8Array? nullableInt8ArrayValue;
   long long? nullableLongLongValue;
   long? nullableLongValue;
   object? nullableObjectValue;
@@ -366,10 +284,6 @@ dictionary MyDictionary {
   SomeType? nullableSomeTypeValue;
   symbol? nullableSymbolValue;
   USVString? nullableUSVStringValue;
-  Uint16Array? nullableUint16ArrayValue;
-  Uint32Array? nullableUint32ArrayValue;
-  Uint8Array? nullableUint8ArrayValue;
-  Uint8ClampedArray? nullableUint8ClampedArrayValue;
   unrestricted double? nullableUnrestrictedDoubleValue;
   unrestricted float? nullableUnrestrictedFloatValue;
   unsigned long long? nullableUnsignedLongLongValue;
@@ -388,10 +302,6 @@ dictionary MyDictionary {
   SomeType someTypeValue;
   symbol symbolValue;
   record<DOMString, SomeType> typeReferenceRecordValue;
-  Uint16Array uint16ArrayValue;
-  Uint32Array uint32ArrayValue;
-  Uint8Array uint8ArrayValue;
-  Uint8ClampedArray uint8ClampedArrayValue;
   unrestricted double unrestrictedDoubleValue;
   unrestricted float unrestrictedFloatValue;
   unsigned long long unsignedLongLongValue;
@@ -414,14 +324,9 @@ interface MyType1 {
   readonly attribute FrozenArray<double> readonlyDoubleFrozenArrayValue;
   readonly attribute sequence<double> readonlyDoubleSequenceValue;
   readonly attribute double readonlyDoubleValue;
-  readonly attribute Float32Array readonlyFloat32ArrayValue;
-  readonly attribute Float64Array readonlyFloat64ArrayValue;
   readonly attribute FrozenArray<float> readonlyFloatFrozenArrayValue;
   readonly attribute sequence<float> readonlyFloatSequenceValue;
   readonly attribute float readonlyFloatValue;
-  readonly attribute Int16Array readonlyInt16ArrayValue;
-  readonly attribute Int32Array readonlyInt32ArrayValue;
-  readonly attribute Int8Array readonlyInt8ArrayValue;
   readonly attribute long long readonlyLongLongValue;
   readonly attribute long readonlyLongValue;
   readonly attribute FrozenArray<boolean>? readonlyNullableBooleanFrozenArrayValue;
@@ -433,14 +338,9 @@ interface MyType1 {
   readonly attribute FrozenArray<double>? readonlyNullableDoubleFrozenArrayValue;
   readonly attribute sequence<double>? readonlyNullableDoubleSequenceValue;
   readonly attribute double? readonlyNullableDoubleValue;
-  readonly attribute Float32Array? readonlyNullableFloat32ArrayValue;
-  readonly attribute Float64Array? readonlyNullableFloat64ArrayValue;
   readonly attribute FrozenArray<float>? readonlyNullableFloatFrozenArrayValue;
   readonly attribute sequence<float>? readonlyNullableFloatSequenceValue;
   readonly attribute float? readonlyNullableFloatValue;
-  readonly attribute Int16Array? readonlyNullableInt16ArrayValue;
-  readonly attribute Int32Array? readonlyNullableInt32ArrayValue;
-  readonly attribute Int8Array? readonlyNullableInt8ArrayValue;
   readonly attribute long long? readonlyNullableLongLongValue;
   readonly attribute long? readonlyNullableLongValue;
   readonly attribute object? readonlyNullableObjectValue;
@@ -455,10 +355,6 @@ interface MyType1 {
   readonly attribute SomeType? readonlyNullableSomeTypeValue;
   readonly attribute symbol? readonlyNullableSymbolValue;
   readonly attribute USVString? readonlyNullableUSVStringValue;
-  readonly attribute Uint16Array? readonlyNullableUint16ArrayValue;
-  readonly attribute Uint32Array? readonlyNullableUint32ArrayValue;
-  readonly attribute Uint8Array? readonlyNullableUint8ArrayValue;
-  readonly attribute Uint8ClampedArray? readonlyNullableUint8ClampedArrayValue;
   readonly attribute unrestricted double? readonlyNullableUnrestrictedDoubleValue;
   readonly attribute unrestricted float? readonlyNullableUnrestrictedFloatValue;
   readonly attribute unsigned long long? readonlyNullableUnsignedLongLongValue;
@@ -476,10 +372,6 @@ interface MyType1 {
   readonly attribute SomeType readonlySomeTypeValue;
   readonly attribute symbol readonlySymbolValue;
   readonly attribute USVString readonlyUSVStringValue;
-  readonly attribute Uint16Array readonlyUint16ArrayValue;
-  readonly attribute Uint32Array readonlyUint32ArrayValue;
-  readonly attribute Uint8Array readonlyUint8ArrayValue;
-  readonly attribute Uint8ClampedArray readonlyUint8ClampedArrayValue;
   readonly attribute unrestricted double readonlyUnrestrictedDoubleValue;
   readonly attribute unrestricted float readonlyUnrestrictedFloatValue;
   readonly attribute unsigned long long readonlyUnsignedLongLongValue;
@@ -503,14 +395,9 @@ interface MyType2 {
   attribute record<DOMString, double> doubleRecordValue;
   attribute sequence<double> doubleSequenceValue;
   attribute double doubleValue;
-  attribute Float32Array float32ArrayValue;
-  attribute Float64Array float64ArrayValue;
   attribute FrozenArray<float> floatFrozenArrayValue;
   attribute sequence<float> floatSequenceValue;
   attribute float floatValue;
-  attribute Int16Array int16ArrayValue;
-  attribute Int32Array int32ArrayValue;
-  attribute Int8Array int8ArrayValue;
   attribute Promise<sequence<long long>> longLongPromiseValue;
   attribute long long longLongValue;
   attribute long longValue;
@@ -524,14 +411,9 @@ interface MyType2 {
   attribute FrozenArray<double>? nullableDoubleFrozenArrayValue;
   attribute sequence<double>? nullableDoubleSequenceValue;
   attribute double? nullableDoubleValue;
-  attribute Float32Array? nullableFloat32ArrayValue;
-  attribute Float64Array? nullableFloat64ArrayValue;
   attribute FrozenArray<float>? nullableFloatFrozenArrayValue;
   attribute sequence<float>? nullableFloatSequenceValue;
   attribute float? nullableFloatValue;
-  attribute Int16Array? nullableInt16ArrayValue;
-  attribute Int32Array? nullableInt32ArrayValue;
-  attribute Int8Array? nullableInt8ArrayValue;
   attribute long long? nullableLongLongValue;
   attribute long? nullableLongValue;
   attribute object? nullableObjectValue;
@@ -546,10 +428,6 @@ interface MyType2 {
   attribute SomeType? nullableSomeTypeValue;
   attribute symbol? nullableSymbolValue;
   attribute USVString? nullableUSVStringValue;
-  attribute Uint16Array? nullableUint16ArrayValue;
-  attribute Uint32Array? nullableUint32ArrayValue;
-  attribute Uint8Array? nullableUint8ArrayValue;
-  attribute Uint8ClampedArray? nullableUint8ClampedArrayValue;
   attribute unrestricted double? nullableUnrestrictedDoubleValue;
   attribute unrestricted float? nullableUnrestrictedFloatValue;
   attribute unsigned long long? nullableUnsignedLongLongValue;
@@ -567,10 +445,6 @@ interface MyType2 {
   attribute SomeType someTypeValue;
   attribute symbol symbolValue;
   attribute record<DOMString, SomeType> typeReferenceRecordValue;
-  attribute Uint16Array uint16ArrayValue;
-  attribute Uint32Array uint32ArrayValue;
-  attribute Uint8Array uint8ArrayValue;
-  attribute Uint8ClampedArray uint8ClampedArrayValue;
   attribute unrestricted double unrestrictedDoubleValue;
   attribute unrestricted float unrestrictedFloatValue;
   attribute unsigned long long unsignedLongLongValue;
@@ -596,14 +470,9 @@ interface MyType3 {
   double doubleMethod( double v1, optional double v2 );
   record<DOMString, double> doubleRecordMethod( record<DOMString, double> v1, optional record<DOMString, double> v2 );
   sequence<double> doubleSequenceMethod( sequence<double> v1, optional sequence<double> v2 );
-  Float32Array float32ArrayMethod( Float32Array v1, optional Float32Array v2 );
-  Float64Array float64ArrayMethod( Float64Array v1, optional Float64Array v2 );
   FrozenArray<float> floatFrozenArrayMethod( FrozenArray<float> v1, optional FrozenArray<float> v2 );
   float floatMethod( float v1, optional float v2 );
   sequence<float> floatSequenceMethod( sequence<float> v1, optional sequence<float> v2 );
-  Int16Array int16ArrayMethod( Int16Array v1, optional Int16Array v2 );
-  Int32Array int32ArrayMethod( Int32Array v1, optional Int32Array v2 );
-  Int8Array int8ArrayMethod( Int8Array v1, optional Int8Array v2 );
   long long longLongMethod( long long v1, optional long long v2 );
   Promise<sequence<long long>> longLongPromiseMethod( Promise<sequence<long long>> v1, optional Promise<sequence<long long>> v2 );
   long longMethod( long v1, optional long v2 );
@@ -617,14 +486,9 @@ interface MyType3 {
   FrozenArray<double>? nullableDoubleFrozenArrayMethod( FrozenArray<double>? v1, optional FrozenArray<double>? v2 );
   double? nullableDoubleMethod( double? v1, optional double? v2 );
   sequence<double>? nullableDoubleSequenceMethod( sequence<double>? v1, optional sequence<double>? v2 );
-  Float32Array? nullableFloat32ArrayMethod( Float32Array? v1, optional Float32Array? v2 );
-  Float64Array? nullableFloat64ArrayMethod( Float64Array? v1, optional Float64Array? v2 );
   FrozenArray<float>? nullableFloatFrozenArrayMethod( FrozenArray<float>? v1, optional FrozenArray<float>? v2 );
   float? nullableFloatMethod( float? v1, optional float? v2 );
   sequence<float>? nullableFloatSequenceMethod( sequence<float>? v1, optional sequence<float>? v2 );
-  Int16Array? nullableInt16ArrayMethod( Int16Array? v1, optional Int16Array? v2 );
-  Int32Array? nullableInt32ArrayMethod( Int32Array? v1, optional Int32Array? v2 );
-  Int8Array? nullableInt8ArrayMethod( Int8Array? v1, optional Int8Array? v2 );
   long long? nullableLongLongMethod( long long? v1, optional long long? v2 );
   long? nullableLongMethod( long? v1, optional long? v2 );
   object? nullableObjectMethod( object? v1, optional object? v2 );
@@ -639,10 +503,6 @@ interface MyType3 {
   sequence<SomeType>? nullableSomeTypeSequenceMethod( sequence<SomeType>? v1, optional sequence<SomeType>? v2 );
   symbol? nullableSymbolMethod( symbol? v1, optional symbol? v2 );
   USVString? nullableUSVStringMethod( USVString? v1, optional USVString? v2 );
-  Uint16Array? nullableUint16ArrayMethod( Uint16Array? v1, optional Uint16Array? v2 );
-  Uint32Array? nullableUint32ArrayMethod( Uint32Array? v1, optional Uint32Array? v2 );
-  Uint8Array? nullableUint8ArrayMethod( Uint8Array? v1, optional Uint8Array? v2 );
-  Uint8ClampedArray? nullableUint8ClampedArrayMethod( Uint8ClampedArray? v1, optional Uint8ClampedArray? v2 );
   unrestricted double? nullableUnrestrictedDoubleMethod( unrestricted double? v1, optional unrestricted double? v2 );
   unrestricted float? nullableUnrestrictedFloatMethod( unrestricted float? v1, optional unrestricted float? v2 );
   unsigned long long? nullableUnsignedLongLongMethod( unsigned long long? v1, optional unsigned long long? v2 );
@@ -660,10 +520,6 @@ interface MyType3 {
   sequence<SomeType> someTypeSequenceMethod( sequence<SomeType> v1, optional sequence<SomeType> v2 );
   symbol symbolMethod( symbol v1, optional symbol v2 );
   record<DOMString, SomeType> typeReferenceRecordMethod( record<DOMString, SomeType> v1, optional record<DOMString, SomeType> v2 );
-  Uint16Array uint16ArrayMethod( Uint16Array v1, optional Uint16Array v2 );
-  Uint32Array uint32ArrayMethod( Uint32Array v1, optional Uint32Array v2 );
-  Uint8Array uint8ArrayMethod( Uint8Array v1, optional Uint8Array v2 );
-  Uint8ClampedArray uint8ClampedArrayMethod( Uint8ClampedArray v1, optional Uint8ClampedArray v2 );
   unrestricted double unrestrictedDoubleMethod( unrestricted double v1, optional unrestricted double v2 );
   unrestricted float unrestrictedFloatMethod( unrestricted float v1, optional unrestricted float v2 );
   unsigned long long unsignedLongLongMethod( unsigned long long v1, optional unsigned long long v2 );
@@ -689,14 +545,9 @@ interface MyType4 {
   static double doubleMethod( double v1, optional double v2 );
   static record<DOMString, double> doubleRecordMethod( record<DOMString, double> v1, optional record<DOMString, double> v2 );
   static sequence<double> doubleSequenceMethod( sequence<double> v1, optional sequence<double> v2 );
-  static Float32Array float32ArrayMethod( Float32Array v1, optional Float32Array v2 );
-  static Float64Array float64ArrayMethod( Float64Array v1, optional Float64Array v2 );
   static FrozenArray<float> floatFrozenArrayMethod( FrozenArray<float> v1, optional FrozenArray<float> v2 );
   static float floatMethod( float v1, optional float v2 );
   static sequence<float> floatSequenceMethod( sequence<float> v1, optional sequence<float> v2 );
-  static Int16Array int16ArrayMethod( Int16Array v1, optional Int16Array v2 );
-  static Int32Array int32ArrayMethod( Int32Array v1, optional Int32Array v2 );
-  static Int8Array int8ArrayMethod( Int8Array v1, optional Int8Array v2 );
   static long long longLongMethod( long long v1, optional long long v2 );
   static Promise<sequence<long long>> longLongPromiseMethod( Promise<sequence<long long>> v1, optional Promise<sequence<long long>> v2 );
   static long longMethod( long v1, optional long v2 );
@@ -710,14 +561,9 @@ interface MyType4 {
   static FrozenArray<double>? nullableDoubleFrozenArrayMethod( FrozenArray<double>? v1, optional FrozenArray<double>? v2 );
   static double? nullableDoubleMethod( double? v1, optional double? v2 );
   static sequence<double>? nullableDoubleSequenceMethod( sequence<double>? v1, optional sequence<double>? v2 );
-  static Float32Array? nullableFloat32ArrayMethod( Float32Array? v1, optional Float32Array? v2 );
-  static Float64Array? nullableFloat64ArrayMethod( Float64Array? v1, optional Float64Array? v2 );
   static FrozenArray<float>? nullableFloatFrozenArrayMethod( FrozenArray<float>? v1, optional FrozenArray<float>? v2 );
   static float? nullableFloatMethod( float? v1, optional float? v2 );
   static sequence<float>? nullableFloatSequenceMethod( sequence<float>? v1, optional sequence<float>? v2 );
-  static Int16Array? nullableInt16ArrayMethod( Int16Array? v1, optional Int16Array? v2 );
-  static Int32Array? nullableInt32ArrayMethod( Int32Array? v1, optional Int32Array? v2 );
-  static Int8Array? nullableInt8ArrayMethod( Int8Array? v1, optional Int8Array? v2 );
   static long long? nullableLongLongMethod( long long? v1, optional long long? v2 );
   static long? nullableLongMethod( long? v1, optional long? v2 );
   static object? nullableObjectMethod( object? v1, optional object? v2 );
@@ -732,10 +578,6 @@ interface MyType4 {
   static sequence<SomeType>? nullableSomeTypeSequenceMethod( sequence<SomeType>? v1, optional sequence<SomeType>? v2 );
   static symbol? nullableSymbolMethod( symbol? v1, optional symbol? v2 );
   static USVString? nullableUSVStringMethod( USVString? v1, optional USVString? v2 );
-  static Uint16Array? nullableUint16ArrayMethod( Uint16Array? v1, optional Uint16Array? v2 );
-  static Uint32Array? nullableUint32ArrayMethod( Uint32Array? v1, optional Uint32Array? v2 );
-  static Uint8Array? nullableUint8ArrayMethod( Uint8Array? v1, optional Uint8Array? v2 );
-  static Uint8ClampedArray? nullableUint8ClampedArrayMethod( Uint8ClampedArray? v1, optional Uint8ClampedArray? v2 );
   static unrestricted double? nullableUnrestrictedDoubleMethod( unrestricted double? v1, optional unrestricted double? v2 );
   static unrestricted float? nullableUnrestrictedFloatMethod( unrestricted float? v1, optional unrestricted float? v2 );
   static unsigned long long? nullableUnsignedLongLongMethod( unsigned long long? v1, optional unsigned long long? v2 );
@@ -753,10 +595,6 @@ interface MyType4 {
   static sequence<SomeType> someTypeSequenceMethod( sequence<SomeType> v1, optional sequence<SomeType> v2 );
   static symbol symbolMethod( symbol v1, optional symbol v2 );
   static record<DOMString, SomeType> typeReferenceRecordMethod( record<DOMString, SomeType> v1, optional record<DOMString, SomeType> v2 );
-  static Uint16Array uint16ArrayMethod( Uint16Array v1, optional Uint16Array v2 );
-  static Uint32Array uint32ArrayMethod( Uint32Array v1, optional Uint32Array v2 );
-  static Uint8Array uint8ArrayMethod( Uint8Array v1, optional Uint8Array v2 );
-  static Uint8ClampedArray uint8ClampedArrayMethod( Uint8ClampedArray v1, optional Uint8ClampedArray v2 );
   static unrestricted double unrestrictedDoubleMethod( unrestricted double v1, optional unrestricted double v2 );
   static unrestricted float unrestrictedFloatMethod( unrestricted float v1, optional unrestricted float v2 );
   static unsigned long long unsignedLongLongMethod( unsigned long long v1, optional unsigned long long v2 );

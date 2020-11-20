@@ -1,16 +1,7 @@
 package com.example;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
 import elemental2.core.JsArray;
 import elemental2.core.Symbol;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -235,13 +226,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setDoubleSequenceValue(@Nonnull final Double... doubleSequenceValue) {
+  default void setDoubleSequenceValue(@Nonnull final double... doubleSequenceValue) {
     setDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( doubleSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary doubleSequenceValue(@Nonnull final Double... doubleSequenceValue) {
+  default MyDictionary doubleSequenceValue(@Nonnull final double... doubleSequenceValue) {
     setDoubleSequenceValue( doubleSequenceValue );
     return this;
   }
@@ -258,36 +249,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary doubleValue(final double doubleValue) {
     setDoubleValue( doubleValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "float32ArrayValue"
-  )
-  Float32Array float32ArrayValue();
-
-  @JsProperty
-  void setFloat32ArrayValue(@Nonnull Float32Array float32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary float32ArrayValue(@Nonnull final Float32Array float32ArrayValue) {
-    setFloat32ArrayValue( float32ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "float64ArrayValue"
-  )
-  Float64Array float64ArrayValue();
-
-  @JsProperty
-  void setFloat64ArrayValue(@Nonnull Float64Array float64ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary float64ArrayValue(@Nonnull final Float64Array float64ArrayValue) {
-    setFloat64ArrayValue( float64ArrayValue );
     return this;
   }
 
@@ -322,13 +283,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setFloatSequenceValue(@Nonnull final Double... floatSequenceValue) {
+  default void setFloatSequenceValue(@Nonnull final double... floatSequenceValue) {
     setFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( floatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary floatSequenceValue(@Nonnull final Double... floatSequenceValue) {
+  default MyDictionary floatSequenceValue(@Nonnull final double... floatSequenceValue) {
     setFloatSequenceValue( floatSequenceValue );
     return this;
   }
@@ -345,51 +306,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary floatValue(final float floatValue) {
     setFloatValue( floatValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "int16ArrayValue"
-  )
-  Int16Array int16ArrayValue();
-
-  @JsProperty
-  void setInt16ArrayValue(@Nonnull Int16Array int16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary int16ArrayValue(@Nonnull final Int16Array int16ArrayValue) {
-    setInt16ArrayValue( int16ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "int32ArrayValue"
-  )
-  Int32Array int32ArrayValue();
-
-  @JsProperty
-  void setInt32ArrayValue(@Nonnull Int32Array int32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary int32ArrayValue(@Nonnull final Int32Array int32ArrayValue) {
-    setInt32ArrayValue( int32ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "int8ArrayValue"
-  )
-  Int8Array int8ArrayValue();
-
-  @JsProperty
-  void setInt8ArrayValue(@Nonnull Int8Array int8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary int8ArrayValue(@Nonnull final Int8Array int8ArrayValue) {
-    setInt8ArrayValue( int8ArrayValue );
     return this;
   }
 
@@ -588,14 +504,14 @@ public interface MyDictionary {
 
   @JsOverlay
   default void setNullableDoubleSequenceValue(
-      @Nullable final Double... nullableDoubleSequenceValue) {
+      @Nullable final double... nullableDoubleSequenceValue) {
     setNullableDoubleSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableDoubleSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableDoubleSequenceValue(
-      @Nullable final Double... nullableDoubleSequenceValue) {
+      @Nullable final double... nullableDoubleSequenceValue) {
     setNullableDoubleSequenceValue( nullableDoubleSequenceValue );
     return this;
   }
@@ -613,40 +529,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary nullableDoubleValue(@Nullable final Double nullableDoubleValue) {
     setNullableDoubleValue( nullableDoubleValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableFloat32ArrayValue"
-  )
-  @Nullable
-  Float32Array nullableFloat32ArrayValue();
-
-  @JsProperty
-  void setNullableFloat32ArrayValue(@Nullable Float32Array nullableFloat32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableFloat32ArrayValue(
-      @Nullable final Float32Array nullableFloat32ArrayValue) {
-    setNullableFloat32ArrayValue( nullableFloat32ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableFloat64ArrayValue"
-  )
-  @Nullable
-  Float64Array nullableFloat64ArrayValue();
-
-  @JsProperty
-  void setNullableFloat64ArrayValue(@Nullable Float64Array nullableFloat64ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableFloat64ArrayValue(
-      @Nullable final Float64Array nullableFloat64ArrayValue) {
-    setNullableFloat64ArrayValue( nullableFloat64ArrayValue );
     return this;
   }
 
@@ -685,14 +567,14 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setNullableFloatSequenceValue(@Nullable final Double... nullableFloatSequenceValue) {
+  default void setNullableFloatSequenceValue(@Nullable final double... nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableFloatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableFloatSequenceValue(
-      @Nullable final Double... nullableFloatSequenceValue) {
+      @Nullable final double... nullableFloatSequenceValue) {
     setNullableFloatSequenceValue( nullableFloatSequenceValue );
     return this;
   }
@@ -710,54 +592,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary nullableFloatValue(@Nullable final Double nullableFloatValue) {
     setNullableFloatValue( nullableFloatValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableInt16ArrayValue"
-  )
-  @Nullable
-  Int16Array nullableInt16ArrayValue();
-
-  @JsProperty
-  void setNullableInt16ArrayValue(@Nullable Int16Array nullableInt16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableInt16ArrayValue(@Nullable final Int16Array nullableInt16ArrayValue) {
-    setNullableInt16ArrayValue( nullableInt16ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableInt32ArrayValue"
-  )
-  @Nullable
-  Int32Array nullableInt32ArrayValue();
-
-  @JsProperty
-  void setNullableInt32ArrayValue(@Nullable Int32Array nullableInt32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableInt32ArrayValue(@Nullable final Int32Array nullableInt32ArrayValue) {
-    setNullableInt32ArrayValue( nullableInt32ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableInt8ArrayValue"
-  )
-  @Nullable
-  Int8Array nullableInt8ArrayValue();
-
-  @JsProperty
-  void setNullableInt8ArrayValue(@Nullable Int8Array nullableInt8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableInt8ArrayValue(@Nullable final Int8Array nullableInt8ArrayValue) {
-    setNullableInt8ArrayValue( nullableInt8ArrayValue );
     return this;
   }
 
@@ -876,14 +710,14 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setNullableShortSequenceValue(@Nullable final Double... nullableShortSequenceValue) {
+  default void setNullableShortSequenceValue(@Nullable final double... nullableShortSequenceValue) {
     setNullableShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( nullableShortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default MyDictionary nullableShortSequenceValue(
-      @Nullable final Double... nullableShortSequenceValue) {
+      @Nullable final double... nullableShortSequenceValue) {
     setNullableShortSequenceValue( nullableShortSequenceValue );
     return this;
   }
@@ -1014,74 +848,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary nullableUSVStringValue(@Nullable final String nullableUSVStringValue) {
     setNullableUSVStringValue( nullableUSVStringValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableUint16ArrayValue"
-  )
-  @Nullable
-  Uint16Array nullableUint16ArrayValue();
-
-  @JsProperty
-  void setNullableUint16ArrayValue(@Nullable Uint16Array nullableUint16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUint16ArrayValue(
-      @Nullable final Uint16Array nullableUint16ArrayValue) {
-    setNullableUint16ArrayValue( nullableUint16ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableUint32ArrayValue"
-  )
-  @Nullable
-  Uint32Array nullableUint32ArrayValue();
-
-  @JsProperty
-  void setNullableUint32ArrayValue(@Nullable Uint32Array nullableUint32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUint32ArrayValue(
-      @Nullable final Uint32Array nullableUint32ArrayValue) {
-    setNullableUint32ArrayValue( nullableUint32ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableUint8ArrayValue"
-  )
-  @Nullable
-  Uint8Array nullableUint8ArrayValue();
-
-  @JsProperty
-  void setNullableUint8ArrayValue(@Nullable Uint8Array nullableUint8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUint8ArrayValue(@Nullable final Uint8Array nullableUint8ArrayValue) {
-    setNullableUint8ArrayValue( nullableUint8ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "nullableUint8ClampedArrayValue"
-  )
-  @Nullable
-  Uint8ClampedArray nullableUint8ClampedArrayValue();
-
-  @JsProperty
-  void setNullableUint8ClampedArrayValue(
-      @Nullable Uint8ClampedArray nullableUint8ClampedArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableUint8ClampedArrayValue(
-      @Nullable final Uint8ClampedArray nullableUint8ClampedArrayValue) {
-    setNullableUint8ClampedArrayValue( nullableUint8ClampedArrayValue );
     return this;
   }
 
@@ -1261,13 +1027,13 @@ public interface MyDictionary {
   }
 
   @JsOverlay
-  default void setShortSequenceValue(@Nonnull final Double... shortSequenceValue) {
+  default void setShortSequenceValue(@Nonnull final double... shortSequenceValue) {
     setShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( shortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
-  default MyDictionary shortSequenceValue(@Nonnull final Double... shortSequenceValue) {
+  default MyDictionary shortSequenceValue(@Nonnull final double... shortSequenceValue) {
     setShortSequenceValue( shortSequenceValue );
     return this;
   }
@@ -1389,67 +1155,6 @@ public interface MyDictionary {
   default MyDictionary typeReferenceRecordValue(
       @Nonnull final JsPropertyMap<SomeType> typeReferenceRecordValue) {
     setTypeReferenceRecordValue( typeReferenceRecordValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "uint16ArrayValue"
-  )
-  Uint16Array uint16ArrayValue();
-
-  @JsProperty
-  void setUint16ArrayValue(@Nonnull Uint16Array uint16ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary uint16ArrayValue(@Nonnull final Uint16Array uint16ArrayValue) {
-    setUint16ArrayValue( uint16ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "uint32ArrayValue"
-  )
-  Uint32Array uint32ArrayValue();
-
-  @JsProperty
-  void setUint32ArrayValue(@Nonnull Uint32Array uint32ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary uint32ArrayValue(@Nonnull final Uint32Array uint32ArrayValue) {
-    setUint32ArrayValue( uint32ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "uint8ArrayValue"
-  )
-  Uint8Array uint8ArrayValue();
-
-  @JsProperty
-  void setUint8ArrayValue(@Nonnull Uint8Array uint8ArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary uint8ArrayValue(@Nonnull final Uint8Array uint8ArrayValue) {
-    setUint8ArrayValue( uint8ArrayValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "uint8ClampedArrayValue"
-  )
-  Uint8ClampedArray uint8ClampedArrayValue();
-
-  @JsProperty
-  void setUint8ClampedArrayValue(@Nonnull Uint8ClampedArray uint8ClampedArrayValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary uint8ClampedArrayValue(
-      @Nonnull final Uint8ClampedArray uint8ClampedArrayValue) {
-    setUint8ClampedArrayValue( uint8ClampedArrayValue );
     return this;
   }
 

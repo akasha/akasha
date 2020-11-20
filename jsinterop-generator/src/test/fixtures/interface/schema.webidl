@@ -61,15 +61,6 @@ interface EventTarget {
 };
 
 /**
- * This tests that values that map to boxed double arrays are transformed into primitive double arrays
- */
-interface FakeFloat32Array {
-  constructor( sequence<unrestricted float> array );
-  sequence<unrestricted float> get( long start, long end );
-  setter undefined set( sequence<unrestricted float> array );
-};
-
-/**
  * This type contains anonymous paired iterable.
  */
 interface Headers {

@@ -27,7 +27,7 @@ public interface Dictionary_requiredFloatSequenceValue {
   @JsOverlay
   @Nonnull
   static Dictionary_requiredFloatSequenceValue create(
-      @Nonnull final Double[] requiredFloatSequenceValue) {
+      @Nonnull final double[] requiredFloatSequenceValue) {
     return Js.<Dictionary_requiredFloatSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredFloatSequenceValue( requiredFloatSequenceValue );
   }
 
@@ -49,14 +49,14 @@ public interface Dictionary_requiredFloatSequenceValue {
   }
 
   @JsOverlay
-  default void setRequiredFloatSequenceValue(@Nonnull final Double... requiredFloatSequenceValue) {
+  default void setRequiredFloatSequenceValue(@Nonnull final double... requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredFloatSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredFloatSequenceValue requiredFloatSequenceValue(
-      @Nonnull final Double... requiredFloatSequenceValue) {
+      @Nonnull final double... requiredFloatSequenceValue) {
     setRequiredFloatSequenceValue( requiredFloatSequenceValue );
     return this;
   }

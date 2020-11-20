@@ -1,16 +1,7 @@
 package com.example;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
 import elemental2.core.JsArray;
 import elemental2.core.Symbol;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -88,18 +79,6 @@ public class MyType1 {
   public native double readonlyDoubleValue();
 
   @JsProperty(
-      name = "readonlyFloat32ArrayValue"
-  )
-  @Nonnull
-  public native Float32Array readonlyFloat32ArrayValue();
-
-  @JsProperty(
-      name = "readonlyFloat64ArrayValue"
-  )
-  @Nonnull
-  public native Float64Array readonlyFloat64ArrayValue();
-
-  @JsProperty(
       name = "readonlyFloatFrozenArrayValue"
   )
   @Nonnull
@@ -115,24 +94,6 @@ public class MyType1 {
       name = "readonlyFloatValue"
   )
   public native float readonlyFloatValue();
-
-  @JsProperty(
-      name = "readonlyInt16ArrayValue"
-  )
-  @Nonnull
-  public native Int16Array readonlyInt16ArrayValue();
-
-  @JsProperty(
-      name = "readonlyInt32ArrayValue"
-  )
-  @Nonnull
-  public native Int32Array readonlyInt32ArrayValue();
-
-  @JsProperty(
-      name = "readonlyInt8ArrayValue"
-  )
-  @Nonnull
-  public native Int8Array readonlyInt8ArrayValue();
 
   @JsProperty(
       name = "readonlyLongLongValue"
@@ -199,18 +160,6 @@ public class MyType1 {
   public native Double readonlyNullableDoubleValue();
 
   @JsProperty(
-      name = "readonlyNullableFloat32ArrayValue"
-  )
-  @Nullable
-  public native Float32Array readonlyNullableFloat32ArrayValue();
-
-  @JsProperty(
-      name = "readonlyNullableFloat64ArrayValue"
-  )
-  @Nullable
-  public native Float64Array readonlyNullableFloat64ArrayValue();
-
-  @JsProperty(
       name = "readonlyNullableFloatFrozenArrayValue"
   )
   @Nullable
@@ -227,24 +176,6 @@ public class MyType1 {
   )
   @Nullable
   public native Double readonlyNullableFloatValue();
-
-  @JsProperty(
-      name = "readonlyNullableInt16ArrayValue"
-  )
-  @Nullable
-  public native Int16Array readonlyNullableInt16ArrayValue();
-
-  @JsProperty(
-      name = "readonlyNullableInt32ArrayValue"
-  )
-  @Nullable
-  public native Int32Array readonlyNullableInt32ArrayValue();
-
-  @JsProperty(
-      name = "readonlyNullableInt8ArrayValue"
-  )
-  @Nullable
-  public native Int8Array readonlyNullableInt8ArrayValue();
 
   @JsProperty(
       name = "readonlyNullableLongLongValue"
@@ -329,30 +260,6 @@ public class MyType1 {
   )
   @Nullable
   public native String readonlyNullableUSVStringValue();
-
-  @JsProperty(
-      name = "readonlyNullableUint16ArrayValue"
-  )
-  @Nullable
-  public native Uint16Array readonlyNullableUint16ArrayValue();
-
-  @JsProperty(
-      name = "readonlyNullableUint32ArrayValue"
-  )
-  @Nullable
-  public native Uint32Array readonlyNullableUint32ArrayValue();
-
-  @JsProperty(
-      name = "readonlyNullableUint8ArrayValue"
-  )
-  @Nullable
-  public native Uint8Array readonlyNullableUint8ArrayValue();
-
-  @JsProperty(
-      name = "readonlyNullableUint8ClampedArrayValue"
-  )
-  @Nullable
-  public native Uint8ClampedArray readonlyNullableUint8ClampedArrayValue();
 
   @JsProperty(
       name = "readonlyNullableUnrestrictedDoubleValue"
@@ -453,30 +360,6 @@ public class MyType1 {
   )
   @Nonnull
   public native String readonlyUSVStringValue();
-
-  @JsProperty(
-      name = "readonlyUint16ArrayValue"
-  )
-  @Nonnull
-  public native Uint16Array readonlyUint16ArrayValue();
-
-  @JsProperty(
-      name = "readonlyUint32ArrayValue"
-  )
-  @Nonnull
-  public native Uint32Array readonlyUint32ArrayValue();
-
-  @JsProperty(
-      name = "readonlyUint8ArrayValue"
-  )
-  @Nonnull
-  public native Uint8Array readonlyUint8ArrayValue();
-
-  @JsProperty(
-      name = "readonlyUint8ClampedArrayValue"
-  )
-  @Nonnull
-  public native Uint8ClampedArray readonlyUint8ClampedArrayValue();
 
   @JsProperty(
       name = "readonlyUnrestrictedDoubleValue"

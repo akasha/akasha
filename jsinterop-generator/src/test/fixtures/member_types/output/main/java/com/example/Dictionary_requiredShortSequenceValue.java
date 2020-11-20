@@ -27,7 +27,7 @@ public interface Dictionary_requiredShortSequenceValue {
   @JsOverlay
   @Nonnull
   static Dictionary_requiredShortSequenceValue create(
-      @Nonnull final Double[] requiredShortSequenceValue) {
+      @Nonnull final double[] requiredShortSequenceValue) {
     return Js.<Dictionary_requiredShortSequenceValue>uncheckedCast( JsPropertyMap.of() ).requiredShortSequenceValue( requiredShortSequenceValue );
   }
 
@@ -49,14 +49,14 @@ public interface Dictionary_requiredShortSequenceValue {
   }
 
   @JsOverlay
-  default void setRequiredShortSequenceValue(@Nonnull final Double... requiredShortSequenceValue) {
+  default void setRequiredShortSequenceValue(@Nonnull final double... requiredShortSequenceValue) {
     setRequiredShortSequenceValue( Js.<JsArray<Double>>uncheckedCast( requiredShortSequenceValue ) );
   }
 
   @JsOverlay
   @Nonnull
   default Dictionary_requiredShortSequenceValue requiredShortSequenceValue(
-      @Nonnull final Double... requiredShortSequenceValue) {
+      @Nonnull final double... requiredShortSequenceValue) {
     setRequiredShortSequenceValue( requiredShortSequenceValue );
     return this;
   }

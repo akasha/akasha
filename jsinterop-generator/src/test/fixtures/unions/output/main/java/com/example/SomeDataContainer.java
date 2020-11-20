@@ -1,14 +1,5 @@
 package com.example;
 
-import elemental2.core.Float32Array;
-import elemental2.core.Float64Array;
-import elemental2.core.Int16Array;
-import elemental2.core.Int32Array;
-import elemental2.core.Int8Array;
-import elemental2.core.Uint16Array;
-import elemental2.core.Uint32Array;
-import elemental2.core.Uint8Array;
-import elemental2.core.Uint8ClampedArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
