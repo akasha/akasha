@@ -171,6 +171,10 @@ final class RunCommand
       logger.log( Level.SEVERE, message, e );
       return ExitCodes.ERROR_EXIT_CODE;
     }
+    catch ( final RunCommandException e )
+    {
+      return ExitCodes.ERROR_EXIT_CODE;
+    }
   }
 
   @Nullable
@@ -289,12 +293,14 @@ final class RunCommand
                             @Nonnull final String message )
     {
       final String msg =
-        pipeline.getName() + ":" + stage.getName() + "(" + pipeline.getStages().indexOf( stage ) + "): " + message;
+        pipeline.getName() + ":" + stage.getName() + "(" + pipeline.getStages().indexOf( stage ) + ")" +
+        "[" + stage.getDescription() + "]: " + message + "\n" +
+        "Config:\n" + stage.getConfig();
       if ( _logger.isLoggable( Level.SEVERE ) )
       {
         _logger.log( Level.SEVERE, msg );
       }
-      throw new RuntimeException( msg );
+      throw new RunCommandException( msg );
     }
 
     @Override
