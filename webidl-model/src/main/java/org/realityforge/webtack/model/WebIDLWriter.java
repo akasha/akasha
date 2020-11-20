@@ -32,12 +32,7 @@ public final class WebIDLWriter
       maybeNewLine( writer, definitionCount++ );
       writeEnumerationDefinition( writer, definition );
     }
-    final List<ConstEnumerationDefinition> constEnumerations =
-      schema
-        .getConstEnumerations()
-        .stream()
-        .collect( Collectors.toList() );
-    for ( final ConstEnumerationDefinition definition : constEnumerations )
+    for ( final ConstEnumerationDefinition definition : new ArrayList<>( schema.getConstEnumerations() ) )
     {
       maybeNewLine( writer, definitionCount++ );
       writeConstEnumerationDefinition( writer, definition );
