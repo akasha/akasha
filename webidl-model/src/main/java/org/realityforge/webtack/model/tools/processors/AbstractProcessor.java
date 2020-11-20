@@ -800,7 +800,6 @@ public abstract class AbstractProcessor
            null :
            new DefaultValue( input.getKind(),
                              null == input.getConstValue() ? null : transformConstValue( input.getConstValue() ),
-                             input.getStringValue(),
                              transformSourceLocations( input.getSourceLocations() ) );
   }
 

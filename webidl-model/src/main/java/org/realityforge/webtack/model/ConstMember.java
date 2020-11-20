@@ -23,7 +23,7 @@ public final class ConstMember
   {
     super( name, documentation, extendedAttributes, sourceLocations );
     // The type reference should be to a primitive type but this would need to be verified post resolution
-    assert type.getKind().isPrimitive() || Kind.TypeReference == type.getKind();
+    assert type.getKind().isPrimitive() || type.getKind().isString() || Kind.TypeReference == type.getKind();
     _type = Objects.requireNonNull( type );
     _value = Objects.requireNonNull( value );
   }

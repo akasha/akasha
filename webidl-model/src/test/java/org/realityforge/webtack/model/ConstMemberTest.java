@@ -23,6 +23,9 @@ public final class ConstMemberTest
                        Kind.TypeReference,
                        ConstValue.Kind.Integer,
                        "0x00000100" );
+    assertConstMember( "const DOMString a = \"A\";", "a", Kind.DOMString, ConstValue.Kind.String, "A" );
+    assertConstMember( "const ByteString b = \"B\";", "b", Kind.ByteString, ConstValue.Kind.String, "B" );
+    assertConstMember( "const USVString c = \"C\";", "c", Kind.USVString, ConstValue.Kind.String, "C" );
   }
 
   private void assertConstMember( @Nonnull final String idl,

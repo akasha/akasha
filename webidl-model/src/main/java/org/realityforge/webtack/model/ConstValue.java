@@ -21,7 +21,7 @@ public final class ConstValue
                      @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( sourceLocations );
-    assert ( Kind.Decimal == kind || Kind.Integer == kind ) == ( null != value );
+    assert ( Kind.Decimal == kind || Kind.Integer == kind || Kind.String == kind ) == ( null != value );
     _kind = Objects.requireNonNull( kind );
     _value = value;
   }
@@ -69,6 +69,7 @@ public final class ConstValue
 
   public enum Kind
   {
+    String,
     True,
     False,
     Decimal,

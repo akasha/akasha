@@ -12,20 +12,15 @@ public final class DefaultValue
   private final Kind _kind;
   @Nullable
   private final ConstValue _constValue;
-  @Nullable
-  private final String _stringValue;
 
   public DefaultValue( @Nonnull final Kind kind,
                        @Nullable final ConstValue constValue,
-                       @Nullable final String stringValue,
                        @Nonnull final List<SourceInterval> sourceLocations )
   {
     super( sourceLocations );
     assert ( Kind.Const == kind ) == ( null != constValue );
-    assert ( Kind.String == kind ) == ( null != stringValue );
     _kind = Objects.requireNonNull( kind );
     _constValue = constValue;
-    _stringValue = stringValue;
   }
 
   @Nonnull
@@ -38,12 +33,6 @@ public final class DefaultValue
   public ConstValue getConstValue()
   {
     return _constValue;
-  }
-
-  @Nullable
-  public String getStringValue()
-  {
-    return _stringValue;
   }
 
   @Override
@@ -61,15 +50,14 @@ public final class DefaultValue
     {
       final DefaultValue other = (DefaultValue) o;
       return _kind == other._kind &&
-             Objects.equals( _constValue, other._constValue ) &&
-             Objects.equals( _stringValue, other._stringValue );
+             Objects.equals( _constValue, other._constValue );
     }
   }
 
   @Override
   public int hashCode()
   {
-    return Objects.hash( _kind, _constValue, _stringValue );
+    return Objects.hash( _kind, _constValue );
   }
 
   public boolean equiv( @Nonnull final DefaultValue other )
@@ -80,7 +68,6 @@ public final class DefaultValue
   public enum Kind
   {
     Const,
-    String,
     EmptyDictionary,
     EmptySequence,
     Null

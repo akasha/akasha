@@ -20,6 +20,7 @@
 // - Retained the `void` return type to maintain compatibility with the majority of WebIDL that have not followed
 //   the crazyness associated with chasing crazy spec changes to remove void.
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
+// - Change constMemberType to accept constant values of string types
 // - Removed types from bufferRelatedType that we represent as web IDL types, namely: DataView, ArrayBuffer
 parser grammar WebIDLParser;
 
@@ -184,6 +185,7 @@ constMember
 constMemberValue
   : booleanLiteral
   | floatLiteral
+  | STRING
   | INTEGER
 ;
 
@@ -201,6 +203,7 @@ floatLiteral
 
 constMemberType
   : primitiveType
+  | stringType
   | IDENTIFIER
 ;
 
@@ -241,7 +244,6 @@ optionalReadOnly
 
 defaultValue
   : constMemberValue
-  | STRING
   | OPEN_SQUARE_BRACKET CLOSE_SQUARE_BRACKET
   | OPEN_BRACE CLOSE_BRACE
   | NULL

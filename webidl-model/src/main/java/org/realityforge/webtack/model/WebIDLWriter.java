@@ -425,11 +425,20 @@ public final class WebIDLWriter
       case False:
         writer.write( "false" );
         break;
+      case String:
+      {
+        final String value = constValue.getValue();
+        assert null != value;
+        writeString( writer, value );
+        break;
+      }
       default:
+      {
         final String value = constValue.getValue();
         assert null != value;
         writer.write( value );
         break;
+      }
     }
   }
 
@@ -449,14 +458,9 @@ public final class WebIDLWriter
       case EmptySequence:
         writer.write( "[]" );
         break;
-      case Null:
-        writer.write( "null" );
-        break;
       default:
-        assert DefaultValue.Kind.String == defaultValue.getKind();
-        final String stringValue = defaultValue.getStringValue();
-        assert null != stringValue;
-        writeString( writer, stringValue );
+        assert DefaultValue.Kind.Null == defaultValue.getKind();
+        writer.write( "null" );
         break;
     }
   }

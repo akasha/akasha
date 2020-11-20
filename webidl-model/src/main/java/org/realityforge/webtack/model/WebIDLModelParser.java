@@ -934,10 +934,16 @@ public final class WebIDLModelParser
     }
     else
     {
-      type = parse( constMemberTypeContext.primitiveType(),
-                    Collections.emptyList(),
-                    false,
-                    parseSourceIntervals( startPosition, ctx ) );
+      final WebIDLParser.StringTypeContext stringType = constMemberTypeContext.stringType();
+      if ( null != stringType )
+      {
+        type = parse( stringType, Collections.emptyList(), false, parseSourceIntervals( startPosition, ctx ) );
+      }
+      else
+      {
+        final WebIDLParser.PrimitiveTypeContext primitiveType = constMemberTypeContext.primitiveType();
+        type = parse( primitiveType, Collections.emptyList(), false, parseSourceIntervals( startPosition, ctx ) );
+      }
     }
     final ConstValue value = parse( ctx.constMemberValue() );
     return new ConstMember( name, type, value, documentation, extendedAttributes, sourceIntervals );
@@ -955,6 +961,11 @@ public final class WebIDLModelParser
                              ConstValue.Kind.False,
                              null,
                              sourceIntervals );
+    }
+    final TerminalNode string = ctx.STRING();
+    if ( null != string )
+    {
+      return new ConstValue( ConstValue.Kind.String, extractString( string ), sourceIntervals );
     }
     final WebIDLParser.FloatLiteralContext floatLiteralContext = ctx.floatLiteral();
     if ( null != floatLiteralContext )
@@ -992,26 +1003,21 @@ public final class WebIDLModelParser
     final WebIDLParser.ConstMemberValueContext constMemberValueContext = ctx.constMemberValue();
     if ( null != constMemberValueContext )
     {
-      return new DefaultValue( DefaultValue.Kind.Const, parse( constMemberValueContext ), null, sourceIntervals );
-    }
-    final TerminalNode string = ctx.STRING();
-    if ( null != string )
-    {
-      return new DefaultValue( DefaultValue.Kind.String, null, extractString( string ), sourceIntervals );
+      return new DefaultValue( DefaultValue.Kind.Const, parse( constMemberValueContext ), sourceIntervals );
     }
     final String child = ctx.getChild( 0 ).getText();
     if ( "[".equals( child ) )
     {
-      return new DefaultValue( DefaultValue.Kind.EmptySequence, null, null, sourceIntervals );
+      return new DefaultValue( DefaultValue.Kind.EmptySequence, null, sourceIntervals );
     }
     else if ( "{".equals( child ) )
     {
-      return new DefaultValue( DefaultValue.Kind.EmptyDictionary, null, null, sourceIntervals );
+      return new DefaultValue( DefaultValue.Kind.EmptyDictionary, null, sourceIntervals );
     }
     else
     {
       assert "null".equals( child );
-      return new DefaultValue( DefaultValue.Kind.Null, null, null, sourceIntervals );
+      return new DefaultValue( DefaultValue.Kind.Null, null, sourceIntervals );
     }
   }
 

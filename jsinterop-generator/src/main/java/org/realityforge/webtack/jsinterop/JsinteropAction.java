@@ -2302,7 +2302,11 @@ final class JsinteropAction
 
     final ConstValue value = constant.getValue();
     final ConstValue.Kind kind = value.getKind();
-    if ( ConstValue.Kind.True == kind )
+    if ( ConstValue.Kind.String == kind )
+    {
+      field.initializer( "$S", value.getValue() );
+    }
+    else if ( ConstValue.Kind.True == kind )
     {
       field.initializer( "true" );
     }
