@@ -230,8 +230,13 @@ Int16Array includes ArrayBufferViewImpl;
 
 
 /**
- * A view on to an ArrayBuffer other exposes it as an array of two’s complement 16-bit unsigned integers.
+ * The Uint16Array typed array represents an array of 16-bit unsigned integers in the platform byte order.
+ * If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once
+ * established, you can reference elements in the array using the object's methods, or using standard array
+ * index syntax (that is, using bracket notation).
  *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array">Uint16Array - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint16Array">Uint16Array - WebIDL</a>
  */
 interface Uint16Array {
@@ -254,8 +259,13 @@ Uint16Array includes ArrayBufferViewImpl;
 
 
 /**
- * A view on to an ArrayBuffer other exposes it as an array of two’s complement 32-bit signed integers.
+ * The Int32Array() typed array constructor creates an array of twos-complement 32-bit signed integers in
+ * the platform byte order. If control over byte order is needed, use DataView instead. The contents are
+ * initialized to 0. Once established, you can reference elements in the array using the object's methods,
+ * or using standard array index syntax (that is, using bracket notation).
  *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array">Int32Array - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-Int32Array">Int32Array - WebIDL</a>
  */
 interface Int32Array {
@@ -278,8 +288,13 @@ Int32Array includes ArrayBufferViewImpl;
 
 
 /**
- * A view on to an ArrayBuffer other exposes it as an array of two’s complement 32-bit unsigned integers.
+ * The Uint32Array typed array represents an array of 32-bit unsigned integers in the platform byte order. If
+ * control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established,
+ * you can reference elements in the array using the object's methods, or using standard array index syntax
+ * (that is, using bracket notation).
  *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array">Uint32Array - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint32Array">Uint32Array - WebIDL</a>
  */
 interface Uint32Array {
@@ -302,8 +317,13 @@ Uint32Array includes ArrayBufferViewImpl;
 
 
 /**
- * A view on to an ArrayBuffer other exposes it as an array of IEEE 754 32-bit floating point numbers.
+ * The Float32Array typed array represents an array of 32-bit floating point numbers (corresponding to
+ * the C float data type) in the platform byte order. If control over byte order is needed, use DataView
+ * instead. The contents are initialized to 0. Once established, you can reference elements in the array
+ * using the object's methods, or using standard array index syntax (that is, using bracket notation).
  *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array">Float32Array - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-Float32Array">Float32Array - WebIDL</a>
  */
 interface Float32Array {
@@ -326,8 +346,14 @@ Float32Array includes ArrayBufferViewImpl;
 
 
 /**
- * A view on to an ArrayBuffer other exposes it as an array of IEEE 754 64-bit floating point numbers.
+ * The Float64Array typed array represents an array of 64-bit floating point numbers (corresponding
+ * to the C double data type) in the platform byte order. If control over byte order is needed, use
+ * DataView instead. The contents are initialized to 0. Once established, you can reference elements
+ * in the array using the object's methods, or using standard array index syntax (that is, using
+ * bracket notation).
  *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array">Float64Array - MDN</a>
+ * @see <a href="https://tc39.es/ecma262/#sec-typedarray-objects">TypedArray Objects - ECMA</a>
  * @see <a href="https://heycam.github.io/webidl/#idl-Float64Array">Float64Array - WebIDL</a>
  */
 interface Float64Array {
