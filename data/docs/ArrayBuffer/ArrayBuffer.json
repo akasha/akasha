@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "ArrayBuffer.ArrayBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer",
+    "description": "The ArrayBuffer() constructor is used to create ArrayBuffer objects."
+}

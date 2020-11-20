@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "ArrayBuffer.isView",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView",
+    "description": "The ArrayBuffer.isView() method determines whether the passed value is one of the ArrayBuffer views, such as typed array objects or a DataView."
+}

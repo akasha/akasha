@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.from",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from",
+    "description": "The TypedArray.from() method creates a new typed array from an array-like or iterable object. This method is nearly the same as Array.from()."
+}

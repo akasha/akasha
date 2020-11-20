@@ -1,0 +1,23 @@
+
+{
+    "name": "TypedArray",
+    "lastModifiedAt": 1605907105242,
+    "entries": [
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1605907101716
+        },
+        {
+            "name": "from",
+            "lastModifiedAt": 1605907104534
+        },
+        {
+            "name": "of",
+            "lastModifiedAt": 1605907104884
+        },
+        {
+            "name": "prototype",
+            "lastModifiedAt": 1605907105242
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+
+{
+    "name": "ArrayBuffer",
+    "lastModifiedAt": 1605907020480,
+    "entries": [
+        {
+            "name": "ArrayBuffer",
+            "lastModifiedAt": 1605907019668
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1605907019324
+        },
+        {
+            "name": "isView",
+            "lastModifiedAt": 1605907020480
+        }
+    ]
+}

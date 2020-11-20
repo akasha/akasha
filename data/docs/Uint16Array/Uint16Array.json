@@ -1,0 +1,7 @@
+
+{
+    "kind": "Constructor",
+    "name": "Uint16Array.Uint16Array",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array",
+    "description": "The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order."
+}

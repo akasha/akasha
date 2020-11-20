@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.of",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of",
+    "description": "The TypedArray.of() method creates a new typed array from a variable number of arguments. This method is nearly the same as Array.of()."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "ArrayBuffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "description": "The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer."
+}
