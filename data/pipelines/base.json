@@ -808,7 +808,7 @@
     {
       "name": "SynthesizeTransferable",
       "config": {
-        "expectedTransferableCount": 6
+        "expectedTransferableCount": 7
       }
     },
     {
