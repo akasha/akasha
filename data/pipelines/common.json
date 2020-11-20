@@ -32,6 +32,16 @@
         "elementNamePattern": "^DOMException$",
         "parentType": "Error"
       }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Convert ArrayBufferView into marker type",
+      "sourceSelector": "name=common",
+      "config": {
+        "namePattern": "^ArrayBufferView$",
+        "extendedAttribute": "MarkerType",
+        "types": ["typedef"]
+      }
     }
   ]
 }
