@@ -33,16 +33,15 @@ public final class TypeTest
     assertParse( "unsigned long", Kind.UnsignedLong, true );
     assertParse( "unsigned long long", Kind.UnsignedLongLong, true );
 
-    // buffer types
-    assertParse( "Int8Array", Kind.Int8Array, true );
-    assertParse( "Int16Array", Kind.Int16Array, true );
-    assertParse( "Int32Array", Kind.Int32Array, true );
-    assertParse( "Uint8Array", Kind.Uint8Array, true );
-    assertParse( "Uint16Array", Kind.Uint16Array, true );
-    assertParse( "Uint32Array", Kind.Uint32Array, true );
-    assertParse( "Uint8ClampedArray", Kind.Uint8ClampedArray, true );
-    assertParse( "Float32Array", Kind.Float32Array, true );
-    assertParse( "Float64Array", Kind.Float64Array, true );
+    assertParse( "Int8Array", Kind.TypeReference, true );
+    assertParse( "Int16Array", Kind.TypeReference, true );
+    assertParse( "Int32Array", Kind.TypeReference, true );
+    assertParse( "Uint8Array", Kind.TypeReference, true );
+    assertParse( "Uint16Array", Kind.TypeReference, true );
+    assertParse( "Uint32Array", Kind.TypeReference, true );
+    assertParse( "Uint8ClampedArray", Kind.TypeReference, true );
+    assertParse( "Float32Array", Kind.TypeReference, true );
+    assertParse( "Float64Array", Kind.TypeReference, true );
 
     // strings
     assertParse( "DOMString", Kind.DOMString, true );

@@ -57,16 +57,6 @@ PROMISE : 'Promise';
 RECORD : 'record';
 QUESTION_MARK : '?';
 
-INT8_ARRAY : 'Int8Array';
-INT16_ARRAY : 'Int16Array';
-INT32_ARRAY : 'Int32Array';
-UINT8_ARRAY : 'Uint8Array';
-UINT16_ARRAY : 'Uint16Array';
-UINT32_ARRAY : 'Uint32Array';
-UINT8_CLAMPED_ARRAY : 'Uint8ClampedArray';
-FLOAT32_ARRAY : 'Float32Array';
-FLOAT64_ARRAY : 'Float64Array';
-
 OPEN_BRACE : '{';
 CLOSE_BRACE : '}';
 OPEN_BRACKET : '(';

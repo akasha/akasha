@@ -32,21 +32,6 @@ public final class WebIDLModelParser
       put( "USVString", Kind.USVString );
     }
   } );
-  @Nonnull
-  private static final Map<String, Kind> BUFFER_KIND_MAP = Collections.unmodifiableMap( new HashMap<String, Kind>()
-  {
-    {
-      put( "Int8Array", Kind.Int8Array );
-      put( "Int16Array", Kind.Int16Array );
-      put( "Int32Array", Kind.Int32Array );
-      put( "Uint8Array", Kind.Uint8Array );
-      put( "Uint16Array", Kind.Uint16Array );
-      put( "Uint32Array", Kind.Uint32Array );
-      put( "Uint8ClampedArray", Kind.Uint8ClampedArray );
-      put( "Float32Array", Kind.Float32Array );
-      put( "Float64Array", Kind.Float64Array );
-    }
-  } );
 
   private WebIDLModelParser()
   {
@@ -1672,11 +1657,6 @@ public final class WebIDLModelParser
                                     sourceIntervals );
       }
     }
-    final WebIDLParser.BufferRelatedTypeContext bufferRelatedTypeContext = ctx.bufferRelatedType();
-    if ( null != bufferRelatedTypeContext )
-    {
-      return parse( bufferRelatedTypeContext, extendedAttributes, nullable, sourceIntervals );
-    }
     final WebIDLParser.RecordTypeContext recordTypeContext = ctx.recordType();
     assert null != recordTypeContext;
     return parse( recordTypeContext, extendedAttributes, nullable, sourceIntervals );
@@ -1691,20 +1671,6 @@ public final class WebIDLModelParser
     final Type keyType = parse( ctx.stringType(), Collections.emptyList(), false, sourceLocations );
     final Type valueType = parse( ctx.typeWithExtendedAttributes() );
     return new RecordType( keyType, valueType, extendedAttributes, nullable, sourceLocations );
-  }
-
-  @Nonnull
-  private static Type parse( @Nonnull final WebIDLParser.BufferRelatedTypeContext ctx,
-                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
-                             final boolean nullable,
-                             @Nonnull final List<SourceInterval> sourceLocations )
-  {
-    final TerminalNode child = (TerminalNode) ctx.getChild( 0 );
-    final String literalName = child.getText();
-    assert null != literalName;
-    final Kind kind = BUFFER_KIND_MAP.get( literalName );
-    assert null != kind;
-    return new Type( kind, extendedAttributes, nullable, sourceLocations );
   }
 
   @Nonnull

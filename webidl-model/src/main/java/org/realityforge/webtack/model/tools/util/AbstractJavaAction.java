@@ -411,15 +411,6 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental2.core.JsArray" );
     tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental2.core.JsIterator" );
     tryRegisterIdlToJavaTypeMapping( Kind.Symbol.name(), "elemental2.core.Symbol" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Int8Array.name(), "elemental2.core.Int8Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Int16Array.name(), "elemental2.core.Int16Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Int32Array.name(), "elemental2.core.Int32Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Uint8Array.name(), "elemental2.core.Uint8Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Uint16Array.name(), "elemental2.core.Uint16Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Uint32Array.name(), "elemental2.core.Uint32Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Uint8ClampedArray.name(), "elemental2.core.Uint8ClampedArray" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Float32Array.name(), "elemental2.core.Float32Array" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Float64Array.name(), "elemental2.core.Float64Array" );
   }
 
   @Nonnull
@@ -577,17 +568,7 @@ public abstract class AbstractJavaAction
     {
       return lookupClassName( generateUnionType( (UnionType) type ) );
     }
-    else if ( Kind.Object == kind ||
-              Kind.Symbol == kind ||
-              Kind.Int8Array == kind ||
-              Kind.Int16Array == kind ||
-              Kind.Int32Array == kind ||
-              Kind.Uint8Array == kind ||
-              Kind.Uint16Array == kind ||
-              Kind.Uint32Array == kind ||
-              Kind.Uint8ClampedArray == kind ||
-              Kind.Float32Array == kind ||
-              Kind.Float64Array == kind )
+    else if ( Kind.Object == kind || Kind.Symbol == kind )
     {
       return lookupClassName( kind.name() );
     }
@@ -626,7 +607,6 @@ public abstract class AbstractJavaAction
       sb.append( "String" );
     }
     else if ( kind.isPrimitive() ||
-              kind.isBufferRelated() ||
               Kind.FrozenArray == kind ||
               Kind.Object == kind ||
               Kind.Symbol == kind )

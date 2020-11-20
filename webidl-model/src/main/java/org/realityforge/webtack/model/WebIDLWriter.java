@@ -1061,33 +1061,6 @@ public final class WebIDLWriter
       case Boolean:
         writer.write( "boolean" );
         break;
-      case Int8Array:
-        writer.write( "Int8Array" );
-        break;
-      case Int16Array:
-        writer.write( "Int16Array" );
-        break;
-      case Int32Array:
-        writer.write( "Int32Array" );
-        break;
-      case Uint8Array:
-        writer.write( "Uint8Array" );
-        break;
-      case Uint16Array:
-        writer.write( "Uint16Array" );
-        break;
-      case Uint32Array:
-        writer.write( "Uint32Array" );
-        break;
-      case Uint8ClampedArray:
-        writer.write( "Uint8ClampedArray" );
-        break;
-      case Float32Array:
-        writer.write( "Float32Array" );
-        break;
-      case Float64Array:
-        writer.write( "Float64Array" );
-        break;
       case DOMString:
         writer.write( "DOMString" );
         break;

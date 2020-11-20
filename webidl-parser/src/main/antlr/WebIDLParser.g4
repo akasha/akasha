@@ -21,7 +21,7 @@
 //   the crazyness associated with chasing crazy spec changes to remove void.
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
 // - Change constMemberType to accept constant values of string types
-// - Removed types from bufferRelatedType that we represent as web IDL types, namely: DataView, ArrayBuffer
+// - Removed the bufferRelatedType rule as we now define the types in WebIDL
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
@@ -488,7 +488,6 @@ distinguishableType
   | SEQUENCE OPEN_ANGLE_BRACKET typeWithExtendedAttributes CLOSE_ANGLE_BRACKET nullModifier
   | OBJECT nullModifier
   | SYMBOL nullModifier
-  | bufferRelatedType nullModifier
   | FROZEN_ARRAY OPEN_ANGLE_BRACKET typeWithExtendedAttributes CLOSE_ANGLE_BRACKET nullModifier
   | recordType nullModifier
 ;
@@ -545,18 +544,6 @@ recordType
 nullModifier
   : QUESTION_MARK
   | /* empty */
-;
-
-bufferRelatedType
-  : INT8_ARRAY
-  | INT16_ARRAY
-  | INT32_ARRAY
-  | UINT8_ARRAY
-  | UINT16_ARRAY
-  | UINT32_ARRAY
-  | UINT8_CLAMPED_ARRAY
-  | FLOAT32_ARRAY
-  | FLOAT64_ARRAY
 ;
 
 extendedAttributeList

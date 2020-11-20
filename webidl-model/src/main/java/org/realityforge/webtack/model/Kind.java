@@ -157,60 +157,6 @@ public enum Kind
    */
   Union( null ),
   /**
-   * A view on to an ArrayBuffer other exposes it as an array of two’s complement 8-bit signed integers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Int8Array">Int8Array</a>
-   */
-  Int8Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of two’s complement 16-bit signed integers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Int16Array">Int16Array</a>
-   */
-  Int16Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of two’s complement 32-bit signed integers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Int32Array">Int32Array</a>
-   */
-  Int32Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of two’s complement 8-bit unsigned integers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Uint8Array">Uint8Array</a>
-   */
-  Uint8Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of two’s complement 16-bit unsigned integers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Uint16Array">Uint16Array</a>
-   */
-  Uint16Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of two’s complement 32-bit unsigned integers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Uint32Array">Uint32Array</a>
-   */
-  Uint32Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of unsigned 8 bit integers with clamped conversions.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Uint8ClampedArray">Uint8ClampedArray</a>
-   */
-  Uint8ClampedArray( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of IEEE 754 32-bit floating point numbers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Float32Array">Float32Array</a>
-   */
-  Float32Array( Flags.BUFFER_RELATED ),
-  /**
-   * A view on to an ArrayBuffer other exposes it as an array of IEEE 754 64-bit floating point numbers.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-Float64Array">Float64Array</a>
-   */
-  Float64Array( Flags.BUFFER_RELATED ),
-  /**
    * A frozen array type is a parameterized type whose values are references to objects other hold a fixed length array of unmodifiable values.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-frozen-array">Frozen array types — FrozenArray&lt;T&gt;</a>
@@ -262,11 +208,6 @@ public enum Kind
     return Flags.STRING == ( Flags.STRING & _flags );
   }
 
-  public boolean isBufferRelated()
-  {
-    return Flags.BUFFER_RELATED == ( Flags.BUFFER_RELATED & _flags );
-  }
-
   public boolean isNullableAllowed()
   {
     return 0 == ( Flags.NULLABLE_DISALLOWED & _flags );
@@ -282,7 +223,6 @@ public enum Kind
     public static final int INTEGER = 1 << 2;
     public static final int DECIMAL = 1 << 3;
     public static final int STRING = 1 << 4;
-    public static final int BUFFER_RELATED = 1 << 5;
     public static final int NULLABLE_DISALLOWED = 1 << 6;
   }
 }
