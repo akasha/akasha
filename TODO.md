@@ -33,8 +33,8 @@ complete as there is too much un-said.
 * Figure out which of TypedArray, `IntegerTypedArray` etc should be transferable
 
 * Expected extends between marker types
- - `ArrayBufferView` extends `IntegerTypedArray`
- - `ArrayBufferView` extends `TypedArray`
+ - `IntegerTypedArray` extends `ArrayBufferView`
+ - `TypedArray` extends `ArrayBufferView`
  - `ArrayBufferView` extends `BufferSource`
  - `IntegerTypedArray` extends `TypedArray`
 
