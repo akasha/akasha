@@ -26,8 +26,6 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
-* Convert `IntegerTypedArray` into `MarkerType`
-
 * Add `TypedArray` as `MarkerType` and change `ArrayBufferView` to extend that type
 
 * `BufferSource` should be `MarkerType` that extends other marker types.
