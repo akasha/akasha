@@ -282,7 +282,7 @@ public final class MdnDocScanner
         for ( final Element row : standardsElement.select( "tr" ) )
         {
           final Elements nodes = row.children();
-          if ( 3 == nodes.size() && nodes.get( 0 ).tagName().equals( "td" ) )
+          if ( nodes.size() >= 1 && nodes.get( 0 ).tagName().equals( "td" ) )
           {
             final Element td = nodes.get( 0 );
             final Element a = td.selectFirst( "a" );
