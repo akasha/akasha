@@ -32,6 +32,10 @@ complete as there is too much un-said.
 
 * Figure out which of TypedArray, `IntegerTypedArray` etc should be transferable
 
+* Support constants on namespaces and enable them in `math.webidl`
+
+* Add support for `JavaNoInline` on constants that force mapping to lookup value from browser
+
 * Expected extends between marker types
  - `IntegerTypedArray` extends `ArrayBufferView`
  - `TypedArray` extends `ArrayBufferView`
