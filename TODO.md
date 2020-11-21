@@ -20,13 +20,29 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.03` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
+* Move promise into elemental3 namespace
+
+* Move `elemental3.*Array` into `elemental3.core` package
+
 * Remove dependency on `elemental2-core`
 
 * Convert `IntegerTypedArray` and `ArrayBufferView` into `MarkerType`
 
+* Add `TypedArray` as `MarkerType` and change `ArrayBufferView` to extend that type
+
 * `BufferSource` should be `MarkerType` that extends other marker types.
 
+* Figure out which of TypedArray, `IntegerTypedArray` etc should be transferable
+
+* Expected extends between marker types
+ - `ArrayBufferView` extends `IntegerTypedArray`
+ - `ArrayBufferView` extends `TypedArray`
+ - `ArrayBufferView` extends `BufferSource`
+ - `IntegerTypedArray` extends `TypedArray`
+
 * Change ArrayBufferView so it is interface implemented by TypeArrays
+
+* Add missing methods to typed array types
 
 # Docs Integration
 
