@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.sin",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin",
+    "description": "The Math.sin() function returns the sine of a number."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.cos",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos",
+    "description": "The Math.cos() static function returns the cosine of the specified angle, which must be specified in radians. This value is"
+}

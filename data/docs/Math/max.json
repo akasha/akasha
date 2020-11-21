@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.max",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max",
+    "description": "The Math.max() function returns the largest of the zero or more numbers given as input parameters."
+}

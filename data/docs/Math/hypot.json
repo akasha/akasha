@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.hypot",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot",
+    "description": "The Math.hypot() function returns the square root of the sum of squares of its arguments, that is:"
+}

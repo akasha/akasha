@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.trunc",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc",
+    "description": "The Math.trunc() function returns the integer part of a number by removing any fractional digits."
+}

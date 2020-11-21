@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.round",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round",
+    "description": "The Math.round() function returns the value of a number rounded to the nearest integer."
+}

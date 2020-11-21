@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.log1p",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p",
+    "description": "The Math.log1p() function returns the natural logarithm (base e) of 1 + a number, that is"
+}

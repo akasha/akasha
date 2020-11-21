@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.fround",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/fround",
+    "description": "The Math.fround() function returns the nearest 32-bit single precision float representation of a Number."
+}

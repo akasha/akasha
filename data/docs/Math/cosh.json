@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.cosh",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cosh",
+    "description": "The Math.cosh() function returns the hyperbolic cosine of a number, that can be expressed using the constant e:"
+}

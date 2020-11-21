@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.imul",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul",
+    "description": "The Math.imul() function returns the result of the C-like 32-bit multiplication of the two parameters."
+}

@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.min",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min",
+    "description": "The static function Math.min() returns the lowest-valued number passed into it, or NaN if any parameter isn't a number and can't be converted into one."
+}

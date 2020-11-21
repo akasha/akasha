@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.exp",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/exp",
+    "description": "The Math.exp() function returns ex, where x is the argument, and e is Euler's number (also known as Napier's constant), the base of the natural logarithms."
+}

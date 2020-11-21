@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.atan2",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/atan2",
+    "description": "The Math.atan2() function returns the angle in the plane (in radians) between the positive x-axis and the ray from (0,0) to the point (x,y), for Math.atan2(y,x)."
+}

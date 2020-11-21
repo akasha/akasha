@@ -1,0 +1,7 @@
+
+{
+    "kind": "Type",
+    "name": "Math",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math",
+    "description": "Math is a built-in object that has properties and methods for mathematical constants and functions. It&rsquo;s not a function object."
+}

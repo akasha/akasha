@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.pow",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow",
+    "description": "The Math.pow() function returns the base to the exponent power, that is, baseexponent."
+}

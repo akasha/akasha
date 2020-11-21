@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.expm1",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1",
+    "description": "The Math.expm1() function returns ex - 1, where x is the argument, and e the base of the natural logarithms."
+}

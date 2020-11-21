@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.ceil",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil",
+    "description": "The Math.ceil() function always rounds a number up to the next largest integer."
+}

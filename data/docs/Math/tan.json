@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.tan",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan",
+    "description": "The Math.tan() function returns the tangent of a number."
+}

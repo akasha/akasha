@@ -1,0 +1,7 @@
+
+{
+    "kind": "Method",
+    "name": "Math.sinh",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sinh",
+    "description": "The Math.sinh() function returns the hyperbolic sine of a number, that can be expressed using the constant e:"
+}
