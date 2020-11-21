@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.cbrt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt",
-    "description": "The Math.cbrt() function returns the cube root of a number, that is"
+    "description": "The Math.cbrt() function returns the cube root of a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.cbrt",
+            "description": "The definition of 'Math.cbrt' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.clz32",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32",
-    "description": "The Math.clz32() function returns the number of leading zero bits in the 32-bit binary representation of a number."
+    "description": "The Math.clz32() function returns the number of leading zero bits in the 32-bit binary representation of a number.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.clz32",
+            "description": "The definition of 'Math.clz32' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

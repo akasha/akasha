@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.cosh",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cosh",
-    "description": "The Math.cosh() function returns the hyperbolic cosine of a number, that can be expressed using the constant e:"
+    "description": "The Math.cosh() function returns the hyperbolic cosine of a number, that can be expressed using the constant e:",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.cosh",
+            "description": "The definition of 'Math.cosh' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

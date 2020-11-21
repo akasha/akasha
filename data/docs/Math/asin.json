@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.asin",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/asin",
-    "description": "The Math.asin() function returns the arcsine (in radians) of a number, that is"
+    "description": "The Math.asin() function returns the arcsine (in radians) of a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.asin",
+            "description": "The definition of 'Math.asin' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

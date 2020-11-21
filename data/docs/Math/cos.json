@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.cos",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos",
-    "description": "The Math.cos() static function returns the cosine of the specified angle, which must be specified in radians. This value is"
+    "description": "The Math.cos() static function returns the cosine of the specified angle, which must be specified in radians. This value is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.cos",
+            "description": "The definition of 'Math.cos' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.sqrt",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt",
-    "description": "The Math.sqrt() function returns the square root of a number, that is"
+    "description": "The Math.sqrt() function returns the square root of a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.sqrt",
+            "description": "The definition of 'Math.sqrt' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.tan",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tan",
-    "description": "The Math.tan() function returns the tangent of a number."
+    "description": "The Math.tan() function returns the tangent of a number.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.tan",
+            "description": "The definition of 'Math.tan' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

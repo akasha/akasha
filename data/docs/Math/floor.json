@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.floor",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor",
-    "description": "The Math.floor() function returns the largest integer less than or equal to a given number."
+    "description": "The Math.floor() function returns the largest integer less than or equal to a given number.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.floor",
+            "description": "The definition of 'Math.floor' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

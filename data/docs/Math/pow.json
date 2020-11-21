@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.pow",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow",
-    "description": "The Math.pow() function returns the base to the exponent power, that is, baseexponent."
+    "description": "The Math.pow() function returns the base to the exponent power, that is, baseexponent.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.pow",
+            "description": "The definition of 'Math.pow' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.abs",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs",
-    "description": "The Math.abs() function returns the absolute value of a number"
+    "description": "The Math.abs() function returns the absolute value of a number",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.abs",
+            "description": "The definition of 'Math.abs' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

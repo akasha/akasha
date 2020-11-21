@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.tanh",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/tanh",
-    "description": "The Math.tanh() function returns the hyperbolic tangent of a number, that is"
+    "description": "The Math.tanh() function returns the hyperbolic tangent of a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.tanh",
+            "description": "The definition of 'Math.tanh' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

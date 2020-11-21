@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.log1p",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log1p",
-    "description": "The Math.log1p() function returns the natural logarithm (base e) of 1 + a number, that is"
+    "description": "The Math.log1p() function returns the natural logarithm (base e) of 1 + a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.log1p",
+            "description": "The definition of 'Math.log1p' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

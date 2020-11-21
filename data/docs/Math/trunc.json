@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.trunc",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc",
-    "description": "The Math.trunc() function returns the integer part of a number by removing any fractional digits."
+    "description": "The Math.trunc() function returns the integer part of a number by removing any fractional digits.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.trunc",
+            "description": "The definition of 'Math.trunc' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

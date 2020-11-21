@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.acosh",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh",
-    "description": "The Math.acosh() function returns the hyperbolic arc-cosine of a number, that is"
+    "description": "The Math.acosh() function returns the hyperbolic arc-cosine of a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.acosh",
+            "description": "The definition of 'Math.acosh' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

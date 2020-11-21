@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.exp",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/exp",
-    "description": "The Math.exp() function returns ex, where x is the argument, and e is Euler's number (also known as Napier's constant), the base of the natural logarithms."
+    "description": "The Math.exp() function returns ex, where x is the argument, and e is Euler's number (also known as Napier's constant), the base of the natural logarithms.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.exp",
+            "description": "The definition of 'Math.exp' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

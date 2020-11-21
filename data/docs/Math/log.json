@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.log",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log",
-    "description": "The Math.log() function returns the natural logarithm (base e) of a number, that is"
+    "description": "The Math.log() function returns the natural logarithm (base e) of a number, that is",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.log",
+            "description": "The definition of 'Math.log' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

@@ -1,151 +1,151 @@
 
 {
     "name": "Math",
-    "lastModifiedAt": 1605992354230,
+    "lastModifiedAt": 1605992735527,
     "entries": [
         {
             "name": "__type__",
-            "lastModifiedAt": 1605992336190
+            "lastModifiedAt": 1605992688519
         },
         {
             "name": "abs",
-            "lastModifiedAt": 1605992337285
+            "lastModifiedAt": 1605992705834
         },
         {
             "name": "acos",
-            "lastModifiedAt": 1605992338255
+            "lastModifiedAt": 1605992705896
         },
         {
             "name": "acosh",
-            "lastModifiedAt": 1605992339200
+            "lastModifiedAt": 1605992705954
         },
         {
             "name": "asin",
-            "lastModifiedAt": 1605992339626
+            "lastModifiedAt": 1605992707153
         },
         {
             "name": "asinh",
-            "lastModifiedAt": 1605992340401
+            "lastModifiedAt": 1605992708240
         },
         {
             "name": "atan",
-            "lastModifiedAt": 1605992340675
+            "lastModifiedAt": 1605992709503
         },
         {
             "name": "atan2",
-            "lastModifiedAt": 1605992341621
+            "lastModifiedAt": 1605992710734
         },
         {
             "name": "atanh",
-            "lastModifiedAt": 1605992342043
+            "lastModifiedAt": 1605992711451
         },
         {
             "name": "cbrt",
-            "lastModifiedAt": 1605992342429
+            "lastModifiedAt": 1605992712735
         },
         {
             "name": "ceil",
-            "lastModifiedAt": 1605992343371
+            "lastModifiedAt": 1605992713990
         },
         {
             "name": "clz32",
-            "lastModifiedAt": 1605992343679
+            "lastModifiedAt": 1605992715221
         },
         {
             "name": "cos",
-            "lastModifiedAt": 1605992343984
+            "lastModifiedAt": 1605992716438
         },
         {
             "name": "cosh",
-            "lastModifiedAt": 1605992344292
+            "lastModifiedAt": 1605992717043
         },
         {
             "name": "exp",
-            "lastModifiedAt": 1605992344599
+            "lastModifiedAt": 1605992717641
         },
         {
             "name": "expm1",
-            "lastModifiedAt": 1605992344905
+            "lastModifiedAt": 1605992718721
         },
         {
             "name": "floor",
-            "lastModifiedAt": 1605992345213
+            "lastModifiedAt": 1605992720030
         },
         {
             "name": "fround",
-            "lastModifiedAt": 1605992346169
+            "lastModifiedAt": 1605992720771
         },
         {
             "name": "hypot",
-            "lastModifiedAt": 1605992346442
+            "lastModifiedAt": 1605992721368
         },
         {
             "name": "imul",
-            "lastModifiedAt": 1605992346750
+            "lastModifiedAt": 1605992722610
         },
         {
             "name": "log",
-            "lastModifiedAt": 1605992347069
+            "lastModifiedAt": 1605992723260
         },
         {
             "name": "log10",
-            "lastModifiedAt": 1605992347316
+            "lastModifiedAt": 1605992724407
         },
         {
             "name": "log1p",
-            "lastModifiedAt": 1605992348280
+            "lastModifiedAt": 1605992725025
         },
         {
             "name": "log2",
-            "lastModifiedAt": 1605992348590
+            "lastModifiedAt": 1605992725721
         },
         {
             "name": "max",
-            "lastModifiedAt": 1605992348899
+            "lastModifiedAt": 1605992726892
         },
         {
             "name": "min",
-            "lastModifiedAt": 1605992349747
+            "lastModifiedAt": 1605992727482
         },
         {
             "name": "pow",
-            "lastModifiedAt": 1605992350130
+            "lastModifiedAt": 1605992727995
         },
         {
             "name": "random",
-            "lastModifiedAt": 1605992350435
+            "lastModifiedAt": 1605992729265
         },
         {
             "name": "round",
-            "lastModifiedAt": 1605992350826
+            "lastModifiedAt": 1605992730333
         },
         {
             "name": "sign",
-            "lastModifiedAt": 1605992351153
+            "lastModifiedAt": 1605992730966
         },
         {
             "name": "sin",
-            "lastModifiedAt": 1605992352000
+            "lastModifiedAt": 1605992732160
         },
         {
             "name": "sinh",
-            "lastModifiedAt": 1605992352879
+            "lastModifiedAt": 1605992732786
         },
         {
             "name": "sqrt",
-            "lastModifiedAt": 1605992353192
+            "lastModifiedAt": 1605992733273
         },
         {
             "name": "tan",
-            "lastModifiedAt": 1605992353544
+            "lastModifiedAt": 1605992733833
         },
         {
             "name": "tanh",
-            "lastModifiedAt": 1605992353909
+            "lastModifiedAt": 1605992734913
         },
         {
             "name": "trunc",
-            "lastModifiedAt": 1605992354230
+            "lastModifiedAt": 1605992735527
         }
     ]
 }

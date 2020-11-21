@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "Math.round",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round",
-    "description": "The Math.round() function returns the value of a number rounded to the nearest integer."
+    "description": "The Math.round() function returns the value of a number rounded to the nearest integer.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-math.round",
+            "description": "The definition of 'Math.round' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }
