@@ -38,8 +38,6 @@ complete as there is too much un-said.
  - `ArrayBufferView` extends `BufferSource`
  - `IntegerTypedArray` extends `TypedArray`
 
-* Change ArrayBufferView so it is interface implemented by TypeArrays
-
 * Add missing methods to typed array types
 
 # Docs Integration
