@@ -109,15 +109,6 @@
       }
     },
     {
-      "name": "AddExtendedAttribute",
-      "description": "Convert IntegerTypedArray into a marker type",
-      "sourceSelector": "name=atomics",
-      "config": {
-        "namePattern": "^IntegerTypedArray$",
-        "extendedAttribute": "MarkerType"
-      }
-    },
-    {
       "name": "ConvertConstructorAttribute",
       "description": "Convert from historic constructor attributes"
     },
