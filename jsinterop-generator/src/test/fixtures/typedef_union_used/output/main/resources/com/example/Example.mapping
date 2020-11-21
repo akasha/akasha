@@ -2,6 +2,6 @@ Blob=com.example.Blob
 ClipboardItemDataType=com.example.ClipboardItemDataType
 ClipboardItemDelayedCallback=com.example.ClipboardItemDelayedCallback
 LongOrTxModeUnion=com.example.LongOrTxModeUnion
-Promise=elemental2.promise.Promise
+Promise=elemental3.promise.Promise
 SomeStore=com.example.SomeStore
 txMode=com.example.TxMode

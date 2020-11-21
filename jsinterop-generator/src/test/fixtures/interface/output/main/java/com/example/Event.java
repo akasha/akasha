@@ -1,7 +1,7 @@
 package com.example;
 
 import elemental2.core.JsArray;
-import elemental2.promise.Promise;
+import elemental3.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;

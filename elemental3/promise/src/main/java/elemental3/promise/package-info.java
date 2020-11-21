@@ -5,4 +5,4 @@
  * but was rewritten and merged with the output from a webtack experiment. The documentation was derived and/or
  * copied from the MDN website.</p>
  */
-package elemental2.promise;
+package elemental3.promise;

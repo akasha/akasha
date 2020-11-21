@@ -3,5 +3,5 @@ CompileError=com.example.web_assembly.CompileError
 Global=com.example.web_assembly.Global
 GlobalDescriptor=com.example.GlobalDescriptor
 Module=com.example.web_assembly.Module
-Promise=elemental2.promise.Promise
+Promise=elemental3.promise.Promise
 WebAssembly=com.example.WebAssemblyNamespace

@@ -1,4 +1,4 @@
-package elemental2.promise;
+package elemental3.promise;
 
 import elemental2.core.JsIterator;
 import javax.annotation.Nonnull;

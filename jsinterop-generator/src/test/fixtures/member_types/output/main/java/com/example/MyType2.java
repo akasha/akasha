@@ -2,7 +2,7 @@ package com.example;
 
 import elemental2.core.JsArray;
 import elemental2.core.Symbol;
-import elemental2.promise.Promise;
+import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

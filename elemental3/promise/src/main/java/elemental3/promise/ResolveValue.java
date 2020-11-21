@@ -1,4 +1,4 @@
-package elemental2.promise;
+package elemental3.promise;
 
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsOverlay;
