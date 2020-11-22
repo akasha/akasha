@@ -77,22 +77,6 @@ public abstract class AbstractTest
     }
   }
 
-  @Nonnull
-  protected final WebIDLSchema loadSchema( @Nonnull final String content )
-    throws Exception
-  {
-    final Path directory = getWorkingDir();
-    final Path file = directory.resolve( "schema.webidl" );
-    writeContent( file, content );
-    return loadWebIDLSchema( file );
-  }
-
-  protected final void writeContent( @Nonnull final Path path, @Nonnull final String content )
-    throws IOException
-  {
-    Files.write( path, content.getBytes( StandardCharsets.UTF_8 ) );
-  }
-
   protected final void assertFileExists( @Nonnull final Path file )
   {
     assertTrue( Files.exists( file ), " File " + file + " should exist" );
@@ -137,17 +121,7 @@ public abstract class AbstractTest
   protected final void generateCode( @Nonnull final Path directory, @Nonnull final ValidatorRuleConfig validator )
     throws Exception
   {
-    generateCode( directory,
-                  new String( Files.readAllBytes( directory.resolve( "schema.webidl" ) ), StandardCharsets.UTF_8 ),
-                  validator );
-  }
-
-  private void generateCode( @Nonnull final Path directory,
-                             @Nonnull final String content,
-                             @Nonnull final ValidatorRuleConfig validator )
-    throws Exception
-  {
-    generateCode( directory, loadSchema( content ), validator );
+    generateCode( directory, loadWebIDLSchema( directory.resolve( "schema.webidl" ) ), validator );
   }
 
   private void generateCode( @Nonnull final Path directory,
@@ -163,7 +137,7 @@ public abstract class AbstractTest
     {
       // Delete local fixtures if we plan to regenerate them to ensure that no
       // stray source files are left in fixtures directory
-      FileUtil.deleteDirIfExists( directory );
+      FileUtil.deleteDirIfExists( directory.resolve( "output" ) );
 
       // write out schema to ensure it is normalized
       Files.createDirectories( directory );
@@ -174,7 +148,11 @@ public abstract class AbstractTest
       }
     }
 
-    final Path outputDirectory = getWorkingDir();
+    final Path workingDirectory = getWorkingDir();
+    final Path inputDirectory = directory.resolve( "input" );
+    final Path inputJavaDirectory = inputDirectory.resolve( "main" ).resolve( "java" );
+    final Path outputDirectory = workingDirectory.resolve( "output" );
+
     final React4jAction action =
       new React4jAction( newPipelineContext( directory ),
                          outputDirectory,
@@ -184,19 +162,33 @@ public abstract class AbstractTest
                          true,
                          true );
     action.process( schema );
-    final Path mainJavaDirectory = action.getMainJavaDirectory();
-    final List<Path> javaFiles = collectJavaFiles( mainJavaDirectory );
+    final Path mainJavaDirectory = outputDirectory.resolve( "main" ).resolve( "java" );
+    final List<Path> javaFiles = collectFilesWithExtension( ".java", mainJavaDirectory );
     final List<Path> classpathEntries = collectLibs();
 
     final Map<String, Path> generatedSourceFiles = action.getGeneratedFiles();
     for ( final Map.Entry<String, Path> e : generatedSourceFiles.entrySet() )
     {
       final Path file = e.getValue();
-      final Path relativePath = outputDirectory.relativize( file );
-      assertFileMatchesFixture( file, directory.resolve( relativePath ) );
+      // If it is not in the input path then it must be in output path
+      final Path javaPath =
+        outputDirectory.resolve( "main" ).resolve( "java" ).relativize( file );
+      if ( !Files.exists( inputJavaDirectory.resolve( javaPath ) ) )
+      {
+        final Path relativePath = workingDirectory.relativize( file );
+        assertFileMatchesFixture( file, directory.resolve( relativePath ) );
+      }
+    }
+    final List<Path> sourceDirectories = new ArrayList<>();
+    sourceDirectories.add( mainJavaDirectory );
+    final List<Path> sourceFiles = new ArrayList<>( javaFiles );
+    if ( Files.exists( inputJavaDirectory ) )
+    {
+      sourceFiles.addAll( collectFilesWithExtension( ".java", inputJavaDirectory ) );
+      sourceDirectories.add( inputJavaDirectory );
     }
 
-    ensureGeneratedCodeCompiles( Collections.singletonList( mainJavaDirectory ), javaFiles, classpathEntries );
+    ensureGeneratedCodeCompiles( sourceDirectories, sourceFiles, classpathEntries );
   }
 
   /**
@@ -260,7 +252,7 @@ public abstract class AbstractTest
   }
 
   @Nonnull
-  private List<Path> collectJavaFiles( @Nonnull final Path... dirs )
+  private List<Path> collectFilesWithExtension( @Nonnull final String extension, @Nonnull final Path... dirs )
     throws IOException
   {
     final List<Path> javaFiles = new ArrayList<>();
@@ -270,7 +262,7 @@ public abstract class AbstractTest
       {
         Files
           .walk( dir )
-          .filter( p -> p.toString().endsWith( ".java" ) )
+          .filter( p -> p.toString().endsWith( extension ) )
           .forEach( javaFiles::add );
       }
     }
