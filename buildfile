@@ -85,7 +85,7 @@ define 'webtack' do
 
     test.using :testng
     test.options[:properties] = {
-      'webtack.jsinterop-generator.gwtc' => 'true',
+      'webtack.jsinterop-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
       'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').package(:jar).to_s}",
       'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').package(:jar).to_s}"
@@ -112,7 +112,7 @@ define 'webtack' do
 
     test.using :testng
     test.options[:properties] = {
-      'webtack.react4j-generator.gwtc' => 'true',
+      'webtack.react4j-generator.gwtc' => ENV['GWT'] == 'no' ? 'false' : 'true',
       'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
       'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').package(:jar).to_s}",
       'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}#{project('elemental3:core').package(:jar).to_s}"
