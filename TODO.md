@@ -26,21 +26,11 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
-* Add `TypedArray` as `MarkerType` and change `ArrayBufferView` to extend that type
-
-* `BufferSource` should be `MarkerType` that extends other marker types.
-
 * Figure out which of TypedArray, `IntegerTypedArray` etc should be transferable
 
 * Support constants on namespaces and enable them in `math.webidl`
 
 * Add support for `JavaNoInline` on constants that force mapping to lookup value from browser
-
-* Expected extends between marker types
- - `IntegerTypedArray` extends `ArrayBufferView`
- - `TypedArray` extends `ArrayBufferView`
- - `ArrayBufferView` extends `BufferSource`
- - `IntegerTypedArray` extends `TypedArray`
 
 * Add missing methods to typed array types
 
