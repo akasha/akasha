@@ -56,6 +56,14 @@ public final class RemoveElementProcessorTest
                                 () -> createProcessor( "^SpeechRecognition.*", ElementType.interface_type ) );
   }
 
+  @Test
+  public void remove_typedef()
+    throws Exception
+  {
+    performStandardFixtureTest( "remove_typedef",
+                                () -> createProcessor( "^NumberOrString$", ElementType.typedef ) );
+  }
+
   @Nonnull
   private Processor createProcessor( @Nonnull final String namePattern, @Nonnull final ElementType... types )
   {

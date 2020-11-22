@@ -18,6 +18,7 @@ import org.realityforge.webtack.model.PartialDictionaryDefinition;
 import org.realityforge.webtack.model.PartialInterfaceDefinition;
 import org.realityforge.webtack.model.PartialMixinDefinition;
 import org.realityforge.webtack.model.PartialNamespaceDefinition;
+import org.realityforge.webtack.model.TypedefDefinition;
 import org.realityforge.webtack.model.tools.processors.AbstractProcessor;
 import org.realityforge.webtack.model.tools.spi.Completable;
 import org.realityforge.webtack.model.tools.spi.PipelineContext;
@@ -76,6 +77,13 @@ final class RemoveElementProcessor
   {
     _removeCount++;
     return null;
+  }
+
+  @Nullable
+  @Override
+  protected TypedefDefinition transformTypedef( @Nonnull final TypedefDefinition input )
+  {
+    return matches( input ) ? incRemoveCountAndReturnNull() : super.transformTypedef( input );
   }
 
   @Nullable
@@ -167,6 +175,11 @@ final class RemoveElementProcessor
   protected IncludesStatement transformIncludesStatement( @Nonnull final IncludesStatement input )
   {
     return matches( input ) ? incRemoveCountAndReturnNull() : super.transformIncludesStatement( input );
+  }
+
+  private boolean matches( @Nonnull final TypedefDefinition input )
+  {
+    return matchesType( ElementType.typedef ) && matchesName( input.getName() );
   }
 
   private boolean matches( @Nonnull final CallbackDefinition input )

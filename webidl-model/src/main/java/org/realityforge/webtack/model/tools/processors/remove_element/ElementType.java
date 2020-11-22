@@ -8,6 +8,7 @@ public enum ElementType
   enumeration,
   const_enumeration,
   interface_type,
+  typedef,
   mixin,
   namespace
 }
