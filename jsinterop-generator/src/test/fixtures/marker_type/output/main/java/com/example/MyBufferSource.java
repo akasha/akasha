@@ -8,7 +8,9 @@ import jsinterop.annotations.JsType;
 @JsType(
     isNative = true,
     namespace = JsPackage.GLOBAL,
-    name = "?"
+    name = "MyBufferSource"
 )
-public interface TexImageSource extends TexBufferSource {
+public class MyBufferSource implements TexBufferSource {
+  protected MyBufferSource() {
+  }
 }

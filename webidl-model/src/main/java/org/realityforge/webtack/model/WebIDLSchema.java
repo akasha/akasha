@@ -606,20 +606,7 @@ public final class WebIDLSchema
     {
       _linked = true;
       getInterfaces().forEach( e -> e.link( this ) );
-      for ( final TypedefDefinition definition : getTypedefs() )
-      {
-        final Type type = definition.getType();
-        if ( Kind.Union == type.getKind() &&
-             definition.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE ) )
-        {
-          final UnionType unionType = (UnionType) type;
-          for ( final Type memberType : unionType.getMemberTypes() )
-          {
-            assert Kind.TypeReference == memberType.getKind();
-            getInterfaceByName( ( (TypeReference) memberType ).getName() ).addMarkerType( definition );
-          }
-        }
-      }
+      getTypedefs().forEach( e -> e.link( this ) );
     }
   }
 }

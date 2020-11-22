@@ -31,19 +31,43 @@ final class MarkerTypeUnionValidator
         final List<Type> memberTypes = unionType.getMemberTypes();
         for ( final Type memberType : memberTypes )
         {
-          if ( Kind.TypeReference != memberType.getKind() ||
-               null == schema.findInterfaceByName( ( (TypeReference) memberType ).getName() ) )
+          if ( Kind.TypeReference != memberType.getKind() )
           {
-            final String message =
-              "Typedef named '" + definition.getName() + "' has the " + ExtendedAttributes.MARKER_TYPE +
-              " extended attribute but contains a member type '" + memberType.toString() +
-              "' that is not a reference to an interface.";
-            errors.add( new ValidationError( unionType, message, true ) );
+            invalidTypedef( definition, unionType, memberType, errors );
+          }
+          else
+          {
+          final String name = ( (TypeReference) memberType ).getName();
+          final TypedefDefinition memberTypedef = schema.findTypedefByName( name );
+          if ( null != memberTypedef )
+          {
+            if ( !memberTypedef.isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE ) )
+            {
+              invalidTypedef( definition, unionType, memberType, errors );
+            }
+          }
+          else if ( null == schema.findInterfaceByName( name ) )
+          {
+            invalidTypedef( definition, unionType, memberType, errors );
+          }
           }
         }
       }
     }
 
     return errors;
+  }
+
+  private void invalidTypedef( @Nonnull final TypedefDefinition definition,
+                               @Nonnull final UnionType unionType,
+                               @Nonnull final Type memberType,
+                               @Nonnull final Collection<ValidationError> errors )
+  {
+    final String message =
+      "Typedef named '" + definition.getName() + "' has the " + ExtendedAttributes.MARKER_TYPE +
+      " extended attribute but contains a member type '" + memberType.toString() +
+      "' that is not a reference to an interface or a typedef with the " + ExtendedAttributes.MARKER_TYPE +
+      " extended attribute.";
+    errors.add( new ValidationError( unionType, message, true ) );
   }
 }

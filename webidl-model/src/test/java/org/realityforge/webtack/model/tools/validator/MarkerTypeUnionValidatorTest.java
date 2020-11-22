@@ -15,8 +15,8 @@ public class MarkerTypeUnionValidatorTest
     final WebIDLSchema schema = loadTestLocalSchema( "validMarkerTypeUnion" + WebIDLSchema.EXTENSION );
 
     // Some assertions just to make sure it is in the shape we expect
-    assertEquals( schema.getTypedefs().size(), 3 );
-    assertEquals( schema.getInterfaces().size(), 6 );
+    assertEquals( schema.getTypedefs().size(), 4 );
+    assertEquals( schema.getInterfaces().size(), 7 );
 
     validate( schema, 0 );
   }
@@ -32,9 +32,22 @@ public class MarkerTypeUnionValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'long' that is not a reference to an interface." );
+                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'long' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
   }
 
+  @Test
+  public void nonMarkerTypeTypedefMarkerTypeUnion()
+  {
+    final WebIDLSchema schema = loadTestLocalSchema( "nonMarkerTypeTypedefMarkerTypeUnion" + WebIDLSchema.EXTENSION );
+
+    // Some assertions just to make sure it is in the shape we expect
+    assertEquals( schema.getTypedefs().size(), 2 );
+    assertEquals( schema.getInterfaces().size(), 3 );
+
+    final Collection<ValidationError> errors = validate( schema, 1 );
+    assertErrorPresent( errors,
+                        "Typedef named 'TexBufferSource' has the MarkerType extended attribute but contains a member type 'TexImageSource' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
+  }
   @Test
   public void invalidReferenceMarkerTypeUnion()
   {
@@ -47,7 +60,7 @@ public class MarkerTypeUnionValidatorTest
 
     final Collection<ValidationError> errors = validate( schema, 1 );
     assertErrorPresent( errors,
-                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'BasicEnumeration' that is not a reference to an interface." );
+                        "Typedef named 'TexImageSource' has the MarkerType extended attribute but contains a member type 'BasicEnumeration' that is not a reference to an interface or a typedef with the MarkerType extended attribute." );
   }
 
   @Nonnull

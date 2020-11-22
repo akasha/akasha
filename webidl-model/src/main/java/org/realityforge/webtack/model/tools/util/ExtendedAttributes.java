@@ -47,8 +47,8 @@ public final class ExtendedAttributes
    */
   public static final String JAVA_ANNOTATION = "JavaAnnotation";
   /**
-   * The MarkerType extended attribute can be added to a UnionType to indicate that the union can be treated as a separate.
-   * The member types of the union be interface types.
+   * The MarkerType extended attribute can be added to a UnionType to indicate that the union can be treated as
+   * a separate type. The member types of the union be interface types or other [MarkerType] typedefs.
    *
    * <p>When generating the code for this, it should be generated as a java marker interface and the java classes that
    * are generated to model the WebIDL interface types should implement the java interface.</p>

@@ -1267,6 +1267,12 @@ final class JsinteropAction
                           .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
                           .addMember( "name", "$S", "?" )
                           .build() );
+
+    for ( final TypedefDefinition markerType : definition.getMarkerTypes() )
+    {
+      type.addSuperinterface( lookupClassName( markerType.getName() ) );
+    }
+
     writeTopLevelType( definition.getName(), type );
   }
 

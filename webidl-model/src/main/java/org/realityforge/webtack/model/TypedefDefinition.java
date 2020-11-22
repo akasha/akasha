@@ -1,15 +1,20 @@
 package org.realityforge.webtack.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import org.realityforge.webtack.model.tools.util.ExtendedAttributes;
 
 public final class TypedefDefinition
   extends NamedDefinition
 {
   @Nonnull
   private final Type _type;
+  @Nonnull
+  private final List<TypedefDefinition> _markerTypes = new ArrayList<>();
+  private boolean _linked;
 
   public TypedefDefinition( @Nonnull final String name,
                             @Nonnull final Type type,
@@ -25,6 +30,13 @@ public final class TypedefDefinition
   public Type getType()
   {
     return _type;
+  }
+
+  @Nonnull
+  public List<TypedefDefinition> getMarkerTypes()
+  {
+    assert _linked;
+    return _markerTypes;
   }
 
   @Override
@@ -54,5 +66,34 @@ public final class TypedefDefinition
   public boolean equiv( @Nonnull final TypedefDefinition other )
   {
     return super.equiv( other ) && _type.equiv( other._type );
+  }
+
+  void link( @Nonnull final WebIDLSchema schema )
+  {
+    if ( Kind.Union == _type.getKind() && isNoArgsExtendedAttributePresent( ExtendedAttributes.MARKER_TYPE ) )
+    {
+      final UnionType unionType = (UnionType) _type;
+      for ( final Type memberType : unionType.getMemberTypes() )
+      {
+        assert Kind.TypeReference == memberType.getKind();
+        final String name = ( (TypeReference) memberType ).getName();
+
+        final TypedefDefinition typedef = schema.findTypedefByName( name );
+        if ( null != typedef )
+        {
+          typedef.addMarkerType( this );
+        }
+        else
+        {
+          schema.getInterfaceByName( name ).addMarkerType( this );
+        }
+      }
+    }
+    _linked = true;
+  }
+
+  void addMarkerType( @Nonnull final TypedefDefinition definition )
+  {
+    _markerTypes.add( definition );
   }
 }
