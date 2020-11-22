@@ -424,3 +424,6 @@ DataView includes ArrayBufferViewImpl;
 
 [MarkerType]
 typedef ( Int8Array or Int16Array or Int32Array or Uint8Array or Uint16Array or Uint32Array or Uint8ClampedArray ) IntegerTypedArray;
+
+[MarkerType]
+typedef ( IntegerTypedArray or Float32Array or Float64Array ) TypedArray;
