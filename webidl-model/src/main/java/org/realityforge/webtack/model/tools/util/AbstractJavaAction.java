@@ -409,9 +409,9 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Any.name(), "jsinterop.base.Any" );
     tryRegisterIdlToJavaTypeMapping( Kind.Object.name(), "java.lang.Object" );
     tryRegisterIdlToJavaTypeMapping( Kind.Promise.name(), "elemental3.promise.Promise" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental2.core.JsArray" );
-    tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental2.core.JsIterator" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Symbol.name(), "elemental2.core.Symbol" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental3.core.JsArray" );
+    tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental3.core.JsIterator" );
+    tryRegisterIdlToJavaTypeMapping( Kind.Symbol.name(), "elemental3.core.Symbol" );
   }
 
   @Nonnull

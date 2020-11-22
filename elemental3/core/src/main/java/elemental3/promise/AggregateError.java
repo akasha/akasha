@@ -1,7 +1,7 @@
 package elemental3.promise;
 
-import elemental2.core.JsError;
-import elemental2.core.JsIterable;
+import elemental3.core.JsError;
+import elemental3.core.JsIterable;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;

@@ -1,6 +1,6 @@
 package com.example;
 
-import elemental2.core.Symbol;
+import elemental3.core.Symbol;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

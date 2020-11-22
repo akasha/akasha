@@ -658,7 +658,6 @@ final class JsinteropAction
       "<module>\n" +
       "  <inherits name='jsinterop.base.Base'/>\n" +
       "  <inherits name='elemental3.promise.Promise'/>\n" +
-      "  <inherits name='elemental2.core.Core'/>\n" +
       "\n" +
       "  <source path=''/>\n" +
       "</module>\n";

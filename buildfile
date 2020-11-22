@@ -13,7 +13,6 @@ GWT_DEPS = [
   :jetbrains_annotations,
   :jsinterop_annotations,
   :jsinterop_base,
-  :elemental2_core,
   :gwt_user
 ]
 
@@ -88,11 +87,11 @@ define 'webtack' do
     test.options[:properties] = {
       'webtack.jsinterop-generator.gwtc' => 'true',
       'webtack.jsinterop-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:promise').package(:jar).to_s}",
-      'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:promise').package(:jar).to_s}"
+      'webtack.jsinterop-generator.fixture.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').package(:jar).to_s}",
+      'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
-    test.compile.with :gir, Java.tools_jar, project('elemental3:promise')
+    test.compile.with :gir, Java.tools_jar
     test.compile.enhance do |d|
       GWT_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
@@ -115,11 +114,11 @@ define 'webtack' do
     test.options[:properties] = {
       'webtack.react4j-generator.gwtc' => 'true',
       'webtack.react4j-generator.fixture_dir' => _('src/test/fixtures'),
-      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:promise').package(:jar).to_s}",
-      'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:promise').package(:jar).to_s}"
+      'webtack.react4j-generator.fixture.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').package(:jar).to_s}",
+      'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}#{project('elemental3:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
-    test.compile.with :gir, Java.tools_jar, project('elemental3:promise')
+    test.compile.with :gir, Java.tools_jar
     test.compile.enhance do |d|
       REACT4J_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
@@ -162,18 +161,7 @@ define 'webtack' do
   end
 
   define 'elemental3' do
-    desc 'Promise: A library implementing javascript promises'
-    define 'promise' do
-      compile.with GWT_DEPS
-
-      gwt_enhance(project)
-
-      package(:jar)
-      package(:sources)
-      package(:javadoc)
-    end
-
-    %w(speech bluetooth main react4j).each do |pipeline|
+    %w(core speech bluetooth main react4j).each do |pipeline|
 
       name = 'main' == pipeline ? 'complete' : pipeline
 
@@ -184,17 +172,23 @@ define 'webtack' do
       define name do
         project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/elemental3/#{name}"
 
-        src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        extra_deps = []
+        if pipeline == 'core'
+          compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
+        else
+          src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+          project.compile.sources << src_dir
+          extra_deps << src_dir
+        end
 
-        project.doc.options.merge!('Xdoclint:all,-missing' => true)
+        project.doc.options.merge!('Xdoclint:all,-missing,-unchecked' => true)
 
         compile.using :javac
-        project.compile.sources << src_dir
 
-        deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS) + [project('elemental3:promise').package(:jar)]
+        deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
         compile.with deps
 
-        gwt_enhance(project, :extra_deps => [src_dir])
+        gwt_enhance(project, :extra_deps => extra_deps)
 
         pom.include_transitive_dependencies << deps
         pom.dependency_filter = Proc.new { |dep| dep[:scope].to_s != 'test' && deps.include?(dep[:artifact]) }
@@ -203,7 +197,7 @@ define 'webtack' do
         package(:sources)
         package(:javadoc)
 
-        project.no_iml unless name = 'main' == pipeline
+        project.no_iml unless 'main' == pipeline || 'core' == pipeline
       end
     end
     project.no_iml
@@ -221,7 +215,7 @@ define 'webtack' do
 
   ipr.add_testng_configuration('jsinterop-generator',
                                :module => 'jsinterop-generator',
-                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}")
+                               :jvm_args => "-ea -Dwebtack.output_fixture_data=true -Dwebtack.jsinterop-generator.fixture_dir=src/test/fixtures -Dwebtack.jsinterop-generator.gwtc=true -Dwebtack.jsinterop-generator.fixture.libs=#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{project('elemental3:core').project._(:target, :main, :idea, :classes)} -Dwebtack.jsinterop-generator.gwt_dev.libs=#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').project._(:target, :main, :idea, :classes)}")
 
   ipr.add_testng_configuration('react4j-generator',
                                :module => 'react4j-generator',

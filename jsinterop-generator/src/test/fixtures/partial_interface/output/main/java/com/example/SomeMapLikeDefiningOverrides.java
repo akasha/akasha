@@ -1,6 +1,6 @@
 package com.example;
 
-import elemental2.core.JsIterator;
+import elemental3.core.JsIterator;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
