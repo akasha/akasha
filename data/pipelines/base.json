@@ -130,6 +130,24 @@
     },
     {
       "name": "AddExtendedAttribute",
+      "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
+      "sourceSelector": "name=atomics name=errors name=json name=typedarray",
+      "config": {
+        "namePattern": "^.*$",
+        "extendedAttribute": "JavaSubPackage=core"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
+      "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
+      "sourceSelector": "name=common",
+      "config": {
+        "namePattern": "^(BufferSource|ArrayBufferView)$",
+        "extendedAttribute": "JavaSubPackage=core"
+      }
+    },
+    {
+      "name": "AddExtendedAttribute",
       "description": "Package up the webgl specific specs into a separate package",
       "sourceSelector": "name=webgl.*",
       "config": {

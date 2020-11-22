@@ -30,5 +30,5 @@ partial interface DOMException {
   readonly attribute DOMException code;
 };
 
-[MarkerType]
+[JavaSubPackage=core, MarkerType]
 typedef ( TypedArray or DataView ) ArrayBufferView;
