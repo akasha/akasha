@@ -29,3 +29,6 @@ const enum DOMExceptionCode {
 partial interface DOMException {
   readonly attribute DOMException code;
 };
+
+[MarkerType]
+typedef ( TypedArray or DataView ) ArrayBufferView;

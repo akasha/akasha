@@ -35,12 +35,22 @@
     },
     {
       "name": "AddExtendedAttribute",
-      "description": "Convert ArrayBufferView into marker type",
+      "description": "Convert BufferSource into marker type",
       "sourceSelector": "name=common",
       "config": {
-        "namePattern": "^ArrayBufferView$",
+        "namePattern": "^BufferSource$",
         "extendedAttribute": "MarkerType",
         "types": ["typedef"]
+      }
+    },
+    {
+      "name": "RemoveElement",
+      "description": "Remove ArrayBufferView as redefined with more general structure in common_patch",
+      "sourceSelector": "name=common",
+      "config": {
+        "expectedRemoveCount": 1,
+        "namePattern": "^ArrayBufferView$",
+        "type": ["typedef"]
       }
     }
   ]
