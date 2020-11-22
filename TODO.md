@@ -20,10 +20,6 @@ complete as there is too much un-said.
   have currently deployed `org.realityforge.webtack:webtack-elemental3-complete:jar:0.03` to maven central
   but have no way to automate the upload, release and bump of the version number.
 
-* Move promise into elemental3 namespace
-
-* Move `elemental3.*Array` into `elemental3.core` package
-
 * Remove dependency on `elemental2-core`
 
 * Support constants on namespaces and enable them in `math.webidl`
