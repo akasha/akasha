@@ -91,7 +91,10 @@ define 'webtack' do
       'webtack.jsinterop-generator.gwt_dev.libs' => "#{GWT_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}:#{project('elemental3:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
-    test.compile.with :gir, Java.tools_jar
+    test.compile.with :gir,
+                      Java.tools_jar,
+                      # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
+                      project('elemental3:core').package(:jar)
     test.compile.enhance do |d|
       GWT_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
@@ -118,7 +121,10 @@ define 'webtack' do
       'webtack.react4j-generator.gwt_dev.libs' => "#{REACT4J_DEPS.collect{|a| artifact(a).to_s}.join(':')}:#{Buildr::GWT.dependencies('2.9.0').collect {|d| artifact(d).to_s }.join(':')}#{project('elemental3:core').package(:jar).to_s}"
     }
     test.options[:java_args] = %w(-ea)
-    test.compile.with :gir, Java.tools_jar
+    test.compile.with :gir,
+                      Java.tools_jar,
+                      # Next dependency ensures the jar is built so can be used in tests but is not directly referenced
+                      project('elemental3:core').package(:jar)
     test.compile.enhance do |d|
       REACT4J_DEPS.collect {|a| artifact(a).invoke }
       Buildr::GWT.dependencies('2.9.0').collect {|a| artifact(a).invoke }
