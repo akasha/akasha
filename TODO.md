@@ -26,8 +26,6 @@ complete as there is too much un-said.
 
 * Remove dependency on `elemental2-core`
 
-* Figure out which of TypedArray, `IntegerTypedArray` etc should be transferable
-
 * Support constants on namespaces and enable them in `math.webidl`
 
 * Add support for `JavaNoInline` on constants that force mapping to lookup value from browser
