@@ -1802,7 +1802,7 @@ public final class WebIDLModelParser
         final WebIDLParser.ConstMemberContext constMemberContext = namespaceMemberContext.constMember();
         if ( null != constMemberContext )
         {
-          constants.add( parse( constMemberContext, documentation, extendedAttributes, startPosition ) );
+          constants.add( parse( constMemberContext, memberDocumentation, memberExtendedAttributes, startPosition ) );
         }
         else
         {
