@@ -1777,6 +1777,7 @@ public final class WebIDLModelParser
     final List<SourceInterval> sourceIntervals = parseSourceIntervals( startPosition, ctx );
     final String name = ctx.IDENTIFIER().getText();
 
+    final List<ConstMember> constants = new ArrayList<>();
     final List<OperationMember> operations = new ArrayList<>();
     final List<AttributeMember> attributes = new ArrayList<>();
 
@@ -1798,26 +1799,36 @@ public final class WebIDLModelParser
       }
       else
       {
-        final WebIDLParser.AttributeRestContext attributeRestContext = namespaceMemberContext.attributeRest();
-        final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
-        modifiers.add( AttributeMember.Modifier.READ_ONLY );
-        attributes.add( parse( attributeRestContext,
-                               modifiers,
-                               memberDocumentation,
-                               memberExtendedAttributes,
-                               memberStart ) );
+        final WebIDLParser.ConstMemberContext constMemberContext = namespaceMemberContext.constMember();
+        if ( null != constMemberContext )
+        {
+          constants.add( parse( constMemberContext, documentation, extendedAttributes, startPosition ) );
+        }
+        else
+        {
+          final WebIDLParser.AttributeRestContext attributeRestContext = namespaceMemberContext.attributeRest();
+          final Set<AttributeMember.Modifier> modifiers = new HashSet<>();
+          modifiers.add( AttributeMember.Modifier.READ_ONLY );
+          attributes.add( parse( attributeRestContext,
+                                 modifiers,
+                                 memberDocumentation,
+                                 memberExtendedAttributes,
+                                 memberStart ) );
+        }
       }
       namespaceMembersContext = namespaceMembersContext.namespaceMembers();
     }
     return
       partial ?
       new PartialNamespaceDefinition( name,
+                                      Collections.unmodifiableList( constants ),
                                       Collections.unmodifiableList( operations ),
                                       Collections.unmodifiableList( attributes ),
                                       documentation,
                                       extendedAttributes,
                                       sourceIntervals ) :
       new NamespaceDefinition( name,
+                               Collections.unmodifiableList( constants ),
                                Collections.unmodifiableList( operations ),
                                Collections.unmodifiableList( attributes ),
                                documentation,

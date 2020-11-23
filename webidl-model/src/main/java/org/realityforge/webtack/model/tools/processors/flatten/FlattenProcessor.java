@@ -177,7 +177,12 @@ final class FlattenProcessor
   private NamespaceDefinition merge( @Nonnull final NamespaceDefinition definition,
                                      @Nonnull final List<PartialNamespaceDefinition> partials )
   {
+    final Map<String, ConstMember> constants = new LinkedHashMap<>();
     final Map<String, AttributeMember> attributes = new LinkedHashMap<>();
+    for ( final ConstMember constant : definition.getConstants() )
+    {
+      constants.put( constant.getName(), constant );
+    }
     for ( final AttributeMember attribute : definition.getAttributes() )
     {
       attributes.put( attribute.getName(), attribute );
@@ -205,6 +210,7 @@ final class FlattenProcessor
       operations.addAll( partial.getOperations() );
     }
     return new NamespaceDefinition( definition.getName(),
+                                    Collections.unmodifiableList( new ArrayList<>( constants.values() ) ),
                                     Collections.unmodifiableList( new ArrayList<>( operations ) ),
                                     Collections.unmodifiableList( new ArrayList<>( attributes.values() ) ),
                                     definition.getDocumentation(),

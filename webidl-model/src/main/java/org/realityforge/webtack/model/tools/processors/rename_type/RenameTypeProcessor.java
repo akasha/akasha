@@ -269,6 +269,7 @@ final class RenameTypeProcessor
     {
       _renameCount++;
       return new NamespaceDefinition( matcher.replaceAll( _replacement ),
+                                      transformConstants( input.getConstants() ),
                                       transformOperationMembers( input.getOperations() ),
                                       transformAttributeMembers( input.getAttributes() ),
                                       transformDocumentation( input.getDocumentation() ),
@@ -289,6 +290,7 @@ final class RenameTypeProcessor
     if ( matcher.matches() )
     {
       return new PartialNamespaceDefinition( matcher.replaceAll( _replacement ),
+                                             transformConstants( input.getConstants() ),
                                              transformOperationMembers( input.getOperations() ),
                                              transformAttributeMembers( input.getAttributes() ),
                                              transformDocumentation( input.getDocumentation() ),

@@ -5,7 +5,6 @@
 namespace Math {
   // These constants are approximations and change based on platform. So we need to lookup these values at runtime
 
-/*
   [JavaNoInline]
   const double E = 2.7182818284590452354;
   [JavaNoInline]
@@ -22,7 +21,7 @@ namespace Math {
   const double SQRT1_2 = 0.7071067811865476;
   [JavaNoInline]
   const double SQRT2 = 1.4142135623730951;
-*/
+
   unrestricted double abs( unrestricted double x );
   unrestricted double acos( unrestricted double x );
   unrestricted double acosh( unrestricted double x );

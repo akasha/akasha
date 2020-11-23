@@ -18,12 +18,20 @@ public final class PartialNamespaceDefinitionTest
   {
     final PartialNamespaceDefinition namespace =
       ensurePartialNamespaceDefinition( "partial namespace WebAssembly {\n" +
+                                        "    const long DEPTH_BUFFER_BIT = 0x00000100;\n" +
                                         "    boolean validate(BufferSource bytes);\n" +
                                         "    Promise<Module> compile(BufferSource bytes);\n" +
                                         "};\n",
                                         "WebAssembly",
                                         2,
                                         0 );
+    assertEquals( namespace.getConstants().size(), 1 );
+    {
+      final ConstMember constant = namespace.getConstantByName( "DEPTH_BUFFER_BIT" );
+      assertEquals( constant.getType().getKind(), Kind.Long );
+      assertEquals( constant.getValue().getKind(), ConstValue.Kind.Integer );
+      assertEquals( constant.getValue().getValue(), "0x00000100" );
+    }
     final List<OperationMember> operations = namespace.getOperations();
     {
       final OperationMember operation = operations.get( 0 );

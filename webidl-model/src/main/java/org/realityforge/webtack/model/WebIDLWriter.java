@@ -707,6 +707,7 @@ public final class WebIDLWriter
     writer.write( "namespace " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
+    writeConstants( writer, definition.getConstants() );
     writeAttributes( writer, definition.getAttributes() );
     writeOperations( writer, definition.getOperations() );
     writer.write( "};\n" );
@@ -721,8 +722,8 @@ public final class WebIDLWriter
     writer.write( "partial namespace " );
     writer.write( definition.getName() );
     writer.write( " {\n" );
-    final List<AttributeMember> attr = definition.getAttributes();
-    writeAttributes( writer, attr );
+    writeConstants( writer, definition.getConstants() );
+    writeAttributes( writer, definition.getAttributes() );
     writeOperations( writer, definition.getOperations() );
     writer.write( "};\n" );
   }

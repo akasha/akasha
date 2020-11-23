@@ -5,6 +5,15 @@ namespace CSS {
   DOMString escape( DOMString ident );
 };
 
+[JavaName=JsMath]
+namespace Math {
+  [JavaName=JsMath]
+  const double E = 2.7182818284590452354;
+  [JavaName=JsMath]
+  const double LN10 = 2.302585092994046;
+  unrestricted double abs( unrestricted double x );
+};
+
 /**
  * The WebAssembly JavaScript object acts as the namespace for all WebAssembly-related functionality.
  *

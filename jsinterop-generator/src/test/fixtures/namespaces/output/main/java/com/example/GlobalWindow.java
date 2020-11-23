@@ -38,4 +38,10 @@ public final class GlobalWindow extends Window {
   )
   @Nonnull
   public native WebAssemblyNamespace webAssembly();
+
+  @JsProperty(
+      name = "Math"
+  )
+  @Nonnull
+  public native JsMathNamespace math();
 }

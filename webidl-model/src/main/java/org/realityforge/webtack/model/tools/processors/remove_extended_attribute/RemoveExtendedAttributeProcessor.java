@@ -194,6 +194,7 @@ final class RemoveExtendedAttributeProcessor
   protected NamespaceDefinition transformNamespace( @Nonnull final NamespaceDefinition input )
   {
     return new NamespaceDefinition( input.getName(),
+                                    transformConstants( input.getConstants() ),
                                     transformOperationMembers( input.getOperations() ),
                                     transformAttributeMembers( input.getAttributes() ),
                                     transformDocumentation( input.getDocumentation() ),
@@ -208,6 +209,7 @@ final class RemoveExtendedAttributeProcessor
   protected PartialNamespaceDefinition transformPartialNamespace( @Nonnull final PartialNamespaceDefinition input )
   {
     return new PartialNamespaceDefinition( input.getName(),
+                                           transformConstants( input.getConstants() ),
                                            transformOperationMembers( input.getOperations() ),
                                            transformAttributeMembers( input.getAttributes() ),
                                            transformDocumentation( input.getDocumentation() ),

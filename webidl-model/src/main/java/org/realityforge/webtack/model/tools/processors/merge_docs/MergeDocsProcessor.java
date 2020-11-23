@@ -328,6 +328,7 @@ final class MergeDocsProcessor
     final DocEntry docEntry = findTypeDocEntry();
     final NamespaceDefinition definition =
       new NamespaceDefinition( input.getName(),
+                               transformConstants( input.getConstants() ),
                                transformOperationMembers( input.getOperations() ),
                                transformAttributeMembers( input.getAttributes() ),
                                shouldUseInputDocs( input, docEntry ) ?
@@ -348,6 +349,7 @@ final class MergeDocsProcessor
     final DocEntry docEntry = findTypeDocEntry();
     final PartialNamespaceDefinition definition =
       new PartialNamespaceDefinition( input.getName(),
+                                      transformConstants( input.getConstants() ),
                                       transformOperationMembers( input.getOperations() ),
                                       transformAttributeMembers( input.getAttributes() ),
                                       shouldUseInputDocs( input, docEntry ) ?

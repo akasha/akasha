@@ -22,6 +22,7 @@
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
 // - Change constMemberType to accept constant values of string types
 // - Removed the bufferRelatedType rule as we now define the types in WebIDL
+// - Added constMember as an alternative of namespaceMember so that namespaces can define constants
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
@@ -383,6 +384,7 @@ namespaceMembers
 
 namespaceMember
   : regularOperation
+  | constMember
   | READONLY attributeRest
 ;
 

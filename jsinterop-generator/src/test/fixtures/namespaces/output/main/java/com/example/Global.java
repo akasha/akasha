@@ -45,4 +45,9 @@ public final class Global {
   public static WebAssemblyNamespace webAssembly() {
     return globalThis().webAssembly();
   }
+
+  @Nonnull
+  public static JsMathNamespace math() {
+    return globalThis().math();
+  }
 }

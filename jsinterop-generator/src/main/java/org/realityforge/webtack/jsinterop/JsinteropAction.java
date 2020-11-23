@@ -346,6 +346,37 @@ final class JsinteropAction
     writeTopLevelType( "$Global", type );
   }
 
+  private void generateStaticConstants( @Nonnull final List<ConstMember> constants,
+                                        @Nonnull final String namespaceName,
+                                        @Nonnull final TypeSpec.Builder type )
+  {
+    constants
+      .stream()
+      .sorted( Comparator.comparing( NamedElement::getName ) )
+      .forEach( constant -> generateStaticConstant( constant, namespaceName, type ) );
+  }
+
+  private void generateStaticConstant( @Nonnull final ConstMember constant,
+                                       @Nonnull final String namespaceName,
+                                       @Nonnull final TypeSpec.Builder type )
+  {
+    final Type constantType = constant.getType();
+    final Type actualType = getSchema().resolveType( constantType );
+    final FieldSpec.Builder field =
+      FieldSpec
+        .builder( toTypeName( actualType ),
+                  constant.getName(),
+                  Modifier.PUBLIC,
+                  Modifier.STATIC,
+                  Modifier.FINAL )
+        .addAnnotation( JsinteropTypes.JS_OVERLAY );
+
+    maybeAddCustomAnnotations( constant, field );
+    maybeAddJavadoc( constant, field );
+    field.initializer( "$T.$N", lookupClassName( namespaceName ), constant.getName() );
+    type.addField( field.build() );
+  }
+
   private void generateStaticAttributes( @Nonnull final List<AttributeMember> attributes,
                                          @Nonnull final TypeSpec.Builder type,
                                          final boolean global )
@@ -1648,6 +1679,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
+    generateConstants( definition.getConstants(), type );
     generateAttributes( definition.getAttributes(), type );
     generateOperations( definition.getOperations(), type );
 
@@ -1674,6 +1706,7 @@ final class JsinteropAction
     writeGeneratedAnnotation( type );
     maybeAddJavadoc( definition, type );
 
+    generateStaticConstants( definition.getConstants(), definition.getName(), type );
     generateStaticAttributes( definition.getAttributes(), type, false );
 
     for ( final OperationMember operation : definition.getOperations() )
