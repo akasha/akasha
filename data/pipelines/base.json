@@ -131,7 +131,7 @@
     {
       "name": "AddExtendedAttribute",
       "description": "Package up the elements defined by ECMA into a separate package to model behaviour of elemental2-core",
-      "sourceSelector": "name=atomics name=errors name=json name=typedarray",
+      "sourceSelector": "name=atomics name=errors name=json name=math name=typedarray",
       "config": {
         "namePattern": "^.*$",
         "extendedAttribute": "JavaSubPackage=core"
