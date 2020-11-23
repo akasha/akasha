@@ -192,6 +192,7 @@ define 'webtack' do
         compile.using :javac
 
         deps = artifacts('react4j' == pipeline ? REACT4J_DEPS : GWT_DEPS)
+        deps << [project('elemental3:core').package(:jar)] unless pipeline == 'core'
         compile.with deps
 
         gwt_enhance(project, :extra_deps => extra_deps)
