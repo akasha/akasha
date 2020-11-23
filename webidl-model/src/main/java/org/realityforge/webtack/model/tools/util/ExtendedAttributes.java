@@ -47,6 +47,16 @@ public final class ExtendedAttributes
    */
   public static final String JAVA_ANNOTATION = "JavaAnnotation";
   /**
+   * The JavaNoInline extended attribute can be added to constants. If added to a constant then the constant value
+   * will be accessed from the javascript context rather than inlined into the java code.
+   *
+   * <p>This is the same strategy as used in the elemental2 libraries and may cause the creation of unnecessary
+   * &lt;clinit&gt; methods in GWT2.x (J2CL has an optimization pass that eliminates this cost). This should only
+   * be used when the constant value MUST be accessed from the java script context (i.e. Math constants which are
+   * platform specific or symbol constants that are context specific etc.)</p>
+   */
+  public static final String JAVA_NO_INLINE = "JavaNoInline";
+  /**
    * The MarkerType extended attribute can be added to a UnionType to indicate that the union can be treated as
    * a separate type. The member types of the union be interface types or other [MarkerType] typedefs.
    *

@@ -1346,7 +1346,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
-    generateConstants( definition.getConstants(), type );
+    generateConstants( definition.getName(), definition.getConstants(), type );
 
     final OperationMember operation = definition.getOperation();
     final List<Argument> arguments = operation.getArguments();
@@ -1374,7 +1374,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
-    generateConstants( definition.getConstants(), type );
+    generateConstants( definition.getName(), definition.getConstants(), type );
 
     type.addMethod( MethodSpec
                       .methodBuilder( "of" )
@@ -1679,7 +1679,7 @@ final class JsinteropAction
     maybeAddCustomAnnotations( definition, type );
     maybeAddJavadoc( definition, type );
 
-    generateConstants( definition.getConstants(), type );
+    generateConstants( definition.getName(), definition.getConstants(), type );
     generateAttributes( definition.getAttributes(), type );
     generateOperations( definition.getOperations(), type );
 
@@ -1779,7 +1779,7 @@ final class JsinteropAction
       parentConstructor = null;
     }
 
-    generateConstants( definition.getConstants(), type );
+    generateConstants( definition.getName(), definition.getConstants(), type );
     generateAttributes( definition.getAttributes(), type );
 
     boolean constructorPresent = false;
@@ -2311,9 +2311,42 @@ final class JsinteropAction
     type.addField( field.build() );
   }
 
-  private void generateConstants( @Nonnull final List<ConstMember> constants,
+  private void generateConstants( @Nonnull final String definitionName,
+                                  @Nonnull final List<ConstMember> constants,
                                   @Nonnull final TypeSpec.Builder type )
   {
+    final List<ConstMember> noInlineConstants =
+      constants
+        .stream()
+        .filter( constant -> constant.isNoArgsExtendedAttributePresent( ExtendedAttributes.JAVA_NO_INLINE ) )
+        .sorted( Comparator.comparing( NamedElement::getName ) )
+        .collect( Collectors.toList() );
+
+    if ( !noInlineConstants.isEmpty() )
+    {
+      final TypeSpec.Builder constantType =
+        TypeSpec
+          .classBuilder( "Constants" )
+          .addModifiers( Modifier.PRIVATE, Modifier.STATIC, Modifier.FINAL )
+          .addAnnotation( AnnotationSpec
+                            .builder( JsinteropTypes.JS_TYPE )
+                            .addMember( "isNative", "true" )
+                            .addMember( "name", "$S", definitionName )
+                            .addMember( "namespace", "$T.GLOBAL", JsinteropTypes.JS_PACKAGE )
+                            .build() );
+      for ( final ConstMember constant : noInlineConstants )
+      {
+        constantType.addField( FieldSpec
+                                 .builder( toTypeName( getSchema().resolveType( constant.getType() ) ),
+                                           constant.getName(),
+                                           Modifier.PRIVATE,
+                                           Modifier.STATIC )
+                                 .addAnnotation( JsinteropTypes.JS_OVERLAY )
+                                 .build() );
+      }
+      type.addType( constantType.build() );
+    }
+
     constants
       .stream()
       .sorted( Comparator.comparing( NamedElement::getName ) )
@@ -2337,58 +2370,65 @@ final class JsinteropAction
     maybeAddCustomAnnotations( constant, field );
     maybeAddJavadoc( constant, field );
 
-    final ConstValue value = constant.getValue();
-    final ConstValue.Kind kind = value.getKind();
-    if ( ConstValue.Kind.String == kind )
+    if ( constant.isNoArgsExtendedAttributePresent( ExtendedAttributes.JAVA_NO_INLINE ) )
     {
-      field.initializer( "$S", value.getValue() );
-    }
-    else if ( ConstValue.Kind.True == kind )
-    {
-      field.initializer( "true" );
-    }
-    else if ( ConstValue.Kind.False == kind )
-    {
-      field.initializer( "false" );
-    }
-    else if ( ConstValue.Kind.NaN == kind &&
-              ( Kind.Float == actualType.getKind() || Kind.UnrestrictedFloat == actualType.getKind() ) )
-    {
-      field.initializer( "$T.NaN", Float.class );
-    }
-    else if ( ConstValue.Kind.NaN == kind )
-    {
-      assert Kind.Double == actualType.getKind() || Kind.UnrestrictedDouble == actualType.getKind();
-      field.initializer( "$T.NaN", Double.class );
-    }
-    else if ( ConstValue.Kind.PositiveInfinity == kind &&
-              ( Kind.Float == actualType.getKind() || Kind.UnrestrictedFloat == actualType.getKind() ) )
-    {
-      field.initializer( "$T.POSITIVE_INFINITY", Float.class );
-    }
-    else if ( ConstValue.Kind.PositiveInfinity == kind )
-    {
-      assert Kind.Double == actualType.getKind() || Kind.UnrestrictedDouble == actualType.getKind();
-      field.initializer( "$T.POSITIVE_INFINITY", Double.class );
-    }
-    else if ( ConstValue.Kind.NegativeInfinity == kind &&
-              ( Kind.Float == actualType.getKind() || Kind.UnrestrictedFloat == actualType.getKind() ) )
-    {
-      field.initializer( "$T.NEGATIVE_INFINITY", Float.class );
-    }
-    else if ( ConstValue.Kind.NegativeInfinity == kind )
-    {
-      assert Kind.Double == actualType.getKind() || Kind.UnrestrictedDouble == actualType.getKind();
-      field.initializer( "$T.NEGATIVE_INFINITY", Double.class );
-    }
-    else if ( ConstValue.Kind.Decimal == kind )
-    {
-      field.initializer( Objects.requireNonNull( value.getValue() ) );
+      field.initializer( "$T.$N", ClassName.bestGuess( "Constants" ), constant.getName() );
     }
     else
     {
-      assert ConstValue.Kind.Integer == kind;
-      field.initializer( Objects.requireNonNull( value.getValue() ) );
+      final ConstValue value = constant.getValue();
+      final ConstValue.Kind kind = value.getKind();
+      if ( ConstValue.Kind.String == kind )
+      {
+        field.initializer( "$S", value.getValue() );
+      }
+      else if ( ConstValue.Kind.True == kind )
+      {
+        field.initializer( "true" );
+      }
+      else if ( ConstValue.Kind.False == kind )
+      {
+        field.initializer( "false" );
+      }
+      else if ( ConstValue.Kind.NaN == kind &&
+                ( Kind.Float == actualType.getKind() || Kind.UnrestrictedFloat == actualType.getKind() ) )
+      {
+        field.initializer( "$T.NaN", Float.class );
+      }
+      else if ( ConstValue.Kind.NaN == kind )
+      {
+        assert Kind.Double == actualType.getKind() || Kind.UnrestrictedDouble == actualType.getKind();
+        field.initializer( "$T.NaN", Double.class );
+      }
+      else if ( ConstValue.Kind.PositiveInfinity == kind &&
+                ( Kind.Float == actualType.getKind() || Kind.UnrestrictedFloat == actualType.getKind() ) )
+      {
+        field.initializer( "$T.POSITIVE_INFINITY", Float.class );
+      }
+      else if ( ConstValue.Kind.PositiveInfinity == kind )
+      {
+        assert Kind.Double == actualType.getKind() || Kind.UnrestrictedDouble == actualType.getKind();
+        field.initializer( "$T.POSITIVE_INFINITY", Double.class );
+      }
+      else if ( ConstValue.Kind.NegativeInfinity == kind &&
+                ( Kind.Float == actualType.getKind() || Kind.UnrestrictedFloat == actualType.getKind() ) )
+      {
+        field.initializer( "$T.NEGATIVE_INFINITY", Float.class );
+      }
+      else if ( ConstValue.Kind.NegativeInfinity == kind )
+      {
+        assert Kind.Double == actualType.getKind() || Kind.UnrestrictedDouble == actualType.getKind();
+        field.initializer( "$T.NEGATIVE_INFINITY", Double.class );
+      }
+      else if ( ConstValue.Kind.Decimal == kind )
+      {
+        field.initializer( Objects.requireNonNull( value.getValue() ) );
+      }
+      else
+      {
+        assert ConstValue.Kind.Integer == kind;
+        field.initializer( Objects.requireNonNull( value.getValue() ) );
+      }
     }
     type.addField( field.build() );
   }
