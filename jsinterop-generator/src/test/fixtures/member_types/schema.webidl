@@ -605,6 +605,155 @@ interface MyType4 {
   static Promise<undefined> voidPromiseMethod( Promise<undefined> v1, optional Promise<undefined> v2 );
 };
 
+/**
+ * Interface contains static read-only attributes.
+ */
+[SecureContext, Exposed=(Window,Worker)]
+interface MyType5 {
+  static readonly attribute any readonlyAnyValue;
+  static readonly attribute FrozenArray<boolean> readonlyBooleanFrozenArrayValue;
+  static readonly attribute sequence<boolean> readonlyBooleanSequenceValue;
+  static readonly attribute boolean readonlyBooleanValue;
+  static readonly attribute ByteString readonlyByteStringValue;
+  static readonly attribute byte readonlyByteValue;
+  static readonly attribute DOMString readonlyDOMStringValue;
+  static readonly attribute FrozenArray<double> readonlyDoubleFrozenArrayValue;
+  static readonly attribute sequence<double> readonlyDoubleSequenceValue;
+  static readonly attribute double readonlyDoubleValue;
+  static readonly attribute FrozenArray<float> readonlyFloatFrozenArrayValue;
+  static readonly attribute sequence<float> readonlyFloatSequenceValue;
+  static readonly attribute float readonlyFloatValue;
+  static readonly attribute long long readonlyLongLongValue;
+  static readonly attribute long readonlyLongValue;
+  static readonly attribute FrozenArray<boolean>? readonlyNullableBooleanFrozenArrayValue;
+  static readonly attribute sequence<boolean>? readonlyNullableBooleanSequenceValue;
+  static readonly attribute boolean? readonlyNullableBooleanValue;
+  static readonly attribute ByteString? readonlyNullableByteStringValue;
+  static readonly attribute byte? readonlyNullableByteValue;
+  static readonly attribute DOMString? readonlyNullableDOMStringValue;
+  static readonly attribute FrozenArray<double>? readonlyNullableDoubleFrozenArrayValue;
+  static readonly attribute sequence<double>? readonlyNullableDoubleSequenceValue;
+  static readonly attribute double? readonlyNullableDoubleValue;
+  static readonly attribute FrozenArray<float>? readonlyNullableFloatFrozenArrayValue;
+  static readonly attribute sequence<float>? readonlyNullableFloatSequenceValue;
+  static readonly attribute float? readonlyNullableFloatValue;
+  static readonly attribute long long? readonlyNullableLongLongValue;
+  static readonly attribute long? readonlyNullableLongValue;
+  static readonly attribute object? readonlyNullableObjectValue;
+  static readonly attribute octet? readonlyNullableOctetValue;
+  static readonly attribute FrozenArray<short>? readonlyNullableShortFrozenArrayValue;
+  static readonly attribute Promise<short?> readonlyNullableShortPromiseValue;
+  static readonly attribute sequence<short>? readonlyNullableShortSequenceValue;
+  static readonly attribute short? readonlyNullableShortValue;
+  static readonly attribute FrozenArray<SomeType>? readonlyNullableSomeTypeFrozenArrayValue;
+  static readonly attribute Promise<SomeType?> readonlyNullableSomeTypePromiseValue;
+  static readonly attribute sequence<SomeType>? readonlyNullableSomeTypeSequenceValue;
+  static readonly attribute SomeType? readonlyNullableSomeTypeValue;
+  static readonly attribute symbol? readonlyNullableSymbolValue;
+  static readonly attribute USVString? readonlyNullableUSVStringValue;
+  static readonly attribute unrestricted double? readonlyNullableUnrestrictedDoubleValue;
+  static readonly attribute unrestricted float? readonlyNullableUnrestrictedFloatValue;
+  static readonly attribute unsigned long long? readonlyNullableUnsignedLongLongValue;
+  static readonly attribute unsigned long? readonlyNullableUnsignedLongValue;
+  static readonly attribute unsigned short? readonlyNullableUnsignedShortValue;
+  static readonly attribute object readonlyObjectValue;
+  static readonly attribute octet readonlyOctetValue;
+  static readonly attribute FrozenArray<short> readonlyShortFrozenArrayValue;
+  static readonly attribute Promise<short> readonlyShortPromiseValue;
+  static readonly attribute sequence<short> readonlyShortSequenceValue;
+  static readonly attribute short readonlyShortValue;
+  static readonly attribute FrozenArray<SomeType> readonlySomeTypeFrozenArrayValue;
+  static readonly attribute Promise<SomeType> readonlySomeTypePromiseValue;
+  static readonly attribute sequence<SomeType> readonlySomeTypeSequenceValue;
+  static readonly attribute SomeType readonlySomeTypeValue;
+  static readonly attribute symbol readonlySymbolValue;
+  static readonly attribute USVString readonlyUSVStringValue;
+  static readonly attribute unrestricted double readonlyUnrestrictedDoubleValue;
+  static readonly attribute unrestricted float readonlyUnrestrictedFloatValue;
+  static readonly attribute unsigned long long readonlyUnsignedLongLongValue;
+  static readonly attribute unsigned long readonlyUnsignedLongValue;
+  static readonly attribute unsigned short readonlyUnsignedShortValue;
+  static readonly attribute Promise<undefined> readonlyVoidPromiseValue;
+};
+
+/**
+ * Interface contains static mutable attributes.
+ */
+[SecureContext, Exposed=(Window,Worker)]
+interface MyType6 {
+  static attribute any anyValue;
+  static attribute FrozenArray<boolean> booleanFrozenArrayValue;
+  static attribute sequence<boolean> booleanSequenceValue;
+  static attribute boolean booleanValue;
+  static attribute record<ByteString, ByteString> byteStringRecordValue;
+  static attribute ByteString byteStringValue;
+  static attribute byte byteValue;
+  static attribute record<DOMString, DOMString> domStringRecordValue;
+  static attribute DOMString domStringValue;
+  static attribute FrozenArray<double> doubleFrozenArrayValue;
+  static attribute record<DOMString, double> doubleRecordValue;
+  static attribute sequence<double> doubleSequenceValue;
+  static attribute double doubleValue;
+  static attribute FrozenArray<float> floatFrozenArrayValue;
+  static attribute sequence<float> floatSequenceValue;
+  static attribute float floatValue;
+  static attribute Promise<sequence<long long>> longLongPromiseValue;
+  static attribute long long longLongValue;
+  static attribute long longValue;
+  static attribute record<DOMString, USVString> mixedStringRecordValue;
+  static attribute FrozenArray<boolean>? nullableBooleanFrozenArrayValue;
+  static attribute sequence<boolean>? nullableBooleanSequenceValue;
+  static attribute boolean? nullableBooleanValue;
+  static attribute ByteString? nullableByteStringValue;
+  static attribute byte? nullableByteValue;
+  static attribute DOMString? nullableDOMStringValue;
+  static attribute FrozenArray<double>? nullableDoubleFrozenArrayValue;
+  static attribute sequence<double>? nullableDoubleSequenceValue;
+  static attribute double? nullableDoubleValue;
+  static attribute FrozenArray<float>? nullableFloatFrozenArrayValue;
+  static attribute sequence<float>? nullableFloatSequenceValue;
+  static attribute float? nullableFloatValue;
+  static attribute long long? nullableLongLongValue;
+  static attribute long? nullableLongValue;
+  static attribute object? nullableObjectValue;
+  static attribute octet? nullableOctetValue;
+  static attribute FrozenArray<short>? nullableShortFrozenArrayValue;
+  static attribute Promise<short?> nullableShortPromiseValue;
+  static attribute sequence<short>? nullableShortSequenceValue;
+  static attribute short? nullableShortValue;
+  static attribute FrozenArray<SomeType>? nullableSomeTypeFrozenArrayValue;
+  static attribute Promise<SomeType?> nullableSomeTypePromiseValue;
+  static attribute sequence<SomeType>? nullableSomeTypeSequenceValue;
+  static attribute SomeType? nullableSomeTypeValue;
+  static attribute symbol? nullableSymbolValue;
+  static attribute USVString? nullableUSVStringValue;
+  static attribute unrestricted double? nullableUnrestrictedDoubleValue;
+  static attribute unrestricted float? nullableUnrestrictedFloatValue;
+  static attribute unsigned long long? nullableUnsignedLongLongValue;
+  static attribute unsigned long? nullableUnsignedLongValue;
+  static attribute unsigned short? nullableUnsignedShortValue;
+  static attribute object objectValue;
+  static attribute octet octetValue;
+  static attribute FrozenArray<short> shortFrozenArrayValue;
+  static attribute Promise<short> shortPromiseValue;
+  static attribute sequence<short> shortSequenceValue;
+  static attribute short shortValue;
+  static attribute FrozenArray<SomeType> someTypeFrozenArrayValue;
+  static attribute Promise<SomeType> someTypePromiseValue;
+  static attribute sequence<SomeType> someTypeSequenceValue;
+  static attribute SomeType someTypeValue;
+  static attribute symbol symbolValue;
+  static attribute record<DOMString, SomeType> typeReferenceRecordValue;
+  static attribute unrestricted double unrestrictedDoubleValue;
+  static attribute unrestricted float unrestrictedFloatValue;
+  static attribute unsigned long long unsignedLongLongValue;
+  static attribute unsigned long unsignedLongValue;
+  static attribute unsigned short unsignedShortValue;
+  static attribute record<USVString, USVString> usvStringRecordValue;
+  static attribute USVString usvStringValue;
+  static attribute Promise<undefined> voidPromiseValue;
+};
+
 [SecureContext, Exposed=(Window,Worker)]
 interface SomeType {
 };

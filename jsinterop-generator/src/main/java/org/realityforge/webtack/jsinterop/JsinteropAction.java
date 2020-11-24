@@ -2268,6 +2268,10 @@ final class JsinteropAction
         .addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY ).addMember( "name", "$S", name ).build() );
     maybeAddCustomAnnotations( attribute, method );
     maybeAddJavadoc( attribute, method );
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+    {
+      method.addModifiers( Modifier.STATIC );
+    }
     if ( schema.isNullable( attributeType ) )
     {
       method.addAnnotation( BasicTypes.NULLABLE );
@@ -2298,6 +2302,10 @@ final class JsinteropAction
       field.addAnnotation( AnnotationSpec.builder( JsinteropTypes.JS_PROPERTY )
                              .addMember( "name", "$S", name )
                              .build() );
+    }
+    if ( attribute.getModifiers().contains( AttributeMember.Modifier.STATIC ) )
+    {
+      field.addModifiers( Modifier.STATIC );
     }
     if ( schema.isNullable( attributeType ) )
     {
