@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Symbol.prototype",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/prototype",
+    "description": "The data type symbol is a primitive data type. The Symbol() function returns a value of type symbol, has static properties that expose several members of built-in objects, has static methods that expose the global symbol registry, and resembles a built-in object class, but is incomplete as a constructor because it does not support the syntax &quot;new Symbol()&quot;.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-symbol-objects",
+            "description": "The definition of 'Symbol' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}
