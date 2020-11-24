@@ -299,6 +299,10 @@
         "url": "https://www.w3.org/TR/SVG2/idl.html"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "symbol"
+    },
+    {
         "lastModifiedTime": 1569311451000,
         "name": "touch_events",
         "url": "https://w3c.github.io/touch-events/"
