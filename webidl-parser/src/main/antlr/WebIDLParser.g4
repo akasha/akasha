@@ -20,6 +20,7 @@
 // - Retained the `void` return type to maintain compatibility with the majority of WebIDL that have not followed
 //   the crazyness associated with chasing crazy spec changes to remove void.
 // - Added OR to operationNameKeyword rule to support operations named or (Used when defining ECMA's Atomics.or())
+// - Added SYMBOL to argumentNameKeyword rule to support arguments named symbol (Used when defining ECMA's Symbol.keyFor())
 // - Change constMemberType to accept constant values of string types
 // - Removed the bufferRelatedType rule as we now define the types in WebIDL
 // - Added constMember as an alternative of namespaceMember so that namespaces can define constants
@@ -72,6 +73,7 @@ argumentNameKeyword
 	| SETTER
 	| STATIC
 	| STRINGIFIER
+	| SYMBOL
 	| TYPEDEF
 	| UNRESTRICTED
 ;
