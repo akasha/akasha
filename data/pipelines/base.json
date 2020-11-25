@@ -346,7 +346,6 @@
         "type": "sequence<Transferable>"
       }
     },
-
     {
       "name": "RemoveMember",
       "description": "Change the type of the transfer member to Transferable",
