@@ -34,7 +34,6 @@ namespace Math {
   long ceil( unrestricted double x );
   long clz32( long x );
   unrestricted double cos( unrestricted double x );
-  unrestricted double cos( DOMString x );
   unrestricted double cosh( unrestricted double x );
   unrestricted double exp( unrestricted double x );
   unrestricted double expm1( unrestricted double x );
