@@ -829,6 +829,30 @@
       }
     },
     {
+      "name": "ChangeArgumentType",
+      "description": "Change arguments to be more efficient type. Not strictly required but a good practie to enforce and cleans up the API",
+      "sourceSelector": "name=webgl_extensions_webgl_multi_draw",
+      "config": {
+        "expectedChangeCount": 10,
+        "elementNamePattern": "^.*$",
+        "operationNamePattern": "^.*$",
+        "argumentNamePattern": "^(firstsList|countsList|offsetsList|instanceCountsList)$",
+        "type": "Int32Array"
+      }
+    },
+    {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl_extensions_webgl_multi_draw",
+      "config": {
+        "expectedChangeCount": 4,
+        "elementNamePattern": "^.*$",
+        "operationNamePattern": "^.*$",
+        "argumentNamePattern": "^mode$",
+        "type": "DrawPrimitiveType"
+      }
+    },
+    {
       "name": "Merge"
     },
     {
