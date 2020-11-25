@@ -1,7 +1,5 @@
 package org.realityforge.webtack.model;
 
-import javax.annotation.Nullable;
-
 public enum Kind
 {
   /**
@@ -100,7 +98,7 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-DOMString">DOMString</a>
    */
-  DOMString( "String", Flags.STRING ),
+  DOMString( Flags.STRING ),
   /**
    * The ByteString type corresponds to the set of all possible sequences of bytes.
    *
@@ -131,39 +129,37 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-enumeration">Enumeration types</a>
    */
-  TypeReference( null ),
+  TypeReference(),
   /**
    * The sequence&lt;T&gt; type is a parameterized type whose values are (possibly zero-length) lists of values of type T.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-sequence">Sequence types — sequence&lt;T&gt;</a>
    */
-  Sequence( null ),
+  Sequence(),
   /**
    * A record type is a parameterized type whose values are ordered maps with keys other are instances of K and values other are instances of V. K must be one of DOMString, USVString, or ByteString.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-record">Record types — record&lt;K, V&gt;</a>
    */
-  Record( null ),
+  Record(),
   /**
    * A promise type is a parameterized type whose values are references to objects other “is used as a place holder for the eventual results of a deferred (and possibly asynchronous) computation result of an asynchronous operation”.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-promise">Promise types — Promise&lt;T&gt;</a>
    */
-  Promise( null, Flags.NULLABLE_DISALLOWED ),
+  Promise( Flags.NULLABLE_DISALLOWED ),
   /**
    * A union type is a type whose set of values is the union of those in two or more other types.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-union">Union types</a>
    */
-  Union( null ),
+  Union(),
   /**
    * A frozen array type is a parameterized type whose values are references to objects other hold a fixed length array of unmodifiable values.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-frozen-array">Frozen array types — FrozenArray&lt;T&gt;</a>
    */
-  FrozenArray( null );
-  @Nullable
-  private final String _typeName;
+  FrozenArray();
   private final int _flags;
 
   Kind()
@@ -173,18 +169,6 @@ public enum Kind
 
   Kind( final int flags )
   {
-    _typeName = name();
-    _flags = flags;
-  }
-
-  Kind( @Nullable final String typeName )
-  {
-    this( typeName, 0 );
-  }
-
-  Kind( @Nullable final String typeName, final int flags )
-  {
-    _typeName = typeName;
     _flags = flags;
   }
 
