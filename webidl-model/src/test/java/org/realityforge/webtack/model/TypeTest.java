@@ -16,7 +16,6 @@ public final class TypeTest
   {
     assertParse( "any", Kind.Any, false );
     assertParse( "object", Kind.Object, true );
-    assertParse( "symbol", Kind.Symbol, true );
 
     // primitives
     assertParse( "boolean", Kind.Boolean, true );

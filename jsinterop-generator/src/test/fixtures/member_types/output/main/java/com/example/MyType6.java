@@ -1,7 +1,6 @@
 package com.example;
 
 import elemental3.core.JsArray;
-import elemental3.core.Symbol;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -148,9 +147,6 @@ public class MyType6 {
   public static SomeType nullableSomeTypeValue;
 
   @Nullable
-  public static Symbol nullableSymbolValue;
-
-  @Nullable
   public static String nullableUSVStringValue;
 
   @Nullable
@@ -195,9 +191,6 @@ public class MyType6 {
 
   @Nonnull
   public static SomeType someTypeValue;
-
-  @Nonnull
-  public static Symbol symbolValue;
 
   @Nonnull
   public static JsPropertyMap<SomeType> typeReferenceRecordValue;

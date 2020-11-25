@@ -150,10 +150,6 @@ dictionary Dictionary_requiredNullableSomeTypeValue {
   required SomeType? requiredNullableSomeTypeValue;
 };
 
-dictionary Dictionary_requiredNullableSymbolValue {
-  required symbol? requiredNullableSymbolValue;
-};
-
 dictionary Dictionary_requiredNullableUSVStringValue {
   required USVString? requiredNullableUSVStringValue;
 };
@@ -208,10 +204,6 @@ dictionary Dictionary_requiredSomeTypeSequenceValue {
 
 dictionary Dictionary_requiredSomeTypeValue {
   required SomeType requiredSomeTypeValue;
-};
-
-dictionary Dictionary_requiredSymbolValue {
-  required symbol requiredSymbolValue;
 };
 
 dictionary Dictionary_requiredUSVStringValue {
@@ -282,7 +274,6 @@ dictionary MyDictionary {
   Promise<SomeType?> nullableSomeTypePromiseValue;
   sequence<SomeType>? nullableSomeTypeSequenceValue;
   SomeType? nullableSomeTypeValue;
-  symbol? nullableSymbolValue;
   USVString? nullableUSVStringValue;
   unrestricted double? nullableUnrestrictedDoubleValue;
   unrestricted float? nullableUnrestrictedFloatValue;
@@ -300,7 +291,6 @@ dictionary MyDictionary {
   Promise<SomeType> someTypePromiseValue;
   sequence<SomeType> someTypeSequenceValue;
   SomeType someTypeValue;
-  symbol symbolValue;
   record<DOMString, SomeType> typeReferenceRecordValue;
   unrestricted double unrestrictedDoubleValue;
   unrestricted float unrestrictedFloatValue;
@@ -353,7 +343,6 @@ interface MyType1 {
   readonly attribute Promise<SomeType?> readonlyNullableSomeTypePromiseValue;
   readonly attribute sequence<SomeType>? readonlyNullableSomeTypeSequenceValue;
   readonly attribute SomeType? readonlyNullableSomeTypeValue;
-  readonly attribute symbol? readonlyNullableSymbolValue;
   readonly attribute USVString? readonlyNullableUSVStringValue;
   readonly attribute unrestricted double? readonlyNullableUnrestrictedDoubleValue;
   readonly attribute unrestricted float? readonlyNullableUnrestrictedFloatValue;
@@ -370,7 +359,6 @@ interface MyType1 {
   readonly attribute Promise<SomeType> readonlySomeTypePromiseValue;
   readonly attribute sequence<SomeType> readonlySomeTypeSequenceValue;
   readonly attribute SomeType readonlySomeTypeValue;
-  readonly attribute symbol readonlySymbolValue;
   readonly attribute USVString readonlyUSVStringValue;
   readonly attribute unrestricted double readonlyUnrestrictedDoubleValue;
   readonly attribute unrestricted float readonlyUnrestrictedFloatValue;
@@ -426,7 +414,6 @@ interface MyType2 {
   attribute Promise<SomeType?> nullableSomeTypePromiseValue;
   attribute sequence<SomeType>? nullableSomeTypeSequenceValue;
   attribute SomeType? nullableSomeTypeValue;
-  attribute symbol? nullableSymbolValue;
   attribute USVString? nullableUSVStringValue;
   attribute unrestricted double? nullableUnrestrictedDoubleValue;
   attribute unrestricted float? nullableUnrestrictedFloatValue;
@@ -443,7 +430,6 @@ interface MyType2 {
   attribute Promise<SomeType> someTypePromiseValue;
   attribute sequence<SomeType> someTypeSequenceValue;
   attribute SomeType someTypeValue;
-  attribute symbol symbolValue;
   attribute record<DOMString, SomeType> typeReferenceRecordValue;
   attribute unrestricted double unrestrictedDoubleValue;
   attribute unrestricted float unrestrictedFloatValue;
@@ -501,7 +487,6 @@ interface MyType3 {
   SomeType? nullableSomeTypeMethod( SomeType? v1, optional SomeType? v2 );
   Promise<SomeType?> nullableSomeTypePromiseMethod( Promise<SomeType?> v1, optional Promise<SomeType?> v2 );
   sequence<SomeType>? nullableSomeTypeSequenceMethod( sequence<SomeType>? v1, optional sequence<SomeType>? v2 );
-  symbol? nullableSymbolMethod( symbol? v1, optional symbol? v2 );
   USVString? nullableUSVStringMethod( USVString? v1, optional USVString? v2 );
   unrestricted double? nullableUnrestrictedDoubleMethod( unrestricted double? v1, optional unrestricted double? v2 );
   unrestricted float? nullableUnrestrictedFloatMethod( unrestricted float? v1, optional unrestricted float? v2 );
@@ -518,7 +503,6 @@ interface MyType3 {
   SomeType someTypeMethod( SomeType v1, optional SomeType v2 );
   Promise<SomeType> someTypePromiseMethod( Promise<SomeType> v1, optional Promise<SomeType> v2 );
   sequence<SomeType> someTypeSequenceMethod( sequence<SomeType> v1, optional sequence<SomeType> v2 );
-  symbol symbolMethod( symbol v1, optional symbol v2 );
   record<DOMString, SomeType> typeReferenceRecordMethod( record<DOMString, SomeType> v1, optional record<DOMString, SomeType> v2 );
   unrestricted double unrestrictedDoubleMethod( unrestricted double v1, optional unrestricted double v2 );
   unrestricted float unrestrictedFloatMethod( unrestricted float v1, optional unrestricted float v2 );
@@ -576,7 +560,6 @@ interface MyType4 {
   static SomeType? nullableSomeTypeMethod( SomeType? v1, optional SomeType? v2 );
   static Promise<SomeType?> nullableSomeTypePromiseMethod( Promise<SomeType?> v1, optional Promise<SomeType?> v2 );
   static sequence<SomeType>? nullableSomeTypeSequenceMethod( sequence<SomeType>? v1, optional sequence<SomeType>? v2 );
-  static symbol? nullableSymbolMethod( symbol? v1, optional symbol? v2 );
   static USVString? nullableUSVStringMethod( USVString? v1, optional USVString? v2 );
   static unrestricted double? nullableUnrestrictedDoubleMethod( unrestricted double? v1, optional unrestricted double? v2 );
   static unrestricted float? nullableUnrestrictedFloatMethod( unrestricted float? v1, optional unrestricted float? v2 );
@@ -593,7 +576,6 @@ interface MyType4 {
   static SomeType someTypeMethod( SomeType v1, optional SomeType v2 );
   static Promise<SomeType> someTypePromiseMethod( Promise<SomeType> v1, optional Promise<SomeType> v2 );
   static sequence<SomeType> someTypeSequenceMethod( sequence<SomeType> v1, optional sequence<SomeType> v2 );
-  static symbol symbolMethod( symbol v1, optional symbol v2 );
   static record<DOMString, SomeType> typeReferenceRecordMethod( record<DOMString, SomeType> v1, optional record<DOMString, SomeType> v2 );
   static unrestricted double unrestrictedDoubleMethod( unrestricted double v1, optional unrestricted double v2 );
   static unrestricted float unrestrictedFloatMethod( unrestricted float v1, optional unrestricted float v2 );
@@ -649,7 +631,6 @@ interface MyType5 {
   static readonly attribute Promise<SomeType?> readonlyNullableSomeTypePromiseValue;
   static readonly attribute sequence<SomeType>? readonlyNullableSomeTypeSequenceValue;
   static readonly attribute SomeType? readonlyNullableSomeTypeValue;
-  static readonly attribute symbol? readonlyNullableSymbolValue;
   static readonly attribute USVString? readonlyNullableUSVStringValue;
   static readonly attribute unrestricted double? readonlyNullableUnrestrictedDoubleValue;
   static readonly attribute unrestricted float? readonlyNullableUnrestrictedFloatValue;
@@ -666,7 +647,6 @@ interface MyType5 {
   static readonly attribute Promise<SomeType> readonlySomeTypePromiseValue;
   static readonly attribute sequence<SomeType> readonlySomeTypeSequenceValue;
   static readonly attribute SomeType readonlySomeTypeValue;
-  static readonly attribute symbol readonlySymbolValue;
   static readonly attribute USVString readonlyUSVStringValue;
   static readonly attribute unrestricted double readonlyUnrestrictedDoubleValue;
   static readonly attribute unrestricted float readonlyUnrestrictedFloatValue;
@@ -725,7 +705,6 @@ interface MyType6 {
   static attribute Promise<SomeType?> nullableSomeTypePromiseValue;
   static attribute sequence<SomeType>? nullableSomeTypeSequenceValue;
   static attribute SomeType? nullableSomeTypeValue;
-  static attribute symbol? nullableSymbolValue;
   static attribute USVString? nullableUSVStringValue;
   static attribute unrestricted double? nullableUnrestrictedDoubleValue;
   static attribute unrestricted float? nullableUnrestrictedFloatValue;
@@ -742,7 +721,6 @@ interface MyType6 {
   static attribute Promise<SomeType> someTypePromiseValue;
   static attribute sequence<SomeType> someTypeSequenceValue;
   static attribute SomeType someTypeValue;
-  static attribute symbol symbolValue;
   static attribute record<DOMString, SomeType> typeReferenceRecordValue;
   static attribute unrestricted double unrestrictedDoubleValue;
   static attribute unrestricted float unrestrictedFloatValue;

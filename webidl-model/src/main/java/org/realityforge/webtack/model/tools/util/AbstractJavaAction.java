@@ -411,7 +411,6 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Promise.name(), "elemental3.promise.Promise" );
     tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental3.core.JsArray" );
     tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental3.core.JsIterator" );
-    tryRegisterIdlToJavaTypeMapping( Kind.Symbol.name(), "elemental3.core.Symbol" );
   }
 
   @Nonnull
@@ -569,7 +568,7 @@ public abstract class AbstractJavaAction
     {
       return lookupClassName( generateUnionType( (UnionType) type ) );
     }
-    else if ( Kind.Object == kind || Kind.Symbol == kind )
+    else if ( Kind.Object == kind )
     {
       return lookupClassName( kind.name() );
     }
@@ -607,10 +606,7 @@ public abstract class AbstractJavaAction
     {
       sb.append( "String" );
     }
-    else if ( kind.isPrimitive() ||
-              Kind.FrozenArray == kind ||
-              Kind.Object == kind ||
-              Kind.Symbol == kind )
+    else if ( kind.isPrimitive() || Kind.FrozenArray == kind || Kind.Object == kind )
     {
       sb.append( kind.name() );
     }

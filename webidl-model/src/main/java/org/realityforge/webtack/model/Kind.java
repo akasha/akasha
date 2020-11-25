@@ -118,12 +118,6 @@ public enum Kind
    */
   Object,
   /**
-   * The symbol type corresponds to the set of all possible symbol values.
-   *
-   * @see <a href="https://heycam.github.io/webidl/#idl-symbol">Symbol</a>
-   */
-  Symbol,
-  /**
    * A reference to a type with specified name.
    * The name may identify an interface, enumeration, callback function, callback interface or typedef.
    *

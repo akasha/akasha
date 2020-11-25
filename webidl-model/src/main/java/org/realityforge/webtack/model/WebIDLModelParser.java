@@ -1644,10 +1644,6 @@ public final class WebIDLModelParser
       {
         return new Type( Kind.Object, extendedAttributes, nullable, sourceIntervals );
       }
-      else if ( "symbol".equals( text ) )
-      {
-        return new Type( Kind.Symbol, extendedAttributes, nullable, sourceIntervals );
-      }
       else
       {
         assert "FrozenArray".equals( text );

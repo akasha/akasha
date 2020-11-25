@@ -1,7 +1,6 @@
 package com.example;
 
 import elemental3.core.JsArray;
-import elemental3.core.Symbol;
 import elemental3.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -430,12 +429,6 @@ public class MyType4 {
   public static native JsArray<SomeType> nullableSomeTypeSequenceMethod(@Nullable SomeType[] v1);
 
   @Nullable
-  public static native Symbol nullableSymbolMethod(@Nullable Symbol v1, @Nullable Symbol v2);
-
-  @Nullable
-  public static native Symbol nullableSymbolMethod(@Nullable Symbol v1);
-
-  @Nullable
   public static native String nullableUSVStringMethod(@Nullable String v1, @Nullable String v2);
 
   @Nullable
@@ -565,12 +558,6 @@ public class MyType4 {
 
   @Nonnull
   public static native JsArray<SomeType> someTypeSequenceMethod(@Nonnull SomeType[] v1);
-
-  @Nonnull
-  public static native Symbol symbolMethod(@Nonnull Symbol v1, @Nonnull Symbol v2);
-
-  @Nonnull
-  public static native Symbol symbolMethod(@Nonnull Symbol v1);
 
   @Nonnull
   public static native JsPropertyMap<SomeType> typeReferenceRecordMethod(

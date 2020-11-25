@@ -1,7 +1,6 @@
 package com.example;
 
 import elemental3.core.JsArray;
-import elemental3.core.Symbol;
 import elemental3.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -820,22 +819,6 @@ public interface MyDictionary {
   }
 
   @JsProperty(
-      name = "nullableSymbolValue"
-  )
-  @Nullable
-  Symbol nullableSymbolValue();
-
-  @JsProperty
-  void setNullableSymbolValue(@Nullable Symbol nullableSymbolValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary nullableSymbolValue(@Nullable final Symbol nullableSymbolValue) {
-    setNullableSymbolValue( nullableSymbolValue );
-    return this;
-  }
-
-  @JsProperty(
       name = "nullableUSVStringValue"
   )
   @Nullable
@@ -1124,21 +1107,6 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary someTypeValue(@Nonnull final SomeType someTypeValue) {
     setSomeTypeValue( someTypeValue );
-    return this;
-  }
-
-  @JsProperty(
-      name = "symbolValue"
-  )
-  Symbol symbolValue();
-
-  @JsProperty
-  void setSymbolValue(@Nonnull Symbol symbolValue);
-
-  @JsOverlay
-  @Nonnull
-  default MyDictionary symbolValue(@Nonnull final Symbol symbolValue) {
-    setSymbolValue( symbolValue );
     return this;
   }
 

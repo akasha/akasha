@@ -34,7 +34,6 @@ UNDEFINED : 'undefined';
 ANY : 'any';
 SEQUENCE : 'sequence';
 OBJECT : 'object';
-SYMBOL : 'symbol';
 FROZEN_ARRAY : 'FrozenArray';
 
 BOOLEAN : 'boolean';

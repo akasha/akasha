@@ -1042,9 +1042,6 @@ public final class WebIDLWriter
       case Object:
         writer.write( "object" );
         break;
-      case Symbol:
-        writer.write( "symbol" );
-        break;
       case Void:
         writer.write( "undefined" );
         break;

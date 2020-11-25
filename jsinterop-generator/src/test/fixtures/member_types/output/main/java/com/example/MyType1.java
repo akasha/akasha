@@ -1,7 +1,6 @@
 package com.example;
 
 import elemental3.core.JsArray;
-import elemental3.core.Symbol;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -250,12 +249,6 @@ public class MyType1 {
   public native SomeType readonlyNullableSomeTypeValue();
 
   @JsProperty(
-      name = "readonlyNullableSymbolValue"
-  )
-  @Nullable
-  public native Symbol readonlyNullableSymbolValue();
-
-  @JsProperty(
       name = "readonlyNullableUSVStringValue"
   )
   @Nullable
@@ -348,12 +341,6 @@ public class MyType1 {
   )
   @Nonnull
   public native SomeType readonlySomeTypeValue();
-
-  @JsProperty(
-      name = "readonlySymbolValue"
-  )
-  @Nonnull
-  public native Symbol readonlySymbolValue();
 
   @JsProperty(
       name = "readonlyUSVStringValue"
