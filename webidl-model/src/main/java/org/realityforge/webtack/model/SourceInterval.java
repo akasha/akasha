@@ -27,4 +27,10 @@ public final class SourceInterval
   {
     return _stop;
   }
+
+  @Override
+  public String toString()
+  {
+    return getStart() + " to " + getStop();
+  }
 }
