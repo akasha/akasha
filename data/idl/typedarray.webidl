@@ -128,6 +128,7 @@ interface Int8Array {
    */
   const DOMString name = "Int8Array";
 
+  static Int8Array of(byte... element);
 
   constructor(unsigned long length);
   constructor(Int8Array array);
@@ -164,6 +165,8 @@ interface Uint8Array {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
   const DOMString name = "Uint8Array";
+
+  static Uint8Array of(octet... element);
 
   constructor(unsigned long length);
   constructor(Uint8Array array);
@@ -202,6 +205,8 @@ interface Uint8ClampedArray {
    */
   const DOMString name = "Uint8ClampedArray";
 
+  static Uint8ClampedArray of(octet... element);
+
   constructor(unsigned long length);
   constructor(Uint8ClampedArray array);
   constructor(sequence<octet> array);
@@ -238,6 +243,8 @@ interface Int16Array {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
   const DOMString name = "Int16Array";
+
+  static Int16Array of(short... element);
 
   constructor(unsigned long length);
   constructor(Int16Array array);
@@ -276,6 +283,8 @@ interface Uint16Array {
    */
   const DOMString name = "Uint16Array";
 
+  static Uint16Array of(unsigned short... element);
+
   constructor(unsigned long length);
   constructor(Uint16Array array);
   constructor(sequence<unsigned short> array);
@@ -312,6 +321,8 @@ interface Int32Array {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
   const DOMString name = "Int32Array";
+
+  static Int32Array of(long... element);
 
   constructor(unsigned long length);
   constructor(Int32Array array);
@@ -350,6 +361,8 @@ interface Uint32Array {
    */
   const DOMString name = "Uint32Array";
 
+  static Uint32Array of(unsigned long... element);
+
   constructor(unsigned long length);
   constructor(Uint32Array array);
   constructor(sequence<unsigned long> array);
@@ -386,6 +399,8 @@ interface Float32Array {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
   const DOMString name = "Float32Array";
+
+  static Float32Array of(unrestricted float... element);
 
   constructor(unsigned long length);
   constructor(Float32Array array);
@@ -424,6 +439,8 @@ interface Float64Array {
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
   const DOMString name = "Float64Array";
+
+  static Float64Array of(unrestricted double... element);
 
   constructor(unsigned long length);
   constructor(Float64Array array);
