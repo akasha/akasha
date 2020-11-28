@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "TypeError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
-    "description": "The TypeError object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type."
+    "description": "The TypeError object represents an error when an operation could not be performed, typically (but not exclusively) when a value is not of the expected type.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-typeerror",
+            "description": "The definition of 'TypeError' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

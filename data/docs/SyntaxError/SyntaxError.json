@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "SyntaxError.SyntaxError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError",
-    "description": "The SyntaxError constructor creates a new error object that represents an error when trying to interpret syntactically invalid code."
+    "description": "The SyntaxError constructor creates a new error object that represents an error when trying to interpret syntactically invalid code.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-nativeerror-constructors",
+            "description": "The definition of 'NativeError constructor' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

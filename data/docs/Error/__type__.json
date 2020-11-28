@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "Error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-    "description": "Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions. See below for standard built-in error types."
+    "description": "Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-error-objects",
+            "description": "The definition of 'Error' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

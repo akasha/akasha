@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Error.Error",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error",
-    "description": "The Error constructor creates an error object."
+    "description": "The Error constructor creates an error object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-error-constructor",
+            "description": "The definition of 'Error constructor' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

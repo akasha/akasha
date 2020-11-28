@@ -3,5 +3,12 @@
     "kind": "Type",
     "name": "ReferenceError",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
-    "description": "The ReferenceError object represents an error when a non-existent variable is referenced."
+    "description": "The ReferenceError object represents an error when a non-existent variable is referenced.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-native-error-types-used-in-this-standard-referenceerror",
+            "description": "The definition of 'ReferenceError' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }
