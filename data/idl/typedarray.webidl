@@ -135,6 +135,21 @@ interface Int8Array {
   constructor(sequence<byte> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Int8Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
+
   getter byte get(unsigned long index);
   setter void set(unsigned long index, byte value);
   void set(Int8Array array, optional unsigned long offset);
@@ -172,6 +187,21 @@ interface Uint8Array {
   constructor(Uint8Array array);
   constructor(sequence<octet> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Uint8Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter octet get(unsigned long index);
   setter void set(unsigned long index, octet value);
@@ -212,6 +242,21 @@ interface Uint8ClampedArray {
   constructor(sequence<octet> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Uint8ClampedArray copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
+
   getter octet get(unsigned long index);
   setter void set(unsigned long index, [Clamp] octet value);
   void set(Uint8ClampedArray array, optional unsigned long offset);
@@ -250,6 +295,21 @@ interface Int16Array {
   constructor(Int16Array array);
   constructor(sequence<short> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Int16Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter short get(unsigned long index);
   setter void set(unsigned long index, short value);
@@ -290,6 +350,21 @@ interface Uint16Array {
   constructor(sequence<unsigned short> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Uint16Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
+
   getter unsigned short get(unsigned long index);
   setter void set(unsigned long index, unsigned short value);
   void set(Uint16Array array, optional unsigned long offset);
@@ -328,6 +403,21 @@ interface Int32Array {
   constructor(Int32Array array);
   constructor(sequence<long> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Int32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter long get(unsigned long index);
   setter void set(unsigned long index, long value);
@@ -368,6 +458,21 @@ interface Uint32Array {
   constructor(sequence<unsigned long> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Uint32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
+
   getter unsigned long get(unsigned long index);
   setter void set(unsigned long index, unsigned long value);
   void set(Uint32Array array, optional unsigned long offset);
@@ -406,6 +511,21 @@ interface Float32Array {
   constructor(Float32Array array);
   constructor(sequence<unrestricted float> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Float32Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter unrestricted float get(unsigned long index);
   setter void set(unsigned long index, unrestricted float value);
@@ -446,6 +566,21 @@ interface Float64Array {
   constructor(Float64Array array);
   constructor(sequence<unrestricted double> array);
   constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+
+  /**
+   * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+   *
+   * @param target Zero-based index at which to copy the sequence to. If negative, target will be counted from the end.
+   *               If target is at or greater than arr.length, nothing will be copied. If target is positioned after start,
+   *               the copied sequence will be trimmed to fit arr.length.
+   * @param start Zero-based index at which to start copying elements from. If negative, start will be counted from the end.
+   *              If start is omitted, copyWithin will copy from index 0.
+   * @param end Zero-based index at which to end copying elements from. copyWithin copies up to but not including end. If negative, end will be counted from the end.
+   *            If end is omitted, copyWithin will copy until the last index (default to arr.length).
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-array.prototype.copywithin">Array.prototype.copyWithin - ECMA</a>
+   */
+  Float64Array copyWithin(unsigned long target, unsigned long start, optional unsigned long end);
 
   getter unrestricted double get(unsigned long index);
   setter void set(unsigned long index, unrestricted double value);
