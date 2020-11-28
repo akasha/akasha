@@ -102,6 +102,7 @@ interface mixin ArrayBufferViewImpl {
   readonly attribute unsigned long byteOffset;
   readonly attribute unsigned long byteLength;
   readonly attribute unsigned long length;
+  stringifier DOMString toString();
 };
 
 /**
