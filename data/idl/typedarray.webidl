@@ -101,6 +101,8 @@ interface mixin ArrayBufferViewImpl {
   readonly attribute ArrayBuffer buffer;
   readonly attribute unsigned long byteOffset;
   readonly attribute unsigned long byteLength;
+
+  readonly attribute unsigned long length;
 };
 
 /**
@@ -127,7 +129,6 @@ interface Int8Array {
    */
   const DOMString name = "Int8Array";
 
-  readonly attribute unsigned long length;
 
   constructor(unsigned long length);
   constructor(Int8Array array);
@@ -154,8 +155,6 @@ Int8Array includes ArrayBufferViewImpl;
  */
 interface Uint8Array {
     const long BYTES_PER_ELEMENT = 1;
-
-    readonly attribute unsigned long length;
 
     constructor(unsigned long length);
     constructor(Uint8Array array);
@@ -184,8 +183,6 @@ Uint8Array includes ArrayBufferViewImpl;
 interface Uint8ClampedArray {
     const long BYTES_PER_ELEMENT = 1;
 
-    readonly attribute unsigned long length;
-
     constructor(unsigned long length);
     constructor(Uint8ClampedArray array);
     constructor(sequence<octet> array);
@@ -212,8 +209,6 @@ Uint8ClampedArray includes ArrayBufferViewImpl;
  */
 interface Int16Array {
     const long BYTES_PER_ELEMENT = 2;
-
-    readonly attribute unsigned long length;
 
     constructor(unsigned long length);
     constructor(Int16Array array);
@@ -242,8 +237,6 @@ Int16Array includes ArrayBufferViewImpl;
 interface Uint16Array {
     const long BYTES_PER_ELEMENT = 2;
 
-    readonly attribute unsigned long length;
-
     constructor(unsigned long length);
     constructor(Uint16Array array);
     constructor(sequence<unsigned short> array);
@@ -270,8 +263,6 @@ Uint16Array includes ArrayBufferViewImpl;
  */
 interface Int32Array {
     const long BYTES_PER_ELEMENT = 4;
-
-    readonly attribute unsigned long length;
 
     constructor(unsigned long length);
     constructor(Int32Array array);
@@ -300,8 +291,6 @@ Int32Array includes ArrayBufferViewImpl;
 interface Uint32Array {
     const long BYTES_PER_ELEMENT = 4;
 
-    readonly attribute unsigned long length;
-
     constructor(unsigned long length);
     constructor(Uint32Array array);
     constructor(sequence<unsigned long> array);
@@ -328,8 +317,6 @@ Uint32Array includes ArrayBufferViewImpl;
  */
 interface Float32Array {
     const long BYTES_PER_ELEMENT = 4;
-
-    readonly attribute unsigned long length;
 
     constructor(unsigned long length);
     constructor(Float32Array array);
@@ -358,8 +345,6 @@ Float32Array includes ArrayBufferViewImpl;
  */
 interface Float64Array {
     const long BYTES_PER_ELEMENT = 8;
-
-    readonly attribute unsigned long length;
 
     constructor(unsigned long length);
     constructor(Float64Array array);
