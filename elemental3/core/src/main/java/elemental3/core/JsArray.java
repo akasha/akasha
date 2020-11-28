@@ -19,7 +19,7 @@ public class JsArray<T>
   public interface EntriesJsIteratorIterableTypeParameterArrayUnionType<T>
   {
     @JsOverlay
-    static EntriesJsIteratorIterableTypeParameterArrayUnionType of( Object o )
+    static <T> EntriesJsIteratorIterableTypeParameterArrayUnionType<T> of( Object o )
     {
       return Js.cast( o );
     }
@@ -107,7 +107,7 @@ public class JsArray<T>
   public interface FromArrayLikeUnionType<T>
   {
     @JsOverlay
-    static FromArrayLikeUnionType of( Object o )
+    static <T> FromArrayLikeUnionType<T> of( Object o )
     {
       return Js.cast( o );
     }
@@ -144,7 +144,7 @@ public class JsArray<T>
     interface P0UnionType<T>
     {
       @JsOverlay
-      static P0UnionType of( Object o )
+      static <T> P0UnionType<T> of( Object o )
       {
         return Js.cast( o );
       }
@@ -332,12 +332,14 @@ public class JsArray<T>
 
   public static native boolean isArray( Object arr );
 
+  @SafeVarargs
   public static native <T> JsArray<T> of( T... var_args );
 
   public int index;
   public String input;
   public int length;
 
+  @SafeVarargs
   public JsArray( T... items )
   {
   }
@@ -348,7 +350,8 @@ public class JsArray<T>
     return ArrayStamper.stampJavaTypeInfo( this, reference );
   }
 
-  public native JsArray<T> concat( T... items );
+  @SafeVarargs
+  public final native JsArray<T> concat( T... items );
 
   public native JsArray<T> copyWithin( int target, int start, int end );
 
@@ -424,7 +427,8 @@ public class JsArray<T>
 
   public native T pop();
 
-  public native int push( T... var_args );
+  @SafeVarargs
+  public final native int push( T... var_args );
 
   public native <R> R reduce(
     ReduceCallbackFn<? extends R, T> callback, Object initialValue );
@@ -456,7 +460,8 @@ public class JsArray<T>
 
   public native JsArray<T> splice();
 
-  public native JsArray<T> splice( int index, int howMany, T... var_args );
+  @SafeVarargs
+  public final native JsArray<T> splice( int index, int howMany, T... var_args );
 
   public native JsArray<T> splice( int index );
 
@@ -465,7 +470,8 @@ public class JsArray<T>
   @JsMethod( name = "toString" )
   public native String toString_();
 
-  public native int unshift( T... items );
+  @SafeVarargs
+  public final native int unshift( T... items );
 
   public native JsIteratorIterable<T> values();
 
