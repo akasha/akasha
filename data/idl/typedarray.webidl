@@ -101,7 +101,6 @@ interface mixin ArrayBufferViewImpl {
   readonly attribute ArrayBuffer buffer;
   readonly attribute unsigned long byteOffset;
   readonly attribute unsigned long byteLength;
-
   readonly attribute unsigned long length;
 };
 
@@ -143,7 +142,6 @@ interface Int8Array {
 };
 Int8Array includes ArrayBufferViewImpl;
 
-
 /**
  * The Uint8Array typed array represents an array of 8-bit unsigned integers. The contents are initialized to 0.
  * Once established, you can reference elements in the array using the object's methods, or using standard array
@@ -154,21 +152,20 @@ Int8Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint8Array">Uint8Array - WebIDL</a>
  */
 interface Uint8Array {
-    const long BYTES_PER_ELEMENT = 1;
+  const long BYTES_PER_ELEMENT = 1;
 
-    constructor(unsigned long length);
-    constructor(Uint8Array array);
-    constructor(sequence<octet> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Uint8Array array);
+  constructor(sequence<octet> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter octet get(unsigned long index);
-    setter void set(unsigned long index, octet value);
-    void set(Uint8Array array, optional unsigned long offset);
-    void set(sequence<octet> array, optional unsigned long offset);
-    Uint8Array subarray(long start, long end);
+  getter octet get(unsigned long index);
+  setter void set(unsigned long index, octet value);
+  void set(Uint8Array array, optional unsigned long offset);
+  void set(sequence<octet> array, optional unsigned long offset);
+  Uint8Array subarray(long start, long end);
 };
 Uint8Array includes ArrayBufferViewImpl;
-
 
 /**
  * The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you
@@ -181,21 +178,20 @@ Uint8Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint8ClampedArray">Uint8ClampedArray - WebIDL</a>
  */
 interface Uint8ClampedArray {
-    const long BYTES_PER_ELEMENT = 1;
+  const long BYTES_PER_ELEMENT = 1;
 
-    constructor(unsigned long length);
-    constructor(Uint8ClampedArray array);
-    constructor(sequence<octet> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Uint8ClampedArray array);
+  constructor(sequence<octet> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter octet get(unsigned long index);
-    setter void set(unsigned long index, [Clamp] octet value);
-    void set(Uint8ClampedArray array, optional unsigned long offset);
-    void set(sequence<octet> array, optional unsigned long offset);
-    Uint8ClampedArray subarray(long start, long end);
+  getter octet get(unsigned long index);
+  setter void set(unsigned long index, [Clamp] octet value);
+  void set(Uint8ClampedArray array, optional unsigned long offset);
+  void set(sequence<octet> array, optional unsigned long offset);
+  Uint8ClampedArray subarray(long start, long end);
 };
 Uint8ClampedArray includes ArrayBufferViewImpl;
-
 
 /**
  * The Int16Array typed array represents an array of twos-complement 16-bit signed integers in the
@@ -208,21 +204,20 @@ Uint8ClampedArray includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Int16Array">Int16Array - WebIDL</a>
  */
 interface Int16Array {
-    const long BYTES_PER_ELEMENT = 2;
+  const long BYTES_PER_ELEMENT = 2;
 
-    constructor(unsigned long length);
-    constructor(Int16Array array);
-    constructor(sequence<short> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Int16Array array);
+  constructor(sequence<short> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter short get(unsigned long index);
-    setter void set(unsigned long index, short value);
-    void set(Int16Array array, optional unsigned long offset);
-    void set(sequence<short> array, optional unsigned long offset);
-    Int16Array subarray(long start, long end);
+  getter short get(unsigned long index);
+  setter void set(unsigned long index, short value);
+  void set(Int16Array array, optional unsigned long offset);
+  void set(sequence<short> array, optional unsigned long offset);
+  Int16Array subarray(long start, long end);
 };
 Int16Array includes ArrayBufferViewImpl;
-
 
 /**
  * The Uint16Array typed array represents an array of 16-bit unsigned integers in the platform byte order.
@@ -235,21 +230,20 @@ Int16Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint16Array">Uint16Array - WebIDL</a>
  */
 interface Uint16Array {
-    const long BYTES_PER_ELEMENT = 2;
+  const long BYTES_PER_ELEMENT = 2;
 
-    constructor(unsigned long length);
-    constructor(Uint16Array array);
-    constructor(sequence<unsigned short> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Uint16Array array);
+  constructor(sequence<unsigned short> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter unsigned short get(unsigned long index);
-    setter void set(unsigned long index, unsigned short value);
-    void set(Uint16Array array, optional unsigned long offset);
-    void set(sequence<unsigned short> array, optional unsigned long offset);
-    Uint16Array subarray(long start, long end);
+  getter unsigned short get(unsigned long index);
+  setter void set(unsigned long index, unsigned short value);
+  void set(Uint16Array array, optional unsigned long offset);
+  void set(sequence<unsigned short> array, optional unsigned long offset);
+  Uint16Array subarray(long start, long end);
 };
 Uint16Array includes ArrayBufferViewImpl;
-
 
 /**
  * The Int32Array() typed array constructor creates an array of twos-complement 32-bit signed integers in
@@ -262,21 +256,20 @@ Uint16Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Int32Array">Int32Array - WebIDL</a>
  */
 interface Int32Array {
-    const long BYTES_PER_ELEMENT = 4;
+  const long BYTES_PER_ELEMENT = 4;
 
-    constructor(unsigned long length);
-    constructor(Int32Array array);
-    constructor(sequence<long> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Int32Array array);
+  constructor(sequence<long> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter long get(unsigned long index);
-    setter void set(unsigned long index, long value);
-    void set(Int32Array array, optional unsigned long offset);
-    void set(sequence<long> array, optional unsigned long offset);
-    Int32Array subarray(long start, long end);
+  getter long get(unsigned long index);
+  setter void set(unsigned long index, long value);
+  void set(Int32Array array, optional unsigned long offset);
+  void set(sequence<long> array, optional unsigned long offset);
+  Int32Array subarray(long start, long end);
 };
 Int32Array includes ArrayBufferViewImpl;
-
 
 /**
  * The Uint32Array typed array represents an array of 32-bit unsigned integers in the platform byte order. If
@@ -289,21 +282,20 @@ Int32Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint32Array">Uint32Array - WebIDL</a>
  */
 interface Uint32Array {
-    const long BYTES_PER_ELEMENT = 4;
+  const long BYTES_PER_ELEMENT = 4;
 
-    constructor(unsigned long length);
-    constructor(Uint32Array array);
-    constructor(sequence<unsigned long> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Uint32Array array);
+  constructor(sequence<unsigned long> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter unsigned long get(unsigned long index);
-    setter void set(unsigned long index, unsigned long value);
-    void set(Uint32Array array, optional unsigned long offset);
-    void set(sequence<unsigned long> array, optional unsigned long offset);
-    Uint32Array subarray(long start, long end);
+  getter unsigned long get(unsigned long index);
+  setter void set(unsigned long index, unsigned long value);
+  void set(Uint32Array array, optional unsigned long offset);
+  void set(sequence<unsigned long> array, optional unsigned long offset);
+  Uint32Array subarray(long start, long end);
 };
 Uint32Array includes ArrayBufferViewImpl;
-
 
 /**
  * The Float32Array typed array represents an array of 32-bit floating point numbers (corresponding to
@@ -316,21 +308,20 @@ Uint32Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Float32Array">Float32Array - WebIDL</a>
  */
 interface Float32Array {
-    const long BYTES_PER_ELEMENT = 4;
+  const long BYTES_PER_ELEMENT = 4;
 
-    constructor(unsigned long length);
-    constructor(Float32Array array);
-    constructor(sequence<unrestricted float> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Float32Array array);
+  constructor(sequence<unrestricted float> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter unrestricted float get(unsigned long index);
-    setter void set(unsigned long index, unrestricted float value);
-    void set(Float32Array array, optional unsigned long offset);
-    void set(sequence<unrestricted float> array, optional unsigned long offset);
-    Float32Array subarray(long start, long end);
+  getter unrestricted float get(unsigned long index);
+  setter void set(unsigned long index, unrestricted float value);
+  void set(Float32Array array, optional unsigned long offset);
+  void set(sequence<unrestricted float> array, optional unsigned long offset);
+  Float32Array subarray(long start, long end);
 };
 Float32Array includes ArrayBufferViewImpl;
-
 
 /**
  * The Float64Array typed array represents an array of 64-bit floating point numbers (corresponding
@@ -344,18 +335,18 @@ Float32Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Float64Array">Float64Array - WebIDL</a>
  */
 interface Float64Array {
-    const long BYTES_PER_ELEMENT = 8;
+  const long BYTES_PER_ELEMENT = 8;
 
-    constructor(unsigned long length);
-    constructor(Float64Array array);
-    constructor(sequence<unrestricted double> array);
-    constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
+  constructor(unsigned long length);
+  constructor(Float64Array array);
+  constructor(sequence<unrestricted double> array);
+  constructor(ArrayBuffer buffer, optional unsigned long byteOffset, optional unsigned long length);
 
-    getter unrestricted double get(unsigned long index);
-    setter void set(unsigned long index, unrestricted double value);
-    void set(Float64Array array, optional unsigned long offset);
-    void set(sequence<unrestricted double> array, optional unsigned long offset);
-    Float64Array subarray(long start, long end);
+  getter unrestricted double get(unsigned long index);
+  setter void set(unsigned long index, unrestricted double value);
+  void set(Float64Array array, optional unsigned long offset);
+  void set(sequence<unrestricted double> array, optional unsigned long offset);
+  Float64Array subarray(long start, long end);
 };
 Float64Array includes ArrayBufferViewImpl;
 
