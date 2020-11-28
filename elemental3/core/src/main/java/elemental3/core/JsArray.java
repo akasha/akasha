@@ -237,7 +237,7 @@ public class JsArray<T>
   }
 
   @JsOverlay
-  public static final <T> JsArray<T> asJsArray( T[] array )
+  public static <T> JsArray<T> asJsArray( T[] array )
   {
     return Js.uncheckedCast( array );
   }
@@ -253,81 +253,78 @@ public class JsArray<T>
   public static native <T, R> JsArray<R> from( FromArrayLikeUnionType<T> arrayLike );
 
   @JsOverlay
-  public static final <T, S, R> JsArray<R> from(
+  public static <T, S, R> JsArray<R> from(
     JsArrayLike<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn, this_ );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from(
+  public static <T, R> JsArray<R> from(
     JsArrayLike<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from( JsArrayLike<T> arrayLike )
+  public static <T, R> JsArray<R> from( JsArrayLike<T> arrayLike )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
   }
 
   @JsOverlay
-  public static final <T, S, R> JsArray<R> from(
+  public static <T, S, R> JsArray<R> from(
     JsIterable<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn, this_ );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from(
-    JsIterable<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn )
+  public static <T, R> JsArray<R> from( JsIterable<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from( JsIterable<T> arrayLike )
+  public static <T, R> JsArray<R> from( JsIterable<T> arrayLike )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
   }
 
   @JsOverlay
-  public static final <T, S, R> JsArray<R> from(
-    String arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
+  public static <T, S, R> JsArray<R> from( String arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn, this_ );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from(
-    String arrayLike, FromMapFn<? super T, ? extends R> mapFn )
+  public static <T, R> JsArray<R> from( String arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from( String arrayLike )
+  public static <T, R> JsArray<R> from( String arrayLike )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
   }
 
   @JsOverlay
-  public static final <T, S, R> JsArray<R> from(
+  public static <T, S, R> JsArray<R> from(
     T[] arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
   {
     return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ), mapFn, this_ );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from(
+  public static <T, R> JsArray<R> from(
     T[] arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ), mapFn );
   }
 
   @JsOverlay
-  public static final <T, R> JsArray<R> from( T[] arrayLike )
+  public static <T, R> JsArray<R> from( T[] arrayLike )
   {
     return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ) );
   }
