@@ -3,6 +3,9 @@ interface Error {
   readonly attribute DOMString name;
   readonly attribute DOMString message;
 
+  // stack is non-standard but broadly implemented and reasonably useful...
+  readonly attribute DOMString stack;
+
   /**
    * The Error constructor creates an error object.
    *
