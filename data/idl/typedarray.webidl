@@ -311,7 +311,7 @@ interface Int32Array {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
-  const DOMString name = "Uint16Array";
+  const DOMString name = "Int32Array";
 
   constructor(unsigned long length);
   constructor(Int32Array array);
@@ -348,7 +348,7 @@ interface Uint32Array {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
-  const DOMString name = "Uint16Array";
+  const DOMString name = "Uint32Array";
 
   constructor(unsigned long length);
   constructor(Uint32Array array);
@@ -385,7 +385,7 @@ interface Float32Array {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
-  const DOMString name = "Uint16Array";
+  const DOMString name = "Float32Array";
 
   constructor(unsigned long length);
   constructor(Float32Array array);
@@ -423,7 +423,7 @@ interface Float64Array {
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
    */
-  const DOMString name = "Uint16Array";
+  const DOMString name = "Float64Array";
 
   constructor(unsigned long length);
   constructor(Float64Array array);
