@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Error.name",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name",
+    "description": "The name property represents a name for the type of error. The initial value is &quot;Error&quot;.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-error.prototype.name",
+            "description": "The definition of 'Error.prototype.name' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

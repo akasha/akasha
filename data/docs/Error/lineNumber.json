@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Error.lineNumber",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/lineNumber",
+    "description": "The lineNumber property contains the line number in the file that raised this error."
+}

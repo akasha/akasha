@@ -1,0 +1,7 @@
+
+{
+    "kind": "Property",
+    "name": "Error.columnNumber",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/columnNumber",
+    "description": "The columnNumber property contains the column number in the line of the file that raised this error."
+}

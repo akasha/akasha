@@ -1,7 +1,7 @@
 
 {
     "name": "Error",
-    "lastModifiedAt": 1606559269341,
+    "lastModifiedAt": 1606593454482,
     "entries": [
         {
             "name": "Error",
@@ -10,6 +10,30 @@
         {
             "name": "__type__",
             "lastModifiedAt": 1606559268510
+        },
+        {
+            "name": "columnNumber",
+            "lastModifiedAt": 1606560318267
+        },
+        {
+            "name": "fileName",
+            "lastModifiedAt": 1606560319822
+        },
+        {
+            "name": "lineNumber",
+            "lastModifiedAt": 1606560320639
+        },
+        {
+            "name": "message",
+            "lastModifiedAt": 1606560321036
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1606560321427
+        },
+        {
+            "name": "stack",
+            "lastModifiedAt": 1606560322396
         }
     ]
 }
