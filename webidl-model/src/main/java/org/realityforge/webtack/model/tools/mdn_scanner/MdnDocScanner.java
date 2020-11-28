@@ -407,6 +407,40 @@ public final class MdnDocScanner
         element.parent().select( "ol > li > a > code" ).stream().map( Element::text ).forEach( constructorNames::add );
       }
     }
+    for ( final Element element : document.select( ".quick-links > div > ol > li > a > strong" ) )
+    {
+      final String sectionType = element.text();
+      if ( sectionType.equalsIgnoreCase( "Methods" ) )
+      {
+        element.parent()
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( localName + "." ) )
+          .forEach( methodsNames::add );
+      }
+      else if ( sectionType.equalsIgnoreCase( "Properties" ) )
+      {
+        element.parent()
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( localName + "." ) )
+          .forEach( propertyNames::add );
+      }
+      else if ( sectionType.equalsIgnoreCase( "Constructor" ) || sectionType.equalsIgnoreCase( "Constructors" ) )
+      {
+        element.parent()
+          .parent()
+          .select( "ol > li > a > code" )
+          .stream()
+          .map( Element::text )
+          .filter( v -> !v.contains( "." ) || v.startsWith( localName + "." ) )
+          .forEach( constructorNames::add );
+      }
+    }
 
     document
       .select( "#Constructors + p + dl > dt > a > code, " +
@@ -447,11 +481,14 @@ public final class MdnDocScanner
     propertyNames
       .stream()
       // Strip out the type name that sometimes appears in the documentation
+      .map( text -> text.replaceAll( "^" + localName + "\\.prototype\\.", "" ) )
+      .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
       .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
       .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
-      .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
       .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
       .filter( SourceVersion::isName )
+      .sorted()
+      .distinct()
       .forEach( property -> queueRequest( DocKind.Property, typeName, property ) );
 
     methodsNames.addAll( document
