@@ -8,8 +8,6 @@ import jsinterop.base.JsConstructorFn;
 @JsType( isNative = true, name = "goog.global", namespace = JsPackage.GLOBAL )
 public class Global
 {
-  @Deprecated
-  public static JsConstructorFn<?> ActiveXObject;
   @JsOverlay
   public static final double Infinity = Global__Constants.Infinity;
   @JsOverlay
