@@ -1,6 +1,7 @@
 package elemental3.core;
 
 import javaemul.internal.ArrayStamper;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -98,18 +99,6 @@ public class JsArray<T>
     default JsArray<S> onInvoke( T p0, double p1, T[] p2 )
     {
       return onInvoke( p0, p1, Js.<JsArrayLike<T>>uncheckedCast( p2 ) );
-    }
-  }
-
-  @JsFunction
-  public interface ForEachCallbackFn<T>
-  {
-    Object onInvoke( T p0, int p1, JsArray<T> p2 );
-
-    @JsOverlay
-    default Object onInvoke( T p0, int p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArray<T>>uncheckedCast( p2 ) );
     }
   }
 
@@ -402,9 +391,11 @@ public class JsArray<T>
 
   public native <S> JsArray<S> flatMap( FlatMapCallbackFn<S, T> callback );
 
-  public native <S> void forEach( ForEachCallbackFn<T> callback, S thisobj );
+  public native void forEach( @Nonnull ForEachCallback<T> forEachCallback );
 
-  public native void forEach( ForEachCallbackFn<T> callback );
+  public native void forEach( @Nonnull ForEachCallback2<T> forEachCallback );
+
+  public native void forEach( @Nonnull ForEachCallback3<T> forEachCallback );
 
   public native boolean includes( T searchElement, int fromIndex );
 
@@ -474,4 +465,25 @@ public class JsArray<T>
   public native int unshift( T... items );
 
   public native JsIteratorIterable<T> values();
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback<T>
+  {
+    void item( @Nonnull T value );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2<T>
+  {
+    void item( @Nonnull T value, int key );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3<T>
+  {
+    void item( @Nonnull T value, int key, @Nonnull JsArray<T> map );
+  }
 }
