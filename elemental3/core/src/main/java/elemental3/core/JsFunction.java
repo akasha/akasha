@@ -7,26 +7,26 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 @JsType( name = "Function", isNative = true, namespace = JsPackage.GLOBAL )
-public class Function
+public class JsFunction
 {
   public Object arguments;
   @Deprecated
   public double arity;
-  public Function caller;
+  public JsFunction caller;
   public Object displayName;
   public int length;
   public String name;
 
-  public Function( Object... var_args )
+  public JsFunction( Object... var_args )
   {
   }
 
   public native Object apply( Object... var_args );
 
-  public native Function bind( JsObject selfObj, Object... var_args );
+  public native JsFunction bind( JsObject selfObj, Object... var_args );
 
   @JsOverlay
-  public final Function bind( Object selfObj, Object... var_args )
+  public final JsFunction bind( Object selfObj, Object... var_args )
   {
     return bind( Js.uncheckedCast( selfObj ), var_args );
   }

@@ -8,6 +8,6 @@ import jsinterop.base.JsArrayLike;
 public class Arguments
   implements JsIterable<Object>, JsArrayLike<Object>
 {
-  public Function callee;
+  public JsFunction callee;
   public int length;
 }

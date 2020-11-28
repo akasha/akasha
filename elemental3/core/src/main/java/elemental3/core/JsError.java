@@ -10,12 +10,12 @@ public class JsError
 {
   public static double stackTraceLimit;
 
-  public static native void captureStackTrace( JsObject error, Function constructor );
+  public static native void captureStackTrace( JsObject error, JsFunction constructor );
 
   public static native void captureStackTrace( JsObject error );
 
   @JsOverlay
-  public static final void captureStackTrace( Object error, Function constructor )
+  public static final void captureStackTrace( Object error, JsFunction constructor )
   {
     captureStackTrace( Js.uncheckedCast( error ), constructor );
   }

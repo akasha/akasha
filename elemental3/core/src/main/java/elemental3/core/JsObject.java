@@ -286,7 +286,7 @@ public class JsObject
   @Deprecated
   public JsObject __parent__;
   public JsObject __proto__;
-  public Function constructor;
+  public JsFunction constructor;
 
   public JsObject()
   {
@@ -297,19 +297,19 @@ public class JsObject
   }
 
   @Deprecated
-  public native void __defineGetter__( String sprop, Function fun );
+  public native void __defineGetter__( String sprop, JsFunction fun );
 
   @Deprecated
-  public native void __defineSetter__( String sprop, Function fun );
+  public native void __defineSetter__( String sprop, JsFunction fun );
 
   @Deprecated
-  public native Function __lookupGetter__( String sprop );
+  public native JsFunction __lookupGetter__( String sprop );
 
   @Deprecated
-  public native Function __lookupSetter__( String sprop );
+  public native JsFunction __lookupSetter__( String sprop );
 
   @Deprecated
-  public native Object __noSuchMethod__( Function fun );
+  public native Object __noSuchMethod__( JsFunction fun );
 
   public native boolean hasOwnProperty( Object propertyName );
 
