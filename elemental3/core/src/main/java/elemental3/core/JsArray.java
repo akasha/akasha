@@ -2,6 +2,7 @@ package elemental3.core;
 
 import javaemul.internal.ArrayStamper;
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsOverlay;
@@ -371,9 +372,14 @@ public class JsArray<T>
 
   public native JsArray<T> filter( FilterCallbackFn<T> callback );
 
-  public native <S> T find( FindPredicateFn<T> predicateFn, S this_ );
+  @Nullable
+  public native T find( @Nonnull FindPredicate<T> predicateFn );
 
-  public native T find( FindPredicateFn<T> predicateFn );
+  @Nullable
+  public native T find( @Nonnull FindPredicate2<T> predicateFn );
+
+  @Nullable
+  public native T find( @Nonnull FindPredicate3<T> predicateFn );
 
   public native <S> int findIndex( FindIndexPredicateFn<T> predicateFn, S this_ );
 
@@ -481,6 +487,27 @@ public class JsArray<T>
   @FunctionalInterface
   public interface ForEachCallback3<T>
   {
-    void item( @Nonnull T value, int key, @Nonnull JsArray<T> map );
+    void item( @Nonnull T value, int key, @Nonnull JsArray<T> array );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface FindPredicate<T>
+  {
+    boolean test( T value );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface FindPredicate2<T>
+  {
+    boolean test( T value, int key );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface FindPredicate3<T>
+  {
+    boolean test( T value, int key, @Nonnull JsArray<T> array );
   }
 }
