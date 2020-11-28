@@ -152,7 +152,18 @@ Int8Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint8Array">Uint8Array - WebIDL</a>
  */
 interface Uint8Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 1;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint8Array";
 
   constructor(unsigned long length);
   constructor(Uint8Array array);
@@ -178,7 +189,18 @@ Uint8Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint8ClampedArray">Uint8ClampedArray - WebIDL</a>
  */
 interface Uint8ClampedArray {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 1;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint8ClampedArray";
 
   constructor(unsigned long length);
   constructor(Uint8ClampedArray array);
@@ -204,7 +226,18 @@ Uint8ClampedArray includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Int16Array">Int16Array - WebIDL</a>
  */
 interface Int16Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 2;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Int16Array";
 
   constructor(unsigned long length);
   constructor(Int16Array array);
@@ -230,7 +263,18 @@ Int16Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint16Array">Uint16Array - WebIDL</a>
  */
 interface Uint16Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 2;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint16Array";
 
   constructor(unsigned long length);
   constructor(Uint16Array array);
@@ -256,7 +300,18 @@ Uint16Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Int32Array">Int32Array - WebIDL</a>
  */
 interface Int32Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 4;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint16Array";
 
   constructor(unsigned long length);
   constructor(Int32Array array);
@@ -282,7 +337,18 @@ Int32Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Uint32Array">Uint32Array - WebIDL</a>
  */
 interface Uint32Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 4;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint16Array";
 
   constructor(unsigned long length);
   constructor(Uint32Array array);
@@ -308,7 +374,18 @@ Uint32Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Float32Array">Float32Array - WebIDL</a>
  */
 interface Float32Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 4;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint16Array";
 
   constructor(unsigned long length);
   constructor(Float32Array array);
@@ -335,7 +412,18 @@ Float32Array includes ArrayBufferViewImpl;
  * @see <a href="https://heycam.github.io/webidl/#idl-Float64Array">Float64Array - WebIDL</a>
  */
 interface Float64Array {
+  /**
+   * The BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT">TypedArray.BYTES_PER_ELEMENT - MDN</a>
+   */
   const long BYTES_PER_ELEMENT = 8;
+  /**
+   * The name property represents a string value of the typed array constructor name.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name">TypedArray.name - MDN</a>
+   */
+  const DOMString name = "Uint16Array";
 
   constructor(unsigned long length);
   constructor(Float64Array array);
