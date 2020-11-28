@@ -7,7 +7,6 @@ import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Any;
-import jsinterop.base.Js;
 
 @JsType( isNative = true, namespace = JsPackage.GLOBAL, name = "AggregateError" )
 public class AggregateError
@@ -27,7 +26,6 @@ public class AggregateError
    */
   public AggregateError( @Nonnull final Any... errors )
   {
-    this.errors = Js.uncheckedCast( errors );
   }
 
   /**
@@ -38,7 +36,6 @@ public class AggregateError
    */
   public AggregateError( @Nonnull final JsIterable<Any> errors )
   {
-    this.errors = errors;
   }
 
   /**
@@ -50,8 +47,6 @@ public class AggregateError
    */
   public AggregateError( @Nonnull final Any[] errors, @Nullable final String message )
   {
-    this.errors = Js.uncheckedCast( errors );
-    this.message = message;
   }
 
   /**
@@ -63,7 +58,5 @@ public class AggregateError
    */
   public AggregateError( @Nonnull final JsIterable<Any> errors, @Nullable final String message )
   {
-    this.errors = errors;
-    this.message = message;
   }
 }
