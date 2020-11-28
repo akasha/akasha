@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType( isNative = true, name = "Set", namespace = JsPackage.GLOBAL )
+@JsType( name = "Set", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsSet<VALUE>
   implements JsIterable<VALUE>
 {

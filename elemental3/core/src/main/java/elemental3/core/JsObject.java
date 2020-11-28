@@ -7,7 +7,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
-@JsType( isNative = true, name = "Object", namespace = JsPackage.GLOBAL )
+@JsType( name = "Object", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsObject
 {
   @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )

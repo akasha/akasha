@@ -5,7 +5,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType( isNative = true, name = "Error", namespace = JsPackage.GLOBAL )
+@JsType( name = "Error", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsError
 {
   public static double stackTraceLimit;

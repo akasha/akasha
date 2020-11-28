@@ -4,7 +4,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType( isNative = true, name = "RegExp", namespace = JsPackage.GLOBAL )
+@JsType( name = "RegExp", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsRegExp
 {
   public static String $1;

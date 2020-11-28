@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType( isNative = true, name = "Number", namespace = JsPackage.GLOBAL )
+@JsType( name = "Number", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsNumber
 {
   @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )

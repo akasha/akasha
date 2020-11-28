@@ -5,7 +5,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType( isNative = true, name = "WeakSet", namespace = JsPackage.GLOBAL )
+@JsType( name = "WeakSet", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsWeakSet<VALUE>
 {
   @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )

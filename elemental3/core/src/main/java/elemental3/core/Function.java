@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@JsType( isNative = true, namespace = JsPackage.GLOBAL )
+@JsType( name = "Function", isNative = true, namespace = JsPackage.GLOBAL )
 public class Function
 {
   public Object arguments;

@@ -7,7 +7,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsConstructorFn;
 
-@JsType( isNative = true, namespace = JsPackage.GLOBAL )
+@JsType( name = "Reflect", isNative = true, namespace = JsPackage.GLOBAL )
 public class Reflect
 {
   @JsFunction

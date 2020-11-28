@@ -4,7 +4,7 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
-@JsType( isNative = true, name = "Boolean", namespace = JsPackage.GLOBAL )
+@JsType( name = "Boolean", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsBoolean
 {
   public JsBoolean()
