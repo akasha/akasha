@@ -80,18 +80,6 @@ public class JsArray<T>
   }
 
   @JsFunction
-  public interface FindPredicateFn<T>
-  {
-    boolean onInvoke( T p0, int p1, JsArray<T> p2 );
-
-    @JsOverlay
-    default boolean onInvoke( T p0, int p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArray<T>>uncheckedCast( p2 ) );
-    }
-  }
-
-  @JsFunction
   public interface FlatMapCallbackFn<S, T>
   {
     JsArray<S> onInvoke( T p0, double p1, JsArrayLike<T> p2 );
