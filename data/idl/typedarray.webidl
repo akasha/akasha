@@ -98,9 +98,9 @@ interface SharedArrayBuffer {
 };
 
 interface mixin ArrayBufferViewImpl {
-    readonly attribute ArrayBuffer buffer;
-    readonly attribute unsigned long byteOffset;
-    readonly attribute unsigned long byteLength;
+  readonly attribute ArrayBuffer buffer;
+  readonly attribute unsigned long byteOffset;
+  readonly attribute unsigned long byteLength;
 };
 
 /**
