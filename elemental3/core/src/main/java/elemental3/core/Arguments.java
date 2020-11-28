@@ -9,7 +9,5 @@ public class Arguments
   implements JsIterable<Object>, JsArrayLike<Object>
 {
   public Function callee;
-  @Deprecated
-  public Function caller;
   public int length;
 }
