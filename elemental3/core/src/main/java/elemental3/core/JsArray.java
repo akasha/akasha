@@ -36,6 +36,7 @@ public class JsArray<T>
       return Js.cast( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isDouble()
     {
@@ -118,6 +119,7 @@ public class JsArray<T>
       return Js.asString( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -149,6 +151,7 @@ public class JsArray<T>
         return Js.cast( this );
       }
 
+      @SuppressWarnings( "ConstantConditions" )
       @JsOverlay
       default boolean isString()
       {

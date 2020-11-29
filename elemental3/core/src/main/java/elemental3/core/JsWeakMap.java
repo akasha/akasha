@@ -12,7 +12,7 @@ public class JsWeakMap<KEY, VALUE>
   public interface ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>
   {
     @JsOverlay
-    static ConstructorIterableJsIterableTypeParameterArrayUnionType of( Object o )
+    static <KEY, VALUE> ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE> of( Object o )
     {
       return Js.cast( o );
     }
@@ -34,23 +34,19 @@ public class JsWeakMap<KEY, VALUE>
   public interface ConstructorIterableUnionType<KEY, VALUE>
   {
     @JsOverlay
-    static ConstructorIterableUnionType of( Object o )
+    static <KEY, VALUE> ConstructorIterableUnionType<KEY, VALUE> of( Object o )
     {
       return Js.cast( o );
     }
 
     @JsOverlay
-    default JsArray<
-      JsArray<ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>>
-    asJsArray()
+    default JsArray<JsArray<ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>> asJsArray()
     {
       return Js.cast( this );
     }
 
     @JsOverlay
-    default JsIterable<
-      JsArray<ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>>
-    asJsIterable()
+    default JsIterable<JsArray<ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>> asJsIterable()
     {
       return Js.cast( this );
     }
@@ -66,9 +62,7 @@ public class JsWeakMap<KEY, VALUE>
   {
   }
 
-  public JsWeakMap(
-    ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>[][]
-      iterable )
+  public JsWeakMap( ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>[][] iterable )
   {
   }
 
@@ -76,19 +70,11 @@ public class JsWeakMap<KEY, VALUE>
   {
   }
 
-  public JsWeakMap(
-    JsArray<
-      JsArray<
-        ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>>
-      iterable )
+  public JsWeakMap( JsArray<JsArray<ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>> iterable )
   {
   }
 
-  public JsWeakMap(
-    JsIterable<
-      JsArray<
-        ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>>
-      iterable )
+  public JsWeakMap( JsIterable<JsArray<ConstructorIterableJsIterableTypeParameterArrayUnionType<KEY, VALUE>>> iterable )
   {
   }
 

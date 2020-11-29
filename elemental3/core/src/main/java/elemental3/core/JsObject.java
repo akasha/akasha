@@ -31,12 +31,14 @@ public class JsObject
       return Js.asString( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isObject()
     {
       return this instanceof Object;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -65,6 +67,7 @@ public class JsObject
       return Js.cast( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -93,12 +96,14 @@ public class JsObject
       return Js.asString( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isObject()
     {
       return this instanceof Object;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {

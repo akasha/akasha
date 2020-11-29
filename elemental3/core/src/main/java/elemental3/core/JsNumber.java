@@ -36,6 +36,7 @@ public class JsNumber
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -64,6 +65,7 @@ public class JsNumber
       return Js.cast( this );
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isInt()
     {

@@ -38,6 +38,7 @@ public class JsString
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -72,6 +73,7 @@ public class JsString
       return this instanceof JsRegExp;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -112,6 +114,7 @@ public class JsString
       return this instanceof ReplaceReplacementFn;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -146,6 +149,7 @@ public class JsString
       return this instanceof JsRegExp;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -180,6 +184,7 @@ public class JsString
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -214,6 +219,7 @@ public class JsString
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {

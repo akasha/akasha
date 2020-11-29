@@ -12,7 +12,7 @@ public class JsWeakSet<VALUE>
   public interface ConstructorIterableUnionType<VALUE>
   {
     @JsOverlay
-    static ConstructorIterableUnionType of( Object o )
+    static <T> ConstructorIterableUnionType<T> of( Object o )
     {
       return Js.cast( o );
     }

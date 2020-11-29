@@ -36,6 +36,7 @@ public class JsDate
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -70,6 +71,7 @@ public class JsDate
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
@@ -104,6 +106,7 @@ public class JsDate
       return this instanceof JsArray;
     }
 
+    @SuppressWarnings( "ConstantConditions" )
     @JsOverlay
     default boolean isString()
     {
