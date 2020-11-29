@@ -1,3 +1,7 @@
+// Typedef exists so that if any specifications starts using the "symbol" token
+// defined in the WebIDL spec then out schema will work with it.
+typedef Symbol symbol;
+
 interface Symbol {
 
   static readonly attribute Symbol asyncIterator;
