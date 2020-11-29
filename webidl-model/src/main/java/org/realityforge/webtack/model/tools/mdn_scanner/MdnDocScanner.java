@@ -512,9 +512,10 @@ public final class MdnDocScanner
         // Strip the brackets at end of methods
         .map( text -> text.replaceAll( "\\(.*", "" ) )
         // Strip out the type name that sometimes appears in the documentation
+        .map( text -> text.replaceAll( "^" + localName + "\\.prototype\\.", "" ) )
+        .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
         .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
-        .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
 
         // Many of the WebGL elements have one page to describe multiple methods with different type
