@@ -11,7 +11,7 @@ import jsinterop.base.JsPropertyMap;
 public interface JsIIterableResult<VALUE>
 {
   @JsOverlay
-  static JsIIterableResult create()
+  static <T> JsIIterableResult<T> create()
   {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
