@@ -1,0 +1,23 @@
+
+{
+    "name": "Boolean",
+    "lastModifiedAt": 1606626907523,
+    "entries": [
+        {
+            "name": "Boolean",
+            "lastModifiedAt": 1606626655297
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1606626654611
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1606626906692
+        },
+        {
+            "name": "valueOf",
+            "lastModifiedAt": 1606626907523
+        }
+    ]
+}

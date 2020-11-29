@@ -15,6 +15,10 @@
         "url": "https://wicg.github.io/background-sync/spec/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "basic_types"
+    },
+    {
         "lastModifiedTime": 1492066082000,
         "name": "beacon",
         "url": "https://www.w3.org/TR/beacon/"
