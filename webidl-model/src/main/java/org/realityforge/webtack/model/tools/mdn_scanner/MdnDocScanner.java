@@ -412,7 +412,8 @@ public final class MdnDocScanner
       final String sectionType = element.text();
       if ( sectionType.equalsIgnoreCase( "Methods" ) )
       {
-        element.parent()
+        element
+          .parent()
           .parent()
           .select( "ol > li > a > code" )
           .stream()
@@ -422,7 +423,8 @@ public final class MdnDocScanner
       }
       else if ( sectionType.equalsIgnoreCase( "Properties" ) )
       {
-        element.parent()
+        element
+          .parent()
           .parent()
           .select( "ol > li > a > code" )
           .stream()
@@ -432,7 +434,8 @@ public final class MdnDocScanner
       }
       else if ( sectionType.equalsIgnoreCase( "Constructor" ) || sectionType.equalsIgnoreCase( "Constructors" ) )
       {
-        element.parent()
+        element
+          .parent()
           .parent()
           .select( "ol > li > a > code" )
           .stream()
