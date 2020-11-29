@@ -9,7 +9,7 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 
 @JsType( isNative = true, namespace = JsPackage.GLOBAL )
-public interface ObjectPropertyDescriptor<THIS>
+public interface ObjectPropertyDescriptor
 {
   @JsFunction
   interface GetFn
