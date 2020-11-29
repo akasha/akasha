@@ -50,18 +50,18 @@ public class Reflect
     }
   }
 
-  public static native <THIS, RESULT> RESULT apply(
-    ApplyTargetFn<? extends RESULT> targetFn, THIS thisArg, JsArray<Object> argList );
+  public static native <THIS, RESULT> RESULT apply( ApplyTargetFn<? extends RESULT> targetFn,
+                                                    THIS thisArg,
+                                                    JsArray<Object> argList );
 
   @JsOverlay
-  public static final <THIS, RESULT> RESULT apply(
-    ApplyTargetFn<? extends RESULT> targetFn, THIS thisArg, Object[] argList )
+  public static <THIS, RESULT> RESULT apply( ApplyTargetFn<? extends RESULT> targetFn, THIS thisArg, Object[] argList )
   {
     return apply( targetFn, thisArg, Js.<JsArray<Object>>uncheckedCast( argList ) );
   }
 
   @JsOverlay
-  public static final <TARGET> TARGET construct(
+  public static <TARGET> TARGET construct(
     Class<?> targetConstructorFn,
     JsArray<Object> argList,
     Class<? extends TARGET> newTargetConstructorFn )
@@ -73,14 +73,14 @@ public class Reflect
   }
 
   @JsOverlay
-  public static final <TARGET> TARGET construct(
+  public static <TARGET> TARGET construct(
     Class<?> targetConstructorFn, JsArray<Object> argList )
   {
     return construct( Js.asConstructorFn( targetConstructorFn ), argList );
   }
 
   @JsOverlay
-  public static final <TARGET> TARGET construct(
+  public static <TARGET> TARGET construct(
     Class<?> targetConstructorFn,
     Object[] argList,
     Class<? extends TARGET> newTargetConstructorFn )
@@ -90,7 +90,7 @@ public class Reflect
   }
 
   @JsOverlay
-  public static final <TARGET> TARGET construct( Class<?> targetConstructorFn, Object[] argList )
+  public static <TARGET> TARGET construct( Class<?> targetConstructorFn, Object[] argList )
   {
     return construct( targetConstructorFn, Js.<JsArray<Object>>uncheckedCast( argList ) );
   }
@@ -104,7 +104,7 @@ public class Reflect
     JsConstructorFn<?> targetConstructorFn, JsArray<Object> argList );
 
   @JsOverlay
-  public static final <TARGET> TARGET construct(
+  public static <TARGET> TARGET construct(
     JsConstructorFn<?> targetConstructorFn,
     Object[] argList,
     JsConstructorFn<? extends TARGET> newTargetConstructorFn )
@@ -114,7 +114,7 @@ public class Reflect
   }
 
   @JsOverlay
-  public static final <TARGET> TARGET construct(
+  public static <TARGET> TARGET construct(
     JsConstructorFn<?> targetConstructorFn, Object[] argList )
   {
     return construct( targetConstructorFn, Js.<JsArray<Object>>uncheckedCast( argList ) );
@@ -124,7 +124,7 @@ public class Reflect
     JsObject target, String propertyKey, ObjectPropertyDescriptor attributes );
 
   @JsOverlay
-  public static final boolean defineProperty(
+  public static boolean defineProperty(
     Object target, String propertyKey, ObjectPropertyDescriptor attributes )
   {
     return defineProperty( Js.uncheckedCast( target ), propertyKey, attributes );
@@ -133,7 +133,7 @@ public class Reflect
   public static native boolean deleteProperty( JsObject target, String propertyKey );
 
   @JsOverlay
-  public static final boolean deleteProperty( Object target, String propertyKey )
+  public static boolean deleteProperty( Object target, String propertyKey )
   {
     return deleteProperty( Js.uncheckedCast( target ), propertyKey );
   }
@@ -143,14 +143,14 @@ public class Reflect
   public static native Object get( JsObject target, String propertyKey );
 
   @JsOverlay
-  public static final Object get( Object target, String propertyKey, Object receiver )
+  public static Object get( Object target, String propertyKey, Object receiver )
   {
     return get(
       Js.uncheckedCast( target ), propertyKey, Js.uncheckedCast( receiver ) );
   }
 
   @JsOverlay
-  public static final Object get( Object target, String propertyKey )
+  public static Object get( Object target, String propertyKey )
   {
     return get( Js.uncheckedCast( target ), propertyKey );
   }
@@ -159,7 +159,7 @@ public class Reflect
     JsObject target, String propertyKey );
 
   @JsOverlay
-  public static final ObjectPropertyDescriptor getOwnPropertyDescriptor(
+  public static ObjectPropertyDescriptor getOwnPropertyDescriptor(
     Object target, String propertyKey )
   {
     return getOwnPropertyDescriptor( Js.uncheckedCast( target ), propertyKey );
@@ -168,7 +168,7 @@ public class Reflect
   public static native JsObject getPrototypeOf( JsObject target );
 
   @JsOverlay
-  public static final JsObject getPrototypeOf( Object target )
+  public static JsObject getPrototypeOf( Object target )
   {
     return getPrototypeOf( Js.uncheckedCast( target ) );
   }
@@ -176,7 +176,7 @@ public class Reflect
   public static native boolean has( JsObject target, String propertyKey );
 
   @JsOverlay
-  public static final boolean has( Object target, String propertyKey )
+  public static boolean has( Object target, String propertyKey )
   {
     return has( Js.uncheckedCast( target ), propertyKey );
   }
@@ -184,7 +184,7 @@ public class Reflect
   public static native boolean isExtensible( JsObject target );
 
   @JsOverlay
-  public static final boolean isExtensible( Object target )
+  public static boolean isExtensible( Object target )
   {
     return isExtensible( Js.uncheckedCast( target ) );
   }
@@ -192,7 +192,7 @@ public class Reflect
   public static native JsArray<OwnKeysArrayUnionType> ownKeys( JsObject target );
 
   @JsOverlay
-  public static final JsArray<OwnKeysArrayUnionType> ownKeys( Object target )
+  public static JsArray<OwnKeysArrayUnionType> ownKeys( Object target )
   {
     return ownKeys( Js.uncheckedCast( target ) );
   }
@@ -200,7 +200,7 @@ public class Reflect
   public static native boolean preventExtensions( JsObject target );
 
   @JsOverlay
-  public static final boolean preventExtensions( Object target )
+  public static boolean preventExtensions( Object target )
   {
     return preventExtensions( Js.uncheckedCast( target ) );
   }
@@ -211,7 +211,7 @@ public class Reflect
   public static native boolean set( JsObject target, String propertyKey, Object value );
 
   @JsOverlay
-  public static final boolean set(
+  public static boolean set(
     Object target, String propertyKey, Object value, Object receiver )
   {
     return set(
@@ -222,7 +222,7 @@ public class Reflect
   }
 
   @JsOverlay
-  public static final boolean set( Object target, String propertyKey, Object value )
+  public static boolean set( Object target, String propertyKey, Object value )
   {
     return set( Js.uncheckedCast( target ), propertyKey, value );
   }
@@ -230,7 +230,7 @@ public class Reflect
   public static native boolean setPrototypeOf( JsObject target, JsObject proto );
 
   @JsOverlay
-  public static final boolean setPrototypeOf( Object target, Object proto )
+  public static boolean setPrototypeOf( Object target, Object proto )
   {
     return setPrototypeOf( Js.uncheckedCast( target ), Js.uncheckedCast( proto ) );
   }
