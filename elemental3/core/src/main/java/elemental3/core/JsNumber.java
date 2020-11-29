@@ -129,8 +129,7 @@ public class JsNumber
   @JsOverlay
   public final String toLocaleString( JsArray<String> locales, JsObject options )
   {
-    return toLocaleString(
-      Js.<ToLocaleStringLocalesUnionType>uncheckedCast( locales ), options );
+    return toLocaleString( Js.<ToLocaleStringLocalesUnionType>uncheckedCast( locales ), options );
   }
 
   @JsOverlay
@@ -148,8 +147,7 @@ public class JsNumber
   @JsOverlay
   public final String toLocaleString( String locales, JsObject options )
   {
-    return toLocaleString(
-      Js.<ToLocaleStringLocalesUnionType>uncheckedCast( locales ), options );
+    return toLocaleString( Js.<ToLocaleStringLocalesUnionType>uncheckedCast( locales ), options );
   }
 
   @JsOverlay
@@ -182,12 +180,10 @@ public class JsNumber
     return toLocaleString( Js.<JsArray<String>>uncheckedCast( locales ) );
   }
 
-  public native String toLocaleString(
-    ToLocaleStringLocalesUnionType locales, JsObject options );
+  public native String toLocaleString( ToLocaleStringLocalesUnionType locales, JsObject options );
 
   @JsOverlay
-  public final String toLocaleString(
-    ToLocaleStringLocalesUnionType locales, Object options )
+  public final String toLocaleString( ToLocaleStringLocalesUnionType locales, Object options )
   {
     return toLocaleString( locales, Js.uncheckedCast( options ) );
   }
