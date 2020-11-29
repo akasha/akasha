@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.parseFloat",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseFloat",
+    "description": "The Number.parseFloat() method parses an argument and returns a floating point number. If a number cannot be parsed from the argument, it returns NaN.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.parsefloat",
+            "description": "The definition of 'Number.parseFloat' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.EPSILON",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/EPSILON",
+    "description": "The Number.EPSILON property represents the difference between 1 and the smallest floating point number greater than 1.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.epsilon",
+            "description": "The definition of 'Number.EPSILON' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.isSafeInteger",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger",
+    "description": "The Number.isSafeInteger() method determines whether the provided value is a number that is a safe integer.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.issafeinteger",
+            "description": "The definition of 'Number.isSafeInteger' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

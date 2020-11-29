@@ -1,0 +1,14 @@
+
+{
+    "kind": "Constructor",
+    "name": "AggregateError.AggregateError",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError",
+    "description": "The AggregateError() constructor creates an error for several errors that need to be wrapped in a single error.",
+    "refs": [
+        {
+            "name": "Promise.any",
+            "href": "https://tc39.es/proposal-promise-any/#sec-aggregate-error-constructor",
+            "description": "The definition of 'AggregateError()' in the 'Promise.any' specification."
+        }
+    ]
+}

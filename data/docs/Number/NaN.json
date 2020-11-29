@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.NaN",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN",
+    "description": "The Number.NaN property represents Not-A-Number. Equivalent of NaN.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.nan",
+            "description": "The definition of 'Number.NaN' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.MAX_SAFE_INTEGER",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER",
+    "description": "The Number.MAX_SAFE_INTEGER constant represents the maximum safe integer in JavaScript (253 - 1).",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.max_safe_integer",
+            "description": "The definition of 'Number.MAX_SAFE_INTEGER' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.MAX_VALUE",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE",
+    "description": "The Number.MAX_VALUE property represents the maximum numeric value representable in JavaScript.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.max_value",
+            "description": "The definition of 'Number.MAX_VALUE' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

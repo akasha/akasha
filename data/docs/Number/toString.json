@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString",
+    "description": "The toString() method returns a string representing the specified Number object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.prototype.tostring",
+            "description": "The definition of 'Number.prototype.tostring' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.isFinite",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite",
+    "description": "The Number.isFinite() method determines whether the passed value is a finite number &mdash; that is, it checks that a number is neither positive nor negative Infinity, since JavaScript has both.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.isfinite",
+            "description": "The definition of 'Number.isInteger' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

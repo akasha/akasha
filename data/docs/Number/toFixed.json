@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.toFixed",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed",
+    "description": "The toFixed() method formats a number using fixed-point notation.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.prototype.tofixed",
+            "description": "The definition of 'Number.prototype.toFixed' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

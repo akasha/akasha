@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.toExponential",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential",
+    "description": "The toExponential() method returns a string representing the Number object in exponential notation.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.prototype.toexponential",
+            "description": "The definition of 'Number.prototype.toExponential' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

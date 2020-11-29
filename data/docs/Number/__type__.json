@@ -1,0 +1,14 @@
+
+{
+    "kind": "Type",
+    "name": "Number",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "description": "The Number constructor contains constants and methods for working with numbers. Values of other types can be converted to numbers using the Number() function.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number-objects",
+            "description": "The definition of 'Number' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

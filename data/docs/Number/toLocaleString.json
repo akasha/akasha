@@ -1,0 +1,19 @@
+
+{
+    "kind": "Method",
+    "name": "Number.toLocaleString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString",
+    "description": "The toLocaleString() method returns a string with a language-sensitive representation of this number.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.prototype.tolocalestring",
+            "description": "The definition of 'Number.prototype.toLocaleString' in the 'ECMAScript (ECMA-262)' specification."
+        },
+        {
+            "name": "ECMAScript Internationalization API (ECMA-402)",
+            "href": "https://tc39.es/ecma402/#sup-number.prototype.tolocalestring",
+            "description": "The definition of 'Number.prototype.toLocaleString' in the 'ECMAScript Internationalization API (ECMA-402)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.MIN_SAFE_INTEGER",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER",
+    "description": "The Number.MIN_SAFE_INTEGER constant represents the minimum safe integer in JavaScript (-(253 - 1)).",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.min_safe_integer",
+            "description": "The definition of 'Number.MIN_SAFE_INTEGER' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

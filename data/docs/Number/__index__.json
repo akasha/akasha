@@ -1,0 +1,95 @@
+
+{
+    "name": "Number",
+    "lastModifiedAt": 1606684309412,
+    "entries": [
+        {
+            "name": "EPSILON",
+            "lastModifiedAt": 1606684298791
+        },
+        {
+            "name": "MAX_SAFE_INTEGER",
+            "lastModifiedAt": 1606684299127
+        },
+        {
+            "name": "MAX_VALUE",
+            "lastModifiedAt": 1606684299534
+        },
+        {
+            "name": "MIN_SAFE_INTEGER",
+            "lastModifiedAt": 1606684300492
+        },
+        {
+            "name": "MIN_VALUE",
+            "lastModifiedAt": 1606684301370
+        },
+        {
+            "name": "NEGATIVE_INFINITY",
+            "lastModifiedAt": 1606684302319
+        },
+        {
+            "name": "NaN",
+            "lastModifiedAt": 1606684302750
+        },
+        {
+            "name": "Number",
+            "lastModifiedAt": 1606684298208
+        },
+        {
+            "name": "POSITIVE_INFINITY",
+            "lastModifiedAt": 1606684303182
+        },
+        {
+            "name": "__type__",
+            "lastModifiedAt": 1606684297630
+        },
+        {
+            "name": "isFinite",
+            "lastModifiedAt": 1606684303519
+        },
+        {
+            "name": "isInteger",
+            "lastModifiedAt": 1606684304430
+        },
+        {
+            "name": "isNaN",
+            "lastModifiedAt": 1606684305395
+        },
+        {
+            "name": "isSafeInteger",
+            "lastModifiedAt": 1606684305800
+        },
+        {
+            "name": "parseFloat",
+            "lastModifiedAt": 1606684306705
+        },
+        {
+            "name": "parseInt",
+            "lastModifiedAt": 1606684306980
+        },
+        {
+            "name": "toExponential",
+            "lastModifiedAt": 1606684307320
+        },
+        {
+            "name": "toFixed",
+            "lastModifiedAt": 1606684307711
+        },
+        {
+            "name": "toLocaleString",
+            "lastModifiedAt": 1606684308001
+        },
+        {
+            "name": "toPrecision",
+            "lastModifiedAt": 1606684308837
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1606684309126
+        },
+        {
+            "name": "valueOf",
+            "lastModifiedAt": 1606684309412
+        }
+    ]
+}

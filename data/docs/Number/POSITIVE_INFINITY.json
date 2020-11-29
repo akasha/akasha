@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.POSITIVE_INFINITY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY",
+    "description": "The Number.POSITIVE_INFINITY property represents the positive Infinity value.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.positive_infinity",
+            "description": "The definition of 'Number.POSITIVE_INFINITY' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

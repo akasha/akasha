@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "Number.parseInt",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt",
+    "description": "The Number.parseInt() method parses a string argument and returns an integer of the specified radix or base.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.parseint",
+            "description": "The definition of 'Number.parseInt' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

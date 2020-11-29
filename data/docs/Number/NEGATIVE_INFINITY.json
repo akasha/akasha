@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "Number.NEGATIVE_INFINITY",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY",
+    "description": "The Number.NEGATIVE_INFINITY property represents the negative Infinity value.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-number.negative_infinity",
+            "description": "The definition of 'Number.NEGATIVE_INFINITY' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}
