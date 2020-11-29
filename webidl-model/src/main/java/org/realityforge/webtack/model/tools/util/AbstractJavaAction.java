@@ -539,7 +539,7 @@ public abstract class AbstractJavaAction
           }
           else
           {
-            return toTypeName( typedef.getType() );
+            return toTypeName( typedef.getType(), boxed );
           }
         }
       }
