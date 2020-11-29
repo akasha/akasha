@@ -12,10 +12,4 @@ public class RegExpResult
   public double index;
   public String input;
   public double length;
-
-  public RegExpResult()
-  {
-    // This super call is here only for the code to compile; it is never executed.
-    super( (String) null );
-  }
 }
