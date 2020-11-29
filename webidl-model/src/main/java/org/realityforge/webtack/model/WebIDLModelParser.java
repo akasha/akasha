@@ -908,7 +908,12 @@ public final class WebIDLModelParser
                             @Nonnull final List<ExtendedAttribute> extendedAttributes,
                             @Nonnull final SourcePosition startPosition )
   {
-    final String name = ctx.IDENTIFIER().getText();
+    final WebIDLParser.ConstMemberNameContext constMemberNameContext = ctx.constMemberName();
+    final TerminalNode constMemberNameIdentifier = constMemberNameContext.IDENTIFIER();
+    final String name =
+      null != constMemberNameIdentifier ?
+      constMemberNameIdentifier.getText() :
+      constMemberNameContext.constMemberNameKeyword().getText();
     final WebIDLParser.ConstMemberTypeContext constMemberTypeContext = ctx.constMemberType();
     final TerminalNode identifier = constMemberTypeContext.IDENTIFIER();
     final Type type;

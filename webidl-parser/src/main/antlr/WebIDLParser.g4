@@ -24,6 +24,7 @@
 // - Change constMemberType to accept constant values of string types
 // - Removed the bufferRelatedType rule as we now define the types in WebIDL
 // - Added constMember as an alternative of namespaceMember so that namespaces can define constants
+// - Added constMemberName rule so constant names can be the same value as some other grammar tokens such as NaN
 parser grammar WebIDLParser;
 
 options { tokenVocab=WebIDLLexer; }
@@ -181,7 +182,16 @@ callbackInterfaceMember
 ;
 
 constMember
-  : CONST constMemberType IDENTIFIER EQUALS constMemberValue SEMI_COLON
+  : CONST constMemberType constMemberName EQUALS constMemberValue SEMI_COLON
+;
+
+constMemberName
+  : constMemberNameKeyword
+  | IDENTIFIER
+;
+
+constMemberNameKeyword
+  : NAN
 ;
 
 constMemberValue
