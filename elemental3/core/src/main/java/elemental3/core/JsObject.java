@@ -109,7 +109,7 @@ public class JsObject
   public static native JsObject assign( JsObject target, JsObject... var_args );
 
   @JsOverlay
-  public static final JsObject assign( Object target, Object... var_args )
+  public static JsObject assign( Object target, Object... var_args )
   {
     return assign( Js.uncheckedCast( target ), Js.<JsObject>uncheckedCast( var_args ) );
   }
@@ -119,13 +119,13 @@ public class JsObject
   public static native JsObject create( JsObject proto );
 
   @JsOverlay
-  public static final JsObject create( Object proto, Object properties )
+  public static JsObject create( Object proto, Object properties )
   {
     return create( Js.uncheckedCast( proto ), Js.uncheckedCast( properties ) );
   }
 
   @JsOverlay
-  public static final JsObject create( Object proto )
+  public static JsObject create( Object proto )
   {
     return create( Js.uncheckedCast( proto ) );
   }
@@ -133,7 +133,7 @@ public class JsObject
   public static native JsObject defineProperties( JsObject obj, JsObject props );
 
   @JsOverlay
-  public static final JsObject defineProperties( Object obj, Object props )
+  public static JsObject defineProperties( Object obj, Object props )
   {
     return defineProperties( Js.uncheckedCast( obj ), Js.uncheckedCast( props ) );
   }
@@ -142,21 +142,21 @@ public class JsObject
     JsObject obj, DefinePropertyPropUnionType prop, JsObject descriptor );
 
   @JsOverlay
-  public static final JsObject defineProperty( JsObject obj, Object prop, JsObject descriptor )
+  public static JsObject defineProperty( JsObject obj, Object prop, JsObject descriptor )
   {
     return defineProperty(
       obj, Js.<DefinePropertyPropUnionType>uncheckedCast( prop ), descriptor );
   }
 
   @JsOverlay
-  public static final JsObject defineProperty( JsObject obj, String prop, JsObject descriptor )
+  public static JsObject defineProperty( JsObject obj, String prop, JsObject descriptor )
   {
     return defineProperty(
       obj, Js.<DefinePropertyPropUnionType>uncheckedCast( prop ), descriptor );
   }
 
   @JsOverlay
-  public static final JsObject defineProperty(
+  public static JsObject defineProperty(
     Object obj, DefinePropertyPropUnionType prop, Object descriptor )
   {
     return defineProperty(
@@ -164,14 +164,14 @@ public class JsObject
   }
 
   @JsOverlay
-  public static final JsObject defineProperty( Object obj, Object prop, Object descriptor )
+  public static JsObject defineProperty( Object obj, Object prop, Object descriptor )
   {
     return defineProperty(
       Js.uncheckedCast( obj ), prop, Js.uncheckedCast( descriptor ) );
   }
 
   @JsOverlay
-  public static final JsObject defineProperty( Object obj, String prop, Object descriptor )
+  public static JsObject defineProperty( Object obj, String prop, Object descriptor )
   {
     return defineProperty(
       Js.uncheckedCast( obj ), prop, Js.uncheckedCast( descriptor ) );
@@ -188,14 +188,14 @@ public class JsObject
     T obj, GetOwnPropertyDescriptorPropUnionType prop );
 
   @JsOverlay
-  public static final <T> ObjectPropertyDescriptor<T> getOwnPropertyDescriptor( T obj, Object prop )
+  public static <T> ObjectPropertyDescriptor<T> getOwnPropertyDescriptor( T obj, Object prop )
   {
     return getOwnPropertyDescriptor(
       obj, Js.<GetOwnPropertyDescriptorPropUnionType>uncheckedCast( prop ) );
   }
 
   @JsOverlay
-  public static final <T> ObjectPropertyDescriptor<T> getOwnPropertyDescriptor( T obj, String prop )
+  public static <T> ObjectPropertyDescriptor<T> getOwnPropertyDescriptor( T obj, String prop )
   {
     return getOwnPropertyDescriptor(
       obj, Js.<GetOwnPropertyDescriptorPropUnionType>uncheckedCast( prop ) );
@@ -205,7 +205,7 @@ public class JsObject
     JsObject obj );
 
   @JsOverlay
-  public static final JsPropertyMap<ObjectPropertyDescriptor> getOwnPropertyDescriptors(
+  public static JsPropertyMap<ObjectPropertyDescriptor> getOwnPropertyDescriptors(
     Object obj )
   {
     return getOwnPropertyDescriptors( Js.uncheckedCast( obj ) );
@@ -214,7 +214,7 @@ public class JsObject
   public static native JsArray<String> getOwnPropertyNames( JsObject obj );
 
   @JsOverlay
-  public static final JsArray<String> getOwnPropertyNames( Object obj )
+  public static JsArray<String> getOwnPropertyNames( Object obj )
   {
     return getOwnPropertyNames( Js.uncheckedCast( obj ) );
   }
@@ -222,7 +222,7 @@ public class JsObject
   public static native JsArray<Object> getOwnPropertySymbols( JsObject obj );
 
   @JsOverlay
-  public static final JsArray<Object> getOwnPropertySymbols( Object obj )
+  public static JsArray<Object> getOwnPropertySymbols( Object obj )
   {
     return getOwnPropertySymbols( Js.uncheckedCast( obj ) );
   }
@@ -230,7 +230,7 @@ public class JsObject
   public static native JsObject getPrototypeOf( JsObject obj );
 
   @JsOverlay
-  public static final JsObject getPrototypeOf( Object obj )
+  public static JsObject getPrototypeOf( Object obj )
   {
     return getPrototypeOf( Js.uncheckedCast( obj ) );
   }
@@ -240,7 +240,7 @@ public class JsObject
   public static native boolean isExtensible( JsObject obj );
 
   @JsOverlay
-  public static final boolean isExtensible( Object obj )
+  public static boolean isExtensible( Object obj )
   {
     return isExtensible( Js.uncheckedCast( obj ) );
   }
@@ -248,7 +248,7 @@ public class JsObject
   public static native boolean isFrozen( JsObject obj );
 
   @JsOverlay
-  public static final boolean isFrozen( Object obj )
+  public static boolean isFrozen( Object obj )
   {
     return isFrozen( Js.uncheckedCast( obj ) );
   }
@@ -256,7 +256,7 @@ public class JsObject
   public static native boolean isSealed( JsObject obj );
 
   @JsOverlay
-  public static final boolean isSealed( Object obj )
+  public static boolean isSealed( Object obj )
   {
     return isSealed( Js.uncheckedCast( obj ) );
   }
@@ -264,7 +264,7 @@ public class JsObject
   public static native JsArray<String> keys( JsObject obj );
 
   @JsOverlay
-  public static final JsArray<String> keys( Object obj )
+  public static JsArray<String> keys( Object obj )
   {
     return keys( Js.uncheckedCast( obj ) );
   }
@@ -276,7 +276,7 @@ public class JsObject
   public static native JsObject setPrototypeOf( JsObject obj, Object proto );
 
   @JsOverlay
-  public static final JsObject setPrototypeOf( Object obj, Object proto )
+  public static JsObject setPrototypeOf( Object obj, Object proto )
   {
     return setPrototypeOf( Js.uncheckedCast( obj ), proto );
   }
