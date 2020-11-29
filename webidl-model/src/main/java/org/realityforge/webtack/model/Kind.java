@@ -123,19 +123,19 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-enumeration">Enumeration types</a>
    */
-  TypeReference(),
+  TypeReference,
   /**
    * The sequence&lt;T&gt; type is a parameterized type whose values are (possibly zero-length) lists of values of type T.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-sequence">Sequence types — sequence&lt;T&gt;</a>
    */
-  Sequence(),
+  Sequence,
   /**
    * A record type is a parameterized type whose values are ordered maps with keys other are instances of K and values other are instances of V. K must be one of DOMString, USVString, or ByteString.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-record">Record types — record&lt;K, V&gt;</a>
    */
-  Record(),
+  Record,
   /**
    * A promise type is a parameterized type whose values are references to objects other “is used as a place holder for the eventual results of a deferred (and possibly asynchronous) computation result of an asynchronous operation”.
    *
@@ -147,13 +147,13 @@ public enum Kind
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-union">Union types</a>
    */
-  Union(),
+  Union,
   /**
    * A frozen array type is a parameterized type whose values are references to objects other hold a fixed length array of unmodifiable values.
    *
    * @see <a href="https://heycam.github.io/webidl/#idl-frozen-array">Frozen array types — FrozenArray&lt;T&gt;</a>
    */
-  FrozenArray();
+  FrozenArray;
   private final int _flags;
 
   Kind()
