@@ -48,12 +48,6 @@ public class JsArray<T>
   public interface FlatMapCallbackFn<S, T>
   {
     JsArray<S> onInvoke( T p0, double p1, JsArrayLike<T> p2 );
-
-    @JsOverlay
-    default JsArray<S> onInvoke( T p0, double p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArrayLike<T>>uncheckedCast( p2 ) );
-    }
   }
 
   @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
@@ -124,54 +118,24 @@ public class JsArray<T>
     }
 
     R onInvoke( P0UnionType<T> p0, int p1 );
-
-    @JsOverlay
-    default R onInvoke( String p0, int p1 )
-    {
-      return onInvoke( Js.<P0UnionType<T>>uncheckedCast( p0 ), p1 );
-    }
-
-    @JsOverlay
-    default R onInvoke( T p0, int p1 )
-    {
-      return onInvoke( Js.<P0UnionType<T>>uncheckedCast( p0 ), p1 );
-    }
   }
 
   @JsFunction
   public interface MapCallbackFn<R, T>
   {
     R onInvoke( T p0, int p1, JsArray<T> p2 );
-
-    @JsOverlay
-    default R onInvoke( T p0, int p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArray<T>>uncheckedCast( p2 ) );
-    }
   }
 
   @JsFunction
   public interface ReduceCallbackFn<R, T>
   {
     R onInvoke( Object p0, T p1, int p2, JsArray<T> p3 );
-
-    @JsOverlay
-    default R onInvoke( Object p0, T p1, int p2, T[] p3 )
-    {
-      return onInvoke( p0, p1, p2, Js.<JsArray<T>>uncheckedCast( p3 ) );
-    }
   }
 
   @JsFunction
   public interface ReduceRightCallbackFn<R, T>
   {
     R onInvoke( Object p0, T p1, int p2, JsArray<T> p3 );
-
-    @JsOverlay
-    default R onInvoke( Object p0, T p1, int p2, T[] p3 )
-    {
-      return onInvoke( p0, p1, p2, Js.<JsArray<T>>uncheckedCast( p3 ) );
-    }
   }
 
   @JsFunction
