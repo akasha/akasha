@@ -322,23 +322,26 @@ public class JsArray<T>
 
   public native void forEach( @Nonnull ForEachCallback3<T> forEachCallback );
 
-  public native boolean includes( T searchElement, int fromIndex );
+  public native boolean includes( @Nullable T searchElement, int fromIndex );
 
-  public native boolean includes( T searchElement );
+  public native boolean includes( @Nullable T searchElement );
 
-  public native int indexOf( T obj, int fromIndex );
+  public native int indexOf( @Nonnull T obj, int fromIndex );
 
-  public native int indexOf( T obj );
+  public native int indexOf( @Nonnull T obj );
 
+  @Nonnull
   public native String join();
 
-  public native String join( Object separator );
+  @Nonnull
+  public native String join( @Nonnull String separator );
 
+  @Nonnull
   public native JsIteratorIterable<Double> keys();
 
-  public native int lastIndexOf( T obj, int fromIndex );
+  public native int lastIndexOf( @Nullable T searchElement, int fromIndex );
 
-  public native int lastIndexOf( T obj );
+  public native int lastIndexOf( @Nullable T searchElement );
 
   public native <R> JsArray<R> map( MapCallbackFn<? extends R, T> callback );
 
