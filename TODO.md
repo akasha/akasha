@@ -64,6 +64,8 @@ complete as there is too much un-said.
 
 # Java Generation
 
+* Add `JsIterator<X>` to generated types if we know the underlying type is an iterator.
+
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.
 
 * Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
