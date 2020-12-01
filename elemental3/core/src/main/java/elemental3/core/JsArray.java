@@ -343,7 +343,11 @@ public class JsArray<T>
   @Nullable
   public native T find( @Nonnull Predicate3<T> predicate );
 
-  public native int findIndex( FindIndexPredicateFn<T> predicateFn );
+  public native int findIndex( @Nonnull Predicate<T> predicate );
+
+  public native int findIndex( @Nonnull Predicate2<T> predicate );
+
+  public native int findIndex( @Nonnull Predicate3<T> predicate );
 
   public native <S> JsArray<S> flat();
 
