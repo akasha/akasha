@@ -234,8 +234,8 @@ public class JsArray<T>
     return Js.uncheckedCast( array );
   }
 
-  public static native <T, R> JsArray<R> from(
-    FromArrayLikeUnionType<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn );
+  public static native <T, R> JsArray<R> from( FromArrayLikeUnionType<T> arrayLike,
+                                               FromMapFn<? super T, ? extends R> mapFn );
 
   public static native <T, R> JsArray<R> from( FromArrayLikeUnionType<T> arrayLike );
 
@@ -277,8 +277,7 @@ public class JsArray<T>
   }
 
   @JsOverlay
-  public static <T, R> JsArray<R> from(
-    T[] arrayLike, FromMapFn<? super T, ? extends R> mapFn )
+  public static <T, R> JsArray<R> from( T[] arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ), mapFn );
   }
@@ -316,9 +315,7 @@ public class JsArray<T>
 
   public native JsArray<T> copyWithin( int target, int start );
 
-  public native JsIteratorIterable<
-    JsArray<EntriesJsIteratorIterableTypeParameterArrayUnionType<T>>>
-  entries();
+  public native JsIteratorIterable<JsArray<EntriesJsIteratorIterableTypeParameterArrayUnionType<T>>> entries();
 
   public native boolean every( @Nonnull Predicate<T> predicate );
 
@@ -386,13 +383,11 @@ public class JsArray<T>
   @SafeVarargs
   public final native int push( T... var_args );
 
-  public native <R> R reduce(
-    ReduceCallbackFn<? extends R, T> callback, Object initialValue );
+  public native <R> R reduce( ReduceCallbackFn<? extends R, T> callback, Object initialValue );
 
   public native <R> R reduce( ReduceCallbackFn<? extends R, T> callback );
 
-  public native <R> R reduceRight(
-    ReduceRightCallbackFn<? extends R, T> callback, Object initialValue );
+  public native <R> R reduceRight( ReduceRightCallbackFn<? extends R, T> callback, Object initialValue );
 
   public native <R> R reduceRight( ReduceRightCallbackFn<? extends R, T> callback );
 
