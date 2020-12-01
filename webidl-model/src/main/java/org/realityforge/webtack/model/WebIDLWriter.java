@@ -798,7 +798,7 @@ public final class WebIDLWriter
     throws IOException
   {
     writeDocumentationIfRequired( writer, event.getDocumentation(), "  " );
-    // Attributes are always nested in a container so add some leading space
+    // Events are always nested in a container so add some leading space
     writeIndent( writer );
     writeAttributesIfRequired( writer, event.getExtendedAttributes(), "\n  " );
     writer.write( "event " );
