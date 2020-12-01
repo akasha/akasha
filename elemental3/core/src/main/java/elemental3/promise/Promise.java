@@ -73,7 +73,7 @@ public class Promise<T>
    *
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
-   * @return A promise that yields the value of the first promise in the given iterable to fulfill or an {@link AggregateError} containing the reasons for all the rejected promises.
+   * @return A promise that yields the value of the first promise in the given iterable to fulfill or an {@link elemental3.core.AggregateError} containing the reasons for all the rejected promises.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">Promise.any - MDN</a>
    */
   @SafeVarargs
@@ -89,7 +89,7 @@ public class Promise<T>
    *
    * @param promises the promises.
    * @param <V>      the component type of the promise returned.
-   * @return A promise that yields the value of the first promise in the given iterable to fulfill or an {@link AggregateError} containing the reasons for all the rejected promises.
+   * @return A promise that yields the value of the first promise in the given iterable to fulfill or an {@link elemental3.core.AggregateError} containing the reasons for all the rejected promises.
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any">Promise.any - MDN</a>
    */
   @Nonnull
