@@ -326,9 +326,9 @@ public class JsArray<T>
 
   public native boolean includes( @Nullable T searchElement );
 
-  public native int indexOf( @Nonnull T obj, int fromIndex );
+  public native int indexOf( @Nonnull T searchElement, int fromIndex );
 
-  public native int indexOf( @Nonnull T obj );
+  public native int indexOf( @Nonnull T searchElement );
 
   @Nonnull
   public native String join();
