@@ -22,8 +22,6 @@ complete as there is too much un-said.
 
 * Add missing methods to typed array types
 
-* Rewrite `JsArray` to be more user friendly.
-
 * Model `GlobalObject` in IDL. This may be just a specially named mixin? that we merge with the exposed global.
   i.e. the logical equivalent of `GlobalWindow extends Window implements GlobalObject`. The methods/fields mixed
   in are documented at https://tc39.es/ecma262/#sec-value-properties-of-the-global-object
