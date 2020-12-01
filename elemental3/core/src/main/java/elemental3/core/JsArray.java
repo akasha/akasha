@@ -45,18 +45,6 @@ public class JsArray<T>
   }
 
   @JsFunction
-  public interface FilterCallbackFn<T>
-  {
-    Object onInvoke( T p0, int p1, JsArray<T> p2 );
-
-    @JsOverlay
-    default Object onInvoke( T p0, int p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArray<T>>uncheckedCast( p2 ) );
-    }
-  }
-
-  @JsFunction
   public interface FlatMapCallbackFn<S, T>
   {
     JsArray<S> onInvoke( T p0, double p1, JsArrayLike<T> p2 );
@@ -293,7 +281,14 @@ public class JsArray<T>
 
   public native JsArray<T> fill( T value );
 
-  public native JsArray<T> filter( FilterCallbackFn<T> callback );
+  @Nonnull
+  public native JsArray<T> filter( @Nonnull Predicate<T> predicate );
+
+  @Nonnull
+  public native JsArray<T> filter( @Nonnull Predicate2<T> predicate );
+
+  @Nonnull
+  public native JsArray<T> filter( @Nonnull Predicate3<T> predicate );
 
   @Nullable
   public native T find( @Nonnull Predicate<T> predicate );
