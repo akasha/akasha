@@ -45,6 +45,7 @@ public class JsArray<T>
   }
 
   @JsFunction
+  @FunctionalInterface
   public interface FlatMapCallbackFn<S, T>
   {
     JsArray<S> onInvoke( T p0, double p1, JsArrayLike<T> p2 );
@@ -86,6 +87,7 @@ public class JsArray<T>
   }
 
   @JsFunction
+  @FunctionalInterface
   public interface FromMapFn<T, R>
   {
     @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
@@ -121,24 +123,28 @@ public class JsArray<T>
   }
 
   @JsFunction
+  @FunctionalInterface
   public interface MapCallbackFn<R, T>
   {
     R onInvoke( T p0, int p1, JsArray<T> p2 );
   }
 
   @JsFunction
+  @FunctionalInterface
   public interface ReduceCallbackFn<R, T>
   {
     R onInvoke( Object p0, T p1, int p2, JsArray<T> p3 );
   }
 
   @JsFunction
+  @FunctionalInterface
   public interface ReduceRightCallbackFn<R, T>
   {
     R onInvoke( Object p0, T p1, int p2, JsArray<T> p3 );
   }
 
   @JsFunction
+  @FunctionalInterface
   public interface SortCompareFn<T>
   {
     double onInvoke( T p0, T p1 );
