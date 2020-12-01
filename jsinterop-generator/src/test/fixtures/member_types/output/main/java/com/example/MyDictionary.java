@@ -1,6 +1,9 @@
 package com.example;
 
 import elemental3.core.JsArray;
+import elemental3.core.JsIterable;
+import elemental3.core.JsIterator;
+import elemental3.core.JsIteratorIterable;
 import elemental3.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -945,6 +948,83 @@ public interface MyDictionary {
   @Nonnull
   default MyDictionary octetValue(final short octetValue) {
     setOctetValue( octetValue );
+    return this;
+  }
+
+  @JsProperty(
+      name = "requiredAnyIterableValue"
+  )
+  JsIterable<Any> requiredAnyIterableValue();
+
+  @JsProperty
+  void setRequiredAnyIterableValue(@Nonnull JsIterable<Any> requiredAnyIterableValue);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary requiredAnyIterableValue(
+      @Nonnull final JsIterable<Any> requiredAnyIterableValue) {
+    setRequiredAnyIterableValue( requiredAnyIterableValue );
+    return this;
+  }
+
+  @JsProperty(
+      name = "requiredAnyIteratorIterableValue"
+  )
+  JsIteratorIterable<Any> requiredAnyIteratorIterableValue();
+
+  @JsProperty
+  void setRequiredAnyIteratorIterableValue(
+      @Nonnull JsIteratorIterable<Any> requiredAnyIteratorIterableValue);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary requiredAnyIteratorIterableValue(
+      @Nonnull final JsIteratorIterable<Any> requiredAnyIteratorIterableValue) {
+    setRequiredAnyIteratorIterableValue( requiredAnyIteratorIterableValue );
+    return this;
+  }
+
+  @JsProperty(
+      name = "requiredAnyIteratorValue"
+  )
+  JsIterator<Any> requiredAnyIteratorValue();
+
+  @JsProperty
+  void setRequiredAnyIteratorValue(@Nonnull JsIterator<Any> requiredAnyIteratorValue);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary requiredAnyIteratorValue(
+      @Nonnull final JsIterator<Any> requiredAnyIteratorValue) {
+    setRequiredAnyIteratorValue( requiredAnyIteratorValue );
+    return this;
+  }
+
+  @JsProperty(
+      name = "requiredAnySequenceValue"
+  )
+  JsArray<Any> requiredAnySequenceValue();
+
+  @JsProperty
+  void setRequiredAnySequenceValue(@Nonnull JsArray<Any> requiredAnySequenceValue);
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary requiredAnySequenceValue(
+      @Nonnull final JsArray<Any> requiredAnySequenceValue) {
+    setRequiredAnySequenceValue( requiredAnySequenceValue );
+    return this;
+  }
+
+  @JsOverlay
+  default void setRequiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
+    setRequiredAnySequenceValue( Js.<JsArray<Any>>uncheckedCast( requiredAnySequenceValue ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default MyDictionary requiredAnySequenceValue(@Nonnull final Any... requiredAnySequenceValue) {
+    setRequiredAnySequenceValue( requiredAnySequenceValue );
     return this;
   }
 

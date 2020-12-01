@@ -411,6 +411,8 @@ public abstract class AbstractJavaAction
     tryRegisterIdlToJavaTypeMapping( Kind.Promise.name(), "elemental3.promise.Promise" );
     tryRegisterIdlToJavaTypeMapping( Kind.Sequence.name(), "elemental3.core.JsArray" );
     tryRegisterIdlToJavaTypeMapping( "Iterator", "elemental3.core.JsIterator" );
+    tryRegisterIdlToJavaTypeMapping( "Iterable", "elemental3.core.JsIterable" );
+    tryRegisterIdlToJavaTypeMapping( "IteratorIterable", "elemental3.core.JsIteratorIterable" );
   }
 
   @Nonnull
@@ -551,8 +553,7 @@ public abstract class AbstractJavaAction
     }
     else if ( Kind.Sequence == kind )
     {
-      return ParameterizedTypeName.get( lookupClassName( Kind.Sequence.name() ),
-                                        getUnexpandedType( ( (SequenceType) type ).getItemType() ) );
+      return toJavaSequenceType( (SequenceType) type );
     }
     else if ( Kind.Record == kind )
     {
@@ -733,6 +734,16 @@ public abstract class AbstractJavaAction
   {
     final DocEntry docEntry = context().docRepository().findDocEntry( type, member );
     return null != docEntry ? DocEntryUtil.createDocumentationElement( docEntry ) : null;
+  }
+
+  @Nonnull
+  protected final TypeName toJavaSequenceType( @Nonnull final SequenceType sequenceType )
+  {
+    final String containerTypeName = sequenceType.getIdentValue( ExtendedAttributes.JAVA_SEQUENCE_TYPE );
+
+    final ClassName containerType =
+      lookupClassName( null == containerTypeName ? Kind.Sequence.name() : containerTypeName );
+    return ParameterizedTypeName.get( containerType, toTypeName( sequenceType.getItemType(), true ) );
   }
 
   @Nonnull

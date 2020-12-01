@@ -74,8 +74,7 @@ complete as there is too much un-said.
 
 * Add codegen for `AsyncIterableMember`
 
-* Consider explicitly representing JsIterable in IDL either as a type or an annotation on a `sequence<>` and have
-  a pass that expands maplike, and iterables into regular operations.
+* Consider a pass that expands maplike, and iterables into regular operations with iterables annotation.
 
 * Use `JsPropertyMap` for records. We may need some "wrapper" types like `JsIntPropertyMap` and like `JsShortPropertyMap`
   which just unchecked cast to `JsPropertyMap<double>` and then cast on the way out?

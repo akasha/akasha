@@ -65,6 +65,11 @@ public final class ExtendedAttributes
    */
   @Nonnull
   public static final String MARKER_TYPE = "MarkerType";
+  /**
+   * A custom extended property that specifies the java type of the sequence class.
+   */
+  @Nonnull
+  public static final String JAVA_SEQUENCE_TYPE = "JavaSequenceType";
 
   private ExtendedAttributes()
   {

@@ -1,6 +1,9 @@
 package com.example;
 
 import elemental3.core.JsArray;
+import elemental3.core.JsIterable;
+import elemental3.core.JsIterator;
+import elemental3.core.JsIteratorIterable;
 import elemental3.promise.Promise;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
@@ -21,11 +24,51 @@ public class MyType3 {
   protected MyType3() {
   }
 
+  @Nonnull
+  public native JsIterable<Any> anyIterableMethod(@Nonnull JsIterable<Any> v1,
+      @Nonnull JsIterable<Any> v2);
+
+  @Nonnull
+  public native JsIterable<Any> anyIterableMethod(@Nonnull JsIterable<Any> v1);
+
+  @Nonnull
+  public native JsIteratorIterable<Any> anyIteratorIterableMethod(
+      @Nonnull JsIteratorIterable<Any> v1, @Nonnull JsIteratorIterable<Any> v2);
+
+  @Nonnull
+  public native JsIteratorIterable<Any> anyIteratorIterableMethod(
+      @Nonnull JsIteratorIterable<Any> v1);
+
+  @Nonnull
+  public native JsIterator<Any> anyIteratorMethod(@Nonnull JsIterator<Any> v1,
+      @Nonnull JsIterator<Any> v2);
+
+  @Nonnull
+  public native JsIterator<Any> anyIteratorMethod(@Nonnull JsIterator<Any> v1);
+
   @Nullable
   public native Any anyMethod(@DoNotAutobox @Nullable Object v1, @DoNotAutobox @Nullable Object v2);
 
   @Nullable
   public native Any anyMethod(@DoNotAutobox @Nullable Object v1);
+
+  @Nonnull
+  public native JsArray<Any> anySequenceMethod(@Nonnull JsArray<Any> v1, @Nonnull JsArray<Any> v2);
+
+  @Nonnull
+  public native JsArray<Any> anySequenceMethod(@Nonnull Any[] v1, @Nonnull JsArray<Any> v2);
+
+  @Nonnull
+  public native JsArray<Any> anySequenceMethod(@Nonnull JsArray<Any> v1, @Nonnull Any[] v2);
+
+  @Nonnull
+  public native JsArray<Any> anySequenceMethod(@Nonnull Any[] v1, @Nonnull Any[] v2);
+
+  @Nonnull
+  public native JsArray<Any> anySequenceMethod(@Nonnull JsArray<Any> v1);
+
+  @Nonnull
+  public native JsArray<Any> anySequenceMethod(@Nonnull Any[] v1);
 
   @Nonnull
   public native JsArray<Boolean> booleanFrozenArrayMethod(@Nonnull JsArray<Boolean> v1,

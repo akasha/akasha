@@ -1,3 +1,10 @@
+dictionary Dictionary_requiredAnySequenceValue {
+  required [JavaSequenceType=Iterable] sequence<any> requiredAnyIterableValue;
+  required [JavaSequenceType=IteratorIterable] sequence<any> requiredAnyIteratorIterableValue;
+  required [JavaSequenceType=Iterator] sequence<any> requiredAnyIteratorValue;
+  required sequence<any> requiredAnySequenceValue;
+};
+
 dictionary Dictionary_requiredAnyValue {
   required any requiredAnyValue;
 };
@@ -282,6 +289,13 @@ dictionary MyDictionary {
   unsigned short? nullableUnsignedShortValue;
   object objectValue;
   octet octetValue;
+  [JavaSequenceType=Iterable]
+  sequence<any> requiredAnyIterableValue;
+  [JavaSequenceType=IteratorIterable]
+  sequence<any> requiredAnyIteratorIterableValue;
+  [JavaSequenceType=Iterator]
+  sequence<any> requiredAnyIteratorValue;
+  sequence<any> requiredAnySequenceValue;
   Promise<sequence<long long>> sequencePromiseValue;
   FrozenArray<short> shortFrozenArrayValue;
   Promise<short> shortPromiseValue;
@@ -366,6 +380,10 @@ interface MyType1 {
   readonly attribute unsigned long readonlyUnsignedLongValue;
   readonly attribute unsigned short readonlyUnsignedShortValue;
   readonly attribute Promise<undefined> readonlyVoidPromiseValue;
+  readonly attribute [JavaSequenceType=Iterable] sequence<any> requiredAnyIterableValue;
+  readonly attribute [JavaSequenceType=IteratorIterable] sequence<any> requiredAnyIteratorIterableValue;
+  readonly attribute [JavaSequenceType=Iterator] sequence<any> requiredAnyIteratorValue;
+  readonly attribute sequence<any> requiredAnySequenceValue;
 };
 
 [SecureContext, Exposed=(Window,Worker)]
@@ -422,6 +440,10 @@ interface MyType2 {
   attribute unsigned short? nullableUnsignedShortValue;
   attribute object objectValue;
   attribute octet octetValue;
+  attribute [JavaSequenceType=Iterable] sequence<any> requiredAnyIterableValue;
+  attribute [JavaSequenceType=IteratorIterable] sequence<any> requiredAnyIteratorIterableValue;
+  attribute [JavaSequenceType=Iterator] sequence<any> requiredAnyIteratorValue;
+  attribute sequence<any> requiredAnySequenceValue;
   attribute FrozenArray<short> shortFrozenArrayValue;
   attribute Promise<short> shortPromiseValue;
   attribute sequence<short> shortSequenceValue;
@@ -443,7 +465,14 @@ interface MyType2 {
 
 [SecureContext, Exposed=(Window,Worker)]
 interface MyType3 {
+  [JavaSequenceType=Iterable]
+  sequence<any> anyIterableMethod( [JavaSequenceType=Iterable] sequence<any> v1, optional [JavaSequenceType=Iterable] sequence<any> v2 );
+  [JavaSequenceType=IteratorIterable]
+  sequence<any> anyIteratorIterableMethod( [JavaSequenceType=IteratorIterable] sequence<any> v1, optional [JavaSequenceType=IteratorIterable] sequence<any> v2 );
+  [JavaSequenceType=Iterator]
+  sequence<any> anyIteratorMethod( [JavaSequenceType=Iterator] sequence<any> v1, optional [JavaSequenceType=Iterator] sequence<any> v2 );
   any anyMethod( any v1, optional any v2 );
+  sequence<any> anySequenceMethod( sequence<any> v1, optional sequence<any> v2 );
   FrozenArray<boolean> booleanFrozenArrayMethod( FrozenArray<boolean> v1, optional FrozenArray<boolean> v2 );
   boolean booleanMethod( boolean v1, optional boolean v2 );
   sequence<boolean> booleanSequenceMethod( sequence<boolean> v1, optional sequence<boolean> v2 );
@@ -516,7 +545,14 @@ interface MyType3 {
 
 [SecureContext, Exposed=(Window,Worker)]
 interface MyType4 {
+  [JavaSequenceType=Iterable]
+  static sequence<any> anyIterableMethod( [JavaSequenceType=Iterable] sequence<any> v1, optional [JavaSequenceType=Iterable] sequence<any> v2 );
+  [JavaSequenceType=IteratorIterable]
+  static sequence<any> anyIteratorIterableMethod( [JavaSequenceType=IteratorIterable] sequence<any> v1, optional [JavaSequenceType=IteratorIterable] sequence<any> v2 );
+  [JavaSequenceType=Iterator]
+  static sequence<any> anyIteratorMethod( [JavaSequenceType=Iterator] sequence<any> v1, optional [JavaSequenceType=Iterator] sequence<any> v2 );
   static any anyMethod( any v1, optional any v2 );
+  static sequence<any> anySequenceMethod( sequence<any> v1, optional sequence<any> v2 );
   static FrozenArray<boolean> booleanFrozenArrayMethod( FrozenArray<boolean> v1, optional FrozenArray<boolean> v2 );
   static boolean booleanMethod( boolean v1, optional boolean v2 );
   static sequence<boolean> booleanSequenceMethod( sequence<boolean> v1, optional sequence<boolean> v2 );
@@ -654,6 +690,10 @@ interface MyType5 {
   static readonly attribute unsigned long readonlyUnsignedLongValue;
   static readonly attribute unsigned short readonlyUnsignedShortValue;
   static readonly attribute Promise<undefined> readonlyVoidPromiseValue;
+  static readonly attribute [JavaSequenceType=Iterable] sequence<any> requiredAnyIterableValue;
+  static readonly attribute [JavaSequenceType=IteratorIterable] sequence<any> requiredAnyIteratorIterableValue;
+  static readonly attribute [JavaSequenceType=Iterator] sequence<any> requiredAnyIteratorValue;
+  static readonly attribute sequence<any> requiredAnySequenceValue;
 };
 
 /**
@@ -713,6 +753,10 @@ interface MyType6 {
   static attribute unsigned short? nullableUnsignedShortValue;
   static attribute object objectValue;
   static attribute octet octetValue;
+  static attribute [JavaSequenceType=Iterable] sequence<any> requiredAnyIterableValue;
+  static attribute [JavaSequenceType=IteratorIterable] sequence<any> requiredAnyIteratorIterableValue;
+  static attribute [JavaSequenceType=Iterator] sequence<any> requiredAnyIteratorValue;
+  static attribute sequence<any> requiredAnySequenceValue;
   static attribute FrozenArray<short> shortFrozenArrayValue;
   static attribute Promise<short> shortPromiseValue;
   static attribute sequence<short> shortSequenceValue;

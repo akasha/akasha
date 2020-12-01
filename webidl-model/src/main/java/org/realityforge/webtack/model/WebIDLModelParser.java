@@ -543,7 +543,7 @@ public final class WebIDLModelParser
     }
     else
     {
-      type = parse( argumentRestContext.type() );
+      type = parse( argumentRestContext.type(), extendedAttributes );
       optional = false;
       variadic = argumentRestContext.ellipsis().getChildCount() > 0;
       defaultValue = null;
@@ -607,7 +607,7 @@ public final class WebIDLModelParser
                                         @Nonnull final List<ExtendedAttribute> extendedAttributes,
                                         @Nonnull final SourcePosition startPosition )
   {
-    final Type returnType = parse( ctx.type() );
+    final Type returnType = parse( ctx.type(), extendedAttributes );
     final WebIDLParser.OperationNameContext operationNameContext =
       ctx.operationRest().optionalOperationName().operationName();
     final String name;
@@ -1516,7 +1516,14 @@ public final class WebIDLModelParser
   @Nonnull
   static Type parse( @Nonnull final WebIDLParser.TypeContext ctx )
   {
-    return parse( ctx, Collections.emptyList(), parseSourcePosition( ctx.getStart() ) );
+    return parse( ctx, Collections.emptyList() );
+  }
+
+  @Nonnull
+  static Type parse( @Nonnull final WebIDLParser.TypeContext ctx,
+                     @Nonnull final List<ExtendedAttribute> extendedAttributes )
+  {
+    return parse( ctx, extendedAttributes, parseSourcePosition( ctx.getStart() ) );
   }
 
   @Nonnull
@@ -1888,7 +1895,7 @@ public final class WebIDLModelParser
     final DefaultValue defaultValue;
     if ( null != typeContext )
     {
-      type = parse( typeContext );
+      type = parse( typeContext, extendedAttributes );
       optional = true;
       final WebIDLParser.DefaultValueContext defaultValueContext = restContext.defaultAssignment().defaultValue();
       defaultValue = null != defaultValueContext ? parse( defaultValueContext ) : null;

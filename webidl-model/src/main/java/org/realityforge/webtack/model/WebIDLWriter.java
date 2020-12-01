@@ -188,7 +188,7 @@ public final class WebIDLWriter
     writer.write( "callback " );
     writer.write( definition.getName() );
     writer.write( " = " );
-    writeType( writer, definition.getReturnType() );
+    writeRawType( writer, definition.getReturnType() );
     writer.write( " " );
     writeArgumentList( writer, definition.getArguments() );
     writer.write( ";\n" );
@@ -384,8 +384,12 @@ public final class WebIDLWriter
     if ( argument.isOptional() )
     {
       writer.write( "optional " );
+      writeType( writer, argument.getType() );
     }
-    writeType( writer, argument.getType() );
+    else
+    {
+      writeRawType( writer, argument.getType() );
+    }
     if ( argument.isVariadic() )
     {
       writer.write( "..." );
@@ -475,7 +479,7 @@ public final class WebIDLWriter
     writeDocumentationIfRequired( writer, definition.getDocumentation(), "" );
     writeAttributesIfRequired( writer, definition.getExtendedAttributes(), "\n" );
     writer.write( "typedef " );
-    writeType( writer, definition.getType() );
+    writeRawType( writer, definition.getType() );
     writer.write( ' ' );
     writer.write( definition.getName() );
     writer.write( ";\n" );
@@ -810,11 +814,15 @@ public final class WebIDLWriter
     writeDocumentationIfRequired( writer, member.getDocumentation(), "  " );
     writeIndent( writer );
     writeAttributesIfRequired( writer, member.getExtendedAttributes(), "\n  " );
-    if ( !member.isOptional() )
+    if ( member.isOptional() )
+    {
+      writeRawType( writer, member.getType() );
+    }
+    else
     {
       writer.write( "required " );
+      writeType( writer, member.getType() );
     }
-    writeType( writer, member.getType() );
     writer.write( " " );
     writer.write( member.getName() );
     final DefaultValue defaultValue = member.getDefaultValue();
@@ -980,7 +988,7 @@ public final class WebIDLWriter
 
       if ( OperationMember.Kind.CONSTRUCTOR != kind )
       {
-        writeType( writer, operation.getReturnType() );
+        writeRawType( writer, operation.getReturnType() );
         writer.write( " " );
         final String name = operation.getName();
         if ( null != name )
@@ -1034,6 +1042,12 @@ public final class WebIDLWriter
     throws IOException
   {
     writeAttributesIfRequired( writer, type.getExtendedAttributes(), " " );
+    writeRawType( writer, type );
+  }
+
+  static void writeRawType( @Nonnull final Writer writer, @Nonnull final Type type )
+    throws IOException
+  {
     switch ( type.getKind() )
     {
       case Any:

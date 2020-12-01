@@ -1,6 +1,9 @@
 package com.example;
 
 import elemental3.core.JsArray;
+import elemental3.core.JsIterable;
+import elemental3.core.JsIterator;
+import elemental3.core.JsIteratorIterable;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -165,6 +168,18 @@ public class MyType2 {
   public Object objectValue;
 
   public short octetValue;
+
+  @Nonnull
+  public JsIterable<Any> requiredAnyIterableValue;
+
+  @Nonnull
+  public JsIteratorIterable<Any> requiredAnyIteratorIterableValue;
+
+  @Nonnull
+  public JsIterator<Any> requiredAnyIteratorValue;
+
+  @Nonnull
+  public JsArray<Any> requiredAnySequenceValue;
 
   @Nonnull
   public JsArray<Double> shortFrozenArrayValue;

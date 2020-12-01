@@ -1,6 +1,9 @@
 package com.example;
 
 import elemental3.core.JsArray;
+import elemental3.core.JsIterable;
+import elemental3.core.JsIterator;
+import elemental3.core.JsIteratorIterable;
 import elemental3.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -378,4 +381,28 @@ public class MyType1 {
   )
   @Nonnull
   public native Promise<Void> readonlyVoidPromiseValue();
+
+  @JsProperty(
+      name = "requiredAnyIterableValue"
+  )
+  @Nonnull
+  public native JsIterable<Any> requiredAnyIterableValue();
+
+  @JsProperty(
+      name = "requiredAnyIteratorIterableValue"
+  )
+  @Nonnull
+  public native JsIteratorIterable<Any> requiredAnyIteratorIterableValue();
+
+  @JsProperty(
+      name = "requiredAnyIteratorValue"
+  )
+  @Nonnull
+  public native JsIterator<Any> requiredAnyIteratorValue();
+
+  @JsProperty(
+      name = "requiredAnySequenceValue"
+  )
+  @Nonnull
+  public native JsArray<Any> requiredAnySequenceValue();
 }
