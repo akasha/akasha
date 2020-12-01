@@ -15,229 +15,82 @@ import jsinterop.base.JsArrayLike;
 public class JsArray<T>
   implements JsIterable<T>, JsArrayLike<T>
 {
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface EntriesJsIteratorIterableTypeParameterArrayUnionType<T>
+  @JsType( isNative = true, name = "Array", namespace = JsPackage.GLOBAL )
+  public static final class Entry<T>
+    extends JsArray<Object>
   {
     @JsOverlay
-    static <T> EntriesJsIteratorIterableTypeParameterArrayUnionType<T> of( Object o )
+    public int key()
     {
-      return Js.cast( o );
+      return getAtAsAny( 0 ).asInt();
     }
 
     @JsOverlay
-    default Double asDouble()
+    public T value()
     {
-      return Js.cast( this );
+      return getAtAsAny( 1 ).cast();
     }
-
-    @JsOverlay
-    default T asT()
-    {
-      return Js.cast( this );
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isDouble()
-    {
-      return (Object) this instanceof Double;
-    }
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface FlatMapCallbackFn<S, T>
-  {
-    JsArray<S> onInvoke( T p0, double p1, JsArrayLike<T> p2 );
-  }
-
-  @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-  public interface FromArrayLikeUnionType<T>
-  {
-    @JsOverlay
-    static <T> FromArrayLikeUnionType<T> of( Object o )
-    {
-      return Js.cast( o );
-    }
-
-    @JsOverlay
-    default JsArrayLike<T> asJsArrayLike()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default JsIterable<T> asJsIterable()
-    {
-      return Js.cast( this );
-    }
-
-    @JsOverlay
-    default String asString()
-    {
-      return Js.asString( this );
-    }
-
-    @SuppressWarnings( "ConstantConditions" )
-    @JsOverlay
-    default boolean isString()
-    {
-      return (Object) this instanceof String;
-    }
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface FromMapFn<T, R>
-  {
-    @JsType( isNative = true, name = "?", namespace = JsPackage.GLOBAL )
-    interface P0UnionType<T>
-    {
-      @JsOverlay
-      static <T> P0UnionType<T> of( Object o )
-      {
-        return Js.cast( o );
-      }
-
-      @JsOverlay
-      default String asString()
-      {
-        return Js.asString( this );
-      }
-
-      @JsOverlay
-      default T asT()
-      {
-        return Js.cast( this );
-      }
-
-      @SuppressWarnings( "ConstantConditions" )
-      @JsOverlay
-      default boolean isString()
-      {
-        return (Object) this instanceof String;
-      }
-    }
-
-    R onInvoke( P0UnionType<T> p0, int p1 );
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface MapCallbackFn<R, T>
-  {
-    R onInvoke( T p0, int p1, JsArray<T> p2 );
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface ReduceCallbackFn<R, T>
-  {
-    R onInvoke( Object p0, T p1, int p2, JsArray<T> p3 );
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface ReduceRightCallbackFn<R, T>
-  {
-    R onInvoke( Object p0, T p1, int p2, JsArray<T> p3 );
-  }
-
-  @JsFunction
-  @FunctionalInterface
-  public interface SortCompareFn<T>
-  {
-    double onInvoke( T p0, T p1 );
   }
 
   @JsOverlay
-  public static <T> JsArray<T> asJsArray( T[] array )
+  @Nonnull
+  public static <T> JsArray<T> asJsArray( @Nonnull T[] array )
   {
     return Js.uncheckedCast( array );
   }
 
-  public static native <T, R> JsArray<R> from( FromArrayLikeUnionType<T> arrayLike,
-                                               FromMapFn<? super T, ? extends R> mapFn );
+  @Nonnull
+  public static native <T, R> JsArray<R> from( @Nonnull JsArrayLike<T> arrayLike,
+                                               @Nonnull Converter<? super T, ? extends R> mapFn );
 
-  public static native <T, R> JsArray<R> from( FromArrayLikeUnionType<T> arrayLike );
+  @Nonnull
+  public static native <T, R> JsArray<R> from( @Nonnull JsArrayLike<T> arrayLike );
 
-  @JsOverlay
-  public static <T, R> JsArray<R> from(
-    JsArrayLike<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
-  }
+  @Nonnull
+  public static native <T, R> JsArray<R> from( @Nonnull JsIterable<T> arrayLike,
+                                               @Nonnull Converter<? super T, ? extends R> mapFn );
 
-  @JsOverlay
-  public static <T, R> JsArray<R> from( JsArrayLike<T> arrayLike )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
-  }
+  @Nonnull
+  public static native <T, R> JsArray<R> from( @Nonnull JsIterable<T> arrayLike );
 
-  @JsOverlay
-  public static <T, R> JsArray<R> from( JsIterable<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
-  }
+  @Nonnull
+  public static native <T, R> JsArray<R> from( @Nonnull T[] arrayLike,
+                                               @Nonnull Converter<? super T, ? extends R> mapFn );
 
-  @JsOverlay
-  public static <T, R> JsArray<R> from( JsIterable<T> arrayLike )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
-  }
+  @Nonnull
+  public static native <T, R> JsArray<R> from( @Nonnull T[] arrayLike );
 
-  @JsOverlay
-  public static <T, R> JsArray<R> from( String arrayLike, FromMapFn<? super T, ? extends R> mapFn )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
-  }
-
-  @JsOverlay
-  public static <T, R> JsArray<R> from( String arrayLike )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
-  }
-
-  @JsOverlay
-  public static <T, R> JsArray<R> from( T[] arrayLike, FromMapFn<? super T, ? extends R> mapFn )
-  {
-    return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ), mapFn );
-  }
-
-  @JsOverlay
-  public static <T, R> JsArray<R> from( T[] arrayLike )
-  {
-    return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ) );
-  }
-
-  public static native boolean isArray( Object arr );
+  public static native boolean isArray( @Nullable Object arr );
 
   @SafeVarargs
-  public static native <T> JsArray<T> of( T... var_args );
+  @Nonnull
+  public static native <T> JsArray<T> of( @Nonnull T... var_args );
 
-  public int index;
-  public String input;
   public int length;
 
   @SafeVarargs
-  public JsArray( T... items )
+  public JsArray( @Nonnull T... items )
   {
   }
 
   @JsOverlay
-  public final T[] asArray( T[] reference )
+  public final T[] asArray( @Nonnull T[] reference )
   {
     return ArrayStamper.stampJavaTypeInfo( this, reference );
   }
 
   @SafeVarargs
-  public final native JsArray<T> concat( T... items );
+  @Nonnull
+  public final native JsArray<T> concat( @Nonnull T... items );
 
+  @Nonnull
   public native JsArray<T> copyWithin( int target, int start, int end );
 
+  @Nonnull
   public native JsArray<T> copyWithin( int target, int start );
 
-  public native JsIteratorIterable<JsArray<EntriesJsIteratorIterableTypeParameterArrayUnionType<T>>> entries();
+  @Nonnull
+  public native JsIteratorIterable<JsArray<Entry<T>>> entries();
 
   public native boolean every( @Nonnull Predicate<T> predicate );
 
@@ -245,11 +98,14 @@ public class JsArray<T>
 
   public native boolean every( @Nonnull Predicate3<T> predicate );
 
-  public native JsArray<T> fill( T value, int begin, int end );
+  @Nonnull
+  public native JsArray<T> fill( @Nullable T value, int begin, int end );
 
-  public native JsArray<T> fill( T value, int begin );
+  @Nonnull
+  public native JsArray<T> fill( @Nullable T value, int begin );
 
-  public native JsArray<T> fill( T value );
+  @Nonnull
+  public native JsArray<T> fill( @Nullable T value );
 
   @Nonnull
   public native JsArray<T> filter( @Nonnull Predicate<T> predicate );
@@ -275,11 +131,20 @@ public class JsArray<T>
 
   public native int findIndex( @Nonnull Predicate3<T> predicate );
 
+  @Nonnull
   public native <S> JsArray<S> flat();
 
+  @Nonnull
   public native <S> JsArray<S> flat( double depth );
 
-  public native <S> JsArray<S> flatMap( FlatMapCallbackFn<S, T> callback );
+  @Nonnull
+  public native <S> JsArray<S> flatMap( @Nonnull FlatMap<S, T> callback );
+
+  @Nonnull
+  public native <S> JsArray<S> flatMap( @Nonnull FlatMap2<S, T> callback );
+
+  @Nonnull
+  public native <S> JsArray<S> flatMap( @Nonnull FlatMap3<S, T> callback );
 
   public native void forEach( @Nonnull ForEachCallback<T> forEachCallback );
 
@@ -308,29 +173,56 @@ public class JsArray<T>
 
   public native int lastIndexOf( @Nullable T searchElement );
 
-  public native <R> JsArray<R> map( MapCallbackFn<? extends R, T> callback );
+  @Nonnull
+  public native <R> JsArray<R> map( @Nonnull Map<? extends R, T> callback );
+
+  @Nonnull
+  public native <R> JsArray<R> map( @Nonnull Map2<? extends R, T> callback );
+
+  @Nonnull
+  public native <R> JsArray<R> map( @Nonnull Map3<? extends R, T> callback );
 
   public native T pop();
 
   @SafeVarargs
-  public final native int push( T... var_args );
+  public final native int push( @Nonnull T... var_args );
 
-  public native <R> R reduce( ReduceCallbackFn<? extends R, T> callback, Object initialValue );
+  public native <R> R reduce( @Nonnull Reduce<? extends R, T> callback, R initialValue );
 
-  public native <R> R reduce( ReduceCallbackFn<? extends R, T> callback );
+  public native <R> R reduce( @Nonnull Reduce2<? extends R, T> callback, R initialValue );
 
-  public native <R> R reduceRight( ReduceRightCallbackFn<? extends R, T> callback, Object initialValue );
+  public native <R> R reduce( @Nonnull Reduce3<? extends R, T> callback, R initialValue );
 
-  public native <R> R reduceRight( ReduceRightCallbackFn<? extends R, T> callback );
+  public native <R> R reduce( @Nonnull Reduce<? extends R, T> callback );
 
-  public native T[] reverse();
+  public native <R> R reduce( @Nonnull Reduce2<? extends R, T> callback );
+
+  public native <R> R reduce( @Nonnull Reduce3<? extends R, T> callback );
+
+  public native <R> R reduceRight( @Nonnull Reduce<? extends R, T> callback, R initialValue );
+
+  public native <R> R reduceRight( @Nonnull Reduce2<? extends R, T> callback, R initialValue );
+
+  public native <R> R reduceRight( @Nonnull Reduce3<? extends R, T> callback, R initialValue );
+
+  public native <R> R reduceRight( @Nonnull Reduce<? extends R, T> callback );
+
+  public native <R> R reduceRight( @Nonnull Reduce2<? extends R, T> callback );
+
+  public native <R> R reduceRight( @Nonnull Reduce3<? extends R, T> callback );
+
+  @Nonnull
+  public native JsArray<T> reverse();
 
   public native T shift();
 
+  @Nonnull
   public native JsArray<T> slice();
 
+  @Nonnull
   public native JsArray<T> slice( int begin, int end );
 
+  @Nonnull
   public native JsArray<T> slice( int begin );
 
   public native boolean some( @Nonnull Predicate<T> predicate );
@@ -339,46 +231,68 @@ public class JsArray<T>
 
   public native boolean some( @Nonnull Predicate3<T> predicate );
 
+  @Nonnull
   public native JsArray<T> sort();
 
-  public native JsArray<T> sort( SortCompareFn<? super T> compareFn );
+  @Nonnull
+  public native JsArray<T> sort( @Nonnull Comparator<? super T> compareFn );
 
+  @Nonnull
   public native JsArray<T> splice();
 
   @SafeVarargs
-  public final native JsArray<T> splice( int index, int howMany, T... var_args );
+  @Nonnull
+  public final native JsArray<T> splice( int start, int deleteCount, @Nonnull T... items );
 
-  public native JsArray<T> splice( int index );
+  @Nonnull
+  public native JsArray<T> splice( int start );
 
+  @Nonnull
   public native String toSource();
 
   @JsMethod( name = "toString" )
+  @Nonnull
   public native String toString_();
 
   @SafeVarargs
-  public final native int unshift( T... items );
+  public final native int unshift( @Nonnull T... items );
 
+  @Nonnull
   public native JsIteratorIterable<T> values();
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Comparator<T>
+  {
+    int compare( T item1, T item2 );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Converter<T, R>
+  {
+    R onInvoke( T value );
+  }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback<T>
   {
-    void item( @Nonnull T value );
+    void item( T value );
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback2<T>
   {
-    void item( @Nonnull T value, int key );
+    void item( T value, int key );
   }
 
   @JsFunction
   @FunctionalInterface
   public interface ForEachCallback3<T>
   {
-    void item( @Nonnull T value, int key, @Nonnull JsArray<T> array );
+    void item( T value, int key, @Nonnull JsArray<T> array );
   }
 
   @JsFunction
@@ -392,13 +306,79 @@ public class JsArray<T>
   @FunctionalInterface
   public interface Predicate2<T>
   {
-    boolean test( T value, int key );
+    boolean test( T value, int index );
   }
 
   @JsFunction
   @FunctionalInterface
   public interface Predicate3<T>
   {
-    boolean test( T value, int key, @Nonnull JsArray<T> array );
+    boolean test( T value, int index, @Nonnull JsArray<T> array );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Map<R, T>
+  {
+    R map( T value );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Map2<R, T>
+  {
+    R map( T value, int index );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Map3<R, T>
+  {
+    R map( T value, int index, @Nonnull JsArrayLike<T> array );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface FlatMap<S, T>
+  {
+    @Nonnull
+    JsArray<S> flatMap( T value );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface FlatMap2<S, T>
+  {
+    @Nonnull
+    JsArray<S> flatMap( T value, int index );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface FlatMap3<S, T>
+  {
+    @Nonnull
+    JsArray<S> flatMap( T value, int index, @Nonnull JsArrayLike<T> array );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Reduce<R, T>
+  {
+    R reduce( R accumulator, T currentValue );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Reduce2<R, T>
+  {
+    R reduce( R accumulator, T currentValue, int index );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface Reduce3<R, T>
+  {
+    R reduce( R accumulator, T currentValue, int index, @Nonnull JsArray<T> p3 );
   }
 }
