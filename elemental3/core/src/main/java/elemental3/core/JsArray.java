@@ -187,18 +187,6 @@ public class JsArray<T>
   }
 
   @JsFunction
-  public interface SomeCallbackFn<T>
-  {
-    Object onInvoke( T p0, int p1, JsArray<T> p2 );
-
-    @JsOverlay
-    default Object onInvoke( T p0, int p1, T[] p2 )
-    {
-      return onInvoke( p0, p1, Js.<JsArray<T>>uncheckedCast( p2 ) );
-    }
-  }
-
-  @JsFunction
   public interface SortCompareFn<T>
   {
     double onInvoke( T p0, T p1 );
@@ -377,7 +365,11 @@ public class JsArray<T>
 
   public native JsArray<T> slice( int begin );
 
-  public native boolean some( SomeCallbackFn<T> callback );
+  public native boolean some( @Nonnull Predicate<T> predicate );
+
+  public native boolean some( @Nonnull Predicate2<T> predicate );
+
+  public native boolean some( @Nonnull Predicate3<T> predicate );
 
   public native JsArray<T> sort();
 
