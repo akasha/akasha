@@ -352,8 +352,6 @@ public class JsArray<T>
     JsArray<EntriesJsIteratorIterableTypeParameterArrayUnionType<T>>>
   entries();
 
-  public native <S> boolean every( EveryCallbackFn<T> callback, S thisobj );
-
   public native boolean every( EveryCallbackFn<T> callback );
 
   public native JsArray<T> fill( T value, int begin, int end );
@@ -361,8 +359,6 @@ public class JsArray<T>
   public native JsArray<T> fill( T value, int begin );
 
   public native JsArray<T> fill( T value );
-
-  public native <S> JsArray<T> filter( FilterCallbackFn<T> callback, S thisobj );
 
   public native JsArray<T> filter( FilterCallbackFn<T> callback );
 
@@ -412,8 +408,6 @@ public class JsArray<T>
 
   public native int lastIndexOf( T obj );
 
-  public native <S, R> JsArray<R> map( MapCallbackFn<? extends R, T> callback, S thisobj );
-
   public native <R> JsArray<R> map( MapCallbackFn<? extends R, T> callback );
 
   public native T pop();
@@ -440,8 +434,6 @@ public class JsArray<T>
   public native JsArray<T> slice( int begin, int end );
 
   public native JsArray<T> slice( int begin );
-
-  public native <S> boolean some( SomeCallbackFn<T> callback, S thisobj );
 
   public native boolean some( SomeCallbackFn<T> callback );
 
