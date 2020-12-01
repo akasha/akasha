@@ -3,5 +3,12 @@
     "kind": "Method",
     "name": "TypedArray.of",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of",
-    "description": "The TypedArray.of() method creates a new typed array from a variable number of arguments. This method is nearly the same as Array.of()."
+    "description": "The TypedArray.of() method creates a new typed array from a variable number of arguments. This method is nearly the same as Array.of().",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.of",
+            "description": "The definition of '%TypedArray%.of' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

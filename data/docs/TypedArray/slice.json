@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.slice",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/slice",
+    "description": "The slice() method returns a new typed array (with a new underlying buffer), that contains a copy of a portion of the original typed array. This method has the same algorithm as Array.prototype.slice(). TypedArray is one of the typed array types here.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.slice",
+            "description": "The definition of '%TypedArray%.prototype.slice' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

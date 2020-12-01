@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.findIndex",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex",
+    "description": "The findIndex() method returns an index in the typed array, if an element in the typed array satisfies the provided testing function. Otherwise -1 is returned.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.findindex",
+            "description": "The definition of '%TypedArray%.prototype.findIndex' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.toString",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString",
+    "description": "The toString() method returns a string representing the specified array and its elements. This method has the same algorithm as Array.prototype.toString(). TypedArray is one of the typed array types here.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.tostring",
+            "description": "The definition of 'Array.prototype.toString' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

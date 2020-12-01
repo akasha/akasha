@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "TypedArray.BYTES_PER_ELEMENT",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT",
+    "description": "The TypedArray.BYTES_PER_ELEMENT property represents the size in bytes of each element in an typed array.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-typedarray.bytes_per_element",
+            "description": "The definition of 'TypedArray.BYTES_PER_ELEMENT' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.reverse",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse",
+    "description": "The reverse() method reverses a typed array in place. The first typed array element becomes the last and the last becomes the first. This method has the same algorithm as Array.prototype.reverse(). TypedArray is one of the typed array types here.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.reverse",
+            "description": "The definition of 'TypedArray.prototype.reverse' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

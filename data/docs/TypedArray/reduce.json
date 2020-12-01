@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.reduce",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce",
+    "description": "The reduce() method applies a function against an accumulator and each value of the typed array (from left-to-right) has to reduce it to a single value. This method has the same algorithm as Array.prototype.reduce(). TypedArray is one of the typed array types here.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.reduce",
+            "description": "The definition of '%TypedArray%.prototype.reduce' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "TypedArray.entries",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries",
+    "description": "The entries() method returns a new Array iterator object that contains the key/value pairs for each index in the array.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-%typedarray%.prototype.entries",
+            "description": "The definition of '%TypedArray%.prototype.entries()' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

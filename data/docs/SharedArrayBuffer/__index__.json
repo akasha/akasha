@@ -1,15 +1,23 @@
 
 {
     "name": "SharedArrayBuffer",
-    "lastModifiedAt": 1605906967647,
+    "lastModifiedAt": 1606791004651,
     "entries": [
         {
             "name": "SharedArrayBuffer",
-            "lastModifiedAt": 1605009599271
+            "lastModifiedAt": 1606791003852
         },
         {
             "name": "__type__",
-            "lastModifiedAt": 1605009598309
+            "lastModifiedAt": 1606791002619
+        },
+        {
+            "name": "byteLength",
+            "lastModifiedAt": 1606791004288
+        },
+        {
+            "name": "slice",
+            "lastModifiedAt": 1606791004651
         }
     ]
 }

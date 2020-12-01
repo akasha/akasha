@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "Uint16Array.Uint16Array",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array",
-    "description": "The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order."
+    "description": "The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-typedarray-constructors",
+            "description": "The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

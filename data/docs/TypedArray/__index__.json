@@ -1,23 +1,147 @@
 
 {
     "name": "TypedArray",
-    "lastModifiedAt": 1605907105242,
+    "lastModifiedAt": 1606791021297,
     "entries": [
         {
+            "name": "BYTES_PER_ELEMENT",
+            "lastModifiedAt": 1606791008363
+        },
+        {
             "name": "__type__",
-            "lastModifiedAt": 1605907101716
+            "lastModifiedAt": 1606791007859
+        },
+        {
+            "name": "buffer",
+            "lastModifiedAt": 1606791008662
+        },
+        {
+            "name": "byteLength",
+            "lastModifiedAt": 1606791008946
+        },
+        {
+            "name": "byteOffset",
+            "lastModifiedAt": 1606791009509
+        },
+        {
+            "name": "copyWithin",
+            "lastModifiedAt": 1606791011069
+        },
+        {
+            "name": "entries",
+            "lastModifiedAt": 1606791011410
+        },
+        {
+            "name": "every",
+            "lastModifiedAt": 1606791011721
+        },
+        {
+            "name": "fill",
+            "lastModifiedAt": 1606791012020
+        },
+        {
+            "name": "filter",
+            "lastModifiedAt": 1606791012455
+        },
+        {
+            "name": "find",
+            "lastModifiedAt": 1606791012762
+        },
+        {
+            "name": "findIndex",
+            "lastModifiedAt": 1606791013193
+        },
+        {
+            "name": "forEach",
+            "lastModifiedAt": 1606791013487
         },
         {
             "name": "from",
-            "lastModifiedAt": 1605907104534
+            "lastModifiedAt": 1606791014020
+        },
+        {
+            "name": "includes",
+            "lastModifiedAt": 1606791014305
+        },
+        {
+            "name": "indexOf",
+            "lastModifiedAt": 1606791014604
+        },
+        {
+            "name": "join",
+            "lastModifiedAt": 1606791014893
+        },
+        {
+            "name": "keys",
+            "lastModifiedAt": 1606791015847
+        },
+        {
+            "name": "lastIndexOf",
+            "lastModifiedAt": 1606791016146
+        },
+        {
+            "name": "length",
+            "lastModifiedAt": 1606791010478
+        },
+        {
+            "name": "map",
+            "lastModifiedAt": 1606791016455
+        },
+        {
+            "name": "name",
+            "lastModifiedAt": 1606791010771
         },
         {
             "name": "of",
-            "lastModifiedAt": 1605907104884
+            "lastModifiedAt": 1606791017005
         },
         {
             "name": "prototype",
-            "lastModifiedAt": 1605907105242
+            "lastModifiedAt": 1606791017821
+        },
+        {
+            "name": "reduce",
+            "lastModifiedAt": 1606791018297
+        },
+        {
+            "name": "reduceRight",
+            "lastModifiedAt": 1606791018572
+        },
+        {
+            "name": "reverse",
+            "lastModifiedAt": 1606791018858
+        },
+        {
+            "name": "set",
+            "lastModifiedAt": 1606791019146
+        },
+        {
+            "name": "slice",
+            "lastModifiedAt": 1606791019442
+        },
+        {
+            "name": "some",
+            "lastModifiedAt": 1606791019729
+        },
+        {
+            "name": "sort",
+            "lastModifiedAt": 1606791020023
+        },
+        {
+            "name": "subarray",
+            "lastModifiedAt": 1606791020366
+        },
+        {
+            "name": "toLocaleString",
+            "lastModifiedAt": 1606791020691
+        },
+        {
+            "name": "toString",
+            "lastModifiedAt": 1606791021006
+        },
+        {
+            "name": "values",
+            "lastModifiedAt": 1606791021297
         }
     ]
 }

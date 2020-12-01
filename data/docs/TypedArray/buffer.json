@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "TypedArray.buffer",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/buffer",
+    "description": "The buffer accessor property represents the ArrayBuffer referenced by a TypedArray at construction time.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-%typedarray%.prototype.buffer",
+            "description": "The definition of 'TypedArray.prototype.buffer' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

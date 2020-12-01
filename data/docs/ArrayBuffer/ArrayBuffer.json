@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "ArrayBuffer.ArrayBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer",
-    "description": "The ArrayBuffer() constructor is used to create ArrayBuffer objects."
+    "description": "The ArrayBuffer() constructor is used to create ArrayBuffer objects.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-arraybuffer-constructor",
+            "description": "The definition of 'ArrayBuffer' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }

@@ -3,5 +3,12 @@
     "kind": "Constructor",
     "name": "SharedArrayBuffer.SharedArrayBuffer",
     "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer",
-    "description": "The SharedArrayBuffer() constructor is used to create a SharedArrayBuffer object representing a generic, fixed-length raw binary data buffer, similar to the ArrayBuffer object."
+    "description": "The SharedArrayBuffer() constructor is used to create a SharedArrayBuffer object representing a generic, fixed-length raw binary data buffer, similar to the ArrayBuffer object.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-sharedarraybuffer-constructor",
+            "description": "The definition of 'SharedArrayBuffer constructor' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
 }
