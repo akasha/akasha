@@ -352,7 +352,11 @@ public class JsArray<T>
     JsArray<EntriesJsIteratorIterableTypeParameterArrayUnionType<T>>>
   entries();
 
-  public native boolean every( EveryCallbackFn<T> callback );
+  public native boolean every( @Nonnull Predicate<T> predicate );
+
+  public native boolean every( @Nonnull Predicate2<T> predicate );
+
+  public native boolean every( @Nonnull Predicate3<T> predicate );
 
   public native JsArray<T> fill( T value, int begin, int end );
 
@@ -363,13 +367,13 @@ public class JsArray<T>
   public native JsArray<T> filter( FilterCallbackFn<T> callback );
 
   @Nullable
-  public native T find( @Nonnull FindPredicate<T> predicateFn );
+  public native T find( @Nonnull Predicate<T> predicate );
 
   @Nullable
-  public native T find( @Nonnull FindPredicate2<T> predicateFn );
+  public native T find( @Nonnull Predicate2<T> predicate );
 
   @Nullable
-  public native T find( @Nonnull FindPredicate3<T> predicateFn );
+  public native T find( @Nonnull Predicate3<T> predicate );
 
   public native <S> int findIndex( FindIndexPredicateFn<T> predicateFn, S this_ );
 
@@ -481,21 +485,21 @@ public class JsArray<T>
 
   @JsFunction
   @FunctionalInterface
-  public interface FindPredicate<T>
+  public interface Predicate<T>
   {
     boolean test( T value );
   }
 
   @JsFunction
   @FunctionalInterface
-  public interface FindPredicate2<T>
+  public interface Predicate2<T>
   {
     boolean test( T value, int key );
   }
 
   @JsFunction
   @FunctionalInterface
-  public interface FindPredicate3<T>
+  public interface Predicate3<T>
   {
     boolean test( T value, int key, @Nonnull JsArray<T> array );
   }
