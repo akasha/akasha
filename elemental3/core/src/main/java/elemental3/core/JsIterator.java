@@ -4,9 +4,9 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType( isNative = true, name = "Iterator", namespace = JsPackage.GLOBAL )
-public interface JsIterator<VALUE>
+public interface JsIterator<T>
 {
-  JsIIterableResult<VALUE> next();
+  JsIIterableResult<T> next();
 
-  JsIIterableResult<VALUE> next( Object value );
+  JsIIterableResult<T> next( Object value );
 }
