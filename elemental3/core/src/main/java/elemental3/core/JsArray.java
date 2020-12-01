@@ -234,22 +234,10 @@ public class JsArray<T>
     return Js.uncheckedCast( array );
   }
 
-  public static native <T, S, R> JsArray<R> from(
-    FromArrayLikeUnionType<T> arrayLike,
-    FromMapFn<? super T, ? extends R> mapFn,
-    S this_ );
-
   public static native <T, R> JsArray<R> from(
     FromArrayLikeUnionType<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn );
 
   public static native <T, R> JsArray<R> from( FromArrayLikeUnionType<T> arrayLike );
-
-  @JsOverlay
-  public static <T, S, R> JsArray<R> from(
-    JsArrayLike<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn, this_ );
-  }
 
   @JsOverlay
   public static <T, R> JsArray<R> from(
@@ -265,13 +253,6 @@ public class JsArray<T>
   }
 
   @JsOverlay
-  public static <T, S, R> JsArray<R> from(
-    JsIterable<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn, this_ );
-  }
-
-  @JsOverlay
   public static <T, R> JsArray<R> from( JsIterable<T> arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
@@ -284,12 +265,6 @@ public class JsArray<T>
   }
 
   @JsOverlay
-  public static <T, S, R> JsArray<R> from( String arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
-  {
-    return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn, this_ );
-  }
-
-  @JsOverlay
   public static <T, R> JsArray<R> from( String arrayLike, FromMapFn<? super T, ? extends R> mapFn )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ), mapFn );
@@ -299,13 +274,6 @@ public class JsArray<T>
   public static <T, R> JsArray<R> from( String arrayLike )
   {
     return from( Js.<FromArrayLikeUnionType<T>>uncheckedCast( arrayLike ) );
-  }
-
-  @JsOverlay
-  public static <T, S, R> JsArray<R> from(
-    T[] arrayLike, FromMapFn<? super T, ? extends R> mapFn, S this_ )
-  {
-    return from( Js.<JsArrayLike<T>>uncheckedCast( arrayLike ), mapFn, this_ );
   }
 
   @JsOverlay
@@ -375,16 +343,11 @@ public class JsArray<T>
   @Nullable
   public native T find( @Nonnull Predicate3<T> predicate );
 
-  public native <S> int findIndex( FindIndexPredicateFn<T> predicateFn, S this_ );
-
   public native int findIndex( FindIndexPredicateFn<T> predicateFn );
 
   public native <S> JsArray<S> flat();
 
   public native <S> JsArray<S> flat( double depth );
-
-  public native <THIS, S> JsArray<S> flatMap(
-    FlatMapCallbackFn<S, T> callback, THIS thisArg );
 
   public native <S> JsArray<S> flatMap( FlatMapCallbackFn<S, T> callback );
 
