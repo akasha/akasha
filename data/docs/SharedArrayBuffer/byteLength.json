@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "SharedArrayBuffer.byteLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength",
+    "description": "The byteLength accessor property represents the length of an SharedArrayBuffer in bytes.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-sharedarraybuffer.prototype.bytelength",
+            "description": "The definition of 'SharedArrayBuffer.prototype.byteLength' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

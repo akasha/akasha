@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "DataView.setUint32",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setUint32",
+    "description": "The setUint32() method stores an unsigned 32-bit integer (unsigned long) value at the specified byte offset from the start of the DataView.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.setuint32",
+            "description": "The definition of 'DataView.prototype.setUint32' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

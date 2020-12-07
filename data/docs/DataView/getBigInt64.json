@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "DataView.getBigInt64",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getBigInt64",
+    "description": "The getBigInt64() method gets a signed 64-bit integer (long long) at the specified byte offset from the start of the DataView.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.getbigint64",
+            "description": "The definition of 'DataView.prototype.getBigInt64()' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

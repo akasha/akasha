@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "DataView.getInt8",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/getInt8",
+    "description": "The getInt8() method gets a signed 8-bit integer (byte) at the specified byte offset from the start of the DataView.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.getint8",
+            "description": "The definition of 'DataView.prototype.getInt8' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

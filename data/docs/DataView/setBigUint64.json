@@ -1,0 +1,14 @@
+
+{
+    "kind": "Method",
+    "name": "DataView.setBigUint64",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64",
+    "description": "The setBigUint64() method stores an unsigned 64-bit integer (unsigned long long) value at the specified byte offset from the start of the DataView.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-dataview.prototype.setbiguint64",
+            "description": "The definition of 'DataView.prototype.setBigUint64()' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

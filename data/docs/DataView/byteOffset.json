@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "DataView.byteOffset",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView/byteOffset",
+    "description": "The byteOffset accessor property represents the offset (in bytes) of this view from the start of its ArrayBuffer or SharedArrayBuffer.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-dataview.prototype.byteoffset",
+            "description": "The definition of 'DataView.prototype.byteOffset' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+
+{
+    "kind": "Property",
+    "name": "ArrayBuffer.byteLength",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength",
+    "description": "The byteLength accessor property represents the length of an ArrayBuffer in bytes.",
+    "refs": [
+        {
+            "name": "ECMAScript (ECMA-262)",
+            "href": "https://tc39.es/ecma262/#sec-get-arraybuffer.prototype.bytelength",
+            "description": "The definition of 'ArrayBuffer.prototype.byteLength' in the 'ECMAScript (ECMA-262)' specification."
+        }
+    ]
+}
