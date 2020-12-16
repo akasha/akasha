@@ -22,4 +22,17 @@ public @interface OverSampleType {
 
   @Nonnull
   String none = "none";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return OverSampleType._2x.equals( value ) || OverSampleType._4x.equals( value ) || OverSampleType.none.equals( value );
+    }
+  }
 }

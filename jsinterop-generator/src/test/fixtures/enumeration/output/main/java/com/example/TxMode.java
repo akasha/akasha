@@ -22,4 +22,17 @@ public @interface TxMode {
 
   @Nonnull
   String requires_new = "requires_new";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return TxMode.not_allowed.equals( value ) || TxMode.requires.equals( value ) || TxMode.requires_new.equals( value );
+    }
+  }
 }

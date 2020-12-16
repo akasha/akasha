@@ -34,4 +34,17 @@ public @interface SpeechRecognitionErrorCode {
 
   @Nonnull
   String service_not_allowed = "service-not-allowed";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return SpeechRecognitionErrorCode.aborted.equals( value ) || SpeechRecognitionErrorCode.audio_capture.equals( value ) || SpeechRecognitionErrorCode.bad_grammar.equals( value ) || SpeechRecognitionErrorCode.language_not_supported.equals( value ) || SpeechRecognitionErrorCode.network.equals( value ) || SpeechRecognitionErrorCode.no_speech.equals( value ) || SpeechRecognitionErrorCode.not_allowed.equals( value ) || SpeechRecognitionErrorCode.service_not_allowed.equals( value );
+    }
+  }
 }

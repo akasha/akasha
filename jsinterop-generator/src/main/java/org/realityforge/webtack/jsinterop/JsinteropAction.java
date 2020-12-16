@@ -240,6 +240,43 @@ final class JsinteropAction
     }
     type.addAnnotation( annotation.build() );
 
+    final ConstEnumerationValue value = definition.getValues().get( 0 );
+    final WebIDLSchema schema = getSchema();
+    final TypeName enumType =
+      toTypeName( schema
+                    .getInterfaceByName( value.getInterfaceName() )
+                    .getConstantByName( value.getConstName() )
+                    .getType() );
+
+    final List<Object> params = new ArrayList<>();
+    final String test =
+      definition
+        .getValues()
+        .stream()
+        .peek( v -> params.add( lookupClassName( v.getInterfaceName() ) ) )
+        .peek( v -> params.add( v.getConstName() ) )
+        .map( v -> "$T.$N == value" )
+        .collect( Collectors.joining( " || " ) );
+
+    type.addType( TypeSpec
+                    .classBuilder( "Validator" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                    .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "assertValid" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addStatement( "assert isValid( value )" )
+                                  .build() )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "isValid" )
+                                  .returns( TypeName.BOOLEAN )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addStatement( "return " + test, params.toArray() )
+                                  .build() )
+                    .build() );
+
     writeTopLevelType( name, type );
   }
 
@@ -2838,19 +2875,56 @@ final class JsinteropAction
       final String value = javaName( enumerationValue );
       if ( !value.isEmpty() )
       {
-        final FieldSpec.Builder field = FieldSpec
-          .builder( BasicTypes.STRING,
-                    javaName( enumerationValue ),
-                    Modifier.PUBLIC,
-                    Modifier.STATIC,
-                    Modifier.FINAL )
-          .addAnnotation( BasicTypes.NONNULL )
-          .initializer( "$S", enumerationValue.getValue() );
+        final FieldSpec.Builder field =
+          FieldSpec
+            .builder( BasicTypes.STRING, value, Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+            .addAnnotation( BasicTypes.NONNULL )
+            .initializer( "$S", enumerationValue.getValue() );
         maybeAddCustomAnnotations( enumerationValue, field );
         maybeAddJavadoc( enumerationValue.getDocumentation(), field );
         type.addField( field.build() );
       }
     }
+
+    final EnumerationValue value = definition.getValues().get( 0 );
+    final WebIDLSchema schema = getSchema();
+
+    final List<Object> params = new ArrayList<>();
+    final String test =
+      definition
+        .getValues()
+        .stream()
+        .map( this::javaName )
+        .filter( v -> !v.isEmpty() )
+        .peek( v -> params.add( self ) )
+        .peek( params::add )
+        .map( v -> "$T.$N.equals( value )" )
+        .collect( Collectors.joining( " || " ) );
+
+    type.addType( TypeSpec
+                    .classBuilder( "Validator" )
+                    .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
+                    .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "assertValid" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .addParameter( ParameterSpec
+                                                   .builder( BasicTypes.STRING, "value", Modifier.FINAL )
+                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .build() )
+                                  .addStatement( "assert isValid( value )" )
+                                  .build() )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "isValid" )
+                                  .returns( TypeName.BOOLEAN )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .addParameter( ParameterSpec
+                                                   .builder( BasicTypes.STRING, "value", Modifier.FINAL )
+                                                   .addAnnotation( BasicTypes.NONNULL )
+                                                   .build() )
+                                  .addStatement( "return " + test, params.toArray() )
+                                  .build() )
+                    .build() );
 
     writeTopLevelType( name, type );
   }

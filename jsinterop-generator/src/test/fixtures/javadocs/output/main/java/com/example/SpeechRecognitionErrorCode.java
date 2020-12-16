@@ -23,4 +23,17 @@ public @interface SpeechRecognitionErrorCode {
    */
   @Nonnull
   String aborted = "aborted";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return SpeechRecognitionErrorCode.aborted.equals( value );
+    }
+  }
 }

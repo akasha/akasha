@@ -16,4 +16,16 @@ import org.intellij.lang.annotations.MagicConstant;
     }
 )
 public @interface ReadyStateType2b {
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(final int value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(final int value) {
+      return XMLHR2.UNSENT == value || XMLHR2.OPENED == value || XMLHR2.HEADERS_RECEIVED == value || XMLHR2.LOADING == value || XMLHR2.DONE == value;
+    }
+  }
 }

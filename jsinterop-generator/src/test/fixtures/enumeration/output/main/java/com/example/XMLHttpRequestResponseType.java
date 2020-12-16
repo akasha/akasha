@@ -31,4 +31,17 @@ public @interface XMLHttpRequestResponseType {
 
   @Nonnull
   String text = "text";
+
+  final class Validator {
+    private Validator() {
+    }
+
+    public static void assertValid(@Nonnull final String value) {
+      assert isValid( value );
+    }
+
+    public static boolean isValid(@Nonnull final String value) {
+      return XMLHttpRequestResponseType.default_text.equals( value ) || XMLHttpRequestResponseType.arraybuffer.equals( value ) || XMLHttpRequestResponseType.blob.equals( value ) || XMLHttpRequestResponseType.document.equals( value ) || XMLHttpRequestResponseType.json.equals( value ) || XMLHttpRequestResponseType.text.equals( value );
+    }
+  }
 }
