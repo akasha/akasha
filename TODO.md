@@ -26,8 +26,6 @@ complete as there is too much un-said.
   i.e. the logical equivalent of `GlobalWindow extends Window implements GlobalObject`. The methods/fields mixed
   in are documented at https://tc39.es/ecma262/#sec-value-properties-of-the-global-object
 
-* Define AggregateError in IDL?
-
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
@@ -67,8 +65,6 @@ complete as there is too much un-said.
 * Add `JsIterator<X>` to generated types if we know the underlying type is an iterator.
 
 * Consider supporting multiple exposure sets and thus multiple `GlobalX` interfaces in output library. Then figure out a way to support multiple `Global` objects.
-
-* Add `static boolean isValid(...) {...}` to java enumerations for `enum` and `const enum` types to make it easy to validate types in code.
 
 * Add the ability to designate root types in the graph that either identify nodes to keep or nodes to remove
   and anything that is removed has all references to it removed. This is a way of partitioning the graph into
