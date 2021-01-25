@@ -1327,7 +1327,7 @@
         "elementNamePattern": "^WebGL2RenderingContext$",
         "operationNamePattern": "^(drawElements|drawElementsInstanced|drawRangeElements)$",
         "argumentNamePattern": "^type$",
-        "type": "DrawElementDataType"
+        "type": "DrawElementsDataType"
       }
     },
     {

@@ -189,7 +189,7 @@ const enum PixelStorageParameter {
   WebGL2RenderingContext.UNPACK_SKIP_IMAGES
 };
 
-const enum DrawElementDataType {
+const enum DrawElementsDataType {
   WebGL2RenderingContext.UNSIGNED_BYTE,
   WebGL2RenderingContext.UNSIGNED_SHORT,
   WebGL2RenderingContext.UNSIGNED_INT
