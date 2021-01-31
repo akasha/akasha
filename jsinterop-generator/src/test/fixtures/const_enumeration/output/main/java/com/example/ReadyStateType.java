@@ -20,6 +20,13 @@ public @interface ReadyStateType {
     private Validator() {
     }
 
+    @ReadyStateType
+    @SuppressWarnings("MagicConstant")
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
       assert isValid( value ) : "@ReadyStateType annotated value must be one of [XMLHttpRequest.UNSENT, XMLHttpRequest.OPENED, XMLHttpRequest.HEADERS_RECEIVED, XMLHttpRequest.LOADING, XMLHttpRequest.DONE] but is " + value;
     }

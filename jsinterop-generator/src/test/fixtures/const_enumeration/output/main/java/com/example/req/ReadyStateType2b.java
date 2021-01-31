@@ -20,6 +20,13 @@ public @interface ReadyStateType2b {
     private Validator() {
     }
 
+    @ReadyStateType2b
+    @SuppressWarnings("MagicConstant")
+    public static int cast(final int value) {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid(final int value) {
       assert isValid( value ) : "@ReadyStateType2b annotated value must be one of [XMLHR2.UNSENT, XMLHR2.OPENED, XMLHR2.HEADERS_RECEIVED, XMLHR2.LOADING, XMLHR2.DONE] but is " + value;
     }

@@ -226,7 +226,8 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
-    final String simpleName = lookupClassName( name ).simpleName();
+    final ClassName className = lookupClassName( name );
+    final String simpleName = className.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
         .annotationBuilder( simpleName )
@@ -265,6 +266,19 @@ final class JsinteropAction
                     .classBuilder( "Validator" )
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "cast" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .addAnnotation( className )
+                                  .addAnnotation( AnnotationSpec
+                                                    .builder( SuppressWarnings.class )
+                                                    .addMember( "value", "$S","MagicConstant" )
+                                                    .build() )
+                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addStatement( "assertValid( value )" )
+                                  .addStatement( "return value" )
+                                  .returns( enumType )
+                                  .build() )
                     .addMethod( MethodSpec
                                   .methodBuilder( "assertValid" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
