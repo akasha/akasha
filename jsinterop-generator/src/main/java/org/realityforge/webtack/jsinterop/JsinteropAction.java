@@ -226,9 +226,10 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
+    final String simpleName = lookupClassName( name ).simpleName();
     final TypeSpec.Builder type =
       TypeSpec
-        .annotationBuilder( lookupClassName( name ).simpleName() )
+        .annotationBuilder( simpleName )
         .addModifiers( Modifier.PUBLIC );
     writeGeneratedAnnotation( type );
     type.addAnnotation( Documented.class );
@@ -249,12 +250,14 @@ final class JsinteropAction
                     .getType() );
 
     final List<Object> params = new ArrayList<>();
+    final List<String> descriptions = new ArrayList<>();
     final String test =
       definition
         .getValues()
         .stream()
         .peek( v -> params.add( lookupClassName( v.getInterfaceName() ) ) )
         .peek( v -> params.add( v.getConstName() ) )
+        .peek( v -> descriptions.add( "$T.$N" ) )
         .map( v -> "$T.$N == value" )
         .collect( Collectors.joining( " || " ) );
 
@@ -266,7 +269,11 @@ final class JsinteropAction
                                   .methodBuilder( "assertValid" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
-                                  .addStatement( "assert isValid( value )" )
+                                  .addStatement( "assert isValid( value ) : \"@" + simpleName +
+                                                 " annotated value must be one of [" +
+                                                 String.join( ", ", descriptions ) +
+                                                 "] but is \" + value",
+                                                 params.toArray() )
                                   .build() )
                     .addMethod( MethodSpec
                                   .methodBuilder( "isValid" )

@@ -21,7 +21,7 @@ public @interface ReadyStateType2b {
     }
 
     public static void assertValid(final int value) {
-      assert isValid( value );
+      assert isValid( value ) : "@ReadyStateType2b annotated value must be one of [XMLHR2.UNSENT, XMLHR2.OPENED, XMLHR2.HEADERS_RECEIVED, XMLHR2.LOADING, XMLHR2.DONE] but is " + value;
     }
 
     public static boolean isValid(final int value) {
