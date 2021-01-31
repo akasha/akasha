@@ -35,6 +35,13 @@ const enum AttributeDataType {
   WebGL2RenderingContext.HALF_FLOAT
 };
 
+const enum AttributeIntegerDataType {
+  WebGL2RenderingContext.BYTE,
+  WebGL2RenderingContext.UNSIGNED_BYTE,
+  WebGL2RenderingContext.SHORT,
+  WebGL2RenderingContext.UNSIGNED_SHORT
+};
+
 const enum FramebufferTargetType {
   WebGL2RenderingContext.FRAMEBUFFER,
   WebGL2RenderingContext.DRAW_FRAMEBUFFER,

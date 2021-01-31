@@ -1343,6 +1343,18 @@
       }
     },
     {
+      "name": "ChangeArgumentType",
+      "description": "Tighten up the parameter types",
+      "sourceSelector": "name=webgl.*",
+      "config": {
+        "expectedChangeCount": 1,
+        "elementNamePattern": "^WebGL2RenderingContext$",
+        "operationNamePattern": "^vertexAttribIPointer$",
+        "argumentNamePattern": "^type$",
+        "type": "AttributeIntegerDataType"
+      }
+    },
+    {
       "name": "AddExtendedAttributeToMember",
       "description": "Annotate a couple of methods that are expected to contain GLSL fragments",
       "sourceSelector": "name=webgl.*",
