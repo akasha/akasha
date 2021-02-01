@@ -367,3 +367,13 @@ const enum TextureComparisonMode {
   WebGL2RenderingContext.NONE,
   WebGL2RenderingContext.COMPARE_REF_TO_TEXTURE
 };
+
+const enum WebGLContextError {
+  WebGL2RenderingContext.NO_ERROR,
+  WebGL2RenderingContext.INVALID_ENUM,
+  WebGL2RenderingContext.INVALID_VALUE,
+  WebGL2RenderingContext.INVALID_OPERATION,
+  WebGL2RenderingContext.INVALID_FRAMEBUFFER_OPERATION,
+  WebGL2RenderingContext.OUT_OF_MEMORY,
+  WebGL2RenderingContext.CONTEXT_LOST_WEBGL
+};
