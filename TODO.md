@@ -26,6 +26,8 @@ complete as there is too much un-said.
   i.e. the logical equivalent of `GlobalWindow extends Window implements GlobalObject`. The methods/fields mixed
   in are documented at https://tc39.es/ecma262/#sec-value-properties-of-the-global-object
 
+* Update all the patches to use `ChangeReturnType` processor if possible.
+
 # Docs Integration
 
 * Process docs and any words that match an original/non-synthetic word then convert into {@link MyType}
