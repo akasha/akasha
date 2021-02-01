@@ -21,7 +21,6 @@ public @interface ReadyStateType2b {
     }
 
     @ReadyStateType2b
-    @SuppressWarnings("MagicConstant")
     public static int cast(final int value) {
       assertValid( value );
       return value;

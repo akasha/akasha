@@ -270,10 +270,6 @@ final class JsinteropAction
                                   .methodBuilder( "cast" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addAnnotation( className )
-                                  .addAnnotation( AnnotationSpec
-                                                    .builder( SuppressWarnings.class )
-                                                    .addMember( "value", "$S","MagicConstant" )
-                                                    .build() )
                                   .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
                                   .addStatement( "assertValid( value )" )
                                   .addStatement( "return value" )
