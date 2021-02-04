@@ -56,7 +56,7 @@ public class JsString
     }
 
     @JsOverlay
-    default JsRegExp asJsRegExp()
+    default RegExp asRegExp()
     {
       return Js.cast( this );
     }
@@ -68,9 +68,9 @@ public class JsString
     }
 
     @JsOverlay
-    default boolean isJsRegExp()
+    default boolean isRegExp()
     {
-      return this instanceof JsRegExp;
+      return this instanceof RegExp;
     }
 
     @SuppressWarnings( "ConstantConditions" )
@@ -132,7 +132,7 @@ public class JsString
     }
 
     @JsOverlay
-    default JsRegExp asJsRegExp()
+    default RegExp asRegExp()
     {
       return Js.cast( this );
     }
@@ -144,9 +144,9 @@ public class JsString
     }
 
     @JsOverlay
-    default boolean isJsRegExp()
+    default boolean isRegExp()
     {
-      return this instanceof JsRegExp;
+      return this instanceof RegExp;
     }
 
     @SuppressWarnings( "ConstantConditions" )
@@ -377,7 +377,7 @@ public class JsString
   public native String repeat( int count );
 
   @JsOverlay
-  public final String replace( JsRegExp pattern, ReplaceReplacementFn replacement )
+  public final String replace( RegExp pattern, ReplaceReplacementFn replacement )
   {
     return replace(
       Js.<ReplacePatternUnionType>uncheckedCast( pattern ),
@@ -385,13 +385,13 @@ public class JsString
   }
 
   @JsOverlay
-  public final String replace( JsRegExp pattern, ReplaceReplacementUnionType replacement )
+  public final String replace( RegExp pattern, ReplaceReplacementUnionType replacement )
   {
     return replace( Js.<ReplacePatternUnionType>uncheckedCast( pattern ), replacement );
   }
 
   @JsOverlay
-  public final String replace( JsRegExp pattern, String replacement )
+  public final String replace( RegExp pattern, String replacement )
   {
     return replace(
       Js.<ReplacePatternUnionType>uncheckedCast( pattern ),
@@ -437,7 +437,7 @@ public class JsString
   }
 
   @JsOverlay
-  public final int search( JsRegExp pattern )
+  public final int search( RegExp pattern )
   {
     return search( Js.<SearchPatternUnionType>uncheckedCast( pattern ) );
   }
