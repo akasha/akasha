@@ -249,6 +249,10 @@
         "url": "https://www.w3.org/TR/push-api/"
     },
     {
+        "lastModifiedTime": 0,
+        "name": "regexp"
+    },
+    {
         "lastModifiedTime": 1606267137000,
         "name": "webgl_extensions_webgl_multi_draw",
         "url": "https://www.khronos.org/registry/webgl/extensions/WEBGL_multi_draw/"
