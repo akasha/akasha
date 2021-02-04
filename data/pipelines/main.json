@@ -13,6 +13,9 @@
         "externalTypeMapping": [
           "data/pipelines/types.mapping"
         ],
+        "predefinedTypeMapping": [
+          "data/pipelines/complete_predefined.mapping"
+        ],
         "outputDirectory": "elemental3/complete/generated",
         "packageName": "elemental3",
         "globalInterface": "Window"
