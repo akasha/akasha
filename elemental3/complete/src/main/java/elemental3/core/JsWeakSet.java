@@ -1,31 +1,30 @@
 package elemental3.core;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType( name = "WeakSet", isNative = true, namespace = JsPackage.GLOBAL )
-public class JsWeakSet<VALUE>
+public class JsWeakSet<T>
 {
   public JsWeakSet()
   {
   }
 
-  public JsWeakSet( @Nonnull JsIterable<VALUE> iterable )
+  public JsWeakSet( @Nonnull JsIterable<T> iterable )
   {
   }
 
-  public JsWeakSet( @Nonnull VALUE[] iterable )
+  public JsWeakSet( @Nonnull T[] iterable )
   {
   }
 
   @Nonnull
-  public native JsWeakSet<VALUE> add( VALUE value );
+  public native JsWeakSet<T> add( T value );
 
   public native void clear();
 
-  public native boolean delete( @Nonnull VALUE value );
+  public native boolean delete( @Nonnull T value );
 
-  public native boolean has( @Nonnull VALUE value );
+  public native boolean has( @Nonnull T value );
 }
