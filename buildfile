@@ -181,8 +181,8 @@ define 'webtack' do
         extra_deps = []
         if pipeline == 'core'
           compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
-        else
-          src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+        elsif pipeline == 'main'
+          src_dir = file("#{project._(:generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
           project.compile.sources << src_dir
           extra_deps << src_dir
         end
