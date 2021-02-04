@@ -1,5 +1,6 @@
 package elemental3.core;
 
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -15,15 +16,11 @@ public class JsRegExp
   public String source;
   public boolean sticky;
 
-  public JsRegExp()
+  public JsRegExp( @Nonnull final String pattern, @Nonnull final String flags )
   {
   }
 
-  public JsRegExp( Object pattern, Object flags )
-  {
-  }
-
-  public JsRegExp( Object pattern )
+  public JsRegExp( @Nonnull final String pattern )
   {
   }
 
