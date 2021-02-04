@@ -11,11 +11,11 @@ public class JsWeakSet<T>
   {
   }
 
-  public JsWeakSet( @Nonnull JsIterable<T> values )
+  public JsWeakSet( @Nonnull final JsIterable<T> values )
   {
   }
 
-  public JsWeakSet( @Nonnull T[] values )
+  public JsWeakSet( @Nonnull final T[] values )
   {
   }
 
