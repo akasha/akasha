@@ -22,8 +22,6 @@ public class JsWeakSet<T>
   @Nonnull
   public native JsWeakSet<T> add( T value );
 
-  public native void clear();
-
   public native boolean delete( @Nonnull T value );
 
   public native boolean has( @Nonnull T value );
