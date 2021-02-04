@@ -20,7 +20,7 @@ public class JsWeakSet<T>
   }
 
   @Nonnull
-  public native JsWeakSet<T> add( T value );
+  public native JsWeakSet<T> add( @Nonnull T value );
 
   public native boolean delete( @Nonnull T value );
 
