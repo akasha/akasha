@@ -12,7 +12,7 @@
       "config": {
         "outputDirectory": "data/output/react4j",
         "predefinedTypeMapping": [
-          "data/output/main/main/resources/elemental3/Elemental3.mapping"
+          "elemental3/complete/generated/main/resources/elemental3/Elemental3.mapping"
         ],
         "packageName": "react4j.dom2"
       }
