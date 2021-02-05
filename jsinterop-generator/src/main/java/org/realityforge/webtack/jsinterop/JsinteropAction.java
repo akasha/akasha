@@ -2941,7 +2941,9 @@ final class JsinteropAction
                                   .methodBuilder( "cast" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addAnnotation( self )
-                                  .addParameter( ParameterSpec.builder( BasicTypes.STRING, "value", Modifier.FINAL ).build() )
+                                  .addParameter( ParameterSpec
+                                                   .builder( BasicTypes.STRING, "value", Modifier.FINAL )
+                                                   .build() )
                                   .addStatement( "assertValid( value )" )
                                   .addStatement( "return value" )
                                   .returns( BasicTypes.STRING )
