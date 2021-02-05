@@ -5,8 +5,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 @JsType( name = "Set", isNative = true, namespace = JsPackage.GLOBAL )
-public class JsSet<VALUE>
-  implements JsIterable<VALUE>
+public class JsSet<T>
+  implements JsIterable<T>
 {
   @JsFunction
   public interface ForEachCallbackFn<VALUE>
@@ -20,30 +20,30 @@ public class JsSet<VALUE>
   {
   }
 
-  public JsSet( JsIterable<VALUE> iterable )
+  public JsSet( JsIterable<T> iterable )
   {
   }
 
-  public JsSet( VALUE[] iterable )
+  public JsSet( T[] iterable )
   {
   }
 
-  public native JsSet<VALUE> add( VALUE value );
+  public native JsSet<T> add( T value );
 
   public native void clear();
 
-  public native boolean delete( VALUE value );
+  public native boolean delete( T value );
 
-  public native JsIteratorIterable<JsArray<VALUE>> entries();
+  public native JsIteratorIterable<JsArray<T>> entries();
 
   public native <THIS> Object forEach(
-    ForEachCallbackFn<? super VALUE> callback, THIS thisArg );
+    ForEachCallbackFn<? super T> callback, THIS thisArg );
 
-  public native Object forEach( ForEachCallbackFn<? super VALUE> callback );
+  public native Object forEach( ForEachCallbackFn<? super T> callback );
 
-  public native boolean has( VALUE value );
+  public native boolean has( T value );
 
-  public native JsIteratorIterable<VALUE> keys();
+  public native JsIteratorIterable<T> keys();
 
-  public native JsIteratorIterable<VALUE> values();
+  public native JsIteratorIterable<T> values();
 }
