@@ -10,12 +10,6 @@ import jsinterop.annotations.JsType;
 public class JsSet<T>
   implements JsIterable<T>
 {
-  @JsFunction
-  public interface ForEachCallbackFn<VALUE>
-  {
-    Object onInvoke( VALUE p0, VALUE p1, JsSet<? extends VALUE> p2 );
-  }
-
   public int size;
 
   public JsSet()
@@ -40,9 +34,11 @@ public class JsSet<T>
   @Nonnull
   public native JsIteratorIterable<JsArray<T>> entries();
 
-  public native <THIS> Object forEach( ForEachCallbackFn<? super T> callback, THIS thisArg );
+  public native void forEach( @Nonnull JsArray.ForEachCallback<T> forEachCallback );
 
-  public native Object forEach( ForEachCallbackFn<? super T> callback );
+  public native void forEach( @Nonnull JsArray.ForEachCallback2<T> forEachCallback );
+
+  public native void forEach( @Nonnull JsArray.ForEachCallback3<T> forEachCallback );
 
   public native boolean has( @Nullable T value );
 
@@ -51,4 +47,25 @@ public class JsSet<T>
 
   @Nonnull
   public native JsIteratorIterable<T> values();
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback<T>
+  {
+    void item( T value );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback2<T>
+  {
+    void item( T value, T key );
+  }
+
+  @JsFunction
+  @FunctionalInterface
+  public interface ForEachCallback3<T>
+  {
+    void item( T value, T key, @Nonnull JsSet<T> array );
+  }
 }
