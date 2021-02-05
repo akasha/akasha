@@ -226,8 +226,8 @@ final class JsinteropAction
     throws IOException
   {
     final String name = definition.getName();
-    final ClassName className = lookupClassName( name );
-    final String simpleName = className.simpleName();
+    final ClassName self = lookupClassName( name );
+    final String simpleName = self.simpleName();
     final TypeSpec.Builder type =
       TypeSpec
         .annotationBuilder( simpleName )
@@ -269,7 +269,7 @@ final class JsinteropAction
                     .addMethod( MethodSpec
                                   .methodBuilder( "cast" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
-                                  .addAnnotation( className )
+                                  .addAnnotation( self )
                                   .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
                                   .addStatement( "assertValid( value )" )
                                   .addStatement( "return value" )
