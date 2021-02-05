@@ -4,14 +4,13 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 @JsType( name = "Set", isNative = true, namespace = JsPackage.GLOBAL )
 public class JsSet<T>
   implements JsIterable<T>
 {
-  public int size;
-
   public JsSet()
   {
   }
@@ -23,6 +22,9 @@ public class JsSet<T>
   public JsSet( @Nonnull T[] values )
   {
   }
+
+  @JsProperty( name = "size" )
+  public native int size();
 
   @Nonnull
   public native JsSet<T> add( @Nullable T value );
