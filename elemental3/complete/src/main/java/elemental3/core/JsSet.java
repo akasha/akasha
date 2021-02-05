@@ -31,9 +31,6 @@ public class JsSet<T>
 
   public native boolean delete( @Nullable T value );
 
-  @Nonnull
-  public native JsIteratorIterable<JsArray<T>> entries();
-
   public native void forEach( @Nonnull JsArray.ForEachCallback<T> forEachCallback );
 
   public native void forEach( @Nonnull JsArray.ForEachCallback2<T> forEachCallback );
@@ -41,6 +38,9 @@ public class JsSet<T>
   public native void forEach( @Nonnull JsArray.ForEachCallback3<T> forEachCallback );
 
   public native boolean has( @Nullable T value );
+
+  @Nonnull
+  public native JsIteratorIterable<JsArray<T>> entries();
 
   @Nonnull
   public native JsIteratorIterable<T> keys();
