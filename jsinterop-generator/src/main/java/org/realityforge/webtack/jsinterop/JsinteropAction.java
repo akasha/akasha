@@ -2923,6 +2923,15 @@ final class JsinteropAction
                     .addModifiers( Modifier.PUBLIC, Modifier.STATIC, Modifier.FINAL )
                     .addMethod( MethodSpec.constructorBuilder().addModifiers( Modifier.PRIVATE ).build() )
                     .addMethod( MethodSpec
+                                  .methodBuilder( "cast" )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .addAnnotation( self )
+                                  .addParameter( ParameterSpec.builder( BasicTypes.STRING, "value", Modifier.FINAL ).build() )
+                                  .addStatement( "assertValid( value )" )
+                                  .addStatement( "return value" )
+                                  .returns( BasicTypes.STRING )
+                                  .build() )
+                    .addMethod( MethodSpec
                                   .methodBuilder( "assertValid" )
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec
