@@ -3,7 +3,6 @@ package elemental3.core;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import jsinterop.base.JsConstructorFn;
 
 @JsType( isNative = true, name = "goog.global", namespace = JsPackage.GLOBAL )
 public class Global
