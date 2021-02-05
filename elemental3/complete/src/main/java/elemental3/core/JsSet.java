@@ -1,5 +1,6 @@
 package elemental3.core;
 
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsFunction;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -20,30 +21,33 @@ public class JsSet<T>
   {
   }
 
-  public JsSet( JsIterable<T> iterable )
+  public JsSet( @Nonnull JsIterable<T> values )
   {
   }
 
-  public JsSet( T[] iterable )
+  public JsSet( @Nonnull T[] values )
   {
   }
 
-  public native JsSet<T> add( T value );
+  @Nonnull
+  public native JsSet<T> add( @Nonnull T value );
 
   public native void clear();
 
-  public native boolean delete( T value );
+  public native boolean delete( @Nonnull T value );
 
+  @Nonnull
   public native JsIteratorIterable<JsArray<T>> entries();
 
-  public native <THIS> Object forEach(
-    ForEachCallbackFn<? super T> callback, THIS thisArg );
+  public native <THIS> Object forEach( ForEachCallbackFn<? super T> callback, THIS thisArg );
 
   public native Object forEach( ForEachCallbackFn<? super T> callback );
 
-  public native boolean has( T value );
+  public native boolean has( @Nonnull T value );
 
+  @Nonnull
   public native JsIteratorIterable<T> keys();
 
+  @Nonnull
   public native JsIteratorIterable<T> values();
 }
