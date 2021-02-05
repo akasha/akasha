@@ -2,6 +2,7 @@ package com.example.req;
 
 import java.lang.annotation.Documented;
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
@@ -32,6 +33,11 @@ public @interface ReadyStateType2b {
 
     public static boolean isValid(final int value) {
       return XMLHR2.UNSENT == value || XMLHR2.OPENED == value || XMLHR2.HEADERS_RECEIVED == value || XMLHR2.LOADING == value || XMLHR2.DONE == value;
+    }
+
+    @Nonnull
+    public static String describe(final int value) {
+      return XMLHR2.UNSENT == value ? "UNSENT" : XMLHR2.OPENED == value ? "OPENED" : XMLHR2.HEADERS_RECEIVED == value ? "HEADERS_RECEIVED" : XMLHR2.LOADING == value ? "LOADING" : XMLHR2.DONE == value ? "DONE" : "Unknown value " + value;
     }
   }
 }

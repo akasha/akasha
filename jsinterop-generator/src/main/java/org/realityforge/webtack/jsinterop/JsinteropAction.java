@@ -252,6 +252,8 @@ final class JsinteropAction
 
     final List<Object> params = new ArrayList<>();
     final List<String> descriptions = new ArrayList<>();
+    final List<Object> describeParams = new ArrayList<>();
+    final List<String> describeBlocks = new ArrayList<>();
     final String test =
       definition
         .getValues()
@@ -259,6 +261,10 @@ final class JsinteropAction
         .peek( v -> params.add( lookupClassName( v.getInterfaceName() ) ) )
         .peek( v -> params.add( v.getConstName() ) )
         .peek( v -> descriptions.add( "$T.$N" ) )
+        .peek( v -> describeParams.add( lookupClassName( v.getInterfaceName() ) ) )
+        .peek( v -> describeParams.add( v.getConstName() ) )
+        .peek( v -> describeParams.add( v.getConstName() ) )
+        .peek( v -> describeBlocks.add( "$T.$N == value ? $S : " ) )
         .map( v -> "$T.$N == value" )
         .collect( Collectors.joining( " || " ) );
 
@@ -291,6 +297,15 @@ final class JsinteropAction
                                   .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
                                   .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
                                   .addStatement( "return " + test, params.toArray() )
+                                  .build() )
+                    .addMethod( MethodSpec
+                                  .methodBuilder( "describe" )
+                                  .addAnnotation( BasicTypes.NONNULL )
+                                  .addModifiers( Modifier.PUBLIC, Modifier.STATIC )
+                                  .returns( BasicTypes.STRING )
+                                  .addParameter( ParameterSpec.builder( enumType, "value", Modifier.FINAL ).build() )
+                                  .addStatement( "return " + String.join( "", describeBlocks ) +
+                                                 "\"Unknown value \" + value", describeParams.toArray() )
                                   .build() )
                     .build() );
 
