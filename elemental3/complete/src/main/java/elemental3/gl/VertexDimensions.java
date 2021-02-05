@@ -16,6 +16,13 @@ public @interface VertexDimensions
     {
     }
 
+    @VertexDimensions
+    public static int cast( final int value )
+    {
+      assertValid( value );
+      return value;
+    }
+
     public static void assertValid( final int value )
     {
       assert isValid( value ) : "@VertexDimensions annotated value must be one of [1, 2, 3, 4] but is " + value;
