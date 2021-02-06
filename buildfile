@@ -179,9 +179,9 @@ define 'webtack' do
         project.layout[:target, :generated] = "#{WORKSPACE_DIR}/generated/elemental3/#{name}"
 
         extra_deps = []
-        if pipeline == 'core'
+        if 'core' == pipeline
           compile.options.lint = 'all,-serial,-rawtypes,-unchecked'
-        elsif pipeline == 'main'
+        elsif 'main' == pipeline
           src_dir = file("#{project._(:generated)}/main/java" => ["data:run_#{pipeline}_pipeline"])
           project.compile.sources << src_dir
           project.iml.main_generated_source_directories << src_dir
