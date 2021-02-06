@@ -187,7 +187,7 @@ define 'webtack' do
           project.iml.main_generated_source_directories << src_dir
           extra_deps << src_dir
         else
-          src_dir = file("#{WORKSPACE_DIR}/generated/elemental3/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+          src_dir = file("#{WORKSPACE_DIR}/data/output/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
           project.compile.sources << src_dir
           extra_deps << src_dir
         end
