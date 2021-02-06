@@ -192,7 +192,7 @@ define 'webtack' do
           extra_deps << src_dir
         end
 
-        project.doc.options.merge!('Xdoclint:all,-reference,-html' => true)
+        project.doc.options.merge!('Xdoclint:all,-reference,-html,-missing' => true)
 
         compile.using :javac
 
