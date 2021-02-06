@@ -95,7 +95,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">Set.prototype.forEach - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.foreach">Set.prototype.forEach - ECMA</a>
    */
-  public native void forEach( @Nonnull JsArray.ForEachCallback<T> forEachCallback );
+  public native void forEach( @Nonnull ForEachCallback<T> forEachCallback );
 
   /**
    * The forEach() method executes a provided function once for each value in the Set object, in insertion order.
@@ -104,7 +104,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">Set.prototype.forEach - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.foreach">Set.prototype.forEach - ECMA</a>
    */
-  public native void forEach( @Nonnull JsArray.ForEachCallback2<T> forEachCallback );
+  public native void forEach( @Nonnull ForEachCallback2<T> forEachCallback );
 
   /**
    * The forEach() method executes a provided function once for each value in the Set object, in insertion order.
@@ -113,7 +113,7 @@ public class JsSet<T>
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/forEach">Set.prototype.forEach - MDN</a>
    * @see <a href="https://tc39.es/ecma262/#sec-get-set.prototype.foreach">Set.prototype.forEach - ECMA</a>
    */
-  public native void forEach( @Nonnull JsArray.ForEachCallback3<T> forEachCallback );
+  public native void forEach( @Nonnull ForEachCallback3<T> forEachCallback );
 
   /**
    * The has() method returns a boolean indicating whether an element with the specified value exists in a Set object or not.
