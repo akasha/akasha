@@ -186,6 +186,10 @@ define 'webtack' do
           project.compile.sources << src_dir
           project.iml.main_generated_source_directories << src_dir
           extra_deps << src_dir
+        else
+          src_dir = file("#{WORKSPACE_DIR}/generated/elemental3/#{pipeline}/main/java" => ["data:run_#{pipeline}_pipeline"])
+          project.compile.sources << src_dir
+          extra_deps << src_dir
         end
 
         project.doc.options.merge!('Xdoclint:all,-reference,-html' => true)
