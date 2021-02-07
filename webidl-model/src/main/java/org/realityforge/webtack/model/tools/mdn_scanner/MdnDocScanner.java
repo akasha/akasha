@@ -454,6 +454,7 @@ public final class MdnDocScanner
       // Strip the brackets at end of constructors
       .map( text -> text.replaceAll( "\\(.*", "" ) )
       .filter( SourceVersion::isName )
+      .distinct()
       .forEach( constructor -> queueRequest( DocKind.Constructor, typeName, constructor ) );
 
     document
