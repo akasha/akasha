@@ -391,7 +391,6 @@ public final class MdnDocScanner
     // We use the localName as some APIs have been updated in spec but MDN still uses "old"
     // name and redirects at http level when you request the new name. i.e. XR type was called XRSystem
     final Element localNameElement = document.selectFirst( "meta[property=\"og:title\"]" );
-    final String localName = null != localNameElement ? localNameElement.attr( "content" ) : "";
 
     final List<String> constructorNames = new ArrayList<>();
     final List<String> propertyNames = new ArrayList<>();
@@ -452,29 +451,27 @@ public final class MdnDocScanner
           .select( "ol > li > a > code" )
           .stream()
           .map( Element::text )
-          .filter( v -> !v.contains( "." ) || v.startsWith( localName + "." ) )
+          .filter( v -> !v.contains( "." ) || v.startsWith( typeName + "." ) )
           .forEach( methodsNames::add );
       }
       else if ( sectionType.equalsIgnoreCase( "Properties" ) )
       {
         element
           .parent()
-          .parent()
           .select( "ol > li > a > code" )
           .stream()
           .map( Element::text )
-          .filter( v -> !v.contains( "." ) || v.startsWith( localName + "." ) )
+          .filter( v -> !v.contains( "." ) || !v.contains( " " ) || v.startsWith( typeName + "." ) )
           .forEach( propertyNames::add );
       }
       else if ( sectionType.equalsIgnoreCase( "Constructor" ) || sectionType.equalsIgnoreCase( "Constructors" ) )
       {
         element
           .parent()
-          .parent()
           .select( "ol > li > a > code" )
           .stream()
           .map( Element::text )
-          .filter( v -> !v.contains( "." ) || v.startsWith( localName + "." ) )
+          .filter( v -> !v.contains( "." ) || !v.contains( " " ) || v.startsWith( typeName + "." ) )
           .forEach( constructorNames::add );
       }
     }
@@ -490,9 +487,7 @@ public final class MdnDocScanner
     propertyNames
       .stream()
       // Strip out the type name that sometimes appears in the documentation
-      .map( text -> text.replaceAll( "^" + localName + "\\.prototype\\.", "" ) )
       .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
-      .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
       .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
       .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
       .filter( SourceVersion::isName )
@@ -506,9 +501,7 @@ public final class MdnDocScanner
         // Strip the brackets at end of methods
         .map( text -> text.replaceAll( "\\(.*", "" ) )
         // Strip out the type name that sometimes appears in the documentation
-        .map( text -> text.replaceAll( "^" + localName + "\\.prototype\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName + "\\.prototype\\.", "" ) )
-        .map( text -> text.replaceAll( "^" + localName + "\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName + "\\.", "" ) )
         .map( text -> text.replaceAll( "^" + typeName.replaceAll( "^.+\\.", "" ) + "\\.prototype\\.", "" ) )
 
@@ -524,13 +517,13 @@ public final class MdnDocScanner
       // Sometimes constructors are documented as methods so instead register them as constructors
       methods
         .stream()
-        .filter( m -> m.equals( localName ) || m.equals( typeName ) )
+        .filter( m -> m.equals( typeName ) )
         .distinct()
         .forEach( property -> queueRequest( DocKind.Constructor, typeName, typeName ) );
 
       methods
         .stream()
-        .filter( m -> !m.equals( localName ) && !m.equals( typeName ) )
+        .filter( m -> !m.equals( typeName ) )
         .distinct()
         .forEach( method -> queueRequest( DocKind.Method, typeName, method ) );
     }
