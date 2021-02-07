@@ -297,6 +297,7 @@ public final class MdnDocScanner
               final String href = a.attr( "href" ).trim();
               if ( !href.isEmpty() )
               {
+                final URL h = new URL( href );
                 final String refDescription =
                   a
                     .text()
@@ -305,7 +306,7 @@ public final class MdnDocScanner
                     .replace( "that specification", "the '" + name + "' specification" );
                 final ExternalRef ref = new ExternalRef();
                 ref.setName( name );
-                ref.setHref( href );
+                ref.setHref( new URI( h.getProtocol(), h.getHost(), h.getPath(), h.getRef() ).toASCIIString() );
                 if ( !refDescription.isEmpty() )
                 {
                   ref.setDescription( StringUtil.encodeHtml( refDescription ) );
